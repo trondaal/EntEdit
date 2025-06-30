@@ -1,0 +1,810 @@
+<http://rdaregistry.info/Elements/rof/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://rdaregistry.info/Elements/rof/> <http://purl.org/dc/elements/1.1/title> "RDA/ONIX Framework element set"@en .
+<http://rdaregistry.info/Elements/rof/> <http://purl.org/dc/elements/1.1/description> "Classes and properties that represent the the entities and attribute elements of the RDA/ONIX Framework for Resource Categorization."@en .
+<http://rdaregistry.info/Elements/rof/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "rof" .
+<http://rdaregistry.info/Elements/rof/> <http://purl.org/dc/elements/1.1/rights> "Copyright © 2020 American Library Association, Canadian Federation of Library Associations, and CILIP: Chartered Institute of Library and Information Professionals"@en .
+<http://rdaregistry.info/Elements/rof/> <http://creativecommons.org/ns#licence> <https://creativecommons.org/licenses/by/4.0/deed.en_US> .
+<http://rdaregistry.info/Elements/rof/> <http://purl.org/dc/elements/1.1/creator> "RDA Steering Committee" .
+<http://rdaregistry.info/Elements/rof/> <http://purl.org/dc/elements/1.1/contributor> "RSC Technical Working Group" .
+<http://rdaregistry.info/Elements/rof/> <http://purl.org/dc/elements/1.1/publisher> "ALA Digital Reference" .
+<http://rdaregistry.info/Elements/rof/> <http://purl.org/dc/elements/1.1/type> <http://rdaregistry.info/termList/RDALinkedDataWork/1003> .
+<http://rdaregistry.info/Elements/rof/> <http://purl.org/dc/elements/1.1/issued> "2015-06-20" .
+<http://rdaregistry.info/Elements/rof/> <http://purl.org/dc/elements/1.1/title> "RDA/ONIX-viitekehyksen elementtijoukko"@fi .
+<http://rdaregistry.info/Elements/rof/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> "owl:Ontology" .
+<http://rdaregistry.info/Elements/rof/> <http://www.w3.org/2002/07/owl#versionInfo> "v5.2.2" .
+<http://rdaregistry.info/Elements/rof/> <http://purl.org/dc/elements/1.1/modified> "2025-01-24" .
+<http://rdaregistry.info/Elements/rof/C10009> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/C10009> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/C10009> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdaregistry.info/Elements/rof/C10003> .
+<http://rdaregistry.info/Elements/rof/C10009> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://rdaregistry.info/Elements/rof/C10009> <http://www.w3.org/2000/01/rdf-schema#label> "Base carrier category"@en .
+<http://rdaregistry.info/Elements/rof/C10009> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/BaseCarrierCategory.en> .
+<http://rdaregistry.info/Elements/rof/C10009> <http://www.w3.org/2004/02/skos/core#definition> "A base category defined only in terms of an attribute or attributes of the carrier of a resource."@en .
+<http://rdaregistry.info/Elements/rof/C10009> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdaregistry.info/Elements/rof/C10004> .
+<http://rdaregistry.info/Elements/rof/C10009> <http://www.w3.org/2000/01/rdf-schema#label> "Basis drager-categorie"@nl .
+<http://rdaregistry.info/Elements/rof/C10009> <http://www.w3.org/2004/02/skos/core#definition> "Een basiscategorie uitsluitend gedefinieerd wat betreft een attribuut of attributen van de drager van de resource."@nl .
+<http://rdaregistry.info/Elements/rof/C10009> <http://www.w3.org/2000/01/rdf-schema#label> "Tallenteen peruskategoria"@fi .
+<http://rdaregistry.info/Elements/rof/C10009> <http://www.w3.org/2004/02/skos/core#definition> "Peruskategoria, joka määrittää vain aineiston tallenteen attribuuttien termit."@fi .
+<http://rdaregistry.info/Elements/rof/C10009> <http://www.w3.org/2000/01/rdf-schema#label> "فئة حامل الأساس"@ar .
+<http://rdaregistry.info/Elements/rof/C10009> <http://www.w3.org/2004/02/skos/core#definition> "فئة الأساس معرفة فقط من حيث خاصية واحدة أو خصائص الحامل لمصدر ما."@ar .
+<http://rdaregistry.info/Elements/rof/C10009> <http://www.w3.org/2000/01/rdf-schema#label> "Basisbærerkategori"@da .
+<http://rdaregistry.info/Elements/rof/C10009> <http://www.w3.org/2004/02/skos/core#definition> "Basiskategori, der er defineret i form af en attribut eller attributter til en ressources bærer."@da .
+<http://rdaregistry.info/Elements/rof/C10009> <http://www.w3.org/2000/01/rdf-schema#label> "Basis-Datenträger-Kategorie"@de .
+<http://rdaregistry.info/Elements/rof/C10009> <http://www.w3.org/2004/02/skos/core#definition> "Eine Basis-Kategorie, die nur durch ein oder mehrere Merkmale des Datenträgers einer Ressource definiert ist."@de .
+<http://rdaregistry.info/Elements/rof/C10009> <http://www.w3.org/2000/01/rdf-schema#label> "基底载体类别"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/C10009> <http://www.w3.org/2004/02/skos/core#definition> "仅按照资源载体的一个或多个属性定义的一个基底类别"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/C10009> <http://www.w3.org/2000/01/rdf-schema#label> "Catégorie de support matériel de base"@fr .
+<http://rdaregistry.info/Elements/rof/C10009> <http://www.w3.org/2004/02/skos/core#definition> "Catégorie de base définie uniquement en fonction d’un ou plusieurs attributs du support matériel d’une ressource."@fr .
+<http://rdaregistry.info/Elements/rof/C10009> <http://www.w3.org/2000/01/rdf-schema#label> "alap-hordozókategória"@hu .
+<http://rdaregistry.info/Elements/rof/C10009> <http://www.w3.org/2004/02/skos/core#definition> "Alapkategória, amelyet kizárólag egy forrás hordozójának egy vagy több ismérve alapján határozntk meg."@hu .
+<http://rdaregistry.info/Elements/rof/C10003> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/C10003> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/C10003> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdaregistry.info/Elements/rof/C10006> .
+<http://rdaregistry.info/Elements/rof/C10003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://rdaregistry.info/Elements/rof/C10003> <http://www.w3.org/2000/01/rdf-schema#label> "Base category"@en .
+<http://rdaregistry.info/Elements/rof/C10003> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/BaseCategory.en> .
+<http://rdaregistry.info/Elements/rof/C10003> <http://www.w3.org/2004/02/skos/core#definition> "A resource category that is wholly defined in terms of primary values that are specified in the RDA/ONIX Framework."@en .
+<http://rdaregistry.info/Elements/rof/C10003> <http://metadataregistry.org/uri/profile/regap/hasSubClass> <http://rdaregistry.info/Elements/rof/C10008> .
+<http://rdaregistry.info/Elements/rof/C10003> <http://metadataregistry.org/uri/profile/regap/hasSubClass> <http://rdaregistry.info/Elements/rof/C10009> .
+<http://rdaregistry.info/Elements/rof/C10003> <http://www.w3.org/2000/01/rdf-schema#label> "Basiscategorie"@nl .
+<http://rdaregistry.info/Elements/rof/C10003> <http://www.w3.org/2000/01/rdf-schema#label> "Peruskategoria"@fi .
+<http://rdaregistry.info/Elements/rof/C10003> <http://www.w3.org/2004/02/skos/core#definition> "Aineistokategoria, joka määrittyy täysin RDA/ONIX-viitekehyksessä eriteltyjen ensisijaisten arvojen kautta."@fi .
+<http://rdaregistry.info/Elements/rof/C10003> <http://www.w3.org/2000/01/rdf-schema#label> "فئة الأساس"@ar .
+<http://rdaregistry.info/Elements/rof/C10003> <http://www.w3.org/2004/02/skos/core#definition> "فئة مصدر معرَفة بالكامل من حيث القيم الرئيسية المحددة في نظام تصنيف المصادر أونكس/وصف المصادر وإتاحتها."@ar .
+<http://rdaregistry.info/Elements/rof/C10003> <http://www.w3.org/2000/01/rdf-schema#label> "Basiskategori"@da .
+<http://rdaregistry.info/Elements/rof/C10003> <http://www.w3.org/2004/02/skos/core#definition> "Ressourcekategori der er fulstændigt defineret i form af de primære værdier, der er angivet i RDA/ONIX Framework."@da .
+<http://rdaregistry.info/Elements/rof/C10003> <http://www.w3.org/2000/01/rdf-schema#label> "Basis-Kategorie"@de .
+<http://rdaregistry.info/Elements/rof/C10003> <http://www.w3.org/2004/02/skos/core#definition> "Eine Kategorie für eine Ressource, die vollständig durch Primärwerte definiert ist, die im RDA/ONIX-Framework angegeben sind."@de .
+<http://rdaregistry.info/Elements/rof/C10003> <http://www.w3.org/2000/01/rdf-schema#label> "基底类别"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/C10003> <http://www.w3.org/2004/02/skos/core#definition> "完全按照RDA/ONIX框架中所规定的主要值定义的一个资源类别"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/C10003> <http://www.w3.org/2000/01/rdf-schema#label> "Catégorie de base"@fr .
+<http://rdaregistry.info/Elements/rof/C10003> <http://www.w3.org/2004/02/skos/core#definition> "Catégorie de ressources qui est entièrement définie en fonction de valeurs primaires spécifiées dans le cadre RDA/ONIX."@fr .
+<http://rdaregistry.info/Elements/rof/C10003> <http://www.w3.org/2000/01/rdf-schema#label> "alapkategória"@hu .
+<http://rdaregistry.info/Elements/rof/C10003> <http://www.w3.org/2004/02/skos/core#definition> "Forráskategória, amelynek egészét elsődleges értékekként határozták meg az RDA/ONIX keretrendszerben."@hu .
+<http://rdaregistry.info/Elements/rof/C10008> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/C10008> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/C10008> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdaregistry.info/Elements/rof/C10003> .
+<http://rdaregistry.info/Elements/rof/C10008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://rdaregistry.info/Elements/rof/C10008> <http://www.w3.org/2000/01/rdf-schema#label> "Base content category"@en .
+<http://rdaregistry.info/Elements/rof/C10008> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/BaseContentCategory.en> .
+<http://rdaregistry.info/Elements/rof/C10008> <http://www.w3.org/2004/02/skos/core#definition> "A base category defined only in terms of an attribute or attributes of the content of a resource."@en .
+<http://rdaregistry.info/Elements/rof/C10008> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdaregistry.info/Elements/rof/C10005> .
+<http://rdaregistry.info/Elements/rof/C10008> <http://www.w3.org/2000/01/rdf-schema#label> "Basis content-categorie"@nl .
+<http://rdaregistry.info/Elements/rof/C10008> <http://www.w3.org/2004/02/skos/core#definition> "Een basiscategorie uitsluitend gedefinieerd wat betreft een attribuut of attributen van de content van de resource."@nl .
+<http://rdaregistry.info/Elements/rof/C10008> <http://www.w3.org/2000/01/rdf-schema#label> "SIsällön peruskategoria"@fi .
+<http://rdaregistry.info/Elements/rof/C10008> <http://www.w3.org/2004/02/skos/core#definition> "Peruskategoria, joka määrittää vain aineiston sisällön attribuuttien termit."@fi .
+<http://rdaregistry.info/Elements/rof/C10008> <http://www.w3.org/2000/01/rdf-schema#label> "فئة محتوى الأساس"@ar .
+<http://rdaregistry.info/Elements/rof/C10008> <http://www.w3.org/2004/02/skos/core#definition> "فئة الأساس معرفة فقط من حيث خاصية واحدة أو خصائص محتوى مصدر ما."@ar .
+<http://rdaregistry.info/Elements/rof/C10008> <http://www.w3.org/2000/01/rdf-schema#label> "Basisindholdskategori"@da .
+<http://rdaregistry.info/Elements/rof/C10008> <http://www.w3.org/2004/02/skos/core#definition> "Basiskategori, der kun er definereti form af en attribut eller attributter til en ressources indhold."@da .
+<http://rdaregistry.info/Elements/rof/C10008> <http://www.w3.org/2000/01/rdf-schema#label> "Basis-Inhalts-Kategorie"@de .
+<http://rdaregistry.info/Elements/rof/C10008> <http://www.w3.org/2004/02/skos/core#definition> "Eine Basis-Kategorie, die nur durch ein oder mehrere Merkmale des Inhalts einer Ressource definiert ist."@de .
+<http://rdaregistry.info/Elements/rof/C10008> <http://www.w3.org/2000/01/rdf-schema#label> "基底内容类别"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/C10008> <http://www.w3.org/2004/02/skos/core#definition> "仅按照资源内容的一个或多个属性定义的一个基底类别"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/C10008> <http://www.w3.org/2000/01/rdf-schema#label> "Catégorie de contenu de base"@fr .
+<http://rdaregistry.info/Elements/rof/C10008> <http://www.w3.org/2004/02/skos/core#definition> "Catégorie de base définie uniquement en fonction d’un ou plusieurs attributs du contenu d’une ressource."@fr .
+<http://rdaregistry.info/Elements/rof/C10008> <http://www.w3.org/2000/01/rdf-schema#label> "alap-tartalomkategória"@hu .
+<http://rdaregistry.info/Elements/rof/C10008> <http://www.w3.org/2004/02/skos/core#definition> "Alapkategória, amelyet kizárólag egy forrás tartalmának egy vagy több ismérve alapján határoznak meg."@hu .
+<http://rdaregistry.info/Elements/rof/C10004> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/C10004> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/C10004> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdaregistry.info/Elements/rof/C10006> .
+<http://rdaregistry.info/Elements/rof/C10004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://rdaregistry.info/Elements/rof/C10004> <http://www.w3.org/2000/01/rdf-schema#label> "Carrier category"@en .
+<http://rdaregistry.info/Elements/rof/C10004> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/CarrierCategory.en> .
+<http://rdaregistry.info/Elements/rof/C10004> <http://www.w3.org/2004/02/skos/core#definition> "A class of resources defined in terms of specific values for one or more attributes of the means and methods by which content is conveyed."@en .
+<http://rdaregistry.info/Elements/rof/C10004> <http://metadataregistry.org/uri/profile/regap/hasSubClass> <http://rdaregistry.info/Elements/rof/C10002> .
+<http://rdaregistry.info/Elements/rof/C10004> <http://metadataregistry.org/uri/profile/regap/hasSubClass> <http://rdaregistry.info/Elements/rof/C10009> .
+<http://rdaregistry.info/Elements/rof/C10004> <http://www.w3.org/2000/01/rdf-schema#label> "Drager-categorie"@nl .
+<http://rdaregistry.info/Elements/rof/C10004> <http://www.w3.org/2004/02/skos/core#definition> "Een klasse van resources gedefinieerd wat betreft de specifieke waardes voor één of meer attributen van de middelen en methodes waarmee de content overgebracht is."@nl .
+<http://rdaregistry.info/Elements/rof/C10004> <http://www.w3.org/2000/01/rdf-schema#label> "Tallennekategoria"@fi .
+<http://rdaregistry.info/Elements/rof/C10004> <http://www.w3.org/2004/02/skos/core#definition> "Aineistojen luokka, joka määrittyy sisältöä välittävien välineiden ja menetelmien yhden tai useamman attribuutin eriteltyjen arvojen kautta."@fi .
+<http://rdaregistry.info/Elements/rof/C10004> <http://www.w3.org/2000/01/rdf-schema#label> "فئة الحامل"@ar .
+<http://rdaregistry.info/Elements/rof/C10004> <http://www.w3.org/2004/02/skos/core#definition> "قسم من المصادر معرَّف من حيث قيم محددة لخاصية واحدة أو أكثر للوسائل والطرق التي يتم من خلالها نقل المحتوى."@ar .
+<http://rdaregistry.info/Elements/rof/C10004> <http://www.w3.org/2000/01/rdf-schema#label> "Bærerkategori"@da .
+<http://rdaregistry.info/Elements/rof/C10004> <http://www.w3.org/2004/02/skos/core#definition> "Klasse af ressourcer defineret i form af specifikke værdier for en eller flere attrributter for de midler og metoder hvormed indhold formidles."@da .
+<http://rdaregistry.info/Elements/rof/C10004> <http://www.w3.org/2000/01/rdf-schema#label> "Datenträger-Kategorie"@de .
+<http://rdaregistry.info/Elements/rof/C10004> <http://www.w3.org/2004/02/skos/core#definition> "Eine Klasse von Ressourcen, die durch bestimmte Werte für ein Merkmal oder mehrere Merkmale der Art und Weise, mit denen Inhalte übermittelt werden, definiert wird."@de .
+<http://rdaregistry.info/Elements/rof/C10004> <http://www.w3.org/2000/01/rdf-schema#label> "载体类别"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/C10004> <http://www.w3.org/2004/02/skos/core#definition> "按照内容借以传递的手段和方法的一个或多个属性的特定值定义的资源的一个类"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/C10004> <http://www.w3.org/2000/01/rdf-schema#label> "Catégorie de support matériel"@fr .
+<http://rdaregistry.info/Elements/rof/C10004> <http://www.w3.org/2004/02/skos/core#definition> "Classe de ressources définie en fonction de valeurs spécifiques pour un ou plusieurs attributs des moyens et méthodes par lesquels un contenu est communiqué."@fr .
+<http://rdaregistry.info/Elements/rof/C10004> <http://www.w3.org/2000/01/rdf-schema#label> "hordozókategória"@hu .
+<http://rdaregistry.info/Elements/rof/C10004> <http://www.w3.org/2004/02/skos/core#definition> "Források egy osztálya, amelyet a tartalom átadására szolgáló eszközökre és módszerekre vonatkozó egy vagy több ismérv adott értékeiként határozták meg."@hu .
+<http://rdaregistry.info/Elements/rof/C10006> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/C10006> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/C10006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://rdaregistry.info/Elements/rof/C10006> <http://www.w3.org/2000/01/rdf-schema#label> "Category"@en .
+<http://rdaregistry.info/Elements/rof/C10006> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/Category.en> .
+<http://rdaregistry.info/Elements/rof/C10006> <http://www.w3.org/2004/02/skos/core#definition> "A class of resources defined in terms of specific values for one or more attributes (e.g., all resources for which the value for Character is language)."@en .
+<http://rdaregistry.info/Elements/rof/C10006> <http://metadataregistry.org/uri/profile/regap/hasSubClass> <http://rdaregistry.info/Elements/rof/C10003> .
+<http://rdaregistry.info/Elements/rof/C10006> <http://metadataregistry.org/uri/profile/regap/hasSubClass> <http://rdaregistry.info/Elements/rof/C10004> .
+<http://rdaregistry.info/Elements/rof/C10006> <http://metadataregistry.org/uri/profile/regap/hasSubClass> <http://rdaregistry.info/Elements/rof/C10005> .
+<http://rdaregistry.info/Elements/rof/C10006> <http://metadataregistry.org/uri/profile/regap/hasSubClass> <http://rdaregistry.info/Elements/rof/C10007> .
+<http://rdaregistry.info/Elements/rof/C10006> <http://www.w3.org/2000/01/rdf-schema#label> "Categorie"@nl .
+<http://rdaregistry.info/Elements/rof/C10006> <http://www.w3.org/2004/02/skos/core#definition> "Een klasse van resources gedefinieerd wat betreft de specifieke waardes voor één of meer attributen (bijv. alle resources waarvoor de waarde voor Karakter is taal)."@nl .
+<http://rdaregistry.info/Elements/rof/C10006> <http://www.w3.org/2000/01/rdf-schema#label> "Kategoria"@fi .
+<http://rdaregistry.info/Elements/rof/C10006> <http://www.w3.org/2004/02/skos/core#definition> "Aineistojen luokka, joka määrittyy yhden tai useamman attribuutin eriteltyjen arvojen kautta (esim. kaikki ne aineistot, joiden ominaislaadun arvo on kieli)."@fi .
+<http://rdaregistry.info/Elements/rof/C10006> <http://www.w3.org/2000/01/rdf-schema#label> "الفئة"@ar .
+<http://rdaregistry.info/Elements/rof/C10006> <http://www.w3.org/2004/02/skos/core#definition> "قسم من المصادر معرَّف من حيث قيم محددة لخاصية واحدة أو أكثر (مثال، جميع المصادر التي تكون فيها اللغة هي القيمة للتمثيلات)."@ar .
+<http://rdaregistry.info/Elements/rof/C10006> <http://www.w3.org/2000/01/rdf-schema#label> "Kategori"@da .
+<http://rdaregistry.info/Elements/rof/C10006> <http://www.w3.org/2004/02/skos/core#definition> "Klasse af ressourcer defineret i form af specifikke værdier for en eller flere attributter (f.eks. alle ressourcer for hvilke værdien for Tegn er sprog)."@da .
+<http://rdaregistry.info/Elements/rof/C10006> <http://www.w3.org/2000/01/rdf-schema#label> "Kategorie"@de .
+<http://rdaregistry.info/Elements/rof/C10006> <http://www.w3.org/2004/02/skos/core#definition> "Eine Klasse von Ressourcen, die durch bestimmte Werte für ein Merkmal oder mehrere Merkmale (zum Beispiel alle Ressourcen, bei denen der Wert für die Eigenschaft Art Sprache ist) definiert wird."@de .
+<http://rdaregistry.info/Elements/rof/C10006> <http://www.w3.org/2000/01/rdf-schema#label> "类别"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/C10006> <http://www.w3.org/2004/02/skos/core#definition> "按照一个或多个属性的特定值（例如，对应于“角色”值为语言的所有资源）定义的资源的一个类"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/C10006> <http://www.w3.org/2000/01/rdf-schema#label> "Catégorie"@fr .
+<http://rdaregistry.info/Elements/rof/C10006> <http://www.w3.org/2004/02/skos/core#definition> "Classe de ressources définie en fonction de valeurs spécifiques pour un ou plusieurs attributs (par exemple, toutes les ressources pour lesquelles la valeur de l’attribut Caractère est langage)."@fr .
+<http://rdaregistry.info/Elements/rof/C10006> <http://www.w3.org/2000/01/rdf-schema#label> "kategória"@hu .
+<http://rdaregistry.info/Elements/rof/C10006> <http://www.w3.org/2004/02/skos/core#definition> "Források egy osztálya, amelyet egy vagy több ismérv adott értékeiként határozták meg (pl. minden forrás, amelyeknél a „Jelleg” értéke „nyelv”)."@hu .
+<http://rdaregistry.info/Elements/rof/C10005> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/C10005> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/C10005> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdaregistry.info/Elements/rof/C10006> .
+<http://rdaregistry.info/Elements/rof/C10005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://rdaregistry.info/Elements/rof/C10005> <http://www.w3.org/2000/01/rdf-schema#label> "Content category"@en .
+<http://rdaregistry.info/Elements/rof/C10005> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/ContentCategory.en> .
+<http://rdaregistry.info/Elements/rof/C10005> <http://www.w3.org/2004/02/skos/core#definition> "A class of resources defined in terms of specific values for one or more attributes of the intellectual or artistic content of a resource."@en .
+<http://rdaregistry.info/Elements/rof/C10005> <http://metadataregistry.org/uri/profile/regap/hasSubClass> <http://rdaregistry.info/Elements/rof/C10001> .
+<http://rdaregistry.info/Elements/rof/C10005> <http://metadataregistry.org/uri/profile/regap/hasSubClass> <http://rdaregistry.info/Elements/rof/C10008> .
+<http://rdaregistry.info/Elements/rof/C10005> <http://www.w3.org/2000/01/rdf-schema#label> "Content-categorie"@nl .
+<http://rdaregistry.info/Elements/rof/C10005> <http://www.w3.org/2004/02/skos/core#definition> "Een klasse van resources gedefinieerd wat betreft de specifieke waardes voor één of meer attributen van de intellectuele of artistieke content van een resource."@nl .
+<http://rdaregistry.info/Elements/rof/C10005> <http://www.w3.org/2000/01/rdf-schema#label> "SIsältökategoria"@fi .
+<http://rdaregistry.info/Elements/rof/C10005> <http://www.w3.org/2004/02/skos/core#definition> "Aineistojen luokka, joka määrittyy aineiston tiedollisen tai taiteellisen sisällön yhden tai useamman attribuutin eriteltyjen arvojen kautta."@fi .
+<http://rdaregistry.info/Elements/rof/C10005> <http://www.w3.org/2000/01/rdf-schema#label> "فئة المحتوى"@ar .
+<http://rdaregistry.info/Elements/rof/C10005> <http://www.w3.org/2004/02/skos/core#definition> "قسم من المصادر معرَّف من حيث قيم محددة لخاصية واحدة أو أكثر للمحتوى الفكري والفني لمصدر."@ar .
+<http://rdaregistry.info/Elements/rof/C10005> <http://www.w3.org/2000/01/rdf-schema#label> "Indholdskategori"@da .
+<http://rdaregistry.info/Elements/rof/C10005> <http://www.w3.org/2004/02/skos/core#definition> "Klasse af ressourcer defineret i from af specifikke værdier for en eller flere attrributter for det intellektuelle eller artistiske indhold af en ressource."@da .
+<http://rdaregistry.info/Elements/rof/C10005> <http://www.w3.org/2000/01/rdf-schema#label> "Inhalts-Kategorie"@de .
+<http://rdaregistry.info/Elements/rof/C10005> <http://www.w3.org/2004/02/skos/core#definition> "Eine Klasse von Ressourcen, die durch bestimmte Werte für ein Merkmal oder mehrere Merkmale des geistigen oder künstlerischen Inhalts einer Ressource definiert wird."@de .
+<http://rdaregistry.info/Elements/rof/C10005> <http://www.w3.org/2000/01/rdf-schema#label> "内容类别"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/C10005> <http://www.w3.org/2004/02/skos/core#definition> "按照资源的知识或艺术内容的一个或多个属性的特定值定义的资源的一个类"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/C10005> <http://www.w3.org/2000/01/rdf-schema#label> "Catégorie de contenu"@fr .
+<http://rdaregistry.info/Elements/rof/C10005> <http://www.w3.org/2004/02/skos/core#definition> "Classe de ressources définie en fonction de valeurs spécifiques pour un ou plusieurs attributs du contenu intellectuel ou artistique d’une ressource."@fr .
+<http://rdaregistry.info/Elements/rof/C10005> <http://www.w3.org/2000/01/rdf-schema#label> "tartalomkategória"@hu .
+<http://rdaregistry.info/Elements/rof/C10005> <http://www.w3.org/2004/02/skos/core#definition> "Források egy osztálya, amelyet egy forrás szellemi vagy művészi tartalmára vonatkozó egy vagy több ismérv adott értékeiként határozták meg."@hu .
+<http://rdaregistry.info/Elements/rof/C10002> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/C10002> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/C10002> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdaregistry.info/Elements/rof/C10007> .
+<http://rdaregistry.info/Elements/rof/C10002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://rdaregistry.info/Elements/rof/C10002> <http://www.w3.org/2000/01/rdf-schema#label> "Qualified carrier category"@en .
+<http://rdaregistry.info/Elements/rof/C10002> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/QualifiedCarrierCategory.en> .
+<http://rdaregistry.info/Elements/rof/C10002> <http://www.w3.org/2004/02/skos/core#definition> "A resource category that qualifies a base carrier category."@en .
+<http://rdaregistry.info/Elements/rof/C10002> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdaregistry.info/Elements/rof/C10004> .
+<http://rdaregistry.info/Elements/rof/C10002> <http://www.w3.org/2000/01/rdf-schema#label> "Gekwalificeerde drager-categorie"@nl .
+<http://rdaregistry.info/Elements/rof/C10002> <http://www.w3.org/2000/01/rdf-schema#label> "Määritetty tallennekategoria"@fi .
+<http://rdaregistry.info/Elements/rof/C10002> <http://www.w3.org/2004/02/skos/core#definition> "Aineistokategoria, joka määrittää tallenteen peruskategorian."@fi .
+<http://rdaregistry.info/Elements/rof/C10002> <http://www.w3.org/2000/01/rdf-schema#label> "فئة حامل مقيد"@ar .
+<http://rdaregistry.info/Elements/rof/C10002> <http://www.w3.org/2004/02/skos/core#definition> "فئة مصدر تُخصص فئة حامل أساسي."@ar .
+<http://rdaregistry.info/Elements/rof/C10002> <http://www.w3.org/2000/01/rdf-schema#label> "Kvalificeret bærerkategori"@da .
+<http://rdaregistry.info/Elements/rof/C10002> <http://www.w3.org/2004/02/skos/core#definition> "Ressourcekategori, der kvalificerer en basisbærerkategori"@da .
+<http://rdaregistry.info/Elements/rof/C10002> <http://www.w3.org/2000/01/rdf-schema#label> "Zugelassene Datenträger-Kategorie"@de .
+<http://rdaregistry.info/Elements/rof/C10002> <http://www.w3.org/2004/02/skos/core#definition> "Eine Kategorie für eine Ressource, die eine Basis-Datenträger-Kategorie zulässt."@de .
+<http://rdaregistry.info/Elements/rof/C10002> <http://www.w3.org/2000/01/rdf-schema#label> "被限定载体类别"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/C10002> <http://www.w3.org/2004/02/skos/core#definition> "限定一个基础载体类别的一个资源类别"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/C10002> <http://www.w3.org/2000/01/rdf-schema#label> "Catégorie de support matériel développée"@fr .
+<http://rdaregistry.info/Elements/rof/C10002> <http://www.w3.org/2004/02/skos/core#definition> "Catégorie de ressources qui développe une catégorie de support matériel de base."@fr .
+<http://rdaregistry.info/Elements/rof/C10002> <http://www.w3.org/2000/01/rdf-schema#label> "minősített hordozókategória"@hu .
+<http://rdaregistry.info/Elements/rof/C10002> <http://www.w3.org/2004/02/skos/core#definition> "Forráskategória, amely a hordozó-alapkategóriát minősíti."@hu .
+<http://rdaregistry.info/Elements/rof/C10007> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/C10007> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/C10007> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdaregistry.info/Elements/rof/C10006> .
+<http://rdaregistry.info/Elements/rof/C10007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://rdaregistry.info/Elements/rof/C10007> <http://www.w3.org/2000/01/rdf-schema#label> "Qualified category"@en .
+<http://rdaregistry.info/Elements/rof/C10007> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/QualifiedCategory.en> .
+<http://rdaregistry.info/Elements/rof/C10007> <http://www.w3.org/2004/02/skos/core#definition> "A category that qualifies a base category by the addition of a value or values that are not specified in the RDA/ONIX Framework."@en .
+<http://rdaregistry.info/Elements/rof/C10007> <http://metadataregistry.org/uri/profile/regap/hasSubClass> <http://rdaregistry.info/Elements/rof/C10001> .
+<http://rdaregistry.info/Elements/rof/C10007> <http://metadataregistry.org/uri/profile/regap/hasSubClass> <http://rdaregistry.info/Elements/rof/C10002> .
+<http://rdaregistry.info/Elements/rof/C10007> <http://www.w3.org/2000/01/rdf-schema#label> "Gekwalificeerde categorie"@nl .
+<http://rdaregistry.info/Elements/rof/C10007> <http://www.w3.org/2004/02/skos/core#definition> "Een categorie die een basiscategorie kwalificeert door de toevoeging van een waarde of waardes die niet gespecificeerd zijn in het RDA/ONIX Framework."@nl .
+<http://rdaregistry.info/Elements/rof/C10007> <http://www.w3.org/2000/01/rdf-schema#label> "Määritetty katerogia"@fi .
+<http://rdaregistry.info/Elements/rof/C10007> <http://www.w3.org/2004/02/skos/core#definition> "Kategoria, joka määrittää peruskategorian lisäämällä siihen arvon tai arvot, joita ei ole eritelty RDA/ONIX-viitekehyksessä."@fi .
+<http://rdaregistry.info/Elements/rof/C10007> <http://www.w3.org/2000/01/rdf-schema#label> "فئة مقيدة"@ar .
+<http://rdaregistry.info/Elements/rof/C10007> <http://www.w3.org/2004/02/skos/core#definition> "فئة تُخصص فئة الأساس من خلال إضافة قيمة أو قيم غير محددة في نظام تصنيف المصادر أونكس/وصف المصادر وإتاحتها."@ar .
+<http://rdaregistry.info/Elements/rof/C10007> <http://www.w3.org/2000/01/rdf-schema#label> "Kvalificeret kategori"@da .
+<http://rdaregistry.info/Elements/rof/C10007> <http://www.w3.org/2004/02/skos/core#definition> "Kategori, der kvalificerer en basiskategori ved at tillægge en værdi eller værdier som ikke er specificeret i RDA/ONIX Framework."@da .
+<http://rdaregistry.info/Elements/rof/C10007> <http://www.w3.org/2000/01/rdf-schema#label> "Zugelassene Kategorie"@de .
+<http://rdaregistry.info/Elements/rof/C10007> <http://www.w3.org/2004/02/skos/core#definition> "Eine Kategorie, die eine Basis-Kategorie zulässt, indem ein Wert oder mehrere Werte ergänzt werden, die nicht im RDA/Onix Framework bestimmt sind."@de .
+<http://rdaregistry.info/Elements/rof/C10007> <http://www.w3.org/2000/01/rdf-schema#label> "限定类别"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/C10007> <http://www.w3.org/2004/02/skos/core#definition> "通过增加RDA/ONIX框架中未规定的取值限定一个基础类别的一个类别"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/C10007> <http://www.w3.org/2000/01/rdf-schema#label> "Catégorie développée"@fr .
+<http://rdaregistry.info/Elements/rof/C10007> <http://www.w3.org/2004/02/skos/core#definition> "Catégorie qui développe une catégorie de base par l’ajout d’une ou plusieurs valeurs qui ne sont pas spécifiées dans le cadre RDA/ONIX."@fr .
+<http://rdaregistry.info/Elements/rof/C10007> <http://www.w3.org/2000/01/rdf-schema#label> "minősített kategória"@hu .
+<http://rdaregistry.info/Elements/rof/C10007> <http://www.w3.org/2004/02/skos/core#definition> "Egy kategória, amely az alapkategóriát minősíti egy vagy több olyan érték hozzáadásával, amelyeket nem az RDA/ONIX keretrendszerben határoztak meg."@hu .
+<http://rdaregistry.info/Elements/rof/C10001> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/C10001> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/C10001> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdaregistry.info/Elements/rof/C10007> .
+<http://rdaregistry.info/Elements/rof/C10001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://rdaregistry.info/Elements/rof/C10001> <http://www.w3.org/2000/01/rdf-schema#label> "Qualified content category"@en .
+<http://rdaregistry.info/Elements/rof/C10001> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/QualifiedContentCategory.en> .
+<http://rdaregistry.info/Elements/rof/C10001> <http://www.w3.org/2004/02/skos/core#definition> "A resource category that qualifies a base content category."@en .
+<http://rdaregistry.info/Elements/rof/C10001> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdaregistry.info/Elements/rof/C10005> .
+<http://rdaregistry.info/Elements/rof/C10001> <http://www.w3.org/2000/01/rdf-schema#label> "Gekwalificeerde content-categorie"@nl .
+<http://rdaregistry.info/Elements/rof/C10001> <http://www.w3.org/2000/01/rdf-schema#label> "Määritetty sisältökategoria"@fi .
+<http://rdaregistry.info/Elements/rof/C10001> <http://www.w3.org/2004/02/skos/core#definition> "Aineistokategoria, joka määrittää sisällön peruskategorian."@fi .
+<http://rdaregistry.info/Elements/rof/C10001> <http://www.w3.org/2000/01/rdf-schema#label> "فئة محتوى مقيد"@ar .
+<http://rdaregistry.info/Elements/rof/C10001> <http://www.w3.org/2004/02/skos/core#definition> "فئة مصدر تُخصص فئة محتوى أساسي."@ar .
+<http://rdaregistry.info/Elements/rof/C10001> <http://www.w3.org/2000/01/rdf-schema#label> "Kvalificeret indholdskategori"@da .
+<http://rdaregistry.info/Elements/rof/C10001> <http://www.w3.org/2004/02/skos/core#definition> "Ressourcekategori, der kvalificerer en basisindholdskategori"@da .
+<http://rdaregistry.info/Elements/rof/C10001> <http://www.w3.org/2000/01/rdf-schema#label> "Qualifizierte Inhalts-Kategorie"@de .
+<http://rdaregistry.info/Elements/rof/C10001> <http://www.w3.org/2004/02/skos/core#definition> "Eine Kategorie für eine Ressource, die eine Basis-Inhalts-Kategorie zulässt."@de .
+<http://rdaregistry.info/Elements/rof/C10001> <http://www.w3.org/2000/01/rdf-schema#label> "被限定内容类别"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/C10001> <http://www.w3.org/2004/02/skos/core#definition> "限定一个基础内容类别的一个资源类别"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/C10001> <http://www.w3.org/2000/01/rdf-schema#label> "Catégorie de contenu développée"@fr .
+<http://rdaregistry.info/Elements/rof/C10001> <http://www.w3.org/2004/02/skos/core#definition> "Catégorie de ressources qui développe une catégorie de contenu de base."@fr .
+<http://rdaregistry.info/Elements/rof/C10001> <http://www.w3.org/2000/01/rdf-schema#label> "minősített tartalomkategória"@hu .
+<http://rdaregistry.info/Elements/rof/C10001> <http://www.w3.org/2004/02/skos/core#definition> "Forráskategória, amely a tartalom-alapkategóriát minősíti."@hu .
+<http://rdaregistry.info/Elements/rof/P10001> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/P10001> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/P10001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rdaregistry.info/Elements/rof/P10001> <http://www.w3.org/2000/01/rdf-schema#label> "has applied material"@en .
+<http://rdaregistry.info/Elements/rof/P10001> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/hasAppliedMaterial.en> .
+<http://rdaregistry.info/Elements/rof/P10001> <http://www.w3.org/2004/02/skos/core#definition> "A material applied to the base material for purposes of infixing the content of the resource."@en .
+<http://rdaregistry.info/Elements/rof/P10001> <http://www.w3.org/2004/02/skos/core#scopeNote> "Applies to resources conveying content on a physical carrier. Resources conveying content by means of broadcasting or online transmission will have an AppliedMaterial value not applicable."@en .
+<http://rdaregistry.info/Elements/rof/P10001> <http://www.w3.org/2000/01/rdf-schema#label> "heeft bevestigd materiaal"@nl .
+<http://rdaregistry.info/Elements/rof/P10001> <http://www.w3.org/2000/01/rdf-schema#label> "päällimateriaali"@fi .
+<http://rdaregistry.info/Elements/rof/P10001> <http://www.w3.org/2004/02/skos/core#definition> "Materiaali, jota käytetään pohjamateriaalin kanssa aineiston sisällön kiinnittämiseksi."@fi .
+<http://rdaregistry.info/Elements/rof/P10001> <http://www.w3.org/2004/02/skos/core#scopeNote> "Soveltuu aineistoihin, joiden sisällön välittää fyysinen tallenne. Päällimateriaalin arvo on ei-sovellettavissa aineistoissa, joiden sisältö välittyy joukkotiedotuksen tai verkon kautta."@fi .
+<http://rdaregistry.info/Elements/rof/P10001> <http://www.w3.org/2000/01/rdf-schema#label> "له مادة مستخدمة"@ar .
+<http://rdaregistry.info/Elements/rof/P10001> <http://www.w3.org/2004/02/skos/core#definition> "مادة يتم وضعها على مادة أساسية بهدف تثبيت محتوى المصدر."@ar .
+<http://rdaregistry.info/Elements/rof/P10001> <http://www.w3.org/2004/02/skos/core#scopeNote> "ينطبق على المصادر التي تعرض المحتوى على حامل مادي. لا تنطبق قيمة \"تطبيق المادة AppliedMaterial\" على المصادر التي تعرض المحتوى من خلال البث أو البث عبر الإنترنت."@ar .
+<http://rdaregistry.info/Elements/rof/P10001> <http://www.w3.org/2000/01/rdf-schema#label> "har anvendt materiale"@da .
+<http://rdaregistry.info/Elements/rof/P10001> <http://www.w3.org/2004/02/skos/core#definition> "Materiale appliceret til basismaterialet med henblik på at fiksere ressourceindholdet."@da .
+<http://rdaregistry.info/Elements/rof/P10001> <http://www.w3.org/2004/02/skos/core#scopeNote> "Omfatter ressourcer, der formidler indhold på en fysisk bærer. Ressourcer, der formidler indhold ved udsendelse eller online transmission, har en anvendt materiale-værdi, der ikke er relevant."@da .
+<http://rdaregistry.info/Elements/rof/P10001> <http://www.w3.org/2000/01/rdf-schema#label> "hat aufgebrachtes Material"@de .
+<http://rdaregistry.info/Elements/rof/P10001> <http://www.w3.org/2004/02/skos/core#definition> "Ein Material, das auf das Trägermaterial aufgebracht wird, um den Inhalt der Ressource einzufügen."@de .
+<http://rdaregistry.info/Elements/rof/P10001> <http://www.w3.org/2004/02/skos/core#scopeNote> "Dies trifft auf Ressourcen zu, die Inhalte auf einem physischen Datenträger vermitteln. Für Ressourcen, die Inhalte durch Hörfunk- oder Online-Übertragung vermitteln, wird der Wert nicht anwendbar vergeben."@de .
+<http://rdaregistry.info/Elements/rof/P10001> <http://www.w3.org/2000/01/rdf-schema#label> "有施加材料"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10001> <http://www.w3.org/2004/02/skos/core#definition> "施加于基底材料上用于固定资源内容的一种材料"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10001> <http://www.w3.org/2004/02/skos/core#scopeNote> "适用于在物理载体上传递内容的资源。通过广播或联机传输传递内容的资源有“施加材料”(AppliedMaterial)不适用的取值。"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10001> <http://www.w3.org/2000/01/rdf-schema#label> "a pour matériau appliqué"@fr .
+<http://rdaregistry.info/Elements/rof/P10001> <http://www.w3.org/2004/02/skos/core#definition> "Matériau appliqué au matériau de base afin de fixer le contenu de la ressource."@fr .
+<http://rdaregistry.info/Elements/rof/P10001> <http://www.w3.org/2004/02/skos/core#scopeNote> "S’applique aux ressources qui communiquent un contenu sur un support matériel physique. Pour les ressources qui communiquent un contenu par radiodiffusion ou transmission en ligne, la valeur de l’attribut MatériauAppliqué est sans objet."@fr .
+<http://rdaregistry.info/Elements/rof/P10001> <http://www.w3.org/2000/01/rdf-schema#label> "alkalmazott anyaga a következő:"@hu .
+<http://rdaregistry.info/Elements/rof/P10001> <http://www.w3.org/2004/02/skos/core#definition> "Az alapanyagra alkalmazott anyag, a forrás tartalmának beillesztésére szolgál."@hu .
+<http://rdaregistry.info/Elements/rof/P10001> <http://www.w3.org/2004/02/skos/core#scopeNote> "Azon forrásoknál alkalmazzák, amelyek tartalmát fizikai hordozón adják át. Azon források esetében, amelyek tartalmukat műsorszórás vagy online adatátvitel útján adják át, az AlkalmazottAnyag érték nem alkalmazható."@hu .
+<http://rdaregistry.info/Elements/rof/P10007> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/P10007> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/P10007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rdaregistry.info/Elements/rof/P10007> <http://www.w3.org/2000/01/rdf-schema#label> "has base material"@en .
+<http://rdaregistry.info/Elements/rof/P10007> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/hasBaseMaterial.en> .
+<http://rdaregistry.info/Elements/rof/P10007> <http://www.w3.org/2004/02/skos/core#definition> "An underlying physical material on or in which the content of a resource is stored."@en .
+<http://rdaregistry.info/Elements/rof/P10007> <http://www.w3.org/2004/02/skos/core#scopeNote> "Applies to resources conveying content on a physical carrier. Resources conveying content by means of broadcasting or online transmission will have a BaseMaterial value not applicable."@en .
+<http://rdaregistry.info/Elements/rof/P10007> <http://www.w3.org/2000/01/rdf-schema#label> "heeft basismateriaal"@nl .
+<http://rdaregistry.info/Elements/rof/P10007> <http://www.w3.org/2000/01/rdf-schema#label> "pohjamateriaali"@fi .
+<http://rdaregistry.info/Elements/rof/P10007> <http://www.w3.org/2004/02/skos/core#definition> "Pohjimmainen fyysinen materiaali, jolle aineiston sisältö on tallennettu."@fi .
+<http://rdaregistry.info/Elements/rof/P10007> <http://www.w3.org/2004/02/skos/core#scopeNote> "Soveltuu aineistoihin, joiden sisällön välittää fyysinen tallenne. Pohjamateriaalin arvo on ei-sovellettavissa aineistoissa, joiden sisältö välittyy joukkotiedotuksen tai verkon kautta."@fi .
+<http://rdaregistry.info/Elements/rof/P10007> <http://www.w3.org/2000/01/rdf-schema#label> "له مادة أساسية"@ar .
+<http://rdaregistry.info/Elements/rof/P10007> <http://www.w3.org/2004/02/skos/core#definition> "مادة ملموسة أساسية يسجل عليها أو يسجل فيها محتوى مصدر ما."@ar .
+<http://rdaregistry.info/Elements/rof/P10007> <http://www.w3.org/2004/02/skos/core#scopeNote> "ينطبق على المصادر التي تعرض المحتوى على حامل مادي. لا تنطبق قيمة \"مادة أساسية على المصادر التي تعرض المحتوى من خلال البث أو البث عبر الإنترنت."@ar .
+<http://rdaregistry.info/Elements/rof/P10007> <http://www.w3.org/2000/01/rdf-schema#label> "har basismateriale"@da .
+<http://rdaregistry.info/Elements/rof/P10007> <http://www.w3.org/2004/02/skos/core#definition> "Underliggende fysisk materiale, hvorpå eller hvori indholdet af en ressource er gemt."@da .
+<http://rdaregistry.info/Elements/rof/P10007> <http://www.w3.org/2004/02/skos/core#scopeNote> "Gælder for ressourcer, der formidler indhold på en fysisk bærer. Ressourcer, der formidler indhold ved udsendelse eller online transmission har et basismateriale-værdi der ikke er relevant."@da .
+<http://rdaregistry.info/Elements/rof/P10007> <http://www.w3.org/2000/01/rdf-schema#label> "hat Trägermaterial"@de .
+<http://rdaregistry.info/Elements/rof/P10007> <http://www.w3.org/2004/02/skos/core#definition> "Ein zugrunde liegendes physisches Material, auf oder in dem der Inhalt einer Ressource gespeichert ist."@de .
+<http://rdaregistry.info/Elements/rof/P10007> <http://www.w3.org/2004/02/skos/core#scopeNote> "Dies trifft auf Ressourcen zu, die Inhalte auf einem physischen Datenträger vermitteln. Für Ressourcen, die Inhalte durch Hörfunk- oder Online-Übertragung vermitteln, wird der Wert nicht anwendbar vergeben."@de .
+<http://rdaregistry.info/Elements/rof/P10007> <http://www.w3.org/2000/01/rdf-schema#label> "有基底材料"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10007> <http://www.w3.org/2004/02/skos/core#definition> "资源的内容被储存于其上或其中的下层物理材料"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10007> <http://www.w3.org/2004/02/skos/core#scopeNote> "适用于在物理载体上传递内容的资源。通过广播或联机传输传递内容的资源有“基底材料”(BaseMaterial)不适用的取值。"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10007> <http://www.w3.org/2000/01/rdf-schema#label> "a pour matériau de base"@fr .
+<http://rdaregistry.info/Elements/rof/P10007> <http://www.w3.org/2004/02/skos/core#definition> "Matériau physique sous-jacent sur ou dans lequel le contenu d’une ressource est stocké."@fr .
+<http://rdaregistry.info/Elements/rof/P10007> <http://www.w3.org/2004/02/skos/core#scopeNote> "S’applique aux ressources qui communiquent un contenu sur un support matériel physique. Pour les ressources qui communiquent un contenu par radiodiffusion ou transmission en ligne, la valeur de l’attribut MatériauDeBase est sans objet."@fr .
+<http://rdaregistry.info/Elements/rof/P10007> <http://www.w3.org/2000/01/rdf-schema#label> "alapul szolgáló anyaga a következő:"@hu .
+<http://rdaregistry.info/Elements/rof/P10007> <http://www.w3.org/2004/02/skos/core#definition> "Mögöttes fizikai anyag, amelyen vagy amelyben a forrás tartalmát tárolják."@hu .
+<http://rdaregistry.info/Elements/rof/P10007> <http://www.w3.org/2004/02/skos/core#scopeNote> "Azon forrásoknál alkalmazzák, amelyek tartalmát fizikai hordozón adják át. Azon források esetében, amelyek tartalmukat műsorszórás vagy online adatátvitel útján adják át, az AlapulszolgálóAnyag érték nem alkalmazható."@hu .
+<http://rdaregistry.info/Elements/rof/P10017> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/P10017> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/P10017> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rdaregistry.info/Elements/rof/P10017> <http://www.w3.org/2000/01/rdf-schema#label> "has capture method"@en .
+<http://rdaregistry.info/Elements/rof/P10017> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/hasCaptureMethod.en> .
+<http://rdaregistry.info/Elements/rof/P10017> <http://www.w3.org/2004/02/skos/core#definition> "A process used to capture the content of a resource."@en .
+<http://rdaregistry.info/Elements/rof/P10017> <http://www.w3.org/2004/02/skos/core#scopeNote> "CaptureMethod is the method used in the initial capturing the content, not the method used to fix the content onto the carrier (c.f., FixationMethod)."@en .
+<http://rdaregistry.info/Elements/rof/P10017> <http://www.w3.org/2000/01/rdf-schema#label> "heeft vastlegmethode"@nl .
+<http://rdaregistry.info/Elements/rof/P10017> <http://www.w3.org/2004/02/skos/core#definition> "Een proces gebruikt om de content van een resource vast te leggen."@nl .
+<http://rdaregistry.info/Elements/rof/P10017> <http://www.w3.org/2004/02/skos/core#scopeNote> "VastlegMethode is de methode gebruikt bij het initiële vastleggen van de content, niet de methode gebruikt om de content op de drager vast te zetten (zie FixatieMethode)."@nl .
+<http://rdaregistry.info/Elements/rof/P10017> <http://www.w3.org/2000/01/rdf-schema#label> "tallentamismenetelmä"@fi .
+<http://rdaregistry.info/Elements/rof/P10017> <http://www.w3.org/2004/02/skos/core#definition> "Menetelmä, jota käytetään aineiston sisällön tallentamiseen."@fi .
+<http://rdaregistry.info/Elements/rof/P10017> <http://www.w3.org/2004/02/skos/core#scopeNote> "Tallentamismenetelmä on sisällön alkuperäisessä tallentamisessa käytetty menetelmä, ei menetelmä, jota käytetään sisällön kiinnittämisessä tallenteeseen (kiinnittämismenetelmä)."@fi .
+<http://rdaregistry.info/Elements/rof/P10017> <http://www.w3.org/2000/01/rdf-schema#label> "له أسلوب تعبير"@ar .
+<http://rdaregistry.info/Elements/rof/P10017> <http://www.w3.org/2004/02/skos/core#definition> "عملية تستخدم للتعبير عن محتوى مصدر ما."@ar .
+<http://rdaregistry.info/Elements/rof/P10017> <http://www.w3.org/2004/02/skos/core#scopeNote> "أسلوب التعبير هو الأسلوب المستخدم في التعبير الأولي عن المحتوى، وليس الأسلوب المستخدم في تثبيت المحتوى على الحامل (قارن، أسلوب تثبيت FixationMethod)."@ar .
+<http://rdaregistry.info/Elements/rof/P10017> <http://www.w3.org/2000/01/rdf-schema#label> "indfangningsmetode"@da .
+<http://rdaregistry.info/Elements/rof/P10017> <http://www.w3.org/2004/02/skos/core#definition> "Proces, der bruges til at fange indholdet af en ressource."@da .
+<http://rdaregistry.info/Elements/rof/P10017> <http://www.w3.org/2004/02/skos/core#scopeNote> "Indfangningsmetode er den metode, der bruges i den oprindelige indfangning af indholdet, ikke den metode der bruges for at fiksere indholdet til bæreren (jfr. Fikseringsmetode)"@da .
+<http://rdaregistry.info/Elements/rof/P10017> <http://www.w3.org/2000/01/rdf-schema#label> "hat Aufzeichnungsmethode"@de .
+<http://rdaregistry.info/Elements/rof/P10017> <http://www.w3.org/2004/02/skos/core#definition> "Ein Prozess, der zur Erfassung des Inhalts einer Ressource verwendet wird."@de .
+<http://rdaregistry.info/Elements/rof/P10017> <http://www.w3.org/2004/02/skos/core#scopeNote> "Die Aufzeichnungsmethode ist die Methode, die bei der anfänglichen Erfassung des Inhalts verwendet wird, nicht die Methode, mit der der Inhalt auf dem Träger fixiert wird (zum Beispiel Befestigungsmethode)."@de .
+<http://rdaregistry.info/Elements/rof/P10017> <http://www.w3.org/2000/01/rdf-schema#label> "有摄录方法"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10017> <http://www.w3.org/2004/02/skos/core#definition> "用于摄录资源内容的过程"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10017> <http://www.w3.org/2004/02/skos/core#scopeNote> "“摄录方法”(CaptureMethod)是用于内容初次摄录的方法，不是将内容固定至载体上的方法（参见“固定方法”(FixationMethod)）"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10017> <http://www.w3.org/2000/01/rdf-schema#label> "a pour méthode de captation"@fr .
+<http://rdaregistry.info/Elements/rof/P10017> <http://www.w3.org/2004/02/skos/core#definition> "Procédé utilisé pour capter le contenu d’une ressource."@fr .
+<http://rdaregistry.info/Elements/rof/P10017> <http://www.w3.org/2004/02/skos/core#scopeNote> "MéthodeDeCaptation est la méthode utilisée lors de la captation initiale du contenu, et non la méthode utilisée pour fixer le contenu sur le support matériel (cf. MéthodeDeFixation)."@fr .
+<http://rdaregistry.info/Elements/rof/P10017> <http://www.w3.org/2000/01/rdf-schema#label> "felvétel módja a következő:"@hu .
+<http://rdaregistry.info/Elements/rof/P10017> <http://www.w3.org/2004/02/skos/core#definition> "Egy forrás tartalmának felvételére használt eljárás."@hu .
+<http://rdaregistry.info/Elements/rof/P10017> <http://www.w3.org/2004/02/skos/core#scopeNote> "A FelvételMódja a tartalom felvételének, nem pedig a tartalom hordozóra való rögzítésének a módszere (vö. „RögzítésMódja”)."@hu .
+<http://rdaregistry.info/Elements/rof/P10012> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/P10012> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/P10012> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rdaregistry.info/Elements/rof/P10012> <http://www.w3.org/2000/01/rdf-schema#label> "has character"@en .
+<http://rdaregistry.info/Elements/rof/P10012> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/hasCharacter.en> .
+<http://rdaregistry.info/Elements/rof/P10012> <http://www.w3.org/2004/02/skos/core#definition> "A fundamental form of communication in which the content of a resource is expressed."@en .
+<http://rdaregistry.info/Elements/rof/P10012> <http://www.w3.org/2000/01/rdf-schema#label> "heeft karakter"@nl .
+<http://rdaregistry.info/Elements/rof/P10012> <http://www.w3.org/2000/01/rdf-schema#label> "ominaislaatu"@fi .
+<http://rdaregistry.info/Elements/rof/P10012> <http://www.w3.org/2004/02/skos/core#definition> "Kommunikoinnin perusmuoto, jolla aineiston sisältö on ilmaistu."@fi .
+<http://rdaregistry.info/Elements/rof/P10012> <http://www.w3.org/2000/01/rdf-schema#label> "له تمثيلات"@ar .
+<http://rdaregistry.info/Elements/rof/P10012> <http://www.w3.org/2004/02/skos/core#definition> "الشكل الرئيسي للتواصل والذي يُعبر عن محتوى مصدر ما."@ar .
+<http://rdaregistry.info/Elements/rof/P10012> <http://www.w3.org/2000/01/rdf-schema#label> "har karakter"@da .
+<http://rdaregistry.info/Elements/rof/P10012> <http://www.w3.org/2004/02/skos/core#definition> "Grundlæggende form af kommunikation, hvor indholdet af en ressource udtrykkes."@da .
+<http://rdaregistry.info/Elements/rof/P10012> <http://www.w3.org/2000/01/rdf-schema#label> "hat Art"@de .
+<http://rdaregistry.info/Elements/rof/P10012> <http://www.w3.org/2004/02/skos/core#definition> "Eine grundlegende Form der Übertragung, in der der Inhalt einer Ressource ausgedrückt wird."@de .
+<http://rdaregistry.info/Elements/rof/P10012> <http://www.w3.org/2000/01/rdf-schema#label> "有字符"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10012> <http://www.w3.org/2004/02/skos/core#definition> "资源内容所表现的基本通讯形式"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10012> <http://www.w3.org/2000/01/rdf-schema#label> "a pour caractère"@fr .
+<http://rdaregistry.info/Elements/rof/P10012> <http://www.w3.org/2004/02/skos/core#definition> "Forme fondamentale de communication sous laquelle le contenu d’une ressource est exprimé."@fr .
+<http://rdaregistry.info/Elements/rof/P10012> <http://www.w3.org/2000/01/rdf-schema#label> "jellege a következő:"@hu .
+<http://rdaregistry.info/Elements/rof/P10012> <http://www.w3.org/2004/02/skos/core#definition> "A kommunikáció azon alapvető formája, amellyel a forrás tartalma kifejezésre kerül."@hu .
+<http://rdaregistry.info/Elements/rof/P10004> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/P10004> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/P10004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rdaregistry.info/Elements/rof/P10004> <http://www.w3.org/2000/01/rdf-schema#label> "has encoding format"@en .
+<http://rdaregistry.info/Elements/rof/P10004> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/hasEncodingFormat.en> .
+<http://rdaregistry.info/Elements/rof/P10004> <http://www.w3.org/2004/02/skos/core#definition> "A schema, standard, etc., used to encode the content of a resource."@en .
+<http://rdaregistry.info/Elements/rof/P10004> <http://www.w3.org/2000/01/rdf-schema#label> "heeft coderingsformaat"@nl .
+<http://rdaregistry.info/Elements/rof/P10004> <http://www.w3.org/2000/01/rdf-schema#label> "koodausmuoto"@fi .
+<http://rdaregistry.info/Elements/rof/P10004> <http://www.w3.org/2004/02/skos/core#definition> "Aineiston sisällön koodaamiseen käytetty skeema, standardi tms."@fi .
+<http://rdaregistry.info/Elements/rof/P10004> <http://www.w3.org/2000/01/rdf-schema#label> "له نظام ترميز"@ar .
+<http://rdaregistry.info/Elements/rof/P10004> <http://www.w3.org/2004/02/skos/core#definition> "خطة، معيار...إلخ، للاستخدام في تكويد محتوى المصدر."@ar .
+<http://rdaregistry.info/Elements/rof/P10004> <http://www.w3.org/2000/01/rdf-schema#label> "har kodningsformat"@da .
+<http://rdaregistry.info/Elements/rof/P10004> <http://www.w3.org/2004/02/skos/core#definition> "Skema, standard etc. brugt for at kode indholdet af en ressource."@da .
+<http://rdaregistry.info/Elements/rof/P10004> <http://www.w3.org/2000/01/rdf-schema#label> "hat Kodierungsformat"@de .
+<http://rdaregistry.info/Elements/rof/P10004> <http://www.w3.org/2004/02/skos/core#definition> "Ein Schema, Standard und so weiter, das/der zum Kodieren des digitalen Inhalts einer Ressource verwendet wird."@de .
+<http://rdaregistry.info/Elements/rof/P10004> <http://www.w3.org/2000/01/rdf-schema#label> "有编码格式"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10004> <http://www.w3.org/2004/02/skos/core#definition> "用于资源内容编码的体系、标准等"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10004> <http://www.w3.org/2000/01/rdf-schema#label> "a pour format d’encodage"@fr .
+<http://rdaregistry.info/Elements/rof/P10004> <http://www.w3.org/2004/02/skos/core#definition> "Norme, schéma, etc. utilisé pour encoder le contenu d’une ressource."@fr .
+<http://rdaregistry.info/Elements/rof/P10004> <http://www.w3.org/2000/01/rdf-schema#label> "kódolási formátuma a következő:"@hu .
+<http://rdaregistry.info/Elements/rof/P10004> <http://www.w3.org/2004/02/skos/core#definition> "Séma, szabvány, stb., amit egy forrás tartalmának kódolására használnak."@hu .
+<http://rdaregistry.info/Elements/rof/P10015> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/P10015> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/P10015> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rdaregistry.info/Elements/rof/P10015> <http://www.w3.org/2000/01/rdf-schema#label> "has extension mode"@en .
+<http://rdaregistry.info/Elements/rof/P10015> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/hasExtensionMode.en> .
+<http://rdaregistry.info/Elements/rof/P10015> <http://www.w3.org/2004/02/skos/core#definition> "A means by which the content of the resource is expected to be extended after initial release."@en .
+<http://rdaregistry.info/Elements/rof/P10015> <http://www.w3.org/2000/01/rdf-schema#label> "heeft uitbreidingsmodus"@nl .
+<http://rdaregistry.info/Elements/rof/P10015> <http://www.w3.org/2004/02/skos/core#definition> "Een middel waarmee de content van de resource verwacht is uitgebreid te worden na initiële uitgave."@nl .
+<http://rdaregistry.info/Elements/rof/P10015> <http://www.w3.org/2000/01/rdf-schema#label> "laajentumisen tapa"@fi .
+<http://rdaregistry.info/Elements/rof/P10015> <http://www.w3.org/2004/02/skos/core#definition> "Tapa, jolla aineiston sisällön odotetaan laajentuvan alkuperäisen julkaisemisen jälkeen."@fi .
+<http://rdaregistry.info/Elements/rof/P10015> <http://www.w3.org/2000/01/rdf-schema#label> "له نمط إضافة أو امتداد"@ar .
+<http://rdaregistry.info/Elements/rof/P10015> <http://www.w3.org/2004/02/skos/core#definition> "وسيلة من شأنها عمل امتداد لمحتوى المصدر بعد الإطلاق الأول."@ar .
+<http://rdaregistry.info/Elements/rof/P10015> <http://www.w3.org/2000/01/rdf-schema#label> "har udvidelsestilstand"@da .
+<http://rdaregistry.info/Elements/rof/P10015> <http://www.w3.org/2004/02/skos/core#definition> "Måde, hvormed indholdet på en ressource forventes at blive udvidet efter den første udgivelse."@da .
+<http://rdaregistry.info/Elements/rof/P10015> <http://www.w3.org/2000/01/rdf-schema#label> "hat Erweiterungsform"@de .
+<http://rdaregistry.info/Elements/rof/P10015> <http://www.w3.org/2004/02/skos/core#definition> "Eine Angabe, wie der Inhalt der Ressource nach der Erstveröffentlichung voraussichtlich erweitert wird."@de .
+<http://rdaregistry.info/Elements/rof/P10015> <http://www.w3.org/2000/01/rdf-schema#label> "有扩充模式"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10015> <http://www.w3.org/2004/02/skos/core#definition> "资源初次发布后其内容预期扩充的方式"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10015> <http://www.w3.org/2000/01/rdf-schema#label> "a pour mode d’extension"@fr .
+<http://rdaregistry.info/Elements/rof/P10015> <http://www.w3.org/2004/02/skos/core#definition> "Moyen par lequel il est prévu que le contenu de la ressource soit étendu après sa mise à disposition initiale."@fr .
+<http://rdaregistry.info/Elements/rof/P10015> <http://www.w3.org/2000/01/rdf-schema#label> "közlési módja a következő:"@hu .
+<http://rdaregistry.info/Elements/rof/P10015> <http://www.w3.org/2004/02/skos/core#definition> "Módszer, amellyel a forrás tartalmát várhatóan az első közzétételt követően közlik."@hu .
+<http://rdaregistry.info/Elements/rof/P10020> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/P10020> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/P10020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rdaregistry.info/Elements/rof/P10020> <http://www.w3.org/2000/01/rdf-schema#label> "has extension requirement"@en .
+<http://rdaregistry.info/Elements/rof/P10020> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/hasExtensionRequirement.en> .
+<http://rdaregistry.info/Elements/rof/P10020> <http://www.w3.org/2004/02/skos/core#definition> "An assessment of the necessity of extension of the content of the resource after initial release for its integrity."@en .
+<http://rdaregistry.info/Elements/rof/P10020> <http://www.w3.org/2000/01/rdf-schema#label> "heeft extensie-eis"@nl .
+<http://rdaregistry.info/Elements/rof/P10020> <http://www.w3.org/2000/01/rdf-schema#label> "laajentumisen vaatimus"@fi .
+<http://rdaregistry.info/Elements/rof/P10020> <http://www.w3.org/2004/02/skos/core#definition> "Arvio aineiston sisällön laajentumisen tarpeellisuudesta sen eheydelle alkuperäisen julkaisemisen jälkeen."@fi .
+<http://rdaregistry.info/Elements/rof/P10020> <http://www.w3.org/2000/01/rdf-schema#label> "له طلب إضافة أو امتداد"@ar .
+<http://rdaregistry.info/Elements/rof/P10020> <http://www.w3.org/2004/02/skos/core#definition> "تقييم لأهمية الإضافة لمحتوى المصدر بعد النشر الأول والتي تعد تكميلية."@ar .
+<http://rdaregistry.info/Elements/rof/P10020> <http://www.w3.org/2000/01/rdf-schema#label> "har udvidelseskrav"@da .
+<http://rdaregistry.info/Elements/rof/P10020> <http://www.w3.org/2004/02/skos/core#definition> "Vurdering af nødvendigheden af udvidelse af ressourceindholdet efter første udgivelse for dets integritet."@da .
+<http://rdaregistry.info/Elements/rof/P10020> <http://www.w3.org/2000/01/rdf-schema#label> "hat Erweiterungsanforderung"@de .
+<http://rdaregistry.info/Elements/rof/P10020> <http://www.w3.org/2004/02/skos/core#definition> "Eine Festlegung, dass eine Erweiterung des Inhalts der Ressource nach der Erstveröffentlichung notwendig sein wird, um sie zu vervollständigen."@de .
+<http://rdaregistry.info/Elements/rof/P10020> <http://www.w3.org/2000/01/rdf-schema#label> "有扩充要求"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10020> <http://www.w3.org/2004/02/skos/core#definition> "资源初次发布后其内容为完整性而扩充的必要性评估"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10020> <http://www.w3.org/2000/01/rdf-schema#label> "a pour condition d’extension"@fr .
+<http://rdaregistry.info/Elements/rof/P10020> <http://www.w3.org/2004/02/skos/core#definition> "Évaluation de la nécessité d’étendre le contenu de la ressource après sa mise à disposition initiale pour en assurer l’intégrité."@fr .
+<http://rdaregistry.info/Elements/rof/P10020> <http://www.w3.org/2000/01/rdf-schema#label> "közlési követelménye a következő:"@hu .
+<http://rdaregistry.info/Elements/rof/P10020> <http://www.w3.org/2004/02/skos/core#definition> "Annak értékelése, hogy a forrás tartalmának közlésén, az integritása érdekében, az első közzétételt követően szükséges-e változtatni."@hu .
+<http://rdaregistry.info/Elements/rof/P10022> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/P10022> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/P10022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rdaregistry.info/Elements/rof/P10022> <http://www.w3.org/2000/01/rdf-schema#label> "has extension termination"@en .
+<http://rdaregistry.info/Elements/rof/P10022> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/hasExtensionTermination.en> .
+<http://rdaregistry.info/Elements/rof/P10022> <http://www.w3.org/2004/02/skos/core#definition> "An expectation as to the period of extension of the content of the resource after initial release."@en .
+<http://rdaregistry.info/Elements/rof/P10022> <http://www.w3.org/2000/01/rdf-schema#label> "heeft extensietermijn"@nl .
+<http://rdaregistry.info/Elements/rof/P10022> <http://www.w3.org/2000/01/rdf-schema#label> "laajentumisen päättyminen"@fi .
+<http://rdaregistry.info/Elements/rof/P10022> <http://www.w3.org/2004/02/skos/core#definition> "Ennuste aineiston sisällön laajentumisen ajanjaksosta alkuperäisen julkaisemisen jälkeen."@fi .
+<http://rdaregistry.info/Elements/rof/P10022> <http://www.w3.org/2000/01/rdf-schema#label> "له توقف إضافة أو امتداد"@ar .
+<http://rdaregistry.info/Elements/rof/P10022> <http://www.w3.org/2004/02/skos/core#definition> "توقع المدة الزمنية للإضافة لمحتوى المصدر بعد النشر الأول."@ar .
+<http://rdaregistry.info/Elements/rof/P10022> <http://www.w3.org/2000/01/rdf-schema#label> "har udvidelsesslut"@da .
+<http://rdaregistry.info/Elements/rof/P10022> <http://www.w3.org/2004/02/skos/core#definition> "Forventning i forhold til forlængelsesperioden for ressourceindholdet efter første udgivelse."@da .
+<http://rdaregistry.info/Elements/rof/P10022> <http://www.w3.org/2000/01/rdf-schema#label> "hat Erweiterungsabschluss"@de .
+<http://rdaregistry.info/Elements/rof/P10022> <http://www.w3.org/2004/02/skos/core#definition> "Eine Einschätzung über die Dauer der Erweiterung des Inhalts der Ressource nach der Erstveröffentlichung."@de .
+<http://rdaregistry.info/Elements/rof/P10022> <http://www.w3.org/2000/01/rdf-schema#label> "有扩充终止"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10022> <http://www.w3.org/2004/02/skos/core#definition> "关于资源初次发布后其内容扩充时期的预期"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10022> <http://www.w3.org/2000/01/rdf-schema#label> "a pour fin de l’extension"@fr .
+<http://rdaregistry.info/Elements/rof/P10022> <http://www.w3.org/2004/02/skos/core#definition> "Attente quant à la période d’extension du contenu de la ressource après sa mise à disposition initiale."@fr .
+<http://rdaregistry.info/Elements/rof/P10022> <http://www.w3.org/2000/01/rdf-schema#label> "közlés megszüntetése a következő:"@hu .
+<http://rdaregistry.info/Elements/rof/P10022> <http://www.w3.org/2004/02/skos/core#definition> "Elvárás, amely a forrás tartalmának az első közzétételt követő közlésének a periódusára vonatkozik."@hu .
+<http://rdaregistry.info/Elements/rof/P10003> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/P10003> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/P10003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rdaregistry.info/Elements/rof/P10003> <http://www.w3.org/2000/01/rdf-schema#label> "has fixation method"@en .
+<http://rdaregistry.info/Elements/rof/P10003> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/hasFixationMethod.en> .
+<http://rdaregistry.info/Elements/rof/P10003> <http://www.w3.org/2004/02/skos/core#definition> "A method or process by which the content of a resource is infixed or embedded in the carrier."@en .
+<http://rdaregistry.info/Elements/rof/P10003> <http://www.w3.org/2000/01/rdf-schema#label> "heeft fixatiemethode"@nl .
+<http://rdaregistry.info/Elements/rof/P10003> <http://www.w3.org/2000/01/rdf-schema#label> "kiinnittämismenetelmä"@fi .
+<http://rdaregistry.info/Elements/rof/P10003> <http://www.w3.org/2004/02/skos/core#definition> "Menetelmä tai prosessi, joka ajaa sisään tai upottaa aineiston sisällön tallenteeseen."@fi .
+<http://rdaregistry.info/Elements/rof/P10003> <http://www.w3.org/2000/01/rdf-schema#label> "له أسلوب تثبيت"@ar .
+<http://rdaregistry.info/Elements/rof/P10003> <http://www.w3.org/2004/02/skos/core#definition> "أسلوب أو عملية يتم من خلالها تثبيت محتوى مصدر ما أو جعله جزءًا لا يتجزأ من الحامل."@ar .
+<http://rdaregistry.info/Elements/rof/P10003> <http://www.w3.org/2000/01/rdf-schema#label> "har fikseringsmetode"@da .
+<http://rdaregistry.info/Elements/rof/P10003> <http://www.w3.org/2004/02/skos/core#definition> "Metode eller proces, hvorved indholdet af en ressource bliver inficeret eller integreret i bæreren."@da .
+<http://rdaregistry.info/Elements/rof/P10003> <http://www.w3.org/2000/01/rdf-schema#label> "hat Befestigungsmethode"@de .
+<http://rdaregistry.info/Elements/rof/P10003> <http://www.w3.org/2004/02/skos/core#definition> "Eine Methode oder ein Prozess, durch den der Inhalt einer Ressource in den Datenträger eingefügt oder eingebettet wird."@de .
+<http://rdaregistry.info/Elements/rof/P10003> <http://www.w3.org/2000/01/rdf-schema#label> "有固定方法"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10003> <http://www.w3.org/2004/02/skos/core#definition> "资源的内容被固定或嵌入载体的一种方法或过程"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10003> <http://www.w3.org/2000/01/rdf-schema#label> "a pour méthode de fixation"@fr .
+<http://rdaregistry.info/Elements/rof/P10003> <http://www.w3.org/2004/02/skos/core#definition> "Méthode ou procédé par lequel le contenu d’une ressource est fixé ou incorporé dans le support matériel."@fr .
+<http://rdaregistry.info/Elements/rof/P10003> <http://www.w3.org/2000/01/rdf-schema#label> "rögzítési módszere a következő:"@hu .
+<http://rdaregistry.info/Elements/rof/P10003> <http://www.w3.org/2004/02/skos/core#definition> "Módszer vagy eljárás, amely során a forrás tartalmát a hordozóra rögzítik, vagy bele ágyazzák."@hu .
+<http://rdaregistry.info/Elements/rof/P10006> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/P10006> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/P10006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rdaregistry.info/Elements/rof/P10006> <http://www.w3.org/2000/01/rdf-schema#label> "has fixation tool"@en .
+<http://rdaregistry.info/Elements/rof/P10006> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/hasFixationTool.en> .
+<http://rdaregistry.info/Elements/rof/P10006> <http://www.w3.org/2004/02/skos/core#definition> "A tool used to infix the content of a resource."@en .
+<http://rdaregistry.info/Elements/rof/P10006> <http://www.w3.org/2000/01/rdf-schema#label> "heeft fixatiehulpmiddel"@nl .
+<http://rdaregistry.info/Elements/rof/P10006> <http://www.w3.org/2000/01/rdf-schema#label> "kiinnittämislaite"@fi .
+<http://rdaregistry.info/Elements/rof/P10006> <http://www.w3.org/2004/02/skos/core#definition> "Laite, jota käytetään aineiston sisällön kiinnittämiseen."@fi .
+<http://rdaregistry.info/Elements/rof/P10006> <http://www.w3.org/2000/01/rdf-schema#label> "له أداة تثبيت"@ar .
+<http://rdaregistry.info/Elements/rof/P10006> <http://www.w3.org/2004/02/skos/core#definition> "أداة تستخدم لتثبيت محتوى مصدر ما."@ar .
+<http://rdaregistry.info/Elements/rof/P10006> <http://www.w3.org/2000/01/rdf-schema#label> "har fikseringsverktøj"@da .
+<http://rdaregistry.info/Elements/rof/P10006> <http://www.w3.org/2004/02/skos/core#definition> "Værktøj, der bruges til at fiksere indholdet af en ressource."@da .
+<http://rdaregistry.info/Elements/rof/P10006> <http://www.w3.org/2000/01/rdf-schema#label> "hat Befestigungsgerät"@de .
+<http://rdaregistry.info/Elements/rof/P10006> <http://www.w3.org/2004/02/skos/core#definition> "Ein Werkzeug, mit dem der Inhalt einer Ressource ergänzt werden kann."@de .
+<http://rdaregistry.info/Elements/rof/P10006> <http://www.w3.org/2000/01/rdf-schema#label> "有固定工具"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10006> <http://www.w3.org/2004/02/skos/core#definition> "用于资源内容的工具"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10006> <http://www.w3.org/2000/01/rdf-schema#label> "a pour outil de fixation"@fr .
+<http://rdaregistry.info/Elements/rof/P10006> <http://www.w3.org/2004/02/skos/core#definition> "Outil utilisé pour fixer le contenu d’une ressource."@fr .
+<http://rdaregistry.info/Elements/rof/P10006> <http://www.w3.org/2000/01/rdf-schema#label> "rögzítési eszköze a következő:"@hu .
+<http://rdaregistry.info/Elements/rof/P10006> <http://www.w3.org/2004/02/skos/core#definition> "Eszköz, amit egy forrás tartalmának rögzítésére használnak."@hu .
+<http://rdaregistry.info/Elements/rof/P10014> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/P10014> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/P10014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rdaregistry.info/Elements/rof/P10014> <http://www.w3.org/2000/01/rdf-schema#label> "has form or genre"@en .
+<http://rdaregistry.info/Elements/rof/P10014> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/hasFormOrGenre.en> .
+<http://rdaregistry.info/Elements/rof/P10014> <http://www.w3.org/2004/02/skos/core#definition> "A literary, musical, artistic, etc., form or genre associated with the content of a resource."@en .
+<http://rdaregistry.info/Elements/rof/P10014> <http://www.w3.org/2000/01/rdf-schema#label> "heeft vorm of genre"@nl .
+<http://rdaregistry.info/Elements/rof/P10014> <http://www.w3.org/2000/01/rdf-schema#label> "muoto tai genre"@fi .
+<http://rdaregistry.info/Elements/rof/P10014> <http://www.w3.org/2004/02/skos/core#definition> "Aineiston sisältöön liittyvän kirjallisuuden, musiikin, kuvataiteen tms. muoto tai genre"@fi .
+<http://rdaregistry.info/Elements/rof/P10014> <http://www.w3.org/2000/01/rdf-schema#label> "له شكل أو نوع"@ar .
+<http://rdaregistry.info/Elements/rof/P10014> <http://www.w3.org/2004/02/skos/core#definition> "شكل أو نوع أدبي، موسيقي، فني...إلخ، مرتبط بمحتوى مصدر ما."@ar .
+<http://rdaregistry.info/Elements/rof/P10014> <http://www.w3.org/2000/01/rdf-schema#label> "har form eller genre"@da .
+<http://rdaregistry.info/Elements/rof/P10014> <http://www.w3.org/2004/02/skos/core#definition> "Literær, musikalsk, artistisk etc. form eller genre, der er forbundet med indholdet af en ressource."@da .
+<http://rdaregistry.info/Elements/rof/P10014> <http://www.w3.org/2000/01/rdf-schema#label> "hat Form oder Genre"@de .
+<http://rdaregistry.info/Elements/rof/P10014> <http://www.w3.org/2004/02/skos/core#definition> "Eine literarische, musikalische, künstlerische und so weiter Form oder ein literarisches, musikalisches, künstlerisches und so weiter Genre, die/das mit dem Inhalt einer Ressource in Verbindung steht."@de .
+<http://rdaregistry.info/Elements/rof/P10014> <http://www.w3.org/2000/01/rdf-schema#label> "有体裁形式"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10014> <http://www.w3.org/2004/02/skos/core#definition> "和一种资源的内容有关的文学、音乐、艺术等的形式或体裁"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10014> <http://www.w3.org/2000/01/rdf-schema#label> "a pour forme ou genre"@fr .
+<http://rdaregistry.info/Elements/rof/P10014> <http://www.w3.org/2004/02/skos/core#definition> "Forme ou genre littéraire, musical, artistique, etc. associé au contenu d’une ressource."@fr .
+<http://rdaregistry.info/Elements/rof/P10014> <http://www.w3.org/2000/01/rdf-schema#label> "formája vagy műfaja a következő:"@hu .
+<http://rdaregistry.info/Elements/rof/P10014> <http://www.w3.org/2004/02/skos/core#definition> "Egy forrás tartalmához kapcsolódó irodalmi, művészi, stb. forma vagy műfaj."@hu .
+<http://rdaregistry.info/Elements/rof/P10009> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/P10009> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/P10009> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rdaregistry.info/Elements/rof/P10009> <http://www.w3.org/2000/01/rdf-schema#label> "has housing format"@en .
+<http://rdaregistry.info/Elements/rof/P10009> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/hasHousingFormat.en> .
+<http://rdaregistry.info/Elements/rof/P10009> <http://www.w3.org/2004/02/skos/core#definition> "The physical format of the encasing for the storage medium."@en .
+<http://rdaregistry.info/Elements/rof/P10009> <http://www.w3.org/2004/02/skos/core#scopeNote> "Applies to resources conveying content on a physical carrier. Resources conveying content by means of broadcasting or online transmission will have a HousingFormat value not applicable."@en .
+<http://rdaregistry.info/Elements/rof/P10009> <http://www.w3.org/2000/01/rdf-schema#label> "heeft behuizingsformaat"@nl .
+<http://rdaregistry.info/Elements/rof/P10009> <http://www.w3.org/2000/01/rdf-schema#label> "tallennemuoto"@fi .
+<http://rdaregistry.info/Elements/rof/P10009> <http://www.w3.org/2004/02/skos/core#definition> "Tallennusvälineen peittävä fyysinen muoto."@fi .
+<http://rdaregistry.info/Elements/rof/P10009> <http://www.w3.org/2004/02/skos/core#scopeNote> "Soveltuu aineistoihin, joiden sisällön välittää fyysinen tallenne. Tallennemuodon arvo on ei-sovellettavissa aineistoissa, joiden sisältö välittyy joukkotiedotuksen tai verkon kautta."@fi .
+<http://rdaregistry.info/Elements/rof/P10009> <http://www.w3.org/2000/01/rdf-schema#label> "له صيغة غلاف"@ar .
+<http://rdaregistry.info/Elements/rof/P10009> <http://www.w3.org/2004/02/skos/core#definition> "الصيغة المادية لغطاء وسيط الاختزان"@ar .
+<http://rdaregistry.info/Elements/rof/P10009> <http://www.w3.org/2004/02/skos/core#scopeNote> "ينطبق على المصادر التي تعرض المحتوى على حامل مادي. لا تنطبق قيمة \"صيغة غلاف HousingFormat\" على المصادر التي تعرض المحتوى من خلال البث أو البث عبر الإنترنت."@ar .
+<http://rdaregistry.info/Elements/rof/P10009> <http://www.w3.org/2000/01/rdf-schema#label> "indkapslingsformat"@da .
+<http://rdaregistry.info/Elements/rof/P10009> <http://www.w3.org/2004/02/skos/core#definition> "Det fysiske format på indkapslingen af lagringsmediet."@da .
+<http://rdaregistry.info/Elements/rof/P10009> <http://www.w3.org/2004/02/skos/core#scopeNote> "Gælder for ressourcer, der formidler indhold på en fysisk bærer. Ressourcer, der formidler indhold ved udsendelse eller online transmission har et indkapslingsformat-værdi der ikke er relevant."@da .
+<http://rdaregistry.info/Elements/rof/P10009> <http://www.w3.org/2000/01/rdf-schema#label> "hat Format des Gehäuses"@de .
+<http://rdaregistry.info/Elements/rof/P10009> <http://www.w3.org/2004/02/skos/core#definition> "Die physische Form des Gehäuses für das Speichermedium."@de .
+<http://rdaregistry.info/Elements/rof/P10009> <http://www.w3.org/2004/02/skos/core#scopeNote> "Dies trifft auf Ressourcen zu, die Inhalte auf einem physischen Datenträger vermitteln. Für Ressourcen, die Inhalte durch Hörfunk- oder Online-Übertragung vermitteln, wird der Wert nicht anwendbar vergeben."@de .
+<http://rdaregistry.info/Elements/rof/P10009> <http://www.w3.org/2000/01/rdf-schema#label> "有容纳格式"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10009> <http://www.w3.org/2004/02/skos/core#definition> "作为储存媒介封套的物理格式"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10009> <http://www.w3.org/2004/02/skos/core#scopeNote> "适用于在物理载体上传递内容的资源。通过广播或联机传输传递内容的资源有“容纳格式”(HousingFormat)不适用的取值。"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10009> <http://www.w3.org/2000/01/rdf-schema#label> "a pour format du contenant"@fr .
+<http://rdaregistry.info/Elements/rof/P10009> <http://www.w3.org/2004/02/skos/core#definition> "Format physique du logement du support de stockage."@fr .
+<http://rdaregistry.info/Elements/rof/P10009> <http://www.w3.org/2004/02/skos/core#scopeNote> "S’applique aux ressources qui communiquent un contenu sur un support matériel physique. Pour les ressources qui communiquent un contenu par radiodiffusion ou transmission en ligne, la valeur de l’attribut FormatDuContenant est sans objet."@fr .
+<http://rdaregistry.info/Elements/rof/P10009> <http://www.w3.org/2000/01/rdf-schema#label> "tárolóelem-formátuma a következő:"@hu .
+<http://rdaregistry.info/Elements/rof/P10009> <http://www.w3.org/2004/02/skos/core#definition> "A tárolási médium burkolatának fizikai formátuma."@hu .
+<http://rdaregistry.info/Elements/rof/P10009> <http://www.w3.org/2004/02/skos/core#scopeNote> "Azon forrásoknál alkalmazzák, amelyek tartalmát fizikai hordozón adják át. Azon források esetében, amelyek tartalmukat műsorszórás vagy online adatátvitel útján adják át, a TárolóelemFormátum érték nem alkalmazható."@hu .
+<http://rdaregistry.info/Elements/rof/P10024> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/P10024> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/P10024> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rdaregistry.info/Elements/rof/P10024> <http://www.w3.org/2000/01/rdf-schema#label> "has image dimensionality"@en .
+<http://rdaregistry.info/Elements/rof/P10024> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/hasImageDimensionality.en> .
+<http://rdaregistry.info/Elements/rof/P10024> <http://www.w3.org/2004/02/skos/core#definition> "The number of spatial dimensions in which the image content of a resource is intended to be perceived."@en .
+<http://rdaregistry.info/Elements/rof/P10024> <http://www.w3.org/2004/02/skos/core#scopeNote> "Applies only to content with a Character value image."@en .
+<http://rdaregistry.info/Elements/rof/P10024> <http://www.w3.org/2000/01/rdf-schema#label> "heeft beelddimensie"@nl .
+<http://rdaregistry.info/Elements/rof/P10024> <http://www.w3.org/2000/01/rdf-schema#label> "kuvan ulottuvuus"@fi .
+<http://rdaregistry.info/Elements/rof/P10024> <http://www.w3.org/2004/02/skos/core#definition> "Tilan ulottuvuuksien määrä, jolla aineiston kuvasisältö oletetaan vastaanotettavan."@fi .
+<http://rdaregistry.info/Elements/rof/P10024> <http://www.w3.org/2004/02/skos/core#scopeNote> "Soveltuu vain aineistolle, jonka Ominaislaadun arvona on kuva."@fi .
+<http://rdaregistry.info/Elements/rof/P10024> <http://www.w3.org/2000/01/rdf-schema#label> "له أبعاد للصورة"@ar .
+<http://rdaregistry.info/Elements/rof/P10024> <http://www.w3.org/2004/02/skos/core#definition> "الأبعاد المكانية والتي يكون من خلالها إدراك أو فهم المحتوى المصوَر لمصدر ما."@ar .
+<http://rdaregistry.info/Elements/rof/P10024> <http://www.w3.org/2004/02/skos/core#scopeNote> "ينطبق فقط على محتوى له صورة لقيم التمثيلات."@ar .
+<http://rdaregistry.info/Elements/rof/P10024> <http://www.w3.org/2000/01/rdf-schema#label> "har billeddimensionalitet"@da .
+<http://rdaregistry.info/Elements/rof/P10024> <http://www.w3.org/2004/02/skos/core#definition> "Antallet af rumlige dimensioner, hvor billedindeholdet i en ressource er beregnet til at blive opfattet."@da .
+<http://rdaregistry.info/Elements/rof/P10024> <http://www.w3.org/2004/02/skos/core#scopeNote> "Omfatter kun indhold med et tegnværdibillede."@da .
+<http://rdaregistry.info/Elements/rof/P10024> <http://www.w3.org/2000/01/rdf-schema#label> "hat Dimensionalität eines Bilds"@de .
+<http://rdaregistry.info/Elements/rof/P10024> <http://www.w3.org/2004/02/skos/core#definition> "Die Anzahl der räumlichen Dimensionen, in denen der Bildinhalt einer Ressource wahrgenommen werden soll."@de .
+<http://rdaregistry.info/Elements/rof/P10024> <http://www.w3.org/2004/02/skos/core#scopeNote> "Dies trifft nur auf Inhalte zu, für die als Art der Wert Bild vergeben wurde."@de .
+<http://rdaregistry.info/Elements/rof/P10024> <http://www.w3.org/2000/01/rdf-schema#label> "有图像的维度"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10024> <http://www.w3.org/2004/02/skos/core#definition> "资源的图像内容设计被感知的空间维度数"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10024> <http://www.w3.org/2004/02/skos/core#scopeNote> "只适用于“角色”取值为图像的内容"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10024> <http://www.w3.org/2000/01/rdf-schema#label> "a pour dimensionnalité de l’image"@fr .
+<http://rdaregistry.info/Elements/rof/P10024> <http://www.w3.org/2004/02/skos/core#definition> "Nombre de dimensions spatiales au travers desquelles le contenu visuel d’une ressource est destiné à être perçu."@fr .
+<http://rdaregistry.info/Elements/rof/P10024> <http://www.w3.org/2004/02/skos/core#scopeNote> "S’applique uniquement au contenu ayant une valeur image pour l’attribut Caractère."@fr .
+<http://rdaregistry.info/Elements/rof/P10024> <http://www.w3.org/2000/01/rdf-schema#label> "kép kiterjedése a következő:"@hu .
+<http://rdaregistry.info/Elements/rof/P10024> <http://www.w3.org/2004/02/skos/core#definition> "Azon térbeli dimenziószám, amelyben egy forrás képtartalma a kívánt módon érzékelhető."@hu .
+<http://rdaregistry.info/Elements/rof/P10024> <http://www.w3.org/2004/02/skos/core#scopeNote> "Kizárólag akkor alkalmazható tartalmaknál, ha a „Jelleg” értéke „kép”."@hu .
+<http://rdaregistry.info/Elements/rof/P10025> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/P10025> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/P10025> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rdaregistry.info/Elements/rof/P10025> <http://www.w3.org/2000/01/rdf-schema#label> "has image movement"@en .
+<http://rdaregistry.info/Elements/rof/P10025> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/hasImageMovement.en> .
+<http://rdaregistry.info/Elements/rof/P10025> <http://www.w3.org/2004/02/skos/core#definition> "The perceived presence or absence of movement in the image content of a resource."@en .
+<http://rdaregistry.info/Elements/rof/P10025> <http://www.w3.org/2004/02/skos/core#scopeNote> "Applies only to content with a Character value image."@en .
+<http://rdaregistry.info/Elements/rof/P10025> <http://www.w3.org/2000/01/rdf-schema#label> "heeft beeldbeweging"@nl .
+<http://rdaregistry.info/Elements/rof/P10025> <http://www.w3.org/2000/01/rdf-schema#label> "kuvan liikkuvuus"@fi .
+<http://rdaregistry.info/Elements/rof/P10025> <http://www.w3.org/2004/02/skos/core#definition> "Aineiston kuvasisällössä havaittava liike tai sen puuttuminen."@fi .
+<http://rdaregistry.info/Elements/rof/P10025> <http://www.w3.org/2004/02/skos/core#scopeNote> "Soveltuu vain aineistolle, jonka ominaislaadun arvona on kuva."@fi .
+<http://rdaregistry.info/Elements/rof/P10025> <http://www.w3.org/2000/01/rdf-schema#label> "له حركة صورة"@ar .
+<http://rdaregistry.info/Elements/rof/P10025> <http://www.w3.org/2004/02/skos/core#definition> "إدراك وجود أو عدم وجود الحركة في المحتوى المصوَر لمصدر ما."@ar .
+<http://rdaregistry.info/Elements/rof/P10025> <http://www.w3.org/2004/02/skos/core#scopeNote> "ينطبق فقط على محتوى له صورة لقيم التمثيلات."@ar .
+<http://rdaregistry.info/Elements/rof/P10025> <http://www.w3.org/2000/01/rdf-schema#label> "har billedbevægelse"@da .
+<http://rdaregistry.info/Elements/rof/P10025> <http://www.w3.org/2004/02/skos/core#definition> "Den opfattede tilstedeværelse eller fravær af bevægelse i billedindholdet i en ressource."@da .
+<http://rdaregistry.info/Elements/rof/P10025> <http://www.w3.org/2004/02/skos/core#scopeNote> "Omfatter kun indhold med et tegnværdibillede."@da .
+<http://rdaregistry.info/Elements/rof/P10025> <http://www.w3.org/2000/01/rdf-schema#label> "hat Bildbewegung"@de .
+<http://rdaregistry.info/Elements/rof/P10025> <http://www.w3.org/2004/02/skos/core#definition> "Das wahrgenommene Vorhandensein beziehungsweise nicht Vorhandensein von Bewegung im Bildinhalt einer Ressource."@de .
+<http://rdaregistry.info/Elements/rof/P10025> <http://www.w3.org/2004/02/skos/core#scopeNote> "Dies trifft nur auf Inhalte zu, für die als Art der Wert Bild vergeben wurde."@de .
+<http://rdaregistry.info/Elements/rof/P10025> <http://www.w3.org/2000/01/rdf-schema#label> "有图像运动"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10025> <http://www.w3.org/2004/02/skos/core#definition> "资源的图像内容是否有被感知的运动"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10025> <http://www.w3.org/2004/02/skos/core#scopeNote> "只适用于“角色”取值为图像的内容"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10025> <http://www.w3.org/2000/01/rdf-schema#label> "a pour mouvement de l’image"@fr .
+<http://rdaregistry.info/Elements/rof/P10025> <http://www.w3.org/2004/02/skos/core#definition> "Présence ou absence perceptibles de mouvement dans le contenu visuel d’une ressource."@fr .
+<http://rdaregistry.info/Elements/rof/P10025> <http://www.w3.org/2004/02/skos/core#scopeNote> "S’applique uniquement au contenu ayant une valeur image pour l’attribut Caractère."@fr .
+<http://rdaregistry.info/Elements/rof/P10025> <http://www.w3.org/2000/01/rdf-schema#label> "kép mozgása a következő:"@hu .
+<http://rdaregistry.info/Elements/rof/P10025> <http://www.w3.org/2004/02/skos/core#definition> "Egy forrás képtartalmának jelenlétére vagy hiányára vonatkozó érzékelés."@hu .
+<http://rdaregistry.info/Elements/rof/P10025> <http://www.w3.org/2004/02/skos/core#scopeNote> "Kizárólag akkor alkalmazható tartalmaknál, ha a „Jelleg” értéke „kép”."@hu .
+<http://rdaregistry.info/Elements/rof/P10011> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/P10011> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/P10011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rdaregistry.info/Elements/rof/P10011> <http://www.w3.org/2000/01/rdf-schema#label> "has interaction"@en .
+<http://rdaregistry.info/Elements/rof/P10011> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/hasInteraction.en> .
+<http://rdaregistry.info/Elements/rof/P10011> <http://www.w3.org/2004/02/skos/core#definition> "A capacity to respond to actions performed by the user in relation to the content of the resource."@en .
+<http://rdaregistry.info/Elements/rof/P10011> <http://www.w3.org/2000/01/rdf-schema#label> "heeft interactie"@nl .
+<http://rdaregistry.info/Elements/rof/P10011> <http://www.w3.org/2004/02/skos/core#definition> "Een hoedanigheid om te reageren op acties uitgevoerd door de gebruiker in relatie tot de content van de resource."@nl .
+<http://rdaregistry.info/Elements/rof/P10011> <http://www.w3.org/2000/01/rdf-schema#label> "vuorovaikutus"@fi .
+<http://rdaregistry.info/Elements/rof/P10011> <http://www.w3.org/2004/02/skos/core#definition> "Kyky vastata aineiston sisältöön yhteydessä olevan käyttäjän toimintoihin."@fi .
+<http://rdaregistry.info/Elements/rof/P10011> <http://www.w3.org/2000/01/rdf-schema#label> "له علاقة تبادلية"@ar .
+<http://rdaregistry.info/Elements/rof/P10011> <http://www.w3.org/2004/02/skos/core#definition> "القدرة على الاستجابة لأفعال المستخدِم فيما يتعلق بمحتوى المصدر."@ar .
+<http://rdaregistry.info/Elements/rof/P10011> <http://www.w3.org/2000/01/rdf-schema#label> "har interaktion"@da .
+<http://rdaregistry.info/Elements/rof/P10011> <http://www.w3.org/2004/02/skos/core#definition> "Kapacitet til at reagere på handlinger udført af brugeren i forhold til ressourcens indhold."@da .
+<http://rdaregistry.info/Elements/rof/P10011> <http://www.w3.org/2000/01/rdf-schema#label> "hat Interaktion"@de .
+<http://rdaregistry.info/Elements/rof/P10011> <http://www.w3.org/2004/02/skos/core#definition> "Eine Funktion, auf Aktionen des Benutzenden in Bezug auf den Inhalt der Ressource zu reagieren."@de .
+<http://rdaregistry.info/Elements/rof/P10011> <http://www.w3.org/2000/01/rdf-schema#label> "有交互功能"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10011> <http://www.w3.org/2004/02/skos/core#definition> "响应使用者所实施的与资源内容有关的行动的能力"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10011> <http://www.w3.org/2000/01/rdf-schema#label> "a pour interaction"@fr .
+<http://rdaregistry.info/Elements/rof/P10011> <http://www.w3.org/2004/02/skos/core#definition> "Capacité à répondre aux actions effectuées par l’usager en rapport avec le contenu de la ressource."@fr .
+<http://rdaregistry.info/Elements/rof/P10011> <http://www.w3.org/2000/01/rdf-schema#label> "interakciója a következő:"@hu .
+<http://rdaregistry.info/Elements/rof/P10011> <http://www.w3.org/2004/02/skos/core#definition> "Adottság, amely által képes válaszolni a felhasználó által végrehajtott műveletekre."@hu .
+<http://rdaregistry.info/Elements/rof/P10002> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/P10002> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/P10002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rdaregistry.info/Elements/rof/P10002> <http://www.w3.org/2000/01/rdf-schema#label> "has intermediation method"@en .
+<http://rdaregistry.info/Elements/rof/P10002> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/hasIntermediationMethod.en> .
+<http://rdaregistry.info/Elements/rof/P10002> <http://www.w3.org/2004/02/skos/core#definition> "A method intended to be applied to the carrier to allow the content of the resource to be perceived."@en .
+<http://rdaregistry.info/Elements/rof/P10002> <http://www.w3.org/2000/01/rdf-schema#label> "heeft bemiddelingsmethode"@nl .
+<http://rdaregistry.info/Elements/rof/P10002> <http://www.w3.org/2000/01/rdf-schema#label> "välittävä menetelmä"@fi .
+<http://rdaregistry.info/Elements/rof/P10002> <http://www.w3.org/2004/02/skos/core#definition> "Menetelmä, joka on tarkoitettu sovellettavan tallenteeseen aineiston sisällön vastaanottamiseksi."@fi .
+<http://rdaregistry.info/Elements/rof/P10002> <http://www.w3.org/2000/01/rdf-schema#label> "له أسلوب وسيط"@ar .
+<http://rdaregistry.info/Elements/rof/P10002> <http://www.w3.org/2004/02/skos/core#definition> "أسلوب يُعتزم تطبيقه على الحامل من أجل السماح بإدراك أو فهم محتوى المصدر."@ar .
+<http://rdaregistry.info/Elements/rof/P10002> <http://www.w3.org/2000/01/rdf-schema#label> "har formidlingsmetode"@da .
+<http://rdaregistry.info/Elements/rof/P10002> <http://www.w3.org/2004/02/skos/core#definition> "Metode afset at blive anvendt på bæreren for at tillade, at man kan opfatte ressourcens indhold."@da .
+<http://rdaregistry.info/Elements/rof/P10002> <http://www.w3.org/2000/01/rdf-schema#label> "hat Vermittlungsmethode"@de .
+<http://rdaregistry.info/Elements/rof/P10002> <http://www.w3.org/2004/02/skos/core#definition> "Eine Methode, die auf den Datenträger angewendet werden soll, damit der Inhalt der Ressource wahrgenommen werden kann."@de .
+<http://rdaregistry.info/Elements/rof/P10002> <http://www.w3.org/2000/01/rdf-schema#label> "有中介方法"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10002> <http://www.w3.org/2004/02/skos/core#definition> "设计应用于载体以允许资源的内容被感知的一种方法"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10002> <http://www.w3.org/2000/01/rdf-schema#label> "a pour méthode de médiation"@fr .
+<http://rdaregistry.info/Elements/rof/P10002> <http://www.w3.org/2004/02/skos/core#definition> "Méthode destinée à être appliquée au support matériel pour permettre de percevoir le contenu de la ressource."@fr .
+<http://rdaregistry.info/Elements/rof/P10002> <http://www.w3.org/2000/01/rdf-schema#label> "közvetítő módszere a következő:"@hu .
+<http://rdaregistry.info/Elements/rof/P10002> <http://www.w3.org/2004/02/skos/core#definition> "A hordozóra alkalmazandó módszer, amely lehetővé teszi a forrás tartalmának érzékelését."@hu .
+<http://rdaregistry.info/Elements/rof/P10005> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/P10005> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/P10005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rdaregistry.info/Elements/rof/P10005> <http://www.w3.org/2000/01/rdf-schema#label> "has intermediation tool"@en .
+<http://rdaregistry.info/Elements/rof/P10005> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/hasIntermediationTool.en> .
+<http://rdaregistry.info/Elements/rof/P10005> <http://www.w3.org/2004/02/skos/core#definition> "A tool intended to be applied to the carrier to enable the content of the resource to be perceived."@en .
+<http://rdaregistry.info/Elements/rof/P10005> <http://www.w3.org/2004/02/skos/core#scopeNote> "IntermediationTool identifies any physical or digital tool required to enable the resource content to be perceived as intended, including tools required to decode, decrypt or otherwise circumvent security measures."@en .
+<http://rdaregistry.info/Elements/rof/P10005> <http://www.w3.org/2000/01/rdf-schema#label> "heeft bemiddelingshulpmiddel"@nl .
+<http://rdaregistry.info/Elements/rof/P10005> <http://www.w3.org/2000/01/rdf-schema#label> "välittävä laite"@fi .
+<http://rdaregistry.info/Elements/rof/P10005> <http://www.w3.org/2004/02/skos/core#definition> "Laite, joka on tarkoitettu tallenteen käyttöön aineiston sisällön vastaanottamiseksi."@fi .
+<http://rdaregistry.info/Elements/rof/P10005> <http://www.w3.org/2004/02/skos/core#scopeNote> "Välittävä laite on fyysinen tai digitaalinen väline, jota tarvitaan aineiston sisällön tarkoituksenmukaiseen vastaanottamiseen, mukaan lukien laitteet, joita tarvitaan koodin tai salauksen purkamiseen tai muunlaiseen turvajärjestelyiden kiertämiseen."@fi .
+<http://rdaregistry.info/Elements/rof/P10005> <http://www.w3.org/2000/01/rdf-schema#label> "له أداة وسيط"@ar .
+<http://rdaregistry.info/Elements/rof/P10005> <http://www.w3.org/2004/02/skos/core#definition> "أداة يُعتزم استخدامها مع الحامل بهدف إدراك أو فهم محتوى المصدر."@ar .
+<http://rdaregistry.info/Elements/rof/P10005> <http://www.w3.org/2004/02/skos/core#scopeNote> "تُحدد أداة وسيط IntermediationTool أي أداة في صورتها المادية أو الرقمية وذلك بهدف إدراك أو فهم محتوى المصدر كما ينبغي، ويشمل ذلك الأدوات المطلوبة لفك ترميز، أو فك تشفير، أو بالأحرى اختراق التدابير الأمنية."@ar .
+<http://rdaregistry.info/Elements/rof/P10005> <http://www.w3.org/2000/01/rdf-schema#label> "har formidlingsverktøj"@da .
+<http://rdaregistry.info/Elements/rof/P10005> <http://www.w3.org/2004/02/skos/core#definition> "Verktøj afset at bruges på bæreren for at muliggøre at indholdet på ressourcen bliver opfattet."@da .
+<http://rdaregistry.info/Elements/rof/P10005> <http://www.w3.org/2004/02/skos/core#scopeNote> "Formidlingsverktøj identificerer ethvert fysisk eller digitalt verktøj, der er nødvendigt for at sætte ressourceindholdet i stand til at opfattes som tiltænkt, herunder verktøjer, der kræves for at afkode, dekryptere eller på anden måde"@da .
+<http://rdaregistry.info/Elements/rof/P10005> <http://www.w3.org/2000/01/rdf-schema#label> "hat Vermittlungsgerät"@de .
+<http://rdaregistry.info/Elements/rof/P10005> <http://www.w3.org/2004/02/skos/core#definition> "Ein Hilfsmittel, mit dem der Datenträger angewendet werden soll, damit der Inhalt der Ressource wahrgenommen werden kann."@de .
+<http://rdaregistry.info/Elements/rof/P10005> <http://www.w3.org/2004/02/skos/core#scopeNote> "Das Vermittlungsgerät bezeichnet jedes physische oder digitale Hilfsmittel, das erforderlich ist, um den Inhalt der Ressource bestimmungsgemäß wahrnehmen zu können, einschließlich der Werkzeuge, die zur Entschlüsselung, Dekodierung oder sonstigen Umgehung von Sicherheitsmaßnahmen erforderlich sind."@de .
+<http://rdaregistry.info/Elements/rof/P10005> <http://www.w3.org/2000/01/rdf-schema#label> "有中介工具"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10005> <http://www.w3.org/2004/02/skos/core#definition> "设计应用于载体以使得资源的内容被感知的一种工具"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10005> <http://www.w3.org/2004/02/skos/core#scopeNote> "“中介工具”(IntermediationTool)标识任何使得资源内容能按设计意图被感知所必须的物理或数字工具，包括解码、解密或其他规避安全措施所必须的工具。"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10005> <http://www.w3.org/2000/01/rdf-schema#label> "a pour outil de médiation"@fr .
+<http://rdaregistry.info/Elements/rof/P10005> <http://www.w3.org/2004/02/skos/core#definition> "Outil destiné à être employé avec le support matériel pour permettre de percevoir le contenu de la ressource."@fr .
+<http://rdaregistry.info/Elements/rof/P10005> <http://www.w3.org/2004/02/skos/core#scopeNote> "OutilDeMédiation identifie tout outil physique ou numérique nécessaire pour permettre de percevoir le contenu de la ressource comme prévu, y compris les outils nécessaires pour décoder, décrypter ou contourner de toute autre manière les mesures de sécurité."@fr .
+<http://rdaregistry.info/Elements/rof/P10005> <http://www.w3.org/2000/01/rdf-schema#label> "közvetítő eszköze a következő:"@hu .
+<http://rdaregistry.info/Elements/rof/P10005> <http://www.w3.org/2004/02/skos/core#definition> "A hordozóra alkalmazandó eszköz, amely lehetővé teszi a forrás tartalmának érzékelését."@hu .
+<http://rdaregistry.info/Elements/rof/P10005> <http://www.w3.org/2004/02/skos/core#scopeNote> "A KözvetítőEszköz azonosít bármilyen fizikai vagy digitális eszközt, amely a forrás tartalmának érzékeléséhez szükséges, beleértve a dekódoláshoz, a titkosítás vagy egyéb biztonsági megoldás feloldolásához szükséges eszközöket."@hu .
+<http://rdaregistry.info/Elements/rof/P10019> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/P10019> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/P10019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rdaregistry.info/Elements/rof/P10019> <http://www.w3.org/2000/01/rdf-schema#label> "has purpose"@en .
+<http://rdaregistry.info/Elements/rof/P10019> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/hasPurpose.en> .
+<http://rdaregistry.info/Elements/rof/P10019> <http://www.w3.org/2004/02/skos/core#definition> "A use for which the content of a resource is intended."@en .
+<http://rdaregistry.info/Elements/rof/P10019> <http://www.w3.org/2000/01/rdf-schema#label> "heeft doel"@nl .
+<http://rdaregistry.info/Elements/rof/P10019> <http://www.w3.org/2000/01/rdf-schema#label> "tarkoitus"@fi .
+<http://rdaregistry.info/Elements/rof/P10019> <http://www.w3.org/2004/02/skos/core#definition> "Aineiston sisällön käyttötarkoitus."@fi .
+<http://rdaregistry.info/Elements/rof/P10019> <http://www.w3.org/2000/01/rdf-schema#label> "له هدف"@ar .
+<http://rdaregistry.info/Elements/rof/P10019> <http://www.w3.org/2004/02/skos/core#definition> "الاستخدام المخصص من أجله محتوى مصدر ما."@ar .
+<http://rdaregistry.info/Elements/rof/P10019> <http://www.w3.org/2000/01/rdf-schema#label> "har formål"@da .
+<http://rdaregistry.info/Elements/rof/P10019> <http://www.w3.org/2004/02/skos/core#definition> "Anvendelse, som indholdet af en ressource er beregnet til."@da .
+<http://rdaregistry.info/Elements/rof/P10019> <http://www.w3.org/2000/01/rdf-schema#label> "hat Ziel"@de .
+<http://rdaregistry.info/Elements/rof/P10019> <http://www.w3.org/2004/02/skos/core#definition> "Eine Verwendung, für die der Inhalt einer Ressource bestimmt ist."@de .
+<http://rdaregistry.info/Elements/rof/P10019> <http://www.w3.org/2000/01/rdf-schema#label> "有目的"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10019> <http://www.w3.org/2004/02/skos/core#definition> "资源内容的设计用途"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10019> <http://www.w3.org/2000/01/rdf-schema#label> "a pour objectif"@fr .
+<http://rdaregistry.info/Elements/rof/P10019> <http://www.w3.org/2004/02/skos/core#definition> "Usage auquel le contenu d’une ressource est destiné."@fr .
+<http://rdaregistry.info/Elements/rof/P10019> <http://www.w3.org/2000/01/rdf-schema#label> "célja a következő:"@hu .
+<http://rdaregistry.info/Elements/rof/P10019> <http://www.w3.org/2004/02/skos/core#definition> "A forrás tartalmának adott szándék szerinti felhasználása."@hu .
+<http://rdaregistry.info/Elements/rof/P10016> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/P10016> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/P10016> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rdaregistry.info/Elements/rof/P10016> <http://www.w3.org/2000/01/rdf-schema#label> "has revision mode"@en .
+<http://rdaregistry.info/Elements/rof/P10016> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/hasRevisionMode.en> .
+<http://rdaregistry.info/Elements/rof/P10016> <http://www.w3.org/2004/02/skos/core#definition> "A means by which the content of the resource is expected to be revised after initial release."@en .
+<http://rdaregistry.info/Elements/rof/P10016> <http://www.w3.org/2000/01/rdf-schema#label> "heeft herzieningsmodus"@nl .
+<http://rdaregistry.info/Elements/rof/P10016> <http://www.w3.org/2004/02/skos/core#definition> "Een middel waarmee de content van de resource verwacht is herzien te worden na initiële uitgave."@nl .
+<http://rdaregistry.info/Elements/rof/P10016> <http://www.w3.org/2000/01/rdf-schema#label> "uudistumisen tapa"@fi .
+<http://rdaregistry.info/Elements/rof/P10016> <http://www.w3.org/2004/02/skos/core#definition> "Tapa, jolla aineiston sisällön odotetaan uudistuvan alkuperäisen julkaisemisen jälkeen."@fi .
+<http://rdaregistry.info/Elements/rof/P10016> <http://www.w3.org/2000/01/rdf-schema#label> "له نمط مراجعة"@ar .
+<http://rdaregistry.info/Elements/rof/P10016> <http://www.w3.org/2004/02/skos/core#definition> "وسيلة من شأنها عمل مراجعة لمحتوى المصدر بعد الإطلاق الأول."@ar .
+<http://rdaregistry.info/Elements/rof/P10016> <http://www.w3.org/2000/01/rdf-schema#label> "har revisionstilstand"@da .
+<http://rdaregistry.info/Elements/rof/P10016> <http://www.w3.org/2004/02/skos/core#definition> "Måde, hvormed indholdet på en ressource forventes at blive revideret efter den første udgivelse."@da .
+<http://rdaregistry.info/Elements/rof/P10016> <http://www.w3.org/2000/01/rdf-schema#label> "hat Überarbeitungsmodus"@de .
+<http://rdaregistry.info/Elements/rof/P10016> <http://www.w3.org/2004/02/skos/core#definition> "Eine Angabe, wie der Inhalt der Ressource nach der Erstveröffentlichung voraussichtlich überarbeitet wird."@de .
+<http://rdaregistry.info/Elements/rof/P10016> <http://www.w3.org/2000/01/rdf-schema#label> "有修订模式"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10016> <http://www.w3.org/2004/02/skos/core#definition> "资源初次发布后其内容预期修订的方式"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10016> <http://www.w3.org/2000/01/rdf-schema#label> "a pour mode de révision"@fr .
+<http://rdaregistry.info/Elements/rof/P10016> <http://www.w3.org/2004/02/skos/core#definition> "Moyen par lequel il est prévu que le contenu de la ressource soit révisé après sa mise à disposition initiale."@fr .
+<http://rdaregistry.info/Elements/rof/P10016> <http://www.w3.org/2000/01/rdf-schema#label> "átdolgozás módja a következő:"@hu .
+<http://rdaregistry.info/Elements/rof/P10016> <http://www.w3.org/2004/02/skos/core#definition> "Módszer, amellyel a forrás tartalmát várhatóan átdolgozzák az első közzétételt követően."@hu .
+<http://rdaregistry.info/Elements/rof/P10021> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/P10021> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/P10021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rdaregistry.info/Elements/rof/P10021> <http://www.w3.org/2000/01/rdf-schema#label> "has revision requirement"@en .
+<http://rdaregistry.info/Elements/rof/P10021> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/hasRevisionRequirement.en> .
+<http://rdaregistry.info/Elements/rof/P10021> <http://www.w3.org/2004/02/skos/core#definition> "An assessment of the necessity of revision of the content of the resource after initial release for its integrity."@en .
+<http://rdaregistry.info/Elements/rof/P10021> <http://www.w3.org/2000/01/rdf-schema#label> "heeft herzieningseis"@nl .
+<http://rdaregistry.info/Elements/rof/P10021> <http://www.w3.org/2000/01/rdf-schema#label> "uudistamisen vaatimus"@fi .
+<http://rdaregistry.info/Elements/rof/P10021> <http://www.w3.org/2004/02/skos/core#definition> "Arvio aineiston sisällön uudistumisen tarpeellisuudesta sen eheydelle alkuperäisen julkaisemisen jälkeen."@fi .
+<http://rdaregistry.info/Elements/rof/P10021> <http://www.w3.org/2000/01/rdf-schema#label> "له طلب مراجعة"@ar .
+<http://rdaregistry.info/Elements/rof/P10021> <http://www.w3.org/2004/02/skos/core#definition> "تقييم لأهمية مراجعة محتوى المصدر بعد النشر الأول والتي تعد تكميلية."@ar .
+<http://rdaregistry.info/Elements/rof/P10021> <http://www.w3.org/2000/01/rdf-schema#label> "har revisionskrav"@da .
+<http://rdaregistry.info/Elements/rof/P10021> <http://www.w3.org/2004/02/skos/core#definition> "Vurdering af nødvendigheden af revision af ressourceindholdet efter første udgivelse for dets integritet."@da .
+<http://rdaregistry.info/Elements/rof/P10021> <http://www.w3.org/2000/01/rdf-schema#label> "hat Überarbeitungsanforderung"@de .
+<http://rdaregistry.info/Elements/rof/P10021> <http://www.w3.org/2004/02/skos/core#definition> "Eine Festlegung, dass eine Überarbeitung des Inhalts der Ressource nach der Erstveröffentlichung notwendig sein wird, um sie zu vervollständigen."@de .
+<http://rdaregistry.info/Elements/rof/P10021> <http://www.w3.org/2000/01/rdf-schema#label> "有修订要求"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10021> <http://www.w3.org/2004/02/skos/core#definition> "资源初次发布后其内容为完整性而修订的必要性评估"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10021> <http://www.w3.org/2000/01/rdf-schema#label> "a pour condition de révision"@fr .
+<http://rdaregistry.info/Elements/rof/P10021> <http://www.w3.org/2004/02/skos/core#definition> "Évaluation de la nécessité de réviser le contenu de la ressource après sa mise à disposition initiale pour en assurer l’intégrité."@fr .
+<http://rdaregistry.info/Elements/rof/P10021> <http://www.w3.org/2000/01/rdf-schema#label> "átdolgozás követelménye a következő:"@hu .
+<http://rdaregistry.info/Elements/rof/P10021> <http://www.w3.org/2004/02/skos/core#definition> "Annak értékelése, hogy a forrás tartalmát, az integritása érdekében, az első közzétételt követően szükséges-e átdolgozni."@hu .
+<http://rdaregistry.info/Elements/rof/P10023> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/P10023> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/P10023> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rdaregistry.info/Elements/rof/P10023> <http://www.w3.org/2000/01/rdf-schema#label> "has revision termination"@en .
+<http://rdaregistry.info/Elements/rof/P10023> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/hasRevisionTermination.en> .
+<http://rdaregistry.info/Elements/rof/P10023> <http://www.w3.org/2004/02/skos/core#definition> "An expectation as to the period of revision of the content of the resource after initial release."@en .
+<http://rdaregistry.info/Elements/rof/P10023> <http://www.w3.org/2000/01/rdf-schema#label> "heeft herzieningstermijn"@nl .
+<http://rdaregistry.info/Elements/rof/P10023> <http://www.w3.org/2000/01/rdf-schema#label> "uudistumisen päättyminen"@fi .
+<http://rdaregistry.info/Elements/rof/P10023> <http://www.w3.org/2004/02/skos/core#definition> "Ennuste aineiston sisällön uudistumisen ajanjaksosta alkuperäisen julkaisemisen jälkeen."@fi .
+<http://rdaregistry.info/Elements/rof/P10023> <http://www.w3.org/2000/01/rdf-schema#label> "له توقف مراجعة"@ar .
+<http://rdaregistry.info/Elements/rof/P10023> <http://www.w3.org/2004/02/skos/core#definition> "توقع المدة الزمنية لمراجعة محتوى المصدر بعد النشر الأول."@ar .
+<http://rdaregistry.info/Elements/rof/P10023> <http://www.w3.org/2000/01/rdf-schema#label> "har revisionsslut"@da .
+<http://rdaregistry.info/Elements/rof/P10023> <http://www.w3.org/2004/02/skos/core#definition> "Forventning i forhold til forlængelsesperioden for ressourceindholdet efter første udgivelse."@da .
+<http://rdaregistry.info/Elements/rof/P10023> <http://www.w3.org/2000/01/rdf-schema#label> "hat Überarbeitungsabschluss"@de .
+<http://rdaregistry.info/Elements/rof/P10023> <http://www.w3.org/2004/02/skos/core#definition> "Eine Einschätzung über die Dauer der Überarbeitung des Inhalts der Ressource nach der Erstveröffentlichung."@de .
+<http://rdaregistry.info/Elements/rof/P10023> <http://www.w3.org/2000/01/rdf-schema#label> "有修订终止"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10023> <http://www.w3.org/2004/02/skos/core#definition> "关于资源初次发布后其内容修订时期的预期"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10023> <http://www.w3.org/2000/01/rdf-schema#label> "a pour fin de la révision"@fr .
+<http://rdaregistry.info/Elements/rof/P10023> <http://www.w3.org/2004/02/skos/core#definition> "Attente quant à la période de révision du contenu de la ressource après sa mise à disposition initiale."@fr .
+<http://rdaregistry.info/Elements/rof/P10023> <http://www.w3.org/2000/01/rdf-schema#label> "átdolgozás várható vége a következő:"@hu .
+<http://rdaregistry.info/Elements/rof/P10023> <http://www.w3.org/2004/02/skos/core#definition> "Elvárás, amely a forrás tartalmának az első közzétételt követő átdolgozásának a periódusára vonatkozik."@hu .
+<http://rdaregistry.info/Elements/rof/P10013> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/P10013> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/P10013> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rdaregistry.info/Elements/rof/P10013> <http://www.w3.org/2000/01/rdf-schema#label> "has sensory mode"@en .
+<http://rdaregistry.info/Elements/rof/P10013> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/hasSensoryMode.en> .
+<http://rdaregistry.info/Elements/rof/P10013> <http://www.w3.org/2004/02/skos/core#definition> "A human sense through which the content of a resource is intended to be perceived."@en .
+<http://rdaregistry.info/Elements/rof/P10013> <http://www.w3.org/2004/02/skos/core#scopeNote> "This attribute refers to a human sense through which the content of a resource is intended to be perceived, as distinct from a sense through which it might be perceived either incidentally or with the aid of an intermediating tool other than one which would normally be expected to be used (e.g., a device for transforming digitally encoded alphabetic characters into simulated voice)."@en .
+<http://rdaregistry.info/Elements/rof/P10013> <http://www.w3.org/2000/01/rdf-schema#label> "heeft zintuiglijke modus"@nl .
+<http://rdaregistry.info/Elements/rof/P10013> <http://www.w3.org/2004/02/skos/core#scopeNote> "Dit attribuut verwijst naar een menselijk zintuig via welke de content bedoeld is om waargenomen te worden, ter onderscheid van een zintuig waarmee het incidenteel waargenomen kan worden of met een hulpmiddel anders dan dat normaliter verwacht wordt te gebruiken (bijv. een apparaat om digitaal gecodeerde alfabetische karakters om te zetten in gesimuleerde stem)."@nl .
+<http://rdaregistry.info/Elements/rof/P10013> <http://www.w3.org/2000/01/rdf-schema#label> "aistilaji"@fi .
+<http://rdaregistry.info/Elements/rof/P10013> <http://www.w3.org/2004/02/skos/core#definition> "Ihmisaisti, jonka kautta aineiston sisältö on tarkoitettu vastaanotettavaksi."@fi .
+<http://rdaregistry.info/Elements/rof/P10013> <http://www.w3.org/2004/02/skos/core#scopeNote> "Attribuutti viittaa ihmisaistiin, jonka kautta aineiston sisältö on tarkoitettu vastaanotettavaksi, erotuksena aistista , jonka kautta sisältö voidaan vastaanottaa joko vahingossa tai normaalista käytöstä poikkeavan välittävän laitteen avulla (esim. laite, joka muuntaa digitaaliset aakkosmerkit ääneksi)."@fi .
+<http://rdaregistry.info/Elements/rof/P10013> <http://www.w3.org/2000/01/rdf-schema#label> "له نمط حسي"@ar .
+<http://rdaregistry.info/Elements/rof/P10013> <http://www.w3.org/2004/02/skos/core#definition> "أحد حواس الإنسان والذي يكون من خلاله إدراك أو فهم محتوى المصدر."@ar .
+<http://rdaregistry.info/Elements/rof/P10013> <http://www.w3.org/2004/02/skos/core#scopeNote> "تشير تلك الخاصية إلى أحد حواس الإنسان والتي يكون من خلالها إدراك أو فهم محتوى المصدر، بما يميزها عن حاسة أخرى يكون من خلالها الإدراك إما مصادفة أو بمساعدة أداة وسيطة ليست الأداة المعتاد استخدامها (مثال، جهاز لتحويل الحروف الهجائية المُكوَّدة رقميًّا إلى صوت مصطنع)."@ar .
+<http://rdaregistry.info/Elements/rof/P10013> <http://www.w3.org/2000/01/rdf-schema#label> "har sensorisk tilstand"@da .
+<http://rdaregistry.info/Elements/rof/P10013> <http://www.w3.org/2004/02/skos/core#definition> "Menneskelig sans, hvorigennem indholdet af en ressource er beregnet til at blive opfattet."@da .
+<http://rdaregistry.info/Elements/rof/P10013> <http://www.w3.org/2004/02/skos/core#scopeNote> "Denne egenskab referer til en menneskelig sans, hvorigennem indholdet af en ressource er beregnet til at blive opfattet, adskilt fra en forstand, hvoriggenem den kan opfattes enten tilfældigt eller ved hjæp af et formidlingsverktøj andet end et, som normalt ville kunne forvetnes brugt (f.eks. en enhed til at omdanne digitalt kodede alfabetiske tegn til simuleret stemme)."@da .
+<http://rdaregistry.info/Elements/rof/P10013> <http://www.w3.org/2000/01/rdf-schema#label> "hat sensorische Form"@de .
+<http://rdaregistry.info/Elements/rof/P10013> <http://www.w3.org/2004/02/skos/core#definition> "Ein menschlicher Sinn, durch den der Inhalt einer Ressource wahrgenommen werden soll."@de .
+<http://rdaregistry.info/Elements/rof/P10013> <http://www.w3.org/2004/02/skos/core#scopeNote> "Dieses Merkmal bezieht sich auf einen menschlichen Sinn, mit dem der Inhalt einer Ressource wahrgenommen werden soll. Er unterscheidet sich zu einem Sinn, mit dem der Inhalt entweder zufällig oder mit Hilfe eines anderen Hilfsmittels, als dem normalerweise zu erwartenden, wahrgenommen werden könnte (zum Beispiel ein Gerät zur Umwandlung digital kodierter Buchstaben in eine simulierte Stimme)."@de .
+<http://rdaregistry.info/Elements/rof/P10013> <http://www.w3.org/2000/01/rdf-schema#label> "有感官模式"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10013> <http://www.w3.org/2004/02/skos/core#definition> "资源内容设计被感知的人类感觉"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10013> <http://www.w3.org/2004/02/skos/core#scopeNote> "这个属性指资源内容设计被感知的人类感觉，这不同于可能被偶然感知或者借助于不同于通常认为会用的中介工具（例如，将数字编码字母字符转换为模拟人声的设备）感知的感觉。"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10013> <http://www.w3.org/2000/01/rdf-schema#label> "a pour mode sensoriel"@fr .
+<http://rdaregistry.info/Elements/rof/P10013> <http://www.w3.org/2004/02/skos/core#definition> "Sens humain par lequel le contenu d’une ressource est destiné à être perçu."@fr .
+<http://rdaregistry.info/Elements/rof/P10013> <http://www.w3.org/2004/02/skos/core#scopeNote> "Cet attribut fait référence à un sens humain par lequel le contenu d’une ressource est destiné à être perçu, par opposition à un sens par lequel il pourrait être perçu soit incidemment, soit à l’aide d’un outil de médiation autre que celui qui devrait normalement être utilisé (par exemple, un dispositif permettant de transformer des caractères alphabétiques codés numériquement en une voix simulée)."@fr .
+<http://rdaregistry.info/Elements/rof/P10013> <http://www.w3.org/2000/01/rdf-schema#label> "érzékelés módja a következő:"@hu .
+<http://rdaregistry.info/Elements/rof/P10013> <http://www.w3.org/2004/02/skos/core#definition> "Emberi érzékszerven keresztüli érzékelésre szánt forrástartalom."@hu .
+<http://rdaregistry.info/Elements/rof/P10013> <http://www.w3.org/2004/02/skos/core#scopeNote> "Ez az ismérv arra utal, amikor a forrás tartalmát emberi érzékszerven keresztüli érzékelésre szánták, megkülönböztetve a véletlen vagy nem a megszokott használatra szánt közvetítő eszköz segítségével történő érzékeléstől (pl. digitálisan kódolt alfabetikus karaktereket szimulált hanggá átalakító eszköz)."@hu .
+<http://rdaregistry.info/Elements/rof/P10008> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/P10008> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/P10008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rdaregistry.info/Elements/rof/P10008> <http://www.w3.org/2000/01/rdf-schema#label> "has storage medium format"@en .
+<http://rdaregistry.info/Elements/rof/P10008> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/hasStorageMediumFormat.en> .
+<http://rdaregistry.info/Elements/rof/P10008> <http://www.w3.org/2004/02/skos/core#definition> "The physical form of the material on which the content of the resource is stored."@en .
+<http://rdaregistry.info/Elements/rof/P10008> <http://www.w3.org/2000/01/rdf-schema#label> "heeft opslagmediumformaat"@nl .
+<http://rdaregistry.info/Elements/rof/P10008> <http://www.w3.org/2000/01/rdf-schema#label> "tallennusväline"@fi .
+<http://rdaregistry.info/Elements/rof/P10008> <http://www.w3.org/2004/02/skos/core#definition> "Materiaalin fyysinen muoto, johon aineiston sisältö on tallennettu."@fi .
+<http://rdaregistry.info/Elements/rof/P10008> <http://www.w3.org/2000/01/rdf-schema#label> "له صيغة وسيط الاختزان"@ar .
+<http://rdaregistry.info/Elements/rof/P10008> <http://www.w3.org/2004/02/skos/core#definition> "الشكل المادي للمادة والذي يُختزن عليه محتوى المصدر."@ar .
+<http://rdaregistry.info/Elements/rof/P10008> <http://www.w3.org/2000/01/rdf-schema#label> "har lagringsmedieformat"@da .
+<http://rdaregistry.info/Elements/rof/P10008> <http://www.w3.org/2004/02/skos/core#definition> "Den fysiske form af det materiale, som indholdet af en ressource er lagret på."@da .
+<http://rdaregistry.info/Elements/rof/P10008> <http://www.w3.org/2000/01/rdf-schema#label> "hat Format des Speichermediums"@de .
+<http://rdaregistry.info/Elements/rof/P10008> <http://www.w3.org/2004/02/skos/core#definition> "Die physische Form des Materials, auf dem der Inhalt der Ressource gespeichert ist."@de .
+<http://rdaregistry.info/Elements/rof/P10008> <http://www.w3.org/2000/01/rdf-schema#label> "有储存媒介格式"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10008> <http://www.w3.org/2004/02/skos/core#definition> "资源的内容在其上储存的材料的物理形式"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10008> <http://www.w3.org/2000/01/rdf-schema#label> "a pour format du support de stockage"@fr .
+<http://rdaregistry.info/Elements/rof/P10008> <http://www.w3.org/2004/02/skos/core#definition> "Forme physique du matériau sur lequel le contenu de la ressource est stocké."@fr .
+<http://rdaregistry.info/Elements/rof/P10008> <http://www.w3.org/2000/01/rdf-schema#label> "a tárolási médium formátuma a következő:"@hu .
+<http://rdaregistry.info/Elements/rof/P10008> <http://www.w3.org/2004/02/skos/core#definition> "Azon anyag fizikai formája, amelyen a tartalom forrását tárolják."@hu .
+<http://rdaregistry.info/Elements/rof/P10018> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/rof/> .
+<http://rdaregistry.info/Elements/rof/P10018> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/Elements/rof/P10018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rdaregistry.info/Elements/rof/P10018> <http://www.w3.org/2000/01/rdf-schema#label> "has subject"@en .
+<http://rdaregistry.info/Elements/rof/P10018> <http://metadataregistry.org/uri/profile/regap/lexicalAlias> <http://rdaregistry.info/Elements/rof/hasSubject.en> .
+<http://rdaregistry.info/Elements/rof/P10018> <http://www.w3.org/2004/02/skos/core#definition> "A topic, discipline, place, event, person, etc., associated with the content of a resource; what the content is about."@en .
+<http://rdaregistry.info/Elements/rof/P10018> <http://www.w3.org/2000/01/rdf-schema#label> "heeft onderwerp"@nl .
+<http://rdaregistry.info/Elements/rof/P10018> <http://www.w3.org/2000/01/rdf-schema#label> "aihe"@fi .
+<http://rdaregistry.info/Elements/rof/P10018> <http://www.w3.org/2004/02/skos/core#definition> "Aineiston sisältöön liittyvä aihe, aihealue, paikka, tapahtuma, henkilö tms.; se, mitä aineisto käsittelee."@fi .
+<http://rdaregistry.info/Elements/rof/P10018> <http://www.w3.org/2000/01/rdf-schema#label> "له موضوع"@ar .
+<http://rdaregistry.info/Elements/rof/P10018> <http://www.w3.org/2004/02/skos/core#definition> "موضوع، مجال معرفي، مكان، حدث، شخص...إلخ، مرتبط بمحتوى مصدر ما؛ ما يدور حوله المحتوى."@ar .
+<http://rdaregistry.info/Elements/rof/P10018> <http://www.w3.org/2000/01/rdf-schema#label> "har emne"@da .
+<http://rdaregistry.info/Elements/rof/P10018> <http://www.w3.org/2004/02/skos/core#definition> "Emne, disciplin, sted, begivenhed, person, etc., knyttet til indholdet af en ressource; hvad indholdet handler om."@da .
+<http://rdaregistry.info/Elements/rof/P10018> <http://www.w3.org/2000/01/rdf-schema#label> "hat Thema"@de .
+<http://rdaregistry.info/Elements/rof/P10018> <http://www.w3.org/2004/02/skos/core#definition> "Ein Thema, eine Fachrichtung, ein Geografikum, ein Ereignis, eine Person und so weiter, das/die mit dem Inhalt einer Ressource in Verbindung steht; also das, worum es im Inhalt geht."@de .
+<http://rdaregistry.info/Elements/rof/P10018> <http://www.w3.org/2000/01/rdf-schema#label> "有主题"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10018> <http://www.w3.org/2004/02/skos/core#definition> "和资源内容有关的论题、学科、地点、事件、个人等；内容关于的事物。"@zh-Hans-CN .
+<http://rdaregistry.info/Elements/rof/P10018> <http://www.w3.org/2000/01/rdf-schema#label> "a pour sujet"@fr .
+<http://rdaregistry.info/Elements/rof/P10018> <http://www.w3.org/2004/02/skos/core#definition> "Sujet, discipline, lieu, événement, personne, etc. associée au contenu d’une ressource ; ce dont traite le contenu."@fr .
+<http://rdaregistry.info/Elements/rof/P10018> <http://www.w3.org/2000/01/rdf-schema#label> "tárgya a következő:"@hu .
+<http://rdaregistry.info/Elements/rof/P10018> <http://www.w3.org/2004/02/skos/core#definition> "Egy téma, tudományterület, hely, esemény, személy, stb. amely a forrás tartalmához kapcsolódik; amiről a tartalom szól."@hu .
+<http://metadataregistry.org/uri/RegStatus/1001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://metadataregistry.org/uri/RegStatus/1001> <http://www.w3.org/2004/02/skos/core#prefLabel> "Published"@en .

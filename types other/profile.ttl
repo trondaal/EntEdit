@@ -1,0 +1,173 @@
+@prefix abi: <http://oslomet.no/abi/vocab#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+abi:StatusLiteral a rdfs:Datatype ;
+    owl:oneOf ("data property" "object property" "class" "deprecated" "not used") .
+
+abi:status a owl:DatatypeProperty ;
+    rdfs:range abi:StatusLiteral ;
+    rdfs:label "has status (literal)" .
+
+#Classes
+<http://rdaregistry.info/Elements/c/C10002>             abi:status "class" .  # "Agent"@en .
+<http://rdaregistry.info/Elements/c/C10001>             abi:status "class" .  # "Work"@en .
+<http://rdaregistry.info/Elements/c/C10006>             abi:status "class" .  # "Expression"@en .
+<http://rdaregistry.info/Elements/c/C10007>             abi:status "class" .  # "Manifestation"@en .
+<http://www.w3.org/2004/02/skos/core#Concept>			abi:status "class" .  # "Concept"@en .
+
+#Agent profile
+<http://rdaregistry.info/Elements/a/datatype/P50339>	abi:status "data property" .   #"dates"@en .
+<http://rdaregistry.info/Elements/a/datatype/P50385>	abi:status "data property" .   #"name"@en .
+<http://rdaregistry.info/Elements/a/datatype/P50415>	abi:status "data property" .   #"variantname"@en .
+
+#Work profile
+<http://rdaregistry.info/Elements/w/datatype/P10004>	abi:status "data property" .   #"type"@en .
+<http://rdaregistry.info/Elements/w/datatype/P10219>	abi:status "data property" .   #"date"@en .
+<http://rdaregistry.info/Elements/w/datatype/P10012>	abi:status "data property" .   #"numbering"@en .
+<http://rdaregistry.info/Elements/w/datatype/P10088>	abi:status "data property" .   #"title"@en .
+<http://rdaregistry.info/Elements/w/datatype/P10223>	abi:status "data property" .   #"titlepreferred"@en .
+<http://rdaregistry.info/Elements/w/datatype/P10086>	abi:status "data property" .   #"titlevariant"@en .
+<http://rdaregistry.info/Elements/x/datatype/P00029>	abi:status "data property" .   #"form"@en .
+
+#Expression profile
+<http://rdaregistry.info/Elements/e/datatype/P20006>	abi:status "data property" .   #"language"@en .
+<http://rdaregistry.info/Elements/e/datatype/P20065>	abi:status "data property" .   #"languagesadditional"@en .
+<http://rdaregistry.info/Elements/e/datatype/P20001>	abi:status "data property" .   #"content"@en .
+<http://rdaregistry.info/Elements/e/datatype/P20312>	abi:status "data property" .   #"title"@en .
+<http://rdaregistry.info/Elements/e/datatype/P20315>	abi:status "data property" .   #"titlepreferred"@en .
+<http://rdaregistry.info/Elements/e/datatype/P20316>	abi:status "data property" .   #"titlevariant"@en .
+<http://rdaregistry.info/Elements/e/datatype/P20071>	abi:status "data property" .   #"contentsnote"@en . 
+
+#Manifestation profile
+<http://rdaregistry.info/Elements/m/datatype/P30004>	abi:status "data property" .   #"identifier"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30156>	abi:status "data property" .   #"title"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30142>	abi:status "data property" .   #"subtitle"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30014>	abi:status "data property" .   #"numbering"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30134>	abi:status "data property" .   #"part"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30117>	abi:status "data property" .   #"responsibility"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30107>	abi:status "data property" .   #"edition"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30182>	abi:status "data property" .   #"extent"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30169>	abi:status "data property" .   #"dimensions"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30086>	abi:status "data property" .   #"productionplace"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30174>	abi:status "data property" .   #"producer"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30009>	abi:status "data property" .   #"productiondate"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30033>	abi:status "data property" .   #"contentsnote"@en . 
+<http://rdaregistry.info/Elements/m/datatype/P30137>	abi:status "data property" .   #"note"@en . 
+<http://rdaregistry.info/Elements/m/datatype/P30111>	abi:status "data property" .   #"publication"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30110>	abi:status "data property" .   #"production"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30109>	abi:status "data property" .   #"manufacture"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30108>	abi:status "data property" .   #"distribution"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30088>	abi:status "data property" .   #"publicationplace"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30083>	abi:status "data property" .   #"publisher"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30011>	abi:status "data property" .   #"publicationdate"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30085>	abi:status "data property" .   #"distributionplace"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30173>	abi:status "data property" .   #"distributor"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30008>	abi:status "data property" .   #"distributiondate"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30087>	abi:status "data property" .   #"manufactureplace"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30175>	abi:status "data property" .   #"manufacturer"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30010>	abi:status "data property" .   #"manufacturedate"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30007>	abi:status "data property" .   #"copyright"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30002>	abi:status "data property" .   #"mediatype"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30001>	abi:status "data property" .   #"carrier"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30106>	abi:status "data property" .   #"series"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30165>	abi:status "data property" .   #"seriesnumbering"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30050>	abi:status "data property" .   #"partnote"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30033>	abi:status "data property" .   #"contentsnote"@en .
+
+<http://id.loc.gov/vocabulary/iso639-2/alb>	rdfs:label   "Albanian"@en .
+<http://id.loc.gov/vocabulary/iso639-2/ara>	rdfs:label   "Arabic"@en .
+<http://id.loc.gov/vocabulary/iso639-2/arm>	rdfs:label   "Armenian"@en .
+<http://id.loc.gov/vocabulary/iso639-2/baq>	rdfs:label   "Basque"@en .
+<http://id.loc.gov/vocabulary/iso639-2/bul>	rdfs:label   "Bulgarian"@en .
+<http://id.loc.gov/vocabulary/iso639-2/cat>	rdfs:label   "Catalan"@en .
+<http://id.loc.gov/vocabulary/iso639-2/chi>	rdfs:label   "Chinese"@en .
+<http://id.loc.gov/vocabulary/iso639-2/cze>	rdfs:label   "Czech"@en .
+<http://id.loc.gov/vocabulary/iso639-2/dan>	rdfs:label   "Danish"@en .
+<http://id.loc.gov/vocabulary/iso639-2/dut>	rdfs:label   "Dutch"@en .
+<http://id.loc.gov/vocabulary/iso639-2/eng>	rdfs:label   "English"@en .
+<http://id.loc.gov/vocabulary/iso639-2/epo>	rdfs:label   "Esperanto"@en .
+<http://id.loc.gov/vocabulary/iso639-2/est>	rdfs:label   "Estonian"@en .
+<http://id.loc.gov/vocabulary/iso639-2/fin>	rdfs:label   "Finnish"@en .
+<http://id.loc.gov/vocabulary/iso639-2/fre>	rdfs:label   "French"@en .
+<http://id.loc.gov/vocabulary/iso639-2/ger>	rdfs:label   "German"@en .
+<http://id.loc.gov/vocabulary/iso639-2/gle>	rdfs:label   "Irish"@en .
+<http://id.loc.gov/vocabulary/iso639-2/glg>	rdfs:label   "Galician"@en .
+<http://id.loc.gov/vocabulary/iso639-2/gre>	rdfs:label   "Greek"@en .
+<http://id.loc.gov/vocabulary/iso639-2/guj>	rdfs:label   "Gujarati"@en .
+<http://id.loc.gov/vocabulary/iso639-2/heb>	rdfs:label   "Hebrew"@en .
+<http://id.loc.gov/vocabulary/iso639-2/hin>	rdfs:label   "Hindi"@en .
+<http://id.loc.gov/vocabulary/iso639-2/hun>	rdfs:label   "Hungarian"@en .
+<http://id.loc.gov/vocabulary/iso639-2/ice>	rdfs:label   "Icelandic"@en .
+<http://id.loc.gov/vocabulary/iso639-2/ita>	rdfs:label   "Italian"@en .
+<http://id.loc.gov/vocabulary/iso639-2/jpn>	rdfs:label   "Japanese"@en .
+<http://id.loc.gov/vocabulary/iso639-2/kor>	rdfs:label   "Korean"@en .
+<http://id.loc.gov/vocabulary/iso639-2/lat>	rdfs:label   "Latin"@en .
+<http://id.loc.gov/vocabulary/iso639-2/lav>	rdfs:label   "Latvian"@en .
+<http://id.loc.gov/vocabulary/iso639-2/lit>	rdfs:label   "Lithuanian"@en .
+<http://id.loc.gov/vocabulary/iso639-2/mul>	rdfs:label   "Multiple"@en .
+<http://id.loc.gov/vocabulary/iso639-2/nno>	rdfs:label   "Norwegian Nynorsk"@en .
+<http://id.loc.gov/vocabulary/iso639-2/nob>	rdfs:label   "Norwegian"@en .
+<http://id.loc.gov/vocabulary/iso639-2/nor>	rdfs:label   "Norwegian"@en .
+<http://id.loc.gov/vocabulary/iso639-2/per>	rdfs:label   "Persian"@en .
+<http://id.loc.gov/vocabulary/iso639-2/pol>	rdfs:label   "Polish"@en .
+<http://id.loc.gov/vocabulary/iso639-2/por>	rdfs:label   "Portuguese"@en .
+<http://id.loc.gov/vocabulary/iso639-2/rum>	rdfs:label   "Romanian"@en .
+<http://id.loc.gov/vocabulary/iso639-2/rus>	rdfs:label   "Russian"@en .
+<http://id.loc.gov/vocabulary/iso639-2/slv>	rdfs:label   "Slovenian"@en .
+<http://id.loc.gov/vocabulary/iso639-2/slo>	rdfs:label   "Slovenian"@en .
+<http://id.loc.gov/vocabulary/iso639-2/sma>	rdfs:label   "Southern Sami"@en .
+<http://id.loc.gov/vocabulary/iso639-2/spa>	rdfs:label   "Spanish"@en .
+<http://id.loc.gov/vocabulary/iso639-2/swe>	rdfs:label   "Swedish"@en .
+<http://id.loc.gov/vocabulary/iso639-2/tam>	rdfs:label   "Tamil"@en .
+<http://id.loc.gov/vocabulary/iso639-2/tet>	rdfs:label   "Tetum"@en .
+<http://id.loc.gov/vocabulary/iso639-2/tur>	rdfs:label   "Turkish"@en .
+<http://id.loc.gov/vocabulary/iso639-2/ukr>	rdfs:label   "Ukrainian"@en .
+<http://id.loc.gov/vocabulary/iso639-2/und>	rdfs:label   "Undetermined"@en .
+<http://id.loc.gov/vocabulary/iso639-2/urd>	rdfs:label   "Urdu"@en .
+<http://id.loc.gov/vocabulary/iso639-2/vie>	rdfs:label   "Vietnamese"@en .
+<http://id.loc.gov/vocabulary/iso639-2/wel>	rdfs:label   "Welsh"@en .
+<http://id.loc.gov/vocabulary/iso639-2/yid>	rdfs:label   "Yiddish"@en .
+
+<http://rdaregistry.info/termList/RDACarrierType/1004>	rdfs:label   "Audio disc"@en .
+<http://rdaregistry.info/termList/RDACarrierType/1007>	rdfs:label   "Audiocassette"@en .
+<http://rdaregistry.info/termList/RDACarrierType/1013>	rdfs:label   "Computer disc"@en .
+<http://rdaregistry.info/termList/RDACarrierType/1018>	rdfs:label   "Online resource"@en .
+<http://rdaregistry.info/termList/RDACarrierType/1026>	rdfs:label   "Microfilm reel"@en .
+<http://rdaregistry.info/termList/RDACarrierType/1033>	rdfs:label   "Film cassette"@en .
+<http://rdaregistry.info/termList/RDACarrierType/1034>	rdfs:label   "Film reel"@en .
+<http://rdaregistry.info/termList/RDACarrierType/1036>	rdfs:label   "Filmstrip"@en .
+<http://rdaregistry.info/termList/RDACarrierType/1048>	rdfs:label   "Sheet"@en .
+<http://rdaregistry.info/termList/RDACarrierType/1049>	rdfs:label   "Volume"@en .
+<http://rdaregistry.info/termList/RDACarrierType/1052>	rdfs:label   "Videocassette"@en .
+<http://rdaregistry.info/termList/RDACarrierType/1059>	rdfs:label   "Object"@en .
+<http://rdaregistry.info/termList/RDACarrierType/1060>	rdfs:label   "Videodisc"@en .
+<http://rdaregistry.info/termList/RDACarrierType/1069>	rdfs:label   "Film roll"@en .
+
+<http://rdaregistry.info/termList/RDAContentType/1002>	rdfs:label   "Cartographic"@en .
+<http://rdaregistry.info/termList/RDAContentType/1008>	rdfs:label   "Software"@en .
+<http://rdaregistry.info/termList/RDAContentType/1010>	rdfs:label   "Score"@en .
+<http://rdaregistry.info/termList/RDAContentType/1011>	rdfs:label   "Music"@en .
+<http://rdaregistry.info/termList/RDAContentType/1013>	rdfs:label   "Audio book"@en .
+<http://rdaregistry.info/termList/RDAContentType/1014>	rdfs:label   "Illustrations"@en .
+<http://rdaregistry.info/termList/RDAContentType/1018>	rdfs:label   "Tactile text"@en .
+<http://rdaregistry.info/termList/RDAContentType/1020>	rdfs:label   "Text"@en .
+<http://rdaregistry.info/termList/RDAContentType/1022>	rdfs:label   "Movie (3D)"@en .
+<http://rdaregistry.info/termList/RDAContentType/1023>	rdfs:label   "Movie"@en .
+
+<http://rdaregistry.info/termList/RDAMediaType/1001>	rdfs:label   "Audio"@en .
+<http://rdaregistry.info/termList/RDAMediaType/1002>	rdfs:label   "Microform"@en .
+<http://rdaregistry.info/termList/RDAMediaType/1003>	rdfs:label   "Computer"@en .
+<http://rdaregistry.info/termList/RDAMediaType/1005>	rdfs:label   "Projected"@en .
+<http://rdaregistry.info/termList/RDAMediaType/1007>	rdfs:label   "Unmediated"@en .
+<http://rdaregistry.info/termList/RDAMediaType/1008>	rdfs:label   "Video"@en .
+
+<https://schema.nb.no/Bibliographic/Values/V1000>		rdfs:label  "Language-based"@en .
+<https://schema.nb.no/Bibliographic/Values/V1001>		rdfs:label  "Music"@en .
+<https://schema.nb.no/Bibliographic/Values/V1002>		rdfs:label  "Moving image"@en .
+<https://schema.nb.no/Bibliographic/Values/V1003>		rdfs:label  "Picture"@en .
+<https://schema.nb.no/Bibliographic/Values/V1004>		rdfs:label  "Carthographic"@en .
+<https://schema.nb.no/Bibliographic/Values/V1005>		rdfs:label  "Interactive"@en .
+<https://schema.nb.no/Bibliographic/Values/V1006>		rdfs:label  "Broadcast"@en .
+<https://schema.nb.no/Bibliographic/Values/V1008>		rdfs:label  "Composite"@en .
+<https://schema.nb.no/Bibliographic/Values/V1009>		rdfs:label  "Performing arts"@en .

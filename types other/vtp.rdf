@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:reg="http://metadataregistry.org/uri/profile/regap/"
+  xmlns:nkostype="http://w3id.org/nkos/nkostype">
+  <!-- Value schemas -->
+  
+  <!-- Version 3 -->
+  
+  <!-- Value schema: Work types -->
+  <rdf:Description rdf:about="https://schema.nb.no/Bibliographic/ValueSchemes/VS1000">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <reg:name xml:lang="en">WorkTypes</reg:name>
+    <rdfs:label xml:lang="en">Vocabulary of work types</rdfs:label>
+    <skos:prefLabel xml:lang="en">Vocabulary of work types</skos:prefLabel>
+    <dc:description xml:lang="en">Vocabulary of types to which works may belong</dc:description>
+    <!--<skos:definition xml:lang="en">Vocabulary of types to which works may belong</skos:definition>-->
+    <rdfs:label xml:lang="nb">Vokabular for verkstyper</rdfs:label>
+    <skos:prefLabel xml:lang="nb">Vokabular for verkstyper</skos:prefLabel>
+    <dc:description xml:lang="nb">Vokabular for typer som kan brukes til å karakterisere verk</dc:description>
+    <!--<skos:definition xml:lang="nb">Vokabular for typer som kan brukes til å karakterisere verk</skos:definition>-->
+    <rdfs:label xml:lang="nn">Vokabular for verkstypar</rdfs:label>
+    <skos:prefLabel xml:lang="nn">Vokabular for verkstypar</skos:prefLabel>
+    <dc:description xml:lang="nn">Vokabular for typar som kan brukast til å karakterisera verk</dc:description>
+    <!--<skos:definition xml:lang="nn">Vokabular for typar som kan brukast til å karakterisera verk</skos:definition>-->
+    <dc:type rdf:resource="http://w3id.org/nkos/nkostype#list"/>
+    <dc:rights rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
+  </rdf:Description>
+  
+  <!-- Values -->
+  
+  <!-- Value: Language-based work -->
+  <rdf:Description rdf:about="https://schema.nb.no/Bibliographic/Values/V1000">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <reg:name xml:lang="en">Language-basedWork</reg:name>
+    <rdfs:label xml:lang="en">Language-based work</rdfs:label>
+    <skos:prefLabel xml:lang="en">Language-based work</skos:prefLabel>
+    <skos:definition xml:lang="en">Works expressed using natural language, written or spoken</skos:definition>
+    <rdfs:label xml:lang="nb">Språkbasert verk</rdfs:label>
+    <skos:prefLabel xml:lang="nb">Språkbasert verk</skos:prefLabel>
+    <skos:definition xml:lang="nb">Verk som er uttrykt ved bruk av naturlig språk, skriftlig eller muntlig</skos:definition>
+    <rdfs:label xml:lang="nn">Språkbasert verk</rdfs:label>
+    <skos:prefLabel xml:lang="nn">Språkbasert verk</skos:prefLabel>
+    <skos:definition xml:lang="nn">Verk som er uttrykt ved bruk av naturleg språk, skriftleg eller
+      munnleg</skos:definition>
+    <skos:scopeNote xml:lang="en">Including, but not limited to, works of fiction and non-fiction,
+      picture books, flyers, pamphlets, periodicals, articles, and web resources that do not depend
+      on user interaction</skos:scopeNote>
+    <skos:scopeNote xml:lang="nb">Inkluderer, men ikke begrenset til, skjønnlitteratur,
+      faglitteratur, bildebøker, pekebøker, småtrykk, periodika, artikler, og nettressurser som ikke
+      forutsetter brukerinteraksjon</skos:scopeNote>
+    <skos:scopeNote xml:lang="nn">Inkluderer, men ikkje avgrensa til, skjønnlitteratur,
+      faglitteratur, bildebøker, pekebøker, småtrykk, periodika, artiklar, og nettressursar som ikke
+      krev brukarinteraksjon</skos:scopeNote>
+    <skos:inScheme rdf:resource="https://schema.nb.no/Bibliographic/ValueSchemes/VS1000"/>
+  </rdf:Description>
+  
+  <!-- Value: Musical work -->
+  <rdf:Description rdf:about="https://schema.nb.no/Bibliographic/Values/V1001">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <reg:name xml:lang="en">MusicalWork</reg:name>
+    <rdfs:label xml:lang="en">Musical work</rdfs:label>
+    <skos:prefLabel xml:lang="en">Musical work</skos:prefLabel>
+    <skos:definition xml:lang="en">Works expressed using vocal or instrumental sounds, or written
+      signs representing vocal or instrumental sounds</skos:definition>
+    <rdfs:label xml:lang="nb">Musikkverk</rdfs:label>
+    <skos:prefLabel xml:lang="nb">Musikkverk</skos:prefLabel>
+    <skos:definition xml:lang="nb">Verk som er uttrykt ved bruk av vokale eller instrumentale lyder,
+      eller med nedskrevne symboler som representerer vokale eller instrumentale
+      lyder</skos:definition>
+    <rdfs:label xml:lang="nn">Musikkverk</rdfs:label>
+    <skos:prefLabel xml:lang="nn">Musikkverk</skos:prefLabel>
+    <skos:definition xml:lang="nn">Verk som er uttrykt ved bruk av vokale eller instrumentale lydar,
+      eller med skrivne symbol som representerer vokale eller instrumentale
+      lydar</skos:definition>
+    <skos:scopeNote xml:lang="en">Works expressed as sheet music and/or as recorded music.
+      Including, but not limited to, classical music, popular music, folk music, and other musical
+      genres</skos:scopeNote>
+    <skos:scopeNote xml:lang="nb">Verk uttrykt som noteark og/eller som opptak. Inkluderer, men ikke
+      begrenset til, klassisk musikk, populærmusikk, folkemusikk, og andre musikksjangre</skos:scopeNote>
+    <skos:scopeNote xml:lang="nn">Verk uttrykt som noteark og/eller som opptak. Inkluderer, men ikkje
+      avgrensa til, klassisk musikk, populærmusikk, folkemusikk og andre musikksjangrar</skos:scopeNote>
+    <skos:inScheme rdf:resource="https://schema.nb.no/Bibliographic/ValueSchemes/VS1000"/>
+  </rdf:Description>
+  
+  <!-- Value: Moving image work -->
+  <rdf:Description rdf:about="https://schema.nb.no/Bibliographic/Values/V1002">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <reg:name xml:lang="en">MovingImageWork</reg:name>
+    <rdfs:label xml:lang="en">Moving image work</rdfs:label>
+    <skos:prefLabel xml:lang="en">Moving image work</skos:prefLabel>
+    <skos:definition xml:lang="en">Works expressed using a sequence of images giving the illusion of
+      continuous movement, with or without sound</skos:definition>
+    <rdfs:label xml:lang="nb">Filmverk</rdfs:label>
+    <skos:prefLabel xml:lang="nb">Filmverk</skos:prefLabel>
+    <skos:definition xml:lang="nb">Verk som er uttrykt ved bruk av en sekvens med bilder som gir
+      illusjonen om kontinuerlig bevegelse, med eller uten lyd</skos:definition>
+    <rdfs:label xml:lang="nn">Filmverk</rdfs:label>
+    <skos:prefLabel xml:lang="nn">Filmverk</skos:prefLabel>
+    <skos:definition xml:lang="nn">Verk som er uttrykt ved bruk av ein sekvens med bilde som gjev
+      illusjonen om kontinuerleg rørsle, med eller utan lyd</skos:definition>
+    <skos:scopeNote xml:lang="en">Including, but not limited to, motion pictures, animated films,
+      documentaries, film clips, video clips, television movies, and television dramatic
+      series</skos:scopeNote>
+    <skos:scopeNote xml:lang="nb">Inkluderer, men ikke begrenset til, spillefilmer, animerte filmer,
+      dokumentarfilmer, filmklipp, videoklipp, tv-filmer, og tv-dramaserier</skos:scopeNote>
+    <skos:scopeNote xml:lang="nn">Inkluderer, men ikkje avgrensa til, spelefilmar, animerte filmar,
+      dokumentarfilmar, filmklipp, videoklipp, tv-filmar, og tv-dramaseriar</skos:scopeNote>
+    <skos:inScheme rdf:resource="https://schema.nb.no/Bibliographic/ValueSchemes/VS1000"/>
+  </rdf:Description>
+  
+  <!-- Value: Picture work -->
+  <rdf:Description rdf:about="https://schema.nb.no/Bibliographic/Values/V1003">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <reg:name xml:lang="en">PictureWork</reg:name>
+    <rdfs:label xml:lang="en">Picture work</rdfs:label>
+    <skos:prefLabel xml:lang="en">Picture work</skos:prefLabel>
+    <skos:definition xml:lang="en">Works expressed using non-moving visual constructs other than
+      text</skos:definition>
+    <rdfs:label xml:lang="nb">Bildeverk</rdfs:label>
+    <skos:prefLabel xml:lang="nb">Bildeverk</skos:prefLabel>
+    <skos:definition xml:lang="nb">Verk som er uttrykt ved bruk av ikke-bevegelige visuelle
+      konstruksjoner</skos:definition>
+    <rdfs:label xml:lang="nn">Bildeverk</rdfs:label>
+    <skos:prefLabel xml:lang="nn">Bildeverk</skos:prefLabel>
+    <skos:definition xml:lang="nn">Verk som er uttrykt ved bruk av visuelle
+      konstruksjonar utan rørsle</skos:definition>
+    <skos:scopeNote xml:lang="en">Including, but not limited to, works of photography,
+      illustrations, posters, postcards, graphs and drawings</skos:scopeNote>
+    <skos:scopeNote xml:lang="nb">Inkluderer, men ikke begrenset til, fotografier, illustrasjoner,
+      plakater, postkort, grafer og tegninger</skos:scopeNote>
+    <skos:scopeNote xml:lang="nn">Inkluderer, men ikkje avgrensa til, fotografi, illustrasjonar,
+      plakatar, postkort, grafar og teikningar</skos:scopeNote>
+    <skos:inScheme rdf:resource="https://schema.nb.no/Bibliographic/ValueSchemes/VS1000"/>
+  </rdf:Description>
+  
+  <!-- Value: Carthographic work  -->
+  <rdf:Description rdf:about="https://schema.nb.no/Bibliographic/Values/V1004">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <reg:name xml:lang="en">CarthographicWork</reg:name>
+    <rdfs:label xml:lang="en">Carthographic work</rdfs:label>
+    <skos:prefLabel xml:lang="en">Carthographic work</skos:prefLabel>
+    <skos:definition xml:lang="en">Works expressed using visual constructs to diagrammatically
+      represent an area of land, sea, sky or outer space</skos:definition>
+    <rdfs:label xml:lang="nb">Kartografisk verk</rdfs:label>
+    <skos:prefLabel xml:lang="nb">Kartografisk verk</skos:prefLabel>
+    <skos:definition xml:lang="nb">Verk som er uttrykt ved bruk av visuelle konstruksjoner til å
+      representere et område av land, sjø, himmel eller verdensrommet
+      diagrammatisk</skos:definition>
+    <rdfs:label xml:lang="nn">Kartografisk verk</rdfs:label>
+    <skos:prefLabel xml:lang="nn">Kartografisk verk</skos:prefLabel>
+    <skos:definition xml:lang="nn">Verk som er uttrykt ved bruk av visuelle konstruksjonar til å
+      representera eit område av land, sjø, himmel eller verdsrommet diagrammatisk</skos:definition>
+    <skos:scopeNote xml:lang="en">Including, but not limited to, political maps, topographical maps,
+      climate maps, road maps, thematic maps and globes</skos:scopeNote>
+    <skos:scopeNote xml:lang="nb">Inkluderer, men ikke begrenset til, geopolitiske kart,
+      topografiske kart, klimakart, veikart, tematiske kart og globus</skos:scopeNote>
+    <skos:scopeNote xml:lang="nn">Inkluderer, men ikkje avgrensa til, geopolitiske kart,
+      topografiske kart, klimakart, vegkart, tematiske kart og globus</skos:scopeNote>
+    <skos:inScheme rdf:resource="https://schema.nb.no/Bibliographic/ValueSchemes/VS1000"/>
+  </rdf:Description>
+  
+  <!-- Value: Interactive work -->
+  <rdf:Description rdf:about="https://schema.nb.no/Bibliographic/Values/V1005">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <reg:name xml:lang="en">InteractiveWork</reg:name>
+    <rdfs:label xml:lang="en">Interactive work</rdfs:label>
+    <skos:prefLabel xml:lang="en">Interactive work</skos:prefLabel>
+    <skos:definition xml:lang="en">Works expressed by their interaction with one or more
+      persons</skos:definition>
+    <rdfs:label xml:lang="nb">Interaktivt verk</rdfs:label>
+    <skos:prefLabel xml:lang="nb">Interaktivt verk</skos:prefLabel>
+    <skos:definition xml:lang="nb">Verk som er uttrykt ved samhandling med en eller flere
+      personer</skos:definition>
+    <rdfs:label xml:lang="nn">Interaktivt verk</rdfs:label>
+    <skos:prefLabel xml:lang="nn">Interaktivt verk</skos:prefLabel>
+    <skos:definition xml:lang="nn">Verk som er uttrykt ved samhandling med ein eller fleire
+      personar</skos:definition>
+    <skos:scopeNote xml:lang="en">Including, but not limited to, games, computer games, video games,
+      mobile games, interactive websites, interactive computer programs</skos:scopeNote>
+    <skos:scopeNote xml:lang="nb">Inkluderer, men ikke begrenset til, spill, dataspill, videospill,
+      mobilspill, interaktive nettressurser, interaktive dataprogrammer</skos:scopeNote>
+    <skos:scopeNote xml:lang="nb">Inkluderer, men ikkje avgrensa til, spel, dataspel, videospel,
+      mobilspel, interaktive nettressursar, interaktive dataprogram</skos:scopeNote>
+    <skos:inScheme rdf:resource="https://schema.nb.no/Bibliographic/ValueSchemes/VS1000"/>
+  </rdf:Description>
+  
+  <!-- Value: Broadcasting work  -->
+  <rdf:Description rdf:about="https://schema.nb.no/Bibliographic/Values/V1006">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <reg:name xml:lang="en">BroadcastingWork</reg:name>
+    <rdfs:label xml:lang="en">Broadcasting work</rdfs:label>
+    <skos:prefLabel xml:lang="en">Broadcasting work</skos:prefLabel>
+    <skos:definition xml:lang="en">Works expressed using words and/or music and/or moving images and
+      intended for broadcast on some broadcasting channel</skos:definition>
+    <rdfs:label xml:lang="nb">Kringkastingsverk</rdfs:label>
+    <skos:prefLabel xml:lang="nb">Kringkastingsverk</skos:prefLabel>
+    <skos:definition xml:lang="nb">Verk som er uttrykt ved bruk av ord og/eller musikk og/eller film
+      og beregnet for kringkasting på en kringkastingskanal</skos:definition>
+    <rdfs:label xml:lang="nn">Kringkastingsverk</rdfs:label>
+    <skos:prefLabel xml:lang="nn">Kringkastingsverk</skos:prefLabel>
+    <skos:definition xml:lang="nn">Verk som er uttrykt ved bruk av ord og/eller musikk og/eller film
+      og meint for kringkasting på ein kringkastingskanal</skos:definition>
+    <skos:scopeNote xml:lang="en">Including, but not limited to, radio programs, radio dramas, and
+      television programs (but not television movies and dramatic series)</skos:scopeNote>
+    <skos:scopeNote xml:lang="nb">Inkluderer, men ikke begrenset til, radioprogrammer, hørespill og
+      tv-programmer (men ikke tv-filmer, og tv-dramaserier)</skos:scopeNote>
+    <skos:scopeNote xml:lang="nn">Inkluderer, men ikkje avgrensa til, radioprogram, høyrespel og
+      tv-program (men ikkje tv-filmar og tv-dramaseriar)</skos:scopeNote>
+    <skos:inScheme rdf:resource="https://schema.nb.no/Bibliographic/ValueSchemes/VS1000"/>
+  </rdf:Description>
+  
+  <!-- Value: Physical object as work -->
+  <rdf:Description rdf:about="https://schema.nb.no/Bibliographic/Values/V1007">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <reg:name xml:lang="en">PhysicalObjectAsWork</reg:name>
+    <rdfs:label xml:lang="en">Physical object as work</rdfs:label>
+    <skos:prefLabel xml:lang="en">Physical object as work</skos:prefLabel>
+    <skos:definition xml:lang="en">Works expressed by virtue of their physical
+      attributes</skos:definition>
+    <rdfs:label xml:lang="nb">Fysisk objekt som verk</rdfs:label>
+    <skos:prefLabel xml:lang="nb">Fysisk objekt som verk</skos:prefLabel>
+    <skos:definition xml:lang="nb">Verk som er uttrykt i kraft av deres fysiske
+      egenskaper</skos:definition>
+    <rdfs:label xml:lang="nn">Fysisk objekt som verk</rdfs:label>
+    <skos:prefLabel xml:lang="nn">Fysisk objekt som verk</skos:prefLabel>
+    <skos:definition xml:lang="nn">Verk som er uttrykt i kraft av deira fysiske
+      eigenskapar</skos:definition>
+    <skos:scopeNote xml:lang="en">Including, but not limited to, sculptures, articles of clothing,
+      architectural objects</skos:scopeNote>
+    <skos:scopeNote xml:lang="nb">Inkluderer, men ikke begrenset til, skulpturer, klær,
+      arkitektoniske objekter</skos:scopeNote>
+    <skos:scopeNote xml:lang="nn">Inkluderer, men ikkje avgrensa til, skulpturar, klede,
+      arkitektoniske objekt</skos:scopeNote>
+    <skos:inScheme rdf:resource="https://schema.nb.no/Bibliographic/ValueSchemes/VS1000"/>
+  </rdf:Description>
+  
+  <!-- Value: Composite work -->
+  <rdf:Description rdf:about="https://schema.nb.no/Bibliographic/Values/V1008">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <reg:name xml:lang="en">CompositeWork</reg:name>
+    <rdfs:label xml:lang="en">Composite work</rdfs:label>
+    <skos:prefLabel xml:lang="en">Composite work</skos:prefLabel>
+    <skos:definition xml:lang="en">Works expressed by combining elements from existing works and/or
+      objects, in which the entirety comprises a new work</skos:definition>
+    <rdfs:label xml:lang="nb">Sammensatt verk</rdfs:label>
+    <skos:prefLabel xml:lang="nb">Sammensatt verk</skos:prefLabel>
+    <skos:definition xml:lang="nb">Verk som er uttrykt ved å kombinere elementer fra eksisterende
+      verk og/eller objekter, hvor helheten utgjør et eget verk</skos:definition>
+    <rdfs:label xml:lang="nn">Samansett verk</rdfs:label>
+    <skos:prefLabel xml:lang="nn">Samansett verk</skos:prefLabel>
+    <skos:definition xml:lang="nn">Verk som er uttrykt ved å kombinera element frå eksisterande
+      verk og/eller objekt, der heilskapen blir eit eige verk</skos:definition>
+    <skos:scopeNote xml:lang="en">Including, but not limited to, archives, data sets, certain types
+      of educational resources (kits), certain types of anthologies, collections (for example
+      bibliographies)</skos:scopeNote>
+    <skos:scopeNote xml:lang="nb">Inkluderer, men ikke begrenset til, arkiv, datasett, visse typer
+      læringsressurser (kits), visse typer antologier, kombidokumenter, samlinger (feks
+      bibliografier)</skos:scopeNote>
+    <skos:scopeNote xml:lang="nn">Inkluderer, men ikkje avgrensa til, arkiv, datasett, visse typar
+      læringsressursar (kits), visse typar antologiar, kombidokument, samlingar (feks
+      bibliografiar)</skos:scopeNote>
+    <skos:example xml:lang="en">The anthology "Eros beretter" by Nils Johan Rud</skos:example>
+    <skos:example xml:lang="en">Arne Garborg's archives</skos:example>
+    <skos:example xml:lang="nb">Antologien "Eros beretter" ved Nils Johan Rud</skos:example>
+    <skos:example xml:lang="nb">arkiv etter Arne Garborg</skos:example>
+    <skos:example xml:lang="nn">Antologien "Eros beretter" ved Nils Johan Rud</skos:example>
+    <skos:example xml:lang="nn">arkiv etter Arne Garborg</skos:example>
+    <skos:inScheme rdf:resource="https://schema.nb.no/Bibliographic/ValueSchemes/VS1000"/>
+  </rdf:Description>
+  
+  <!-- Value: Performing arts -->
+  <rdf:Description rdf:about="https://schema.nb.no/Bibliographic/Values/V1009">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <reg:name xml:lang="en">PerformingArt</reg:name>
+    <rdfs:label xml:lang="en">Work of performing arts</rdfs:label>
+    <skos:prefLabel xml:lang="en">Work of performing arts</skos:prefLabel>
+    <skos:definition xml:lang="en">Works expressed as a creative activity that is performed in front of an audience</skos:definition>
+    <rdfs:label xml:lang="nb">Framføringsverk</rdfs:label>
+    <skos:prefLabel xml:lang="nb">Framføringsverk</skos:prefLabel>
+    <skos:definition xml:lang="nb">Verk som er uttrykt som en kreativ aktivitet framført foran et publikum</skos:definition>
+    <rdfs:label xml:lang="nn">Framføringsverk</rdfs:label>
+    <skos:prefLabel xml:lang="nn">Framføringsverk</skos:prefLabel>
+    <skos:definition xml:lang="nn">Verk som er uttrykt som ein kreativ aktivitet framført framfor eit publikum</skos:definition>
+    <skos:scopeNote xml:lang="en">Including, but not limited to, theatrical performances, dramatized music (for example opera, oratorio and musical performances), and dance</skos:scopeNote>
+    <skos:scopeNote xml:lang="nb">Inkluderer, men ikke begrenset til, teaterforestillinger, dramatisert musikk (for eksempel opera-, oratorie- og musikalfremføringer), og dans</skos:scopeNote>
+    <skos:scopeNote xml:lang="nn">Inkluderer, men ikkje avgrensa til, teaterframsyningar, dramatisert musikk (for eksempel opera-, oratorie- og musikalframsyningar), og dans</skos:scopeNote>
+    <skos:example xml:lang="en">The theatrical performance "Natten er dagens mor" produced by Nationaltheatret for Hovedscenen. Premiere: 10. January 2015</skos:example>
+    <skos:example xml:lang="nb">Teaterforestillingen "Natten er dagens mor" produsert av Nationaltheatret for Hovedscenen. Premiere: 10. januar 2015</skos:example>
+    <skos:example xml:lang="nn">Teaterframsyninga "Natten er dagens mor" produsert av Nationaltheatret for Hovedscenen. Premiere: 10. januar 2015</skos:example>
+    <skos:inScheme rdf:resource="https://schema.nb.no/Bibliographic/ValueSchemes/VS1000"/>
+  </rdf:Description>
+  
+  <!-- subtypes -->
+
+</rdf:RDF>
