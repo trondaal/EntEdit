@@ -1,0 +1,14 @@
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+
+#Verkstyper - legger til 'no' label siden orginaldata kun har 'nb', 'nn', og 'en' label
+<https://schema.nb.no/Bibliographic/Values/V1000>	rdfs:label	"Språkbasert verk"@no .
+<https://schema.nb.no/Bibliographic/Values/V1001>	rdfs:label	"Musikkverk"@no .
+<https://schema.nb.no/Bibliographic/Values/V1002>	rdfs:label	"Filmverk"@no .
+<https://schema.nb.no/Bibliographic/Values/V1003>	rdfs:label	"Bildeverk"@no .
+<https://schema.nb.no/Bibliographic/Values/V1004>	rdfs:label	"Kartografisk verk"@no .
+<https://schema.nb.no/Bibliographic/Values/V1005>	rdfs:label	"Interaktivt verk"@no .
+<https://schema.nb.no/Bibliographic/Values/V1006>	rdfs:label	"Kringkastingsverk"@no .
+<https://schema.nb.no/Bibliographic/Values/V1007>	rdfs:label	"Fysisk objekt som verk"@no .
+<https://schema.nb.no/Bibliographic/Values/V1008>	rdfs:label	"Sammensatt verk"@no .
+<https://schema.nb.no/Bibliographic/Values/V1009>	rdfs:label	"Framføringsverk"@no .
+

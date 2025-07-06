@@ -1,0 +1,501 @@
+# rdfs:labels in norwegian and english for languages
+<http://id.loc.gov/vocabulary/iso639-2/aar>	<http://www.w3.org/2000/01/rdf-schema#label>	"Afar"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/abk>	<http://www.w3.org/2000/01/rdf-schema#label>	"Abkhazian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ace>	<http://www.w3.org/2000/01/rdf-schema#label>	"Achinese"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ach>	<http://www.w3.org/2000/01/rdf-schema#label>	"Acoli"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ada>	<http://www.w3.org/2000/01/rdf-schema#label>	"Adangme"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ady>	<http://www.w3.org/2000/01/rdf-schema#label>	"Adyghe | Adygei"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/afa>	<http://www.w3.org/2000/01/rdf-schema#label>	"Afro-Asiatic languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/afh>	<http://www.w3.org/2000/01/rdf-schema#label>	"Afrihili"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/afr>	<http://www.w3.org/2000/01/rdf-schema#label>	"Afrikaans"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ain>	<http://www.w3.org/2000/01/rdf-schema#label>	"Ainu"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/aka>	<http://www.w3.org/2000/01/rdf-schema#label>	"Akan"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/akk>	<http://www.w3.org/2000/01/rdf-schema#label>	"Akkadian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/alb>	<http://www.w3.org/2000/01/rdf-schema#label>	"Albanian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ale>	<http://www.w3.org/2000/01/rdf-schema#label>	"Aleut"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/alg>	<http://www.w3.org/2000/01/rdf-schema#label>	"Algonquian languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/alt>	<http://www.w3.org/2000/01/rdf-schema#label>	"Southern Altai"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/amh>	<http://www.w3.org/2000/01/rdf-schema#label>	"Amharic"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ang>	<http://www.w3.org/2000/01/rdf-schema#label>	"English, Old (ca.450-1100)"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/anp>	<http://www.w3.org/2000/01/rdf-schema#label>	"Angika"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/apa>	<http://www.w3.org/2000/01/rdf-schema#label>	"Apache languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ara>	<http://www.w3.org/2000/01/rdf-schema#label>	"Arabic"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/arc>	<http://www.w3.org/2000/01/rdf-schema#label>	"Official Aramaic (700-300 BCE) | Imperial Aramaic (700-300 BCE)"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/arg>	<http://www.w3.org/2000/01/rdf-schema#label>	"Aragonese"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/arm>	<http://www.w3.org/2000/01/rdf-schema#label>	"Armenian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/arn>	<http://www.w3.org/2000/01/rdf-schema#label>	"Mapudungun | Mapuche"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/arp>	<http://www.w3.org/2000/01/rdf-schema#label>	"Arapaho"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/art>	<http://www.w3.org/2000/01/rdf-schema#label>	"Artificial languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/arw>	<http://www.w3.org/2000/01/rdf-schema#label>	"Arawak"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/asm>	<http://www.w3.org/2000/01/rdf-schema#label>	"Assamese"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ast>	<http://www.w3.org/2000/01/rdf-schema#label>	"Asturian | Bable | Leonese | Asturleonese"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ath>	<http://www.w3.org/2000/01/rdf-schema#label>	"Athapascan languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/aus>	<http://www.w3.org/2000/01/rdf-schema#label>	"Australian languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ava>	<http://www.w3.org/2000/01/rdf-schema#label>	"Avaric"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ave>	<http://www.w3.org/2000/01/rdf-schema#label>	"Avestan"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/awa>	<http://www.w3.org/2000/01/rdf-schema#label>	"Awadhi"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/aym>	<http://www.w3.org/2000/01/rdf-schema#label>	"Aymara"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/aze>	<http://www.w3.org/2000/01/rdf-schema#label>	"Azerbaijani"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/bad>	<http://www.w3.org/2000/01/rdf-schema#label>	"Banda languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/bai>	<http://www.w3.org/2000/01/rdf-schema#label>	"Bamileke languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/bak>	<http://www.w3.org/2000/01/rdf-schema#label>	"Bashkir"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/bal>	<http://www.w3.org/2000/01/rdf-schema#label>	"Baluchi"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/bam>	<http://www.w3.org/2000/01/rdf-schema#label>	"Bambara"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ban>	<http://www.w3.org/2000/01/rdf-schema#label>	"Balinese"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/baq>	<http://www.w3.org/2000/01/rdf-schema#label>	"Basque"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/bas>	<http://www.w3.org/2000/01/rdf-schema#label>	"Basa"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/bat>	<http://www.w3.org/2000/01/rdf-schema#label>	"Baltic languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/bej>	<http://www.w3.org/2000/01/rdf-schema#label>	"Beja | Bedawiyet"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/bel>	<http://www.w3.org/2000/01/rdf-schema#label>	"Belarusian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/bem>	<http://www.w3.org/2000/01/rdf-schema#label>	"Bemba"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ben>	<http://www.w3.org/2000/01/rdf-schema#label>	"Bengali"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ber>	<http://www.w3.org/2000/01/rdf-schema#label>	"Berber languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/bho>	<http://www.w3.org/2000/01/rdf-schema#label>	"Bhojpuri"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/bih>	<http://www.w3.org/2000/01/rdf-schema#label>	"Bihari languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/bik>	<http://www.w3.org/2000/01/rdf-schema#label>	"Bikol"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/bin>	<http://www.w3.org/2000/01/rdf-schema#label>	"Bini | Edo"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/bis>	<http://www.w3.org/2000/01/rdf-schema#label>	"Bislama"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/bla>	<http://www.w3.org/2000/01/rdf-schema#label>	"Siksika"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/bnt>	<http://www.w3.org/2000/01/rdf-schema#label>	"Bantu languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/bod>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tibetan"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/bos>	<http://www.w3.org/2000/01/rdf-schema#label>	"Bosnian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/bra>	<http://www.w3.org/2000/01/rdf-schema#label>	"Braj"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/bre>	<http://www.w3.org/2000/01/rdf-schema#label>	"Breton"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/btk>	<http://www.w3.org/2000/01/rdf-schema#label>	"Batak languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/bua>	<http://www.w3.org/2000/01/rdf-schema#label>	"Buriat"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/bug>	<http://www.w3.org/2000/01/rdf-schema#label>	"Buginese"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/bul>	<http://www.w3.org/2000/01/rdf-schema#label>	"Bulgarian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/bur>	<http://www.w3.org/2000/01/rdf-schema#label>	"Burmese"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/byn>	<http://www.w3.org/2000/01/rdf-schema#label>	"Blin | Bilin"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/cad>	<http://www.w3.org/2000/01/rdf-schema#label>	"Caddo"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/cai>	<http://www.w3.org/2000/01/rdf-schema#label>	"Central American Indian languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/car>	<http://www.w3.org/2000/01/rdf-schema#label>	"Galibi Carib"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/cat>	<http://www.w3.org/2000/01/rdf-schema#label>	"Catalan"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/cau>	<http://www.w3.org/2000/01/rdf-schema#label>	"Caucasian languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ceb>	<http://www.w3.org/2000/01/rdf-schema#label>	"Cebuano"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/cel>	<http://www.w3.org/2000/01/rdf-schema#label>	"Celtic languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ces>	<http://www.w3.org/2000/01/rdf-schema#label>	"Czech"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/cha>	<http://www.w3.org/2000/01/rdf-schema#label>	"Chamorro"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/chb>	<http://www.w3.org/2000/01/rdf-schema#label>	"Chibcha"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/che>	<http://www.w3.org/2000/01/rdf-schema#label>	"Chechen"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/chg>	<http://www.w3.org/2000/01/rdf-schema#label>	"Chagatai"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/chi>	<http://www.w3.org/2000/01/rdf-schema#label>	"Chinese"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/chk>	<http://www.w3.org/2000/01/rdf-schema#label>	"Chuukese"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/chm>	<http://www.w3.org/2000/01/rdf-schema#label>	"Mari"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/chn>	<http://www.w3.org/2000/01/rdf-schema#label>	"Chinook jargon"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/cho>	<http://www.w3.org/2000/01/rdf-schema#label>	"Choctaw"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/chp>	<http://www.w3.org/2000/01/rdf-schema#label>	"Chipewyan | Dene Suline"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/chr>	<http://www.w3.org/2000/01/rdf-schema#label>	"Cherokee"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/chu>	<http://www.w3.org/2000/01/rdf-schema#label>	"Church Slavic | Old Slavonic | Church Slavonic | Old Bulgarian | Old Church Slavonic"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/chv>	<http://www.w3.org/2000/01/rdf-schema#label>	"Chuvash"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/chy>	<http://www.w3.org/2000/01/rdf-schema#label>	"Cheyenne"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/cmc>	<http://www.w3.org/2000/01/rdf-schema#label>	"Chamic languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/cnr>	<http://www.w3.org/2000/01/rdf-schema#label>	"Montenegrin"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/cop>	<http://www.w3.org/2000/01/rdf-schema#label>	"Coptic"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/cor>	<http://www.w3.org/2000/01/rdf-schema#label>	"Cornish"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/cos>	<http://www.w3.org/2000/01/rdf-schema#label>	"Corsican"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/cpe>	<http://www.w3.org/2000/01/rdf-schema#label>	"Creoles and pidgins, English based"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/cpf>	<http://www.w3.org/2000/01/rdf-schema#label>	"Creoles and pidgins, French-based"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/cpp>	<http://www.w3.org/2000/01/rdf-schema#label>	"Creoles and pidgins, Portuguese-based"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/cre>	<http://www.w3.org/2000/01/rdf-schema#label>	"Cree"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/crh>	<http://www.w3.org/2000/01/rdf-schema#label>	"Crimean Tatar | Crimean Turkish"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/crp>	<http://www.w3.org/2000/01/rdf-schema#label>	"Creoles and pidgins"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/csb>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kashubian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/cus>	<http://www.w3.org/2000/01/rdf-schema#label>	"Cushitic languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/cym>	<http://www.w3.org/2000/01/rdf-schema#label>	"Welsh"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/cze>	<http://www.w3.org/2000/01/rdf-schema#label>	"Czech"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/dak>	<http://www.w3.org/2000/01/rdf-schema#label>	"Dakota"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/dan>	<http://www.w3.org/2000/01/rdf-schema#label>	"Danish"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/dar>	<http://www.w3.org/2000/01/rdf-schema#label>	"Dargwa"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/day>	<http://www.w3.org/2000/01/rdf-schema#label>	"Land Dayak languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/del>	<http://www.w3.org/2000/01/rdf-schema#label>	"Delaware"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/den>	<http://www.w3.org/2000/01/rdf-schema#label>	"Slave (Athapascan)"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/deu>	<http://www.w3.org/2000/01/rdf-schema#label>	"German"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/dgr>	<http://www.w3.org/2000/01/rdf-schema#label>	"Dogrib"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/din>	<http://www.w3.org/2000/01/rdf-schema#label>	"Dinka"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/div>	<http://www.w3.org/2000/01/rdf-schema#label>	"Divehi | Dhivehi | Maldivian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/doi>	<http://www.w3.org/2000/01/rdf-schema#label>	"Dogri"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/dra>	<http://www.w3.org/2000/01/rdf-schema#label>	"Dravidian languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/dsb>	<http://www.w3.org/2000/01/rdf-schema#label>	"Lower Sorbian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/dua>	<http://www.w3.org/2000/01/rdf-schema#label>	"Duala"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/dum>	<http://www.w3.org/2000/01/rdf-schema#label>	"Dutch, Middle (ca.1050-1350)"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/dut>	<http://www.w3.org/2000/01/rdf-schema#label>	"Dutch"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/dyu>	<http://www.w3.org/2000/01/rdf-schema#label>	"Dyula"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/dzo>	<http://www.w3.org/2000/01/rdf-schema#label>	"Dzongkha"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/efi>	<http://www.w3.org/2000/01/rdf-schema#label>	"Efik"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/egy>	<http://www.w3.org/2000/01/rdf-schema#label>	"Egyptian (Ancient)"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/eka>	<http://www.w3.org/2000/01/rdf-schema#label>	"Ekajuk"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ell>	<http://www.w3.org/2000/01/rdf-schema#label>	"Greek, Modern (1453-)"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/elx>	<http://www.w3.org/2000/01/rdf-schema#label>	"Elamite"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/eng>	<http://www.w3.org/2000/01/rdf-schema#label>	"English"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/enm>	<http://www.w3.org/2000/01/rdf-schema#label>	"English, Middle (1100-1500)"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/epo>	<http://www.w3.org/2000/01/rdf-schema#label>	"Esperanto"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/est>	<http://www.w3.org/2000/01/rdf-schema#label>	"Estonian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ewe>	<http://www.w3.org/2000/01/rdf-schema#label>	"Ewe"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ewo>	<http://www.w3.org/2000/01/rdf-schema#label>	"Ewondo"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/fan>	<http://www.w3.org/2000/01/rdf-schema#label>	"Fang"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/fao>	<http://www.w3.org/2000/01/rdf-schema#label>	"Faroese"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/fas>	<http://www.w3.org/2000/01/rdf-schema#label>	"Persian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/fat>	<http://www.w3.org/2000/01/rdf-schema#label>	"Fanti"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/fij>	<http://www.w3.org/2000/01/rdf-schema#label>	"Fijian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/fil>	<http://www.w3.org/2000/01/rdf-schema#label>	"Filipino | Pilipino"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/fin>	<http://www.w3.org/2000/01/rdf-schema#label>	"Finnish"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/fiu>	<http://www.w3.org/2000/01/rdf-schema#label>	"Finno-Ugrian languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/fon>	<http://www.w3.org/2000/01/rdf-schema#label>	"Fon"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/fra>	<http://www.w3.org/2000/01/rdf-schema#label>	"French"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/fre>	<http://www.w3.org/2000/01/rdf-schema#label>	"French"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/frm>	<http://www.w3.org/2000/01/rdf-schema#label>	"French, Middle (ca.1400-1600)"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/fro>	<http://www.w3.org/2000/01/rdf-schema#label>	"French, Old (842-ca.1400)"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/frr>	<http://www.w3.org/2000/01/rdf-schema#label>	"Northern Frisian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/frs>	<http://www.w3.org/2000/01/rdf-schema#label>	"Eastern Frisian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/fry>	<http://www.w3.org/2000/01/rdf-schema#label>	"Western Frisian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ful>	<http://www.w3.org/2000/01/rdf-schema#label>	"Fulah"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/fur>	<http://www.w3.org/2000/01/rdf-schema#label>	"Friulian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/gaa>	<http://www.w3.org/2000/01/rdf-schema#label>	"Ga"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/gay>	<http://www.w3.org/2000/01/rdf-schema#label>	"Gayo"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/gba>	<http://www.w3.org/2000/01/rdf-schema#label>	"Gbaya"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/gem>	<http://www.w3.org/2000/01/rdf-schema#label>	"Germanic languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/geo>	<http://www.w3.org/2000/01/rdf-schema#label>	"Georgian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ger>	<http://www.w3.org/2000/01/rdf-schema#label>	"German"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/gez>	<http://www.w3.org/2000/01/rdf-schema#label>	"Geez"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/gil>	<http://www.w3.org/2000/01/rdf-schema#label>	"Gilbertese"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/gla>	<http://www.w3.org/2000/01/rdf-schema#label>	"Gaelic | Scottish Gaelic"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/gle>	<http://www.w3.org/2000/01/rdf-schema#label>	"Irish"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/glg>	<http://www.w3.org/2000/01/rdf-schema#label>	"Galician"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/glv>	<http://www.w3.org/2000/01/rdf-schema#label>	"Manx"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/gmh>	<http://www.w3.org/2000/01/rdf-schema#label>	"German, Middle High (ca.1050-1500)"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/goh>	<http://www.w3.org/2000/01/rdf-schema#label>	"German, Old High (ca.750-1050)"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/gon>	<http://www.w3.org/2000/01/rdf-schema#label>	"Gondi"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/gor>	<http://www.w3.org/2000/01/rdf-schema#label>	"Gorontalo"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/got>	<http://www.w3.org/2000/01/rdf-schema#label>	"Gothic"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/grb>	<http://www.w3.org/2000/01/rdf-schema#label>	"Grebo"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/grc>	<http://www.w3.org/2000/01/rdf-schema#label>	"Ancient Greek"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/grn>	<http://www.w3.org/2000/01/rdf-schema#label>	"Guarani"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/gsw>	<http://www.w3.org/2000/01/rdf-schema#label>	"Swiss German | Alemannic | Alsatian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/guj>	<http://www.w3.org/2000/01/rdf-schema#label>	"Gujarati"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/gwi>	<http://www.w3.org/2000/01/rdf-schema#label>	"Gwich'in"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/hai>	<http://www.w3.org/2000/01/rdf-schema#label>	"Haida"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/hat>	<http://www.w3.org/2000/01/rdf-schema#label>	"Haitian | Haitian Creole"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/hau>	<http://www.w3.org/2000/01/rdf-schema#label>	"Hausa"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/haw>	<http://www.w3.org/2000/01/rdf-schema#label>	"Hawaiian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/heb>	<http://www.w3.org/2000/01/rdf-schema#label>	"Hebrew"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/her>	<http://www.w3.org/2000/01/rdf-schema#label>	"Herero"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/hil>	<http://www.w3.org/2000/01/rdf-schema#label>	"Hiligaynon"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/him>	<http://www.w3.org/2000/01/rdf-schema#label>	"Himachali languages | Western Pahari languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/hin>	<http://www.w3.org/2000/01/rdf-schema#label>	"Hindi"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/hit>	<http://www.w3.org/2000/01/rdf-schema#label>	"Hittite"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/hmn>	<http://www.w3.org/2000/01/rdf-schema#label>	"Hmong | Mong"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/hmo>	<http://www.w3.org/2000/01/rdf-schema#label>	"Hiri Motu"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/hrv>	<http://www.w3.org/2000/01/rdf-schema#label>	"Croatian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/hsb>	<http://www.w3.org/2000/01/rdf-schema#label>	"Upper Sorbian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/hun>	<http://www.w3.org/2000/01/rdf-schema#label>	"Hungarian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/hup>	<http://www.w3.org/2000/01/rdf-schema#label>	"Hupa"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/iba>	<http://www.w3.org/2000/01/rdf-schema#label>	"Iban"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ibo>	<http://www.w3.org/2000/01/rdf-schema#label>	"Igbo"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ice>	<http://www.w3.org/2000/01/rdf-schema#label>	"Icelandic"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ido>	<http://www.w3.org/2000/01/rdf-schema#label>	"Ido"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/iii>	<http://www.w3.org/2000/01/rdf-schema#label>	"Sichuan Yi | Nuosu"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ijo>	<http://www.w3.org/2000/01/rdf-schema#label>	"Ijo languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/iku>	<http://www.w3.org/2000/01/rdf-schema#label>	"Inuktitut"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ile>	<http://www.w3.org/2000/01/rdf-schema#label>	"Interlingue | Occidental"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ilo>	<http://www.w3.org/2000/01/rdf-schema#label>	"Iloko"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ina>	<http://www.w3.org/2000/01/rdf-schema#label>	"Interlingua (International Auxiliary Language Association)"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/inc>	<http://www.w3.org/2000/01/rdf-schema#label>	"Indic languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ind>	<http://www.w3.org/2000/01/rdf-schema#label>	"Indonesian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ine>	<http://www.w3.org/2000/01/rdf-schema#label>	"Indo-European languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/inh>	<http://www.w3.org/2000/01/rdf-schema#label>	"Ingush"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ipk>	<http://www.w3.org/2000/01/rdf-schema#label>	"Inupiaq"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ira>	<http://www.w3.org/2000/01/rdf-schema#label>	"Iranian languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/iro>	<http://www.w3.org/2000/01/rdf-schema#label>	"Iroquoian languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ita>	<http://www.w3.org/2000/01/rdf-schema#label>	"Italian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/jav>	<http://www.w3.org/2000/01/rdf-schema#label>	"Javanese"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/jbo>	<http://www.w3.org/2000/01/rdf-schema#label>	"Lojban"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/jpn>	<http://www.w3.org/2000/01/rdf-schema#label>	"Japanese"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/jpr>	<http://www.w3.org/2000/01/rdf-schema#label>	"Judeo-Persian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/jrb>	<http://www.w3.org/2000/01/rdf-schema#label>	"Judeo-Arabic"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kaa>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kara-Kalpak"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kab>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kabyle"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kac>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kachin | Jingpho"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kal>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kalaallisut | Greenlandic"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kam>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kamba"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kan>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kannada"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kar>	<http://www.w3.org/2000/01/rdf-schema#label>	"Karen languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kas>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kashmiri"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kau>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kanuri"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kaw>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kawi"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kaz>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kazakh"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kbd>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kabardian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kha>	<http://www.w3.org/2000/01/rdf-schema#label>	"Khasi"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/khi>	<http://www.w3.org/2000/01/rdf-schema#label>	"Khoisan languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/khm>	<http://www.w3.org/2000/01/rdf-schema#label>	"Central Khmer"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kho>	<http://www.w3.org/2000/01/rdf-schema#label>	"Khotanese | Sakan"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kik>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kikuyu | Gikuyu"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kin>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kinyarwanda"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kir>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kirghiz | Kyrgyz"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kmb>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kimbundu"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kok>	<http://www.w3.org/2000/01/rdf-schema#label>	"Konkani"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kom>	<http://www.w3.org/2000/01/rdf-schema#label>	"Komi"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kon>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kongo"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kor>	<http://www.w3.org/2000/01/rdf-schema#label>	"Korean"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kos>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kosraean"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kpe>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kpelle"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/krc>	<http://www.w3.org/2000/01/rdf-schema#label>	"Karachay-Balkar"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/krl>	<http://www.w3.org/2000/01/rdf-schema#label>	"Karelian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kro>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kru languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kru>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kurukh"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kua>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kuanyama | Kwanyama"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kum>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kumyk"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kur>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kurdish"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/kut>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kutenai"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/lad>	<http://www.w3.org/2000/01/rdf-schema#label>	"Ladino"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/lah>	<http://www.w3.org/2000/01/rdf-schema#label>	"Lahnda"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/lam>	<http://www.w3.org/2000/01/rdf-schema#label>	"Lamba"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/lao>	<http://www.w3.org/2000/01/rdf-schema#label>	"Lao"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/lat>	<http://www.w3.org/2000/01/rdf-schema#label>	"Latin"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/lav>	<http://www.w3.org/2000/01/rdf-schema#label>	"Latvian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/lez>	<http://www.w3.org/2000/01/rdf-schema#label>	"Lezghian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/lim>	<http://www.w3.org/2000/01/rdf-schema#label>	"Limburgan | Limburger | Limburgish"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/lin>	<http://www.w3.org/2000/01/rdf-schema#label>	"Lingala"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/lit>	<http://www.w3.org/2000/01/rdf-schema#label>	"Lithuanian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/lol>	<http://www.w3.org/2000/01/rdf-schema#label>	"Mongo"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/loz>	<http://www.w3.org/2000/01/rdf-schema#label>	"Lozi"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ltz>	<http://www.w3.org/2000/01/rdf-schema#label>	"Luxembourgish | Letzeburgesch"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/lua>	<http://www.w3.org/2000/01/rdf-schema#label>	"Luba-Lulua"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/lub>	<http://www.w3.org/2000/01/rdf-schema#label>	"Luba-Katanga"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/lug>	<http://www.w3.org/2000/01/rdf-schema#label>	"Ganda"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/lui>	<http://www.w3.org/2000/01/rdf-schema#label>	"Luiseno"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/lun>	<http://www.w3.org/2000/01/rdf-schema#label>	"Lunda"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/luo>	<http://www.w3.org/2000/01/rdf-schema#label>	"Luo (Kenya and Tanzania)"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/lus>	<http://www.w3.org/2000/01/rdf-schema#label>	"Lushai"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/mac>	<http://www.w3.org/2000/01/rdf-schema#label>	"Macedonian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/mad>	<http://www.w3.org/2000/01/rdf-schema#label>	"Madurese"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/mag>	<http://www.w3.org/2000/01/rdf-schema#label>	"Magahi"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/mah>	<http://www.w3.org/2000/01/rdf-schema#label>	"Marshallese"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/mai>	<http://www.w3.org/2000/01/rdf-schema#label>	"Maithili"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/mak>	<http://www.w3.org/2000/01/rdf-schema#label>	"Makasar"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/mal>	<http://www.w3.org/2000/01/rdf-schema#label>	"Malayalam"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/man>	<http://www.w3.org/2000/01/rdf-schema#label>	"Mandingo"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/mao>	<http://www.w3.org/2000/01/rdf-schema#label>	"Maori"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/map>	<http://www.w3.org/2000/01/rdf-schema#label>	"Austronesian languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/mar>	<http://www.w3.org/2000/01/rdf-schema#label>	"Marathi"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/mas>	<http://www.w3.org/2000/01/rdf-schema#label>	"Masai"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/may>	<http://www.w3.org/2000/01/rdf-schema#label>	"Malay"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/mdf>	<http://www.w3.org/2000/01/rdf-schema#label>	"Moksha"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/mdr>	<http://www.w3.org/2000/01/rdf-schema#label>	"Mandar"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/men>	<http://www.w3.org/2000/01/rdf-schema#label>	"Mende"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/mga>	<http://www.w3.org/2000/01/rdf-schema#label>	"Irish, Middle (900-1200)"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/mic>	<http://www.w3.org/2000/01/rdf-schema#label>	"Mi'kmaq | Micmac"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/min>	<http://www.w3.org/2000/01/rdf-schema#label>	"Minangkabau"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/mis>	<http://www.w3.org/2000/01/rdf-schema#label>	"Uncoded languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/mkh>	<http://www.w3.org/2000/01/rdf-schema#label>	"Mon-Khmer languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/mlg>	<http://www.w3.org/2000/01/rdf-schema#label>	"Malagasy"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/mlt>	<http://www.w3.org/2000/01/rdf-schema#label>	"Maltese"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/mnc>	<http://www.w3.org/2000/01/rdf-schema#label>	"Manchu"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/mni>	<http://www.w3.org/2000/01/rdf-schema#label>	"Manipuri"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/mno>	<http://www.w3.org/2000/01/rdf-schema#label>	"Manobo languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/moh>	<http://www.w3.org/2000/01/rdf-schema#label>	"Mohawk"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/mon>	<http://www.w3.org/2000/01/rdf-schema#label>	"Mongolian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/mos>	<http://www.w3.org/2000/01/rdf-schema#label>	"Mossi"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/mul>	<http://www.w3.org/2000/01/rdf-schema#label>	"Multiple languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/mun>	<http://www.w3.org/2000/01/rdf-schema#label>	"Munda languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/mus>	<http://www.w3.org/2000/01/rdf-schema#label>	"Creek"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/mwl>	<http://www.w3.org/2000/01/rdf-schema#label>	"Mirandese"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/mwr>	<http://www.w3.org/2000/01/rdf-schema#label>	"Marwari"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/myn>	<http://www.w3.org/2000/01/rdf-schema#label>	"Mayan languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/myv>	<http://www.w3.org/2000/01/rdf-schema#label>	"Erzya"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/nah>	<http://www.w3.org/2000/01/rdf-schema#label>	"Nahuatl languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/nai>	<http://www.w3.org/2000/01/rdf-schema#label>	"North American Indian languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/nap>	<http://www.w3.org/2000/01/rdf-schema#label>	"Neapolitan"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/nau>	<http://www.w3.org/2000/01/rdf-schema#label>	"Nauru"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/nav>	<http://www.w3.org/2000/01/rdf-schema#label>	"Navajo | Navaho"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/nbl>	<http://www.w3.org/2000/01/rdf-schema#label>	"Ndebele, South | South Ndebele"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/nde>	<http://www.w3.org/2000/01/rdf-schema#label>	"Ndebele, North | North Ndebele"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ndo>	<http://www.w3.org/2000/01/rdf-schema#label>	"Ndonga"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/nds>	<http://www.w3.org/2000/01/rdf-schema#label>	"Low German | Low Saxon | German, Low | Saxon, Low"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/nep>	<http://www.w3.org/2000/01/rdf-schema#label>	"Nepali"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/new>	<http://www.w3.org/2000/01/rdf-schema#label>	"Nepal Bhasa | Newari"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/nia>	<http://www.w3.org/2000/01/rdf-schema#label>	"Nias"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/nic>	<http://www.w3.org/2000/01/rdf-schema#label>	"Niger-Kordofanian languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/niu>	<http://www.w3.org/2000/01/rdf-schema#label>	"Niuean"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/nno>	<http://www.w3.org/2000/01/rdf-schema#label>	"Norwegian Nynorsk"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/nob>	<http://www.w3.org/2000/01/rdf-schema#label>	"Norwegian Bokmål"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/nog>	<http://www.w3.org/2000/01/rdf-schema#label>	"Nogai"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/non>	<http://www.w3.org/2000/01/rdf-schema#label>	"Norse, Old"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/nor>	<http://www.w3.org/2000/01/rdf-schema#label>	"Norwegian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/nqo>	<http://www.w3.org/2000/01/rdf-schema#label>	"N'Ko"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/nso>	<http://www.w3.org/2000/01/rdf-schema#label>	"Pedi | Sepedi | Northern Sotho"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/nub>	<http://www.w3.org/2000/01/rdf-schema#label>	"Nubian languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/nwc>	<http://www.w3.org/2000/01/rdf-schema#label>	"Classical Newari | Old Newari | Classical Nepal Bhasa"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/nya>	<http://www.w3.org/2000/01/rdf-schema#label>	"Chichewa | Chewa | Nyanja"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/nym>	<http://www.w3.org/2000/01/rdf-schema#label>	"Nyamwezi"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/nyn>	<http://www.w3.org/2000/01/rdf-schema#label>	"Nyankole"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/nyo>	<http://www.w3.org/2000/01/rdf-schema#label>	"Nyoro"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/nzi>	<http://www.w3.org/2000/01/rdf-schema#label>	"Nzima"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/oci>	<http://www.w3.org/2000/01/rdf-schema#label>	"Occitan (post 1500)"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/oji>	<http://www.w3.org/2000/01/rdf-schema#label>	"Ojibwa"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ori>	<http://www.w3.org/2000/01/rdf-schema#label>	"Oriya"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/orm>	<http://www.w3.org/2000/01/rdf-schema#label>	"Oromo"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/osa>	<http://www.w3.org/2000/01/rdf-schema#label>	"Osage"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/oss>	<http://www.w3.org/2000/01/rdf-schema#label>	"Ossetian | Ossetic"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ota>	<http://www.w3.org/2000/01/rdf-schema#label>	"Turkish, Ottoman (1500-1928)"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/oto>	<http://www.w3.org/2000/01/rdf-schema#label>	"Otomian languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/paa>	<http://www.w3.org/2000/01/rdf-schema#label>	"Papuan languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/pag>	<http://www.w3.org/2000/01/rdf-schema#label>	"Pangasinan"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/pal>	<http://www.w3.org/2000/01/rdf-schema#label>	"Pahlavi"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/pam>	<http://www.w3.org/2000/01/rdf-schema#label>	"Pampanga | Kapampangan"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/pan>	<http://www.w3.org/2000/01/rdf-schema#label>	"Panjabi | Punjabi"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/pap>	<http://www.w3.org/2000/01/rdf-schema#label>	"Papiamento"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/pau>	<http://www.w3.org/2000/01/rdf-schema#label>	"Palauan"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/peo>	<http://www.w3.org/2000/01/rdf-schema#label>	"Persian, Old (ca.600-400 B.C.)"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/per>	<http://www.w3.org/2000/01/rdf-schema#label>	"Persian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/phi>	<http://www.w3.org/2000/01/rdf-schema#label>	"Philippine languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/phn>	<http://www.w3.org/2000/01/rdf-schema#label>	"Phoenician"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/pli>	<http://www.w3.org/2000/01/rdf-schema#label>	"Pali"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/pol>	<http://www.w3.org/2000/01/rdf-schema#label>	"Polish"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/pon>	<http://www.w3.org/2000/01/rdf-schema#label>	"Pohnpeian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/por>	<http://www.w3.org/2000/01/rdf-schema#label>	"Portuguese"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/pra>	<http://www.w3.org/2000/01/rdf-schema#label>	"Prakrit languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/pro>	<http://www.w3.org/2000/01/rdf-schema#label>	"Provençal, Old (to 1500) | Occitan, Old (to 1500)"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/pus>	<http://www.w3.org/2000/01/rdf-schema#label>	"Pushto | Pashto"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/qaa-qtz>	<http://www.w3.org/2000/01/rdf-schema#label>	"Reserved for local use"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/que>	<http://www.w3.org/2000/01/rdf-schema#label>	"Quechua"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/raj>	<http://www.w3.org/2000/01/rdf-schema#label>	"Rajasthani"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/rap>	<http://www.w3.org/2000/01/rdf-schema#label>	"Rapanui"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/rar>	<http://www.w3.org/2000/01/rdf-schema#label>	"Rarotongan | Cook Islands Maori"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/roa>	<http://www.w3.org/2000/01/rdf-schema#label>	"Romance languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/roh>	<http://www.w3.org/2000/01/rdf-schema#label>	"Romansh"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/rom>	<http://www.w3.org/2000/01/rdf-schema#label>	"Romany"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ron>	<http://www.w3.org/2000/01/rdf-schema#label>	"Romanian | Moldavian | Moldovan"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/rum>	<http://www.w3.org/2000/01/rdf-schema#label>	"Romanian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/run>	<http://www.w3.org/2000/01/rdf-schema#label>	"Rundi"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/rup>	<http://www.w3.org/2000/01/rdf-schema#label>	"Aromanian | Arumanian | Macedo-Romanian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/rus>	<http://www.w3.org/2000/01/rdf-schema#label>	"Russian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/sad>	<http://www.w3.org/2000/01/rdf-schema#label>	"Sandawe"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/sag>	<http://www.w3.org/2000/01/rdf-schema#label>	"Sango"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/sah>	<http://www.w3.org/2000/01/rdf-schema#label>	"Yakut"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/sai>	<http://www.w3.org/2000/01/rdf-schema#label>	"South American Indian languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/sal>	<http://www.w3.org/2000/01/rdf-schema#label>	"Salishan languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/sam>	<http://www.w3.org/2000/01/rdf-schema#label>	"Samaritan Aramaic"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/san>	<http://www.w3.org/2000/01/rdf-schema#label>	"Sanskrit"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/sas>	<http://www.w3.org/2000/01/rdf-schema#label>	"Sasak"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/sat>	<http://www.w3.org/2000/01/rdf-schema#label>	"Santali"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/scn>	<http://www.w3.org/2000/01/rdf-schema#label>	"Sicilian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/sco>	<http://www.w3.org/2000/01/rdf-schema#label>	"Scots"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/sel>	<http://www.w3.org/2000/01/rdf-schema#label>	"Selkup"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/sem>	<http://www.w3.org/2000/01/rdf-schema#label>	"Semitic languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/sga>	<http://www.w3.org/2000/01/rdf-schema#label>	"Irish, Old (to 900)"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/sgn>	<http://www.w3.org/2000/01/rdf-schema#label>	"Sign Languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/shn>	<http://www.w3.org/2000/01/rdf-schema#label>	"Shan"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/sid>	<http://www.w3.org/2000/01/rdf-schema#label>	"Sidamo"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/sin>	<http://www.w3.org/2000/01/rdf-schema#label>	"Sinhala | Sinhalese"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/sio>	<http://www.w3.org/2000/01/rdf-schema#label>	"Siouan languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/sit>	<http://www.w3.org/2000/01/rdf-schema#label>	"Sino-Tibetan languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/sla>	<http://www.w3.org/2000/01/rdf-schema#label>	"Slavic languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/slk>	<http://www.w3.org/2000/01/rdf-schema#label>	"Slovak"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/slv>	<http://www.w3.org/2000/01/rdf-schema#label>	"Slovenian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/sma>	<http://www.w3.org/2000/01/rdf-schema#label>	"Southern Sami"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/sme>	<http://www.w3.org/2000/01/rdf-schema#label>	"Northern Sami"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/smi>	<http://www.w3.org/2000/01/rdf-schema#label>	"Sami languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/smj>	<http://www.w3.org/2000/01/rdf-schema#label>	"Lule Sami"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/smn>	<http://www.w3.org/2000/01/rdf-schema#label>	"Inari Sami"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/smo>	<http://www.w3.org/2000/01/rdf-schema#label>	"Samoan"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/sms>	<http://www.w3.org/2000/01/rdf-schema#label>	"Skolt Sami"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/sna>	<http://www.w3.org/2000/01/rdf-schema#label>	"Shona"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/snd>	<http://www.w3.org/2000/01/rdf-schema#label>	"Sindhi"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/snk>	<http://www.w3.org/2000/01/rdf-schema#label>	"Soninke"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/sog>	<http://www.w3.org/2000/01/rdf-schema#label>	"Sogdian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/som>	<http://www.w3.org/2000/01/rdf-schema#label>	"Somali"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/son>	<http://www.w3.org/2000/01/rdf-schema#label>	"Songhai languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/sot>	<http://www.w3.org/2000/01/rdf-schema#label>	"Sotho, Southern"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/spa>	<http://www.w3.org/2000/01/rdf-schema#label>	"Spanish"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/srd>	<http://www.w3.org/2000/01/rdf-schema#label>	"Sardinian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/srn>	<http://www.w3.org/2000/01/rdf-schema#label>	"Sranan Tongo"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/srp>	<http://www.w3.org/2000/01/rdf-schema#label>	"Serbian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/srr>	<http://www.w3.org/2000/01/rdf-schema#label>	"Serer"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ssa>	<http://www.w3.org/2000/01/rdf-schema#label>	"Nilo-Saharan languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ssw>	<http://www.w3.org/2000/01/rdf-schema#label>	"Swati"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/suk>	<http://www.w3.org/2000/01/rdf-schema#label>	"Sukuma"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/sun>	<http://www.w3.org/2000/01/rdf-schema#label>	"Sundanese"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/sus>	<http://www.w3.org/2000/01/rdf-schema#label>	"Susu"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/sux>	<http://www.w3.org/2000/01/rdf-schema#label>	"Sumerian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/swa>	<http://www.w3.org/2000/01/rdf-schema#label>	"Swahili"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/swe>	<http://www.w3.org/2000/01/rdf-schema#label>	"Swedish"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/syc>	<http://www.w3.org/2000/01/rdf-schema#label>	"Classical Syriac"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/syr>	<http://www.w3.org/2000/01/rdf-schema#label>	"Syriac"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/tah>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tahitian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/tai>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tai languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/tam>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tamil"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/tat>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tatar"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/tel>	<http://www.w3.org/2000/01/rdf-schema#label>	"Telugu"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/tem>	<http://www.w3.org/2000/01/rdf-schema#label>	"Timne"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ter>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tereno"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/tet>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tetum"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/tgk>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tajik"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/tgl>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tagalog"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/tha>	<http://www.w3.org/2000/01/rdf-schema#label>	"Thai"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/tig>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tigre"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/tir>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tigrinya"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/tiv>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tiv"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/tkl>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tokelau"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/tlh>	<http://www.w3.org/2000/01/rdf-schema#label>	"Klingon | tlhIngan-Hol"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/tli>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tlingit"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/tmh>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tamashek"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/tog>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tonga (Nyasa)"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ton>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tonga (Tonga Islands)"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/tpi>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tok Pisin"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/tsi>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tsimshian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/tsn>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tswana"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/tso>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tsonga"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/tuk>	<http://www.w3.org/2000/01/rdf-schema#label>	"Turkmen"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/tum>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tumbuka"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/tup>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tupi languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/tur>	<http://www.w3.org/2000/01/rdf-schema#label>	"Turkish"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/tut>	<http://www.w3.org/2000/01/rdf-schema#label>	"Altaic languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/tvl>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tuvalu"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/twi>	<http://www.w3.org/2000/01/rdf-schema#label>	"Twi"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/tyv>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tuvinian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/udm>	<http://www.w3.org/2000/01/rdf-schema#label>	"Udmurt"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/uga>	<http://www.w3.org/2000/01/rdf-schema#label>	"Ugaritic"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/uig>	<http://www.w3.org/2000/01/rdf-schema#label>	"Uighur | Uyghur"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ukr>	<http://www.w3.org/2000/01/rdf-schema#label>	"Ukrainian"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/umb>	<http://www.w3.org/2000/01/rdf-schema#label>	"Umbundu"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/und>	<http://www.w3.org/2000/01/rdf-schema#label>	"Undetermined"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/urd>	<http://www.w3.org/2000/01/rdf-schema#label>	"Urdu"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/uzb>	<http://www.w3.org/2000/01/rdf-schema#label>	"Uzbek"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/vai>	<http://www.w3.org/2000/01/rdf-schema#label>	"Vai"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ven>	<http://www.w3.org/2000/01/rdf-schema#label>	"Venda"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/vie>	<http://www.w3.org/2000/01/rdf-schema#label>	"Vietnamese"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/vol>	<http://www.w3.org/2000/01/rdf-schema#label>	"Volapük"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/vot>	<http://www.w3.org/2000/01/rdf-schema#label>	"Votic"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/wak>	<http://www.w3.org/2000/01/rdf-schema#label>	"Wakashan languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/wal>	<http://www.w3.org/2000/01/rdf-schema#label>	"Wolaitta | Wolaytta"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/war>	<http://www.w3.org/2000/01/rdf-schema#label>	"Waray"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/was>	<http://www.w3.org/2000/01/rdf-schema#label>	"Washo"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/wel>	<http://www.w3.org/2000/01/rdf-schema#label>	"Welsh"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/wen>	<http://www.w3.org/2000/01/rdf-schema#label>	"Sorbian languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/wln>	<http://www.w3.org/2000/01/rdf-schema#label>	"Walloon"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/wol>	<http://www.w3.org/2000/01/rdf-schema#label>	"Wolof"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/xal>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kalmyk | Oirat"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/xho>	<http://www.w3.org/2000/01/rdf-schema#label>	"Xhosa"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/yao>	<http://www.w3.org/2000/01/rdf-schema#label>	"Yao"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/yap>	<http://www.w3.org/2000/01/rdf-schema#label>	"Yapese"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/yid>	<http://www.w3.org/2000/01/rdf-schema#label>	"Yiddish"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/yor>	<http://www.w3.org/2000/01/rdf-schema#label>	"Yoruba"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/ypk>	<http://www.w3.org/2000/01/rdf-schema#label>	"Yupik languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/zap>	<http://www.w3.org/2000/01/rdf-schema#label>	"Zapotec"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/zbl>	<http://www.w3.org/2000/01/rdf-schema#label>	"Blissymbols | Blissymbolics | Bliss"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/zen>	<http://www.w3.org/2000/01/rdf-schema#label>	"Zenaga"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/zgh>	<http://www.w3.org/2000/01/rdf-schema#label>	"Standard Moroccan Tamazight"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/zha>	<http://www.w3.org/2000/01/rdf-schema#label>	"Zhuang | Chuang"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/znd>	<http://www.w3.org/2000/01/rdf-schema#label>	"Zande languages"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/zul>	<http://www.w3.org/2000/01/rdf-schema#label>	"Zulu"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/zun>	<http://www.w3.org/2000/01/rdf-schema#label>	"Zuni"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/zxx>	<http://www.w3.org/2000/01/rdf-schema#label>	"No linguistic content | Not applicable"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/zza>	<http://www.w3.org/2000/01/rdf-schema#label>	"Zaza | Dimili | Dimli | Kirdki | Kirmanjki | Zazaki"@en	 .
+
+<http://id.loc.gov/vocabulary/iso639-2/nno>	<http://www.w3.org/2000/01/rdf-schema#label>   "Nynorsk"@no .
+<http://id.loc.gov/vocabulary/iso639-2/nob>	<http://www.w3.org/2000/01/rdf-schema#label>   "Bokmål"@no .
+<http://id.loc.gov/vocabulary/iso639-2/nor>	<http://www.w3.org/2000/01/rdf-schema#label>   "Norsk"@no .
+<http://id.loc.gov/vocabulary/iso639-2/eng>	<http://www.w3.org/2000/01/rdf-schema#label>   "Engelsk"@no .
+<http://id.loc.gov/vocabulary/iso639-2/ger>	<http://www.w3.org/2000/01/rdf-schema#label>   "Tysk"@no .
+<http://id.loc.gov/vocabulary/iso639-2/swe>	<http://www.w3.org/2000/01/rdf-schema#label>   "Svensk"@no .
