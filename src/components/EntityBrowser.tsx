@@ -44,7 +44,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({ config, selectedLanguage 
   const { 
     data: entities, 
     isLoading: entitiesLoading 
-  } = useEntitiesByClass(config, selectedClass || '');
+  } = useEntitiesByClass(config, selectedClass || '', selectedLanguage);
 
   if (classesError) {
     return (
@@ -62,7 +62,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({ config, selectedLanguage 
           <Box sx={{ p: 2, borderBottom: 1, borderColor: 'divider' }}>
             <Typography variant="h6" sx={{ display: 'flex', alignItems: 'center' }}>
               <Class sx={{ mr: 1 }} />
-              RDF Classes
+              Classes
             </Typography>
           </Box>
           
@@ -82,7 +82,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({ config, selectedLanguage 
                     }}
                   >
                     <ListItemText
-                      primary={rdfClass.label || rdfClass.uri.split('#').pop() || rdfClass.uri}
+                      primary={(rdfClass.label || rdfClass.uri.split('#').pop() || rdfClass.uri).charAt(0).toUpperCase() + (rdfClass.label || rdfClass.uri.split('#').pop() || rdfClass.uri).slice(1)}
                       secondary={rdfClass.comment}
                       secondaryTypographyProps={{ noWrap: true }}
                     />
@@ -103,7 +103,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({ config, selectedLanguage 
             </Typography>
             {selectedClass && (
               <Chip 
-                label={classes?.find(c => c.uri === selectedClass)?.label || selectedClass.split('#').pop()}
+                label={(classes?.find(c => c.uri === selectedClass)?.label || selectedClass.split('#').pop() || '').charAt(0).toUpperCase() + (classes?.find(c => c.uri === selectedClass)?.label || selectedClass.split('#').pop() || '').slice(1)}
                 size="small"
               />
             )}
@@ -141,12 +141,13 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({ config, selectedLanguage 
       <Box sx={{ flex: '0 0 600px', minWidth: 600, alignSelf: 'flex-start' }}>
         <EntityEditor
           config={config}
-          classUri={selectedClass}
+          classUri={selectedClass || ''}
           entityUri={selectedEntity}
           properties={properties || []}
           objectProperties={objectProperties || []}
           propertiesLoading={propertiesLoading}
           objectPropertiesLoading={objectPropertiesLoading}
+          selectedLanguage={selectedLanguage}
           onEntitySaved={() => {
             // Optionally refetch entities list
           }}

@@ -18,7 +18,7 @@ import { Edit, Save, Add, Delete } from '@mui/icons-material';
 import type { SparqlEndpointConfig, RdfProperty } from '../types/sparql';
 import { SparqlClient } from '../utils/sparqlClient';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
-import { useEntitiesByRange } from '../hooks/useSparqlQueries';
+import { useEntitiesByRange, useAvailableLanguages } from '../hooks/useSparqlQueries';
 
 interface EntityEditorProps {
   config: SparqlEndpointConfig;
@@ -28,6 +28,7 @@ interface EntityEditorProps {
   objectProperties: RdfProperty[];
   propertiesLoading: boolean;
   objectPropertiesLoading: boolean;
+  selectedLanguage: string;
   onEntitySaved: () => void;
 }
 
@@ -39,6 +40,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   objectProperties,
   propertiesLoading,
   objectPropertiesLoading,
+  selectedLanguage,
   onEntitySaved,
 }) => {
   const queryClient = useQueryClient();
@@ -49,6 +51,9 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   const [selectedProperty, setSelectedProperty] = useState<string>('');
   const [selectedObjectProperty, setSelectedObjectProperty] = useState<string>('');
   const [customEntityUri, setCustomEntityUri] = useState<string>('');
+  const [labelLanguage, setLabelLanguage] = useState<string>(selectedLanguage);
+
+  const { data: availableLanguages, isLoading: languagesLoading } = useAvailableLanguages(config);
 
   const { data: existingEntity, isLoading: entityLoading } = useQuery({
     queryKey: ['entity', config.url, entityUri],
@@ -65,10 +70,16 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       
       const response = await client.query(query);
       const data: Record<string, string[]> = {};
+      let detectedLabelLanguage = selectedLanguage;
       
       response.results.bindings.forEach(binding => {
         const property = binding.property.value;
         const value = binding.value.value;
+        
+        // Extract language from rdfs:label if available
+        if (property === 'http://www.w3.org/2000/01/rdf-schema#label' && binding.value['xml:lang']) {
+          detectedLabelLanguage = binding.value['xml:lang'];
+        }
         
         if (!data[property]) {
           data[property] = [];
@@ -76,21 +87,24 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         data[property].push(value);
       });
       
-      return data;
+      return { data, detectedLabelLanguage };
     },
     enabled: !!entityUri && !!config.url,
   });
 
   useEffect(() => {
     if (existingEntity) {
-      setEntityData(existingEntity);
+      setEntityData(existingEntity.data);
       setIsEditing(false);
+      // Use detected language from the entity
+      setLabelLanguage(existingEntity.detectedLabelLanguage);
     } else if (!entityUri) {
       setEntityData({});
       setIsEditing(true);
       setCustomEntityUri(''); // Clear custom URI for new entities
+      setLabelLanguage(selectedLanguage); // Reset to selected language for new entities
     }
-  }, [existingEntity, entityUri]);
+  }, [existingEntity, entityUri, selectedLanguage]);
 
   const handleSave = async () => {
     if (!classUri) return; // Don't save if no class is selected
@@ -108,9 +122,15 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       Object.entries(entityData).forEach(([property, values]) => {
         values.forEach(value => {
           if (value.trim()) {
-            // Simple heuristic: if value looks like a URI, don't quote it
-            const formattedValue = value.startsWith('http') ? `<${value}>` : `"${value}"`;
-            triples.push(`<${currentEntityUri}> <${property}> ${formattedValue} .`);
+            // Special handling for rdfs:label to include language tag
+            if (property === 'http://www.w3.org/2000/01/rdf-schema#label') {
+              const formattedValue = `"${value}"@${labelLanguage}`;
+              triples.push(`<${currentEntityUri}> <${property}> ${formattedValue} .`);
+            } else {
+              // Simple heuristic: if value looks like a URI, don't quote it
+              const formattedValue = value.startsWith('http') ? `<${value}>` : `"${value}"`;
+              triples.push(`<${currentEntityUri}> <${property}> ${formattedValue} .`);
+            }
           }
         });
       });
@@ -206,7 +226,8 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     const values = entityData[property] || [];
     const newValues = values.filter((_, i) => i !== index);
     if (newValues.length === 0) {
-      const { [property]: removed, ...rest } = entityData;
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      const { [property]: _, ...rest } = entityData;
       setEntityData(rest);
     } else {
       setEntityData({
@@ -218,6 +239,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
   // Get properties that have values, separated by type
   const dataPropertiesWithValues = Object.keys(entityData).filter(
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     property => {
       const hasValues = entityData[property] && entityData[property].length > 0;
       const isDataProperty = properties.some(p => p.uri === property);
@@ -226,6 +248,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   );
 
   const objectPropertiesWithValues = Object.keys(entityData).filter(
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     property => {
       const hasValues = entityData[property] && entityData[property].length > 0;
       const isObjectProperty = objectProperties.some(p => p.uri === property);
@@ -289,7 +312,8 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
                   size="small"
                   onClick={() => {
                     setIsEditing(false);
-                    setEntityData(existingEntity || {});
+                    setEntityData(existingEntity?.data || {});
+                    setLabelLanguage(existingEntity?.detectedLabelLanguage || selectedLanguage);
                   }}
                 >
                   Cancel
@@ -323,22 +347,6 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         
         <TextField
           fullWidth
-          label="Label (rdfs:label)"
-          value={entityData['http://www.w3.org/2000/01/rdf-schema#label']?.[0] || ''}
-          onChange={(e) => 
-            setEntityData({ 
-              ...entityData, 
-              'http://www.w3.org/2000/01/rdf-schema#label': [e.target.value]
-            })
-          }
-          disabled={!isEditing || !classUri}
-          sx={{ mb: 2 }}
-          helperText="Human-readable name for this entity"
-          required
-        />
-        
-        <TextField
-          fullWidth
           label="Entity URI"
           value={entityUri || customEntityUri}
           onChange={(e) => {
@@ -360,6 +368,38 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           }
           placeholder="http://example.org/my-entity"
         />
+        
+        <Box sx={{ display: 'flex', gap: 1, mb: 2 }}>
+          <TextField
+            fullWidth
+            label="Label (rdfs:label)"
+            value={entityData['http://www.w3.org/2000/01/rdf-schema#label']?.[0] || ''}
+            onChange={(e) => 
+              setEntityData({ 
+                ...entityData, 
+                'http://www.w3.org/2000/01/rdf-schema#label': [e.target.value]
+              })
+            }
+            disabled={!isEditing || !classUri}
+            helperText="Human-readable name for this entity"
+            required
+          />
+          <FormControl size="small" sx={{ minWidth: 100 }}>
+            <InputLabel>Language</InputLabel>
+            <Select
+              value={labelLanguage}
+              label="Language"
+              onChange={(e) => setLabelLanguage(e.target.value)}
+              disabled={!isEditing || !classUri || languagesLoading}
+            >
+              {availableLanguages?.map((lang) => (
+                <MenuItem key={lang} value={lang}>
+                  {lang.toUpperCase()}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+        </Box>
         
         <Divider sx={{ my: 2 }} />
         
@@ -494,7 +534,7 @@ interface ObjectPropertySectionProps {
 
 const ObjectPropertySection: React.FC<ObjectPropertySectionProps> = ({
   config,
-  propertyUri,
+  propertyUri: _,
   propertyLabel,
   values,
   rangeUri,
@@ -535,9 +575,11 @@ interface ObjectPropertyValueProps {
 const ObjectPropertyValue: React.FC<ObjectPropertyValueProps> = ({
   config,
   value,
-  rangeUri,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  rangeUri: _,
   isEditing,
-  onUpdate,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  onUpdate: __,
   onRemove,
 }) => {
   const { data: entity } = useQuery({
@@ -597,7 +639,8 @@ interface ObjectPropertySelectorProps {
 
 const ObjectPropertySelector: React.FC<ObjectPropertySelectorProps> = ({
   config,
-  propertyUri,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  propertyUri: _,
   rangeUri,
   onSelect,
   onCancel,
@@ -642,7 +685,7 @@ const ObjectPropertySelector: React.FC<ObjectPropertySelectorProps> = ({
   return (
     <Box sx={{ mb: 2, p: 2, border: 1, borderColor: 'primary.main', borderRadius: 1 }}>
       <Typography variant="subtitle2" sx={{ mb: 1 }}>
-        Select an entity for {propertyUri.split('#').pop()}:
+        Select an entity for relationship:
       </Typography>
       <Box sx={{ maxHeight: 200, overflow: 'auto' }}>
         {entities.map((entity) => (

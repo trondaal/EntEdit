@@ -96,19 +96,20 @@ export const useRdfProperties = (
 export const useEntitiesByClass = (
   config: SparqlEndpointConfig,
   classUri: string,
+  language: string = "en",
 ) => {
   return useQuery({
-    queryKey: ["entities-by-class", config.url, classUri],
+    queryKey: ["entities-by-class", config.url, classUri, language],
     queryFn: async () => {
       const client = new SparqlClient(config);
       const query = `
         SELECT DISTINCT ?entity (SAMPLE(?label) AS ?label)
         WHERE {
           ?entity a <${classUri}> .
-          OPTIONAL { ?entity rdfs:label ?label }
+          OPTIONAL { ?entity rdfs:label ?label .
+          FILTER(LANG(?label) = "${language}" || LANG(?label) = "") .}
         }GROUP BY ?entity
-        ORDER BY ?label
-        LIMIT 500
+        ORDER BY ?entity ?label
       `;
 
       const response = await client.query(query);
@@ -152,7 +153,7 @@ export const useRdfObjectProperties = (
           OPTIONAL { ?property rdfs:range ?range }
           ${classUri ? `FILTER(?domain = <${classUri}>)` : ""}
         }
-        ORDER BY ?property
+        ORDER BY ?label
       `;
 
       const response = await client.query(query);
