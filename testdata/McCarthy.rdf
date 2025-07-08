@@ -659,8 +659,8 @@
       <rdaed:P20312>The border trilogy : All the pretty horses, The Crossing, Cities of the plain</rdaed:P20312>
       <rdaed:P20071>All the pretty horses -- The crossing -- Cities of the plain</rdaed:P20071>
       <rdaed:P20315>The border trilogy</rdaed:P20315>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20145 rdf:resource="http://viaf.org/viaf/214001528/exp/eng/1020"/>
       <rdaeo:P20145 rdf:resource="http://viaf.org/viaf/3417153653286155900001/exp/eng/1020"/>
       <rdaeo:P20145 rdf:resource="http://viaf.org/viaf/309357400/exp/eng/1020"/>
@@ -673,8 +673,8 @@
       <rdaed:P20071>Alle de vakre hestene -- Over grensen -- Byene på høysletten</rdaed:P20071>
       <rdaed:P20315>Grensetriologien</rdaed:P20315>
       <rdfs:label>Grensetriologien (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/nob"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/nob"/>
       <rdaeo:P20037 rdf:resource="http://viaf.org/viaf/225596267"/>
       <rdaeo:P20145 rdf:resource="http://viaf.org/viaf/214001528/exp/nob/1020/225596267"/>
       <rdaeo:P20145 rdf:resource="http://viaf.org/viaf/3417153653286155900001/exp/nob/1020/225596267"/>
@@ -686,8 +686,8 @@
       <rdaxd:P00029>standalone</rdaxd:P00029>
       <rdaed:P20312>Suttree</rdaed:P20312>
       <rdfs:label>Suttree (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/188298726"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/188670330/exp/eng/1020">
@@ -695,8 +695,8 @@
       <rdaxd:P00029>standalone</rdaxd:P00029>
       <rdaed:P20312>Child of God</rdaed:P20312>
       <rdfs:label>Child of God (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/188670330"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/188670330/exp/nob/1020/266451311">
@@ -704,8 +704,8 @@
       <rdaxd:P00029>standalone</rdaxd:P00029>
       <rdaed:P20312>Et Guds barn</rdaed:P20312>
       <rdfs:label>Et Guds barn (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/nob"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/nob"/>
       <rdaeo:P20037 rdf:resource="http://viaf.org/viaf/266451311"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/188670330"/>
    </rdac:C10006>
@@ -716,8 +716,8 @@
       <rdfs:label>Blood meridian (McCarthy, Cormac)</rdfs:label>
       <rdaed:P20312>Blood meridian, or, The evening redness in the West</rdaed:P20312>
       <rdfs:label>Blood meridian, or, The evening redness in the West (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/191524645"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/191524645/exp/nob/1020/225596267">
@@ -725,8 +725,8 @@
       <rdaxd:P00029>standalone</rdaxd:P00029>
       <rdaed:P20312>Blodmeridianen, eller Aftenrøden i vest</rdaed:P20312>
       <rdfs:label>Blodmeridianen, eller Aftenrøden i vest (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/nob"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/nob"/>
       <rdaeo:P20037 rdf:resource="http://viaf.org/viaf/225596267"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/191524645"/>
    </rdac:C10006>
@@ -735,8 +735,8 @@
       <rdaxd:P00029>standalone</rdaxd:P00029>
       <rdaed:P20312>The orchard keeper</rdaed:P20312>
       <rdfs:label>The orchard keeper (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/191907343"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/191907343/exp/nob/1020/225596267">
@@ -744,8 +744,8 @@
       <rdaxd:P00029>standalone</rdaxd:P00029>
       <rdaed:P20312>Frukthagen</rdaed:P20312>
       <rdfs:label>Frukthagen (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/nob"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/nob"/>
       <rdaeo:P20037 rdf:resource="http://viaf.org/viaf/225596267"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/191907343"/>
    </rdac:C10006>
@@ -754,8 +754,8 @@
       <rdaxd:P00029>standalone</rdaxd:P00029>
       <rdaed:P20312>All the pretty horses</rdaed:P20312>
       <rdfs:label>All the pretty horses (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1013"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1013"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20022 rdf:resource="https://isni.org/isni/0000000114380049"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/214001528"/>
    </rdac:C10006>
@@ -765,8 +765,8 @@
       <rdaed:P20312>All the Pretty Horses</rdaed:P20312>
       <rdfs:label>All the Pretty Horses (McCarthy, Cormac)</rdfs:label>
       <rdaxd:P00029>part</rdaxd:P00029>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/214001528"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/214001528/exp/nob/1020/225596267">
@@ -781,8 +781,8 @@
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>All the pretty horses (McCarthy, Cormac)</rdfs:label>
       <rdaed:P20315>Alle de vakre hestene</rdaed:P20315>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/nob"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/nob"/>
       <rdaeo:P20037 rdf:resource="http://viaf.org/viaf/225596267"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/214001528"/>
    </rdac:C10006>
@@ -791,8 +791,8 @@
       <rdaxd:P00029>standalone</rdaxd:P00029>
       <rdaed:P20312>No country for old men</rdaed:P20312>
       <rdfs:label>No country for old men (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/214012164"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/214012164/exp/nob/1020/225596267">
@@ -800,8 +800,8 @@
       <rdaxd:P00029>standalone</rdaxd:P00029>
       <rdaed:P20312>Ikke et land for gamle menn</rdaed:P20312>
       <rdfs:label>Ikke et land for gamle menn (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/nob"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/nob"/>
       <rdaeo:P20037 rdf:resource="http://viaf.org/viaf/225596267"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/214012164"/>
    </rdac:C10006>
@@ -810,8 +810,8 @@
       <rdaxd:P00029>standalone</rdaxd:P00029>
       <rdaed:P20312>Outer dark</rdaed:P20312>
       <rdfs:label>Outer dark (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/215254416"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/220031159/exp/eng/1020">
@@ -819,8 +819,8 @@
       <rdaxd:P00029>standalone</rdaxd:P00029>
       <rdaed:P20312>The road</rdaed:P20312>
       <rdfs:label>The road (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/220031159"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/220031159/exp/nob/1013/225596267/27122071">
@@ -828,8 +828,8 @@
       <rdaxd:P00029>standalone</rdaxd:P00029>
       <rdaed:P20312>Veien</rdaed:P20312>
       <rdfs:label>Veien (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1013"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/nob"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1013"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/nob"/>
       <rdaeo:P20022 rdf:resource="http://viaf.org/viaf/27122071"/>
       <rdaeo:P20037 rdf:resource="http://viaf.org/viaf/225596267"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/220031159"/>
@@ -839,8 +839,8 @@
       <rdaxd:P00029>standalone</rdaxd:P00029>
       <rdaed:P20312>Veien</rdaed:P20312>
       <rdfs:label>Veien (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/nob"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/nob"/>
       <rdaeo:P20037 rdf:resource="http://viaf.org/viaf/225596267"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/220031159"/>
    </rdac:C10006>
@@ -849,8 +849,8 @@
       <rdaxd:P00029>standalone</rdaxd:P00029>
       <rdaed:P20312>The counselor : a screenplay</rdaed:P20312>
       <rdfs:label>The counselor (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/29558386/counselor"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/29558386/gardenersson/exp/eng/1020">
@@ -859,8 +859,8 @@
       <rdaed:P20312>The gardener's son</rdaed:P20312>
       <rdfs:label>The gardener's son (McCarthy, Cormac)</rdfs:label>
       <rdaed:P20312>The gardener's son : a screenplay</rdaed:P20312>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/29558386/gardenersson"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/309357400/exp/eng/1013/0000000114380049">
@@ -868,8 +868,8 @@
       <rdaxd:P00029>standalone</rdaxd:P00029>
       <rdaed:P20312>The crossing</rdaed:P20312>
       <rdfs:label>The crossing (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1013"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1013"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20022 rdf:resource="https://isni.org/isni/0000000114380049"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/309357400"/>
    </rdac:C10006>
@@ -879,8 +879,8 @@
       <rdaed:P20312>The crossing</rdaed:P20312>
       <rdfs:label>The crossing (McCarthy, Cormac)</rdfs:label>
       <rdaxd:P00029>part</rdaxd:P00029>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/309357400"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/309357400/exp/nob/1020/225596267">
@@ -894,8 +894,8 @@
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>The crossing (McCarthy, Cormac)</rdfs:label>
       <rdaed:P20315>Over grensen</rdaed:P20315>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/nob"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/nob"/>
       <rdaeo:P20037 rdf:resource="http://viaf.org/viaf/225596267"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/309357400"/>
    </rdac:C10006>
@@ -905,8 +905,8 @@
       <rdaed:P20312>Cities of the plain</rdaed:P20312>
       <rdfs:label>Cities of the plain (McCarthy, Cormac)</rdfs:label>
       <rdaxd:P00029>part</rdaxd:P00029>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/3417153653286155900001"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/3417153653286155900001/exp/nob/1020/225596267">
@@ -920,8 +920,8 @@
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Cities of the plain (McCarthy, Cormac)</rdfs:label>
       <rdaed:P20315>Byene på høysletten</rdaed:P20315>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/nob"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/nob"/>
       <rdaeo:P20037 rdf:resource="http://viaf.org/viaf/225596267"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/3417153653286155900001"/>
    </rdac:C10006>
@@ -930,8 +930,8 @@
       <rdaxd:P00029>standalone</rdaxd:P00029>
       <rdaed:P20312>The Sunset Limited : a novel in dramatic form</rdaed:P20312>
       <rdfs:label>The Sunset Limited (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/4440159478236227990002"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/470166838899836200007/exp/eng/1020">
@@ -939,8 +939,8 @@
       <rdaxd:P00029>standalone</rdaxd:P00029>
       <rdaed:P20312>The passenger</rdaed:P20312>
       <rdfs:label>The passenger (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/470166838899836200007"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/470166838899836200007/exp/nob/1020/225596267">
@@ -948,8 +948,8 @@
       <rdaxd:P00029>standalone</rdaxd:P00029>
       <rdaed:P20312>Passasjeren</rdaed:P20312>
       <rdfs:label>Passasjeren (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/nob"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/nob"/>
       <rdaeo:P20037 rdf:resource="http://viaf.org/viaf/225596267"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/470166838899836200007"/>
    </rdac:C10006>
@@ -958,8 +958,8 @@
       <rdaxd:P00029>standalone</rdaxd:P00029>
       <rdaed:P20312>Stella Maris</rdaed:P20312>
       <rdfs:label>Stella Maris (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/470166838899836200007/stellamaris"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/470166838899836200007/stellamaris/exp/nob/1020/225596267">
@@ -967,8 +967,8 @@
       <rdaxd:P00029>standalone</rdaxd:P00029>
       <rdaed:P20312>Stella Maris</rdaed:P20312>
       <rdfs:label>Stella Maris (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/nob"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/nob"/>
       <rdaeo:P20037 rdf:resource="http://viaf.org/viaf/225596267"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/470166838899836200007/stellamaris"/>
    </rdac:C10006>
@@ -978,8 +978,8 @@
       <rdaed:P20312>The road</rdaed:P20312>
       <rdfs:label>The road (Penhall, Joe)</rdfs:label>
       <rdaed:P20312>The road : based on the novel by Cormac McCarthy</rdaed:P20312>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/5191807/theroad"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/8419162723677961290005/exp/eng/1020">
@@ -990,80 +990,80 @@
       <rdaed:P20312>The stonemason : a play in five acts</rdaed:P20312>
       <rdaed:P20312>Stonemason : A Play in five acts</rdaed:P20312>
       <rdfs:label>Stonemason (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/8419162723677961290005"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/92910249/seriousnoticing/01/exp/eng/1020">
       <rdaed:P20312>Fun stuff: homage to Keith Moon</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Fun stuff: homage to Keith Moon (Wood, James)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/01"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/92910249/seriousnoticing/02/exp/eng/1020">
       <rdaed:P20312>What Chekhov meant by life</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>What Chekhov meant by life (Wood, James)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/02"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/92910249/seriousnoticing/03/exp/eng/1020">
       <rdaed:P20312>Serious noticing</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Serious noticing (Wood, James)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/03"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/92910249/seriousnoticing/04/exp/eng/1020">
       <rdaed:P20312>Saul Bellow's comic style</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Saul Bellow's comic style (Wood, James)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/04"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/92910249/seriousnoticing/05/exp/eng/1020">
       <rdaed:P20312>Anna Karenina and characterization</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Anna Karenina and characterization (Wood, James)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/05"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/92910249/seriousnoticing/06/exp/eng/1020">
       <rdaed:P20312>Joseph Roth's empire of signs</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Joseph Roth's empire of signs (Wood, James)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/06"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/92910249/seriousnoticing/07/exp/eng/1020">
       <rdaed:P20312>Paul Auster's shallowness</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Paul Auster's shallowness (Wood, James)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/07"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/92910249/seriousnoticing/08/exp/eng/1020">
       <rdaed:P20312>Hysterical realism</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Hysterical realism (Wood, James)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/08"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/92910249/seriousnoticing/09/exp/eng/1020">
       <rdaed:P20312>Bohumil Hrabal's comic world</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Bohumil Hrabal's comic world (Wood, James)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/09"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/92910249/seriousnoticing/11/exp/eng/1020">
@@ -1072,144 +1072,144 @@
       <rdfs:label>George Orwell's very English revolution (Wood, James)</rdfs:label>
       <rdaed:P20312>Jane Austen's heroic consciousness</rdaed:P20312>
       <rdfs:label>Jane Austen's heroic consciousness (Wood, James)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/11"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/92910249/seriousnoticing/12/exp/eng/1020">
       <rdaed:P20312>Cormac McCarthy's the road</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Cormac McCarthy's the road (Wood, James)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/12"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/92910249/seriousnoticing/13/exp/eng/1020">
       <rdaed:P20312>Reality examined to the point of madness': László Krasznahorkai</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Reality examined to the point of madness': László Krasznahorkai (Wood, James)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/13"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/92910249/seriousnoticing/14/exp/eng/1020">
       <rdaed:P20312>Wounder and wounded</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Wounder and wounded (Wood, James)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/14"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/92910249/seriousnoticing/15/exp/eng/1020">
       <rdaed:P20312>On not going home</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>On not going home (Wood, James)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/15"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/92910249/seriousnoticing/16/exp/eng/1020">
       <rdaed:P20312>Other side of silence: rereading W. G. Sebald</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Other side of silence: rereading W. G. Sebald (Wood, James)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/16"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/92910249/seriousnoticing/17/exp/eng/1020">
       <rdaed:P20312>Becoming them</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Becoming them (Wood, James)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/17"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/92910249/seriousnoticing/18/exp/eng/1020">
       <rdaed:P20312>Don Quixote's old and new testaments</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Don Quixote's old and new testaments (Wood, James)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/18"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/92910249/seriousnoticing/19/exp/eng/1020">
       <rdaed:P20312>Dostoevsky's god</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Dostoevsky's god (Wood, James)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/19"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/92910249/seriousnoticing/20/exp/eng/1020">
       <rdaed:P20312>Helen Garner's savage honesty</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Helen Garner's savage honesty (Wood, James)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/20"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/92910249/seriousnoticing/21/exp/eng/1020">
       <rdaed:P20312>All and the if: God and metaphor in Melville</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>All and the if: God and metaphor in Melville (Wood, James)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/21"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/92910249/seriousnoticing/22/exp/eng/1020">
       <rdaed:P20312>Elena Ferrante</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Elena Ferrante (Wood, James)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/22"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/92910249/seriousnoticing/23/exp/eng/1020">
       <rdaed:P20312>Virginia Woolf's Mysticism</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Virginia Woolf's Mysticism (Wood, James)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/23"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/92910249/seriousnoticing/24/exp/eng/1020">
       <rdaed:P20312>Job existed: Primo Levi</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Job existed: Primo Levi (Wood, James)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/24"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/92910249/seriousnoticing/25/exp/eng/1020">
       <rdaed:P20312>Marilynne Robinson</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Marilynne Robinson (Wood, James)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/25"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/92910249/seriousnoticing/26/exp/eng/1020">
       <rdaed:P20312>Ismail Kadare</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Ismail Kadare (Wood, James)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/26"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/92910249/seriousnoticing/27/exp/eng/1020">
       <rdaed:P20312>Jenny Erpenbeck</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Jenny Erpenbeck (Wood, James)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/27"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/92910249/seriousnoticing/28/exp/eng/1020">
       <rdaed:P20312>Packing my father-in-law's library</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Packing my father-in-law's library (Wood, James)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/28"/>
    </rdac:C10006>
    <rdac:C10006 rdf:about="http://viaf.org/viaf/92910249/seriousnoticing/exp/eng/1020">
@@ -1218,8 +1218,8 @@
       <rdaed:P20312>Serious noticing : selected essays, 1997-2019</rdaed:P20312>
       <rdfs:label>Serious noticing (Wood, James)</rdfs:label>
       <rdaed:P20071>Fun stuff: homage to Keith Moon -- What Chekhov meant by life -- Serious noticing -- Saul Bellow's comic style -- Anna Karenina and characterization -- Joseph Roth's empire of signs -- Paul Auster's shallowness -- Hysterical realism -- Bohumil Hrabal's comic world -- George Orwell's very English revolution -- Jane Austen's heroic consciousness -- Cormac McCarthy's the road -- Reality examined to the point of madness': László Krasznahorkai -- Wounder and wounded -- On not going home -- Other side of silence: rereading W. G. Sebald -- Becoming them -- Don Quixote's old and new testaments -- Dostoevsky's god -- Helen Garner's savage honesty -- All and the if: God and metaphor in Melville -- Elena Ferrante -- Virginia Woolf's Mysticism -- Job existed: Primo Levi -- Marilynne Robinson -- Ismail Kadare -- Jenny Erpenbeck -- Packing my father-in-law's library.</rdaed:P20071>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing"/>
       <rdaeo:P20319 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/01/exp/eng/1020"/>
       <rdaeo:P20319 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/02/exp/eng/1020"/>
@@ -1255,10 +1255,10 @@
       <rdaed:P20312>The counselor</rdaed:P20312>
       <rdfs:label>The counselor</rdfs:label>
       <rdaed:P20071>disc 1. The counselor (Theatrical version) (117 in.) -- disc 2. The counselor (Unrated extended cut) (138 min.).</rdaed:P20071>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1023"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/fre"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/spa"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1023"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/fre"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/spa"/>
       <rdaed:P20065 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/spa"/>
       <rdaed:P20065 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaed:P20065 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/fre"/>
@@ -1274,8 +1274,8 @@
       <rdaed:P20312>Gotta keep movin'</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Gotta keep movin' (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1011"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1011"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20039 rdf:resource="https://isni.org/isni/0000000046450913"/>
       <rdaeo:P20231 rdf:resource="https://isni.org/isni/0000000046450913/collateral/01"/>
    </rdac:C10006>
@@ -1283,8 +1283,8 @@
       <rdaed:P20312>The working poor</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>The working poor (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1011"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1011"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20039 rdf:resource="https://isni.org/isni/0000000046450913"/>
       <rdaeo:P20231 rdf:resource="https://isni.org/isni/0000000046450913/collateral/02"/>
    </rdac:C10006>
@@ -1292,8 +1292,8 @@
       <rdaed:P20312>Cadillac man</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Cadillac man (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1011"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1011"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20039 rdf:resource="https://isni.org/isni/0000000046450913"/>
       <rdaeo:P20231 rdf:resource="https://isni.org/isni/0000000046450913/collateral/03"/>
    </rdac:C10006>
@@ -1301,8 +1301,8 @@
       <rdaed:P20312>Back when I worked on the railroad</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Back when I worked on the railroad (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1011"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1011"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20039 rdf:resource="https://isni.org/isni/0000000046450913"/>
       <rdaeo:P20231 rdf:resource="https://isni.org/isni/0000000046450913/collateral/04"/>
    </rdac:C10006>
@@ -1310,8 +1310,8 @@
       <rdaed:P20312>The crossroads</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>The crossroads (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1011"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1011"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20039 rdf:resource="https://isni.org/isni/0000000046450913"/>
       <rdaeo:P20231 rdf:resource="https://isni.org/isni/0000000046450913/collateral/05"/>
    </rdac:C10006>
@@ -1319,8 +1319,8 @@
       <rdaed:P20312>One a night like this</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>One a night like this (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1011"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1011"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20039 rdf:resource="https://isni.org/isni/0000000046450913"/>
       <rdaeo:P20231 rdf:resource="https://isni.org/isni/0000000046450913/collateral/06"/>
    </rdac:C10006>
@@ -1328,8 +1328,8 @@
       <rdaed:P20312>You can't outrun the hounds</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>You can't outrun the hounds (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1011"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1011"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20039 rdf:resource="https://isni.org/isni/0000000046450913"/>
       <rdaeo:P20231 rdf:resource="https://isni.org/isni/0000000046450913/collateral/07"/>
    </rdac:C10006>
@@ -1337,8 +1337,8 @@
       <rdaed:P20312>Walking on solid ground</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Walking on solid ground (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1011"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1011"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20039 rdf:resource="https://isni.org/isni/0000000046450913"/>
       <rdaeo:P20231 rdf:resource="https://isni.org/isni/0000000046450913/collateral/08"/>
    </rdac:C10006>
@@ -1346,8 +1346,8 @@
       <rdaed:P20312>Jailhouse bound</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Jailhouse bound (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1011"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1011"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20039 rdf:resource="https://isni.org/isni/0000000046450913"/>
       <rdaeo:P20231 rdf:resource="https://isni.org/isni/0000000046450913/collateral/09"/>
    </rdac:C10006>
@@ -1355,8 +1355,8 @@
       <rdaed:P20312>Doppelganger</rdaed:P20312>
       <rdaxd:P00029>part</rdaxd:P00029>
       <rdfs:label>Doppelganger (McCarthy, Cormac)</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1011"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1011"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20039 rdf:resource="https://isni.org/isni/0000000046450913"/>
       <rdaeo:P20231 rdf:resource="https://isni.org/isni/0000000046450913/collateral/10"/>
    </rdac:C10006>
@@ -1366,8 +1366,8 @@
       <rdaed:P20312>Collateral</rdaed:P20312>
       <rdfs:label>Collateral (McCarthy, Cormac)</rdfs:label>
       <rdaed:P20071>Gotta keep movin' -- The working poor -- Cadillac man -- Back when I worked on the railroad -- The crossroads -- One a night like this -- You can't outrun the hounds -- Walking on solid ground -- Jailhouse bound -- Doppelganger.</rdaed:P20071>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1011"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1011"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20039 rdf:resource="https://isni.org/isni/0000000046450913"/>
       <rdaeo:P20145 rdf:resource="https://isni.org/isni/0000000046450913/collateral/01/exp/eng/1011"/>
       <rdaeo:P20145 rdf:resource="https://isni.org/isni/0000000046450913/collateral/02/exp/eng/1011"/>
@@ -1386,10 +1386,10 @@
       <rdaxd:P00029>aggregate</rdaxd:P00029>
       <rdaed:P20312>All the pretty horses</rdaed:P20312>
       <rdfs:label>All the pretty horses</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1023"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/mul"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/nob"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1023"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/mul"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/nob"/>
       <rdaeo:P20012 rdf:resource="https://isni.org/isni/0000000109011804"/>
       <rdaeo:P20012 rdf:resource="https://isni.org/isni/000000012142082X"/>
       <rdaeo:P20012 rdf:resource="https://isni.org/isni/0000000108854789"/>
@@ -1400,8 +1400,8 @@
       <rdaed:P20316>No country for old men (Motion picture)</rdaed:P20316>
       <rdaed:P20312>No country for old men</rdaed:P20312>
       <rdfs:label>No country for old men</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1023"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1023"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaed:P20065 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaed:P20065 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/fre"/>
       <rdaed:P20065 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/spa"/>
@@ -1415,8 +1415,8 @@
       <rdaed:P20316>Road (Motion picture : 2009)</rdaed:P20316>
       <rdaed:P20312>The Road</rdaed:P20312>
       <rdfs:label>The Road</rdfs:label>
-      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1023"/>
-      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1023"/>
+      <rdaeo:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
       <rdaeo:P20012 rdf:resource="https://isni.org/isni/0000000114558548"/>
       <rdaeo:P20012 rdf:resource="https://isni.org/isni/0000000110296296"/>
       <rdaeo:P20012 rdf:resource="https://isni.org/isni/0000000114563013"/>
@@ -1430,8 +1430,8 @@
       <rdamd:P30083>André Deutsch</rdamd:P30083>
       <rdamd:P30011>1966</rdamd:P30011>
       <rdamd:P30182>246 pages, (8º).</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/191907343/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/15039940">
@@ -1446,8 +1446,8 @@
       <rdamd:P30165>v. 1</rdamd:P30165>
       <rdamd:P30137>Abridged.</rdamd:P30137>
       <rdamd:P30137>In container (18 cm.).</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1007"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1001"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1007"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1001"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/214001528/exp/eng/1013/0000000114380049"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/15894496">
@@ -1462,8 +1462,8 @@
       <rdamd:P30137>Not viewed.</rdamd:P30137>
       <rdamd:P30137>Sources used: copyright database; All-movie guide WWW site, Sept. 4, 2009; Variety WWW site, review posted May 18, 2007, viewed Sept. 4, 2009; Internet movie database, via WWW, Sept. 4, 2009; FirstSearch, via WWW, OCLC 184908513, Sept. 4, 2009.</rdamd:P30137>
       <rdamd:P30137>Summary adapted from All-movie guide WWW site, Sept. 4, 2009, Sept. 4, 2009.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1069"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1008"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1069"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1008"/>
       <rdamo:P30139 rdf:resource="https://www.imdb.com/title/tt0477348/exp/1023"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/20395066">
@@ -1477,8 +1477,8 @@
       <rdamd:P30137>Aspect ratio is 2.35:1.</rdamd:P30137>
       <rdamd:P30137>Not viewed.</rdamd:P30137>
       <rdamd:P30137>Sources used: Internet movie database, March 12, 2018; Variety, October 24, 2013; Copyright catalog online.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1069"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1008"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1069"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1008"/>
       <rdamo:P30139 rdf:resource="http://www.wikidata.org/entity/Q3061599/exp/1023"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/20691857">
@@ -1493,8 +1493,8 @@
       <rdamd:P30137>Based on the novel by Cormac McCarthy.</rdamd:P30137>
       <rdamd:P30137>Not viewed.</rdamd:P30137>
       <rdamd:P30137>Sources used: Internet movie database, October 1, 2018; Variety, September 3, 2009; Copyright catalog online.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1069"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1008"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1069"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1008"/>
       <rdamo:P30139 rdf:resource="https://www.imdb.com/title/tt0898367/exp/1023"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/23017180">
@@ -1505,8 +1505,8 @@
       <rdamd:P30083>Ecco</rdamd:P30083>
       <rdamd:P30011>1994</rdamd:P30011>
       <rdamd:P30182>1 v.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/8419162723677961290005/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/3120806">
@@ -1517,8 +1517,8 @@
       <rdamd:P30011>[1968]</rdamd:P30011>
       <rdamd:P30182>242 p., 22 cm.</rdamd:P30182>
       <rdamd:P30137>Bookmark with notes on it inserted.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/215254416/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/8474754">
@@ -1528,8 +1528,8 @@
       <rdamd:P30083>Deutsch</rdamd:P30083>
       <rdamd:P30011>1966 [c1965]</rdamd:P30011>
       <rdamd:P30182>246 p., 21 cm.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/191907343/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/8928727">
@@ -1542,8 +1542,8 @@
       <rdamd:P30137>Enthusiastic note of praise for book and author on the stationary of Ralph Ellison inserted.</rdamd:P30137>
       <rdamd:P30137>Review copy?.</rdamd:P30137>
       <rdamd:P30137>Signed by Ralph Ellison on front free endpaper.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/191907343/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/999920049602702202">
@@ -1562,8 +1562,8 @@
       <rdamd:P30137>Inneholder ekstramateriell</rdamd:P30137>
       <rdamd:P30137>Medietilsynet : 150489</rdamd:P30137>
       <rdamd:P30137>NOS9860SV</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1060"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1008"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1060"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1008"/>
       <rdamo:P30139 rdf:resource="https://www.imdb.com/title/tt0898367/exp/1023"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/IAN-5050582404920">
@@ -1585,8 +1585,8 @@
       <rdamd:P30137>Produksjon: USA : Columbia/Miramax, 2000.</rdamd:P30137>
       <rdamd:P30137>Rolleliste: Matt Damon, Henry Thomas, Penelope Cruz.</rdamd:P30137>
       <rdamd:P30137>Widescreen.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1060"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1008"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1060"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1008"/>
       <rdamo:P30139 rdf:resource="https://www.imdb.com/title/tt0149624/exp/1023"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/IAN-7332431029293">
@@ -1609,8 +1609,8 @@
       <rdamd:P30137>Produksjon: USA : Paramount Vantage/Miramax Films, 2007</rdamd:P30137>
       <rdamd:P30137>Rolleliste: Javier Bardem, Tommy Lee Jones, Josh Brolin</rdamd:P30137>
       <rdamd:P30137>Thriller</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1060"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1008"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1060"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1008"/>
       <rdamo:P30139 rdf:resource="https://www.imdb.com/title/tt0477348/exp/1023"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/UPC-024543899990">
@@ -1635,8 +1635,8 @@
       <rdamd:P30137>Title from container.</rdamd:P30137>
       <rdamd:P30137>Widescreen (2.40:1).</rdamd:P30137>
       <rdamd:P30033>disc 1. The counselor (Theatrical version) (117 in.) -- disc 2. The counselor (Unrated extended cut) (138 min.).</rdamd:P30033>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1060"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1008"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1060"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1008"/>
       <rdamo:P30139 rdf:resource="http://www.wikidata.org/entity/Q3061599/exp/1023"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/UPC-793447355627">
@@ -1651,8 +1651,8 @@
       <rdamd:P30182>1 sound disc : digital, 4 3/4 in.</rdamd:P30182>
       <rdamd:P30137>Compact disc.</rdamd:P30137>
       <rdamd:P30033>Gotta keep movin' -- The working poor -- Cadillac man -- Back when I worked on the railroad -- The crossroads -- One a night like this -- You can't outrun the hounds -- Walking on solid ground -- Jailhouse bound -- Doppelganger.</rdamd:P30033>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1013"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1001"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1013"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1001"/>
       <rdamo:P30139 rdf:resource="https://isni.org/isni/0000000046450913/collateral/exp/eng/1011"/>
       <rdamo:P30139 rdf:resource="https://isni.org/isni/0000000046450913/collateral/01/exp/eng/1011"/>
       <rdamo:P30139 rdf:resource="https://isni.org/isni/0000000046450913/collateral/02/exp/eng/1011"/>
@@ -1676,8 +1676,8 @@
       <rdamd:P30011>1970</rdamd:P30011>
       <rdamd:P30182>238 p., 21 cm.</rdamd:P30182>
       <rdamd:P30137>Originally published, New York: Random House, 1968.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/215254416/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0307265439">
@@ -1696,8 +1696,8 @@
       <rdamd:P30011>2006</rdamd:P30011>
       <rdamd:P30182>241 p., 25 cm.</rdamd:P30182>
       <rdamd:P30137>Winner of the Pulitzer Prize in 2006 as well as the James Tait Black Memorial Prize for Fiction. McCarthy is a 1981 MacArthur Fellow.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/220031159/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0307268993">
@@ -1723,8 +1723,8 @@
       <rdamd:P30007>©2022</rdamd:P30007>
       <rdamd:P30182>383 pages, 25 cm.</rdamd:P30182>
       <rdamd:P30137>"This is a Borzoi book"--Title page verso.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/470166838899836200007/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0307269000">
@@ -1745,8 +1745,8 @@
       <rdamd:P30182>189 pages, 25 cm.</rdamd:P30182>
       <rdamd:P30137>"This is a Borzoi book"-- Title page verso.</rdamd:P30137>
       <rdamd:P30137>Sequel to: The Passenger.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/470166838899836200007/stellamaris/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0307278360">
@@ -1766,8 +1766,8 @@
       <rdamd:P30011>2006</rdamd:P30011>
       <rdamd:P30182>143 p., 21 cm.</rdamd:P30182>
       <rdamd:P30137>"A Vintage International original."</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/4440159478236227990002/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-033030643">
@@ -1781,8 +1781,8 @@
       <rdamd:P30083>Picador</rdamd:P30083>
       <rdamd:P30011>1989</rdamd:P30011>
       <rdamd:P30182>197p.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/188670330/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0330312561">
@@ -1794,8 +1794,8 @@
       <rdamd:P30111>: Picador, 1990</rdamd:P30111>
       <rdamd:P30011>1990</rdamd:P30011>
       <rdamd:P30182>337p.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/191524645/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0330314912">
@@ -1808,8 +1808,8 @@
       <rdamd:P30083>Picador</rdamd:P30083>
       <rdamd:P30011>1994</rdamd:P30011>
       <rdamd:P30182>246p.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/191907343/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0330314920">
@@ -1822,8 +1822,8 @@
       <rdamd:P30083>Picador</rdamd:P30083>
       <rdamd:P30011>1994</rdamd:P30011>
       <rdamd:P30182>242p.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/215254416/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0330325310">
@@ -1835,8 +1835,8 @@
       <rdamd:P30111>: Picador, 1993</rdamd:P30111>
       <rdamd:P30011>1993</rdamd:P30011>
       <rdamd:P30182>301p.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/214001528/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0330331698">
@@ -1851,8 +1851,8 @@
       <rdamd:P30010>(1994 [printing])</rdamd:P30010>
       <rdamd:P30182>301p., 20cm.</rdamd:P30182>
       <rdamd:P30137>Originally published: New York: Knopf, 1992; London: Picador, 1993.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/214001528/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0330334611">
@@ -1868,8 +1868,8 @@
       <rdamd:P30011>2002</rdamd:P30011>
       <rdamd:P30182>1037 p., 20 cm.</rdamd:P30182>
       <rdamd:P30033>All the pretty horses -- The crossing -- Cities of the plain</rdamd:P30033>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/175871715/exp/eng/1020"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/214001528/exp/eng/1020"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/3417153653286155900001/exp/eng/1020"/>
@@ -1885,8 +1885,8 @@
       <rdamd:P30083>Picador</rdamd:P30083>
       <rdamd:P30011>1994</rdamd:P30011>
       <rdamd:P30182>425p.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/309357400/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-033034448">
@@ -1902,8 +1902,8 @@
       <rdamd:P30182>291p., 23cm.</rdamd:P30182>
       <rdamd:P30106>Border trilogy</rdamd:P30106>
       <rdamd:P30165>v.3</rdamd:P30165>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/3417153653286155900001/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0330350331">
@@ -1919,8 +1919,8 @@
       <rdamd:P30011>1997, c1994</rdamd:P30011>
       <rdamd:P30182>133p., 20cm.</rdamd:P30182>
       <rdamd:P30137>Originally published: Hopewell, N.J. : Ecco, 1994.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/8419162723677961290005/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0330440101">
@@ -1938,8 +1938,8 @@
       <rdamd:P30011>2005</rdamd:P30011>
       <rdamd:P30182>309 p., 22 cm.</rdamd:P30182>
       <rdamd:P30137>Formerly CIP.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/214012164/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-033044753">
@@ -1963,8 +1963,8 @@
       <rdamd:P30011>2006</rdamd:P30011>
       <rdamd:P30182>241 p., 22 cm.</rdamd:P30182>
       <rdamd:P30137>Formerly CIP.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/220031159/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0330468464">
@@ -1984,8 +1984,8 @@
       <rdamd:P30137>Film tie-in.</rdamd:P30137>
       <rdamd:P30137>Formerly CIP.</rdamd:P30137>
       <rdamd:P30137>Originally published: 2006.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/220031159/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0330472755">
@@ -2002,8 +2002,8 @@
       <rdamd:P30083>Picador</rdamd:P30083>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>1 online resource (256 pages).</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/220031159/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0330474677">
@@ -2022,8 +2022,8 @@
       <rdamd:P30182>1 online resource.</rdamd:P30182>
       <rdamd:P30106>The Border trilogy</rdamd:P30106>
       <rdamd:P30165>v. 1</rdamd:P30165>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/214001528/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0330474731">
@@ -2042,8 +2042,8 @@
       <rdamd:P30182>1 online resource.</rdamd:P30182>
       <rdamd:P30106>The Border trilogy</rdamd:P30106>
       <rdamd:P30165>v. 3</rdamd:P30165>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/3417153653286155900001/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0330474774">
@@ -2060,8 +2060,8 @@
       <rdamd:P30083>Picador</rdamd:P30083>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>1 online resource.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/214012164/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0330474804">
@@ -2078,8 +2078,8 @@
       <rdamd:P30083>Picador</rdamd:P30083>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>1 online resource.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/215254416/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0330474901">
@@ -2096,8 +2096,8 @@
       <rdamd:P30083>Picador</rdamd:P30083>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>1 online resource.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/188298726/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0330474936">
@@ -2116,8 +2116,8 @@
       <rdamd:P30182>1 online resource.</rdamd:P30182>
       <rdamd:P30106>The Border trilogy</rdamd:P30106>
       <rdamd:P30165>v. 2</rdamd:P30165>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/309357400/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0330474960">
@@ -2134,8 +2134,8 @@
       <rdamd:P30083>Picador</rdamd:P30083>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>1 online resource.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/188670330/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0330475002">
@@ -2152,8 +2152,8 @@
       <rdamd:P30083>Picador</rdamd:P30083>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>1 online resource.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/191907343/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0330503820">
@@ -2170,8 +2170,8 @@
       <rdamd:P30083>Picador</rdamd:P30083>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>1 online resource.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/220031159/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0330510932">
@@ -2192,8 +2192,8 @@
       <rdamd:P30165>v. 1</rdamd:P30165>
       <rdamd:P30137>Formerly CIP.</rdamd:P30137>
       <rdamd:P30137>Originally published: New York: Alfred A. Knopf, 1992; London: Pan, 1993.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/214001528/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0330510940">
@@ -2212,8 +2212,8 @@
       <rdamd:P30182>352 p., 20 cm.</rdamd:P30182>
       <rdamd:P30137>Formerly CIP.</rdamd:P30137>
       <rdamd:P30137>Originally published: New York: Random House, 1985; London: Picador, 1989.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/191524645/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0330511203">
@@ -2234,8 +2234,8 @@
       <rdamd:P30165>v. 3</rdamd:P30165>
       <rdamd:P30137>Formerly CIP.</rdamd:P30137>
       <rdamd:P30137>Originally published: New York: Alfred A. Knopf; London: Picador, 1998.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/3417153653286155900001/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-033051122">
@@ -2254,8 +2254,8 @@
       <rdamd:P30182>251 p., 20 cm.</rdamd:P30182>
       <rdamd:P30137>Formerly CIP.</rdamd:P30137>
       <rdamd:P30137>Originally published: New York: Random House, 1968; London: Deutsch, 1970.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/215254416/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0330511238">
@@ -2274,8 +2274,8 @@
       <rdamd:P30182>567 p., 20 cm.</rdamd:P30182>
       <rdamd:P30137>Formerly CIP.</rdamd:P30137>
       <rdamd:P30137>Originally published: New York: Random House, 1979; London: Chatto &amp; Windus, 1980.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/188298726/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0330511246">
@@ -2296,8 +2296,8 @@
       <rdamd:P30165>v. 2</rdamd:P30165>
       <rdamd:P30137>Formerly CIP.</rdamd:P30137>
       <rdamd:P30137>Originally published: 1994.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/309357400/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0330511254">
@@ -2316,8 +2316,8 @@
       <rdamd:P30182>259 p., 20 cm.</rdamd:P30182>
       <rdamd:P30137>Formerly CIP.</rdamd:P30137>
       <rdamd:P30137>Originally published: London: Deutsch, 1966.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/191907343/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0330518194">
@@ -2337,8 +2337,8 @@
       <rdamd:P30182>142 p., 20 cm.</rdamd:P30182>
       <rdamd:P30137>Formerly CIP.</rdamd:P30137>
       <rdamd:P30137>Originally published: New York: Vintage, 2006; London: Picador, 2010.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/4440159478236227990002/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0330535757">
@@ -2356,8 +2356,8 @@
       <rdamd:P30083>Picador</rdamd:P30083>
       <rdamd:P30011>2011</rdamd:P30011>
       <rdamd:P30182>1 online resource (160 pages).</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/4440159478236227990002/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0374261164">
@@ -2382,8 +2382,8 @@
       <rdamd:P30137>"These essays originally appeared, in slightly different form, in The New Yorker, London Review of Books, and The New Republic"--Title page verso.</rdamd:P30137>
       <rdamd:P30137>Originally published in 2019 by Vintage, Great Britain, as Serious noticing: selected essays.</rdamd:P30137>
       <rdamd:P30033>Fun stuff: homage to Keith Moon -- What Chekhov meant by life -- Serious noticing -- Saul Bellow's comic style -- Anna Karenina and characterization -- Joseph Roth's empire of signs -- Paul Auster's shallowness -- Hysterical realism -- Bohumil Hrabal's comic world -- George Orwell's very English revolution -- Jane Austen's heroic consciousness -- Cormac McCarthy's the road -- Reality examined to the point of madness': László Krasznahorkai -- Wounder and wounded -- On not going home -- Other side of silence: rereading W. G. Sebald -- Becoming them -- Don Quixote's old and new testaments -- Dostoevsky's god -- Helen Garner's savage honesty -- All and the if: God and metaphor in Melville -- Elena Ferrante -- Virginia Woolf's Mysticism -- Job existed: Primo Levi -- Marilynne Robinson -- Ismail Kadare -- Jenny Erpenbeck -- Packing my father-in-law's library.</rdamd:P30033>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/exp/eng/1020"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/01/exp/eng/1020"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/92910249/seriousnoticing/02/exp/eng/1020"/>
@@ -2425,8 +2425,8 @@
       <rdamd:P30083>Knopf</rdamd:P30083>
       <rdamd:P30011>2005</rdamd:P30011>
       <rdamd:P30182>309 p., 22 cm.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/214012164/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0375407936">
@@ -2443,8 +2443,8 @@
       <rdamd:P30106>Everyman's library</rdamd:P30106>
       <rdamd:P30165>261</rdamd:P30165>
       <rdamd:P30033>All the pretty horses -- The crossing -- Cities of the plain.</rdamd:P30033>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/214001528/exp/eng/1020"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/3417153653286155900001/exp/eng/1020"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/309357400/exp/eng/1020"/>
@@ -2461,8 +2461,8 @@
       <rdamd:P30083>Random House</rdamd:P30083>
       <rdamd:P30011>c1985</rdamd:P30011>
       <rdamd:P30182>337 p., 22 cm.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/191524645/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0394482131">
@@ -2478,8 +2478,8 @@
       <rdamd:P30011>c1979</rdamd:P30011>
       <rdamd:P30182>471 p., 22 cm.</rdamd:P30182>
       <rdamd:P30137>New York Times book review inserted.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/188298726/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0394487710">
@@ -2493,8 +2493,8 @@
       <rdamd:P30083>Random House</rdamd:P30083>
       <rdamd:P30011>[1974, c1973]</rdamd:P30011>
       <rdamd:P30182>197 p., 22 cm.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/188670330/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0394574745">
@@ -2510,8 +2510,8 @@
       <rdamd:P30182>301 p., 22 cm.</rdamd:P30182>
       <rdamd:P30106>The Border trilogy</rdamd:P30106>
       <rdamd:P30165>v. 1</rdamd:P30165>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/214001528/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0394574753">
@@ -2529,8 +2529,8 @@
       <rdamd:P30182>425 p., 22 cm.</rdamd:P30182>
       <rdamd:P30106>The Border trilogy</rdamd:P30106>
       <rdamd:P30165>v. 2</rdamd:P30165>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/309357400/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0394741455">
@@ -2546,8 +2546,8 @@
       <rdamd:P30011>1986, c1979</rdamd:P30011>
       <rdamd:P30182>471 p., 21 cm.</rdamd:P30182>
       <rdamd:P30106>Vintage contemporaries</rdamd:P30106>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/188298726/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0679423907">
@@ -2565,8 +2565,8 @@
       <rdamd:P30182>291 p., 22 cm.</rdamd:P30182>
       <rdamd:P30106>The border trilogy</rdamd:P30106>
       <rdamd:P30165>v. 3</rdamd:P30165>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/3417153653286155900001/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0679427031">
@@ -2586,8 +2586,8 @@
       <rdamd:P30165>v. 2</rdamd:P30165>
       <rdamd:P30137>Abridged.</rdamd:P30137>
       <rdamd:P30137>In container (18 cm.).</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1007"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1001"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1007"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1001"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/309357400/exp/eng/1013/0000000114380049"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0679641041">
@@ -2602,8 +2602,8 @@
       <rdamd:P30083>Modern Library</rdamd:P30083>
       <rdamd:P30011>2001</rdamd:P30011>
       <rdamd:P30182>xiii, 337 p., 20 cm.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/191524645/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-067964265">
@@ -2618,8 +2618,8 @@
       <rdamd:P30083>Modern Library</rdamd:P30083>
       <rdamd:P30011>2002</rdamd:P30011>
       <rdamd:P30182>471 p., 20 cm.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/188298726/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0679728724">
@@ -2635,8 +2635,8 @@
       <rdamd:P30011>1993</rdamd:P30011>
       <rdamd:P30182>246 p., 21 cm.</rdamd:P30182>
       <rdamd:P30137>Originally published in hardcover by Random House, inc., New York, in 1965.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/191907343/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0679728732">
@@ -2651,8 +2651,8 @@
       <rdamd:P30083>Vintage Books</rdamd:P30083>
       <rdamd:P30011>1993</rdamd:P30011>
       <rdamd:P30182>242 p., 20 cm.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/215254416/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0679728740">
@@ -2667,8 +2667,8 @@
       <rdamd:P30083>Vintage Books</rdamd:P30083>
       <rdamd:P30011>1993</rdamd:P30011>
       <rdamd:P30182>197 p., 21 cm.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/188670330/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0679728759">
@@ -2683,8 +2683,8 @@
       <rdamd:P30083>Vintage Books</rdamd:P30083>
       <rdamd:P30011>1992</rdamd:P30011>
       <rdamd:P30182>337 p., 21 cm.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/191524645/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0679744398">
@@ -2701,8 +2701,8 @@
       <rdamd:P30182>301 p., 21 cm.</rdamd:P30182>
       <rdamd:P30106>The Border trilogy</rdamd:P30106>
       <rdamd:P30165>v. 1</rdamd:P30165>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/214001528/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0679762809">
@@ -2719,8 +2719,8 @@
       <rdamd:P30011>1995</rdamd:P30011>
       <rdamd:P30182>133 p., 21 cm.</rdamd:P30182>
       <rdamd:P30106>Vintage International</rdamd:P30106>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/8419162723677961290005/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0701120959">
@@ -2736,8 +2736,8 @@
       <rdamd:P30182>197 p., 21 cm.</rdamd:P30182>
       <rdamd:P30182>[4], 197 p., 21 cm.</rdamd:P30182>
       <rdamd:P30137>Originally published, New York: Random House. 1974.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/188670330/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0701125063">
@@ -2752,8 +2752,8 @@
       <rdamd:P30011>1980</rdamd:P30011>
       <rdamd:P30182>[6],471p., 22cm.</rdamd:P30182>
       <rdamd:P30137>Originally published : New York : Random House, 1979.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/188298726/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0788884492">
@@ -2781,8 +2781,8 @@
       <rdamd:P30137>Special features: Working with the Coens; the making of; diary of a country sheriff; total menus.</rdamd:P30137>
       <rdamd:P30137>Title from container.</rdamd:P30137>
       <rdamd:P30050>Snelson (John) Collection (Library of Congress).</rdamd:P30050>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1069"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1008"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1069"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1008"/>
       <rdamo:P30139 rdf:resource="https://www.imdb.com/title/tt0477348/exp/1023"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0880010096">
@@ -2797,8 +2797,8 @@
       <rdamd:P30011>1982, c1965</rdamd:P30011>
       <rdamd:P30182>246 p., 20 cm.</rdamd:P30182>
       <rdamd:P30137>Reprint. Originally published: New York : Random House, 1965.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/191907343/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0880010649">
@@ -2812,8 +2812,8 @@
       <rdamd:P30083>Ecco Press</rdamd:P30083>
       <rdamd:P30011>1984, c1968</rdamd:P30011>
       <rdamd:P30182>242 p., 21 cm.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/215254416/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0880010657">
@@ -2828,8 +2828,8 @@
       <rdamd:P30011>1984, c1973</rdamd:P30011>
       <rdamd:P30182>197 p., 21 cm.</rdamd:P30182>
       <rdamd:P30137>Reprint. Originally published: New York : Random House, 1974, c1973.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/188670330/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0880010924">
@@ -2844,8 +2844,8 @@
       <rdamd:P30011>1986, c1985</rdamd:P30011>
       <rdamd:P30182>337 p., 21 cm.</rdamd:P30182>
       <rdamd:P30137>Reprint. Originally published: New York : Random House, c1985.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/191524645/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0880013591">
@@ -2861,8 +2861,8 @@
       <rdamd:P30083>Ecco Press</rdamd:P30083>
       <rdamd:P30011>c1994</rdamd:P30011>
       <rdamd:P30182>133p., 22cm.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/8419162723677961290005/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-0880014814">
@@ -2878,8 +2878,8 @@
       <rdamd:P30083>Ecco Press</rdamd:P30083>
       <rdamd:P30011>1996</rdamd:P30011>
       <rdamd:P30182>x, 93 p., 20 cm.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/29558386/gardenersson/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-1405613947">
@@ -2904,8 +2904,8 @@
       <rdamd:P30011>2006</rdamd:P30011>
       <rdamd:P30182>280 p., 25 cm.</rdamd:P30182>
       <rdamd:P30137>Originally published: London: Picador, 2005.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/214012164/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-1408127423">
@@ -2922,8 +2922,8 @@
       <rdamd:P30083>Methuen Drama</rdamd:P30083>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>102 p., 20 cm.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/5191807/theroad/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-1408134829">
@@ -2944,8 +2944,8 @@
       <rdamd:P30106>Methuen Drama's critical scripts series</rdamd:P30106>
       <rdamd:P30137>"Critical scripts with teaching activities for Key Stage 3 and GCSE"--Front cover.</rdamd:P30137>
       <rdamd:P30137>Formerly CIP.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/5191807/theroad/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-1408138719">
@@ -2971,8 +2971,8 @@
       <rdamd:P30007>©2009</rdamd:P30007>
       <rdamd:P30182>1 online resource (107 pages).</rdamd:P30182>
       <rdamd:P30106>Methuen/drama</rdamd:P30106>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/5191807/theroad/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-1447220706">
@@ -2990,8 +2990,8 @@
       <rdamd:P30011>2012</rdamd:P30011>
       <rdamd:P30182>1 online resource (416 pages).</rdamd:P30182>
       <rdamd:P30106>Picador Collection</rdamd:P30106>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/214001528/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-1447227670">
@@ -3009,8 +3009,8 @@
       <rdamd:P30083>Picador</rdamd:P30083>
       <rdamd:P30011>2013</rdamd:P30011>
       <rdamd:P30182>1 online resource (160 pages).</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/29558386/counselor/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-1447267842">
@@ -3029,8 +3029,8 @@
       <rdamd:P30182>1 online resource (924 pages).</rdamd:P30182>
       <rdamd:P30106>Border Trilogy</rdamd:P30106>
       <rdamd:P30033>All the pretty horses -- The crossing -- Cities of the plain</rdamd:P30033>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/175871715/exp/eng/1020"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/214001528/exp/eng/1020"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/3417153653286155900001/exp/eng/1020"/>
@@ -3052,8 +3052,8 @@
       <rdamd:P30011>2013, copyright 2013</rdamd:P30011>
       <rdamd:P30182>1 online resource (144 pages).</rdamd:P30182>
       <rdamd:P30106>Methuen Drama's critical scripts series</rdamd:P30106>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/5191807/theroad/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-8205180504">
@@ -3068,8 +3068,8 @@
       <rdamd:P30011>1989</rdamd:P30011>
       <rdamd:P30182>148 s., 22 cm.</rdamd:P30182>
       <rdamd:P30106>Vita-serien</rdamd:P30106>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/188670330/exp/nob/1020/266451311"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-8205218358">
@@ -3084,8 +3084,8 @@
       <rdamd:P30083>Gyldendal</rdamd:P30083>
       <rdamd:P30011>1993</rdamd:P30011>
       <rdamd:P30182>285 s.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/214001528/exp/nob/1020/225596267"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-8205223556">
@@ -3101,8 +3101,8 @@
       <rdamd:P30182>148 s.</rdamd:P30182>
       <rdamd:P30106>Mini-Vita</rdamd:P30106>
       <rdamd:P30137>1. norske utg. 1989</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/188670330/exp/nob/1020/266451311"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-8205229740">
@@ -3120,8 +3120,8 @@
       <rdamd:P30083>Gyldendal</rdamd:P30083>
       <rdamd:P30011>1995</rdamd:P30011>
       <rdamd:P30182>396 s.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/309357400/exp/nob/1020/225596267"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-8205244731">
@@ -3138,8 +3138,8 @@
       <rdamd:P30011>1996</rdamd:P30011>
       <rdamd:P30182>285 s.</rdamd:P30182>
       <rdamd:P30137>1. norske utg. 1993</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/214001528/exp/nob/1020/225596267"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-8205257027">
@@ -3154,8 +3154,8 @@
       <rdamd:P30083>Gyldendal</rdamd:P30083>
       <rdamd:P30011>1999</rdamd:P30011>
       <rdamd:P30182>266 s.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/3417153653286155900001/exp/nob/1020/225596267"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-8205312923">
@@ -3171,8 +3171,8 @@
       <rdamd:P30182>148 s.</rdamd:P30182>
       <rdamd:P30106>Gyldendals små grå</rdamd:P30106>
       <rdamd:P30137>1. norske utg. 1989</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/188670330/exp/nob/1020/266451311"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-8205351619">
@@ -3194,8 +3194,8 @@
       <rdamd:P30137>Innhold; Alle de vakre hestene ; Over grensen ; Byene på høysletten</rdamd:P30137>
       <rdamd:P30137>Opplagshistorikk: Gyldendal pocket, 2. oppl. 2007</rdamd:P30137>
       <rdamd:P30033>Alle de vakre hestene -- Over grensen -- Byene på høysletten</rdamd:P30033>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/175871715/exp/nob/1020/225596267"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/214001528/exp/nob/1020/225596267"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/3417153653286155900001/exp/nob/1020/225596267"/>
@@ -3215,8 +3215,8 @@
       <rdamd:P30083>Gyldendal</rdamd:P30083>
       <rdamd:P30011>2006</rdamd:P30011>
       <rdamd:P30182>229 s.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/214012164/exp/nob/1020/225596267"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9780307455291">
@@ -3231,8 +3231,8 @@
       <rdamd:P30083>Vintage International</rdamd:P30083>
       <rdamd:P30011>c2008</rdamd:P30011>
       <rdamd:P30182>287 p., 21 cm.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/220031159/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9780307476302">
@@ -3247,8 +3247,8 @@
       <rdamd:P30083>Vintage International</rdamd:P30083>
       <rdamd:P30011>[2009]</rdamd:P30011>
       <rdamd:P30182>287 p., 21 cm.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/220031159/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9780330513005">
@@ -3262,8 +3262,8 @@
       <rdamd:P30083>Picador</rdamd:P30083>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>306 s.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/220031159/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9780345803597">
@@ -3279,8 +3279,8 @@
       <rdamd:P30083>Vintage International, Vintage Books, A Division of Random House, LLC</rdamd:P30083>
       <rdamd:P30011>[2013]</rdamd:P30011>
       <rdamd:P30182>184 pages, 21 cm.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/29558386/counselor/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9780375407932">
@@ -3303,8 +3303,8 @@
       <rdamd:P30165>261</rdamd:P30165>
       <rdamd:P30137>"The border trilogy first published as a single volume in Everyman's Library in the USA, 1999. Individual volumes originally published by Alfred A. Knopf"--T.p. verso.</rdamd:P30137>
       <rdamd:P30033>All the pretty horses -- The crossing -- Cities of the plain.</rdamd:P30033>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/175871715/exp/eng/1020"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/214001528/exp/eng/1020"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/3417153653286155900001/exp/eng/1020"/>
@@ -3326,8 +3326,8 @@
       <rdamd:P30011>2013</rdamd:P30011>
       <rdamd:P30182>184 pages, 23 cm.</rdamd:P30182>
       <rdamd:P30137>Formerly CIP.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/29558386/counselor/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9781447245834">
@@ -3341,8 +3341,8 @@
       <rdamd:P30083>Picador</rdamd:P30083>
       <rdamd:P30011>2022</rdamd:P30011>
       <rdamd:P30182>1 online resource.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/470166838899836200007/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9781447272168">
@@ -3358,8 +3358,8 @@
       <rdamd:P30182>133 pages, 24 cm.</rdamd:P30182>
       <rdamd:P30137>Formerly CIP.</rdamd:P30137>
       <rdamd:P30137>Originally published: 1997.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/8419162723677961290005/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9781447273134">
@@ -3376,8 +3376,8 @@
       <rdamd:P30182>ix, 96 pages, 20 cm.</rdamd:P30182>
       <rdamd:P30137>Formerly CIP.</rdamd:P30137>
       <rdamd:P30137>Originally published: Hopewell, N.J. : Ecco Press, 1996.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/29558386/gardenersson/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9781447273141">
@@ -3391,8 +3391,8 @@
       <rdamd:P30083>Picador</rdamd:P30083>
       <rdamd:P30011>2014</rdamd:P30011>
       <rdamd:P30182>1 online resource.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/29558386/gardenersson/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9781447289456">
@@ -3410,8 +3410,8 @@
       <rdamd:P30106>Picador classic</rdamd:P30106>
       <rdamd:P30137>Formerly CIP.</rdamd:P30137>
       <rdamd:P30137>Previous edition: published as Blood meridian, or, The evening redness in the West. New York: Random House, 1985.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/191524645/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9781447289463">
@@ -3428,8 +3428,8 @@
       <rdamd:P30182>1 online resource.</rdamd:P30182>
       <rdamd:P30106>Picador classic</rdamd:P30106>
       <rdamd:P30137>Previous edition: published as Blood meridian, or, The evening redness in the West. New York: Random House, 1985.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/191524645/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9781447294023">
@@ -3443,8 +3443,8 @@
       <rdamd:P30083>Picador</rdamd:P30083>
       <rdamd:P30011>2022</rdamd:P30011>
       <rdamd:P30182>1 online resource.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/470166838899836200007/stellamaris/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9781509852031">
@@ -3461,8 +3461,8 @@
       <rdamd:P30106>Picador classic</rdamd:P30106>
       <rdamd:P30137>Previously issued in print: 2002.</rdamd:P30137>
       <rdamd:P30033>All the pretty horses -- The crossing -- Cities of the plain</rdamd:P30033>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/175871715/exp/eng/1020"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/214001528/exp/eng/1020"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/3417153653286155900001/exp/eng/1020"/>
@@ -3482,8 +3482,8 @@
       <rdamd:P30182>1 online resource.</rdamd:P30182>
       <rdamd:P30106>Picador classic</rdamd:P30106>
       <rdamd:P30137>Previous edition: New York: Alfred A. Knopf; London: Picador, 2006.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/220031159/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9781846329166">
@@ -3500,8 +3500,8 @@
       <rdamd:P30182>250 p. (large print), 25 cm.</rdamd:P30182>
       <rdamd:P30137>Formerly CIP.</rdamd:P30137>
       <rdamd:P30137>Originally published: London: Picador, 2006.</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/220031159/exp/eng/1020"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9788205331730">
@@ -3516,8 +3516,8 @@
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>334 s.</rdamd:P30182>
       <rdamd:P30137>Originalutg.: New York : Random House, 1985</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/191524645/exp/nob/1020/225596267"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9788205367739">
@@ -3533,8 +3533,8 @@
       <rdamd:P30182>229 s.</rdamd:P30182>
       <rdamd:P30106>Gyldendal pocket</rdamd:P30106>
       <rdamd:P30137>1. norske utg. 2006</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/214012164/exp/nob/1020/225596267"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9788205373860">
@@ -3548,8 +3548,8 @@
       <rdamd:P30083>Gyldendal</rdamd:P30083>
       <rdamd:P30011>2008</rdamd:P30011>
       <rdamd:P30182>253 s.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/220031159/exp/nob/1020/225596267"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9788205385030">
@@ -3565,8 +3565,8 @@
       <rdamd:P30011>2008</rdamd:P30011>
       <rdamd:P30182>229 s.</rdamd:P30182>
       <rdamd:P30137>1. norske utg. 2006</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/214012164/exp/nob/1020/225596267"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9788205394964">
@@ -3583,8 +3583,8 @@
       <rdamd:P30182>253 s.</rdamd:P30182>
       <rdamd:P30106>Gyldendal pocket</rdamd:P30106>
       <rdamd:P30137>1. norske utg. 2008</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/220031159/exp/nob/1020/225596267"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9788205405318">
@@ -3600,8 +3600,8 @@
       <rdamd:P30182>299 s.</rdamd:P30182>
       <rdamd:P30106>Gyldendal pocket</rdamd:P30106>
       <rdamd:P30137>1. norske utg. 1993</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/214001528/exp/nob/1020/225596267"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9788205405325">
@@ -3617,8 +3617,8 @@
       <rdamd:P30182>168 s.</rdamd:P30182>
       <rdamd:P30106>Gyldendal pocket</rdamd:P30106>
       <rdamd:P30137>1. norske utg. 1989</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/188670330/exp/nob/1020/266451311"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9788205408715">
@@ -3634,8 +3634,8 @@
       <rdamd:P30182>334 s.</rdamd:P30182>
       <rdamd:P30106>Gyldendal pocket</rdamd:P30106>
       <rdamd:P30137>1. norske utg. 2010</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/191524645/exp/nob/1020/225596267"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9788205413399">
@@ -3649,8 +3649,8 @@
       <rdamd:P30083>Gyldendal</rdamd:P30083>
       <rdamd:P30011>2012</rdamd:P30011>
       <rdamd:P30182>276 s.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/191907343/exp/nob/1020/225596267"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9788205576780">
@@ -3668,8 +3668,8 @@
       <rdamd:P30106>Grensetrilogien</rdamd:P30106>
       <rdamd:P30165>1</rdamd:P30165>
       <rdamd:P30137>1. norske utgave 1993</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/214001528/exp/nob/1020/225596267"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9788205576797">
@@ -3687,8 +3687,8 @@
       <rdamd:P30106>Grensetrilogien</rdamd:P30106>
       <rdamd:P30165>2</rdamd:P30165>
       <rdamd:P30137>1. norske utgave 1995</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/309357400/exp/nob/1020/225596267"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9788205576803">
@@ -3705,8 +3705,8 @@
       <rdamd:P30182>266 sider.</rdamd:P30182>
       <rdamd:P30106>Grensetrilogien</rdamd:P30106>
       <rdamd:P30137>1. norske utgave 1999</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/3417153653286155900001/exp/nob/1020/225596267"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9788205577015">
@@ -3720,8 +3720,8 @@
       <rdamd:P30083>Gyldendal</rdamd:P30083>
       <rdamd:P30011>[2022]</rdamd:P30011>
       <rdamd:P30182>405 sider.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/470166838899836200007/exp/nob/1020/225596267"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9788205577046">
@@ -3735,8 +3735,8 @@
       <rdamd:P30083>Gyldendal</rdamd:P30083>
       <rdamd:P30011>[2022]</rdamd:P30011>
       <rdamd:P30182>217 sider.</rdamd:P30182>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/470166838899836200007/stellamaris/exp/nob/1020/225596267"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9788205577121">
@@ -3752,8 +3752,8 @@
       <rdamd:P30011>2022</rdamd:P30011>
       <rdamd:P30182>253 sider.</rdamd:P30182>
       <rdamd:P30137>1. norske utgave 2008</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/220031159/exp/nob/1020/225596267"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9788205577138">
@@ -3769,8 +3769,8 @@
       <rdamd:P30011>2022</rdamd:P30011>
       <rdamd:P30182>229 sider.</rdamd:P30182>
       <rdamd:P30137>1. norske utgave 2006</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/214012164/exp/nob/1020/225596267"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9788205577145">
@@ -3786,8 +3786,8 @@
       <rdamd:P30011>2022</rdamd:P30011>
       <rdamd:P30182>334 sider.</rdamd:P30182>
       <rdamd:P30137>1. norske utgave 2010</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/191524645/exp/nob/1020/225596267"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9788205586307">
@@ -3804,8 +3804,8 @@
       <rdamd:P30182>405 sider.</rdamd:P30182>
       <rdamd:P30106>Gyldendal pocket</rdamd:P30106>
       <rdamd:P30137>1. norske utgave (innbundet) 2022</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/470166838899836200007/exp/nob/1020/225596267"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9788205588387">
@@ -3823,8 +3823,8 @@
       <rdamd:P30106>Bobby og Alicia Western</rdamd:P30106>
       <rdamd:P30165>2</rdamd:P30165>
       <rdamd:P30137>1. norske utgave 2022</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/470166838899836200007/stellamaris/exp/nob/1020/225596267"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9788242148407">
@@ -3839,8 +3839,8 @@
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>6 plater (CD) (6 t, 41 min) : digital, 12 cm, i eske.</rdamd:P30182>
       <rdamd:P30137>Lest av Trond Brænne</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1004"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1001"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1004"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1001"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/220031159/exp/nob/1013/225596267/27122071"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9788242148490">
@@ -3856,8 +3856,8 @@
       <rdamd:P30182>1 avspiller med lydfil (6 t, 40 min) : digital.</rdamd:P30182>
       <rdamd:P30137>Digital lydbok med integrert avspilling (digibok)</rdamd:P30137>
       <rdamd:P30137>Lest av: Trond Brænne</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1004"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1001"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1004"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1001"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/220031159/exp/nob/1013/225596267/27122071"/>
    </rdac:C10007>
    <rdac:C10007 rdf:about="http://example.org/isbn-9788252574920">
@@ -3872,70 +3872,8 @@
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>253 s.</rdamd:P30182>
       <rdamd:P30137>1. norske utg. Oslo : Gyldendal, 2008</rdamd:P30137>
-      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
-      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamo:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
       <rdamo:P30139 rdf:resource="http://viaf.org/viaf/220031159/exp/nob/1020/225596267"/>
    </rdac:C10007>
-   <skos:Concept rdf:about="http://id.loc.gov/vocabulary/iso639-2/eng">
-      <rdfs:label>eng</rdfs:label>
-      <skos:subjectIndicator>eng</skos:subjectIndicator>
-   </skos:Concept>
-   <skos:Concept rdf:about="http://id.loc.gov/vocabulary/iso639-2/fre">
-      <skos:subjectIndicator>fre</skos:subjectIndicator>
-   </skos:Concept>
-   <skos:Concept rdf:about="http://id.loc.gov/vocabulary/iso639-2/mul">
-      <rdfs:label>mul</rdfs:label>
-   </skos:Concept>
-   <skos:Concept rdf:about="http://id.loc.gov/vocabulary/iso639-2/nob">
-      <rdfs:label>nob</rdfs:label>
-      <skos:subjectIndicator>nob</skos:subjectIndicator>
-   </skos:Concept>
-   <skos:Concept rdf:about="http://id.loc.gov/vocabulary/iso639-2/spa">
-      <skos:subjectIndicator>spa</skos:subjectIndicator>
-   </skos:Concept>
-   <skos:Concept rdf:about="http://rdaregistry.info/termList/RDACarrierType/1004">
-      <skos:subjectIndicator>http://rdaregistry.info/termList/RDACarrierType/1004</skos:subjectIndicator>
-   </skos:Concept>
-   <skos:Concept rdf:about="http://rdaregistry.info/termList/RDACarrierType/1007">
-      <skos:subjectIndicator>http://rdaregistry.info/termList/RDACarrierType/1007</skos:subjectIndicator>
-   </skos:Concept>
-   <skos:Concept rdf:about="http://rdaregistry.info/termList/RDACarrierType/1013">
-      <skos:subjectIndicator>http://rdaregistry.info/termList/RDACarrierType/1013</skos:subjectIndicator>
-   </skos:Concept>
-   <skos:Concept rdf:about="http://rdaregistry.info/termList/RDACarrierType/1018">
-      <skos:subjectIndicator>http://rdaregistry.info/termList/RDACarrierType/1018</skos:subjectIndicator>
-   </skos:Concept>
-   <skos:Concept rdf:about="http://rdaregistry.info/termList/RDACarrierType/1049">
-      <skos:subjectIndicator>http://rdaregistry.info/termList/RDACarrierType/1049</skos:subjectIndicator>
-   </skos:Concept>
-   <skos:Concept rdf:about="http://rdaregistry.info/termList/RDACarrierType/1060">
-      <skos:subjectIndicator>http://rdaregistry.info/termList/RDACarrierType/1060</skos:subjectIndicator>
-   </skos:Concept>
-   <skos:Concept rdf:about="http://rdaregistry.info/termList/RDACarrierType/1069">
-      <skos:subjectIndicator>http://rdaregistry.info/termList/RDACarrierType/1069</skos:subjectIndicator>
-   </skos:Concept>
-   <skos:Concept rdf:about="http://rdaregistry.info/termList/RDAContentType/1011">
-      <skos:subjectIndicator>http://rdaregistry.info/termList/RDAContentType/1011</skos:subjectIndicator>
-   </skos:Concept>
-   <skos:Concept rdf:about="http://rdaregistry.info/termList/RDAContentType/1013">
-      <skos:subjectIndicator>http://rdaregistry.info/termList/RDAContentType/1013</skos:subjectIndicator>
-   </skos:Concept>
-   <skos:Concept rdf:about="http://rdaregistry.info/termList/RDAContentType/1020">
-      <skos:subjectIndicator>http://rdaregistry.info/termList/RDAContentType/1020</skos:subjectIndicator>
-   </skos:Concept>
-   <skos:Concept rdf:about="http://rdaregistry.info/termList/RDAContentType/1023">
-      <skos:subjectIndicator>http://rdaregistry.info/termList/RDAContentType/1023</skos:subjectIndicator>
-   </skos:Concept>
-   <skos:Concept rdf:about="http://rdaregistry.info/termList/RDAMediaType/1001">
-      <skos:subjectIndicator>http://rdaregistry.info/termList/RDAMediaType/1001</skos:subjectIndicator>
-   </skos:Concept>
-   <skos:Concept rdf:about="http://rdaregistry.info/termList/RDAMediaType/1003">
-      <skos:subjectIndicator>http://rdaregistry.info/termList/RDAMediaType/1003</skos:subjectIndicator>
-   </skos:Concept>
-   <skos:Concept rdf:about="http://rdaregistry.info/termList/RDAMediaType/1007">
-      <skos:subjectIndicator>http://rdaregistry.info/termList/RDAMediaType/1007</skos:subjectIndicator>
-   </skos:Concept>
-   <skos:Concept rdf:about="http://rdaregistry.info/termList/RDAMediaType/1008">
-      <skos:subjectIndicator>http://rdaregistry.info/termList/RDAMediaType/1008</skos:subjectIndicator>
-   </skos:Concept>
 </rdf:RDF>

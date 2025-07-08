@@ -1,4 +1,5 @@
-# rdfs:labels in norwegian and english for languages
+# Adding rdfs:labels in norwegian and english for languages, English is a copy of skos:preferredLabel
+
 <http://id.loc.gov/vocabulary/iso639-2/aar>	<http://www.w3.org/2000/01/rdf-schema#label>	"Afar"@en	 .
 <http://id.loc.gov/vocabulary/iso639-2/abk>	<http://www.w3.org/2000/01/rdf-schema#label>	"Abkhazian"@en	 .
 <http://id.loc.gov/vocabulary/iso639-2/ace>	<http://www.w3.org/2000/01/rdf-schema#label>	"Achinese"@en	 .

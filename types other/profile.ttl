@@ -3,18 +3,44 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
 abi:StatusLiteral a rdfs:Datatype ;
-    owl:oneOf ("data property" "object property" "class" "vocabulary property" "deprecated" "not used") .
+    owl:oneOf ("data property" "object property" "class" "controlled property" "deprecated" "not used") .
 
 abi:status a owl:DatatypeProperty ;
     rdfs:range abi:StatusLiteral ;
     rdfs:label "has status (literal)" .
+
+#Adding some classes for the vocabularies used since difficult to differentiate skos:Concept
+abi:Contenttype a owl:Class .
+abi:Contenttype rdfs:label "Innholdstyper"@no .
+abi:Contenttype rdfs:label "Content types"@en .
+
+#Adding some semantics to the data
+abi:Carriertype a owl:Class .
+abi:Carriertype rdfs:label "Bærertyper"@no .
+abi:Carriertype rdfs:label "Carrier types"@en .
+
+#Adding some semantics to the data
+abi:Mediatype a owl:Class .
+abi:Mediatype rdfs:label "Medietyper"@no .
+abi:Mediatype rdfs:label "Media types"@en .
+
+#Adding some semantics to the data
+abi:Language a owl:Class .
+abi:Language rdfs:label "Språk"@no .
+abi:Language rdfs:label "Language"@en .
 
 #Classes
 <http://rdaregistry.info/Elements/c/C10002>             abi:status "class" .  # "Agent"@en .
 <http://rdaregistry.info/Elements/c/C10001>             abi:status "class" .  # "Work"@en .
 <http://rdaregistry.info/Elements/c/C10006>             abi:status "class" .  # "Expression"@en .
 <http://rdaregistry.info/Elements/c/C10007>             abi:status "class" .  # "Manifestation"@en .
-<http://www.w3.org/2004/02/skos/core#Concept>			abi:status "class" .  # "Concept"@en .
+# <http://www.w3.org/2004/02/skos/core#Concept>			abi:status "class" .  # "Concept"@en .
+
+abi:Worktype		                                        abi:status "class" .  # "Verkstype"@en .
+abi:Language			                                      abi:status "class" .  # "Språk"@en .
+abi:Contenttype			                                    abi:status "class" .  # "Innholdstype"@en .
+abi:Carriertype  			                                  abi:status "class" .  # "Bærertype"@en .
+abi:Mediatype			                                      abi:status "class" .  # "Mediatype"@en .
 
 #Agent profile, data properties
 <http://rdaregistry.info/Elements/a/datatype/P50339>	abi:status "data property" .   #"dates"@en .
@@ -28,7 +54,13 @@ abi:status a owl:DatatypeProperty ;
 <http://rdaregistry.info/Elements/w/datatype/P10088>	abi:status "data property" .   #"title"@en .
 <http://rdaregistry.info/Elements/w/datatype/P10223>	abi:status "data property" .   #"titlepreferred"@en .
 <http://rdaregistry.info/Elements/w/datatype/P10086>	abi:status "data property" .   #"titlevariant"@en .
+<http://rdaregistry.info/Elements/w/datatype/P10330>	abi:status "data property" .   #"note on Work"@en .
 <http://rdaregistry.info/Elements/x/datatype/P00029>	abi:status "data property" .   #"form"@en .
+
+# Defining the object type version of this property the type "controlled property"
+# Also using ad hoc range type to be able to filter the relevant values in the user interface
+<http://rdaregistry.info/Elements/w/object/P10004>	    abi:status "controlled property" .   #"type"@en .
+<http://rdaregistry.info/Elements/w/object/P10004>      rdfs:range abi:Worktype .
 
 #Expression profile, data properties
 <http://rdaregistry.info/Elements/e/datatype/P20006>	abi:status "data property" .   #"language"@en .
@@ -38,6 +70,11 @@ abi:status a owl:DatatypeProperty ;
 <http://rdaregistry.info/Elements/e/datatype/P20315>	abi:status "data property" .   #"titlepreferred"@en .
 <http://rdaregistry.info/Elements/e/datatype/P20316>	abi:status "data property" .   #"titlevariant"@en .
 <http://rdaregistry.info/Elements/e/datatype/P20071>	abi:status "data property" .   #"contentsnote"@en .
+
+<http://rdaregistry.info/Elements/e/object/P20006>	abi:status "controlled property" .   #"language"@en .
+<http://rdaregistry.info/Elements/e/object/P20006>  rdfs:range  abi:Language .
+<http://rdaregistry.info/Elements/e/object/P20001>	abi:status "controlled property" .   #"content"@en .
+<http://rdaregistry.info/Elements/e/object/P20001>  rdfs:range  abi:Contenttype .
 
 #Manifestation profile
 <http://rdaregistry.info/Elements/m/datatype/P30004>	abi:status "data property" .   #"identifier"@en .
@@ -75,6 +112,10 @@ abi:status a owl:DatatypeProperty ;
 <http://rdaregistry.info/Elements/m/datatype/P30050>	abi:status "data property" .   #"partnote"@en .
 <http://rdaregistry.info/Elements/m/datatype/P30033>	abi:status "data property" .   #"contentsnote"@en .
 
+<http://rdaregistry.info/Elements/m/object/P30002>	  abi:status "controlled property" .   #"mediatype"@en .
+<http://rdaregistry.info/Elements/m/object/P30002>    rdfs:range  abi:Mediatype .
+<http://rdaregistry.info/Elements/m/object/P30001>	  abi:status "controlled property" .   #"carrier"@en .
+<http://rdaregistry.info/Elements/m/object/P30001>    rdfs:range  abi:Carriertype .
 
 #Object properties
 rdawo:P10016	abi:status	"object property"	 . #	is dramatized as work	rdac:C10001	rdac:C10001
@@ -101,11 +142,11 @@ rdawo:P10129	abi:status	"object property"	 . #	is motion picture adaptation of w
 rdawo:P10026	abi:status	"object property"	 . #	has cadenza work	rdac:C10001	rdac:C10001
 rdawo:P10029	abi:status	"object property"	 . #	is cadenza composed for work	rdac:C10001	rdac:C10001
 
-rdawo:P10027	abi:status	"object property"	 . #	is variations based on work	rdac:C10001	rdac:C10001
-rdawo:P10028	abi:status	"object property"	 . #	is modified by variation as work	rdac:C10001	rdac:C10001
+#rdawo:P10027	abi:status	"object property"	 . #	is variations based on work	rdac:C10001	rdac:C10001
+#rdawo:P10028	abi:status	"object property"	 . #	is modified by variation as work	rdac:C10001	rdac:C10001
 
-rdawo:P10028	abi:status	"object property"	 . #	is modified by variation as work	rdac:C10001	rdac:C10001
-rdawo:P10027	abi:status	"object property"	 . #	is variations based on work	rdac:C10001	rdac:C10001
+#rdawo:P10028	abi:status	"object property"	 . #	is modified by variation as work	rdac:C10001	rdac:C10001
+#rdawo:P10027	abi:status	"object property"	 . #	is variations based on work	rdac:C10001	rdac:C10001
 
 rdawo:P10029	abi:status	"object property"	 . #	is cadenza composed for work	rdac:C10001	rdac:C10001
 rdawo:P10026	abi:status	"object property"	 . #	has cadenza work	rdac:C10001	rdac:C10001
@@ -128,8 +169,8 @@ rdawo:P10130	abi:status	"object property"	 . #	is novelization of work	rdac:C100
 rdawo:P10076	abi:status	"object property"	 . #	is adapted as radio program work	rdac:C10001	rdac:C10001
 rdawo:P10131	abi:status	"object property"	 . #	is radio adaptation of work	rdac:C10001	rdac:C10001
 
-rdawo:P10080	abi:status	"object property"	 . #	has subseries	rdac:C10001	rdac:C10001
-rdawo:P10101	abi:status	"object property"	 . #	is subseries of	rdac:C10001	rdac:C10001
+#rdawo:P10080	abi:status	"object property"	 . #	has subseries	rdac:C10001	rdac:C10001
+#rdawo:P10101	abi:status	"object property"	 . #	is subseries of	rdac:C10001	rdac:C10001
 
 rdawo:P10085	abi:status	"object property"	 . #	is adapted as television program work	rdac:C10001	rdac:C10001
 rdawo:P10132	abi:status	"object property"	 . #	is television adaptation of work	rdac:C10001	rdac:C10001
@@ -143,8 +184,8 @@ rdawo:P10193	abi:status	"object property"	 . #	is abstracts for work	rdac:C10001
 rdawo:P10091	abi:status	"object property"	 . #	is adapted as choreography work	rdac:C10001	rdac:C10001
 rdawo:P10183	abi:status	"object property"	 . #	is choreographic adaptation of work	rdac:C10001	rdac:C10001
 
-rdawo:P10092	abi:status	"object property"	 . #	has errata work	rdac:C10001	rdac:C10001
-rdawo:P10149	abi:status	"object property"	 . #	is errata to work	rdac:C10001	rdac:C10001
+#rdawo:P10092	abi:status	"object property"	 . #	has errata work	rdac:C10001	rdac:C10001
+#rdawo:P10149	abi:status	"object property"	 . #	is errata to work	rdac:C10001	rdac:C10001
 
 rdawo:P10093	abi:status	"object property"	 . #	has illustrations work	rdac:C10001	rdac:C10001
 rdawo:P10152	abi:status	"object property"	 . #	is illustrations for work	rdac:C10001	rdac:C10001
@@ -608,26 +649,26 @@ rdawo:P10379	abi:status	"object property"	 . #	has sequential version	rdac:C1000
 rdawo:P10381	abi:status	"object property"	 . #	has serialized version	rdac:C10001	rdac:C10001
 rdawo:P10391	abi:status	"object property"	 . #	is serialized version of	rdac:C10001	rdac:C10001
 
-rdawo:P10382	abi:status	"object property"	 . #	has static version	rdac:C10001	rdac:C10001
-rdawo:P10392	abi:status	"object property"	 . #	is static version of	rdac:C10001	rdac:C10001
+#rdawo:P10382	abi:status	"object property"	 . #	has static version	rdac:C10001	rdac:C10001
+#rdawo:P10392	abi:status	"object property"	 . #	is static version of	rdac:C10001	rdac:C10001
 
-rdawo:P10383	abi:status	"object property"	 . #	has transformation by audience	rdac:C10001	rdac:C10001
-rdawo:P10384	abi:status	"object property"	 . #	is transformation by audience of	rdac:C10001	rdac:C10001
+#rdawo:P10383	abi:status	"object property"	 . #	has transformation by audience	rdac:C10001	rdac:C10001
+#rdawo:P10384	abi:status	"object property"	 . #	is transformation by audience of	rdac:C10001	rdac:C10001
 
-rdawo:P10384	abi:status	"object property"	 . #	is transformation by audience of	rdac:C10001	rdac:C10001
-rdawo:P10383	abi:status	"object property"	 . #	has transformation by audience	rdac:C10001	rdac:C10001
+#rdawo:P10384	abi:status	"object property"	 . #	is transformation by audience of	rdac:C10001	rdac:C10001
+#rdawo:P10383	abi:status	"object property"	 . #	has transformation by audience	rdac:C10001	rdac:C10001
 
-rdawo:P10385	abi:status	"object property"	 . #	has language version	rdac:C10001	rdac:C10001
-rdawo:P10388	abi:status	"object property"	 . #	is language version of	rdac:C10001	rdac:C10001
+#rdawo:P10385	abi:status	"object property"	 . #	has language version	rdac:C10001	rdac:C10001
+#rdawo:P10388	abi:status	"object property"	 . #	is language version of	rdac:C10001	rdac:C10001
 
-rdawo:P10386	abi:status	"object property"	 . #	has regional version	rdac:C10001	rdac:C10001
-rdawo:P10389	abi:status	"object property"	 . #	is regional version of	rdac:C10001	rdac:C10001
+#rdawo:P10386	abi:status	"object property"	 . #	has regional version	rdac:C10001	rdac:C10001
+#rdawo:P10389	abi:status	"object property"	 . #	is regional version of	rdac:C10001	rdac:C10001
 
-rdawo:P10387	abi:status	"object property"	 . #	has carrier version	rdac:C10001	rdac:C10001
-rdawo:P10390	abi:status	"object property"	 . #	is carrier version of	rdac:C10001	rdac:C10001
+#rdawo:P10387	abi:status	"object property"	 . #	has carrier version	rdac:C10001	rdac:C10001
+#rdawo:P10390	abi:status	"object property"	 . #	is carrier version of	rdac:C10001	rdac:C10001
 
-rdawo:P10388	abi:status	"object property"	 . #	is language version of	rdac:C10001	rdac:C10001
-rdawo:P10385	abi:status	"object property"	 . #	has language version	rdac:C10001	rdac:C10001
+#rdawo:P10388	abi:status	"object property"	 . #	is language version of	rdac:C10001	rdac:C10001
+#rdawo:P10385	abi:status	"object property"	 . #	has language version	rdac:C10001	rdac:C10001
 
 rdawo:P10389	abi:status	"object property"	 . #	is regional version of	rdac:C10001	rdac:C10001
 rdawo:P10386	abi:status	"object property"	 . #	has regional version	rdac:C10001	rdac:C10001
@@ -638,26 +679,26 @@ rdawo:P10387	abi:status	"object property"	 . #	has carrier version	rdac:C10001	r
 rdawo:P10391	abi:status	"object property"	 . #	is serialized version of	rdac:C10001	rdac:C10001
 rdawo:P10381	abi:status	"object property"	 . #	has serialized version	rdac:C10001	rdac:C10001
 
-rdawo:P10392	abi:status	"object property"	 . #	is static version of	rdac:C10001	rdac:C10001
-rdawo:P10382	abi:status	"object property"	 . #	has static version	rdac:C10001	rdac:C10001
+#rdawo:P10392	abi:status	"object property"	 . #	is static version of	rdac:C10001	rdac:C10001
+#rdawo:P10382	abi:status	"object property"	 . #	has static version	rdac:C10001	rdac:C10001
 
-rdawo:P10410	abi:status	"object property"	 . #	has special issue	rdac:C10001	rdac:C10001
-rdawo:P10411	abi:status	"object property"	 . #	is special issue of	rdac:C10001	rdac:C10001
+#rdawo:P10410	abi:status	"object property"	 . #	has special issue	rdac:C10001	rdac:C10001
+#rdawo:P10411	abi:status	"object property"	 . #	is special issue of	rdac:C10001	rdac:C10001
 
-rdawo:P10411	abi:status	"object property"	 . #	is special issue of	rdac:C10001	rdac:C10001
-rdawo:P10410	abi:status	"object property"	 . #	has special issue	rdac:C10001	rdac:C10001
+#rdawo:P10411	abi:status	"object property"	 . #	is special issue of	rdac:C10001	rdac:C10001
+#rdawo:P10410	abi:status	"object property"	 . #	has special issue	rdac:C10001	rdac:C10001
 
-rdawo:P10621	abi:status	"object property"	 . #	is metadata description of work	rdac:C10001	rdac:C10001
-rdawo:P10623	abi:status	"object property"	 . #	is work described with metadata by	rdac:C10001	rdac:C10001
+#rdawo:P10621	abi:status	"object property"	 . #	is metadata description of work	rdac:C10001	rdac:C10001
+#rdawo:P10623	abi:status	"object property"	 . #	is work described with metadata by	rdac:C10001	rdac:C10001
 
-rdawo:P10621	abi:status	"object property"	 . #	is metadata description of work	rdac:C10001	rdac:C10001
-rdawo:P10623	abi:status	"object property"	 . #	teosta metatiedoilla kuvaileva teos	rdac:C10001	rdac:C10001
+#rdawo:P10621	abi:status	"object property"	 . #	is metadata description of work	rdac:C10001	rdac:C10001
+#rdawo:P10623	abi:status	"object property"	 . #	teosta metatiedoilla kuvaileva teos	rdac:C10001	rdac:C10001
 
-rdawo:P10623	abi:status	"object property"	 . #	is work described with metadata by	rdac:C10001	rdac:C10001
-rdawo:P10621	abi:status	"object property"	 . #	is metadata description of work	rdac:C10001	rdac:C10001
+#rdawo:P10623	abi:status	"object property"	 . #	is work described with metadata by	rdac:C10001	rdac:C10001
+#rdawo:P10621	abi:status	"object property"	 . #	is metadata description of work	rdac:C10001	rdac:C10001
 
-rdawo:P10623	abi:status	"object property"	 . #	is work described with metadata by	rdac:C10001	rdac:C10001
-rdawo:P10621	abi:status	"object property"	 . #	metatietokuvailu teoksesta	rdac:C10001	rdac:C10001
+#rdawo:P10623	abi:status	"object property"	 . #	is work described with metadata by	rdac:C10001	rdac:C10001
+#rdawo:P10621	abi:status	"object property"	 . #	metatietokuvailu teoksesta	rdac:C10001	rdac:C10001
 
 rdawo:P10013	abi:status	"object property"	 . #	has film director agent	rdac:C10001	rdac:C10002
 rdaao:P50048	abi:status	"object property"	 . #	is film director agent of	rdac:C10002	rdac:C10001
@@ -821,29 +862,29 @@ rdaao:P51108	abi:status	"object property"	 . #	toimijaa metatiedoilla kuvaileva 
 rdawo:P10629	abi:status	"object property"	 . #	has collector agent	rdac:C10001	rdac:C10002
 rdaao:P51113	abi:status	"object property"	 . #	is collector agent of 	rdac:C10002	rdac:C10001
 
-rdawo:P10629	abi:status	"object property"	 . #	has collector agent	rdac:C10001	rdac:C10002
-rdaao:P51113	abi:status	"object property"	 . #	muodostaja (toimija) kokoelmalle	rdac:C10002	rdac:C10001
+#rdawo:P10629	abi:status	"object property"	 . #	has collector agent	rdac:C10001	rdac:C10002
+#rdaao:P51113	abi:status	"object property"	 . #	muodostaja (toimija) kokoelmalle	rdac:C10002	rdac:C10001
 
-rdawo:P10634	abi:status	"object property"	 . #	has collection registrar agent	rdac:C10001	rdac:C10002
-rdaao:P51118	abi:status	"object property"	 . #	is collection registrar agent of	rdac:C10002	rdac:C10001
+#rdawo:P10634	abi:status	"object property"	 . #	has collection registrar agent	rdac:C10001	rdac:C10002
+#rdaao:P51118	abi:status	"object property"	 . #	is collection registrar agent of	rdac:C10002	rdac:C10001
 
-rdawo:P10634	abi:status	"object property"	 . #	has collection registrar agent	rdac:C10001	rdac:C10002
-rdaao:P51118	abi:status	"object property"	 . #	luetteloija (toimija) kokoelmalle	rdac:C10002	rdac:C10001
+#rdawo:P10634	abi:status	"object property"	 . #	has collection registrar agent	rdac:C10001	rdac:C10002
+#rdaao:P51118	abi:status	"object property"	 . #	luetteloija (toimija) kokoelmalle	rdac:C10002	rdac:C10001
 
 rdawo:P10078	abi:status	"object property"	 . #	has expression of work	rdac:C10001	rdac:C10006
 rdaeo:P20231	abi:status	"object property"	 . #	has work expressed	rdac:C10006	rdac:C10001
 
-rdawo:P10258	abi:status	"object property"	 . #	has subject expression	rdac:C10001	rdac:C10006
-rdaeo:P20268	abi:status	"object property"	 . #	is subject expression of	rdac:C10006	rdac:C10001
+#rdawo:P10258	abi:status	"object property"	 . #	has subject expression	rdac:C10001	rdac:C10006
+#rdaeo:P20268	abi:status	"object property"	 . #	is subject expression of	rdac:C10006	rdac:C10001
 
-rdawo:P10277	abi:status	"object property"	 . #	is description of expression	rdac:C10001	rdac:C10006
-rdaeo:P20269	abi:status	"object property"	 . #	is expression described by	rdac:C10006	rdac:C10001
+#rdawo:P10277	abi:status	"object property"	 . #	is description of expression	rdac:C10001	rdac:C10006
+#rdaeo:P20269	abi:status	"object property"	 . #	is expression described by	rdac:C10006	rdac:C10001
 
-rdawo:P10278	abi:status	"object property"	 . #	is analysis of expression	rdac:C10001	rdac:C10006
-rdaeo:P20270	abi:status	"object property"	 . #	is expression analysed in	rdac:C10006	rdac:C10001
+#rdawo:P10278	abi:status	"object property"	 . #	is analysis of expression	rdac:C10001	rdac:C10006
+#rdaeo:P20270	abi:status	"object property"	 . #	is expression analysed in	rdac:C10006	rdac:C10001
 
-rdawo:P10279	abi:status	"object property"	 . #	is evaluation of expression	rdac:C10001	rdac:C10006
-rdaeo:P20273	abi:status	"object property"	 . #	is expression evaluated by	rdac:C10006	rdac:C10001
+#rdawo:P10279	abi:status	"object property"	 . #	is evaluation of expression	rdac:C10001	rdac:C10006
+#rdaeo:P20273	abi:status	"object property"	 . #	is expression evaluated by	rdac:C10006	rdac:C10001
 
 rdawo:P10280	abi:status	"object property"	 . #	is review of expression	rdac:C10001	rdac:C10006
 rdaeo:P20274	abi:status	"object property"	 . #	is expression reviewed by	rdac:C10006	rdac:C10001
@@ -854,86 +895,86 @@ rdaeo:P20272	abi:status	"object property"	 . #	is expression critiqued by	rdac:C
 rdawo:P10282	abi:status	"object property"	 . #	is commentary on expression	rdac:C10001	rdac:C10006
 rdaeo:P20271	abi:status	"object property"	 . #	is expression commentary in	rdac:C10006	rdac:C10001
 
-rdawo:P10308	abi:status	"object property"	 . #	has related expression of work	rdac:C10001	rdac:C10006
-rdaeo:P20298	abi:status	"object property"	 . #	has related work of expression	rdac:C10006	rdac:C10001
+#rdawo:P10308	abi:status	"object property"	 . #	has related expression of work	rdac:C10001	rdac:C10006
+#rdaeo:P20298	abi:status	"object property"	 . #	has related work of expression	rdac:C10006	rdac:C10001
 
-rdawo:P10346	abi:status	"object property"	 . #	has representative expression	rdac:C10001	rdac:C10006
-rdaeo:P20325	abi:status	"object property"	 . #	is representative expression of	rdac:C10006	rdac:C10001
+#rdawo:P10346	abi:status	"object property"	 . #	has representative expression	rdac:C10001	rdac:C10006
+#rdaeo:P20325	abi:status	"object property"	 . #	is representative expression of	rdac:C10006	rdac:C10001
 
-rdawo:P10615	abi:status	"object property"	 . #	is metadata description of expression	rdac:C10001	rdac:C10006
-rdaeo:P20576	abi:status	"object property"	 . #	is expression described with metadata by	rdac:C10006	rdac:C10001
+#rdawo:P10615	abi:status	"object property"	 . #	is metadata description of expression	rdac:C10001	rdac:C10006
+#rdaeo:P20576	abi:status	"object property"	 . #	is expression described with metadata by	rdac:C10006	rdac:C10001
 
-rdawo:P10615	abi:status	"object property"	 . #	is metadata description of expression	rdac:C10001	rdac:C10006
-rdaeo:P20576	abi:status	"object property"	 . #	ekspressiota metatiedoilla kuvaileva teos	rdac:C10006	rdac:C10001
+#rdawo:P10615	abi:status	"object property"	 . #	is metadata description of expression	rdac:C10001	rdac:C10006
+#rdaeo:P20576	abi:status	"object property"	 . #	ekspressiota metatiedoilla kuvaileva teos	rdac:C10006	rdac:C10001
 
-rdawo:P10628	abi:status	"object property"	 . #	is concordance work for	rdac:C10001	rdac:C10006
-rdaeo:P20577	abi:status	"object property"	 . #	has concordance work	rdac:C10006	rdac:C10001
+#rdawo:P10628	abi:status	"object property"	 . #	is concordance work for	rdac:C10001	rdac:C10006
+#rdaeo:P20577	abi:status	"object property"	 . #	has concordance work	rdac:C10006	rdac:C10001
 
-rdawo:P10628	abi:status	"object property"	 . #	is concordance work for	rdac:C10001	rdac:C10006
-rdaeo:P20577	abi:status	"object property"	 . #	konkordanssihakemisto (teos)	rdac:C10006	rdac:C10001
+#rdawo:P10628	abi:status	"object property"	 . #	is concordance work for	rdac:C10001	rdac:C10006
+#rdaeo:P20577	abi:status	"object property"	 . #	konkordanssihakemisto (teos)	rdac:C10006	rdac:C10001
 
-rdawo:P10072	abi:status	"object property"	 . #	has manifestation of work	rdac:C10001	rdac:C10007
-rdamo:P30135	abi:status	"object property"	 . #	has work manifested	rdac:C10007	rdac:C10001
+#rdawo:P10072	abi:status	"object property"	 . #	has manifestation of work	rdac:C10001	rdac:C10007
+#rdamo:P30135	abi:status	"object property"	 . #	has work manifested	rdac:C10007	rdac:C10001
 
-rdawo:P10259	abi:status	"object property"	 . #	has subject manifestation	rdac:C10001	rdac:C10007
-rdamo:P30253	abi:status	"object property"	 . #	is subject manifestation of	rdac:C10007	rdac:C10001
+#rdawo:P10259	abi:status	"object property"	 . #	has subject manifestation	rdac:C10001	rdac:C10007
+#rdamo:P30253	abi:status	"object property"	 . #	is subject manifestation of	rdac:C10007	rdac:C10001
 
-rdawo:P10271	abi:status	"object property"	 . #	is description of manifestation	rdac:C10001	rdac:C10007
-rdamo:P30254	abi:status	"object property"	 . #	is manifestation described by	rdac:C10007	rdac:C10001
+#rdawo:P10271	abi:status	"object property"	 . #	is description of manifestation	rdac:C10001	rdac:C10007
+#rdamo:P30254	abi:status	"object property"	 . #	is manifestation described by	rdac:C10007	rdac:C10001
 
-rdawo:P10272	abi:status	"object property"	 . #	is analysis of manifestation	rdac:C10001	rdac:C10007
-rdamo:P30255	abi:status	"object property"	 . #	is manifestation analysed in	rdac:C10007	rdac:C10001
+#rdawo:P10272	abi:status	"object property"	 . #	is analysis of manifestation	rdac:C10001	rdac:C10007
+#rdamo:P30255	abi:status	"object property"	 . #	is manifestation analysed in	rdac:C10007	rdac:C10001
 
-rdawo:P10273	abi:status	"object property"	 . #	is evaluation of manifestation	rdac:C10001	rdac:C10007
-rdamo:P30258	abi:status	"object property"	 . #	is manifestation evaluated by	rdac:C10007	rdac:C10001
+#rdawo:P10273	abi:status	"object property"	 . #	is evaluation of manifestation	rdac:C10001	rdac:C10007
+#rdamo:P30258	abi:status	"object property"	 . #	is manifestation evaluated by	rdac:C10007	rdac:C10001
 
-rdawo:P10274	abi:status	"object property"	 . #	is review of manifestation	rdac:C10001	rdac:C10007
-rdamo:P30259	abi:status	"object property"	 . #	is manifestation reviewed by	rdac:C10007	rdac:C10001
+#rdawo:P10274	abi:status	"object property"	 . #	is review of manifestation	rdac:C10001	rdac:C10007
+#rdamo:P30259	abi:status	"object property"	 . #	is manifestation reviewed by	rdac:C10007	rdac:C10001
 
-rdawo:P10275	abi:status	"object property"	 . #	is critique of manifestation	rdac:C10001	rdac:C10007
-rdamo:P30257	abi:status	"object property"	 . #	is manifestation critiqued by	rdac:C10007	rdac:C10001
+#rdawo:P10275	abi:status	"object property"	 . #	is critique of manifestation	rdac:C10001	rdac:C10007
+#rdamo:P30257	abi:status	"object property"	 . #	is manifestation critiqued by	rdac:C10007	rdac:C10001
 
-rdawo:P10276	abi:status	"object property"	 . #	is commentary on manifestation	rdac:C10001	rdac:C10007
-rdamo:P30256	abi:status	"object property"	 . #	is manifestation commentary in	rdac:C10007	rdac:C10001
+#rdawo:P10276	abi:status	"object property"	 . #	is commentary on manifestation	rdac:C10001	rdac:C10007
+#rdamo:P30256	abi:status	"object property"	 . #	is manifestation commentary in	rdac:C10007	rdac:C10001
 
-rdawo:P10309	abi:status	"object property"	 . #	has related manifestation of work	rdac:C10001	rdac:C10007
-rdamo:P30265	abi:status	"object property"	 . #	has related work of manifestation	rdac:C10007	rdac:C10001
+#rdawo:P10309	abi:status	"object property"	 . #	has related manifestation of work	rdac:C10001	rdac:C10007
+#rdamo:P30265	abi:status	"object property"	 . #	has related work of manifestation	rdac:C10007	rdac:C10001
 
-rdawo:P10363	abi:status	"object property"	 . #	is binding of manifestation of	rdac:C10001	rdac:C10007
-rdamo:P30310	abi:status	"object property"	 . #	has binding of manifestation	rdac:C10007	rdac:C10001
+#rdawo:P10363	abi:status	"object property"	 . #	is binding of manifestation of	rdac:C10001	rdac:C10007
+#rdamo:P30310	abi:status	"object property"	 . #	has binding of manifestation	rdac:C10007	rdac:C10001
 
-rdawo:P10406	abi:status	"object property"	 . #	has source consulted	rdac:C10001	rdac:C10007
-rdamo:P30334	abi:status	"object property"	 . #	is source consulted of	rdac:C10007	rdac:C10001
+#rdawo:P10406	abi:status	"object property"	 . #	has source consulted	rdac:C10001	rdac:C10007
+#rdamo:P30334	abi:status	"object property"	 . #	is source consulted of	rdac:C10007	rdac:C10001
 
-rdawo:P10617	abi:status	"object property"	 . #	is metadata description of manifestation	rdac:C10001	rdac:C10007
-rdamo:P30462	abi:status	"object property"	 . #	is manifestation described with metadata by	rdac:C10007	rdac:C10001
+#rdawo:P10617	abi:status	"object property"	 . #	is metadata description of manifestation	rdac:C10001	rdac:C10007
+#rdamo:P30462	abi:status	"object property"	 . #	is manifestation described with metadata by	rdac:C10007	rdac:C10001
 
-rdawo:P10617	abi:status	"object property"	 . #	is metadata description of manifestation	rdac:C10001	rdac:C10007
-rdamo:P30462	abi:status	"object property"	 . #	manifestaatiota metatiedoilla kuvaileva entiteetti	rdac:C10007	rdac:C10001
+#rdawo:P10617	abi:status	"object property"	 . #	is metadata description of manifestation	rdac:C10001	rdac:C10007
+#rdamo:P30462	abi:status	"object property"	 . #	manifestaatiota metatiedoilla kuvaileva entiteetti	rdac:C10007	rdac:C10001
 
-rdawo:P10624	abi:status	"object property"	 . #	is finding aid of	rdac:C10001	rdac:C10007
-rdamo:P30463	abi:status	"object property"	 . #	has finding aid	rdac:C10007	rdac:C10001
+#rdawo:P10624	abi:status	"object property"	 . #	is finding aid of	rdac:C10001	rdac:C10007
+#rdamo:P30463	abi:status	"object property"	 . #	has finding aid	rdac:C10007	rdac:C10001
 
-rdawo:P10624	abi:status	"object property"	 . #	is finding aid of	rdac:C10001	rdac:C10007
-rdamo:P30463	abi:status	"object property"	 . #	arkistokokoelman hakemisto	rdac:C10007	rdac:C10001
+#rdawo:P10624	abi:status	"object property"	 . #	is finding aid of	rdac:C10001	rdac:C10007
+#rdamo:P30463	abi:status	"object property"	 . #	arkistokokoelman hakemisto	rdac:C10007	rdac:C10001
 
-rdawo:P10625	abi:status	"object property"	 . #	is catalogue of	rdac:C10001	rdac:C10007
-rdamo:P30464	abi:status	"object property"	 . #	has catalogue	rdac:C10007	rdac:C10001
+#rdawo:P10625	abi:status	"object property"	 . #	is catalogue of	rdac:C10001	rdac:C10007
+#rdamo:P30464	abi:status	"object property"	 . #	has catalogue	rdac:C10007	rdac:C10001
 
-rdawo:P10625	abi:status	"object property"	 . #	is catalogue of	rdac:C10001	rdac:C10007
-rdamo:P30464	abi:status	"object property"	 . #	luettelo	rdac:C10007	rdac:C10001
+#rdawo:P10625	abi:status	"object property"	 . #	is catalogue of	rdac:C10001	rdac:C10007
+#rdamo:P30464	abi:status	"object property"	 . #	luettelo	rdac:C10007	rdac:C10001
 
-rdawo:P10626	abi:status	"object property"	 . #	is hierarchic finding aid of	rdac:C10001	rdac:C10007
-rdamo:P30465	abi:status	"object property"	 . #	has hierarchic finding aid	rdac:C10007	rdac:C10001
+#rdawo:P10626	abi:status	"object property"	 . #	is hierarchic finding aid of	rdac:C10001	rdac:C10007
+#rdamo:P30465	abi:status	"object property"	 . #	has hierarchic finding aid	rdac:C10007	rdac:C10001
 
-rdawo:P10626	abi:status	"object property"	 . #	is hierarchic finding aid of	rdac:C10001	rdac:C10007
-rdamo:P30465	abi:status	"object property"	 . #	hierarkkinen arkistokokoelman hakemisto	rdac:C10007	rdac:C10001
+#rdawo:P10626	abi:status	"object property"	 . #	is hierarchic finding aid of	rdac:C10001	rdac:C10007
+#rdamo:P30465	abi:status	"object property"	 . #	hierarkkinen arkistokokoelman hakemisto	rdac:C10007	rdac:C10001
 
-rdawo:P10627	abi:status	"object property"	 . #	is index for	rdac:C10001	rdac:C10007
-rdamo:P30466	abi:status	"object property"	 . #	has index	rdac:C10007	rdac:C10001
+#rdawo:P10627	abi:status	"object property"	 . #	is index for	rdac:C10001	rdac:C10007
+#rdamo:P30466	abi:status	"object property"	 . #	has index	rdac:C10007	rdac:C10001
 
-rdawo:P10627	abi:status	"object property"	 . #	is index for	rdac:C10001	rdac:C10007
-rdamo:P30466	abi:status	"object property"	 . #	hakemisto	rdac:C10007	rdac:C10001
+#rdawo:P10627	abi:status	"object property"	 . #	is index for	rdac:C10001	rdac:C10007
+#rdamo:P30466	abi:status	"object property"	 . #	hakemisto	rdac:C10007	rdac:C10001
 
 rdaao:P50048	abi:status	"object property"	 . #	is film director agent of	rdac:C10002	rdac:C10001
 rdawo:P10013	abi:status	"object property"	 . #	has film director agent	rdac:C10001	rdac:C10002
@@ -1088,23 +1129,23 @@ rdawo:P10338	abi:status	"object property"	 . #	is description of agent	rdac:C100
 rdaao:P50453	abi:status	"object property"	 . #	is aggregator agent of	rdac:C10002	rdac:C10001
 rdawo:P10393	abi:status	"object property"	 . #	has aggregator agent	rdac:C10001	rdac:C10002
 
-rdaao:P51108	abi:status	"object property"	 . #	is agent described with metadata by	rdac:C10002	rdac:C10001
-rdawo:P10610	abi:status	"object property"	 . #	is metadata description of agent	rdac:C10001	rdac:C10002
+#rdaao:P51108	abi:status	"object property"	 . #	is agent described with metadata by	rdac:C10002	rdac:C10001
+#rdawo:P10610	abi:status	"object property"	 . #	is metadata description of agent	rdac:C10001	rdac:C10002
 
-rdaao:P51108	abi:status	"object property"	 . #	is agent described with metadata by	rdac:C10002	rdac:C10001
-rdawo:P10610	abi:status	"object property"	 . #	metatietokuvailu toimijasta	rdac:C10001	rdac:C10002
+#rdaao:P51108	abi:status	"object property"	 . #	is agent described with metadata by	rdac:C10002	rdac:C10001
+#rdawo:P10610	abi:status	"object property"	 . #	metatietokuvailu toimijasta	rdac:C10001	rdac:C10002
 
-rdaao:P51113	abi:status	"object property"	 . #	is collector agent of 	rdac:C10002	rdac:C10001
-rdawo:P10629	abi:status	"object property"	 . #	kokoelman muodostaja (toimija)	rdac:C10001	rdac:C10002
+#rdaao:P51113	abi:status	"object property"	 . #	is collector agent of 	rdac:C10002	rdac:C10001
+#rdawo:P10629	abi:status	"object property"	 . #	kokoelman muodostaja (toimija)	rdac:C10001	rdac:C10002
 
-rdaao:P51113	abi:status	"object property"	 . #	is collector agent of 	rdac:C10002	rdac:C10001
-rdawo:P10629	abi:status	"object property"	 . #	has collector agent	rdac:C10001	rdac:C10002
+#rdaao:P51113	abi:status	"object property"	 . #	is collector agent of 	rdac:C10002	rdac:C10001
+#rdawo:P10629	abi:status	"object property"	 . #	has collector agent	rdac:C10001	rdac:C10002
 
-rdaao:P51118	abi:status	"object property"	 . #	is collection registrar agent of	rdac:C10002	rdac:C10001
-rdawo:P10634	abi:status	"object property"	 . #	kokoelman luetteloija (toimija)	rdac:C10001	rdac:C10002
+#rdaao:P51118	abi:status	"object property"	 . #	is collection registrar agent of	rdac:C10002	rdac:C10001
+#rdawo:P10634	abi:status	"object property"	 . #	kokoelman luetteloija (toimija)	rdac:C10001	rdac:C10002
 
-rdaao:P51118	abi:status	"object property"	 . #	is collection registrar agent of	rdac:C10002	rdac:C10001
-rdawo:P10634	abi:status	"object property"	 . #	has collection registrar agent	rdac:C10001	rdac:C10002
+#rdaao:P51118	abi:status	"object property"	 . #	is collection registrar agent of	rdac:C10002	rdac:C10001
+#rdawo:P10634	abi:status	"object property"	 . #	has collection registrar agent	rdac:C10001	rdac:C10002
 
 rdaao:P50309	abi:status	"object property"	 . #	has related agent of agent	rdac:C10002	rdac:C10002
 rdaao:P50309	abi:status	"object property"	 . #	has related agent of agent	rdac:C10002	rdac:C10002
@@ -1166,8 +1207,8 @@ rdaeo:P20031	abi:status	"object property"	 . #	has stage director agent	rdac:C10
 rdaao:P50140	abi:status	"object property"	 . #	is interviewer agent of expression of	rdac:C10002	rdac:C10006
 rdaeo:P20032	abi:status	"object property"	 . #	has interviewer agent of expression	rdac:C10006	rdac:C10002
 
-rdaao:P50141	abi:status	"object property"	 . #	is draftsman agent of	rdac:C10002	rdac:C10006
-rdaeo:P20033	abi:status	"object property"	 . #	has draftsman agent	rdac:C10006	rdac:C10002
+#rdaao:P50141	abi:status	"object property"	 . #	is draftsman agent of	rdac:C10002	rdac:C10006
+#rdaeo:P20033	abi:status	"object property"	 . #	has draftsman agent	rdac:C10006	rdac:C10002
 
 rdaao:P50142	abi:status	"object property"	 . #	is transcriber agent of	rdac:C10002	rdac:C10006
 rdaeo:P20034	abi:status	"object property"	 . #	has transcriber agent	rdac:C10006	rdac:C10002
@@ -1256,8 +1297,8 @@ rdaeo:P20286	abi:status	"object property"	 . #	has instrumental conductor agent	
 rdaao:P50271	abi:status	"object property"	 . #	is censor agent of	rdac:C10002	rdac:C10006
 rdaeo:P20287	abi:status	"object property"	 . #	has censor agent	rdac:C10006	rdac:C10002
 
-rdaao:P50273	abi:status	"object property"	 . #	is restorationist agent of expression of	rdac:C10002	rdac:C10006
-rdaeo:P20289	abi:status	"object property"	 . #	has restorationist agent of expression	rdac:C10006	rdac:C10002
+#rdaao:P50273	abi:status	"object property"	 . #	is restorationist agent of expression of	rdac:C10002	rdac:C10006
+#rdaeo:P20289	abi:status	"object property"	 . #	has restorationist agent of expression	rdac:C10006	rdac:C10002
 
 rdaao:P50296	abi:status	"object property"	 . #	is audio engineer agent of	rdac:C10002	rdac:C10006
 rdaeo:P20292	abi:status	"object property"	 . #	has audio engineer agent	rdac:C10006	rdac:C10002
@@ -1385,41 +1426,41 @@ rdawo:P10078	abi:status	"object property"	 . #	has expression of work	rdac:C1000
 rdaeo:P20268	abi:status	"object property"	 . #	is subject expression of	rdac:C10006	rdac:C10001
 rdawo:P10258	abi:status	"object property"	 . #	has subject expression	rdac:C10001	rdac:C10006
 
-rdaeo:P20269	abi:status	"object property"	 . #	is expression described by	rdac:C10006	rdac:C10001
-rdawo:P10277	abi:status	"object property"	 . #	is description of expression	rdac:C10001	rdac:C10006
+#rdaeo:P20269	abi:status	"object property"	 . #	is expression described by	rdac:C10006	rdac:C10001
+#rdawo:P10277	abi:status	"object property"	 . #	is description of expression	rdac:C10001	rdac:C10006
 
-rdaeo:P20270	abi:status	"object property"	 . #	is expression analysed in	rdac:C10006	rdac:C10001
-rdawo:P10278	abi:status	"object property"	 . #	is analysis of expression	rdac:C10001	rdac:C10006
+#rdaeo:P20270	abi:status	"object property"	 . #	is expression analysed in	rdac:C10006	rdac:C10001
+#rdawo:P10278	abi:status	"object property"	 . #	is analysis of expression	rdac:C10001	rdac:C10006
 
-rdaeo:P20271	abi:status	"object property"	 . #	is expression commentary in	rdac:C10006	rdac:C10001
-rdawo:P10282	abi:status	"object property"	 . #	is commentary on expression	rdac:C10001	rdac:C10006
+#rdaeo:P20271	abi:status	"object property"	 . #	is expression commentary in	rdac:C10006	rdac:C10001
+#rdawo:P10282	abi:status	"object property"	 . #	is commentary on expression	rdac:C10001	rdac:C10006
 
-rdaeo:P20272	abi:status	"object property"	 . #	is expression critiqued by	rdac:C10006	rdac:C10001
-rdawo:P10281	abi:status	"object property"	 . #	is critique of expression	rdac:C10001	rdac:C10006
+#rdaeo:P20272	abi:status	"object property"	 . #	is expression critiqued by	rdac:C10006	rdac:C10001
+#rdawo:P10281	abi:status	"object property"	 . #	is critique of expression	rdac:C10001	rdac:C10006
 
-rdaeo:P20273	abi:status	"object property"	 . #	is expression evaluated by	rdac:C10006	rdac:C10001
-rdawo:P10279	abi:status	"object property"	 . #	is evaluation of expression	rdac:C10001	rdac:C10006
+#rdaeo:P20273	abi:status	"object property"	 . #	is expression evaluated by	rdac:C10006	rdac:C10001
+#rdawo:P10279	abi:status	"object property"	 . #	is evaluation of expression	rdac:C10001	rdac:C10006
 
-rdaeo:P20274	abi:status	"object property"	 . #	is expression reviewed by	rdac:C10006	rdac:C10001
-rdawo:P10280	abi:status	"object property"	 . #	is review of expression	rdac:C10001	rdac:C10006
+#rdaeo:P20274	abi:status	"object property"	 . #	is expression reviewed by	rdac:C10006	rdac:C10001
+#rdawo:P10280	abi:status	"object property"	 . #	is review of expression	rdac:C10001	rdac:C10006
 
 rdaeo:P20298	abi:status	"object property"	 . #	has related work of expression	rdac:C10006	rdac:C10001
 rdawo:P10308	abi:status	"object property"	 . #	has related expression of work	rdac:C10001	rdac:C10006
 
-rdaeo:P20325	abi:status	"object property"	 . #	is representative expression of	rdac:C10006	rdac:C10001
-rdawo:P10346	abi:status	"object property"	 . #	has representative expression	rdac:C10001	rdac:C10006
+#rdaeo:P20325	abi:status	"object property"	 . #	is representative expression of	rdac:C10006	rdac:C10001
+#rdawo:P10346	abi:status	"object property"	 . #	has representative expression	rdac:C10001	rdac:C10006
 
-rdaeo:P20576	abi:status	"object property"	 . #	is expression described with metadata by	rdac:C10006	rdac:C10001
-rdawo:P10615	abi:status	"object property"	 . #	is metadata description of expression	rdac:C10001	rdac:C10006
+#rdaeo:P20576	abi:status	"object property"	 . #	is expression described with metadata by	rdac:C10006	rdac:C10001
+#rdawo:P10615	abi:status	"object property"	 . #	is metadata description of expression	rdac:C10001	rdac:C10006
 
-rdaeo:P20576	abi:status	"object property"	 . #	is expression described with metadata by	rdac:C10006	rdac:C10001
-rdawo:P10615	abi:status	"object property"	 . #	metatietokuvailu ekspressiosta	rdac:C10001	rdac:C10006
+#rdaeo:P20576	abi:status	"object property"	 . #	is expression described with metadata by	rdac:C10006	rdac:C10001
+#rdawo:P10615	abi:status	"object property"	 . #	metatietokuvailu ekspressiosta	rdac:C10001	rdac:C10006
 
 rdaeo:P20577	abi:status	"object property"	 . #	has concordance work	rdac:C10006	rdac:C10001
 rdawo:P10628	abi:status	"object property"	 . #	is concordance work for	rdac:C10001	rdac:C10006
 
-rdaeo:P20577	abi:status	"object property"	 . #	has concordance work	rdac:C10006	rdac:C10001
-rdawo:P10628	abi:status	"object property"	 . #	konkordanssihakemisto (teos) ekspressiolle	rdac:C10001	rdac:C10006
+#rdaeo:P20577	abi:status	"object property"	 . #	has concordance work	rdac:C10006	rdac:C10001
+#rdawo:P10628	abi:status	"object property"	 . #	konkordanssihakemisto (teos) ekspressiolle	rdac:C10001	rdac:C10006
 
 rdaeo:P20011	abi:status	"object property"	 . #	has conductor agent	rdac:C10006	rdac:C10002
 rdaao:P50070	abi:status	"object property"	 . #	is conductor agent of	rdac:C10002	rdac:C10006
@@ -1478,8 +1519,8 @@ rdaao:P50139	abi:status	"object property"	 . #	is stage director agent of	rdac:C
 rdaeo:P20032	abi:status	"object property"	 . #	has interviewer agent of expression	rdac:C10006	rdac:C10002
 rdaao:P50140	abi:status	"object property"	 . #	is interviewer agent of expression of	rdac:C10002	rdac:C10006
 
-rdaeo:P20033	abi:status	"object property"	 . #	has draftsman agent	rdac:C10006	rdac:C10002
-rdaao:P50141	abi:status	"object property"	 . #	is draftsman agent of	rdac:C10002	rdac:C10006
+#rdaeo:P20033	abi:status	"object property"	 . #	has draftsman agent	rdac:C10006	rdac:C10002
+#rdaao:P50141	abi:status	"object property"	 . #	is draftsman agent of	rdac:C10002	rdac:C10006
 
 rdaeo:P20034	abi:status	"object property"	 . #	has transcriber agent	rdac:C10006	rdac:C10002
 rdaao:P50142	abi:status	"object property"	 . #	is transcriber agent of	rdac:C10002	rdac:C10006
@@ -2024,77 +2065,77 @@ rdaeo:P20334	abi:status	"object property"	 . #	has prequel expression	rdac:C1000
 rdaeo:P20574	abi:status	"object property"	 . #	has source expression	rdac:C10006	rdac:C10006
 rdaeo:P20575	abi:status	"object property"	 . #	has derivative expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20574	abi:status	"object property"	 . #	has source expression	rdac:C10006	rdac:C10006
-rdaeo:P20575	abi:status	"object property"	 . #	johdannaisekspressio	rdac:C10006	rdac:C10006
+#rdaeo:P20574	abi:status	"object property"	 . #	has source expression	rdac:C10006	rdac:C10006
+#rdaeo:P20575	abi:status	"object property"	 . #	johdannaisekspressio	rdac:C10006	rdac:C10006
 
 rdaeo:P20575	abi:status	"object property"	 . #	has derivative expression	rdac:C10006	rdac:C10006
 rdaeo:P20574	abi:status	"object property"	 . #	has source expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20575	abi:status	"object property"	 . #	has derivative expression	rdac:C10006	rdac:C10006
-rdaeo:P20574	abi:status	"object property"	 . #	lähde-ekspressio	rdac:C10006	rdac:C10006
+#rdaeo:P20575	abi:status	"object property"	 . #	has derivative expression	rdac:C10006	rdac:C10006
+#rdaeo:P20574	abi:status	"object property"	 . #	lähde-ekspressio	rdac:C10006	rdac:C10006
 
 rdaeo:P20059	abi:status	"object property"	 . #	has manifestation of expression	rdac:C10006	rdac:C10007
 rdamo:P30139	abi:status	"object property"	 . #	has expression manifested	rdac:C10007	rdac:C10006
 
-rdaeo:P20299	abi:status	"object property"	 . #	has related manifestation of expression	rdac:C10006	rdac:C10007
-rdamo:P30266	abi:status	"object property"	 . #	has related expression of manifestation	rdac:C10007	rdac:C10006
+#rdaeo:P20299	abi:status	"object property"	 . #	has related manifestation of expression	rdac:C10006	rdac:C10007
+#rdamo:P30266	abi:status	"object property"	 . #	has related expression of manifestation	rdac:C10007	rdac:C10006
 
-rdamo:P30135	abi:status	"object property"	 . #	has work manifested	rdac:C10007	rdac:C10001
-rdawo:P10072	abi:status	"object property"	 . #	has manifestation of work	rdac:C10001	rdac:C10007
+#rdamo:P30135	abi:status	"object property"	 . #	has work manifested	rdac:C10007	rdac:C10001
+#rdawo:P10072	abi:status	"object property"	 . #	has manifestation of work	rdac:C10001	rdac:C10007
 
 rdamo:P30253	abi:status	"object property"	 . #	is subject manifestation of	rdac:C10007	rdac:C10001
 rdawo:P10259	abi:status	"object property"	 . #	has subject manifestation	rdac:C10001	rdac:C10007
 
-rdamo:P30254	abi:status	"object property"	 . #	is manifestation described by	rdac:C10007	rdac:C10001
-rdawo:P10271	abi:status	"object property"	 . #	is description of manifestation	rdac:C10001	rdac:C10007
+#rdamo:P30254	abi:status	"object property"	 . #	is manifestation described by	rdac:C10007	rdac:C10001
+#rdawo:P10271	abi:status	"object property"	 . #	is description of manifestation	rdac:C10001	rdac:C10007
 
-rdamo:P30255	abi:status	"object property"	 . #	is manifestation analysed in	rdac:C10007	rdac:C10001
-rdawo:P10272	abi:status	"object property"	 . #	is analysis of manifestation	rdac:C10001	rdac:C10007
+#rdamo:P30255	abi:status	"object property"	 . #	is manifestation analysed in	rdac:C10007	rdac:C10001
+#rdawo:P10272	abi:status	"object property"	 . #	is analysis of manifestation	rdac:C10001	rdac:C10007
 
-rdamo:P30256	abi:status	"object property"	 . #	is manifestation commentary in	rdac:C10007	rdac:C10001
-rdawo:P10276	abi:status	"object property"	 . #	is commentary on manifestation	rdac:C10001	rdac:C10007
+#rdamo:P30256	abi:status	"object property"	 . #	is manifestation commentary in	rdac:C10007	rdac:C10001
+#rdawo:P10276	abi:status	"object property"	 . #	is commentary on manifestation	rdac:C10001	rdac:C10007
 
-rdamo:P30257	abi:status	"object property"	 . #	is manifestation critiqued by	rdac:C10007	rdac:C10001
-rdawo:P10275	abi:status	"object property"	 . #	is critique of manifestation	rdac:C10001	rdac:C10007
+#rdamo:P30257	abi:status	"object property"	 . #	is manifestation critiqued by	rdac:C10007	rdac:C10001
+#rdawo:P10275	abi:status	"object property"	 . #	is critique of manifestation	rdac:C10001	rdac:C10007
 
-rdamo:P30258	abi:status	"object property"	 . #	is manifestation evaluated by	rdac:C10007	rdac:C10001
-rdawo:P10273	abi:status	"object property"	 . #	is evaluation of manifestation	rdac:C10001	rdac:C10007
+#rdamo:P30258	abi:status	"object property"	 . #	is manifestation evaluated by	rdac:C10007	rdac:C10001
+#rdawo:P10273	abi:status	"object property"	 . #	is evaluation of manifestation	rdac:C10001	rdac:C10007
 
-rdamo:P30259	abi:status	"object property"	 . #	is manifestation reviewed by	rdac:C10007	rdac:C10001
-rdawo:P10274	abi:status	"object property"	 . #	is review of manifestation	rdac:C10001	rdac:C10007
+#rdamo:P30259	abi:status	"object property"	 . #	is manifestation reviewed by	rdac:C10007	rdac:C10001
+#rdawo:P10274	abi:status	"object property"	 . #	is review of manifestation	rdac:C10001	rdac:C10007
 
-rdamo:P30265	abi:status	"object property"	 . #	has related work of manifestation	rdac:C10007	rdac:C10001
-rdawo:P10309	abi:status	"object property"	 . #	has related manifestation of work	rdac:C10001	rdac:C10007
+#rdamo:P30265	abi:status	"object property"	 . #	has related work of manifestation	rdac:C10007	rdac:C10001
+#rdawo:P10309	abi:status	"object property"	 . #	has related manifestation of work	rdac:C10001	rdac:C10007
 
 rdamo:P30310	abi:status	"object property"	 . #	has binding of manifestation	rdac:C10007	rdac:C10001
 rdawo:P10363	abi:status	"object property"	 . #	is binding of manifestation of	rdac:C10001	rdac:C10007
 
-rdamo:P30334	abi:status	"object property"	 . #	is source consulted of	rdac:C10007	rdac:C10001
-rdawo:P10406	abi:status	"object property"	 . #	has source consulted	rdac:C10001	rdac:C10007
+#rdamo:P30334	abi:status	"object property"	 . #	is source consulted of	rdac:C10007	rdac:C10001
+#rdawo:P10406	abi:status	"object property"	 . #	has source consulted	rdac:C10001	rdac:C10007
 
-rdamo:P30462	abi:status	"object property"	 . #	is manifestation described with metadata by	rdac:C10007	rdac:C10001
-rdawo:P10617	abi:status	"object property"	 . #	is metadata description of manifestation	rdac:C10001	rdac:C10007
+#rdamo:P30462	abi:status	"object property"	 . #	is manifestation described with metadata by	rdac:C10007	rdac:C10001
+#rdawo:P10617	abi:status	"object property"	 . #	is metadata description of manifestation	rdac:C10001	rdac:C10007
 
-rdamo:P30462	abi:status	"object property"	 . #	is manifestation described with metadata by	rdac:C10007	rdac:C10001
-rdawo:P10617	abi:status	"object property"	 . #	metatietokuvailu manifestaatiosta	rdac:C10001	rdac:C10007
+#rdamo:P30462	abi:status	"object property"	 . #	is manifestation described with metadata by	rdac:C10007	rdac:C10001
+#rdawo:P10617	abi:status	"object property"	 . #	metatietokuvailu manifestaatiosta	rdac:C10001	rdac:C10007
 
-rdamo:P30463	abi:status	"object property"	 . #	has finding aid	rdac:C10007	rdac:C10001
-rdawo:P10624	abi:status	"object property"	 . #	is finding aid of	rdac:C10001	rdac:C10007
+#rdamo:P30463	abi:status	"object property"	 . #	has finding aid	rdac:C10007	rdac:C10001
+#rdawo:P10624	abi:status	"object property"	 . #	is finding aid of	rdac:C10001	rdac:C10007
 
-rdamo:P30463	abi:status	"object property"	 . #	has finding aid	rdac:C10007	rdac:C10001
-rdawo:P10624	abi:status	"object property"	 . #	arkistokokoelman hakemisto manifestaatiolle	rdac:C10001	rdac:C10007
+#rdamo:P30463	abi:status	"object property"	 . #	has finding aid	rdac:C10007	rdac:C10001
+#rdawo:P10624	abi:status	"object property"	 . #	arkistokokoelman hakemisto manifestaatiolle	rdac:C10001	rdac:C10007
 
-rdamo:P30464	abi:status	"object property"	 . #	has catalogue	rdac:C10007	rdac:C10001
-rdawo:P10625	abi:status	"object property"	 . #	is catalogue of	rdac:C10001	rdac:C10007
+#rdamo:P30464	abi:status	"object property"	 . #	has catalogue	rdac:C10007	rdac:C10001
+#rdawo:P10625	abi:status	"object property"	 . #	is catalogue of	rdac:C10001	rdac:C10007
 
-rdamo:P30464	abi:status	"object property"	 . #	has catalogue	rdac:C10007	rdac:C10001
-rdawo:P10625	abi:status	"object property"	 . #	luettelo manifestaatiolle	rdac:C10001	rdac:C10007
+#rdamo:P30464	abi:status	"object property"	 . #	has catalogue	rdac:C10007	rdac:C10001
+#rdawo:P10625	abi:status	"object property"	 . #	luettelo manifestaatiolle	rdac:C10001	rdac:C10007
 
-rdamo:P30465	abi:status	"object property"	 . #	has hierarchic finding aid	rdac:C10007	rdac:C10001
-rdawo:P10626	abi:status	"object property"	 . #	is hierarchic finding aid of	rdac:C10001	rdac:C10007
+#rdamo:P30465	abi:status	"object property"	 . #	has hierarchic finding aid	rdac:C10007	rdac:C10001
+#rdawo:P10626	abi:status	"object property"	 . #	is hierarchic finding aid of	rdac:C10001	rdac:C10007
 
-rdamo:P30465	abi:status	"object property"	 . #	has hierarchic finding aid	rdac:C10007	rdac:C10001
-rdawo:P10626	abi:status	"object property"	 . #	hierarkkinen arkistokokoelman hakemisto manifestaatiolle	rdac:C10001	rdac:C10007
+#rdamo:P30465	abi:status	"object property"	 . #	has hierarchic finding aid	rdac:C10007	rdac:C10001
+#rdawo:P10626	abi:status	"object property"	 . #	hierarkkinen arkistokokoelman hakemisto manifestaatiolle	rdac:C10001	rdac:C10007
 
 rdamo:P30466	abi:status	"object property"	 . #	has index	rdac:C10007	rdac:C10001
 rdawo:P10627	abi:status	"object property"	 . #	is index for	rdac:C10001	rdac:C10007
@@ -2195,8 +2236,8 @@ rdaao:P50485	abi:status	"object property"	 . #	is contributor agent of computer 
 rdamo:P30139	abi:status	"object property"	 . #	has expression manifested	rdac:C10007	rdac:C10006
 rdaeo:P20059	abi:status	"object property"	 . #	has manifestation of expression	rdac:C10006	rdac:C10007
 
-rdamo:P30266	abi:status	"object property"	 . #	has related expression of manifestation	rdac:C10007	rdac:C10006
-rdaeo:P20299	abi:status	"object property"	 . #	has related manifestation of expression	rdac:C10006	rdac:C10007
+#rdamo:P30266	abi:status	"object property"	 . #	has related expression of manifestation	rdac:C10007	rdac:C10006
+#rdaeo:P20299	abi:status	"object property"	 . #	has related manifestation of expression	rdac:C10006	rdac:C10007
 
 rdamo:P30016	abi:status	"object property"	 . #	has electronic reproduction of manifestation	rdac:C10007	rdac:C10007
 rdamo:P30136	abi:status	"object property"	 . #	is electronic reproduction of manifestation of	rdac:C10007	rdac:C10007
@@ -2219,8 +2260,8 @@ rdamo:P30024	abi:status	"object property"	 . #	has equivalent manifestation	rdac
 rdamo:P30025	abi:status	"object property"	 . #	is inserted in	rdac:C10007	rdac:C10007
 rdamo:P30022	abi:status	"object property"	 . #	has insert	rdac:C10007	rdac:C10007
 
-rdamo:P30026	abi:status	"object property"	 . #	is also issued as	rdac:C10007	rdac:C10007
-rdamo:P30026	abi:status	"object property"	 . #	is also issued as	rdac:C10007	rdac:C10007
+#rdamo:P30026	abi:status	"object property"	 . #	is also issued as	rdac:C10007	rdac:C10007
+#rdamo:P30026	abi:status	"object property"	 . #	is also issued as	rdac:C10007	rdac:C10007
 
 rdamo:P30027	abi:status	"object property"	 . #	is accompanied by manifestation	rdac:C10007	rdac:C10007
 rdamo:P30027	abi:status	"object property"	 . #	is accompanied by manifestation	rdac:C10007	rdac:C10007
@@ -2276,14 +2317,511 @@ rdamo:P30038	abi:status	"object property"	 . #	is reprinted as manifestation	rda
 rdamo:P30136	abi:status	"object property"	 . #	is electronic reproduction of manifestation of	rdac:C10007	rdac:C10007
 rdamo:P30016	abi:status	"object property"	 . #	has electronic reproduction of manifestation	rdac:C10007	rdac:C10007
 
-rdamo:P30458	abi:status	"object property"	 . #	has subcollection	rdac:C10007	rdac:C10007
-rdamo:P30459	abi:status	"object property"	 . #	is subcollection of	rdac:C10007	rdac:C10007
+#rdamo:P30458	abi:status	"object property"	 . #	has subcollection	rdac:C10007	rdac:C10007
+#rdamo:P30459	abi:status	"object property"	 . #	is subcollection of	rdac:C10007	rdac:C10007
 
-rdamo:P30458	abi:status	"object property"	 . #	has subcollection	rdac:C10007	rdac:C10007
-rdamo:P30459	abi:status	"object property"	 . #	alakokoelma kokoelmassa	rdac:C10007	rdac:C10007
+#rdamo:P30458	abi:status	"object property"	 . #	has subcollection	rdac:C10007	rdac:C10007
+#rdamo:P30459	abi:status	"object property"	 . #	alakokoelma kokoelmassa	rdac:C10007	rdac:C10007
 
-rdamo:P30459	abi:status	"object property"	 . #	is subcollection of	rdac:C10007	rdac:C10007
-rdamo:P30458	abi:status	"object property"	 . #	has subcollection	rdac:C10007	rdac:C10007
+#rdamo:P30459	abi:status	"object property"	 . #	is subcollection of	rdac:C10007	rdac:C10007
+#rdamo:P30458	abi:status	"object property"	 . #	has subcollection	rdac:C10007	rdac:C10007
 
-rdamo:P30459	abi:status	"object property"	 . #	is subcollection of	rdac:C10007	rdac:C10007
-rdamo:P30458	abi:status	"object property"	 . #	alakokoelma	rdac:C10007	rdac:C10007
+#rdamo:P30459	abi:status	"object property"	 . #	is subcollection of	rdac:C10007	rdac:C10007
+#rdamo:P30458	abi:status	"object property"	 . #	alakokoelma	rdac:C10007	rdac:C10007
+#
+#
+
+
+<http://id.loc.gov/vocabulary/iso639-2/aar>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/abk>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ace>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ach>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ada>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ady>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/afa>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/afh>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/afr>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ain>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/aka>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/akk>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/alb>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ale>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/alg>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/alt>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/amh>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ang>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/anp>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/apa>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ara>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/arc>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/arg>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/arm>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/arn>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/arp>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/art>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/arw>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/asm>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ast>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ath>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/aus>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ava>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ave>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/awa>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/aym>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/aze>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bad>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bai>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bak>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bal>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bam>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ban>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/baq>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bas>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bat>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bej>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bel>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bem>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ben>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ber>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bho>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bih>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bik>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bin>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bis>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bla>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bnt>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bod>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bos>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bra>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bre>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/btk>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bua>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bug>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bul>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bur>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/byn>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cad>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cai>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/car>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cat>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cau>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ceb>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cel>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ces>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cha>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/chb>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/che>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/chg>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/chi>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/chk>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/chm>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/chn>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cho>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/chp>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/chr>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/chu>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/chv>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/chy>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cmc>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cnr>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cop>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cor>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cos>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cpe>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cpf>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cpp>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cre>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/crh>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/crp>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/csb>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cus>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cym>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cze>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/dak>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/dan>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/dar>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/day>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/del>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/den>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/deu>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/dgr>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/din>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/div>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/doi>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/dra>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/dsb>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/dua>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/dum>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/dut>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/dyu>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/dzo>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/efi>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/egy>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/eka>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ell>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/elx>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/eng>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/enm>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/epo>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/est>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ewe>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ewo>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/fan>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/fao>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/fas>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/fat>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/fij>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/fil>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/fin>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/fiu>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/fon>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/fra>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/fre>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/frm>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/fro>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/frr>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/frs>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/fry>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ful>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/fur>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/gaa>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/gay>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/gba>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/gem>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/geo>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ger>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/gez>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/gil>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/gla>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/gle>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/glg>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/glv>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/gmh>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/goh>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/gon>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/gor>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/got>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/grb>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/grc>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/grn>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/gsw>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/guj>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/gwi>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/hai>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/hat>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/hau>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/haw>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/heb>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/her>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/hil>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/him>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/hin>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/hit>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/hmn>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/hmo>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/hrv>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/hsb>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/hun>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/hup>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/iba>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ibo>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ice>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ido>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/iii>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ijo>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/iku>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ile>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ilo>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ina>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/inc>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ind>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ine>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/inh>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ipk>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ira>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/iro>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ita>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/jav>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/jbo>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/jpn>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/jpr>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/jrb>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kaa>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kab>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kac>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kal>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kam>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kan>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kar>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kas>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kau>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kaw>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kaz>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kbd>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kha>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/khi>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/khm>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kho>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kik>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kin>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kir>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kmb>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kok>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kom>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kon>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kor>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kos>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kpe>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/krc>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/krl>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kro>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kru>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kua>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kum>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kur>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kut>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lad>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lah>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lam>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lao>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lat>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lav>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lez>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lim>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lin>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lit>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lol>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/loz>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ltz>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lua>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lub>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lug>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lui>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lun>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/luo>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lus>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mac>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mad>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mag>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mah>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mai>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mak>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mal>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/man>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mao>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/map>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mar>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mas>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/may>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mdf>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mdr>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/men>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mga>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mic>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/min>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mis>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mkh>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mlg>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mlt>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mnc>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mni>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mno>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/moh>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mon>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mos>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mul>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mun>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mus>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mwl>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mwr>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/myn>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/myv>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nah>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nai>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nap>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nau>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nav>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nbl>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nde>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ndo>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nds>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nep>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/new>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nia>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nic>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/niu>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nno>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nob>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nog>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/non>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nor>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nqo>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nso>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nub>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nwc>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nya>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nym>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nyn>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nyo>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nzi>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/oci>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/oji>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ori>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/orm>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/osa>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/oss>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ota>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/oto>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/paa>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/pag>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/pal>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/pam>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/pan>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/pap>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/pau>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/peo>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/per>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/phi>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/phn>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/pli>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/pol>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/pon>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/por>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/pra>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/pro>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/pus>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/qaa-qtz>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/que>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/raj>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/rap>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/rar>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/roa>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/roh>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/rom>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ron>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/rum>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/run>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/rup>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/rus>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sad>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sag>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sah>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sai>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sal>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sam>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/san>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sas>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sat>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/scn>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sco>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sel>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sem>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sga>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sgn>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/shn>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sid>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sin>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sio>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sit>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sla>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/slk>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/slv>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sma>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sme>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/smi>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/smj>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/smn>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/smo>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sms>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sna>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/snd>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/snk>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sog>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/som>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/son>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sot>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/spa>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/srd>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/srn>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/srp>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/srr>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ssa>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ssw>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/suk>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sun>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sus>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sux>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/swa>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/swe>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/syc>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/syr>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tah>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tai>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tam>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tat>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tel>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tem>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ter>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tet>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tgk>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tgl>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tha>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tig>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tir>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tiv>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tkl>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tlh>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tli>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tmh>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tog>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ton>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tpi>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tsi>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tsn>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tso>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tuk>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tum>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tup>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tur>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tut>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tvl>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/twi>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tyv>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/udm>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/uga>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/uig>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ukr>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/umb>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/und>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/urd>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/uzb>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/vai>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ven>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/vie>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/vol>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/vot>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/wak>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/wal>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/war>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/was>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/wel>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/wen>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/wln>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/wol>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/xal>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/xho>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/yao>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/yap>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/yid>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/yor>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ypk>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/zap>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/zbl>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/zen>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/zgh>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/zha>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/znd>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/zul>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/zun>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/zxx>	a	abi:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/zza>	a	abi:Language	 .

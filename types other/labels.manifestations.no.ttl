@@ -1,0 +1,789 @@
+﻿<http://rdaregistry.info/Elements/m/object/P30131>	<http://www.w3.org/2000/01/rdf-schema#label>	"har forkortet tittel"@no .
+<http://rdaregistry.info/Elements/m/object/P30276>	<http://www.w3.org/2000/01/rdf-schema#label>	"har søkeinngang for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30027>	<http://www.w3.org/2000/01/rdf-schema#label>	"er ledsaget av manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30026>	<http://www.w3.org/2000/01/rdf-schema#label>	"er også utgitt som"@no .
+<http://rdaregistry.info/Elements/m/object/P30277>	<http://www.w3.org/2000/01/rdf-schema#label>	"har betegnelse for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30084>	<http://www.w3.org/2000/01/rdf-schema#label>	"har anvendt materiale"@no .
+<http://rdaregistry.info/Elements/m/object/P30294>	<http://www.w3.org/2000/01/rdf-schema#label>	"har autorisert søkeinngang for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30208>	<http://www.w3.org/2000/01/rdf-schema#label>	"har basismateriale"@no .
+<http://rdaregistry.info/Elements/m/object/P30197>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bokformat"@no .
+<http://rdaregistry.info/Elements/m/object/P30310>	<http://www.w3.org/2000/01/rdf-schema#label>	"har innbinding for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30069>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bokdesigner (agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30378>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bokdesigner (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30407>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bokdesigner (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/object/P30436>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bokdesigner (familie)"@no .
+<http://rdaregistry.info/Elements/m/object/P30349>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bokdesigner (person)"@no .
+<http://rdaregistry.info/Elements/m/object/P30071>	<http://www.w3.org/2000/01/rdf-schema#label>	"har punktskriftpreger (agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30380>	<http://www.w3.org/2000/01/rdf-schema#label>	"har punktskriftpreger (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30409>	<http://www.w3.org/2000/01/rdf-schema#label>	"har punktskriftpreger (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/object/P30438>	<http://www.w3.org/2000/01/rdf-schema#label>	"har punktskriftpreger (familie)"@no .
+<http://rdaregistry.info/Elements/m/object/P30351>	<http://www.w3.org/2000/01/rdf-schema#label>	"har punktskriftpreger (person)"@no .
+<http://rdaregistry.info/Elements/m/object/P30067>	<http://www.w3.org/2000/01/rdf-schema#label>	"har kringkaster (agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30376>	<http://www.w3.org/2000/01/rdf-schema#label>	"har kringkaster (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30405>	<http://www.w3.org/2000/01/rdf-schema#label>	"har kringkaster (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/object/P30434>	<http://www.w3.org/2000/01/rdf-schema#label>	"har kringkaster (familie)"@no .
+<http://rdaregistry.info/Elements/m/object/P30347>	<http://www.w3.org/2000/01/rdf-schema#label>	"har kringkaster (person)"@no .
+<http://rdaregistry.info/Elements/m/object/P30123>	<http://www.w3.org/2000/01/rdf-schema#label>	"har kringkastingsstandard"@no .
+<http://rdaregistry.info/Elements/m/object/P30001>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bærertype"@no .
+<http://rdaregistry.info/Elements/m/object/P30261>	<http://www.w3.org/2000/01/rdf-schema#label>	"har type kartografiske data"@no .
+<http://rdaregistry.info/Elements/m/object/P30073>	<http://www.w3.org/2000/01/rdf-schema#label>	"har støper (agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30382>	<http://www.w3.org/2000/01/rdf-schema#label>	"har støper (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30411>	<http://www.w3.org/2000/01/rdf-schema#label>	"har støper (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/object/P30440>	<http://www.w3.org/2000/01/rdf-schema#label>	"har støper (familie)"@no .
+<http://rdaregistry.info/Elements/m/object/P30353>	<http://www.w3.org/2000/01/rdf-schema#label>	"har støper (person)"@no .
+<http://rdaregistry.info/Elements/m/object/P30335>	<http://www.w3.org/2000/01/rdf-schema#label>	"har kategori av manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30077>	<http://www.w3.org/2000/01/rdf-schema#label>	"har lystrykker (agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30386>	<http://www.w3.org/2000/01/rdf-schema#label>	"har lystrykker (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30415>	<http://www.w3.org/2000/01/rdf-schema#label>	"har lystrykker (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/object/P30444>	<http://www.w3.org/2000/01/rdf-schema#label>	"har lystrykker (familie)"@no .
+<http://rdaregistry.info/Elements/m/object/P30357>	<http://www.w3.org/2000/01/rdf-schema#label>	"har lystrykker (person)"@no .
+<http://rdaregistry.info/Elements/m/object/P30184>	<http://www.w3.org/2000/01/rdf-schema#label>	"har konfigurasjon av kanaler for avspilling"@no .
+<http://rdaregistry.info/Elements/m/object/P30141>	<http://www.w3.org/2000/01/rdf-schema#label>	"har kontaktinformasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30315>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til kartografi (agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30316>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til koreografi (agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30333>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til datamaskininnhold (agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30326>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til levende bilder (agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30311>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til musikk (agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30332>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til gjenstand (agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30331>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til tale (agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30321>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til bilde (agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30328>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til tekst (agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30327>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til aggregat (agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30367>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til kartografi (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30368>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til koreografi (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30375>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til datamaskininnhold (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30369>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til levende bilder (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30370>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til musikk (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30374>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til gjenstand (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30371>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til tale (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30372>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til bilde (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30373>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til tekst (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30365>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til aggregat (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30396>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til kartografi (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/object/P30397>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til koreografi (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/object/P30404>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til datamaskininnhold (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/object/P30398>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til levende bilder (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/object/P30399>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til musikk (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/object/P30403>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til gjenstand (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/object/P30400>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til tale (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/object/P30401>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til bilde (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/object/P30402>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til tekst (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/object/P30394>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til aggregat (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/object/P30425>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til kartografi (familie)"@no .
+<http://rdaregistry.info/Elements/m/object/P30426>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til koreografi (familie)"@no .
+<http://rdaregistry.info/Elements/m/object/P30433>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til datamaskininnhold (familie)"@no .
+<http://rdaregistry.info/Elements/m/object/P30427>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til levende bilder (familie)"@no .
+<http://rdaregistry.info/Elements/m/object/P30428>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til musikk (familie)"@no .
+<http://rdaregistry.info/Elements/m/object/P30432>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til gjenstand (familie)"@no .
+<http://rdaregistry.info/Elements/m/object/P30429>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til tale (familie)"@no .
+<http://rdaregistry.info/Elements/m/object/P30430>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til bilde (familie)"@no .
+<http://rdaregistry.info/Elements/m/object/P30431>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til tekst (familie)"@no .
+<http://rdaregistry.info/Elements/m/object/P30423>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til aggregat (familie)"@no .
+<http://rdaregistry.info/Elements/m/object/P30338>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til kartografi (person)"@no .
+<http://rdaregistry.info/Elements/m/object/P30339>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til koreografi (person)"@no .
+<http://rdaregistry.info/Elements/m/object/P30346>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til datamaskininnhold (person)"@no .
+<http://rdaregistry.info/Elements/m/object/P30340>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til levende bilder (person)"@no .
+<http://rdaregistry.info/Elements/m/object/P30341>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til musikk (person)"@no .
+<http://rdaregistry.info/Elements/m/object/P30345>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til gjenstand (person)"@no .
+<http://rdaregistry.info/Elements/m/object/P30342>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til tale (person)"@no .
+<http://rdaregistry.info/Elements/m/object/P30343>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til bilde (person)"@no .
+<http://rdaregistry.info/Elements/m/object/P30344>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til tekst (person)"@no .
+<http://rdaregistry.info/Elements/m/object/P30336>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til aggregat (person)"@no .
+<http://rdaregistry.info/Elements/m/object/P30007>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tidsrom for copyright"@no .
+<http://rdaregistry.info/Elements/m/object/P30329>	<http://www.w3.org/2000/01/rdf-schema#label>	"har skaper av manifestasjon (agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30392>	<http://www.w3.org/2000/01/rdf-schema#label>	"har skaper av manifestasjon (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30421>	<http://www.w3.org/2000/01/rdf-schema#label>	"har skaper av manifestasjon (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/object/P30450>	<http://www.w3.org/2000/01/rdf-schema#label>	"har skaper av manifestasjon (familie)"@no .
+<http://rdaregistry.info/Elements/m/object/P30363>	<http://www.w3.org/2000/01/rdf-schema#label>	"har skaper av manifestasjon (person)"@no .
+<http://rdaregistry.info/Elements/m/object/P30008>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tidsrom for distribusjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30278>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tidspunkt for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30010>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tidsrom for framstilling"@no .
+<http://rdaregistry.info/Elements/m/object/P30009>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tidsrom for produksjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30011>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tidsrom for utgivelse"@no .
+<http://rdaregistry.info/Elements/m/object/P30133>	<http://www.w3.org/2000/01/rdf-schema#label>	"har betegnelse for utgave"@no .
+<http://rdaregistry.info/Elements/m/object/P30132>	<http://www.w3.org/2000/01/rdf-schema#label>	"har betegnelse for en bestemt revisjon av en utgave"@no .
+<http://rdaregistry.info/Elements/m/object/P30216>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende anvendt materiale"@no .
+<http://rdaregistry.info/Elements/m/object/P30217>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende basismateriale"@no .
+<http://rdaregistry.info/Elements/m/object/P30218>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende bokformat"@no .
+<http://rdaregistry.info/Elements/m/object/P30219>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende kringkastingsstandard"@no .
+<http://rdaregistry.info/Elements/m/object/P30262>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende type kartografiske data"@no .
+<http://rdaregistry.info/Elements/m/object/P30220>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende konfigurasjon av kanaler for avspilling"@no .
+<http://rdaregistry.info/Elements/m/object/P30221>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende egenskaper for digital fil"@no .
+<http://rdaregistry.info/Elements/m/object/P30222>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende digital representasjon av kartografisk innhold"@no .
+<http://rdaregistry.info/Elements/m/object/P30223>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende emulsjon på mikrofilm og mikrofilmkort"@no .
+<http://rdaregistry.info/Elements/m/object/P30224>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende kodeformat"@no .
+<http://rdaregistry.info/Elements/m/object/P30225>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende filtype"@no .
+<http://rdaregistry.info/Elements/m/object/P30226>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende skriftstørrelse"@no .
+<http://rdaregistry.info/Elements/m/object/P30252>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende generasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30232>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende rilleegenskaper"@no .
+<http://rdaregistry.info/Elements/m/object/P30233>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende layout"@no .
+<http://rdaregistry.info/Elements/m/object/P30234>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende underlag eller ramme"@no .
+<http://rdaregistry.info/Elements/m/object/P30235>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende avspillingshastighet"@no .
+<http://rdaregistry.info/Elements/m/object/P30236>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende polaritet"@no .
+<http://rdaregistry.info/Elements/m/object/P30237>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende visningsformat"@no .
+<http://rdaregistry.info/Elements/m/object/P30238>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende produksjonsmetode"@no .
+<http://rdaregistry.info/Elements/m/object/P30241>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende projeksjonsegenskaper for spillefilm"@no .
+<http://rdaregistry.info/Elements/m/object/P30242>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende projeksjonshastighet"@no .
+<http://rdaregistry.info/Elements/m/object/P30243>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende opptaksmedium"@no .
+<http://rdaregistry.info/Elements/m/object/P30244>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende betegnelse for reduksjonsrate"@no .
+<http://rdaregistry.info/Elements/m/object/P30275>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende regionkoder"@no .
+<http://rdaregistry.info/Elements/m/object/P30245>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende lydegenskaper"@no .
+<http://rdaregistry.info/Elements/m/object/P30246>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende spesielle avspillingsegenskaper"@no .
+<http://rdaregistry.info/Elements/m/object/P30247>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende lydbåndkonfigurasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30248>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende sporkonfigurasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30249>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende typen opptak"@no .
+<http://rdaregistry.info/Elements/m/object/P30250>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende videoegenskaper"@no .
+<http://rdaregistry.info/Elements/m/object/P30251>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende videoformat"@no .
+<http://rdaregistry.info/Elements/m/object/P30124>	<http://www.w3.org/2000/01/rdf-schema#label>	"har digtal filkarakteristikk"@no .
+<http://rdaregistry.info/Elements/m/object/P30102>	<http://www.w3.org/2000/01/rdf-schema#label>	"har digital representasjon av kartografisk innhold"@no .
+<http://rdaregistry.info/Elements/m/object/P30029>	<http://www.w3.org/2000/01/rdf-schema#label>	"har digital overføring av manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30298>	<http://www.w3.org/2000/01/rdf-schema#label>	"er digital overføring av eksemplar av"@no .
+<http://rdaregistry.info/Elements/m/object/P30040>	<http://www.w3.org/2000/01/rdf-schema#label>	"er digital overføring av manifestasjon av"@no .
+<http://rdaregistry.info/Elements/m/object/P30169>	<http://www.w3.org/2000/01/rdf-schema#label>	"har størrelse"@no .
+<http://rdaregistry.info/Elements/m/object/P30170>	<http://www.w3.org/2000/01/rdf-schema#label>	"har størrelse for kartografisk bilde"@no .
+<http://rdaregistry.info/Elements/m/object/P30171>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bildestørrelse"@no .
+<http://rdaregistry.info/Elements/m/object/P30108>	<http://www.w3.org/2000/01/rdf-schema#label>	"har distribusjonsopplysninger"@no .
+<http://rdaregistry.info/Elements/m/object/P30080>	<http://www.w3.org/2000/01/rdf-schema#label>	"har distributør (agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30388>	<http://www.w3.org/2000/01/rdf-schema#label>	"har distributør (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30417>	<http://www.w3.org/2000/01/rdf-schema#label>	"har distributør (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/object/P30446>	<http://www.w3.org/2000/01/rdf-schema#label>	"har distributør (familie)"@no .
+<http://rdaregistry.info/Elements/m/object/P30359>	<http://www.w3.org/2000/01/rdf-schema#label>	"har distributør (person)"@no .
+<http://rdaregistry.info/Elements/m/object/P30107>	<http://www.w3.org/2000/01/rdf-schema#label>	"har utgaveangivelse"@no .
+<http://rdaregistry.info/Elements/m/object/P30299>	<http://www.w3.org/2000/01/rdf-schema#label>	"er elektronisk reproduksjon av eksemplar av"@no .
+<http://rdaregistry.info/Elements/m/object/P30016>	<http://www.w3.org/2000/01/rdf-schema#label>	"har elektronisk reproduksjon av manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30136>	<http://www.w3.org/2000/01/rdf-schema#label>	"har elektronisk reproduksjon av manifestasjon av"@no .
+<http://rdaregistry.info/Elements/m/object/P30122>	<http://www.w3.org/2000/01/rdf-schema#label>	"har emulsjon på mikrofilm og mikrofilmkort"@no .
+<http://rdaregistry.info/Elements/m/object/P30202>	<http://www.w3.org/2000/01/rdf-schema#label>	"har kodet bithastighet"@no .
+<http://rdaregistry.info/Elements/m/object/P30096>	<http://www.w3.org/2000/01/rdf-schema#label>	"har kodeformat"@no .
+<http://rdaregistry.info/Elements/m/object/P30070>	<http://www.w3.org/2000/01/rdf-schema#label>	"har gravør (agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30379>	<http://www.w3.org/2000/01/rdf-schema#label>	"har gravør (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30408>	<http://www.w3.org/2000/01/rdf-schema#label>	"har gravør (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/object/P30437>	<http://www.w3.org/2000/01/rdf-schema#label>	"har gravør (familie)"@no .
+<http://rdaregistry.info/Elements/m/object/P30350>	<http://www.w3.org/2000/01/rdf-schema#label>	"har gravør (person)"@no .
+<http://rdaregistry.info/Elements/m/object/P30162>	<http://www.w3.org/2000/01/rdf-schema#label>	"har utstyrs- eller systemkrav"@no .
+<http://rdaregistry.info/Elements/m/object/P30024>	<http://www.w3.org/2000/01/rdf-schema#label>	"har ekvivalent manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30076>	<http://www.w3.org/2000/01/rdf-schema#label>	"har etser (agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30385>	<http://www.w3.org/2000/01/rdf-schema#label>	"har etser (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30414>	<http://www.w3.org/2000/01/rdf-schema#label>	"har etser (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/object/P30443>	<http://www.w3.org/2000/01/rdf-schema#label>	"har etser (familie)"@no .
+<http://rdaregistry.info/Elements/m/object/P30356>	<http://www.w3.org/2000/01/rdf-schema#label>	"har etser (person)"@no .
+<http://rdaregistry.info/Elements/m/object/P30103>	<http://www.w3.org/2000/01/rdf-schema#label>	"har eksemplar av en manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30139>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestert uttrykk"@no .
+<http://rdaregistry.info/Elements/m/object/P30182>	<http://www.w3.org/2000/01/rdf-schema#label>	"har omfang for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30300>	<http://www.w3.org/2000/01/rdf-schema#label>	"er faksimile av eksemplar av"@no .
+<http://rdaregistry.info/Elements/m/object/P30031>	<http://www.w3.org/2000/01/rdf-schema#label>	"har faksimile av manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30047>	<http://www.w3.org/2000/01/rdf-schema#label>	"er faksimile av manifestasjon av"@no .
+<http://rdaregistry.info/Elements/m/object/P30046>	<http://www.w3.org/2000/01/rdf-schema#label>	"har faksimile som del"@no .
+<http://rdaregistry.info/Elements/m/object/P30019>	<http://www.w3.org/2000/01/rdf-schema#label>	"har faksimile som del av"@no .
+<http://rdaregistry.info/Elements/m/object/P30183>	<http://www.w3.org/2000/01/rdf-schema#label>	"har filstørrelse"@no .
+<http://rdaregistry.info/Elements/m/object/P30018>	<http://www.w3.org/2000/01/rdf-schema#label>	"har filtype"@no .
+<http://rdaregistry.info/Elements/m/object/P30068>	<http://www.w3.org/2000/01/rdf-schema#label>	"har filmdistributør (agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30377>	<http://www.w3.org/2000/01/rdf-schema#label>	"har filmdistributør (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30406>	<http://www.w3.org/2000/01/rdf-schema#label>	"har filmdistributør (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/object/P30435>	<http://www.w3.org/2000/01/rdf-schema#label>	"har filmdistributør (familie)"@no .
+<http://rdaregistry.info/Elements/m/object/P30348>	<http://www.w3.org/2000/01/rdf-schema#label>	"har filmdistributør (person)"@no .
+<http://rdaregistry.info/Elements/m/object/P30037>	<http://www.w3.org/2000/01/rdf-schema#label>	"er på film med manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30296>	<http://www.w3.org/2000/01/rdf-schema#label>	"har fingeravtrykk"@no .
+<http://rdaregistry.info/Elements/m/object/P30097>	<http://www.w3.org/2000/01/rdf-schema#label>	"har første alfanumeriske betegnelse for alternativ sekvens"@no .
+<http://rdaregistry.info/Elements/m/object/P30147>	<http://www.w3.org/2000/01/rdf-schema#label>	"har første alfanumeriske betegnelse for sekvens"@no .
+<http://rdaregistry.info/Elements/m/object/P30099>	<http://www.w3.org/2000/01/rdf-schema#label>	"har første kronologiske betegnelse for alternativ sekvens"@no .
+<http://rdaregistry.info/Elements/m/object/P30149>	<http://www.w3.org/2000/01/rdf-schema#label>	"har første kronologiske betegnelse for sekvens"@no .
+<http://rdaregistry.info/Elements/m/object/P30306>	<http://www.w3.org/2000/01/rdf-schema#label>	"har skriftpunktstørrelse"@no .
+<http://rdaregistry.info/Elements/m/object/P30199>	<http://www.w3.org/2000/01/rdf-schema#label>	"har skriftstørrelse"@no .
+<http://rdaregistry.info/Elements/m/object/P30191>	<http://www.w3.org/2000/01/rdf-schema#label>	"har generasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30164>	<http://www.w3.org/2000/01/rdf-schema#label>	"har rilleegenskaper"@no .
+<http://rdaregistry.info/Elements/m/object/P30307>	<http://www.w3.org/2000/01/rdf-schema#label>	"har rillevidde"@no .
+<http://rdaregistry.info/Elements/m/object/P30308>	<http://www.w3.org/2000/01/rdf-schema#label>	"har rillebredde"@no .
+<http://rdaregistry.info/Elements/m/object/P30004>	<http://www.w3.org/2000/01/rdf-schema#label>	"har identifikator for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30022>	<http://www.w3.org/2000/01/rdf-schema#label>	"har innlegg"@no .
+<http://rdaregistry.info/Elements/m/object/P30025>	<http://www.w3.org/2000/01/rdf-schema#label>	"er lagt inn i"@no .
+<http://rdaregistry.info/Elements/m/object/P30305>	<http://www.w3.org/2000/01/rdf-schema#label>	"har målgruppe for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30035>	<http://www.w3.org/2000/01/rdf-schema#label>	"er utgitt sammen med"@no .
+<http://rdaregistry.info/Elements/m/object/P30148>	<http://www.w3.org/2000/01/rdf-schema#label>	"har siste alfanumeriske betegnelse for sekvens"@no .
+<http://rdaregistry.info/Elements/m/object/P30098>	<http://www.w3.org/2000/01/rdf-schema#label>	"har siste alfanumeriske betegnelse for alternativ sekvens"@no .
+<http://rdaregistry.info/Elements/m/object/P30100>	<http://www.w3.org/2000/01/rdf-schema#label>	"har siste kronologiske betegnelse for alternativ sekvens"@no .
+<http://rdaregistry.info/Elements/m/object/P30150>	<http://www.w3.org/2000/01/rdf-schema#label>	"har siste kronologiske betegnelse for sekvens"@no .
+<http://rdaregistry.info/Elements/m/object/P30155>	<http://www.w3.org/2000/01/rdf-schema#label>	"har layout"@no .
+<http://rdaregistry.info/Elements/m/object/P30074>	<http://www.w3.org/2000/01/rdf-schema#label>	"har litograf (agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30383>	<http://www.w3.org/2000/01/rdf-schema#label>	"har litograf (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30412>	<http://www.w3.org/2000/01/rdf-schema#label>	"har litograf (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/object/P30441>	<http://www.w3.org/2000/01/rdf-schema#label>	"har litograf (familie)"@no .
+<http://rdaregistry.info/Elements/m/object/P30354>	<http://www.w3.org/2000/01/rdf-schema#label>	"har litograf (person)"@no .
+<http://rdaregistry.info/Elements/m/object/P30255>	<http://www.w3.org/2000/01/rdf-schema#label>	"er manifestasjon analysert i "@no .
+<http://rdaregistry.info/Elements/m/object/P30256>	<http://www.w3.org/2000/01/rdf-schema#label>	"er manifestasjon kommentert i "@no .
+<http://rdaregistry.info/Elements/m/object/P30280>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestasjonsopplysning om copyright"@no .
+<http://rdaregistry.info/Elements/m/object/P30257>	<http://www.w3.org/2000/01/rdf-schema#label>	"er manifestasjon kritisert i"@no .
+<http://rdaregistry.info/Elements/m/object/P30254>	<http://www.w3.org/2000/01/rdf-schema#label>	"er manifestasjon beskrevet i "@no .
+<http://rdaregistry.info/Elements/m/object/P30281>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestasjonsopplysning om betegnelse for sekvens"@no .
+<http://rdaregistry.info/Elements/m/object/P30282>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestasjonsopplysning om doktoravhandling"@no .
+<http://rdaregistry.info/Elements/m/object/P30283>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestasjonsopplysning om distribusjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30284>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestasjonsopplysning om utgave"@no .
+<http://rdaregistry.info/Elements/m/object/P30258>	<http://www.w3.org/2000/01/rdf-schema#label>	"er manifestasjon evaluert i "@no .
+<http://rdaregistry.info/Elements/m/object/P30285>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestasjonsopplysning om frekvens"@no .
+<http://rdaregistry.info/Elements/m/object/P30286>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestasjonsopplysning om identifikator"@no .
+<http://rdaregistry.info/Elements/m/object/P30287>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestasjonsopplysning for framstilling"@no .
+<http://rdaregistry.info/Elements/m/object/P30288>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestasjonsopplysning om produksjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30289>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestasjonsopplysning om utgivelse"@no .
+<http://rdaregistry.info/Elements/m/object/P30290>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestasjonsopplysning om regionskode"@no .
+<http://rdaregistry.info/Elements/m/object/P30259>	<http://www.w3.org/2000/01/rdf-schema#label>	"er manifestasjon anmeldt i "@no .
+<http://rdaregistry.info/Elements/m/object/P30291>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestasjonsopplysning om serie"@no .
+<http://rdaregistry.info/Elements/m/object/P30292>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestasjonsopplysning"@no .
+<http://rdaregistry.info/Elements/m/object/P30293>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestasjonsopplysning om tittel og ansvar"@no .
+<http://rdaregistry.info/Elements/m/object/P30082>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tilvirker (agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30390>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tilvirker (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30419>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tilvirker (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/object/P30448>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tilvirker (familie)"@no .
+<http://rdaregistry.info/Elements/m/object/P30361>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tilvirker (person)"@no .
+<http://rdaregistry.info/Elements/m/object/P30109>	<http://www.w3.org/2000/01/rdf-schema#label>	"har framstillingsangivelse"@no .
+<http://rdaregistry.info/Elements/m/object/P30304>	<http://www.w3.org/2000/01/rdf-schema#label>	"har materiale"@no .
+<http://rdaregistry.info/Elements/m/object/P30002>	<http://www.w3.org/2000/01/rdf-schema#label>	"har medietype"@no .
+<http://rdaregistry.info/Elements/m/object/P30028>	<http://www.w3.org/2000/01/rdf-schema#label>	"har speilside"@no .
+<http://rdaregistry.info/Elements/m/object/P30003>	<http://www.w3.org/2000/01/rdf-schema#label>	"har utgivelsesmåte"@no .
+<http://rdaregistry.info/Elements/m/object/P30186>	<http://www.w3.org/2000/01/rdf-schema#label>	"har underlag eller ramme"@no .
+<http://rdaregistry.info/Elements/m/object/P30297>	<http://www.w3.org/2000/01/rdf-schema#label>	"har navn på agent for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30173>	<http://www.w3.org/2000/01/rdf-schema#label>	"har navn på distributør"@no .
+<http://rdaregistry.info/Elements/m/object/P30175>	<http://www.w3.org/2000/01/rdf-schema#label>	"har navn på tilvirker"@no .
+<http://rdaregistry.info/Elements/m/object/P30174>	<http://www.w3.org/2000/01/rdf-schema#label>	"har navn på produsent"@no .
+<http://rdaregistry.info/Elements/m/object/P30176>	<http://www.w3.org/2000/01/rdf-schema#label>	"har navn på utgiver"@no .
+<http://rdaregistry.info/Elements/m/object/P30214>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om bærer"@no .
+<http://rdaregistry.info/Elements/m/object/P30051>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om endringer i bæreregenskapene"@no .
+<http://rdaregistry.info/Elements/m/object/P30059>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om tidspunkt for copyright"@no .
+<http://rdaregistry.info/Elements/m/object/P30060>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om manifestasjonens størrelse"@no .
+<http://rdaregistry.info/Elements/m/object/P30052>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om distribusjonangivelse"@no .
+<http://rdaregistry.info/Elements/m/object/P30064>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om utgaveangivelse"@no .
+<http://rdaregistry.info/Elements/m/object/P30061>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om manifestasjonens omfang"@no .
+<http://rdaregistry.info/Elements/m/object/P30260>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om identifikator for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30050>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om hefte, del, eller versjon brukt som grunnlag for identifisering av manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30137>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30053>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om framstillingsangivelse"@no .
+<http://rdaregistry.info/Elements/m/object/P30054>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om produksjonsangivelse"@no .
+<http://rdaregistry.info/Elements/m/object/P30055>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om utgivelse"@no .
+<http://rdaregistry.info/Elements/m/object/P30062>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om nummerering av sekvens"@no .
+<http://rdaregistry.info/Elements/m/object/P30058>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om serieangivelse"@no .
+<http://rdaregistry.info/Elements/m/object/P30057>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om ansvarsangivelse"@no .
+<http://rdaregistry.info/Elements/m/object/P30063>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om tittel"@no .
+<http://rdaregistry.info/Elements/m/object/P30165>	<http://www.w3.org/2000/01/rdf-schema#label>	"har nummerering for sekvens"@no .
+<http://rdaregistry.info/Elements/m/object/P30014>	<http://www.w3.org/2000/01/rdf-schema#label>	"har nummerering innen sekvens"@no .
+<http://rdaregistry.info/Elements/m/object/P30036>	<http://www.w3.org/2000/01/rdf-schema#label>	"er på plate med manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30142>	<http://www.w3.org/2000/01/rdf-schema#label>	"har annen tittelinformasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30143>	<http://www.w3.org/2000/01/rdf-schema#label>	"har annen serietittelinformasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30215>	<http://www.w3.org/2000/01/rdf-schema#label>	"har papirprodusent (agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30393>	<http://www.w3.org/2000/01/rdf-schema#label>	"har papirprodusent (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30422>	<http://www.w3.org/2000/01/rdf-schema#label>	"har papirprodusent (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/object/P30451>	<http://www.w3.org/2000/01/rdf-schema#label>	"har papirprodusent (familie)"@no .
+<http://rdaregistry.info/Elements/m/object/P30364>	<http://www.w3.org/2000/01/rdf-schema#label>	"har papirprodusent (person)"@no .
+<http://rdaregistry.info/Elements/m/object/P30013>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallell utgaveangivelse"@no .
+<http://rdaregistry.info/Elements/m/object/P30012>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallell betegnelse for en bestemt revisjon av utgave"@no .
+<http://rdaregistry.info/Elements/m/object/P30017>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallelt navn på distributør"@no .
+<http://rdaregistry.info/Elements/m/object/P30049>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallelt navn på tilvirker"@no .
+<http://rdaregistry.info/Elements/m/object/P30094>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallelt navn på produsent"@no .
+<http://rdaregistry.info/Elements/m/object/P30095>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallelt navn på utgiver"@no .
+<http://rdaregistry.info/Elements/m/object/P30151>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallell annen tittelinformasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30152>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallell annen serietittelinformasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30089>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallelt distribusjonssted"@no .
+<http://rdaregistry.info/Elements/m/object/P30090>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallelt framstillingssted"@no .
+<http://rdaregistry.info/Elements/m/object/P30091>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallelt produksjonssted"@no .
+<http://rdaregistry.info/Elements/m/object/P30092>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallelt utgivelsessted"@no .
+<http://rdaregistry.info/Elements/m/object/P30115>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallell ansvarsangivelse knyttet til utgave"@no .
+<http://rdaregistry.info/Elements/m/object/P30112>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallell ansvarsangivelse som er knyttet til en bestemt revisjon av en utgave"@no .
+<http://rdaregistry.info/Elements/m/object/P30113>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallell ansvarsangivelse knyttet til serie"@no .
+<http://rdaregistry.info/Elements/m/object/P30116>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallell ansvarsangivelse knyttet til hovedtittel"@no .
+<http://rdaregistry.info/Elements/m/object/P30204>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallell serietittel"@no .
+<http://rdaregistry.info/Elements/m/object/P30203>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallell hovedtittel"@no .
+<http://rdaregistry.info/Elements/m/object/P30033>	<http://www.w3.org/2000/01/rdf-schema#label>	"har del av manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30020>	<http://www.w3.org/2000/01/rdf-schema#label>	"har del av manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30085>	<http://www.w3.org/2000/01/rdf-schema#label>	"har distribusjonssted"@no .
+<http://rdaregistry.info/Elements/m/object/P30279>	<http://www.w3.org/2000/01/rdf-schema#label>	"har sted for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30087>	<http://www.w3.org/2000/01/rdf-schema#label>	"har framstillingssted"@no .
+<http://rdaregistry.info/Elements/m/object/P30086>	<http://www.w3.org/2000/01/rdf-schema#label>	"har produksjonssted"@no .
+<http://rdaregistry.info/Elements/m/object/P30088>	<http://www.w3.org/2000/01/rdf-schema#label>	"har utgivelsessted"@no .
+<http://rdaregistry.info/Elements/m/object/P30075>	<http://www.w3.org/2000/01/rdf-schema#label>	"har trykkplatemaker (agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30384>	<http://www.w3.org/2000/01/rdf-schema#label>	"har trykkplatemaker (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30413>	<http://www.w3.org/2000/01/rdf-schema#label>	"har trykkplatemaker (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/object/P30442>	<http://www.w3.org/2000/01/rdf-schema#label>	"har trykkplatemaker (familie)"@no .
+<http://rdaregistry.info/Elements/m/object/P30355>	<http://www.w3.org/2000/01/rdf-schema#label>	"har trykkplatemaker (person)"@no .
+<http://rdaregistry.info/Elements/m/object/P30066>	<http://www.w3.org/2000/01/rdf-schema#label>	"har platenummer for nedskrevet musikk"@no .
+<http://rdaregistry.info/Elements/m/object/P30201>	<http://www.w3.org/2000/01/rdf-schema#label>	"har avspillingshastighet"@no .
+<http://rdaregistry.info/Elements/m/object/P30196>	<http://www.w3.org/2000/01/rdf-schema#label>	"har polaritet"@no .
+<http://rdaregistry.info/Elements/m/object/P30005>	<http://www.w3.org/2000/01/rdf-schema#label>	"har foretrukket referanse"@no .
+<http://rdaregistry.info/Elements/m/object/P30163>	<http://www.w3.org/2000/01/rdf-schema#label>	"har visningsformat"@no .
+<http://rdaregistry.info/Elements/m/object/P30301>	<http://www.w3.org/2000/01/rdf-schema#label>	"er bevaringskopi av eksemplar av "@no .
+<http://rdaregistry.info/Elements/m/object/P30021>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bevaringskopi av manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30045>	<http://www.w3.org/2000/01/rdf-schema#label>	"er bevaringskopi av manifestasjon av"@no .
+<http://rdaregistry.info/Elements/m/object/P30078>	<http://www.w3.org/2000/01/rdf-schema#label>	"har trykker (agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30387>	<http://www.w3.org/2000/01/rdf-schema#label>	"har trykker (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30416>	<http://www.w3.org/2000/01/rdf-schema#label>	"har trykker (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/object/P30445>	<http://www.w3.org/2000/01/rdf-schema#label>	"har trykker (familie)"@no .
+<http://rdaregistry.info/Elements/m/object/P30358>	<http://www.w3.org/2000/01/rdf-schema#label>	"har trykker (person)"@no .
+<http://rdaregistry.info/Elements/m/object/P30072>	<http://www.w3.org/2000/01/rdf-schema#label>	"har grafiker (agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30381>	<http://www.w3.org/2000/01/rdf-schema#label>	"har grafiker (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30410>	<http://www.w3.org/2000/01/rdf-schema#label>	"har grafiker (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/object/P30439>	<http://www.w3.org/2000/01/rdf-schema#label>	"har grafiker (familie)"@no .
+<http://rdaregistry.info/Elements/m/object/P30352>	<http://www.w3.org/2000/01/rdf-schema#label>	"har grafiker (person)"@no .
+<http://rdaregistry.info/Elements/m/object/P30081>	<http://www.w3.org/2000/01/rdf-schema#label>	"har produsent av upublisert manifestasjon (agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30389>	<http://www.w3.org/2000/01/rdf-schema#label>	"har produsent av upublisert manifestasjon (kollekitv agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30418>	<http://www.w3.org/2000/01/rdf-schema#label>	"har produsent av upublisert manifestasjon (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/object/P30447>	<http://www.w3.org/2000/01/rdf-schema#label>	"har produsent av upublisert manifestasjon (familie)"@no .
+<http://rdaregistry.info/Elements/m/object/P30360>	<http://www.w3.org/2000/01/rdf-schema#label>	"har produsent av upublisert manifestasjon (person)"@no .
+<http://rdaregistry.info/Elements/m/object/P30187>	<http://www.w3.org/2000/01/rdf-schema#label>	"har produksjonsmetode"@no .
+<http://rdaregistry.info/Elements/m/object/P30110>	<http://www.w3.org/2000/01/rdf-schema#label>	"har produksjonsangivelse"@no .
+<http://rdaregistry.info/Elements/m/object/P30127>	<http://www.w3.org/2000/01/rdf-schema#label>	"har projeksjonsegenskaper for spillefilm"@no .
+<http://rdaregistry.info/Elements/m/object/P30200>	<http://www.w3.org/2000/01/rdf-schema#label>	"har projeksjonshastighet"@no .
+<http://rdaregistry.info/Elements/m/object/P30111>	<http://www.w3.org/2000/01/rdf-schema#label>	"har opplysninger om utgivelse"@no .
+<http://rdaregistry.info/Elements/m/object/P30083>	<http://www.w3.org/2000/01/rdf-schema#label>	"har utgiver (agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30391>	<http://www.w3.org/2000/01/rdf-schema#label>	"har utgiver (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30420>	<http://www.w3.org/2000/01/rdf-schema#label>	"har utgiver (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/object/P30449>	<http://www.w3.org/2000/01/rdf-schema#label>	"har utgiver (familie)"@no .
+<http://rdaregistry.info/Elements/m/object/P30065>	<http://www.w3.org/2000/01/rdf-schema#label>	"har edisjonsnummer for nedskrevet musikk"@no .
+<http://rdaregistry.info/Elements/m/object/P30362>	<http://www.w3.org/2000/01/rdf-schema#label>	"har utgiver (person)"@no .
+<http://rdaregistry.info/Elements/m/object/P30206>	<http://www.w3.org/2000/01/rdf-schema#label>	"har opptaksmedium"@no .
+<http://rdaregistry.info/Elements/m/object/P30198>	<http://www.w3.org/2000/01/rdf-schema#label>	"har reduksjonsrate"@no .
+<http://rdaregistry.info/Elements/m/object/P30263>	<http://www.w3.org/2000/01/rdf-schema#label>	"har betegnelse for reduksjonsrate"@no .
+<http://rdaregistry.info/Elements/m/object/P30006>	<http://www.w3.org/2000/01/rdf-schema#label>	"har regionkode"@no .
+<http://rdaregistry.info/Elements/m/object/P30267>	<http://www.w3.org/2000/01/rdf-schema#label>	"har agent relatert til manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30271>	<http://www.w3.org/2000/01/rdf-schema#label>	"har kollektiv agent relatert til manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30270>	<http://www.w3.org/2000/01/rdf-schema#label>	"har korporasjon relatert til manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30266>	<http://www.w3.org/2000/01/rdf-schema#label>	"har uttrykk relatert til manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30269>	<http://www.w3.org/2000/01/rdf-schema#label>	"har familie relatert til manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30140>	<http://www.w3.org/2000/01/rdf-schema#label>	"har relatert eksemplar av manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30048>	<http://www.w3.org/2000/01/rdf-schema#label>	"har relatert manifestasjon av manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30274>	<http://www.w3.org/2000/01/rdf-schema#label>	"har nomen relatert til manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30268>	<http://www.w3.org/2000/01/rdf-schema#label>	"har person relatert til manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30272>	<http://www.w3.org/2000/01/rdf-schema#label>	"har sted relatert til manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30264>	<http://www.w3.org/2000/01/rdf-schema#label>	"har RDA-entitet relatert til manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30273>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tidsrom relatert til manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30265>	<http://www.w3.org/2000/01/rdf-schema#label>	"har verk relatert til manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30038>	<http://www.w3.org/2000/01/rdf-schema#label>	"er opptrykt som manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30302>	<http://www.w3.org/2000/01/rdf-schema#label>	"er opptrykk av eksemplar av"@no .
+<http://rdaregistry.info/Elements/m/object/P30093>	<http://www.w3.org/2000/01/rdf-schema#label>	"er opptrykk av manifestasjon av"@no .
+<http://rdaregistry.info/Elements/m/object/P30039>	<http://www.w3.org/2000/01/rdf-schema#label>	"er reprodusert som manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30303>	<http://www.w3.org/2000/01/rdf-schema#label>	"er reproduksjon av eksemplar av"@no .
+<http://rdaregistry.info/Elements/m/object/P30043>	<http://www.w3.org/2000/01/rdf-schema#label>	"er reproduksjon av manifestasjon av"@no .
+<http://rdaregistry.info/Elements/m/object/P30159>	<http://www.w3.org/2000/01/rdf-schema#label>	"har oppløsning"@no .
+<http://rdaregistry.info/Elements/m/object/P30145>	<http://www.w3.org/2000/01/rdf-schema#label>	"har adgangsbegrensning for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30146>	<http://www.w3.org/2000/01/rdf-schema#label>	"har restriksjoner for bruk av manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30106>	<http://www.w3.org/2000/01/rdf-schema#label>	"har serieangivelse"@no .
+<http://rdaregistry.info/Elements/m/object/P30125>	<http://www.w3.org/2000/01/rdf-schema#label>	"har lydegenskaper"@no .
+<http://rdaregistry.info/Elements/m/object/P30334>	<http://www.w3.org/2000/01/rdf-schema#label>	"er kilde konsultert for"@no .
+<http://rdaregistry.info/Elements/m/object/P30138>	<http://www.w3.org/2000/01/rdf-schema#label>	"har spesiell avspillingsegenskap"@no .
+<http://rdaregistry.info/Elements/m/object/P30117>	<http://www.w3.org/2000/01/rdf-schema#label>	"har ansvarsangivelse"@no .
+<http://rdaregistry.info/Elements/m/object/P30121>	<http://www.w3.org/2000/01/rdf-schema#label>	"har ansvarsangivelse knyttet til utgave"@no .
+<http://rdaregistry.info/Elements/m/object/P30118>	<http://www.w3.org/2000/01/rdf-schema#label>	"har ansvarsangivelse knyttet til en bestemt revisjon av utgave"@no .
+<http://rdaregistry.info/Elements/m/object/P30119>	<http://www.w3.org/2000/01/rdf-schema#label>	"har ansvarsangivelse knyttet til serie"@no .
+<http://rdaregistry.info/Elements/m/object/P30105>	<http://www.w3.org/2000/01/rdf-schema#label>	"har ansvarsangivelse knyttet til hovedtittel"@no .
+<http://rdaregistry.info/Elements/m/object/P30253>	<http://www.w3.org/2000/01/rdf-schema#label>	"er emne for manifestasjon av "@no .
+<http://rdaregistry.info/Elements/m/object/P30312>	<http://www.w3.org/2000/01/rdf-schema#label>	"har landmåler (agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30366>	<http://www.w3.org/2000/01/rdf-schema#label>	"har landmåler (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/object/P30395>	<http://www.w3.org/2000/01/rdf-schema#label>	"har landmåler (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/object/P30424>	<http://www.w3.org/2000/01/rdf-schema#label>	"har landmåler (familie)"@no .
+<http://rdaregistry.info/Elements/m/object/P30337>	<http://www.w3.org/2000/01/rdf-schema#label>	"har landmåler (person)"@no .
+<http://rdaregistry.info/Elements/m/object/P30185>	<http://www.w3.org/2000/01/rdf-schema#label>	"har lydbåndkonfigurasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30160>	<http://www.w3.org/2000/01/rdf-schema#label>	"har leveringsbetingelser"@no .
+<http://rdaregistry.info/Elements/m/object/P30134>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tittel for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30157>	<http://www.w3.org/2000/01/rdf-schema#label>	"har serietittel"@no .
+<http://rdaregistry.info/Elements/m/object/P30156>	<http://www.w3.org/2000/01/rdf-schema#label>	"har hovedtittel"@no .
+<http://rdaregistry.info/Elements/m/object/P30161>	<http://www.w3.org/2000/01/rdf-schema#label>	"har sporkonfigurasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30309>	<http://www.w3.org/2000/01/rdf-schema#label>	"har innbindingstype"@no .
+<http://rdaregistry.info/Elements/m/object/P30172>	<http://www.w3.org/2000/01/rdf-schema#label>	"har type opptak"@no .
+<http://rdaregistry.info/Elements/m/object/P30154>	<http://www.w3.org/2000/01/rdf-schema#label>	"har URL-adresse (Uniform Resource Locator)"@no .
+<http://rdaregistry.info/Elements/m/object/P30295>	<http://www.w3.org/2000/01/rdf-schema#label>	"har alternativ søkeinngang for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30128>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tittelvariant for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/object/P30126>	<http://www.w3.org/2000/01/rdf-schema#label>	"har videoegenskaper"@no .
+<http://rdaregistry.info/Elements/m/object/P30104>	<http://www.w3.org/2000/01/rdf-schema#label>	"har videoformat"@no .
+<http://rdaregistry.info/Elements/m/object/P30135>	<http://www.w3.org/2000/01/rdf-schema#label>	"har verk manifestert"@no .
+<http://rdaregistry.info/Elements/m/object/P30330>	<http://www.w3.org/2000/01/rdf-schema#label>	"har relatert entitet til manifestasjon"@no .
+
+<http://rdaregistry.info/Elements/m/datatype/P30131>	<http://www.w3.org/2000/01/rdf-schema#label>	"har forkortet tittel"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30276>	<http://www.w3.org/2000/01/rdf-schema#label>	"har søkeinngang for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30027>	<http://www.w3.org/2000/01/rdf-schema#label>	"er ledsaget av manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30026>	<http://www.w3.org/2000/01/rdf-schema#label>	"er også utgitt som"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30277>	<http://www.w3.org/2000/01/rdf-schema#label>	"har betegnelse for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30084>	<http://www.w3.org/2000/01/rdf-schema#label>	"har anvendt materiale"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30294>	<http://www.w3.org/2000/01/rdf-schema#label>	"har autorisert søkeinngang for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30208>	<http://www.w3.org/2000/01/rdf-schema#label>	"har basismateriale"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30197>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bokformat"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30310>	<http://www.w3.org/2000/01/rdf-schema#label>	"har innbinding for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30069>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bokdesigner (agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30378>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bokdesigner (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30407>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bokdesigner (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30436>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bokdesigner (familie)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30349>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bokdesigner (person)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30071>	<http://www.w3.org/2000/01/rdf-schema#label>	"har punktskriftpreger (agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30380>	<http://www.w3.org/2000/01/rdf-schema#label>	"har punktskriftpreger (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30409>	<http://www.w3.org/2000/01/rdf-schema#label>	"har punktskriftpreger (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30438>	<http://www.w3.org/2000/01/rdf-schema#label>	"har punktskriftpreger (familie)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30351>	<http://www.w3.org/2000/01/rdf-schema#label>	"har punktskriftpreger (person)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30067>	<http://www.w3.org/2000/01/rdf-schema#label>	"har kringkaster (agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30376>	<http://www.w3.org/2000/01/rdf-schema#label>	"har kringkaster (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30405>	<http://www.w3.org/2000/01/rdf-schema#label>	"har kringkaster (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30434>	<http://www.w3.org/2000/01/rdf-schema#label>	"har kringkaster (familie)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30347>	<http://www.w3.org/2000/01/rdf-schema#label>	"har kringkaster (person)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30123>	<http://www.w3.org/2000/01/rdf-schema#label>	"har kringkastingsstandard"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30001>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bærertype"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30261>	<http://www.w3.org/2000/01/rdf-schema#label>	"har type kartografiske data"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30073>	<http://www.w3.org/2000/01/rdf-schema#label>	"har støper (agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30382>	<http://www.w3.org/2000/01/rdf-schema#label>	"har støper (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30411>	<http://www.w3.org/2000/01/rdf-schema#label>	"har støper (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30440>	<http://www.w3.org/2000/01/rdf-schema#label>	"har støper (familie)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30353>	<http://www.w3.org/2000/01/rdf-schema#label>	"har støper (person)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30335>	<http://www.w3.org/2000/01/rdf-schema#label>	"har kategori av manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30077>	<http://www.w3.org/2000/01/rdf-schema#label>	"har lystrykker (agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30386>	<http://www.w3.org/2000/01/rdf-schema#label>	"har lystrykker (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30415>	<http://www.w3.org/2000/01/rdf-schema#label>	"har lystrykker (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30444>	<http://www.w3.org/2000/01/rdf-schema#label>	"har lystrykker (familie)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30357>	<http://www.w3.org/2000/01/rdf-schema#label>	"har lystrykker (person)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30184>	<http://www.w3.org/2000/01/rdf-schema#label>	"har konfigurasjon av kanaler for avspilling"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30141>	<http://www.w3.org/2000/01/rdf-schema#label>	"har kontaktinformasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30315>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til kartografi (agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30316>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til koreografi (agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30333>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til datamaskininnhold (agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30326>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til levende bilder (agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30311>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til musikk (agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30332>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til gjenstand (agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30331>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til tale (agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30321>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til bilde (agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30328>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til tekst (agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30327>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til aggregat (agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30367>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til kartografi (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30368>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til koreografi (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30375>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til datamaskininnhold (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30369>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til levende bilder (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30370>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til musikk (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30374>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til gjenstand (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30371>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til tale (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30372>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til bilde (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30373>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til tekst (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30365>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til aggregat (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30396>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til kartografi (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30397>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til koreografi (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30404>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til datamaskininnhold (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30398>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til levende bilder (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30399>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til musikk (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30403>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til gjenstand (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30400>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til tale (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30401>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til bilde (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30402>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til tekst (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30394>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til aggregat (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30425>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til kartografi (familie)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30426>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til koreografi (familie)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30433>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til datamaskininnhold (familie)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30427>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til levende bilder (familie)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30428>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til musikk (familie)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30432>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til gjenstand (familie)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30429>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til tale (familie)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30430>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til bilde (familie)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30431>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til tekst (familie)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30423>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til aggregat (familie)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30338>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til kartografi (person)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30339>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til koreografi (person)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30346>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til datamaskininnhold (person)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30340>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til levende bilder (person)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30341>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til musikk (person)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30345>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til gjenstand (person)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30342>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til tale (person)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30343>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til bilde (person)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30344>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til tekst (person)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30336>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bidragsyter til aggregat (person)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30007>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tidsrom for copyright"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30329>	<http://www.w3.org/2000/01/rdf-schema#label>	"har skaper av manifestasjon (agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30392>	<http://www.w3.org/2000/01/rdf-schema#label>	"har skaper av manifestasjon (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30421>	<http://www.w3.org/2000/01/rdf-schema#label>	"har skaper av manifestasjon (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30450>	<http://www.w3.org/2000/01/rdf-schema#label>	"har skaper av manifestasjon (familie)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30363>	<http://www.w3.org/2000/01/rdf-schema#label>	"har skaper av manifestasjon (person)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30008>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tidsrom for distribusjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30278>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tidspunkt for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30010>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tidsrom for framstilling"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30009>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tidsrom for produksjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30011>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tidsrom for utgivelse"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30133>	<http://www.w3.org/2000/01/rdf-schema#label>	"har betegnelse for utgave"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30132>	<http://www.w3.org/2000/01/rdf-schema#label>	"har betegnelse for en bestemt revisjon av en utgave"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30216>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende anvendt materiale"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30217>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende basismateriale"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30218>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende bokformat"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30219>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende kringkastingsstandard"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30262>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende type kartografiske data"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30220>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende konfigurasjon av kanaler for avspilling"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30221>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende egenskaper for digital fil"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30222>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende digital representasjon av kartografisk innhold"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30223>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende emulsjon på mikrofilm og mikrofilmkort"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30224>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende kodeformat"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30225>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende filtype"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30226>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende skriftstørrelse"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30252>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende generasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30232>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende rilleegenskaper"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30233>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende layout"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30234>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende underlag eller ramme"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30235>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende avspillingshastighet"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30236>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende polaritet"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30237>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende visningsformat"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30238>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende produksjonsmetode"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30241>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende projeksjonsegenskaper for spillefilm"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30242>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende projeksjonshastighet"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30243>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende opptaksmedium"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30244>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende betegnelse for reduksjonsrate"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30275>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende regionkoder"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30245>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende lydegenskaper"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30246>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende spesielle avspillingsegenskaper"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30247>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende lydbåndkonfigurasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30248>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende sporkonfigurasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30249>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende typen opptak"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30250>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende videoegenskaper"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30251>	<http://www.w3.org/2000/01/rdf-schema#label>	"har detaljer vedrørende videoformat"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30124>	<http://www.w3.org/2000/01/rdf-schema#label>	"har digtal filkarakteristikk"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30102>	<http://www.w3.org/2000/01/rdf-schema#label>	"har digital representasjon av kartografisk innhold"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30029>	<http://www.w3.org/2000/01/rdf-schema#label>	"har digital overføring av manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30298>	<http://www.w3.org/2000/01/rdf-schema#label>	"er digital overføring av eksemplar av"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30040>	<http://www.w3.org/2000/01/rdf-schema#label>	"er digital overføring av manifestasjon av"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30169>	<http://www.w3.org/2000/01/rdf-schema#label>	"har størrelse"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30170>	<http://www.w3.org/2000/01/rdf-schema#label>	"har størrelse for kartografisk bilde"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30171>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bildestørrelse"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30108>	<http://www.w3.org/2000/01/rdf-schema#label>	"har distribusjonsopplysninger"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30080>	<http://www.w3.org/2000/01/rdf-schema#label>	"har distributør (agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30388>	<http://www.w3.org/2000/01/rdf-schema#label>	"har distributør (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30417>	<http://www.w3.org/2000/01/rdf-schema#label>	"har distributør (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30446>	<http://www.w3.org/2000/01/rdf-schema#label>	"har distributør (familie)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30359>	<http://www.w3.org/2000/01/rdf-schema#label>	"har distributør (person)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30107>	<http://www.w3.org/2000/01/rdf-schema#label>	"har utgaveangivelse"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30299>	<http://www.w3.org/2000/01/rdf-schema#label>	"er elektronisk reproduksjon av eksemplar av"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30016>	<http://www.w3.org/2000/01/rdf-schema#label>	"har elektronisk reproduksjon av manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30136>	<http://www.w3.org/2000/01/rdf-schema#label>	"har elektronisk reproduksjon av manifestasjon av"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30122>	<http://www.w3.org/2000/01/rdf-schema#label>	"har emulsjon på mikrofilm og mikrofilmkort"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30202>	<http://www.w3.org/2000/01/rdf-schema#label>	"har kodet bithastighet"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30096>	<http://www.w3.org/2000/01/rdf-schema#label>	"har kodeformat"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30070>	<http://www.w3.org/2000/01/rdf-schema#label>	"har gravør (agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30379>	<http://www.w3.org/2000/01/rdf-schema#label>	"har gravør (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30408>	<http://www.w3.org/2000/01/rdf-schema#label>	"har gravør (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30437>	<http://www.w3.org/2000/01/rdf-schema#label>	"har gravør (familie)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30350>	<http://www.w3.org/2000/01/rdf-schema#label>	"har gravør (person)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30162>	<http://www.w3.org/2000/01/rdf-schema#label>	"har utstyrs- eller systemkrav"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30024>	<http://www.w3.org/2000/01/rdf-schema#label>	"har ekvivalent manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30076>	<http://www.w3.org/2000/01/rdf-schema#label>	"har etser (agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30385>	<http://www.w3.org/2000/01/rdf-schema#label>	"har etser (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30414>	<http://www.w3.org/2000/01/rdf-schema#label>	"har etser (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30443>	<http://www.w3.org/2000/01/rdf-schema#label>	"har etser (familie)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30356>	<http://www.w3.org/2000/01/rdf-schema#label>	"har etser (person)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30103>	<http://www.w3.org/2000/01/rdf-schema#label>	"har eksemplar av en manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30139>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestert uttrykk"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30182>	<http://www.w3.org/2000/01/rdf-schema#label>	"har omfang for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30300>	<http://www.w3.org/2000/01/rdf-schema#label>	"er faksimile av eksemplar av"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30031>	<http://www.w3.org/2000/01/rdf-schema#label>	"har faksimile av manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30047>	<http://www.w3.org/2000/01/rdf-schema#label>	"er faksimile av manifestasjon av"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30046>	<http://www.w3.org/2000/01/rdf-schema#label>	"har faksimile som del"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30019>	<http://www.w3.org/2000/01/rdf-schema#label>	"har faksimile som del av"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30183>	<http://www.w3.org/2000/01/rdf-schema#label>	"har filstørrelse"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30018>	<http://www.w3.org/2000/01/rdf-schema#label>	"har filtype"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30068>	<http://www.w3.org/2000/01/rdf-schema#label>	"har filmdistributør (agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30377>	<http://www.w3.org/2000/01/rdf-schema#label>	"har filmdistributør (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30406>	<http://www.w3.org/2000/01/rdf-schema#label>	"har filmdistributør (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30435>	<http://www.w3.org/2000/01/rdf-schema#label>	"har filmdistributør (familie)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30348>	<http://www.w3.org/2000/01/rdf-schema#label>	"har filmdistributør (person)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30037>	<http://www.w3.org/2000/01/rdf-schema#label>	"er på film med manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30296>	<http://www.w3.org/2000/01/rdf-schema#label>	"har fingeravtrykk"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30097>	<http://www.w3.org/2000/01/rdf-schema#label>	"har første alfanumeriske betegnelse for alternativ sekvens"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30147>	<http://www.w3.org/2000/01/rdf-schema#label>	"har første alfanumeriske betegnelse for sekvens"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30099>	<http://www.w3.org/2000/01/rdf-schema#label>	"har første kronologiske betegnelse for alternativ sekvens"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30149>	<http://www.w3.org/2000/01/rdf-schema#label>	"har første kronologiske betegnelse for sekvens"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30306>	<http://www.w3.org/2000/01/rdf-schema#label>	"har skriftpunktstørrelse"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30199>	<http://www.w3.org/2000/01/rdf-schema#label>	"har skriftstørrelse"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30191>	<http://www.w3.org/2000/01/rdf-schema#label>	"har generasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30164>	<http://www.w3.org/2000/01/rdf-schema#label>	"har rilleegenskaper"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30307>	<http://www.w3.org/2000/01/rdf-schema#label>	"har rillevidde"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30308>	<http://www.w3.org/2000/01/rdf-schema#label>	"har rillebredde"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30004>	<http://www.w3.org/2000/01/rdf-schema#label>	"har identifikator for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30022>	<http://www.w3.org/2000/01/rdf-schema#label>	"har innlegg"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30025>	<http://www.w3.org/2000/01/rdf-schema#label>	"er lagt inn i"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30305>	<http://www.w3.org/2000/01/rdf-schema#label>	"har målgruppe for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30035>	<http://www.w3.org/2000/01/rdf-schema#label>	"er utgitt sammen med"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30148>	<http://www.w3.org/2000/01/rdf-schema#label>	"har siste alfanumeriske betegnelse for sekvens"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30098>	<http://www.w3.org/2000/01/rdf-schema#label>	"har siste alfanumeriske betegnelse for alternativ sekvens"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30100>	<http://www.w3.org/2000/01/rdf-schema#label>	"har siste kronologiske betegnelse for alternativ sekvens"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30150>	<http://www.w3.org/2000/01/rdf-schema#label>	"har siste kronologiske betegnelse for sekvens"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30155>	<http://www.w3.org/2000/01/rdf-schema#label>	"har layout"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30074>	<http://www.w3.org/2000/01/rdf-schema#label>	"har litograf (agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30383>	<http://www.w3.org/2000/01/rdf-schema#label>	"har litograf (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30412>	<http://www.w3.org/2000/01/rdf-schema#label>	"har litograf (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30441>	<http://www.w3.org/2000/01/rdf-schema#label>	"har litograf (familie)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30354>	<http://www.w3.org/2000/01/rdf-schema#label>	"har litograf (person)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30255>	<http://www.w3.org/2000/01/rdf-schema#label>	"er manifestasjon analysert i "@no .
+<http://rdaregistry.info/Elements/m/datatype/P30256>	<http://www.w3.org/2000/01/rdf-schema#label>	"er manifestasjon kommentert i "@no .
+<http://rdaregistry.info/Elements/m/datatype/P30280>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestasjonsopplysning om copyright"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30257>	<http://www.w3.org/2000/01/rdf-schema#label>	"er manifestasjon kritisert i"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30254>	<http://www.w3.org/2000/01/rdf-schema#label>	"er manifestasjon beskrevet i "@no .
+<http://rdaregistry.info/Elements/m/datatype/P30281>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestasjonsopplysning om betegnelse for sekvens"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30282>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestasjonsopplysning om doktoravhandling"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30283>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestasjonsopplysning om distribusjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30284>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestasjonsopplysning om utgave"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30258>	<http://www.w3.org/2000/01/rdf-schema#label>	"er manifestasjon evaluert i "@no .
+<http://rdaregistry.info/Elements/m/datatype/P30285>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestasjonsopplysning om frekvens"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30286>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestasjonsopplysning om identifikator"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30287>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestasjonsopplysning for framstilling"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30288>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestasjonsopplysning om produksjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30289>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestasjonsopplysning om utgivelse"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30290>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestasjonsopplysning om regionskode"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30259>	<http://www.w3.org/2000/01/rdf-schema#label>	"er manifestasjon anmeldt i "@no .
+<http://rdaregistry.info/Elements/m/datatype/P30291>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestasjonsopplysning om serie"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30292>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestasjonsopplysning"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30293>	<http://www.w3.org/2000/01/rdf-schema#label>	"har manifestasjonsopplysning om tittel og ansvar"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30082>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tilvirker (agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30390>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tilvirker (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30419>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tilvirker (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30448>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tilvirker (familie)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30361>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tilvirker (person)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30109>	<http://www.w3.org/2000/01/rdf-schema#label>	"har framstillingsangivelse"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30304>	<http://www.w3.org/2000/01/rdf-schema#label>	"har materiale"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30002>	<http://www.w3.org/2000/01/rdf-schema#label>	"har medietype"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30028>	<http://www.w3.org/2000/01/rdf-schema#label>	"har speilside"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30003>	<http://www.w3.org/2000/01/rdf-schema#label>	"har utgivelsesmåte"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30186>	<http://www.w3.org/2000/01/rdf-schema#label>	"har underlag eller ramme"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30297>	<http://www.w3.org/2000/01/rdf-schema#label>	"har navn på agent for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30173>	<http://www.w3.org/2000/01/rdf-schema#label>	"har navn på distributør"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30175>	<http://www.w3.org/2000/01/rdf-schema#label>	"har navn på tilvirker"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30174>	<http://www.w3.org/2000/01/rdf-schema#label>	"har navn på produsent"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30176>	<http://www.w3.org/2000/01/rdf-schema#label>	"har navn på utgiver"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30214>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om bærer"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30051>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om endringer i bæreregenskapene"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30059>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om tidspunkt for copyright"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30060>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om manifestasjonens størrelse"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30052>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om distribusjonangivelse"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30064>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om utgaveangivelse"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30061>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om manifestasjonens omfang"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30260>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om identifikator for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30050>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om hefte, del, eller versjon brukt som grunnlag for identifisering av manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30137>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30053>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om framstillingsangivelse"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30054>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om produksjonsangivelse"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30055>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om utgivelse"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30062>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om nummerering av sekvens"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30058>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om serieangivelse"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30057>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om ansvarsangivelse"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30063>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om tittel"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30165>	<http://www.w3.org/2000/01/rdf-schema#label>	"har nummerering for sekvens"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30014>	<http://www.w3.org/2000/01/rdf-schema#label>	"har nummerering innen sekvens"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30036>	<http://www.w3.org/2000/01/rdf-schema#label>	"er på plate med manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30142>	<http://www.w3.org/2000/01/rdf-schema#label>	"har annen tittelinformasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30143>	<http://www.w3.org/2000/01/rdf-schema#label>	"har annen serietittelinformasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30215>	<http://www.w3.org/2000/01/rdf-schema#label>	"har papirprodusent (agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30393>	<http://www.w3.org/2000/01/rdf-schema#label>	"har papirprodusent (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30422>	<http://www.w3.org/2000/01/rdf-schema#label>	"har papirprodusent (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30451>	<http://www.w3.org/2000/01/rdf-schema#label>	"har papirprodusent (familie)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30364>	<http://www.w3.org/2000/01/rdf-schema#label>	"har papirprodusent (person)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30013>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallell utgaveangivelse"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30012>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallell betegnelse for en bestemt revisjon av utgave"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30017>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallelt navn på distributør"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30049>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallelt navn på tilvirker"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30094>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallelt navn på produsent"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30095>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallelt navn på utgiver"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30151>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallell annen tittelinformasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30152>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallell annen serietittelinformasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30089>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallelt distribusjonssted"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30090>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallelt framstillingssted"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30091>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallelt produksjonssted"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30092>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallelt utgivelsessted"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30115>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallell ansvarsangivelse knyttet til utgave"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30112>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallell ansvarsangivelse som er knyttet til en bestemt revisjon av en utgave"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30113>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallell ansvarsangivelse knyttet til serie"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30116>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallell ansvarsangivelse knyttet til hovedtittel"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30204>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallell serietittel"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30203>	<http://www.w3.org/2000/01/rdf-schema#label>	"har parallell hovedtittel"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30033>	<http://www.w3.org/2000/01/rdf-schema#label>	"har del av manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30020>	<http://www.w3.org/2000/01/rdf-schema#label>	"har del av manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30085>	<http://www.w3.org/2000/01/rdf-schema#label>	"har distribusjonssted"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30279>	<http://www.w3.org/2000/01/rdf-schema#label>	"har sted for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30087>	<http://www.w3.org/2000/01/rdf-schema#label>	"har framstillingssted"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30086>	<http://www.w3.org/2000/01/rdf-schema#label>	"har produksjonssted"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30088>	<http://www.w3.org/2000/01/rdf-schema#label>	"har utgivelsessted"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30075>	<http://www.w3.org/2000/01/rdf-schema#label>	"har trykkplatemaker (agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30384>	<http://www.w3.org/2000/01/rdf-schema#label>	"har trykkplatemaker (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30413>	<http://www.w3.org/2000/01/rdf-schema#label>	"har trykkplatemaker (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30442>	<http://www.w3.org/2000/01/rdf-schema#label>	"har trykkplatemaker (familie)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30355>	<http://www.w3.org/2000/01/rdf-schema#label>	"har trykkplatemaker (person)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30066>	<http://www.w3.org/2000/01/rdf-schema#label>	"har platenummer for nedskrevet musikk"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30201>	<http://www.w3.org/2000/01/rdf-schema#label>	"har avspillingshastighet"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30196>	<http://www.w3.org/2000/01/rdf-schema#label>	"har polaritet"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30005>	<http://www.w3.org/2000/01/rdf-schema#label>	"har foretrukket referanse"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30163>	<http://www.w3.org/2000/01/rdf-schema#label>	"har visningsformat"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30301>	<http://www.w3.org/2000/01/rdf-schema#label>	"er bevaringskopi av eksemplar av "@no .
+<http://rdaregistry.info/Elements/m/datatype/P30021>	<http://www.w3.org/2000/01/rdf-schema#label>	"har bevaringskopi av manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30045>	<http://www.w3.org/2000/01/rdf-schema#label>	"er bevaringskopi av manifestasjon av"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30078>	<http://www.w3.org/2000/01/rdf-schema#label>	"har trykker (agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30387>	<http://www.w3.org/2000/01/rdf-schema#label>	"har trykker (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30416>	<http://www.w3.org/2000/01/rdf-schema#label>	"har trykker (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30445>	<http://www.w3.org/2000/01/rdf-schema#label>	"har trykker (familie)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30358>	<http://www.w3.org/2000/01/rdf-schema#label>	"har trykker (person)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30072>	<http://www.w3.org/2000/01/rdf-schema#label>	"har grafiker (agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30381>	<http://www.w3.org/2000/01/rdf-schema#label>	"har grafiker (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30410>	<http://www.w3.org/2000/01/rdf-schema#label>	"har grafiker (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30439>	<http://www.w3.org/2000/01/rdf-schema#label>	"har grafiker (familie)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30352>	<http://www.w3.org/2000/01/rdf-schema#label>	"har grafiker (person)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30081>	<http://www.w3.org/2000/01/rdf-schema#label>	"har produsent av upublisert manifestasjon (agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30389>	<http://www.w3.org/2000/01/rdf-schema#label>	"har produsent av upublisert manifestasjon (kollekitv agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30418>	<http://www.w3.org/2000/01/rdf-schema#label>	"har produsent av upublisert manifestasjon (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30447>	<http://www.w3.org/2000/01/rdf-schema#label>	"har produsent av upublisert manifestasjon (familie)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30360>	<http://www.w3.org/2000/01/rdf-schema#label>	"har produsent av upublisert manifestasjon (person)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30187>	<http://www.w3.org/2000/01/rdf-schema#label>	"har produksjonsmetode"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30110>	<http://www.w3.org/2000/01/rdf-schema#label>	"har produksjonsangivelse"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30127>	<http://www.w3.org/2000/01/rdf-schema#label>	"har projeksjonsegenskaper for spillefilm"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30200>	<http://www.w3.org/2000/01/rdf-schema#label>	"har projeksjonshastighet"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30111>	<http://www.w3.org/2000/01/rdf-schema#label>	"har opplysninger om utgivelse"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30083>	<http://www.w3.org/2000/01/rdf-schema#label>	"har utgiver (agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30391>	<http://www.w3.org/2000/01/rdf-schema#label>	"har utgiver (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30420>	<http://www.w3.org/2000/01/rdf-schema#label>	"har utgiver (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30449>	<http://www.w3.org/2000/01/rdf-schema#label>	"har utgiver (familie)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30065>	<http://www.w3.org/2000/01/rdf-schema#label>	"har edisjonsnummer for nedskrevet musikk"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30362>	<http://www.w3.org/2000/01/rdf-schema#label>	"har utgiver (person)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30206>	<http://www.w3.org/2000/01/rdf-schema#label>	"har opptaksmedium"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30198>	<http://www.w3.org/2000/01/rdf-schema#label>	"har reduksjonsrate"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30263>	<http://www.w3.org/2000/01/rdf-schema#label>	"har betegnelse for reduksjonsrate"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30006>	<http://www.w3.org/2000/01/rdf-schema#label>	"har regionkode"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30267>	<http://www.w3.org/2000/01/rdf-schema#label>	"har agent relatert til manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30271>	<http://www.w3.org/2000/01/rdf-schema#label>	"har kollektiv agent relatert til manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30270>	<http://www.w3.org/2000/01/rdf-schema#label>	"har korporasjon relatert til manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30266>	<http://www.w3.org/2000/01/rdf-schema#label>	"har uttrykk relatert til manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30269>	<http://www.w3.org/2000/01/rdf-schema#label>	"har familie relatert til manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30140>	<http://www.w3.org/2000/01/rdf-schema#label>	"har relatert eksemplar av manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30048>	<http://www.w3.org/2000/01/rdf-schema#label>	"har relatert manifestasjon av manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30274>	<http://www.w3.org/2000/01/rdf-schema#label>	"har nomen relatert til manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30268>	<http://www.w3.org/2000/01/rdf-schema#label>	"har person relatert til manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30272>	<http://www.w3.org/2000/01/rdf-schema#label>	"har sted relatert til manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30264>	<http://www.w3.org/2000/01/rdf-schema#label>	"har RDA-entitet relatert til manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30273>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tidsrom relatert til manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30265>	<http://www.w3.org/2000/01/rdf-schema#label>	"har verk relatert til manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30038>	<http://www.w3.org/2000/01/rdf-schema#label>	"er opptrykt som manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30302>	<http://www.w3.org/2000/01/rdf-schema#label>	"er opptrykk av eksemplar av"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30093>	<http://www.w3.org/2000/01/rdf-schema#label>	"er opptrykk av manifestasjon av"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30039>	<http://www.w3.org/2000/01/rdf-schema#label>	"er reprodusert som manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30303>	<http://www.w3.org/2000/01/rdf-schema#label>	"er reproduksjon av eksemplar av"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30043>	<http://www.w3.org/2000/01/rdf-schema#label>	"er reproduksjon av manifestasjon av"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30159>	<http://www.w3.org/2000/01/rdf-schema#label>	"har oppløsning"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30145>	<http://www.w3.org/2000/01/rdf-schema#label>	"har adgangsbegrensning for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30146>	<http://www.w3.org/2000/01/rdf-schema#label>	"har restriksjoner for bruk av manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30106>	<http://www.w3.org/2000/01/rdf-schema#label>	"har serieangivelse"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30125>	<http://www.w3.org/2000/01/rdf-schema#label>	"har lydegenskaper"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30334>	<http://www.w3.org/2000/01/rdf-schema#label>	"er kilde konsultert for"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30138>	<http://www.w3.org/2000/01/rdf-schema#label>	"har spesiell avspillingsegenskap"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30117>	<http://www.w3.org/2000/01/rdf-schema#label>	"har ansvarsangivelse"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30121>	<http://www.w3.org/2000/01/rdf-schema#label>	"har ansvarsangivelse knyttet til utgave"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30118>	<http://www.w3.org/2000/01/rdf-schema#label>	"har ansvarsangivelse knyttet til en bestemt revisjon av utgave"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30119>	<http://www.w3.org/2000/01/rdf-schema#label>	"har ansvarsangivelse knyttet til serie"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30105>	<http://www.w3.org/2000/01/rdf-schema#label>	"har ansvarsangivelse knyttet til hovedtittel"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30253>	<http://www.w3.org/2000/01/rdf-schema#label>	"er emne for manifestasjon av "@no .
+<http://rdaregistry.info/Elements/m/datatype/P30312>	<http://www.w3.org/2000/01/rdf-schema#label>	"har landmåler (agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30366>	<http://www.w3.org/2000/01/rdf-schema#label>	"har landmåler (kollektiv agent)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30395>	<http://www.w3.org/2000/01/rdf-schema#label>	"har landmåler (korporasjon)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30424>	<http://www.w3.org/2000/01/rdf-schema#label>	"har landmåler (familie)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30337>	<http://www.w3.org/2000/01/rdf-schema#label>	"har landmåler (person)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30185>	<http://www.w3.org/2000/01/rdf-schema#label>	"har lydbåndkonfigurasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30160>	<http://www.w3.org/2000/01/rdf-schema#label>	"har leveringsbetingelser"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30134>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tittel for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30157>	<http://www.w3.org/2000/01/rdf-schema#label>	"har serietittel"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30156>	<http://www.w3.org/2000/01/rdf-schema#label>	"har hovedtittel"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30161>	<http://www.w3.org/2000/01/rdf-schema#label>	"har sporkonfigurasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30309>	<http://www.w3.org/2000/01/rdf-schema#label>	"har innbindingstype"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30172>	<http://www.w3.org/2000/01/rdf-schema#label>	"har type opptak"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30154>	<http://www.w3.org/2000/01/rdf-schema#label>	"har URL-adresse (Uniform Resource Locator)"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30295>	<http://www.w3.org/2000/01/rdf-schema#label>	"har alternativ søkeinngang for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30128>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tittelvariant for manifestasjon"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30126>	<http://www.w3.org/2000/01/rdf-schema#label>	"har videoegenskaper"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30104>	<http://www.w3.org/2000/01/rdf-schema#label>	"har videoformat"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30135>	<http://www.w3.org/2000/01/rdf-schema#label>	"har verk manifestert"@no .
+<http://rdaregistry.info/Elements/m/datatype/P30330>	<http://www.w3.org/2000/01/rdf-schema#label>	"har relatert entitet til manifestasjon"@no .

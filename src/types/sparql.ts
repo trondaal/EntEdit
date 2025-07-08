@@ -37,6 +37,7 @@ export interface RdfProperty {
   domain?: string;
   range?: string;
   datatype?: string;
+  status?: string;
 }
 
 export interface EntityData {

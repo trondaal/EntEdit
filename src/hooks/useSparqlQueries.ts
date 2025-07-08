@@ -109,7 +109,7 @@ export const useEntitiesByClass = (
           OPTIONAL { ?entity rdfs:label ?label .
           FILTER(LANG(?label) = "${language}" || LANG(?label) = "") .}
         }GROUP BY ?entity
-        ORDER BY ?entity ?label
+        ORDER BY ?label ?entity
       `;
 
       const response = await client.query(query);
@@ -137,10 +137,11 @@ export const useRdfObjectProperties = (
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
         PREFIX entedit: <http://oslomet.no/abi/vocab#>
 
-        SELECT DISTINCT ?property ?label ?comment ?domain ?range
+        SELECT DISTINCT ?property ?label ?comment ?domain ?range ?status
         WHERE {
           ?property a rdf:Property .
-          ?property entedit:status "object property" .
+          ?property entedit:status ?status.
+          FILTER(?status = "controlled property" || ?status = "object property") .
           OPTIONAL {
             ?property rdfs:label ?label .
             FILTER(LANG(?label) = "${language}" || LANG(?label) = "")
@@ -149,8 +150,9 @@ export const useRdfObjectProperties = (
             ?property rdfs:comment ?comment .
             FILTER(LANG(?comment) = "${language}" || LANG(?comment) = "")
           }
-          OPTIONAL { ?property rdfs:domain ?domain }
-          OPTIONAL { ?property rdfs:range ?range }
+          ?property rdfs:domain ?domain .
+          ?property rdfs:range ?range .
+    	    FILTER($range != <http://www.w3.org/2004/02/skos/core#Concept> ) .
           ${classUri ? `FILTER(?domain = <${classUri}>)` : ""}
         }
         ORDER BY ?label
@@ -163,6 +165,7 @@ export const useRdfObjectProperties = (
         comment: binding.comment?.value,
         domain: binding.domain?.value,
         range: binding.range?.value,
+        status: binding.status?.value,
       }));
     },
     enabled: !!config.url,
@@ -172,21 +175,25 @@ export const useRdfObjectProperties = (
 export const useEntitiesByRange = (
   config: SparqlEndpointConfig,
   rangeUri: string,
+  language: string = "en",
 ) => {
   return useQuery({
-    queryKey: ["entities-by-range", config.url, rangeUri],
+    queryKey: ["entities-by-range", config.url, rangeUri, language],
     queryFn: async () => {
       const client = new SparqlClient(config);
       const query = `
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        
+
         SELECT DISTINCT ?entity ?label
         WHERE {
           ?entity a <${rangeUri}> .
-          OPTIONAL { ?entity rdfs:label ?label }
+          OPTIONAL {
+            ?entity rdfs:label ?label .
+            FILTER(LANG(?label) = "${language}" || LANG(?label) = "")
+          }
         }
         ORDER BY ?label ?entity
-        LIMIT 100
+        LIMIT 1000
       `;
 
       const response = await client.query(query);
@@ -238,4 +245,3 @@ export const useAvailableLanguages = (config: SparqlEndpointConfig) => {
     enabled: !!config.url,
   });
 };
-

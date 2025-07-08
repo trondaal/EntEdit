@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   FormControl,
   InputLabel,
@@ -7,10 +7,10 @@ import {
   type SelectChangeEvent,
   CircularProgress,
   Box,
-} from '@mui/material';
-import { Language } from '@mui/icons-material';
-import type { SparqlEndpointConfig } from '../types/sparql';
-import { useAvailableLanguages } from '../hooks/useSparqlQueries';
+} from "@mui/material";
+import { Language } from "@mui/icons-material";
+import type { SparqlEndpointConfig } from "../types/sparql";
+import { useAvailableLanguages } from "../hooks/useSparqlQueries";
 
 interface LanguageSelectorProps {
   config: SparqlEndpointConfig;
@@ -30,15 +30,51 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
   };
 
   return (
-    <Box sx={{ minWidth: 120, display: 'flex', alignItems: 'center' }}>
-      <Language sx={{ mr: 1, color: 'action.active' }} />
-      <FormControl size="small" sx={{ minWidth: 100 }}>
-        <InputLabel>Language</InputLabel>
+    <Box
+      sx={{
+        width: 90,
+        minWidth: 90,
+        maxWidth: 90,
+        display: "flex",
+        alignItems: "center",
+        //overflow: "hidden"
+      }}
+    >
+      <Language
+        sx={{
+          mr: 0.5,
+          color: "action.active",
+          flexShrink: 0,
+          fontSize: "1rem",
+        }}
+      />
+      <FormControl
+        size="small"
+        sx={{
+          width: 65,
+          minWidth: 65,
+          maxWidth: 65,
+          flexShrink: 0,
+        }}
+      >
+        <InputLabel sx={{ fontSize: "0.75rem" }}>Language</InputLabel>
         <Select
           value={selectedLanguage}
           label="Language"
           onChange={handleChange}
           disabled={isLoading}
+          sx={{
+            width: 65,
+            minWidth: 65,
+            maxWidth: 65,
+            fontSize: "0.875rem",
+            "& .MuiSelect-select": {
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              whiteSpace: "nowrap",
+              padding: "6px 8px",
+            },
+          }}
         >
           {isLoading ? (
             <MenuItem disabled>
