@@ -2,7 +2,7 @@ import { useState } from "react";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { CssBaseline, Container, Box, colors } from "@mui/material";
+import { CssBaseline, Container, Box } from "@mui/material";
 import { queryClient } from "./utils/queryClient";
 import AppHeader from "./components/AppHeader";
 import EntityBrowser from "./components/EntityBrowser";

@@ -90,7 +90,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
         }}
       >
         <Box sx={{ flex: "0 0 200px", minWidth: 200, alignSelf: "flex-start" }}>
-          <Paper elevation={1} sx={{ height: "fit-content", minHeight: 600 }}>
+          <Paper elevation={1} sx={{ height: "fit-content", minHeight: 700 }}>
             <Box sx={{ p: 2, borderBottom: 1, borderColor: "divider" }}>
               <Typography
                 variant="h6"
@@ -106,7 +106,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
                 <CircularProgress />
               </Box>
             ) : (
-              <List sx={{ maxHeight: 400, overflow: "auto" }}>
+              <List sx={{ maxHeight: 650, overflow: "auto" }}>
                 {classes?.map((rdfClass) => (
                   <ListItem key={rdfClass.uri} disablePadding>
                     <ListItemButton
@@ -143,7 +143,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
         </Box>
 
         <Box sx={{ flex: "0 0 400px", minWidth: 400, alignSelf: "flex-start" }}>
-          <Paper elevation={1} sx={{ height: "fit-content", minHeight: 600 }}>
+          <Paper elevation={1} sx={{ height: "fit-content", minHeight: 700 }}>
             <Box
               sx={{
                 p: 2,
@@ -162,40 +162,57 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
                 <Description sx={{ mr: 1 }} />
                 Entities
               </Typography>
-              
+
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: 1,
+                  flex: 1,
+                }}
+              >
+                {selectedClass && (
+                  <Chip
+                    label={
+                      (
+                        classes?.find((c) => c.uri === selectedClass)?.label ||
+                        selectedClass.split("#").pop() ||
+                        ""
+                      )
+                        .charAt(0)
+                        .toUpperCase() +
+                      (
+                        classes?.find((c) => c.uri === selectedClass)?.label ||
+                        selectedClass.split("#").pop() ||
+                        ""
+                      ).slice(1)
+                    }
+                    size="small"
+                  />
+                )}
+              </Box>
+
               <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                 {selectedClass && (
-                  <>
-                    <Chip
-                      label={
-                        (
-                          classes?.find((c) => c.uri === selectedClass)?.label ||
-                          selectedClass.split("#").pop() ||
-                          ""
-                        )
-                          .charAt(0)
-                          .toUpperCase() +
-                        (
-                          classes?.find((c) => c.uri === selectedClass)?.label ||
-                          selectedClass.split("#").pop() ||
-                          ""
-                        ).slice(1)
-                      }
-                      size="small"
-                    />
-                    <TextField
-                      size="small"
-                      placeholder="Filter..."
-                      value={entityFilter}
-                      onChange={(e) => setEntityFilter(e.target.value)}
-                      sx={{ width: 150 }}
-                      InputProps={{
-                        startAdornment: (
-                          <Search sx={{ mr: 1, color: "action.active", fontSize: "1rem" }} />
-                        ),
-                      }}
-                    />
-                  </>
+                  <TextField
+                    size="small"
+                    placeholder="Filter..."
+                    value={entityFilter}
+                    onChange={(e) => setEntityFilter(e.target.value)}
+                    sx={{ width: 130 }}
+                    InputProps={{
+                      startAdornment: (
+                        <Search
+                          sx={{
+                            mr: 1,
+                            color: "action.active",
+                            fontSize: "1rem",
+                          }}
+                        />
+                      ),
+                    }}
+                  />
                 )}
               </Box>
             </Box>
@@ -215,7 +232,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
                   : "No entities found for this class"}
               </Box>
             ) : (
-              <List sx={{ maxHeight: 500, overflow: "auto" }}>
+              <List sx={{ maxHeight: 600, overflow: "auto" }}>
                 {filteredEntities?.map((entity) => (
                   <ListItem
                     key={`${selectedClass}-${entity.uri}`}

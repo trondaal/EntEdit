@@ -77,7 +77,7 @@ export const useRdfProperties = (
           OPTIONAL { ?property rdfs:range ?range }
           ${classUri ? `FILTER(?domain = <${classUri}>)` : ""}
         }
-        ORDER BY ?property
+        ORDER BY ?label ?property
       `;
 
       const response = await client.query(query);
