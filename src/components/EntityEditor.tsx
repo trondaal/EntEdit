@@ -651,6 +651,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           disabled={!!entityUri || !isEditing}
           error={!!uriError}
           sx={{ mb: 2 }}
+          size="small"
           /*helperText={
             uriError
               ? "Please enter a valid URI"
@@ -728,6 +729,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
                 >
                   <TextField
                     fullWidth
+                    // label={getPropertyLabel(propertyUri)}
                     value={value}
                     onChange={(e) =>
                       updatePropertyValue(propertyUri, index, e.target.value)
@@ -735,7 +737,14 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
                     disabled={!isEditing || !classUri}
                     size="small"
                     placeholder={`Enter ${getPropertyLabel(propertyUri)}`}
-                    sx={{ "& .MuiInputBase-input": { py: 0.75 } }}
+                    sx={{
+                      "& .MuiInputBase-input": { py: 0.75 },
+                      "& .MuiInputLabel-outlined": {
+                        color: "#4F4F4F",
+                        fontSize: 17,
+                        // And the label when it focused
+                      },
+                    }}
                   />
                   {isEditing && (
                     <IconButton
@@ -752,7 +761,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
             </Box>
           ))}
 
-        {(isEditing || controlledPropertiesWithValues.length > 0) && (
+        {isEditing && (
           <>
             <Divider sx={{ my: 1.5 }} />
 
@@ -800,6 +809,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
               objectProperties.find((p) => p.uri === propertyUri)?.range
             }
             isEditing={isEditing && !!classUri}
+            selectedLanguage={selectedLanguage}
             onUpdateValue={(index, value) =>
               updatePropertyValue(propertyUri, index, value)
             }
@@ -823,7 +833,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           />
         )}
 
-        {(isEditing || objectPropertiesWithValues.length > 0) && (
+        {isEditing && (
           <>
             <Divider sx={{ my: 1.5 }} />
 
@@ -869,6 +879,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
               objectProperties.find((p) => p.uri === propertyUri)?.range
             }
             isEditing={isEditing && !!classUri}
+            selectedLanguage={selectedLanguage}
             onUpdateValue={(index, value) =>
               updatePropertyValue(propertyUri, index, value)
             }
@@ -957,6 +968,7 @@ interface ObjectPropertySectionProps {
   values: string[];
   rangeUri?: string;
   isEditing: boolean;
+  selectedLanguage: string;
   onUpdateValue: (index: number, value: string) => void;
   onRemoveValue: (index: number) => void;
 }
@@ -969,6 +981,7 @@ const ObjectPropertySection: React.FC<ObjectPropertySectionProps> = ({
   values,
   rangeUri,
   isEditing,
+  selectedLanguage,
   onUpdateValue,
   onRemoveValue,
 }) => {
@@ -984,6 +997,7 @@ const ObjectPropertySection: React.FC<ObjectPropertySectionProps> = ({
           value={value}
           rangeUri={rangeUri}
           isEditing={isEditing}
+          selectedLanguage={selectedLanguage}
           onUpdate={(newValue) => onUpdateValue(index, newValue)}
           onRemove={() => onRemoveValue(index)}
         />
@@ -998,6 +1012,7 @@ interface ObjectPropertyValueProps {
   value: string;
   rangeUri?: string;
   isEditing: boolean;
+  selectedLanguage: string;
   onUpdate: (value: string) => void;
   onRemove: () => void;
 }
@@ -1008,27 +1023,46 @@ const ObjectPropertyValue: React.FC<ObjectPropertyValueProps> = ({
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   rangeUri: _,
   isEditing,
+  selectedLanguage,
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   onUpdate: __,
   onRemove,
 }) => {
   const { data: entity } = useQuery({
-    queryKey: ["entity-label", config.url, value],
+    queryKey: ["entity-label", config.url, value, selectedLanguage],
     queryFn: async () => {
       if (!value) return null;
 
       const client = new SparqlClient(config);
       const query = `
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        SELECT ?label
+        SELECT ?label ?lang
         WHERE {
           <${value}> rdfs:label ?label .
+          BIND(LANG(?label) AS ?lang)
         }
-        LIMIT 1
       `;
 
       const response = await client.query(query);
-      return response.results.bindings[0]?.label?.value || null;
+      const labels = response.results.bindings.map((binding) => ({
+        value: binding.label.value,
+        language: binding.lang?.value || "",
+      }));
+
+      if (labels.length === 0) return null;
+
+      // First try to find a label in the selected language
+      const selectedLangLabel = labels.find(
+        (label) => label.language === selectedLanguage,
+      );
+      if (selectedLangLabel) return selectedLangLabel.value;
+
+      // Then try to find a label without language tag
+      const noLangLabel = labels.find((label) => label.language === "");
+      if (noLangLabel) return noLangLabel.value;
+
+      // Finally, return the first available label
+      return labels[0].value;
     },
     enabled: !!value && !!config.url,
   });
