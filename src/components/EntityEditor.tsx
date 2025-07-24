@@ -110,10 +110,17 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
       const client = new SparqlClient(config);
       const query = `
-        SELECT ?property ?value
-        WHERE {
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        SELECT DISTINCT ?property ?value WHERE {
           <${entityUri}> ?property ?value .
+
+          FILTER NOT EXISTS {
+            <${entityUri}> ?subProperty ?value .
+            ?subProperty rdfs:subPropertyOf+ ?property .
+            FILTER (?subProperty != ?property)
+          }
         }
+        ORDER BY ?property
       `;
 
       const response = await client.query(query);
