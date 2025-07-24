@@ -1,0 +1,182 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?entity (SAMPLE(?label) AS ?label)
+        WHERE {
+          ?entity a <http://www.w3.org/2004/02/skos/core#Concept> .
+          OPTIONAL { 
+        	?entity rdfs:label ?label .
+        	FILTER(LANG(?label) = "en" || LANG(?label) = "") .
+		  }
+          OPTIONAL { 
+        	?entity <http://www.w3.org/2004/02/skos/core#prefLabel> ?slabel .
+        	FILTER(LANG(?slabel) = "en" || LANG(?slabel) = "") .
+		  }
+        }GROUP BY ?entity 
+        ORDER BY ?entity 
+
+
+
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+		PREFIX abi: <http://oslomet.no/abi/vocab#>
+		PREFIX rdac: <http://rdaregistry.info/Elements/c/>
+
+SELECT DISTINCT
+?property (abi:status as ?status)  ("\"data property\"" as ?statusvalue) (" . #" as ?comment) ?label ?domain ?range
+        WHERE {
+          ?property a rdf:Property .
+    	  ?property rdfs:domain ?domain .
+      	  FILTER( CONTAINS(STR(?property), "datatype") && !CONTAINS(STR(?label), "Deprecated") ) .
+    OPTIONAL{
+        ?property rdfs:range ?range .
+    }
+          OPTIONAL {
+            ?property rdfs:label ?label .
+            FILTER(LANG(?label) = "en" || LANG(?label) = "")
+          } 
+    	  VALUES ?domain {rdac:C10001 rdac:C10002 rdac:C10006 rdac:C10007} .
+         
+        }
+        ORDER BY ?domain ?label
+		
+		PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+		        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+		        PREFIX entedit: <http://oslomet.no/abi/vocab#>
+
+		        SELECT DISTINCT ?class ?label ?comment
+		        WHERE {
+		          ?class a owl:Class .
+		          ?class entedit:status "class" .
+		          OPTIONAL {
+		            ?class rdfs:label ?label .
+		            FILTER(LANG(?label) = "en" || LANG(?label) = "")
+		          }
+		          OPTIONAL {
+		            ?class rdfs:comment ?comment .
+		            FILTER(LANG(?comment) = "en" || LANG(?comment) = "")
+		          }
+		        }
+		        ORDER BY desc(?label)
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        PREFIX entedit: <http://oslomet.no/abi/vocab#>
+
+        SELECT DISTINCT ?class ?label ?comment
+        WHERE {
+          ?class a owl:Class .
+          ?class entedit:status "class" .
+          OPTIONAL {
+            ?class rdfs:label ?label .
+            FILTER(LANG(?label) = "en" || LANG(?label) = "")
+          }
+          OPTIONAL {
+            ?class rdfs:comment ?comment .
+            FILTER(LANG(?comment) = "en" || LANG(?comment) = "")
+          }
+        }
+        ORDER BY desc(?label)
+		
+	
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        PREFIX entedit: <http://oslomet.no/abi/vocab#>
+
+        SELECT DISTINCT ?class ?label ?comment
+        WHERE {
+          ?class a owl:Class .
+          ?class entedit:status "class" .
+          OPTIONAL {
+            ?class rdfs:label ?label .
+            FILTER LANGMATCHES(LANG(?label), "en")
+          }
+          OPTIONAL {
+            ?class rdfs:label ?label .
+            FILTER LANGMATCHES(LANG(?label), "")
+          }
+        }
+        ORDER BY desc(?label)
+		
+		
+
+
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX entedit: <http://oslomet.no/abi/vocab#>
+
+        SELECT DISTINCT ?property ?label ?comment ?domain ?range ?status
+        WHERE {
+          ?property a rdf:Property .
+          ?property entedit:status ?status.
+          FILTER(?status = "controlled property" || ?status = "object property") .
+          OPTIONAL {
+            ?property rdfs:label ?label .
+            FILTER(LANG(?label) = "en" || LANG(?label) = "")
+          }
+          OPTIONAL {
+            ?property rdfs:comment ?comment .
+            FILTER(LANG(?comment) = "en" || LANG(?comment) = "")
+          }
+          ?property rdfs:domain ?domain .
+          ?property rdfs:range ?range .
+    	  FILTER($range != <http://www.w3.org/2004/02/skos/core#Concept> ) .
+        }
+        ORDER BY ?status
+		
+		
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+          PREFIX owl: <http://www.w3.org/2002/07/owl#>
+          PREFIX entedit: <http://oslomet.no/abi/vocab#>
+
+          SELECT DISTINCT ?class ?label ?comment
+          WHERE {
+            ?class a owl:Class .
+            ?class entedit:status "class" .
+            OPTIONAL {
+              ?class rdfs:label ?label .
+              FILTER(LANG(?label) = "en" || LANG(?label) = "")
+            }
+            OPTIONAL {
+              ?class rdfs:comment ?comment .
+              FILTER(LANG(?comment) = "en" || LANG(?comment) = "")
+            }
+          }
+          ORDER BY desc(?label)
+		  
+		  
+		  prefix abi: <http://oslomet.no/abi/vocab#> 
+		  prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+		  prefix owl: <http://www.w3.org/2002/07/owl#> 
+
+		  select distinct ?s (rdfs:range as ?p)  (abi:Language as ?o)  (" ." as ?e){
+		  	?s ?x ?y .
+		      FILTER STRSTARTS(str(?s), "http://id.loc.gov/vocabulary/iso639-2/")
+		  } order by ?s
+		  
+		  
+		  
+          PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+          PREFIX owl: <http://www.w3.org/2002/07/owl#>
+          PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+          PREFIX entedit: <http://oslomet.no/abi/vocab#>
+
+          SELECT DISTINCT ?property ?label ?comment ?domain ?range ?status
+          WHERE {
+            ?property a rdf:Property .
+            ?property entedit:status ?status.
+            FILTER(?status = "controlled property" || ?status = "object property") .
+            OPTIONAL {
+              ?property rdfs:label ?label .
+              FILTER(LANG(?label) = "no" || LANG(?label) = "")
+            }
+            OPTIONAL {
+              ?property rdfs:comment ?comment .
+              FILTER(LANG(?comment) = "no" || LANG(?comment) = "")
+            }
+            ?property rdfs:domain ?domain .
+            ?property rdfs:range ?range .
+      	    FILTER($range != <http://www.w3.org/2004/02/skos/core#Concept> ) .
+          }
+          ORDER BY ?status

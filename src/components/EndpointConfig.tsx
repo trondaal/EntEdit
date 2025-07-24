@@ -21,6 +21,7 @@ interface EndpointConfigProps {
   selectedLanguage: string;
   onLanguageChange: (language: string) => void;
   isModal?: boolean;
+  onResetConfiguration?: () => void;
 }
 
 const EndpointConfig: React.FC<EndpointConfigProps> = ({
@@ -29,6 +30,7 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
   selectedLanguage,
   onLanguageChange,
   isModal = false,
+  onResetConfiguration,
 }) => {
   const [expanded, setExpanded] = useState(false);
   const [localConfig, setLocalConfig] = useState(config);
@@ -92,6 +94,11 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
           <Button onClick={handleReset}>
             Reset
           </Button>
+          {onResetConfiguration && (
+            <Button onClick={onResetConfiguration} color="error">
+              Reconfigure Database
+            </Button>
+          )}
           <Button variant="contained" onClick={handleSave}>
             Save Configuration
           </Button>

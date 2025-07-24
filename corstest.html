@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CORS Test</title>
+</head>
+<body>
+    <script>
+        // Test CORS from browser console
+        fetch('http://localhost:7200/repositories/your-repo-name', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'Authorization': 'Basic ' + btoa('admin:root')
+            },
+            body: 'query=SELECT ?s ?p ?o WHERE { ?s ?p ?o } LIMIT 1'
+        })
+        .then(response => {
+            console.log('CORS working!', response.headers);
+            return response.text();
+        })
+        .then(data => console.log(data))
+        .catch(error => console.error('CORS error:', error));
+    </script>
+</body>
+</html>

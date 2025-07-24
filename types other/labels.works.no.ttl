@@ -1178,3 +1178,4 @@
 <http://rdaregistry.info/Elements/w/object/P10384>	<http://www.w3.org/2000/01/rdf-schema#label>	"er transformasjon ved målgruppe for"@no .
 <http://rdaregistry.info/Elements/w/object/P10398>	<http://www.w3.org/2000/01/rdf-schema#label>	"har dato for representativt uttrykk"@no .
 <http://rdaregistry.info/Elements/w/object/P10405>	<http://www.w3.org/2000/01/rdf-schema#label>	"har relatert entitet for verk"@no .
+<http://rdaregistry.info/Elements/w/object/P10628>	<http://www.w3.org/2000/01/rdf-schema#label>	"er konkordans for verk"@no .

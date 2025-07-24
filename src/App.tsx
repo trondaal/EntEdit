@@ -1,12 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { CssBaseline, Container, Box } from "@mui/material";
+import { CssBaseline, Container, Box, CircularProgress, Typography } from "@mui/material";
 import { queryClient } from "./utils/queryClient";
 import AppHeader from "./components/AppHeader";
 import EntityBrowser from "./components/EntityBrowser";
+import ConfigurationWizard from "./components/ConfigurationWizard";
 import type { SparqlEndpointConfig } from "./types/sparql";
+import { 
+  loadConfiguration, 
+  saveConfiguration, 
+  clearConfiguration,
+  getDefaultConfiguration,
+  type AppConfiguration 
+} from "./utils/configManager";
 
 const theme = createTheme({
   components: {
@@ -56,38 +64,137 @@ const theme = createTheme({
 });
 
 function App() {
-  const [endpointConfig, setEndpointConfig] = useState<SparqlEndpointConfig>({
-    url: "/graphdb/repositories/EntEdit",
-    username: "admin",
-    password: "letmein",
-  });
-  const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
+  const [appConfig, setAppConfig] = useState<AppConfiguration | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [showWizard, setShowWizard] = useState(false);
+
+  // Load configuration on app start
+  useEffect(() => {
+    const savedConfig = loadConfiguration();
+    
+    if (savedConfig && savedConfig.isConfigured) {
+      setAppConfig(savedConfig);
+      setShowWizard(false);
+    } else {
+      setAppConfig(getDefaultConfiguration());
+      setShowWizard(true);
+    }
+    
+    setLoading(false);
+  }, []);
+
+  const handleConfigurationComplete = (config: SparqlEndpointConfig, language: string) => {
+    // Save to localStorage
+    saveConfiguration(config, language);
+    
+    // Update app state
+    const newAppConfig: AppConfiguration = {
+      endpoint: config,
+      language,
+      isConfigured: true,
+    };
+    
+    setAppConfig(newAppConfig);
+    setShowWizard(false);
+  };
+
+  const handleConfigChange = (newConfig: SparqlEndpointConfig) => {
+    if (appConfig) {
+      const updatedConfig = {
+        ...appConfig,
+        endpoint: newConfig,
+      };
+      setAppConfig(updatedConfig);
+      saveConfiguration(newConfig, appConfig.language);
+    }
+  };
+
+  const handleLanguageChange = (newLanguage: string) => {
+    if (appConfig) {
+      const updatedConfig = {
+        ...appConfig,
+        language: newLanguage,
+      };
+      setAppConfig(updatedConfig);
+      saveConfiguration(appConfig.endpoint, newLanguage);
+    }
+  };
+
+  const handleResetConfiguration = () => {
+    // Clear stored configuration
+    clearConfiguration();
+    
+    // Reset to default state and show wizard
+    setAppConfig(getDefaultConfiguration());
+    setShowWizard(true);
+  };
+
+  // Show loading spinner while determining configuration state
+  if (loading) {
+    return (
+      <QueryClientProvider client={queryClient}>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Box
+            sx={{
+              minHeight: "100vh",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <CircularProgress size={40} sx={{ mb: 2 }} />
+            <Typography variant="h6" color="text.secondary">
+              Loading EntEdit...
+            </Typography>
+          </Box>
+        </ThemeProvider>
+      </QueryClientProvider>
+    );
+  }
 
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <AppHeader
-          config={endpointConfig}
-          onConfigChange={setEndpointConfig}
-          selectedLanguage={selectedLanguage}
-          onLanguageChange={setSelectedLanguage}
+        
+        {/* Configuration Wizard - shown on first run or if config is invalid */}
+        <ConfigurationWizard
+          open={showWizard}
+          onConfigurationComplete={handleConfigurationComplete}
+          initialConfig={appConfig?.endpoint}
+          initialLanguage={appConfig?.language}
         />
-        <Box
-          sx={{
-            minHeight: "100vh",
-            display: "flex",
-            flexDirection: "column",
-            pt: "64px", // Account for fixed header height
-          }}
-        >
-          <Container maxWidth="xl" sx={{ py: 3, px: 2, flexGrow: 1 }}>
-            <EntityBrowser
-              config={endpointConfig}
-              selectedLanguage={selectedLanguage}
+
+        {/* Main Application - only rendered when properly configured */}
+        {appConfig?.isConfigured && !showWizard && (
+          <>
+            <AppHeader
+              config={appConfig.endpoint}
+              onConfigChange={handleConfigChange}
+              selectedLanguage={appConfig.language}
+              onLanguageChange={handleLanguageChange}
+              onResetConfiguration={handleResetConfiguration}
             />
-          </Container>
-        </Box>
+            <Box
+              sx={{
+                minHeight: "100vh",
+                display: "flex",
+                flexDirection: "column",
+                pt: "64px", // Account for fixed header height
+              }}
+            >
+              <Container maxWidth="xl" sx={{ py: 3, px: 2, flexGrow: 1 }}>
+                <EntityBrowser
+                  config={appConfig.endpoint}
+                  selectedLanguage={appConfig.language}
+                />
+              </Container>
+            </Box>
+          </>
+        )}
+        
         <ReactQueryDevtools initialIsOpen={false} />
       </ThemeProvider>
     </QueryClientProvider>

@@ -1,6 +1,10 @@
 @prefix abi: <http://oslomet.no/abi/vocab#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdaao: <http://rdaregistry.info/Elements/a/object/> .
+@prefix rdawo: <http://rdaregistry.info/Elements/w/object/> .
+@prefix rdaeo: <http://rdaregistry.info/Elements/e/object/> .
+@prefix rdamo: <http://rdaregistry.info/Elements/m/object/> .
 
 abi:StatusLiteral a rdfs:Datatype ;
     owl:oneOf ("data property" "object property" "class" "controlled property" "deprecated" "not used") .

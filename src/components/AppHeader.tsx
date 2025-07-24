@@ -18,6 +18,7 @@ interface AppHeaderProps {
   onConfigChange: (config: SparqlEndpointConfig) => void;
   selectedLanguage: string;
   onLanguageChange: (language: string) => void;
+  onResetConfiguration?: () => void;
 }
 
 const AppHeader: React.FC<AppHeaderProps> = ({
@@ -25,6 +26,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({
   onConfigChange,
   selectedLanguage,
   onLanguageChange,
+  onResetConfiguration,
 }) => {
   const [configDialogOpen, setConfigDialogOpen] = useState(false);
 
@@ -170,6 +172,10 @@ const AppHeader: React.FC<AppHeaderProps> = ({
           selectedLanguage={selectedLanguage}
           onLanguageChange={onLanguageChange}
           isModal={true}
+          onResetConfiguration={() => {
+            setConfigDialogOpen(false);
+            onResetConfiguration?.();
+          }}
         />
       </Dialog>
     </>
