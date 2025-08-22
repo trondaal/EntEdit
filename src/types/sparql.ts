@@ -5,9 +5,9 @@ export interface SparqlEndpointConfig {
 }
 
 export interface SparqlBinding {
-  type: 'uri' | 'literal' | 'bnode';
+  type: "uri" | "literal" | "bnode";
   value: string;
-  'xml:lang'?: string;
+  "xml:lang"?: string;
   datatype?: string;
 }
 

@@ -91,9 +91,7 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
           </Box>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleReset}>
-            Reset
-          </Button>
+          <Button onClick={handleReset}>Reset</Button>
           {onResetConfiguration && (
             <Button onClick={onResetConfiguration} color="error">
               Reconfigure Database
@@ -125,9 +123,7 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
 
       <Collapse in={expanded}>
         <Box sx={{ p: 2, pt: 0 }}>
-          <Box
-            sx={{ display: "flex", alignItems: "flex-start", mb: 2 }}
-          >
+          <Box sx={{ display: "flex", alignItems: "flex-start", mb: 2 }}>
             <TextField
               label="SPARQL Endpoint URL"
               value={localConfig.url}

@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+.continue/mcpServers/github.yaml
+testdata/Hamsun.rdf
+testdata/Grass.rdf
+testdata/Ballard.rdf
