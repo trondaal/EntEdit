@@ -1,16 +1,17 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: "/entedit/", // Set this to your subfolder name
   server: {
     proxy: {
-      '/graphdb': {
-        target: 'http://localhost:7200',
+      "/graphdb": {
+        target: "http://localhost:7200",
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/graphdb/, ''),
+        rewrite: (path) => path.replace(/^\/graphdb/, ""),
       },
     },
   },
-})
+});
