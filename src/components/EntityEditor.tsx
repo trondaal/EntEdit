@@ -326,9 +326,13 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   const handleOpenGraph = () => {
     if (!entityUri) return;
 
+    // Derive visualization base URI from SPARQL endpoint URL
+    const url = new URL(config.url);
+    const baseUrl = `${url.protocol}//${url.host}`;
+    
     // Encode the URI for the query parameter
     const encodedUri = encodeURIComponent(entityUri);
-    const graphUrl = `http://localhost:7200/graphs-visualizations?uri=${encodedUri}&embedded`;
+    const graphUrl = `${baseUrl}/graphs-visualizations?uri=${encodedUri}&embedded`;
 
     // Open in new tab
     window.open(graphUrl, "_blank");
