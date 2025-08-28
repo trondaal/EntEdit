@@ -44,6 +44,7 @@ interface EntityEditorProps {
   objectPropertiesLoading: boolean;
   selectedLanguage: string;
   onEntitySaved: () => void;
+  onEntityDeselected?: () => void;
 }
 
 const EntityEditor: React.FC<EntityEditorProps> = ({
@@ -56,6 +57,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   objectPropertiesLoading,
   selectedLanguage,
   onEntitySaved,
+  onEntityDeselected,
 }) => {
   const queryClient = useQueryClient();
   const [entityData, setEntityData] = useState<Record<string, string[]>>({});
@@ -588,6 +590,15 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
                     color="primary"
                   >
                     Graph
+                  </Button>
+                  <Button
+                    variant="outlined"
+                    size="small"
+                    onClick={() => onEntityDeselected?.()}
+                    startIcon={<Add />}
+                    color="success"
+                  >
+                    New
                   </Button>
                   <Button
                     variant="outlined"

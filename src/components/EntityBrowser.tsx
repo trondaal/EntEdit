@@ -268,6 +268,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
             onEntitySaved={() => {
               // Optionally refetch entities list
             }}
+            onEntityDeselected={() => setSelectedEntity(null)}
           />
         </Box>
       </Box>
