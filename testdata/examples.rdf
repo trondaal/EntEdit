@@ -72,10 +72,9 @@
    <rdac:C10007 rdf:about="http://example.org/isbn-0330468464">
       <rdamd:P30004>ISBN 0330468464 (pbk.)</rdamd:P30004>
       <rdaxd:P00018>isbn-0330468464</rdaxd:P00018>
-      <rdfs:label>ISBN0330468464 (pbk.)</rdfs:label>
       <rdamd:P30004>ISBN 9780330468466 (pbk.)</rdamd:P30004>
       <rdaxd:P00018>isbn-9780330468466</rdaxd:P00018>
-      <rdfs:label>ISBN9780330468466 (pbk.)</rdfs:label>
+      <rdfs:label>The road / Cormac McCarthy. --Picador,2009</rdfs:label>
       <rdamd:P30156>The road</rdamd:P30156>
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
@@ -93,7 +92,7 @@
    <rdac:C10007 rdf:about="http://example.org/isbn-8205277478">
       <rdamd:P30004>ISBN 8205277478</rdamd:P30004>
       <rdaxd:P00018>isbn-8205277478</rdaxd:P00018>
-      <rdfs:label>ISBN8205277478</rdfs:label>
+      <rdfs:label>Markens grøde / Knut Hamsun. --Gyldendal, 2001</rdfs:label>
       <rdamd:P30156>Markens grøde</rdamd:P30156>
       <rdamd:P30117>Knut Hamsun</rdamd:P30117>
       <rdamd:P30088>[Oslo]</rdamd:P30088>
