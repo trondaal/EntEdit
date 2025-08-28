@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:frbrizer="http://idi.ntnu.no/frbrizer/"
+         xmlns:xs="http://www.w3.org/2001/XMLSchema"
+         xmlns:marc="http://www.loc.gov/MARC21/slim"
+         xmlns:rdac="http://rdaregistry.info/Elements/c/"
+         xmlns:rdaad="http://rdaregistry.info/Elements/a/datatype/"
+         xmlns:rdaao="http://rdaregistry.info/Elements/a/object/"
+         xmlns:rdawd="http://rdaregistry.info/Elements/w/datatype/"
+         xmlns:rdawo="http://rdaregistry.info/Elements/w/object/"
+         xmlns:rdaed="http://rdaregistry.info/Elements/e/datatype/"
+         xmlns:rdaeo="http://rdaregistry.info/Elements/e/object/"
+         xmlns:rdamd="http://rdaregistry.info/Elements/m/datatype/"
+         xmlns:rdamo="http://rdaregistry.info/Elements/m/object/"
+         xmlns:rdaxd="http://rdaregistry.info/Elements/x/datatype/"
+         xmlns:mads="http://www.loc.gov/mads/rdf/v1#"
+         xmlns:mmmm="http://www.loc.gov/MARC21/slim/"
+         xmlns:rdaco="http://rdaregistry.info/termList/RDAContentType/"
+         xmlns:rdact="http://rdaregistry.info/termList/RDACarrierType/"
+         xmlns:rdamt="http://rdaregistry.info/termList/RDAMediaType/"
+         xmlns:rdat="http://rdaregistry.info/termList/"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:ex="http://www.example.org/">
+   <rdac:C10001 rdf:about="http://viaf.org/viaf/220031159">
+      <rdaxd:P00018>http://viaf.org/viaf/220031159</rdaxd:P00018>
+      <rdawd:P10088>The road</rdawd:P10088>
+      <rdfs:label>The road (McCarthy, Cormac)</rdfs:label>
+      <rdaxd:P00029>Roman</rdaxd:P00029>
+      <rdawo:P10061 rdf:resource="http://viaf.org/viaf/29558386"/>
+   </rdac:C10001>
+   <rdac:C10001 rdf:about="http://viaf.org/viaf/294124367">
+      <rdaxd:P00018>http://viaf.org/viaf/294124367</rdaxd:P00018>
+      <rdawd:P10088>Markens grøde</rdawd:P10088>
+      <rdfs:label>Markens grøde (Hamsun, Knut)</rdfs:label>
+      <rdaxd:P00029>novel</rdaxd:P00029>
+      <rdawd:P10004 rdf:resource="https://schema.nb.no/Bibliographic/Values/V1000"/>
+      <rdawo:P10061 rdf:resource="http://viaf.org/viaf/59083692"/>
+   </rdac:C10001>
+   <rdac:C10002 rdf:about="http://viaf.org/viaf/29558386">
+      <rdaxd:P00018>http://viaf.org/viaf/29558386</rdaxd:P00018>
+      <rdaad:P50385>McCarthy, Cormac</rdaad:P50385>
+      <rdfs:label>McCarthy, Cormac</rdfs:label>
+      <rdaad:P50339>1933-2023</rdaad:P50339>
+   </rdac:C10002>
+   <rdac:C10002 rdf:about="http://viaf.org/viaf/59083692">
+      <rdaxd:P00018>http://viaf.org/viaf/59083692</rdaxd:P00018>
+      <rdaad:P50385>Hamsun, Knut</rdaad:P50385>
+      <rdfs:label>Hamsun, Knut</rdfs:label>
+      <rdaad:P50339>1859-1952</rdaad:P50339>
+   </rdac:C10002>
+   <rdac:C10006 rdf:about="http://viaf.org/viaf/220031159/exp/eng/1020/">
+      <rdaed:P20316>The road</rdaed:P20316>
+      <rdaxd:P00029>standalone</rdaxd:P00029>
+      <rdaed:P20312>The road</rdaed:P20312>
+      <rdfs:label>The road (McCarthy, Cormac)</rdfs:label>
+      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/220031159"/>
+   </rdac:C10006>
+   <rdac:C10006 rdf:about="http://viaf.org/viaf/294124367/exp/nob/nor/1020/">
+      <rdaed:P20316>Markens grøde</rdaed:P20316>
+      <rdaxd:P00029>standalone</rdaxd:P00029>
+      <rdaed:P20312>Markens grøde</rdaed:P20312>
+      <rdfs:label>Markens grøde (Hamsun, Knut)</rdfs:label>
+      <rdaed:P20001 rdf:resource="http://rdaregistry.info/termList/RDAContentType/1020"/>
+      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/nob"/>
+      <rdaed:P20006 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/nor"/>
+      <rdaeo:P20231 rdf:resource="http://viaf.org/viaf/294124367"/>
+   </rdac:C10006>
+   <rdac:C10007 rdf:about="http://example.org/isbn-0330468464">
+      <rdamd:P30004>ISBN 0330468464 (pbk.)</rdamd:P30004>
+      <rdaxd:P00018>isbn-0330468464</rdaxd:P00018>
+      <rdfs:label>ISBN0330468464 (pbk.)</rdfs:label>
+      <rdamd:P30004>ISBN 9780330468466 (pbk.)</rdamd:P30004>
+      <rdaxd:P00018>isbn-9780330468466</rdaxd:P00018>
+      <rdfs:label>ISBN9780330468466 (pbk.)</rdfs:label>
+      <rdamd:P30156>The road</rdamd:P30156>
+      <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
+      <rdamd:P30088>London</rdamd:P30088>
+      <rdamd:P30111>London : Picador, 2009</rdamd:P30111>
+      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30011>2009</rdamd:P30011>
+      <rdamd:P30182>307 p., 20 cm.</rdamd:P30182>
+      <rdamd:P30137>Film tie-in.</rdamd:P30137>
+      <rdamd:P30137>Formerly CIP.</rdamd:P30137>
+      <rdamd:P30137>Originally published: 2006.</rdamd:P30137>
+      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30139 rdf:resource="http://viaf.org/viaf/220031159/exp/eng/1020/"/>
+   </rdac:C10007>
+   <rdac:C10007 rdf:about="http://example.org/isbn-8205277478">
+      <rdamd:P30004>ISBN 8205277478</rdamd:P30004>
+      <rdaxd:P00018>isbn-8205277478</rdaxd:P00018>
+      <rdfs:label>ISBN8205277478</rdfs:label>
+      <rdamd:P30156>Markens grøde</rdamd:P30156>
+      <rdamd:P30117>Knut Hamsun</rdamd:P30117>
+      <rdamd:P30088>[Oslo]</rdamd:P30088>
+      <rdamd:P30111>[Oslo] : Gyldendal, 2001</rdamd:P30111>
+      <rdamd:P30083>Gyldendal</rdamd:P30083>
+      <rdamd:P30011>2001</rdamd:P30011>
+      <rdamd:P30182>277 s.</rdamd:P30182>
+      <rdamd:P30106>Gyldendals 10 store</rdamd:P30106>
+      <rdamd:P30137>1. utg. Kristiania ; København : Gyldendalske Boghandel, 1917 i 2 b.</rdamd:P30137>
+      <rdamd:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
+      <rdamd:P30002 rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1007"/>
+      <rdamo:P30139 rdf:resource="http://viaf.org/viaf/294124367/exp/nob/nor/1020/"/>
+   </rdac:C10007>
+   <skos:Concept rdf:about="http://id.loc.gov/vocabulary/iso639-2/eng">
+      <rdfs:label>eng</rdfs:label>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://id.loc.gov/vocabulary/iso639-2/nob">
+      <rdfs:label>nob</rdfs:label>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://id.loc.gov/vocabulary/iso639-2/nor">
+      <skos:subjectIndicator>nor</skos:subjectIndicator>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://rdaregistry.info/termList/RDACarrierType/1049">
+      <skos:subjectIndicator>http://rdaregistry.info/termList/RDACarrierType/1049</skos:subjectIndicator>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://rdaregistry.info/termList/RDAContentType/1020">
+      <skos:subjectIndicator>http://rdaregistry.info/termList/RDAContentType/1020</skos:subjectIndicator>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://rdaregistry.info/termList/RDAMediaType/1007">
+      <skos:subjectIndicator>http://rdaregistry.info/termList/RDAMediaType/1007</skos:subjectIndicator>
+   </skos:Concept>
+   <skos:Concept rdf:about="https://schema.nb.no/Bibliographic/Values/V1000">
+      <skos:subjectIndicator>https://schema.nb.no/Bibliographic/Values/V1000</skos:subjectIndicator>
+   </skos:Concept>
+</rdf:RDF>
