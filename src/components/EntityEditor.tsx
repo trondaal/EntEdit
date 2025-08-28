@@ -329,10 +329,10 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     // Derive visualization base URI from SPARQL endpoint URL
     const url = new URL(config.url);
     const baseUrl = `${url.protocol}//${url.host}`;
-    
+
     // Encode the URI for the query parameter
     const encodedUri = encodeURIComponent(entityUri);
-    const graphUrl = `${baseUrl}/graphs-visualizations?uri=${encodedUri}&embedded`;
+    const graphUrl = `${baseUrl}/graphs-visualizations?uri=${encodedUri}`;
 
     // Open in new tab
     window.open(graphUrl, "_blank");
