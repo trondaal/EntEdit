@@ -38,13 +38,13 @@ abi:Language rdfs:label "Language"@en .
 <http://rdaregistry.info/Elements/c/C10001>             abi:status "class" .  # "Work"@en .
 <http://rdaregistry.info/Elements/c/C10006>             abi:status "class" .  # "Expression"@en .
 <http://rdaregistry.info/Elements/c/C10007>             abi:status "class" .  # "Manifestation"@en .
-# <http://www.w3.org/2004/02/skos/core#Concept>			abi:status "class" .  # "Concept"@en .
 
-abi:Worktype		                                        abi:status "class" .  # "Verkstype"@en .
-abi:Language			                                      abi:status "class" .  # "Språk"@en .
-abi:Contenttype			                                    abi:status "class" .  # "Innholdstype"@en .
-abi:Carriertype  			                                  abi:status "class" .  # "Bærertype"@en .
-abi:Mediatype			                                      abi:status "class" .  # "Mediatype"@en .
+# <http://www.w3.org/2004/02/skos/core#Concept>			    abi:status "class" .  # "Concept"@en .
+#abi:Worktype		                                        abi:status "class" .  # "Verkstype"@en .
+#abi:Language			                                      abi:status "class" .  # "Språk"@en .
+#abi:Contenttype			                                  abi:status "class" .  # "Innholdstype"@en .
+#abi:Carriertype  			                                abi:status "class" .  # "Bærertype"@en .
+#abi:Mediatype			                                    abi:status "class" .  # "Mediatype"@en .
 
 #Agent profile, data properties
 <http://rdaregistry.info/Elements/a/datatype/P50339>	abi:status "data property" .   #"dates"@en .
