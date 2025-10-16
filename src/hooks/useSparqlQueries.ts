@@ -106,8 +106,22 @@ export const useEntitiesByClass = (
         SELECT DISTINCT ?entity (SAMPLE(?label) AS ?label)
         WHERE {
           ?entity a <${classUri}> .
-          OPTIONAL { ?entity rdfs:label ?label .
-          FILTER(LANG(?label) = "${language}" || LANG(?label) = "") .}
+
+          # Choosing label in the priority order chosen, none, any
+          OPTIONAL {
+            ?entity rdfs:label ?label_chosen .
+            FILTER(LANG(?label_chosen) = "${language}") .
+          }
+          OPTIONAL {
+            ?entity rdfs:label ?label_none .
+            FILTER(LANG(?label_none) = "") .
+          }
+          OPTIONAL {
+            ?entity rdfs:label ?label_any .
+            FILTER(LANG(?label_any) = "*") .
+          }
+          BIND(COALESCE(?label_chosen, ?label_none, ?label_any) AS ?label)
+
         }GROUP BY ?entity
         ORDER BY ?label ?entity
       `;
@@ -137,19 +151,27 @@ export const useRdfObjectProperties = (
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
         PREFIX entedit: <http://oslomet.no/abi/vocab#>
 
-        SELECT DISTINCT ?property ?label ?comment ?domain ?range ?status
+        SELECT DISTINCT ?property ?label ?domain ?range ?status
         WHERE {
           ?property a rdf:Property .
           ?property entedit:status ?status.
           FILTER(?status = "controlled property" || ?status = "object property") .
+
+          # Choosing label in the priority order chosen, none, any
           OPTIONAL {
-            ?property rdfs:label ?label .
-            FILTER(LANG(?label) = "${language}" || LANG(?label) = "")
+            ?entity rdfs:label ?label_chosen .
+            FILTER(LANG(?label_chosen) = "${language}") .
           }
           OPTIONAL {
-            ?property rdfs:comment ?comment .
-            FILTER(LANG(?comment) = "${language}" || LANG(?comment) = "")
+            ?entity rdfs:label ?label_none .
+            FILTER(LANG(?label_none) = "") .
           }
+          OPTIONAL {
+            ?entity rdfs:label ?label_any .
+            FILTER(LANG(?label_any) = "*") .
+          }
+          BIND(COALESCE(?label_chosen, ?label_none, ?label_any) AS ?label)
+
           ?property rdfs:domain ?domain .
           ?property rdfs:range ?range .
     	    FILTER($range != <http://www.w3.org/2004/02/skos/core#Concept> ) .
@@ -187,10 +209,22 @@ export const useEntitiesByRange = (
         SELECT DISTINCT ?entity ?label
         WHERE {
           ?entity a <${rangeUri}> .
+
+          # Choosing label in the priority order chosen, none, any
           OPTIONAL {
-            ?entity rdfs:label ?label .
-            FILTER(LANG(?label) = "${language}" || LANG(?label) = "")
+            ?entity rdfs:label ?label_chosen .
+            FILTER(LANG(?label_chosen) = "${language}") .
           }
+          OPTIONAL {
+            ?entity rdfs:label ?label_none .
+            FILTER(LANG(?label_none) = "") .
+          }
+          OPTIONAL {
+            ?entity rdfs:label ?label_any .
+            FILTER(LANG(?label_any) = "*") .
+          }
+          BIND(COALESCE(?label_chosen, ?label_none, ?label_any) AS ?label)
+
         }
         ORDER BY ?label ?entity
         LIMIT 1000
