@@ -11,6 +11,7 @@ export interface SearchResult {
   language?: string;
   contentType?: string;
   workType?: string;
+  description?: string;
   type?: string;
   score?: number;
 }
@@ -37,7 +38,7 @@ export const useSearchEntities = (
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
-        SELECT DISTINCT ?entity ?label ?score WHERE {
+        SELECT DISTINCT ?entity ?label ?description ?score WHERE {
           ?search a inst:entitiesIndex ;
                   lucene:query "${query.replace(/"/g, '\\"')}" ;
                   lucene:entities ?entity .
@@ -51,8 +52,14 @@ export const useSearchEntities = (
             BIND(STR(?labelLit) AS ?label)
           }
 
+          OPTIONAL {
+            ?entity rdfs:comment ?descLit .
+            FILTER(LANG(?descLit) = "" || LANG(?descLit) = "${language}")
+            BIND(STR(?descLit) AS ?description)
+          }
         }
         ORDER BY DESC(?score)
+        LIMIT 100
       `;
 
       const response = await client.query(sparqlQuery);
