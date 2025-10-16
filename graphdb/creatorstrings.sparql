@@ -1,0 +1,35 @@
+PREFIX local: <http://oslomet.no/abi/>
+select * where {
+    ?s local:creators ?o .
+}
+
+PREFIX local: <http://oslomet.no/abi/>
+DELETE { ?e local:creators ?value }
+WHERE { ?e local:creators ?value };
+
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX local: <http://oslomet.no/abi/>
+
+INSERT {
+    ?e local:creators ?creatorText
+}
+WHERE {
+    {
+        SELECT ?e (STRLANG(GROUP_CONCAT(DISTINCT ?roleCreators; SEPARATOR="; "), "en-x-display") AS ?creatorText)
+        WHERE {
+            {
+                SELECT ?e ?role (CONCAT(?role, ": ", (GROUP_CONCAT(DISTINCT ?name; SEPARATOR=" & "))) AS ?roleCreators)
+                WHERE {
+                    ?a a <http://rdaregistry.info/Elements/c/C10002> .
+                    ?e ?property ?a .
+                    ?a rdfs:label ?name .
+                    ?property rdfs:label ?role .
+                    FILTER(lang(?role) = "en-x-display") .
+                }
+                GROUP BY ?e ?role
+            }
+        }
+        GROUP BY ?e
+    }
+};

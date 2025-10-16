@@ -1,4 +1,4 @@
-﻿<http://rdaregistry.info/Elements/w/datatype/P10061>	<http://www.w3.org/2000/01/rdf-schema#label>	"har forfatter (agent)"@no .
+<http://rdaregistry.info/Elements/w/datatype/P10061>	<http://www.w3.org/2000/01/rdf-schema#label>	"har forfatter (agent)"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10058>	<http://www.w3.org/2000/01/rdf-schema#label>	"har kunstner (agent)"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10053>	<http://www.w3.org/2000/01/rdf-schema#label>	"har komponist for verk (agent)"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10056>	<http://www.w3.org/2000/01/rdf-schema#label>	"har fotograf for verk (agent)"@no .
