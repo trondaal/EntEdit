@@ -1,4 +1,4 @@
-﻿<http://rdaregistry.info/Elements/m/object/P30131>	<http://www.w3.org/2000/01/rdf-schema#label>	"har forkortet tittel"@no .
+<http://rdaregistry.info/Elements/m/object/P30131>	<http://www.w3.org/2000/01/rdf-schema#label>	"har forkortet tittel"@no .
 <http://rdaregistry.info/Elements/m/object/P30276>	<http://www.w3.org/2000/01/rdf-schema#label>	"har søkeinngang for manifestasjon"@no .
 <http://rdaregistry.info/Elements/m/object/P30027>	<http://www.w3.org/2000/01/rdf-schema#label>	"er ledsaget av manifestasjon"@no .
 <http://rdaregistry.info/Elements/m/object/P30026>	<http://www.w3.org/2000/01/rdf-schema#label>	"er også utgitt som"@no .
