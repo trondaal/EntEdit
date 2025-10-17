@@ -65,14 +65,12 @@ export const useRdfProperties = (
         WHERE {
           ?property a rdf:Property .
           ?property entedit:status "data property" .
+          
           OPTIONAL {
             ?property rdfs:label ?label .
             FILTER(LANG(?label) = "${language}" || LANG(?label) = "")
           }
-          OPTIONAL {
-            ?property rdfs:comment ?comment .
-            FILTER(LANG(?comment) = "${language}" || LANG(?comment) = "")
-          }
+
           OPTIONAL { ?property rdfs:domain ?domain }
           OPTIONAL { ?property rdfs:range ?range }
           ${classUri ? `FILTER(?domain = <${classUri}>)` : ""}
@@ -106,23 +104,25 @@ export const useEntitiesByClass = (
         SELECT DISTINCT ?entity (SAMPLE(?label) AS ?label)
         WHERE {
           ?entity a <${classUri}> .
-
+          
           # Choosing label in the priority order chosen, none, any
           OPTIONAL {
-            ?entity rdfs:label ?label_chosen .
-            FILTER(LANG(?label_chosen) = "${language}") .
+            ?property rdfs:label ?label_chosen .
+            FILTER(LANGMATCHES(LANG(?label_chosen), "${language}")) .
           }
           OPTIONAL {
-            ?entity rdfs:label ?label_none .
+            ?property rdfs:label ?label_none .
             FILTER(LANG(?label_none) = "") .
           }
+          # Defaulting to English if no language is specified
           OPTIONAL {
-            ?entity rdfs:label ?label_any .
-            FILTER(LANG(?label_any) = "*") .
+            ?property rdfs:label ?label_any .
+            FILTER(LANGMATCHES(LANG(?label_any), "en")) .
           }
           BIND(COALESCE(?label_chosen, ?label_none, ?label_any) AS ?label)
 
-        }GROUP BY ?entity
+        }
+        GROUP BY ?entity
         ORDER BY ?label ?entity
       `;
 
@@ -159,16 +159,17 @@ export const useRdfObjectProperties = (
 
           # Choosing label in the priority order chosen, none, any
           OPTIONAL {
-            ?entity rdfs:label ?label_chosen .
-            FILTER(LANG(?label_chosen) = "${language}") .
+            ?property rdfs:label ?label_chosen .
+            FILTER(LANGMATCHES(LANG(?label_chosen), "${language}")) .
           }
           OPTIONAL {
-            ?entity rdfs:label ?label_none .
+            ?property rdfs:label ?label_none .
             FILTER(LANG(?label_none) = "") .
           }
+          # Defaulting to English if no language is specified
           OPTIONAL {
-            ?entity rdfs:label ?label_any .
-            FILTER(LANG(?label_any) = "*") .
+            ?property rdfs:label ?label_any .
+            FILTER(LANGMATCHES(LANG(?label_any), "en")) .
           }
           BIND(COALESCE(?label_chosen, ?label_none, ?label_any) AS ?label)
 
@@ -213,15 +214,16 @@ export const useEntitiesByRange = (
           # Choosing label in the priority order chosen, none, any
           OPTIONAL {
             ?entity rdfs:label ?label_chosen .
-            FILTER(LANG(?label_chosen) = "${language}") .
+            FILTER(LANGMATCHES(LANG(?label_chosen), "${language}")) .
           }
           OPTIONAL {
             ?entity rdfs:label ?label_none .
             FILTER(LANG(?label_none) = "") .
           }
+          # Defaulting to any language if no language is specified, safe because we only use few languages
           OPTIONAL {
             ?entity rdfs:label ?label_any .
-            FILTER(LANG(?label_any) = "*") .
+            FILTER(LANGMATCHES(LANG(?label_any), "*")) .
           }
           BIND(COALESCE(?label_chosen, ?label_none, ?label_any) AS ?label)
 

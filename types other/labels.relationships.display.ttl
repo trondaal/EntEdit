@@ -1,0 +1,11 @@
+#Expression to agent
+<http://rdaregistry.info/Elements/e/object/P20037>	<http://www.w3.org/2000/01/rdf-schema#label>	"oversetter"@no-x-display .
+<http://rdaregistry.info/Elements/e/object/P20037>	<http://www.w3.org/2000/01/rdf-schema#label>	"translator"@en-x-display .
+<http://rdaregistry.info/Elements/e/object/P20022>	<http://www.w3.org/2000/01/rdf-schema#label>	"innleser"@no-x-display .
+<http://rdaregistry.info/Elements/e/object/P20022>	<http://www.w3.org/2000/01/rdf-schema#label>	"narrator"@en-x-display.
+<http://rdaregistry.info/Elements/e/object/P20012>	<http://www.w3.org/2000/01/rdf-schema#label>	"skuespiller"@no-x-display .
+<http://rdaregistry.info/Elements/e/object/P20012>	<http://www.w3.org/2000/01/rdf-schema#label>	"actor"@en-x-display .
+
+#Work to agent
+<http://rdaregistry.info/Elements/w/object/P10061>	<http://www.w3.org/2000/01/rdf-schema#label>	"forfatter"@no-x-display.
+<http://rdaregistry.info/Elements/w/object/P10061>	<http://www.w3.org/2000/01/rdf-schema#label>	"author"@en-x-display.
