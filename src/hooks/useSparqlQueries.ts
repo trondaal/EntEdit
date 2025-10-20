@@ -104,16 +104,16 @@ export const useEntitiesByClass = (
           
           # Choosing label in the priority order chosen, none, any
           OPTIONAL {
-            ?property rdfs:label ?label_chosen .
+            ?entity rdfs:label ?label_chosen .
             FILTER(LANGMATCHES(LANG(?label_chosen), "${language}")) .
           }
           OPTIONAL {
-            ?property rdfs:label ?label_none .
+            ?entity rdfs:label ?label_none .
             FILTER(LANG(?label_none) = "") .
           }
           # Defaulting to English if no language is specified
           OPTIONAL {
-            ?property rdfs:label ?label_en .
+            ?entity rdfs:label ?label_en .
             FILTER(LANGMATCHES(LANG(?label_en), "*")) .
           }
           BIND(COALESCE(?label_chosen, ?label_none, ?label_en) AS ?label)
