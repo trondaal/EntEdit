@@ -19,17 +19,13 @@ export const useRdfClasses = (
         PREFIX owl: <http://www.w3.org/2002/07/owl#>
         PREFIX entedit: <http://oslomet.no/abi/vocab#>
 
-        SELECT DISTINCT ?class ?label ?comment
+        SELECT DISTINCT ?class ?label
         WHERE {
           ?class a owl:Class .
           ?class entedit:status "class" .
           OPTIONAL {
             ?class rdfs:label ?label .
             FILTER(LANG(?label) = "${language}" || LANG(?label) = "")
-          }
-          OPTIONAL {
-            ?class rdfs:comment ?comment .
-            FILTER(LANG(?comment) = "${language}" || LANG(?comment) = "")
           }
         }
         ORDER BY desc(?label)
@@ -46,6 +42,7 @@ export const useRdfClasses = (
   });
 };
 
+// Retrieve all data properties for a given class
 export const useRdfProperties = (
   config: SparqlEndpointConfig,
   classUri?: string,
@@ -116,10 +113,10 @@ export const useEntitiesByClass = (
           }
           # Defaulting to English if no language is specified
           OPTIONAL {
-            ?property rdfs:label ?label_any .
-            FILTER(LANGMATCHES(LANG(?label_any), "en")) .
+            ?property rdfs:label ?label_en .
+            FILTER(LANGMATCHES(LANG(?label_en), "*")) .
           }
-          BIND(COALESCE(?label_chosen, ?label_none, ?label_any) AS ?label)
+          BIND(COALESCE(?label_chosen, ?label_none, ?label_en) AS ?label)
 
         }
         GROUP BY ?entity
@@ -157,21 +154,10 @@ export const useRdfObjectProperties = (
           ?property entedit:status ?status.
           FILTER(?status = "controlled property" || ?status = "object property") .
 
-          # Choosing label in the priority order chosen, none, any
           OPTIONAL {
-            ?property rdfs:label ?label_chosen .
-            FILTER(LANGMATCHES(LANG(?label_chosen), "${language}")) .
+            ?property rdfs:label ?label .
+            FILTER(LANG(?label) = "${language}" || LANG(?label) = "")
           }
-          OPTIONAL {
-            ?property rdfs:label ?label_none .
-            FILTER(LANG(?label_none) = "") .
-          }
-          # Defaulting to English if no language is specified
-          OPTIONAL {
-            ?property rdfs:label ?label_any .
-            FILTER(LANGMATCHES(LANG(?label_any), "en")) .
-          }
-          BIND(COALESCE(?label_chosen, ?label_none, ?label_any) AS ?label)
 
           ?property rdfs:domain ?domain .
           ?property rdfs:range ?range .
@@ -242,6 +228,7 @@ export const useEntitiesByRange = (
   });
 };
 
+//Retrieve all available languages used in the dataset
 export const useAvailableLanguages = (config: SparqlEndpointConfig) => {
   return useQuery({
     queryKey: ["available-languages", config.url],
@@ -254,7 +241,7 @@ export const useAvailableLanguages = (config: SparqlEndpointConfig) => {
         WHERE {
           ?s rdfs:label ?label .
           BIND(LANG(?label) AS ?lang)
-          FILTER(?lang != "")
+          FILTER(?lang != "" && STRLEN(?lang) = 2)
         }
         ORDER BY ?lang
       `;
