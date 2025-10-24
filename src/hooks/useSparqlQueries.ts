@@ -174,7 +174,7 @@ export const useRdfObjectProperties = (
 
           ?property rdfs:domain ?domain .
           ?property rdfs:range ?range .
-    	    FILTER($range != <http://www.w3.org/2004/02/skos/core#Concept> ) .
+    	    FILTER(?range != <http://www.w3.org/2004/02/skos/core#Concept> ) .
           ${classUri ? `FILTER(?domain = <${classUri}>)` : ""}
         }
         ORDER BY ?label
