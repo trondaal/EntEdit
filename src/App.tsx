@@ -70,10 +70,13 @@ function App() {
   const [showWizard, setShowWizard] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
 
+  // Check if search tab should be shown based on URL parameter
+  const showSearchTab = new URLSearchParams(window.location.search).has('search');
+
   // Load configuration on app start
   useEffect(() => {
     const savedConfig = loadConfiguration();
-    
+
     if (savedConfig && savedConfig.isConfigured) {
       setAppConfig(savedConfig);
       setShowWizard(false);
@@ -81,7 +84,7 @@ function App() {
       setAppConfig(getDefaultConfiguration());
       setShowWizard(true);
     }
-    
+
     setLoading(false);
   }, []);
 
@@ -195,7 +198,7 @@ function App() {
                     aria-label="main navigation tabs"
                   >
                     <Tab label="Entity Browser" />
-                    <Tab label="Search" />
+                    {showSearchTab && <Tab label="Search" />}
                   </Tabs>
                 </Container>
               </Box>
@@ -207,7 +210,7 @@ function App() {
                     selectedLanguage={appConfig.language}
                   />
                 )}
-                {activeTab === 1 && (
+                {activeTab === 1 && showSearchTab && (
                   <SearchInterface
                     config={appConfig.endpoint}
                     selectedLanguage={appConfig.language}
