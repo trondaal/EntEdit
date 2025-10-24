@@ -5,12 +5,6 @@ import type { SparqlEndpointConfig } from "../types/sparql";
 export interface SearchResult {
   uri: string;
   label?: string;
-  etitle?: string;
-  wtitle?: string;
-  agents?: string;
-  language?: string;
-  contentType?: string;
-  workType?: string;
   description?: string;
   type?: string;
   score?: number;
