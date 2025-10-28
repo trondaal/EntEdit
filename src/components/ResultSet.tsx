@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import Expression from "./Expression";
 import type { SearchResult } from "../hooks/useSearchQueries";
+import type { SparqlEndpointConfig } from "../types/sparql";
 
 interface ResultSetProps {
   searchQuery: string;
@@ -17,6 +18,10 @@ interface ResultSetProps {
   searchError: Error | null;
   selectedResult: string | null;
   onSelectResult: (uri: string) => void;
+  config: SparqlEndpointConfig;
+  selectedManifestationUri: string | null;
+  onManifestationSelect: (uri: string) => void;
+  selectedLanguage: string;
 }
 
 const ResultSet: React.FC<ResultSetProps> = ({
@@ -26,6 +31,10 @@ const ResultSet: React.FC<ResultSetProps> = ({
   searchError,
   selectedResult,
   onSelectResult,
+  config,
+  selectedManifestationUri,
+  onManifestationSelect,
+  selectedLanguage,
 }) => {
   return (
     <Paper elevation={1} sx={{ height: "fit-content", minHeight: 700 }}>
@@ -66,6 +75,10 @@ const ResultSet: React.FC<ResultSetProps> = ({
               result={result}
               isSelected={selectedResult === result.uri}
               onSelect={onSelectResult}
+              config={config}
+              selectedManifestationUri={selectedManifestationUri}
+              onManifestationSelect={onManifestationSelect}
+              selectedLanguage={selectedLanguage}
             />
           ))}
         </List>

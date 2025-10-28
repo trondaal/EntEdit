@@ -23,6 +23,7 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
 }) => {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [selectedResult, setSelectedResult] = useState<string | null>(null);
+  const [selectedManifestation, setSelectedManifestation] = useState<string | null>(null);
 
   const {
     data: searchResults,
@@ -33,11 +34,13 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
   const handleSearch = (value: string) => {
     setSearchQuery(value);
     setSelectedResult(null);
+    setSelectedManifestation(null);
   };
 
   const handleClearSearch = () => {
     setSearchQuery("");
     setSelectedResult(null);
+    setSelectedManifestation(null);
   };
 
   return (
@@ -92,7 +95,7 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
             <Box sx={{ p: 2 }}>
               <Typography variant="body2" color="text.secondary">
                 Enter search terms to find entities using GraphDB's Lucene connector.
-                Search will be performed across entity labels and descriptions.
+                Search will be performed across names and titles.
               </Typography>
             </Box>
           </Paper>
@@ -107,6 +110,10 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
             searchError={searchError as Error | null}
             selectedResult={selectedResult}
             onSelectResult={setSelectedResult}
+            config={config}
+            selectedManifestationUri={selectedManifestation}
+            onManifestationSelect={setSelectedManifestation}
+            selectedLanguage={selectedLanguage}
           />
         </Box>
       </Box>
