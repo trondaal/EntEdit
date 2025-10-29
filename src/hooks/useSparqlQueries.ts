@@ -209,7 +209,7 @@ export const useEntitiesByRange = (
           # Defaulting to english language if no language is specified, safe because we only use few languages
           OPTIONAL {
             ?entity rdfs:label ?label_any .
-            FILTER(LANGMATCHES(LANG(?label_any), "*")) .
+            FILTER(LANGMATCHES(LANG(?label_any), "en")) .
           }
           BIND(COALESCE(?label_chosen, ?label_none, ?label_any) AS ?label)
 
