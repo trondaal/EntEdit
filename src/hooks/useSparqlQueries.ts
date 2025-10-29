@@ -214,7 +214,7 @@ export const useEntitiesByRange = (
           BIND(COALESCE(?label_chosen, ?label_none, ?label_any) AS ?label)
 
         }
-        ORDER BY ?entity
+        ORDER BY ?label ?entity
       `;
 
       const response = await client.query(query);
