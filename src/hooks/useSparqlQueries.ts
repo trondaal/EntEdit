@@ -200,13 +200,13 @@ export const useEntitiesByRange = (
           # Choosing label in the priority order chosen, none, any
           OPTIONAL {
             ?entity rdfs:label ?label_chosen .
-            FILTER(LANGMATCHES(LANG(?label_chosen), "${language}")) .
+            FILTER(LANG(?label_chosen) = "${language}") .
           }
           OPTIONAL {
             ?entity rdfs:label ?label_none .
             FILTER(LANG(?label_none) = "") .
           }
-          # Defaulting to any language if no language is specified, safe because we only use few languages
+          # Defaulting to english language if no language is specified, safe because we only use few languages
           OPTIONAL {
             ?entity rdfs:label ?label_any .
             FILTER(LANGMATCHES(LANG(?label_any), "*")) .
@@ -214,8 +214,7 @@ export const useEntitiesByRange = (
           BIND(COALESCE(?label_chosen, ?label_none, ?label_any) AS ?label)
 
         }
-        ORDER BY ?label ?entity
-        LIMIT 1000
+        ORDER BY ?entity
       `;
 
       const response = await client.query(query);
