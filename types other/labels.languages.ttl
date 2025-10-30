@@ -493,10 +493,3 @@
 <http://id.loc.gov/vocabulary/iso639-2/zun>	<http://www.w3.org/2000/01/rdf-schema#label>	"Zuni"@en	 .
 <http://id.loc.gov/vocabulary/iso639-2/zxx>	<http://www.w3.org/2000/01/rdf-schema#label>	"No linguistic content | Not applicable"@en	 .
 <http://id.loc.gov/vocabulary/iso639-2/zza>	<http://www.w3.org/2000/01/rdf-schema#label>	"Zaza | Dimili | Dimli | Kirdki | Kirmanjki | Zazaki"@en	 .
-
-<http://id.loc.gov/vocabulary/iso639-2/nno>	<http://www.w3.org/2000/01/rdf-schema#label>   "Nynorsk"@no .
-<http://id.loc.gov/vocabulary/iso639-2/nob>	<http://www.w3.org/2000/01/rdf-schema#label>   "Bokmål"@no .
-<http://id.loc.gov/vocabulary/iso639-2/nor>	<http://www.w3.org/2000/01/rdf-schema#label>   "Norsk"@no .
-<http://id.loc.gov/vocabulary/iso639-2/eng>	<http://www.w3.org/2000/01/rdf-schema#label>   "Engelsk"@no .
-<http://id.loc.gov/vocabulary/iso639-2/ger>	<http://www.w3.org/2000/01/rdf-schema#label>   "Tysk"@no .
-<http://id.loc.gov/vocabulary/iso639-2/swe>	<http://www.w3.org/2000/01/rdf-schema#label>   "Svensk"@no .
