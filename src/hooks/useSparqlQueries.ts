@@ -63,10 +63,21 @@ export const useRdfProperties = (
           ?property a rdf:Property .
           ?property entedit:status "data property" .
           
+         # Choosing label in the priority order chosen, none, any
           OPTIONAL {
-            ?property rdfs:label ?label .
-            FILTER(LANG(?label) = "${language}" || LANG(?label) = "")
+            ?property rdfs:label ?label_chosen .
+            FILTER(LANGMATCHES(LANG(?label_chosen), "${language}")) .
           }
+          OPTIONAL {
+            ?property rdfs:label ?label_none .
+            FILTER(LANG(?label_none) = "") .
+          }
+          # Defaulting to English if no language is specified
+          OPTIONAL {
+            ?property rdfs:label ?label_en .
+            FILTER(LANG(?label_en) = "en") .
+          }
+          BIND(COALESCE(?label_chosen, ?label_none, ?label_en) AS ?label)
 
           OPTIONAL { ?property rdfs:domain ?domain }
           OPTIONAL { ?property rdfs:range ?range }
