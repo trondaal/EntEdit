@@ -176,7 +176,7 @@ export const useRdfObjectProperties = (
     	    FILTER(?range != <http://www.w3.org/2004/02/skos/core#Concept> ) .
           ${classUri ? `FILTER(?domain = <${classUri}>)` : ""}
         }
-        ORDER BY ?range ?label
+        ORDER BY ?range STR(?label)
       `;
 
       const response = await client.query(query);
