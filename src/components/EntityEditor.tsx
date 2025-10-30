@@ -240,12 +240,20 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
       if (entityUri) {
         // For existing entities, we should delete old triples first
+        // Delete both outgoing and incoming statements to handle inverse properties
         const deleteQuery = `
           DELETE {
             <${entityUri}> ?p ?o .
+            ?s ?p2 <${entityUri}> .
           }
           WHERE {
-            <${entityUri}> ?p ?o .
+            {
+              <${entityUri}> ?p ?o .
+            }
+            UNION
+            {
+              ?s ?p2 <${entityUri}> .
+            }
           }
         `;
         await client.update(deleteQuery);
@@ -294,12 +302,22 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
     try {
       const client = new SparqlClient(config);
+
+      // Delete both outgoing statements and incoming statements (inverse properties)
+      // This ensures that both explicit triples and their inverses are removed
       const deleteQuery = `
         DELETE {
           <${entityUri}> ?p ?o .
+          ?s ?p2 <${entityUri}> .
         }
         WHERE {
-          <${entityUri}> ?p ?o .
+          {
+            <${entityUri}> ?p ?o .
+          }
+          UNION
+          {
+            ?s ?p2 <${entityUri}> .
+          }
         }
       `;
 
