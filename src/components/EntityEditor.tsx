@@ -77,6 +77,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   const [entityLabels, setEntityLabels] = useState<
     Array<{ id: string; value: string; language: string }>
   >([]);
+  const [graphError, setGraphError] = useState<string | null>(null);
 
   // Reset form when entity type (classUri) changes
   useEffect(() => {
@@ -186,6 +187,40 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         customEntityUri.trim() ||
         `http://example.org/entity-${Date.now()}`;
 
+      // Collect all affected entity URIs (entities that are objects in relationships)
+      const affectedEntityUris = new Set<string>();
+
+      // If updating an existing entity, query for all related entities before deletion
+      if (entityUri) {
+        const findRelatedQuery = `
+          SELECT DISTINCT ?relatedEntity WHERE {
+            {
+              <${entityUri}> ?p ?relatedEntity .
+              FILTER (isIRI(?relatedEntity))
+            }
+            UNION
+            {
+              ?relatedEntity ?p2 <${entityUri}> .
+            }
+          }
+        `;
+        const relatedEntities = await client.query(findRelatedQuery);
+        relatedEntities.results.bindings.forEach((binding) => {
+          if (binding.relatedEntity?.value) {
+            affectedEntityUris.add(binding.relatedEntity.value);
+          }
+        });
+      }
+
+      // Also collect entity URIs from the new data being saved
+      Object.entries(entityData).forEach(([, values]) => {
+        values.forEach((value) => {
+          if (value.trim() && value.startsWith("http")) {
+            affectedEntityUris.add(value);
+          }
+        });
+      });
+
       const triples = [`<${currentEntityUri}> a <${classUri}> .`];
 
       // Add labels from the label manager
@@ -240,12 +275,20 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
       if (entityUri) {
         // For existing entities, we should delete old triples first
+        // Delete both outgoing and incoming statements to handle inverse properties
         const deleteQuery = `
           DELETE {
             <${entityUri}> ?p ?o .
+            ?s ?p2 <${entityUri}> .
           }
           WHERE {
-            <${entityUri}> ?p ?o .
+            {
+              <${entityUri}> ?p ?o .
+            }
+            UNION
+            {
+              ?s ?p2 <${entityUri}> .
+            }
           }
         `;
         await client.update(deleteQuery);
@@ -261,6 +304,13 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       // Invalidate entity label queries
       queryClient.invalidateQueries({
         queryKey: ["entity-label", config.url],
+      });
+
+      // Invalidate caches for all affected entities (those in relationships)
+      affectedEntityUris.forEach((affectedUri) => {
+        queryClient.invalidateQueries({
+          queryKey: ["entity", config.url, affectedUri],
+        });
       });
 
       // If this was a new entity, also invalidate the current entity query to reflect the new URI
@@ -294,12 +344,43 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
     try {
       const client = new SparqlClient(config);
+
+      // First, find all related entities before deletion so we can invalidate their caches
+      const findRelatedQuery = `
+        SELECT DISTINCT ?relatedEntity WHERE {
+          {
+            <${entityUri}> ?p ?relatedEntity .
+            FILTER (isIRI(?relatedEntity))
+          }
+          UNION
+          {
+            ?relatedEntity ?p2 <${entityUri}> .
+          }
+        }
+      `;
+      const relatedEntities = await client.query(findRelatedQuery);
+      const affectedEntityUris = new Set<string>();
+      relatedEntities.results.bindings.forEach((binding) => {
+        if (binding.relatedEntity?.value) {
+          affectedEntityUris.add(binding.relatedEntity.value);
+        }
+      });
+
+      // Delete both outgoing statements and incoming statements (inverse properties)
+      // This ensures that both explicit triples and their inverses are removed
       const deleteQuery = `
         DELETE {
           <${entityUri}> ?p ?o .
+          ?s ?p2 <${entityUri}> .
         }
         WHERE {
-          <${entityUri}> ?p ?o .
+          {
+            <${entityUri}> ?p ?o .
+          }
+          UNION
+          {
+            ?s ?p2 <${entityUri}> .
+          }
         }
       `;
 
@@ -315,9 +396,23 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         queryKey: ["entity-label", config.url],
       });
 
-      // Close dialog and call success callback
+      // Invalidate caches for all affected entities (those that were in relationships)
+      affectedEntityUris.forEach((affectedUri) => {
+        queryClient.invalidateQueries({
+          queryKey: ["entity", config.url, affectedUri],
+        });
+      });
+
+      // Close dialog and clear the entity selection
       setDeleteDialogOpen(false);
-      onEntitySaved(); // This will trigger a refresh of the entity list
+
+      // Deselect the entity to show the "Create New Entity" form
+      if (onEntityDeselected) {
+        onEntityDeselected();
+      }
+
+      // Trigger a refresh of the entity list
+      onEntitySaved();
     } catch (error) {
       setDeleteError((error as Error).message);
     } finally {
@@ -325,19 +420,47 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     }
   };
 
-  const handleOpenGraph = () => {
-    if (!entityUri) return;
+  const getGraphUrl = (): string | null => {
+    if (!entityUri) return null;
 
-    // Derive visualization base URI from SPARQL endpoint URL
-    const url = new URL(config.url);
-    const baseUrl = `${url.protocol}//${url.host}`;
+    try {
+      // Derive visualization base URI from SPARQL endpoint URL
+      const url = new URL(config.url);
+      const baseUrl = `${url.protocol}//${url.host}`;
 
-    // Encode the URI for the query parameter
-    const encodedUri = encodeURIComponent(entityUri);
-    const graphUrl = `${baseUrl}/graphs-visualizations?uri=${encodedUri}`;
+      // Encode the URI for the query parameter
+      const encodedUri = encodeURIComponent(entityUri);
+      return `${baseUrl}/graphs-visualizations?uri=${encodedUri}`;
+    } catch (error) {
+      setGraphError(
+        `Failed to generate graph URL: ${(error as Error).message}`,
+      );
+      return null;
+    }
+  };
 
-    // Open in new tab
-    window.open(graphUrl, "_blank");
+  const handleOpenGraph = (event: React.MouseEvent) => {
+    // If user is holding Ctrl/Cmd, let the default link behavior work
+    if (event.ctrlKey || event.metaKey) {
+      return;
+    }
+
+    event.preventDefault();
+    setGraphError(null);
+
+    const graphUrl = getGraphUrl();
+    if (!graphUrl) return;
+
+    // Open in new tab with security attributes
+    // Using 'noopener' and 'noreferrer' for security best practices
+    const newWindow = window.open(graphUrl, "_blank", "noopener,noreferrer");
+
+    // Check if popup was blocked
+    if (!newWindow || newWindow.closed || typeof newWindow.closed === "undefined") {
+      setGraphError(
+        "Popup blocked! Please allow popups for this site or use Ctrl+Click (Cmd+Click on Mac) on the Graph button.",
+      );
+    }
   };
 
   const getPropertyLabel = (propertyUri: string) => {
@@ -586,6 +709,10 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
                     variant="outlined"
                     size="small"
                     onClick={handleOpenGraph}
+                    component="a"
+                    href={getGraphUrl() || undefined}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     startIcon={<AccountTree />}
                     color="primary"
                   >
@@ -625,6 +752,11 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         {saveError && (
           <Alert severity="error" sx={{ mb: 2 }}>
             {saveError}
+          </Alert>
+        )}
+        {graphError && (
+          <Alert severity="warning" sx={{ mb: 2 }} onClose={() => setGraphError(null)}>
+            {graphError}
           </Alert>
         )}
 
