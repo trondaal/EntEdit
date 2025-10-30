@@ -157,7 +157,7 @@ export const useRdfObjectProperties = (
          # Choosing label in the priority order chosen, none, any
           OPTIONAL {
             ?property rdfs:label ?label_chosen .
-            FILTER(LANGMATCHES(LANG(?label_chosen), "$language")) .
+            FILTER(LANGMATCHES(LANG(?label_chosen), "${language}")) .
           }
           OPTIONAL {
             ?property rdfs:label ?label_none .
@@ -176,7 +176,7 @@ export const useRdfObjectProperties = (
     	    FILTER(?range != <http://www.w3.org/2004/02/skos/core#Concept> ) .
           ${classUri ? `FILTER(?domain = <${classUri}>)` : ""}
         }
-        ORDER BY ?label
+        ORDER BY ?range ?label
       `;
 
       const response = await client.query(query);
