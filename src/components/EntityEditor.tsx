@@ -402,9 +402,16 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         });
       });
 
-      // Close dialog and call success callback
+      // Close dialog and clear the entity selection
       setDeleteDialogOpen(false);
-      onEntitySaved(); // This will trigger a refresh of the entity list
+
+      // Deselect the entity to show the "Create New Entity" form
+      if (onEntityDeselected) {
+        onEntityDeselected();
+      }
+
+      // Trigger a refresh of the entity list
+      onEntitySaved();
     } catch (error) {
       setDeleteError((error as Error).message);
     } finally {
