@@ -186,6 +186,40 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         customEntityUri.trim() ||
         `http://example.org/entity-${Date.now()}`;
 
+      // Collect all affected entity URIs (entities that are objects in relationships)
+      const affectedEntityUris = new Set<string>();
+
+      // If updating an existing entity, query for all related entities before deletion
+      if (entityUri) {
+        const findRelatedQuery = `
+          SELECT DISTINCT ?relatedEntity WHERE {
+            {
+              <${entityUri}> ?p ?relatedEntity .
+              FILTER (isIRI(?relatedEntity))
+            }
+            UNION
+            {
+              ?relatedEntity ?p2 <${entityUri}> .
+            }
+          }
+        `;
+        const relatedEntities = await client.query(findRelatedQuery);
+        relatedEntities.results.bindings.forEach((binding) => {
+          if (binding.relatedEntity?.value) {
+            affectedEntityUris.add(binding.relatedEntity.value);
+          }
+        });
+      }
+
+      // Also collect entity URIs from the new data being saved
+      Object.entries(entityData).forEach(([, values]) => {
+        values.forEach((value) => {
+          if (value.trim() && value.startsWith("http")) {
+            affectedEntityUris.add(value);
+          }
+        });
+      });
+
       const triples = [`<${currentEntityUri}> a <${classUri}> .`];
 
       // Add labels from the label manager
@@ -271,6 +305,13 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         queryKey: ["entity-label", config.url],
       });
 
+      // Invalidate caches for all affected entities (those in relationships)
+      affectedEntityUris.forEach((affectedUri) => {
+        queryClient.invalidateQueries({
+          queryKey: ["entity", config.url, affectedUri],
+        });
+      });
+
       // If this was a new entity, also invalidate the current entity query to reflect the new URI
       if (!entityUri) {
         queryClient.invalidateQueries({
@@ -303,6 +344,27 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     try {
       const client = new SparqlClient(config);
 
+      // First, find all related entities before deletion so we can invalidate their caches
+      const findRelatedQuery = `
+        SELECT DISTINCT ?relatedEntity WHERE {
+          {
+            <${entityUri}> ?p ?relatedEntity .
+            FILTER (isIRI(?relatedEntity))
+          }
+          UNION
+          {
+            ?relatedEntity ?p2 <${entityUri}> .
+          }
+        }
+      `;
+      const relatedEntities = await client.query(findRelatedQuery);
+      const affectedEntityUris = new Set<string>();
+      relatedEntities.results.bindings.forEach((binding) => {
+        if (binding.relatedEntity?.value) {
+          affectedEntityUris.add(binding.relatedEntity.value);
+        }
+      });
+
       // Delete both outgoing statements and incoming statements (inverse properties)
       // This ensures that both explicit triples and their inverses are removed
       const deleteQuery = `
@@ -331,6 +393,13 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       // Invalidate entity label queries
       queryClient.invalidateQueries({
         queryKey: ["entity-label", config.url],
+      });
+
+      // Invalidate caches for all affected entities (those that were in relationships)
+      affectedEntityUris.forEach((affectedUri) => {
+        queryClient.invalidateQueries({
+          queryKey: ["entity", config.url, affectedUri],
+        });
       });
 
       // Close dialog and call success callback
