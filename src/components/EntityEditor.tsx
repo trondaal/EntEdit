@@ -77,6 +77,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   const [entityLabels, setEntityLabels] = useState<
     Array<{ id: string; value: string; language: string }>
   >([]);
+  const [graphError, setGraphError] = useState<string | null>(null);
 
   // Reset form when entity type (classUri) changes
   useEffect(() => {
@@ -419,19 +420,47 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     }
   };
 
-  const handleOpenGraph = () => {
-    if (!entityUri) return;
+  const getGraphUrl = (): string | null => {
+    if (!entityUri) return null;
 
-    // Derive visualization base URI from SPARQL endpoint URL
-    const url = new URL(config.url);
-    const baseUrl = `${url.protocol}//${url.host}`;
+    try {
+      // Derive visualization base URI from SPARQL endpoint URL
+      const url = new URL(config.url);
+      const baseUrl = `${url.protocol}//${url.host}`;
 
-    // Encode the URI for the query parameter
-    const encodedUri = encodeURIComponent(entityUri);
-    const graphUrl = `${baseUrl}/graphs-visualizations?uri=${encodedUri}`;
+      // Encode the URI for the query parameter
+      const encodedUri = encodeURIComponent(entityUri);
+      return `${baseUrl}/graphs-visualizations?uri=${encodedUri}`;
+    } catch (error) {
+      setGraphError(
+        `Failed to generate graph URL: ${(error as Error).message}`,
+      );
+      return null;
+    }
+  };
 
-    // Open in new tab
-    window.open(graphUrl, "_blank");
+  const handleOpenGraph = (event: React.MouseEvent) => {
+    // If user is holding Ctrl/Cmd, let the default link behavior work
+    if (event.ctrlKey || event.metaKey) {
+      return;
+    }
+
+    event.preventDefault();
+    setGraphError(null);
+
+    const graphUrl = getGraphUrl();
+    if (!graphUrl) return;
+
+    // Open in new tab with security attributes
+    // Using 'noopener' and 'noreferrer' for security best practices
+    const newWindow = window.open(graphUrl, "_blank", "noopener,noreferrer");
+
+    // Check if popup was blocked
+    if (!newWindow || newWindow.closed || typeof newWindow.closed === "undefined") {
+      setGraphError(
+        "Popup blocked! Please allow popups for this site or use Ctrl+Click (Cmd+Click on Mac) on the Graph button.",
+      );
+    }
   };
 
   const getPropertyLabel = (propertyUri: string) => {
@@ -680,6 +709,10 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
                     variant="outlined"
                     size="small"
                     onClick={handleOpenGraph}
+                    component="a"
+                    href={getGraphUrl() || undefined}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     startIcon={<AccountTree />}
                     color="primary"
                   >
@@ -719,6 +752,11 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         {saveError && (
           <Alert severity="error" sx={{ mb: 2 }}>
             {saveError}
+          </Alert>
+        )}
+        {graphError && (
+          <Alert severity="warning" sx={{ mb: 2 }} onClose={() => setGraphError(null)}>
+            {graphError}
           </Alert>
         )}
 
