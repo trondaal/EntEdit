@@ -114,7 +114,7 @@ export const useEntitiesByClass = (
           # Defaulting to English if no language is specified
           OPTIONAL {
             ?entity rdfs:label ?label_en .
-            FILTER(LANGMATCHES(LANG(?label_en), "*")) .
+            FILTER(LANG(?label_none) = "en") .
           }
           BIND(COALESCE(?label_chosen, ?label_none, ?label_en) AS ?label)
 
@@ -154,10 +154,22 @@ export const useRdfObjectProperties = (
           ?property entedit:status ?status.
           FILTER(?status = "controlled property" || ?status = "object property") .
 
+         # Choosing label in the priority order chosen, none, any
           OPTIONAL {
-            ?property rdfs:label ?label .
-            FILTER(LANG(?label) = "${language}" || LANG(?label) = "")
+            ?property rdfs:label ?label_chosen .
+            FILTER(LANGMATCHES(LANG(?label_chosen), "$language")) .
           }
+          OPTIONAL {
+            ?property rdfs:label ?label_none .
+            FILTER(LANG(?label_none) = "") .
+          }
+          # Defaulting to English if no language is specified
+          OPTIONAL {
+            ?property rdfs:label ?label_en .
+            FILTER(LANG(?label_en) = "en") .
+          }
+          BIND(COALESCE(?label_chosen, ?label_none, ?label_en) AS ?label)
+
 
           ?property rdfs:domain ?domain .
           ?property rdfs:range ?range .
