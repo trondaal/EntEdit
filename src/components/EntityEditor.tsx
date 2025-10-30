@@ -77,7 +77,6 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   const [entityLabels, setEntityLabels] = useState<
     Array<{ id: string; value: string; language: string }>
   >([]);
-  const [graphError, setGraphError] = useState<string | null>(null);
 
   // Reset form when entity type (classUri) changes
   useEffect(() => {
@@ -432,9 +431,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       const encodedUri = encodeURIComponent(entityUri);
       return `${baseUrl}/graphs-visualizations?uri=${encodedUri}`;
     } catch (error) {
-      setGraphError(
-        `Failed to generate graph URL: ${(error as Error).message}`,
-      );
+      console.error("Failed to generate graph URL:", error);
       return null;
     }
   };
@@ -446,21 +443,17 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     }
 
     event.preventDefault();
-    setGraphError(null);
 
     const graphUrl = getGraphUrl();
     if (!graphUrl) return;
 
     // Open in new tab with security attributes
     // Using 'noopener' and 'noreferrer' for security best practices
-    const newWindow = window.open(graphUrl, "_blank", "noopener,noreferrer");
-
-    // Check if popup was blocked
-    if (!newWindow || newWindow.closed || typeof newWindow.closed === "undefined") {
-      setGraphError(
-        "Popup blocked! Please allow popups for this site or use Ctrl+Click (Cmd+Click on Mac) on the Graph button.",
-      );
-    }
+    // Note: We don't check for popup blocking here because:
+    // 1. The button also works as a link (supports Ctrl+Click, right-click)
+    // 2. Checking with 'noopener' returns null even on success (false positive)
+    // 3. Browser will show its own popup blocked notification if needed
+    window.open(graphUrl, "_blank", "noopener,noreferrer");
   };
 
   const getPropertyLabel = (propertyUri: string) => {
@@ -752,11 +745,6 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         {saveError && (
           <Alert severity="error" sx={{ mb: 2 }}>
             {saveError}
-          </Alert>
-        )}
-        {graphError && (
-          <Alert severity="warning" sx={{ mb: 2 }} onClose={() => setGraphError(null)}>
-            {graphError}
           </Alert>
         )}
 
