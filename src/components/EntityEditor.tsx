@@ -452,29 +452,14 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     if (!graphUrl) return;
 
     // Open in new tab with security attributes
-    // Note: We use 'noreferrer' but NOT 'noopener' so we can detect if popup was blocked
-    // noopener would return null even on success, causing false positive
-    const newWindow = window.open(graphUrl, "_blank", "noreferrer");
+    // Using 'noopener' and 'noreferrer' for security best practices
+    const newWindow = window.open(graphUrl, "_blank", "noopener,noreferrer");
 
-    // Check if popup was blocked - use a timeout to avoid false positives
-    if (!newWindow) {
+    // Check if popup was blocked
+    if (!newWindow || newWindow.closed || typeof newWindow.closed === "undefined") {
       setGraphError(
         "Popup blocked! Please allow popups for this site or use Ctrl+Click (Cmd+Click on Mac) on the Graph button.",
       );
-    } else {
-      // Try to check if window was actually opened after a brief delay
-      setTimeout(() => {
-        try {
-          if (newWindow.closed) {
-            setGraphError(
-              "Popup blocked! Please allow popups for this site or use Ctrl+Click (Cmd+Click on Mac) on the Graph button.",
-            );
-          }
-        } catch (e) {
-          // If we can't access the window, it's probably opened successfully with different origin
-          // No error needed
-        }
-      }, 100);
     }
   };
 
