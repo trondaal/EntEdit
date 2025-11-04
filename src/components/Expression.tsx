@@ -34,8 +34,8 @@ const Expression: React.FC<ExpressionProps> = ({
 }) => {
   const [manifestationsExpanded, setManifestationsExpanded] = useState(false);
 
-  // Determine if worktitle should be shown (different from expressiontitle)
-  const showWorkTitle = result.worktitle && result.worktitle !== result.expressiontitle;
+  // Determine if work_title should be shown (different from expression_title)
+  const showWorkTitle = result.work_title && result.work_title !== result.expression_title;
 
   // Helper function to capitalize first letter
   const capitalizeFirstLetter = (text: string | undefined): string | undefined => {
@@ -59,11 +59,11 @@ const Expression: React.FC<ExpressionProps> = ({
             primary={
               <Box>
                 <Typography component="span" sx={{ fontWeight: 'bold' }}>
-                  {result.expressiontitle || result.uri.split("#").pop() || result.uri}
+                  {result.expression_title || result.uri.split("#").pop() || result.uri}
                 </Typography>
                 {showWorkTitle && (
                   <Typography component="span" sx={{ fontStyle: 'italic', ml: 1 }}>
-                    ({result.worktitle})
+                    ({result.work_title})
                   </Typography>
                 )}
               </Box>
@@ -71,14 +71,14 @@ const Expression: React.FC<ExpressionProps> = ({
             secondary={
               <Box>
 
-                {result.worknames && (
+                {result.work_creators && (
                   <Typography variant="body2" color="text.secondary">
-                    {capitalizeFirstLetter(result.worknames)}
+                    {capitalizeFirstLetter(result.work_creators)}
                   </Typography>
                 )}
-                {result.expressionnames && (
+                {result.expression_creators && (
                   <Typography variant="body2" color="text.secondary">
-                    {capitalizeFirstLetter(result.expressionnames)}
+                    {capitalizeFirstLetter(result.expression_creators)}
                   </Typography>
                 )}
                 {result.language && (
