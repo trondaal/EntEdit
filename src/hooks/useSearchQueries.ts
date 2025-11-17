@@ -50,7 +50,7 @@ export const useSearchEntities = (
           (GROUP_CONCAT(DISTINCT ?worktype_label ; SEPARATOR=" ; ") as ?worktype)
           (GROUP_CONCAT(DISTINCT CONCAT(?work_agent_relationship_label, ": ", ?work_agent_names) ; SEPARATOR=" ; ") as ?work_creators)
           (GROUP_CONCAT(DISTINCT CONCAT(?expression_agent_relationship_label, ": ", ?expression_agent_names) ; SEPARATOR=" ; ") as ?expression_creators)
-            
+      FROM <http://www.ontotext.com/explicit>      
       WHERE {
           ?search a inst:entitiesIndex ;
           #lucene:query "horses" ;
