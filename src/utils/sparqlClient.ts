@@ -8,10 +8,18 @@ export class SparqlClient {
   }
 
   async query(sparql: string): Promise<SparqlResponse> {
+    return this.queryWithInference(sparql, true);
+  }
+
+  async queryWithoutInference(sparql: string): Promise<SparqlResponse> {
+    return this.queryWithInference(sparql, false);
+  }
+
+  private async queryWithInference(sparql: string, infer: boolean): Promise<SparqlResponse> {
     const formData = new URLSearchParams({
       query: sparql,
       format: "application/sparql-results+json",
-      infer: "true",
+      infer: infer.toString(),
     });
 
     const headers: HeadersInit = {
