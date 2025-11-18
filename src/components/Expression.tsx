@@ -96,6 +96,16 @@ const Expression: React.FC<ExpressionProps> = ({
                     Work type: {capitalizeFirstLetter(result.worktype)}
                   </Typography>
                 )}
+                {result.work_to_work_relationships && (
+                  <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
+                    {capitalizeFirstLetter(result.work_to_work_relationships)}
+                  </Typography>
+                )}
+                {result.expression_to_expression_relationships && (
+                  <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
+                    {capitalizeFirstLetter(result.expression_to_expression_relationships)}
+                  </Typography>
+                )}
               </Box>
             }
           />
