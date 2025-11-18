@@ -65,16 +65,13 @@ const AppHeader: React.FC<AppHeaderProps> = ({
           left: 0,
           right: 0,
           zIndex: 1200,
-          width: "1250px",
-          maxWidth: "1250px",
-          mx: 3,
         }}
       >
         <Toolbar
           sx={{
             minHeight: 64,
             height: 64,
-            maxWidth: 1250,
+            maxWidth: 1536, // Match Container maxWidth="xl"
             width: "100%",
             mx: "auto",
             px: 2,

@@ -1,7 +1,7 @@
 PREFIX :<http://www.ontotext.com/connectors/lucene#>
 PREFIX inst:<http://www.ontotext.com/connectors/lucene/instance#>
 INSERT DATA {
-	inst:lrmfti :createConnector '''
+	inst:entitiesIndex :createConnector '''
 {
   "fields": [
     {
@@ -154,7 +154,7 @@ INSERT DATA {
   ],
   "languages": [],
   "types": [
-    "http://rdaregistry.info/Elements/c/C10002"
+    "http://rdaregistry.info/Elements/c/C10006"
   ],
   "readonly": false,
   "detectFields": false,

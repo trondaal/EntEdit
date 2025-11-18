@@ -2,10 +2,11 @@ import { useState, useEffect } from "react";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { CssBaseline, Container, Box, CircularProgress, Typography } from "@mui/material";
+import { CssBaseline, Container, Box, CircularProgress, Typography, Tabs, Tab } from "@mui/material";
 import { queryClient } from "./utils/queryClient";
 import AppHeader from "./components/AppHeader";
 import EntityBrowser from "./components/EntityBrowser";
+import SearchInterface from "./components/SearchInterface";
 import ConfigurationWizard from "./components/ConfigurationWizard";
 import type { SparqlEndpointConfig } from "./types/sparql";
 import { 
@@ -67,11 +68,15 @@ function App() {
   const [appConfig, setAppConfig] = useState<AppConfiguration | null>(null);
   const [loading, setLoading] = useState(true);
   const [showWizard, setShowWizard] = useState(false);
+  const [activeTab, setActiveTab] = useState(0);
+
+  // Check if search tab should be shown based on URL parameter
+  const showSearchTab = new URLSearchParams(window.location.search).has('search');
 
   // Load configuration on app start
   useEffect(() => {
     const savedConfig = loadConfiguration();
-    
+
     if (savedConfig && savedConfig.isConfigured) {
       setAppConfig(savedConfig);
       setShowWizard(false);
@@ -79,7 +84,7 @@ function App() {
       setAppConfig(getDefaultConfiguration());
       setShowWizard(true);
     }
-    
+
     setLoading(false);
   }, []);
 
@@ -185,11 +190,32 @@ function App() {
                 pt: "64px", // Account for fixed header height
               }}
             >
+              <Box sx={{ borderBottom: 1, borderColor: "divider", bgcolor: "background.paper" }}>
+                <Container maxWidth="xl">
+                  <Tabs
+                    value={activeTab}
+                    onChange={(_, newValue) => setActiveTab(newValue)}
+                    aria-label="main navigation tabs"
+                  >
+                    <Tab label="Entity Browser" />
+                    {showSearchTab && <Tab label="Search" />}
+                  </Tabs>
+                </Container>
+              </Box>
+
               <Container maxWidth="xl" sx={{ py: 3, px: 2, flexGrow: 1 }}>
-                <EntityBrowser
-                  config={appConfig.endpoint}
-                  selectedLanguage={appConfig.language}
-                />
+                {activeTab === 0 && (
+                  <EntityBrowser
+                    config={appConfig.endpoint}
+                    selectedLanguage={appConfig.language}
+                  />
+                )}
+                {activeTab === 1 && showSearchTab && (
+                  <SearchInterface
+                    config={appConfig.endpoint}
+                    selectedLanguage={appConfig.language}
+                  />
+                )}
               </Container>
             </Box>
           </>
