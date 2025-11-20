@@ -72,7 +72,15 @@ const Manifestation: React.FC<ManifestationProps> = ({
   };
 
   return (
-    <ListItem disablePadding sx={{ pl: 4 }}>
+    <ListItem
+      disablePadding
+      sx={{
+        pl: 4,
+        bgcolor: (theme) => theme.palette.mode === 'light'
+          ? 'grey.50'
+          : 'grey.900',
+      }}
+    >
       <ListItemButton
         selected={isSelected}
         onClick={() => onSelect(manifestation.uri)}
@@ -80,34 +88,51 @@ const Manifestation: React.FC<ManifestationProps> = ({
         <ListItemText
           primary={
             <Box>
-              <Typography variant="body2">
+              <Typography
+                variant="body2"
+                sx={{
+                  fontWeight: 500,
+                  lineHeight: 1.5,
+                  mb: 0.25,
+                }}
+              >
                 {formatTitle()}
               </Typography>
               {formatPublicationInfo() && (
-                <Typography variant="body2" color="text.secondary">
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  sx={{
+                    lineHeight: 1.5,
+                    fontSize: '0.8125rem',
+                  }}
+                >
                   {formatPublicationInfo()}
                 </Typography>
               )}
             </Box>
           }
           secondary={
-            <Box>
-              {manifestation.extent && (
-                <Typography variant="caption" color="text.secondary">
-                  {manifestation.extent}
+            (manifestation.extent || manifestation.mediatype || manifestation.carriertype) ? (
+              <Box sx={{ mt: 0.5 }}>
+                <Typography
+                  variant="caption"
+                  color="text.secondary"
+                  sx={{
+                    lineHeight: 1.4,
+                    display: 'block',
+                  }}
+                >
+                  {[
+                    manifestation.extent,
+                    manifestation.mediatype,
+                    manifestation.carriertype,
+                  ]
+                    .filter(Boolean)
+                    .join(' • ')}
                 </Typography>
-              )}
-              {manifestation.mediatype && (
-                <Typography variant="caption" color="text.secondary" sx={{ ml: manifestation.extent ? 2 : 0 }}>
-                  {manifestation.mediatype}
-                </Typography>
-              )}
-              {manifestation.carriertype && (
-                <Typography variant="caption" color="text.secondary" sx={{ ml: (manifestation.extent || manifestation.mediatype) ? 2 : 0 }}>
-                  {manifestation.carriertype}
-                </Typography>
-              )}
-            </Box>
+              </Box>
+            ) : null
           }
         />
       </ListItemButton>

@@ -70,8 +70,9 @@ function App() {
   const [showWizard, setShowWizard] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
 
-  // Check if search tab should be shown based on URL parameter
-  const showSearchTab = new URLSearchParams(window.location.search).has('search');
+  // Check if search tab should be hidden based on URL parameter
+  // By default, search tab is shown unless 'nosearch' parameter is present
+  const showSearchTab = !new URLSearchParams(window.location.search).has('nosearch');
 
   // Load configuration on app start
   useEffect(() => {

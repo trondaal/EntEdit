@@ -63,7 +63,10 @@ WHERE {
     lucene:entities ?expression .
     ?expression lucene:score ?score .
     ?expression a <http://rdaregistry.info/Elements/c/C10006> .
-    ?expression rdaeo:P20231 ?work .
+
+        {?expression rdaeo:P20231 ?work .}
+            UNION
+        {?work rdawo:P10078 ?expression .}
 
     #Titles, we assume they have no language tag.
     OPTIONAL {
