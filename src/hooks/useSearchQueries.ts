@@ -33,7 +33,7 @@ export const useSearchEntities = (
       // GraphDB Lucene connector search query
       // This query uses the lucene:query predicate to perform fulltext search
       const sparqlQuery = `
-      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX lucene: <http://www.ontotext.com/connectors/lucene#>
 PREFIX inst: <http://www.ontotext.com/connectors/lucene/instance#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>

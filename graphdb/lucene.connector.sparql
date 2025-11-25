@@ -12,6 +12,7 @@ INSERT DATA {
             "http://rdaregistry.info/Elements/x/object/P00019"
          ]
     },
+    
     {
         "fieldName": "names$expression",
         "propertyChain": [
@@ -62,6 +63,15 @@ INSERT DATA {
             "http://rdaregistry.info/Elements/x/datatype/P00019"
         ]
     },
+        {
+        "fieldName": "names$ispart",
+        "propertyChain": [
+            "http://rdaregistry.info/Elements/e/object/P20231",
+            "http://rdaregistry.info/Elements/w/object/P10019",
+            "http://rdaregistry.info/Elements/x/object/P00006",
+            "http://rdaregistry.info/Elements/x/datatype/P00019"
+        ]
+    },
     {
         "fieldName": "titles$expression",
         "propertyChain": [
@@ -103,6 +113,14 @@ INSERT DATA {
         "propertyChain": [
             "http://rdaregistry.info/Elements/e/object/P20231",
             "http://rdaregistry.info/Elements/w/object/P10147",
+            "http://rdaregistry.info/Elements/x/datatype/P00019"
+        ]
+    },
+    {
+        "fieldName": "titles$ispart",
+        "propertyChain": [
+            "http://rdaregistry.info/Elements/e/object/P20231",
+            "http://rdaregistry.info/Elements/w/object/P10019",
             "http://rdaregistry.info/Elements/x/datatype/P00019"
         ]
     },

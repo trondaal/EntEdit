@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo, useCallback } from "react";
 import {
   Paper,
   Typography,
@@ -21,6 +21,7 @@ import {
   useEntitiesByClass,
 } from "../hooks/useSparqlQueries";
 import EntityEditor from "./EntityEditor";
+import { formatLabel } from "../utils/labelUtils";
 
 interface EntityBrowserProps {
   config: SparqlEndpointConfig;
@@ -66,10 +67,26 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
     selectedLanguage,
   );
 
-  // Filter entities based on the filter text
-  const filteredEntities = entities?.filter((entity) =>
-    entity.label.toLowerCase().includes(entityFilter.toLowerCase()),
-  );
+  // Filter entities based on the filter text (memoized for performance)
+  const filteredEntities = useMemo(() => {
+    return entities?.filter((entity) =>
+      entity.label.toLowerCase().includes(entityFilter.toLowerCase()),
+    );
+  }, [entities, entityFilter]);
+
+  // Memoized callbacks for handlers
+  const handleClassSelect = useCallback((classUri: string) => {
+    setSelectedClass(classUri);
+    setSelectedEntity(null);
+  }, []);
+
+  const handleEntitySelect = useCallback((entityUri: string) => {
+    setSelectedEntity(entityUri);
+  }, []);
+
+  const handleEntityDeselect = useCallback(() => {
+    setSelectedEntity(null);
+  }, []);
 
   if (classesError) {
     return (
@@ -111,26 +128,10 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
                   <ListItem key={rdfClass.uri} disablePadding>
                     <ListItemButton
                       selected={selectedClass === rdfClass.uri}
-                      onClick={() => {
-                        setSelectedClass(rdfClass.uri);
-                        setSelectedEntity(null);
-                      }}
+                      onClick={() => handleClassSelect(rdfClass.uri)}
                     >
                       <ListItemText
-                        primary={
-                          (
-                            rdfClass.label ||
-                            rdfClass.uri.split("#").pop() ||
-                            rdfClass.uri
-                          )
-                            .charAt(0)
-                            .toUpperCase() +
-                          (
-                            rdfClass.label ||
-                            rdfClass.uri.split("#").pop() ||
-                            rdfClass.uri
-                          ).slice(1)
-                        }
+                        primary={formatLabel(rdfClass.label, rdfClass.uri)}
                         secondary={rdfClass.comment}
                         secondaryTypographyProps={{ noWrap: true }}
                       />
@@ -174,20 +175,10 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
               >
                 {selectedClass && (
                   <Chip
-                    label={
-                      (
-                        classes?.find((c) => c.uri === selectedClass)?.label ||
-                        selectedClass.split("#").pop() ||
-                        ""
-                      )
-                        .charAt(0)
-                        .toUpperCase() +
-                      (
-                        classes?.find((c) => c.uri === selectedClass)?.label ||
-                        selectedClass.split("#").pop() ||
-                        ""
-                      ).slice(1)
-                    }
+                    label={formatLabel(
+                      classes?.find((c) => c.uri === selectedClass)?.label,
+                      selectedClass,
+                    )}
                     size="small"
                   />
                 )}
@@ -201,6 +192,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
                     value={entityFilter}
                     onChange={(e) => setEntityFilter(e.target.value)}
                     sx={{ width: 130 }}
+                    aria-label="Filter entities"
                     InputProps={{
                       startAdornment: (
                         <Search
@@ -240,7 +232,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
                   >
                     <ListItemButton
                       selected={selectedEntity === entity.uri}
-                      onClick={() => setSelectedEntity(entity.uri)}
+                      onClick={() => handleEntitySelect(entity.uri)}
                     >
                       <ListItemText
                         primary={entity.label}
@@ -268,7 +260,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
             onEntitySaved={() => {
               // Optionally refetch entities list
             }}
-            onEntityDeselected={() => setSelectedEntity(null)}
+            onEntityDeselected={handleEntityDeselect}
           />
         </Box>
       </Box>

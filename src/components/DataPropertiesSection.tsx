@@ -1,0 +1,149 @@
+import React from "react";
+import {
+  Box,
+  Typography,
+  TextField,
+  IconButton,
+  Divider,
+  Select,
+  MenuItem,
+  FormControl,
+  InputLabel,
+} from "@mui/material";
+import { Delete } from "@mui/icons-material";
+import type { RdfProperty } from "../types/sparql";
+
+interface DataPropertiesSectionProps {
+  entityData: Record<string, string[]>;
+  properties: RdfProperty[];
+  isEditing: boolean;
+  classUri: string;
+  selectedProperty: string;
+  onPropertySelect: (propertyUri: string) => void;
+  onUpdateValue: (property: string, index: number, value: string) => void;
+  onRemoveValue: (property: string, index: number) => void;
+  getPropertyLabel: (propertyUri: string) => string;
+}
+
+const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
+  entityData,
+  properties,
+  isEditing,
+  classUri,
+  selectedProperty,
+  onPropertySelect,
+  onUpdateValue,
+  onRemoveValue,
+  getPropertyLabel,
+}) => {
+  // Get available properties (excluding rdfs:label)
+  const availableProperties = properties.filter(
+    (property) => property.uri !== "http://www.w3.org/2000/01/rdf-schema#label",
+  );
+
+  // Get properties that have values
+  const dataPropertiesWithValues = Object.keys(entityData).filter(
+    (property) => {
+      const hasValues = entityData[property] && entityData[property].length > 0;
+      const isDataProperty = properties.some((p) => p.uri === property);
+      return (
+        hasValues &&
+        isDataProperty &&
+        property !== "http://www.w3.org/2000/01/rdf-schema#label"
+      );
+    },
+  );
+
+  return (
+    <>
+      {isEditing && (
+        <>
+          <Divider sx={{ my: 1.5 }} />
+
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              mb: 1.5,
+            }}
+          >
+            <Typography variant="subtitle1">Text metadata</Typography>
+
+            {isEditing && (
+              <FormControl size="small" sx={{ minWidth: 200 }}>
+                <InputLabel>Add text value</InputLabel>
+                <Select
+                  value={selectedProperty}
+                  label="Add text value"
+                  onChange={(e) => onPropertySelect(e.target.value)}
+                  disabled={!classUri}
+                >
+                  {availableProperties.map((property) => (
+                    <MenuItem key={property.uri} value={property.uri}>
+                      {getPropertyLabel(property.uri)}
+                    </MenuItem>
+                  ))}
+                </Select>
+              </FormControl>
+            )}
+          </Box>
+        </>
+      )}
+
+      {dataPropertiesWithValues.map((propertyUri) => (
+        <Box key={propertyUri} sx={{ mb: 2 }}>
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            sx={{ mb: 0.5 }}
+          >
+            {getPropertyLabel(propertyUri)}
+          </Typography>
+          {entityData[propertyUri].map((value, index) => (
+            <Box
+              key={`${propertyUri}-${index}`}
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: 1,
+                mb: 0.5,
+              }}
+            >
+              <TextField
+                fullWidth
+                value={value}
+                onChange={(e) =>
+                  onUpdateValue(propertyUri, index, e.target.value)
+                }
+                disabled={!isEditing || !classUri}
+                size="small"
+                placeholder={`Enter ${getPropertyLabel(propertyUri)}`}
+                sx={{
+                  "& .MuiInputBase-input": { py: 0.75 },
+                  "& .MuiInputLabel-outlined": {
+                    color: "#4F4F4F",
+                    fontSize: 17,
+                  },
+                }}
+              />
+              {isEditing && (
+                <IconButton
+                  size="small"
+                  onClick={() => onRemoveValue(propertyUri, index)}
+                  color="error"
+                  sx={{ p: 0.5 }}
+                  aria-label="Remove property value"
+                >
+                  <Delete fontSize="small" />
+                </IconButton>
+              )}
+            </Box>
+          ))}
+        </Box>
+      ))}
+    </>
+  );
+};
+
+export default React.memo(DataPropertiesSection);

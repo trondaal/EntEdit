@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 import {
   Paper,
-  Typography,
   TextField,
   Button,
   Box,
@@ -12,27 +11,25 @@ import {
   MenuItem,
   FormControl,
   InputLabel,
-  IconButton,
   Dialog,
   DialogTitle,
   DialogContent,
   DialogContentText,
   DialogActions,
+  Typography,
 } from "@mui/material";
-import {
-  Edit,
-  Save,
-  Add,
-  Delete,
-  DeleteForever,
-  AccountTree,
-  Language,
-} from "@mui/icons-material";
+import { DeleteForever } from "@mui/icons-material";
 import type { SparqlEndpointConfig, RdfProperty } from "../types/sparql";
 import { SparqlClient } from "../utils/sparqlClient";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import { useEntitiesByRange } from "../hooks/useSparqlQueries";
 import LabelManager from "./LabelManager";
+import EntityEditorHeader from "./EntityEditorHeader";
+import EntityLabelsSection from "./EntityLabelsSection";
+import DataPropertiesSection from "./DataPropertiesSection";
+import ObjectPropertySection from "./ObjectPropertySection";
+import ObjectPropertySelector from "./ObjectPropertySelector";
+import { invalidateEntityCaches } from "../utils/queryInvalidation";
+import { escapeSparqlLiteral, isValidUri, formatLabel } from "../utils/labelUtils";
 
 interface EntityEditorProps {
   config: SparqlEndpointConfig;
@@ -172,7 +169,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     }
   }, [existingEntity, entityUri, selectedLanguage]);
 
-  const handleSave = async () => {
+  const handleSave = useCallback(async () => {
     if (!classUri) return; // Don't save if no class is selected
 
     setSaving(true);
@@ -223,18 +220,13 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       const triples = [`<${currentEntityUri}> a <${classUri}> .`];
 
       // Add labels from the label manager
-      console.log("Entity labels to save:", entityLabels);
       entityLabels.forEach((label) => {
         if (label.value.trim()) {
-          const escapedValue = label.value
-            .replace(/"/g, '\\"')
-            .replace(/\n/g, "\\n")
-            .replace(/\r/g, "\\r");
+          const escapedValue = escapeSparqlLiteral(label.value);
           const formattedValue = label.language
             ? `"${escapedValue}"@${label.language}`
             : `"${escapedValue}"`;
           const labelTriple = `<${currentEntityUri}> <http://www.w3.org/2000/01/rdf-schema#label> ${formattedValue} .`;
-          console.log("Adding label triple:", labelTriple);
           triples.push(labelTriple);
         }
       });
@@ -249,10 +241,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
                 `<${currentEntityUri}> <${property}> ${formattedValue} .`,
               );
             } else {
-              const escapedValue = value
-                .replace(/"/g, '\\"')
-                .replace(/\n/g, "\\n")
-                .replace(/\r/g, "\\r");
+              const escapedValue = escapeSparqlLiteral(value);
               const formattedValue = `"${escapedValue}"`;
               triples.push(
                 `<${currentEntityUri}> <${property}> ${formattedValue} .`,
@@ -267,10 +256,6 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           ${triples.join("\n          ")}
         }
       `;
-
-      // Debug: Log the generated query
-      console.log("Generated SPARQL INSERT query:", insertQuery);
-      console.log("All triples to insert:", triples);
 
       if (entityUri) {
         // For existing entities, we should delete old triples first
@@ -295,35 +280,19 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
       await client.update(insertQuery);
 
-      // Invalidate and refetch the entities list for this class
-      queryClient.invalidateQueries({
-        queryKey: ["entities-by-class", config.url, classUri],
-      });
+      // Invalidate caches using utility function
+      invalidateEntityCaches(
+        queryClient,
+        config.url,
+        classUri,
+        entityUri || currentEntityUri,
+        affectedEntityUris,
+      );
 
-      // Invalidate entity label queries
-      queryClient.invalidateQueries({
-        queryKey: ["entity-label", config.url],
-      });
-
-      // Invalidate caches for all affected entities (those in relationships)
-      affectedEntityUris.forEach((affectedUri) => {
-        queryClient.invalidateQueries({
-          queryKey: ["entity", config.url, affectedUri],
-        });
-      });
-
-      // If this was a new entity, also invalidate the current entity query to reflect the new URI
+      // If this was a new entity, reset the create form
       if (!entityUri) {
-        queryClient.invalidateQueries({
-          queryKey: ["entity", config.url],
-        });
-        // Reset the create form for new entities
         resetCreateForm();
       } else {
-        // For existing entities, invalidate the specific entity query
-        queryClient.invalidateQueries({
-          queryKey: ["entity", config.url, entityUri],
-        });
         setIsEditing(false);
       }
 
@@ -333,9 +302,9 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     } finally {
       setSaving(false);
     }
-  };
+  }, [classUri, config, entityUri, customEntityUri, entityData, entityLabels, queryClient, onEntitySaved]);
 
-  const handleDelete = async () => {
+  const handleDelete = useCallback(async () => {
     if (!entityUri) return;
 
     setDeleting(true);
@@ -366,7 +335,6 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       });
 
       // Delete both outgoing statements and incoming statements (inverse properties)
-      // This ensures that both explicit triples and their inverses are removed
       const deleteQuery = `
         DELETE {
           <${entityUri}> ?p ?o .
@@ -385,22 +353,14 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
       await client.update(deleteQuery);
 
-      // Invalidate and refetch the entities list for this class
-      queryClient.invalidateQueries({
-        queryKey: ["entities-by-class", config.url, classUri],
-      });
-
-      // Invalidate entity label queries
-      queryClient.invalidateQueries({
-        queryKey: ["entity-label", config.url],
-      });
-
-      // Invalidate caches for all affected entities (those that were in relationships)
-      affectedEntityUris.forEach((affectedUri) => {
-        queryClient.invalidateQueries({
-          queryKey: ["entity", config.url, affectedUri],
-        });
-      });
+      // Invalidate caches using utility function
+      invalidateEntityCaches(
+        queryClient,
+        config.url,
+        classUri,
+        undefined,
+        affectedEntityUris,
+      );
 
       // Close dialog and clear the entity selection
       setDeleteDialogOpen(false);
@@ -417,9 +377,9 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     } finally {
       setDeleting(false);
     }
-  };
+  }, [entityUri, config, classUri, queryClient, onEntityDeselected, onEntitySaved]);
 
-  const getGraphUrl = (): string | null => {
+  const getGraphUrl = useMemo((): string | null => {
     if (!entityUri) return null;
 
     try {
@@ -434,9 +394,9 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       console.error("Failed to generate graph URL:", error);
       return null;
     }
-  };
+  }, [entityUri, config.url]);
 
-  const handleOpenGraph = (event: React.MouseEvent) => {
+  const handleOpenGraph = useCallback((event: React.MouseEvent) => {
     // If user is holding Ctrl/Cmd, let the default link behavior work
     if (event.ctrlKey || event.metaKey) {
       return;
@@ -444,188 +404,153 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
     event.preventDefault();
 
-    const graphUrl = getGraphUrl();
-    if (!graphUrl) return;
+    if (!getGraphUrl) return;
 
     // Open in new tab with security attributes
-    // Using 'noopener' and 'noreferrer' for security best practices
-    // Note: We don't check for popup blocking here because:
-    // 1. The button also works as a link (supports Ctrl+Click, right-click)
-    // 2. Checking with 'noopener' returns null even on success (false positive)
-    // 3. Browser will show its own popup blocked notification if needed
-    window.open(graphUrl, "_blank", "noopener,noreferrer");
-  };
+    window.open(getGraphUrl, "_blank", "noopener,noreferrer");
+  }, [getGraphUrl]);
 
-  const getPropertyLabel = (propertyUri: string) => {
+  const getPropertyLabel = useCallback((propertyUri: string) => {
     const property = properties.find((p) => p.uri === propertyUri);
-    return property?.label || propertyUri.split("#").pop() || propertyUri;
-  };
+    return formatLabel(property?.label, propertyUri);
+  }, [properties]);
 
-  const getObjectPropertyLabel = (propertyUri: string) => {
+  const getObjectPropertyLabel = useCallback((propertyUri: string) => {
     const property = objectProperties.find((p) => p.uri === propertyUri);
-    return property?.label || propertyUri.split("#").pop() || propertyUri;
-  };
+    return formatLabel(property?.label, propertyUri);
+  }, [objectProperties]);
 
-  // Get the primary label for display
-  const getPrimaryLabel = () => {
-    console.log("getPrimaryLabel called with entityLabels:", entityLabels);
-    console.log("selectedLanguage:", selectedLanguage);
-
-    if (entityLabels.length === 0) {
-      console.log("No labels available");
-      return null;
-    }
-
-    // First try to find a label in the selected language
-    const selectedLangLabel = entityLabels.find(
-      (label) => label.language === selectedLanguage,
-    );
-    if (selectedLangLabel) {
-      console.log("Found label in selected language:", selectedLangLabel);
-      return selectedLangLabel.value;
-    }
-
-    // Then try to find a label without language tag
-    const noLangLabel = entityLabels.find((label) => label.language === "");
-    if (noLangLabel) {
-      console.log("Found label without language:", noLangLabel);
-      return noLangLabel.value;
-    }
-
-    // Finally, return the first available label
-    console.log("Using first available label:", entityLabels[0]);
-    return entityLabels[0].value;
-  };
-
-  const handleLabelsSave = (
+  const handleLabelsSave = useCallback((
     labels: Array<{ id: string; value: string; language: string }>,
   ) => {
-    console.log("Labels being saved:", labels);
     setEntityLabels(labels);
     setLabelManagerOpen(false);
-  };
+  }, []);
 
-  const addProperty = (propertyUri: string) => {
+  const addProperty = useCallback((propertyUri: string) => {
     if (propertyUri && isEditing) {
-      const currentValues = entityData[propertyUri] || [];
-      setEntityData({
-        ...entityData,
-        [propertyUri]: [...currentValues, ""],
+      setEntityData((prev) => {
+        const currentValues = prev[propertyUri] || [];
+        return {
+          ...prev,
+          [propertyUri]: [...currentValues, ""],
+        };
       });
     }
-  };
+  }, [isEditing]);
 
-  const addObjectProperty = (selectedEntityUri: string) => {
+  const addObjectProperty = useCallback((selectedEntityUri: string) => {
     if (selectedObjectProperty && selectedEntityUri && isEditing) {
-      const currentValues = entityData[selectedObjectProperty] || [];
-      setEntityData({
-        ...entityData,
-        [selectedObjectProperty]: [...currentValues, selectedEntityUri],
+      setEntityData((prev) => {
+        const currentValues = prev[selectedObjectProperty] || [];
+        return {
+          ...prev,
+          [selectedObjectProperty]: [...currentValues, selectedEntityUri],
+        };
       });
       setSelectedObjectProperty("");
     }
-  };
+  }, [selectedObjectProperty, isEditing]);
 
-  const addControlledProperty = (selectedEntityUri: string) => {
+  const addControlledProperty = useCallback((selectedEntityUri: string) => {
     if (selectedControlledProperty && selectedEntityUri && isEditing) {
-      const currentValues = entityData[selectedControlledProperty] || [];
-      setEntityData({
-        ...entityData,
-        [selectedControlledProperty]: [...currentValues, selectedEntityUri],
+      setEntityData((prev) => {
+        const currentValues = prev[selectedControlledProperty] || [];
+        return {
+          ...prev,
+          [selectedControlledProperty]: [...currentValues, selectedEntityUri],
+        };
       });
       setSelectedControlledProperty("");
     }
-  };
+  }, [selectedControlledProperty, isEditing]);
 
-  const updatePropertyValue = (
+  const updatePropertyValue = useCallback((
     property: string,
     index: number,
     value: string,
   ) => {
-    const values = [...(entityData[property] || [])];
-    values[index] = value;
-    setEntityData({
-      ...entityData,
-      [property]: values,
+    setEntityData((prev) => {
+      const values = [...(prev[property] || [])];
+      values[index] = value;
+      return {
+        ...prev,
+        [property]: values,
+      };
     });
-  };
+  }, []);
 
-  const removePropertyValue = (property: string, index: number) => {
-    const values = entityData[property] || [];
-    const newValues = values.filter((_, i) => i !== index);
-    if (newValues.length === 0) {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      const { [property]: _, ...rest } = entityData;
-      setEntityData(rest);
-    } else {
-      setEntityData({
-        ...entityData,
-        [property]: newValues,
-      });
-    }
-  };
+  const removePropertyValue = useCallback((property: string, index: number) => {
+    setEntityData((prev) => {
+      const values = prev[property] || [];
+      const newValues = values.filter((_, i) => i !== index);
+      if (newValues.length === 0) {
+        const { [property]: _, ...rest } = prev;
+        return rest;
+      } else {
+        return {
+          ...prev,
+          [property]: newValues,
+        };
+      }
+    });
+  }, []);
 
-  // Get properties that have values, separated by type
-  const dataPropertiesWithValues = Object.keys(entityData).filter(
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    (property) => {
-      const hasValues = entityData[property] && entityData[property].length > 0;
-      const isDataProperty = properties.some((p) => p.uri === property);
-      return hasValues && isDataProperty;
-    },
-  );
-
-  const objectPropertiesWithValues = Object.keys(entityData).filter(
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    (property) => {
+  // Get properties that have values, separated by type (memoized for performance)
+  const objectPropertiesWithValues = useMemo(() => {
+    return Object.keys(entityData).filter((property) => {
       const hasValues = entityData[property] && entityData[property].length > 0;
       const isObjectProperty = objectProperties.some(
         (p) => p.uri === property && p.status === "object property",
       );
       return hasValues && isObjectProperty;
-    },
-  );
+    });
+  }, [entityData, objectProperties]);
 
   // Controlled properties are those with status "controlled property"
-  const controlledPropertiesWithValues = Object.keys(entityData).filter(
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    (property) => {
+  const controlledPropertiesWithValues = useMemo(() => {
+    return Object.keys(entityData).filter((property) => {
       const hasValues = entityData[property] && entityData[property].length > 0;
       const isControlledProperty = objectProperties.some(
         (p) => p.uri === property && p.status === "controlled property",
       );
       return hasValues && isControlledProperty;
-    },
-  );
+    });
+  }, [entityData, objectProperties]);
 
   // Get available properties for dropdown (excluding rdfs:label)
-  const availableProperties = properties.filter(
-    (property) => property.uri !== "http://www.w3.org/2000/01/rdf-schema#label",
-  );
-
-  const availableObjectProperties = objectProperties.filter(
-    (property) => property.status === "object property",
-  );
+  const availableObjectProperties = useMemo(() => {
+    return objectProperties.filter(
+      (property) => property.status === "object property",
+    );
+  }, [objectProperties]);
 
   // Available controlled properties are those with status "controlled property"
-  const availableControlledProperties = objectProperties.filter(
-    (property) => property.status === "controlled property",
-  );
+  const availableControlledProperties = useMemo(() => {
+    return objectProperties.filter(
+      (property) => property.status === "controlled property",
+    );
+  }, [objectProperties]);
 
-  // Basic URI validation
-  const isValidUri = (uri: string): boolean => {
-    if (!uri.trim()) return true; // Empty is valid (will auto-generate)
-    try {
-      new URL(uri);
-      return true;
-    } catch {
-      // Check if it's a valid URI pattern (not necessarily a URL)
-      const uriPattern = /^([a-zA-Z][a-zA-Z0-9+.-]*:|\/)/;
-      return uriPattern.test(uri);
-    }
-  };
+  const uriError = useMemo(() => {
+    return customEntityUri && !isValidUri(customEntityUri);
+  }, [customEntityUri]);
 
-  const uriError = customEntityUri && !isValidUri(customEntityUri);
+  // Additional handlers for the header component
+  const handleEdit = useCallback(() => setIsEditing(true), []);
+  const handleCancel = useCallback(() => {
+    setIsEditing(false);
+    setEntityData(existingEntity?.data || {});
+    setEntityLabels(existingEntity?.labels || []);
+  }, [existingEntity]);
+  const handleDeleteDialog = useCallback(() => setDeleteDialogOpen(true), []);
+  const handleNew = useCallback(() => onEntityDeselected?.(), [onEntityDeselected]);
+  const handleEditLabels = useCallback(() => setLabelManagerOpen(true), []);
+
+  const handlePropertySelect = useCallback((propertyUri: string) => {
+    addProperty(propertyUri);
+    setSelectedProperty("");
+  }, [addProperty]);
 
   if (entityLoading || propertiesLoading || objectPropertiesLoading) {
     return (
@@ -645,96 +570,20 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
   return (
     <Paper elevation={1} sx={{ minHeight: 700, height: "fit-content" }}>
-      <Box
-        sx={{
-          p: 2,
-          borderBottom: 1,
-          borderColor: "divider",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
-        <Typography variant="h6" sx={{ display: "flex", alignItems: "center" }}>
-          {entityUri ? <Edit sx={{ mr: 1 }} /> : <Add sx={{ mr: 1 }} />}
-          {entityUri ? "Edit Entity" : "Create New Entity"}
-        </Typography>
-
-        <Box sx={{ display: "flex", gap: 1 }}>
-          {isEditing ? (
-            <>
-              <Button
-                variant="contained"
-                size="small"
-                onClick={handleSave}
-                disabled={saving || !!uriError || !classUri}
-                startIcon={saving ? <CircularProgress size={16} /> : <Save />}
-              >
-                {saving ? "Saving..." : "Save"}
-              </Button>
-              {entityUri && (
-                <Button
-                  variant="outlined"
-                  size="small"
-                  onClick={() => {
-                    setIsEditing(false);
-                    setEntityData(existingEntity?.data || {});
-                    setEntityLabels(existingEntity?.labels || []);
-                  }}
-                >
-                  Cancel
-                </Button>
-              )}
-            </>
-          ) : (
-            <>
-              <Button
-                variant="contained"
-                size="small"
-                onClick={() => setIsEditing(true)}
-                startIcon={<Edit />}
-              >
-                Edit
-              </Button>
-              {entityUri && (
-                <>
-                  <Button
-                    variant="outlined"
-                    size="small"
-                    onClick={handleOpenGraph}
-                    component="a"
-                    href={getGraphUrl() || undefined}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    startIcon={<AccountTree />}
-                    color="primary"
-                  >
-                    Graph
-                  </Button>
-                  <Button
-                    variant="outlined"
-                    size="small"
-                    onClick={() => onEntityDeselected?.()}
-                    startIcon={<Add />}
-                    color="success"
-                  >
-                    New
-                  </Button>
-                  <Button
-                    variant="outlined"
-                    size="small"
-                    onClick={() => setDeleteDialogOpen(true)}
-                    startIcon={<DeleteForever />}
-                    color="error"
-                  >
-                    Delete
-                  </Button>
-                </>
-              )}
-            </>
-          )}
-        </Box>
-      </Box>
+      <EntityEditorHeader
+        entityUri={entityUri}
+        isEditing={isEditing}
+        saving={saving}
+        uriError={!!uriError}
+        classUri={classUri}
+        graphUrl={getGraphUrl}
+        onSave={handleSave}
+        onEdit={handleEdit}
+        onCancel={handleCancel}
+        onDelete={handleDeleteDialog}
+        onNew={handleNew}
+        onOpenGraph={handleOpenGraph}
+      />
 
       <Box sx={{ p: 3 }}>
         {!classUri && (
@@ -748,37 +597,13 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           </Alert>
         )}
 
-        {/* Primary Label Display */}
-        <Box sx={{ mb: 2 }}>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              mb: 1,
-            }}
-          >
-            <Typography variant="h6" color="primary">
-              {getPrimaryLabel() || "No label"}
-            </Typography>
-            {isEditing && (
-              <Button
-                variant="outlined"
-                size="small"
-                startIcon={<Language />}
-                onClick={() => setLabelManagerOpen(true)}
-                disabled={!classUri}
-              >
-                Edit Labels
-              </Button>
-            )}
-          </Box>
-          {!getPrimaryLabel() && isEditing && (
-            <Typography variant="body2" color="text.secondary">
-              This entity has no labels. Click "Edit Labels" to add one.
-            </Typography>
-          )}
-        </Box>
+        <EntityLabelsSection
+          entityLabels={entityLabels}
+          selectedLanguage={selectedLanguage}
+          isEditing={isEditing}
+          classUri={classUri}
+          onEditLabels={handleEditLabels}
+        />
 
         <TextField
           fullWidth
@@ -794,115 +619,22 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           error={!!uriError}
           sx={{ mb: 2 }}
           size="small"
-          /*helperText={
-            uriError
-              ? "Please enter a valid URI"
-              : entityUri
-                ? "Existing entity URI (cannot be changed)"
-                : isEditing
-                  ? "Enter custom URI or leave empty for auto-generation"
-                  : "URI will be generated automatically"
-          }*/
           placeholder="Enter custom URI or leave empty for auto-generation"
         />
 
-        {isEditing && (
-          <>
-            <Divider sx={{ my: 1.5 }} />
+        <DataPropertiesSection
+          entityData={entityData}
+          properties={properties}
+          isEditing={isEditing}
+          classUri={classUri}
+          selectedProperty={selectedProperty}
+          onPropertySelect={handlePropertySelect}
+          onUpdateValue={updatePropertyValue}
+          onRemoveValue={removePropertyValue}
+          getPropertyLabel={getPropertyLabel}
+        />
 
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                mb: 1.5,
-              }}
-            >
-              <Typography variant="subtitle1">Text metadata</Typography>
-
-              {isEditing && (
-                <FormControl size="small" sx={{ minWidth: 200 }}>
-                  <InputLabel>Add text value</InputLabel>
-                  <Select
-                    value={selectedProperty}
-                    label="Add text value"
-                    onChange={(e) => {
-                      const propertyUri = e.target.value;
-                      addProperty(propertyUri);
-                      setSelectedProperty("");
-                    }}
-                    disabled={!classUri}
-                  >
-                    {availableProperties.map((property) => (
-                      <MenuItem key={property.uri} value={property.uri}>
-                        {getPropertyLabel(property.uri)}
-                      </MenuItem>
-                    ))}
-                  </Select>
-                </FormControl>
-              )}
-            </Box>
-          </>
-        )}
-
-        {dataPropertiesWithValues
-          .filter(
-            (propertyUri) =>
-              propertyUri !== "http://www.w3.org/2000/01/rdf-schema#label",
-          )
-          .map((propertyUri) => (
-            <Box key={propertyUri} sx={{ mb: 2 }}>
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                sx={{ mb: 0.5 }}
-              >
-                {getPropertyLabel(propertyUri)}
-              </Typography>
-              {entityData[propertyUri].map((value, index) => (
-                <Box
-                  key={index}
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 1,
-                    mb: 0.5,
-                  }}
-                >
-                  <TextField
-                    fullWidth
-                    // label={getPropertyLabel(propertyUri)}
-                    value={value}
-                    onChange={(e) =>
-                      updatePropertyValue(propertyUri, index, e.target.value)
-                    }
-                    disabled={!isEditing || !classUri}
-                    size="small"
-                    placeholder={`Enter ${getPropertyLabel(propertyUri)}`}
-                    sx={{
-                      "& .MuiInputBase-input": { py: 0.75 },
-                      "& .MuiInputLabel-outlined": {
-                        color: "#4F4F4F",
-                        fontSize: 17,
-                        // And the label when it focused
-                      },
-                    }}
-                  />
-                  {isEditing && (
-                    <IconButton
-                      size="small"
-                      onClick={() => removePropertyValue(propertyUri, index)}
-                      color="error"
-                      sx={{ p: 0.5 }}
-                    >
-                      <Delete fontSize="small" />
-                    </IconButton>
-                  )}
-                </Box>
-              ))}
-            </Box>
-          ))}
-
+        {/* Controlled Properties Section */}
         {isEditing && (
           <>
             <Divider sx={{ my: 1.5 }} />
@@ -917,7 +649,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
             >
               <Typography variant="subtitle1">Controlled values</Typography>
 
-              {isEditing && availableControlledProperties.length > 0 && (
+              {availableControlledProperties.length > 0 && (
                 <FormControl size="small" sx={{ minWidth: 200 }}>
                   <InputLabel>Add category</InputLabel>
                   <Select
@@ -968,13 +700,12 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
                 ?.range
             }
             selectedLanguage={selectedLanguage}
-            onSelect={(entityUri) => {
-              addControlledProperty(entityUri);
-            }}
+            onSelect={addControlledProperty}
             onCancel={() => setSelectedControlledProperty("")}
           />
         )}
 
+        {/* Object Properties Section */}
         {isEditing && (
           <>
             <Divider sx={{ my: 1.5 }} />
@@ -989,7 +720,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
             >
               <Typography variant="subtitle1">Related entities</Typography>
 
-              {isEditing && availableObjectProperties.length > 0 && (
+              {availableObjectProperties.length > 0 && (
                 <FormControl size="small" sx={{ minWidth: 200 }}>
                   <InputLabel>Add related</InputLabel>
                   <Select
@@ -1038,9 +769,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
                 ?.range
             }
             selectedLanguage={selectedLanguage}
-            onSelect={(entityUri) => {
-              addObjectProperty(entityUri);
-            }}
+            onSelect={addObjectProperty}
             onCancel={() => setSelectedObjectProperty("")}
           />
         )}
@@ -1099,278 +828,6 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         </DialogActions>
       </Dialog>
     </Paper>
-  );
-};
-
-// Component for displaying object property values
-interface ObjectPropertySectionProps {
-  config: SparqlEndpointConfig;
-  propertyUri: string;
-  propertyLabel: string;
-  values: string[];
-  rangeUri?: string;
-  isEditing: boolean;
-  selectedLanguage: string;
-  onUpdateValue: (index: number, value: string) => void;
-  onRemoveValue: (index: number) => void;
-}
-
-const ObjectPropertySection: React.FC<ObjectPropertySectionProps> = ({
-  config,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  propertyUri: _unused,
-  propertyLabel,
-  values,
-  rangeUri,
-  isEditing,
-  selectedLanguage,
-  onUpdateValue,
-  onRemoveValue,
-}) => {
-  return (
-    <Box sx={{ mb: 2 }}>
-      <Typography variant="body2" color="text.secondary" sx={{ mb: 0.5 }}>
-        {propertyLabel}
-      </Typography>
-      {values.map((value, index) => (
-        <ObjectPropertyValue
-          key={index}
-          config={config}
-          value={value}
-          rangeUri={rangeUri}
-          isEditing={isEditing}
-          selectedLanguage={selectedLanguage}
-          onUpdate={(newValue) => onUpdateValue(index, newValue)}
-          onRemove={() => onRemoveValue(index)}
-        />
-      ))}
-    </Box>
-  );
-};
-
-// Component for displaying a single object property value
-interface ObjectPropertyValueProps {
-  config: SparqlEndpointConfig;
-  value: string;
-  rangeUri?: string;
-  isEditing: boolean;
-  selectedLanguage: string;
-  onUpdate: (value: string) => void;
-  onRemove: () => void;
-}
-
-const ObjectPropertyValue: React.FC<ObjectPropertyValueProps> = ({
-  config,
-  value,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  rangeUri: _,
-  isEditing,
-  selectedLanguage,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  onUpdate: __,
-  onRemove,
-}) => {
-  const { data: entity } = useQuery({
-    queryKey: ["entity-label", config.url, value, selectedLanguage],
-    queryFn: async () => {
-      if (!value) return null;
-
-      const client = new SparqlClient(config);
-      const query = `
-        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        SELECT ?label ?lang
-        WHERE {
-          <${value}> rdfs:label ?label .
-          BIND(LANG(?label) AS ?lang)
-        }
-      `;
-
-      const response = await client.query(query);
-      const labels = response.results.bindings.map((binding) => ({
-        value: binding.label.value,
-        language: binding.lang?.value || "",
-      }));
-
-      if (labels.length === 0) return null;
-
-      // First try to find a label in the selected language
-      const selectedLangLabel = labels.find(
-        (label) => label.language === selectedLanguage,
-      );
-      if (selectedLangLabel) return selectedLangLabel.value;
-
-      // Then try to find a label without language tag
-      const noLangLabel = labels.find((label) => label.language === "");
-      if (noLangLabel) return noLangLabel.value;
-
-      // Finally, return the first available label
-      return labels[0].value;
-    },
-    enabled: !!value && !!config.url,
-  });
-
-  const displayLabel = entity || value.split("#").pop() || value;
-
-  return (
-    <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 0.5 }}>
-      <Box
-        sx={{
-          flex: 1,
-          p: 0.75,
-          border: 1,
-          borderColor: "divider",
-          borderRadius: 1,
-        }}
-      >
-        <Typography
-          variant="body2"
-          sx={{ fontWeight: "bold", lineHeight: 1.2 }}
-        >
-          {displayLabel}
-        </Typography>
-        <Typography
-          variant="caption"
-          color="text.secondary"
-          sx={{ lineHeight: 1.1 }}
-        >
-          {value}
-        </Typography>
-      </Box>
-      {isEditing && (
-        <IconButton
-          size="small"
-          onClick={onRemove}
-          color="error"
-          sx={{ p: 0.5 }}
-        >
-          <Delete fontSize="small" />
-        </IconButton>
-      )}
-    </Box>
-  );
-};
-
-// Component for selecting an entity for an object property
-interface ObjectPropertySelectorProps {
-  config: SparqlEndpointConfig;
-  propertyUri: string;
-  rangeUri?: string;
-  selectedLanguage: string;
-  onSelect: (entityUri: string) => void;
-  onCancel: () => void;
-}
-
-const ObjectPropertySelector: React.FC<ObjectPropertySelectorProps> = ({
-  config,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  propertyUri: _,
-  rangeUri,
-  selectedLanguage,
-  onSelect,
-  onCancel,
-}) => {
-  const { data: entities, isLoading } = useEntitiesByRange(
-    config,
-    rangeUri || "",
-    selectedLanguage,
-  );
-
-  if (!rangeUri) {
-    return (
-      <Box
-        sx={{
-          mb: 2,
-          p: 2,
-          border: 1,
-          borderColor: "warning.main",
-          borderRadius: 1,
-        }}
-      >
-        <Typography color="warning.main">
-          No range specified for this property. Cannot suggest entities.
-        </Typography>
-        <Button variant="outlined" onClick={onCancel} sx={{ mt: 1 }}>
-          Cancel
-        </Button>
-      </Box>
-    );
-  }
-
-  if (isLoading) {
-    return (
-      <Box
-        sx={{ mb: 2, p: 2, border: 1, borderColor: "divider", borderRadius: 1 }}
-      >
-        <CircularProgress size={20} />
-        <Typography sx={{ ml: 1, display: "inline" }}>
-          Loading entities...
-        </Typography>
-      </Box>
-    );
-  }
-
-  if (!entities || entities.length === 0) {
-    return (
-      <Box
-        sx={{
-          mb: 2,
-          p: 2,
-          border: 1,
-          borderColor: "info.main",
-          borderRadius: 1,
-        }}
-      >
-        <Typography color="info.main">
-          No entities found of type {rangeUri.split("#").pop()}
-        </Typography>
-        <Button variant="outlined" onClick={onCancel} sx={{ mt: 1 }}>
-          Cancel
-        </Button>
-      </Box>
-    );
-  }
-
-  return (
-    <Box
-      sx={{
-        mb: 2,
-        p: 2,
-        border: 1,
-        borderColor: "primary.main",
-        borderRadius: 1,
-      }}
-    >
-      <Typography variant="subtitle2" sx={{ mb: 1 }}>
-        Select an entity for relationship:
-      </Typography>
-      <Box sx={{ maxHeight: 200, overflow: "auto" }}>
-        {entities.map((entity) => (
-          <Button
-            key={`${rangeUri}-${entity.uri}`}
-            fullWidth
-            variant="outlined"
-            size="small"
-            onClick={() => onSelect(entity.uri)}
-            sx={{
-              mb: 1,
-              justifyContent: "flex-start",
-              textAlign: "left",
-              display: "block",
-            }}
-          >
-            <Typography variant="body2" sx={{ fontWeight: "bold" }}>
-              {entity.label}
-            </Typography>
-            <Typography variant="caption" color="text.secondary">
-              {entity.uri}
-            </Typography>
-          </Button>
-        ))}
-      </Box>
-      <Button variant="outlined" onClick={onCancel} sx={{ mt: 1 }}>
-        Cancel
-      </Button>
-    </Box>
   );
 };
 
