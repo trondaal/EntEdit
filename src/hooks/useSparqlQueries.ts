@@ -1,5 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
 import { SparqlClient } from "../utils/sparqlClient";
+import {
+  createLanguageFallbackFragment,
+  getFallbackLanguage,
+} from "../utils/sparqlFragments";
 import type {
   SparqlEndpointConfig,
   RdfClass,
@@ -52,7 +56,7 @@ export const useRdfProperties = (
     queryKey: ["rdf-properties", config.url, classUri, language],
     queryFn: async (): Promise<RdfProperty[]> => {
       const client = new SparqlClient(config);
-      const fallbackLanguage = language === "no" ? "en" : "no";
+      const fallbackLanguage = getFallbackLanguage(language);
       const query = `
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -63,22 +67,7 @@ export const useRdfProperties = (
         WHERE {
           ?property a rdf:Property .
           ?property entedit:status "data property" .
-
-         # Choosing label in the priority order chosen, none, fallback
-          OPTIONAL {
-            ?property rdfs:label ?label_chosen .
-            FILTER(LANGMATCHES(LANG(?label_chosen), "${language}")) .
-          }
-          OPTIONAL {
-            ?property rdfs:label ?label_none .
-            FILTER(LANG(?label_none) = "") .
-          }
-          # Fallback to Norwegian if English, or English if Norwegian
-          OPTIONAL {
-            ?property rdfs:label ?label_fallback .
-            FILTER(LANG(?label_fallback) = "${fallbackLanguage}") .
-          }
-          BIND(COALESCE(?label_chosen, ?label_none, ?label_fallback) AS ?label)
+${createLanguageFallbackFragment("?property", language, fallbackLanguage)}
 
           OPTIONAL { ?property rdfs:domain ?domain }
           OPTIONAL { ?property rdfs:range ?range }
@@ -109,27 +98,14 @@ export const useEntitiesByClass = (
     queryKey: ["entities-by-class", config.url, classUri, language],
     queryFn: async () => {
       const client = new SparqlClient(config);
-      const fallbackLanguage = language === "no" ? "en" : "no";
+      const fallbackLanguage = getFallbackLanguage(language);
       const query = `
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
         SELECT DISTINCT ?entity (SAMPLE(?label) AS ?label)
         WHERE {
           ?entity a <${classUri}> .
-
-          # Choosing label in the priority order chosen, none, fallback
-          OPTIONAL {
-            ?entity rdfs:label ?label_chosen .
-            FILTER(LANGMATCHES(LANG(?label_chosen), "${language}")) .
-          }
-          OPTIONAL {
-            ?entity rdfs:label ?label_none .
-            FILTER(LANG(?label_none) = "") .
-          }
-          # Fallback to Norwegian if English, or English if Norwegian
-          OPTIONAL {
-            ?entity rdfs:label ?label_fallback .
-            FILTER(LANG(?label_fallback) = "${fallbackLanguage}") .
-          }
-          BIND(COALESCE(?label_chosen, ?label_none, ?label_fallback) AS ?label)
+${createLanguageFallbackFragment("?entity", language, fallbackLanguage)}
 
         }
         GROUP BY ?entity
@@ -155,7 +131,7 @@ export const useRdfObjectProperties = (
     queryKey: ["rdf-object-properties", config.url, classUri, language],
     queryFn: async (): Promise<RdfProperty[]> => {
       const client = new SparqlClient(config);
-      const fallbackLanguage = language === "no" ? "en" : "no";
+      const fallbackLanguage = getFallbackLanguage(language);
       const query = `
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -167,23 +143,7 @@ export const useRdfObjectProperties = (
           ?property a rdf:Property .
           ?property entedit:status ?status.
           FILTER(?status = "controlled property" || ?status = "object property") .
-
-         # Choosing label in the priority order chosen, none, fallback
-          OPTIONAL {
-            ?property rdfs:label ?label_chosen .
-            FILTER(LANGMATCHES(LANG(?label_chosen), "${language}")) .
-          }
-          OPTIONAL {
-            ?property rdfs:label ?label_none .
-            FILTER(LANG(?label_none) = "") .
-          }
-          # Fallback to Norwegian if English, or English if Norwegian
-          OPTIONAL {
-            ?property rdfs:label ?label_fallback .
-            FILTER(LANG(?label_fallback) = "${fallbackLanguage}") .
-          }
-          BIND(COALESCE(?label_chosen, ?label_none, ?label_fallback) AS ?label)
-
+${createLanguageFallbackFragment("?property", language, fallbackLanguage)}
 
           ?property rdfs:domain ?domain .
           ?property rdfs:range ?range .
@@ -216,29 +176,14 @@ export const useEntitiesByRange = (
     queryKey: ["entities-by-range", config.url, rangeUri, language],
     queryFn: async () => {
       const client = new SparqlClient(config);
-      const fallbackLanguage = language === "no" ? "en" : "no";
+      const fallbackLanguage = getFallbackLanguage(language);
       const query = `
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
         SELECT DISTINCT ?entity ?label
         WHERE {
           ?entity a <${rangeUri}> .
-
-          # Choosing label in the priority order chosen, none, fallback
-          OPTIONAL {
-            ?entity rdfs:label ?label_chosen .
-            FILTER(LANG(?label_chosen) = "${language}") .
-          }
-          OPTIONAL {
-            ?entity rdfs:label ?label_none .
-            FILTER(LANG(?label_none) = "") .
-          }
-          # Fallback to Norwegian if English, or English if Norwegian
-          OPTIONAL {
-            ?entity rdfs:label ?label_fallback .
-            FILTER(LANGMATCHES(LANG(?label_fallback), "${fallbackLanguage}")) .
-          }
-          BIND(COALESCE(?label_chosen, ?label_none, ?label_fallback) AS ?label)
+${createLanguageFallbackFragment("?entity", language, fallbackLanguage, "label", false)}
 
         }
         ORDER BY STR(?label) ?entity
