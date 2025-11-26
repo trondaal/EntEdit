@@ -12,6 +12,7 @@ import {
   DialogActions,
 } from "@mui/material";
 import { ExpandMore, ExpandLess, Settings } from "@mui/icons-material";
+import { useTranslation } from "react-i18next";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import LanguageSelector from "./LanguageSelector";
 
@@ -32,6 +33,7 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
   isModal = false,
   onResetConfiguration,
 }) => {
+  const { t } = useTranslation();
   const [expanded, setExpanded] = useState(false);
   const [localConfig, setLocalConfig] = useState(config);
 
@@ -52,25 +54,25 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
         <DialogTitle>
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <Settings sx={{ mr: 1 }} />
-            SPARQL Endpoint Configuration
+            {t("endpointConfig.title")}
           </Box>
         </DialogTitle>
         <DialogContent>
           <Box sx={{ pt: 1 }}>
             <TextField
               fullWidth
-              label="SPARQL Endpoint URL"
+              label={t("endpointConfig.endpointUrl")}
               value={localConfig.url}
               onChange={(e) =>
                 setLocalConfig({ ...localConfig, url: e.target.value })
               }
-              helperText="Enter the URL of your SPARQL endpoint"
+              helperText={t("endpointConfig.endpointUrlHelper")}
               sx={{ mb: 2 }}
             />
 
             <TextField
               fullWidth
-              label="Username (optional)"
+              label={t("endpointConfig.username")}
               value={localConfig.username || ""}
               onChange={(e) =>
                 setLocalConfig({ ...localConfig, username: e.target.value })
@@ -80,7 +82,7 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
 
             <TextField
               fullWidth
-              label="Password (optional)"
+              label={t("endpointConfig.password")}
               type="password"
               value={localConfig.password || ""}
               onChange={(e) =>
@@ -91,14 +93,14 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
           </Box>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleReset}>Reset</Button>
+          <Button onClick={handleReset}>{t("endpointConfig.reset")}</Button>
           {onResetConfiguration && (
             <Button onClick={onResetConfiguration} color="error">
-              Reconfigure Database
+              {t("endpointConfig.reconfigureDatabase")}
             </Button>
           )}
           <Button variant="contained" onClick={handleSave}>
-            Save Configuration
+            {t("endpointConfig.saveConfiguration")}
           </Button>
         </DialogActions>
       </>
@@ -110,7 +112,7 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
       <Box sx={{ display: "flex", alignItems: "center", p: 2 }}>
         <Settings sx={{ mr: 1 }} />
         <Typography variant="h6" sx={{ flexGrow: 1 }}>
-          SPARQL Endpoint Configuration
+          {t("endpointConfig.title")}
         </Typography>
         <Typography variant="body2" color="text.secondary" sx={{ mr: 2 }}>
           {config.url}
@@ -125,12 +127,12 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
         <Box sx={{ p: 2, pt: 0 }}>
           <Box sx={{ display: "flex", alignItems: "flex-start", mb: 2 }}>
             <TextField
-              label="SPARQL Endpoint URL"
+              label={t("endpointConfig.endpointUrl")}
               value={localConfig.url}
               onChange={(e) =>
                 setLocalConfig({ ...localConfig, url: e.target.value })
               }
-              helperText="Enter the URL of your SPARQL endpoint"
+              helperText={t("endpointConfig.endpointUrlHelper")}
               sx={{ flexGrow: 1, mr: 2 }}
             />
             <Box sx={{ alignSelf: "center" }}>
@@ -144,7 +146,7 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
 
           <TextField
             fullWidth
-            label="Username (optional)"
+            label={t("endpointConfig.username")}
             value={localConfig.username || ""}
             onChange={(e) =>
               setLocalConfig({ ...localConfig, username: e.target.value })
@@ -154,7 +156,7 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
 
           <TextField
             fullWidth
-            label="Password (optional)"
+            label={t("endpointConfig.password")}
             type="password"
             value={localConfig.password || ""}
             onChange={(e) =>
@@ -165,10 +167,10 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
 
           <Box sx={{ display: "flex", gap: 1 }}>
             <Button variant="contained" onClick={handleSave}>
-              Save Configuration
+              {t("endpointConfig.saveConfiguration")}
             </Button>
             <Button variant="outlined" onClick={handleReset}>
-              Reset
+              {t("endpointConfig.reset")}
             </Button>
           </Box>
         </Box>

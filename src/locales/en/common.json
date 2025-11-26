@@ -37,5 +37,15 @@
     "noEntitiesForClass": "No entities found for this class",
     "noEntitiesMatching": "No entities found matching \"{{filter}}\"",
     "loadingEntities": "Loading entities..."
+  },
+  "endpointConfig": {
+    "title": "SPARQL Endpoint Configuration",
+    "endpointUrl": "SPARQL Endpoint URL",
+    "endpointUrlHelper": "Enter the URL of your SPARQL endpoint",
+    "username": "Username (optional)",
+    "password": "Password (optional)",
+    "saveConfiguration": "Save Configuration",
+    "reset": "Reset",
+    "reconfigureDatabase": "Reconfigure Database"
   }
 }

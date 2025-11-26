@@ -37,5 +37,15 @@
     "noEntitiesForClass": "Ingen entiteter funnet for denne klassen",
     "noEntitiesMatching": "Ingen entiteter funnet som matcher \"{{filter}}\"",
     "loadingEntities": "Laster entiteter..."
+  },
+  "endpointConfig": {
+    "title": "SPARQL endepunkt-konfigurasjon",
+    "endpointUrl": "SPARQL endepunkt-URL",
+    "endpointUrlHelper": "Skriv inn URL-en til SPARQL-endepunktet ditt",
+    "username": "Brukernavn (valgfritt)",
+    "password": "Passord (valgfritt)",
+    "saveConfiguration": "Lagre konfigurasjon",
+    "reset": "Tilbakestill",
+    "reconfigureDatabase": "Konfigurer database på nytt"
   }
 }
