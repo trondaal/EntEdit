@@ -9,6 +9,7 @@ import {
   Box,
 } from "@mui/material";
 import { Settings, Help } from "@mui/icons-material";
+import { useTranslation } from "react-i18next";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import LanguageSelector from "./LanguageSelector";
 import EndpointConfig from "./EndpointConfig";
@@ -28,6 +29,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({
   onLanguageChange,
   onResetConfiguration,
 }) => {
+  const { t } = useTranslation();
   const [configDialogOpen, setConfigDialogOpen] = useState(false);
 
   const getEndpointDisplayName = (url: string): string => {
@@ -78,7 +80,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({
           }}
         >
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Entity-oriented metadata
+            {t("appTitle")}
           </Typography>
 
           <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
