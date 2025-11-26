@@ -3,18 +3,19 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { CssBaseline, Container, Box, CircularProgress, Typography, Tabs, Tab } from "@mui/material";
+import { useTranslation } from "react-i18next";
 import { queryClient } from "./utils/queryClient";
 import AppHeader from "./components/AppHeader";
 import EntityBrowser from "./components/EntityBrowser";
 import SearchInterface from "./components/SearchInterface";
 import ConfigurationWizard from "./components/ConfigurationWizard";
 import type { SparqlEndpointConfig } from "./types/sparql";
-import { 
-  loadConfiguration, 
-  saveConfiguration, 
+import {
+  loadConfiguration,
+  saveConfiguration,
   clearConfiguration,
   getDefaultConfiguration,
-  type AppConfiguration 
+  type AppConfiguration
 } from "./utils/configManager";
 
 const theme = createTheme({
@@ -65,6 +66,7 @@ const theme = createTheme({
 });
 
 function App() {
+  const { t, i18n } = useTranslation();
   const [appConfig, setAppConfig] = useState<AppConfiguration | null>(null);
   const [loading, setLoading] = useState(true);
   const [showWizard, setShowWizard] = useState(false);
@@ -73,6 +75,13 @@ function App() {
   // Check if search tab should be hidden based on URL parameter
   // By default, search tab is shown unless 'nosearch' parameter is present
   const showSearchTab = !new URLSearchParams(window.location.search).has('nosearch');
+
+  // Sync i18next language with app language selection
+  useEffect(() => {
+    if (appConfig?.language) {
+      i18n.changeLanguage(appConfig.language);
+    }
+  }, [appConfig?.language, i18n]);
 
   // Load configuration on app start
   useEffect(() => {
@@ -152,7 +161,7 @@ function App() {
           >
             <CircularProgress size={40} sx={{ mb: 2 }} />
             <Typography variant="h6" color="text.secondary">
-              Loading EntEdit...
+              {t("labels.loading")}
             </Typography>
           </Box>
         </ThemeProvider>
@@ -198,8 +207,8 @@ function App() {
                     onChange={(_, newValue) => setActiveTab(newValue)}
                     aria-label="main navigation tabs"
                   >
-                    <Tab label="Entity Browser" />
-                    {showSearchTab && <Tab label="Search" />}
+                    <Tab label={t("tabs.entityBrowser")} />
+                    {showSearchTab && <Tab label={t("tabs.search")} />}
                   </Tabs>
                 </Container>
               </Box>

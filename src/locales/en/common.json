@@ -1,0 +1,40 @@
+{
+  "buttons": {
+    "save": "Save",
+    "saving": "Saving...",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "deleting": "Deleting...",
+    "new": "New",
+    "add": "Add",
+    "remove": "Remove",
+    "graph": "Graph",
+    "editLabels": "Edit Labels"
+  },
+  "labels": {
+    "language": "Language",
+    "identifier": "Identifier (URI)",
+    "loading": "Loading...",
+    "noResults": "No results found",
+    "filter": "Filter...",
+    "addTextValue": "Add text value",
+    "addCategory": "Add category",
+    "addRelated": "Add related"
+  },
+  "navigation": {
+    "classes": "Classes",
+    "entities": "Entities",
+    "properties": "Properties"
+  },
+  "tabs": {
+    "entityBrowser": "Entity Browser",
+    "search": "Search"
+  },
+  "messages": {
+    "selectClass": "Select a class to view entities",
+    "noEntitiesForClass": "No entities found for this class",
+    "noEntitiesMatching": "No entities found matching \"{{filter}}\"",
+    "loadingEntities": "Loading entities..."
+  }
+}

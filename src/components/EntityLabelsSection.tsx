@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
 import { Language } from "@mui/icons-material";
+import { useTranslation } from "react-i18next";
 import { getPrimaryLabel } from "../utils/labelUtils";
 
 interface EntityLabelsSectionProps {
@@ -18,6 +19,7 @@ const EntityLabelsSection: React.FC<EntityLabelsSectionProps> = ({
   classUri,
   onEditLabels,
 }) => {
+  const { t } = useTranslation("entityEditor");
   const primaryLabel = getPrimaryLabel(entityLabels, selectedLanguage);
 
   return (
@@ -31,7 +33,7 @@ const EntityLabelsSection: React.FC<EntityLabelsSectionProps> = ({
         }}
       >
         <Typography variant="h6" color="primary">
-          {primaryLabel || "No label"}
+          {primaryLabel || t("messages.noLabel")}
         </Typography>
         {isEditing && (
           <Button
@@ -40,15 +42,15 @@ const EntityLabelsSection: React.FC<EntityLabelsSectionProps> = ({
             startIcon={<Language />}
             onClick={onEditLabels}
             disabled={!classUri}
-            aria-label="Edit entity labels"
+            aria-label={t("common:buttons.editLabels", { ns: "common" })}
           >
-            Edit Labels
+            {t("common:buttons.editLabels", { ns: "common" })}
           </Button>
         )}
       </Box>
       {!primaryLabel && isEditing && (
         <Typography variant="body2" color="text.secondary">
-          This entity has no labels. Click "Edit Labels" to add one.
+          {t("messages.noLabels")}
         </Typography>
       )}
     </Box>

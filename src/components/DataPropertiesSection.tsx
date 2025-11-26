@@ -11,6 +11,7 @@ import {
   InputLabel,
 } from "@mui/material";
 import { Delete } from "@mui/icons-material";
+import { useTranslation } from "react-i18next";
 import type { RdfProperty } from "../types/sparql";
 
 interface DataPropertiesSectionProps {
@@ -36,6 +37,8 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
   onRemoveValue,
   getPropertyLabel,
 }) => {
+  const { t } = useTranslation("entityEditor");
+
   // Get available properties (excluding rdfs:label)
   const availableProperties = properties.filter(
     (property) => property.uri !== "http://www.w3.org/2000/01/rdf-schema#label",
@@ -68,14 +71,14 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
               mb: 1.5,
             }}
           >
-            <Typography variant="subtitle1">Text metadata</Typography>
+            <Typography variant="subtitle1">{t("sections.textMetadata")}</Typography>
 
             {isEditing && (
               <FormControl size="small" sx={{ minWidth: 200 }}>
-                <InputLabel>Add text value</InputLabel>
+                <InputLabel>{t("common:labels.addTextValue", { ns: "common" })}</InputLabel>
                 <Select
                   value={selectedProperty}
-                  label="Add text value"
+                  label={t("common:labels.addTextValue", { ns: "common" })}
                   onChange={(e) => onPropertySelect(e.target.value)}
                   disabled={!classUri}
                 >

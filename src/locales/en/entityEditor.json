@@ -1,0 +1,31 @@
+{
+  "title": {
+    "create": "Create New Entity",
+    "edit": "Edit Entity"
+  },
+  "sections": {
+    "labels": "Labels",
+    "textMetadata": "Text metadata",
+    "controlledValues": "Controlled values",
+    "relatedEntities": "Related entities"
+  },
+  "placeholders": {
+    "enterUri": "Enter custom URI or leave empty for auto-generation",
+    "enterValue": "Enter {{propertyName}}"
+  },
+  "messages": {
+    "noLabel": "No label",
+    "noLabels": "This entity has no labels. Click \"Edit Labels\" to add one.",
+    "selectClass": "Please select a class from the left panel to create a new entity.",
+    "noRangeSpecified": "No range specified for this property. Cannot suggest entities.",
+    "noEntitiesFound": "No entities found of type {{typeName}}",
+    "selectEntity": "Select an entity for relationship:"
+  },
+  "dialogs": {
+    "delete": {
+      "title": "Delete Entity",
+      "message": "Are you sure you want to delete this entity? This action will permanently remove all statements about this entity from the database and cannot be undone.",
+      "entityLabel": "Entity: {{entityUri}}"
+    }
+  }
+}

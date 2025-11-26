@@ -13,6 +13,7 @@ import {
   TextField,
 } from "@mui/material";
 import { Class, Description, Search } from "@mui/icons-material";
+import { useTranslation } from "react-i18next";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import {
   useRdfClasses,
@@ -32,6 +33,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
   config,
   selectedLanguage,
 }) => {
+  const { t } = useTranslation();
   const [selectedClass, setSelectedClass] = useState<string | null>(null);
   const [selectedEntity, setSelectedEntity] = useState<string | null>(null);
   const [entityFilter, setEntityFilter] = useState<string>("");
@@ -114,7 +116,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
                 sx={{ display: "flex", alignItems: "center" }}
               >
                 <Class sx={{ mr: 1 }} />
-                Classes
+                {t("navigation.classes")}
               </Typography>
             </Box>
 
@@ -161,7 +163,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
                 sx={{ display: "flex", alignItems: "center" }}
               >
                 <Description sx={{ mr: 1 }} />
-                Entities
+                {t("navigation.entities")}
               </Typography>
 
               <Box
@@ -188,11 +190,11 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
                 {selectedClass && (
                   <TextField
                     size="small"
-                    placeholder="Filter..."
+                    placeholder={t("labels.filter")}
                     value={entityFilter}
                     onChange={(e) => setEntityFilter(e.target.value)}
                     sx={{ width: 130 }}
-                    aria-label="Filter entities"
+                    aria-label={t("labels.filter")}
                     InputProps={{
                       startAdornment: (
                         <Search
@@ -211,7 +213,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
 
             {!selectedClass ? (
               <Box sx={{ p: 3, textAlign: "center", color: "text.secondary" }}>
-                Select a class to view entities
+                {t("messages.selectClass")}
               </Box>
             ) : entitiesLoading ? (
               <Box sx={{ display: "flex", justifyContent: "center", p: 3 }}>
@@ -220,8 +222,8 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
             ) : filteredEntities?.length === 0 ? (
               <Box sx={{ p: 3, textAlign: "center", color: "text.secondary" }}>
                 {entityFilter
-                  ? `No entities found matching "${entityFilter}"`
-                  : "No entities found for this class"}
+                  ? t("messages.noEntitiesMatching", { filter: entityFilter })
+                  : t("messages.noEntitiesForClass")}
               </Box>
             ) : (
               <List sx={{ maxHeight: 600, overflow: "auto" }}>

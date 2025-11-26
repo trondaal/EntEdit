@@ -1,0 +1,31 @@
+{
+  "title": {
+    "create": "Opprett ny entitet",
+    "edit": "Rediger entitet"
+  },
+  "sections": {
+    "labels": "Etiketter",
+    "textMetadata": "Tekstmetadata",
+    "controlledValues": "Kontrollerte verdier",
+    "relatedEntities": "Relaterte entiteter"
+  },
+  "placeholders": {
+    "enterUri": "Skriv inn tilpasset URI eller la stå tomt for automatisk generering",
+    "enterValue": "Skriv inn {{propertyName}}"
+  },
+  "messages": {
+    "noLabel": "Ingen etikett",
+    "noLabels": "Denne entiteten har ingen etiketter. Klikk \"Rediger etiketter\" for å legge til en.",
+    "selectClass": "Vennligst velg en klasse fra venstre panel for å opprette en ny entitet.",
+    "noRangeSpecified": "Ingen rekkevidde spesifisert for denne egenskapen. Kan ikke foreslå entiteter.",
+    "noEntitiesFound": "Ingen entiteter funnet av type {{typeName}}",
+    "selectEntity": "Velg en entitet for relasjon:"
+  },
+  "dialogs": {
+    "delete": {
+      "title": "Slett entitet",
+      "message": "Er du sikker på at du vil slette denne entiteten? Denne handlingen vil permanent fjerne alle utsagn om denne entiteten fra databasen og kan ikke angres.",
+      "entityLabel": "Entitet: {{entityUri}}"
+    }
+  }
+}

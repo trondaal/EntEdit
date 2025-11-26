@@ -1,0 +1,40 @@
+{
+  "buttons": {
+    "save": "Lagre",
+    "saving": "Lagrer...",
+    "cancel": "Avbryt",
+    "edit": "Rediger",
+    "delete": "Slett",
+    "deleting": "Sletter...",
+    "new": "Ny",
+    "add": "Legg til",
+    "remove": "Fjern",
+    "graph": "Graf",
+    "editLabels": "Rediger etiketter"
+  },
+  "labels": {
+    "language": "Språk",
+    "identifier": "Identifikator (URI)",
+    "loading": "Laster...",
+    "noResults": "Ingen resultater funnet",
+    "filter": "Filter...",
+    "addTextValue": "Legg til tekstverdi",
+    "addCategory": "Legg til kategori",
+    "addRelated": "Legg til relatert"
+  },
+  "navigation": {
+    "classes": "Klasser",
+    "entities": "Entiteter",
+    "properties": "Egenskaper"
+  },
+  "tabs": {
+    "entityBrowser": "Entitetsutforsker",
+    "search": "Søk"
+  },
+  "messages": {
+    "selectClass": "Velg en klasse for å se entiteter",
+    "noEntitiesForClass": "Ingen entiteter funnet for denne klassen",
+    "noEntitiesMatching": "Ingen entiteter funnet som matcher \"{{filter}}\"",
+    "loadingEntities": "Laster entiteter..."
+  }
+}

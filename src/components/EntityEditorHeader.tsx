@@ -7,6 +7,7 @@ import {
   DeleteForever,
   AccountTree,
 } from "@mui/icons-material";
+import { useTranslation } from "react-i18next";
 
 interface EntityEditorHeaderProps {
   entityUri: string | null;
@@ -37,6 +38,8 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
   onNew,
   onOpenGraph,
 }) => {
+  const { t } = useTranslation("entityEditor");
+
   return (
     <Box
       sx={{
@@ -50,7 +53,7 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
     >
       <Typography variant="h6" sx={{ display: "flex", alignItems: "center" }}>
         {entityUri ? <Edit sx={{ mr: 1 }} /> : <Add sx={{ mr: 1 }} />}
-        {entityUri ? "Edit Entity" : "Create New Entity"}
+        {entityUri ? t("title.edit") : t("title.create")}
       </Typography>
 
       <Box sx={{ display: "flex", gap: 1 }}>
@@ -62,18 +65,18 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
               onClick={onSave}
               disabled={saving || uriError || !classUri}
               startIcon={saving ? <CircularProgress size={16} /> : <Save />}
-              aria-label="Save entity"
+              aria-label={t("common:buttons.save", { ns: "common" })}
             >
-              {saving ? "Saving..." : "Save"}
+              {saving ? t("common:buttons.saving", { ns: "common" }) : t("common:buttons.save", { ns: "common" })}
             </Button>
             {entityUri && (
               <Button
                 variant="outlined"
                 size="small"
                 onClick={onCancel}
-                aria-label="Cancel editing"
+                aria-label={t("common:buttons.cancel", { ns: "common" })}
               >
-                Cancel
+                {t("common:buttons.cancel", { ns: "common" })}
               </Button>
             )}
           </>
@@ -84,9 +87,9 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
               size="small"
               onClick={onEdit}
               startIcon={<Edit />}
-              aria-label="Edit entity"
+              aria-label={t("common:buttons.edit", { ns: "common" })}
             >
-              Edit
+              {t("common:buttons.edit", { ns: "common" })}
             </Button>
             {entityUri && (
               <>
@@ -100,9 +103,9 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
                   rel="noopener noreferrer"
                   startIcon={<AccountTree />}
                   color="primary"
-                  aria-label="View entity graph"
+                  aria-label={t("common:buttons.graph", { ns: "common" })}
                 >
-                  Graph
+                  {t("common:buttons.graph", { ns: "common" })}
                 </Button>
                 <Button
                   variant="outlined"
@@ -110,9 +113,9 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
                   onClick={onNew}
                   startIcon={<Add />}
                   color="success"
-                  aria-label="Create new entity"
+                  aria-label={t("common:buttons.new", { ns: "common" })}
                 >
-                  New
+                  {t("common:buttons.new", { ns: "common" })}
                 </Button>
                 <Button
                   variant="outlined"
@@ -120,9 +123,9 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
                   onClick={onDelete}
                   startIcon={<DeleteForever />}
                   color="error"
-                  aria-label="Delete entity"
+                  aria-label={t("common:buttons.delete", { ns: "common" })}
                 >
-                  Delete
+                  {t("common:buttons.delete", { ns: "common" })}
                 </Button>
               </>
             )}
