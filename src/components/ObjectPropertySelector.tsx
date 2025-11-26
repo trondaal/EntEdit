@@ -5,6 +5,7 @@ import {
   Button,
   CircularProgress,
 } from "@mui/material";
+import { useTranslation } from "react-i18next";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import { useEntitiesByRange } from "../hooks/useSparqlQueries";
 import { extractUriFragment } from "../utils/labelUtils";
@@ -25,6 +26,7 @@ const ObjectPropertySelector: React.FC<ObjectPropertySelectorProps> = ({
   onSelect,
   onCancel,
 }) => {
+  const { t } = useTranslation("entityEditor");
   const { data: entities, isLoading } = useEntitiesByRange(
     config,
     rangeUri || "",
@@ -43,10 +45,10 @@ const ObjectPropertySelector: React.FC<ObjectPropertySelectorProps> = ({
         }}
       >
         <Typography color="warning.main">
-          No range specified for this property. Cannot suggest entities.
+          {t("messages.noRangeSpecified")}
         </Typography>
         <Button variant="outlined" onClick={onCancel} sx={{ mt: 1 }}>
-          Cancel
+          {t("common:buttons.cancel", { ns: "common" })}
         </Button>
       </Box>
     );
@@ -59,7 +61,7 @@ const ObjectPropertySelector: React.FC<ObjectPropertySelectorProps> = ({
       >
         <CircularProgress size={20} />
         <Typography sx={{ ml: 1, display: "inline" }}>
-          Loading entities...
+          {t("common:messages.loadingEntities", { ns: "common" })}
         </Typography>
       </Box>
     );
@@ -77,10 +79,10 @@ const ObjectPropertySelector: React.FC<ObjectPropertySelectorProps> = ({
         }}
       >
         <Typography color="info.main">
-          No entities found of type {extractUriFragment(rangeUri)}
+          {t("messages.noEntitiesFound", { typeName: extractUriFragment(rangeUri) })}
         </Typography>
         <Button variant="outlined" onClick={onCancel} sx={{ mt: 1 }}>
-          Cancel
+          {t("common:buttons.cancel", { ns: "common" })}
         </Button>
       </Box>
     );
@@ -97,7 +99,7 @@ const ObjectPropertySelector: React.FC<ObjectPropertySelectorProps> = ({
       }}
     >
       <Typography variant="subtitle2" sx={{ mb: 1 }}>
-        Select an entity for relationship:
+        {t("messages.selectEntity")}
       </Typography>
       <Box sx={{ maxHeight: 200, overflow: "auto" }}>
         {entities.map((entity) => (
@@ -124,7 +126,7 @@ const ObjectPropertySelector: React.FC<ObjectPropertySelectorProps> = ({
         ))}
       </Box>
       <Button variant="outlined" onClick={onCancel} sx={{ mt: 1 }}>
-        Cancel
+        {t("common:buttons.cancel", { ns: "common" })}
       </Button>
     </Box>
   );

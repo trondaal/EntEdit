@@ -19,6 +19,7 @@ import {
   Typography,
 } from "@mui/material";
 import { DeleteForever } from "@mui/icons-material";
+import { useTranslation } from "react-i18next";
 import type { SparqlEndpointConfig, RdfProperty } from "../types/sparql";
 import { SparqlClient } from "../utils/sparqlClient";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
@@ -56,6 +57,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   onEntitySaved,
   onEntityDeselected,
 }) => {
+  const { t } = useTranslation("entityEditor");
   const queryClient = useQueryClient();
   const [entityData, setEntityData] = useState<Record<string, string[]>>({});
   const [isEditing, setIsEditing] = useState(!entityUri);
@@ -588,7 +590,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       <Box sx={{ p: 3 }}>
         {!classUri && (
           <Alert severity="info" sx={{ mb: 2 }}>
-            Please select a class from the left panel to create a new entity.
+            {t("messages.selectClass")}
           </Alert>
         )}
         {saveError && (
@@ -607,7 +609,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
         <TextField
           fullWidth
-          label="Identifier (URI)"
+          label={t("common:labels.identifier", { ns: "common" })}
           value={entityUri || customEntityUri}
           onChange={(e) => {
             if (!entityUri) {
@@ -619,7 +621,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           error={!!uriError}
           sx={{ mb: 2 }}
           size="small"
-          placeholder="Enter custom URI or leave empty for auto-generation"
+          placeholder={t("placeholders.enterUri")}
         />
 
         <DataPropertiesSection
@@ -647,14 +649,14 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
                 mb: 1.5,
               }}
             >
-              <Typography variant="subtitle1">Controlled values</Typography>
+              <Typography variant="subtitle1">{t("sections.controlledValues")}</Typography>
 
               {availableControlledProperties.length > 0 && (
                 <FormControl size="small" sx={{ minWidth: 200 }}>
-                  <InputLabel>Add category</InputLabel>
+                  <InputLabel>{t("common:labels.addCategory", { ns: "common" })}</InputLabel>
                   <Select
                     value={selectedControlledProperty}
-                    label="Add category"
+                    label={t("common:labels.addCategory", { ns: "common" })}
                     onChange={(e) =>
                       setSelectedControlledProperty(e.target.value)
                     }
@@ -718,14 +720,14 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
                 mb: 1.5,
               }}
             >
-              <Typography variant="subtitle1">Related entities</Typography>
+              <Typography variant="subtitle1">{t("sections.relatedEntities")}</Typography>
 
               {availableObjectProperties.length > 0 && (
                 <FormControl size="small" sx={{ minWidth: 200 }}>
-                  <InputLabel>Add related</InputLabel>
+                  <InputLabel>{t("common:labels.addRelated", { ns: "common" })}</InputLabel>
                   <Select
                     value={selectedObjectProperty}
-                    label="Add related"
+                    label={t("common:labels.addRelated", { ns: "common" })}
                     onChange={(e) => setSelectedObjectProperty(e.target.value)}
                     disabled={!classUri}
                   >
@@ -791,15 +793,13 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         aria-labelledby="delete-dialog-title"
         aria-describedby="delete-dialog-description"
       >
-        <DialogTitle id="delete-dialog-title">Delete Entity</DialogTitle>
+        <DialogTitle id="delete-dialog-title">{t("dialogs.delete.title")}</DialogTitle>
         <DialogContent>
           <DialogContentText id="delete-dialog-description">
-            Are you sure you want to delete this entity? This action will
-            permanently remove all statements about this entity from the
-            database and cannot be undone.
+            {t("dialogs.delete.message")}
           </DialogContentText>
           <DialogContentText sx={{ mt: 1, fontWeight: "bold" }}>
-            Entity: {entityUri}
+            {t("dialogs.delete.entityLabel", { entityUri })}
           </DialogContentText>
           {deleteError && (
             <Alert severity="error" sx={{ mt: 2 }}>
@@ -812,7 +812,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
             onClick={() => setDeleteDialogOpen(false)}
             disabled={deleting}
           >
-            Cancel
+            {t("common:buttons.cancel", { ns: "common" })}
           </Button>
           <Button
             onClick={handleDelete}
@@ -823,7 +823,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
               deleting ? <CircularProgress size={16} /> : <DeleteForever />
             }
           >
-            {deleting ? "Deleting..." : "Delete Entity"}
+            {deleting ? t("common:buttons.deleting", { ns: "common" }) : t("common:buttons.delete", { ns: "common" })}
           </Button>
         </DialogActions>
       </Dialog>
