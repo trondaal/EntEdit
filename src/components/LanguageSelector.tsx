@@ -9,6 +9,7 @@ import {
   Box,
 } from "@mui/material";
 import { Language } from "@mui/icons-material";
+import { useTranslation } from "react-i18next";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import { useAvailableLanguages } from "../hooks/useSparqlQueries";
 
@@ -23,6 +24,7 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
   selectedLanguage,
   onLanguageChange,
 }) => {
+  const { t } = useTranslation();
   const { data: languages, isLoading } = useAvailableLanguages(config);
 
   const handleChange = (event: SelectChangeEvent) => {
@@ -57,10 +59,10 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
           flexShrink: 0,
         }}
       >
-        <InputLabel sx={{ fontSize: "0.75rem" }}>Language</InputLabel>
+        <InputLabel sx={{ fontSize: "0.75rem" }}>{t("labels.language")}</InputLabel>
         <Select
           value={selectedLanguage}
-          label="Language"
+          label={t("labels.language")}
           onChange={handleChange}
           disabled={isLoading}
           sx={{
