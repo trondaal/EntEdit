@@ -7,11 +7,13 @@
 @prefix rdamo: <http://rdaregistry.info/Elements/m/object/> .
 
 abi:StatusLiteral a rdfs:Datatype ;
-    owl:oneOf ("data property" "object property" "class" "controlled property" "deprecated" "not used") .
+    owl:oneOf ("core wemi property" "data property" "object property" "class" "controlled property" "deprecated" "not used") .
 
 abi:status a owl:DatatypeProperty ;
     rdfs:range abi:StatusLiteral ;
     rdfs:label "has status (literal)" .
+
+abi:order a owl:DatatypeProperty .
 
 #Adding some classes for the vocabularies used since difficult to differentiate skos:Concept
 abi:Contenttype a owl:Class .
@@ -42,24 +44,29 @@ abi:Language rdfs:label "Language"@en .
 # <http://www.w3.org/2004/02/skos/core#Concept>			    abi:status "class" .  # "Concept"@en .
 #abi:Worktype		                                        abi:status "class" .  # "Verkstype"@en .
 #abi:Language			                                      abi:status "class" .  # "Språk"@en .
-#abi:Contenttype			                                  abi:status "class" .  # "Innholdstype"@en .
+#abi:Contenttype			                                abi:status "class" .  # "Innholdstype"@en .
 #abi:Carriertype  			                                abi:status "class" .  # "Bærertype"@en .
 #abi:Mediatype			                                    abi:status "class" .  # "Mediatype"@en .
 
 #Agent profile, data properties
-<http://rdaregistry.info/Elements/a/datatype/P50339>	abi:status "data property" .   #"dates"@en .
 <http://rdaregistry.info/Elements/a/datatype/P50385>	abi:status "data property" .   #"name"@en .
+<http://rdaregistry.info/Elements/a/datatype/P50385>	abi:order 1 .
 <http://rdaregistry.info/Elements/a/datatype/P50415>	abi:status "data property" .   #"variantname"@en .
+<http://rdaregistry.info/Elements/a/datatype/P50415>	abi:order 2 .
+<http://rdaregistry.info/Elements/a/datatype/P50339>	abi:status "data property" .   #"dates"@en .
+<http://rdaregistry.info/Elements/a/datatype/P50339>	abi:order 3 .
+
 
 #Work profile, data properties
-<http://rdaregistry.info/Elements/w/datatype/P10004>	abi:status "data property" .   #"type"@en .
-<http://rdaregistry.info/Elements/w/datatype/P10219>	abi:status "data property" .   #"date"@en .
-<http://rdaregistry.info/Elements/w/datatype/P10012>	abi:status "data property" .   #"numbering"@en .
-<http://rdaregistry.info/Elements/w/datatype/P10088>	abi:status "data property" .   #"title"@en .
-<http://rdaregistry.info/Elements/w/datatype/P10223>	abi:status "data property" .   #"titlepreferred"@en .
-<http://rdaregistry.info/Elements/w/datatype/P10086>	abi:status "data property" .   #"titlevariant"@en .
-<http://rdaregistry.info/Elements/w/datatype/P10330>	abi:status "data property" .   #"note on Work"@en .
-<http://rdaregistry.info/Elements/x/datatype/P00029>	abi:status "data property" .   #"form"@en .
+<http://rdaregistry.info/Elements/w/datatype/P10088>	abi:status "data property" ; abi:order 1 .   #"title"@en .
+<http://rdaregistry.info/Elements/w/datatype/P10223>	abi:status "data property" ; abi:order 2 .  #"titlepreferred"@en .
+<http://rdaregistry.info/Elements/w/datatype/P10086>	abi:status "data property" ; abi:order 3 .   #"titlevariant"@en .
+<http://rdaregistry.info/Elements/w/datatype/P10012>	abi:status "data property" ; abi:order 4 .   #"numbering"@en .
+<http://rdaregistry.info/Elements/w/datatype/P10256>	abi:status "data property" ; abi:order 6 .   #"emne"@en .
+<http://rdaregistry.info/Elements/w/datatype/P10219>	abi:status "data property" ; abi:order 7 .   #"date"@en ; 	
+<http://rdaregistry.info/Elements/w/datatype/P10330>	abi:status "data property" ; abi:order 8 .   #"note on Work"@en .
+#<http://rdaregistry.info/Elements/w/datatype/P10004>	abi:status "data property" .   #"type"@en .
+#<http://rdaregistry.info/Elements/x/datatype/P00029>	abi:status "data property" .   #"form"@en .
 
 # Defining the object type version of this property the type "controlled property"
 # Also using ad hoc range type to be able to filter the relevant values in the user interface
@@ -67,13 +74,12 @@ abi:Language rdfs:label "Language"@en .
 <http://rdaregistry.info/Elements/w/object/P10004>      rdfs:range abi:Worktype .
 
 #Expression profile, data properties
-<http://rdaregistry.info/Elements/e/datatype/P20006>	abi:status "data property" .   #"language"@en .
-<http://rdaregistry.info/Elements/e/datatype/P20065>	abi:status "data property" .   #"languagesadditional"@en .
-<http://rdaregistry.info/Elements/e/datatype/P20001>	abi:status "data property" .   #"content"@en .
-<http://rdaregistry.info/Elements/e/datatype/P20312>	abi:status "data property" .   #"title"@en .
-<http://rdaregistry.info/Elements/e/datatype/P20315>	abi:status "data property" .   #"titlepreferred"@en .
-<http://rdaregistry.info/Elements/e/datatype/P20316>	abi:status "data property" .   #"titlevariant"@en .
-<http://rdaregistry.info/Elements/e/datatype/P20071>	abi:status "data property" .   #"contentsnote"@en .
+#<http://rdaregistry.info/Elements/e/datatype/P20006>	abi:status "data property" .   #"language"@en .
+#<http://rdaregistry.info/Elements/e/datatype/P20001>	abi:status "data property" .   #"content"@en .
+<http://rdaregistry.info/Elements/e/datatype/P20312>	abi:status "data property" ; abi:order   1 .  #"title"@en .
+<http://rdaregistry.info/Elements/e/datatype/P20315>	abi:status "data property" ; abi:order   2 .   #"titlepreferred"@en .
+<http://rdaregistry.info/Elements/e/datatype/P20316>	abi:status "data property" ; abi:order   3 .   #"titlevariant"@en .
+#<http://rdaregistry.info/Elements/e/datatype/P20071>	abi:status "data property" .   #"contentsnote"@en .
 
 <http://rdaregistry.info/Elements/e/object/P20006>	abi:status "controlled property" .   #"language"@en .
 <http://rdaregistry.info/Elements/e/object/P20006>  rdfs:range  abi:Language .
@@ -81,15 +87,22 @@ abi:Language rdfs:label "Language"@en .
 <http://rdaregistry.info/Elements/e/object/P20001>  rdfs:range  abi:Contenttype .
 
 #Manifestation profile
-<http://rdaregistry.info/Elements/m/datatype/P30004>	abi:status "data property" .   #"identifier"@en .
-<http://rdaregistry.info/Elements/m/datatype/P30156>	abi:status "data property" .   #"title"@en .
-<http://rdaregistry.info/Elements/m/datatype/P30142>	abi:status "data property" .   #"subtitle"@en .
-<http://rdaregistry.info/Elements/m/datatype/P30014>	abi:status "data property" .   #"numbering"@en .
-<http://rdaregistry.info/Elements/m/datatype/P30134>	abi:status "data property" .   #"part"@en .
-<http://rdaregistry.info/Elements/m/datatype/P30117>	abi:status "data property" .   #"responsibility"@en .
-<http://rdaregistry.info/Elements/m/datatype/P30107>	abi:status "data property" .   #"edition"@en .
-<http://rdaregistry.info/Elements/m/datatype/P30182>	abi:status "data property" .   #"extent"@en .
-<http://rdaregistry.info/Elements/m/datatype/P30169>	abi:status "data property" .   #"dimensions"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30156>	abi:status "data property" ; abi:order 1 .   #"title"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30142>	abi:status "data property" ; abi:order 2 .   #"subtitle"@en .	
+<http://rdaregistry.info/Elements/m/datatype/P30117>	abi:status "data property" ; abi:order 3 .   #"responsibility"@en .	
+#<http://rdaregistry.info/Elements/m/datatype/P30134>	abi:status "data property" ; abi:order 4 .   #"tittel"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30014>	abi:status "data property" ; abi:order 5 .   #"numbering"@en .
+
+<http://rdaregistry.info/Elements/m/datatype/P30107>	abi:status "data property" ; abi:order 6 .  #"edition"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30182>	abi:status "data property" ; abi:order 7 .  #"extent"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30169>	abi:status "data property" ; abi:order 8 .  #"dimensions"@en .
+
+<http://rdaregistry.info/Elements/m/datatype/P30083>	abi:status "data property" ; abi:order 9 .  #"publisher"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30088>	abi:status "data property" ; abi:order 10 . #"publicationplace"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30011>	abi:status "data property" ; abi:order 11 .  #"publicationdate"@en .
+
+#<http://rdaregistry.info/Elements/m/datatype/P30007>	abi:status "data property" ; abi:order 12 . #"copyright date"@en .
+
 <http://rdaregistry.info/Elements/m/datatype/P30086>	abi:status "data property" .   #"productionplace"@en .
 <http://rdaregistry.info/Elements/m/datatype/P30174>	abi:status "data property" .   #"producer"@en .
 <http://rdaregistry.info/Elements/m/datatype/P30009>	abi:status "data property" .   #"productiondate"@en .
@@ -99,27 +112,52 @@ abi:Language rdfs:label "Language"@en .
 <http://rdaregistry.info/Elements/m/datatype/P30110>	abi:status "data property" .   #"production"@en .
 <http://rdaregistry.info/Elements/m/datatype/P30109>	abi:status "data property" .   #"manufacture"@en .
 <http://rdaregistry.info/Elements/m/datatype/P30108>	abi:status "data property" .   #"distribution"@en .
-<http://rdaregistry.info/Elements/m/datatype/P30088>	abi:status "data property" .   #"publicationplace"@en .
-<http://rdaregistry.info/Elements/m/datatype/P30083>	abi:status "data property" .   #"publisher"@en .
-<http://rdaregistry.info/Elements/m/datatype/P30011>	abi:status "data property" .   #"publicationdate"@en .
+
 <http://rdaregistry.info/Elements/m/datatype/P30085>	abi:status "data property" .   #"distributionplace"@en .
 <http://rdaregistry.info/Elements/m/datatype/P30173>	abi:status "data property" .   #"distributor"@en .
 <http://rdaregistry.info/Elements/m/datatype/P30008>	abi:status "data property" .   #"distributiondate"@en .
 <http://rdaregistry.info/Elements/m/datatype/P30087>	abi:status "data property" .   #"manufactureplace"@en .
 <http://rdaregistry.info/Elements/m/datatype/P30175>	abi:status "data property" .   #"manufacturer"@en .
 <http://rdaregistry.info/Elements/m/datatype/P30010>	abi:status "data property" .   #"manufacturedate"@en .
-<http://rdaregistry.info/Elements/m/datatype/P30007>	abi:status "data property" .   #"copyright"@en .
-<http://rdaregistry.info/Elements/m/datatype/P30002>	abi:status "data property" .   #"mediatype"@en .
-<http://rdaregistry.info/Elements/m/datatype/P30001>	abi:status "data property" .   #"carrier"@en .
-<http://rdaregistry.info/Elements/m/datatype/P30106>	abi:status "data property" .   #"series"@en .
-<http://rdaregistry.info/Elements/m/datatype/P30165>	abi:status "data property" .   #"seriesnumbering"@en .
-<http://rdaregistry.info/Elements/m/datatype/P30050>	abi:status "data property" .   #"partnote"@en .
-<http://rdaregistry.info/Elements/m/datatype/P30033>	abi:status "data property" .   #"contentsnote"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30004>	abi:status "data property" ;  abi:order 30 . #"identifier"@en .
+
+#<http://rdaregistry.info/Elements/m/datatype/P30002>	abi:status "data property" .   #"mediatype"@en .
+#<http://rdaregistry.info/Elements/m/datatype/P30001>	abi:status "data property" .   #"carrier"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30106>	abi:status "data property" ; abi:order 40 .  #"series"@en .
+<http://rdaregistry.info/Elements/m/datatype/P30165>	abi:status "data property" ; abi:order 41 .  #"seriesnumbering"@en .
+#<http://rdaregistry.info/Elements/m/datatype/P30050>	abi:status "data property" .   #"partnote"@en .
 
 <http://rdaregistry.info/Elements/m/object/P30002>	  abi:status "controlled property" .   #"mediatype"@en .
 <http://rdaregistry.info/Elements/m/object/P30002>    rdfs:range  abi:Mediatype .
 <http://rdaregistry.info/Elements/m/object/P30001>	  abi:status "controlled property" .   #"carrier"@en .
 <http://rdaregistry.info/Elements/m/object/P30001>    rdfs:range  abi:Carriertype .
+
+#Basic WEMI types
+
+rdawo:P10078	abi:status	"core wemi property"	 . #	has expression of work	rdac:C10001	rdac:C10006
+rdaeo:P20231	abi:status	"core wemi property"	 . #	has work expressed	rdac:C10006	rdac:C10001
+
+rdamo:P30139	abi:status	"core wemi property"	 . #	has expression manifested	rdac:C10007	rdac:C10006
+rdaeo:P20059	abi:status	"core wemi property"	 . #	has manifestation of expression	rdac:C10006	rdac:C10007
+
+#Object properties subject
+
+#<http://rdaregistry.info/Elements/w/object/P10256>	abi:status	"object property"	 .	    #   "har emne"@no .
+<http://rdaregistry.info/Elements/w/object/P10319>	abi:status	"object property"	 .	    #   "har emne agent"@no .
+#<http://rdaregistry.info/Elements/w/object/P10320>	abi:status	"object property"	 .	    #   "har emne kollektiv agent"@no .
+#<http://rdaregistry.info/Elements/w/object/P10263>	abi:status	"object property"	 .	    #   "har emne (korporasjon)"@no .
+<http://rdaregistry.info/Elements/w/object/P10258>	abi:status	"object property"	 .	    #   "har emne (uttrykk)"@no .
+#<http://rdaregistry.info/Elements/w/object/P10262>	abi:status	"object property"	 .	    #   "har emne (familie)"@no .
+#<http://rdaregistry.info/Elements/w/object/P10260>	abi:status	"object property"	 .	    #   "har emne (eksemplar)"@no .
+<http://rdaregistry.info/Elements/w/object/P10259>	abi:status	"object property"	 .	    #   "har emne (manifestasjon)"@no .
+#<http://rdaregistry.info/Elements/w/object/P10323>	abi:status	"object property"	 .	    #   "har emne nomen"@no .
+#<http://rdaregistry.info/Elements/w/object/P10261>	abi:status	"object property"	 .	    #   "har emne (person)"@no .
+#<http://rdaregistry.info/Elements/w/object/P10321>	abi:status	"object property"	 .	    #   "har emne sted"@no .
+#<http://rdaregistry.info/Elements/w/object/P10324>	abi:status	"object property"	 .	    #   "har emne RDA-entitet"@no .
+#<http://rdaregistry.info/Elements/w/object/P10322>	abi:status	"object property"	 .	    #   "har emne tidsrom"@no .
+<http://rdaregistry.info/Elements/w/object/P10257>	abi:status	"object property"	 .	    #   "har emne (verk)"@no .
+<http://rdaregistry.info/Elements/w/object/P10264>	abi:status	"object property"	 .	    #   "er emneverk for"@no .
+
 
 #Object properties
 rdawo:P10016	abi:status	"object property"	 . #	is dramatized as work	rdac:C10001	rdac:C10001
@@ -131,11 +169,11 @@ rdawo:P10147	abi:status	"object property"	 . #	has part work	rdac:C10001	rdac:C1
 rdawo:P10020	abi:status	"object property"	 . #	has sequel work	rdac:C10001	rdac:C10001
 rdawo:P10122	abi:status	"object property"	 . #	has prequel work	rdac:C10001	rdac:C10001
 
-rdawo:P10021	abi:status	"object property"	 . #	is replaced in part by work	rdac:C10001	rdac:C10001
-rdawo:P10206	abi:status	"object property"	 . #	is replacement in part of work	rdac:C10001	rdac:C10001
+#rdawo:P10021	abi:status	"object property"	 . #	is replaced in part by work	rdac:C10001	rdac:C10001
+#rdawo:P10206	abi:status	"object property"	 . #	is replacement in part of work	rdac:C10001	rdac:C10001
 
-rdawo:P10022	abi:status	"object property"	 . #	is replaced by work	rdac:C10001	rdac:C10001
-rdawo:P10207	abi:status	"object property"	 . #	is replacement of work	rdac:C10001	rdac:C10001
+#rdawo:P10022	abi:status	"object property"	 . #	is replaced by work	rdac:C10001	rdac:C10001
+#rdawo:P10207	abi:status	"object property"	 . #	is replacement of work	rdac:C10001	rdac:C10001
 
 rdawo:P10023	abi:status	"object property"	 . #	is adapted in verse as work	rdac:C10001	rdac:C10001
 rdawo:P10128	abi:status	"object property"	 . #	is verse adaptation of work	rdac:C10001	rdac:C10001
@@ -148,12 +186,6 @@ rdawo:P10029	abi:status	"object property"	 . #	is cadenza composed for work	rdac
 
 #rdawo:P10027	abi:status	"object property"	 . #	is variations based on work	rdac:C10001	rdac:C10001
 #rdawo:P10028	abi:status	"object property"	 . #	is modified by variation as work	rdac:C10001	rdac:C10001
-
-#rdawo:P10028	abi:status	"object property"	 . #	is modified by variation as work	rdac:C10001	rdac:C10001
-#rdawo:P10027	abi:status	"object property"	 . #	is variations based on work	rdac:C10001	rdac:C10001
-
-rdawo:P10029	abi:status	"object property"	 . #	is cadenza composed for work	rdac:C10001	rdac:C10001
-rdawo:P10026	abi:status	"object property"	 . #	has cadenza work	rdac:C10001	rdac:C10001
 
 rdawo:P10030	abi:status	"object property"	 . #	is libretto for work	rdac:C10001	rdac:C10001
 rdawo:P10165	abi:status	"object property"	 . #	has libretto work	rdac:C10001	rdac:C10001
@@ -209,29 +241,20 @@ rdawo:P10136	abi:status	"object property"	 . #	is video screenplay based on work
 rdawo:P10098	abi:status	"object property"	 . #	is adapted as radio script work	rdac:C10001	rdac:C10001
 rdawo:P10137	abi:status	"object property"	 . #	is radio script based on work	rdac:C10001	rdac:C10001
 
-rdawo:P10099	abi:status	"object property"	 . #	is freely translated as work	rdac:C10001	rdac:C10001
-rdawo:P10143	abi:status	"object property"	 . #	is free translation of work	rdac:C10001	rdac:C10001
+#rdawo:P10099	abi:status	"object property"	 . #	is freely translated as work	rdac:C10001	rdac:C10001
+#rdawo:P10143	abi:status	"object property"	 . #	is free translation of work	rdac:C10001	rdac:C10001
 
-rdawo:P10100	abi:status	"object property"	 . #	is description of work	rdac:C10001	rdac:C10001
-rdawo:P10118	abi:status	"object property"	 . #	is work described by	rdac:C10001	rdac:C10001
-
-rdawo:P10101	abi:status	"object property"	 . #	is subseries of	rdac:C10001	rdac:C10001
-rdawo:P10080	abi:status	"object property"	 . #	has subseries	rdac:C10001	rdac:C10001
-
-rdawo:P10102	abi:status	"object property"	 . #	is issue of	rdac:C10001	rdac:C10001
-rdawo:P10141	abi:status	"object property"	 . #	has issue	rdac:C10001	rdac:C10001
+#rdawo:P10100	abi:status	"object property"	 . #	is description of work	rdac:C10001	rdac:C10001
+#rdawo:P10118	abi:status	"object property"	 . #	is work described by	rdac:C10001	rdac:C10001
 
 rdawo:P10103	abi:status	"object property"	 . #	is complemented by work	rdac:C10001	rdac:C10001
 rdawo:P10103	abi:status	"object property"	 . #	is complemented by work	rdac:C10001	rdac:C10001
 
-rdawo:P10104	abi:status	"object property"	 . #	is separated into work	rdac:C10001	rdac:C10001
-rdawo:P10169	abi:status	"object property"	 . #	is separated from work	rdac:C10001	rdac:C10001
+#rdawo:P10104	abi:status	"object property"	 . #	is separated into work	rdac:C10001	rdac:C10001
+#rdawo:P10169	abi:status	"object property"	 . #	is separated from work	rdac:C10001	rdac:C10001
 
 rdawo:P10105	abi:status	"object property"	 . #	is screenplay for work	rdac:C10001	rdac:C10001
 rdawo:P10159	abi:status	"object property"	 . #	has screenplay work	rdac:C10001	rdac:C10001
-
-rdawo:P10106	abi:status	"object property"	 . #	is incidental music for work	rdac:C10001	rdac:C10001
-rdawo:P10031	abi:status	"object property"	 . #	has incidental music work	rdac:C10001	rdac:C10001
 
 rdawo:P10107	abi:status	"object property"	 . #	has abstract	rdac:C10001	rdac:C10001
 rdawo:P10126	abi:status	"object property"	 . #	is abstract of	rdac:C10001	rdac:C10001
@@ -245,44 +268,44 @@ rdawo:P10179	abi:status	"object property"	 . #	is summary of	rdac:C10001	rdac:C1
 rdawo:P10112	abi:status	"object property"	 . #	has addenda work	rdac:C10001	rdac:C10001
 rdawo:P10177	abi:status	"object property"	 . #	is addenda to work	rdac:C10001	rdac:C10001
 
-rdawo:P10113	abi:status	"object property"	 . #	is adapted as libretto work	rdac:C10001	rdac:C10001
-rdawo:P10189	abi:status	"object property"	 . #	is libretto based on work	rdac:C10001	rdac:C10001
+#rdawo:P10113	abi:status	"object property"	 . #	has index	rdac:C10001	rdac:C10001
+#rdawo:P10150	abi:status	"object property"	 . #	is index to	rdac:C10001	rdac:C10001
 
-rdawo:P10114	abi:status	"object property"	 . #	is work reviewed by	rdac:C10001	rdac:C10001
-rdawo:P10178	abi:status	"object property"	 . #	is review of work	rdac:C10001	rdac:C10001
+rdawo:P10114	abi:status	"object property"	 . #	has concordance	rdac:C10001	rdac:C10001
+rdawo:P10155	abi:status	"object property"	 . #	is concordance to	rdac:C10001	rdac:C10001
 
-rdawo:P10115	abi:status	"object property"	 . #	is work critiqued by	rdac:C10001	rdac:C10001
-rdawo:P10182	abi:status	"object property"	 . #	is critique of work	rdac:C10001	rdac:C10001
+rdawo:P10115	abi:status	"object property"	 . #	has appendix	rdac:C10001	rdac:C10001
+rdawo:P10182	abi:status	"object property"	 . #	is appendix to	rdac:C10001	rdac:C10001
 
-rdawo:P10116	abi:status	"object property"	 . #	is work commentary in	rdac:C10001	rdac:C10001
-rdawo:P10187	abi:status	"object property"	 . #	is commentary on work	rdac:C10001	rdac:C10001
+rdawo:P10116	abi:status	"object property"	 . #	is continued in part by work	rdac:C10001	rdac:C10001
+rdawo:P10195	abi:status	"object property"	 . #	is continuation in part of work	rdac:C10001	rdac:C10001
 
-rdawo:P10117	abi:status	"object property"	 . #	is imitated as work	rdac:C10001	rdac:C10001
-rdawo:P10196	abi:status	"object property"	 . #	is imitation of work	rdac:C10001	rdac:C10001
+rdawo:P10117	abi:status	"object property"	 . #	is continued by work	rdac:C10001	rdac:C10001
+rdawo:P10196	abi:status	"object property"	 . #	is continuation of work	rdac:C10001	rdac:C10001
 
 rdawo:P10118	abi:status	"object property"	 . #	is work described by	rdac:C10001	rdac:C10001
 rdawo:P10100	abi:status	"object property"	 . #	is description of work	rdac:C10001	rdac:C10001
 
-rdawo:P10119	abi:status	"object property"	 . #	is expanded as work	rdac:C10001	rdac:C10001
-rdawo:P10184	abi:status	"object property"	 . #	is expanded version of work	rdac:C10001	rdac:C10001
+rdawo:P10119	abi:status	"object property"	 . #	is imitated as work	rdac:C10001	rdac:C10001
+rdawo:P10145	abi:status	"object property"	 . #	is imitation of work	rdac:C10001	rdac:C10001
 
-rdawo:P10120	abi:status	"object property"	 . #	is work evaluated by	rdac:C10001	rdac:C10001
-rdawo:P10153	abi:status	"object property"	 . #	is evaluation of work	rdac:C10001	rdac:C10001
+#rdawo:P10120	abi:status	"object property"	 . #	is absorbed in part by work	rdac:C10001	rdac:C10001
+#rdawo:P10181	abi:status	"object property"	 . #	is absorption in part of work	rdac:C10001	rdac:C10001
 
-rdawo:P10121	abi:status	"object property"	 . #	is work analysed in	rdac:C10001	rdac:C10001
-rdawo:P10140	abi:status	"object property"	 . #	is analysis of work	rdac:C10001	rdac:C10001
+#rdawo:P10121	abi:status	"object property"	 . #	is absorbed by work	rdac:C10001	rdac:C10001
+#rdawo:P10180	abi:status	"object property"	 . #	is absorption of work	rdac:C10001	rdac:C10001
 
 rdawo:P10122	abi:status	"object property"	 . #	has prequel work	rdac:C10001	rdac:C10001
 rdawo:P10020	abi:status	"object property"	 . #	has sequel work	rdac:C10001	rdac:C10001
 
-rdawo:P10123	abi:status	"object property"	 . #	has appendix work	rdac:C10001	rdac:C10001
-rdawo:P10151	abi:status	"object property"	 . #	is appendix to work	rdac:C10001	rdac:C10001
+rdawo:P10123	abi:status	"object property"	 . #	is parodied as work	rdac:C10001	rdac:C10001
+rdawo:P10146	abi:status	"object property"	 . #	is parody of work	rdac:C10001	rdac:C10001
 
-rdawo:P10124	abi:status	"object property"	 . #	has guide work	rdac:C10001	rdac:C10001
-rdawo:P10150	abi:status	"object property"	 . #	is guide to work	rdac:C10001	rdac:C10001
+#rdawo:P10124	abi:status	"object property"	 . #	is revived as work	rdac:C10001	rdac:C10001
+#rdawo:P10188	abi:status	"object property"	 . #	is revival of work	rdac:C10001	rdac:C10001
 
-rdawo:P10125	abi:status	"object property"	 . #	is abridgement of work	rdac:C10001	rdac:C10001
-rdawo:P10167	abi:status	"object property"	 . #	is abridged as work	rdac:C10001	rdac:C10001
+#rdawo:P10125	abi:status	"object property"	 . #	is digest of work	rdac:C10001	rdac:C10001
+#rdawo:P10189	abi:status	"object property"	 . #	is digested as work	rdac:C10001	rdac:C10001
 
 rdawo:P10126	abi:status	"object property"	 . #	is abstract of	rdac:C10001	rdac:C10001
 rdawo:P10107	abi:status	"object property"	 . #	has abstract	rdac:C10001	rdac:C10001
@@ -290,8 +313,8 @@ rdawo:P10107	abi:status	"object property"	 . #	has abstract	rdac:C10001	rdac:C10
 rdawo:P10127	abi:status	"object property"	 . #	is dramatization of work	rdac:C10001	rdac:C10001
 rdawo:P10016	abi:status	"object property"	 . #	is dramatized as work	rdac:C10001	rdac:C10001
 
-rdawo:P10128	abi:status	"object property"	 . #	is verse adaptation of work	rdac:C10001	rdac:C10001
-rdawo:P10023	abi:status	"object property"	 . #	is adapted in verse as work	rdac:C10001	rdac:C10001
+#rdawo:P10128	abi:status	"object property"	 . #	is verse adaptation of work	rdac:C10001	rdac:C10001
+#rdawo:P10023	abi:status	"object property"	 . #	is adapted in verse as work	rdac:C10001	rdac:C10001
 
 rdawo:P10129	abi:status	"object property"	 . #	is motion picture adaptation of work	rdac:C10001	rdac:C10001
 rdawo:P10025	abi:status	"object property"	 . #	is adapted as motion picture work	rdac:C10001	rdac:C10001
@@ -323,149 +346,149 @@ rdawo:P10098	abi:status	"object property"	 . #	is adapted as radio script work	r
 rdawo:P10138	abi:status	"object property"	 . #	is video adaptation of work	rdac:C10001	rdac:C10001
 rdawo:P10087	abi:status	"object property"	 . #	is adapted as video work	rdac:C10001	rdac:C10001
 
-rdawo:P10139	abi:status	"object property"	 . #	is digest of work	rdac:C10001	rdac:C10001
-rdawo:P10171	abi:status	"object property"	 . #	is digested as work	rdac:C10001	rdac:C10001
+rdawo:P10139	abi:status	"object property"	 . #	has adaptation	rdac:C10001	rdac:C10001
+rdawo:P10190	abi:status	"object property"	 . #	is adapted as work	rdac:C10001	rdac:C10001
 
-rdawo:P10140	abi:status	"object property"	 . #	is analysis of work	rdac:C10001	rdac:C10001
-rdawo:P10121	abi:status	"object property"	 . #	is work analysed in	rdac:C10001	rdac:C10001
+rdawo:P10140	abi:status	"object property"	 . #	is adaptation of	rdac:C10001	rdac:C10001
+rdawo:P10191	abi:status	"object property"	 . #	is adapted as (derivative)	rdac:C10001	rdac:C10001
 
-rdawo:P10141	abi:status	"object property"	 . #	has issue	rdac:C10001	rdac:C10001
-rdawo:P10102	abi:status	"object property"	 . #	is issue of	rdac:C10001	rdac:C10001
+rdawo:P10142	abi:status	"object property"	 . #	is paraphrased as work	rdac:C10001	rdac:C10001
+rdawo:P10144	abi:status	"object property"	 . #	is paraphrase of work	rdac:C10001	rdac:C10001
 
-rdawo:P10142	abi:status	"object property"	 . #	is adaptation of work	rdac:C10001	rdac:C10001
-rdawo:P10155	abi:status	"object property"	 . #	is adapted as work	rdac:C10001	rdac:C10001
+#rdawo:P10143	abi:status	"object property"	 . #	is free translation of work	rdac:C10001	rdac:C10001
+#rdawo:P10099	abi:status	"object property"	 . #	is freely translated as work	rdac:C10001	rdac:C10001
 
-rdawo:P10143	abi:status	"object property"	 . #	is free translation of work	rdac:C10001	rdac:C10001
-rdawo:P10099	abi:status	"object property"	 . #	is freely translated as work	rdac:C10001	rdac:C10001
+rdawo:P10144	abi:status	"object property"	 . #	is paraphrase of work	rdac:C10001	rdac:C10001
+rdawo:P10142	abi:status	"object property"	 . #	is paraphrased as work	rdac:C10001	rdac:C10001
 
-rdawo:P10144	abi:status	"object property"	 . #	is parodied as work	rdac:C10001	rdac:C10001
-rdawo:P10197	abi:status	"object property"	 . #	is parody of work	rdac:C10001	rdac:C10001
+rdawo:P10145	abi:status	"object property"	 . #	is imitation of work	rdac:C10001	rdac:C10001
+rdawo:P10119	abi:status	"object property"	 . #	is imitated as work	rdac:C10001	rdac:C10001
 
-rdawo:P10145	abi:status	"object property"	 . #	is absorbed by work	rdac:C10001	rdac:C10001
-rdawo:P10224	abi:status	"object property"	 . #	is absorption of work	rdac:C10001	rdac:C10001
-
-rdawo:P10146	abi:status	"object property"	 . #	is absorbed in part by work	rdac:C10001	rdac:C10001
-rdawo:P10225	abi:status	"object property"	 . #	is absorption in part of work	rdac:C10001	rdac:C10001
+rdawo:P10146	abi:status	"object property"	 . #	is parody of work	rdac:C10001	rdac:C10001
+rdawo:P10123	abi:status	"object property"	 . #	is parodied as work	rdac:C10001	rdac:C10001
 
 rdawo:P10147	abi:status	"object property"	 . #	has part work	rdac:C10001	rdac:C10001
 rdawo:P10019	abi:status	"object property"	 . #	is part of work	rdac:C10001	rdac:C10001
 
-rdawo:P10148	abi:status	"object property"	 . #	has derivative work	rdac:C10001	rdac:C10001
-rdawo:P10190	abi:status	"object property"	 . #	has source work	rdac:C10001	rdac:C10001
+rdawo:P10148	abi:status	"object property"	 . #	has supplement work	rdac:C10001	rdac:C10001
+rdawo:P10178	abi:status	"object property"	 . #	is supplement to work	rdac:C10001	rdac:C10001
 
-rdawo:P10149	abi:status	"object property"	 . #	is errata to work	rdac:C10001	rdac:C10001
-rdawo:P10092	abi:status	"object property"	 . #	has errata work	rdac:C10001	rdac:C10001
+#rdawo:P10150	abi:status	"object property"	 . #	is index to	rdac:C10001	rdac:C10001
+#rdawo:P10113	abi:status	"object property"	 . #	has index	rdac:C10001	rdac:C10001
 
-rdawo:P10150	abi:status	"object property"	 . #	is guide to work	rdac:C10001	rdac:C10001
-rdawo:P10124	abi:status	"object property"	 . #	has guide work	rdac:C10001	rdac:C10001
-
-rdawo:P10151	abi:status	"object property"	 . #	is appendix to work	rdac:C10001	rdac:C10001
-rdawo:P10123	abi:status	"object property"	 . #	has appendix work	rdac:C10001	rdac:C10001
+#rdawo:P10151	abi:status	"object property"	 . #	is on disc with work	rdac:C10001	rdac:C10001
+#rdawo:P10184	abi:status	"object property"	 . #	has on disc work	rdac:C10001	rdac:C10001
 
 rdawo:P10152	abi:status	"object property"	 . #	is illustrations for work	rdac:C10001	rdac:C10001
 rdawo:P10093	abi:status	"object property"	 . #	has illustrations work	rdac:C10001	rdac:C10001
 
-rdawo:P10153	abi:status	"object property"	 . #	is evaluation of work	rdac:C10001	rdac:C10001
-rdawo:P10120	abi:status	"object property"	 . #	is work evaluated by	rdac:C10001	rdac:C10001
+#rdawo:P10153	abi:status	"object property"	 . #	has equivalent work	rdac:C10001	rdac:C10001
+#rdawo:P10153	abi:status	"object property"	 . #	has equivalent work	rdac:C10001	rdac:C10001
 
-rdawo:P10154	abi:status	"object property"	 . #	is supplement to work	rdac:C10001	rdac:C10001
-rdawo:P10172	abi:status	"object property"	 . #	has supplement work	rdac:C10001	rdac:C10001
+rdawo:P10154	abi:status	"object property"	 . #	is commentary in work	rdac:C10001	rdac:C10001
+rdawo:P10186	abi:status	"object property"	 . #	is commentary on work	rdac:C10001	rdac:C10001
 
-rdawo:P10155	abi:status	"object property"	 . #	is adapted as work	rdac:C10001	rdac:C10001
-rdawo:P10142	abi:status	"object property"	 . #	is adaptation of work	rdac:C10001	rdac:C10001
+rdawo:P10155	abi:status	"object property"	 . #	is concordance to	rdac:C10001	rdac:C10001
+rdawo:P10114	abi:status	"object property"	 . #	has concordance	rdac:C10001	rdac:C10001
 
-rdawo:P10156	abi:status	"object property"	 . #	is preceded by work	rdac:C10001	rdac:C10001
-rdawo:P10170	abi:status	"object property"	 . #	is succeeded by work	rdac:C10001	rdac:C10001
+rdawo:P10156	abi:status	"object property"	 . #	has derivative work	rdac:C10001	rdac:C10001
+rdawo:P10187	abi:status	"object property"	 . #	is derivative of	rdac:C10001	rdac:C10001
+
+rdawo:P10157	abi:status	"object property"	 . #	has guide work	rdac:C10001	rdac:C10001
+rdawo:P10203	abi:status	"object property"	 . #	is guide to work	rdac:C10001	rdac:C10001
+
+#rdawo:P10158	abi:status	"object property"	 . #	has whole-part work relationship with	rdac:C10001	rdac:C10001
+#rdawo:P10158	abi:status	"object property"	 . #	has whole-part work relationship with	rdac:C10001	rdac:C10001
 
 rdawo:P10159	abi:status	"object property"	 . #	has screenplay work	rdac:C10001	rdac:C10001
 rdawo:P10105	abi:status	"object property"	 . #	is screenplay for work	rdac:C10001	rdac:C10001
 
-rdawo:P10160	abi:status	"object property"	 . #	has motion picture screenplay work	rdac:C10001	rdac:C10001
-rdawo:P10173	abi:status	"object property"	 . #	is screenplay for motion picture work	rdac:C10001	rdac:C10001
+rdawo:P10160	abi:status	"object property"	 . #	is critique of work	rdac:C10001	rdac:C10001
+rdawo:P10197	abi:status	"object property"	 . #	is critiqued in work	rdac:C10001	rdac:C10001
 
 rdawo:P10161	abi:status	"object property"	 . #	is musical setting of work	rdac:C10001	rdac:C10001
 rdawo:P10033	abi:status	"object property"	 . #	is set to music as work	rdac:C10001	rdac:C10001
 
-rdawo:P10162	abi:status	"object property"	 . #	has radio script work	rdac:C10001	rdac:C10001
-rdawo:P10176	abi:status	"object property"	 . #	is script for radio program work	rdac:C10001	rdac:C10001
+rdawo:P10162	abi:status	"object property"	 . #	is reviewed by work	rdac:C10001	rdac:C10001
+rdawo:P10198	abi:status	"object property"	 . #	is review of work	rdac:C10001	rdac:C10001
 
-rdawo:P10163	abi:status	"object property"	 . #	has television screenplay work	rdac:C10001	rdac:C10001
-rdawo:P10174	abi:status	"object property"	 . #	is screenplay for television program work	rdac:C10001	rdac:C10001
-
-rdawo:P10164	abi:status	"object property"	 . #	has video screenplay work	rdac:C10001	rdac:C10001
-rdawo:P10175	abi:status	"object property"	 . #	is screenplay for video work	rdac:C10001	rdac:C10001
+rdawo:P10163	abi:status	"object property"	 . #	has cartographic data set work	rdac:C10001	rdac:C10001
+rdawo:P10164	abi:status	"object property"	 . #	is in cartographic work	rdac:C10001	rdac:C10001
 
 rdawo:P10165	abi:status	"object property"	 . #	has libretto work	rdac:C10001	rdac:C10001
 rdawo:P10030	abi:status	"object property"	 . #	is libretto for work	rdac:C10001	rdac:C10001
 
-rdawo:P10166	abi:status	"object property"	 . #	is paraphrased as work	rdac:C10001	rdac:C10001
-rdawo:P10186	abi:status	"object property"	 . #	is paraphrase of work	rdac:C10001	rdac:C10001
+rdawo:P10166	abi:status	"object property"	 . #	has music work	rdac:C10001	rdac:C10001
+rdawo:P10167	abi:status	"object property"	 . #	is music for work	rdac:C10001	rdac:C10001
 
-rdawo:P10167	abi:status	"object property"	 . #	is abridged as work	rdac:C10001	rdac:C10001
-rdawo:P10125	abi:status	"object property"	 . #	is abridgement of work	rdac:C10001	rdac:C10001
+#rdawo:P10168	abi:status	"object property"	 . #	is split into work	rdac:C10001	rdac:C10001
+#rdawo:P10199	abi:status	"object property"	 . #	is split from work	rdac:C10001	rdac:C10001
 
-rdawo:P10168	abi:status	"object property"	 . #	is split from work	rdac:C10001	rdac:C10001
-rdawo:P10211	abi:status	"object property"	 . #	is split into work	rdac:C10001	rdac:C10001
+#rdawo:P10170	abi:status	"object property"	 . #	is merged to form work	rdac:C10001	rdac:C10001
+#rdawo:P10200	abi:status	"object property"	 . #	is merger of work	rdac:C10001	rdac:C10001
 
-rdawo:P10169	abi:status	"object property"	 . #	is separated from work	rdac:C10001	rdac:C10001
-rdawo:P10104	abi:status	"object property"	 . #	is separated into work	rdac:C10001	rdac:C10001
+rdawo:P10171	abi:status	"object property"	 . #	is expanded version of work	rdac:C10001	rdac:C10001
+rdawo:P10201	abi:status	"object property"	 . #	has expanded version	rdac:C10001	rdac:C10001
 
-rdawo:P10170	abi:status	"object property"	 . #	is succeeded by work	rdac:C10001	rdac:C10001
-rdawo:P10156	abi:status	"object property"	 . #	is preceded by work	rdac:C10001	rdac:C10001
+rdawo:P10172	abi:status	"object property"	 . #	is analysis of work	rdac:C10001	rdac:C10001
+rdawo:P10202	abi:status	"object property"	 . #	is analysed in work	rdac:C10001	rdac:C10001
 
-rdawo:P10171	abi:status	"object property"	 . #	is digested as work	rdac:C10001	rdac:C10001
-rdawo:P10139	abi:status	"object property"	 . #	is digest of work	rdac:C10001	rdac:C10001
+#rdawo:P10173	abi:status	"object property"	 . #	has related work	rdac:C10001	rdac:C10001
+#rdawo:P10173	abi:status	"object property"	 . #	has related work	rdac:C10001	rdac:C10001
 
-rdawo:P10172	abi:status	"object property"	 . #	has supplement work	rdac:C10001	rdac:C10001
-rdawo:P10154	abi:status	"object property"	 . #	is supplement to work	rdac:C10001	rdac:C10001
+rdawo:P10174	abi:status	"object property"	 . #	is based on work	rdac:C10001	rdac:C10001
+rdawo:P10204	abi:status	"object property"	 . #	is source work of	rdac:C10001	rdac:C10001
 
-rdawo:P10173	abi:status	"object property"	 . #	is screenplay for motion picture work	rdac:C10001	rdac:C10001
-rdawo:P10160	abi:status	"object property"	 . #	has motion picture screenplay work	rdac:C10001	rdac:C10001
+rdawo:P10175	abi:status	"object property"	 . #	is filming of work	rdac:C10001	rdac:C10001
+rdawo:P10205	abi:status	"object property"	 . #	is filmed as work	rdac:C10001	rdac:C10001
 
-rdawo:P10174	abi:status	"object property"	 . #	is screenplay for television program work	rdac:C10001	rdac:C10001
-rdawo:P10163	abi:status	"object property"	 . #	has television screenplay work	rdac:C10001	rdac:C10001
-
-rdawo:P10175	abi:status	"object property"	 . #	is screenplay for video work	rdac:C10001	rdac:C10001
-rdawo:P10164	abi:status	"object property"	 . #	has video screenplay work	rdac:C10001	rdac:C10001
-
-rdawo:P10176	abi:status	"object property"	 . #	is script for radio program work	rdac:C10001	rdac:C10001
-rdawo:P10162	abi:status	"object property"	 . #	has radio script work	rdac:C10001	rdac:C10001
+#rdawo:P10176	abi:status	"object property"	 . #	is reprinted as work	rdac:C10001	rdac:C10001
+#rdawo:P10208	abi:status	"object property"	 . #	is reprint of work	rdac:C10001	rdac:C10001
 
 rdawo:P10177	abi:status	"object property"	 . #	is addenda to work	rdac:C10001	rdac:C10001
 rdawo:P10112	abi:status	"object property"	 . #	has addenda work	rdac:C10001	rdac:C10001
 
-rdawo:P10178	abi:status	"object property"	 . #	is review of work	rdac:C10001	rdac:C10001
-rdawo:P10114	abi:status	"object property"	 . #	is work reviewed by	rdac:C10001	rdac:C10001
+rdawo:P10178	abi:status	"object property"	 . #	is supplement to work	rdac:C10001	rdac:C10001
+rdawo:P10148	abi:status	"object property"	 . #	has supplement work	rdac:C10001	rdac:C10001
 
 rdawo:P10179	abi:status	"object property"	 . #	is summary of	rdac:C10001	rdac:C10001
 rdawo:P10109	abi:status	"object property"	 . #	has summary	rdac:C10001	rdac:C10001
 
-rdawo:P10182	abi:status	"object property"	 . #	is critique of work	rdac:C10001	rdac:C10001
-rdawo:P10115	abi:status	"object property"	 . #	is work critiqued by	rdac:C10001	rdac:C10001
+#rdawo:P10180	abi:status	"object property"	 . #	is absorption of work	rdac:C10001	rdac:C10001
+#rdawo:P10121	abi:status	"object property"	 . #	is absorbed by work	rdac:C10001	rdac:C10001
+
+#rdawo:P10181	abi:status	"object property"	 . #	is absorption in part of work	rdac:C10001	rdac:C10001
+#rdawo:P10120	abi:status	"object property"	 . #	is absorbed in part by work	rdac:C10001	rdac:C10001
+
+#rdawo:P10182	abi:status	"object property"	 . #	is appendix to	rdac:C10001	rdac:C10001
+#rdawo:P10115	abi:status	"object property"	 . #	has appendix	rdac:C10001	rdac:C10001
 
 rdawo:P10183	abi:status	"object property"	 . #	is choreographic adaptation of work	rdac:C10001	rdac:C10001
 rdawo:P10091	abi:status	"object property"	 . #	is adapted as choreography work	rdac:C10001	rdac:C10001
 
-rdawo:P10184	abi:status	"object property"	 . #	is expanded version of work	rdac:C10001	rdac:C10001
-rdawo:P10119	abi:status	"object property"	 . #	is expanded as work	rdac:C10001	rdac:C10001
+#rdawo:P10184	abi:status	"object property"	 . #	has on disc work	rdac:C10001	rdac:C10001
+#rdawo:P10151	abi:status	"object property"	 . #	is on disc with work	rdac:C10001	rdac:C10001
 
 rdawo:P10185	abi:status	"object property"	 . #	is remake of work	rdac:C10001	rdac:C10001
 rdawo:P10032	abi:status	"object property"	 . #	is remade as work	rdac:C10001	rdac:C10001
 
-rdawo:P10186	abi:status	"object property"	 . #	is paraphrase of work	rdac:C10001	rdac:C10001
-rdawo:P10166	abi:status	"object property"	 . #	is paraphrased as work	rdac:C10001	rdac:C10001
+rdawo:P10186	abi:status	"object property"	 . #	is commentary on work	rdac:C10001	rdac:C10001
+rdawo:P10154	abi:status	"object property"	 . #	is commentary in work	rdac:C10001	rdac:C10001
 
-rdawo:P10187	abi:status	"object property"	 . #	is commentary on work	rdac:C10001	rdac:C10001
-rdawo:P10116	abi:status	"object property"	 . #	is work commentary in	rdac:C10001	rdac:C10001
+rdawo:P10187	abi:status	"object property"	 . #	is derivative of	rdac:C10001	rdac:C10001
+rdawo:P10156	abi:status	"object property"	 . #	has derivative work	rdac:C10001	rdac:C10001
 
-rdawo:P10189	abi:status	"object property"	 . #	is libretto based on work	rdac:C10001	rdac:C10001
-rdawo:P10113	abi:status	"object property"	 . #	is adapted as libretto work	rdac:C10001	rdac:C10001
+#rdawo:P10188	abi:status	"object property"	 . #	is revival of work	rdac:C10001	rdac:C10001
+#rdawo:P10124	abi:status	"object property"	 . #	is revived as work	rdac:C10001	rdac:C10001
 
-rdawo:P10190	abi:status	"object property"	 . #	has source work	rdac:C10001	rdac:C10001
-rdawo:P10148	abi:status	"object property"	 . #	has derivative work	rdac:C10001	rdac:C10001
+#rdawo:P10189	abi:status	"object property"	 . #	is digested as work	rdac:C10001	rdac:C10001
+#rdawo:P10125	abi:status	"object property"	 . #	is digest of work	rdac:C10001	rdac:C10001
 
-rdawo:P10191	abi:status	"object property"	 . #	is continued by work	rdac:C10001	rdac:C10001
-rdawo:P10226	abi:status	"object property"	 . #	is continuation of work	rdac:C10001	rdac:C10001
+rdawo:P10190	abi:status	"object property"	 . #	is adapted as work	rdac:C10001	rdac:C10001
+rdawo:P10139	abi:status	"object property"	 . #	has adaptation	rdac:C10001	rdac:C10001
+
+#rdawo:P10191	abi:status	"object property"	 . #	is adapted as (derivative)	rdac:C10001	rdac:C10001
+#rdawo:P10140	abi:status	"object property"	 . #	is adaptation of	rdac:C10001	rdac:C10001
 
 rdawo:P10192	abi:status	"object property"	 . #	is augmentation of work	rdac:C10001	rdac:C10001
 rdawo:P10108	abi:status	"object property"	 . #	is augmented by work	rdac:C10001	rdac:C10001
@@ -473,194 +496,92 @@ rdawo:P10108	abi:status	"object property"	 . #	is augmented by work	rdac:C10001	
 rdawo:P10193	abi:status	"object property"	 . #	is abstracts for work	rdac:C10001	rdac:C10001
 rdawo:P10089	abi:status	"object property"	 . #	is abstracted in work	rdac:C10001	rdac:C10001
 
-rdawo:P10196	abi:status	"object property"	 . #	is imitation of work	rdac:C10001	rdac:C10001
-rdawo:P10117	abi:status	"object property"	 . #	is imitated as work	rdac:C10001	rdac:C10001
+rdawo:P10194	abi:status	"object property"	 . #	is screenplay for television program	rdac:C10001	rdac:C10006
+rdawo:P10330	abi:status	"object property"	 . #	has screenplay for television program	rdac:C10006	rdac:C10001
 
-rdawo:P10197	abi:status	"object property"	 . #	is parody of work	rdac:C10001	rdac:C10001
-rdawo:P10144	abi:status	"object property"	 . #	is parodied as work	rdac:C10001	rdac:C10001
+#rdawo:P10195	abi:status	"object property"	 . #	is continuation in part of work	rdac:C10001	rdac:C10001
+#rdawo:P10116	abi:status	"object property"	 . #	is continued in part by work	rdac:C10001	rdac:C10001
 
-rdawo:P10198	abi:status	"object property"	 . #	has related work of work	rdac:C10001	rdac:C10001
-rdawo:P10198	abi:status	"object property"	 . #	has related work of work	rdac:C10001	rdac:C10001
+rdawo:P10196	abi:status	"object property"	 . #	is continuation of work	rdac:C10001	rdac:C10001
+rdawo:P10117	abi:status	"object property"	 . #	is continued by work	rdac:C10001	rdac:C10001
 
-rdawo:P10206	abi:status	"object property"	 . #	is replacement in part of work	rdac:C10001	rdac:C10001
-rdawo:P10021	abi:status	"object property"	 . #	is replaced in part by work	rdac:C10001	rdac:C10001
+#rdawo:P10197	abi:status	"object property"	 . #	is critiqued in work	rdac:C10001	rdac:C10001
+#rdawo:P10160	abi:status	"object property"	 . #	is critique of work	rdac:C10001	rdac:C10001
 
-rdawo:P10207	abi:status	"object property"	 . #	is replacement of work	rdac:C10001	rdac:C10001
-rdawo:P10022	abi:status	"object property"	 . #	is replaced by work	rdac:C10001	rdac:C10001
+#rdawo:P10198	abi:status	"object property"	 . #	is review of work	rdac:C10001	rdac:C10001
+#rdawo:P10162	abi:status	"object property"	 . #	is reviewed by work	rdac:C10001	rdac:C10001
 
-rdawo:P10211	abi:status	"object property"	 . #	is split into work	rdac:C10001	rdac:C10001
-rdawo:P10168	abi:status	"object property"	 . #	is split from work	rdac:C10001	rdac:C10001
+#rdawo:P10200	abi:status	"object property"	 . #	is merger of work	rdac:C10001	rdac:C10001
+#rdawo:P10170	abi:status	"object property"	 . #	is merged to form work	rdac:C10001	rdac:C10001
 
-rdawo:P10212	abi:status	"object property"	 . #	is merged to form work	rdac:C10001	rdac:C10001
-rdawo:P10213	abi:status	"object property"	 . #	is merger of work	rdac:C10001	rdac:C10001
+#rdawo:P10201	abi:status	"object property"	 . #	has expanded version	rdac:C10001	rdac:C10001
+#rdawo:P10171	abi:status	"object property"	 . #	is expanded version of work	rdac:C10001	rdac:C10001
 
-rdawo:P10213	abi:status	"object property"	 . #	is merger of work	rdac:C10001	rdac:C10001
-rdawo:P10212	abi:status	"object property"	 . #	is merged to form work	rdac:C10001	rdac:C10001
+rdawo:P10202	abi:status	"object property"	 . #	is analysed in work	rdac:C10001	rdac:C10001
+rdawo:P10172	abi:status	"object property"	 . #	is analysis of work	rdac:C10001	rdac:C10001
 
-rdawo:P10224	abi:status	"object property"	 . #	is absorption of work	rdac:C10001	rdac:C10001
-rdawo:P10145	abi:status	"object property"	 . #	is absorbed by work	rdac:C10001	rdac:C10001
+rdawo:P10203	abi:status	"object property"	 . #	is guide to work	rdac:C10001	rdac:C10001
+rdawo:P10157	abi:status	"object property"	 . #	has guide work	rdac:C10001	rdac:C10001
 
-rdawo:P10225	abi:status	"object property"	 . #	is absorption in part of work	rdac:C10001	rdac:C10001
-rdawo:P10146	abi:status	"object property"	 . #	is absorbed in part by work	rdac:C10001	rdac:C10001
+#rdawo:P10204	abi:status	"object property"	 . #	is source work of	rdac:C10001	rdac:C10001
+#rdawo:P10174	abi:status	"object property"	 . #	is based on work	rdac:C10001	rdac:C10001
 
-rdawo:P10226	abi:status	"object property"	 . #	is continuation of work	rdac:C10001	rdac:C10001
-rdawo:P10191	abi:status	"object property"	 . #	is continued by work	rdac:C10001	rdac:C10001
+#rdawo:P10205	abi:status	"object property"	 . #	is filmed as work	rdac:C10001	rdac:C10001
+#rdawo:P10175	abi:status	"object property"	 . #	is filming of work	rdac:C10001	rdac:C10001
 
-rdawo:P10233	abi:status	"object property"	 . #	is musical theatre adaptation of work	rdac:C10001	rdac:C10001
-rdawo:P10235	abi:status	"object property"	 . #	is adapted as musical theatre work	rdac:C10001	rdac:C10001
+#rdawo:P10206	abi:status	"object property"	 . #	is replacement in part of work	rdac:C10001	rdac:C10001
+#rdawo:P10021	abi:status	"object property"	 . #	is replaced in part by work	rdac:C10001	rdac:C10001
 
-rdawo:P10234	abi:status	"object property"	 . #	is opera adaptation of work	rdac:C10001	rdac:C10001
-rdawo:P10236	abi:status	"object property"	 . #	is adapted as opera work	rdac:C10001	rdac:C10001
+#rdawo:P10207	abi:status	"object property"	 . #	is replacement of work	rdac:C10001	rdac:C10001
+#rdawo:P10022	abi:status	"object property"	 . #	is replaced by work	rdac:C10001	rdac:C10001
 
-rdawo:P10235	abi:status	"object property"	 . #	is adapted as musical theatre work	rdac:C10001	rdac:C10001
-rdawo:P10233	abi:status	"object property"	 . #	is musical theatre adaptation of work	rdac:C10001	rdac:C10001
-
-rdawo:P10236	abi:status	"object property"	 . #	is adapted as opera work	rdac:C10001	rdac:C10001
-rdawo:P10234	abi:status	"object property"	 . #	is opera adaptation of work	rdac:C10001	rdac:C10001
-
-rdawo:P10237	abi:status	"object property"	 . #	has music work	rdac:C10001	rdac:C10001
-rdawo:P10238	abi:status	"object property"	 . #	is music for work	rdac:C10001	rdac:C10001
-
-rdawo:P10238	abi:status	"object property"	 . #	is music for work	rdac:C10001	rdac:C10001
-rdawo:P10237	abi:status	"object property"	 . #	has music work	rdac:C10001	rdac:C10001
-
-rdawo:P10239	abi:status	"object property"	 . #	has video music work	rdac:C10001	rdac:C10001
-rdawo:P10240	abi:status	"object property"	 . #	is music for video work	rdac:C10001	rdac:C10001
-
-rdawo:P10240	abi:status	"object property"	 . #	is music for video work	rdac:C10001	rdac:C10001
-rdawo:P10239	abi:status	"object property"	 . #	has video music work	rdac:C10001	rdac:C10001
-
-rdawo:P10241	abi:status	"object property"	 . #	has television program music work	rdac:C10001	rdac:C10001
-rdawo:P10242	abi:status	"object property"	 . #	is music for television program work	rdac:C10001	rdac:C10001
-
-rdawo:P10242	abi:status	"object property"	 . #	is music for television program work	rdac:C10001	rdac:C10001
-rdawo:P10241	abi:status	"object property"	 . #	has television program music work	rdac:C10001	rdac:C10001
-
-rdawo:P10243	abi:status	"object property"	 . #	has radio program music work	rdac:C10001	rdac:C10001
-rdawo:P10244	abi:status	"object property"	 . #	is music for radio program work	rdac:C10001	rdac:C10001
-
-rdawo:P10244	abi:status	"object property"	 . #	is music for radio program work	rdac:C10001	rdac:C10001
-rdawo:P10243	abi:status	"object property"	 . #	has radio program music work	rdac:C10001	rdac:C10001
-
-rdawo:P10245	abi:status	"object property"	 . #	is music for motion picture work	rdac:C10001	rdac:C10001
-rdawo:P10246	abi:status	"object property"	 . #	has motion picture music work	rdac:C10001	rdac:C10001
-
-rdawo:P10246	abi:status	"object property"	 . #	has motion picture music work	rdac:C10001	rdac:C10001
-rdawo:P10245	abi:status	"object property"	 . #	is music for motion picture work	rdac:C10001	rdac:C10001
-
-rdawo:P10247	abi:status	"object property"	 . #	has choreography work	rdac:C10001	rdac:C10001
-rdawo:P10248	abi:status	"object property"	 . #	is choreography for work	rdac:C10001	rdac:C10001
-
-rdawo:P10248	abi:status	"object property"	 . #	is choreography for work	rdac:C10001	rdac:C10001
-rdawo:P10247	abi:status	"object property"	 . #	has choreography work	rdac:C10001	rdac:C10001
-
-rdawo:P10249	abi:status	"object property"	 . #	is adapted as video game work	rdac:C10001	rdac:C10001
-rdawo:P10250	abi:status	"object property"	 . #	is video game adaptation of work	rdac:C10001	rdac:C10001
-
-rdawo:P10250	abi:status	"object property"	 . #	is video game adaptation of work	rdac:C10001	rdac:C10001
-rdawo:P10249	abi:status	"object property"	 . #	is adapted as video game work	rdac:C10001	rdac:C10001
-
-rdawo:P10251	abi:status	"object property"	 . #	is adapted as graphic novel work	rdac:C10001	rdac:C10001
-rdawo:P10252	abi:status	"object property"	 . #	is graphic novelization of work	rdac:C10001	rdac:C10001
-
-rdawo:P10252	abi:status	"object property"	 . #	is graphic novelization of work	rdac:C10001	rdac:C10001
-rdawo:P10251	abi:status	"object property"	 . #	is adapted as graphic novel work	rdac:C10001	rdac:C10001
-
-rdawo:P10257	abi:status	"object property"	 . #	has subject work	rdac:C10001	rdac:C10001
-rdawo:P10264	abi:status	"object property"	 . #	is subject work of	rdac:C10001	rdac:C10001
-
-rdawo:P10264	abi:status	"object property"	 . #	is subject work of	rdac:C10001	rdac:C10001
-rdawo:P10257	abi:status	"object property"	 . #	has subject work	rdac:C10001	rdac:C10001
-
-rdawo:P10288	abi:status	"object property"	 . #	is oratorio adaptation of work	rdac:C10001	rdac:C10001
-rdawo:P10289	abi:status	"object property"	 . #	is adapted as oratorio work	rdac:C10001	rdac:C10001
-
-rdawo:P10289	abi:status	"object property"	 . #	is adapted as oratorio work	rdac:C10001	rdac:C10001
-rdawo:P10288	abi:status	"object property"	 . #	is oratorio adaptation of work	rdac:C10001	rdac:C10001
+#rdawo:P10208	abi:status	"object property"	 . #	is reprint of work	rdac:C10001	rdac:C10001
+#rdawo:P10176	abi:status	"object property"	 . #	is reprinted as work	rdac:C10001	rdac:C10001
 
 rdawo:P10290	abi:status	"object property"	 . #	is inspired by	rdac:C10001	rdac:C10001
 rdawo:P10291	abi:status	"object property"	 . #	is inspiration for	rdac:C10001	rdac:C10001
 
-rdawo:P10291	abi:status	"object property"	 . #	is inspiration for	rdac:C10001	rdac:C10001
-rdawo:P10290	abi:status	"object property"	 . #	is inspired by	rdac:C10001	rdac:C10001
-
-rdawo:P10294	abi:status	"object property"	 . #	has commemoration	rdac:C10001	rdac:C10001
-rdawo:P10295	abi:status	"object property"	 . #	is commemoration of	rdac:C10001	rdac:C10001
-
-rdawo:P10295	abi:status	"object property"	 . #	is commemoration of	rdac:C10001	rdac:C10001
-rdawo:P10294	abi:status	"object property"	 . #	has commemoration	rdac:C10001	rdac:C10001
+#rdawo:P10294	abi:status	"object property"	 . #	has commemoration	rdac:C10001	rdac:C10001
+#rdawo:P10295	abi:status	"object property"	 . #	is commemoration of	rdac:C10001	rdac:C10001
 
 rdawo:P10336	abi:status	"object property"	 . #	has transformation	rdac:C10001	rdac:C10001
 rdawo:P10337	abi:status	"object property"	 . #	is transformation of	rdac:C10001	rdac:C10001
 
-rdawo:P10337	abi:status	"object property"	 . #	is transformation of	rdac:C10001	rdac:C10001
-rdawo:P10336	abi:status	"object property"	 . #	has transformation	rdac:C10001	rdac:C10001
+#rdawo:P10340	abi:status	"object property"	 . #	has transformation by style	rdac:C10001	rdac:C10001
+#rdawo:P10341	abi:status	"object property"	 . #	is transformation by style of	rdac:C10001	rdac:C10001
 
-rdawo:P10340	abi:status	"object property"	 . #	has transformation by style	rdac:C10001	rdac:C10001
-rdawo:P10341	abi:status	"object property"	 . #	is transformation by style of	rdac:C10001	rdac:C10001
+#rdawo:P10342	abi:status	"object property"	 . #	has transformation by genre	rdac:C10001	rdac:C10001
+#rdawo:P10343	abi:status	"object property"	 . #	is transformation by genre of	rdac:C10001	rdac:C10001
 
-rdawo:P10341	abi:status	"object property"	 . #	is transformation by style of	rdac:C10001	rdac:C10001
-rdawo:P10340	abi:status	"object property"	 . #	has transformation by style	rdac:C10001	rdac:C10001
-
-rdawo:P10342	abi:status	"object property"	 . #	has transformation by genre	rdac:C10001	rdac:C10001
-rdawo:P10343	abi:status	"object property"	 . #	is transformation by genre of	rdac:C10001	rdac:C10001
-
-rdawo:P10343	abi:status	"object property"	 . #	is transformation by genre of	rdac:C10001	rdac:C10001
-rdawo:P10342	abi:status	"object property"	 . #	has transformation by genre	rdac:C10001	rdac:C10001
-
-rdawo:P10344	abi:status	"object property"	 . #	has transformation by policy	rdac:C10001	rdac:C10001
-rdawo:P10345	abi:status	"object property"	 . #	is transformation by policy of	rdac:C10001	rdac:C10001
-
-rdawo:P10345	abi:status	"object property"	 . #	is transformation by policy of	rdac:C10001	rdac:C10001
-rdawo:P10344	abi:status	"object property"	 . #	has transformation by policy	rdac:C10001	rdac:C10001
+#rdawo:P10344	abi:status	"object property"	 . #	has transformation by policy	rdac:C10001	rdac:C10001
+#rdawo:P10345	abi:status	"object property"	 . #	is transformation by policy of	rdac:C10001	rdac:C10001
 
 rdawo:P10369	abi:status	"object property"	 . #	is lyrics for work	rdac:C10001	rdac:C10001
 rdawo:P10370	abi:status	"object property"	 . #	has lyrics work	rdac:C10001	rdac:C10001
 
-rdawo:P10370	abi:status	"object property"	 . #	has lyrics work	rdac:C10001	rdac:C10001
-rdawo:P10369	abi:status	"object property"	 . #	is lyrics for work	rdac:C10001	rdac:C10001
+#rdawo:P10371	abi:status	"object property"	 . #	has text work	rdac:C10001	rdac:C10001
+#rdawo:P10372	abi:status	"object property"	 . #	is text for work	rdac:C10001	rdac:C10001
 
-rdawo:P10371	abi:status	"object property"	 . #	has text work	rdac:C10001	rdac:C10001
-rdawo:P10372	abi:status	"object property"	 . #	is text for work	rdac:C10001	rdac:C10001
+#rdawo:P10373	abi:status	"object property"	 . #	has spoken word work	rdac:C10001	rdac:C10001
+#rdawo:P10375	abi:status	"object property"	 . #	is spoken word for work	rdac:C10001	rdac:C10001
 
-rdawo:P10372	abi:status	"object property"	 . #	is text for work	rdac:C10001	rdac:C10001
-rdawo:P10371	abi:status	"object property"	 . #	has text work	rdac:C10001	rdac:C10001
+#rdawo:P10374	abi:status	"object property"	 . #	has sounds work	rdac:C10001	rdac:C10001
+#rdawo:P10376	abi:status	"object property"	 . #	is sounds for work	rdac:C10001	rdac:C10001
 
-rdawo:P10373	abi:status	"object property"	 . #	has spoken word work	rdac:C10001	rdac:C10001
-rdawo:P10375	abi:status	"object property"	 . #	is spoken word for work	rdac:C10001	rdac:C10001
+#rdawo:P10377	abi:status	"object property"	 . #	has transformation by extension plan	rdac:C10001	rdac:C10001
+#rdawo:P10378	abi:status	"object property"	 . #	is transformation by extension plan of	rdac:C10001	rdac:C10001
 
-rdawo:P10374	abi:status	"object property"	 . #	has sounds work	rdac:C10001	rdac:C10001
-rdawo:P10376	abi:status	"object property"	 . #	is sounds for work	rdac:C10001	rdac:C10001
+#rdawo:P10379	abi:status	"object property"	 . #	has sequential version	rdac:C10001	rdac:C10001
+#rdawo:P10380	abi:status	"object property"	 . #	is sequential version of	rdac:C10001	rdac:C10001
 
-rdawo:P10375	abi:status	"object property"	 . #	is spoken word for work	rdac:C10001	rdac:C10001
-rdawo:P10373	abi:status	"object property"	 . #	has spoken word work	rdac:C10001	rdac:C10001
-
-rdawo:P10376	abi:status	"object property"	 . #	is sounds for work	rdac:C10001	rdac:C10001
-rdawo:P10374	abi:status	"object property"	 . #	has sounds work	rdac:C10001	rdac:C10001
-
-rdawo:P10377	abi:status	"object property"	 . #	has transformation by extension plan	rdac:C10001	rdac:C10001
-rdawo:P10378	abi:status	"object property"	 . #	is transformation by extension plan of	rdac:C10001	rdac:C10001
-
-rdawo:P10378	abi:status	"object property"	 . #	is transformation by extension plan of	rdac:C10001	rdac:C10001
-rdawo:P10377	abi:status	"object property"	 . #	has transformation by extension plan	rdac:C10001	rdac:C10001
-
-rdawo:P10379	abi:status	"object property"	 . #	has sequential version	rdac:C10001	rdac:C10001
-rdawo:P10380	abi:status	"object property"	 . #	is sequential version of	rdac:C10001	rdac:C10001
-
-rdawo:P10380	abi:status	"object property"	 . #	is sequential version of	rdac:C10001	rdac:C10001
-rdawo:P10379	abi:status	"object property"	 . #	has sequential version	rdac:C10001	rdac:C10001
-
-rdawo:P10381	abi:status	"object property"	 . #	has serialized version	rdac:C10001	rdac:C10001
-rdawo:P10391	abi:status	"object property"	 . #	is serialized version of	rdac:C10001	rdac:C10001
+#rdawo:P10381	abi:status	"object property"	 . #	has serialized version	rdac:C10001	rdac:C10001
+#rdawo:P10391	abi:status	"object property"	 . #	is serialized version of	rdac:C10001	rdac:C10001
 
 #rdawo:P10382	abi:status	"object property"	 . #	has static version	rdac:C10001	rdac:C10001
 #rdawo:P10392	abi:status	"object property"	 . #	is static version of	rdac:C10001	rdac:C10001
 
 #rdawo:P10383	abi:status	"object property"	 . #	has transformation by audience	rdac:C10001	rdac:C10001
 #rdawo:P10384	abi:status	"object property"	 . #	is transformation by audience of	rdac:C10001	rdac:C10001
-
-#rdawo:P10384	abi:status	"object property"	 . #	is transformation by audience of	rdac:C10001	rdac:C10001
-#rdawo:P10383	abi:status	"object property"	 . #	has transformation by audience	rdac:C10001	rdac:C10001
 
 #rdawo:P10385	abi:status	"object property"	 . #	has language version	rdac:C10001	rdac:C10001
 #rdawo:P10388	abi:status	"object property"	 . #	is language version of	rdac:C10001	rdac:C10001
@@ -671,38 +592,11 @@ rdawo:P10391	abi:status	"object property"	 . #	is serialized version of	rdac:C10
 #rdawo:P10387	abi:status	"object property"	 . #	has carrier version	rdac:C10001	rdac:C10001
 #rdawo:P10390	abi:status	"object property"	 . #	is carrier version of	rdac:C10001	rdac:C10001
 
-#rdawo:P10388	abi:status	"object property"	 . #	is language version of	rdac:C10001	rdac:C10001
-#rdawo:P10385	abi:status	"object property"	 . #	has language version	rdac:C10001	rdac:C10001
-
-rdawo:P10389	abi:status	"object property"	 . #	is regional version of	rdac:C10001	rdac:C10001
-rdawo:P10386	abi:status	"object property"	 . #	has regional version	rdac:C10001	rdac:C10001
-
-rdawo:P10390	abi:status	"object property"	 . #	is carrier version of	rdac:C10001	rdac:C10001
-rdawo:P10387	abi:status	"object property"	 . #	has carrier version	rdac:C10001	rdac:C10001
-
-rdawo:P10391	abi:status	"object property"	 . #	is serialized version of	rdac:C10001	rdac:C10001
-rdawo:P10381	abi:status	"object property"	 . #	has serialized version	rdac:C10001	rdac:C10001
-
-#rdawo:P10392	abi:status	"object property"	 . #	is static version of	rdac:C10001	rdac:C10001
-#rdawo:P10382	abi:status	"object property"	 . #	has static version	rdac:C10001	rdac:C10001
-
 #rdawo:P10410	abi:status	"object property"	 . #	has special issue	rdac:C10001	rdac:C10001
 #rdawo:P10411	abi:status	"object property"	 . #	is special issue of	rdac:C10001	rdac:C10001
 
-#rdawo:P10411	abi:status	"object property"	 . #	is special issue of	rdac:C10001	rdac:C10001
-#rdawo:P10410	abi:status	"object property"	 . #	has special issue	rdac:C10001	rdac:C10001
-
 #rdawo:P10621	abi:status	"object property"	 . #	is metadata description of work	rdac:C10001	rdac:C10001
 #rdawo:P10623	abi:status	"object property"	 . #	is work described with metadata by	rdac:C10001	rdac:C10001
-
-#rdawo:P10621	abi:status	"object property"	 . #	is metadata description of work	rdac:C10001	rdac:C10001
-#rdawo:P10623	abi:status	"object property"	 . #	teosta metatiedoilla kuvaileva teos	rdac:C10001	rdac:C10001
-
-#rdawo:P10623	abi:status	"object property"	 . #	is work described with metadata by	rdac:C10001	rdac:C10001
-#rdawo:P10621	abi:status	"object property"	 . #	is metadata description of work	rdac:C10001	rdac:C10001
-
-#rdawo:P10623	abi:status	"object property"	 . #	is work described with metadata by	rdac:C10001	rdac:C10001
-#rdawo:P10621	abi:status	"object property"	 . #	metatietokuvailu teoksesta	rdac:C10001	rdac:C10001
 
 rdawo:P10013	abi:status	"object property"	 . #	has film director agent	rdac:C10001	rdac:C10002
 rdaao:P50048	abi:status	"object property"	 . #	is film director agent of	rdac:C10002	rdac:C10001
@@ -875,8 +769,6 @@ rdaao:P51113	abi:status	"object property"	 . #	is collector agent of 	rdac:C1000
 #rdawo:P10634	abi:status	"object property"	 . #	has collection registrar agent	rdac:C10001	rdac:C10002
 #rdaao:P51118	abi:status	"object property"	 . #	luetteloija (toimija) kokoelmalle	rdac:C10002	rdac:C10001
 
-rdawo:P10078	abi:status	"object property"	 . #	has expression of work	rdac:C10001	rdac:C10006
-rdaeo:P20231	abi:status	"object property"	 . #	has work expressed	rdac:C10006	rdac:C10001
 
 #rdawo:P10258	abi:status	"object property"	 . #	has subject expression	rdac:C10001	rdac:C10006
 #rdaeo:P20268	abi:status	"object property"	 . #	is subject expression of	rdac:C10006	rdac:C10001
@@ -1424,11 +1316,8 @@ rdamo:P30332	abi:status	"object property"	 . #	has contributor agent of object	r
 rdaao:P50485	abi:status	"object property"	 . #	is contributor agent of computer content of	rdac:C10002	rdac:C10007
 rdamo:P30333	abi:status	"object property"	 . #	has contributor agent of computer content	rdac:C10007	rdac:C10002
 
-rdaeo:P20231	abi:status	"object property"	 . #	has work expressed	rdac:C10006	rdac:C10001
-rdawo:P10078	abi:status	"object property"	 . #	has expression of work	rdac:C10001	rdac:C10006
-
-rdaeo:P20268	abi:status	"object property"	 . #	is subject expression of	rdac:C10006	rdac:C10001
-rdawo:P10258	abi:status	"object property"	 . #	has subject expression	rdac:C10001	rdac:C10006
+#rdaeo:P20268	abi:status	"object property"	 . #	is subject expression of	rdac:C10006	rdac:C10001
+#rdawo:P10258	abi:status	"object property"	 . #	has subject expression	rdac:C10001	rdac:C10006
 
 #rdaeo:P20269	abi:status	"object property"	 . #	is expression described by	rdac:C10006	rdac:C10001
 #rdawo:P10277	abi:status	"object property"	 . #	is description of expression	rdac:C10001	rdac:C10006
@@ -2078,9 +1967,6 @@ rdaeo:P20574	abi:status	"object property"	 . #	has source expression	rdac:C10006
 #rdaeo:P20575	abi:status	"object property"	 . #	has derivative expression	rdac:C10006	rdac:C10006
 #rdaeo:P20574	abi:status	"object property"	 . #	lähde-ekspressio	rdac:C10006	rdac:C10006
 
-rdaeo:P20059	abi:status	"object property"	 . #	has manifestation of expression	rdac:C10006	rdac:C10007
-rdamo:P30139	abi:status	"object property"	 . #	has expression manifested	rdac:C10007	rdac:C10006
-
 #rdaeo:P20299	abi:status	"object property"	 . #	has related manifestation of expression	rdac:C10006	rdac:C10007
 #rdamo:P30266	abi:status	"object property"	 . #	has related expression of manifestation	rdac:C10007	rdac:C10006
 
@@ -2236,9 +2122,6 @@ rdaao:P50484	abi:status	"object property"	 . #	is contributor agent of object of
 
 rdamo:P30333	abi:status	"object property"	 . #	has contributor agent of computer content	rdac:C10007	rdac:C10002
 rdaao:P50485	abi:status	"object property"	 . #	is contributor agent of computer content of	rdac:C10002	rdac:C10007
-
-rdamo:P30139	abi:status	"object property"	 . #	has expression manifested	rdac:C10007	rdac:C10006
-rdaeo:P20059	abi:status	"object property"	 . #	has manifestation of expression	rdac:C10006	rdac:C10007
 
 #rdamo:P30266	abi:status	"object property"	 . #	has related expression of manifestation	rdac:C10007	rdac:C10006
 #rdaeo:P20299	abi:status	"object property"	 . #	has related manifestation of expression	rdac:C10006	rdac:C10007
