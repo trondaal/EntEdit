@@ -55,7 +55,7 @@ INSERT DATA {
         ]
     },
     {
-        "fieldName": "names$haspart",
+        "fieldName": "names$haspartwork",
         "propertyChain": [
             "http://rdaregistry.info/Elements/e/object/P20231",
             "http://rdaregistry.info/Elements/w/object/P10147",
@@ -64,7 +64,7 @@ INSERT DATA {
         ]
     },
         {
-        "fieldName": "names$ispart",
+        "fieldName": "names$ispartwork",
         "propertyChain": [
             "http://rdaregistry.info/Elements/e/object/P20231",
             "http://rdaregistry.info/Elements/w/object/P10019",
@@ -109,7 +109,7 @@ INSERT DATA {
         ]
     },
     {
-        "fieldName": "titles$haspart",
+        "fieldName": "titles$haspartwork",
         "propertyChain": [
             "http://rdaregistry.info/Elements/e/object/P20231",
             "http://rdaregistry.info/Elements/w/object/P10147",
@@ -117,7 +117,7 @@ INSERT DATA {
         ]
     },
     {
-        "fieldName": "titles$ispart",
+        "fieldName": "titles$ispartwork",
         "propertyChain": [
             "http://rdaregistry.info/Elements/e/object/P20231",
             "http://rdaregistry.info/Elements/w/object/P10019",
