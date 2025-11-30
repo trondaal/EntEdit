@@ -173,7 +173,7 @@
 <http://rdaregistry.info/Elements/w/datatype/P10359>	<http://www.w3.org/2000/01/rdf-schema#label>	"er kritikk av RDA-entitet"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10182>	<http://www.w3.org/2000/01/rdf-schema#label>	"er kritikk av verk"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10350>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tidspunkt for opptak for representativt uttrykk"@no .
-<http://rdaregistry.info/Elements/w/datatype/P10219>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tidspunkt for verk"@no .
+<http://rdaregistry.info/Elements/w/datatype/P10219>	<http://www.w3.org/2000/01/rdf-schema#label>	"dato"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10303>	<http://www.w3.org/2000/01/rdf-schema#label>	"har deklinasjon"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10069>	<http://www.w3.org/2000/01/rdf-schema#label>	"har verk tilegnet til (agent)"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10459>	<http://www.w3.org/2000/01/rdf-schema#label>	"har kollektiv agent som verk er tilegnet"@no .
@@ -369,9 +369,9 @@
 <http://rdaregistry.info/Elements/w/datatype/P10237>	<http://www.w3.org/2000/01/rdf-schema#label>	"har musikk (verk)"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10222>	<http://www.w3.org/2000/01/rdf-schema#label>	"har innhold"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10402>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om metadataverk"@no .
-<http://rdaregistry.info/Elements/w/datatype/P10330>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note på verk"@no .
+<http://rdaregistry.info/Elements/w/datatype/P10330>	<http://www.w3.org/2000/01/rdf-schema#label>	"note"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10130>	<http://www.w3.org/2000/01/rdf-schema#label>	"er bearbeidelse av verk til roman"@no .
-<http://rdaregistry.info/Elements/w/datatype/P10012>	<http://www.w3.org/2000/01/rdf-schema#label>	"har nummerering av del"@no .
+<http://rdaregistry.info/Elements/w/datatype/P10012>	<http://www.w3.org/2000/01/rdf-schema#label>	"nummerering"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10079>	<http://www.w3.org/2000/01/rdf-schema#label>	"har numerisk betegnelse for musikalsk verk"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10234>	<http://www.w3.org/2000/01/rdf-schema#label>	"er bearbeidelse av verk til opera"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10333>	<http://www.w3.org/2000/01/rdf-schema#label>	"har opusnummer"@no .
@@ -398,7 +398,7 @@
 <http://rdaregistry.info/Elements/w/datatype/P10043>	<http://www.w3.org/2000/01/rdf-schema#label>	"har saksøker (person)"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10045>	<http://www.w3.org/2000/01/rdf-schema#label>	"har preses"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10156>	<http://www.w3.org/2000/01/rdf-schema#label>	"etterfølger verk"@no .
-<http://rdaregistry.info/Elements/w/datatype/P10223>	<http://www.w3.org/2000/01/rdf-schema#label>	"har foretrukket tittel på verk"@no .
+<http://rdaregistry.info/Elements/w/datatype/P10223>	<http://www.w3.org/2000/01/rdf-schema#label>	"foretrukket tittel"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10122>	<http://www.w3.org/2000/01/rdf-schema#label>	"har forløper (verk)"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10064>	<http://www.w3.org/2000/01/rdf-schema#label>	"har produsent (agent)"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10501>	<http://www.w3.org/2000/01/rdf-schema#label>	"har produsent (kollektiv agent)"@no .
@@ -521,7 +521,7 @@
 <http://rdaregistry.info/Elements/w/datatype/P10382>	<http://www.w3.org/2000/01/rdf-schema#label>	"har statisk versjon"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10392>	<http://www.w3.org/2000/01/rdf-schema#label>	"er statisk versjon av"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10083>	<http://www.w3.org/2000/01/rdf-schema#label>	"har strenger med koordinatpar"@no .
-<http://rdaregistry.info/Elements/w/datatype/P10256>	<http://www.w3.org/2000/01/rdf-schema#label>	"har emne"@no .
+<http://rdaregistry.info/Elements/w/datatype/P10256>	<http://www.w3.org/2000/01/rdf-schema#label>	"emne"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10319>	<http://www.w3.org/2000/01/rdf-schema#label>	"har emne agent"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10320>	<http://www.w3.org/2000/01/rdf-schema#label>	"har emne kollektiv agent"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10263>	<http://www.w3.org/2000/01/rdf-schema#label>	"har emne (korporasjon)"@no .
@@ -561,7 +561,7 @@
 <http://rdaregistry.info/Elements/w/datatype/P10372>	<http://www.w3.org/2000/01/rdf-schema#label>	"er tekst for verk"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10371>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tekstlig verk"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10335>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tematisk indeksnummer"@no .
-<http://rdaregistry.info/Elements/w/datatype/P10088>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tittel på verk"@no .
+<http://rdaregistry.info/Elements/w/datatype/P10088>	<http://www.w3.org/2000/01/rdf-schema#label>	"tittel"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10336>	<http://www.w3.org/2000/01/rdf-schema#label>	"har transformasjon"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10383>	<http://www.w3.org/2000/01/rdf-schema#label>	"har transformasjon ved målgruppe"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10377>	<http://www.w3.org/2000/01/rdf-schema#label>	"har transformasjon ved utvidelsesplan"@no .
@@ -574,7 +574,7 @@
 <http://rdaregistry.info/Elements/w/datatype/P10341>	<http://www.w3.org/2000/01/rdf-schema#label>	"er transformasjon av stil fra"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10337>	<http://www.w3.org/2000/01/rdf-schema#label>	"er transformasjon av"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10332>	<http://www.w3.org/2000/01/rdf-schema#label>	"har alternativ søkeinngang for verk"@no .
-<http://rdaregistry.info/Elements/w/datatype/P10086>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tittelvariant for verk"@no .
+<http://rdaregistry.info/Elements/w/datatype/P10086>	<http://www.w3.org/2000/01/rdf-schema#label>	"tittelvariant"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10027>	<http://www.w3.org/2000/01/rdf-schema#label>	"er variasjoner basert på verk"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10128>	<http://www.w3.org/2000/01/rdf-schema#label>	"er bearbeidelse av verk til verseform"@no .
 <http://rdaregistry.info/Elements/w/datatype/P10138>	<http://www.w3.org/2000/01/rdf-schema#label>	"er bearbeidelse av verk for video"@no .
@@ -764,7 +764,7 @@
 <http://rdaregistry.info/Elements/w/object/P10359>	<http://www.w3.org/2000/01/rdf-schema#label>	"er kritikk av RDA-entitet"@no .
 <http://rdaregistry.info/Elements/w/object/P10182>	<http://www.w3.org/2000/01/rdf-schema#label>	"er kritikk av verk"@no .
 <http://rdaregistry.info/Elements/w/object/P10350>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tidspunkt for opptak for representativt uttrykk"@no .
-<http://rdaregistry.info/Elements/w/object/P10219>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tidspunkt for verk"@no .
+<http://rdaregistry.info/Elements/w/object/P10219>	<http://www.w3.org/2000/01/rdf-schema#label>	"dato"@no .
 <http://rdaregistry.info/Elements/w/object/P10303>	<http://www.w3.org/2000/01/rdf-schema#label>	"har deklinasjon"@no .
 <http://rdaregistry.info/Elements/w/object/P10069>	<http://www.w3.org/2000/01/rdf-schema#label>	"har verk tilegnet til (agent)"@no .
 <http://rdaregistry.info/Elements/w/object/P10459>	<http://www.w3.org/2000/01/rdf-schema#label>	"har kollektiv agent som verk er tilegnet"@no .
@@ -960,9 +960,9 @@
 <http://rdaregistry.info/Elements/w/object/P10237>	<http://www.w3.org/2000/01/rdf-schema#label>	"har musikk (verk)"@no .
 <http://rdaregistry.info/Elements/w/object/P10222>	<http://www.w3.org/2000/01/rdf-schema#label>	"har innhold"@no .
 <http://rdaregistry.info/Elements/w/object/P10402>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note om metadataverk"@no .
-<http://rdaregistry.info/Elements/w/object/P10330>	<http://www.w3.org/2000/01/rdf-schema#label>	"har note på verk"@no .
+<http://rdaregistry.info/Elements/w/object/P10330>	<http://www.w3.org/2000/01/rdf-schema#label>	"note"@no .
 <http://rdaregistry.info/Elements/w/object/P10130>	<http://www.w3.org/2000/01/rdf-schema#label>	"er bearbeidelse av verk til roman"@no .
-<http://rdaregistry.info/Elements/w/object/P10012>	<http://www.w3.org/2000/01/rdf-schema#label>	"har nummerering av del"@no .
+<http://rdaregistry.info/Elements/w/object/P10012>	<http://www.w3.org/2000/01/rdf-schema#label>	"nummerering"@no .
 <http://rdaregistry.info/Elements/w/object/P10079>	<http://www.w3.org/2000/01/rdf-schema#label>	"har numerisk betegnelse for musikalsk verk"@no .
 <http://rdaregistry.info/Elements/w/object/P10234>	<http://www.w3.org/2000/01/rdf-schema#label>	"er bearbeidelse av verk til opera"@no .
 <http://rdaregistry.info/Elements/w/object/P10333>	<http://www.w3.org/2000/01/rdf-schema#label>	"har opusnummer"@no .
@@ -989,7 +989,7 @@
 <http://rdaregistry.info/Elements/w/object/P10043>	<http://www.w3.org/2000/01/rdf-schema#label>	"har saksøker (person)"@no .
 <http://rdaregistry.info/Elements/w/object/P10045>	<http://www.w3.org/2000/01/rdf-schema#label>	"har preses"@no .
 <http://rdaregistry.info/Elements/w/object/P10156>	<http://www.w3.org/2000/01/rdf-schema#label>	"etterfølger verk"@no .
-<http://rdaregistry.info/Elements/w/object/P10223>	<http://www.w3.org/2000/01/rdf-schema#label>	"har foretrukket tittel på verk"@no .
+<http://rdaregistry.info/Elements/w/object/P10223>	<http://www.w3.org/2000/01/rdf-schema#label>	"foretrukket tittel"@no .
 <http://rdaregistry.info/Elements/w/object/P10122>	<http://www.w3.org/2000/01/rdf-schema#label>	"har forløper (verk)"@no .
 <http://rdaregistry.info/Elements/w/object/P10064>	<http://www.w3.org/2000/01/rdf-schema#label>	"har produsent (agent)"@no .
 <http://rdaregistry.info/Elements/w/object/P10501>	<http://www.w3.org/2000/01/rdf-schema#label>	"har produsent (kollektiv agent)"@no .
@@ -1152,7 +1152,7 @@
 <http://rdaregistry.info/Elements/w/object/P10372>	<http://www.w3.org/2000/01/rdf-schema#label>	"er tekst for verk"@no .
 <http://rdaregistry.info/Elements/w/object/P10371>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tekstlig verk"@no .
 <http://rdaregistry.info/Elements/w/object/P10335>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tematisk indeksnummer"@no .
-<http://rdaregistry.info/Elements/w/object/P10088>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tittel på verk"@no .
+<http://rdaregistry.info/Elements/w/object/P10088>	<http://www.w3.org/2000/01/rdf-schema#label>	"tittel"@no .
 <http://rdaregistry.info/Elements/w/object/P10336>	<http://www.w3.org/2000/01/rdf-schema#label>	"har transformasjon"@no .
 <http://rdaregistry.info/Elements/w/object/P10383>	<http://www.w3.org/2000/01/rdf-schema#label>	"har transformasjon ved målgruppe"@no .
 <http://rdaregistry.info/Elements/w/object/P10377>	<http://www.w3.org/2000/01/rdf-schema#label>	"har transformasjon ved utvidelsesplan"@no .
@@ -1165,7 +1165,7 @@
 <http://rdaregistry.info/Elements/w/object/P10341>	<http://www.w3.org/2000/01/rdf-schema#label>	"er transformasjon av stil fra"@no .
 <http://rdaregistry.info/Elements/w/object/P10337>	<http://www.w3.org/2000/01/rdf-schema#label>	"er transformasjon av"@no .
 <http://rdaregistry.info/Elements/w/object/P10332>	<http://www.w3.org/2000/01/rdf-schema#label>	"har alternativ søkeinngang for verk"@no .
-<http://rdaregistry.info/Elements/w/object/P10086>	<http://www.w3.org/2000/01/rdf-schema#label>	"har tittelvariant for verk"@no .
+<http://rdaregistry.info/Elements/w/object/P10086>	<http://www.w3.org/2000/01/rdf-schema#label>	"tittelvariant"@no .
 <http://rdaregistry.info/Elements/w/object/P10027>	<http://www.w3.org/2000/01/rdf-schema#label>	"er variasjoner basert på verk"@no .
 <http://rdaregistry.info/Elements/w/object/P10128>	<http://www.w3.org/2000/01/rdf-schema#label>	"er bearbeidelse av verk til verseform"@no .
 <http://rdaregistry.info/Elements/w/object/P10138>	<http://www.w3.org/2000/01/rdf-schema#label>	"er bearbeidelse av verk for video"@no .
