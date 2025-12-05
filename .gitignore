@@ -26,3 +26,5 @@ dist-ssr
 testdata/Hamsun.rdf
 testdata/Grass.rdf
 testdata/Ballard.rdf
+
+old_types/
