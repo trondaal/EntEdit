@@ -493,7 +493,7 @@ ${createLanguageFallbackFragment("?property", language, fallbackLanguage)}
 };
 
 // Return supported languages (English and Norwegian)
-export const useAvailableLanguages = (config: SparqlEndpointConfig) => {
+export const useAvailableLanguages = (_config: SparqlEndpointConfig) => {
   return useQuery({
     queryKey: ["available-languages"],
     queryFn: async (): Promise<string[]> => {

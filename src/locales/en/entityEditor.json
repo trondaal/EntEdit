@@ -29,7 +29,10 @@
     "selectRelatedAgent": "Select a related agent:",
     "selectRelatedWork": "Select a related work:",
     "selectRelatedExpression": "Select a related expression:",
-    "selectRelatedManifestation": "Select a related manifestation:"
+    "selectRelatedManifestation": "Select a related manifestation:",
+    "entitySaved": "Entity saved successfully",
+    "entityCreated": "Entity created successfully",
+    "entityDeleted": "Entity deleted successfully"
   },
   "dialogs": {
     "delete": {

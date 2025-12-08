@@ -19,6 +19,7 @@ import {
   Typography,
 } from "@mui/material";
 import { DeleteForever } from "@mui/icons-material";
+import { useSnackbar } from "notistack";
 import { useTranslation } from "react-i18next";
 import type { SparqlEndpointConfig, RdfProperty } from "../types/sparql";
 import { SparqlClient } from "../utils/sparqlClient";
@@ -71,6 +72,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 }) => {
   const { t } = useTranslation("entityEditor");
   const queryClient = useQueryClient();
+  const { enqueueSnackbar } = useSnackbar();
 
   // Fetch properties for the specialized sections
   const { data: wemiProperties = [], isLoading: wemiPropertiesLoading } =
@@ -89,8 +91,6 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
   const [selectedProperty, setSelectedProperty] = useState<string>("");
-  const [selectedObjectProperty, setSelectedObjectProperty] =
-    useState<string>("");
   const [selectedControlledProperty, setSelectedControlledProperty] =
     useState<string>("");
   const [selectedWEMIProperty, setSelectedWEMIProperty] =
@@ -119,7 +119,6 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       setEntityData({});
       setCustomEntityUri("");
       setSelectedProperty("");
-      setSelectedObjectProperty("");
       setSelectedControlledProperty("");
       setSelectedWEMIProperty("");
       setSelectedAgentProperty("");
@@ -137,7 +136,6 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     setEntityData({});
     setCustomEntityUri("");
     setSelectedProperty("");
-    setSelectedObjectProperty("");
     setSelectedControlledProperty("");
     setSelectedWEMIProperty("");
     setSelectedAgentProperty("");
@@ -342,8 +340,10 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       // If this was a new entity, reset the create form
       if (!entityUri) {
         resetCreateForm();
+        enqueueSnackbar(t("messages.entityCreated"), { variant: "success" });
       } else {
         setIsEditing(false);
+        enqueueSnackbar(t("messages.entitySaved"), { variant: "success" });
       }
 
       onEntitySaved();
@@ -414,6 +414,9 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
       // Close dialog and clear the entity selection
       setDeleteDialogOpen(false);
+
+      // Show success notification
+      enqueueSnackbar(t("messages.entityDeleted"), { variant: "success" });
 
       // Deselect the entity to show the "Create New Entity" form
       if (onEntityDeselected) {
@@ -494,19 +497,6 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       });
     }
   }, [isEditing]);
-
-  const addObjectProperty = useCallback((selectedEntityUri: string) => {
-    if (selectedObjectProperty && selectedEntityUri && isEditing) {
-      setEntityData((prev) => {
-        const currentValues = prev[selectedObjectProperty] || [];
-        return {
-          ...prev,
-          [selectedObjectProperty]: [...currentValues, selectedEntityUri],
-        };
-      });
-      setSelectedObjectProperty("");
-    }
-  }, [selectedObjectProperty, isEditing]);
 
   const addControlledProperty = useCallback((selectedEntityUri: string) => {
     if (selectedControlledProperty && selectedEntityUri && isEditing) {

@@ -4,6 +4,7 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { CssBaseline, Container, Box, CircularProgress, Typography, Tabs, Tab } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import { SnackbarProvider } from "notistack";
 import { queryClient } from "./utils/queryClient";
 import AppHeader from "./components/AppHeader";
 import EntityBrowser from "./components/EntityBrowser";
@@ -44,6 +45,43 @@ const theme = createTheme({
               borderColor: "rgba(0, 0, 0, 0.23)", // Keep border visible
             },
           },
+          "&:focus-within": {
+            boxShadow: "0 0 0 3px rgba(25, 118, 210, 0.2)", // Focus ring for accessibility
+          },
+        },
+      },
+    },
+    MuiListItemButton: {
+      styleOverrides: {
+        root: {
+          "&:focus-visible": {
+            outline: "3px solid",
+            outlineColor: "#1976d2",
+            outlineOffset: "2px",
+            backgroundColor: "rgba(0, 0, 0, 0.04)",
+          },
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          "&:focus-visible": {
+            outline: "3px solid",
+            outlineColor: "#1976d2",
+            outlineOffset: "2px",
+          },
+        },
+      },
+    },
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          "&:focus-visible": {
+            outline: "3px solid",
+            outlineColor: "#1976d2",
+            outlineOffset: "2px",
+          },
         },
       },
     },
@@ -56,10 +94,13 @@ const theme = createTheme({
     secondary: {
       main: "#dc004e",
     },
+    text: {
+      disabled: "rgba(0, 0, 0, 0.55)", // Improved contrast for accessibility
+    },
   },
   typography: {
     subtitle1: {
-      color: "#1976d2", // Change to your desired color
+      color: "#1976d2",
       fontWeight: 400,
     },
   },
@@ -172,66 +213,72 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider theme={theme}>
-        <CssBaseline />
-        
-        {/* Configuration Wizard - shown on first run or if config is invalid */}
-        <ConfigurationWizard
-          open={showWizard}
-          onConfigurationComplete={handleConfigurationComplete}
-          initialConfig={appConfig?.endpoint}
-          initialLanguage={appConfig?.language}
-        />
+        <SnackbarProvider
+          maxSnack={3}
+          anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+          autoHideDuration={3000}
+        >
+          <CssBaseline />
 
-        {/* Main Application - only rendered when properly configured */}
-        {appConfig?.isConfigured && !showWizard && (
-          <>
-            <AppHeader
-              config={appConfig.endpoint}
-              onConfigChange={handleConfigChange}
-              selectedLanguage={appConfig.language}
-              onLanguageChange={handleLanguageChange}
-              onResetConfiguration={handleResetConfiguration}
-            />
-            <Box
-              sx={{
-                minHeight: "100vh",
-                display: "flex",
-                flexDirection: "column",
-                pt: "64px", // Account for fixed header height
-              }}
-            >
-              <Box sx={{ borderBottom: 1, borderColor: "divider", bgcolor: "background.paper" }}>
-                <Container maxWidth="xl">
-                  <Tabs
-                    value={activeTab}
-                    onChange={(_, newValue) => setActiveTab(newValue)}
-                    aria-label="main navigation tabs"
-                  >
-                    <Tab label={t("tabs.entityBrowser")} />
-                    {showSearchTab && <Tab label={t("tabs.search")} />}
-                  </Tabs>
+          {/* Configuration Wizard - shown on first run or if config is invalid */}
+          <ConfigurationWizard
+            open={showWizard}
+            onConfigurationComplete={handleConfigurationComplete}
+            initialConfig={appConfig?.endpoint}
+            initialLanguage={appConfig?.language}
+          />
+
+          {/* Main Application - only rendered when properly configured */}
+          {appConfig?.isConfigured && !showWizard && (
+            <>
+              <AppHeader
+                config={appConfig.endpoint}
+                onConfigChange={handleConfigChange}
+                selectedLanguage={appConfig.language}
+                onLanguageChange={handleLanguageChange}
+                onResetConfiguration={handleResetConfiguration}
+              />
+              <Box
+                sx={{
+                  minHeight: "100vh",
+                  display: "flex",
+                  flexDirection: "column",
+                  pt: "64px", // Account for fixed header height
+                }}
+              >
+                <Box sx={{ borderBottom: 1, borderColor: "divider", bgcolor: "background.paper" }}>
+                  <Container maxWidth="xl">
+                    <Tabs
+                      value={activeTab}
+                      onChange={(_, newValue) => setActiveTab(newValue)}
+                      aria-label="main navigation tabs"
+                    >
+                      <Tab label={t("tabs.entityBrowser")} />
+                      {showSearchTab && <Tab label={t("tabs.search")} />}
+                    </Tabs>
+                  </Container>
+                </Box>
+
+                <Container maxWidth="xl" sx={{ py: 3, px: 2, flexGrow: 1 }}>
+                  {activeTab === 0 && (
+                    <EntityBrowser
+                      config={appConfig.endpoint}
+                      selectedLanguage={appConfig.language}
+                    />
+                  )}
+                  {activeTab === 1 && showSearchTab && (
+                    <SearchInterface
+                      config={appConfig.endpoint}
+                      selectedLanguage={appConfig.language}
+                    />
+                  )}
                 </Container>
               </Box>
+            </>
+          )}
 
-              <Container maxWidth="xl" sx={{ py: 3, px: 2, flexGrow: 1 }}>
-                {activeTab === 0 && (
-                  <EntityBrowser
-                    config={appConfig.endpoint}
-                    selectedLanguage={appConfig.language}
-                  />
-                )}
-                {activeTab === 1 && showSearchTab && (
-                  <SearchInterface
-                    config={appConfig.endpoint}
-                    selectedLanguage={appConfig.language}
-                  />
-                )}
-              </Container>
-            </Box>
-          </>
-        )}
-        
-        <ReactQueryDevtools initialIsOpen={false} />
+          <ReactQueryDevtools initialIsOpen={false} />
+        </SnackbarProvider>
       </ThemeProvider>
     </QueryClientProvider>
   );

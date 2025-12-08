@@ -102,14 +102,19 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
     <Box>
       <Box
         sx={{
-          display: "flex",
+          display: "grid",
+          gridTemplateColumns: {
+            xs: "1fr",
+            md: "250px 1fr",
+            lg: "minmax(200px, 1fr) minmax(350px, 1.5fr) minmax(550px, 2.5fr)",
+          },
           gap: 3,
-          flexWrap: "wrap",
-          alignItems: "flex-start",
+          height: "calc(100vh - 160px)",
+          overflow: "hidden",
         }}
       >
-        <Box sx={{ flex: "0 0 200px", minWidth: 200, alignSelf: "flex-start" }}>
-          <Paper elevation={1} sx={{ height: "fit-content", minHeight: 700 }}>
+        <Box sx={{ display: "flex", flexDirection: "column", overflow: "hidden" }}>
+          <Paper elevation={1} sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
             <Box sx={{ p: 2, borderBottom: 1, borderColor: "divider" }}>
               <Typography
                 variant="h6"
@@ -125,7 +130,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
                 <CircularProgress />
               </Box>
             ) : (
-              <List sx={{ maxHeight: 650, overflow: "auto" }}>
+              <List sx={{ flex: 1, overflow: "auto" }}>
                 {classes?.map((rdfClass) => (
                   <ListItem key={rdfClass.uri} disablePadding>
                     <ListItemButton
@@ -145,8 +150,8 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
           </Paper>
         </Box>
 
-        <Box sx={{ flex: "0 0 400px", minWidth: 400, alignSelf: "flex-start" }}>
-          <Paper elevation={1} sx={{ height: "fit-content", minHeight: 700 }}>
+        <Box sx={{ display: "flex", flexDirection: "column", overflow: "hidden" }}>
+          <Paper elevation={1} sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
             <Box
               sx={{
                 p: 2,
@@ -226,7 +231,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
                   : t("messages.noEntitiesForClass")}
               </Box>
             ) : (
-              <List sx={{ maxHeight: 600, overflow: "auto" }}>
+              <List sx={{ flex: 1, overflow: "auto" }}>
                 {filteredEntities?.map((entity) => (
                   <ListItem
                     key={`${selectedClass}-${entity.uri}`}
@@ -249,7 +254,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
           </Paper>
         </Box>
 
-        <Box sx={{ flex: "0 0 600px", minWidth: 600, alignSelf: "flex-start" }}>
+        <Box sx={{ display: "flex", flexDirection: "column", overflow: "hidden" }}>
           <EntityEditor
             config={config}
             classUri={selectedClass || ""}

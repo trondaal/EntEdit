@@ -29,7 +29,10 @@
     "selectRelatedAgent": "Velg relatert agent:",
     "selectRelatedWork": "Velg relatert verk:",
     "selectRelatedExpression": "Velg relatert uttrykk:",
-    "selectRelatedManifestation": "Velg relatert manifestasjon:"
+    "selectRelatedManifestation": "Velg relatert manifestasjon:",
+    "entitySaved": "Entitet lagret",
+    "entityCreated": "Entitet opprettet",
+    "entityDeleted": "Entitet slettet"
   },
   "dialogs": {
     "delete": {
