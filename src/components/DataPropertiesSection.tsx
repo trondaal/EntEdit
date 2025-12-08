@@ -44,18 +44,11 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
     (property) => property.uri !== "http://www.w3.org/2000/01/rdf-schema#label",
   );
 
-  // Get properties that have values
-  const dataPropertiesWithValues = Object.keys(entityData).filter(
-    (property) => {
-      const hasValues = entityData[property] && entityData[property].length > 0;
-      const isDataProperty = properties.some((p) => p.uri === property);
-      return (
-        hasValues &&
-        isDataProperty &&
-        property !== "http://www.w3.org/2000/01/rdf-schema#label"
-      );
-    },
-  );
+  // Get properties that have values, using the order from the already-sorted properties array
+  const dataPropertiesWithValues = properties
+    .filter((p) => p.uri !== "http://www.w3.org/2000/01/rdf-schema#label")
+    .filter((p) => entityData[p.uri] && entityData[p.uri].length > 0)
+    .map((p) => p.uri);
 
   return (
     <>
@@ -71,9 +64,14 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
               mb: 1.5,
             }}
           >
-            <Typography variant="subtitle1">{t("sections.textMetadata")}</Typography>
+            <Typography
+              variant="subtitle1"
+              sx={{ color: availableProperties.length === 0 ? 'text.disabled' : 'text.primary' }}
+            >
+              {t("sections.textMetadata")}
+            </Typography>
 
-            {isEditing && (
+            {availableProperties.length > 0 && (
               <FormControl size="small" sx={{ minWidth: 200 }}>
                 <InputLabel>{t("common:labels.addTextValue", { ns: "common" })}</InputLabel>
                 <Select

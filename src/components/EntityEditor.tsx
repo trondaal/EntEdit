@@ -23,12 +23,24 @@ import { useTranslation } from "react-i18next";
 import type { SparqlEndpointConfig, RdfProperty } from "../types/sparql";
 import { SparqlClient } from "../utils/sparqlClient";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
+import {
+  useWEMIProperties,
+  useAgentProperties,
+  useRelatedWorkProperties,
+  useRelatedExpressionProperties,
+  useRelatedManifestationProperties
+} from "../hooks/useSparqlQueries";
 import LabelManager from "./LabelManager";
 import EntityEditorHeader from "./EntityEditorHeader";
 import EntityLabelsSection from "./EntityLabelsSection";
 import DataPropertiesSection from "./DataPropertiesSection";
 import ObjectPropertySection from "./ObjectPropertySection";
 import ObjectPropertySelector from "./ObjectPropertySelector";
+import WEMIRelationshipSelector from "./WEMIRelationshipSelector";
+import RelatedAgentsSelector from "./RelatedAgentsSelector";
+import RelatedWorkSelector from "./RelatedWorkSelector";
+import RelatedExpressionSelector from "./RelatedExpressionSelector";
+import RelatedManifestationSelector from "./RelatedManifestationSelector";
 import { invalidateEntityCaches } from "../utils/queryInvalidation";
 import { escapeSparqlLiteral, isValidUri, formatLabel } from "../utils/labelUtils";
 
@@ -59,6 +71,19 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 }) => {
   const { t } = useTranslation("entityEditor");
   const queryClient = useQueryClient();
+
+  // Fetch properties for the specialized sections
+  const { data: wemiProperties = [], isLoading: wemiPropertiesLoading } =
+    useWEMIProperties(config, classUri, selectedLanguage);
+  const { data: agentProperties = [], isLoading: agentPropertiesLoading } =
+    useAgentProperties(config, classUri, selectedLanguage);
+  const { data: relatedWorkProperties = [], isLoading: relatedWorkPropertiesLoading } =
+    useRelatedWorkProperties(config, classUri, selectedLanguage);
+  const { data: relatedExpressionProperties = [], isLoading: relatedExpressionPropertiesLoading } =
+    useRelatedExpressionProperties(config, classUri, selectedLanguage);
+  const { data: relatedManifestationProperties = [], isLoading: relatedManifestationPropertiesLoading } =
+    useRelatedManifestationProperties(config, classUri, selectedLanguage);
+
   const [entityData, setEntityData] = useState<Record<string, string[]>>({});
   const [isEditing, setIsEditing] = useState(!entityUri);
   const [saving, setSaving] = useState(false);
@@ -67,6 +92,16 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   const [selectedObjectProperty, setSelectedObjectProperty] =
     useState<string>("");
   const [selectedControlledProperty, setSelectedControlledProperty] =
+    useState<string>("");
+  const [selectedWEMIProperty, setSelectedWEMIProperty] =
+    useState<string>("");
+  const [selectedAgentProperty, setSelectedAgentProperty] =
+    useState<string>("");
+  const [selectedRelatedWorkProperty, setSelectedRelatedWorkProperty] =
+    useState<string>("");
+  const [selectedRelatedExpressionProperty, setSelectedRelatedExpressionProperty] =
+    useState<string>("");
+  const [selectedRelatedManifestationProperty, setSelectedRelatedManifestationProperty] =
     useState<string>("");
   const [customEntityUri, setCustomEntityUri] = useState<string>("");
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
@@ -86,6 +121,11 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       setSelectedProperty("");
       setSelectedObjectProperty("");
       setSelectedControlledProperty("");
+      setSelectedWEMIProperty("");
+      setSelectedAgentProperty("");
+      setSelectedRelatedWorkProperty("");
+      setSelectedRelatedExpressionProperty("");
+      setSelectedRelatedManifestationProperty("");
       setSaveError(null);
       setIsEditing(true);
       setEntityLabels([]);
@@ -99,6 +139,11 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     setSelectedProperty("");
     setSelectedObjectProperty("");
     setSelectedControlledProperty("");
+    setSelectedWEMIProperty("");
+    setSelectedAgentProperty("");
+    setSelectedRelatedWorkProperty("");
+    setSelectedRelatedExpressionProperty("");
+    setSelectedRelatedManifestationProperty("");
     setSaveError(null);
     setIsEditing(true);
     setEntityLabels([]);
@@ -112,9 +157,12 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       const client = new SparqlClient(config);
       const query = `
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        SELECT DISTINCT ?property ?value WHERE {
+        PREFIX entedit: <http://oslomet.no/abi/vocab#>
+        SELECT DISTINCT ?property ?value ?order WHERE {
           <${entityUri}> ?property ?value .
-
+          OPTIONAL{
+            ?property entedit:order ?order 
+          }
           FILTER NOT EXISTS {
             <${entityUri}> ?subProperty ?value .
             ?subProperty rdfs:subPropertyOf+ ?property .
@@ -418,9 +466,15 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   }, [properties]);
 
   const getObjectPropertyLabel = useCallback((propertyUri: string) => {
-    const property = objectProperties.find((p) => p.uri === propertyUri);
+    // Search across all property arrays
+    const property = objectProperties.find((p) => p.uri === propertyUri)
+      || wemiProperties.find((p) => p.uri === propertyUri)
+      || agentProperties.find((p) => p.uri === propertyUri)
+      || relatedWorkProperties.find((p) => p.uri === propertyUri)
+      || relatedExpressionProperties.find((p) => p.uri === propertyUri)
+      || relatedManifestationProperties.find((p) => p.uri === propertyUri);
     return formatLabel(property?.label, propertyUri);
-  }, [objectProperties]);
+  }, [objectProperties, wemiProperties, agentProperties, relatedWorkProperties, relatedExpressionProperties, relatedManifestationProperties]);
 
   const handleLabelsSave = useCallback((
     labels: Array<{ id: string; value: string; language: string }>,
@@ -467,6 +521,71 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     }
   }, [selectedControlledProperty, isEditing]);
 
+  const addWEMIProperty = useCallback((selectedEntityUri: string) => {
+    if (selectedWEMIProperty && selectedEntityUri && isEditing) {
+      setEntityData((prev) => {
+        const currentValues = prev[selectedWEMIProperty] || [];
+        return {
+          ...prev,
+          [selectedWEMIProperty]: [...currentValues, selectedEntityUri],
+        };
+      });
+      setSelectedWEMIProperty("");
+    }
+  }, [selectedWEMIProperty, isEditing]);
+
+  const addAgentProperty = useCallback((selectedEntityUri: string) => {
+    if (selectedAgentProperty && selectedEntityUri && isEditing) {
+      setEntityData((prev) => {
+        const currentValues = prev[selectedAgentProperty] || [];
+        return {
+          ...prev,
+          [selectedAgentProperty]: [...currentValues, selectedEntityUri],
+        };
+      });
+      setSelectedAgentProperty("");
+    }
+  }, [selectedAgentProperty, isEditing]);
+
+  const addRelatedWorkProperty = useCallback((selectedEntityUri: string) => {
+    if (selectedRelatedWorkProperty && selectedEntityUri && isEditing) {
+      setEntityData((prev) => {
+        const currentValues = prev[selectedRelatedWorkProperty] || [];
+        return {
+          ...prev,
+          [selectedRelatedWorkProperty]: [...currentValues, selectedEntityUri],
+        };
+      });
+      setSelectedRelatedWorkProperty("");
+    }
+  }, [selectedRelatedWorkProperty, isEditing]);
+
+  const addRelatedExpressionProperty = useCallback((selectedEntityUri: string) => {
+    if (selectedRelatedExpressionProperty && selectedEntityUri && isEditing) {
+      setEntityData((prev) => {
+        const currentValues = prev[selectedRelatedExpressionProperty] || [];
+        return {
+          ...prev,
+          [selectedRelatedExpressionProperty]: [...currentValues, selectedEntityUri],
+        };
+      });
+      setSelectedRelatedExpressionProperty("");
+    }
+  }, [selectedRelatedExpressionProperty, isEditing]);
+
+  const addRelatedManifestationProperty = useCallback((selectedEntityUri: string) => {
+    if (selectedRelatedManifestationProperty && selectedEntityUri && isEditing) {
+      setEntityData((prev) => {
+        const currentValues = prev[selectedRelatedManifestationProperty] || [];
+        return {
+          ...prev,
+          [selectedRelatedManifestationProperty]: [...currentValues, selectedEntityUri],
+        };
+      });
+      setSelectedRelatedManifestationProperty("");
+    }
+  }, [selectedRelatedManifestationProperty, isEditing]);
+
   const updatePropertyValue = useCallback((
     property: string,
     index: number,
@@ -499,7 +618,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   }, []);
 
   // Get properties that have values, separated by type (memoized for performance)
-  const objectPropertiesWithValues = useMemo(() => {
+  /*const objectPropertiesWithValues = useMemo(() => {
     return Object.keys(entityData).filter((property) => {
       const hasValues = entityData[property] && entityData[property].length > 0;
       const isObjectProperty = objectProperties.some(
@@ -507,7 +626,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       );
       return hasValues && isObjectProperty;
     });
-  }, [entityData, objectProperties]);
+  }, [entityData, objectProperties]);*/
 
   // Controlled properties are those with status "controlled property"
   const controlledPropertiesWithValues = useMemo(() => {
@@ -520,12 +639,63 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     });
   }, [entityData, objectProperties]);
 
+  // Filter properties with values from the three specialized property sets
+  const wemiPropertiesWithValues = useMemo(() => {
+    return Object.keys(entityData).filter((property) => {
+      const hasValues = entityData[property] && entityData[property].length > 0;
+      const isWEMIProperty = wemiProperties.some(
+        (p) => p.uri === property && p.status === "core wemi property",
+      );
+      return hasValues && isWEMIProperty;
+    });
+  }, [entityData, wemiProperties]);
+
+  const agentPropertiesWithValues = useMemo(() => {
+    return Object.keys(entityData).filter((property) => {
+      const hasValues = entityData[property] && entityData[property].length > 0;
+      const isAgentProperty = agentProperties.some(
+        (p) => p.uri === property && p.status === "object property",
+      );
+      return hasValues && isAgentProperty;
+    });
+  }, [entityData, agentProperties]);
+
+  const relatedWorkPropertiesWithValues = useMemo(() => {
+    return Object.keys(entityData).filter((property) => {
+      const hasValues = entityData[property] && entityData[property].length > 0;
+      const isRelatedWorkProperty = relatedWorkProperties.some(
+        (p) => p.uri === property && p.status === "object property",
+      );
+      return hasValues && isRelatedWorkProperty;
+    });
+  }, [entityData, relatedWorkProperties]);
+
+  const relatedExpressionPropertiesWithValues = useMemo(() => {
+    return Object.keys(entityData).filter((property) => {
+      const hasValues = entityData[property] && entityData[property].length > 0;
+      const isRelatedExpressionProperty = relatedExpressionProperties.some(
+        (p) => p.uri === property && p.status === "object property",
+      );
+      return hasValues && isRelatedExpressionProperty;
+    });
+  }, [entityData, relatedExpressionProperties]);
+
+  const relatedManifestationPropertiesWithValues = useMemo(() => {
+    return Object.keys(entityData).filter((property) => {
+      const hasValues = entityData[property] && entityData[property].length > 0;
+      const isRelatedManifestationProperty = relatedManifestationProperties.some(
+        (p) => p.uri === property && p.status === "object property",
+      );
+      return hasValues && isRelatedManifestationProperty;
+    });
+  }, [entityData, relatedManifestationProperties]);
+
   // Get available properties for dropdown (excluding rdfs:label)
-  const availableObjectProperties = useMemo(() => {
+  /*const availableObjectProperties = useMemo(() => {
     return objectProperties.filter(
       (property) => property.status === "object property",
     );
-  }, [objectProperties]);
+  }, [objectProperties]);*/
 
   // Available controlled properties are those with status "controlled property"
   const availableControlledProperties = useMemo(() => {
@@ -533,6 +703,41 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       (property) => property.status === "controlled property",
     );
   }, [objectProperties]);
+
+  // Available WEMI properties from dedicated hook
+  const availableWEMIProperties = useMemo(() => {
+    return wemiProperties.filter(
+      (property) => property.status === "core wemi property",
+    );
+  }, [wemiProperties]);
+
+  // Available agent properties from dedicated hook
+  const availableAgentProperties = useMemo(() => {
+    return agentProperties.filter(
+      (property) => property.status === "object property",
+    );
+  }, [agentProperties]);
+
+  // Available related work properties from dedicated hook
+  const availableRelatedWorkProperties = useMemo(() => {
+    return relatedWorkProperties.filter(
+      (property) => property.status === "object property",
+    );
+  }, [relatedWorkProperties]);
+
+  // Available related expression properties from dedicated hook
+  const availableRelatedExpressionProperties = useMemo(() => {
+    return relatedExpressionProperties.filter(
+      (property) => property.status === "object property",
+    );
+  }, [relatedExpressionProperties]);
+
+  // Available related manifestation properties from dedicated hook
+  const availableRelatedManifestationProperties = useMemo(() => {
+    return relatedManifestationProperties.filter(
+      (property) => property.status === "object property",
+    );
+  }, [relatedManifestationProperties]);
 
   const uriError = useMemo(() => {
     return customEntityUri && !isValidUri(customEntityUri);
@@ -554,7 +759,16 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     setSelectedProperty("");
   }, [addProperty]);
 
-  if (entityLoading || propertiesLoading || objectPropertiesLoading) {
+  if (
+    entityLoading ||
+    propertiesLoading ||
+    objectPropertiesLoading ||
+    wemiPropertiesLoading ||
+    agentPropertiesLoading ||
+    relatedWorkPropertiesLoading ||
+    relatedExpressionPropertiesLoading ||
+    relatedManifestationPropertiesLoading
+  ) {
     return (
       <Paper
         elevation={1}
@@ -649,7 +863,12 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
                 mb: 1.5,
               }}
             >
-              <Typography variant="subtitle1">{t("sections.controlledValues")}</Typography>
+              <Typography
+                variant="subtitle1"
+                sx={{ color: availableControlledProperties.length === 0 ? 'text.disabled' : 'text.primary' }}
+              >
+                {t("sections.controlledValues")}
+              </Typography>
 
               {availableControlledProperties.length > 0 && (
                 <FormControl size="small" sx={{ minWidth: 200 }}>
@@ -707,7 +926,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           />
         )}
 
-        {/* Object Properties Section */}
+        {/* Related Agents Section */}
         {isEditing && (
           <>
             <Divider sx={{ my: 1.5 }} />
@@ -720,18 +939,23 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
                 mb: 1.5,
               }}
             >
-              <Typography variant="subtitle1">{t("sections.relatedEntities")}</Typography>
+              <Typography
+                variant="subtitle1"
+                sx={{ color: availableAgentProperties.length === 0 ? 'text.disabled' : 'text.primary' }}
+              >
+                {t("sections.relatedAgents")}
+              </Typography>
 
-              {availableObjectProperties.length > 0 && (
+              {availableAgentProperties.length > 0 && (
                 <FormControl size="small" sx={{ minWidth: 200 }}>
-                  <InputLabel>{t("common:labels.addRelated", { ns: "common" })}</InputLabel>
+                  <InputLabel>{t("common:labels.addAgent", { ns: "common" })}</InputLabel>
                   <Select
-                    value={selectedObjectProperty}
-                    label={t("common:labels.addRelated", { ns: "common" })}
-                    onChange={(e) => setSelectedObjectProperty(e.target.value)}
+                    value={selectedAgentProperty}
+                    label={t("common:labels.addAgent", { ns: "common" })}
+                    onChange={(e) => setSelectedAgentProperty(e.target.value)}
                     disabled={!classUri}
                   >
-                    {availableObjectProperties.map((property) => (
+                    {availableAgentProperties.map((property) => (
                       <MenuItem key={property.uri} value={property.uri}>
                         {getObjectPropertyLabel(property.uri)}
                       </MenuItem>
@@ -743,7 +967,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           </>
         )}
 
-        {objectPropertiesWithValues.map((propertyUri) => (
+        {agentPropertiesWithValues.map((propertyUri) => (
           <ObjectPropertySection
             key={propertyUri}
             config={config}
@@ -751,7 +975,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
             propertyLabel={getObjectPropertyLabel(propertyUri)}
             values={entityData[propertyUri]}
             rangeUri={
-              objectProperties.find((p) => p.uri === propertyUri)?.range
+              agentProperties.find((p) => p.uri === propertyUri)?.range
             }
             isEditing={isEditing && !!classUri}
             selectedLanguage={selectedLanguage}
@@ -762,17 +986,313 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           />
         ))}
 
-        {selectedObjectProperty && (
-          <ObjectPropertySelector
+        {selectedAgentProperty && (
+          <RelatedAgentsSelector
             config={config}
-            propertyUri={selectedObjectProperty}
+            propertyUri={selectedAgentProperty}
             rangeUri={
-              objectProperties.find((p) => p.uri === selectedObjectProperty)
+              agentProperties.find((p) => p.uri === selectedAgentProperty)
                 ?.range
             }
             selectedLanguage={selectedLanguage}
-            onSelect={addObjectProperty}
-            onCancel={() => setSelectedObjectProperty("")}
+            onSelect={addAgentProperty}
+            onCancel={() => setSelectedAgentProperty("")}
+          />
+        )}
+
+        {/* Basic WEMI Relationships Section */}
+        {isEditing && (
+          <>
+            <Divider sx={{ my: 1.5 }} />
+
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                mb: 1.5,
+              }}
+            >
+              <Typography
+                variant="subtitle1"
+                sx={{ color: availableWEMIProperties.length === 0 ? 'text.disabled' : 'text.primary' }}
+              >
+                {t("sections.wemiRelationships")}
+              </Typography>
+
+              {availableWEMIProperties.length > 0 && (
+                <FormControl size="small" sx={{ minWidth: 200 }}>
+                  <InputLabel>{t("common:labels.addWEMI", { ns: "common" })}</InputLabel>
+                  <Select
+                    value={selectedWEMIProperty}
+                    label={t("common:labels.addWEMI", { ns: "common" })}
+                    onChange={(e) => setSelectedWEMIProperty(e.target.value)}
+                    disabled={!classUri}
+                  >
+                    {availableWEMIProperties.map((property) => (
+                      <MenuItem key={property.uri} value={property.uri}>
+                        {getObjectPropertyLabel(property.uri)}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
+              )}
+            </Box>
+          </>
+        )}
+
+        {wemiPropertiesWithValues.map((propertyUri) => (
+          <ObjectPropertySection
+            key={propertyUri}
+            config={config}
+            propertyUri={propertyUri}
+            propertyLabel={getObjectPropertyLabel(propertyUri)}
+            values={entityData[propertyUri]}
+            rangeUri={
+              wemiProperties.find((p) => p.uri === propertyUri)?.range
+            }
+            isEditing={isEditing && !!classUri}
+            selectedLanguage={selectedLanguage}
+            onUpdateValue={(index, value) =>
+              updatePropertyValue(propertyUri, index, value)
+            }
+            onRemoveValue={(index) => removePropertyValue(propertyUri, index)}
+          />
+        ))}
+
+        {selectedWEMIProperty && (
+          <WEMIRelationshipSelector
+            config={config}
+            propertyUri={selectedWEMIProperty}
+            rangeUri={
+              wemiProperties.find((p) => p.uri === selectedWEMIProperty)
+                ?.range
+            }
+            selectedLanguage={selectedLanguage}
+            onSelect={addWEMIProperty}
+            onCancel={() => setSelectedWEMIProperty("")}
+          />
+        )}
+
+        {/* Related Works Section */}
+        {isEditing && (
+          <>
+            <Divider sx={{ my: 1.5 }} />
+
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                mb: 1.5,
+              }}
+            >
+              <Typography
+                variant="subtitle1"
+                sx={{ color: availableRelatedWorkProperties.length === 0 ? 'text.disabled' : 'text.primary' }}
+              >
+                {t("sections.relatedWorks")}
+              </Typography>
+
+              {availableRelatedWorkProperties.length > 0 && (
+                <FormControl size="small" sx={{ minWidth: 200 }}>
+                  <InputLabel>{t("common:labels.addRelatedWork", { ns: "common" })}</InputLabel>
+                  <Select
+                    value={selectedRelatedWorkProperty}
+                    label={t("common:labels.addRelatedWork", { ns: "common" })}
+                    onChange={(e) => setSelectedRelatedWorkProperty(e.target.value)}
+                    disabled={!classUri}
+                  >
+                    {availableRelatedWorkProperties.map((property) => (
+                      <MenuItem key={property.uri} value={property.uri}>
+                        {getObjectPropertyLabel(property.uri)}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
+              )}
+            </Box>
+          </>
+        )}
+
+        {relatedWorkPropertiesWithValues.map((propertyUri) => (
+          <ObjectPropertySection
+            key={propertyUri}
+            config={config}
+            propertyUri={propertyUri}
+            propertyLabel={getObjectPropertyLabel(propertyUri)}
+            values={entityData[propertyUri]}
+            rangeUri={
+              relatedWorkProperties.find((p) => p.uri === propertyUri)?.range
+            }
+            isEditing={isEditing && !!classUri}
+            selectedLanguage={selectedLanguage}
+            onUpdateValue={(index, value) =>
+              updatePropertyValue(propertyUri, index, value)
+            }
+            onRemoveValue={(index) => removePropertyValue(propertyUri, index)}
+          />
+        ))}
+
+        {selectedRelatedWorkProperty && (
+          <RelatedWorkSelector
+            config={config}
+            propertyUri={selectedRelatedWorkProperty}
+            rangeUri={
+              relatedWorkProperties.find((p) => p.uri === selectedRelatedWorkProperty)
+                ?.range
+            }
+            selectedLanguage={selectedLanguage}
+            onSelect={addRelatedWorkProperty}
+            onCancel={() => setSelectedRelatedWorkProperty("")}
+          />
+        )}
+
+        {/* Related Expressions Section */}
+        {isEditing && (
+          <>
+            <Divider sx={{ my: 1.5 }} />
+
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                mb: 1.5,
+              }}
+            >
+              <Typography
+                variant="subtitle1"
+                sx={{ color: availableRelatedExpressionProperties.length === 0 ? 'text.disabled' : 'text.primary' }}
+              >
+                {t("sections.relatedExpressions")}
+              </Typography>
+
+              {availableRelatedExpressionProperties.length > 0 && (
+                <FormControl size="small" sx={{ minWidth: 200 }}>
+                  <InputLabel>{t("common:labels.addRelatedExpression", { ns: "common" })}</InputLabel>
+                  <Select
+                    value={selectedRelatedExpressionProperty}
+                    label={t("common:labels.addRelatedExpression", { ns: "common" })}
+                    onChange={(e) => setSelectedRelatedExpressionProperty(e.target.value)}
+                    disabled={!classUri}
+                  >
+                    {availableRelatedExpressionProperties.map((property) => (
+                      <MenuItem key={property.uri} value={property.uri}>
+                        {getObjectPropertyLabel(property.uri)}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
+              )}
+            </Box>
+          </>
+        )}
+
+        {relatedExpressionPropertiesWithValues.map((propertyUri) => (
+          <ObjectPropertySection
+            key={propertyUri}
+            config={config}
+            propertyUri={propertyUri}
+            propertyLabel={getObjectPropertyLabel(propertyUri)}
+            values={entityData[propertyUri]}
+            rangeUri={
+              relatedExpressionProperties.find((p) => p.uri === propertyUri)?.range
+            }
+            isEditing={isEditing && !!classUri}
+            selectedLanguage={selectedLanguage}
+            onUpdateValue={(index, value) =>
+              updatePropertyValue(propertyUri, index, value)
+            }
+            onRemoveValue={(index) => removePropertyValue(propertyUri, index)}
+          />
+        ))}
+
+        {selectedRelatedExpressionProperty && (
+          <RelatedExpressionSelector
+            config={config}
+            propertyUri={selectedRelatedExpressionProperty}
+            rangeUri={
+              relatedExpressionProperties.find((p) => p.uri === selectedRelatedExpressionProperty)
+                ?.range
+            }
+            selectedLanguage={selectedLanguage}
+            onSelect={addRelatedExpressionProperty}
+            onCancel={() => setSelectedRelatedExpressionProperty("")}
+          />
+        )}
+
+        {/* Related Manifestations Section */}
+        {isEditing && (
+          <>
+            <Divider sx={{ my: 1.5 }} />
+
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                mb: 1.5,
+              }}
+            >
+              <Typography
+                variant="subtitle1"
+                sx={{ color: availableRelatedManifestationProperties.length === 0 ? 'text.disabled' : 'text.primary' }}
+              >
+                {t("sections.relatedManifestations")}
+              </Typography>
+
+              {availableRelatedManifestationProperties.length > 0 && (
+                <FormControl size="small" sx={{ minWidth: 200 }}>
+                  <InputLabel>{t("common:labels.addRelatedManifestation", { ns: "common" })}</InputLabel>
+                  <Select
+                    value={selectedRelatedManifestationProperty}
+                    label={t("common:labels.addRelatedManifestation", { ns: "common" })}
+                    onChange={(e) => setSelectedRelatedManifestationProperty(e.target.value)}
+                    disabled={!classUri}
+                  >
+                    {availableRelatedManifestationProperties.map((property) => (
+                      <MenuItem key={property.uri} value={property.uri}>
+                        {getObjectPropertyLabel(property.uri)}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
+              )}
+            </Box>
+          </>
+        )}
+
+        {relatedManifestationPropertiesWithValues.map((propertyUri) => (
+          <ObjectPropertySection
+            key={propertyUri}
+            config={config}
+            propertyUri={propertyUri}
+            propertyLabel={getObjectPropertyLabel(propertyUri)}
+            values={entityData[propertyUri]}
+            rangeUri={
+              relatedManifestationProperties.find((p) => p.uri === propertyUri)?.range
+            }
+            isEditing={isEditing && !!classUri}
+            selectedLanguage={selectedLanguage}
+            onUpdateValue={(index, value) =>
+              updatePropertyValue(propertyUri, index, value)
+            }
+            onRemoveValue={(index) => removePropertyValue(propertyUri, index)}
+          />
+        ))}
+
+        {selectedRelatedManifestationProperty && (
+          <RelatedManifestationSelector
+            config={config}
+            propertyUri={selectedRelatedManifestationProperty}
+            rangeUri={
+              relatedManifestationProperties.find((p) => p.uri === selectedRelatedManifestationProperty)
+                ?.range
+            }
+            selectedLanguage={selectedLanguage}
+            onSelect={addRelatedManifestationProperty}
+            onCancel={() => setSelectedRelatedManifestationProperty("")}
           />
         )}
       </Box>

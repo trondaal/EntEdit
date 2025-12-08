@@ -63,17 +63,18 @@ export const useRdfProperties = (
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
         PREFIX entedit: <http://oslomet.no/abi/vocab#>
 
-        SELECT DISTINCT ?property ?label ?comment ?domain ?range
+        SELECT DISTINCT ?property ?label ?domain ?range ?order
         WHERE {
           ?property a rdf:Property .
           ?property entedit:status "data property" .
-${createLanguageFallbackFragment("?property", language, fallbackLanguage)}
+          ?property entedit:order ?order
+          ${createLanguageFallbackFragment("?property", language, fallbackLanguage)}
 
           OPTIONAL { ?property rdfs:domain ?domain }
           OPTIONAL { ?property rdfs:range ?range }
           ${classUri ? `FILTER(?domain = <${classUri}>)` : ""}
         }
-        ORDER BY ?label ?property
+        ORDER BY ?order ?label ?property
       `;
 
       const response = await client.query(query);
@@ -83,6 +84,7 @@ ${createLanguageFallbackFragment("?property", language, fallbackLanguage)}
         comment: binding.comment?.value,
         domain: binding.domain?.value,
         range: binding.range?.value,
+        order: binding.order?.value ? parseInt(binding.order.value, 10) : undefined,
       }));
     },
     enabled: !!config.url,
@@ -143,7 +145,7 @@ export const useRdfObjectProperties = (
           ?property a rdf:Property .
           ?property entedit:status ?status.
           FILTER(?status = "controlled property" || ?status = "object property") .
-${createLanguageFallbackFragment("?property", language, fallbackLanguage)}
+         ${createLanguageFallbackFragment("?property", language, fallbackLanguage)}
 
           ?property rdfs:domain ?domain .
           ?property rdfs:range ?range .
@@ -199,43 +201,305 @@ ${createLanguageFallbackFragment("?entity", language, fallbackLanguage, "label",
   });
 };
 
-//Retrieve all available languages used in the dataset
-export const useAvailableLanguages = (config: SparqlEndpointConfig) => {
+// Hook for Basic WEMI relationship properties
+export const useWEMIProperties = (
+  config: SparqlEndpointConfig,
+  classUri?: string,
+  language: string = "en",
+) => {
   return useQuery({
-    queryKey: ["available-languages", config.url],
-    queryFn: async (): Promise<string[]> => {
+    queryKey: ["wemi-properties", config.url, classUri, language],
+    queryFn: async (): Promise<RdfProperty[]> => {
       const client = new SparqlClient(config);
+      const fallbackLanguage = getFallbackLanguage(language);
       const query = `
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX entedit: <http://oslomet.no/abi/vocab#>
+        PREFIX rdawo: <http://rdaregistry.info/Elements/w/object/>
+        PREFIX rdaeo: <http://rdaregistry.info/Elements/e/object/>
+        PREFIX rdamo: <http://rdaregistry.info/Elements/m/object/>
 
-        SELECT DISTINCT ?lang
+
+        SELECT DISTINCT ?property ?label ?domain ?range ?status
         WHERE {
-          ?s rdfs:label ?label .
-          BIND(LANG(?label) AS ?lang)
-          FILTER(?lang != "" && STRLEN(?lang) = 2)
+          ?property a rdf:Property .
+          ?property entedit:status ?status.
+          FILTER(?status = "core wemi property") .
+          ${createLanguageFallbackFragment("?property", language, fallbackLanguage)}
+          ?property rdfs:domain ?domain .
+          ?property rdfs:range ?range .
+
+          ${classUri ? `FILTER(?domain = <${classUri}>)` : ""}
         }
-        ORDER BY ?lang
+        ORDER BY ?range STR(?label)
       `;
 
       const response = await client.query(query);
-      const languages = response.results.bindings
-        .map((binding) => binding.lang.value)
-        .filter((lang) => lang !== "");
-
-      // Ensure 'en' is always available and first
-      const uniqueLanguages = Array.from(new Set(languages));
-      if (!uniqueLanguages.includes("en")) {
-        uniqueLanguages.unshift("en");
-      } else {
-        uniqueLanguages.sort((a, b) => {
-          if (a === "en") return -1;
-          if (b === "en") return 1;
-          return a.localeCompare(b);
-        });
-      }
-
-      return uniqueLanguages;
+      return response.results.bindings.map((binding) => ({
+        uri: binding.property.value,
+        label: binding.label?.value,
+        comment: binding.comment?.value,
+        domain: binding.domain?.value,
+        range: binding.range?.value,
+        status: binding.status?.value,
+      }));
     },
     enabled: !!config.url,
+  });
+};
+
+// Hook for Related Agent properties
+export const useAgentProperties = (
+  config: SparqlEndpointConfig,
+  classUri?: string,
+  language: string = "en",
+) => {
+  return useQuery({
+    queryKey: ["agent-properties", config.url, classUri, language],
+    queryFn: async (): Promise<RdfProperty[]> => {
+      const client = new SparqlClient(config);
+      const fallbackLanguage = getFallbackLanguage(language);
+      const query = `
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX entedit: <http://oslomet.no/abi/vocab#>
+
+        SELECT DISTINCT ?property ?label ?domain ?range ?status
+        WHERE {
+          ?property a rdf:Property .
+          ?property entedit:status ?status.
+          FILTER(?status = "controlled property" || ?status = "object property") .
+          ${createLanguageFallbackFragment("?property", language, fallbackLanguage)}
+          ?property rdfs:domain ?domain .
+          ?property rdfs:range ?range .
+    	    FILTER(?range = <http://rdaregistry.info/Elements/c/C10002> ) .
+          ${classUri ? `FILTER(?domain = <${classUri}>)` : ""}
+        }
+        ORDER BY ?range STR(?label)
+      `;
+
+      const response = await client.query(query);
+      return response.results.bindings.map((binding) => ({
+        uri: binding.property.value,
+        label: binding.label?.value,
+        comment: binding.comment?.value,
+        domain: binding.domain?.value,
+        range: binding.range?.value,
+        status: binding.status?.value,
+      }));
+    },
+    enabled: !!config.url,
+  });
+};
+
+// Hook for Other related entity properties
+export const useOtherEntityProperties = (
+  config: SparqlEndpointConfig,
+  classUri?: string,
+  language: string = "en",
+) => {
+  return useQuery({
+    queryKey: ["other-entity-properties", config.url, classUri, language],
+    queryFn: async (): Promise<RdfProperty[]> => {
+      const client = new SparqlClient(config);
+      const fallbackLanguage = getFallbackLanguage(language);
+      const query = `
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX entedit: <http://oslomet.no/abi/vocab#>
+
+        SELECT DISTINCT ?property ?label ?domain ?range ?status
+        WHERE {
+          ?property a rdf:Property .
+          ?property entedit:status ?status.
+          FILTER(?status = "object property") .
+${createLanguageFallbackFragment("?property", language, fallbackLanguage)}
+
+          ?property rdfs:domain ?domain .
+          ?property rdfs:range ?range .
+    	    FILTER(?range != <http://www.w3.org/2004/02/skos/core#Concept> && ?range != <http://rdaregistry.info/Elements/c/C10002>) .
+          ${classUri ? `FILTER(?domain = <${classUri}>)` : ""}
+          ${classUri ? `FILTER(?range = <${classUri}>)` : ""}
+        }
+        ORDER BY ?range STR(?label)
+      `;
+
+      const response = await client.query(query);
+      return response.results.bindings.map((binding) => ({
+        uri: binding.property.value,
+        label: binding.label?.value,
+        comment: binding.comment?.value,
+        domain: binding.domain?.value,
+        range: binding.range?.value,
+        status: binding.status?.value,
+      }));
+    },
+    enabled: !!config.url,
+  });
+};
+
+// Hook for Related Work properties
+export const useRelatedWorkProperties = (
+  config: SparqlEndpointConfig,
+  classUri?: string,
+  language: string = "en",
+) => {
+  return useQuery({
+    queryKey: ["related-work-properties", config.url, classUri, language],
+    queryFn: async (): Promise<RdfProperty[]> => {
+      const client = new SparqlClient(config);
+      const fallbackLanguage = getFallbackLanguage(language);
+      const query = `
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX entedit: <http://oslomet.no/abi/vocab#>
+        PREFIX rdawo: <http://rdaregistry.info/Elements/w/object/>
+        PREFIX rdaeo: <http://rdaregistry.info/Elements/e/object/>
+        PREFIX rdamo: <http://rdaregistry.info/Elements/m/object/>
+
+        SELECT DISTINCT ?property ?label ?domain ?range ?status
+        WHERE {
+          ?property a rdf:Property .
+          ?property entedit:status ?status.
+          FILTER(?status = "object property") .
+          ${createLanguageFallbackFragment("?property", language, fallbackLanguage)}
+
+          ?property rdfs:domain ?domain .
+          ?property rdfs:range ?range .
+    	    FILTER(?range = <http://rdaregistry.info/Elements/c/C10001> ) .
+          FILTER(?property NOT IN (rdawo:P10078,rdaeo:P20231,rdaeo:P20059,rdamo:P30135,rdamo:P30139)) .
+          ${classUri ? `FILTER(?domain = <${classUri}>)` : ""}
+        }
+        ORDER BY ?range STR(?label)
+      `;
+
+      const response = await client.query(query);
+      return response.results.bindings.map((binding) => ({
+        uri: binding.property.value,
+        label: binding.label?.value,
+        comment: binding.comment?.value,
+        domain: binding.domain?.value,
+        range: binding.range?.value,
+        status: binding.status?.value,
+      }));
+    },
+    enabled: !!config.url,
+  });
+};
+
+// Hook for Related Expression properties
+export const useRelatedExpressionProperties = (
+  config: SparqlEndpointConfig,
+  classUri?: string,
+  language: string = "en",
+) => {
+  return useQuery({
+    queryKey: ["related-expression-properties", config.url, classUri, language],
+    queryFn: async (): Promise<RdfProperty[]> => {
+      const client = new SparqlClient(config);
+      const fallbackLanguage = getFallbackLanguage(language);
+      const query = `
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX entedit: <http://oslomet.no/abi/vocab#>
+        PREFIX rdawo: <http://rdaregistry.info/Elements/w/object/>
+        PREFIX rdaeo: <http://rdaregistry.info/Elements/e/object/>
+        PREFIX rdamo: <http://rdaregistry.info/Elements/m/object/>
+
+        SELECT DISTINCT ?property ?label ?domain ?range ?status
+        WHERE {
+          ?property a rdf:Property .
+          ?property entedit:status ?status.
+          FILTER(?status = "object property") .
+${createLanguageFallbackFragment("?property", language, fallbackLanguage)}
+
+          ?property rdfs:domain ?domain .
+          ?property rdfs:range ?range .
+    	    FILTER(?range = <http://rdaregistry.info/Elements/c/C10006> ) .
+          FILTER(?property NOT IN (rdawo:P10078,rdaeo:P20231,rdaeo:P20059,rdamo:P30135,rdamo:P30139)) .
+          ${classUri ? `FILTER(?domain = <${classUri}>)` : ""}
+        }
+        ORDER BY ?range STR(?label)
+      `;
+
+      const response = await client.query(query);
+      return response.results.bindings.map((binding) => ({
+        uri: binding.property.value,
+        label: binding.label?.value,
+        comment: binding.comment?.value,
+        domain: binding.domain?.value,
+        range: binding.range?.value,
+        status: binding.status?.value,
+      }));
+    },
+    enabled: !!config.url,
+  });
+};
+
+// Hook for Related Manifestation properties
+export const useRelatedManifestationProperties = (
+  config: SparqlEndpointConfig,
+  classUri?: string,
+  language: string = "en",
+) => {
+  return useQuery({
+    queryKey: ["related-manifestation-properties", config.url, classUri, language],
+    queryFn: async (): Promise<RdfProperty[]> => {
+      const client = new SparqlClient(config);
+      const fallbackLanguage = getFallbackLanguage(language);
+      const query = `
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX entedit: <http://oslomet.no/abi/vocab#>
+        PREFIX rdawo: <http://rdaregistry.info/Elements/w/object/>
+        PREFIX rdaeo: <http://rdaregistry.info/Elements/e/object/>
+        PREFIX rdamo: <http://rdaregistry.info/Elements/m/object/>
+
+        SELECT DISTINCT ?property ?label ?domain ?range ?status
+        WHERE {
+          ?property a rdf:Property .
+          ?property entedit:status ?status.
+          FILTER(?status = "object property") .
+${createLanguageFallbackFragment("?property", language, fallbackLanguage)}
+
+          ?property rdfs:domain ?domain .
+          ?property rdfs:range ?range .
+    	    FILTER(?range = <http://rdaregistry.info/Elements/c/C10007>) .
+          FILTER(?property NOT IN (rdawo:P10078,rdaeo:P20231,rdaeo:P20059,rdamo:P30135,rdamo:P30139)) .
+          ${classUri ? `FILTER(?domain = <${classUri}>)` : ""}
+        }
+        ORDER BY ?range STR(?label)
+      `;
+
+      const response = await client.query(query);
+      return response.results.bindings.map((binding) => ({
+        uri: binding.property.value,
+        label: binding.label?.value,
+        comment: binding.comment?.value,
+        domain: binding.domain?.value,
+        range: binding.range?.value,
+        status: binding.status?.value,
+      }));
+    },
+    enabled: !!config.url,
+  });
+};
+
+// Return supported languages (English and Norwegian)
+export const useAvailableLanguages = (config: SparqlEndpointConfig) => {
+  return useQuery({
+    queryKey: ["available-languages"],
+    queryFn: async (): Promise<string[]> => {
+      // Return hardcoded list of supported languages
+      return ["en", "no"];
+    },
+    enabled: true,
   });
 };

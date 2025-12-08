@@ -19,9 +19,14 @@
     "loading": "Laster...",
     "noResults": "Ingen resultater funnet",
     "filter": "Filter...",
-    "addTextValue": "Legg til tekstverdi",
-    "addCategory": "Legg til kategori",
-    "addRelated": "Legg til relatert"
+    "addTextValue": "Legg til",
+    "addCategory": "Legg til",
+    "addRelated": "Legg til",
+    "addWEMI": "Legg til",
+    "addAgent": "Legg til",
+    "addRelatedWork": "Legg til",
+    "addRelatedExpression": "Legg til",
+    "addRelatedManifestation": "Legg til"
   },
   "navigation": {
     "classes": "Klasser",

@@ -21,7 +21,12 @@
     "filter": "Filter...",
     "addTextValue": "Add text value",
     "addCategory": "Add category",
-    "addRelated": "Add related"
+    "addRelated": "Add related",
+    "addWEMI": "Add WEMI relationship",
+    "addAgent": "Add related agent",
+    "addRelatedWork": "Add related work",
+    "addRelatedExpression": "Add related expression",
+    "addRelatedManifestation": "Add related manifestation"
   },
   "navigation": {
     "classes": "Classes",

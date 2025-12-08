@@ -7,7 +7,12 @@
     "labels": "Labels",
     "textMetadata": "Text metadata",
     "controlledValues": "Controlled values",
-    "relatedEntities": "Related entities"
+    "relatedEntities": "Related entities",
+    "wemiRelationships": "Basic WEMI relationships",
+    "relatedAgents": "Related Agents",
+    "relatedWorks": "Related Works",
+    "relatedExpressions": "Related Expressions",
+    "relatedManifestations": "Related Manifestations"
   },
   "placeholders": {
     "enterUri": "Enter custom URI or leave empty for auto-generation",
@@ -19,7 +24,12 @@
     "selectClass": "Please select a class from the left panel to create a new entity.",
     "noRangeSpecified": "No range specified for this property. Cannot suggest entities.",
     "noEntitiesFound": "No entities found of type {{typeName}}",
-    "selectEntity": "Select an entity for relationship:"
+    "selectEntity": "Select an entity for relationship:",
+    "selectWEMIEntity": "Select a WEMI entity for relationship:",
+    "selectRelatedAgent": "Select a related agent:",
+    "selectRelatedWork": "Select a related work:",
+    "selectRelatedExpression": "Select a related expression:",
+    "selectRelatedManifestation": "Select a related manifestation:"
   },
   "dialogs": {
     "delete": {

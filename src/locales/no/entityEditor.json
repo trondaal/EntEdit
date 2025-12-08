@@ -7,7 +7,12 @@
     "labels": "Etiketter",
     "textMetadata": "Tekstmetadata",
     "controlledValues": "Kontrollerte verdier",
-    "relatedEntities": "Relaterte entiteter"
+    "relatedEntities": "Relaterte entiteter",
+    "wemiRelationships": "Grunnleggende WEMI-relasjoner",
+    "relatedAgents": "Relaterte agenter",
+    "relatedWorks": "Relaterte verk",
+    "relatedExpressions": "Relaterte uttrykk",
+    "relatedManifestations": "Relaterte manifestasjoner"
   },
   "placeholders": {
     "enterUri": "Skriv inn tilpasset URI eller la stå tomt for automatisk generering",
@@ -19,7 +24,12 @@
     "selectClass": "Vennligst velg en klasse fra venstre panel for å opprette en ny entitet.",
     "noRangeSpecified": "Ingen rekkevidde spesifisert for denne egenskapen. Kan ikke foreslå entiteter.",
     "noEntitiesFound": "Ingen entiteter funnet av type {{typeName}}",
-    "selectEntity": "Velg en entitet for relasjon:"
+    "selectEntity": "Velg en entitet for relasjon:",
+    "selectWEMIEntity": "Velg entitet:",
+    "selectRelatedAgent": "Velg relatert agent:",
+    "selectRelatedWork": "Velg relatert verk:",
+    "selectRelatedExpression": "Velg relatert uttrykk:",
+    "selectRelatedManifestation": "Velg relatert manifestasjon:"
   },
   "dialogs": {
     "delete": {
