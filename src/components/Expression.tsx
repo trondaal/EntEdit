@@ -51,29 +51,70 @@ const Expression: React.FC<ExpressionProps> = ({
     return text.charAt(0).toUpperCase() + text.slice(1);
   };
 
+  // Helper function to split semicolon-separated values into array
+  const splitValues = (value: string | undefined): string[] => {
+    if (!value) return [];
+    return value.split(/\s*;\s*/).map(v => v.trim()).filter(v => v.length > 0);
+  };
+
+  // Helper function to parse creator strings
+  // Example input: "rolelabel: name & name & name ; rolelabel: name & name"
+  // Output: Array of { role, names }
+  const parseCreators = (creatorString: string | undefined): Array<{ role: string; names: string[] }> => {
+    if (!creatorString) return [];
+
+    // Split by semicolon to get individual role groups
+    const roleGroups = creatorString.split(';').map(group => group.trim());
+
+    return roleGroups.map(group => {
+      // Split by colon to separate role from names
+      const colonIndex = group.indexOf(':');
+      if (colonIndex === -1) return null;
+
+      const role = group.substring(0, colonIndex).trim();
+      const namesString = group.substring(colonIndex + 1).trim();
+
+      // Split by ' & ' to get individual names
+      const names = namesString.split('&').map(name => name.trim()).filter(name => name.length > 0);
+
+      return { role, names };
+    }).filter((group): group is { role: string; names: string[] } => group !== null);
+  };
+
   // Helper function to parse and format relationship strings
-  // Example input: "er del av verk: The border trilogy = http://viaf.org/viaf/175871715 ; er bearbeidet som spillefilm (verk): All the pretty horses = https://www.imdb.com/title/tt0149624"
+  // Example input: "har del av verk: All the pretty horses = http://viaf.org/viaf/214001528 & Cities of the plain = http://viaf.org/viaf/3417153653286155900001 ; er bearbeidet som spillefilm (verk): All the pretty horses = https://www.imdb.com/title/tt0149624"
   // Output: Array of { relationshipLabel, title }
   const parseRelationships = (relationshipString: string | undefined): Array<{ relationshipLabel: string; title: string }> => {
     if (!relationshipString) return [];
 
-    // Split by semicolon to get individual relationships
-    const relationships = relationshipString.split(';').map(rel => rel.trim());
+    const result: Array<{ relationshipLabel: string; title: string }> = [];
 
-    return relationships.map(rel => {
-      // Split by colon to separate relationship label from title+URI
-      const colonIndex = rel.indexOf(':');
-      if (colonIndex === -1) return null;
+    // Split by semicolon to get individual relationship groups
+    const relationshipGroups = relationshipString.split(';').map(group => group.trim());
 
-      const relationshipLabel = rel.substring(0, colonIndex).trim();
-      const titleAndUri = rel.substring(colonIndex + 1).trim();
+    relationshipGroups.forEach(group => {
+      // Split by colon to separate relationship label from title+URI pairs
+      const colonIndex = group.indexOf(':');
+      if (colonIndex === -1) return;
 
-      // Split by ' = ' to separate title from URI
-      const parts = titleAndUri.split(' = ');
-      const title = parts[0]?.trim() || titleAndUri;
+      const relationshipLabel = group.substring(0, colonIndex).trim();
+      const titleAndUriPairs = group.substring(colonIndex + 1).trim();
 
-      return { relationshipLabel, title };
-    }).filter((rel): rel is { relationshipLabel: string; title: string } => rel !== null);
+      // Split by ' & ' to get individual title=URI pairs
+      const pairs = titleAndUriPairs.split('&').map(pair => pair.trim());
+
+      pairs.forEach(pair => {
+        // Split by ' = ' to separate title from URI
+        const parts = pair.split(' = ');
+        const title = parts[0]?.trim();
+
+        if (title) {
+          result.push({ relationshipLabel, title });
+        }
+      });
+    });
+
+    return result;
   };
 
   const handleToggleManifestations = (e: React.MouseEvent) => {
@@ -126,22 +167,62 @@ const Expression: React.FC<ExpressionProps> = ({
                 {(result.work_creators || result.expression_creators) && (
                   <Box>
                     {result.work_creators && (
-                      <Typography
-                        variant="body2"
-                        color="text.secondary"
-                        sx={{ lineHeight: 1.5 }}
-                      >
-                        {capitalizeFirstLetter(result.work_creators)}
-                      </Typography>
+                      <Box>
+                        {parseCreators(result.work_creators).map((creator, index) => (
+                          <Typography
+                            key={index}
+                            variant="body2"
+                            color="text.secondary"
+                            sx={{ lineHeight: 1.5 }}
+                          >
+                            <Box
+                              component="span"
+                              className="creator-role"
+                              sx={{
+                                fontWeight: 500,
+                                color: 'text.primary',
+                              }}
+                            >
+                              {capitalizeFirstLetter(creator.role)}:
+                            </Box>{' '}
+                            <Box
+                              component="span"
+                              className="creator-names"
+                            >
+                              {creator.names.join(' ; ')}
+                            </Box>
+                          </Typography>
+                        ))}
+                      </Box>
                     )}
                     {result.expression_creators && (
-                      <Typography
-                        variant="body2"
-                        color="text.secondary"
-                        sx={{ lineHeight: 1.5 }}
-                      >
-                        {capitalizeFirstLetter(result.expression_creators)}
-                      </Typography>
+                      <Box>
+                        {parseCreators(result.expression_creators).map((creator, index) => (
+                          <Typography
+                            key={index}
+                            variant="body2"
+                            color="text.secondary"
+                            sx={{ lineHeight: 1.5 }}
+                          >
+                            <Box
+                              component="span"
+                              className="creator-role"
+                              sx={{
+                                fontWeight: 500,
+                                color: 'text.primary',
+                              }}
+                            >
+                              {capitalizeFirstLetter(creator.role)}:
+                            </Box>{' '}
+                            <Box
+                              component="span"
+                              className="creator-names"
+                            >
+                              {creator.names.join(' ; ')}
+                            </Box>
+                          </Typography>
+                        ))}
+                      </Box>
                     )}
                   </Box>
                 )}
@@ -154,9 +235,10 @@ const Expression: React.FC<ExpressionProps> = ({
                     gap: 0.75,
                     mt: 0.25,
                   }}>
-                    {result.language && (
+                    {splitValues(result.language).map((lang, index) => (
                       <Chip
-                        label={capitalizeFirstLetter(result.language)}
+                        key={`lang-${index}`}
+                        label={capitalizeFirstLetter(lang)}
                         size="small"
                         variant="outlined"
                         sx={{
@@ -166,10 +248,11 @@ const Expression: React.FC<ExpressionProps> = ({
                           borderColor: 'divider',
                         }}
                       />
-                    )}
-                    {result.contenttype && (
+                    ))}
+                    {splitValues(result.contenttype).map((ct, index) => (
                       <Chip
-                        label={capitalizeFirstLetter(result.contenttype)}
+                        key={`ct-${index}`}
+                        label={capitalizeFirstLetter(ct)}
                         size="small"
                         variant="outlined"
                         sx={{
@@ -179,10 +262,11 @@ const Expression: React.FC<ExpressionProps> = ({
                           borderColor: 'divider',
                         }}
                       />
-                    )}
-                    {result.worktype && (
+                    ))}
+                    {splitValues(result.worktype).map((wt, index) => (
                       <Chip
-                        label={capitalizeFirstLetter(result.worktype)}
+                        key={`wt-${index}`}
+                        label={capitalizeFirstLetter(wt)}
                         size="small"
                         variant="outlined"
                         sx={{
@@ -192,7 +276,7 @@ const Expression: React.FC<ExpressionProps> = ({
                           borderColor: 'divider',
                         }}
                       />
-                    )}
+                    ))}
                   </Box>
                 )}
 

@@ -5,6 +5,7 @@ import {
   ListItemText,
   Typography,
   Box,
+  Chip,
 } from "@mui/material";
 import type { Manifestation as ManifestationType } from "../hooks/useManifestationQueries";
 
@@ -21,6 +22,26 @@ const Manifestation: React.FC<ManifestationProps> = ({
   onSelect,
   selectedLanguage: _selectedLanguage,
 }) => {
+  // Debug: Log manifestation data to console
+  console.log('Manifestation data:', {
+    uri: manifestation.uri,
+    mediatype: manifestation.mediatype,
+    carriertype: manifestation.carriertype,
+    extent: manifestation.extent,
+    fullObject: manifestation
+  });
+
+  // Helper function to capitalize first letter
+  const capitalizeFirstLetter = (text: string | undefined): string | undefined => {
+    if (!text) return text;
+    return text.charAt(0).toUpperCase() + text.slice(1);
+  };
+
+  // Helper function to split semicolon-separated values into array
+  const splitValues = (value: string | undefined): string[] => {
+    if (!value) return [];
+    return value.split(/\s*;\s*/).map(v => v.trim()).filter(v => v.length > 0);
+  };
   // Format the title with ISBD separators
   const formatTitle = () => {
     if (manifestation.title) {
@@ -113,8 +134,9 @@ const Manifestation: React.FC<ManifestationProps> = ({
             </Box>
           }
           secondary={
-            (manifestation.extent || manifestation.mediatype || manifestation.carriertype) ? (
-              <Box sx={{ mt: 0.5 }}>
+            <Box component="div" sx={{ display: 'flex', flexDirection: 'column', gap: 0.5, mt: 0.5 }}>
+              {/* Extent as text */}
+              {manifestation.extent && (
                 <Typography
                   variant="caption"
                   color="text.secondary"
@@ -123,16 +145,48 @@ const Manifestation: React.FC<ManifestationProps> = ({
                     display: 'block',
                   }}
                 >
-                  {[
-                    manifestation.extent,
-                    manifestation.mediatype,
-                    manifestation.carriertype,
-                  ]
-                    .filter(Boolean)
-                    .join(' • ')}
+                  {manifestation.extent}
                 </Typography>
-              </Box>
-            ) : null
+              )}
+
+              {/* Media type and Carrier type as visual tags/chips */}
+              {(manifestation.mediatype || manifestation.carriertype) && (
+                <Box sx={{
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  gap: 0.75,
+                }}>
+                  {splitValues(manifestation.carriertype).map((ct, index) => (
+                    <Chip
+                      key={`carrier-${index}`}
+                      label={capitalizeFirstLetter(ct)}
+                      size="small"
+                      variant="outlined"
+                      sx={{
+                        height: 20,
+                        fontSize: '0.6875rem',
+                        fontWeight: 500,
+                        borderColor: 'divider',
+                      }}
+                    />
+                  ))}
+                  {splitValues(manifestation.mediatype).map((mt, index) => (
+                    <Chip
+                      key={`media-${index}`}
+                      label={capitalizeFirstLetter(mt)}
+                      size="small"
+                      variant="outlined"
+                      sx={{
+                        height: 20,
+                        fontSize: '0.6875rem',
+                        fontWeight: 500,
+                        borderColor: 'divider',
+                      }}
+                    />
+                  ))}
+                </Box>
+              )}
+            </Box>
           }
         />
       </ListItemButton>

@@ -254,7 +254,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
           </Paper>
         </Box>
 
-        <Box sx={{ display: "flex", flexDirection: "column", overflow: "hidden" }}>
+        <Box sx={{ display: "flex", flexDirection: "column", overflow: "auto" }}>
           <EntityEditor
             config={config}
             classUri={selectedClass || ""}

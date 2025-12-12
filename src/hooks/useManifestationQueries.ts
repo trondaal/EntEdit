@@ -72,34 +72,34 @@ export const useManifestations = (
           }
           #mediatype label, we use english as default
           OPTIONAL {
-              ?manifestation rdamd:P30002 ?mediatype_chosen .
+              ?manifestation rdamo:P30002 ?mediatype_chosen .
               ?mediatype_chosen rdfs:label ?mediatypelabel_chosen .
               FILTER(LANG(?mediatypelabel_chosen) = "${language}")
           }
           OPTIONAL {
-              ?manifestation rdamd:P30002 ?mediatype_none .
+              ?manifestation rdamo:P30002 ?mediatype_none .
               ?mediatype_none rdfs:label ?mediatypelabel_none .
               FILTER(LANG(?mediatypelabel_none) = "")
           }
           OPTIONAL {
-              ?manifestation rdamd:P30002 ?mediatype_en .
+              ?manifestation rdamo:P30002 ?mediatype_en .
               ?mediatype_en rdfs:label ?mediatypelabel_en .
               FILTER(LANG(?mediatypelabel_en) = "en")
           }
           BIND(COALESCE(?mediatypelabel_chosen, ?mediatypelabel_none, ?mediatypelabel_en) AS ?mediatypelabel)
            #carriertype label, we use english as default
           OPTIONAL {
-              ?manifestation rdamd:P30001  ?carriertype_chosen .
+              ?manifestation rdamo:P30001  ?carriertype_chosen .
               ?carriertype_chosen rdfs:label ?carriertypelabel_chosen .
               FILTER(LANG(?carriertypelabel_chosen) = "${language}")
           }
           OPTIONAL {
-              ?manifestation rdamd:P30001 ?carriertype_none .
+              ?manifestation rdamo:P30001 ?carriertype_none .
               ?carriertype_none rdfs:label ?carriertypelabel_none .
               FILTER(LANG(?carriertypelabel_none) = "")
           }
           OPTIONAL {
-              ?manifestation rdamd:P30001 ?carriertype_en .
+              ?manifestation rdamo:P30001 ?carriertype_en .
               ?carriertype_en rdfs:label ?carriertypelabel_en .
               FILTER(LANG(?carriertypelabel_en) = "en")
           }

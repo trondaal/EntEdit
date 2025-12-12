@@ -1,10 +1,10 @@
 PREFIX :<http://www.ontotext.com/connectors/lucene#>
 PREFIX inst:<http://www.ontotext.com/connectors/lucene/instance#>
 INSERT DATA {
-	inst:entitiesIndex :createConnector '''
+	inst:expressionsIndex :createConnector '''
 {
   "fields": [
-    {
+    {press
         "fieldName": "names$manifestation",
         "propertyChain": [
             "http://rdaregistry.info/Elements/e/object/P20059",
