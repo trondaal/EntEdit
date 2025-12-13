@@ -775,7 +775,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   }
 
   return (
-    <Paper elevation={1} sx={{ minHeight: 700, height: "fit-content" }}>
+    <Paper elevation={1} sx={{ height: "fit-content" }}>
       <EntityEditorHeader
         entityUri={entityUri}
         isEditing={isEditing}
