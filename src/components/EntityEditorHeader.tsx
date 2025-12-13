@@ -46,6 +46,7 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
         p: 2,
         borderBottom: 1,
         borderColor: "divider",
+        minHeight: 72,
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",

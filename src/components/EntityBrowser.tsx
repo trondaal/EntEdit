@@ -115,7 +115,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
       >
         <Box sx={{ display: "flex", flexDirection: "column", overflow: "hidden" }}>
           <Paper elevation={1} sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
-            <Box sx={{ p: 2, borderBottom: 1, borderColor: "divider" }}>
+            <Box sx={{ p: 2, borderBottom: 1, borderColor: "divider", minHeight: 72, display: "flex", alignItems: "center" }}>
               <Typography
                 variant="h6"
                 sx={{ display: "flex", alignItems: "center" }}
@@ -157,6 +157,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
                 p: 2,
                 borderBottom: 1,
                 borderColor: "divider",
+                minHeight: 72,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
