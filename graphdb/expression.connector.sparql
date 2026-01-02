@@ -4,7 +4,7 @@ INSERT DATA {
 	inst:expressionsIndex :createConnector '''
 {
   "fields": [
-    {press
+    {
         "fieldName": "names$manifestation",
         "propertyChain": [
             "http://rdaregistry.info/Elements/e/object/P20059",
@@ -12,7 +12,7 @@ INSERT DATA {
             "http://rdaregistry.info/Elements/x/object/P00019"
          ]
     },
-    
+
     {
         "fieldName": "names$expression",
         "propertyChain": [
