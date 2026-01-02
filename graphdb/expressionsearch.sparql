@@ -17,18 +17,21 @@ SELECT DISTINCT ?expression
 		(GROUP_CONCAT(DISTINCT ?worktype_label ; SEPARATOR=" ; ") as ?worktype)
 		(GROUP_CONCAT(DISTINCT CONCAT(?work_agent_relationship_label, ": ", ?work_agent_names) ; SEPARATOR=" ; ") as ?work_creators)
 		(GROUP_CONCAT(DISTINCT CONCAT(?expression_agent_relationship_label, ": ", ?expression_agent_names) ; SEPARATOR=" ; ") as ?expression_creators)
-		(GROUP_CONCAT(DISTINCT CONCAT(?work_to_work_relationship_label, ": ", ?target_work_label) ; SEPARATOR=" ; ") as ?work_to_work_relationships)
-(GROUP_CONCAT(DISTINCT CONCAT(?expression_to_expression_relationship_label, ": ", ?target_expression_label) ; SEPARATOR=" ; ") as ?expression_to_expression_relationships)
+		(GROUP_CONCAT(DISTINCT CONCAT(?work_to_work_relationship_label, ": ", ?target_work_title) ; SEPARATOR=" ; ") as ?work_to_work_relationships)
+(GROUP_CONCAT(DISTINCT CONCAT(?expression_to_expression_relationship_label, ": ", ?target_expression_title) ; SEPARATOR=" ; ") as ?expression_to_expression_relationships)
 FROM <http://www.ontotext.com/explicit>
 	  	
 WHERE {
     ?search a inst:entitiesIndex ;
-    #lucene:query "the" ;
+    lucene:query "horses" ;
     #lucene:query "${query.replace(/"/g, '\\"')}" ;
     lucene:entities ?expression .
     ?expression lucene:score ?score .
     ?expression a <http://rdaregistry.info/Elements/c/C10006> .
-    ?expression rdaeo:P20231 ?work .
+
+        {?expression rdaeo:P20231 ?work .}
+            UNION
+        {?work rdawo:P10078 ?expression .}
 
     #Titles, we assume they have no language tag.
     OPTIONAL {
@@ -58,7 +61,7 @@ WHERE {
     #Work to agent relationships
     OPTIONAL {
         SELECT DISTINCT ?work ?work_agent_relationship_label 
-        (GROUP_CONCAT(?work_agent_name_x ; SEPARATOR=" & ") as ?work_agent_names)
+        (GROUP_CONCAT(DISTINCT ?work_agent_name_x ; SEPARATOR=" & ") as ?work_agent_names)
         WHERE {
             {
                 OPTIONAL {
@@ -83,7 +86,7 @@ WHERE {
         #Expression to agent relationships
     OPTIONAL {
         SELECT DISTINCT ?expression ?expression_agent_relationship_label 
-        (GROUP_CONCAT(?expression_agent_name_x ; SEPARATOR=" & ") as ?expression_agent_names)
+        (GROUP_CONCAT(DISTINCT ?expression_agent_name_x ; SEPARATOR=" & ") as ?expression_agent_names)
         WHERE {
             {
                 OPTIONAL {
@@ -108,31 +111,62 @@ WHERE {
     #Work to work relationships
     OPTIONAL {
         SELECT DISTINCT ?work ?work_to_work_relationship_label
-        (GROUP_CONCAT(DISTINCT CONCAT(?target_work_label, " = ", STR(?target_work))  ; SEPARATOR=" & ") as ?target_work_label)
+        (GROUP_CONCAT(DISTINCT CONCAT(?target_work_title, " = ", STR(?target_work))  ; SEPARATOR=" & ") as ?target_work_title)
         WHERE {
-            OPTIONAL {
-                ?work ?work_to_work_relationship ?target_work .
-                ?target_work a <http://rdaregistry.info/Elements/c/C10001> .
-                ?target_work rdfs:label ?target_work_label .
-                ?work_to_work_relationship rdfs:label ?work_to_work_relationship_label .
-                FILTER(LANG(?work_to_work_relationship_label) = "no") .
-		 	}
+            {
+                OPTIONAL {
+                    ?work ?work_to_work_relationship ?target_work .
+                    ?target_work a <http://rdaregistry.info/Elements/c/C10001> .
+                    ?target_work rdawd:P10088 ?target_work_title .
+                    ?work_to_work_relationship rdfs:label ?work_to_work_relationship_label .
+                    FILTER(LANG(?work_to_work_relationship_label) = "no") .
+                    FILTER NOT EXISTS {
+    					?work_to_work_relationship rdfs:subPropertyOf* <http://rdaregistry.info/Elements/w/P10336> .
+  					}
+                }
+            }UNION {
+                OPTIONAL {
+                    ?target_work ?work_to_work_relationship ?work .
+                    ?target_work a <http://rdaregistry.info/Elements/c/C10001> .
+                    ?target_work rdawd:P10088 ?target_work_title .
+                    ?work_to_work_relationship_inverse owl:inverseOf ?work_to_work_relationship .
+                    ?work_to_work_relationship_inverse rdfs:label ?work_to_work_relationship_label .
+                    #?work_to_work_relationship rdfs:label ?work_to_work_relationship_label .
+                    FILTER(LANG(?work_to_work_relationship_label) = "no") .
+                    FILTER NOT EXISTS {
+    					?work_to_work_relationship_inverse rdfs:subPropertyOf* <http://rdaregistry.info/Elements/w/P10336> .
+  					}
+                }
+            }
+
         }
         GROUP BY ?work ?work_to_work_relationship_label
     }
     
-        #Expression to expression relationships
+    #Expression to expression relationships
     OPTIONAL {
         SELECT DISTINCT ?expression ?expression_to_expression_relationship_label
-        (GROUP_CONCAT(DISTINCT CONCAT(?target_expression_label, " = ", STR(?target_expression))  ; SEPARATOR=" & ") as ?target_expression_label)
+        (GROUP_CONCAT(DISTINCT CONCAT(?target_expression_title, " = ", STR(?target_expression))  ; SEPARATOR=" & ") as ?target_expression_title)
         WHERE {
-            OPTIONAL {
-                ?expression ?expression_to_expression_relationship ?target_expression .
-                ?target_expression a <http://rdaregistry.info/Elements/c/C10006> .
-                ?target_expression rdfs:label ?target_expression_label .
-                ?expression_to_expression_relationship rdfs:label ?expression_to_expression_relationship_label .
-                FILTER(LANG(?expression_to_expression_relationship_label) = "no") .
-		 	}
+                {
+                OPTIONAL {
+                    ?expression ?expression_to_expression_relationship ?target_expression .
+                    ?target_expression a <http://rdaregistry.info/Elements/c/C10006> .
+                    ?target_expression rdaed:P20315 ?target_expression_title .
+                    ?expression_to_expression_relationship rdfs:label ?expression_to_expression_relationship_label .
+                    FILTER(LANG(?expression_to_expression_relationship_label) = "no") .
+                }
+            }UNION{
+                OPTIONAL {
+                    ?target_expression ?expression_to_expression_relationship ?expression .
+                    ?target_expression a <http://rdaregistry.info/Elements/c/C10006> .
+                    ?target_expression rdaed:P20315 ?target_expression_title .
+                    ?expression_to_expression_relationship_inverse owl:inverseOf ?expression_to_expression_relationship .
+                    ?expression_to_expression_relationship_inverse rdfs:label ?expression_to_expression_relationship_label .
+                    FILTER(LANG(?expression_to_expression_relationship_label) = "no") .
+                }                  
+            }
+            
         }
         GROUP BY ?expression ?expression_to_expression_relationship_label
     }
