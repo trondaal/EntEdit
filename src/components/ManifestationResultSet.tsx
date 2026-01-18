@@ -7,24 +7,23 @@ import {
   CircularProgress,
   Alert,
 } from "@mui/material";
-import Expression from "./Expression";
-import type { ExpressionSearchResult } from "../hooks/useSearchQueries";
+import { useTranslation } from "react-i18next";
+import ManifestationSearchResult from "./ManifestationSearchResult";
+import type { ManifestationSearchResult as ManifestationSearchResultType } from "../hooks/useSearchQueries";
 import type { SparqlEndpointConfig } from "../types/sparql";
 
-interface ResultSetProps {
+interface ManifestationResultSetProps {
   searchQuery: string;
-  searchResults?: ExpressionSearchResult[];
+  searchResults?: ManifestationSearchResultType[];
   searchLoading: boolean;
   searchError: Error | null;
   selectedResult: string | null;
   onSelectResult: (uri: string) => void;
   config: SparqlEndpointConfig;
-  selectedManifestationUri: string | null;
-  onManifestationSelect: (uri: string) => void;
   selectedLanguage: string;
 }
 
-const ResultSet: React.FC<ResultSetProps> = ({
+const ManifestationResultSet: React.FC<ManifestationResultSetProps> = ({
   searchQuery,
   searchResults,
   searchLoading,
@@ -32,15 +31,15 @@ const ResultSet: React.FC<ResultSetProps> = ({
   selectedResult,
   onSelectResult,
   config,
-  selectedManifestationUri,
-  onManifestationSelect,
   selectedLanguage,
 }) => {
+  const { t } = useTranslation();
+
   return (
     <Paper elevation={1} sx={{ height: "fit-content", minHeight: 700 }}>
       <Box sx={{ p: 2, borderBottom: 1, borderColor: "divider" }}>
         <Typography variant="h6" sx={{ display: "flex", alignItems: "center" }}>
-          Search Results
+          {t("search.searchResults")}
           {searchResults && searchQuery && (
             <Typography variant="body2" color="text.secondary" sx={{ ml: 2 }}>
               ({searchResults.length} found)
@@ -57,7 +56,7 @@ const ResultSet: React.FC<ResultSetProps> = ({
 
       {!searchQuery ? (
         <Box sx={{ p: 3, textAlign: "center", color: "text.secondary" }}>
-          Enter a search query to find entities
+          Enter a search query to find manifestations
         </Box>
       ) : searchLoading ? (
         <Box sx={{ display: "flex", justifyContent: "center", p: 3 }}>
@@ -70,15 +69,13 @@ const ResultSet: React.FC<ResultSetProps> = ({
       ) : (
         <List sx={{ maxHeight: 600, overflow: "auto" }}>
           {searchResults?.map((result, index) => (
-            <Expression
+            <ManifestationSearchResult
               key={`${result.uri}-${index}`}
               result={result}
               isSelected={selectedResult === result.uri}
               onSelect={onSelectResult}
-              config={config}
-              selectedManifestationUri={selectedManifestationUri}
-              onManifestationSelect={onManifestationSelect}
               selectedLanguage={selectedLanguage}
+              config={config}
             />
           ))}
         </List>
@@ -87,4 +84,4 @@ const ResultSet: React.FC<ResultSetProps> = ({
   );
 };
 
-export default ResultSet;
+export default ManifestationResultSet;

@@ -64,7 +64,7 @@ rdawd:P10223	abi:status "data property" ; abi:order 2 ; rdfs:label "foretrukket 
 rdawd:P10086	abi:status "data property" ; abi:order 3 ; rdfs:label "tittelvariant"@no . #"titlevariant"@en .
 rdawd:P10012	abi:status "data property" ; abi:order 4 ; rdfs:label "nummerering"@no . #"numbering"@en .
 rdawd:P10256	abi:status "data property" ; abi:order 6 ; rdfs:label "emne"@no . #"emne"@en .
-rdawd:P10219	abi:status "data property" ; abi:order 7 ; rdfs:label "dato"@no . #"date"@en ; 	
+rdawd:P10219	abi:status "data property" ; abi:order 7 ; rdfs:label "dato"@no . #"date"@en ;
 rdawd:P10330	abi:status "data property" ; abi:order 8 ; rdfs:label "note"@no . #"note on Work"@en .
 #rdawd:P10004	abi:status "data property" ; rdfs:label "har kategori av verk"@no . #"type"@en .
 
@@ -85,16 +85,17 @@ rdaeo:P20001	abi:status "controlled property" ; rdfs:range  abi:Contenttype ; rd
 
 #Manifestation profile
 rdamd:P30156	abi:status "data property" ; abi:order 1 ; rdfs:label "tittel"@no . #"title"@en .
-rdamd:P30142	abi:status "data property" ; abi:order 2 ; rdfs:label "annen tittelinformasjon"@no . #"subtitle"@en .	
-rdamd:P30117	abi:status "data property" ; abi:order 3 ; rdfs:label "ansvarsangivelse"@no . #"responsibility"@en .	
+rdamd:P30142	abi:status "data property" ; abi:order 2 ; rdfs:label "annen tittelinformasjon"@no . #"subtitle"@en .
+rdamd:P30117	abi:status "data property" ; abi:order 3 ; rdfs:label "ansvarsangivelse"@no . #"responsibility"@en .
 #rdamd:P30134	abi:status "data property" ; abi:order 4 ; rdfs:label "har tittel for manifestasjon"@no . #"tittel"@en .
-rdamd:P30014	abi:status "data property" ; abi:order 5 ; rdfs:label "nummer for del"@no . #"numbering"@en .
+#rdamd:P30014	abi:status "data property" ; abi:order 5 ; rdfs:label "nummer for del"@no . #"numbering"@en .
 
 rdamd:P30107	abi:status "data property" ; abi:order 6 ; rdfs:label "utgave"@no . #"edition"@en .
 rdamd:P30182	abi:status "data property" ; abi:order 7 ; rdfs:label "omfang"@no . #"extent"@en .
-rdamd:P30169	abi:status "data property" ; abi:order 8 ; rdfs:label "format"@no . #"dimensions"@en .
+rdamd:P30169	abi:status "data property" ; abi:order 8 ; rdfs:label "dimensjon"@no . #"dimensions"@en .
 
-rdamd:P30083	abi:status "data property" ; abi:order 9 ; rdfs:label "utgiver"@no . #"publisher"@en .
+rdamd:P30076	abi:status "data property" ; abi:order 9 ; rdfs:label "navn på utgiver"@no . #"publisher"@en
+#rdamd:P30083	abi:status "data property" ; abi:order 9 ; rdfs:label "utgiver"@no . #"publisher"@en .
 rdamd:P30088	abi:status "data property" ; abi:order 10 ; rdfs:label "utgivelsessted"@no . #"publicationplace"@en .
 rdamd:P30011	abi:status "data property" ; abi:order 11 ; rdfs:label "utgivelsesdato"@no . #"publicationdate"@en .
 
@@ -104,29 +105,31 @@ rdamd:P30174	abi:status "data property" ; rdfs:label "har navn på produsent"@no
 rdamd:P30086	abi:status "data property" ; rdfs:label "har produksjonssted"@no . #"productionplace"@en .
 rdamd:P30009	abi:status "data property" ; rdfs:label "har tidsrom for produksjon"@no . #"productiondate"@en .
 
-rdamd:P30033	abi:status "data property" ; rdfs:label "har del av manifestasjon"@no . #"contentsnote"@en .
-rdamd:P30111	abi:status "data property" ; rdfs:label "har opplysninger om utgivelse"@no . #"publication"@en .
-rdamd:P30110	abi:status "data property" ; rdfs:label "har produksjonsangivelse"@no . #"production"@en .
-rdamd:P30109	abi:status "data property" ; rdfs:label "har framstillingsangivelse"@no . #"manufacture"@en .
-rdamd:P30108	abi:status "data property" ; rdfs:label "har distribusjonsopplysninger"@no . #"distribution"@en .
+#rdamd:P30033	abi:status "data property" ; rdfs:label "har del av manifestasjon"@no . #"contentsnote"@en .
+#rdamd:P30111	abi:status "data property" ; rdfs:label "har opplysninger om utgivelse"@no . #"publication"@en .
+#rdamd:P30110	abi:status "data property" ; rdfs:label "har produksjonsangivelse"@no . #"production"@en .
+#rdamd:P30109	abi:status "data property" ; rdfs:label "har framstillingsangivelse"@no . #"manufacture"@en .
+#rdamd:P30108	abi:status "data property" ; rdfs:label "har distribusjonsopplysninger"@no . #"distribution"@en .
 
-rdamd:P30085	abi:status "data property" ; rdfs:label "har distribusjonssted"@no . #"distributionplace"@en .
-rdamd:P30173	abi:status "data property" ; rdfs:label "har navn på distributør"@no . #"distributor"@en .
-rdamd:P30008	abi:status "data property" ; rdfs:label "har tidsrom for distribusjon"@no . #"distributiondate"@en .
-rdamd:P30087	abi:status "data property" ; rdfs:label "har framstillingssted"@no . #"manufactureplace"@en .
-rdamd:P30175	abi:status "data property" ; rdfs:label "har navn på tilvirker"@no . #"manufacturer"@en .
-rdamd:P30010	abi:status "data property" ; rdfs:label "har tidsrom for framstilling"@no . #"manufacturedate"@en .
-rdamd:P30004	abi:status "data property" ; abi:order 30 ; rdfs:label "identifikator"@no . #"identifier"@en .
-rdamd:P30137	abi:status "data property" ; abi:order 31 ; rdfs:label "note"@no . #"note"@en .
+#rdamd:P30085	abi:status "data property" ; rdfs:label "har distribusjonssted"@no . #"distributionplace"@en .
+#rdamd:P30173	abi:status "data property" ; rdfs:label "har navn på distributør"@no . #"distributor"@en .
+#rdamd:P30008	abi:status "data property" ; rdfs:label "har tidsrom for distribusjon"@no . #"distributiondate"@en .
+
+#rdamd:P30087	abi:status "data property" ; rdfs:label "har framstillingssted"@no . #"manufactureplace"@en .
+#rdamd:P30175	abi:status "data property" ; rdfs:label "har navn på tilvirker"@no . #"manufacturer"@en .
+#rdamd:P30010	abi:status "data property" ; rdfs:label "har tidsrom for framstilling"@no . #"manufacturedate"@en .
+rdamd:P30137	abi:status "data property" ; abi:order 30 ; rdfs:label "note"@no . #"note"@en .
+rdamd:P30004	abi:status "data property" ; abi:order 31 ; rdfs:label "identifikator"@no . #"identifier"@en .
+
 
 #rdamd:P30002	abi:status "data property" ; rdfs:label "har medietype"@no . #"mediatype"@en .
 #rdamd:P30001	abi:status "data property" ; rdfs:label "har bærertype"@no . #"carrier"@en .
-rdamd:P30106	abi:status "data property" ; abi:order 40 ; rdfs:label "serieangivelse"@no . #"series"@en .
-rdamd:P30165	abi:status "data property" ; abi:order 41 ; rdfs:label "nummerering i serie"@no . #"seriesnumbering"@en .
+rdamd:P30106	abi:status "data property" ; abi:order 20 ; rdfs:label "serieangivelse"@no . #"series"@en .
+rdamd:P30165	abi:status "data property" ; abi:order 21 ; rdfs:label "nummerering i serie"@no . #"seriesnumbering"@en .
 #rdamd:P30050	abi:status "data property" ; rdfs:label "har note om hefte, del, eller versjon brukt som grunnlag for identifisering av manifestasjon"@no . #"partnote"@en .
 
-rdamo:P30002	  abi:status "controlled property" ; rdfs:range  abi:Mediatype ; rdfs:label "medietype"@no . #"mediatype"@en .  
-rdamo:P30001	  abi:status "controlled property" ;  rdfs:range  abi:Carriertype ; rdfs:label "bærertype"@no . #"carrier"@en .   
+rdamo:P30002	  abi:status "controlled property" ; rdfs:range  abi:Mediatype ; rdfs:label "medietype"@no . #"mediatype"@en .
+rdamo:P30001	  abi:status "controlled property" ;  rdfs:range  abi:Carriertype ; rdfs:label "bærertype"@no . #"carrier"@en .
 
 #Basic WEMI types
 

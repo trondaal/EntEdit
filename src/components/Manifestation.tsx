@@ -22,74 +22,109 @@ const Manifestation: React.FC<ManifestationProps> = ({
   onSelect,
   selectedLanguage: _selectedLanguage,
 }) => {
-  // Debug: Log manifestation data to console
-  console.log('Manifestation data:', {
-    uri: manifestation.uri,
-    mediatype: manifestation.mediatype,
-    carriertype: manifestation.carriertype,
-    extent: manifestation.extent,
-    fullObject: manifestation
-  });
-
   // Helper function to capitalize first letter
   const capitalizeFirstLetter = (text: string | undefined): string | undefined => {
     if (!text) return text;
     return text.charAt(0).toUpperCase() + text.slice(1);
   };
 
-  // Helper function to split semicolon-separated values into array
+  // Helper function to split pipe-separated values into array
   const splitValues = (value: string | undefined): string[] => {
     if (!value) return [];
-    return value.split(/\s*;\s*/).map(v => v.trim()).filter(v => v.length > 0);
+    return value.split(/\s*\|\s*/).map(v => v.trim()).filter(v => v.length > 0);
   };
-  // Format the title with ISBD separators
-  const formatTitle = () => {
-    if (manifestation.title) {
-      let formattedTitle = manifestation.title;
 
-      // Add 'other' field with ISBD separator " : " if present
-      if (manifestation.other) {
-        formattedTitle += ` : ${manifestation.other}`;
-      }
+  // Line 1: Title area (Title proper : Other title information / Statement of responsibility)
+  const formatTitleArea = () => {
+    if (!manifestation.title) return manifestation.uri;
 
-      // Add responsibility statement with ISBD separator " / " if present
-      if (manifestation.responsibilityStatement) {
-        formattedTitle += ` / ${manifestation.responsibilityStatement}`;
-      }
-
-      return formattedTitle;
+    let formatted = manifestation.title;
+    if (manifestation.other) {
+      formatted += ` : ${manifestation.other}`;
     }
-    return manifestation.uri;
+    if (manifestation.responsibilityStatement) {
+      formatted += ` / ${manifestation.responsibilityStatement}`;
+    }
+    return formatted;
   };
 
-  // Format publication information with ISBD separators
-  const formatPublicationInfo = () => {
+  // Line 2: Publication area + Physical description + Series
+  // (Edition . – Place : Publisher , Date . – Extent ; Dimensions . – (Series ; Numbering))
+  const formatPublicationPhysicalSeries = () => {
     const parts: string[] = [];
 
-    // Add place if present
-    if (manifestation.place) {
-      parts.push(manifestation.place);
+    // Publication area
+    if (manifestation.edition) {
+      parts.push(manifestation.edition);
     }
 
-    // Add publisher with ISBD separator " : " if present
+    const pubParts: string[] = [];
+    if (manifestation.place) {
+      pubParts.push(manifestation.place);
+    }
     if (manifestation.publisher) {
+      pubParts.push(manifestation.place ? ` : ${manifestation.publisher}` : manifestation.publisher);
+    }
+    if (manifestation.date) {
+      pubParts.push(pubParts.length > 0 ? ` , ${manifestation.date}` : manifestation.date);
+    }
+
+    if (pubParts.length > 0) {
       if (parts.length > 0) {
-        parts.push(` : ${manifestation.publisher}`);
+        parts.push(` . – ${pubParts.join('')}`);
       } else {
-        parts.push(manifestation.publisher);
+        parts.push(pubParts.join(''));
       }
     }
 
-    // Add date with ISBD separator " , " if present
-    if (manifestation.date) {
+    // Physical description
+    const physParts: string[] = [];
+    if (manifestation.extent) {
+      physParts.push(manifestation.extent);
+    }
+    if (manifestation.dimensions) {
+      physParts.push(manifestation.extent ? ` ; ${manifestation.dimensions}` : manifestation.dimensions);
+    }
+
+    if (physParts.length > 0) {
       if (parts.length > 0) {
-        parts.push(` , ${manifestation.date}`);
+        parts.push(` . – ${physParts.join('')}`);
       } else {
-        parts.push(manifestation.date);
+        parts.push(physParts.join(''));
+      }
+    }
+
+    // Series
+    if (manifestation.series || manifestation.seriesNumbering) {
+      let seriesFormatted = '';
+      if (manifestation.series) {
+        seriesFormatted = manifestation.series;
+      }
+      if (manifestation.seriesNumbering) {
+        seriesFormatted += seriesFormatted ? ` ; ${manifestation.seriesNumbering}` : manifestation.seriesNumbering;
+      }
+      if (seriesFormatted) {
+        if (parts.length > 0) {
+          parts.push(` . – (${seriesFormatted})`);
+        } else {
+          parts.push(`(${seriesFormatted})`);
+        }
       }
     }
 
     return parts.length > 0 ? parts.join('') : null;
+  };
+
+  // Line 3: Notes (all on one line, separated by ' ; ')
+  const formatNotes = () => {
+    if (!manifestation.notes) return null;
+    return splitValues(manifestation.notes).join(' ; ');
+  };
+
+  // Line 4: Identifiers (all on one line, separated by ' ; ')
+  const formatIdentifiers = () => {
+    if (!manifestation.identifiers) return null;
+    return splitValues(manifestation.identifiers).join(' ; ');
   };
 
   return (
@@ -108,18 +143,20 @@ const Manifestation: React.FC<ManifestationProps> = ({
       >
         <ListItemText
           primary={
-            <Box>
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.5 }}>
+              {/* Line 1: Title area */}
               <Typography
                 variant="body2"
                 sx={{
                   fontWeight: 500,
                   lineHeight: 1.5,
-                  mb: 0.25,
                 }}
               >
-                {formatTitle()}
+                {formatTitleArea()}
               </Typography>
-              {formatPublicationInfo() && (
+
+              {/* Line 2: Publication area + Physical description + Series */}
+              {formatPublicationPhysicalSeries() && (
                 <Typography
                   variant="body2"
                   color="text.secondary"
@@ -128,38 +165,47 @@ const Manifestation: React.FC<ManifestationProps> = ({
                     fontSize: '0.8125rem',
                   }}
                 >
-                  {formatPublicationInfo()}
+                  {formatPublicationPhysicalSeries()}
                 </Typography>
               )}
-            </Box>
-          }
-          secondary={
-            <Box component="div" sx={{ display: 'flex', flexDirection: 'column', gap: 0.5, mt: 0.5 }}>
-              {/* Extent as text */}
-              {manifestation.extent && (
+
+              {/* Line 3: Notes (all on one line) */}
+              {formatNotes() && (
                 <Typography
                   variant="caption"
                   color="text.secondary"
                   sx={{
                     lineHeight: 1.4,
-                    display: 'block',
                   }}
                 >
-                  {manifestation.extent}
+                  {formatNotes()}
                 </Typography>
               )}
 
-              {/* Media type and Carrier type as visual tags/chips */}
+              {/* Line 4: Identifiers (all on one line) */}
+              {formatIdentifiers() && (
+                <Typography
+                  variant="caption"
+                  color="text.secondary"
+                  sx={{
+                    lineHeight: 1.4,
+                  }}
+                >
+                  {formatIdentifiers()}
+                </Typography>
+              )}
+
+              {/* Media type and Carrier type chips */}
               {(manifestation.mediatype || manifestation.carriertype) && (
                 <Box sx={{
                   display: 'flex',
                   flexWrap: 'wrap',
                   gap: 0.75,
+                  mt: 0.5,
                 }}>
-                  {splitValues(manifestation.carriertype).map((ct, index) => (
+                  {manifestation.carriertype && (
                     <Chip
-                      key={`carrier-${index}`}
-                      label={capitalizeFirstLetter(ct)}
+                      label={capitalizeFirstLetter(manifestation.carriertype)}
                       size="small"
                       variant="outlined"
                       sx={{
@@ -169,11 +215,10 @@ const Manifestation: React.FC<ManifestationProps> = ({
                         borderColor: 'divider',
                       }}
                     />
-                  ))}
-                  {splitValues(manifestation.mediatype).map((mt, index) => (
+                  )}
+                  {manifestation.mediatype && (
                     <Chip
-                      key={`media-${index}`}
-                      label={capitalizeFirstLetter(mt)}
+                      label={capitalizeFirstLetter(manifestation.mediatype)}
                       size="small"
                       variant="outlined"
                       sx={{
@@ -183,7 +228,7 @@ const Manifestation: React.FC<ManifestationProps> = ({
                         borderColor: 'divider',
                       }}
                     />
-                  ))}
+                  )}
                 </Box>
               )}
             </Box>

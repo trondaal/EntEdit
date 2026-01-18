@@ -1427,7 +1427,7 @@
       <rdamd:P30156>The Orchard keeper</rdamd:P30156>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : André Deutsch, 1966</rdamd:P30111>
-      <rdamd:P30083>André Deutsch</rdamd:P30083>
+      <rdamd:P30076>André Deutsch</rdamd:P30076>
       <rdamd:P30011>1966</rdamd:P30011>
       <rdamd:P30182>246 pages, (8º).</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -1439,7 +1439,7 @@
       <rdamd:P30117>by Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>New York, NY</rdamd:P30088>
       <rdamd:P30111>New York, NY : Random House AudioBooks, p1993</rdamd:P30111>
-      <rdamd:P30083>Random House AudioBooks</rdamd:P30083>
+      <rdamd:P30076>Random House AudioBooks</rdamd:P30076>
       <rdamd:P30011>p1993</rdamd:P30011>
       <rdamd:P30182>2 sound cassettes (3 hrs.) : analog.</rdamd:P30182>
       <rdamd:P30106>The Border trilogy</rdamd:P30106>
@@ -1455,7 +1455,7 @@
       <rdamd:P30117>a Miramax, Paramount Vantage presentation of a Scott Rudin/Mike Zoss production ; directed, written by Joel Coen, Ethan Coen ; produced by Scott Rudin, Ethan Coen, Joel Coen</rdamd:P30117>
       <rdamd:P30088>United States</rdamd:P30088>
       <rdamd:P30111>United States : Miramax Films, 2007</rdamd:P30111>
-      <rdamd:P30083>Miramax Films</rdamd:P30083>
+      <rdamd:P30076>Miramax Films</rdamd:P30076>
       <rdamd:P30011>2007</rdamd:P30011>
       <rdamd:P30182>12 film reels of 12 on 6 (ca. 122 min., ca. 10,980 ft.) : sd. (opt, Dolby SR, digital, Dolby SRD, SDDS), col., 35 mm.</rdamd:P30182>
       <rdamd:P30137>Based on the novel by Cormac McCarthy.</rdamd:P30137>
@@ -1471,7 +1471,7 @@
       <rdamd:P30117>a Fox 2000 Pictures presentation of a Scott Free/Nick Wechsler/Chockstone Pictures production, made in association with TSG Entertainment, Ingenious Media ; directed by Ridley Scott ; produced by Ridley Scott, Wechsler, Steve Schwartz, Paula Mae Schwartz ; written by Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>United States</rdamd:P30088>
       <rdamd:P30111>United States : 20th Century Fox, 2013</rdamd:P30111>
-      <rdamd:P30083>20th Century Fox</rdamd:P30083>
+      <rdamd:P30076>20th Century Fox</rdamd:P30076>
       <rdamd:P30011>2013</rdamd:P30011>
       <rdamd:P30182>14 film reels of 14 on 7 (113 min., 10,170 ft.) : anamorphic, sd. (opt, Dolby SR), col., 35 mm.</rdamd:P30182>
       <rdamd:P30137>Aspect ratio is 2.35:1.</rdamd:P30137>
@@ -1486,7 +1486,7 @@
       <rdamd:P30117>a Dimension Films release presented with 2929 Productions of a Nick Wechsler and Chockstone Pictures production ; directed by John Hillcoat ; produced by Nick Wechsler, Paula Mae Schwartz, Steve Schwartz ; screenplay by Joe Penhall</rdamd:P30117>
       <rdamd:P30088>United States</rdamd:P30088>
       <rdamd:P30111>United States : Dimension, 2009</rdamd:P30111>
-      <rdamd:P30083>Dimension</rdamd:P30083>
+      <rdamd:P30076>Dimension</rdamd:P30076>
       <rdamd:P30011>2009</rdamd:P30011>
       <rdamd:P30182>12 film reels of 12 on 6 (2009 min., 9,990 ft.) : anamorphic, sd. (opt, Dolby SR, digital, Dolby SR-D, SDDS, DTS), col., 35 mm.</rdamd:P30182>
       <rdamd:P30137>Aspect ratio is 2.35:1.</rdamd:P30137>
@@ -1502,7 +1502,7 @@
       <rdamd:P30142>A Play in five acts</rdamd:P30142>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Ecco, 1994</rdamd:P30111>
-      <rdamd:P30083>Ecco</rdamd:P30083>
+      <rdamd:P30076>Ecco</rdamd:P30076>
       <rdamd:P30011>1994</rdamd:P30011>
       <rdamd:P30182>1 v.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -1513,7 +1513,7 @@
       <rdamd:P30156>Outer dark</rdamd:P30156>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Random House, [1968]</rdamd:P30111>
-      <rdamd:P30083>Random House</rdamd:P30083>
+      <rdamd:P30076>Random House</rdamd:P30076>
       <rdamd:P30011>[1968]</rdamd:P30011>
       <rdamd:P30182>242 p., 22 cm.</rdamd:P30182>
       <rdamd:P30137>Bookmark with notes on it inserted.</rdamd:P30137>
@@ -1525,7 +1525,7 @@
       <rdamd:P30156>The orchard keeper</rdamd:P30156>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Deutsch, 1966 [c1965]</rdamd:P30111>
-      <rdamd:P30083>Deutsch</rdamd:P30083>
+      <rdamd:P30076>Deutsch</rdamd:P30076>
       <rdamd:P30011>1966 [c1965]</rdamd:P30011>
       <rdamd:P30182>246 p., 21 cm.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -1536,7 +1536,7 @@
       <rdamd:P30156>The orchard keeper</rdamd:P30156>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Random House, [1965]</rdamd:P30111>
-      <rdamd:P30083>Random House</rdamd:P30083>
+      <rdamd:P30076>Random House</rdamd:P30076>
       <rdamd:P30011>[1965]</rdamd:P30011>
       <rdamd:P30182>246 p., 22 cm.</rdamd:P30182>
       <rdamd:P30137>Enthusiastic note of praise for book and author on the stationary of Ralph Ellison inserted.</rdamd:P30137>
@@ -1551,9 +1551,9 @@
       <rdamd:P30117>regi: John Hillcoat</rdamd:P30117>
       <rdamd:P30088>[S.l.]</rdamd:P30088>
       <rdamd:P30111>[S.l.] : Dimension Films : 2929 Productions : Scanbox Entertainment Denmark, 2009</rdamd:P30111>
-      <rdamd:P30083>Dimension Films</rdamd:P30083>
-      <rdamd:P30083>2929 Productions</rdamd:P30083>
-      <rdamd:P30083>Scanbox Entertainment Denmark</rdamd:P30083>
+      <rdamd:P30076>Dimension Films</rdamd:P30076>
+      <rdamd:P30076>2929 Productions</rdamd:P30076>
+      <rdamd:P30076>Scanbox Entertainment Denmark</rdamd:P30076>
       <rdamd:P30011>2009</rdamd:P30011>
       <rdamd:P30182>1 plate (DVD-video) (111 min) : lyd, kol.</rdamd:P30182>
       <rdamd:P30137>Basert på: The road / Cormac McCarthy</rdamd:P30137>
@@ -1573,7 +1573,7 @@
       <rdamd:P30117>directed by Billy Bob Thornton ; produced by Robert Salerno and Billy Bob Thornton</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : SPHE, 2005</rdamd:P30111>
-      <rdamd:P30083>SPHE</rdamd:P30083>
+      <rdamd:P30076>SPHE</rdamd:P30076>
       <rdamd:P30011>2005</rdamd:P30011>
       <rdamd:P30182>1 plate (DVD-video) (1 t. 52 min) : lyd, kol.</rdamd:P30182>
       <rdamd:P30137>Drama.</rdamd:P30137>
@@ -1596,7 +1596,7 @@
       <rdamd:P30117>en film fra Coen brødrene</rdamd:P30117>
       <rdamd:P30088>[Oslo]</rdamd:P30088>
       <rdamd:P30111>[Oslo] : Paramount Home Entertainment (Norway), cop. 2007</rdamd:P30111>
-      <rdamd:P30083>Paramount Home Entertainment (Norway)</rdamd:P30083>
+      <rdamd:P30076>Paramount Home Entertainment (Norway)</rdamd:P30076>
       <rdamd:P30011>cop. 2007</rdamd:P30011>
       <rdamd:P30182>1 videoplate (DVD-video) (117 min) : lyd, kol.</rdamd:P30182>
       <rdamd:P30106>S film</rdamd:P30106>
@@ -1623,7 +1623,7 @@
       <rdamd:P30107>Unrated extended cut</rdamd:P30107>
       <rdamd:P30088>Beverly Hills, California</rdamd:P30088>
       <rdamd:P30111>Beverly Hills, California : Twentieth Century Fox Home Entertainment, [2014]</rdamd:P30111>
-      <rdamd:P30083>Twentieth Century Fox Home Entertainment</rdamd:P30083>
+      <rdamd:P30076>Twentieth Century Fox Home Entertainment</rdamd:P30076>
       <rdamd:P30011>[2014]</rdamd:P30011>
       <rdamd:P30007>©2013</rdamd:P30007>
       <rdamd:P30182>1 videodisc (117 min.) : sound, color, 4 3/4 in. + 1 Blu-ray.</rdamd:P30182>
@@ -1646,7 +1646,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>South Berwick, ME</rdamd:P30088>
       <rdamd:P30111>South Berwick, ME : Rakish Tilt Records, [2012]</rdamd:P30111>
-      <rdamd:P30083>Rakish Tilt Records</rdamd:P30083>
+      <rdamd:P30076>Rakish Tilt Records</rdamd:P30076>
       <rdamd:P30011>[2012]</rdamd:P30011>
       <rdamd:P30182>1 sound disc : digital, 4 3/4 in.</rdamd:P30182>
       <rdamd:P30137>Compact disc.</rdamd:P30137>
@@ -1672,7 +1672,7 @@
       <rdamd:P30156>Outer dark</rdamd:P30156>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Deutsch, 1970</rdamd:P30111>
-      <rdamd:P30083>Deutsch</rdamd:P30083>
+      <rdamd:P30076>Deutsch</rdamd:P30076>
       <rdamd:P30011>1970</rdamd:P30011>
       <rdamd:P30182>238 p., 21 cm.</rdamd:P30182>
       <rdamd:P30137>Originally published, New York: Random House, 1968.</rdamd:P30137>
@@ -1692,7 +1692,7 @@
       <rdamd:P30107>1st ed</rdamd:P30107>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Alfred A. Knopf, 2006</rdamd:P30111>
-      <rdamd:P30083>Alfred A. Knopf</rdamd:P30083>
+      <rdamd:P30076>Alfred A. Knopf</rdamd:P30076>
       <rdamd:P30011>2006</rdamd:P30011>
       <rdamd:P30182>241 p., 25 cm.</rdamd:P30182>
       <rdamd:P30137>Winner of the Pulitzer Prize in 2006 as well as the James Tait Black Memorial Prize for Fiction. McCarthy is a 1981 MacArthur Fellow.</rdamd:P30137>
@@ -1718,7 +1718,7 @@
       <rdamd:P30107>First edition</rdamd:P30107>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Alfred A. Knopf, 2022</rdamd:P30111>
-      <rdamd:P30083>Alfred A. Knopf</rdamd:P30083>
+      <rdamd:P30076>Alfred A. Knopf</rdamd:P30076>
       <rdamd:P30011>2022</rdamd:P30011>
       <rdamd:P30007>©2022</rdamd:P30007>
       <rdamd:P30182>383 pages, 25 cm.</rdamd:P30182>
@@ -1739,7 +1739,7 @@
       <rdamd:P30107>First edition</rdamd:P30107>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Alfred A. Knopf, 2022</rdamd:P30111>
-      <rdamd:P30083>Alfred A. Knopf</rdamd:P30083>
+      <rdamd:P30076>Alfred A. Knopf</rdamd:P30076>
       <rdamd:P30011>2022</rdamd:P30011>
       <rdamd:P30007>©2022</rdamd:P30007>
       <rdamd:P30182>189 pages, 25 cm.</rdamd:P30182>
@@ -1762,7 +1762,7 @@
       <rdamd:P30107>1st Vintage International ed</rdamd:P30107>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Vintage Books, 2006</rdamd:P30111>
-      <rdamd:P30083>Vintage Books</rdamd:P30083>
+      <rdamd:P30076>Vintage Books</rdamd:P30076>
       <rdamd:P30011>2006</rdamd:P30011>
       <rdamd:P30182>143 p., 21 cm.</rdamd:P30182>
       <rdamd:P30137>"A Vintage International original."</rdamd:P30137>
@@ -1778,7 +1778,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 1989</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>1989</rdamd:P30011>
       <rdamd:P30182>197p.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -1790,7 +1790,7 @@
       <rdaxd:P00018>isbn-0330312561</rdaxd:P00018>
       <rdfs:label>ISBN0330312561 (pbk)</rdfs:label>
       <rdamd:P30156>Blood meridian, or, The evening redness in the west</rdamd:P30156>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30111>: Picador, 1990</rdamd:P30111>
       <rdamd:P30011>1990</rdamd:P30011>
       <rdamd:P30182>337p.</rdamd:P30182>
@@ -1805,7 +1805,7 @@
       <rdamd:P30156>The orchard keeper</rdamd:P30156>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 1994</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>1994</rdamd:P30011>
       <rdamd:P30182>246p.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -1819,7 +1819,7 @@
       <rdamd:P30156>Outer dark</rdamd:P30156>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 1994</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>1994</rdamd:P30011>
       <rdamd:P30182>242p.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -1831,7 +1831,7 @@
       <rdaxd:P00018>isbn-0330325310</rdaxd:P00018>
       <rdfs:label>ISBN0330325310</rdfs:label>
       <rdamd:P30156>All the pretty horses</rdamd:P30156>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30111>: Picador, 1993</rdamd:P30111>
       <rdamd:P30011>1993</rdamd:P30011>
       <rdamd:P30182>301p.</rdamd:P30182>
@@ -1846,7 +1846,7 @@
       <rdamd:P30156>All the pretty horses</rdamd:P30156>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 1993</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>1993</rdamd:P30011>
       <rdamd:P30010>(1994 [printing])</rdamd:P30010>
       <rdamd:P30182>301p., 20cm.</rdamd:P30182>
@@ -1864,7 +1864,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2002</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2002</rdamd:P30011>
       <rdamd:P30182>1037 p., 20 cm.</rdamd:P30182>
       <rdamd:P30033>All the pretty horses -- The crossing -- Cities of the plain</rdamd:P30033>
@@ -1882,7 +1882,7 @@
       <rdamd:P30156>The crossing</rdamd:P30156>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 1994</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>1994</rdamd:P30011>
       <rdamd:P30182>425p.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -1897,7 +1897,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 1998</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>1998</rdamd:P30011>
       <rdamd:P30182>291p., 23cm.</rdamd:P30182>
       <rdamd:P30106>Border trilogy</rdamd:P30106>
@@ -1915,7 +1915,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 1997, c1994</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>1997, c1994</rdamd:P30011>
       <rdamd:P30182>133p., 20cm.</rdamd:P30182>
       <rdamd:P30137>Originally published: Hopewell, N.J. : Ecco, 1994.</rdamd:P30137>
@@ -1934,7 +1934,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2005</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2005</rdamd:P30011>
       <rdamd:P30182>309 p., 22 cm.</rdamd:P30182>
       <rdamd:P30137>Formerly CIP.</rdamd:P30137>
@@ -1959,7 +1959,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2006</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2006</rdamd:P30011>
       <rdamd:P30182>241 p., 22 cm.</rdamd:P30182>
       <rdamd:P30137>Formerly CIP.</rdamd:P30137>
@@ -1978,7 +1978,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2009</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2009</rdamd:P30011>
       <rdamd:P30182>307 p., 20 cm.</rdamd:P30182>
       <rdamd:P30137>Film tie-in.</rdamd:P30137>
@@ -1999,7 +1999,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2010</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>1 online resource (256 pages).</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
@@ -2017,7 +2017,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2010</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>1 online resource.</rdamd:P30182>
       <rdamd:P30106>The Border trilogy</rdamd:P30106>
@@ -2037,7 +2037,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2010</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>1 online resource.</rdamd:P30182>
       <rdamd:P30106>The Border trilogy</rdamd:P30106>
@@ -2057,7 +2057,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2010</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>1 online resource.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
@@ -2075,7 +2075,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2010</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>1 online resource.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
@@ -2093,7 +2093,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2010</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>1 online resource.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
@@ -2111,7 +2111,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2010</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>1 online resource.</rdamd:P30182>
       <rdamd:P30106>The Border trilogy</rdamd:P30106>
@@ -2131,7 +2131,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2010</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>1 online resource.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
@@ -2149,7 +2149,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2010</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>1 online resource.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
@@ -2167,7 +2167,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2010</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>1 online resource.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
@@ -2185,7 +2185,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2010</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>309 p., 20 cm.</rdamd:P30182>
       <rdamd:P30106>The Border trilogy</rdamd:P30106>
@@ -2207,7 +2207,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2010</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>352 p., 20 cm.</rdamd:P30182>
       <rdamd:P30137>Formerly CIP.</rdamd:P30137>
@@ -2227,7 +2227,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2010</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>293 p., 20 cm.</rdamd:P30182>
       <rdamd:P30106>The Border trilogy</rdamd:P30106>
@@ -2249,7 +2249,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2010</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>251 p., 20 cm.</rdamd:P30182>
       <rdamd:P30137>Formerly CIP.</rdamd:P30137>
@@ -2269,7 +2269,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2010</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>567 p., 20 cm.</rdamd:P30182>
       <rdamd:P30137>Formerly CIP.</rdamd:P30137>
@@ -2289,7 +2289,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2010</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>436 p., 20 cm.</rdamd:P30182>
       <rdamd:P30106>The Border trilogy</rdamd:P30106>
@@ -2311,7 +2311,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2010</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>259 p., 20 cm.</rdamd:P30182>
       <rdamd:P30137>Formerly CIP.</rdamd:P30137>
@@ -2332,7 +2332,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2011</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2011</rdamd:P30011>
       <rdamd:P30182>142 p., 20 cm.</rdamd:P30182>
       <rdamd:P30137>Formerly CIP.</rdamd:P30137>
@@ -2353,7 +2353,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2011</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2011</rdamd:P30011>
       <rdamd:P30182>1 online resource (160 pages).</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
@@ -2375,7 +2375,7 @@
       <rdamd:P30107>First American edition</rdamd:P30107>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Farrar, Straus and Giroux, 2020</rdamd:P30111>
-      <rdamd:P30083>Farrar, Straus and Giroux</rdamd:P30083>
+      <rdamd:P30076>Farrar, Straus and Giroux</rdamd:P30076>
       <rdamd:P30011>2020</rdamd:P30011>
       <rdamd:P30007>©2019</rdamd:P30007>
       <rdamd:P30182>vi, 510 pages, 22 cm.</rdamd:P30182>
@@ -2422,7 +2422,7 @@
       <rdamd:P30107>1st ed</rdamd:P30107>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Knopf, 2005</rdamd:P30111>
-      <rdamd:P30083>Knopf</rdamd:P30083>
+      <rdamd:P30076>Knopf</rdamd:P30076>
       <rdamd:P30011>2005</rdamd:P30011>
       <rdamd:P30182>309 p., 22 cm.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -2437,7 +2437,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Knopf, 1999</rdamd:P30111>
-      <rdamd:P30083>Knopf</rdamd:P30083>
+      <rdamd:P30076>Knopf</rdamd:P30076>
       <rdamd:P30011>1999</rdamd:P30011>
       <rdamd:P30182>301, 425, 291 p., 21 cm.</rdamd:P30182>
       <rdamd:P30106>Everyman's library</rdamd:P30106>
@@ -2458,7 +2458,7 @@
       <rdamd:P30107>1st ed</rdamd:P30107>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Random House, c1985</rdamd:P30111>
-      <rdamd:P30083>Random House</rdamd:P30083>
+      <rdamd:P30076>Random House</rdamd:P30076>
       <rdamd:P30011>c1985</rdamd:P30011>
       <rdamd:P30182>337 p., 22 cm.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -2474,7 +2474,7 @@
       <rdamd:P30107>1st ed</rdamd:P30107>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Random House, c1979</rdamd:P30111>
-      <rdamd:P30083>Random House</rdamd:P30083>
+      <rdamd:P30076>Random House</rdamd:P30076>
       <rdamd:P30011>c1979</rdamd:P30011>
       <rdamd:P30182>471 p., 22 cm.</rdamd:P30182>
       <rdamd:P30137>New York Times book review inserted.</rdamd:P30137>
@@ -2490,7 +2490,7 @@
       <rdamd:P30107>[1st ed.]</rdamd:P30107>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Random House, [1974, c1973]</rdamd:P30111>
-      <rdamd:P30083>Random House</rdamd:P30083>
+      <rdamd:P30076>Random House</rdamd:P30076>
       <rdamd:P30011>[1974, c1973]</rdamd:P30011>
       <rdamd:P30182>197 p., 22 cm.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -2505,7 +2505,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Knopf, 1992</rdamd:P30111>
-      <rdamd:P30083>Knopf</rdamd:P30083>
+      <rdamd:P30076>Knopf</rdamd:P30076>
       <rdamd:P30011>1992</rdamd:P30011>
       <rdamd:P30182>301 p., 22 cm.</rdamd:P30182>
       <rdamd:P30106>The Border trilogy</rdamd:P30106>
@@ -2523,8 +2523,8 @@
       <rdamd:P30107>1st ed</rdamd:P30107>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : A.A. Knopf : Distributed by Random House, 1994</rdamd:P30111>
-      <rdamd:P30083>A.A. Knopf</rdamd:P30083>
-      <rdamd:P30083>Distributed by Random House</rdamd:P30083>
+      <rdamd:P30076>A.A. Knopf</rdamd:P30076>
+      <rdamd:P30076>Distributed by Random House</rdamd:P30076>
       <rdamd:P30011>1994</rdamd:P30011>
       <rdamd:P30182>425 p., 22 cm.</rdamd:P30182>
       <rdamd:P30106>The Border trilogy</rdamd:P30106>
@@ -2542,7 +2542,7 @@
       <rdamd:P30107>1st Vintage Books ed</rdamd:P30107>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Vintage Books, 1986, c1979</rdamd:P30111>
-      <rdamd:P30083>Vintage Books</rdamd:P30083>
+      <rdamd:P30076>Vintage Books</rdamd:P30076>
       <rdamd:P30011>1986, c1979</rdamd:P30011>
       <rdamd:P30182>471 p., 21 cm.</rdamd:P30182>
       <rdamd:P30106>Vintage contemporaries</rdamd:P30106>
@@ -2559,8 +2559,8 @@
       <rdamd:P30107>1st ed</rdamd:P30107>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Knopf : Distributed by Random House, 1998</rdamd:P30111>
-      <rdamd:P30083>Knopf</rdamd:P30083>
-      <rdamd:P30083>Distributed by Random House</rdamd:P30083>
+      <rdamd:P30076>Knopf</rdamd:P30076>
+      <rdamd:P30076>Distributed by Random House</rdamd:P30076>
       <rdamd:P30011>1998</rdamd:P30011>
       <rdamd:P30182>291 p., 22 cm.</rdamd:P30182>
       <rdamd:P30106>The border trilogy</rdamd:P30106>
@@ -2579,7 +2579,7 @@
       <rdamd:P30117>by Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>New York, NY</rdamd:P30088>
       <rdamd:P30111>New York, NY : Random House AudioBooks, p1994</rdamd:P30111>
-      <rdamd:P30083>Random House AudioBooks</rdamd:P30083>
+      <rdamd:P30076>Random House AudioBooks</rdamd:P30076>
       <rdamd:P30011>p1994</rdamd:P30011>
       <rdamd:P30182>2 sound cassettes (3 hr.) : analog.</rdamd:P30182>
       <rdamd:P30106>Border trilogy</rdamd:P30106>
@@ -2599,7 +2599,7 @@
       <rdamd:P30107>Modern Library ed</rdamd:P30107>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Modern Library, 2001</rdamd:P30111>
-      <rdamd:P30083>Modern Library</rdamd:P30083>
+      <rdamd:P30076>Modern Library</rdamd:P30076>
       <rdamd:P30011>2001</rdamd:P30011>
       <rdamd:P30182>xiii, 337 p., 20 cm.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -2615,7 +2615,7 @@
       <rdamd:P30107>Modern Library ed</rdamd:P30107>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Modern Library, 2002</rdamd:P30111>
-      <rdamd:P30083>Modern Library</rdamd:P30083>
+      <rdamd:P30076>Modern Library</rdamd:P30076>
       <rdamd:P30011>2002</rdamd:P30011>
       <rdamd:P30182>471 p., 20 cm.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -2631,7 +2631,7 @@
       <rdamd:P30107>1st Vintage International ed</rdamd:P30107>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Vintage Books, 1993</rdamd:P30111>
-      <rdamd:P30083>Vintage Books</rdamd:P30083>
+      <rdamd:P30076>Vintage Books</rdamd:P30076>
       <rdamd:P30011>1993</rdamd:P30011>
       <rdamd:P30182>246 p., 21 cm.</rdamd:P30182>
       <rdamd:P30137>Originally published in hardcover by Random House, inc., New York, in 1965.</rdamd:P30137>
@@ -2648,7 +2648,7 @@
       <rdamd:P30107>1st Vintage International ed</rdamd:P30107>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Vintage Books, 1993</rdamd:P30111>
-      <rdamd:P30083>Vintage Books</rdamd:P30083>
+      <rdamd:P30076>Vintage Books</rdamd:P30076>
       <rdamd:P30011>1993</rdamd:P30011>
       <rdamd:P30182>242 p., 20 cm.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -2664,7 +2664,7 @@
       <rdamd:P30107>1st Vintage International ed</rdamd:P30107>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Vintage Books, 1993</rdamd:P30111>
-      <rdamd:P30083>Vintage Books</rdamd:P30083>
+      <rdamd:P30076>Vintage Books</rdamd:P30076>
       <rdamd:P30011>1993</rdamd:P30011>
       <rdamd:P30182>197 p., 21 cm.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -2680,7 +2680,7 @@
       <rdamd:P30107>1st Vintage International ed</rdamd:P30107>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Vintage Books, 1992</rdamd:P30111>
-      <rdamd:P30083>Vintage Books</rdamd:P30083>
+      <rdamd:P30076>Vintage Books</rdamd:P30076>
       <rdamd:P30011>1992</rdamd:P30011>
       <rdamd:P30182>337 p., 21 cm.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -2696,7 +2696,7 @@
       <rdamd:P30107>1st Vintage International ed</rdamd:P30107>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Vintage Books, 1993</rdamd:P30111>
-      <rdamd:P30083>Vintage Books</rdamd:P30083>
+      <rdamd:P30076>Vintage Books</rdamd:P30076>
       <rdamd:P30011>1993</rdamd:P30011>
       <rdamd:P30182>301 p., 21 cm.</rdamd:P30182>
       <rdamd:P30106>The Border trilogy</rdamd:P30106>
@@ -2715,7 +2715,7 @@
       <rdamd:P30107>1st Vintage International ed</rdamd:P30107>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Vintage Books, 1995</rdamd:P30111>
-      <rdamd:P30083>Vintage Books</rdamd:P30083>
+      <rdamd:P30076>Vintage Books</rdamd:P30076>
       <rdamd:P30011>1995</rdamd:P30011>
       <rdamd:P30182>133 p., 21 cm.</rdamd:P30182>
       <rdamd:P30106>Vintage International</rdamd:P30106>
@@ -2731,7 +2731,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Chatto and Windus, 1975</rdamd:P30111>
-      <rdamd:P30083>Chatto and Windus</rdamd:P30083>
+      <rdamd:P30076>Chatto and Windus</rdamd:P30076>
       <rdamd:P30011>1975</rdamd:P30011>
       <rdamd:P30182>197 p., 21 cm.</rdamd:P30182>
       <rdamd:P30182>[4], 197 p., 21 cm.</rdamd:P30182>
@@ -2748,7 +2748,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Chatto and Windus, 1980</rdamd:P30111>
-      <rdamd:P30083>Chatto and Windus</rdamd:P30083>
+      <rdamd:P30076>Chatto and Windus</rdamd:P30076>
       <rdamd:P30011>1980</rdamd:P30011>
       <rdamd:P30182>[6],471p., 22cm.</rdamd:P30182>
       <rdamd:P30137>Originally published : New York : Random House, 1979.</rdamd:P30137>
@@ -2793,7 +2793,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Ecco Press, 1982, c1965</rdamd:P30111>
-      <rdamd:P30083>Ecco Press</rdamd:P30083>
+      <rdamd:P30076>Ecco Press</rdamd:P30076>
       <rdamd:P30011>1982, c1965</rdamd:P30011>
       <rdamd:P30182>246 p., 20 cm.</rdamd:P30182>
       <rdamd:P30137>Reprint. Originally published: New York : Random House, 1965.</rdamd:P30137>
@@ -2809,7 +2809,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Ecco Press, 1984, c1968</rdamd:P30111>
-      <rdamd:P30083>Ecco Press</rdamd:P30083>
+      <rdamd:P30076>Ecco Press</rdamd:P30076>
       <rdamd:P30011>1984, c1968</rdamd:P30011>
       <rdamd:P30182>242 p., 21 cm.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -2824,7 +2824,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Ecco Press, 1984, c1973</rdamd:P30111>
-      <rdamd:P30083>Ecco Press</rdamd:P30083>
+      <rdamd:P30076>Ecco Press</rdamd:P30076>
       <rdamd:P30011>1984, c1973</rdamd:P30011>
       <rdamd:P30182>197 p., 21 cm.</rdamd:P30182>
       <rdamd:P30137>Reprint. Originally published: New York : Random House, 1974, c1973.</rdamd:P30137>
@@ -2840,7 +2840,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Ecco Press, 1986, c1985</rdamd:P30111>
-      <rdamd:P30083>Ecco Press</rdamd:P30083>
+      <rdamd:P30076>Ecco Press</rdamd:P30076>
       <rdamd:P30011>1986, c1985</rdamd:P30011>
       <rdamd:P30182>337 p., 21 cm.</rdamd:P30182>
       <rdamd:P30137>Reprint. Originally published: New York : Random House, c1985.</rdamd:P30137>
@@ -2858,7 +2858,7 @@
       <rdamd:P30107>1st ed</rdamd:P30107>
       <rdamd:P30088>Hopewell, N.J</rdamd:P30088>
       <rdamd:P30111>Hopewell, N.J. : Ecco Press, c1994</rdamd:P30111>
-      <rdamd:P30083>Ecco Press</rdamd:P30083>
+      <rdamd:P30076>Ecco Press</rdamd:P30076>
       <rdamd:P30011>c1994</rdamd:P30011>
       <rdamd:P30182>133p., 22cm.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -2875,7 +2875,7 @@
       <rdamd:P30107>1st ed</rdamd:P30107>
       <rdamd:P30088>Hopewell, N.J</rdamd:P30088>
       <rdamd:P30111>Hopewell, N.J. : Ecco Press, 1996</rdamd:P30111>
-      <rdamd:P30083>Ecco Press</rdamd:P30083>
+      <rdamd:P30076>Ecco Press</rdamd:P30076>
       <rdamd:P30011>1996</rdamd:P30011>
       <rdamd:P30182>x, 93 p., 20 cm.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -2900,7 +2900,7 @@
       <rdamd:P30107>Large print ed</rdamd:P30107>
       <rdamd:P30088>Bath</rdamd:P30088>
       <rdamd:P30111>Bath : Windsor, 2006</rdamd:P30111>
-      <rdamd:P30083>Windsor</rdamd:P30083>
+      <rdamd:P30076>Windsor</rdamd:P30076>
       <rdamd:P30011>2006</rdamd:P30011>
       <rdamd:P30182>280 p., 25 cm.</rdamd:P30182>
       <rdamd:P30137>Originally published: London: Picador, 2005.</rdamd:P30137>
@@ -2919,7 +2919,7 @@
       <rdamd:P30117>Joe Penhall ; based on the novel by Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Methuen Drama, 2010</rdamd:P30111>
-      <rdamd:P30083>Methuen Drama</rdamd:P30083>
+      <rdamd:P30076>Methuen Drama</rdamd:P30076>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>102 p., 20 cm.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -2938,7 +2938,7 @@
       <rdamd:P30117>Joe Penhall ; activities by Paul Bunyan and Ruth Moore</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Methuen Drama, 2011</rdamd:P30111>
-      <rdamd:P30083>Methuen Drama</rdamd:P30083>
+      <rdamd:P30076>Methuen Drama</rdamd:P30076>
       <rdamd:P30011>2011</rdamd:P30011>
       <rdamd:P30182>139 p., 20 cm.</rdamd:P30182>
       <rdamd:P30106>Methuen Drama's critical scripts series</rdamd:P30106>
@@ -2966,7 +2966,7 @@
       <rdamd:P30088>London [England]</rdamd:P30088>
       <rdamd:P30088>New York, New York</rdamd:P30088>
       <rdamd:P30111>London [England] ; New York, New York : Bloomsbury, 2009</rdamd:P30111>
-      <rdamd:P30083>Bloomsbury</rdamd:P30083>
+      <rdamd:P30076>Bloomsbury</rdamd:P30076>
       <rdamd:P30011>2009</rdamd:P30011>
       <rdamd:P30007>©2009</rdamd:P30007>
       <rdamd:P30182>1 online resource (107 pages).</rdamd:P30182>
@@ -2986,7 +2986,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>Basingstoke</rdamd:P30088>
       <rdamd:P30111>Basingstoke : Picador, 2012</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2012</rdamd:P30011>
       <rdamd:P30182>1 online resource (416 pages).</rdamd:P30182>
       <rdamd:P30106>Picador Collection</rdamd:P30106>
@@ -3006,7 +3006,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2013</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2013</rdamd:P30011>
       <rdamd:P30182>1 online resource (160 pages).</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
@@ -3024,7 +3024,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2013</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2013</rdamd:P30011>
       <rdamd:P30182>1 online resource (924 pages).</rdamd:P30182>
       <rdamd:P30106>Border Trilogy</rdamd:P30106>
@@ -3048,7 +3048,7 @@
       <rdamd:P30117>Joe Penhall ; activities by Paul Bunyan and Ruth Moore</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Bloomsbury Methuen Drama, 2013, copyright 2013</rdamd:P30111>
-      <rdamd:P30083>Bloomsbury Methuen Drama</rdamd:P30083>
+      <rdamd:P30076>Bloomsbury Methuen Drama</rdamd:P30076>
       <rdamd:P30011>2013, copyright 2013</rdamd:P30011>
       <rdamd:P30182>1 online resource (144 pages).</rdamd:P30182>
       <rdamd:P30106>Methuen Drama's critical scripts series</rdamd:P30106>
@@ -3064,7 +3064,7 @@
       <rdamd:P30117>Cormac McCarthy ; oversatt av Knut Johansen</rdamd:P30117>
       <rdamd:P30088>Oslo</rdamd:P30088>
       <rdamd:P30111>Oslo : Gyldendal, 1989</rdamd:P30111>
-      <rdamd:P30083>Gyldendal</rdamd:P30083>
+      <rdamd:P30076>Gyldendal</rdamd:P30076>
       <rdamd:P30011>1989</rdamd:P30011>
       <rdamd:P30182>148 s., 22 cm.</rdamd:P30182>
       <rdamd:P30106>Vita-serien</rdamd:P30106>
@@ -3081,7 +3081,7 @@
       <rdamd:P30134>Alle de vakre hestene</rdamd:P30134>
       <rdamd:P30088>Oslo</rdamd:P30088>
       <rdamd:P30111>Oslo : Gyldendal, 1993</rdamd:P30111>
-      <rdamd:P30083>Gyldendal</rdamd:P30083>
+      <rdamd:P30076>Gyldendal</rdamd:P30076>
       <rdamd:P30011>1993</rdamd:P30011>
       <rdamd:P30182>285 s.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -3096,7 +3096,7 @@
       <rdamd:P30117>Cormac McCarthy ; oversatt av Knut Johansen</rdamd:P30117>
       <rdamd:P30088>Oslo</rdamd:P30088>
       <rdamd:P30111>Oslo : Gyldendal, 1994</rdamd:P30111>
-      <rdamd:P30083>Gyldendal</rdamd:P30083>
+      <rdamd:P30076>Gyldendal</rdamd:P30076>
       <rdamd:P30011>1994</rdamd:P30011>
       <rdamd:P30182>148 s.</rdamd:P30182>
       <rdamd:P30106>Mini-Vita</rdamd:P30106>
@@ -3117,7 +3117,7 @@
       <rdamd:P30134>Over grensen</rdamd:P30134>
       <rdamd:P30088>Oslo</rdamd:P30088>
       <rdamd:P30111>Oslo : Gyldendal, 1995</rdamd:P30111>
-      <rdamd:P30083>Gyldendal</rdamd:P30083>
+      <rdamd:P30076>Gyldendal</rdamd:P30076>
       <rdamd:P30011>1995</rdamd:P30011>
       <rdamd:P30182>396 s.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -3134,7 +3134,7 @@
       <rdamd:P30107>2. utg</rdamd:P30107>
       <rdamd:P30088>Oslo</rdamd:P30088>
       <rdamd:P30111>Oslo : Gyldendal, 1996</rdamd:P30111>
-      <rdamd:P30083>Gyldendal</rdamd:P30083>
+      <rdamd:P30076>Gyldendal</rdamd:P30076>
       <rdamd:P30011>1996</rdamd:P30011>
       <rdamd:P30182>285 s.</rdamd:P30182>
       <rdamd:P30137>1. norske utg. 1993</rdamd:P30137>
@@ -3151,7 +3151,7 @@
       <rdamd:P30134>Byene på høysletten</rdamd:P30134>
       <rdamd:P30088>Oslo</rdamd:P30088>
       <rdamd:P30111>Oslo : Gyldendal, 1999</rdamd:P30111>
-      <rdamd:P30083>Gyldendal</rdamd:P30083>
+      <rdamd:P30076>Gyldendal</rdamd:P30076>
       <rdamd:P30011>1999</rdamd:P30011>
       <rdamd:P30182>266 s.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -3166,7 +3166,7 @@
       <rdamd:P30117>Cormac McCarthy ; oversatt av Knut Johansen</rdamd:P30117>
       <rdamd:P30088>[Oslo]</rdamd:P30088>
       <rdamd:P30111>[Oslo] : Gyldendal, 2003</rdamd:P30111>
-      <rdamd:P30083>Gyldendal</rdamd:P30083>
+      <rdamd:P30076>Gyldendal</rdamd:P30076>
       <rdamd:P30011>2003</rdamd:P30011>
       <rdamd:P30182>148 s.</rdamd:P30182>
       <rdamd:P30106>Gyldendals små grå</rdamd:P30106>
@@ -3186,7 +3186,7 @@
       <rdamd:P30117>Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad</rdamd:P30117>
       <rdamd:P30088>[Oslo]</rdamd:P30088>
       <rdamd:P30111>[Oslo] : Gyldendal, 2006</rdamd:P30111>
-      <rdamd:P30083>Gyldendal</rdamd:P30083>
+      <rdamd:P30076>Gyldendal</rdamd:P30076>
       <rdamd:P30011>2006</rdamd:P30011>
       <rdamd:P30182>1023 s.</rdamd:P30182>
       <rdamd:P30106>Gyldendal pocket</rdamd:P30106>
@@ -3212,7 +3212,7 @@
       <rdamd:P30117>Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad</rdamd:P30117>
       <rdamd:P30088>[Oslo]</rdamd:P30088>
       <rdamd:P30111>[Oslo] : Gyldendal, 2006</rdamd:P30111>
-      <rdamd:P30083>Gyldendal</rdamd:P30083>
+      <rdamd:P30076>Gyldendal</rdamd:P30076>
       <rdamd:P30011>2006</rdamd:P30011>
       <rdamd:P30182>229 s.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -3228,7 +3228,7 @@
       <rdamd:P30107>1st Vintage International ed</rdamd:P30107>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Vintage International, c2008</rdamd:P30111>
-      <rdamd:P30083>Vintage International</rdamd:P30083>
+      <rdamd:P30076>Vintage International</rdamd:P30076>
       <rdamd:P30011>c2008</rdamd:P30011>
       <rdamd:P30182>287 p., 21 cm.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -3244,7 +3244,7 @@
       <rdamd:P30107>1st Vintage International ed</rdamd:P30107>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Vintage International, [2009]</rdamd:P30111>
-      <rdamd:P30083>Vintage International</rdamd:P30083>
+      <rdamd:P30076>Vintage International</rdamd:P30076>
       <rdamd:P30011>[2009]</rdamd:P30011>
       <rdamd:P30182>287 p., 21 cm.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -3259,7 +3259,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2010</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>306 s.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -3276,7 +3276,7 @@
       <rdamd:P30107>First Vintage International Edition</rdamd:P30107>
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30111>New York : Vintage International, Vintage Books, A Division of Random House, LLC, [2013]</rdamd:P30111>
-      <rdamd:P30083>Vintage International, Vintage Books, A Division of Random House, LLC</rdamd:P30083>
+      <rdamd:P30076>Vintage International, Vintage Books, A Division of Random House, LLC</rdamd:P30076>
       <rdamd:P30011>[2013]</rdamd:P30011>
       <rdamd:P30182>184 pages, 21 cm.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -3295,8 +3295,8 @@
       <rdamd:P30088>New York</rdamd:P30088>
       <rdamd:P30088>[London]</rdamd:P30088>
       <rdamd:P30111>New York : Alfred A. Knopf ; [London] : Distributed by Random House UK, 2008</rdamd:P30111>
-      <rdamd:P30083>Alfred A. Knopf</rdamd:P30083>
-      <rdamd:P30083>Distributed by Random House UK</rdamd:P30083>
+      <rdamd:P30076>Alfred A. Knopf</rdamd:P30076>
+      <rdamd:P30076>Distributed by Random House UK</rdamd:P30076>
       <rdamd:P30011>2008</rdamd:P30011>
       <rdamd:P30182>1 v. (various pagings), 22 cm.</rdamd:P30182>
       <rdamd:P30106>Everyman's library</rdamd:P30106>
@@ -3322,7 +3322,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2013</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2013</rdamd:P30011>
       <rdamd:P30182>184 pages, 23 cm.</rdamd:P30182>
       <rdamd:P30137>Formerly CIP.</rdamd:P30137>
@@ -3338,7 +3338,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2022</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2022</rdamd:P30011>
       <rdamd:P30182>1 online resource.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
@@ -3353,7 +3353,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2014</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2014</rdamd:P30011>
       <rdamd:P30182>133 pages, 24 cm.</rdamd:P30182>
       <rdamd:P30137>Formerly CIP.</rdamd:P30137>
@@ -3371,7 +3371,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2014</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2014</rdamd:P30011>
       <rdamd:P30182>ix, 96 pages, 20 cm.</rdamd:P30182>
       <rdamd:P30137>Formerly CIP.</rdamd:P30137>
@@ -3388,7 +3388,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2014</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2014</rdamd:P30011>
       <rdamd:P30182>1 online resource.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
@@ -3404,7 +3404,7 @@
       <rdamd:P30107>New edition / introduction by Philipp Meyer</rdamd:P30107>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2015</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2015</rdamd:P30011>
       <rdamd:P30182>xiv, 352 pages, 20 cm.</rdamd:P30182>
       <rdamd:P30106>Picador classic</rdamd:P30106>
@@ -3423,7 +3423,7 @@
       <rdamd:P30107>New edition / introduction by Philipp Meyer</rdamd:P30107>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2015</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2015</rdamd:P30011>
       <rdamd:P30182>1 online resource.</rdamd:P30182>
       <rdamd:P30106>Picador classic</rdamd:P30106>
@@ -3440,7 +3440,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2022</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2022</rdamd:P30011>
       <rdamd:P30182>1 online resource.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1018"/>
@@ -3455,7 +3455,7 @@
       <rdamd:P30117>Cormac McCarthy</rdamd:P30117>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2018</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2018</rdamd:P30011>
       <rdamd:P30182>1 online resource.</rdamd:P30182>
       <rdamd:P30106>Picador classic</rdamd:P30106>
@@ -3477,7 +3477,7 @@
       <rdamd:P30107>New edition / introduction by John Banville</rdamd:P30107>
       <rdamd:P30088>London</rdamd:P30088>
       <rdamd:P30111>London : Picador, 2019</rdamd:P30111>
-      <rdamd:P30083>Picador</rdamd:P30083>
+      <rdamd:P30076>Picador</rdamd:P30076>
       <rdamd:P30011>2019</rdamd:P30011>
       <rdamd:P30182>1 online resource.</rdamd:P30182>
       <rdamd:P30106>Picador classic</rdamd:P30106>
@@ -3495,7 +3495,7 @@
       <rdamd:P30107>Large print ed</rdamd:P30107>
       <rdamd:P30088>Rearsby</rdamd:P30088>
       <rdamd:P30111>Rearsby : W. F. Howes, 2007</rdamd:P30111>
-      <rdamd:P30083>W. F. Howes</rdamd:P30083>
+      <rdamd:P30076>W. F. Howes</rdamd:P30076>
       <rdamd:P30011>2007</rdamd:P30011>
       <rdamd:P30182>250 p. (large print), 25 cm.</rdamd:P30182>
       <rdamd:P30137>Formerly CIP.</rdamd:P30137>
@@ -3512,7 +3512,7 @@
       <rdamd:P30117>Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad</rdamd:P30117>
       <rdamd:P30088>[Oslo]</rdamd:P30088>
       <rdamd:P30111>[Oslo] : Gyldendal, 2010</rdamd:P30111>
-      <rdamd:P30083>Gyldendal</rdamd:P30083>
+      <rdamd:P30076>Gyldendal</rdamd:P30076>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>334 s.</rdamd:P30182>
       <rdamd:P30137>Originalutg.: New York : Random House, 1985</rdamd:P30137>
@@ -3528,7 +3528,7 @@
       <rdamd:P30117>Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad</rdamd:P30117>
       <rdamd:P30088>[Oslo]</rdamd:P30088>
       <rdamd:P30111>[Oslo] : Gyldendal, 2007</rdamd:P30111>
-      <rdamd:P30083>Gyldendal</rdamd:P30083>
+      <rdamd:P30076>Gyldendal</rdamd:P30076>
       <rdamd:P30011>2007</rdamd:P30011>
       <rdamd:P30182>229 s.</rdamd:P30182>
       <rdamd:P30106>Gyldendal pocket</rdamd:P30106>
@@ -3545,7 +3545,7 @@
       <rdamd:P30117>Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad</rdamd:P30117>
       <rdamd:P30088>[Oslo]</rdamd:P30088>
       <rdamd:P30111>[Oslo] : Gyldendal, 2008</rdamd:P30111>
-      <rdamd:P30083>Gyldendal</rdamd:P30083>
+      <rdamd:P30076>Gyldendal</rdamd:P30076>
       <rdamd:P30011>2008</rdamd:P30011>
       <rdamd:P30182>253 s.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -3561,7 +3561,7 @@
       <rdamd:P30107>Filmpocketutg</rdamd:P30107>
       <rdamd:P30088>[Oslo]</rdamd:P30088>
       <rdamd:P30111>[Oslo] : Gyldendal, 2008</rdamd:P30111>
-      <rdamd:P30083>Gyldendal</rdamd:P30083>
+      <rdamd:P30076>Gyldendal</rdamd:P30076>
       <rdamd:P30011>2008</rdamd:P30011>
       <rdamd:P30182>229 s.</rdamd:P30182>
       <rdamd:P30137>1. norske utg. 2006</rdamd:P30137>
@@ -3578,7 +3578,7 @@
       <rdamd:P30107>[Ny utg.]</rdamd:P30107>
       <rdamd:P30088>[Oslo]</rdamd:P30088>
       <rdamd:P30111>[Oslo] : Gyldendal, 2009</rdamd:P30111>
-      <rdamd:P30083>Gyldendal</rdamd:P30083>
+      <rdamd:P30076>Gyldendal</rdamd:P30076>
       <rdamd:P30011>2009</rdamd:P30011>
       <rdamd:P30182>253 s.</rdamd:P30182>
       <rdamd:P30106>Gyldendal pocket</rdamd:P30106>
@@ -3595,7 +3595,7 @@
       <rdamd:P30117>Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad</rdamd:P30117>
       <rdamd:P30088>[Oslo]</rdamd:P30088>
       <rdamd:P30111>[Oslo] : Gyldendal, 2010</rdamd:P30111>
-      <rdamd:P30083>Gyldendal</rdamd:P30083>
+      <rdamd:P30076>Gyldendal</rdamd:P30076>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>299 s.</rdamd:P30182>
       <rdamd:P30106>Gyldendal pocket</rdamd:P30106>
@@ -3612,7 +3612,7 @@
       <rdamd:P30117>Cormac McCarthy ; oversatt fra engelsk av Knut Johansen</rdamd:P30117>
       <rdamd:P30088>[Oslo]</rdamd:P30088>
       <rdamd:P30111>[Oslo] : Gyldendal, 2010</rdamd:P30111>
-      <rdamd:P30083>Gyldendal</rdamd:P30083>
+      <rdamd:P30076>Gyldendal</rdamd:P30076>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>168 s.</rdamd:P30182>
       <rdamd:P30106>Gyldendal pocket</rdamd:P30106>
@@ -3629,7 +3629,7 @@
       <rdamd:P30117>Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad</rdamd:P30117>
       <rdamd:P30088>[Oslo]</rdamd:P30088>
       <rdamd:P30111>[Oslo] : Gyldendal, 2011</rdamd:P30111>
-      <rdamd:P30083>Gyldendal</rdamd:P30083>
+      <rdamd:P30076>Gyldendal</rdamd:P30076>
       <rdamd:P30011>2011</rdamd:P30011>
       <rdamd:P30182>334 s.</rdamd:P30182>
       <rdamd:P30106>Gyldendal pocket</rdamd:P30106>
@@ -3646,7 +3646,7 @@
       <rdamd:P30117>Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad</rdamd:P30117>
       <rdamd:P30088>[Oslo]</rdamd:P30088>
       <rdamd:P30111>[Oslo] : Gyldendal, 2012</rdamd:P30111>
-      <rdamd:P30083>Gyldendal</rdamd:P30083>
+      <rdamd:P30076>Gyldendal</rdamd:P30076>
       <rdamd:P30011>2012</rdamd:P30011>
       <rdamd:P30182>276 s.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -3662,7 +3662,7 @@
       <rdamd:P30107>2. utgave</rdamd:P30107>
       <rdamd:P30088>Oslo</rdamd:P30088>
       <rdamd:P30111>Oslo : Gyldendal, 2023</rdamd:P30111>
-      <rdamd:P30083>Gyldendal</rdamd:P30083>
+      <rdamd:P30076>Gyldendal</rdamd:P30076>
       <rdamd:P30011>2023</rdamd:P30011>
       <rdamd:P30182>299 sider.</rdamd:P30182>
       <rdamd:P30106>Grensetrilogien</rdamd:P30106>
@@ -3681,7 +3681,7 @@
       <rdamd:P30107>Ny utgave</rdamd:P30107>
       <rdamd:P30088>Oslo</rdamd:P30088>
       <rdamd:P30111>Oslo : Gyldendal, 2023</rdamd:P30111>
-      <rdamd:P30083>Gyldendal</rdamd:P30083>
+      <rdamd:P30076>Gyldendal</rdamd:P30076>
       <rdamd:P30011>2023</rdamd:P30011>
       <rdamd:P30182>427 sider.</rdamd:P30182>
       <rdamd:P30106>Grensetrilogien</rdamd:P30106>
@@ -3700,7 +3700,7 @@
       <rdamd:P30107>ny utgave</rdamd:P30107>
       <rdamd:P30088>Oslo</rdamd:P30088>
       <rdamd:P30111>Oslo : Gyldendal, 2023</rdamd:P30111>
-      <rdamd:P30083>Gyldendal</rdamd:P30083>
+      <rdamd:P30076>Gyldendal</rdamd:P30076>
       <rdamd:P30011>2023</rdamd:P30011>
       <rdamd:P30182>266 sider.</rdamd:P30182>
       <rdamd:P30106>Grensetrilogien</rdamd:P30106>
@@ -3717,7 +3717,7 @@
       <rdamd:P30117>Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad</rdamd:P30117>
       <rdamd:P30088>Oslo</rdamd:P30088>
       <rdamd:P30111>Oslo : Gyldendal, [2022]</rdamd:P30111>
-      <rdamd:P30083>Gyldendal</rdamd:P30083>
+      <rdamd:P30076>Gyldendal</rdamd:P30076>
       <rdamd:P30011>[2022]</rdamd:P30011>
       <rdamd:P30182>405 sider.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -3732,7 +3732,7 @@
       <rdamd:P30117>Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad</rdamd:P30117>
       <rdamd:P30088>Oslo</rdamd:P30088>
       <rdamd:P30111>Oslo : Gyldendal, [2022]</rdamd:P30111>
-      <rdamd:P30083>Gyldendal</rdamd:P30083>
+      <rdamd:P30076>Gyldendal</rdamd:P30076>
       <rdamd:P30011>[2022]</rdamd:P30011>
       <rdamd:P30182>217 sider.</rdamd:P30182>
       <rdamo:P30001 rdf:resource="http://rdaregistry.info/termList/RDACarrierType/1049"/>
@@ -3748,7 +3748,7 @@
       <rdamd:P30107>Ny utgave</rdamd:P30107>
       <rdamd:P30088>Oslo</rdamd:P30088>
       <rdamd:P30111>Oslo : Gyldendal, 2022</rdamd:P30111>
-      <rdamd:P30083>Gyldendal</rdamd:P30083>
+      <rdamd:P30076>Gyldendal</rdamd:P30076>
       <rdamd:P30011>2022</rdamd:P30011>
       <rdamd:P30182>253 sider.</rdamd:P30182>
       <rdamd:P30137>1. norske utgave 2008</rdamd:P30137>
@@ -3765,7 +3765,7 @@
       <rdamd:P30107>Ny utgave</rdamd:P30107>
       <rdamd:P30088>Oslo</rdamd:P30088>
       <rdamd:P30111>Oslo : Gyldendal, 2022</rdamd:P30111>
-      <rdamd:P30083>Gyldendal</rdamd:P30083>
+      <rdamd:P30076>Gyldendal</rdamd:P30076>
       <rdamd:P30011>2022</rdamd:P30011>
       <rdamd:P30182>229 sider.</rdamd:P30182>
       <rdamd:P30137>1. norske utgave 2006</rdamd:P30137>
@@ -3782,7 +3782,7 @@
       <rdamd:P30107>2. utgave</rdamd:P30107>
       <rdamd:P30088>Oslo</rdamd:P30088>
       <rdamd:P30111>Oslo : Gyldendal, 2022</rdamd:P30111>
-      <rdamd:P30083>Gyldendal</rdamd:P30083>
+      <rdamd:P30076>Gyldendal</rdamd:P30076>
       <rdamd:P30011>2022</rdamd:P30011>
       <rdamd:P30182>334 sider.</rdamd:P30182>
       <rdamd:P30137>1. norske utgave 2010</rdamd:P30137>
@@ -3799,7 +3799,7 @@
       <rdamd:P30107>2. utgave</rdamd:P30107>
       <rdamd:P30088>[Oslo]</rdamd:P30088>
       <rdamd:P30111>[Oslo] : Gyldendal, 2023</rdamd:P30111>
-      <rdamd:P30083>Gyldendal</rdamd:P30083>
+      <rdamd:P30076>Gyldendal</rdamd:P30076>
       <rdamd:P30011>2023</rdamd:P30011>
       <rdamd:P30182>405 sider.</rdamd:P30182>
       <rdamd:P30106>Gyldendal pocket</rdamd:P30106>
@@ -3817,7 +3817,7 @@
       <rdamd:P30107>2. utgave</rdamd:P30107>
       <rdamd:P30088>[Oslo]</rdamd:P30088>
       <rdamd:P30111>[Oslo] : Gyldendal, 2023</rdamd:P30111>
-      <rdamd:P30083>Gyldendal</rdamd:P30083>
+      <rdamd:P30076>Gyldendal</rdamd:P30076>
       <rdamd:P30011>2023</rdamd:P30011>
       <rdamd:P30182>217 sider.</rdamd:P30182>
       <rdamd:P30106>Bobby og Alicia Western</rdamd:P30106>
@@ -3835,7 +3835,7 @@
       <rdamd:P30117>Cormac McCarthy ; oversatt av Knut Ofstad</rdamd:P30117>
       <rdamd:P30088>[Melhus]</rdamd:P30088>
       <rdamd:P30111>[Melhus] : Lydbokforl., 2010</rdamd:P30111>
-      <rdamd:P30083>Lydbokforl</rdamd:P30083>
+      <rdamd:P30076>Lydbokforl</rdamd:P30076>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>6 plater (CD) (6 t, 41 min) : digital, 12 cm, i eske.</rdamd:P30182>
       <rdamd:P30137>Lest av Trond Brænne</rdamd:P30137>
@@ -3851,7 +3851,7 @@
       <rdamd:P30117>Cormac McCarthy ; [oversatt av Knut Ofstad]</rdamd:P30117>
       <rdamd:P30088>[Melhus]</rdamd:P30088>
       <rdamd:P30111>[Melhus] : Lydbokforl., 2010</rdamd:P30111>
-      <rdamd:P30083>Lydbokforl</rdamd:P30083>
+      <rdamd:P30076>Lydbokforl</rdamd:P30076>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>1 avspiller med lydfil (6 t, 40 min) : digital.</rdamd:P30182>
       <rdamd:P30137>Digital lydbok med integrert avspilling (digibok)</rdamd:P30137>
@@ -3868,7 +3868,7 @@
       <rdamd:P30117>Cormac McCarthy ; oversatt av Knut Ofstad</rdamd:P30117>
       <rdamd:P30088>Oslo</rdamd:P30088>
       <rdamd:P30111>Oslo : Bokklubben, 2010</rdamd:P30111>
-      <rdamd:P30083>Bokklubben</rdamd:P30083>
+      <rdamd:P30076>Bokklubben</rdamd:P30076>
       <rdamd:P30011>2010</rdamd:P30011>
       <rdamd:P30182>253 s.</rdamd:P30182>
       <rdamd:P30137>1. norske utg. Oslo : Gyldendal, 2008</rdamd:P30137>

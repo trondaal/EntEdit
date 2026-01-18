@@ -37,6 +37,11 @@
     "entityBrowser": "Entity Browser",
     "search": "Search"
   },
+  "search": {
+    "expressionSearch": "Expression Search",
+    "manifestationSearch": "Manifestation Search",
+    "searchResults": "Search Results"
+  },
   "messages": {
     "selectClass": "Select a class to view entities",
     "noEntitiesForClass": "No entities found for this class",

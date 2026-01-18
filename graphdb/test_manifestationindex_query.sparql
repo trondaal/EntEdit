@@ -1,0 +1,177 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX lucene: <http://www.ontotext.com/connectors/lucene#>
+PREFIX inst: <http://www.ontotext.com/connectors/lucene/instance#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdaed: <http://rdaregistry.info/Elements/e/datatype/>
+PREFIX rdaeo: <http://rdaregistry.info/Elements/e/object/>
+PREFIX rdawd: <http://rdaregistry.info/Elements/w/datatype/>
+PREFIX rdawo: <http://rdaregistry.info/Elements/w/object/>
+PREFIX rdamd: <http://rdaregistry.info/Elements/m/datatype/>
+PREFIX rdamo: <http://rdaregistry.info/Elements/m/object/>
+
+SELECT DISTINCT ?manifestation
+    (SAMPLE(?manifestationtitle) as ?title)
+    (SAMPLE(?manifestationother) as ?other)
+    (SAMPLE(?responsstmt) as ?responsibilityStatement)
+    (SAMPLE(?pubdate) as ?date)
+    (SAMPLE(?publisher_name) as ?publisher)
+    (SAMPLE(?pubplace) as ?place)
+    (SAMPLE(?extenttext) as ?extent)
+    (SAMPLE(?mediatype_label) as ?mediatype)
+    (SAMPLE(?carriertype_label) as ?carriertype)
+    (SAMPLE(?expressiontitle) as ?expression_title)
+    (SAMPLE(?worktitle) as ?work_title)
+    (GROUP_CONCAT(DISTINCT ?language_label ; SEPARATOR=" ; ") as ?language)
+    (GROUP_CONCAT(DISTINCT ?contenttype_label ; SEPARATOR=" ; ") as ?contenttype)
+    (GROUP_CONCAT(DISTINCT ?worktype_label ; SEPARATOR=" ; ") as ?worktype)
+    (GROUP_CONCAT(DISTINCT CONCAT(?work_agent_relationship_label, ": ", ?work_agent_names) ; SEPARATOR=" ; ") as ?work_creators)
+    (GROUP_CONCAT(DISTINCT CONCAT(?expression_agent_relationship_label, ": ", ?expression_agent_names) ; SEPARATOR=" ; ") as ?expression_creators)
+FROM <http://www.ontotext.com/explicit>
+
+WHERE {
+    ?search a inst:manifestationsIndex ;
+    lucene:query "horses" ;
+    lucene:entities ?manifestation .
+    ?manifestation lucene:score ?score .
+    ?manifestation a <http://rdaregistry.info/Elements/c/C10007> .
+
+    # Navigate to expression and work (bidirectional)
+    {?manifestation rdamo:P30139 ?expression .}
+        UNION
+    {?expression rdaeo:P20059 ?manifestation .}
+
+    {?expression rdaeo:P20231 ?work .}
+        UNION
+    {?work rdawo:P10078 ?expression .}
+
+    # Manifestation-specific fields
+    OPTIONAL {
+        ?manifestation rdamd:P30134 ?manifestationtitle .
+    }
+    OPTIONAL {
+        ?manifestation rdamd:P30142 ?manifestationother .
+    }
+    OPTIONAL {
+        ?manifestation rdamd:P30117 ?responsstmt .
+    }
+    OPTIONAL {
+        ?manifestation rdamd:P30278 ?pubdate .
+    }
+    OPTIONAL {
+        ?manifestation rdamd:P30329 ?publisher_name .
+    }
+    OPTIONAL {
+        ?manifestation rdamd:P30279 ?pubplace .
+    }
+    OPTIONAL {
+        ?manifestation rdamd:P30182 ?extenttext .
+    }
+
+    # Expression and Work titles for context
+    OPTIONAL {
+        ?expression rdaed:P20312 ?expressiontitle .
+    }
+    OPTIONAL {
+        ?work rdawd:P10088 ?worktitle .
+    }
+
+    # Media type with language fallback (matching useManifestations pattern)
+    OPTIONAL {
+        ?manifestation rdamd:P30002 ?mediatype_chosen .
+        ?mediatype_chosen rdfs:label ?mediatype_label_chosen .
+        FILTER(LANG(?mediatype_label_chosen) = "no")
+    }
+    OPTIONAL {
+        ?manifestation rdamd:P30002 ?mediatype_en .
+        ?mediatype_en rdfs:label ?mediatype_label_en .
+        FILTER(LANG(?mediatype_label_en) = "en")
+    }
+    BIND(COALESCE(?mediatype_label_chosen, ?mediatype_label_en) AS ?mediatype_label)
+
+    # Carrier type with language fallback (matching useManifestations pattern)
+    OPTIONAL {
+        ?manifestation rdamd:P30001 ?carriertype_chosen .
+        ?carriertype_chosen rdfs:label ?carriertype_label_chosen .
+        FILTER(LANG(?carriertype_label_chosen) = "no")
+    }
+    OPTIONAL {
+        ?manifestation rdamd:P30001 ?carriertype_en .
+        ?carriertype_en rdfs:label ?carriertype_label_en .
+        FILTER(LANG(?carriertype_label_en) = "en")
+    }
+    BIND(COALESCE(?carriertype_label_chosen, ?carriertype_label_en) AS ?carriertype_label)
+
+    # Language label from expression
+    OPTIONAL {
+        ?expression rdaeo:P20006 ?language .
+        ?language rdfs:label ?language_label .
+        FILTER(LANG(?language_label) = "en")
+    }
+
+    # Content type from expression
+    OPTIONAL {
+        ?expression rdaeo:P20001 ?contenttype .
+        ?contenttype rdfs:label ?contenttype_label .
+        FILTER(LANG(?contenttype_label) = "no")
+    }
+
+    # Work type from work
+    OPTIONAL {
+        ?work rdawo:P10004 ?worktype .
+        ?worktype rdfs:label ?worktype_label .
+        FILTER(LANG(?worktype_label) = "no")
+    }
+
+    # Work to agent relationships
+    OPTIONAL {
+        SELECT DISTINCT ?work ?work_agent_relationship_label
+        (GROUP_CONCAT(DISTINCT ?work_agent_name_x ; SEPARATOR=" & ") as ?work_agent_names)
+        WHERE {
+            {
+                OPTIONAL {
+                    ?work ?work_agent_relationship ?work_agent .
+                    ?work_agent <http://rdaregistry.info/Elements/a/datatype/P50385> ?work_agent_name_x .
+                    ?work_agent_relationship rdfs:label ?work_agent_relationship_label .
+                    FILTER(LANG(?work_agent_relationship_label) = "no") .
+                }
+            }UNION{
+                OPTIONAL {
+                    ?work_agent ?work_agent_relationship ?work .
+                    ?work_agent <http://rdaregistry.info/Elements/a/datatype/P50385> ?work_agent_name_x .
+                    ?work_agent_relationship_inverse owl:inverseOf ?work_agent_relationship .
+                    ?work_agent_relationship_inverse rdfs:label ?work_agent_relationship_label .
+                    FILTER(LANG(?work_agent_relationship_label) = "no") .
+                }
+            }
+        }
+        GROUP BY ?work ?work_agent_relationship_label
+    }
+
+    # Expression to agent relationships
+    OPTIONAL {
+        SELECT DISTINCT ?expression ?expression_agent_relationship_label
+        (GROUP_CONCAT(DISTINCT ?expression_agent_name_x ; SEPARATOR=" & ") as ?expression_agent_names)
+        WHERE {
+            {
+                OPTIONAL {
+                    ?expression ?expression_agent_relationship ?expression_agent .
+                    ?expression_agent <http://rdaregistry.info/Elements/a/datatype/P50385> ?expression_agent_name_x .
+                    ?expression_agent_relationship rdfs:label ?expression_agent_relationship_label .
+                    FILTER(LANG(?expression_agent_relationship_label) = "no") .
+                }
+            }UNION{
+                OPTIONAL {
+                    ?expression_agent ?expression_agent_relationship ?expression .
+                    ?expression_agent <http://rdaregistry.info/Elements/a/datatype/P50385> ?expression_agent_name_x .
+                    ?expression_agent_relationship_inverse owl:inverseOf ?expression_agent_relationship .
+                    ?expression_agent_relationship_inverse rdfs:label ?expression_agent_relationship_label .
+                    FILTER(LANG(?expression_agent_relationship_label) = "no") .
+                }
+            }
+        }
+        GROUP BY ?expression ?expression_agent_relationship_label
+    }
+}
+GROUP BY ?manifestation
+ORDER BY DESC(?score)

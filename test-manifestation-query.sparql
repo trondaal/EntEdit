@@ -1,0 +1,51 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX lucene: <http://www.ontotext.com/connectors/lucene#>
+PREFIX inst: <http://www.ontotext.com/connectors/lucene/instance#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdaed: <http://rdaregistry.info/Elements/e/datatype/>
+PREFIX rdaeo: <http://rdaregistry.info/Elements/e/object/>
+PREFIX rdawd: <http://rdaregistry.info/Elements/w/datatype/>
+PREFIX rdawo: <http://rdaregistry.info/Elements/w/object/>
+PREFIX rdamd: <http://rdaregistry.info/Elements/m/datatype/>
+PREFIX rdamo: <http://rdaregistry.info/Elements/m/object/>
+
+SELECT DISTINCT ?manifestation 
+    ?manifestationtitle 
+    ?manifestationother 
+    ?responsstmt 
+    ?pubdate 
+    ?publisher_name 
+    ?pubplace 
+    ?extenttext
+FROM <http://www.ontotext.com/explicit>
+WHERE {
+    ?search a inst:manifestationsIndex ;
+    lucene:query "test" ;
+    lucene:entities ?manifestation .
+    ?manifestation a <http://rdaregistry.info/Elements/c/C10007> .
+
+    # Manifestation-specific fields
+    OPTIONAL {
+        ?manifestation rdamd:P30134 ?manifestationtitle .
+    }
+    OPTIONAL {
+        ?manifestation rdamd:P30142 ?manifestationother .
+    }
+    OPTIONAL {
+        ?manifestation rdamd:P30117 ?responsstmt .
+    }
+    OPTIONAL {
+        ?manifestation rdamd:P30278 ?pubdate .
+    }
+    OPTIONAL {
+        ?manifestation rdamd:P30329 ?publisher_name .
+    }
+    OPTIONAL {
+        ?manifestation rdamd:P30279 ?pubplace .
+    }
+    OPTIONAL {
+        ?manifestation rdamd:P30182 ?extenttext .
+    }
+}
+LIMIT 5

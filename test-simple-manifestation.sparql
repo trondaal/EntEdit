@@ -1,0 +1,13 @@
+PREFIX rdamd: <http://rdaregistry.info/Elements/m/datatype/>
+PREFIX rdamo: <http://rdaregistry.info/Elements/m/object/>
+
+SELECT ?manifestation ?title ?publisher ?responsibilityStatement ?extent
+WHERE {
+  ?manifestation a <http://rdaregistry.info/Elements/c/C10007> .
+  
+  OPTIONAL { ?manifestation rdamd:P30134 ?title . }
+  OPTIONAL { ?manifestation rdamd:P30329 ?publisher . }
+  OPTIONAL { ?manifestation rdamd:P30117 ?responsibilityStatement . }
+  OPTIONAL { ?manifestation rdamd:P30182 ?extent . }
+}
+LIMIT 10

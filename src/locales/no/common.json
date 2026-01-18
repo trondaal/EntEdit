@@ -37,6 +37,11 @@
     "entityBrowser": "Entitetsutforsker",
     "search": "Søk"
   },
+  "search": {
+    "expressionSearch": "Uttrykk-søk",
+    "manifestationSearch": "Manifestasjon-søk",
+    "searchResults": "Søkeresultater"
+  },
   "messages": {
     "selectClass": "Velg en klasse for å se entiteter",
     "noEntitiesForClass": "Ingen entiteter funnet for denne klassen",

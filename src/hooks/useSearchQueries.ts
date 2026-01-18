@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { SparqlClient } from "../utils/sparqlClient";
 import type { SparqlEndpointConfig } from "../types/sparql";
 
-export interface SearchResult {
+export interface ExpressionSearchResult {
   uri: string;
   expression_title?: string;
   work_title?: string;
@@ -16,14 +16,40 @@ export interface SearchResult {
   score?: number;
 }
 
-export const useSearchEntities = (
+export interface ManifestationSearchResult {
+  uri: string;
+  // Line 1: Title area
+  title?: string;                    // rdamd:P30156
+  other?: string;                    // rdamd:P30142
+  responsibilityStatement?: string;  // rdamd:P30117
+  // Line 2: Publication area
+  edition?: string;                  // rdamd:P30107
+  place?: string;                    // rdamd:P30088
+  publisher?: string;                // rdamd:P30076
+  date?: string;                     // rdamd:P30011
+  // Line 3: Physical description
+  extent?: string;                   // rdamd:P30182
+  dimensions?: string;               // rdamd:P30169
+  // Line 4: Series
+  series?: string;                   // rdamd:P30106
+  seriesNumbering?: string;          // rdamd:P30165
+  // Line 5: Notes (concatenated)
+  notes?: string;                    // rdamd:P30137 - GROUP_CONCAT
+  // Line 6: Identifiers (concatenated)
+  identifiers?: string;              // rdamd:P30004 - GROUP_CONCAT
+  // Additional metadata
+  mediatype?: string;
+  carriertype?: string;
+}
+
+export const useSearchExpressions = (
   config: SparqlEndpointConfig,
   query: string,
   language: string,
 ) => {
   return useQuery({
-    queryKey: ["search", config.url, query, language],
-    queryFn: async (): Promise<SearchResult[]> => {
+    queryKey: ["searchExpressions", config.url, query, language],
+    queryFn: async (): Promise<ExpressionSearchResult[]> => {
       if (!query || query.trim().length === 0) {
         return [];
       }
@@ -226,6 +252,161 @@ ORDER BY DESC(?score)
           binding.expression_to_expression_relationships?.value,
         score: binding.score ? parseFloat(binding.score.value) : undefined,
       }));
+    },
+    enabled: Boolean(query && query.trim().length > 0),
+    staleTime: 5 * 60 * 1000, // 5 minutes
+  });
+};
+
+export const useSearchManifestations = (
+  config: SparqlEndpointConfig,
+  query: string,
+  language: string,
+) => {
+  return useQuery({
+    queryKey: ["searchManifestations", config.url, query, language],
+    queryFn: async (): Promise<ManifestationSearchResult[]> => {
+      if (!query || query.trim().length === 0) {
+        return [];
+      }
+
+      const client = new SparqlClient(config);
+
+      const sparqlQuery = `
+PREFIX lucene: <http://www.ontotext.com/connectors/lucene#>
+PREFIX inst: <http://www.ontotext.com/connectors/lucene/instance#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdamd: <http://rdaregistry.info/Elements/m/datatype/>
+PREFIX rdamo: <http://rdaregistry.info/Elements/m/object/>
+
+SELECT DISTINCT ?manifestation
+    (SAMPLE(?title_val) as ?title)
+    (SAMPLE(?other_val) as ?other)
+    (SAMPLE(?responsibilityStatement_val) as ?responsibilityStatement)
+    (SAMPLE(?edition_val) as ?edition)
+    (SAMPLE(?place_val) as ?place)
+    (SAMPLE(?publisher_val) as ?publisher)
+    (SAMPLE(?date_val) as ?date)
+    (SAMPLE(?extent_val) as ?extent)
+    (SAMPLE(?dimensions_val) as ?dimensions)
+    (SAMPLE(?series_val) as ?series)
+    (SAMPLE(?seriesNumbering_val) as ?seriesNumbering)
+    (GROUP_CONCAT(DISTINCT ?note_val; SEPARATOR=" | ") as ?notes)
+    (GROUP_CONCAT(DISTINCT ?identifier_val; SEPARATOR=" | ") as ?identifiers)
+    (SAMPLE(?mediatype_label) as ?mediatype)
+    (SAMPLE(?carriertype_label) as ?carriertype)
+WHERE {
+    ?search a inst:manifestationsIndex ;
+    lucene:query "${query.replace(/"/g, '\\"')}" ;
+    lucene:entities ?manifestation .
+    ?manifestation lucene:score ?score .
+    ?manifestation a <http://rdaregistry.info/Elements/c/C10007> .
+
+    # Title area
+    OPTIONAL {
+        ?manifestation rdamd:P30156 ?title_val .  # title proper
+    }
+    OPTIONAL {
+        ?manifestation rdamd:P30142 ?other_val .  # other title info
+    }
+    OPTIONAL {
+        ?manifestation rdamd:P30117 ?responsibilityStatement_val .  # responsibility statement
+    }
+    # Publication area
+    OPTIONAL {
+        ?manifestation rdamd:P30107 ?edition_val .  # edition statement
+    }
+    OPTIONAL {
+        ?manifestation rdamd:P30088 ?place_val .  # publication place
+    }
+    OPTIONAL {
+        ?manifestation rdamd:P30076 ?publisher_val .  # publisher name
+    }
+    OPTIONAL {
+        ?manifestation rdamd:P30011 ?date_val .  # publication date
+    }
+    # Physical description
+    OPTIONAL {
+        ?manifestation rdamd:P30182 ?extent_val .  # extent
+    }
+    OPTIONAL {
+        ?manifestation rdamd:P30169 ?dimensions_val .  # dimensions
+    }
+    # Series
+    OPTIONAL {
+        ?manifestation rdamd:P30106 ?series_val .  # series statement
+    }
+    OPTIONAL {
+        ?manifestation rdamd:P30165 ?seriesNumbering_val .  # numbering within series
+    }
+    # Notes (multiple values)
+    OPTIONAL {
+        ?manifestation rdamd:P30137 ?note_val .  # note
+    }
+    # Identifiers (multiple values)
+    OPTIONAL {
+        ?manifestation rdamd:P30004 ?identifier_val .  # identifier
+    }
+
+    # Media type with language fallback
+    OPTIONAL {
+        ?manifestation rdamo:P30002 ?mediatype_chosen .
+        ?mediatype_chosen rdfs:label ?mediatype_label_chosen .
+        FILTER(LANG(?mediatype_label_chosen) = "${language}")
+    }
+    OPTIONAL {
+        ?manifestation rdamo:P30002 ?mediatype_en .
+        ?mediatype_en rdfs:label ?mediatype_label_en .
+        FILTER(LANG(?mediatype_label_en) = "en")
+    }
+    BIND(COALESCE(?mediatype_label_chosen, ?mediatype_label_en) AS ?mediatype_label)
+
+    # Carrier type with language fallback
+    OPTIONAL {
+        ?manifestation rdamo:P30001 ?carriertype_chosen .
+        ?carriertype_chosen rdfs:label ?carriertype_label_chosen .
+        FILTER(LANG(?carriertype_label_chosen) = "${language}")
+    }
+    OPTIONAL {
+        ?manifestation rdamo:P30001 ?carriertype_en .
+        ?carriertype_en rdfs:label ?carriertype_label_en .
+        FILTER(LANG(?carriertype_label_en) = "en")
+    }
+    BIND(COALESCE(?carriertype_label_chosen, ?carriertype_label_en) AS ?carriertype_label)
+}
+GROUP BY ?manifestation
+ORDER BY DESC(?score)
+      `;
+
+      const response = await client.query(sparqlQuery);
+
+      console.log("useSearchManifestations SPARQL response:", {
+        query: sparqlQuery,
+        bindings: response.results.bindings,
+        firstBinding: response.results.bindings[0],
+      });
+
+      const results = response.results.bindings.map((binding) => ({
+        uri: binding.manifestation.value,
+        title: binding.title?.value,
+        other: binding.other?.value,
+        responsibilityStatement: binding.responsibilityStatement?.value,
+        edition: binding.edition?.value,
+        place: binding.place?.value,
+        publisher: binding.publisher?.value,
+        date: binding.date?.value,
+        extent: binding.extent?.value,
+        dimensions: binding.dimensions?.value,
+        series: binding.series?.value,
+        seriesNumbering: binding.seriesNumbering?.value,
+        notes: binding.notes?.value,
+        identifiers: binding.identifiers?.value,
+        mediatype: binding.mediatype?.value,
+        carriertype: binding.carriertype?.value,
+      }));
+
+      console.log("Mapped manifestation results:", results);
+      return results;
     },
     enabled: Boolean(query && query.trim().length > 0),
     staleTime: 5 * 60 * 1000, // 5 minutes

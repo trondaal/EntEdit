@@ -10,12 +10,12 @@ import {
   Chip,
 } from "@mui/material";
 import { ExpandMore, ExpandLess } from "@mui/icons-material";
-import type { SearchResult } from "../hooks/useSearchQueries";
+import type { ExpressionSearchResult } from "../hooks/useSearchQueries";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import ManifestationList from "./ManifestationList";
 
 interface ExpressionProps {
-  result: SearchResult;
+  result: ExpressionSearchResult;
   isSelected: boolean;
   onSelect: (uri: string) => void;
   config: SparqlEndpointConfig;
