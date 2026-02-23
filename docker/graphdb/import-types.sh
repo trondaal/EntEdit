@@ -39,3 +39,25 @@ find "$DATA_DIR" -type f \( -name "*.ttl" -o -name "*.nt" -o -name "*.rdf" \) | 
 done
 
 echo "Import complete."
+
+# --- Phase 2: SPARQL UPDATE queries (e.g. Lucene connector definitions) ---
+SPARQL_DIR="/sparql-updates"
+
+if [ -d "$SPARQL_DIR" ]; then
+  echo "Running SPARQL updates..."
+  find "$SPARQL_DIR" -type f -name "*.sparql" | sort | while read -r file; do
+    filename=$(basename "$file")
+    printf "  Executing %-50s" "$filename..."
+    http_code=$(curl -s -o /dev/null -w "%{http_code}" \
+      -X POST "${GRAPHDB_URL}/repositories/${REPO}/statements" \
+      -H "Content-Type: application/sparql-update" \
+      --data-binary "@${file}")
+
+    if [ "$http_code" = "204" ]; then
+      echo "OK"
+    else
+      echo "WARN (HTTP $http_code)"
+    fi
+  done
+  echo "SPARQL updates complete."
+fi
