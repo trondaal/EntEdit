@@ -5,7 +5,6 @@ services:
       - "7200:7200"
     volumes:
       - graphdb-data:/opt/graphdb/data
-      - ./docker/graphdb/repositories:/opt/graphdb/data/repositories
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:7200/rest/repositories"]
       interval: 10s
@@ -19,6 +18,7 @@ services:
     volumes:
       - ./database/types:/import-data:ro
       - "./database/lucene connectors:/sparql-updates:ro"
+      - ./docker/graphdb/repositories/EntEdit/config.ttl:/repo-config.ttl:ro
       - ./docker/graphdb/import-types.sh:/import-types.sh:ro
     environment:
       - GRAPHDB_URL=http://graphdb:7200

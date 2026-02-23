@@ -8,13 +8,15 @@
    rep:repositoryID "EntEdit" ;
    rdfs:label "EntEdit" ;
    rep:repositoryImpl [
-     rep:repositoryType "graphdb:FreeSailRepository" ;
+     rep:repositoryType "graphdb:SailRepository" ;
      sr:sailImpl [
-       sail:sailType "graphdb:FreeSail" ;
-       graphdb:base-URL "http://entedit.example.org/graphdb/data/" ;
-       graphdb:defaultNS "" ;
-       graphdb:entity-index-size "10000000" ;
+       sail:sailType "graphdb:Sail" ;
+       graphdb:ruleset "rdfsplus-optimized" ;
+       graphdb:disable-sameAs "true" ;
        graphdb:entity-id-size "32" ;
-       graphdb:owlim-license ""
+       graphdb:entity-index-size "10000000" ;
+       graphdb:enablePredicateList "true" ;
+       graphdb:in-memory-literal-properties "true" ;
+       graphdb:enable-literal-index "true"
      ]
    ] .
