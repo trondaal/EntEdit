@@ -38,8 +38,12 @@ On first startup, the `graphdb-init` service automatically:
 When the app loads, open the configuration wizard and enter the SPARQL endpoint:
 
 ```
-http://localhost:7200/repositories/EntEdit
+http://localhost/graphdb/repositories/EntEdit
 ```
+
+> **Note:** Use the proxied URL above (via nginx on port 80), not `http://localhost:7200/...` directly.
+> Accessing GraphDB on port 7200 from the browser causes a CORS error because it is a different origin.
+> The nginx proxy forwards the request server-side, avoiding this entirely.
 
 GraphDB data is persisted in a Docker volume and survives restarts. To stop:
 
