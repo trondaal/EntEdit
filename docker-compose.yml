@@ -1,0 +1,39 @@
+services:
+  graphdb:
+    image: ontotext/graphdb:latest
+    ports:
+      - "7200:7200"
+    volumes:
+      - graphdb-data:/opt/graphdb/data
+      - ./docker/graphdb/repositories:/opt/graphdb/data/repositories
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7200/rest/repositories"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+  graphdb-init:
+    image: alpine:3
+    command: sh -c "apk add --no-cache curl && sh /import-types.sh"
+    volumes:
+      - ./database/types:/import-data:ro
+      - ./docker/graphdb/import-types.sh:/import-types.sh:ro
+    environment:
+      - GRAPHDB_URL=http://graphdb:7200
+      - GRAPHDB_REPO=EntEdit
+    depends_on:
+      graphdb:
+        condition: service_healthy
+    restart: "no"
+
+  web:
+    build: ./app
+    ports:
+      - "80:80"
+    depends_on:
+      graphdb:
+        condition: service_healthy
+
+volumes:
+  graphdb-data:

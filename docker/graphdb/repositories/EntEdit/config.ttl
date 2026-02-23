@@ -1,0 +1,20 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rep:  <http://www.openrdf.org/config/repository#> .
+@prefix sr:   <http://www.openrdf.org/config/repository/sail#> .
+@prefix sail: <http://www.openrdf.org/config/sail#> .
+@prefix graphdb: <http://www.ontotext.com/config/graphdb#> .
+
+[] a rep:Repository ;
+   rep:repositoryID "EntEdit" ;
+   rdfs:label "EntEdit" ;
+   rep:repositoryImpl [
+     rep:repositoryType "graphdb:FreeSailRepository" ;
+     sr:sailImpl [
+       sail:sailType "graphdb:FreeSail" ;
+       graphdb:base-URL "http://entedit.example.org/graphdb/data/" ;
+       graphdb:defaultNS "" ;
+       graphdb:entity-index-size "10000000" ;
+       graphdb:entity-id-size "32" ;
+       graphdb:owlim-license ""
+     ]
+   ] .
