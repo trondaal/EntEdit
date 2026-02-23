@@ -23,8 +23,10 @@ dist-ssr
 *.sln
 *.sw?
 .continue/mcpServers/github.yaml
-testdata/Hamsun.rdf
-testdata/Grass.rdf
-testdata/Ballard.rdf
+database/testdata/Hamsun.rdf
+database/testdata/Grass.rdf
+database/testdata/Ballard.rdf
 
-old_types/
+database/old_types/
+
+scripts/

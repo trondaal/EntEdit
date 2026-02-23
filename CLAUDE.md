@@ -4,6 +4,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Development Commands
 
+Run from the `app/` directory:
+
 - `npm run dev` - Start development server with Vite (proxies /graphdb to localhost:7200)
 - `npm run build` - Build for production (runs TypeScript check first)
 - `npm run lint` - Run ESLint
@@ -21,17 +23,32 @@ EntEdit is a React-based RDF/SPARQL entity editor for browsing and editing seman
 - **Internationalization**: i18next with English and Norwegian locales
 - **SPARQL Integration**: Custom `SparqlClient` class for GraphDB
 
-### Project Structure
+### Repository Layout
 
 ```
-src/
-├── components/       # React components (see below)
-├── hooks/           # Data fetching hooks (TanStack Query)
-├── utils/           # Utilities (SparqlClient, labelUtils, etc.)
-├── types/           # TypeScript type definitions
-├── i18n/            # i18next configuration
-├── locales/         # Translation files (en/, no/)
-└── App.tsx          # Root component with theme and query client
+EntEdit/
+├── app/                   # Web application (React/Vite)
+│   ├── src/
+│   │   ├── components/    # React components (see below)
+│   │   ├── hooks/         # Data fetching hooks (TanStack Query)
+│   │   ├── utils/         # Utilities (SparqlClient, labelUtils, etc.)
+│   │   ├── types/         # TypeScript type definitions
+│   │   ├── i18n/          # i18next configuration
+│   │   ├── locales/       # Translation files (en/, no/)
+│   │   └── App.tsx        # Root component with theme and query client
+│   ├── Dockerfile
+│   └── package.json
+├── database/              # RDF data and GraphDB config
+│   ├── types/             # Vocabulary files loaded into GraphDB on init
+│   ├── graphdb/           # SPARQL connector query definitions
+│   ├── inference rules/   # GraphDB inference rule sets
+│   └── testdata/          # Sample RDF entities for testing
+├── docker/                # Docker deployment configs
+│   ├── nginx/             # nginx SPA + proxy config
+│   └── graphdb/           # Repository definition + init script
+├── scripts/               # Ad hoc scripts (gitignored, not for sharing)
+├── docker-compose.yml
+└── CLAUDE.md
 ```
 
 ### Key Components
@@ -57,7 +74,7 @@ src/
 - `ConfigurationWizard` - First-run setup dialog
 - `EndpointConfig` - SPARQL endpoint settings form
 
-### Custom Hooks (src/hooks/)
+### Custom Hooks (app/src/hooks/)
 
 **useSparqlQueries.ts** - Core data fetching:
 - `useRdfClasses` / `useRdfProperties` / `useRdfObjectProperties`
@@ -68,7 +85,7 @@ src/
 
 **useManifestationQueries.ts** - Manifestation metadata queries
 
-### Utilities (src/utils/)
+### Utilities (app/src/utils/)
 
 - `sparqlClient.ts` - SparqlClient class with query/update methods and auth support
 - `configManager.ts` - localStorage persistence for app configuration
@@ -93,7 +110,7 @@ src/
 
 ### Localization
 
-Two namespaces in `src/locales/{lang}/`:
+Two namespaces in `app/src/locales/{lang}/`:
 - `common.json` - Shared UI strings (buttons, messages, navigation)
 - `entityEditor.json` - Entity editor specific labels
 
