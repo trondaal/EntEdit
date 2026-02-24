@@ -16,7 +16,8 @@ services:
     image: alpine:3
     command: sh -c "apk add --no-cache curl && sh /import-types.sh"
     volumes:
-      - ./database/types:/import-data:ro
+      - ./database/types:/import-data/types:ro
+      - ./database/testdata:/import-data/testdata:ro
       - "./database/lucene connectors:/sparql-updates:ro"
       - ./docker/graphdb/repositories/EntEdit/config.ttl:/repo-config.ttl:ro
       - ./docker/graphdb/import-types.sh:/import-types.sh:ro
