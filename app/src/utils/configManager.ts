@@ -86,7 +86,7 @@ export const isConfigured = (): boolean => {
 export const getDefaultConfiguration = (): AppConfiguration => {
   return {
     endpoint: {
-      url: "",
+      url: "http://localhost/graphdb/repositories/EntEdit",
       username: "",
       password: "",
     },

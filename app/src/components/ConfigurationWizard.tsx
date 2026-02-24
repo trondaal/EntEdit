@@ -194,9 +194,9 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
               label="SPARQL Endpoint URL"
               value={config.url}
               onChange={(e) => setConfig({ ...config, url: e.target.value })}
-              helperText="e.g., http://localhost:7200/repositories/EntEdit"
+              helperText="e.g., http://localhost/graphdb/repositories/EntEdit"
               sx={{ mb: 2 }}
-              placeholder="http://localhost:7200/repositories/EntEdit"
+              placeholder="http://localhost/graphdb/repositories/EntEdit"
             />
 
             <TextField
@@ -229,8 +229,14 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
               <List dense>
                 <ListItem disablePadding>
                   <ListItemText
-                    primary="GraphDB: http://localhost:7200/repositories/[repository]"
-                    secondary="Default GraphDB local installation"
+                    primary="GraphDB (Docker): http://localhost/graphdb/repositories/EntEdit"
+                    secondary="Default when running via Docker Compose"
+                  />
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemText
+                    primary="GraphDB (local): http://localhost:7200/repositories/[repository]"
+                    secondary="Direct GraphDB installation"
                   />
                 </ListItem>
                 <ListItem disablePadding>
