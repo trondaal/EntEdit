@@ -291,7 +291,7 @@ const LabelManager: React.FC<LabelManagerProps> = ({
           disabled={!!editingId}
           startIcon={<Save />}
         >
-          Done editing labels
+          Apply
         </Button>
       </DialogActions>
     </Dialog>

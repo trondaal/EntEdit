@@ -9,10 +9,10 @@ import {
   CircularProgress,
   Alert,
   Box,
-  Chip,
   TextField,
+  Tooltip,
 } from "@mui/material";
-import { Class, Description, Search } from "@mui/icons-material";
+import { Class, Description, Search, Tag } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import {
@@ -105,17 +105,16 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
           display: "grid",
           gridTemplateColumns: {
             xs: "1fr",
-            md: "250px 1fr",
-            lg: "minmax(200px, 1fr) minmax(350px, 1.5fr) minmax(550px, 2.5fr)",
+            md: "minmax(160px, 0.8fr) minmax(220px, 1fr) minmax(360px, 2.2fr)",
           },
           gap: 3,
-          height: "calc(100vh - 160px)",
-          overflow: "hidden",
+          height: { xs: "auto", md: "calc(100vh - 160px)" },
+          overflow: { xs: "visible", md: "hidden" },
         }}
       >
-        <Box sx={{ display: "flex", flexDirection: "column", overflow: "hidden" }}>
-          <Paper elevation={1} sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
-            <Box sx={{ p: 2, borderBottom: 1, borderColor: "divider", minHeight: 72, display: "flex", alignItems: "center" }}>
+        <Box sx={{ display: "flex", flexDirection: "column", overflow: { xs: "visible", md: "hidden" } }}>
+          <Paper elevation={1} sx={{ height: { xs: "auto", md: "100%" }, display: "flex", flexDirection: "column" }}>
+            <Box sx={{ p: 2, borderBottom: 1, borderColor: "divider", height: 88, display: "flex", flexDirection: "column", justifyContent: "flex-end" }}>
               <Typography
                 variant="h6"
                 sx={{ display: "flex", alignItems: "center" }}
@@ -130,7 +129,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
                 <CircularProgress />
               </Box>
             ) : (
-              <List sx={{ flex: 1, overflow: "auto" }}>
+              <List sx={{ flex: 1, overflow: "auto", maxHeight: { xs: 280, md: "none" } }}>
                 {classes?.map((rdfClass) => (
                   <ListItem key={rdfClass.uri} disablePadding>
                     <ListItemButton
@@ -150,56 +149,45 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
           </Paper>
         </Box>
 
-        <Box sx={{ display: "flex", flexDirection: "column", overflow: "hidden" }}>
-          <Paper elevation={1} sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
+        <Box sx={{ display: "flex", flexDirection: "column", overflow: { xs: "visible", md: "hidden" } }}>
+          <Paper elevation={1} sx={{ height: { xs: "auto", md: "100%" }, display: "flex", flexDirection: "column" }}>
             <Box
               sx={{
                 p: 2,
                 borderBottom: 1,
                 borderColor: "divider",
-                minHeight: 72,
+                height: 88,
                 display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                gap: 2,
+                flexDirection: "column",
               }}
             >
-              <Typography
-                variant="h6"
-                sx={{ display: "flex", alignItems: "center" }}
-              >
-                <Description sx={{ mr: 1 }} />
-                {t("navigation.entities")}
-              </Typography>
+              {selectedClass && (
+                <Typography variant="body2" color="text.secondary" sx={{ pl: 4 }}>
+                  {formatLabel(
+                    classes?.find((c) => c.uri === selectedClass)?.label,
+                    selectedClass,
+                  )}
+                </Typography>
+              )}
 
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: 1,
-                  flex: 1,
-                }}
-              >
-                {selectedClass && (
-                  <Chip
-                    label={formatLabel(
-                      classes?.find((c) => c.uri === selectedClass)?.label,
-                      selectedClass,
-                    )}
-                    size="small"
-                  />
-                )}
-              </Box>
+              <Box sx={{ flex: 1 }} />
 
-              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                <Typography
+                  variant="h6"
+                  sx={{ display: "flex", alignItems: "center", flexShrink: 0 }}
+                >
+                  <Description sx={{ mr: 1 }} />
+                  {t("navigation.entities")}
+                </Typography>
+
                 {selectedClass && (
                   <TextField
                     size="small"
                     placeholder={t("labels.filter")}
                     value={entityFilter}
                     onChange={(e) => setEntityFilter(e.target.value)}
-                    sx={{ width: 130 }}
+                    sx={{ flex: 1, minWidth: 80 }}
                     aria-label={t("labels.filter")}
                     InputProps={{
                       startAdornment: (
@@ -232,7 +220,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
                   : t("messages.noEntitiesForClass")}
               </Box>
             ) : (
-              <List sx={{ flex: 1, overflow: "auto" }}>
+              <List sx={{ flex: 1, overflow: "auto", maxHeight: { xs: 360, md: "none" } }}>
                 {filteredEntities?.map((entity) => (
                   <ListItem
                     key={`${selectedClass}-${entity.uri}`}
@@ -243,9 +231,17 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
                       onClick={() => handleEntitySelect(entity.uri)}
                     >
                       <ListItemText
-                        primary={entity.label}
-                        secondary={entity.uri}
-                        secondaryTypographyProps={{ noWrap: true }}
+                        primary={
+                          <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
+                            <Typography variant="body2" noWrap sx={{ flex: 1 }}>
+                              {entity.label}
+                            </Typography>
+                            <Tooltip title={entity.uri} placement="bottom-start">
+                              <Tag sx={{ fontSize: "0.875rem", color: "text.disabled", flexShrink: 0 }} />
+                            </Tooltip>
+                          </Box>
+                        }
+                        disableTypography
                       />
                     </ListItemButton>
                   </ListItem>
@@ -255,7 +251,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
           </Paper>
         </Box>
 
-        <Box sx={{ display: "flex", flexDirection: "column", overflow: "auto" }}>
+        <Box sx={{ display: "flex", flexDirection: "column", overflow: { xs: "visible", md: "hidden" } }}>
           <EntityEditor
             config={config}
             classUri={selectedClass || ""}

@@ -107,6 +107,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [deleting, setDeleting] = useState(false);
   const [deleteError, setDeleteError] = useState<string | null>(null);
+  const [discardDialogOpen, setDiscardDialogOpen] = useState(false);
   const [labelManagerOpen, setLabelManagerOpen] = useState(false);
   const [entityLabels, setEntityLabels] = useState<
     Array<{ id: string; value: string; language: string }>
@@ -733,13 +734,46 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     return customEntityUri && !isValidUri(customEntityUri);
   }, [customEntityUri]);
 
+  // Human-readable label for the delete confirmation dialog
+  const entityDisplayName = useMemo(() => {
+    if (!entityLabels.length) return entityUri || "";
+    const langMatch = entityLabels.find((l) => l.language === selectedLanguage);
+    if (langMatch) return langMatch.value;
+    const noLangMatch = entityLabels.find((l) => l.language === "");
+    if (noLangMatch) return noLangMatch.value;
+    return entityLabels[0].value;
+  }, [entityLabels, selectedLanguage, entityUri]);
+
   // Additional handlers for the header component
   const handleEdit = useCallback(() => setIsEditing(true), []);
-  const handleCancel = useCallback(() => {
+
+  const performCancel = useCallback(() => {
     setIsEditing(false);
     setEntityData(existingEntity?.data || {});
     setEntityLabels(existingEntity?.labels || []);
+    setDiscardDialogOpen(false);
   }, [existingEntity]);
+
+  const handleCancel = useCallback(() => {
+    const dataChanged =
+      JSON.stringify(entityData) !==
+      JSON.stringify(existingEntity?.data ?? {});
+    const labelsChanged =
+      JSON.stringify(
+        entityLabels.map((l) => ({ value: l.value, language: l.language })),
+      ) !==
+      JSON.stringify(
+        (existingEntity?.labels ?? []).map((l) => ({
+          value: l.value,
+          language: l.language,
+        })),
+      );
+    if (dataChanged || labelsChanged) {
+      setDiscardDialogOpen(true);
+    } else {
+      performCancel();
+    }
+  }, [entityData, entityLabels, existingEntity, performCancel]);
   const handleDeleteDialog = useCallback(() => setDeleteDialogOpen(true), []);
   const handleNew = useCallback(() => onEntityDeselected?.(), [onEntityDeselected]);
   const handleEditLabels = useCallback(() => setLabelManagerOpen(true), []);
@@ -763,10 +797,10 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       <Paper
         elevation={1}
         sx={{
-          p: 3,
-          textAlign: "center",
-          minHeight: 800,
-          height: "fit-content",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          height: { xs: "auto", md: "100%" },
         }}
       >
         <CircularProgress />
@@ -775,7 +809,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   }
 
   return (
-    <Paper elevation={1} sx={{ height: "fit-content" }}>
+    <Paper elevation={1} sx={{ height: { xs: "auto", md: "100%" }, display: "flex", flexDirection: "column" }}>
       <EntityEditorHeader
         entityUri={entityUri}
         isEditing={isEditing}
@@ -791,7 +825,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         onOpenGraph={handleOpenGraph}
       />
 
-      <Box sx={{ p: 3 }}>
+      <Box sx={{ p: 3, flex: 1, overflow: "auto" }}>
         {!classUri && (
           <Alert severity="info" sx={{ mb: 2 }}>
             {t("messages.selectClass")}
@@ -823,7 +857,15 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           }}
           disabled={!!entityUri || !isEditing}
           error={!!uriError}
-          sx={{ mb: 2 }}
+          sx={{
+            mb: 2,
+            "& .MuiInputBase-root.Mui-disabled": {
+              backgroundColor: "rgba(0, 0, 0, 0.04)",
+            },
+            "& .MuiInputBase-input.Mui-disabled": {
+              WebkitTextFillColor: "rgba(0, 0, 0, 0.75)",
+            },
+          }}
           size="small"
           placeholder={t("placeholders.enterUri")}
         />
@@ -883,6 +925,20 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           </>
         )}
 
+        {selectedControlledProperty && (
+          <ObjectPropertySelector
+            config={config}
+            propertyUri={selectedControlledProperty}
+            rangeUri={
+              objectProperties.find((p) => p.uri === selectedControlledProperty)
+                ?.range
+            }
+            selectedLanguage={selectedLanguage}
+            onSelect={addControlledProperty}
+            onCancel={() => setSelectedControlledProperty("")}
+          />
+        )}
+
         {controlledPropertiesWithValues.map((propertyUri) => (
           <ObjectPropertySection
             key={propertyUri}
@@ -901,20 +957,6 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
             onRemoveValue={(index) => removePropertyValue(propertyUri, index)}
           />
         ))}
-
-        {selectedControlledProperty && (
-          <ObjectPropertySelector
-            config={config}
-            propertyUri={selectedControlledProperty}
-            rangeUri={
-              objectProperties.find((p) => p.uri === selectedControlledProperty)
-                ?.range
-            }
-            selectedLanguage={selectedLanguage}
-            onSelect={addControlledProperty}
-            onCancel={() => setSelectedControlledProperty("")}
-          />
-        )}
 
         {/* Related Agents Section */}
         {isEditing && (
@@ -957,6 +999,20 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           </>
         )}
 
+        {selectedAgentProperty && (
+          <RelatedAgentsSelector
+            config={config}
+            propertyUri={selectedAgentProperty}
+            rangeUri={
+              agentProperties.find((p) => p.uri === selectedAgentProperty)
+                ?.range
+            }
+            selectedLanguage={selectedLanguage}
+            onSelect={addAgentProperty}
+            onCancel={() => setSelectedAgentProperty("")}
+          />
+        )}
+
         {agentPropertiesWithValues.map((propertyUri) => (
           <ObjectPropertySection
             key={propertyUri}
@@ -975,20 +1031,6 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
             onRemoveValue={(index) => removePropertyValue(propertyUri, index)}
           />
         ))}
-
-        {selectedAgentProperty && (
-          <RelatedAgentsSelector
-            config={config}
-            propertyUri={selectedAgentProperty}
-            rangeUri={
-              agentProperties.find((p) => p.uri === selectedAgentProperty)
-                ?.range
-            }
-            selectedLanguage={selectedLanguage}
-            onSelect={addAgentProperty}
-            onCancel={() => setSelectedAgentProperty("")}
-          />
-        )}
 
         {/* Basic WEMI Relationships Section */}
         {isEditing && (
@@ -1031,6 +1073,20 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           </>
         )}
 
+        {selectedWEMIProperty && (
+          <WEMIRelationshipSelector
+            config={config}
+            propertyUri={selectedWEMIProperty}
+            rangeUri={
+              wemiProperties.find((p) => p.uri === selectedWEMIProperty)
+                ?.range
+            }
+            selectedLanguage={selectedLanguage}
+            onSelect={addWEMIProperty}
+            onCancel={() => setSelectedWEMIProperty("")}
+          />
+        )}
+
         {wemiPropertiesWithValues.map((propertyUri) => (
           <ObjectPropertySection
             key={propertyUri}
@@ -1049,20 +1105,6 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
             onRemoveValue={(index) => removePropertyValue(propertyUri, index)}
           />
         ))}
-
-        {selectedWEMIProperty && (
-          <WEMIRelationshipSelector
-            config={config}
-            propertyUri={selectedWEMIProperty}
-            rangeUri={
-              wemiProperties.find((p) => p.uri === selectedWEMIProperty)
-                ?.range
-            }
-            selectedLanguage={selectedLanguage}
-            onSelect={addWEMIProperty}
-            onCancel={() => setSelectedWEMIProperty("")}
-          />
-        )}
 
         {/* Related Works Section */}
         {isEditing && (
@@ -1105,6 +1147,20 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           </>
         )}
 
+        {selectedRelatedWorkProperty && (
+          <RelatedWorkSelector
+            config={config}
+            propertyUri={selectedRelatedWorkProperty}
+            rangeUri={
+              relatedWorkProperties.find((p) => p.uri === selectedRelatedWorkProperty)
+                ?.range
+            }
+            selectedLanguage={selectedLanguage}
+            onSelect={addRelatedWorkProperty}
+            onCancel={() => setSelectedRelatedWorkProperty("")}
+          />
+        )}
+
         {relatedWorkPropertiesWithValues.map((propertyUri) => (
           <ObjectPropertySection
             key={propertyUri}
@@ -1123,20 +1179,6 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
             onRemoveValue={(index) => removePropertyValue(propertyUri, index)}
           />
         ))}
-
-        {selectedRelatedWorkProperty && (
-          <RelatedWorkSelector
-            config={config}
-            propertyUri={selectedRelatedWorkProperty}
-            rangeUri={
-              relatedWorkProperties.find((p) => p.uri === selectedRelatedWorkProperty)
-                ?.range
-            }
-            selectedLanguage={selectedLanguage}
-            onSelect={addRelatedWorkProperty}
-            onCancel={() => setSelectedRelatedWorkProperty("")}
-          />
-        )}
 
         {/* Related Expressions Section */}
         {isEditing && (
@@ -1179,6 +1221,20 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           </>
         )}
 
+        {selectedRelatedExpressionProperty && (
+          <RelatedExpressionSelector
+            config={config}
+            propertyUri={selectedRelatedExpressionProperty}
+            rangeUri={
+              relatedExpressionProperties.find((p) => p.uri === selectedRelatedExpressionProperty)
+                ?.range
+            }
+            selectedLanguage={selectedLanguage}
+            onSelect={addRelatedExpressionProperty}
+            onCancel={() => setSelectedRelatedExpressionProperty("")}
+          />
+        )}
+
         {relatedExpressionPropertiesWithValues.map((propertyUri) => (
           <ObjectPropertySection
             key={propertyUri}
@@ -1197,20 +1253,6 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
             onRemoveValue={(index) => removePropertyValue(propertyUri, index)}
           />
         ))}
-
-        {selectedRelatedExpressionProperty && (
-          <RelatedExpressionSelector
-            config={config}
-            propertyUri={selectedRelatedExpressionProperty}
-            rangeUri={
-              relatedExpressionProperties.find((p) => p.uri === selectedRelatedExpressionProperty)
-                ?.range
-            }
-            selectedLanguage={selectedLanguage}
-            onSelect={addRelatedExpressionProperty}
-            onCancel={() => setSelectedRelatedExpressionProperty("")}
-          />
-        )}
 
         {/* Related Manifestations Section */}
         {isEditing && (
@@ -1253,6 +1295,20 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           </>
         )}
 
+        {selectedRelatedManifestationProperty && (
+          <RelatedManifestationSelector
+            config={config}
+            propertyUri={selectedRelatedManifestationProperty}
+            rangeUri={
+              relatedManifestationProperties.find((p) => p.uri === selectedRelatedManifestationProperty)
+                ?.range
+            }
+            selectedLanguage={selectedLanguage}
+            onSelect={addRelatedManifestationProperty}
+            onCancel={() => setSelectedRelatedManifestationProperty("")}
+          />
+        )}
+
         {relatedManifestationPropertiesWithValues.map((propertyUri) => (
           <ObjectPropertySection
             key={propertyUri}
@@ -1271,20 +1327,6 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
             onRemoveValue={(index) => removePropertyValue(propertyUri, index)}
           />
         ))}
-
-        {selectedRelatedManifestationProperty && (
-          <RelatedManifestationSelector
-            config={config}
-            propertyUri={selectedRelatedManifestationProperty}
-            rangeUri={
-              relatedManifestationProperties.find((p) => p.uri === selectedRelatedManifestationProperty)
-                ?.range
-            }
-            selectedLanguage={selectedLanguage}
-            onSelect={addRelatedManifestationProperty}
-            onCancel={() => setSelectedRelatedManifestationProperty("")}
-          />
-        )}
       </Box>
 
       {/* Label Manager Dialog */}
@@ -1309,7 +1351,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
             {t("dialogs.delete.message")}
           </DialogContentText>
           <DialogContentText sx={{ mt: 1, fontWeight: "bold" }}>
-            {t("dialogs.delete.entityLabel", { entityUri })}
+            {t("dialogs.delete.entityLabel", { entityName: entityDisplayName })}
           </DialogContentText>
           {deleteError && (
             <Alert severity="error" sx={{ mt: 2 }}>
@@ -1334,6 +1376,31 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
             }
           >
             {deleting ? t("common:buttons.deleting", { ns: "common" }) : t("common:buttons.delete", { ns: "common" })}
+          </Button>
+        </DialogActions>
+      </Dialog>
+
+      {/* Discard Changes Confirmation Dialog */}
+      <Dialog
+        open={discardDialogOpen}
+        onClose={() => setDiscardDialogOpen(false)}
+        aria-labelledby="discard-dialog-title"
+        aria-describedby="discard-dialog-description"
+      >
+        <DialogTitle id="discard-dialog-title">
+          {t("dialogs.discard.title")}
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText id="discard-dialog-description">
+            {t("dialogs.discard.message")}
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setDiscardDialogOpen(false)}>
+            {t("common:buttons.cancel", { ns: "common" })}
+          </Button>
+          <Button onClick={performCancel} color="warning" variant="contained">
+            {t("dialogs.discard.confirm")}
           </Button>
         </DialogActions>
       </Dialog>

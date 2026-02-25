@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, Typography, IconButton } from "@mui/material";
-import { Delete } from "@mui/icons-material";
+import { Box, Typography, IconButton, Tooltip } from "@mui/material";
+import { Delete, Tag } from "@mui/icons-material";
 import { useQuery } from "@tanstack/react-query";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import { SparqlClient } from "../utils/sparqlClient";
@@ -64,19 +64,17 @@ const ObjectPropertyValue: React.FC<ObjectPropertyValueProps> = ({
           borderRadius: 1,
         }}
       >
-        <Typography
-          variant="body2"
-          sx={{ fontWeight: "bold", lineHeight: 1.2 }}
-        >
-          {displayLabel}
-        </Typography>
-        <Typography
-          variant="caption"
-          color="text.secondary"
-          sx={{ lineHeight: 1.1 }}
-        >
-          {value}
-        </Typography>
+        <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
+          <Typography
+            variant="body2"
+            sx={{ fontWeight: "bold", lineHeight: 1.2 }}
+          >
+            {displayLabel}
+          </Typography>
+          <Tooltip title={value} placement="bottom-start">
+            <Tag sx={{ fontSize: "0.875rem", color: "text.disabled", flexShrink: 0 }} />
+          </Tooltip>
+        </Box>
       </Box>
       {isEditing && (
         <IconButton
