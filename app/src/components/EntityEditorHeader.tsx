@@ -1,16 +1,30 @@
-import React from "react";
-import { Box, Typography, Button, CircularProgress } from "@mui/material";
+import React, { useState } from "react";
+import {
+  Box,
+  Typography,
+  Button,
+  CircularProgress,
+  IconButton,
+  Menu,
+  MenuItem,
+  ListItemIcon,
+  ListItemText,
+  Tooltip,
+} from "@mui/material";
 import {
   Edit,
   Save,
   Add,
   DeleteForever,
   AccountTree,
+  MoreVert,
+  Label,
 } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 
 interface EntityEditorHeaderProps {
   entityUri: string | null;
+  entityLabel: string | null;
   isEditing: boolean;
   saving: boolean;
   uriError: boolean;
@@ -22,10 +36,12 @@ interface EntityEditorHeaderProps {
   onDelete: () => void;
   onNew: () => void;
   onOpenGraph: (event: React.MouseEvent) => void;
+  onEditLabels: () => void;
 }
 
 const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
   entityUri,
+  entityLabel,
   isEditing,
   saving,
   uriError,
@@ -37,8 +53,13 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
   onDelete,
   onNew,
   onOpenGraph,
+  onEditLabels,
 }) => {
   const { t } = useTranslation("entityEditor");
+  const [menuAnchor, setMenuAnchor] = useState<null | HTMLElement>(null);
+
+  const titleText = entityLabel || (entityUri ? t("messages.noLabel") : t("title.create"));
+  const titleMuted = !entityLabel;
 
   return (
     <Box
@@ -46,18 +67,38 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
         p: 2,
         borderBottom: 1,
         borderColor: "divider",
-        minHeight: 72,
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
+        minHeight: 64,
       }}
     >
-      <Typography variant="h6" sx={{ display: "flex", alignItems: "center" }}>
-        {entityUri ? <Edit sx={{ mr: 1 }} /> : <Add sx={{ mr: 1 }} />}
-        {entityUri ? t("title.edit") : t("title.create")}
-      </Typography>
+      {/* Left: label as title + label-edit icon */}
+      <Box sx={{ display: "flex", alignItems: "center", gap: 0.5, minWidth: 0, flex: 1, mr: 1 }}>
+        <Typography
+          variant="h6"
+          noWrap
+          sx={{ color: titleMuted ? "text.disabled" : "text.primary", fontStyle: titleMuted ? "italic" : "normal" }}
+        >
+          {titleText}
+        </Typography>
+        <Tooltip title={t("common:buttons.editLabels", { ns: "common" })}>
+          <span>
+            <IconButton
+              size="small"
+              onClick={onEditLabels}
+              disabled={!classUri}
+              aria-label={t("common:buttons.editLabels", { ns: "common" })}
+              sx={{ color: isEditing ? "primary.main" : "text.disabled", flexShrink: 0 }}
+            >
+              <Label fontSize="small" />
+            </IconButton>
+          </span>
+        </Tooltip>
+      </Box>
 
-      <Box sx={{ display: "flex", gap: 1 }}>
+      {/* Right: action buttons */}
+      <Box sx={{ display: "flex", gap: 1, flexShrink: 0 }}>
         {isEditing ? (
           <>
             <Button
@@ -118,16 +159,34 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
                 >
                   {t("common:buttons.new", { ns: "common" })}
                 </Button>
-                <Button
-                  variant="outlined"
+                <IconButton
                   size="small"
-                  onClick={onDelete}
-                  startIcon={<DeleteForever />}
-                  color="error"
-                  aria-label={t("common:buttons.delete", { ns: "common" })}
+                  onClick={(e) => setMenuAnchor(e.currentTarget)}
+                  aria-label={t("common:buttons.moreActions", { ns: "common" })}
+                  aria-haspopup="true"
                 >
-                  {t("common:buttons.delete", { ns: "common" })}
-                </Button>
+                  <MoreVert />
+                </IconButton>
+                <Menu
+                  anchorEl={menuAnchor}
+                  open={Boolean(menuAnchor)}
+                  onClose={() => setMenuAnchor(null)}
+                  anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+                  transformOrigin={{ vertical: "top", horizontal: "right" }}
+                >
+                  <MenuItem
+                    onClick={() => {
+                      setMenuAnchor(null);
+                      onDelete();
+                    }}
+                    sx={{ color: "error.main" }}
+                  >
+                    <ListItemIcon>
+                      <DeleteForever fontSize="small" sx={{ color: "error.main" }} />
+                    </ListItemIcon>
+                    <ListItemText>{t("common:buttons.delete", { ns: "common" })}</ListItemText>
+                  </MenuItem>
+                </Menu>
               </>
             )}
           </>

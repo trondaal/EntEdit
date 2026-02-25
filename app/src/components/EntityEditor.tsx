@@ -33,7 +33,6 @@ import {
 } from "../hooks/useSparqlQueries";
 import LabelManager from "./LabelManager";
 import EntityEditorHeader from "./EntityEditorHeader";
-import EntityLabelsSection from "./EntityLabelsSection";
 import DataPropertiesSection from "./DataPropertiesSection";
 import ObjectPropertySection from "./ObjectPropertySection";
 import ObjectPropertySelector from "./ObjectPropertySelector";
@@ -734,15 +733,17 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     return customEntityUri && !isValidUri(customEntityUri);
   }, [customEntityUri]);
 
-  // Human-readable label for the delete confirmation dialog
-  const entityDisplayName = useMemo(() => {
-    if (!entityLabels.length) return entityUri || "";
+  // Primary label for the header and delete confirmation dialog
+  const primaryEntityLabel = useMemo(() => {
+    if (!entityLabels.length) return null;
     const langMatch = entityLabels.find((l) => l.language === selectedLanguage);
     if (langMatch) return langMatch.value;
     const noLangMatch = entityLabels.find((l) => l.language === "");
     if (noLangMatch) return noLangMatch.value;
     return entityLabels[0].value;
-  }, [entityLabels, selectedLanguage, entityUri]);
+  }, [entityLabels, selectedLanguage]);
+
+  const entityDisplayName = primaryEntityLabel || entityUri || "";
 
   // Additional handlers for the header component
   const handleEdit = useCallback(() => setIsEditing(true), []);
@@ -812,6 +813,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     <Paper elevation={1} sx={{ height: { xs: "auto", md: "100%" }, display: "flex", flexDirection: "column" }}>
       <EntityEditorHeader
         entityUri={entityUri}
+        entityLabel={primaryEntityLabel}
         isEditing={isEditing}
         saving={saving}
         uriError={!!uriError}
@@ -823,6 +825,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         onDelete={handleDeleteDialog}
         onNew={handleNew}
         onOpenGraph={handleOpenGraph}
+        onEditLabels={handleEditLabels}
       />
 
       <Box sx={{ p: 3, flex: 1, overflow: "auto" }}>
@@ -836,14 +839,6 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
             {saveError}
           </Alert>
         )}
-
-        <EntityLabelsSection
-          entityLabels={entityLabels}
-          selectedLanguage={selectedLanguage}
-          isEditing={isEditing}
-          classUri={classUri}
-          onEditLabels={handleEditLabels}
-        />
 
         <TextField
           fullWidth
