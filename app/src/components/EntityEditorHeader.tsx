@@ -10,6 +10,7 @@ import {
   ListItemIcon,
   ListItemText,
   Tooltip,
+  Divider,
 } from "@mui/material";
 import {
   Edit,
@@ -60,15 +61,16 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
   const { t } = useTranslation("entityEditor");
   const [menuAnchor, setMenuAnchor] = useState<null | HTMLElement>(null);
 
-  // Existing entity with label → show label
-  // Existing entity without label → "Edit <ClassName>"
-  // New entity → "Describe a new <ClassName>"
   const resolvedClassName = className || t("title.defaultClassName");
   const titleText = entityLabel
     || (entityUri
       ? t("title.edit", { className: resolvedClassName })
       : t("title.create", { className: resolvedClassName }));
   const titleMuted = !entityLabel;
+
+  // Menu is only meaningful when an entity is selected
+  const menuDisabled = !entityUri;
+  const handleMenuClose = () => setMenuAnchor(null);
 
   return (
     <Box
@@ -107,7 +109,7 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
       </Box>
 
       {/* Right: action buttons */}
-      <Box sx={{ display: "flex", gap: 1, flexShrink: 0 }}>
+      <Box sx={{ display: "flex", gap: 1, flexShrink: 0, alignItems: "center" }}>
         {isEditing ? (
           <>
             <Button
@@ -132,74 +134,69 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
             )}
           </>
         ) : (
-          <>
-            <Button
-              variant="contained"
-              size="small"
-              onClick={onEdit}
-              startIcon={<Edit />}
-              aria-label={t("common:buttons.edit", { ns: "common" })}
-            >
-              {t("common:buttons.edit", { ns: "common" })}
-            </Button>
-            {entityUri && (
-              <>
-                <Button
-                  variant="outlined"
-                  size="small"
-                  onClick={onOpenGraph}
-                  component="a"
-                  href={graphUrl || undefined}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  startIcon={<AccountTree />}
-                  color="primary"
-                  aria-label={t("common:buttons.graph", { ns: "common" })}
-                >
-                  {t("common:buttons.graph", { ns: "common" })}
-                </Button>
-                <Button
-                  variant="outlined"
-                  size="small"
-                  onClick={onNew}
-                  startIcon={<Add />}
-                  color="success"
-                  aria-label={t("common:buttons.new", { ns: "common" })}
-                >
-                  {t("common:buttons.new", { ns: "common" })}
-                </Button>
-                <IconButton
-                  size="small"
-                  onClick={(e) => setMenuAnchor(e.currentTarget)}
-                  aria-label={t("common:buttons.moreActions", { ns: "common" })}
-                  aria-haspopup="true"
-                >
-                  <MoreVert />
-                </IconButton>
-                <Menu
-                  anchorEl={menuAnchor}
-                  open={Boolean(menuAnchor)}
-                  onClose={() => setMenuAnchor(null)}
-                  anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-                  transformOrigin={{ vertical: "top", horizontal: "right" }}
-                >
-                  <MenuItem
-                    onClick={() => {
-                      setMenuAnchor(null);
-                      onDelete();
-                    }}
-                    sx={{ color: "error.main" }}
-                  >
-                    <ListItemIcon>
-                      <DeleteForever fontSize="small" sx={{ color: "error.main" }} />
-                    </ListItemIcon>
-                    <ListItemText>{t("common:buttons.delete", { ns: "common" })}</ListItemText>
-                  </MenuItem>
-                </Menu>
-              </>
-            )}
-          </>
+          <Button
+            variant="contained"
+            size="small"
+            onClick={onEdit}
+            startIcon={<Edit />}
+            disabled={!classUri}
+            aria-label={t("common:buttons.edit", { ns: "common" })}
+          >
+            {t("common:buttons.edit", { ns: "common" })}
+          </Button>
         )}
+
+        {/* MoreVert always visible; disabled when no entity is selected */}
+        <Tooltip title={menuDisabled ? "" : t("common:buttons.moreActions", { ns: "common" })}>
+          <span>
+            <IconButton
+              size="small"
+              onClick={(e) => setMenuAnchor(e.currentTarget)}
+              disabled={menuDisabled}
+              aria-label={t("common:buttons.moreActions", { ns: "common" })}
+              aria-haspopup="true"
+            >
+              <MoreVert />
+            </IconButton>
+          </span>
+        </Tooltip>
+
+        <Menu
+          anchorEl={menuAnchor}
+          open={Boolean(menuAnchor)}
+          onClose={handleMenuClose}
+          anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+          transformOrigin={{ vertical: "top", horizontal: "right" }}
+        >
+          <MenuItem onClick={() => { handleMenuClose(); onNew(); }}>
+            <ListItemIcon>
+              <Add fontSize="small" />
+            </ListItemIcon>
+            <ListItemText>{t("common:buttons.new", { ns: "common" })}</ListItemText>
+          </MenuItem>
+          <MenuItem
+            onClick={(e) => { handleMenuClose(); onOpenGraph(e); }}
+            component="a"
+            href={graphUrl || undefined}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <ListItemIcon>
+              <AccountTree fontSize="small" />
+            </ListItemIcon>
+            <ListItemText>{t("common:buttons.graph", { ns: "common" })}</ListItemText>
+          </MenuItem>
+          <Divider />
+          <MenuItem
+            onClick={() => { handleMenuClose(); onDelete(); }}
+            sx={{ color: "error.main" }}
+          >
+            <ListItemIcon>
+              <DeleteForever fontSize="small" sx={{ color: "error.main" }} />
+            </ListItemIcon>
+            <ListItemText>{t("common:buttons.delete", { ns: "common" })}</ListItemText>
+          </MenuItem>
+        </Menu>
       </Box>
     </Box>
   );
