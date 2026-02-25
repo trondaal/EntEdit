@@ -47,6 +47,7 @@ import { escapeSparqlLiteral, isValidUri, formatLabel } from "../utils/labelUtil
 interface EntityEditorProps {
   config: SparqlEndpointConfig;
   classUri: string;
+  className: string | null;
   entityUri: string | null;
   properties: RdfProperty[];
   objectProperties: RdfProperty[];
@@ -60,6 +61,7 @@ interface EntityEditorProps {
 const EntityEditor: React.FC<EntityEditorProps> = ({
   config,
   classUri,
+  className,
   entityUri,
   properties,
   objectProperties,
@@ -814,6 +816,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       <EntityEditorHeader
         entityUri={entityUri}
         entityLabel={primaryEntityLabel}
+        className={className}
         isEditing={isEditing}
         saving={saving}
         uriError={!!uriError}
@@ -854,6 +857,8 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           error={!!uriError}
           sx={{
             mb: 2,
+            "& .MuiInputBase-input": { fontSize: "0.875rem", py: 0.75 },
+            "& .MuiInputLabel-outlined": { fontSize: "0.875rem" },
             "& .MuiInputBase-root.Mui-disabled": {
               backgroundColor: "rgba(0, 0, 0, 0.04)",
             },

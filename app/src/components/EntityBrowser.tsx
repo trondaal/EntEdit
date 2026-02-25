@@ -11,6 +11,7 @@ import {
   Box,
   TextField,
   Tooltip,
+  Chip,
 } from "@mui/material";
 import { Class, Description, Search, Tag } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
@@ -114,14 +115,25 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
       >
         <Box sx={{ display: "flex", flexDirection: "column", overflow: { xs: "visible", md: "hidden" } }}>
           <Paper elevation={1} sx={{ height: { xs: "auto", md: "100%" }, display: "flex", flexDirection: "column" }}>
-            <Box sx={{ p: 2, borderBottom: 1, borderColor: "divider", height: 88, display: "flex", flexDirection: "column", justifyContent: "flex-end" }}>
+            <Box sx={{ p: 2, borderBottom: 1, borderColor: "divider", height: 64, display: "flex", alignItems: "center", gap: 1 }}>
               <Typography
                 variant="h6"
-                sx={{ display: "flex", alignItems: "center" }}
+                sx={{ display: "flex", alignItems: "center", flexShrink: 0 }}
               >
                 <Class sx={{ mr: 1 }} />
                 {t("navigation.classes")}
               </Typography>
+              {selectedClass && (
+                <Chip
+                  label={formatLabel(
+                    classes?.find((c) => c.uri === selectedClass)?.label,
+                    selectedClass,
+                  )}
+                  size="small"
+                  color="primary"
+                  variant="outlined"
+                />
+              )}
             </Box>
 
             {classesLoading ? (
@@ -156,53 +168,41 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
                 p: 2,
                 borderBottom: 1,
                 borderColor: "divider",
-                height: 88,
+                height: 64,
                 display: "flex",
-                flexDirection: "column",
+                alignItems: "center",
+                gap: 2,
               }}
             >
+              <Typography
+                variant="h6"
+                sx={{ display: "flex", alignItems: "center", flexShrink: 0 }}
+              >
+                <Description sx={{ mr: 1 }} />
+                {t("navigation.entities")}
+              </Typography>
+
               {selectedClass && (
-                <Typography variant="body2" color="text.secondary" sx={{ pl: 4 }}>
-                  {formatLabel(
-                    classes?.find((c) => c.uri === selectedClass)?.label,
-                    selectedClass,
-                  )}
-                </Typography>
+                <TextField
+                  size="small"
+                  placeholder={t("labels.filter")}
+                  value={entityFilter}
+                  onChange={(e) => setEntityFilter(e.target.value)}
+                  sx={{ flex: 1, minWidth: 80 }}
+                  aria-label={t("labels.filter")}
+                  InputProps={{
+                    startAdornment: (
+                      <Search
+                        sx={{
+                          mr: 1,
+                          color: "action.active",
+                          fontSize: "1rem",
+                        }}
+                      />
+                    ),
+                  }}
+                />
               )}
-
-              <Box sx={{ flex: 1 }} />
-
-              <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-                <Typography
-                  variant="h6"
-                  sx={{ display: "flex", alignItems: "center", flexShrink: 0 }}
-                >
-                  <Description sx={{ mr: 1 }} />
-                  {t("navigation.entities")}
-                </Typography>
-
-                {selectedClass && (
-                  <TextField
-                    size="small"
-                    placeholder={t("labels.filter")}
-                    value={entityFilter}
-                    onChange={(e) => setEntityFilter(e.target.value)}
-                    sx={{ flex: 1, minWidth: 80 }}
-                    aria-label={t("labels.filter")}
-                    InputProps={{
-                      startAdornment: (
-                        <Search
-                          sx={{
-                            mr: 1,
-                            color: "action.active",
-                            fontSize: "1rem",
-                          }}
-                        />
-                      ),
-                    }}
-                  />
-                )}
-              </Box>
             </Box>
 
             {!selectedClass ? (
@@ -255,6 +255,9 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
           <EntityEditor
             config={config}
             classUri={selectedClass || ""}
+            className={selectedClass
+              ? formatLabel(classes?.find((c) => c.uri === selectedClass)?.label, selectedClass)
+              : null}
             entityUri={selectedEntity}
             properties={properties || []}
             objectProperties={objectProperties || []}

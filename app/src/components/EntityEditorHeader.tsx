@@ -25,6 +25,7 @@ import { useTranslation } from "react-i18next";
 interface EntityEditorHeaderProps {
   entityUri: string | null;
   entityLabel: string | null;
+  className: string | null;
   isEditing: boolean;
   saving: boolean;
   uriError: boolean;
@@ -42,6 +43,7 @@ interface EntityEditorHeaderProps {
 const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
   entityUri,
   entityLabel,
+  className,
   isEditing,
   saving,
   uriError,
@@ -58,7 +60,14 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
   const { t } = useTranslation("entityEditor");
   const [menuAnchor, setMenuAnchor] = useState<null | HTMLElement>(null);
 
-  const titleText = entityLabel || (entityUri ? t("messages.noLabel") : t("title.create"));
+  // Existing entity with label → show label
+  // Existing entity without label → "Edit <ClassName>"
+  // New entity → "Describe a new <ClassName>"
+  const resolvedClassName = className || t("title.defaultClassName");
+  const titleText = entityLabel
+    || (entityUri
+      ? t("title.edit", { className: resolvedClassName })
+      : t("title.create", { className: resolvedClassName }));
   const titleMuted = !entityLabel;
 
   return (
