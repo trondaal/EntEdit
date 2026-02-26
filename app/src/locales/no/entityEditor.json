@@ -36,6 +36,29 @@
     "entityCreated": "Entitet opprettet",
     "entityDeleted": "Entitet slettet"
   },
+  "labelManager": {
+    "title": "Administrer etiketter",
+    "columns": {
+      "label": "Etikett",
+      "language": "Språk"
+    },
+    "empty": "Ingen etiketter ennå — klikk Legg til for å opprette en",
+    "placeholders": {
+      "labelValue": "Etikettverdi"
+    },
+    "tooltips": {
+      "save": "Lagre",
+      "cancel": "Avbryt",
+      "edit": "Rediger",
+      "delete": "Slett"
+    },
+    "errors": {
+      "emptyValue": "Etikettverdi kan ikke være tom",
+      "duplicateLanguage": "En etikett med språk \"{{lang}}\" finnes allerede",
+      "duplicateNoLanguage": "En etikett uten språktag finnes allerede",
+      "unsavedEdit": "Vennligst lagre eller avbryt gjeldende redigering først"
+    }
+  },
   "dialogs": {
     "delete": {
       "title": "Slett entitet",

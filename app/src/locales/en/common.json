@@ -11,7 +11,9 @@
     "add": "Add",
     "remove": "Remove",
     "graph": "Graph",
-    "editLabels": "Edit Labels"
+    "editLabels": "Edit Labels",
+    "moreActions": "More actions",
+    "apply": "Apply"
   },
   "labels": {
     "language": "Language",
@@ -19,14 +21,14 @@
     "loading": "Loading...",
     "noResults": "No results found",
     "filter": "Filter...",
-    "addTextValue": "Add text value",
-    "addCategory": "Add category",
-    "addRelated": "Add related",
-    "addWEMI": "Add WEMI relationship",
-    "addAgent": "Add related agent",
-    "addRelatedWork": "Add related work",
-    "addRelatedExpression": "Add related expression",
-    "addRelatedManifestation": "Add related manifestation"
+    "addTextValue": "Add",
+    "addCategory": "Add",
+    "addRelated": "Add",
+    "addWEMI": "Add",
+    "addAgent": "Add",
+    "addRelatedWork": "Add",
+    "addRelatedExpression": "Add",
+    "addRelatedManifestation": "Add"
   },
   "navigation": {
     "classes": "Classes",

@@ -11,7 +11,9 @@
     "add": "Legg til",
     "remove": "Fjern",
     "graph": "Graf",
-    "editLabels": "Rediger etiketter"
+    "editLabels": "Rediger etiketter",
+    "moreActions": "Flere handlinger",
+    "apply": "Bruk"
   },
   "labels": {
     "language": "Språk",

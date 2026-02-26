@@ -19,6 +19,7 @@ import {
   Tooltip,
 } from "@mui/material";
 import { Add, Delete, Edit, Save, Cancel, Label } from "@mui/icons-material";
+import { useTranslation } from "react-i18next";
 import { useAvailableLanguages } from "../hooks/useSparqlQueries";
 import type { SparqlEndpointConfig } from "../types/sparql";
 
@@ -43,6 +44,7 @@ const LabelManager: React.FC<LabelManagerProps> = ({
   initialLabels,
   config,
 }) => {
+  const { t } = useTranslation("entityEditor");
   const [labels, setLabels] = useState<LabelEntry[]>(initialLabels);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [tempValue, setTempValue] = useState("");
@@ -74,7 +76,7 @@ const LabelManager: React.FC<LabelManagerProps> = ({
 
   const handleSaveRow = () => {
     if (!tempValue.trim()) {
-      setError("Label value cannot be empty");
+      setError(t("labelManager.errors.emptyValue"));
       return;
     }
     const duplicate = labels.find(
@@ -83,8 +85,8 @@ const LabelManager: React.FC<LabelManagerProps> = ({
     if (duplicate) {
       setError(
         tempLanguage
-          ? `A label with language "${tempLanguage}" already exists`
-          : "A label without a language tag already exists"
+          ? t("labelManager.errors.duplicateLanguage", { lang: tempLanguage })
+          : t("labelManager.errors.duplicateNoLanguage")
       );
       return;
     }
@@ -119,7 +121,7 @@ const LabelManager: React.FC<LabelManagerProps> = ({
 
   const handleApply = () => {
     if (editingId) {
-      setError("Please save or cancel the current edit first");
+      setError(t("labelManager.errors.unsavedEdit"));
       return;
     }
     onSave(labels);
@@ -127,7 +129,7 @@ const LabelManager: React.FC<LabelManagerProps> = ({
 
   const handleClose = () => {
     if (editingId) {
-      setError("Please save or cancel the current edit first");
+      setError(t("labelManager.errors.unsavedEdit"));
       return;
     }
     onClose();
@@ -137,7 +139,7 @@ const LabelManager: React.FC<LabelManagerProps> = ({
     <Dialog open={open} onClose={handleClose} maxWidth="sm" fullWidth>
       <DialogTitle sx={{ display: "flex", alignItems: "center", gap: 1, pb: 1 }}>
         <Label fontSize="small" />
-        Manage Labels
+        {t("labelManager.title")}
       </DialogTitle>
 
       <DialogContent sx={{ pt: 1 }}>
@@ -150,8 +152,8 @@ const LabelManager: React.FC<LabelManagerProps> = ({
         <Table size="small">
           <TableHead>
             <TableRow>
-              <TableCell>Label</TableCell>
-              <TableCell sx={{ width: 110 }}>Language</TableCell>
+              <TableCell>{t("labelManager.columns.label")}</TableCell>
+              <TableCell sx={{ width: 110 }}>{t("labelManager.columns.language")}</TableCell>
               <TableCell sx={{ width: 80 }} />
             </TableRow>
           </TableHead>
@@ -168,7 +170,7 @@ const LabelManager: React.FC<LabelManagerProps> = ({
                       autoFocus
                       error={!tempValue.trim()}
                       onKeyDown={(e) => e.key === "Enter" && handleSaveRow()}
-                      placeholder="Label value"
+                      placeholder={t("labelManager.placeholders.labelValue")}
                     />
                   </TableCell>
                   <TableCell sx={{ py: 0.5 }}>
@@ -188,12 +190,12 @@ const LabelManager: React.FC<LabelManagerProps> = ({
                     </Select>
                   </TableCell>
                   <TableCell sx={{ py: 0.5 }}>
-                    <Tooltip title="Save">
+                    <Tooltip title={t("labelManager.tooltips.save")}>
                       <IconButton size="small" onClick={handleSaveRow} color="primary">
                         <Save fontSize="small" />
                       </IconButton>
                     </Tooltip>
-                    <Tooltip title="Cancel">
+                    <Tooltip title={t("labelManager.tooltips.cancel")}>
                       <IconButton size="small" onClick={handleCancelRow}>
                         <Cancel fontSize="small" />
                       </IconButton>
@@ -207,7 +209,7 @@ const LabelManager: React.FC<LabelManagerProps> = ({
                     {label.language ? label.language.toUpperCase() : "—"}
                   </TableCell>
                   <TableCell>
-                    <Tooltip title="Edit">
+                    <Tooltip title={t("labelManager.tooltips.edit")}>
                       <span>
                         <IconButton
                           size="small"
@@ -218,7 +220,7 @@ const LabelManager: React.FC<LabelManagerProps> = ({
                         </IconButton>
                       </span>
                     </Tooltip>
-                    <Tooltip title="Delete">
+                    <Tooltip title={t("labelManager.tooltips.delete")}>
                       <span>
                         <IconButton
                           size="small"
@@ -237,7 +239,7 @@ const LabelManager: React.FC<LabelManagerProps> = ({
             {labels.length === 0 && (
               <TableRow>
                 <TableCell colSpan={3} sx={{ color: "text.disabled", textAlign: "center", py: 2 }}>
-                  No labels yet — click Add to create one
+                  {t("labelManager.empty")}
                 </TableCell>
               </TableRow>
             )}
@@ -252,11 +254,11 @@ const LabelManager: React.FC<LabelManagerProps> = ({
           onClick={handleAddLabel}
           disabled={!!editingId}
         >
-          Add
+          {t("common:buttons.add")}
         </Button>
         <Box sx={{ display: "flex", gap: 1 }}>
           <Button onClick={handleClose} disabled={!!editingId}>
-            Cancel
+            {t("common:buttons.cancel")}
           </Button>
           <Button
             variant="contained"
@@ -264,7 +266,7 @@ const LabelManager: React.FC<LabelManagerProps> = ({
             disabled={!!editingId}
             startIcon={<Save />}
           >
-            Apply
+            {t("common:buttons.apply")}
           </Button>
         </Box>
       </DialogActions>
