@@ -121,10 +121,10 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
                 size="small"
                 placeholder={`Enter ${getPropertyLabel(propertyUri)}`}
                 sx={{
-                  "& .MuiInputBase-input": { py: 0.75 },
-                  "& .MuiInputLabel-outlined": {
-                    color: "#4F4F4F",
-                    fontSize: 17,
+                  "& .MuiInputBase-input": { fontSize: "0.875rem", py: 0.75 },
+                  "& .MuiInputLabel-outlined": { fontSize: "0.875rem" },
+                  "& .MuiInputBase-input.Mui-disabled": {
+                    WebkitTextFillColor: "rgba(0, 0, 0, 0.75)",
                   },
                 }}
               />

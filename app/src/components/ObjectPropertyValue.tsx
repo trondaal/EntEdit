@@ -65,10 +65,7 @@ const ObjectPropertyValue: React.FC<ObjectPropertyValueProps> = ({
         }}
       >
         <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
-          <Typography
-            variant="body2"
-            sx={{ fontWeight: "bold", lineHeight: 1.2 }}
-          >
+          <Typography variant="body2">
             {displayLabel}
           </Typography>
           <Tooltip title={value} placement="bottom-start">

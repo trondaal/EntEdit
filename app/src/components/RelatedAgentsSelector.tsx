@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Typography,
   Button,
   CircularProgress,
+  TextField,
+  InputAdornment,
+  Tooltip,
 } from "@mui/material";
+import { Search, Tag } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import { useEntitiesByRange } from "../hooks/useSparqlQueries";
@@ -27,6 +31,7 @@ const RelatedAgentsSelector: React.FC<RelatedAgentsSelectorProps> = ({
   onCancel,
 }) => {
   const { t } = useTranslation("entityEditor");
+  const [filter, setFilter] = useState("");
   const { data: entities, isLoading } = useEntitiesByRange(
     config,
     rangeUri || "",
@@ -101,8 +106,29 @@ const RelatedAgentsSelector: React.FC<RelatedAgentsSelectorProps> = ({
       <Typography variant="subtitle2" sx={{ mb: 1 }}>
         {t("messages.selectRelatedAgent")} {/* Related Agents */}
       </Typography>
-      <Box sx={{ maxHeight: 200, overflow: "auto" }}>
-        {entities.map((entity) => (
+      <TextField
+        size="small"
+        fullWidth
+        placeholder={t("placeholders.filterEntities")}
+        value={filter}
+        onChange={(e) => setFilter(e.target.value)}
+        sx={{ mb: 1 }}
+        slotProps={{
+          input: {
+            startAdornment: (
+              <InputAdornment position="start">
+                <Search fontSize="small" sx={{ color: "action.active" }} />
+              </InputAdornment>
+            ),
+          },
+        }}
+      />
+      <Box sx={{ maxHeight: 320, overflow: "auto" }}>
+        {entities
+          .filter((entity) =>
+            entity.label.toLowerCase().includes(filter.toLowerCase()),
+          )
+          .map((entity) => (
           <Button
             key={`${rangeUri}-${entity.uri}`}
             fullWidth
@@ -113,15 +139,14 @@ const RelatedAgentsSelector: React.FC<RelatedAgentsSelectorProps> = ({
               mb: 1,
               justifyContent: "flex-start",
               textAlign: "left",
-              display: "block",
             }}
           >
-            <Typography variant="body2" sx={{ fontWeight: "bold" }}>
+            <Typography variant="body2" noWrap>
               {entity.label}
             </Typography>
-            <Typography variant="caption" color="text.secondary">
-              {entity.uri}
-            </Typography>
+            <Tooltip title={entity.uri} placement="bottom-start">
+              <Tag sx={{ fontSize: "0.875rem", color: "text.disabled", flexShrink: 0, ml: 0.5 }} />
+            </Tooltip>
           </Button>
         ))}
       </Box>
