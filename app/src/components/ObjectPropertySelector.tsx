@@ -141,7 +141,7 @@ const ObjectPropertySelector: React.FC<ObjectPropertySelectorProps> = ({
               textAlign: "left",
             }}
           >
-            <Typography variant="body2" noWrap sx={{ flex: 1 }}>
+            <Typography variant="body2" noWrap>
               {entity.label}
             </Typography>
             <Tooltip title={entity.uri} placement="bottom-start">

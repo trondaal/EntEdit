@@ -233,7 +233,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
                       <ListItemText
                         primary={
                           <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
-                            <Typography variant="body2" noWrap sx={{ flex: 1 }}>
+                            <Typography variant="body2" noWrap>
                               {entity.label}
                             </Typography>
                             <Tooltip title={entity.uri} placement="bottom-start">
