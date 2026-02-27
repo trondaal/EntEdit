@@ -7,6 +7,10 @@ import {
   TextField,
   InputAdornment,
   Tooltip,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
 } from "@mui/material";
 import { Search, Tag } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
@@ -95,66 +99,94 @@ const EntityPickerPanel: React.FC<EntityPickerPanelProps> = ({
     );
   }
 
+  const filtered = entities.filter((entity) =>
+    entity.label.toLowerCase().includes(filter.toLowerCase()),
+  );
+
   return (
     <Box
       sx={{
         mb: 2,
-        p: 2,
         border: 1,
         borderColor: "primary.main",
         borderRadius: 1,
+        overflow: "hidden",
       }}
     >
-      <Typography variant="subtitle2" sx={{ mb: 1 }}>
-        {promptLabel}
-      </Typography>
-      <TextField
-        size="small"
-        fullWidth
-        placeholder={t("placeholders.filterEntities")}
-        value={filter}
-        onChange={(e) => setFilter(e.target.value)}
-        sx={{ mb: 1 }}
-        slotProps={{
-          input: {
-            startAdornment: (
-              <InputAdornment position="start">
-                <Search fontSize="small" sx={{ color: "action.active" }} />
-              </InputAdornment>
-            ),
-          },
+      {/* Header row: prompt label + filter field */}
+      <Box
+        sx={{
+          px: 2,
+          py: 1,
+          borderBottom: 1,
+          borderColor: "divider",
+          display: "flex",
+          alignItems: "center",
+          gap: 1,
         }}
-      />
-      <Box sx={{ maxHeight: 320, overflow: "auto" }}>
-        {entities
-          .filter((entity) =>
-            entity.label.toLowerCase().includes(filter.toLowerCase()),
-          )
-          .map((entity) => (
-          <Button
-            key={`${rangeUri}-${entity.uri}`}
-            fullWidth
-            variant="outlined"
-            size="small"
-            onClick={() => onSelect(entity.uri)}
-            sx={{
-              mb: 1,
-              justifyContent: "flex-start",
-              textAlign: "left",
-            }}
-          >
-            <Typography variant="body2" noWrap>
-              {entity.label}
-            </Typography>
-            <Tooltip title={entity.uri} placement="bottom-start">
-              <Tag sx={{ fontSize: "0.875rem", color: "text.disabled", flexShrink: 0, ml: 0.5 }} />
-            </Tooltip>
-          </Button>
-        ))}
+      >
+        <Typography variant="subtitle2" sx={{ flexShrink: 0 }}>
+          {promptLabel}
+        </Typography>
+        <TextField
+          size="small"
+          placeholder={t("placeholders.filterEntities")}
+          value={filter}
+          onChange={(e) => setFilter(e.target.value)}
+          sx={{ flex: 1 }}
+          slotProps={{
+            input: {
+              startAdornment: (
+                <InputAdornment position="start">
+                  <Search fontSize="small" sx={{ color: "action.active" }} />
+                </InputAdornment>
+              ),
+            },
+          }}
+        />
       </Box>
-      <Button variant="outlined" onClick={onCancel} sx={{ mt: 1 }}>
-        {t("common:buttons.cancel", { ns: "common" })}
-      </Button>
+
+      {/* Entity list */}
+      <List disablePadding sx={{ maxHeight: 280, overflow: "auto" }}>
+        {filtered.length === 0 ? (
+          <Box sx={{ p: 2, textAlign: "center", color: "text.secondary" }}>
+            <Typography variant="body2">{t("messages.noEntitiesMatchFilter")}</Typography>
+          </Box>
+        ) : (
+          filtered.map((entity) => (
+            <ListItem key={`${rangeUri}-${entity.uri}`} disablePadding>
+              <ListItemButton onClick={() => onSelect(entity.uri)}>
+                <ListItemText
+                  primary={
+                    <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
+                      <Typography variant="body2" noWrap sx={{ flex: 1 }}>
+                        {entity.label}
+                      </Typography>
+                      <Tooltip title={entity.uri} placement="bottom-start">
+                        <Tag
+                          sx={{
+                            fontSize: "0.875rem",
+                            color: "text.disabled",
+                            flexShrink: 0,
+                          }}
+                        />
+                      </Tooltip>
+                    </Box>
+                  }
+                  disableTypography
+                />
+              </ListItemButton>
+            </ListItem>
+          ))
+        )}
+      </List>
+
+      {/* Footer: cancel */}
+      <Box sx={{ px: 2, py: 1, borderTop: 1, borderColor: "divider" }}>
+        <Button size="small" onClick={onCancel}>
+          {t("common:buttons.cancel", { ns: "common" })}
+        </Button>
+      </Box>
     </Box>
   );
 };

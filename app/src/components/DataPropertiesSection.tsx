@@ -119,7 +119,7 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
                 }
                 disabled={!isEditing || !classUri}
                 size="small"
-                placeholder={`Enter ${getPropertyLabel(propertyUri)}`}
+                placeholder={t("placeholders.enterValue", { propertyName: getPropertyLabel(propertyUri) })}
                 sx={{
                   "& .MuiInputBase-input": { fontSize: "0.875rem", py: 0.75 },
                   "& .MuiInputLabel-outlined": { fontSize: "0.875rem" },
@@ -134,7 +134,7 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
                   onClick={() => onRemoveValue(propertyUri, index)}
                   color="error"
                   sx={{ p: 0.5 }}
-                  aria-label="Remove property value"
+                  aria-label={t("common:buttons.remove", { ns: "common" })}
                 >
                   <Delete fontSize="small" />
                 </IconButton>

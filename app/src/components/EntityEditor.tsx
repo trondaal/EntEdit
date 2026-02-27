@@ -17,8 +17,10 @@ import {
   DialogContentText,
   DialogActions,
   Typography,
+  Tooltip,
+  IconButton,
 } from "@mui/material";
-import { DeleteForever } from "@mui/icons-material";
+import { ContentCopy, DeleteForever, Lock } from "@mui/icons-material";
 import { useSnackbar } from "notistack";
 import { useTranslation } from "react-i18next";
 import type { SparqlEndpointConfig, RdfProperty } from "../types/sparql";
@@ -850,32 +852,60 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           </Alert>
         )}
 
-        <TextField
-          fullWidth
-          label={t("common:labels.identifier", { ns: "common" })}
-          value={entityUri || customEntityUri}
-          onChange={(e) => {
-            if (!entityUri) {
-              // Only allow editing for new entities
-              setCustomEntityUri(e.target.value);
-            }
-          }}
-          disabled={!!entityUri || !isEditing}
-          error={!!uriError}
-          sx={{
-            mb: 2,
-            "& .MuiInputBase-input": { fontSize: "0.875rem", py: 0.75 },
-            "& .MuiInputLabel-outlined": { fontSize: "0.875rem" },
-            "& .MuiInputBase-root.Mui-disabled": {
-              backgroundColor: "rgba(0, 0, 0, 0.04)",
-            },
-            "& .MuiInputBase-input.Mui-disabled": {
-              WebkitTextFillColor: "rgba(0, 0, 0, 0.75)",
-            },
-          }}
-          size="small"
-          placeholder={t("placeholders.enterUri")}
-        />
+        {entityUri ? (
+          /* Existing entity — locked URI, read-only display with copy button */
+          <Box
+            sx={{
+              mb: 2,
+              px: 1.25,
+              py: 0.75,
+              border: 1,
+              borderColor: "divider",
+              borderRadius: 1,
+              backgroundColor: "action.hover",
+              display: "flex",
+              alignItems: "center",
+              gap: 0.5,
+              minHeight: 38,
+            }}
+          >
+            <Lock sx={{ fontSize: "0.9rem", color: "text.disabled", flexShrink: 0 }} />
+            <Typography
+              variant="body2"
+              noWrap
+              sx={{ flex: 1, color: "text.secondary", fontFamily: "monospace", fontSize: "0.8rem" }}
+            >
+              {entityUri}
+            </Typography>
+            <Tooltip title={t("tooltips.copyUri")}>
+              <IconButton
+                size="small"
+                sx={{ p: 0.5 }}
+                aria-label={t("tooltips.copyUri")}
+                onClick={() => navigator.clipboard.writeText(entityUri)}
+              >
+                <ContentCopy sx={{ fontSize: "0.9rem" }} />
+              </IconButton>
+            </Tooltip>
+          </Box>
+        ) : (
+          /* New entity — editable URI field */
+          <TextField
+            fullWidth
+            label={t("common:labels.identifier", { ns: "common" })}
+            value={customEntityUri}
+            onChange={(e) => setCustomEntityUri(e.target.value)}
+            disabled={!isEditing}
+            error={!!uriError}
+            sx={{
+              mb: 2,
+              "& .MuiInputBase-input": { fontSize: "0.875rem", py: 0.75 },
+              "& .MuiInputLabel-outlined": { fontSize: "0.875rem" },
+            }}
+            size="small"
+            placeholder={t("placeholders.enterUri")}
+          />
+        )}
 
         <DataPropertiesSection
           entityData={entityData}

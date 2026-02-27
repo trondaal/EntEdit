@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Typography, IconButton, Tooltip } from "@mui/material";
 import { Delete, Tag } from "@mui/icons-material";
 import { useQuery } from "@tanstack/react-query";
+import { useTranslation } from "react-i18next";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import { SparqlClient } from "../utils/sparqlClient";
 import { extractUriFragment, getPrimaryLabel } from "../utils/labelUtils";
@@ -23,6 +24,7 @@ const ObjectPropertyValue: React.FC<ObjectPropertyValueProps> = ({
   selectedLanguage,
   onRemove,
 }) => {
+  const { t } = useTranslation("common");
   const { data: entity } = useQuery({
     queryKey: ["entity-label", config.url, value, selectedLanguage],
     queryFn: async () => {
@@ -79,7 +81,7 @@ const ObjectPropertyValue: React.FC<ObjectPropertyValueProps> = ({
           onClick={onRemove}
           color="error"
           sx={{ p: 0.5 }}
-          aria-label="Remove property value"
+          aria-label={t("buttons.remove")}
         >
           <Delete fontSize="small" />
         </IconButton>
