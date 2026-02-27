@@ -21,6 +21,7 @@
     "loading": "Loading...",
     "noResults": "No results found",
     "filter": "Filter...",
+    "help": "Help",
     "addTextValue": "Add",
     "addCategory": "Add",
     "addRelated": "Add",
@@ -40,15 +41,24 @@
     "search": "Search"
   },
   "search": {
+    "fullTextSearch": "Full-Text Search",
     "expressionSearch": "Expression Search",
     "manifestationSearch": "Manifestation Search",
-    "searchResults": "Search Results"
+    "searchResults": "Search Results",
+    "searchPlaceholder": "Search entities using full-text search…",
+    "searchHelp": "Enter search terms to find entities using GraphDB's Lucene connector. Search will be performed across names and titles."
   },
   "messages": {
     "selectClass": "Select a class to view entities",
     "noEntitiesForClass": "No entities found for this class",
     "noEntitiesMatching": "No entities found matching \"{{filter}}\"",
-    "loadingEntities": "Loading entities..."
+    "loadingEntities": "Loading entities...",
+    "noClassesFound": "No active classes found in the ontology",
+    "entityCountFiltered": "{{shown}} of {{total}}",
+    "entityBeingEdited": "Unsaved changes",
+    "switchEntityTitle": "Unsaved changes",
+    "switchEntityMessage": "The current entity has unsaved changes. Switching to another entity will discard them.",
+    "switchEntityConfirm": "Discard and switch"
   },
   "endpointConfig": {
     "title": "SPARQL Endpoint Configuration",

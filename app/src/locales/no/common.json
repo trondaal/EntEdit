@@ -21,6 +21,7 @@
     "loading": "Laster...",
     "noResults": "Ingen resultater funnet",
     "filter": "Filter...",
+    "help": "Hjelp",
     "addTextValue": "Legg til",
     "addCategory": "Legg til",
     "addRelated": "Legg til",
@@ -40,15 +41,24 @@
     "search": "Søk"
   },
   "search": {
+    "fullTextSearch": "Fulltekstsøk",
     "expressionSearch": "Uttrykk-søk",
     "manifestationSearch": "Manifestasjon-søk",
-    "searchResults": "Søkeresultater"
+    "searchResults": "Søkeresultater",
+    "searchPlaceholder": "Søk etter entiteter med fulltekstsøk…",
+    "searchHelp": "Skriv inn søkeord for å finne entiteter via GraphDBs Lucene-kobling. Søket utføres på tvers av navn og titler."
   },
   "messages": {
     "selectClass": "Velg en klasse for å se entiteter",
     "noEntitiesForClass": "Ingen entiteter funnet for denne klassen",
     "noEntitiesMatching": "Ingen entiteter funnet som matcher \"{{filter}}\"",
-    "loadingEntities": "Laster entiteter..."
+    "loadingEntities": "Laster entiteter...",
+    "noClassesFound": "Ingen aktive klasser funnet i ontologien",
+    "entityCountFiltered": "{{shown}} av {{total}}",
+    "entityBeingEdited": "Ulagrede endringer",
+    "switchEntityTitle": "Ulagrede endringer",
+    "switchEntityMessage": "Den gjeldende entiteten har ulagrede endringer. Å bytte til en annen entitet vil forkaste dem.",
+    "switchEntityConfirm": "Forkast og bytt"
   },
   "endpointConfig": {
     "title": "SPARQL endepunkt-konfigurasjon",

@@ -52,7 +52,7 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
 
   return (
     <>
-      {isEditing && (
+      {(isEditing || dataPropertiesWithValues.length > 0) && (
         <>
           <Divider sx={{ my: 1.5 }} />
 
@@ -64,14 +64,11 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
               mb: 1.5,
             }}
           >
-            <Typography
-              variant="subtitle1"
-              sx={{ color: availableProperties.length === 0 ? 'text.disabled' : 'text.primary' }}
-            >
+            <Typography variant="subtitle1">
               {t("sections.textMetadata")}
             </Typography>
 
-            {availableProperties.length > 0 && (
+            {isEditing && availableProperties.length > 0 && (
               <FormControl size="small" sx={{ minWidth: 200 }}>
                 <InputLabel>{t("common:labels.addTextValue", { ns: "common" })}</InputLabel>
                 <Select
@@ -119,7 +116,7 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
                 }
                 disabled={!isEditing || !classUri}
                 size="small"
-                placeholder={`Enter ${getPropertyLabel(propertyUri)}`}
+                placeholder={t("placeholders.enterValue", { propertyName: getPropertyLabel(propertyUri) })}
                 sx={{
                   "& .MuiInputBase-input": { fontSize: "0.875rem", py: 0.75 },
                   "& .MuiInputLabel-outlined": { fontSize: "0.875rem" },
@@ -134,7 +131,7 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
                   onClick={() => onRemoveValue(propertyUri, index)}
                   color="error"
                   sx={{ p: 0.5 }}
-                  aria-label="Remove property value"
+                  aria-label={t("common:buttons.remove", { ns: "common" })}
                 >
                   <Delete fontSize="small" />
                 </IconButton>

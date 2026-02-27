@@ -21,22 +21,6 @@ import {
 
 const theme = createTheme({
   components: {
-    MuiInputBase: {
-      styleOverrides: {
-        root: {
-          "&.Mui-disabled": {
-            color: "rgba(0, 0, 0, 0.8)", // Much darker than default disabled color
-            "-webkit-text-fill-color": "rgba(0, 0, 0, 0.8)", // Override webkit autofill
-          },
-        },
-        input: {
-          "&.Mui-disabled": {
-            color: "rgba(0, 0, 0, 0.8)", // Ensure input text is also darker
-            "-webkit-text-fill-color": "rgba(0, 0, 0, 0.8)",
-          },
-        },
-      },
-    },
     MuiOutlinedInput: {
       styleOverrides: {
         root: {
@@ -100,8 +84,8 @@ const theme = createTheme({
   },
   typography: {
     subtitle1: {
-      color: "#1976d2",
-      fontWeight: 400,
+      color: "rgba(0, 0, 0, 0.6)",
+      fontWeight: 600,
     },
   },
 });
@@ -216,7 +200,6 @@ function App() {
         <SnackbarProvider
           maxSnack={3}
           anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-          autoHideDuration={3000}
         >
           <CssBaseline />
 

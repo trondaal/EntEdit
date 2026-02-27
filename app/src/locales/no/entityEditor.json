@@ -20,12 +20,16 @@
     "enterValue": "Skriv inn {{propertyName}}",
     "filterEntities": "Filtrer..."
   },
+  "tooltips": {
+    "copyUri": "Kopier URI"
+  },
   "messages": {
     "noLabel": "Ingen etikett",
     "noLabels": "Denne entiteten har ingen etiketter. Klikk \"Rediger etiketter\" for å legge til en.",
     "selectClass": "Vennligst velg en klasse fra venstre panel for å opprette en ny entitet.",
     "noRangeSpecified": "Ingen rekkevidde spesifisert for denne egenskapen. Kan ikke foreslå entiteter.",
     "noEntitiesFound": "Ingen entiteter funnet av type {{typeName}}",
+    "noEntitiesMatchFilter": "Ingen entiteter matcher filteret",
     "selectEntity": "Velg en entitet for relasjon:",
     "selectWEMIEntity": "Velg entitet:",
     "selectRelatedAgent": "Velg relatert agent:",

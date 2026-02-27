@@ -12,8 +12,14 @@ import {
   TextField,
   Tooltip,
   Chip,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
+  DialogActions,
+  Button,
 } from "@mui/material";
-import { Class, Description, Search, Tag } from "@mui/icons-material";
+import { Class, Description, Edit, Search, Tag } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import {
@@ -38,11 +44,16 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
   const [selectedClass, setSelectedClass] = useState<string | null>(null);
   const [selectedEntity, setSelectedEntity] = useState<string | null>(null);
   const [entityFilter, setEntityFilter] = useState<string>("");
+  const [isEditorEditing, setIsEditorEditing] = useState(false);
+  // URI that the user clicked while the editor had unsaved changes
+  const [pendingEntityUri, setPendingEntityUri] = useState<string | null>(null);
+  const [switchEntityDialogOpen, setSwitchEntityDialogOpen] = useState(false);
 
   // Reset filter when class changes
   React.useEffect(() => {
     setEntityFilter("");
     setSelectedEntity(null);
+    setIsEditorEditing(false);
   }, [selectedClass]);
 
   const {
@@ -84,11 +95,32 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
   }, []);
 
   const handleEntitySelect = useCallback((entityUri: string) => {
-    setSelectedEntity(entityUri);
-  }, []);
+    if (isEditorEditing && entityUri !== selectedEntity) {
+      // Editor has unsaved changes — ask for confirmation before switching
+      setPendingEntityUri(entityUri);
+      setSwitchEntityDialogOpen(true);
+    } else {
+      setSelectedEntity(entityUri);
+    }
+  }, [isEditorEditing, selectedEntity]);
 
   const handleEntityDeselect = useCallback(() => {
     setSelectedEntity(null);
+    setIsEditorEditing(false);
+  }, []);
+
+  const handleSwitchConfirm = useCallback(() => {
+    if (pendingEntityUri !== null) {
+      setSelectedEntity(pendingEntityUri);
+      setIsEditorEditing(false);
+    }
+    setPendingEntityUri(null);
+    setSwitchEntityDialogOpen(false);
+  }, [pendingEntityUri]);
+
+  const handleSwitchCancel = useCallback(() => {
+    setPendingEntityUri(null);
+    setSwitchEntityDialogOpen(false);
   }, []);
 
   if (classesError) {
@@ -140,9 +172,13 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
               <Box sx={{ display: "flex", justifyContent: "center", p: 3 }}>
                 <CircularProgress />
               </Box>
+            ) : !classes || classes.length === 0 ? (
+              <Box sx={{ p: 3, textAlign: "center", color: "text.secondary" }}>
+                {t("messages.noClassesFound")}
+              </Box>
             ) : (
               <List sx={{ flex: 1, overflow: "auto", maxHeight: { xs: 280, md: "none" } }}>
-                {classes?.map((rdfClass) => (
+                {classes.map((rdfClass) => (
                   <ListItem key={rdfClass.uri} disablePadding>
                     <ListItemButton
                       selected={selectedClass === rdfClass.uri}
@@ -171,7 +207,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
                 height: 64,
                 display: "flex",
                 alignItems: "center",
-                gap: 2,
+                gap: 1,
               }}
             >
               <Typography
@@ -182,15 +218,33 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
                 {t("navigation.entities")}
               </Typography>
 
-              {selectedClass && (
-                <TextField
+              {/* Count badge: "n of total" when filtered, just "n" otherwise */}
+              {selectedClass && !entitiesLoading && entities && (
+                <Chip
+                  label={
+                    entityFilter && filteredEntities
+                      ? t("messages.entityCountFiltered", {
+                          shown: filteredEntities.length,
+                          total: entities.length,
+                        })
+                      : String(entities.length)
+                  }
                   size="small"
-                  placeholder={t("labels.filter")}
-                  value={entityFilter}
-                  onChange={(e) => setEntityFilter(e.target.value)}
-                  sx={{ flex: 1, minWidth: 80 }}
-                  aria-label={t("labels.filter")}
-                  InputProps={{
+                  variant="outlined"
+                  sx={{ flexShrink: 0 }}
+                />
+              )}
+
+              <TextField
+                size="small"
+                placeholder={t("labels.filter")}
+                value={entityFilter}
+                onChange={(e) => setEntityFilter(e.target.value)}
+                disabled={!selectedClass}
+                sx={{ flex: 1, minWidth: 80 }}
+                aria-label={t("labels.filter")}
+                slotProps={{
+                  input: {
                     startAdornment: (
                       <Search
                         sx={{
@@ -200,9 +254,9 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
                         }}
                       />
                     ),
-                  }}
-                />
-              )}
+                  },
+                }}
+              />
             </Box>
 
             {!selectedClass ? (
@@ -221,31 +275,46 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
               </Box>
             ) : (
               <List sx={{ flex: 1, overflow: "auto", maxHeight: { xs: 360, md: "none" } }}>
-                {filteredEntities?.map((entity) => (
-                  <ListItem
-                    key={`${selectedClass}-${entity.uri}`}
-                    disablePadding
-                  >
-                    <ListItemButton
-                      selected={selectedEntity === entity.uri}
-                      onClick={() => handleEntitySelect(entity.uri)}
+                {filteredEntities?.map((entity) => {
+                  const isActiveEditing =
+                    isEditorEditing && selectedEntity === entity.uri;
+                  return (
+                    <ListItem
+                      key={`${selectedClass}-${entity.uri}`}
+                      disablePadding
                     >
-                      <ListItemText
-                        primary={
-                          <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
-                            <Typography variant="body2" noWrap>
-                              {entity.label}
-                            </Typography>
-                            <Tooltip title={entity.uri} placement="bottom-start">
-                              <Tag sx={{ fontSize: "0.875rem", color: "text.disabled", flexShrink: 0 }} />
-                            </Tooltip>
-                          </Box>
-                        }
-                        disableTypography
-                      />
-                    </ListItemButton>
-                  </ListItem>
-                ))}
+                      <ListItemButton
+                        selected={selectedEntity === entity.uri}
+                        onClick={() => handleEntitySelect(entity.uri)}
+                      >
+                        <ListItemText
+                          primary={
+                            <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
+                              <Typography variant="body2" noWrap sx={{ flex: 1 }}>
+                                {entity.label}
+                              </Typography>
+                              {isActiveEditing && (
+                                <Tooltip title={t("messages.entityBeingEdited")} placement="left">
+                                  <Edit
+                                    sx={{
+                                      fontSize: "0.875rem",
+                                      color: "warning.main",
+                                      flexShrink: 0,
+                                    }}
+                                  />
+                                </Tooltip>
+                              )}
+                              <Tooltip title={entity.uri} placement="bottom-start">
+                                <Tag sx={{ fontSize: "0.875rem", color: "text.disabled", flexShrink: 0 }} />
+                              </Tooltip>
+                            </Box>
+                          }
+                          disableTypography
+                        />
+                      </ListItemButton>
+                    </ListItem>
+                  );
+                })}
               </List>
             )}
           </Paper>
@@ -268,9 +337,33 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
               // Optionally refetch entities list
             }}
             onEntityDeselected={handleEntityDeselect}
+            onEditingChange={setIsEditorEditing}
           />
         </Box>
       </Box>
+      {/* Unsaved changes guard when switching entities */}
+      <Dialog
+        open={switchEntityDialogOpen}
+        onClose={handleSwitchCancel}
+        aria-labelledby="switch-entity-dialog-title"
+      >
+        <DialogTitle id="switch-entity-dialog-title">
+          {t("messages.switchEntityTitle")}
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            {t("messages.switchEntityMessage")}
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleSwitchCancel}>
+            {t("buttons.cancel")}
+          </Button>
+          <Button onClick={handleSwitchConfirm} color="warning" variant="contained">
+            {t("messages.switchEntityConfirm")}
+          </Button>
+        </DialogActions>
+      </Dialog>
     </Box>
   );
 };

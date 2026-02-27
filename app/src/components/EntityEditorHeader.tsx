@@ -98,9 +98,9 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
             <IconButton
               size="small"
               onClick={onEditLabels}
-              disabled={!classUri}
+              disabled={!isEditing || !classUri}
               aria-label={t("common:buttons.editLabels", { ns: "common" })}
-              sx={{ color: isEditing ? "primary.main" : "text.disabled", flexShrink: 0 }}
+              sx={{ color: isEditing && classUri ? "primary.main" : "text.disabled", flexShrink: 0 }}
             >
               <Label fontSize="small" />
             </IconButton>

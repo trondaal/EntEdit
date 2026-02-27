@@ -20,12 +20,16 @@
     "enterValue": "Enter {{propertyName}}",
     "filterEntities": "Filter..."
   },
+  "tooltips": {
+    "copyUri": "Copy URI"
+  },
   "messages": {
     "noLabel": "No label",
     "noLabels": "This entity has no labels. Click \"Edit Labels\" to add one.",
     "selectClass": "Please select a class from the left panel to create a new entity.",
     "noRangeSpecified": "No range specified for this property. Cannot suggest entities.",
     "noEntitiesFound": "No entities found of type {{typeName}}",
+    "noEntitiesMatchFilter": "No entities match the filter",
     "selectEntity": "Select an entity for relationship:",
     "selectWEMIEntity": "Select a WEMI entity for relationship:",
     "selectRelatedAgent": "Select a related agent:",

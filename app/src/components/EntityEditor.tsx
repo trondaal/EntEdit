@@ -5,6 +5,7 @@ import {
   Button,
   Box,
   CircularProgress,
+  Skeleton,
   Alert,
   Divider,
   Select,
@@ -17,8 +18,10 @@ import {
   DialogContentText,
   DialogActions,
   Typography,
+  Tooltip,
+  IconButton,
 } from "@mui/material";
-import { DeleteForever } from "@mui/icons-material";
+import { ContentCopy, DeleteForever, Lock } from "@mui/icons-material";
 import { useSnackbar } from "notistack";
 import { useTranslation } from "react-i18next";
 import type { SparqlEndpointConfig, RdfProperty } from "../types/sparql";
@@ -56,6 +59,7 @@ interface EntityEditorProps {
   selectedLanguage: string;
   onEntitySaved: () => void;
   onEntityDeselected?: () => void;
+  onEditingChange?: (isEditing: boolean) => void;
 }
 
 const EntityEditor: React.FC<EntityEditorProps> = ({
@@ -70,6 +74,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   selectedLanguage,
   onEntitySaved,
   onEntityDeselected,
+  onEditingChange,
 }) => {
   const { t } = useTranslation("entityEditor");
   const queryClient = useQueryClient();
@@ -89,6 +94,11 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
   const [entityData, setEntityData] = useState<Record<string, string[]>>({});
   const [isEditing, setIsEditing] = useState(!entityUri);
+
+  // Notify parent whenever editing mode changes
+  useEffect(() => {
+    onEditingChange?.(isEditing);
+  }, [isEditing, onEditingChange]);
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
   const [selectedProperty, setSelectedProperty] = useState<string>("");
@@ -342,10 +352,10 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       // If this was a new entity, reset the create form
       if (!entityUri) {
         resetCreateForm();
-        enqueueSnackbar(t("messages.entityCreated"), { variant: "success" });
+        enqueueSnackbar(t("messages.entityCreated"), { variant: "success", autoHideDuration: 3000 });
       } else {
         setIsEditing(false);
-        enqueueSnackbar(t("messages.entitySaved"), { variant: "success" });
+        enqueueSnackbar(t("messages.entitySaved"), { variant: "success", autoHideDuration: 3000 });
       }
 
       onEntitySaved();
@@ -418,7 +428,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       setDeleteDialogOpen(false);
 
       // Show success notification
-      enqueueSnackbar(t("messages.entityDeleted"), { variant: "success" });
+      enqueueSnackbar(t("messages.entityDeleted"), { variant: "success", autoHideDuration: 3000 });
 
       // Deselect the entity to show the "Create New Entity" form
       if (onEntityDeselected) {
@@ -747,6 +757,19 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
   const entityDisplayName = primaryEntityLabel || entityUri || "";
 
+  // Ctrl/Cmd+S keyboard shortcut to save while editing
+  useEffect(() => {
+    if (!isEditing) return;
+    const handler = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === "s") {
+        e.preventDefault();
+        handleSave();
+      }
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [isEditing, handleSave]);
+
   // Additional handlers for the header component
   const handleEdit = useCallback(() => setIsEditing(true), []);
 
@@ -786,7 +809,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     setSelectedProperty("");
   }, [addProperty]);
 
-  if (
+  const isLoadingAny =
     entityLoading ||
     propertiesLoading ||
     objectPropertiesLoading ||
@@ -794,19 +817,36 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     agentPropertiesLoading ||
     relatedWorkPropertiesLoading ||
     relatedExpressionPropertiesLoading ||
-    relatedManifestationPropertiesLoading
-  ) {
+    relatedManifestationPropertiesLoading;
+
+  if (isLoadingAny) {
     return (
       <Paper
         elevation={1}
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          height: { xs: "auto", md: "100%" },
-        }}
+        sx={{ height: { xs: "auto", md: "100%" }, display: "flex", flexDirection: "column" }}
       >
-        <CircularProgress />
+        {/* Skeleton header row */}
+        <Box sx={{ px: 2, py: 1, borderBottom: 1, borderColor: "divider", display: "flex", gap: 1 }}>
+          <Skeleton variant="rounded" width={80} height={32} />
+          <Skeleton variant="rounded" width={80} height={32} />
+          <Skeleton variant="rounded" width={80} height={32} />
+        </Box>
+        {/* Skeleton body */}
+        <Box sx={{ p: 3, flex: 1 }}>
+          {/* URI row */}
+          <Skeleton variant="rounded" height={38} sx={{ mb: 2 }} />
+          {/* Section header */}
+          <Skeleton variant="text" width="40%" sx={{ mb: 1 }} />
+          {/* Three property rows */}
+          <Skeleton variant="rounded" height={40} sx={{ mb: 1.5 }} />
+          <Skeleton variant="rounded" height={40} sx={{ mb: 1.5 }} />
+          <Skeleton variant="rounded" height={40} sx={{ mb: 2 }} />
+          <Divider sx={{ my: 1.5 }} />
+          {/* Second section header */}
+          <Skeleton variant="text" width="35%" sx={{ mb: 1 }} />
+          <Skeleton variant="rounded" height={40} sx={{ mb: 1.5 }} />
+          <Skeleton variant="rounded" height={40} />
+        </Box>
       </Paper>
     );
   }
@@ -843,32 +883,60 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           </Alert>
         )}
 
-        <TextField
-          fullWidth
-          label={t("common:labels.identifier", { ns: "common" })}
-          value={entityUri || customEntityUri}
-          onChange={(e) => {
-            if (!entityUri) {
-              // Only allow editing for new entities
-              setCustomEntityUri(e.target.value);
-            }
-          }}
-          disabled={!!entityUri || !isEditing}
-          error={!!uriError}
-          sx={{
-            mb: 2,
-            "& .MuiInputBase-input": { fontSize: "0.875rem", py: 0.75 },
-            "& .MuiInputLabel-outlined": { fontSize: "0.875rem" },
-            "& .MuiInputBase-root.Mui-disabled": {
-              backgroundColor: "rgba(0, 0, 0, 0.04)",
-            },
-            "& .MuiInputBase-input.Mui-disabled": {
-              WebkitTextFillColor: "rgba(0, 0, 0, 0.75)",
-            },
-          }}
-          size="small"
-          placeholder={t("placeholders.enterUri")}
-        />
+        {entityUri ? (
+          /* Existing entity — locked URI, read-only display with copy button */
+          <Box
+            sx={{
+              mb: 2,
+              px: 1.25,
+              py: 0.75,
+              border: 1,
+              borderColor: "divider",
+              borderRadius: 1,
+              backgroundColor: "action.hover",
+              display: "flex",
+              alignItems: "center",
+              gap: 0.5,
+              minHeight: 38,
+            }}
+          >
+            <Lock sx={{ fontSize: "0.9rem", color: "text.disabled", flexShrink: 0 }} />
+            <Typography
+              variant="body2"
+              noWrap
+              sx={{ flex: 1, color: "text.secondary", fontFamily: "monospace", fontSize: "0.8rem" }}
+            >
+              {entityUri}
+            </Typography>
+            <Tooltip title={t("tooltips.copyUri")}>
+              <IconButton
+                size="small"
+                sx={{ p: 0.5 }}
+                aria-label={t("tooltips.copyUri")}
+                onClick={() => navigator.clipboard.writeText(entityUri)}
+              >
+                <ContentCopy sx={{ fontSize: "0.9rem" }} />
+              </IconButton>
+            </Tooltip>
+          </Box>
+        ) : (
+          /* New entity — editable URI field */
+          <TextField
+            fullWidth
+            label={t("common:labels.identifier", { ns: "common" })}
+            value={customEntityUri}
+            onChange={(e) => setCustomEntityUri(e.target.value)}
+            disabled={!isEditing}
+            error={!!uriError}
+            sx={{
+              mb: 2,
+              "& .MuiInputBase-input": { fontSize: "0.875rem", py: 0.75 },
+              "& .MuiInputLabel-outlined": { fontSize: "0.875rem" },
+            }}
+            size="small"
+            placeholder={t("placeholders.enterUri")}
+          />
+        )}
 
         <DataPropertiesSection
           entityData={entityData}
@@ -883,7 +951,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         />
 
         {/* Controlled Properties Section */}
-        {isEditing && (
+        {(controlledPropertiesWithValues.length > 0 || (isEditing && availableControlledProperties.length > 0)) && (
           <>
             <Divider sx={{ my: 1.5 }} />
 
@@ -895,14 +963,11 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
                 mb: 1.5,
               }}
             >
-              <Typography
-                variant="subtitle1"
-                sx={{ color: availableControlledProperties.length === 0 ? 'text.disabled' : 'text.primary' }}
-              >
+              <Typography variant="subtitle1">
                 {t("sections.controlledValues")}
               </Typography>
 
-              {availableControlledProperties.length > 0 && (
+              {isEditing && availableControlledProperties.length > 0 && (
                 <FormControl size="small" sx={{ minWidth: 200 }}>
                   <InputLabel>{t("common:labels.addCategory", { ns: "common" })}</InputLabel>
                   <Select
@@ -959,7 +1024,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         ))}
 
         {/* Related Agents Section */}
-        {isEditing && (
+        {(agentPropertiesWithValues.length > 0 || (isEditing && availableAgentProperties.length > 0)) && (
           <>
             <Divider sx={{ my: 1.5 }} />
 
@@ -971,14 +1036,11 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
                 mb: 1.5,
               }}
             >
-              <Typography
-                variant="subtitle1"
-                sx={{ color: availableAgentProperties.length === 0 ? 'text.disabled' : 'text.primary' }}
-              >
+              <Typography variant="subtitle1">
                 {t("sections.relatedAgents")}
               </Typography>
 
-              {availableAgentProperties.length > 0 && (
+              {isEditing && availableAgentProperties.length > 0 && (
                 <FormControl size="small" sx={{ minWidth: 200 }}>
                   <InputLabel>{t("common:labels.addAgent", { ns: "common" })}</InputLabel>
                   <Select
@@ -1033,7 +1095,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         ))}
 
         {/* Basic WEMI Relationships Section */}
-        {isEditing && (
+        {(wemiPropertiesWithValues.length > 0 || (isEditing && availableWEMIProperties.length > 0)) && (
           <>
             <Divider sx={{ my: 1.5 }} />
 
@@ -1045,14 +1107,11 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
                 mb: 1.5,
               }}
             >
-              <Typography
-                variant="subtitle1"
-                sx={{ color: availableWEMIProperties.length === 0 ? 'text.disabled' : 'text.primary' }}
-              >
+              <Typography variant="subtitle1">
                 {t("sections.wemiRelationships")}
               </Typography>
 
-              {availableWEMIProperties.length > 0 && (
+              {isEditing && availableWEMIProperties.length > 0 && (
                 <FormControl size="small" sx={{ minWidth: 200 }}>
                   <InputLabel>{t("common:labels.addWEMI", { ns: "common" })}</InputLabel>
                   <Select
@@ -1107,7 +1166,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         ))}
 
         {/* Related Works Section */}
-        {isEditing && (
+        {(relatedWorkPropertiesWithValues.length > 0 || (isEditing && availableRelatedWorkProperties.length > 0)) && (
           <>
             <Divider sx={{ my: 1.5 }} />
 
@@ -1119,14 +1178,11 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
                 mb: 1.5,
               }}
             >
-              <Typography
-                variant="subtitle1"
-                sx={{ color: availableRelatedWorkProperties.length === 0 ? 'text.disabled' : 'text.primary' }}
-              >
+              <Typography variant="subtitle1">
                 {t("sections.relatedWorks")}
               </Typography>
 
-              {availableRelatedWorkProperties.length > 0 && (
+              {isEditing && availableRelatedWorkProperties.length > 0 && (
                 <FormControl size="small" sx={{ minWidth: 200 }}>
                   <InputLabel>{t("common:labels.addRelatedWork", { ns: "common" })}</InputLabel>
                   <Select
@@ -1181,7 +1237,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         ))}
 
         {/* Related Expressions Section */}
-        {isEditing && (
+        {(relatedExpressionPropertiesWithValues.length > 0 || (isEditing && availableRelatedExpressionProperties.length > 0)) && (
           <>
             <Divider sx={{ my: 1.5 }} />
 
@@ -1193,14 +1249,11 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
                 mb: 1.5,
               }}
             >
-              <Typography
-                variant="subtitle1"
-                sx={{ color: availableRelatedExpressionProperties.length === 0 ? 'text.disabled' : 'text.primary' }}
-              >
+              <Typography variant="subtitle1">
                 {t("sections.relatedExpressions")}
               </Typography>
 
-              {availableRelatedExpressionProperties.length > 0 && (
+              {isEditing && availableRelatedExpressionProperties.length > 0 && (
                 <FormControl size="small" sx={{ minWidth: 200 }}>
                   <InputLabel>{t("common:labels.addRelatedExpression", { ns: "common" })}</InputLabel>
                   <Select
@@ -1255,7 +1308,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         ))}
 
         {/* Related Manifestations Section */}
-        {isEditing && (
+        {(relatedManifestationPropertiesWithValues.length > 0 || (isEditing && availableRelatedManifestationProperties.length > 0)) && (
           <>
             <Divider sx={{ my: 1.5 }} />
 
@@ -1267,14 +1320,11 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
                 mb: 1.5,
               }}
             >
-              <Typography
-                variant="subtitle1"
-                sx={{ color: availableRelatedManifestationProperties.length === 0 ? 'text.disabled' : 'text.primary' }}
-              >
+              <Typography variant="subtitle1">
                 {t("sections.relatedManifestations")}
               </Typography>
 
-              {availableRelatedManifestationProperties.length > 0 && (
+              {isEditing && availableRelatedManifestationProperties.length > 0 && (
                 <FormControl size="small" sx={{ minWidth: 200 }}>
                   <InputLabel>{t("common:labels.addRelatedManifestation", { ns: "common" })}</InputLabel>
                   <Select
