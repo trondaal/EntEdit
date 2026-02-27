@@ -52,7 +52,7 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
 
   return (
     <>
-      {isEditing && (
+      {(isEditing || dataPropertiesWithValues.length > 0) && (
         <>
           <Divider sx={{ my: 1.5 }} />
 
@@ -66,12 +66,12 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
           >
             <Typography
               variant="subtitle1"
-              sx={{ color: availableProperties.length === 0 ? 'text.disabled' : 'text.primary' }}
+              sx={{ color: availableProperties.length === 0 && dataPropertiesWithValues.length === 0 ? 'text.disabled' : 'text.primary' }}
             >
               {t("sections.textMetadata")}
             </Typography>
 
-            {availableProperties.length > 0 && (
+            {isEditing && availableProperties.length > 0 && (
               <FormControl size="small" sx={{ minWidth: 200 }}>
                 <InputLabel>{t("common:labels.addTextValue", { ns: "common" })}</InputLabel>
                 <Select
