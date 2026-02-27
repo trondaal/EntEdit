@@ -75,7 +75,7 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
                 sx={{ display: "flex", alignItems: "center", mb: 2 }}
               >
                 <Search sx={{ mr: 1 }} />
-                Full-Text Search
+                {t("search.fullTextSearch")}
               </Typography>
 
               {/* Search Mode Tabs */}
@@ -91,34 +91,35 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
               <TextField
                 fullWidth
                 variant="outlined"
-                placeholder="Search entities using full-text search..."
+                placeholder={t("search.searchPlaceholder")}
                 value={searchQuery}
                 onChange={(e) => handleSearch(e.target.value)}
-                InputProps={{
-                  startAdornment: (
-                    <InputAdornment position="start">
-                      <Search color="action" />
-                    </InputAdornment>
-                  ),
-                  endAdornment: searchQuery && (
-                    <InputAdornment position="end">
-                      <IconButton
-                        onClick={handleClearSearch}
-                        edge="end"
-                        size="small"
-                      >
-                        <Clear />
-                      </IconButton>
-                    </InputAdornment>
-                  ),
+                slotProps={{
+                  input: {
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <Search color="action" />
+                      </InputAdornment>
+                    ),
+                    endAdornment: searchQuery && (
+                      <InputAdornment position="end">
+                        <IconButton
+                          onClick={handleClearSearch}
+                          edge="end"
+                          size="small"
+                        >
+                          <Clear />
+                        </IconButton>
+                      </InputAdornment>
+                    ),
+                  },
                 }}
               />
             </Box>
 
             <Box sx={{ p: 2 }}>
               <Typography variant="body2" color="text.secondary">
-                Enter search terms to find entities using GraphDB's Lucene connector.
-                Search will be performed across names and titles.
+                {t("search.searchHelp")}
               </Typography>
             </Box>
           </Paper>

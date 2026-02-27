@@ -40,9 +40,12 @@
     "search": "Search"
   },
   "search": {
+    "fullTextSearch": "Full-Text Search",
     "expressionSearch": "Expression Search",
     "manifestationSearch": "Manifestation Search",
-    "searchResults": "Search Results"
+    "searchResults": "Search Results",
+    "searchPlaceholder": "Search entities using full-text search…",
+    "searchHelp": "Enter search terms to find entities using GraphDB's Lucene connector. Search will be performed across names and titles."
   },
   "messages": {
     "selectClass": "Select a class to view entities",

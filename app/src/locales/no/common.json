@@ -40,9 +40,12 @@
     "search": "Søk"
   },
   "search": {
+    "fullTextSearch": "Fulltekstsøk",
     "expressionSearch": "Uttrykk-søk",
     "manifestationSearch": "Manifestasjon-søk",
-    "searchResults": "Søkeresultater"
+    "searchResults": "Søkeresultater",
+    "searchPlaceholder": "Søk etter entiteter med fulltekstsøk…",
+    "searchHelp": "Skriv inn søkeord for å finne entiteter via GraphDBs Lucene-kobling. Søket utføres på tvers av navn og titler."
   },
   "messages": {
     "selectClass": "Velg en klasse for å se entiteter",
