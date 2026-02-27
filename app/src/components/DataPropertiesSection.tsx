@@ -64,10 +64,7 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
               mb: 1.5,
             }}
           >
-            <Typography
-              variant="subtitle1"
-              sx={{ color: availableProperties.length === 0 && dataPropertiesWithValues.length === 0 ? 'text.disabled' : 'text.primary' }}
-            >
+            <Typography variant="subtitle1">
               {t("sections.textMetadata")}
             </Typography>
 
