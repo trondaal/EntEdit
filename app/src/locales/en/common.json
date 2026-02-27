@@ -48,7 +48,13 @@
     "selectClass": "Select a class to view entities",
     "noEntitiesForClass": "No entities found for this class",
     "noEntitiesMatching": "No entities found matching \"{{filter}}\"",
-    "loadingEntities": "Loading entities..."
+    "loadingEntities": "Loading entities...",
+    "noClassesFound": "No active classes found in the ontology",
+    "entityCountFiltered": "{{shown}} of {{total}}",
+    "entityBeingEdited": "Unsaved changes",
+    "switchEntityTitle": "Unsaved changes",
+    "switchEntityMessage": "The current entity has unsaved changes. Switching to another entity will discard them.",
+    "switchEntityConfirm": "Discard and switch"
   },
   "endpointConfig": {
     "title": "SPARQL Endpoint Configuration",

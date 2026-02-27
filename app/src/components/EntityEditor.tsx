@@ -56,6 +56,7 @@ interface EntityEditorProps {
   selectedLanguage: string;
   onEntitySaved: () => void;
   onEntityDeselected?: () => void;
+  onEditingChange?: (isEditing: boolean) => void;
 }
 
 const EntityEditor: React.FC<EntityEditorProps> = ({
@@ -70,6 +71,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   selectedLanguage,
   onEntitySaved,
   onEntityDeselected,
+  onEditingChange,
 }) => {
   const { t } = useTranslation("entityEditor");
   const queryClient = useQueryClient();
@@ -89,6 +91,11 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
   const [entityData, setEntityData] = useState<Record<string, string[]>>({});
   const [isEditing, setIsEditing] = useState(!entityUri);
+
+  // Notify parent whenever editing mode changes
+  useEffect(() => {
+    onEditingChange?.(isEditing);
+  }, [isEditing, onEditingChange]);
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
   const [selectedProperty, setSelectedProperty] = useState<string>("");
