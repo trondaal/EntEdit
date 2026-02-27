@@ -142,11 +142,9 @@ const AppHeader: React.FC<AppHeaderProps> = ({
             {/* Help Button */}
             <IconButton
               color="inherit"
+              aria-label={t("labels.help")}
               onClick={() => {
-                window.open(
-                  "https://docs.anthropic.com/en/docs/claude-code",
-                  "_blank",
-                );
+                window.open("./docs/README.md", "_blank", "noopener,noreferrer");
               }}
             >
               <Help />

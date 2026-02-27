@@ -5,6 +5,7 @@ import {
   Button,
   Box,
   CircularProgress,
+  Skeleton,
   Alert,
   Divider,
   Select,
@@ -351,10 +352,10 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       // If this was a new entity, reset the create form
       if (!entityUri) {
         resetCreateForm();
-        enqueueSnackbar(t("messages.entityCreated"), { variant: "success" });
+        enqueueSnackbar(t("messages.entityCreated"), { variant: "success", autoHideDuration: 3000 });
       } else {
         setIsEditing(false);
-        enqueueSnackbar(t("messages.entitySaved"), { variant: "success" });
+        enqueueSnackbar(t("messages.entitySaved"), { variant: "success", autoHideDuration: 3000 });
       }
 
       onEntitySaved();
@@ -427,7 +428,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       setDeleteDialogOpen(false);
 
       // Show success notification
-      enqueueSnackbar(t("messages.entityDeleted"), { variant: "success" });
+      enqueueSnackbar(t("messages.entityDeleted"), { variant: "success", autoHideDuration: 3000 });
 
       // Deselect the entity to show the "Create New Entity" form
       if (onEntityDeselected) {
@@ -756,6 +757,19 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
   const entityDisplayName = primaryEntityLabel || entityUri || "";
 
+  // Ctrl/Cmd+S keyboard shortcut to save while editing
+  useEffect(() => {
+    if (!isEditing) return;
+    const handler = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === "s") {
+        e.preventDefault();
+        handleSave();
+      }
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [isEditing, handleSave]);
+
   // Additional handlers for the header component
   const handleEdit = useCallback(() => setIsEditing(true), []);
 
@@ -795,7 +809,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     setSelectedProperty("");
   }, [addProperty]);
 
-  if (
+  const isLoadingAny =
     entityLoading ||
     propertiesLoading ||
     objectPropertiesLoading ||
@@ -803,19 +817,36 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     agentPropertiesLoading ||
     relatedWorkPropertiesLoading ||
     relatedExpressionPropertiesLoading ||
-    relatedManifestationPropertiesLoading
-  ) {
+    relatedManifestationPropertiesLoading;
+
+  if (isLoadingAny) {
     return (
       <Paper
         elevation={1}
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          height: { xs: "auto", md: "100%" },
-        }}
+        sx={{ height: { xs: "auto", md: "100%" }, display: "flex", flexDirection: "column" }}
       >
-        <CircularProgress />
+        {/* Skeleton header row */}
+        <Box sx={{ px: 2, py: 1, borderBottom: 1, borderColor: "divider", display: "flex", gap: 1 }}>
+          <Skeleton variant="rounded" width={80} height={32} />
+          <Skeleton variant="rounded" width={80} height={32} />
+          <Skeleton variant="rounded" width={80} height={32} />
+        </Box>
+        {/* Skeleton body */}
+        <Box sx={{ p: 3, flex: 1 }}>
+          {/* URI row */}
+          <Skeleton variant="rounded" height={38} sx={{ mb: 2 }} />
+          {/* Section header */}
+          <Skeleton variant="text" width="40%" sx={{ mb: 1 }} />
+          {/* Three property rows */}
+          <Skeleton variant="rounded" height={40} sx={{ mb: 1.5 }} />
+          <Skeleton variant="rounded" height={40} sx={{ mb: 1.5 }} />
+          <Skeleton variant="rounded" height={40} sx={{ mb: 2 }} />
+          <Divider sx={{ my: 1.5 }} />
+          {/* Second section header */}
+          <Skeleton variant="text" width="35%" sx={{ mb: 1 }} />
+          <Skeleton variant="rounded" height={40} sx={{ mb: 1.5 }} />
+          <Skeleton variant="rounded" height={40} />
+        </Box>
       </Paper>
     );
   }

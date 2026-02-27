@@ -34,12 +34,8 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
   return (
     <Box
       sx={{
-        width: 90,
-        minWidth: 90,
-        maxWidth: 90,
         display: "flex",
         alignItems: "center",
-        //overflow: "hidden"
       }}
     >
       <Language
@@ -53,10 +49,7 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
       <FormControl
         size="small"
         sx={{
-          width: 65,
-          minWidth: 65,
-          maxWidth: 65,
-          flexShrink: 0,
+          minWidth: 60,
         }}
       >
         <InputLabel sx={{ fontSize: "0.75rem" }}>{t("labels.language")}</InputLabel>
@@ -66,14 +59,8 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
           onChange={handleChange}
           disabled={isLoading}
           sx={{
-            width: 65,
-            minWidth: 65,
-            maxWidth: 65,
             fontSize: "0.875rem",
             "& .MuiSelect-select": {
-              overflow: "hidden",
-              textOverflow: "ellipsis",
-              whiteSpace: "nowrap",
               padding: "6px 8px",
             },
           }}
