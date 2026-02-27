@@ -951,7 +951,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         />
 
         {/* Controlled Properties Section */}
-        {(isEditing || controlledPropertiesWithValues.length > 0) && (
+        {(controlledPropertiesWithValues.length > 0 || (isEditing && availableControlledProperties.length > 0)) && (
           <>
             <Divider sx={{ my: 1.5 }} />
 
@@ -963,10 +963,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
                 mb: 1.5,
               }}
             >
-              <Typography
-                variant="subtitle1"
-                sx={{ color: availableControlledProperties.length === 0 && controlledPropertiesWithValues.length === 0 ? 'text.disabled' : 'text.primary' }}
-              >
+              <Typography variant="subtitle1">
                 {t("sections.controlledValues")}
               </Typography>
 
@@ -1027,7 +1024,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         ))}
 
         {/* Related Agents Section */}
-        {(isEditing || agentPropertiesWithValues.length > 0) && (
+        {(agentPropertiesWithValues.length > 0 || (isEditing && availableAgentProperties.length > 0)) && (
           <>
             <Divider sx={{ my: 1.5 }} />
 
@@ -1039,10 +1036,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
                 mb: 1.5,
               }}
             >
-              <Typography
-                variant="subtitle1"
-                sx={{ color: availableAgentProperties.length === 0 && agentPropertiesWithValues.length === 0 ? 'text.disabled' : 'text.primary' }}
-              >
+              <Typography variant="subtitle1">
                 {t("sections.relatedAgents")}
               </Typography>
 
@@ -1101,7 +1095,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         ))}
 
         {/* Basic WEMI Relationships Section */}
-        {(isEditing || wemiPropertiesWithValues.length > 0) && (
+        {(wemiPropertiesWithValues.length > 0 || (isEditing && availableWEMIProperties.length > 0)) && (
           <>
             <Divider sx={{ my: 1.5 }} />
 
@@ -1113,10 +1107,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
                 mb: 1.5,
               }}
             >
-              <Typography
-                variant="subtitle1"
-                sx={{ color: availableWEMIProperties.length === 0 && wemiPropertiesWithValues.length === 0 ? 'text.disabled' : 'text.primary' }}
-              >
+              <Typography variant="subtitle1">
                 {t("sections.wemiRelationships")}
               </Typography>
 
@@ -1175,7 +1166,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         ))}
 
         {/* Related Works Section */}
-        {(isEditing || relatedWorkPropertiesWithValues.length > 0) && (
+        {(relatedWorkPropertiesWithValues.length > 0 || (isEditing && availableRelatedWorkProperties.length > 0)) && (
           <>
             <Divider sx={{ my: 1.5 }} />
 
@@ -1187,10 +1178,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
                 mb: 1.5,
               }}
             >
-              <Typography
-                variant="subtitle1"
-                sx={{ color: availableRelatedWorkProperties.length === 0 && relatedWorkPropertiesWithValues.length === 0 ? 'text.disabled' : 'text.primary' }}
-              >
+              <Typography variant="subtitle1">
                 {t("sections.relatedWorks")}
               </Typography>
 
@@ -1249,7 +1237,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         ))}
 
         {/* Related Expressions Section */}
-        {(isEditing || relatedExpressionPropertiesWithValues.length > 0) && (
+        {(relatedExpressionPropertiesWithValues.length > 0 || (isEditing && availableRelatedExpressionProperties.length > 0)) && (
           <>
             <Divider sx={{ my: 1.5 }} />
 
@@ -1261,10 +1249,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
                 mb: 1.5,
               }}
             >
-              <Typography
-                variant="subtitle1"
-                sx={{ color: availableRelatedExpressionProperties.length === 0 && relatedExpressionPropertiesWithValues.length === 0 ? 'text.disabled' : 'text.primary' }}
-              >
+              <Typography variant="subtitle1">
                 {t("sections.relatedExpressions")}
               </Typography>
 
@@ -1323,7 +1308,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         ))}
 
         {/* Related Manifestations Section */}
-        {(isEditing || relatedManifestationPropertiesWithValues.length > 0) && (
+        {(relatedManifestationPropertiesWithValues.length > 0 || (isEditing && availableRelatedManifestationProperties.length > 0)) && (
           <>
             <Divider sx={{ my: 1.5 }} />
 
@@ -1335,10 +1320,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
                 mb: 1.5,
               }}
             >
-              <Typography
-                variant="subtitle1"
-                sx={{ color: availableRelatedManifestationProperties.length === 0 && relatedManifestationPropertiesWithValues.length === 0 ? 'text.disabled' : 'text.primary' }}
-              >
+              <Typography variant="subtitle1">
                 {t("sections.relatedManifestations")}
               </Typography>
 
