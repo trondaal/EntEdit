@@ -883,7 +883,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         />
 
         {/* Controlled Properties Section */}
-        {isEditing && (
+        {(isEditing || controlledPropertiesWithValues.length > 0) && (
           <>
             <Divider sx={{ my: 1.5 }} />
 
@@ -897,12 +897,12 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
             >
               <Typography
                 variant="subtitle1"
-                sx={{ color: availableControlledProperties.length === 0 ? 'text.disabled' : 'text.primary' }}
+                sx={{ color: availableControlledProperties.length === 0 && controlledPropertiesWithValues.length === 0 ? 'text.disabled' : 'text.primary' }}
               >
                 {t("sections.controlledValues")}
               </Typography>
 
-              {availableControlledProperties.length > 0 && (
+              {isEditing && availableControlledProperties.length > 0 && (
                 <FormControl size="small" sx={{ minWidth: 200 }}>
                   <InputLabel>{t("common:labels.addCategory", { ns: "common" })}</InputLabel>
                   <Select
@@ -959,7 +959,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         ))}
 
         {/* Related Agents Section */}
-        {isEditing && (
+        {(isEditing || agentPropertiesWithValues.length > 0) && (
           <>
             <Divider sx={{ my: 1.5 }} />
 
@@ -973,12 +973,12 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
             >
               <Typography
                 variant="subtitle1"
-                sx={{ color: availableAgentProperties.length === 0 ? 'text.disabled' : 'text.primary' }}
+                sx={{ color: availableAgentProperties.length === 0 && agentPropertiesWithValues.length === 0 ? 'text.disabled' : 'text.primary' }}
               >
                 {t("sections.relatedAgents")}
               </Typography>
 
-              {availableAgentProperties.length > 0 && (
+              {isEditing && availableAgentProperties.length > 0 && (
                 <FormControl size="small" sx={{ minWidth: 200 }}>
                   <InputLabel>{t("common:labels.addAgent", { ns: "common" })}</InputLabel>
                   <Select
@@ -1033,7 +1033,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         ))}
 
         {/* Basic WEMI Relationships Section */}
-        {isEditing && (
+        {(isEditing || wemiPropertiesWithValues.length > 0) && (
           <>
             <Divider sx={{ my: 1.5 }} />
 
@@ -1047,12 +1047,12 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
             >
               <Typography
                 variant="subtitle1"
-                sx={{ color: availableWEMIProperties.length === 0 ? 'text.disabled' : 'text.primary' }}
+                sx={{ color: availableWEMIProperties.length === 0 && wemiPropertiesWithValues.length === 0 ? 'text.disabled' : 'text.primary' }}
               >
                 {t("sections.wemiRelationships")}
               </Typography>
 
-              {availableWEMIProperties.length > 0 && (
+              {isEditing && availableWEMIProperties.length > 0 && (
                 <FormControl size="small" sx={{ minWidth: 200 }}>
                   <InputLabel>{t("common:labels.addWEMI", { ns: "common" })}</InputLabel>
                   <Select
@@ -1107,7 +1107,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         ))}
 
         {/* Related Works Section */}
-        {isEditing && (
+        {(isEditing || relatedWorkPropertiesWithValues.length > 0) && (
           <>
             <Divider sx={{ my: 1.5 }} />
 
@@ -1121,12 +1121,12 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
             >
               <Typography
                 variant="subtitle1"
-                sx={{ color: availableRelatedWorkProperties.length === 0 ? 'text.disabled' : 'text.primary' }}
+                sx={{ color: availableRelatedWorkProperties.length === 0 && relatedWorkPropertiesWithValues.length === 0 ? 'text.disabled' : 'text.primary' }}
               >
                 {t("sections.relatedWorks")}
               </Typography>
 
-              {availableRelatedWorkProperties.length > 0 && (
+              {isEditing && availableRelatedWorkProperties.length > 0 && (
                 <FormControl size="small" sx={{ minWidth: 200 }}>
                   <InputLabel>{t("common:labels.addRelatedWork", { ns: "common" })}</InputLabel>
                   <Select
@@ -1181,7 +1181,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         ))}
 
         {/* Related Expressions Section */}
-        {isEditing && (
+        {(isEditing || relatedExpressionPropertiesWithValues.length > 0) && (
           <>
             <Divider sx={{ my: 1.5 }} />
 
@@ -1195,12 +1195,12 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
             >
               <Typography
                 variant="subtitle1"
-                sx={{ color: availableRelatedExpressionProperties.length === 0 ? 'text.disabled' : 'text.primary' }}
+                sx={{ color: availableRelatedExpressionProperties.length === 0 && relatedExpressionPropertiesWithValues.length === 0 ? 'text.disabled' : 'text.primary' }}
               >
                 {t("sections.relatedExpressions")}
               </Typography>
 
-              {availableRelatedExpressionProperties.length > 0 && (
+              {isEditing && availableRelatedExpressionProperties.length > 0 && (
                 <FormControl size="small" sx={{ minWidth: 200 }}>
                   <InputLabel>{t("common:labels.addRelatedExpression", { ns: "common" })}</InputLabel>
                   <Select
@@ -1255,7 +1255,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         ))}
 
         {/* Related Manifestations Section */}
-        {isEditing && (
+        {(isEditing || relatedManifestationPropertiesWithValues.length > 0) && (
           <>
             <Divider sx={{ my: 1.5 }} />
 
@@ -1269,12 +1269,12 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
             >
               <Typography
                 variant="subtitle1"
-                sx={{ color: availableRelatedManifestationProperties.length === 0 ? 'text.disabled' : 'text.primary' }}
+                sx={{ color: availableRelatedManifestationProperties.length === 0 && relatedManifestationPropertiesWithValues.length === 0 ? 'text.disabled' : 'text.primary' }}
               >
                 {t("sections.relatedManifestations")}
               </Typography>
 
-              {availableRelatedManifestationProperties.length > 0 && (
+              {isEditing && availableRelatedManifestationProperties.length > 0 && (
                 <FormControl size="small" sx={{ minWidth: 200 }}>
                   <InputLabel>{t("common:labels.addRelatedManifestation", { ns: "common" })}</InputLabel>
                   <Select
