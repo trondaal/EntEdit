@@ -192,10 +192,17 @@ ${createLanguageFallbackFragment("?entity", language, fallbackLanguage, "label",
       `;
 
       const response = await client.query(query);
-      return response.results.bindings.map((binding) => ({
-        uri: binding.entity.value,
-        label: binding.label?.value || binding.entity.value,
-      }));
+      const seen = new Set<string>();
+      return response.results.bindings
+        .map((binding) => ({
+          uri: binding.entity.value,
+          label: binding.label?.value || binding.entity.value,
+        }))
+        .filter((entity) => {
+          if (seen.has(entity.uri)) return false;
+          seen.add(entity.uri);
+          return true;
+        });
     },
     enabled: !!config.url && !!rangeUri,
   });
