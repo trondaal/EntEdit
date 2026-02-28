@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
@@ -7,9 +7,9 @@ import { useTranslation } from "react-i18next";
 import { SnackbarProvider } from "notistack";
 import { queryClient } from "./utils/queryClient";
 import AppHeader from "./components/AppHeader";
-import EntityBrowser from "./components/EntityBrowser";
-import SearchInterface from "./components/SearchInterface";
-import ConfigurationWizard from "./components/ConfigurationWizard";
+const EntityBrowser = lazy(() => import("./components/EntityBrowser"));
+const SearchInterface = lazy(() => import("./components/SearchInterface"));
+const ConfigurationWizard = lazy(() => import("./components/ConfigurationWizard"));
 import type { SparqlEndpointConfig } from "./types/sparql";
 import {
   loadConfiguration,
@@ -204,12 +204,14 @@ function App() {
           <CssBaseline />
 
           {/* Configuration Wizard - shown on first run or if config is invalid */}
-          <ConfigurationWizard
-            open={showWizard}
-            onConfigurationComplete={handleConfigurationComplete}
-            initialConfig={appConfig?.endpoint}
-            initialLanguage={appConfig?.language}
-          />
+          <Suspense fallback={null}>
+            <ConfigurationWizard
+              open={showWizard}
+              onConfigurationComplete={handleConfigurationComplete}
+              initialConfig={appConfig?.endpoint}
+              initialLanguage={appConfig?.language}
+            />
+          </Suspense>
 
           {/* Main Application - only rendered when properly configured */}
           {appConfig?.isConfigured && !showWizard && (
@@ -243,18 +245,20 @@ function App() {
                 </Box>
 
                 <Container maxWidth="xl" sx={{ py: 3, px: 2, flexGrow: 1 }}>
-                  {activeTab === 0 && (
-                    <EntityBrowser
-                      config={appConfig.endpoint}
-                      selectedLanguage={appConfig.language}
-                    />
-                  )}
-                  {activeTab === 1 && showSearchTab && (
-                    <SearchInterface
-                      config={appConfig.endpoint}
-                      selectedLanguage={appConfig.language}
-                    />
-                  )}
+                  <Suspense fallback={<Box sx={{ display: "flex", justifyContent: "center", pt: 8 }}><CircularProgress /></Box>}>
+                    {activeTab === 0 && (
+                      <EntityBrowser
+                        config={appConfig.endpoint}
+                        selectedLanguage={appConfig.language}
+                      />
+                    )}
+                    {activeTab === 1 && showSearchTab && (
+                      <SearchInterface
+                        config={appConfig.endpoint}
+                        selectedLanguage={appConfig.language}
+                      />
+                    )}
+                  </Suspense>
                 </Container>
               </Box>
             </>
