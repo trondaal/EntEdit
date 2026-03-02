@@ -4,6 +4,7 @@ import {
   createLanguageFallbackFragment,
   getFallbackLanguage,
 } from "../utils/sparqlFragments";
+import { sanitizeSparqlUri, escapeSparqlLiteral } from "../utils/labelUtils";
 import type {
   SparqlEndpointConfig,
   RdfClass,
@@ -29,7 +30,7 @@ export const useRdfClasses = (
           ?class entedit:status "class" .
           OPTIONAL {
             ?class rdfs:label ?label .
-            FILTER(LANG(?label) = "${language}" || LANG(?label) = "")
+            FILTER(LANG(?label) = "${escapeSparqlLiteral(language)}" || LANG(?label) = "")
           }
         }
         ORDER BY desc(?label)
@@ -72,7 +73,7 @@ export const useRdfProperties = (
 
           OPTIONAL { ?property rdfs:domain ?domain }
           OPTIONAL { ?property rdfs:range ?range }
-          ${classUri ? `FILTER(?domain = <${classUri}>)` : ""}
+          ${classUri ? `FILTER(?domain = <${sanitizeSparqlUri(classUri)}>)` : ""}
         }
         ORDER BY ?order ?label ?property
       `;
@@ -106,7 +107,7 @@ export const useEntitiesByClass = (
 
         SELECT DISTINCT ?entity (SAMPLE(?label) AS ?label)
         WHERE {
-          ?entity a <${classUri}> .
+          ?entity a <${sanitizeSparqlUri(classUri)}> .
 ${createLanguageFallbackFragment("?entity", language, fallbackLanguage)}
 
         }
@@ -150,7 +151,7 @@ export const useRdfObjectProperties = (
           ?property rdfs:domain ?domain .
           ?property rdfs:range ?range .
     	    FILTER(?range != <http://www.w3.org/2004/02/skos/core#Concept> ) .
-          ${classUri ? `FILTER(?domain = <${classUri}>)` : ""}
+          ${classUri ? `FILTER(?domain = <${sanitizeSparqlUri(classUri)}>)` : ""}
         }
         ORDER BY ?range STR(?label)
       `;
@@ -184,7 +185,7 @@ export const useEntitiesByRange = (
 
         SELECT DISTINCT ?entity ?label
         WHERE {
-          ?entity a <${rangeUri}> .
+          ?entity a <${sanitizeSparqlUri(rangeUri)}> .
 ${createLanguageFallbackFragment("?entity", language, fallbackLanguage, "label", false)}
 
         }
@@ -238,7 +239,7 @@ export const useWEMIProperties = (
           ?property rdfs:domain ?domain .
           ?property rdfs:range ?range .
 
-          ${classUri ? `FILTER(?domain = <${classUri}>)` : ""}
+          ${classUri ? `FILTER(?domain = <${sanitizeSparqlUri(classUri)}>)` : ""}
         }
         ORDER BY ?range STR(?label)
       `;
@@ -283,7 +284,7 @@ export const useAgentProperties = (
           ?property rdfs:domain ?domain .
           ?property rdfs:range ?range .
     	    FILTER(?range = <http://rdaregistry.info/Elements/c/C10002> ) .
-          ${classUri ? `FILTER(?domain = <${classUri}>)` : ""}
+          ${classUri ? `FILTER(?domain = <${sanitizeSparqlUri(classUri)}>)` : ""}
         }
         ORDER BY ?range STR(?label)
       `;
@@ -329,8 +330,8 @@ ${createLanguageFallbackFragment("?property", language, fallbackLanguage)}
           ?property rdfs:domain ?domain .
           ?property rdfs:range ?range .
     	    FILTER(?range != <http://www.w3.org/2004/02/skos/core#Concept> && ?range != <http://rdaregistry.info/Elements/c/C10002>) .
-          ${classUri ? `FILTER(?domain = <${classUri}>)` : ""}
-          ${classUri ? `FILTER(?range = <${classUri}>)` : ""}
+          ${classUri ? `FILTER(?domain = <${sanitizeSparqlUri(classUri)}>)` : ""}
+          ${classUri ? `FILTER(?range = <${sanitizeSparqlUri(classUri)}>)` : ""}
         }
         ORDER BY ?range STR(?label)
       `;
@@ -380,7 +381,7 @@ export const useRelatedWorkProperties = (
           ?property rdfs:range ?range .
     	    FILTER(?range = <http://rdaregistry.info/Elements/c/C10001> ) .
           FILTER(?property NOT IN (rdawo:P10078,rdaeo:P20231,rdaeo:P20059,rdamo:P30135,rdamo:P30139)) .
-          ${classUri ? `FILTER(?domain = <${classUri}>)` : ""}
+          ${classUri ? `FILTER(?domain = <${sanitizeSparqlUri(classUri)}>)` : ""}
         }
         ORDER BY ?range STR(?label)
       `;
@@ -430,7 +431,7 @@ ${createLanguageFallbackFragment("?property", language, fallbackLanguage)}
           ?property rdfs:range ?range .
     	    FILTER(?range = <http://rdaregistry.info/Elements/c/C10006> ) .
           FILTER(?property NOT IN (rdawo:P10078,rdaeo:P20231,rdaeo:P20059,rdamo:P30135,rdamo:P30139)) .
-          ${classUri ? `FILTER(?domain = <${classUri}>)` : ""}
+          ${classUri ? `FILTER(?domain = <${sanitizeSparqlUri(classUri)}>)` : ""}
         }
         ORDER BY ?range STR(?label)
       `;
@@ -480,7 +481,7 @@ ${createLanguageFallbackFragment("?property", language, fallbackLanguage)}
           ?property rdfs:range ?range .
     	    FILTER(?range = <http://rdaregistry.info/Elements/c/C10007>) .
           FILTER(?property NOT IN (rdawo:P10078,rdaeo:P20231,rdaeo:P20059,rdamo:P30135,rdamo:P30139)) .
-          ${classUri ? `FILTER(?domain = <${classUri}>)` : ""}
+          ${classUri ? `FILTER(?domain = <${sanitizeSparqlUri(classUri)}>)` : ""}
         }
         ORDER BY ?range STR(?label)
       `;

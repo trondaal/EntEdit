@@ -75,6 +75,21 @@ export const escapeSparqlLiteral = (value: string): string => {
 };
 
 /**
+ * Sanitizes a URI for safe interpolation into SPARQL queries within angle brackets.
+ * Rejects URIs containing characters that could break out of <...> syntax.
+ * @param uri - The URI to sanitize
+ * @returns The URI if safe
+ * @throws Error if the URI contains unsafe characters
+ */
+export const sanitizeSparqlUri = (uri: string): string => {
+  // eslint-disable-next-line no-control-regex
+  if (/[<>"{}|\\^`\x00-\x20]/.test(uri)) {
+    throw new Error(`Unsafe URI for SPARQL interpolation: ${uri}`);
+  }
+  return uri;
+};
+
+/**
  * Validates if a string is a valid URI
  * @param uri - The URI to validate
  * @returns true if valid, false otherwise

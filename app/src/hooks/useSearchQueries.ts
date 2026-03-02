@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { SparqlClient } from "../utils/sparqlClient";
+import { escapeSparqlLiteral } from "../utils/labelUtils";
 import type { SparqlEndpointConfig } from "../types/sparql";
 
 export interface ExpressionSearchResult {
@@ -85,7 +86,7 @@ FROM <http://www.ontotext.com/explicit>
 WHERE {
     ?search a inst:expressionsIndex ;
     #lucene:query "horses" ;
-    lucene:query "${query.replace(/"/g, '\\"')}" ;
+    lucene:query "${escapeSparqlLiteral(query)}" ;
     lucene:entities ?expression .
     ?expression lucene:score ?score .
     ?expression a <http://rdaregistry.info/Elements/c/C10006> .
@@ -111,12 +112,12 @@ WHERE {
     OPTIONAL {
         ?expression rdaeo:P20001 ?contenttype .
         ?contenttype rdfs:label ?contenttype_label .
-        FILTER(LANG(?contenttype_label) = "${language}")
+        FILTER(LANG(?contenttype_label) = "${escapeSparqlLiteral(language)}")
     }
     OPTIONAL {
         ?work rdawo:P10004 ?worktype .
         ?worktype rdfs:label ?worktype_label .
-        FILTER(LANG(?worktype_label) = "${language}")
+        FILTER(LANG(?worktype_label) = "${escapeSparqlLiteral(language)}")
     }
 
     #Work to agent relationships
@@ -129,7 +130,7 @@ WHERE {
                     ?work ?work_agent_relationship ?work_agent .
                     ?work_agent <http://rdaregistry.info/Elements/a/datatype/P50385> ?work_agent_name_x .
                     ?work_agent_relationship rdfs:label ?work_agent_relationship_label .
-                    FILTER(LANG(?work_agent_relationship_label) = "${language}") .
+                    FILTER(LANG(?work_agent_relationship_label) = "${escapeSparqlLiteral(language)}") .
             	}
             }UNION{
                 OPTIONAL {
@@ -137,7 +138,7 @@ WHERE {
                     ?work_agent <http://rdaregistry.info/Elements/a/datatype/P50385> ?work_agent_name_x .
                     ?work_agent_relationship_inverse owl:inverseOf ?work_agent_relationship .
                     ?work_agent_relationship_inverse rdfs:label ?work_agent_relationship_label .
-                    FILTER(LANG(?work_agent_relationship_label) = "${language}") .
+                    FILTER(LANG(?work_agent_relationship_label) = "${escapeSparqlLiteral(language)}") .
             	}
             }
         }
@@ -154,7 +155,7 @@ WHERE {
                     ?expression ?expression_agent_relationship ?expression_agent .
                     ?expression_agent <http://rdaregistry.info/Elements/a/datatype/P50385> ?expression_agent_name_x .
                     ?expression_agent_relationship rdfs:label ?expression_agent_relationship_label .
-                    FILTER(LANG(?expression_agent_relationship_label) = "${language}") .
+                    FILTER(LANG(?expression_agent_relationship_label) = "${escapeSparqlLiteral(language)}") .
             	}
             }UNION{
                   OPTIONAL {
@@ -162,7 +163,7 @@ WHERE {
                     ?expression_agent <http://rdaregistry.info/Elements/a/datatype/P50385> ?expression_agent_name_x .
                     ?expression_agent_relationship_inverse owl:inverseOf ?expression_agent_relationship .
                     ?expression_agent_relationship_inverse rdfs:label ?expression_agent_relationship_label .
-                    FILTER(LANG(?expression_agent_relationship_label) = "${language}") .
+                    FILTER(LANG(?expression_agent_relationship_label) = "${escapeSparqlLiteral(language)}") .
             	}
             }
         }
@@ -180,7 +181,7 @@ WHERE {
                     ?target_work a <http://rdaregistry.info/Elements/c/C10001> .
                     ?target_work rdawd:P10088 ?target_work_title .
                     ?work_to_work_relationship rdfs:label ?work_to_work_relationship_label .
-                    FILTER(LANG(?work_to_work_relationship_label) = "${language}") .
+                    FILTER(LANG(?work_to_work_relationship_label) = "${escapeSparqlLiteral(language)}") .
                     FILTER NOT EXISTS {
     					?work_to_work_relationship rdfs:subPropertyOf* <http://rdaregistry.info/Elements/w/P10336> .
   					}
@@ -193,7 +194,7 @@ WHERE {
                     ?work_to_work_relationship_inverse owl:inverseOf ?work_to_work_relationship .
                     ?work_to_work_relationship_inverse rdfs:label ?work_to_work_relationship_label .
                     #?work_to_work_relationship rdfs:label ?work_to_work_relationship_label .
-                    FILTER(LANG(?work_to_work_relationship_label) = "${language}") .
+                    FILTER(LANG(?work_to_work_relationship_label) = "${escapeSparqlLiteral(language)}") .
                     FILTER NOT EXISTS {
     					?work_to_work_relationship_inverse rdfs:subPropertyOf* <http://rdaregistry.info/Elements/w/P10336> .
   					}
@@ -215,7 +216,7 @@ WHERE {
                     ?target_expression a <http://rdaregistry.info/Elements/c/C10006> .
                     ?target_expression rdaed:P20315 ?target_expression_title .
                     ?expression_to_expression_relationship rdfs:label ?expression_to_expression_relationship_label .
-                    FILTER(LANG(?expression_to_expression_relationship_label) = "${language}") .
+                    FILTER(LANG(?expression_to_expression_relationship_label) = "${escapeSparqlLiteral(language)}") .
                 }
             }UNION{
                 OPTIONAL {
@@ -224,7 +225,7 @@ WHERE {
                     ?target_expression rdaed:P20315 ?target_expression_title .
                     ?expression_to_expression_relationship_inverse owl:inverseOf ?expression_to_expression_relationship .
                     ?expression_to_expression_relationship_inverse rdfs:label ?expression_to_expression_relationship_label .
-                    FILTER(LANG(?expression_to_expression_relationship_label) = "${language}") .
+                    FILTER(LANG(?expression_to_expression_relationship_label) = "${escapeSparqlLiteral(language)}") .
                 }
             }
 
@@ -297,7 +298,7 @@ SELECT DISTINCT ?manifestation
     (SAMPLE(?carriertype_label) as ?carriertype)
 WHERE {
     ?search a inst:manifestationsIndex ;
-    lucene:query "${query.replace(/"/g, '\\"')}" ;
+    lucene:query "${escapeSparqlLiteral(query)}" ;
     lucene:entities ?manifestation .
     ?manifestation lucene:score ?score .
     ?manifestation a <http://rdaregistry.info/Elements/c/C10007> .
@@ -352,7 +353,7 @@ WHERE {
     OPTIONAL {
         ?manifestation rdamo:P30002 ?mediatype_chosen .
         ?mediatype_chosen rdfs:label ?mediatype_label_chosen .
-        FILTER(LANG(?mediatype_label_chosen) = "${language}")
+        FILTER(LANG(?mediatype_label_chosen) = "${escapeSparqlLiteral(language)}")
     }
     OPTIONAL {
         ?manifestation rdamo:P30002 ?mediatype_en .
@@ -365,7 +366,7 @@ WHERE {
     OPTIONAL {
         ?manifestation rdamo:P30001 ?carriertype_chosen .
         ?carriertype_chosen rdfs:label ?carriertype_label_chosen .
-        FILTER(LANG(?carriertype_label_chosen) = "${language}")
+        FILTER(LANG(?carriertype_label_chosen) = "${escapeSparqlLiteral(language)}")
     }
     OPTIONAL {
         ?manifestation rdamo:P30001 ?carriertype_en .
