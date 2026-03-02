@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { SparqlClient } from "../utils/sparqlClient";
 import type { SparqlEndpointConfig } from "../types/sparql";
+import { sanitizeSparqlUri } from "../utils/labelUtils";
 
 export interface Expression {
   uri: string;
@@ -52,9 +53,9 @@ export const useExpressionsByManifestation = (
                FROM <http://www.ontotext.com/explicit>
                WHERE {
           # Navigate from manifestation to expression
-          {<${manifestationUri}> rdamo:P30139 ?expression}
+          {<${sanitizeSparqlUri(manifestationUri)}> rdamo:P30139 ?expression}
           UNION
-          {?expression rdaeo:P20059 <${manifestationUri}>}
+          {?expression rdaeo:P20059 <${sanitizeSparqlUri(manifestationUri)}>}
 
           # Get exressions and work
           { ?expression rdaeo:P20231 ?work }

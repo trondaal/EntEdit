@@ -32,7 +32,7 @@ const ObjectPropertySection: React.FC<ObjectPropertySectionProps> = ({
       </Typography>
       {values.map((value, index) => (
         <ObjectPropertyValue
-          key={`${value}-${index}`}
+          key={index}
           config={config}
           value={value}
           rangeUri={rangeUri}

@@ -84,11 +84,14 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
   const [entityData, setEntityData] = useState<Record<string, string[]>>({});
   const [isEditing, setIsEditing] = useState(!entityUri);
+  // isDirty tracks actual user changes (separate from isEditing which controls form interactivity)
+  // For new entities isEditing starts true but isDirty only becomes true after the user makes a change
+  const [isDirty, setIsDirty] = useState(false);
 
-  // Notify parent whenever editing mode changes
+  // Notify parent whenever dirty state changes (not edit mode, since new entities start in edit mode)
   useEffect(() => {
-    onEditingChange?.(isEditing);
-  }, [isEditing, onEditingChange]);
+    onEditingChange?.(isDirty);
+  }, [isDirty, onEditingChange]);
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
   const [selectedProperty, setSelectedProperty] = useState<string>("");
@@ -111,9 +114,10 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       setSelectedProperty("");
       setSaveError(null);
       setIsEditing(true);
+      setIsDirty(false);
       setEntityLabels([]);
     }
-  }, [classUri, entityUri, selectedLanguage]);
+  }, [classUri, entityUri]);
 
   // Reset form after successful save of new entity
   const resetCreateForm = () => {
@@ -122,6 +126,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     setSelectedProperty("");
     setSaveError(null);
     setIsEditing(true);
+    setIsDirty(false);
     setEntityLabels([]);
   };
 
@@ -181,19 +186,18 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
   useEffect(() => {
     if (existingEntity) {
-      console.log("Loading existing entity:", existingEntity);
       setEntityData(existingEntity.data);
       setIsEditing(false);
-      // Use detected language from the entity (could be empty string for no language)
+      setIsDirty(false);
       setEntityLabels(existingEntity.labels || []);
-      console.log("Setting entity labels:", existingEntity.labels);
     } else if (!entityUri) {
       setEntityData({});
       setIsEditing(true);
+      setIsDirty(false);
       setCustomEntityUri(""); // Clear custom URI for new entities
       setEntityLabels([]);
     }
-  }, [existingEntity, entityUri, selectedLanguage]);
+  }, [existingEntity, entityUri]);
 
   const handleSave = useCallback(async () => {
     if (!classUri) return; // Don't save if no class is selected
@@ -234,13 +238,13 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         });
       }
 
-      // Also collect entity URIs from the new data being saved
-      Object.entries(entityData).forEach(([, values]) => {
-        values.forEach((value) => {
-          if (value.trim() && value.startsWith("http")) {
-            affectedEntityUris.add(value);
-          }
-        });
+      // Also collect entity URIs from the new data being saved (object properties only)
+      Object.entries(entityData).forEach(([property, values]) => {
+        if (objectPropertyUris.has(property)) {
+          values.forEach((value) => {
+            if (value.trim()) affectedEntityUris.add(value);
+          });
+        }
       });
 
       const triples = [`<${sanitizeSparqlUri(currentEntityUri)}> a <${sanitizeSparqlUri(classUri)}> .`];
@@ -260,17 +264,14 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       Object.entries(entityData).forEach(([property, values]) => {
         values.forEach((value) => {
           if (value.trim()) {
-            // Simple heuristic: if value looks like a URI, don't quote it
-            if (value.startsWith("http")) {
-              const formattedValue = `<${sanitizeSparqlUri(value)}>`;
+            if (objectPropertyUris.has(property)) {
               triples.push(
-                `<${sanitizeSparqlUri(currentEntityUri)}> <${sanitizeSparqlUri(property)}> ${formattedValue} .`,
+                `<${sanitizeSparqlUri(currentEntityUri)}> <${sanitizeSparqlUri(property)}> <${sanitizeSparqlUri(value)}> .`,
               );
             } else {
               const escapedValue = escapeSparqlLiteral(value);
-              const formattedValue = `"${escapedValue}"`;
               triples.push(
-                `<${sanitizeSparqlUri(currentEntityUri)}> <${sanitizeSparqlUri(property)}> ${formattedValue} .`,
+                `<${sanitizeSparqlUri(currentEntityUri)}> <${sanitizeSparqlUri(property)}> "${escapedValue}" .`,
               );
             }
           }
@@ -321,6 +322,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         enqueueSnackbar(t("messages.entityCreated"), { variant: "success", autoHideDuration: 3000 });
       } else {
         setIsEditing(false);
+        setIsDirty(false);
         enqueueSnackbar(t("messages.entitySaved"), { variant: "success", autoHideDuration: 3000 });
       }
 
@@ -451,6 +453,8 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   ) => {
     setEntityLabels(labels);
     setLabelManagerOpen(false);
+    setIsEditing(true); // Ensure form is in edit mode
+    setIsDirty(true);   // Mark entity as having unsaved changes
   }, []);
 
   const addProperty = useCallback((propertyUri: string) => {
@@ -462,6 +466,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           [propertyUri]: [...currentValues, ""],
         };
       });
+      setIsDirty(true);
     }
   }, [isEditing]);
 
@@ -471,6 +476,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         ...prev,
         [propertyUri]: [...(prev[propertyUri] || []), entityUri],
       }));
+      setIsDirty(true);
     }
   }, []);
 
@@ -487,6 +493,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         [property]: values,
       };
     });
+    setIsDirty(true);
   }, []);
 
   const removePropertyValue = useCallback((property: string, index: number) => {
@@ -503,6 +510,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         };
       }
     });
+    setIsDirty(true);
   }, []);
 
   // Section configurations for the object property groups
@@ -557,6 +565,15 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     },
   ], [objectProperties, agentProperties, wemiProperties, relatedWorkProperties, relatedExpressionProperties, relatedManifestationProperties]);
 
+  // Set of all object property URIs — used to distinguish object vs data properties when serializing
+  const objectPropertyUris = useMemo(() => {
+    const uris = new Set<string>();
+    objectPropertySections.forEach((section) =>
+      section.properties.forEach((p) => uris.add(p.uri)),
+    );
+    return uris;
+  }, [objectPropertySections]);
+
   const uriError = useMemo(() => {
     return customEntityUri && !isValidUri(customEntityUri);
   }, [customEntityUri]);
@@ -591,6 +608,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
   const performCancel = useCallback(() => {
     setIsEditing(false);
+    setIsDirty(false);
     setEntityData(existingEntity?.data || {});
     setEntityLabels(existingEntity?.labels || []);
     setDiscardDialogOpen(false);
@@ -729,7 +747,12 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
                 size="small"
                 sx={{ p: 0.5 }}
                 aria-label={t("tooltips.copyUri")}
-                onClick={() => navigator.clipboard.writeText(entityUri)}
+                onClick={() =>
+                  navigator.clipboard.writeText(entityUri).then(
+                    () => enqueueSnackbar(t("messages.uriCopied"), { variant: "success", autoHideDuration: 2000 }),
+                    () => enqueueSnackbar(t("messages.copyFailed"), { variant: "error" }),
+                  )
+                }
               >
                 <ContentCopy sx={{ fontSize: "0.9rem" }} />
               </IconButton>
@@ -792,7 +815,6 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         onClose={() => setLabelManagerOpen(false)}
         onSave={handleLabelsSave}
         initialLabels={entityLabels}
-        config={config}
       />
 
       {/* Delete Confirmation Dialog */}

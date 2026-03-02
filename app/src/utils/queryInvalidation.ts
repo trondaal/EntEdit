@@ -20,6 +20,11 @@ export const invalidateEntityCaches = (
     queryKey: ["entity-label", endpointUrl],
   });
 
+  // Invalidate entities-by-range so entity pickers reflect the latest data
+  queryClient.invalidateQueries({
+    queryKey: ["entities-by-range", endpointUrl],
+  });
+
   // Invalidate caches for all affected entities (those in relationships)
   affectedEntityUris.forEach((affectedUri) => {
     queryClient.invalidateQueries({

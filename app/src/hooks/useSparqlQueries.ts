@@ -303,53 +303,6 @@ export const useAgentProperties = (
   });
 };
 
-// Hook for Other related entity properties
-export const useOtherEntityProperties = (
-  config: SparqlEndpointConfig,
-  classUri?: string,
-  language: string = "en",
-) => {
-  return useQuery({
-    queryKey: ["other-entity-properties", config.url, classUri, language],
-    queryFn: async (): Promise<RdfProperty[]> => {
-      const client = new SparqlClient(config);
-      const fallbackLanguage = getFallbackLanguage(language);
-      const query = `
-        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        PREFIX owl: <http://www.w3.org/2002/07/owl#>
-        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-        PREFIX entedit: <http://oslomet.no/abi/vocab#>
-
-        SELECT DISTINCT ?property ?label ?domain ?range ?status
-        WHERE {
-          ?property a rdf:Property .
-          ?property entedit:status ?status.
-          FILTER(?status = "object property") .
-${createLanguageFallbackFragment("?property", language, fallbackLanguage)}
-
-          ?property rdfs:domain ?domain .
-          ?property rdfs:range ?range .
-    	    FILTER(?range != <http://www.w3.org/2004/02/skos/core#Concept> && ?range != <http://rdaregistry.info/Elements/c/C10002>) .
-          ${classUri ? `FILTER(?domain = <${sanitizeSparqlUri(classUri)}>)` : ""}
-          ${classUri ? `FILTER(?range = <${sanitizeSparqlUri(classUri)}>)` : ""}
-        }
-        ORDER BY ?range STR(?label)
-      `;
-
-      const response = await client.query(query);
-      return response.results.bindings.map((binding) => ({
-        uri: binding.property.value,
-        label: binding.label?.value,
-        comment: binding.comment?.value,
-        domain: binding.domain?.value,
-        range: binding.range?.value,
-        status: binding.status?.value,
-      }));
-    },
-    enabled: !!config.url,
-  });
-};
-
 // Hook for Related Work properties
 export const useRelatedWorkProperties = (
   config: SparqlEndpointConfig,
@@ -500,14 +453,3 @@ ${createLanguageFallbackFragment("?property", language, fallbackLanguage)}
   });
 };
 
-// Return supported languages (English and Norwegian)
-export const useAvailableLanguages = (_config: SparqlEndpointConfig) => {
-  return useQuery({
-    queryKey: ["available-languages"],
-    queryFn: async (): Promise<string[]> => {
-      // Return hardcoded list of supported languages
-      return ["en", "no"];
-    },
-    enabled: true,
-  });
-};

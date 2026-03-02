@@ -20,8 +20,7 @@ import {
 } from "@mui/material";
 import { Add, Delete, Edit, Save, Cancel, Label } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
-import { useAvailableLanguages } from "../hooks/useSparqlQueries";
-import type { SparqlEndpointConfig } from "../types/sparql";
+import { SUPPORTED_LANGUAGES } from "../utils/sparqlFragments";
 
 interface LabelEntry {
   id: string;
@@ -34,7 +33,6 @@ interface LabelManagerProps {
   onClose: () => void;
   onSave: (labels: LabelEntry[]) => void;
   initialLabels: LabelEntry[];
-  config: SparqlEndpointConfig;
 }
 
 const LabelManager: React.FC<LabelManagerProps> = ({
@@ -42,7 +40,6 @@ const LabelManager: React.FC<LabelManagerProps> = ({
   onClose,
   onSave,
   initialLabels,
-  config,
 }) => {
   const { t } = useTranslation("entityEditor");
   const [labels, setLabels] = useState<LabelEntry[]>(initialLabels);
@@ -50,9 +47,6 @@ const LabelManager: React.FC<LabelManagerProps> = ({
   const [tempValue, setTempValue] = useState("");
   const [tempLanguage, setTempLanguage] = useState("");
   const [error, setError] = useState<string | null>(null);
-
-  const { data: availableLanguages, isLoading: languagesLoading } =
-    useAvailableLanguages(config);
 
   useEffect(() => {
     setLabels(initialLabels);
@@ -179,10 +173,9 @@ const LabelManager: React.FC<LabelManagerProps> = ({
                       fullWidth
                       value={tempLanguage}
                       onChange={(e) => setTempLanguage(e.target.value)}
-                      disabled={languagesLoading}
                     >
                       <MenuItem value=""><em>—</em></MenuItem>
-                      {availableLanguages?.map((lang) => (
+                      {SUPPORTED_LANGUAGES.map((lang) => (
                         <MenuItem key={lang} value={lang}>
                           {lang.toUpperCase()}
                         </MenuItem>

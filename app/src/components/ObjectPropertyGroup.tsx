@@ -74,11 +74,15 @@ const ObjectPropertyGroup: React.FC<ObjectPropertyGroupProps> = ({
   const handleSelect = useCallback(
     (entityUri: string) => {
       if (selectedProperty && entityUri) {
-        onAddProperty(selectedProperty, entityUri);
+        // Prevent adding the same entity URI twice for the same property
+        const existing = entityData[selectedProperty] || [];
+        if (!existing.includes(entityUri)) {
+          onAddProperty(selectedProperty, entityUri);
+        }
         setSelectedProperty("");
       }
     },
-    [selectedProperty, onAddProperty],
+    [selectedProperty, entityData, onAddProperty],
   );
 
   const handleCancel = useCallback(() => setSelectedProperty(""), []);

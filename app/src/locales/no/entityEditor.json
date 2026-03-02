@@ -38,7 +38,9 @@
     "selectRelatedManifestation": "Velg relatert manifestasjon:",
     "entitySaved": "Entitet lagret",
     "entityCreated": "Entitet opprettet",
-    "entityDeleted": "Entitet slettet"
+    "entityDeleted": "Entitet slettet",
+    "uriCopied": "URI kopiert til utklippstavlen",
+    "copyFailed": "Kunne ikke kopiere URI"
   },
   "labelManager": {
     "title": "Administrer etiketter",

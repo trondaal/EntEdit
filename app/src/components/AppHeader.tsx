@@ -133,7 +133,6 @@ const AppHeader: React.FC<AppHeaderProps> = ({
               }}
             >
               <LanguageSelector
-                config={config}
                 selectedLanguage={selectedLanguage}
                 onLanguageChange={onLanguageChange}
               />
