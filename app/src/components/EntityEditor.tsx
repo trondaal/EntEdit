@@ -84,11 +84,14 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
   const [entityData, setEntityData] = useState<Record<string, string[]>>({});
   const [isEditing, setIsEditing] = useState(!entityUri);
+  // isDirty tracks actual user changes (separate from isEditing which controls form interactivity)
+  // For new entities isEditing starts true but isDirty only becomes true after the user makes a change
+  const [isDirty, setIsDirty] = useState(false);
 
-  // Notify parent whenever editing mode changes
+  // Notify parent whenever dirty state changes (not edit mode, since new entities start in edit mode)
   useEffect(() => {
-    onEditingChange?.(isEditing);
-  }, [isEditing, onEditingChange]);
+    onEditingChange?.(isDirty);
+  }, [isDirty, onEditingChange]);
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
   const [selectedProperty, setSelectedProperty] = useState<string>("");
@@ -111,6 +114,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       setSelectedProperty("");
       setSaveError(null);
       setIsEditing(true);
+      setIsDirty(false);
       setEntityLabels([]);
     }
   }, [classUri, entityUri]);
@@ -122,6 +126,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     setSelectedProperty("");
     setSaveError(null);
     setIsEditing(true);
+    setIsDirty(false);
     setEntityLabels([]);
   };
 
@@ -183,10 +188,12 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     if (existingEntity) {
       setEntityData(existingEntity.data);
       setIsEditing(false);
+      setIsDirty(false);
       setEntityLabels(existingEntity.labels || []);
     } else if (!entityUri) {
       setEntityData({});
       setIsEditing(true);
+      setIsDirty(false);
       setCustomEntityUri(""); // Clear custom URI for new entities
       setEntityLabels([]);
     }
@@ -315,6 +322,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         enqueueSnackbar(t("messages.entityCreated"), { variant: "success", autoHideDuration: 3000 });
       } else {
         setIsEditing(false);
+        setIsDirty(false);
         enqueueSnackbar(t("messages.entitySaved"), { variant: "success", autoHideDuration: 3000 });
       }
 
@@ -445,7 +453,8 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   ) => {
     setEntityLabels(labels);
     setLabelManagerOpen(false);
-    setIsEditing(true); // Mark entity as having unsaved changes
+    setIsEditing(true); // Ensure form is in edit mode
+    setIsDirty(true);   // Mark entity as having unsaved changes
   }, []);
 
   const addProperty = useCallback((propertyUri: string) => {
@@ -457,6 +466,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           [propertyUri]: [...currentValues, ""],
         };
       });
+      setIsDirty(true);
     }
   }, [isEditing]);
 
@@ -466,6 +476,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         ...prev,
         [propertyUri]: [...(prev[propertyUri] || []), entityUri],
       }));
+      setIsDirty(true);
     }
   }, []);
 
@@ -482,6 +493,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         [property]: values,
       };
     });
+    setIsDirty(true);
   }, []);
 
   const removePropertyValue = useCallback((property: string, index: number) => {
@@ -498,6 +510,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         };
       }
     });
+    setIsDirty(true);
   }, []);
 
   // Section configurations for the object property groups
@@ -595,6 +608,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
   const performCancel = useCallback(() => {
     setIsEditing(false);
+    setIsDirty(false);
     setEntityData(existingEntity?.data || {});
     setEntityLabels(existingEntity?.labels || []);
     setDiscardDialogOpen(false);
