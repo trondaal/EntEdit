@@ -445,6 +445,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   ) => {
     setEntityLabels(labels);
     setLabelManagerOpen(false);
+    setIsEditing(true); // Mark entity as having unsaved changes
   }, []);
 
   const addProperty = useCallback((propertyUri: string) => {
