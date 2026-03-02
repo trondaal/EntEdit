@@ -1,4 +1,4 @@
-import { useState, useEffect, lazy, Suspense } from "react";
+import { useState, useEffect, useMemo, lazy, Suspense } from "react";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
@@ -99,7 +99,10 @@ function App() {
 
   // Check if search tab should be hidden based on URL parameter
   // By default, search tab is shown unless 'nosearch' parameter is present
-  const showSearchTab = !new URLSearchParams(window.location.search).has('nosearch');
+  const showSearchTab = useMemo(
+    () => !new URLSearchParams(window.location.search).has("nosearch"),
+    [],
+  );
 
   // Sync i18next language with app language selection
   useEffect(() => {

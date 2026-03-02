@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useCallback } from "react";
+import React, { useState, useMemo, useCallback, useEffect } from "react";
 import {
   Paper,
   Typography,
@@ -50,7 +50,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
   const [switchEntityDialogOpen, setSwitchEntityDialogOpen] = useState(false);
 
   // Reset filter when class changes
-  React.useEffect(() => {
+  useEffect(() => {
     setEntityFilter("");
     setSelectedEntity(null);
     setIsEditorEditing(false);

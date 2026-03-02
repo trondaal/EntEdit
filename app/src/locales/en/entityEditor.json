@@ -38,7 +38,9 @@
     "selectRelatedManifestation": "Select a related manifestation:",
     "entitySaved": "Entity saved successfully",
     "entityCreated": "Entity created successfully",
-    "entityDeleted": "Entity deleted successfully"
+    "entityDeleted": "Entity deleted successfully",
+    "uriCopied": "URI copied to clipboard",
+    "copyFailed": "Failed to copy URI"
   },
   "labelManager": {
     "title": "Manage Labels",

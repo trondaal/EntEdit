@@ -5,7 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import { SparqlClient } from "../utils/sparqlClient";
-import { extractUriFragment, getPrimaryLabel } from "../utils/labelUtils";
+import { extractUriFragment, getPrimaryLabel, sanitizeSparqlUri } from "../utils/labelUtils";
 
 interface ObjectPropertyValueProps {
   config: SparqlEndpointConfig;
@@ -35,7 +35,7 @@ const ObjectPropertyValue: React.FC<ObjectPropertyValueProps> = ({
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         SELECT ?label ?lang
         WHERE {
-          <${value}> rdfs:label ?label .
+          <${sanitizeSparqlUri(value)}> rdfs:label ?label .
           BIND(LANG(?label) AS ?lang)
         }
       `;

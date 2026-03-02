@@ -5,27 +5,22 @@ import {
   Select,
   MenuItem,
   type SelectChangeEvent,
-  CircularProgress,
   Box,
 } from "@mui/material";
 import { Language } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
-import type { SparqlEndpointConfig } from "../types/sparql";
-import { useAvailableLanguages } from "../hooks/useSparqlQueries";
+import { SUPPORTED_LANGUAGES } from "../utils/sparqlFragments";
 
 interface LanguageSelectorProps {
-  config: SparqlEndpointConfig;
   selectedLanguage: string;
   onLanguageChange: (language: string) => void;
 }
 
 const LanguageSelector: React.FC<LanguageSelectorProps> = ({
-  config,
   selectedLanguage,
   onLanguageChange,
 }) => {
   const { t } = useTranslation();
-  const { data: languages, isLoading } = useAvailableLanguages(config);
 
   const handleChange = (event: SelectChangeEvent) => {
     onLanguageChange(event.target.value);
@@ -57,7 +52,6 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
           value={selectedLanguage}
           label={t("labels.language")}
           onChange={handleChange}
-          disabled={isLoading}
           sx={{
             fontSize: "0.875rem",
             "& .MuiSelect-select": {
@@ -65,17 +59,11 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
             },
           }}
         >
-          {isLoading ? (
-            <MenuItem disabled>
-              <CircularProgress size={16} />
+          {SUPPORTED_LANGUAGES.map((lang) => (
+            <MenuItem key={lang} value={lang}>
+              {lang.toUpperCase()}
             </MenuItem>
-          ) : (
-            languages?.map((lang) => (
-              <MenuItem key={lang} value={lang}>
-                {lang.toUpperCase()}
-              </MenuItem>
-            ))
-          )}
+          ))}
         </Select>
       </FormControl>
     </Box>

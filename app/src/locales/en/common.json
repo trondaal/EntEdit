@@ -60,6 +60,52 @@
     "switchEntityMessage": "The current entity has unsaved changes. Switching to another entity will discard them.",
     "switchEntityConfirm": "Discard and switch"
   },
+  "wizard": {
+    "steps": {
+      "connection": "Database Connection",
+      "test": "Test Connection",
+      "language": "Language Selection"
+    },
+    "connection": {
+      "title": "Configure Database Connection",
+      "description": "Enter your SPARQL endpoint details. This information will be stored locally in your browser.",
+      "urlLabel": "SPARQL Endpoint URL",
+      "urlHelper": "e.g., http://localhost/graphdb/repositories/EntEdit",
+      "urlPlaceholder": "http://localhost/graphdb/repositories/EntEdit",
+      "usernameLabel": "Username (optional)",
+      "passwordLabel": "Password (optional)",
+      "popularEndpoints": "Popular SPARQL Endpoints:",
+      "graphdbDocker": "GraphDB (Docker): http://localhost/graphdb/repositories/EntEdit",
+      "graphdbDockerHint": "Default when running via Docker Compose",
+      "graphdbLocal": "GraphDB (local): http://localhost:7200/repositories/[repository]",
+      "graphdbLocalHint": "Direct GraphDB installation",
+      "fuseki": "Fuseki: http://localhost:3030/[dataset]/sparql",
+      "fusekiHint": "Apache Jena Fuseki server",
+      "stardog": "Stardog: http://localhost:5820/[database]/query",
+      "stardogHint": "Stardog graph database"
+    },
+    "test": {
+      "title": "Test Database Connection",
+      "description": "We'll test the connection to ensure your endpoint is accessible.",
+      "endpointLabel": "Endpoint:",
+      "usernameLabel": "Username:",
+      "testing": "Testing connection...",
+      "testButton": "Test Connection",
+      "testingButton": "Testing..."
+    },
+    "languageStep": {
+      "title": "Select Default Language",
+      "description": "Choose your preferred language for labels and interface text. You can change this later.",
+      "successTitle": "Configuration Complete!",
+      "successDescription": "Your configuration will be saved locally and the application will connect to your database."
+    },
+    "buttons": {
+      "nextTest": "Next: Test Connection",
+      "nextLanguage": "Next: Language",
+      "back": "Back",
+      "complete": "Complete Setup"
+    }
+  },
   "endpointConfig": {
     "title": "SPARQL Endpoint Configuration",
     "endpointUrl": "SPARQL Endpoint URL",

@@ -62,3 +62,6 @@ export const createLanguageFallbackFragment = (
 export const getFallbackLanguage = (language: string): string => {
   return language === "no" ? "en" : "no";
 };
+
+/** Languages supported by the application */
+export const SUPPORTED_LANGUAGES = ["en", "no"] as const;

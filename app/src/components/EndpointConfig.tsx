@@ -137,7 +137,6 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
             />
             <Box sx={{ alignSelf: "center" }}>
               <LanguageSelector
-                config={config}
                 selectedLanguage={selectedLanguage}
                 onLanguageChange={onLanguageChange}
               />

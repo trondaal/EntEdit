@@ -381,12 +381,6 @@ ORDER BY DESC(?score)
 
       const response = await client.query(sparqlQuery);
 
-      console.log("useSearchManifestations SPARQL response:", {
-        query: sparqlQuery,
-        bindings: response.results.bindings,
-        firstBinding: response.results.bindings[0],
-      });
-
       const results = response.results.bindings.map((binding) => ({
         uri: binding.manifestation.value,
         title: binding.title?.value,
@@ -406,7 +400,6 @@ ORDER BY DESC(?score)
         carriertype: binding.carriertype?.value,
       }));
 
-      console.log("Mapped manifestation results:", results);
       return results;
     },
     enabled: Boolean(query && query.trim().length > 0),

@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { SparqlClient } from "../utils/sparqlClient";
 import type { SparqlEndpointConfig } from "../types/sparql";
+import { sanitizeSparqlUri } from "../utils/labelUtils";
 
 export interface Manifestation {
   uri: string;
@@ -67,7 +68,7 @@ export const useManifestations = (
                (SAMPLE(?mediatypelabel) as ?mediatypelabel)
                (SAMPLE(?carriertypelabel) as ?carriertypelabel)
         WHERE {
-          <${expressionUri}> rdaeo:P20059 ?manifestation .
+          <${sanitizeSparqlUri(expressionUri)}> rdaeo:P20059 ?manifestation .
           # Title area
           OPTIONAL {
             ?manifestation rdamd:P30156 ?title_val .

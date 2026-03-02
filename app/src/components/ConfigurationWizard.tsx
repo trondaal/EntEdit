@@ -19,6 +19,7 @@ import {
   ListItemText,
 } from "@mui/material";
 import { Storage, CheckCircle, Error, Language } from "@mui/icons-material";
+import { useTranslation } from "react-i18next";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import { SparqlClient } from "../utils/sparqlClient";
 import LanguageSelector from "./LanguageSelector";
@@ -39,6 +40,7 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
   initialConfig,
   initialLanguage = "en",
 }) => {
+  const { t } = useTranslation("common");
   const [activeStep, setActiveStep] = useState(0);
   const [config, setConfig] = useState<SparqlEndpointConfig>(
     initialConfig || {
@@ -56,9 +58,9 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
   } | null>(null);
 
   const steps = [
-    "Database Connection",
-    "Test Connection",
-    "Language Selection",
+    t("wizard.steps.connection"),
+    t("wizard.steps.test"),
+    t("wizard.steps.language"),
   ];
 
   const testConnection = async () => {
@@ -74,23 +76,6 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
     setTestResult(null);
 
     try {
-      // First, try a basic connectivity test without authentication
-      console.log("Testing basic connectivity to:", config.url);
-
-      try {
-        const basicResponse = await fetch(config.url, {
-          method: "OPTIONS",
-          credentials: "include",
-          //mode: "cors",
-        });
-        console.log("Basic connectivity test result:", {
-          status: basicResponse.status,
-          ok: basicResponse.ok,
-        });
-      } catch (basicError) {
-        console.log("Basic connectivity failed:", basicError);
-      }
-
       // Now test with full SPARQL query
       const client = new SparqlClient(config);
 
@@ -103,10 +88,6 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
         LIMIT 1
       `;
 
-      console.log(
-        "Testing SPARQL query with authentication:",
-        !!config.username,
-      );
       const response = await client.query(testQuery);
 
       if (response.results.bindings.length > 0) {
@@ -155,13 +136,6 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
           "The database server needs to allow requests from this application. For GraphDB, add these CORS headers:\n• Access-Control-Allow-Origin: *\n• Access-Control-Allow-Methods: GET, POST, OPTIONS\n• Access-Control-Allow-Headers: Content-Type, Authorization";
       }
 
-      console.error("Connection test failed:", error);
-      console.log("Config used:", {
-        url: config.url,
-        hasUsername: !!config.username,
-        hasPassword: !!config.password,
-      });
-
       setTestResult({
         success: false,
         message: enhancedMessage,
@@ -182,26 +156,25 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
         return (
           <Box sx={{ minHeight: 300 }}>
             <Typography variant="h6" sx={{ mb: 2 }}>
-              Configure Database Connection
+              {t("wizard.connection.title")}
             </Typography>
             <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
-              Enter your SPARQL endpoint details. This information will be
-              stored locally in your browser.
+              {t("wizard.connection.description")}
             </Typography>
 
             <TextField
               fullWidth
-              label="SPARQL Endpoint URL"
+              label={t("wizard.connection.urlLabel")}
               value={config.url}
               onChange={(e) => setConfig({ ...config, url: e.target.value })}
-              helperText="e.g., http://localhost/graphdb/repositories/EntEdit"
+              helperText={t("wizard.connection.urlHelper")}
               sx={{ mb: 2 }}
-              placeholder="http://localhost/graphdb/repositories/EntEdit"
+              placeholder={t("wizard.connection.urlPlaceholder")}
             />
 
             <TextField
               fullWidth
-              label="Username (optional)"
+              label={t("wizard.connection.usernameLabel")}
               value={config.username || ""}
               onChange={(e) =>
                 setConfig({ ...config, username: e.target.value })
@@ -211,7 +184,7 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
 
             <TextField
               fullWidth
-              label="Password (optional)"
+              label={t("wizard.connection.passwordLabel")}
               type="password"
               value={config.password || ""}
               onChange={(e) =>
@@ -224,31 +197,31 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
               sx={{ p: 2, bgcolor: "info.light", color: "info.contrastText" }}
             >
               <Typography variant="body2">
-                <strong>Popular SPARQL Endpoints:</strong>
+                <strong>{t("wizard.connection.popularEndpoints")}</strong>
               </Typography>
               <List dense>
                 <ListItem disablePadding>
                   <ListItemText
-                    primary="GraphDB (Docker): http://localhost/graphdb/repositories/EntEdit"
-                    secondary="Default when running via Docker Compose"
+                    primary={t("wizard.connection.graphdbDocker")}
+                    secondary={t("wizard.connection.graphdbDockerHint")}
                   />
                 </ListItem>
                 <ListItem disablePadding>
                   <ListItemText
-                    primary="GraphDB (local): http://localhost:7200/repositories/[repository]"
-                    secondary="Direct GraphDB installation"
+                    primary={t("wizard.connection.graphdbLocal")}
+                    secondary={t("wizard.connection.graphdbLocalHint")}
                   />
                 </ListItem>
                 <ListItem disablePadding>
                   <ListItemText
-                    primary="Fuseki: http://localhost:3030/[dataset]/sparql"
-                    secondary="Apache Jena Fuseki server"
+                    primary={t("wizard.connection.fuseki")}
+                    secondary={t("wizard.connection.fusekiHint")}
                   />
                 </ListItem>
                 <ListItem disablePadding>
                   <ListItemText
-                    primary="Stardog: http://localhost:5820/[database]/query"
-                    secondary="Stardog graph database"
+                    primary={t("wizard.connection.stardog")}
+                    secondary={t("wizard.connection.stardogHint")}
                   />
                 </ListItem>
               </List>
@@ -268,23 +241,23 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
             }}
           >
             <Typography variant="h6" sx={{ mb: 2 }}>
-              Test Database Connection
+              {t("wizard.test.title")}
             </Typography>
             <Typography
               variant="body2"
               color="text.secondary"
               sx={{ mb: 3, textAlign: "center" }}
             >
-              We'll test the connection to ensure your endpoint is accessible.
+              {t("wizard.test.description")}
             </Typography>
 
             <Box sx={{ textAlign: "center", mb: 3 }}>
               <Typography variant="body1" sx={{ mb: 1 }}>
-                <strong>Endpoint:</strong> {config.url}
+                <strong>{t("wizard.test.endpointLabel")}</strong> {config.url}
               </Typography>
               {config.username && (
                 <Typography variant="body2" color="text.secondary">
-                  <strong>Username:</strong> {config.username}
+                  <strong>{t("wizard.test.usernameLabel")}</strong> {config.username}
                 </Typography>
               )}
             </Box>
@@ -292,7 +265,7 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
             {testing && (
               <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
                 <CircularProgress size={20} sx={{ mr: 1 }} />
-                <Typography>Testing connection...</Typography>
+                <Typography>{t("wizard.test.testing")}</Typography>
               </Box>
             )}
 
@@ -317,7 +290,7 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
               disabled={testing || !config.url.trim()}
               sx={{ minWidth: 120 }}
             >
-              {testing ? "Testing..." : "Test Connection"}
+              {testing ? t("wizard.test.testingButton") : t("wizard.test.testButton")}
             </Button>
           </Box>
         );
@@ -326,17 +299,15 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
         return (
           <Box sx={{ minHeight: 300 }}>
             <Typography variant="h6" sx={{ mb: 2 }}>
-              Select Default Language
+              {t("wizard.languageStep.title")}
             </Typography>
             <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
-              Choose your preferred language for labels and interface text. You
-              can change this later.
+              {t("wizard.languageStep.description")}
             </Typography>
 
             <Box sx={{ display: "flex", alignItems: "center", gap: 2, mb: 3 }}>
               <Language />
               <LanguageSelector
-                config={config}
                 selectedLanguage={selectedLanguage}
                 onLanguageChange={setSelectedLanguage}
               />
@@ -354,11 +325,10 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
                 sx={{ display: "flex", alignItems: "center" }}
               >
                 <CheckCircle sx={{ mr: 1 }} />
-                Configuration Complete!
+                {t("wizard.languageStep.successTitle")}
               </Typography>
               <Typography variant="body2" sx={{ mt: 1 }}>
-                Your configuration will be saved locally and the application
-                will connect to your database.
+                {t("wizard.languageStep.successDescription")}
               </Typography>
             </Paper>
           </Box>
@@ -378,21 +348,21 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
             onClick={() => setActiveStep(1)}
             disabled={!config.url.trim()}
           >
-            Next: Test Connection
+            {t("wizard.buttons.nextTest")}
           </Button>
         );
       case 1:
         return (
           <Box sx={{ display: "flex", gap: 1 }}>
             <Button variant="outlined" onClick={() => setActiveStep(0)}>
-              Back
+              {t("wizard.buttons.back")}
             </Button>
             <Button
               variant="contained"
               onClick={() => setActiveStep(2)}
               disabled={!testResult?.success}
             >
-              Next: Language
+              {t("wizard.buttons.nextLanguage")}
             </Button>
           </Box>
         );
@@ -400,14 +370,14 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
         return (
           <Box sx={{ display: "flex", gap: 1 }}>
             <Button variant="outlined" onClick={() => setActiveStep(1)}>
-              Back
+              {t("wizard.buttons.back")}
             </Button>
             <Button
               variant="contained"
               onClick={handleComplete}
               color="success"
             >
-              Complete Setup
+              {t("wizard.buttons.complete")}
             </Button>
           </Box>
         );
@@ -431,7 +401,7 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
       <DialogTitle>
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <Storage sx={{ mr: 1 }} />
-          Database Configuration
+          {t("wizard.steps.connection")}
         </Box>
       </DialogTitle>
 

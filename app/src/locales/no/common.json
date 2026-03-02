@@ -60,6 +60,52 @@
     "switchEntityMessage": "Den gjeldende entiteten har ulagrede endringer. Å bytte til en annen entitet vil forkaste dem.",
     "switchEntityConfirm": "Forkast og bytt"
   },
+  "wizard": {
+    "steps": {
+      "connection": "Databasetilkobling",
+      "test": "Test tilkobling",
+      "language": "Språkvalg"
+    },
+    "connection": {
+      "title": "Konfigurer databasetilkobling",
+      "description": "Skriv inn SPARQL-endepunktdetaljer. Denne informasjonen lagres lokalt i nettleseren din.",
+      "urlLabel": "SPARQL-endepunkt-URL",
+      "urlHelper": "f.eks. http://localhost/graphdb/repositories/EntEdit",
+      "urlPlaceholder": "http://localhost/graphdb/repositories/EntEdit",
+      "usernameLabel": "Brukernavn (valgfritt)",
+      "passwordLabel": "Passord (valgfritt)",
+      "popularEndpoints": "Vanlige SPARQL-endepunkter:",
+      "graphdbDocker": "GraphDB (Docker): http://localhost/graphdb/repositories/EntEdit",
+      "graphdbDockerHint": "Standard ved kjøring via Docker Compose",
+      "graphdbLocal": "GraphDB (lokal): http://localhost:7200/repositories/[repository]",
+      "graphdbLocalHint": "Direkte GraphDB-installasjon",
+      "fuseki": "Fuseki: http://localhost:3030/[dataset]/sparql",
+      "fusekiHint": "Apache Jena Fuseki-server",
+      "stardog": "Stardog: http://localhost:5820/[database]/query",
+      "stardogHint": "Stardog grafbase"
+    },
+    "test": {
+      "title": "Test databasetilkobling",
+      "description": "Vi tester tilkoblingen for å sikre at endepunktet er tilgjengelig.",
+      "endpointLabel": "Endepunkt:",
+      "usernameLabel": "Brukernavn:",
+      "testing": "Tester tilkobling...",
+      "testButton": "Test tilkobling",
+      "testingButton": "Tester..."
+    },
+    "languageStep": {
+      "title": "Velg standardspråk",
+      "description": "Velg foretrukket språk for etiketter og grensesnitttekst. Du kan endre dette senere.",
+      "successTitle": "Konfigurasjon fullført!",
+      "successDescription": "Konfigurasjonen din lagres lokalt og applikasjonen kobler til databasen din."
+    },
+    "buttons": {
+      "nextTest": "Neste: Test tilkobling",
+      "nextLanguage": "Neste: Språk",
+      "back": "Tilbake",
+      "complete": "Fullfør oppsett"
+    }
+  },
   "endpointConfig": {
     "title": "SPARQL endepunkt-konfigurasjon",
     "endpointUrl": "SPARQL endepunkt-URL",
