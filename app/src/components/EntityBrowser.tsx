@@ -95,8 +95,8 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
   }, []);
 
   const handleEntitySelect = useCallback((entityUri: string) => {
-    if (isEditorEditing && entityUri !== selectedEntity) {
-      // Editor has unsaved changes — ask for confirmation before switching
+    if (isEditorEditing && selectedEntity !== null && entityUri !== selectedEntity) {
+      // Editor has unsaved changes on an existing entity — ask for confirmation before switching
       setPendingEntityUri(entityUri);
       setSwitchEntityDialogOpen(true);
     } else {

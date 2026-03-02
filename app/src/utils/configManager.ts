@@ -1,6 +1,7 @@
 import type { SparqlEndpointConfig } from "../types/sparql";
 
 const CONFIG_STORAGE_KEY = "entEdit.config";
+const CREDENTIALS_STORAGE_KEY = "entEdit.credentials";
 const LANGUAGE_STORAGE_KEY = "entEdit.language";
 
 export interface AppConfiguration {
@@ -10,28 +11,43 @@ export interface AppConfiguration {
 }
 
 /**
- * Save configuration to localStorage
+ * Save configuration.
+ * URL and language persist in localStorage across sessions.
+ * Credentials (username/password) are stored in sessionStorage and
+ * cleared automatically when the browser tab is closed.
  */
 export const saveConfiguration = (
   config: SparqlEndpointConfig,
   language: string,
 ): void => {
   try {
-    const configToSave = {
-      url: config.url,
-      username: config.username || undefined,
-      password: config.password || undefined,
-    };
-
-    localStorage.setItem(CONFIG_STORAGE_KEY, JSON.stringify(configToSave));
+    // Persist non-sensitive settings in localStorage
+    localStorage.setItem(
+      CONFIG_STORAGE_KEY,
+      JSON.stringify({ url: config.url }),
+    );
     localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
+
+    // Store credentials in sessionStorage (cleared on tab close)
+    if (config.username || config.password) {
+      sessionStorage.setItem(
+        CREDENTIALS_STORAGE_KEY,
+        JSON.stringify({
+          username: config.username || "",
+          password: config.password || "",
+        }),
+      );
+    } else {
+      sessionStorage.removeItem(CREDENTIALS_STORAGE_KEY);
+    }
   } catch (error) {
-    console.warn("Failed to save configuration to localStorage:", error);
+    console.warn("Failed to save configuration:", error);
   }
 };
 
 /**
- * Load configuration from localStorage
+ * Load configuration.
+ * Merges the persisted URL from localStorage with credentials from sessionStorage.
  */
 export const loadConfiguration = (): AppConfiguration | null => {
   try {
@@ -42,20 +58,57 @@ export const loadConfiguration = (): AppConfiguration | null => {
       return null;
     }
 
-    const config = JSON.parse(configStr) as SparqlEndpointConfig;
+    const config = JSON.parse(configStr) as {
+      url: string;
+      username?: string;
+      password?: string;
+    };
 
     // Validate that we have at least a URL
     if (!config.url) {
       return null;
     }
 
+    // Migrate: if old localStorage config contains credentials, move them to
+    // sessionStorage and strip them from localStorage
+    if (config.username || config.password) {
+      sessionStorage.setItem(
+        CREDENTIALS_STORAGE_KEY,
+        JSON.stringify({
+          username: config.username || "",
+          password: config.password || "",
+        }),
+      );
+      localStorage.setItem(
+        CONFIG_STORAGE_KEY,
+        JSON.stringify({ url: config.url }),
+      );
+    }
+
+    // Load credentials from sessionStorage
+    let username = "";
+    let password = "";
+    const credentialsStr = sessionStorage.getItem(CREDENTIALS_STORAGE_KEY);
+    if (credentialsStr) {
+      const credentials = JSON.parse(credentialsStr) as {
+        username: string;
+        password: string;
+      };
+      username = credentials.username || "";
+      password = credentials.password || "";
+    }
+
     return {
-      endpoint: config,
+      endpoint: {
+        url: config.url,
+        username,
+        password,
+      },
       language: language || "en",
       isConfigured: true,
     };
   } catch (error) {
-    console.warn("Failed to load configuration from localStorage:", error);
+    console.warn("Failed to load configuration:", error);
     return null;
   }
 };
@@ -67,8 +120,9 @@ export const clearConfiguration = (): void => {
   try {
     localStorage.removeItem(CONFIG_STORAGE_KEY);
     localStorage.removeItem(LANGUAGE_STORAGE_KEY);
+    sessionStorage.removeItem(CREDENTIALS_STORAGE_KEY);
   } catch (error) {
-    console.warn("Failed to clear configuration from localStorage:", error);
+    console.warn("Failed to clear configuration:", error);
   }
 };
 
