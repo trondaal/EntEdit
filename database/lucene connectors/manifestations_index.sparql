@@ -8,7 +8,7 @@ INSERT DATA {
       "fieldName": "names$manifestation",
       "propertyChain": [
         "http://rdaregistry.info/Elements/x/object/P00006",
-        "http://rdaregistry.info/Elements/x/object/P00019"
+        "http://rdaregistry.info/Elements/x/P00019"
       ],
       "indexed": true,
       "stored": true,
@@ -84,7 +84,7 @@ INSERT DATA {
         "http://rdaregistry.info/Elements/e/object/P20231",
         "http://rdaregistry.info/Elements/w/object/P10192",
         "http://rdaregistry.info/Elements/x/object/P00006",
-        "http://rdaregistry.info/Elements/x/object/P00019"
+        "http://rdaregistry.info/Elements/x/P00019"
       ],
       "indexed": true,
       "stored": true,
@@ -100,7 +100,7 @@ INSERT DATA {
         "http://rdaregistry.info/Elements/e/object/P20231",
         "http://rdaregistry.info/Elements/w/object/P10147",
         "http://rdaregistry.info/Elements/x/object/P00006",
-        "http://rdaregistry.info/Elements/x/datatype/P00019"
+        "http://rdaregistry.info/Elements/x/P00019"
       ],
       "indexed": true,
       "stored": true,
@@ -116,7 +116,7 @@ INSERT DATA {
         "http://rdaregistry.info/Elements/e/object/P20231",
         "http://rdaregistry.info/Elements/w/object/P10019",
         "http://rdaregistry.info/Elements/x/object/P00006",
-        "http://rdaregistry.info/Elements/x/datatype/P00019"
+        "http://rdaregistry.info/Elements/x/P00019"
       ],
       "indexed": true,
       "stored": true,
@@ -130,7 +130,7 @@ INSERT DATA {
       "propertyChain": [
         "http://rdaregistry.info/Elements/m/object/P30139",
         "http://rdaregistry.info/Elements/e/object/P20059",
-        "http://rdaregistry.info/Elements/x/object/P00019"
+        "http://rdaregistry.info/Elements/x/P00019"
       ],
       "indexed": true,
       "stored": true,
@@ -201,7 +201,7 @@ INSERT DATA {
         "http://rdaregistry.info/Elements/m/object/P30139",
         "http://rdaregistry.info/Elements/e/object/P20231",
         "http://rdaregistry.info/Elements/w/object/P10192",
-        "http://rdaregistry.info/Elements/x/object/P00019"
+        "http://rdaregistry.info/Elements/x/P00019"
       ],
       "indexed": true,
       "stored": true,
@@ -216,7 +216,7 @@ INSERT DATA {
         "http://rdaregistry.info/Elements/m/object/P30139",
         "http://rdaregistry.info/Elements/e/object/P20231",
         "http://rdaregistry.info/Elements/w/object/P10147",
-        "http://rdaregistry.info/Elements/x/datatype/P00019"
+        "http://rdaregistry.info/Elements/x/P00019"
       ],
       "indexed": true,
       "stored": true,
@@ -231,7 +231,7 @@ INSERT DATA {
         "http://rdaregistry.info/Elements/m/object/P30139",
         "http://rdaregistry.info/Elements/e/object/P20231",
         "http://rdaregistry.info/Elements/w/object/P10019",
-        "http://rdaregistry.info/Elements/x/datatype/P00019"
+        "http://rdaregistry.info/Elements/x/P00019"
       ],
       "indexed": true,
       "stored": true,
