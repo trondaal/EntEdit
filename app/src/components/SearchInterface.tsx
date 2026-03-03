@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import {
   Paper,
   Typography,
@@ -13,6 +13,7 @@ import { Search, Clear } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import { useSearchExpressions, useSearchManifestations } from "../hooks/useSearchQueries";
+import { useDebouncedValue } from "../hooks/useDebouncedValue";
 import ResultSet from "./ResultSet";
 import ManifestationResultSet from "./ManifestationResultSet";
 
@@ -26,32 +27,52 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
   selectedLanguage,
 }) => {
   const { t } = useTranslation();
-  const [searchQuery, setSearchQuery] = useState<string>("");
+  const [searchInput, setSearchInput] = useState<string>("");
   const [searchMode, setSearchMode] = useState<'expression' | 'manifestation'>('expression');
   const [selectedResult, setSelectedResult] = useState<string | null>(null);
   const [selectedManifestation, setSelectedManifestation] = useState<string | null>(null);
   const [selectedManifestationResult, setSelectedManifestationResult] = useState<string | null>(null);
 
+  // Debounce the search query to avoid firing expensive SPARQL queries on every keystroke
+  const debouncedQuery = useDebouncedValue(searchInput, 500);
+
   const {
-    data: searchResults,
+    data: searchData,
     isLoading: searchLoading,
     error: searchError,
-  } = useSearchExpressions(config, searchQuery, selectedLanguage);
+    hasNextPage: searchHasNextPage,
+    isFetchingNextPage: searchIsFetchingNextPage,
+    fetchNextPage: searchFetchNextPage,
+  } = useSearchExpressions(config, debouncedQuery, selectedLanguage);
 
   const {
-    data: manifestationSearchResults,
+    data: manifestationSearchData,
     isLoading: manifestationSearchLoading,
     error: manifestationSearchError,
-  } = useSearchManifestations(config, searchQuery, selectedLanguage);
+    hasNextPage: manifestationHasNextPage,
+    isFetchingNextPage: manifestationIsFetchingNextPage,
+    fetchNextPage: manifestationFetchNextPage,
+  } = useSearchManifestations(config, debouncedQuery, selectedLanguage);
+
+  // Flatten infinite query pages into flat arrays
+  const searchResults = useMemo(
+    () => searchData?.pages.flat() ?? [],
+    [searchData],
+  );
+
+  const manifestationSearchResults = useMemo(
+    () => manifestationSearchData?.pages.flat() ?? [],
+    [manifestationSearchData],
+  );
 
   const handleSearch = (value: string) => {
-    setSearchQuery(value);
+    setSearchInput(value);
     setSelectedResult(null);
     setSelectedManifestation(null);
   };
 
   const handleClearSearch = () => {
-    setSearchQuery("");
+    setSearchInput("");
     setSelectedResult(null);
     setSelectedManifestation(null);
   };
@@ -92,7 +113,7 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
                 fullWidth
                 variant="outlined"
                 placeholder={t("search.searchPlaceholder")}
-                value={searchQuery}
+                value={searchInput}
                 onChange={(e) => handleSearch(e.target.value)}
                 slotProps={{
                   input: {
@@ -101,7 +122,7 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
                         <Search color="action" />
                       </InputAdornment>
                     ),
-                    endAdornment: searchQuery && (
+                    endAdornment: searchInput && (
                       <InputAdornment position="end">
                         <IconButton
                           onClick={handleClearSearch}
@@ -129,7 +150,7 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
         <Box sx={{ flex: "1 1 600px", minWidth: 600, alignSelf: "flex-start" }}>
           {searchMode === 'expression' ? (
             <ResultSet
-              searchQuery={searchQuery}
+              searchQuery={debouncedQuery}
               searchResults={searchResults}
               searchLoading={searchLoading}
               searchError={searchError as Error | null}
@@ -139,10 +160,13 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
               selectedManifestationUri={selectedManifestation}
               onManifestationSelect={setSelectedManifestation}
               selectedLanguage={selectedLanguage}
+              hasNextPage={searchHasNextPage}
+              isFetchingNextPage={searchIsFetchingNextPage}
+              onFetchNextPage={searchFetchNextPage}
             />
           ) : (
             <ManifestationResultSet
-              searchQuery={searchQuery}
+              searchQuery={debouncedQuery}
               searchResults={manifestationSearchResults}
               searchLoading={manifestationSearchLoading}
               searchError={manifestationSearchError as Error | null}
@@ -150,6 +174,9 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
               onSelectResult={setSelectedManifestationResult}
               config={config}
               selectedLanguage={selectedLanguage}
+              hasNextPage={manifestationHasNextPage}
+              isFetchingNextPage={manifestationIsFetchingNextPage}
+              onFetchNextPage={manifestationFetchNextPage}
             />
           )}
         </Box>

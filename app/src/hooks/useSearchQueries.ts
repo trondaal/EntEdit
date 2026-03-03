@@ -1,7 +1,10 @@
-import { useQuery } from "@tanstack/react-query";
+import { useInfiniteQuery } from "@tanstack/react-query";
 import { SparqlClient } from "../utils/sparqlClient";
 import { escapeSparqlLiteral } from "../utils/labelUtils";
 import type { SparqlEndpointConfig } from "../types/sparql";
+
+/** Number of search results fetched per page */
+export const SEARCH_PAGE_SIZE = 20;
 
 export interface ExpressionSearchResult {
   uri: string;
@@ -48,9 +51,9 @@ export const useSearchExpressions = (
   query: string,
   language: string,
 ) => {
-  return useQuery({
+  return useInfiniteQuery({
     queryKey: ["searchExpressions", config.url, query, language],
-    queryFn: async (): Promise<ExpressionSearchResult[]> => {
+    queryFn: async ({ pageParam = 0 }): Promise<ExpressionSearchResult[]> => {
       if (!query || query.trim().length === 0) {
         return [];
       }
@@ -87,6 +90,7 @@ WHERE {
     ?search a inst:expressionsIndex ;
     #lucene:query "horses" ;
     lucene:query "${escapeSparqlLiteral(query)}" ;
+    lucene:limit "${pageParam + SEARCH_PAGE_SIZE + 80}" ;
     lucene:entities ?expression .
     ?expression lucene:score ?score .
     ?expression a <http://rdaregistry.info/Elements/c/C10006> .
@@ -235,6 +239,8 @@ WHERE {
 }
 GROUP BY ?expression
 ORDER BY DESC(?score)
+LIMIT ${SEARCH_PAGE_SIZE}
+OFFSET ${pageParam}
       `;
 
       const response = await client.query(sparqlQuery);
@@ -254,6 +260,11 @@ ORDER BY DESC(?score)
         score: binding.score ? parseFloat(binding.score.value) : undefined,
       }));
     },
+    initialPageParam: 0,
+    getNextPageParam: (lastPage, _allPages, lastPageParam) => {
+      if (lastPage.length < SEARCH_PAGE_SIZE) return undefined;
+      return lastPageParam + SEARCH_PAGE_SIZE;
+    },
     enabled: Boolean(query && query.trim().length > 0),
     staleTime: 5 * 60 * 1000, // 5 minutes
   });
@@ -264,9 +275,9 @@ export const useSearchManifestations = (
   query: string,
   language: string,
 ) => {
-  return useQuery({
+  return useInfiniteQuery({
     queryKey: ["searchManifestations", config.url, query, language],
-    queryFn: async (): Promise<ManifestationSearchResult[]> => {
+    queryFn: async ({ pageParam = 0 }): Promise<ManifestationSearchResult[]> => {
       if (!query || query.trim().length === 0) {
         return [];
       }
@@ -299,6 +310,7 @@ SELECT DISTINCT ?manifestation
 WHERE {
     ?search a inst:manifestationsIndex ;
     lucene:query "${escapeSparqlLiteral(query)}" ;
+    lucene:limit "${pageParam + SEARCH_PAGE_SIZE + 80}" ;
     lucene:entities ?manifestation .
     ?manifestation lucene:score ?score .
     ?manifestation a <http://rdaregistry.info/Elements/c/C10007> .
@@ -377,6 +389,8 @@ WHERE {
 }
 GROUP BY ?manifestation
 ORDER BY DESC(?score)
+LIMIT ${SEARCH_PAGE_SIZE}
+OFFSET ${pageParam}
       `;
 
       const response = await client.query(sparqlQuery);
@@ -401,6 +415,11 @@ ORDER BY DESC(?score)
       }));
 
       return results;
+    },
+    initialPageParam: 0,
+    getNextPageParam: (lastPage, _allPages, lastPageParam) => {
+      if (lastPage.length < SEARCH_PAGE_SIZE) return undefined;
+      return lastPageParam + SEARCH_PAGE_SIZE;
     },
     enabled: Boolean(query && query.trim().length > 0),
     staleTime: 5 * 60 * 1000, // 5 minutes

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo, useCallback, useRef } from "react";
 import {
   Box,
   Typography,
@@ -7,6 +7,7 @@ import {
   TextField,
   InputAdornment,
   Tooltip,
+  Chip,
   List,
   ListItem,
   ListItemButton,
@@ -14,8 +15,13 @@ import {
 } from "@mui/material";
 import { Search, Tag } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
+import { useVirtualizer } from "@tanstack/react-virtual";
 import type { SparqlEndpointConfig } from "../types/sparql";
-import { useEntitiesByRange } from "../hooks/useSparqlQueries";
+import {
+  useInfiniteEntitiesByRange,
+  useEntityCountByRange,
+} from "../hooks/useSparqlQueries";
+import { useDebouncedValue } from "../hooks/useDebouncedValue";
 import { extractUriFragment } from "../utils/labelUtils";
 
 interface EntityPickerPanelProps {
@@ -28,6 +34,8 @@ interface EntityPickerPanelProps {
   onCancel: () => void;
 }
 
+const ITEM_HEIGHT = 42;
+
 const EntityPickerPanel: React.FC<EntityPickerPanelProps> = ({
   config,
   rangeUri,
@@ -38,10 +46,63 @@ const EntityPickerPanel: React.FC<EntityPickerPanelProps> = ({
 }) => {
   const { t } = useTranslation("entityEditor");
   const [filter, setFilter] = useState("");
-  const { data: entities, isLoading } = useEntitiesByRange(
+  const debouncedFilter = useDebouncedValue(filter, 300);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const {
+    data: entitiesData,
+    isLoading,
+    isFetchingNextPage,
+    hasNextPage,
+    fetchNextPage,
+  } = useInfiniteEntitiesByRange(
     config,
     rangeUri || "",
     selectedLanguage,
+    debouncedFilter,
+  );
+
+  const { data: totalCount } = useEntityCountByRange(
+    config,
+    rangeUri || "",
+    selectedLanguage,
+    "",
+  );
+
+  const { data: filteredCount } = useEntityCountByRange(
+    config,
+    rangeUri || "",
+    selectedLanguage,
+    debouncedFilter,
+  );
+
+  // Flatten pages
+  const entities = useMemo(
+    () => entitiesData?.pages.flat() ?? [],
+    [entitiesData],
+  );
+
+  // Virtualizer
+  const virtualizer = useVirtualizer({
+    count: entities.length,
+    getScrollElement: () => scrollContainerRef.current,
+    estimateSize: () => ITEM_HEIGHT,
+    overscan: 8,
+  });
+
+  // Fetch next page when user scrolls near the bottom of the container.
+  // Uses a direct onScroll handler instead of watching virtualizer state,
+  // because the scroll container is conditionally rendered and may not be
+  // connected when the virtualizer initialises.
+  const handleScroll = useCallback(
+    (e: React.UIEvent<HTMLDivElement>) => {
+      const { scrollHeight, scrollTop, clientHeight } = e.currentTarget;
+      const distanceFromBottom = scrollHeight - scrollTop - clientHeight;
+      if (distanceFromBottom < 200 && hasNextPage && !isFetchingNextPage) {
+        fetchNextPage();
+      }
+    },
+    [hasNextPage, isFetchingNextPage, fetchNextPage],
   );
 
   if (!rangeUri) {
@@ -78,30 +139,14 @@ const EntityPickerPanel: React.FC<EntityPickerPanelProps> = ({
     );
   }
 
-  if (!entities || entities.length === 0) {
-    return (
-      <Box
-        sx={{
-          mb: 2,
-          p: 2,
-          border: 1,
-          borderColor: "info.main",
-          borderRadius: 1,
-        }}
-      >
-        <Typography color="info.main">
-          {t("messages.noEntitiesFound", { typeName: extractUriFragment(rangeUri) })}
-        </Typography>
-        <Button variant="outlined" onClick={onCancel} sx={{ mt: 1 }}>
-          {t("common:buttons.cancel", { ns: "common" })}
-        </Button>
-      </Box>
-    );
-  }
-
-  const filtered = entities.filter((entity) =>
-    entity.label.toLowerCase().includes(filter.toLowerCase()),
-  );
+  // Build count label
+  const countLabel = (() => {
+    if (totalCount == null) return null;
+    if (debouncedFilter && filteredCount != null) {
+      return `${filteredCount} / ${totalCount}`;
+    }
+    return String(totalCount);
+  })();
 
   return (
     <Box
@@ -113,7 +158,7 @@ const EntityPickerPanel: React.FC<EntityPickerPanelProps> = ({
         overflow: "hidden",
       }}
     >
-      {/* Header row: prompt label + filter field */}
+      {/* Header row: prompt label + count + filter field */}
       <Box
         sx={{
           px: 2,
@@ -128,6 +173,14 @@ const EntityPickerPanel: React.FC<EntityPickerPanelProps> = ({
         <Typography variant="subtitle2" sx={{ flexShrink: 0 }}>
           {promptLabel}
         </Typography>
+        {countLabel && (
+          <Chip
+            label={countLabel}
+            size="small"
+            variant="outlined"
+            sx={{ flexShrink: 0 }}
+          />
+        )}
         <TextField
           size="small"
           placeholder={t("placeholders.filterEntities")}
@@ -147,39 +200,78 @@ const EntityPickerPanel: React.FC<EntityPickerPanelProps> = ({
       </Box>
 
       {/* Entity list */}
-      <List disablePadding sx={{ maxHeight: 280, overflow: "auto" }}>
-        {filtered.length === 0 ? (
-          <Box sx={{ p: 2, textAlign: "center", color: "text.secondary" }}>
-            <Typography variant="body2">{t("messages.noEntitiesMatchFilter")}</Typography>
-          </Box>
-        ) : (
-          filtered.map((entity) => (
-            <ListItem key={`${rangeUri}-${entity.uri}`} disablePadding>
-              <ListItemButton onClick={() => onSelect(entity.uri)}>
-                <ListItemText
-                  primary={
-                    <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
-                      <Typography variant="body2" noWrap sx={{ flex: 1 }}>
-                        {entity.label}
-                      </Typography>
-                      <Tooltip title={entity.uri} placement="bottom-start">
-                        <Tag
-                          sx={{
-                            fontSize: "0.875rem",
-                            color: "text.disabled",
-                            flexShrink: 0,
-                          }}
-                        />
-                      </Tooltip>
-                    </Box>
-                  }
-                  disableTypography
-                />
-              </ListItemButton>
-            </ListItem>
-          ))
-        )}
-      </List>
+      {entities.length === 0 && !isFetchingNextPage ? (
+        <Box sx={{ p: 2, textAlign: "center", color: "text.secondary" }}>
+          <Typography variant="body2">
+            {filter
+              ? t("messages.noEntitiesMatchFilter")
+              : t("messages.noEntitiesFound", { typeName: extractUriFragment(rangeUri) })}
+          </Typography>
+        </Box>
+      ) : (
+        <Box
+          ref={scrollContainerRef}
+          onScroll={handleScroll}
+          sx={{ maxHeight: 280, overflow: "auto" }}
+        >
+          <List
+            disablePadding
+            sx={{
+              height: virtualizer.getTotalSize(),
+              position: "relative",
+            }}
+          >
+            {virtualizer.getVirtualItems().map((virtualRow) => {
+              const entity = entities[virtualRow.index];
+              if (!entity) return null;
+              return (
+                <ListItem
+                  key={`${rangeUri}-${entity.uri}`}
+                  disablePadding
+                  sx={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    transform: `translateY(${virtualRow.start}px)`,
+                  }}
+                  ref={virtualizer.measureElement}
+                  data-index={virtualRow.index}
+                >
+                  <ListItemButton onClick={() => onSelect(entity.uri)}>
+                    <ListItemText
+                      primary={
+                        <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
+                          <Typography variant="body2" noWrap sx={{ flex: 1 }}>
+                            {entity.label}
+                          </Typography>
+                          <Tooltip title={entity.uri} placement="bottom-start">
+                            <Tag
+                              sx={{
+                                fontSize: "0.875rem",
+                                color: "text.disabled",
+                                flexShrink: 0,
+                              }}
+                            />
+                          </Tooltip>
+                        </Box>
+                      }
+                      disableTypography
+                    />
+                  </ListItemButton>
+                </ListItem>
+              );
+            })}
+          </List>
+
+          {/* Loading indicator for next page */}
+          {isFetchingNextPage && (
+            <Box sx={{ display: "flex", justifyContent: "center", py: 1 }}>
+              <CircularProgress size={16} />
+            </Box>
+          )}
+        </Box>
+      )}
 
       {/* Footer: cancel */}
       <Box sx={{ px: 2, py: 1, borderTop: 1, borderColor: "divider" }}>

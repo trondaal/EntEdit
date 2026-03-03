@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useCallback, useEffect } from "react";
+import React, { useState, useMemo, useCallback, useEffect, useRef } from "react";
 import {
   Paper,
   Typography,
@@ -21,13 +21,16 @@ import {
 } from "@mui/material";
 import { Class, Description, Edit, Search, Tag } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
+import { useVirtualizer } from "@tanstack/react-virtual";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import {
   useRdfClasses,
   useRdfProperties,
   useRdfObjectProperties,
-  useEntitiesByClass,
+  useInfiniteEntitiesByClass,
+  useEntityCountByClass,
 } from "../hooks/useSparqlQueries";
+import { useDebouncedValue } from "../hooks/useDebouncedValue";
 import EntityEditor from "./EntityEditor";
 import { formatLabel } from "../utils/labelUtils";
 
@@ -35,6 +38,8 @@ interface EntityBrowserProps {
   config: SparqlEndpointConfig;
   selectedLanguage: string;
 }
+
+const ITEM_HEIGHT = 42; // Approximate height of a single entity list item
 
 const EntityBrowser: React.FC<EntityBrowserProps> = ({
   config,
@@ -48,6 +53,12 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
   // URI that the user clicked while the editor had unsaved changes
   const [pendingEntityUri, setPendingEntityUri] = useState<string | null>(null);
   const [switchEntityDialogOpen, setSwitchEntityDialogOpen] = useState(false);
+
+  // Debounce the filter text so SPARQL queries don't fire on every keystroke
+  const debouncedFilter = useDebouncedValue(entityFilter, 300);
+
+  // Ref for the scrollable container used by the virtualizer
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   // Reset filter when class changes
   useEffect(() => {
@@ -75,18 +86,63 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
       selectedLanguage,
     );
 
-  const { data: entities, isLoading: entitiesLoading } = useEntitiesByClass(
+  // Infinite paginated entity query (server-side filter via debounced value)
+  const {
+    data: entitiesData,
+    isLoading: entitiesLoading,
+    isFetchingNextPage,
+    hasNextPage,
+    fetchNextPage,
+  } = useInfiniteEntitiesByClass(
     config,
     selectedClass || "",
     selectedLanguage,
+    debouncedFilter,
   );
 
-  // Filter entities based on the filter text (memoized for performance)
-  const filteredEntities = useMemo(() => {
-    return entities?.filter((entity) =>
-      entity.label.toLowerCase().includes(entityFilter.toLowerCase()),
-    );
-  }, [entities, entityFilter]);
+  // Parallel count queries: total + filtered
+  const { data: totalCount } = useEntityCountByClass(
+    config,
+    selectedClass || "",
+    selectedLanguage,
+    "", // no filter → total count
+  );
+
+  const { data: filteredCount } = useEntityCountByClass(
+    config,
+    selectedClass || "",
+    selectedLanguage,
+    debouncedFilter, // filtered count (same as total when no filter)
+  );
+
+  // Flatten all pages into a single array
+  const entities = useMemo(
+    () => entitiesData?.pages.flat() ?? [],
+    [entitiesData],
+  );
+
+  // Set up virtualizer for the entity list
+  const virtualizer = useVirtualizer({
+    count: entities.length,
+    getScrollElement: () => scrollContainerRef.current,
+    estimateSize: () => ITEM_HEIGHT,
+    overscan: 10,
+  });
+
+  // Fetch next page when user scrolls near the bottom of the container.
+  // Uses a direct onScroll handler instead of watching virtualizer state,
+  // because the scroll container is conditionally rendered and may not be
+  // connected when the virtualizer initialises.
+  const handleEntityListScroll = useCallback(
+    (e: React.UIEvent<HTMLDivElement>) => {
+      const { scrollHeight, scrollTop, clientHeight } = e.currentTarget;
+      const distanceFromBottom = scrollHeight - scrollTop - clientHeight;
+      if (distanceFromBottom < 200 && hasNextPage && !isFetchingNextPage) {
+        fetchNextPage();
+      }
+    },
+    [hasNextPage, isFetchingNextPage, fetchNextPage],
+  );
 
   // Memoized callbacks for handlers
   const handleClassSelect = useCallback((classUri: string) => {
@@ -122,6 +178,19 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
     setPendingEntityUri(null);
     setSwitchEntityDialogOpen(false);
   }, []);
+
+  // Build the count label for the entity panel header
+  // (must be before early return to satisfy Rules of Hooks)
+  const countLabel = useMemo(() => {
+    if (!selectedClass || totalCount == null) return null;
+    if (debouncedFilter && filteredCount != null) {
+      return t("messages.entityCountFiltered", {
+        shown: filteredCount,
+        total: totalCount,
+      });
+    }
+    return String(totalCount);
+  }, [selectedClass, debouncedFilter, filteredCount, totalCount, t]);
 
   if (classesError) {
     return (
@@ -218,17 +287,10 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
                 {t("navigation.entities")}
               </Typography>
 
-              {/* Count badge: "n of total" when filtered, just "n" otherwise */}
-              {selectedClass && !entitiesLoading && entities && (
+              {/* Count badge: "filtered of total" when filtering, just total otherwise */}
+              {selectedClass && !entitiesLoading && countLabel && (
                 <Chip
-                  label={
-                    entityFilter && filteredEntities
-                      ? t("messages.entityCountFiltered", {
-                          shown: filteredEntities.length,
-                          total: entities.length,
-                        })
-                      : String(entities.length)
-                  }
+                  label={countLabel}
                   size="small"
                   variant="outlined"
                   sx={{ flexShrink: 0 }}
@@ -267,55 +329,89 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
               <Box sx={{ display: "flex", justifyContent: "center", p: 3 }}>
                 <CircularProgress />
               </Box>
-            ) : filteredEntities?.length === 0 ? (
+            ) : entities.length === 0 ? (
               <Box sx={{ p: 3, textAlign: "center", color: "text.secondary" }}>
                 {entityFilter
                   ? t("messages.noEntitiesMatching", { filter: entityFilter })
                   : t("messages.noEntitiesForClass")}
               </Box>
             ) : (
-              <List sx={{ flex: 1, overflow: "auto", maxHeight: { xs: 360, md: "none" } }}>
-                {filteredEntities?.map((entity) => {
-                  const isActiveEditing =
-                    isEditorEditing && selectedEntity === entity.uri;
-                  return (
-                    <ListItem
-                      key={`${selectedClass}-${entity.uri}`}
-                      disablePadding
-                    >
-                      <ListItemButton
-                        selected={selectedEntity === entity.uri}
-                        onClick={() => handleEntitySelect(entity.uri)}
+              <Box
+                ref={scrollContainerRef}
+                onScroll={handleEntityListScroll}
+                sx={{
+                  flex: 1,
+                  overflow: "auto",
+                  maxHeight: { xs: 360, md: "none" },
+                }}
+              >
+                <List
+                  disablePadding
+                  sx={{
+                    height: virtualizer.getTotalSize(),
+                    position: "relative",
+                  }}
+                >
+                  {virtualizer.getVirtualItems().map((virtualRow) => {
+                    const entity = entities[virtualRow.index];
+                    if (!entity) return null;
+                    const isActiveEditing =
+                      isEditorEditing && selectedEntity === entity.uri;
+                    return (
+                      <ListItem
+                        key={`${selectedClass}-${entity.uri}`}
+                        disablePadding
+                        sx={{
+                          position: "absolute",
+                          top: 0,
+                          left: 0,
+                          width: "100%",
+                          transform: `translateY(${virtualRow.start}px)`,
+                        }}
+                        ref={virtualizer.measureElement}
+                        data-index={virtualRow.index}
                       >
-                        <ListItemText
-                          primary={
-                            <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
-                              <Typography variant="body2" noWrap sx={{ flex: 1 }}>
-                                {entity.label}
-                              </Typography>
-                              {isActiveEditing && (
-                                <Tooltip title={t("messages.entityBeingEdited")} placement="left">
-                                  <Edit
-                                    sx={{
-                                      fontSize: "0.875rem",
-                                      color: "warning.main",
-                                      flexShrink: 0,
-                                    }}
-                                  />
+                        <ListItemButton
+                          selected={selectedEntity === entity.uri}
+                          onClick={() => handleEntitySelect(entity.uri)}
+                        >
+                          <ListItemText
+                            primary={
+                              <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
+                                <Typography variant="body2" noWrap sx={{ flex: 1 }}>
+                                  {entity.label}
+                                </Typography>
+                                {isActiveEditing && (
+                                  <Tooltip title={t("messages.entityBeingEdited")} placement="left">
+                                    <Edit
+                                      sx={{
+                                        fontSize: "0.875rem",
+                                        color: "warning.main",
+                                        flexShrink: 0,
+                                      }}
+                                    />
+                                  </Tooltip>
+                                )}
+                                <Tooltip title={entity.uri} placement="bottom-start">
+                                  <Tag sx={{ fontSize: "0.875rem", color: "text.disabled", flexShrink: 0 }} />
                                 </Tooltip>
-                              )}
-                              <Tooltip title={entity.uri} placement="bottom-start">
-                                <Tag sx={{ fontSize: "0.875rem", color: "text.disabled", flexShrink: 0 }} />
-                              </Tooltip>
-                            </Box>
-                          }
-                          disableTypography
-                        />
-                      </ListItemButton>
-                    </ListItem>
-                  );
-                })}
-              </List>
+                              </Box>
+                            }
+                            disableTypography
+                          />
+                        </ListItemButton>
+                      </ListItem>
+                    );
+                  })}
+                </List>
+
+                {/* Loading indicator for next page */}
+                {isFetchingNextPage && (
+                  <Box sx={{ display: "flex", justifyContent: "center", py: 1 }}>
+                    <CircularProgress size={20} />
+                  </Box>
+                )}
+              </Box>
             )}
           </Paper>
         </Box>

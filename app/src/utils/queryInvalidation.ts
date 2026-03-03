@@ -10,9 +10,17 @@ export const invalidateEntityCaches = (
   entityUri?: string,
   affectedEntityUris: Set<string> = new Set(),
 ): void => {
-  // Invalidate the entities list for this class
+  // Invalidate the entities list for this class (legacy + infinite)
   queryClient.invalidateQueries({
     queryKey: ["entities-by-class", endpointUrl, classUri],
+  });
+  queryClient.invalidateQueries({
+    queryKey: ["entities-by-class-infinite", endpointUrl, classUri],
+  });
+
+  // Invalidate entity count caches
+  queryClient.invalidateQueries({
+    queryKey: ["entity-count-by-class", endpointUrl, classUri],
   });
 
   // Invalidate entity label queries
@@ -20,9 +28,15 @@ export const invalidateEntityCaches = (
     queryKey: ["entity-label", endpointUrl],
   });
 
-  // Invalidate entities-by-range so entity pickers reflect the latest data
+  // Invalidate entities-by-range so entity pickers reflect the latest data (legacy + infinite)
   queryClient.invalidateQueries({
     queryKey: ["entities-by-range", endpointUrl],
+  });
+  queryClient.invalidateQueries({
+    queryKey: ["entities-by-range-infinite", endpointUrl],
+  });
+  queryClient.invalidateQueries({
+    queryKey: ["entity-count-by-range", endpointUrl],
   });
 
   // Invalidate caches for all affected entities (those in relationships)
