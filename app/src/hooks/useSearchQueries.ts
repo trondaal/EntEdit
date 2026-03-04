@@ -44,6 +44,8 @@ export interface ManifestationSearchResult {
   // Additional metadata
   mediatype?: string;
   carriertype?: string;
+  // Agents
+  manifestation_creators?: string;
 }
 
 export const useSearchExpressions = (
@@ -285,6 +287,7 @@ export const useSearchManifestations = (
       const client = new SparqlClient(config);
 
       const sparqlQuery = `
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX lucene: <http://www.ontotext.com/connectors/lucene#>
 PREFIX inst: <http://www.ontotext.com/connectors/lucene/instance#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -307,6 +310,8 @@ SELECT DISTINCT ?manifestation
     (GROUP_CONCAT(DISTINCT ?identifier_val; SEPARATOR=" | ") as ?identifiers)
     (SAMPLE(?mediatype_label) as ?mediatype)
     (SAMPLE(?carriertype_label) as ?carriertype)
+    (GROUP_CONCAT(DISTINCT CONCAT(?manifestation_agent_relationship_label, ": ", ?manifestation_agent_names) ; SEPARATOR=" ; ") as ?manifestation_creators)
+FROM <http://www.ontotext.com/explicit>
 WHERE {
     ?search a inst:manifestationsIndex ;
     lucene:query "${escapeSparqlLiteral(query)}" ;
@@ -386,6 +391,31 @@ WHERE {
         FILTER(LANG(?carriertype_label_en) = "en")
     }
     BIND(COALESCE(?carriertype_label_chosen, ?carriertype_label_en) AS ?carriertype_label)
+
+    #Manifestation to agent relationships
+    OPTIONAL {
+        SELECT DISTINCT ?manifestation ?manifestation_agent_relationship_label
+        (GROUP_CONCAT(DISTINCT ?manifestation_agent_name_x ; SEPARATOR=" & ") as ?manifestation_agent_names)
+        WHERE {
+            {
+                OPTIONAL {
+                    ?manifestation ?manifestation_agent_relationship ?manifestation_agent .
+                    ?manifestation_agent <http://rdaregistry.info/Elements/a/datatype/P50385> ?manifestation_agent_name_x .
+                    ?manifestation_agent_relationship rdfs:label ?manifestation_agent_relationship_label .
+                    FILTER(LANG(?manifestation_agent_relationship_label) = "${escapeSparqlLiteral(language)}") .
+                }
+            } UNION {
+                OPTIONAL {
+                    ?manifestation_agent ?manifestation_agent_relationship ?manifestation .
+                    ?manifestation_agent <http://rdaregistry.info/Elements/a/datatype/P50385> ?manifestation_agent_name_x .
+                    ?manifestation_agent_relationship_inverse owl:inverseOf ?manifestation_agent_relationship .
+                    ?manifestation_agent_relationship_inverse rdfs:label ?manifestation_agent_relationship_label .
+                    FILTER(LANG(?manifestation_agent_relationship_label) = "${escapeSparqlLiteral(language)}") .
+                }
+            }
+        }
+        GROUP BY ?manifestation ?manifestation_agent_relationship_label
+    }
 }
 GROUP BY ?manifestation
 ORDER BY DESC(?score)
@@ -412,6 +442,7 @@ OFFSET ${pageParam}
         identifiers: binding.identifiers?.value,
         mediatype: binding.mediatype?.value,
         carriertype: binding.carriertype?.value,
+        manifestation_creators: binding.manifestation_creators?.value,
       }));
 
       return results;

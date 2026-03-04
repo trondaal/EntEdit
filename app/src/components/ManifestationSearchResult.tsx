@@ -42,6 +42,26 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
     return text.charAt(0).toUpperCase() + text.slice(1);
   };
 
+  // Helper function to parse creator strings
+  // Example input: "rolelabel: name & name & name ; rolelabel: name & name"
+  // Output: Array of { role, names }
+  const parseCreators = (creatorString: string | undefined): Array<{ role: string; names: string[] }> => {
+    if (!creatorString) return [];
+
+    const roleGroups = creatorString.split(';').map(group => group.trim());
+
+    return roleGroups.map(group => {
+      const colonIndex = group.indexOf(':');
+      if (colonIndex === -1) return null;
+
+      const role = group.substring(0, colonIndex).trim();
+      const namesString = group.substring(colonIndex + 1).trim();
+      const names = namesString.split('&').map(name => name.trim()).filter(name => name.length > 0);
+
+      return { role, names };
+    }).filter((group): group is { role: string; names: string[] } => group !== null);
+  };
+
   // Helper function to split pipe-separated values into array
   const splitValues = (value: string | undefined): string[] => {
     if (!value) return [];
@@ -171,6 +191,28 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                 >
                   {formatTitleArea()}
                 </Typography>
+
+                {/* Creators */}
+                {result.manifestation_creators && (
+                  <Box>
+                    {parseCreators(result.manifestation_creators).map((creator, index) => (
+                      <Typography
+                        key={index}
+                        variant="body2"
+                        color="text.secondary"
+                        sx={{ lineHeight: 1.5, fontSize: '0.8125rem' }}
+                      >
+                        <Box component="span" sx={{ fontWeight: 500, color: 'text.primary' }}>
+                          {capitalizeFirstLetter(creator.role)}:
+                        </Box>
+                        {' '}
+                        <Box component="span">
+                          {creator.names.join(' ; ')}
+                        </Box>
+                      </Typography>
+                    ))}
+                  </Box>
+                )}
 
                 {/* Line 2: Publication area + Physical description + Series */}
                 {formatPublicationPhysicalSeries() && (

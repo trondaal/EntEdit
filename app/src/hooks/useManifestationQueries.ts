@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { SparqlClient } from "../utils/sparqlClient";
 import type { SparqlEndpointConfig } from "../types/sparql";
-import { sanitizeSparqlUri } from "../utils/labelUtils";
+import { sanitizeSparqlUri, escapeSparqlLiteral } from "../utils/labelUtils";
 
 export interface Manifestation {
   uri: string;
@@ -27,6 +27,8 @@ export interface Manifestation {
   // Additional metadata
   mediatype?: string;
   carriertype?: string;
+  // Agents
+  manifestation_creators?: string;
 }
 
 export const useManifestations = (
@@ -45,6 +47,7 @@ export const useManifestations = (
 
       const sparqlQuery = `
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
         PREFIX rdaed: <http://rdaregistry.info/Elements/e/datatype/>
         PREFIX rdaeo: <http://rdaregistry.info/Elements/e/object/>
@@ -67,8 +70,12 @@ export const useManifestations = (
                (GROUP_CONCAT(DISTINCT ?identifier_val; SEPARATOR=" | ") as ?identifiers)
                (SAMPLE(?mediatypelabel) as ?mediatypelabel)
                (SAMPLE(?carriertypelabel) as ?carriertypelabel)
+               (GROUP_CONCAT(DISTINCT CONCAT(?manifestation_agent_relationship_label, ": ", ?manifestation_agent_names) ; SEPARATOR=" ; ") as ?manifestation_creators)
+        FROM <http://www.ontotext.com/explicit>
         WHERE {
-          <${sanitizeSparqlUri(expressionUri)}> rdaeo:P20059 ?manifestation .
+          { <${sanitizeSparqlUri(expressionUri)}> rdaeo:P20059 ?manifestation . }
+          UNION
+          { ?manifestation rdamo:P30139 <${sanitizeSparqlUri(expressionUri)}> . }
           # Title area
           OPTIONAL {
             ?manifestation rdamd:P30156 ?title_val .
@@ -138,6 +145,31 @@ export const useManifestations = (
               FILTER(LANG(?carriertypelabel_en) = "en")
           }
           BIND(COALESCE(?carriertypelabel_chosen, ?carriertypelabel_en) AS ?carriertypelabel)
+
+          #Manifestation to agent relationships
+          OPTIONAL {
+            SELECT DISTINCT ?manifestation ?manifestation_agent_relationship_label
+            (GROUP_CONCAT(DISTINCT ?manifestation_agent_name_x ; SEPARATOR=" & ") as ?manifestation_agent_names)
+            WHERE {
+              {
+                OPTIONAL {
+                  ?manifestation ?manifestation_agent_relationship ?manifestation_agent .
+                  ?manifestation_agent <http://rdaregistry.info/Elements/a/datatype/P50385> ?manifestation_agent_name_x .
+                  ?manifestation_agent_relationship rdfs:label ?manifestation_agent_relationship_label .
+                  FILTER(LANG(?manifestation_agent_relationship_label) = "${escapeSparqlLiteral(language)}") .
+                }
+              } UNION {
+                OPTIONAL {
+                  ?manifestation_agent ?manifestation_agent_relationship ?manifestation .
+                  ?manifestation_agent <http://rdaregistry.info/Elements/a/datatype/P50385> ?manifestation_agent_name_x .
+                  ?manifestation_agent_relationship_inverse owl:inverseOf ?manifestation_agent_relationship .
+                  ?manifestation_agent_relationship_inverse rdfs:label ?manifestation_agent_relationship_label .
+                  FILTER(LANG(?manifestation_agent_relationship_label) = "${escapeSparqlLiteral(language)}") .
+                }
+              }
+            }
+            GROUP BY ?manifestation ?manifestation_agent_relationship_label
+          }
         }
         GROUP BY ?manifestation
       `;
@@ -161,6 +193,7 @@ export const useManifestations = (
         identifiers: binding.identifiers?.value,
         mediatype: binding.mediatypelabel?.value,
         carriertype: binding.carriertypelabel?.value,
+        manifestation_creators: binding.manifestation_creators?.value,
       }));
     },
     enabled: Boolean(expressionUri),
