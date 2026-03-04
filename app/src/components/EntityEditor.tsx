@@ -29,7 +29,7 @@ import {
   useRelatedWorkProperties,
   useRelatedExpressionProperties,
   useRelatedManifestationProperties
-} from "../hooks/useSparqlQueries";
+} from "../hooks/useRelationshipQueries";
 import LabelManager from "./LabelManager";
 import EntityEditorHeader from "./EntityEditorHeader";
 import DataPropertiesSection from "./DataPropertiesSection";

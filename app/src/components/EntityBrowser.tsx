@@ -27,9 +27,11 @@ import {
   useRdfClasses,
   useRdfProperties,
   useRdfObjectProperties,
+} from "../hooks/useSchemaQueries";
+import {
   useInfiniteEntitiesByClass,
   useEntityCountByClass,
-} from "../hooks/useSparqlQueries";
+} from "../hooks/useEntityQueries";
 import { useDebouncedValue } from "../hooks/useDebouncedValue";
 import EntityEditor from "./EntityEditor";
 import { formatLabel } from "../utils/labelUtils";

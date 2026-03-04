@@ -76,14 +76,22 @@ EntEdit/
 
 ### Custom Hooks (app/src/hooks/)
 
-**useSparqlQueries.ts** - Core data fetching:
+**useSchemaQueries.ts** - OWL/RDFS schema introspection:
 - `useRdfClasses` / `useRdfProperties` / `useRdfObjectProperties`
-- `useEntitiesByClass` / `useEntitiesByRange` / `useEntity`
-- `useWEMIProperties` / `useAgentProperties` / `useRelatedWorkProperties`
+
+**useEntityQueries.ts** - Entity listing, pagination, and counts:
+- `useEntitiesByClass` / `useInfiniteEntitiesByClass` / `useEntityCountByClass`
+- `useEntitiesByRange` / `useInfiniteEntitiesByRange` / `useEntityCountByRange`
+
+**useRelationshipQueries.ts** - WEMI and agent relationship properties:
+- `useWEMIProperties` / `useAgentProperties`
+- `useRelatedWorkProperties` / `useRelatedExpressionProperties` / `useRelatedManifestationProperties`
 
 **useSearchQueries.ts** - Full-text search via GraphDB Lucene connector
 
 **useManifestationQueries.ts** - Manifestation metadata queries
+
+**useExpressionQueries.ts** - Expression queries by manifestation
 
 ### Utilities (app/src/utils/)
 

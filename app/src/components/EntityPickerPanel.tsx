@@ -20,7 +20,7 @@ import type { SparqlEndpointConfig } from "../types/sparql";
 import {
   useInfiniteEntitiesByRange,
   useEntityCountByRange,
-} from "../hooks/useSparqlQueries";
+} from "../hooks/useEntityQueries";
 import { useDebouncedValue } from "../hooks/useDebouncedValue";
 import { extractUriFragment } from "../utils/labelUtils";
 
