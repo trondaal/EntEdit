@@ -259,6 +259,13 @@
 <nav class="toc">
   <h2>Contents</h2>
   <ol>
+    <li><a href="#getting-started">Getting started</a>
+      <ol>
+        <li><a href="#config-wizard">Configuration wizard</a></li>
+        <li><a href="#connecting-database">Connecting to a database</a></li>
+        <li><a href="#language-selection">Language selection</a></li>
+      </ol>
+    </li>
     <li><a href="#what-is-entity-cataloguing">What is entity-oriented cataloguing?</a></li>
     <li><a href="#wemi-model">The WEMI model</a></li>
     <li><a href="#navigating-entedit">Navigating EntEdit</a>
@@ -289,8 +296,74 @@
 </nav>
 
 
-<!-- 1. WHAT IS ENTITY-ORIENTED CATALOGUING -->
-<h2 id="what-is-entity-cataloguing">1. What is entity-oriented cataloguing?</h2>
+<!-- 1. GETTING STARTED -->
+<h2 id="getting-started">1. Getting started</h2>
+
+<p>
+  EntEdit requires a connection to a SPARQL-compatible graph database containing bibliographic data described with RDA vocabulary. On first launch, a configuration wizard will guide you through the setup.
+</p>
+
+<h3 id="config-wizard">1.1 Configuration wizard</h3>
+
+<p>
+  When you open EntEdit for the first time, a three-step wizard appears:
+</p>
+<ol class="steps">
+  <li><strong>Database connection</strong> — Enter the URL of your SPARQL endpoint, and optionally a username and password if the endpoint requires authentication.</li>
+  <li><strong>Test connection</strong> — EntEdit verifies that it can reach the database and query it.</li>
+  <li><strong>Language</strong> — Choose your preferred language (English or Norwegian).</li>
+</ol>
+<p>
+  You can change these settings at any time by clicking the endpoint chip or the settings icon in the header bar.
+</p>
+
+<h3 id="connecting-database">1.2 Connecting to a database</h3>
+
+<p>There are several ways to get a database up and running:</p>
+
+<table>
+  <tr>
+    <th>Option</th>
+    <th>Endpoint URL</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><strong>Demo database</strong></td>
+    <td><code>http://dijon.idi.ntnu.no:8080/repositories/EntEdit</code></td>
+    <td>A shared demo instance pre-loaded with sample data. Good for trying out the application without any local setup.</td>
+  </tr>
+  <tr>
+    <td><strong>Docker (recommended)</strong></td>
+    <td><code>http://localhost/graphdb/repositories/EntEdit</code></td>
+    <td>Run the full stack locally with <code>docker compose up -d</code>. This starts both the web application and a GraphDB instance with sample data. The app is then available at <code>http://localhost/entedit/</code>.</td>
+  </tr>
+  <tr>
+    <td><strong>Your own database</strong></td>
+    <td><em>(varies)</em></td>
+    <td>Set up a GraphDB or other SPARQL-compatible database with your own data and ontology. See the <a href="setup.html">Database Setup Guide</a> for detailed instructions.</td>
+  </tr>
+</table>
+
+<div class="info-box tip">
+  <strong>Tip:</strong> If you are a student in a course, your instructor will tell you which endpoint URL to use. In most cases this will be the demo database.
+</div>
+
+<h3 id="language-selection">1.3 Language selection</h3>
+
+<p>
+  The language setting (available in the header bar and in the configuration wizard) affects two things:
+</p>
+<ul>
+  <li><strong>User interface</strong> — All buttons, labels, and messages in the application are shown in the selected language.</li>
+  <li><strong>Database content</strong> — When the database contains labels in multiple languages (for classes, properties, and controlled values), EntEdit will prefer labels in the selected language. If a label is not available in the selected language, it falls back to the other language or to untagged values.</li>
+</ul>
+<p>
+  EntEdit currently supports English and Norwegian. You can switch language at any time without losing your work.
+</p>
+
+
+<!-- 2. WHAT IS ENTITY-ORIENTED CATALOGUING -->
+<h2 id="what-is-entity-cataloguing">2. What is entity-oriented cataloguing?</h2>
 
 <p>
   Traditional library cataloguing focuses on describing <em>publications</em> — the physical or digital items you find on a shelf or in a database. Entity-oriented cataloguing takes a different approach: it describes the world of creative works as a network of distinct <strong>entities</strong> and the <strong>relationships</strong> between them.
@@ -308,8 +381,8 @@
 </p>
 
 
-<!-- 2. THE WEMI MODEL -->
-<h2 id="wemi-model">2. The WEMI model</h2>
+<!-- 3. THE WEMI MODEL -->
+<h2 id="wemi-model">3. The WEMI model</h2>
 
 <p>
   At the heart of IFLA-LRM is the <strong>WEMI model</strong>, which organises bibliographic information into four levels of abstraction:
@@ -376,10 +449,10 @@
 </div>
 
 
-<!-- 3. NAVIGATING ENTEDIT -->
-<h2 id="navigating-entedit">3. Navigating EntEdit</h2>
+<!-- 4. NAVIGATING ENTEDIT -->
+<h2 id="navigating-entedit">4. Navigating EntEdit</h2>
 
-<h3 id="entity-browser">3.1 The Entity Browser</h3>
+<h3 id="entity-browser">4.1 The Entity Browser</h3>
 
 <p>The Entity Browser is the main interface, organised in three panels:</p>
 
@@ -402,7 +475,7 @@
   </tr>
 </table>
 
-<h3 id="editing-entities">3.2 Editing entities</h3>
+<h3 id="editing-entities">4.2 Editing entities</h3>
 
 <h4>About labels</h4>
 <p>
@@ -460,7 +533,7 @@
   <strong>Tip:</strong> You may need to create the target entity first. For example, before linking a Work to its author, make sure the Agent entity for that author already exists in the database.
 </div>
 
-<h3 id="search-interface">3.3 The Search interface</h3>
+<h3 id="search-interface">4.3 The Search interface</h3>
 
 <p>The Search tab offers full-text search across the database with two modes:</p>
 <ul>
@@ -470,8 +543,8 @@
 <p>Search results display agents, metadata, and relationships in a compact format, letting you quickly survey what is already catalogued.</p>
 
 
-<!-- 4. EXAMPLE 1: THE ROAD -->
-<h2 id="example-the-road">4. Example 1 — <em>The Road</em> by Cormac McCarthy</h2>
+<!-- 5. EXAMPLE 1: THE ROAD -->
+<h2 id="example-the-road">5. Example 1 — <em>The Road</em> by Cormac McCarthy</h2>
 
 <p>
   Let us walk through cataloguing Cormac McCarthy's <em>The Road</em> — a post-apocalyptic novel published in 2006, later adapted into a film in 2009. This example demonstrates the core WEMI chain and how to express an adaptation relationship between two Works.
@@ -495,7 +568,7 @@
 </div>
 
 
-<h3 id="road-agent">4.1 Creating the Agent</h3>
+<h3 id="road-agent">5.1 Creating the Agent</h3>
 
 <p>We start by creating the author, since we will link to this Agent from the Work.</p>
 
@@ -518,7 +591,7 @@
 </ol>
 
 
-<h3 id="road-work">4.2 Creating the Work</h3>
+<h3 id="road-work">5.2 Creating the Work</h3>
 
 <p>The Work represents the novel as an abstract intellectual creation — independent of any particular edition or format.</p>
 
@@ -545,7 +618,7 @@
 </div>
 
 
-<h3 id="road-expression">4.3 Creating the Expression</h3>
+<h3 id="road-expression">5.3 Creating the Expression</h3>
 
 <p>An Expression represents a specific intellectual realisation of the Work. For a novel, the original English text is one Expression. A Norwegian translation would be a different Expression of the same Work.</p>
 
@@ -570,7 +643,7 @@
 </ol>
 
 
-<h3 id="road-manifestation">4.4 Creating the Manifestation</h3>
+<h3 id="road-manifestation">5.4 Creating the Manifestation</h3>
 
 <p>A Manifestation is a specific published edition. This is where we record the physical details familiar from traditional cataloguing: publisher, date, extent, ISBN.</p>
 
@@ -608,7 +681,7 @@
 </div>
 
 
-<h3 id="road-film">4.5 Adding the film adaptation</h3>
+<h3 id="road-film">5.5 Adding the film adaptation</h3>
 
 <p>
   <em>The Road</em> was adapted into a film directed by John Hillcoat in 2009. In the WEMI model, this is a <em>new Work</em> — a distinct intellectual creation that is related to the original novel through an adaptation relationship.
@@ -637,8 +710,8 @@
 </div>
 
 
-<!-- 5. EXAMPLE 2: SULT -->
-<h2 id="example-sult">5. Example 2 — <em>Sult</em> by Knut Hamsun</h2>
+<!-- 6. EXAMPLE 2: SULT -->
+<h2 id="example-sult">6. Example 2 — <em>Sult</em> by Knut Hamsun</h2>
 
 <p>
   Knut Hamsun's <em>Sult</em> (1890) is an excellent example for understanding how translations and multiple editions are modelled. The novel has been translated into English under the title <em>Hunger</em> by several different translators, and published in numerous editions in both Norwegian and English.
@@ -662,7 +735,7 @@
   <span class="dim">                                                 └── </span><span class="manifestation">Manifestation: Farrar, Straus &amp; Giroux, 1967</span>
 </div>
 
-<h3 id="sult-translation">5.1 Translations as separate Expressions</h3>
+<h3 id="sult-translation">6.1 Translations as separate Expressions</h3>
 
 <p>Each translation of <em>Sult</em> is a separate Expression because the translator creates a new intellectual realisation of the Work. Even two English translations are different Expressions if they are by different translators:</p>
 
@@ -703,7 +776,7 @@
   <strong>Key insight:</strong> The <em>author</em> (Hamsun) is linked at the Work level — he is the creator of the intellectual content. The <em>translator</em> is linked at the Expression level — they created this specific realisation. This separation means we only record Hamsun's authorship once, not on every edition.
 </div>
 
-<h3 id="sult-editions">5.2 Multiple editions as Manifestations</h3>
+<h3 id="sult-editions">6.2 Multiple editions as Manifestations</h3>
 
 <p>
   Different published editions of the same text are separate Manifestations of the same Expression. For example, the Norwegian text of <em>Sult</em> has appeared in dozens of editions since 1890, each with a different publisher, date, format, or ISBN — but they all share the same Expression.
@@ -727,8 +800,8 @@
 </div>
 
 
-<!-- 6. PRACTICE EXERCISES -->
-<h2 id="exercises">6. Practice exercises</h2>
+<!-- 7. PRACTICE EXERCISES -->
+<h2 id="exercises">7. Practice exercises</h2>
 
 <p>Try these exercises to practice what you have learned. Start with the simpler tasks and work your way up.</p>
 
@@ -768,8 +841,8 @@
 </ul>
 
 
-<!-- 7. KEY CONCEPTS -->
-<h2 id="key-concepts">7. Key concepts reference</h2>
+<!-- 8. KEY CONCEPTS -->
+<h2 id="key-concepts">8. Key concepts reference</h2>
 
 <h3>WEMI relationship summary</h3>
 <table>

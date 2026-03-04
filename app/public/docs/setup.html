@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EntEdit — Database Setup Guide</title>
+<style>
+  :root {
+    --primary: #1565c0;
+    --primary-light: #e3f2fd;
+    --accent: #e65100;
+    --bg: #fafafa;
+    --surface: #ffffff;
+    --text: #212121;
+    --text-secondary: #616161;
+    --border: #e0e0e0;
+    --code-bg: #f5f5f5;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+  .page-header {
+    background: var(--primary);
+    color: white;
+    padding: 2.5rem 2rem;
+    text-align: center;
+  }
+  .page-header h1 { font-size: 2rem; font-weight: 600; margin-bottom: 0.3rem; }
+  .page-header p { font-size: 1.05rem; opacity: 0.9; }
+  .back-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  .back-link:hover { color: white; text-decoration: underline; }
+
+  .container {
+    max-width: 52rem;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid var(--primary-light);
+  }
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  p { margin-bottom: 1rem; }
+  ul, ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+  li { margin-bottom: 0.4rem; }
+
+  .info-box {
+    background: var(--primary-light);
+    border-left: 4px solid var(--primary);
+    padding: 1rem 1.25rem;
+    margin: 1.25rem 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .info-box.tip {
+    background: #fff3e0;
+    border-left-color: var(--accent);
+  }
+  .info-box.warning {
+    background: #fce4ec;
+    border-left-color: #c62828;
+  }
+  .info-box strong { display: block; margin-bottom: 0.3rem; }
+
+  /* Step-by-step instructions */
+  .steps {
+    counter-reset: step-counter;
+    list-style: none;
+    padding-left: 0;
+  }
+  .steps li {
+    counter-increment: step-counter;
+    position: relative;
+    padding-left: 2.75rem;
+    margin-bottom: 1.25rem;
+  }
+  .steps li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 0.05rem;
+    width: 2rem;
+    height: 2rem;
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  code {
+    background: var(--code-bg);
+    padding: 0.15em 0.4em;
+    border-radius: 3px;
+    font-size: 0.9em;
+  }
+  pre {
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin: 1rem 0 1.5rem;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  pre code {
+    background: none;
+    padding: 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1.5rem;
+    font-size: 0.93rem;
+  }
+  th, td {
+    text-align: left;
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--border);
+  }
+  th {
+    background: var(--code-bg);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--text-secondary);
+  }
+
+  .file-tree {
+    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+    font-size: 0.88rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    margin: 1.25rem 0;
+    line-height: 1.8;
+    overflow-x: auto;
+  }
+
+  @media (max-width: 600px) {
+    .page-header { padding: 1.5rem 1rem; }
+    .page-header h1 { font-size: 1.5rem; }
+    .container { padding: 1.25rem 1rem 3rem; }
+    h2 { font-size: 1.35rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>Database Setup Guide</h1>
+  <p>How to set up your own EntEdit database with GraphDB</p>
+  <a href="index.html" class="back-link">← Back to Cataloguing Guide</a>
+</div>
+
+<div class="container">
+
+
+<!-- 1. OVERVIEW -->
+<h2>1. Overview</h2>
+
+<p>
+  EntEdit uses a SPARQL-compatible graph database to store and query RDF data. The recommended database is <strong>Ontotext GraphDB</strong>, which is included in the Docker Compose setup. This guide walks through setting up the database from scratch using Docker, and explains how to load your own data.
+</p>
+
+<p>If you just want to try EntEdit, you can skip this guide and use the demo database at <code>http://dijon.idi.ntnu.no:8080/repositories/EntEdit</code>.</p>
+
+
+<!-- 2. PREREQUISITES -->
+<h2>2. Prerequisites</h2>
+
+<ul>
+  <li><strong>Docker</strong> and <strong>Docker Compose</strong> — installed and running on your machine.</li>
+  <li>The EntEdit repository cloned from Git.</li>
+</ul>
+
+<div class="info-box tip">
+  <strong>Tip:</strong> Docker Desktop (available for Windows, macOS, and Linux) includes both Docker and Docker Compose.
+</div>
+
+
+<!-- 3. STARTING WITH DOCKER -->
+<h2>3. Starting the Docker environment</h2>
+
+<p>From the root of the EntEdit repository, run:</p>
+
+<pre><code>docker compose up -d</code></pre>
+
+<p>This starts three services:</p>
+
+<table>
+  <tr>
+    <th>Service</th>
+    <th>URL</th>
+    <th>Purpose</th>
+  </tr>
+  <tr>
+    <td><strong>Web application</strong></td>
+    <td><code>http://localhost/entedit/</code></td>
+    <td>The EntEdit user interface (served by nginx)</td>
+  </tr>
+  <tr>
+    <td><strong>GraphDB</strong></td>
+    <td><code>http://localhost:7200</code></td>
+    <td>The graph database (GraphDB Workbench for administration)</td>
+  </tr>
+  <tr>
+    <td><strong>Initialization</strong></td>
+    <td>—</td>
+    <td>A one-time service that creates the repository and imports data</td>
+  </tr>
+</table>
+
+<p>
+  When using the Docker setup, configure EntEdit with the endpoint URL <code>http://localhost/graphdb/repositories/EntEdit</code>. The nginx proxy forwards requests to GraphDB, which avoids cross-origin (CORS) issues.
+</p>
+
+<div class="info-box">
+  <strong>Note:</strong> The first time you run <code>docker compose up</code>, the initialization service will create the GraphDB repository, import vocabulary files and test data, and set up the full-text search indexes. This may take a minute or two.
+</div>
+
+
+<!-- 4. WHAT GETS INITIALIZED -->
+<h2>4. What gets initialized</h2>
+
+<p>The initialization service performs three phases:</p>
+
+<ol class="steps">
+  <li><strong>Repository creation</strong> — Creates a GraphDB repository named <code>EntEdit</code> with RDFS-Plus reasoning enabled.</li>
+  <li><strong>Data import</strong> — Loads all RDF files from two directories:
+    <ul style="margin-top: 0.5rem;">
+      <li><code>database/types/</code> — Vocabulary and ontology files (RDA properties, class definitions, controlled value lists)</li>
+      <li><code>database/testdata/</code> — Sample bibliographic entities (works, expressions, manifestations, agents)</li>
+    </ul>
+  </li>
+  <li><strong>SPARQL updates</strong> — Executes setup queries from <code>database/graphdb/</code>, including the Lucene full-text search connector definitions that power the Search tab.</li>
+</ol>
+
+
+<!-- 5. REPOSITORY STRUCTURE -->
+<h2>5. Repository structure</h2>
+
+<p>The relevant directories in the EntEdit repository:</p>
+
+<div class="file-tree">
+EntEdit/<br>
+├── database/<br>
+│   ├── types/          <span style="color: var(--text-secondary);">← Vocabulary files (loaded into GraphDB)</span><br>
+│   ├── testdata/       <span style="color: var(--text-secondary);">← Sample RDF entities</span><br>
+│   ├── graphdb/        <span style="color: var(--text-secondary);">← SPARQL connector definitions</span><br>
+│   └── inference rules/<span style="color: var(--text-secondary);">← GraphDB reasoning rules</span><br>
+├── docker/<br>
+│   ├── graphdb/        <span style="color: var(--text-secondary);">← Repository config + init script</span><br>
+│   └── nginx/          <span style="color: var(--text-secondary);">← Web server + proxy config</span><br>
+└── docker-compose.yml
+</div>
+
+
+<!-- 6. USING YOUR OWN DATA -->
+<h2>6. Using your own data</h2>
+
+<h3>Adding data before first launch</h3>
+
+<p>The simplest approach is to place your RDF files in the <code>database/testdata/</code> directory before running <code>docker compose up</code> for the first time. Supported formats:</p>
+
+<ul>
+  <li><code>.ttl</code> — Turtle</li>
+  <li><code>.rdf</code> — RDF/XML</li>
+  <li><code>.nt</code> — N-Triples</li>
+</ul>
+
+<h3>Importing data into an existing database</h3>
+
+<p>If the database is already running, you can import data through the GraphDB Workbench:</p>
+
+<ol class="steps">
+  <li>Open <code>http://localhost:7200</code> in your browser.</li>
+  <li>Go to <strong>Import → RDF</strong> in the left sidebar.</li>
+  <li>Upload your RDF files and import them into the <code>EntEdit</code> repository.</li>
+</ol>
+
+<div class="info-box warning">
+  <strong>Important:</strong> After importing new data, you may need to recreate the Lucene full-text search indexes for the new entities to appear in search results. The connector definitions are in <code>database/graphdb/</code>.
+</div>
+
+
+<!-- 7. SETTING UP YOUR OWN DATABASE -->
+<h2>7. Setting up your own database from scratch</h2>
+
+<p>
+  If you want to use EntEdit with your own GraphDB instance (outside the Docker setup), you need to load the vocabulary files and set up the full-text search connectors. This section covers the minimum steps required.
+</p>
+
+<h3>Step 1: Create a repository</h3>
+
+<p>
+  In the GraphDB Workbench (<code>http://localhost:7200</code>), go to <strong>Setup → Repositories → Create new repository</strong>. Use the following settings:
+</p>
+<ul>
+  <li><strong>Repository ID:</strong> <code>EntEdit</code> (or any name you prefer)</li>
+  <li><strong>Ruleset:</strong> <code>RDFS-Plus (Optimized)</code></li>
+</ul>
+<p>All other settings can be left at their defaults.</p>
+
+<h3>Step 2: Import the vocabulary files</h3>
+
+<p>
+  EntEdit requires the vocabulary files under <code>database/types/</code> to be loaded into the database. These define the classes, properties, controlled values, and display configuration that the application relies on. The directory contains three subdirectories:
+</p>
+
+<table>
+  <tr>
+    <th>Directory</th>
+    <th>Contents</th>
+  </tr>
+  <tr>
+    <td><code>database/types/entedit profile/</code></td>
+    <td>The EntEdit application profile — defines which classes and properties are active, their display order, and status. <strong>This is required.</strong></td>
+  </tr>
+  <tr>
+    <td><code>database/types/rda vocabulary/</code></td>
+    <td>The RDA (Resource Description and Access) ontology — class and property definitions with labels in multiple languages.</td>
+  </tr>
+  <tr>
+    <td><code>database/types/term vocabularies/</code></td>
+    <td>Controlled value lists — languages, content types, media types, carrier types, work types.</td>
+  </tr>
+</table>
+
+<p>Import all files from these directories via <strong>Import → RDF</strong> in the GraphDB Workbench, or use the GraphDB REST API.</p>
+
+<div class="info-box warning">
+  <strong>Important:</strong> All three directories must be imported. Without the EntEdit profile, no classes or properties will appear in the application. Without the RDA vocabulary, labels will be missing. Without the term vocabularies, controlled value dropdowns will be empty.
+</div>
+
+<h3>Step 3: Set up the Lucene connectors</h3>
+
+<p>
+  The Search tab in EntEdit relies on GraphDB's Lucene connector for full-text search. You need to execute the connector definition queries to create the search indexes. These are SPARQL UPDATE statements found in:
+</p>
+
+<ul>
+  <li><code>database/graphdb/expression.connector.sparql</code> — Creates the full-text index for Expression search</li>
+  <li><code>database/graphdb/manifestation.connector.sparql</code> — Creates the full-text index for Manifestation search</li>
+</ul>
+
+<p>Execute these in the GraphDB Workbench under <strong>SPARQL → SPARQL Update</strong>, or via the SPARQL endpoint. After execution, the connectors will automatically index existing data and keep the index updated as new data is added.</p>
+
+<div class="info-box tip">
+  <strong>Tip:</strong> If you skip this step, the Entity Browser will still work — you can browse and edit entities normally. Only the Search tab requires the Lucene connectors.
+</div>
+
+<h3>Step 4: Import your bibliographic data</h3>
+
+<p>
+  With the vocabulary in place, you can now import your own bibliographic data (Works, Expressions, Manifestations, Agents) via GraphDB's import tools. The data should use the RDA vocabulary URIs defined in the vocabulary files. See the sample files in <code>database/testdata/</code> for examples of the expected RDF structure.
+</p>
+
+
+<!-- 8. ONTOLOGY REQUIREMENTS -->
+<h2>8. Ontology requirements</h2>
+
+<p>
+  EntEdit expects certain conventions in the ontology to determine which classes and properties to display and how to order them:
+</p>
+
+<table>
+  <tr>
+    <th>Predicate</th>
+    <th>Purpose</th>
+  </tr>
+  <tr>
+    <td><code>entedit:status</code></td>
+    <td>Must be set to an active status value for a class or property to appear in the application. Classes and properties without this predicate are hidden.</td>
+  </tr>
+  <tr>
+    <td><code>entedit:order</code></td>
+    <td>A numeric value that controls the display order of properties within the editor. Lower values appear first.</td>
+  </tr>
+  <tr>
+    <td><code>rdfs:domain</code></td>
+    <td>Standard RDFS. Used to determine which properties are available for a given class.</td>
+  </tr>
+  <tr>
+    <td><code>rdfs:range</code></td>
+    <td>Standard RDFS. Used to determine what values are valid for object properties.</td>
+  </tr>
+  <tr>
+    <td><code>rdfs:label</code></td>
+    <td>Used to display human-readable names for classes, properties, and entities. Should be provided in both English and Norwegian for full bilingual support.</td>
+  </tr>
+</table>
+
+<p>
+  The vocabulary files in <code>database/types/</code> provide a working example of how these predicates are used with the RDA ontology. If you are building your own ontology, use these files as a reference.
+</p>
+
+
+<!-- 9. DEVELOPMENT SETUP -->
+<h2>9. Development setup</h2>
+
+<p>For local development of the EntEdit web application (without Docker for the frontend):</p>
+
+<ol class="steps">
+  <li>Make sure you have <strong>Node.js 20+</strong> installed.</li>
+  <li>Start a GraphDB instance (either via Docker or a standalone installation) with the <code>EntEdit</code> repository.</li>
+  <li>
+    Install dependencies and start the dev server:
+    <pre style="margin-top: 0.5rem;"><code>cd app
+npm install
+npm run dev</code></pre>
+  </li>
+  <li>Open <code>http://localhost:5173</code> in your browser.</li>
+</ol>
+
+<p>
+  The Vite development server proxies <code>/graphdb</code> requests to <code>http://localhost:7200</code>, so you can use the endpoint URL <code>http://localhost:7200/repositories/EntEdit</code> or let the proxy handle it.
+</p>
+
+<div class="info-box tip">
+  <strong>Tip:</strong> If you are only developing the frontend, you can start just the GraphDB service with <code>docker compose up graphdb graphdb-init -d</code> and run the web app locally with <code>npm run dev</code>.
+</div>
+
+
+</div>
+
+</body>
+</html>
