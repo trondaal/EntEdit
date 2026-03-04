@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo, lazy, Suspense } from "react";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { CssBaseline, Container, Box, CircularProgress, Typography, Tabs, Tab } from "@mui/material";
+import { CssBaseline, Box, CircularProgress, Typography, Tabs, Tab } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { SnackbarProvider } from "notistack";
 import { queryClient } from "./utils/queryClient";
@@ -218,7 +218,16 @@ function App() {
 
           {/* Main Application - only rendered when properly configured */}
           {appConfig?.isConfigured && !showWizard && (
-            <>
+            <Box
+              sx={{
+                maxWidth: 1536,
+                mx: "auto",
+                px: { xs: 1, sm: 2, md: 3 },
+                minHeight: "100vh",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
               <AppHeader
                 config={appConfig.endpoint}
                 onConfigChange={handleConfigChange}
@@ -226,45 +235,34 @@ function App() {
                 onLanguageChange={handleLanguageChange}
                 onResetConfiguration={handleResetConfiguration}
               />
-              <Box
-                sx={{
-                  minHeight: "100vh",
-                  display: "flex",
-                  flexDirection: "column",
-                  pt: "64px", // Account for fixed header height
-                }}
-              >
-                <Box sx={{ borderBottom: 1, borderColor: "divider", bgcolor: "background.paper" }}>
-                  <Container maxWidth="xl">
-                    <Tabs
-                      value={activeTab}
-                      onChange={(_, newValue) => setActiveTab(newValue)}
-                      aria-label="main navigation tabs"
-                    >
-                      <Tab label={t("tabs.entityBrowser")} />
-                      {showSearchTab && <Tab label={t("tabs.search")} />}
-                    </Tabs>
-                  </Container>
-                </Box>
-
-                <Container maxWidth="xl" sx={{ py: 3, px: 2, flexGrow: 1 }}>
-                  <Suspense fallback={<Box sx={{ display: "flex", justifyContent: "center", pt: 8 }}><CircularProgress /></Box>}>
-                    {activeTab === 0 && (
-                      <EntityBrowser
-                        config={appConfig.endpoint}
-                        selectedLanguage={appConfig.language}
-                      />
-                    )}
-                    {activeTab === 1 && showSearchTab && (
-                      <SearchInterface
-                        config={appConfig.endpoint}
-                        selectedLanguage={appConfig.language}
-                      />
-                    )}
-                  </Suspense>
-                </Container>
+              <Box sx={{ borderBottom: 1, borderColor: "divider", bgcolor: "background.paper" }}>
+                <Tabs
+                  value={activeTab}
+                  onChange={(_, newValue) => setActiveTab(newValue)}
+                  aria-label="main navigation tabs"
+                >
+                  <Tab label={t("tabs.entityBrowser")} />
+                  {showSearchTab && <Tab label={t("tabs.search")} />}
+                </Tabs>
               </Box>
-            </>
+
+              <Box sx={{ py: 3, flexGrow: 1 }}>
+                <Suspense fallback={<Box sx={{ display: "flex", justifyContent: "center", pt: 8 }}><CircularProgress /></Box>}>
+                  {activeTab === 0 && (
+                    <EntityBrowser
+                      config={appConfig.endpoint}
+                      selectedLanguage={appConfig.language}
+                    />
+                  )}
+                  {activeTab === 1 && showSearchTab && (
+                    <SearchInterface
+                      config={appConfig.endpoint}
+                      selectedLanguage={appConfig.language}
+                    />
+                  )}
+                </Suspense>
+              </Box>
+            </Box>
           )}
 
           <ReactQueryDevtools initialIsOpen={false} />

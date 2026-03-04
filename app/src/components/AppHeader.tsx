@@ -60,22 +60,18 @@ const AppHeader: React.FC<AppHeaderProps> = ({
   return (
     <>
       <AppBar
-        position="fixed"
+        position="sticky"
         elevation={1}
         sx={{
           top: 0,
-          left: 0,
-          right: 0,
           zIndex: 1200,
+          borderRadius: 1,
         }}
       >
         <Toolbar
           sx={{
             minHeight: 64,
             height: 64,
-            maxWidth: 1536, // Match Container maxWidth="xl"
-            width: "100%",
-            mx: "auto",
             px: 2,
           }}
         >
