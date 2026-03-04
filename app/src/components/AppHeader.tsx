@@ -143,7 +143,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({
               color="inherit"
               aria-label={t("labels.help")}
               onClick={() => {
-                window.open("./docs/README.md", "_blank", "noopener,noreferrer");
+                window.open("./docs/index.html", "_blank", "noopener,noreferrer");
               }}
             >
               <Help />
