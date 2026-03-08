@@ -25,6 +25,7 @@ interface ResultSetProps {
   hasNextPage: boolean;
   isFetchingNextPage: boolean;
   onFetchNextPage: () => void;
+  onEntitySearch: (name: string) => void;
 }
 
 const ResultSet: React.FC<ResultSetProps> = ({
@@ -41,6 +42,7 @@ const ResultSet: React.FC<ResultSetProps> = ({
   hasNextPage,
   isFetchingNextPage,
   onFetchNextPage,
+  onEntitySearch,
 }) => {
   // Fetch next page when user scrolls near the bottom
   const handleScroll = useCallback(
@@ -97,6 +99,7 @@ const ResultSet: React.FC<ResultSetProps> = ({
               selectedManifestationUri={selectedManifestationUri}
               onManifestationSelect={onManifestationSelect}
               selectedLanguage={selectedLanguage}
+              onEntitySearch={onEntitySearch}
             />
           ))}
 

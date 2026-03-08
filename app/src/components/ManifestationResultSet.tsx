@@ -24,6 +24,7 @@ interface ManifestationResultSetProps {
   hasNextPage: boolean;
   isFetchingNextPage: boolean;
   onFetchNextPage: () => void;
+  onEntitySearch: (name: string) => void;
 }
 
 const ManifestationResultSet: React.FC<ManifestationResultSetProps> = ({
@@ -38,6 +39,7 @@ const ManifestationResultSet: React.FC<ManifestationResultSetProps> = ({
   hasNextPage,
   isFetchingNextPage,
   onFetchNextPage,
+  onEntitySearch,
 }) => {
   const { t } = useTranslation();
 
@@ -94,6 +96,7 @@ const ManifestationResultSet: React.FC<ManifestationResultSetProps> = ({
               onSelect={onSelectResult}
               selectedLanguage={selectedLanguage}
               config={config}
+              onEntitySearch={onEntitySearch}
             />
           ))}
 

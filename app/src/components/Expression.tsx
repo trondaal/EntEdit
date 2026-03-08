@@ -8,6 +8,7 @@ import {
   Collapse,
   IconButton,
   Chip,
+  Link,
 } from "@mui/material";
 import { ExpandMore, ExpandLess } from "@mui/icons-material";
 import type { ExpressionSearchResult } from "../hooks/useSearchQueries";
@@ -22,6 +23,7 @@ interface ExpressionProps {
   selectedManifestationUri: string | null;
   onManifestationSelect: (uri: string) => void;
   selectedLanguage: string;
+  onEntitySearch: (name: string) => void;
 }
 
 const Expression: React.FC<ExpressionProps> = ({
@@ -32,6 +34,7 @@ const Expression: React.FC<ExpressionProps> = ({
   selectedManifestationUri,
   onManifestationSelect,
   selectedLanguage,
+  onEntitySearch,
 }) => {
   const [manifestationsExpanded, setManifestationsExpanded] = useState(false);
 
@@ -58,36 +61,42 @@ const Expression: React.FC<ExpressionProps> = ({
   };
 
   // Helper function to parse creator strings
-  // Example input: "rolelabel: name & name & name ; rolelabel: name & name"
-  // Output: Array of { role, names }
-  const parseCreators = (creatorString: string | undefined): Array<{ role: string; names: string[] }> => {
-    if (!creatorString) return [];
+  // Example input: "rolelabel: name = uri & name = uri ; rolelabel: name = uri"
+  // Output: Array of { role, names: Array<{ name, uri? }> }
+  const parseCreators = (creatorString: string | undefined) => {
+    if (!creatorString) return [] as Array<{ role: string; names: Array<{ name: string; uri?: string }> }>;
 
     // Split by semicolon to get individual role groups
     const roleGroups = creatorString.split(';').map(group => group.trim());
 
-    return roleGroups.map(group => {
+    return roleGroups.flatMap(group => {
       // Split by colon to separate role from names
       const colonIndex = group.indexOf(':');
-      if (colonIndex === -1) return null;
+      if (colonIndex === -1) return [];
 
       const role = group.substring(0, colonIndex).trim();
       const namesString = group.substring(colonIndex + 1).trim();
 
-      // Split by ' & ' to get individual names
-      const names = namesString.split('&').map(name => name.trim()).filter(name => name.length > 0);
+      // Split by ' & ' to get individual "name = uri" entries
+      const names = namesString.split('&').map(entry => {
+        const parts = entry.trim().split(' = ');
+        return {
+          name: parts[0]?.trim() || '',
+          uri: parts.length > 1 ? parts[1]?.trim() : undefined,
+        };
+      }).filter(entry => entry.name.length > 0);
 
-      return { role, names };
-    }).filter((group): group is { role: string; names: string[] } => group !== null);
+      return [{ role, names }];
+    });
   };
 
   // Helper function to parse and format relationship strings
   // Example input: "har del av verk: All the pretty horses = http://viaf.org/viaf/214001528 & Cities of the plain = http://viaf.org/viaf/3417153653286155900001 ; er bearbeidet som spillefilm (verk): All the pretty horses = https://www.imdb.com/title/tt0149624"
-  // Output: Array of { relationshipLabel, title }
-  const parseRelationships = (relationshipString: string | undefined): Array<{ relationshipLabel: string; title: string }> => {
+  // Output: Array of { relationshipLabel, title, uri? }
+  const parseRelationships = (relationshipString: string | undefined): Array<{ relationshipLabel: string; title: string; uri?: string }> => {
     if (!relationshipString) return [];
 
-    const result: Array<{ relationshipLabel: string; title: string }> = [];
+    const result: Array<{ relationshipLabel: string; title: string; uri?: string }> = [];
 
     // Split by semicolon to get individual relationship groups
     const relationshipGroups = relationshipString.split(';').map(group => group.trim());
@@ -107,9 +116,10 @@ const Expression: React.FC<ExpressionProps> = ({
         // Split by ' = ' to separate title from URI
         const parts = pair.split(' = ');
         const title = parts[0]?.trim();
+        const uri = parts[1]?.trim();
 
         if (title) {
-          result.push({ relationshipLabel, title });
+          result.push({ relationshipLabel, title, uri });
         }
       });
     });
@@ -189,7 +199,30 @@ const Expression: React.FC<ExpressionProps> = ({
                               component="span"
                               className="creator-names"
                             >
-                              {creator.names.join(' ; ')}
+                              {creator.names.map((entry, nameIndex) => (
+                                <React.Fragment key={nameIndex}>
+                                  {nameIndex > 0 && ' ; '}
+                                  <Link
+                                    component="button"
+                                    variant="body2"
+                                    onClick={(e: React.MouseEvent) => {
+                                      e.stopPropagation();
+                                      onEntitySearch(entry.name);
+                                    }}
+                                    sx={{
+                                      textDecoration: 'none',
+                                      '&:hover': { textDecoration: 'underline' },
+                                      cursor: 'pointer',
+                                      color: 'inherit',
+                                      verticalAlign: 'baseline',
+                                      fontSize: 'inherit',
+                                      lineHeight: 'inherit',
+                                    }}
+                                  >
+                                    {entry.name}
+                                  </Link>
+                                </React.Fragment>
+                              ))}
                             </Box>
                           </Typography>
                         ))}
@@ -218,7 +251,30 @@ const Expression: React.FC<ExpressionProps> = ({
                               component="span"
                               className="creator-names"
                             >
-                              {creator.names.join(' ; ')}
+                              {creator.names.map((entry, nameIndex) => (
+                                <React.Fragment key={nameIndex}>
+                                  {nameIndex > 0 && ' ; '}
+                                  <Link
+                                    component="button"
+                                    variant="body2"
+                                    onClick={(e: React.MouseEvent) => {
+                                      e.stopPropagation();
+                                      onEntitySearch(entry.name);
+                                    }}
+                                    sx={{
+                                      textDecoration: 'none',
+                                      '&:hover': { textDecoration: 'underline' },
+                                      cursor: 'pointer',
+                                      color: 'inherit',
+                                      verticalAlign: 'baseline',
+                                      fontSize: 'inherit',
+                                      lineHeight: 'inherit',
+                                    }}
+                                  >
+                                    {entry.name}
+                                  </Link>
+                                </React.Fragment>
+                              ))}
                             </Box>
                           </Typography>
                         ))}
@@ -309,7 +365,27 @@ const Expression: React.FC<ExpressionProps> = ({
                               →
                             </Box>
                             <Box component="span">
-                              {capitalizeFirstLetter(rel.relationshipLabel)}: <em>{rel.title}</em>
+                              {capitalizeFirstLetter(rel.relationshipLabel)}:{' '}
+                              <Link
+                                component="button"
+                                variant="body2"
+                                onClick={(e: React.MouseEvent) => {
+                                  e.stopPropagation();
+                                  onEntitySearch(rel.title);
+                                }}
+                                sx={{
+                                  textDecoration: 'none',
+                                  fontStyle: 'italic',
+                                  '&:hover': { textDecoration: 'underline' },
+                                  cursor: 'pointer',
+                                  color: 'inherit',
+                                  fontSize: 'inherit',
+                                  lineHeight: 'inherit',
+                                  verticalAlign: 'baseline',
+                                }}
+                              >
+                                {rel.title}
+                              </Link>
                             </Box>
                           </Typography>
                         ))}
@@ -341,7 +417,27 @@ const Expression: React.FC<ExpressionProps> = ({
                               →
                             </Box>
                             <Box component="span">
-                              {capitalizeFirstLetter(rel.relationshipLabel)}: <em>{rel.title}</em>
+                              {capitalizeFirstLetter(rel.relationshipLabel)}:{' '}
+                              <Link
+                                component="button"
+                                variant="body2"
+                                onClick={(e: React.MouseEvent) => {
+                                  e.stopPropagation();
+                                  onEntitySearch(rel.title);
+                                }}
+                                sx={{
+                                  textDecoration: 'none',
+                                  fontStyle: 'italic',
+                                  '&:hover': { textDecoration: 'underline' },
+                                  cursor: 'pointer',
+                                  color: 'inherit',
+                                  fontSize: 'inherit',
+                                  lineHeight: 'inherit',
+                                  verticalAlign: 'baseline',
+                                }}
+                              >
+                                {rel.title}
+                              </Link>
                             </Box>
                           </Typography>
                         ))}

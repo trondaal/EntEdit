@@ -94,7 +94,7 @@ export const useExpressionsByManifestation = (
           # Work to agent relationships
           OPTIONAL {
             SELECT DISTINCT ?work ?work_agent_relationship_label
-            (GROUP_CONCAT(DISTINCT ?work_agent_name_x ; SEPARATOR=" & ") as ?work_agent_names)
+            (GROUP_CONCAT(DISTINCT CONCAT(?work_agent_name_x, " = ", STR(?work_agent)) ; SEPARATOR=" & ") as ?work_agent_names)
             WHERE {
               {
                 OPTIONAL {
@@ -119,7 +119,7 @@ export const useExpressionsByManifestation = (
           # Expression to agent relationships
           OPTIONAL {
             SELECT DISTINCT ?expression ?expression_agent_relationship_label
-            (GROUP_CONCAT(DISTINCT ?expression_agent_name_x ; SEPARATOR=" & ") as ?expression_agent_names)
+            (GROUP_CONCAT(DISTINCT CONCAT(?expression_agent_name_x, " = ", STR(?expression_agent)) ; SEPARATOR=" & ") as ?expression_agent_names)
             WHERE {
               {
                 OPTIONAL {

@@ -8,6 +8,7 @@ import {
   ListItemButton,
   ListItemText,
   Chip,
+  Link,
 } from "@mui/material";
 import { useExpressionsByManifestation } from "../hooks/useExpressionQueries";
 import type { SparqlEndpointConfig } from "../types/sparql";
@@ -16,12 +17,14 @@ interface ExpressionListProps {
   config: SparqlEndpointConfig;
   manifestationUri: string;
   selectedLanguage: string;
+  onEntitySearch?: (name: string) => void;
 }
 
 const ExpressionList: React.FC<ExpressionListProps> = ({
   config,
   manifestationUri,
   selectedLanguage,
+  onEntitySearch,
 }) => {
   const {
     data: expressions,
@@ -39,6 +42,31 @@ const ExpressionList: React.FC<ExpressionListProps> = ({
   const splitValues = (value: string | undefined): string[] => {
     if (!value) return [];
     return value.split(/\s*;\s*/).map(v => v.trim()).filter(v => v.length > 0);
+  };
+
+  // Parse creator strings with URI support
+  // Input format: "rolelabel: name = uri & name = uri ; rolelabel: name = uri"
+  const parseCreators = (creatorString: string | undefined) => {
+    if (!creatorString) return [] as Array<{ role: string; names: Array<{ name: string; uri?: string }> }>;
+
+    const roleGroups = creatorString.split(';').map(group => group.trim());
+
+    return roleGroups.flatMap(group => {
+      const colonIndex = group.indexOf(':');
+      if (colonIndex === -1) return [];
+
+      const role = group.substring(0, colonIndex).trim();
+      const namesString = group.substring(colonIndex + 1).trim();
+      const names = namesString.split('&').map(entry => {
+        const parts = entry.trim().split(' = ');
+        return {
+          name: parts[0]?.trim() || '',
+          uri: parts.length > 1 ? parts[1]?.trim() : undefined,
+        };
+      }).filter(entry => entry.name.length > 0);
+
+      return [{ role, names }];
+    });
   };
 
   if (isLoading) {
@@ -88,14 +116,10 @@ const ExpressionList: React.FC<ExpressionListProps> = ({
           allChips.push(...splitValues(expression.worktype));
         }
 
-        // Combine creators
-        const creators: string[] = [];
-        if (expression.work_creators) {
-          creators.push(...splitValues(expression.work_creators));
-        }
-        if (expression.expression_creators) {
-          creators.push(...splitValues(expression.expression_creators));
-        }
+        // Parse creators with URI support
+        const workCreators = parseCreators(expression.work_creators);
+        const expressionCreators = parseCreators(expression.expression_creators);
+        const allCreators = [...workCreators, ...expressionCreators];
 
         return (
           <ListItem
@@ -134,18 +158,55 @@ const ExpressionList: React.FC<ExpressionListProps> = ({
                   </Typography>
 
                   {/* Creators */}
-                  {creators.length > 0 && (
-                    <Typography
-                      variant="body2"
-                      color="text.secondary"
-                      sx={{
-                        fontSize: '0.8125rem',
-                        lineHeight: 1.5,
-                        mb: 0.5,
-                      }}
-                    >
-                      {creators.join(" ; ")}
-                    </Typography>
+                  {allCreators.length > 0 && (
+                    <Box sx={{ mb: 0.5 }}>
+                      {allCreators.map((creator, creatorIndex) => (
+                        <Typography
+                          key={creatorIndex}
+                          variant="body2"
+                          color="text.secondary"
+                          sx={{
+                            fontSize: '0.8125rem',
+                            lineHeight: 1.5,
+                          }}
+                        >
+                          <Box component="span" sx={{ fontWeight: 500, color: 'text.primary' }}>
+                            {capitalizeFirstLetter(creator.role)}:
+                          </Box>
+                          {' '}
+                          <Box component="span">
+                            {creator.names.map((entry, nameIndex) => (
+                              <React.Fragment key={nameIndex}>
+                                {nameIndex > 0 && ' ; '}
+                                {onEntitySearch ? (
+                                  <Link
+                                    component="button"
+                                    variant="body2"
+                                    onClick={(e: React.MouseEvent) => {
+                                      e.stopPropagation();
+                                      onEntitySearch(entry.name);
+                                    }}
+                                    sx={{
+                                      textDecoration: 'none',
+                                      '&:hover': { textDecoration: 'underline' },
+                                      cursor: 'pointer',
+                                      color: 'inherit',
+                                      verticalAlign: 'baseline',
+                                      fontSize: 'inherit',
+                                      lineHeight: 'inherit',
+                                    }}
+                                  >
+                                    {entry.name}
+                                  </Link>
+                                ) : (
+                                  entry.name
+                                )}
+                              </React.Fragment>
+                            ))}
+                          </Box>
+                        </Typography>
+                      ))}
+                    </Box>
                   )}
 
                   {/* Metadata chips */}

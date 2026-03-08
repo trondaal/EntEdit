@@ -8,6 +8,7 @@ import {
   Chip,
   Collapse,
   IconButton,
+  Link,
 } from "@mui/material";
 import { ExpandMore, ExpandLess } from "@mui/icons-material";
 import type { ManifestationSearchResult as ManifestationSearchResultType } from "../hooks/useSearchQueries";
@@ -20,6 +21,7 @@ interface ManifestationSearchResultProps {
   onSelect: (uri: string) => void;
   selectedLanguage: string;
   config: SparqlEndpointConfig;
+  onEntitySearch: (name: string) => void;
 }
 
 const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
@@ -28,6 +30,7 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
   onSelect,
   selectedLanguage,
   config,
+  onEntitySearch,
 }) => {
   const [expressionsExpanded, setExpressionsExpanded] = useState(false);
 
@@ -43,23 +46,29 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
   };
 
   // Helper function to parse creator strings
-  // Example input: "rolelabel: name & name & name ; rolelabel: name & name"
-  // Output: Array of { role, names }
-  const parseCreators = (creatorString: string | undefined): Array<{ role: string; names: string[] }> => {
-    if (!creatorString) return [];
+  // Example input: "rolelabel: name = uri & name = uri ; rolelabel: name = uri"
+  // Output: Array of { role, names: Array<{ name, uri? }> }
+  const parseCreators = (creatorString: string | undefined) => {
+    if (!creatorString) return [] as Array<{ role: string; names: Array<{ name: string; uri?: string }> }>;
 
     const roleGroups = creatorString.split(';').map(group => group.trim());
 
-    return roleGroups.map(group => {
+    return roleGroups.flatMap(group => {
       const colonIndex = group.indexOf(':');
-      if (colonIndex === -1) return null;
+      if (colonIndex === -1) return [];
 
       const role = group.substring(0, colonIndex).trim();
       const namesString = group.substring(colonIndex + 1).trim();
-      const names = namesString.split('&').map(name => name.trim()).filter(name => name.length > 0);
+      const names = namesString.split('&').map(entry => {
+        const parts = entry.trim().split(' = ');
+        return {
+          name: parts[0]?.trim() || '',
+          uri: parts.length > 1 ? parts[1]?.trim() : undefined,
+        };
+      }).filter(entry => entry.name.length > 0);
 
-      return { role, names };
-    }).filter((group): group is { role: string; names: string[] } => group !== null);
+      return [{ role, names }];
+    });
   };
 
   // Helper function to split pipe-separated values into array
@@ -207,7 +216,30 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                         </Box>
                         {' '}
                         <Box component="span">
-                          {creator.names.join(' ; ')}
+                          {creator.names.map((entry, nameIndex) => (
+                            <React.Fragment key={nameIndex}>
+                              {nameIndex > 0 && ' ; '}
+                              <Link
+                                component="button"
+                                variant="body2"
+                                onClick={(e: React.MouseEvent) => {
+                                  e.stopPropagation();
+                                  onEntitySearch(entry.name);
+                                }}
+                                sx={{
+                                  textDecoration: 'none',
+                                  '&:hover': { textDecoration: 'underline' },
+                                  cursor: 'pointer',
+                                  color: 'inherit',
+                                  verticalAlign: 'baseline',
+                                  fontSize: 'inherit',
+                                  lineHeight: 'inherit',
+                                }}
+                              >
+                                {entry.name}
+                              </Link>
+                            </React.Fragment>
+                          ))}
                         </Box>
                       </Typography>
                     ))}
@@ -295,6 +327,7 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
           config={config}
           manifestationUri={result.uri}
           selectedLanguage={selectedLanguage}
+          onEntitySearch={onEntitySearch}
         />
       </Collapse>
       <Box

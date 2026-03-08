@@ -77,6 +77,13 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
     setSelectedManifestation(null);
   };
 
+  const handleEntitySearch = (name: string) => {
+    setSearchInput(`"${name}"`);
+    setSelectedResult(null);
+    setSelectedManifestation(null);
+    setSelectedManifestationResult(null);
+  };
+
   return (
     <Box>
       <Box
@@ -163,6 +170,7 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
               hasNextPage={searchHasNextPage}
               isFetchingNextPage={searchIsFetchingNextPage}
               onFetchNextPage={searchFetchNextPage}
+              onEntitySearch={handleEntitySearch}
             />
           ) : (
             <ManifestationResultSet
@@ -177,6 +185,7 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
               hasNextPage={manifestationHasNextPage}
               isFetchingNextPage={manifestationIsFetchingNextPage}
               onFetchNextPage={manifestationFetchNextPage}
+              onEntitySearch={handleEntitySearch}
             />
           )}
         </Box>
