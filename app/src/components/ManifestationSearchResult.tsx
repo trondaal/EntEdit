@@ -7,7 +7,6 @@ import {
   Box,
   Chip,
   Collapse,
-  IconButton,
   Link,
 } from "@mui/material";
 import { ExpandMore, ExpandLess } from "@mui/icons-material";
@@ -287,39 +286,47 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                 )}
 
                 {/* Metadata chips */}
-                {allChips.length > 0 && (
-                  <Box sx={{
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    gap: 0.75,
-                    mt: 0.5,
-                  }}>
-                    {allChips.map((chip, index) => (
-                      <Chip
-                        key={`chip-${index}`}
-                        label={capitalizeFirstLetter(chip)}
-                        size="small"
-                        variant="outlined"
-                        sx={{
-                          height: 20,
-                          fontSize: '0.6875rem',
-                          fontWeight: 500,
-                          borderColor: 'divider',
-                        }}
-                      />
-                    ))}
-                  </Box>
-                )}
+                <Box sx={{
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  gap: 0.75,
+                  mt: 0.5,
+                }}>
+                  {allChips.map((chip, index) => (
+                    <Chip
+                      key={`chip-${index}`}
+                      label={capitalizeFirstLetter(chip)}
+                      size="small"
+                      variant="outlined"
+                      sx={{
+                        height: 20,
+                        fontSize: '0.6875rem',
+                        fontWeight: 500,
+                        borderColor: 'divider',
+                      }}
+                    />
+                  ))}
+                  <Chip
+                    label="Contents"
+                    size="small"
+                    variant="outlined"
+                    onClick={handleToggleExpressions}
+                    icon={expressionsExpanded ? <ExpandLess /> : <ExpandMore />}
+                    sx={{
+                      ml: 2,
+                      cursor: 'pointer',
+                      height: 20,
+                      fontSize: '0.6875rem',
+                      fontWeight: 500,
+                      borderColor: 'divider',
+                      '& .MuiChip-label': { overflow: 'visible' },
+                      '& .MuiChip-icon': { fontSize: '1rem' },
+                    }}
+                  />
+                </Box>
               </Box>
             }
           />
-          <IconButton
-            size="small"
-            onClick={handleToggleExpressions}
-            sx={{ ml: 1 }}
-          >
-            {expressionsExpanded ? <ExpandLess /> : <ExpandMore />}
-          </IconButton>
         </ListItemButton>
       </ListItem>
       <Collapse in={expressionsExpanded} timeout="auto" unmountOnExit>

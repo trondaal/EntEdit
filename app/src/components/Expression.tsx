@@ -6,7 +6,6 @@ import {
   Box,
   Typography,
   Collapse,
-  IconButton,
   Chip,
   Link,
 } from "@mui/material";
@@ -138,9 +137,6 @@ const Expression: React.FC<ExpressionProps> = ({
         <ListItemButton
           selected={isSelected}
           onClick={() => onSelect(result.uri)}
-          sx={{
-            alignItems: 'flex-end',
-          }}
         >
           <ListItemText
             primary={
@@ -283,62 +279,9 @@ const Expression: React.FC<ExpressionProps> = ({
                   </Box>
                 )}
 
-                {/* Section 2: Metadata Tags - Use chip-style layout */}
-                {(result.language || result.contenttype || result.worktype) && (
-                  <Box sx={{
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    gap: 0.75,
-                    mt: 0.25,
-                  }}>
-                    {splitValues(result.language).map((lang, index) => (
-                      <Chip
-                        key={`lang-${index}`}
-                        label={capitalizeFirstLetter(lang)}
-                        size="small"
-                        variant="outlined"
-                        sx={{
-                          height: 20,
-                          fontSize: '0.6875rem',
-                          fontWeight: 500,
-                          borderColor: 'divider',
-                        }}
-                      />
-                    ))}
-                    {splitValues(result.contenttype).map((ct, index) => (
-                      <Chip
-                        key={`ct-${index}`}
-                        label={capitalizeFirstLetter(ct)}
-                        size="small"
-                        variant="outlined"
-                        sx={{
-                          height: 20,
-                          fontSize: '0.6875rem',
-                          fontWeight: 500,
-                          borderColor: 'divider',
-                        }}
-                      />
-                    ))}
-                    {splitValues(result.worktype).map((wt, index) => (
-                      <Chip
-                        key={`wt-${index}`}
-                        label={capitalizeFirstLetter(wt)}
-                        size="small"
-                        variant="outlined"
-                        sx={{
-                          height: 20,
-                          fontSize: '0.6875rem',
-                          fontWeight: 500,
-                          borderColor: 'divider',
-                        }}
-                      />
-                    ))}
-                  </Box>
-                )}
-
-                {/* Section 3: Relationships */}
+                {/* Section 2: Relationships */}
                 {(result.work_to_work_relationships || result.expression_to_expression_relationships) && (
-                  <Box sx={{ mt: 0.5 }}>
+                  <Box>
                     {result.work_to_work_relationships && (
                       <Box sx={{ mb: 0.5 }}>
                         {parseRelationships(result.work_to_work_relationships).map((rel, index) => (
@@ -446,16 +389,77 @@ const Expression: React.FC<ExpressionProps> = ({
                   </Box>
                 )}
 
+                {/* Section 3: Metadata Tags - Use chip-style layout */}
+                <Box sx={{
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  gap: 0.75,
+                  mt: 0.25,
+                }}>
+                  {splitValues(result.language).map((lang, index) => (
+                    <Chip
+                      key={`lang-${index}`}
+                      label={capitalizeFirstLetter(lang)}
+                      size="small"
+                      variant="outlined"
+                      sx={{
+                        height: 20,
+                        fontSize: '0.6875rem',
+                        fontWeight: 500,
+                        borderColor: 'divider',
+                      }}
+                    />
+                  ))}
+                  {splitValues(result.contenttype).map((ct, index) => (
+                    <Chip
+                      key={`ct-${index}`}
+                      label={capitalizeFirstLetter(ct)}
+                      size="small"
+                      variant="outlined"
+                      sx={{
+                        height: 20,
+                        fontSize: '0.6875rem',
+                        fontWeight: 500,
+                        borderColor: 'divider',
+                      }}
+                    />
+                  ))}
+                  {splitValues(result.worktype).map((wt, index) => (
+                    <Chip
+                      key={`wt-${index}`}
+                      label={capitalizeFirstLetter(wt)}
+                      size="small"
+                      variant="outlined"
+                      sx={{
+                        height: 20,
+                        fontSize: '0.6875rem',
+                        fontWeight: 500,
+                        borderColor: 'divider',
+                      }}
+                    />
+                  ))}
+                  <Chip
+                    label="Publications"
+                    size="small"
+                    variant="outlined"
+                    onClick={handleToggleManifestations}
+                    icon={manifestationsExpanded ? <ExpandLess /> : <ExpandMore />}
+                    sx={{
+                      ml: 2,
+                      cursor: 'pointer',
+                      height: 20,
+                      fontSize: '0.6875rem',
+                      fontWeight: 500,
+                      borderColor: 'divider',
+                      '& .MuiChip-label': { overflow: 'visible' },
+                      '& .MuiChip-icon': { fontSize: '1rem' },
+                    }}
+                  />
+                </Box>
+
               </Box>
             }
           />
-          <IconButton
-            size="small"
-            onClick={handleToggleManifestations}
-            sx={{ ml: 1 }}
-          >
-            {manifestationsExpanded ? <ExpandLess /> : <ExpandMore />}
-          </IconButton>
         </ListItemButton>
       </ListItem>
       <Collapse in={manifestationsExpanded} timeout="auto" unmountOnExit>
