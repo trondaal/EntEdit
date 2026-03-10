@@ -307,7 +307,7 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                     />
                   ))}
                   <Chip
-                    label="Contents"
+                    label={result.expression_count != null ? `Contents (${result.expression_count})` : "Contents"}
                     size="small"
                     variant="outlined"
                     onClick={handleToggleExpressions}

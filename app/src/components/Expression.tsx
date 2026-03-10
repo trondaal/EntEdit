@@ -91,13 +91,13 @@ const Expression: React.FC<ExpressionProps> = ({
 
   // Helper function to parse and format relationship strings
   // Example input: "har del av verk: All the pretty horses = http://viaf.org/viaf/214001528 & Cities of the plain = http://viaf.org/viaf/3417153653286155900001 ; er bearbeidet som spillefilm (verk): All the pretty horses = https://www.imdb.com/title/tt0149624"
-  // Output: Array of { relationshipLabel, title, uri? }
-  const parseRelationships = (relationshipString: string | undefined): Array<{ relationshipLabel: string; title: string; uri?: string }> => {
+  // Output: Array of { relationshipLabel, titles: Array<{ title, uri? }> }
+  const parseRelationships = (relationshipString: string | undefined): Array<{ relationshipLabel: string; titles: Array<{ title: string; uri?: string }> }> => {
     if (!relationshipString) return [];
 
-    const result: Array<{ relationshipLabel: string; title: string; uri?: string }> = [];
+    const result: Array<{ relationshipLabel: string; titles: Array<{ title: string; uri?: string }> }> = [];
 
-    // Split by semicolon to get individual relationship groups
+    // Split by semicolon to get individual relationship groups (already grouped by label from SPARQL)
     const relationshipGroups = relationshipString.split(';').map(group => group.trim());
 
     relationshipGroups.forEach(group => {
@@ -109,18 +109,21 @@ const Expression: React.FC<ExpressionProps> = ({
       const titleAndUriPairs = group.substring(colonIndex + 1).trim();
 
       // Split by ' & ' to get individual title=URI pairs
+      const titles: Array<{ title: string; uri?: string }> = [];
       const pairs = titleAndUriPairs.split('&').map(pair => pair.trim());
 
       pairs.forEach(pair => {
-        // Split by ' = ' to separate title from URI
         const parts = pair.split(' = ');
         const title = parts[0]?.trim();
         const uri = parts[1]?.trim();
-
         if (title) {
-          result.push({ relationshipLabel, title, uri });
+          titles.push({ title, uri });
         }
       });
+
+      if (titles.length > 0) {
+        result.push({ relationshipLabel, titles });
+      }
     });
 
     return result;
@@ -309,26 +312,31 @@ const Expression: React.FC<ExpressionProps> = ({
                             </Box>
                             <Box component="span">
                               {capitalizeFirstLetter(rel.relationshipLabel)}:{' '}
-                              <Link
-                                component="button"
-                                variant="body2"
-                                onClick={(e: React.MouseEvent) => {
-                                  e.stopPropagation();
-                                  onEntitySearch(rel.title);
-                                }}
-                                sx={{
-                                  textDecoration: 'none',
-                                  fontStyle: 'italic',
-                                  '&:hover': { textDecoration: 'underline' },
-                                  cursor: 'pointer',
-                                  color: 'inherit',
-                                  fontSize: 'inherit',
-                                  lineHeight: 'inherit',
-                                  verticalAlign: 'baseline',
-                                }}
-                              >
-                                {rel.title}
-                              </Link>
+                              {rel.titles.map((entry, titleIndex) => (
+                                <React.Fragment key={titleIndex}>
+                                  {titleIndex > 0 && ' ; '}
+                                  <Link
+                                    component="button"
+                                    variant="body2"
+                                    onClick={(e: React.MouseEvent) => {
+                                      e.stopPropagation();
+                                      onEntitySearch(entry.title);
+                                    }}
+                                    sx={{
+                                      textDecoration: 'none',
+                                      fontStyle: 'italic',
+                                      '&:hover': { textDecoration: 'underline' },
+                                      cursor: 'pointer',
+                                      color: 'inherit',
+                                      fontSize: 'inherit',
+                                      lineHeight: 'inherit',
+                                      verticalAlign: 'baseline',
+                                    }}
+                                  >
+                                    {entry.title}
+                                  </Link>
+                                </React.Fragment>
+                              ))}
                             </Box>
                           </Typography>
                         ))}
@@ -361,26 +369,31 @@ const Expression: React.FC<ExpressionProps> = ({
                             </Box>
                             <Box component="span">
                               {capitalizeFirstLetter(rel.relationshipLabel)}:{' '}
-                              <Link
-                                component="button"
-                                variant="body2"
-                                onClick={(e: React.MouseEvent) => {
-                                  e.stopPropagation();
-                                  onEntitySearch(rel.title);
-                                }}
-                                sx={{
-                                  textDecoration: 'none',
-                                  fontStyle: 'italic',
-                                  '&:hover': { textDecoration: 'underline' },
-                                  cursor: 'pointer',
-                                  color: 'inherit',
-                                  fontSize: 'inherit',
-                                  lineHeight: 'inherit',
-                                  verticalAlign: 'baseline',
-                                }}
-                              >
-                                {rel.title}
-                              </Link>
+                              {rel.titles.map((entry, titleIndex) => (
+                                <React.Fragment key={titleIndex}>
+                                  {titleIndex > 0 && ' ; '}
+                                  <Link
+                                    component="button"
+                                    variant="body2"
+                                    onClick={(e: React.MouseEvent) => {
+                                      e.stopPropagation();
+                                      onEntitySearch(entry.title);
+                                    }}
+                                    sx={{
+                                      textDecoration: 'none',
+                                      fontStyle: 'italic',
+                                      '&:hover': { textDecoration: 'underline' },
+                                      cursor: 'pointer',
+                                      color: 'inherit',
+                                      fontSize: 'inherit',
+                                      lineHeight: 'inherit',
+                                      verticalAlign: 'baseline',
+                                    }}
+                                  >
+                                    {entry.title}
+                                  </Link>
+                                </React.Fragment>
+                              ))}
                             </Box>
                           </Typography>
                         ))}
@@ -439,7 +452,7 @@ const Expression: React.FC<ExpressionProps> = ({
                     />
                   ))}
                   <Chip
-                    label="Publications"
+                    label={result.manifestation_count != null ? `Publications (${result.manifestation_count})` : "Publications"}
                     size="small"
                     variant="outlined"
                     onClick={handleToggleManifestations}

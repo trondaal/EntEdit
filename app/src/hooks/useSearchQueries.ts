@@ -17,6 +17,7 @@ export interface ExpressionSearchResult {
   worktype?: string;
   work_to_work_relationships?: string;
   expression_to_expression_relationships?: string;
+  manifestation_count?: number;
   score?: number;
 }
 
@@ -46,6 +47,8 @@ export interface ManifestationSearchResult {
   carriertype?: string;
   // Agents
   manifestation_creators?: string;
+  // Count
+  expression_count?: number;
 }
 
 export const useSearchExpressions = (
@@ -74,6 +77,7 @@ PREFIX rdaed: <http://rdaregistry.info/Elements/e/datatype/>
 PREFIX rdaeo: <http://rdaregistry.info/Elements/e/object/>
 PREFIX rdawd: <http://rdaregistry.info/Elements/w/datatype/>
 PREFIX rdawo: <http://rdaregistry.info/Elements/w/object/>
+PREFIX rdamo: <http://rdaregistry.info/Elements/m/object/>
 PREFIX local: <http://oslomet.no/abi/>
 
 SELECT DISTINCT ?expression
@@ -86,6 +90,7 @@ SELECT DISTINCT ?expression
 		(GROUP_CONCAT(DISTINCT CONCAT(?expression_agent_relationship_label, ": ", ?expression_agent_names) ; SEPARATOR=" ; ") as ?expression_creators)
 		(GROUP_CONCAT(DISTINCT CONCAT(?work_to_work_relationship_label, ": ", ?target_work_title) ; SEPARATOR=" ; ") as ?work_to_work_relationships)
 (GROUP_CONCAT(DISTINCT CONCAT(?expression_to_expression_relationship_label, ": ", ?target_expression_title) ; SEPARATOR=" ; ") as ?expression_to_expression_relationships)
+		(COUNT(DISTINCT ?manifestation) as ?manifestation_count)
 FROM <http://www.ontotext.com/explicit>
 
 WHERE {
@@ -100,6 +105,11 @@ WHERE {
         {?expression rdaeo:P20231 ?work .}
             UNION
         {?work rdawo:P10078 ?expression .}
+
+    #expression to manifestation
+    { ?expression rdaeo:P20059 ?manifestation . }
+    UNION
+    { ?manifestation rdamo:P30139 ?expression . }
 
     #Titles, we assume they have no language tag.
     OPTIONAL {
@@ -259,6 +269,9 @@ OFFSET ${pageParam}
         work_to_work_relationships: binding.work_to_work_relationships?.value,
         expression_to_expression_relationships:
           binding.expression_to_expression_relationships?.value,
+        manifestation_count: binding.manifestation_count
+          ? parseInt(binding.manifestation_count.value, 10)
+          : undefined,
         score: binding.score ? parseFloat(binding.score.value) : undefined,
       }));
     },
@@ -293,6 +306,7 @@ PREFIX inst: <http://www.ontotext.com/connectors/lucene/instance#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdamd: <http://rdaregistry.info/Elements/m/datatype/>
 PREFIX rdamo: <http://rdaregistry.info/Elements/m/object/>
+PREFIX rdaeo: <http://rdaregistry.info/Elements/e/object/>
 
 SELECT DISTINCT ?manifestation
     (SAMPLE(?title_val) as ?title)
@@ -311,6 +325,7 @@ SELECT DISTINCT ?manifestation
     (SAMPLE(?mediatype_label) as ?mediatype)
     (SAMPLE(?carriertype_label) as ?carriertype)
     (GROUP_CONCAT(DISTINCT CONCAT(?manifestation_agent_relationship_label, ": ", ?manifestation_agent_names) ; SEPARATOR=" ; ") as ?manifestation_creators)
+    (COUNT(DISTINCT ?expression) as ?expression_count)
 FROM <http://www.ontotext.com/explicit>
 WHERE {
     ?search a inst:manifestationsIndex ;
@@ -319,6 +334,11 @@ WHERE {
     lucene:entities ?manifestation .
     ?manifestation lucene:score ?score .
     ?manifestation a <http://rdaregistry.info/Elements/c/C10007> .
+
+    #manifestation to expression
+    { ?manifestation rdamo:P30139 ?expression . }
+    UNION
+    { ?expression rdaeo:P20059 ?manifestation . }
 
     # Title area
     OPTIONAL {
@@ -443,6 +463,9 @@ OFFSET ${pageParam}
         mediatype: binding.mediatype?.value,
         carriertype: binding.carriertype?.value,
         manifestation_creators: binding.manifestation_creators?.value,
+        expression_count: binding.expression_count
+          ? parseInt(binding.expression_count.value, 10)
+          : undefined,
       }));
 
       return results;
