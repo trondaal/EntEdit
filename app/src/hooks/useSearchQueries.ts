@@ -119,11 +119,11 @@ WHERE {
         ?work rdawd:P10088 ?worktitle .
     }
 
-    #language label, we use english as default
+    #language label
     OPTIONAL {
         ?expression rdaeo:P20006 ?language .
         ?language rdfs:label ?language_label .
-        FILTER(LANG(?language_label) = "en")
+        FILTER(LANG(?language_label) = "${escapeSparqlLiteral(language)}")
     }
     OPTIONAL {
         ?expression rdaeo:P20001 ?contenttype .

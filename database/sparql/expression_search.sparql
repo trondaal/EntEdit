@@ -49,7 +49,7 @@ WHERE {
         ?work rdawd:P10088 ?worktitle .
     }
 
-    #language label, we use english as default
+    #language label
     OPTIONAL {
         ?expression rdaeo:P20006 ?language .
         ?language rdfs:label ?language_label .

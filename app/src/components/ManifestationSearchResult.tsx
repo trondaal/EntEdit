@@ -12,6 +12,7 @@ import {
 import { ExpandMore, ExpandLess } from "@mui/icons-material";
 import type { ManifestationSearchResult as ManifestationSearchResultType } from "../hooks/useSearchQueries";
 import type { SparqlEndpointConfig } from "../types/sparql";
+import { useExpressionsByManifestation } from "../hooks/useExpressionQueries";
 import ExpressionList from "./ExpressionList";
 
 interface ManifestationSearchResultProps {
@@ -32,6 +33,12 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
   onEntitySearch,
 }) => {
   const [expressionsExpanded, setExpressionsExpanded] = useState(false);
+
+  // Auto-fetch expression data when there is exactly one expression
+  const isSingleExpression = result.expression_count === 1;
+  const autoFetchUri = isSingleExpression ? result.uri : null;
+  const { data: expressions } = useExpressionsByManifestation(config, autoFetchUri, selectedLanguage);
+  const singleExpression = expressions?.[0];
 
   const handleToggleExpressions = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -70,10 +77,16 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
     });
   };
 
-  // Helper function to split pipe-separated values into array
+  // Helper function to split pipe-separated values into array (manifestation data)
   const splitValues = (value: string | undefined): string[] => {
     if (!value) return [];
     return value.split(/\s*\|\s*/).map(v => v.trim()).filter(v => v.length > 0);
+  };
+
+  // Helper function to split semicolon-separated values into array (expression data)
+  const splitSemicolonValues = (value: string | undefined): string[] => {
+    if (!value) return [];
+    return value.split(/\s*;\s*/).map(v => v.trim()).filter(v => v.length > 0);
   };
 
   // Line 1: Title area (Title proper : Other title information / Statement of responsibility)
@@ -169,13 +182,25 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
     return splitValues(result.identifiers).join(' ; ');
   };
 
-  // Collect all metadata chips
+  // Collect all metadata chips (manifestation-level)
   const allChips: string[] = [];
   if (result.mediatype) {
     allChips.push(...splitValues(result.mediatype));
   }
   if (result.carriertype) {
     allChips.push(...splitValues(result.carriertype));
+  }
+  // Add expression-level chips when single expression is loaded
+  if (singleExpression) {
+    if (singleExpression.language) {
+      allChips.push(...splitSemicolonValues(singleExpression.language));
+    }
+    if (singleExpression.contenttype) {
+      allChips.push(...splitSemicolonValues(singleExpression.contenttype));
+    }
+    if (singleExpression.worktype) {
+      allChips.push(...splitSemicolonValues(singleExpression.worktype));
+    }
   }
 
   return (
@@ -200,12 +225,90 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                   {formatTitleArea()}
                 </Typography>
 
-                {/* Creators */}
-                {result.manifestation_creators && (
+                {/* Creators (manifestation-level + expression-level when single expression) */}
+                {(result.manifestation_creators || (singleExpression && (singleExpression.work_creators || singleExpression.expression_creators))) && (
                   <Box>
-                    {parseCreators(result.manifestation_creators).map((creator, index) => (
+                    {result.manifestation_creators && parseCreators(result.manifestation_creators).map((creator, index) => (
                       <Typography
-                        key={index}
+                        key={`m-${index}`}
+                        variant="body2"
+                        color="text.secondary"
+                        sx={{ lineHeight: 1.5, fontSize: '0.8125rem' }}
+                      >
+                        <Box component="span" sx={{ fontWeight: 500, color: 'text.primary' }}>
+                          {capitalizeFirstLetter(creator.role)}:
+                        </Box>
+                        {' '}
+                        <Box component="span">
+                          {creator.names.map((entry, nameIndex) => (
+                            <React.Fragment key={nameIndex}>
+                              {nameIndex > 0 && ' ; '}
+                              <Link
+                                component="button"
+                                variant="body2"
+                                onClick={(e: React.MouseEvent) => {
+                                  e.stopPropagation();
+                                  onEntitySearch(entry.name);
+                                }}
+                                sx={{
+                                  textDecoration: 'none',
+                                  '&:hover': { textDecoration: 'underline' },
+                                  cursor: 'pointer',
+                                  color: 'inherit',
+                                  verticalAlign: 'baseline',
+                                  fontSize: 'inherit',
+                                  lineHeight: 'inherit',
+                                }}
+                              >
+                                {entry.name}
+                              </Link>
+                            </React.Fragment>
+                          ))}
+                        </Box>
+                      </Typography>
+                    ))}
+                    {singleExpression?.work_creators && parseCreators(singleExpression.work_creators).map((creator, index) => (
+                      <Typography
+                        key={`wc-${index}`}
+                        variant="body2"
+                        color="text.secondary"
+                        sx={{ lineHeight: 1.5, fontSize: '0.8125rem' }}
+                      >
+                        <Box component="span" sx={{ fontWeight: 500, color: 'text.primary' }}>
+                          {capitalizeFirstLetter(creator.role)}:
+                        </Box>
+                        {' '}
+                        <Box component="span">
+                          {creator.names.map((entry, nameIndex) => (
+                            <React.Fragment key={nameIndex}>
+                              {nameIndex > 0 && ' ; '}
+                              <Link
+                                component="button"
+                                variant="body2"
+                                onClick={(e: React.MouseEvent) => {
+                                  e.stopPropagation();
+                                  onEntitySearch(entry.name);
+                                }}
+                                sx={{
+                                  textDecoration: 'none',
+                                  '&:hover': { textDecoration: 'underline' },
+                                  cursor: 'pointer',
+                                  color: 'inherit',
+                                  verticalAlign: 'baseline',
+                                  fontSize: 'inherit',
+                                  lineHeight: 'inherit',
+                                }}
+                              >
+                                {entry.name}
+                              </Link>
+                            </React.Fragment>
+                          ))}
+                        </Box>
+                      </Typography>
+                    ))}
+                    {singleExpression?.expression_creators && parseCreators(singleExpression.expression_creators).map((creator, index) => (
+                      <Typography
+                        key={`ec-${index}`}
                         variant="body2"
                         color="text.secondary"
                         sx={{ lineHeight: 1.5, fontSize: '0.8125rem' }}
@@ -306,37 +409,41 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                       }}
                     />
                   ))}
-                  <Chip
-                    label={result.expression_count != null ? `Contents (${result.expression_count})` : "Contents"}
-                    size="small"
-                    variant="outlined"
-                    onClick={handleToggleExpressions}
-                    icon={expressionsExpanded ? <ExpandLess /> : <ExpandMore />}
-                    sx={{
-                      ml: 2,
-                      cursor: 'pointer',
-                      height: 20,
-                      fontSize: '0.6875rem',
-                      fontWeight: 500,
-                      borderColor: 'divider',
-                      '& .MuiChip-label': { overflow: 'visible' },
-                      '& .MuiChip-icon': { fontSize: '1rem' },
-                    }}
-                  />
+                  {!isSingleExpression && (
+                    <Chip
+                      label={result.expression_count != null ? `Contents (${result.expression_count})` : "Contents"}
+                      size="small"
+                      variant="outlined"
+                      onClick={handleToggleExpressions}
+                      icon={expressionsExpanded ? <ExpandLess /> : <ExpandMore />}
+                      sx={{
+                        ml: 2,
+                        cursor: 'pointer',
+                        height: 20,
+                        fontSize: '0.6875rem',
+                        fontWeight: 500,
+                        borderColor: 'divider',
+                        '& .MuiChip-label': { overflow: 'visible' },
+                        '& .MuiChip-icon': { fontSize: '1rem' },
+                      }}
+                    />
+                  )}
                 </Box>
               </Box>
             }
           />
         </ListItemButton>
       </ListItem>
-      <Collapse in={expressionsExpanded} timeout="auto" unmountOnExit>
-        <ExpressionList
-          config={config}
-          manifestationUri={result.uri}
-          selectedLanguage={selectedLanguage}
-          onEntitySearch={onEntitySearch}
-        />
-      </Collapse>
+      {!isSingleExpression && (
+        <Collapse in={expressionsExpanded} timeout="auto" unmountOnExit>
+          <ExpressionList
+            config={config}
+            manifestationUri={result.uri}
+            selectedLanguage={selectedLanguage}
+            onEntitySearch={onEntitySearch}
+          />
+        </Collapse>
+      )}
       <Box
         sx={{
           borderBottom: '1px solid',

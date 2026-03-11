@@ -74,7 +74,7 @@ export const useExpressionsByManifestation = (
           OPTIONAL {
             ?expression rdaeo:P20006 ?language .
             ?language rdfs:label ?language_label .
-            FILTER(LANG(?language_label) = "en")
+            FILTER(LANG(?language_label) = "${language}")
           }
 
           # Content type
