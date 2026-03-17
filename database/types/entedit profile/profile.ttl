@@ -159,7 +159,7 @@ rdaao:P50366	abi:status	"object property" ; rdfs:label "er emne for"@no . #	is s
 rdawo:P10257	abi:status	"object property" ; rdfs:label "har emne (verk)"@no . #   "har emne (verk)"@no .
 rdawo:P10264	abi:status	"object property" ; rdfs:label "er emne for"@no . #   "er emneverk for"@no .
 
-#Object properties
+#Agent object properties
 rdaao:P50048	abi:status	"object property" ; rdfs:label "er filmregissør for"@no . #	is film director agent of	rdac:C10002	rdac:C10001
 rdawo:P10013	abi:status	"object property" ; rdfs:label "har filmregissør"@no . #	has film director agent	rdac:C10001	rdac:C10002
 
@@ -547,7 +547,7 @@ rdaao:P50202	abi:status	"object property" ; rdfs:label "er tilvirker"@no . #	is 
 rdamo:P30082	abi:status	"object property" ; rdfs:label "har tilvirker"@no . #	has manufacturer agent	rdac:C10007	rdac:C10002
 
 rdaao:P50203	abi:status	"object property" ; rdfs:label "er utgiver"@no . #	is publisher agent of	rdac:C10002	rdac:C10007
-rdamo:P30083	abi:status	"object property" ; rdfs:label "utgiver"@no . #	has publisher agent	rdac:C10007	rdac:C10002
+rdamo:P30083	abi:status	"object property" ; rdfs:label "har utgiver"@no . #	has publisher agent	rdac:C10007	rdac:C10002
 
 rdaao:P50242	abi:status	"object property" ; rdfs:label "er papirprodusent"@no . #	is papermaker agent of	rdac:C10002	rdac:C10007
 rdamo:P30215	abi:status	"object property" ; rdfs:label "har papirprodusent"@no . #	has papermaker agent	rdac:C10007	rdac:C10002
@@ -555,41 +555,41 @@ rdamo:P30215	abi:status	"object property" ; rdfs:label "har papirprodusent"@no .
 #rdaao:P50307	abi:status	"object property" ; rdfs:label "har manifestasjon relatert til agent"@no . #	has related manifestation of agent	rdac:C10002	rdac:C10007
 #rdamo:P30267	abi:status	"object property" ; rdfs:label "har agent relatert til manifestasjon"@no . #	has related agent of manifestation	rdac:C10007	rdac:C10002
 
-rdaao:P50459	abi:status	"object property" ; rdfs:label "er har bidragsyter til musikk for"@no . #	is contributor agent of music of	rdac:C10002	rdac:C10007
-rdamo:P30311	abi:status	"object property" ; rdfs:label "har bidragsyter til musikk"@no . #	has contributor agent of music	rdac:C10007	rdac:C10002
+rdaao:P50459	abi:status	"object property" ; rdfs:label "er musikk-bidragsyter"@no . #	is contributor agent of music of	rdac:C10002	rdac:C10007
+rdamo:P30311	abi:status	"object property" ; rdfs:label "har musikk-bidragsyter"@no . #	has contributor agent of music	rdac:C10007	rdac:C10002
 
 #rdaao:P50460	abi:status	"object property" ; rdfs:label "er landmåler"@no . #	is surveyor agent of	rdac:C10002	rdac:C10007
 #rdamo:P30312	abi:status	"object property" ; rdfs:label "har landmåler"@no . #	has surveyor agent	rdac:C10007	rdac:C10002
 
-rdaao:P50463	abi:status	"object property" ; rdfs:label "er bidragsyter som kartograf"@no . #	is contributor agent of cartography of	rdac:C10002	rdac:C10007
-rdamo:P30315	abi:status	"object property" ; rdfs:label "har bidragsyter til kartografi"@no . #	has contributor agent of cartography	rdac:C10007	rdac:C10002
+rdaao:P50463	abi:status	"object property" ; rdfs:label "er kartograf-bidragsyter"@no . #	is contributor agent of cartography of	rdac:C10002	rdac:C10007
+rdamo:P30315	abi:status	"object property" ; rdfs:label "har kartografi-bidragsyter"@no . #	has contributor agent of cartography	rdac:C10007	rdac:C10002
 
-rdaao:P50464	abi:status	"object property" ; rdfs:label "er bidragsyter til koreografi"@no . #	is contributor agent of choreography of	rdac:C10002	rdac:C10007
-rdamo:P30316	abi:status	"object property" ; rdfs:label "har bidragsyter til koreografi"@no . #	has contributor agent of choreography	rdac:C10007	rdac:C10002
+rdaao:P50464	abi:status	"object property" ; rdfs:label "er koreografi-bidragsyter"@no . #	is contributor agent of choreography of	rdac:C10002	rdac:C10007
+rdamo:P30316	abi:status	"object property" ; rdfs:label "har koreografi-bidragsyter"@no . #	has contributor agent of choreography	rdac:C10007	rdac:C10002
 
-rdaao:P50469	abi:status	"object property" ; rdfs:label "er bidragsyter til bilde"@no . #	is contributor agent of still image of	rdac:C10002	rdac:C10007
-rdamo:P30321	abi:status	"object property" ; rdfs:label "har bidragsyter til bilde"@no . #	has contributor agent of still image	rdac:C10007	rdac:C10002
+rdaao:P50469	abi:status	"object property" ; rdfs:label "er bilde-bidragsyter"@no . #	is contributor agent of still image of	rdac:C10002	rdac:C10007
+rdamo:P30321	abi:status	"object property" ; rdfs:label "har bilde-bidragsyter"@no . #	has contributor agent of still image	rdac:C10007	rdac:C10002
 
-rdaao:P50474	abi:status	"object property" ; rdfs:label "er bidragsyter til levende bilder for"@no . #	is contributor agent of moving image of	rdac:C10002	rdac:C10007
-rdamo:P30326	abi:status	"object property" ; rdfs:label "har bidragsyter til levende bilder"@no . #	has contributor agent of moving image	rdac:C10007	rdac:C10002
+#rdaao:P50474	abi:status	"object property" ; rdfs:label "er bidragsyter til levende bilder for"@no . #	is contributor agent of moving image of	rdac:C10002	rdac:C10007
+#rdamo:P30326	abi:status	"object property" ; rdfs:label "har bidragsyter til levende bilder"@no . #	has contributor agent of moving image	rdac:C10007	rdac:C10002
 
-rdaao:P50475	abi:status	"object property" ; rdfs:label "er bidragsyter til tekst for"@no . #	is contributor agent of text of	rdac:C10002	rdac:C10007
-rdamo:P30328	abi:status	"object property" ; rdfs:label "har bidragsyter til tekst"@no . #	has contributor agent of text	rdac:C10007	rdac:C10002
+rdaao:P50475	abi:status	"object property" ; rdfs:label "er tekst-bidragsyter"@no . #	is contributor agent of text of	rdac:C10002	rdac:C10007
+rdamo:P30328	abi:status	"object property" ; rdfs:label "har tekst-bidragsyter"@no . #	has contributor agent of text	rdac:C10007	rdac:C10002
 
-rdaao:P50476	abi:status	"object property" ; rdfs:label "er bidragsyter til aggregat for"@no . #	is contributor agent to aggregate of	rdac:C10002	rdac:C10007
-rdamo:P30327	abi:status	"object property" ; rdfs:label "har bidragsyter til aggregat"@no . #	has contributor agent to aggregate	rdac:C10007	rdac:C10002
+rdaao:P50476	abi:status	"object property" ; rdfs:label "er bidragsyter"@no . #	is contributor agent to aggregate of	rdac:C10002	rdac:C10007
+rdamo:P30327	abi:status	"object property" ; rdfs:label "har bidragsyter"@no . #	has contributor agent to aggregate	rdac:C10007	rdac:C10002
 
-rdaao:P50477	abi:status	"object property" ; rdfs:label "er skaper av manifestasjon for"@no . #	is creator agent of manifestation of	rdac:C10002	rdac:C10007
-rdamo:P30329	abi:status	"object property" ; rdfs:label "har skaper av manifestasjon"@no . #	has creator agent of manifestation	rdac:C10007	rdac:C10002
+rdaao:P50477	abi:status	"object property" ; rdfs:label "er skaper av"@no . #	is creator agent of manifestation of	rdac:C10002	rdac:C10007
+rdamo:P30329	abi:status	"object property" ; rdfs:label "har skaper"@no . #	has creator agent of manifestation	rdac:C10007	rdac:C10002
 
-rdaao:P50483	abi:status	"object property" ; rdfs:label "er bidragsyter til tale for"@no . #	is contributor agent of speech of	rdac:C10002	rdac:C10007
-rdamo:P30331	abi:status	"object property" ; rdfs:label "har bidragsyter til tale"@no . #	has contributor agent of speech	rdac:C10007	rdac:C10002
+rdaao:P50483	abi:status	"object property" ; rdfs:label "er tale-bidragsyter"@no . #	is contributor agent of speech of	rdac:C10002	rdac:C10007
+rdamo:P30331	abi:status	"object property" ; rdfs:label "har tale-bidragsyter"@no . #	has contributor agent of speech	rdac:C10007	rdac:C10002
 
-rdaao:P50484	abi:status	"object property" ; rdfs:label "er bidragsyter til objekt for"@no . #	is contributor agent of object of	rdac:C10002	rdac:C10007
-rdamo:P30332	abi:status	"object property" ; rdfs:label "har bidragsyter til gjenstand"@no . #	has contributor agent of object	rdac:C10007	rdac:C10002
+#rdaao:P50484	abi:status	"object property" ; rdfs:label "er bidragsyter til objekt for"@no . #	is contributor agent of object of	rdac:C10002	rdac:C10007
+#rdamo:P30332	abi:status	"object property" ; rdfs:label "har bidragsyter til gjenstand"@no . #	has contributor agent of object	rdac:C10007	rdac:C10002
 
-rdaao:P50485	abi:status	"object property" ; rdfs:label "er bidragsyter til maskinlesbart innhold for"@no . #	is contributor agent of computer content of	rdac:C10002	rdac:C10007
-rdamo:P30333	abi:status	"object property" ; rdfs:label "har bidragsyter til datamaskininnhold"@no . #	has contributor agent of computer content	rdac:C10007	rdac:C10002
+#rdaao:P50485	abi:status	"object property" ; rdfs:label "er bidragsyter til maskinlesbart innhold for"@no . #	is contributor agent of computer content of	rdac:C10002	rdac:C10007
+#rdamo:P30333	abi:status	"object property" ; rdfs:label "har bidragsyter til datamaskininnhold"@no . #	has contributor agent of computer content	rdac:C10007	rdac:C10002
 
 rdawo:P10016	abi:status	"object property" ; rdfs:label "er dramatisert som verk"@no . #	is dramatized as work	rdac:C10001	rdac:C10001
 rdawo:P10127	abi:status	"object property" ; rdfs:label "er dramatisering av verk"@no . #	is dramatization of work	rdac:C10001	rdac:C10001
