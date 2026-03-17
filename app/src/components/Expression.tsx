@@ -8,10 +8,14 @@ import {
   Collapse,
   Chip,
   Link,
+  IconButton,
+  Tooltip,
 } from "@mui/material";
-import { ExpandMore, ExpandLess } from "@mui/icons-material";
+import { ExpandMore, ExpandLess, AccountTree } from "@mui/icons-material";
+import { useTranslation } from "react-i18next";
 import type { ExpressionSearchResult } from "../hooks/useSearchQueries";
 import type { SparqlEndpointConfig } from "../types/sparql";
+import { getGraphVisualizationUrl } from "../utils/graphUtils";
 import ManifestationList from "./ManifestationList";
 
 interface ExpressionProps {
@@ -35,7 +39,9 @@ const Expression: React.FC<ExpressionProps> = ({
   selectedLanguage,
   onEntitySearch,
 }) => {
+  const { t } = useTranslation();
   const [manifestationsExpanded, setManifestationsExpanded] = useState(false);
+  const graphUrl = getGraphVisualizationUrl(config.url, result.uri);
 
   // Determine the primary display title
   // Priority: expression_title > work_title > URI
@@ -143,29 +149,51 @@ const Expression: React.FC<ExpressionProps> = ({
         >
           <ListItemText
             primary={
-              <Box sx={{ mb: 0.5 }}>
-                <Typography
-                  component="span"
-                  sx={{
-                    fontWeight: 600,
-                    fontSize: '0.9375rem',
-                    lineHeight: 1.4,
-                  }}
-                >
-                  {primaryTitle}
-                </Typography>
-                {showWorkTitle && (
+              <Box sx={{ display: 'flex', alignItems: 'flex-start', mb: 0.5 }}>
+                <Box sx={{ flex: 1, minWidth: 0 }}>
                   <Typography
                     component="span"
                     sx={{
-                      fontStyle: 'italic',
-                      fontSize: '0.875rem',
-                      color: 'text.secondary',
-                      ml: 1,
+                      fontWeight: 600,
+                      fontSize: '0.9375rem',
+                      lineHeight: 1.4,
                     }}
                   >
-                    ({result.work_title})
+                    {primaryTitle}
                   </Typography>
+                  {showWorkTitle && (
+                    <Typography
+                      component="span"
+                      sx={{
+                        fontStyle: 'italic',
+                        fontSize: '0.875rem',
+                        color: 'text.secondary',
+                        ml: 1,
+                      }}
+                    >
+                      ({result.work_title})
+                    </Typography>
+                  )}
+                </Box>
+                {graphUrl && (
+                  <Tooltip title={t("common:buttons.graph")}>
+                    <IconButton
+                      size="small"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.open(graphUrl, "_blank", "noopener,noreferrer");
+                      }}
+                      sx={{
+                        ml: 1,
+                        mt: -0.5,
+                        p: 0.5,
+                        color: 'text.disabled',
+                        '&:hover': { color: 'primary.main' },
+                      }}
+                    >
+                      <AccountTree sx={{ fontSize: '1rem' }} />
+                    </IconButton>
+                  </Tooltip>
                 )}
               </Box>
             }

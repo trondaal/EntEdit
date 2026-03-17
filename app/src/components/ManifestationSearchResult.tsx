@@ -8,10 +8,14 @@ import {
   Chip,
   Collapse,
   Link,
+  IconButton,
+  Tooltip,
 } from "@mui/material";
-import { ExpandMore, ExpandLess } from "@mui/icons-material";
+import { ExpandMore, ExpandLess, AccountTree } from "@mui/icons-material";
+import { useTranslation } from "react-i18next";
 import type { ManifestationSearchResult as ManifestationSearchResultType } from "../hooks/useSearchQueries";
 import type { SparqlEndpointConfig } from "../types/sparql";
+import { getGraphVisualizationUrl } from "../utils/graphUtils";
 import { useExpressionsByManifestation } from "../hooks/useExpressionQueries";
 import ExpressionList from "./ExpressionList";
 
@@ -32,7 +36,9 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
   config,
   onEntitySearch,
 }) => {
+  const { t } = useTranslation();
   const [expressionsExpanded, setExpressionsExpanded] = useState(false);
+  const graphUrl = getGraphVisualizationUrl(config.url, result.uri);
 
   // Auto-fetch expression data when there is exactly one expression
   const isSingleExpression = result.expression_count === 1;
@@ -213,17 +219,41 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
           <ListItemText
             primary={
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.5 }}>
-                {/* Line 1: Title area */}
-                <Typography
-                  variant="body1"
-                  sx={{
-                    fontWeight: 500,
-                    lineHeight: 1.5,
-                    fontSize: '0.9375rem',
-                  }}
-                >
-                  {formatTitleArea()}
-                </Typography>
+                {/* Line 1: Title area with visualization button */}
+                <Box sx={{ display: 'flex', alignItems: 'flex-start' }}>
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      flex: 1,
+                      minWidth: 0,
+                      fontWeight: 500,
+                      lineHeight: 1.5,
+                      fontSize: '0.9375rem',
+                    }}
+                  >
+                    {formatTitleArea()}
+                  </Typography>
+                  {graphUrl && (
+                    <Tooltip title={t("common:buttons.graph")}>
+                      <IconButton
+                        size="small"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          window.open(graphUrl, "_blank", "noopener,noreferrer");
+                        }}
+                        sx={{
+                          ml: 1,
+                          mt: -0.5,
+                          p: 0.5,
+                          color: 'text.disabled',
+                          '&:hover': { color: 'primary.main' },
+                        }}
+                      >
+                        <AccountTree sx={{ fontSize: '1rem' }} />
+                      </IconButton>
+                    </Tooltip>
+                  )}
+                </Box>
 
                 {/* Creators (manifestation-level + expression-level when single expression) */}
                 {(result.manifestation_creators || (singleExpression && (singleExpression.work_creators || singleExpression.expression_creators))) && (

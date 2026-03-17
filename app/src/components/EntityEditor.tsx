@@ -22,6 +22,7 @@ import { useSnackbar } from "notistack";
 import { useTranslation } from "react-i18next";
 import type { SparqlEndpointConfig, RdfProperty } from "../types/sparql";
 import { SparqlClient } from "../utils/sparqlClient";
+import { getGraphVisualizationUrl } from "../utils/graphUtils";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import {
   useWEMIProperties,
@@ -412,22 +413,10 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     }
   }, [entityUri, config, classUri, queryClient, onEntityDeselected, onEntitySaved]);
 
-  const getGraphUrl = useMemo((): string | null => {
-    if (!entityUri) return null;
-
-    try {
-      // Derive visualization base URI from SPARQL endpoint URL
-      const url = new URL(config.url);
-      const baseUrl = `${url.protocol}//${url.host}`;
-
-      // Encode the URI for the query parameter
-      const encodedUri = encodeURIComponent(entityUri);
-      return `${baseUrl}/graphs-visualizations?uri=${encodedUri}`;
-    } catch (error) {
-      console.error("Failed to generate graph URL:", error);
-      return null;
-    }
-  }, [entityUri, config.url]);
+  const getGraphUrl = useMemo(
+    () => entityUri ? getGraphVisualizationUrl(config.url, entityUri) : null,
+    [entityUri, config.url]
+  );
 
   const handleOpenGraph = useCallback((event: React.MouseEvent) => {
     // If user is holding Ctrl/Cmd, let the default link behavior work

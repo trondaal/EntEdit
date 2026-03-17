@@ -221,6 +221,7 @@ function App() {
             <Box
               sx={{
                 maxWidth: 1536,
+                width: "100%",
                 mx: "auto",
                 px: { xs: 1, sm: 2, md: 3 },
                 minHeight: "100vh",
