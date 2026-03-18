@@ -21,7 +21,10 @@
     "filterEntities": "Filtrer..."
   },
   "tooltips": {
-    "copyUri": "Kopier URI"
+    "copyUri": "Kopier URI",
+    "dragToReorder": "Dra for å endre rekkefølge",
+    "moveUp": "Flytt opp",
+    "moveDown": "Flytt ned"
   },
   "messages": {
     "noLabel": "Ingen etikett",

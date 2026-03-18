@@ -21,7 +21,10 @@
     "filterEntities": "Filter..."
   },
   "tooltips": {
-    "copyUri": "Copy URI"
+    "copyUri": "Copy URI",
+    "dragToReorder": "Drag to reorder",
+    "moveUp": "Move up",
+    "moveDown": "Move down"
   },
   "messages": {
     "noLabel": "No label",

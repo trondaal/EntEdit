@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import {
   Box,
   Typography,
@@ -12,10 +12,11 @@ import {
 } from "@mui/material";
 import { Delete } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
-import type { RdfProperty } from "../types/sparql";
+import type { RdfProperty, OrderedValue } from "../types/sparql";
+import OrderableValueList from "./OrderableValueList";
 
 interface DataPropertiesSectionProps {
-  entityData: Record<string, string[]>;
+  entityData: Record<string, OrderedValue[]>;
   properties: RdfProperty[];
   isEditing: boolean;
   classUri: string;
@@ -23,6 +24,7 @@ interface DataPropertiesSectionProps {
   onPropertySelect: (propertyUri: string) => void;
   onUpdateValue: (property: string, index: number, value: string) => void;
   onRemoveValue: (property: string, index: number) => void;
+  onReorderValues: (property: string, fromIndex: number, toIndex: number) => void;
   getPropertyLabel: (propertyUri: string) => string;
 }
 
@@ -35,6 +37,7 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
   onPropertySelect,
   onUpdateValue,
   onRemoveValue,
+  onReorderValues,
   getPropertyLabel,
 }) => {
   const { t } = useTranslation("entityEditor");
@@ -49,6 +52,18 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
     .filter((p) => p.uri !== "http://www.w3.org/2000/01/rdf-schema#label")
     .filter((p) => entityData[p.uri] && entityData[p.uri].length > 0)
     .map((p) => p.uri);
+
+  // Generate stable IDs for sortable items per property
+  const itemIdsMap = useMemo(() => {
+    const map: Record<string, string[]> = {};
+    dataPropertiesWithValues.forEach((propertyUri) => {
+      const values = entityData[propertyUri] || [];
+      map[propertyUri] = values.map(
+        (v, i) => `${propertyUri}--${i}--${v.order}`,
+      );
+    });
+    return map;
+  }, [dataPropertiesWithValues, entityData]);
 
   return (
     <>
@@ -98,46 +113,51 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
           >
             {getPropertyLabel(propertyUri)}
           </Typography>
-          {entityData[propertyUri].map((value, index) => (
-            <Box
-              key={`${propertyUri}-${index}`}
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                gap: 1,
-                mb: 0.5,
-              }}
-            >
-              <TextField
-                fullWidth
-                value={value}
-                onChange={(e) =>
-                  onUpdateValue(propertyUri, index, e.target.value)
-                }
-                disabled={!isEditing || !classUri}
-                size="small"
-                placeholder={t("placeholders.enterValue", { propertyName: getPropertyLabel(propertyUri) })}
+          <OrderableValueList
+            propertyUri={propertyUri}
+            itemIds={itemIdsMap[propertyUri] || []}
+            isEditing={isEditing}
+            onReorder={onReorderValues}
+          >
+            {(index) => (
+              <Box
                 sx={{
-                  "& .MuiInputBase-input": { fontSize: "0.875rem", py: 0.75 },
-                  "& .MuiInputLabel-outlined": { fontSize: "0.875rem" },
-                  "& .MuiInputBase-input.Mui-disabled": {
-                    WebkitTextFillColor: "rgba(0, 0, 0, 0.75)",
-                  },
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
                 }}
-              />
-              {isEditing && (
-                <IconButton
+              >
+                <TextField
+                  fullWidth
+                  value={entityData[propertyUri][index].value}
+                  onChange={(e) =>
+                    onUpdateValue(propertyUri, index, e.target.value)
+                  }
+                  disabled={!isEditing || !classUri}
                   size="small"
-                  onClick={() => onRemoveValue(propertyUri, index)}
-                  color="error"
-                  sx={{ p: 0.5 }}
-                  aria-label={t("common:buttons.remove", { ns: "common" })}
-                >
-                  <Delete fontSize="small" />
-                </IconButton>
-              )}
-            </Box>
-          ))}
+                  placeholder={t("placeholders.enterValue", { propertyName: getPropertyLabel(propertyUri) })}
+                  sx={{
+                    "& .MuiInputBase-input": { fontSize: "0.875rem", py: 0.75 },
+                    "& .MuiInputLabel-outlined": { fontSize: "0.875rem" },
+                    "& .MuiInputBase-input.Mui-disabled": {
+                      WebkitTextFillColor: "rgba(0, 0, 0, 0.75)",
+                    },
+                  }}
+                />
+                {isEditing && (
+                  <IconButton
+                    size="small"
+                    onClick={() => onRemoveValue(propertyUri, index)}
+                    color="error"
+                    sx={{ p: 0.5 }}
+                    aria-label={t("common:buttons.remove", { ns: "common" })}
+                  >
+                    <Delete fontSize="small" />
+                  </IconButton>
+                )}
+              </Box>
+            )}
+          </OrderableValueList>
         </Box>
       ))}
     </>

@@ -41,6 +41,11 @@ export interface RdfProperty {
   order?: number;
 }
 
+export interface OrderedValue {
+  value: string;
+  order: number;
+}
+
 export interface EntityData {
   uri: string;
   type: string;

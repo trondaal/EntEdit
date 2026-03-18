@@ -8,7 +8,7 @@ import {
   Select,
   Typography,
 } from "@mui/material";
-import type { SparqlEndpointConfig, RdfProperty } from "../types/sparql";
+import type { SparqlEndpointConfig, RdfProperty, OrderedValue } from "../types/sparql";
 import { formatLabel } from "../utils/labelUtils";
 import EntityPickerPanel from "./EntityPickerPanel";
 import ObjectPropertySection from "./ObjectPropertySection";
@@ -20,12 +20,13 @@ interface ObjectPropertyGroupProps {
   selectorPromptLabel: string;
   properties: RdfProperty[];
   statusFilter: string;
-  entityData: Record<string, string[]>;
+  entityData: Record<string, OrderedValue[]>;
   isEditing: boolean;
   classUri: string;
   selectedLanguage: string;
   onUpdateValue: (property: string, index: number, value: string) => void;
   onRemoveValue: (property: string, index: number) => void;
+  onReorderValues: (property: string, fromIndex: number, toIndex: number) => void;
   onAddProperty: (propertyUri: string, entityUri: string) => void;
 }
 
@@ -42,6 +43,7 @@ const ObjectPropertyGroup: React.FC<ObjectPropertyGroupProps> = ({
   selectedLanguage,
   onUpdateValue,
   onRemoveValue,
+  onReorderValues,
   onAddProperty,
 }) => {
   const [selectedProperty, setSelectedProperty] = useState("");
@@ -76,7 +78,7 @@ const ObjectPropertyGroup: React.FC<ObjectPropertyGroupProps> = ({
       if (selectedProperty && entityUri) {
         // Prevent adding the same entity URI twice for the same property
         const existing = entityData[selectedProperty] || [];
-        if (!existing.includes(entityUri)) {
+        if (!existing.some((v) => v.value === entityUri)) {
           onAddProperty(selectedProperty, entityUri);
         }
         setSelectedProperty("");
@@ -156,6 +158,7 @@ const ObjectPropertyGroup: React.FC<ObjectPropertyGroupProps> = ({
             onUpdateValue(propertyUri, index, value)
           }
           onRemoveValue={(index) => onRemoveValue(propertyUri, index)}
+          onReorderValues={onReorderValues}
         />
       ))}
     </>

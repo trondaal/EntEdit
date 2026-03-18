@@ -20,7 +20,7 @@ import {
 import { ContentCopy, DeleteForever, Lock } from "@mui/icons-material";
 import { useSnackbar } from "notistack";
 import { useTranslation } from "react-i18next";
-import type { SparqlEndpointConfig, RdfProperty } from "../types/sparql";
+import type { SparqlEndpointConfig, RdfProperty, OrderedValue } from "../types/sparql";
 import { SparqlClient } from "../utils/sparqlClient";
 import { getGraphVisualizationUrl } from "../utils/graphUtils";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
@@ -83,7 +83,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   const { data: relatedManifestationProperties = [], isLoading: relatedManifestationPropertiesLoading } =
     useRelatedManifestationProperties(config, classUri, selectedLanguage);
 
-  const [entityData, setEntityData] = useState<Record<string, string[]>>({});
+  const [entityData, setEntityData] = useState<Record<string, OrderedValue[]>>({});
   const [isEditing, setIsEditing] = useState(!entityUri);
   // isDirty tracks actual user changes (separate from isEditing which controls form interactivity)
   // For new entities isEditing starts true but isDirty only becomes true after the user makes a change
@@ -137,27 +137,34 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       if (!entityUri) return null;
 
       const client = new SparqlClient(config);
+      const sanitizedUri = sanitizeSparqlUri(entityUri!);
       const query = `
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX entedit: <http://oslomet.no/abi/vocab#>
-        SELECT DISTINCT ?property ?value ?order WHERE {
-          <${sanitizeSparqlUri(entityUri!)}> ?property ?value .
+        SELECT DISTINCT ?property ?value ?order ?valueOrder WHERE {
+          <${sanitizedUri}> ?property ?value .
           OPTIONAL{
-            ?property entedit:order ?order 
+            ?property entedit:order ?order
+          }
+          OPTIONAL {
+            << <${sanitizedUri}> ?property ?value >> entedit:valueOrder ?valueOrder .
           }
           FILTER NOT EXISTS {
-            <${sanitizeSparqlUri(entityUri!)}> ?subProperty ?value .
+            <${sanitizedUri}> ?subProperty ?value .
             ?subProperty rdfs:subPropertyOf+ ?property .
             FILTER (?subProperty != ?property)
           }
         }
-        ORDER BY ?property
+        ORDER BY ?property ?valueOrder
       `;
 
       const response = await client.query(query);
-      const data: Record<string, string[]> = {};
+      const data: Record<string, OrderedValue[]> = {};
 
       const labels: Array<{ id: string; value: string; language: string }> = [];
+
+      // Track per-property auto-increment for values without explicit order
+      const propertyCounters: Record<string, number> = {};
 
       response.results.bindings.forEach((binding) => {
         const property = binding.property.value;
@@ -175,9 +182,20 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           // Non-label properties
           if (!data[property]) {
             data[property] = [];
+            propertyCounters[property] = 0;
           }
-          data[property].push(value);
+          const explicitOrder = binding.valueOrder?.value
+            ? parseInt(binding.valueOrder.value, 10)
+            : undefined;
+          const order = explicitOrder ?? propertyCounters[property];
+          propertyCounters[property] = Math.max(propertyCounters[property], order) + 1;
+          data[property].push({ value, order });
         }
+      });
+
+      // Sort values within each property by order
+      Object.values(data).forEach((values) => {
+        values.sort((a, b) => a.order - b.order);
       });
 
       return { data, labels };
@@ -242,13 +260,15 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       // Also collect entity URIs from the new data being saved (object properties only)
       Object.entries(entityData).forEach(([property, values]) => {
         if (objectPropertyUris.has(property)) {
-          values.forEach((value) => {
+          values.forEach(({ value }) => {
             if (value.trim()) affectedEntityUris.add(value);
           });
         }
       });
 
-      const triples = [`<${sanitizeSparqlUri(currentEntityUri)}> a <${sanitizeSparqlUri(classUri)}> .`];
+      const sanitizedEntityUri = sanitizeSparqlUri(currentEntityUri);
+      const triples = [`<${sanitizedEntityUri}> a <${sanitizeSparqlUri(classUri)}> .`];
+      const orderAnnotations: string[] = [];
 
       // Add labels from the label manager
       entityLabels.forEach((label) => {
@@ -257,49 +277,65 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           const formattedValue = label.language
             ? `"${escapedValue}"@${label.language}`
             : `"${escapedValue}"`;
-          const labelTriple = `<${sanitizeSparqlUri(currentEntityUri)}> <http://www.w3.org/2000/01/rdf-schema#label> ${formattedValue} .`;
+          const labelTriple = `<${sanitizedEntityUri}> <http://www.w3.org/2000/01/rdf-schema#label> ${formattedValue} .`;
           triples.push(labelTriple);
         }
       });
 
       Object.entries(entityData).forEach(([property, values]) => {
-        values.forEach((value) => {
+        const hasMultipleValues = values.filter(({ value }) => value.trim()).length > 1;
+        values.forEach(({ value, order }) => {
           if (value.trim()) {
+            const sanitizedProp = sanitizeSparqlUri(property);
+            let objectValue: string;
             if (objectPropertyUris.has(property)) {
-              triples.push(
-                `<${sanitizeSparqlUri(currentEntityUri)}> <${sanitizeSparqlUri(property)}> <${sanitizeSparqlUri(value)}> .`,
-              );
+              objectValue = `<${sanitizeSparqlUri(value)}>`;
             } else {
-              const escapedValue = escapeSparqlLiteral(value);
-              triples.push(
-                `<${sanitizeSparqlUri(currentEntityUri)}> <${sanitizeSparqlUri(property)}> "${escapedValue}" .`,
+              objectValue = `"${escapeSparqlLiteral(value)}"`;
+            }
+            triples.push(
+              `<${sanitizedEntityUri}> <${sanitizedProp}> ${objectValue} .`,
+            );
+            // Add RDF-star order annotation when there are multiple values
+            if (hasMultipleValues) {
+              orderAnnotations.push(
+                `<< <${sanitizedEntityUri}> <${sanitizedProp}> ${objectValue} >> <http://oslomet.no/abi/vocab#valueOrder> ${order} .`,
               );
             }
           }
         });
       });
 
+      const allTriples = [...triples, ...orderAnnotations];
       const insertQuery = `
         INSERT DATA {
-          ${triples.join("\n          ")}
+          ${allTriples.join("\n          ")}
         }
       `;
 
       if (entityUri) {
-        // For existing entities, we should delete old triples first
-        // Delete both outgoing and incoming statements to handle inverse properties
+        // For existing entities, delete old triples and RDF-star annotations
+        const sanitizedUri = sanitizeSparqlUri(entityUri!);
+        // First delete RDF-star annotations on outgoing triples
+        const deleteAnnotationsQuery = `
+          DELETE WHERE {
+            << <${sanitizedUri}> ?p ?o >> ?annotPred ?annotVal .
+          }
+        `;
+        await client.update(deleteAnnotationsQuery);
+        // Then delete both outgoing and incoming statements to handle inverse properties
         const deleteQuery = `
           DELETE {
-            <${sanitizeSparqlUri(entityUri!)}> ?p ?o .
-            ?s ?p2 <${sanitizeSparqlUri(entityUri!)}> .
+            <${sanitizedUri}> ?p ?o .
+            ?s ?p2 <${sanitizedUri}> .
           }
           WHERE {
             {
-              <${sanitizeSparqlUri(entityUri!)}> ?p ?o .
+              <${sanitizedUri}> ?p ?o .
             }
             UNION
             {
-              ?s ?p2 <${sanitizeSparqlUri(entityUri!)}> .
+              ?s ?p2 <${sanitizedUri}> .
             }
           }
         `;
@@ -365,23 +401,30 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         }
       });
 
-      // Delete both outgoing statements and incoming statements (inverse properties)
+      // Delete RDF-star annotations first, then outgoing and incoming statements
+      const sanitizedUri = sanitizeSparqlUri(entityUri!);
+      const deleteAnnotationsQuery = `
+        DELETE WHERE {
+          << <${sanitizedUri}> ?p ?o >> ?annotPred ?annotVal .
+        }
+      `;
+      await client.update(deleteAnnotationsQuery);
+
       const deleteQuery = `
         DELETE {
-          <${sanitizeSparqlUri(entityUri!)}> ?p ?o .
-          ?s ?p2 <${sanitizeSparqlUri(entityUri!)}> .
+          <${sanitizedUri}> ?p ?o .
+          ?s ?p2 <${sanitizedUri}> .
         }
         WHERE {
           {
-            <${sanitizeSparqlUri(entityUri!)}> ?p ?o .
+            <${sanitizedUri}> ?p ?o .
           }
           UNION
           {
-            ?s ?p2 <${sanitizeSparqlUri(entityUri!)}> .
+            ?s ?p2 <${sanitizedUri}> .
           }
         }
       `;
-
       await client.update(deleteQuery);
 
       // Invalidate caches using utility function
@@ -450,9 +493,12 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     if (propertyUri && isEditing) {
       setEntityData((prev) => {
         const currentValues = prev[propertyUri] || [];
+        const maxOrder = currentValues.length > 0
+          ? Math.max(...currentValues.map((v) => v.order)) + 1
+          : 0;
         return {
           ...prev,
-          [propertyUri]: [...currentValues, ""],
+          [propertyUri]: [...currentValues, { value: "", order: maxOrder }],
         };
       });
       setIsDirty(true);
@@ -461,10 +507,16 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
   const addObjectProperty = useCallback((propertyUri: string, entityUri: string) => {
     if (propertyUri && entityUri) {
-      setEntityData((prev) => ({
-        ...prev,
-        [propertyUri]: [...(prev[propertyUri] || []), entityUri],
-      }));
+      setEntityData((prev) => {
+        const currentValues = prev[propertyUri] || [];
+        const maxOrder = currentValues.length > 0
+          ? Math.max(...currentValues.map((v) => v.order)) + 1
+          : 0;
+        return {
+          ...prev,
+          [propertyUri]: [...currentValues, { value: entityUri, order: maxOrder }],
+        };
+      });
       setIsDirty(true);
     }
   }, []);
@@ -476,7 +528,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   ) => {
     setEntityData((prev) => {
       const values = [...(prev[property] || [])];
-      values[index] = value;
+      values[index] = { ...values[index], value };
       return {
         ...prev,
         [property]: values,
@@ -498,6 +550,21 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           [property]: newValues,
         };
       }
+    });
+    setIsDirty(true);
+  }, []);
+
+  const reorderPropertyValues = useCallback((property: string, fromIndex: number, toIndex: number) => {
+    setEntityData((prev) => {
+      const values = [...(prev[property] || [])];
+      const [moved] = values.splice(fromIndex, 1);
+      values.splice(toIndex, 0, moved);
+      // Re-assign sequential order values
+      const reordered = values.map((v, i) => ({ ...v, order: i }));
+      return {
+        ...prev,
+        [property]: reordered,
+      };
     });
     setIsDirty(true);
   }, []);
@@ -775,6 +842,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           onPropertySelect={handlePropertySelect}
           onUpdateValue={updatePropertyValue}
           onRemoveValue={removePropertyValue}
+          onReorderValues={reorderPropertyValues}
           getPropertyLabel={getPropertyLabel}
         />
 
@@ -793,6 +861,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
             selectedLanguage={selectedLanguage}
             onUpdateValue={updatePropertyValue}
             onRemoveValue={removePropertyValue}
+            onReorderValues={reorderPropertyValues}
             onAddProperty={addObjectProperty}
           />
         ))}
