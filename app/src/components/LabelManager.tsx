@@ -203,6 +203,9 @@ const LabelManager: React.FC<LabelManagerProps> = ({
       aria-labelledby="label-manager-dialog-title"
       hideBackdrop
       disableScrollLock
+      disableEnforceFocus
+      disableAutoFocus
+      disableRestoreFocus
       sx={{
         // Allow interaction with content behind the dialog
         pointerEvents: "none",
