@@ -20,6 +20,8 @@ EntEdit is a React-based RDF/SPARQL entity editor for browsing and editing seman
 - **Frontend**: React 19 + TypeScript + Vite with SWC
 - **UI Framework**: Material-UI v7 (Emotion CSS-in-JS)
 - **State Management**: TanStack Query for server state caching
+- **Virtual Scrolling**: @tanstack/react-virtual for large lists
+- **Notifications**: notistack for snackbar messages
 - **Internationalization**: i18next with English and Norwegian locales
 - **SPARQL Integration**: Custom `SparqlClient` class for GraphDB
 
@@ -40,7 +42,8 @@ EntEdit/
 │   └── package.json
 ├── database/              # RDF data and GraphDB config
 │   ├── types/             # Vocabulary files loaded into GraphDB on init
-│   ├── graphdb/           # SPARQL connector query definitions
+│   ├── sparql/            # SPARQL query definitions
+│   ├── lucene connectors/ # Lucene index configurations
 │   ├── inference rules/   # GraphDB inference rule sets
 │   └── testdata/          # Sample RDF entities for testing
 ├── docker/                # Docker deployment configs
@@ -65,10 +68,16 @@ EntEdit/
 - `EntityLabelsSection` - Manages rdfs:label in multiple languages
 - `ObjectPropertySection` - Displays and manages object property values
 
-**WEMI Relationship Selectors:**
-- `WEMIRelationshipSelector` - Selector for Work-Expression-Manifestation-Item links
-- `RelatedWorkSelector`, `RelatedExpressionSelector`, `RelatedManifestationSelector`
-- `RelatedAgentsSelector` - For linking entities to agents (creators, contributors)
+**WEMI Display:**
+- `Expression`, `ExpressionList` - Expression view and list
+- `Manifestation`, `ManifestationList`, `ManifestationResultSet`, `ManifestationSearchResult` - Manifestation display components
+
+**UI Helpers:**
+- `EntityEditorHeader` - Header section of entity editor
+- `EntityPickerPanel` - Entity selection panel
+- `LabelManager`, `LanguageSelector` - Label and language UI
+- `ObjectPropertyGroup`, `ObjectPropertyValue` - Object property rendering
+- `ResultSet` - Generic search result display
 
 **Configuration:**
 - `ConfigurationWizard` - First-run setup dialog
@@ -89,6 +98,8 @@ EntEdit/
 
 **useSearchQueries.ts** - Full-text search via GraphDB Lucene connector
 
+**useDebouncedValue.ts** - Debounce hook for search inputs
+
 **useManifestationQueries.ts** - Manifestation metadata queries
 
 **useExpressionQueries.ts** - Expression queries by manifestation
@@ -100,6 +111,8 @@ EntEdit/
 - `labelUtils.ts` - URI label extraction, formatting, SPARQL escaping
 - `sparqlFragments.ts` - Reusable SPARQL fragments for language fallback
 - `queryInvalidation.ts` - Cache invalidation after mutations
+- `graphUtils.ts` - Generates GraphDB Workbench visualization URLs from endpoint URL
+- `queryClient.ts` - TanStack Query client setup
 
 ### Data Flow
 
