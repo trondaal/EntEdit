@@ -9,7 +9,8 @@ export interface Expression {
   work_title?: string;
   language?: string;
   contenttype?: string;
-  worktype?: string;
+  workcategory?: string;
+  genre?: string;
   work_creators?: string;
   expression_creators?: string;
 }
@@ -41,13 +42,15 @@ export const useExpressionsByManifestation = (
         PREFIX rdawd: <http://rdaregistry.info/Elements/w/datatype/>
         PREFIX rdawo: <http://rdaregistry.info/Elements/w/object/>
         PREFIX rdamo: <http://rdaregistry.info/Elements/m/object/>
+        PREFIX vocab: <http://oslomet.no/abi/vocab#>
 
         SELECT DISTINCT ?expression
                (SAMPLE(?expressiontitle) as ?title)
                (SAMPLE(?worktitle) as ?work_title)
                (GROUP_CONCAT(DISTINCT ?language_label ; SEPARATOR=" ; ") as ?language)
                (GROUP_CONCAT(DISTINCT ?contenttype_label ; SEPARATOR=" ; ") as ?contenttype)
-               (GROUP_CONCAT(DISTINCT ?worktype_label ; SEPARATOR=" ; ") as ?worktype)
+               (GROUP_CONCAT(DISTINCT ?workcategory_label ; SEPARATOR=" ; ") as ?workcategory)
+               (GROUP_CONCAT(DISTINCT ?genre_label ; SEPARATOR=" ; ") as ?genre)
                (GROUP_CONCAT(DISTINCT CONCAT(?work_agent_relationship_label, ": ", ?work_agent_names) ; SEPARATOR=" ; ") as ?work_creators)
                (GROUP_CONCAT(DISTINCT CONCAT(?expression_agent_relationship_label, ": ", ?expression_agent_names) ; SEPARATOR=" ; ") as ?expression_creators)
                FROM <http://www.ontotext.com/explicit>
@@ -57,7 +60,7 @@ export const useExpressionsByManifestation = (
           UNION
           {?expression rdaeo:P20059 <${sanitizeSparqlUri(manifestationUri)}>}
 
-          # Get exressions and work
+          # Get expressions and work
           { ?expression rdaeo:P20231 ?work }
           UNION
           { ?work rdawo:P10078 ?expression }
@@ -84,11 +87,18 @@ export const useExpressionsByManifestation = (
             FILTER(LANG(?contenttype_label) = "${language}")
           }
 
-          # Work type
+          # Work category
           OPTIONAL {
-            ?work rdawo:P10004 ?worktype .
-            ?worktype rdfs:label ?worktype_label .
-            FILTER(LANG(?worktype_label) = "${language}")
+            ?work vocab:P01 ?workcategory .
+            ?workcategory rdfs:label ?workcategory_label .
+            FILTER(LANG(?workcategory_label) = "${language}")
+          }
+
+          # Genre
+          OPTIONAL {
+            ?work vocab:P02 ?genre_entity .
+            ?genre_entity rdfs:label ?genre_label .
+            FILTER(LANG(?genre_label) = "${language}")
           }
 
           # Work to agent relationships
@@ -152,7 +162,8 @@ export const useExpressionsByManifestation = (
         work_title: binding.work_title?.value,
         language: binding.language?.value,
         contenttype: binding.contenttype?.value,
-        worktype: binding.worktype?.value,
+        workcategory: binding.workcategory?.value,
+        genre: binding.genre?.value,
         work_creators: binding.work_creators?.value,
         expression_creators: binding.expression_creators?.value,
       }));

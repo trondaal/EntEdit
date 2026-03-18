@@ -112,8 +112,11 @@ const ExpressionList: React.FC<ExpressionListProps> = ({
         if (expression.contenttype) {
           allChips.push(...splitValues(expression.contenttype));
         }
-        if (expression.worktype) {
-          allChips.push(...splitValues(expression.worktype));
+        if (expression.workcategory) {
+          allChips.push(...splitValues(expression.workcategory));
+        }
+        if (expression.genre) {
+          allChips.push(...splitValues(expression.genre));
         }
 
         // Parse creators with URI support

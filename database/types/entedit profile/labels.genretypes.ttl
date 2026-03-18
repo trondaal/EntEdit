@@ -2,2130 +2,2675 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix abi: <http://oslomet.no/abi/vocab#> .
 
+abi:T01
+    a skos:Concept ;
+    a abi:Genretype;
+    skos:prefLabel "Short story collections"@en, "Novellesamlinger"@nb, "Novellesamlinger"@nn ;
+    rdfs:label "Novellesamlinger"@no, "Short story collections"@en.
+
+abi:T02
+  a skos:Concept ;
+  a abi:Genretype;
+  skos:prefLabel "Individual short stories"@en, "Enkeltnoveller"@nb, "Enkeltnoveller"@nn ;
+        rdfs:label "Enkeltnoveller"@no, "Individual short stories"@en.
+
+
 <https://id.nb.no/vocabulary/ntsf/1130>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Adaptasjoner (film)"@no, "Film adaptations"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1122>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Film"@no, "Motion pictures"@en.
 
 <https://id.nb.no/vocabulary/ntsf/414>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Adaptasjoner"@no, "Adaptations"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1283>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Ikke-fiksjonsfilmer"@no, "Non-fiction films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/10>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Alterbøker"@no, "Altar books"@en.
 
 <https://id.nb.no/vocabulary/ntsf/466>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Liturgiske bøker"@no, "Liturgical books"@en.
 
 <https://id.nb.no/vocabulary/ntsf/100>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Foredrag"@no, "Talks"@en.
 
 <https://id.nb.no/vocabulary/ntsf/475>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Samtalelignende verk"@no, "Discursive works"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1024>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Julesanger"@no, "Christmas carols"@en.
 
 <https://id.nb.no/vocabulary/ntsf/330>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Viser og sanger"@no, "Songs and Scandinavian ballads"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1027>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Sanger"@no, "Songs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1029>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Prisskrifter"@no, "Award thesis"@en.
 
 <https://id.nb.no/vocabulary/ntsf/19>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Avhandlinger"@no, "Academic thesis"@en.
 
 <https://id.nb.no/vocabulary/ntsf/103>
 		a abi:Genretype;
+		abi:order 0;
 		rdfs:label "Forord"@no, "Prefaces"@en.
 
 <https://id.nb.no/vocabulary/ntsf/894>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Deler av bøker, aviser og tidsskrift"@no, "Parts of books, newspapers and journals"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1032>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Militærkart"@no, "Military maps"@en.
 
 <https://id.nb.no/vocabulary/ntsf/141>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Kart"@no, "Maps"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1036>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Konsertprogrammer"@no, "Concert programs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/341>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Programmer (publikasjoner)"@no, "Programmes(publications)"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1040>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Konsertanmeldelser"@no, "Concert reviews"@en.
 
 <https://id.nb.no/vocabulary/ntsf/14>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Anmeldelser"@no, "Reviews"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1056>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Rappetekster"@no, "Rap lyrics"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1060>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Mønstre"@no, "Patterns"@en.
 
 <https://id.nb.no/vocabulary/ntsf/430>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Instruksjons- og undervisningsmateriale"@no, "Instructional and educational works"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1063>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Valgprogrammer (publikasjoner)"@no, "Election manifestos"@en.
 
 <https://id.nb.no/vocabulary/ntsf/404>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Efemert materiale"@no, "Ephemera"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1074>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Barnetegninger"@no, "Children's drawings"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1070>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Visuelle verk"@no, "Visual works"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1076>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Fotografier"@no, "Photographs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1081>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Psykologiske thrillere"@no, "Psychological thrillers"@en.
 
 <https://id.nb.no/vocabulary/ntsf/306>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Thrillere"@no, "Thrillers (fiction)"@en.
 
 <https://id.nb.no/vocabulary/ntsf/11>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Amerikabrev"@no, "American letters"@en.
 
 <https://id.nb.no/vocabulary/ntsf/44>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Brev"@no, "Personal correspondence"@en.
 
 <https://id.nb.no/vocabulary/ntsf/110>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Frekvensordbøker"@no, "Frequency dictionaries"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1502>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Ordbøker"@no, "Dictionaries"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1107>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Prosjektrapporter"@no, "Project reports"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1775>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Rapporter"@no, "Reports"@en.
 
 <https://id.nb.no/vocabulary/ntsf/112>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Føljetonger"@no, "Serialized fiction"@en.
 
 <https://id.nb.no/vocabulary/ntsf/278>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Litteratur"@no, "Literature"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1140>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Biografiske filmer"@no, "Biographical films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1143>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Dansefilmer"@no, "Dance films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1146>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Erotiske filmer"@no, "Erotic films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1149>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Fantasy (film)"@no, "Fantasy films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1150>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Komedier (film)"@no, "Comedy films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1156>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Krigsfilmer"@no, "War films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1157>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Martial arts (film)"@no, "Martial Arts Films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1128>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Action"@no, "Action films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1160>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Sportsfilmer"@no, "Sport films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1169>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Romantiske filmer"@no, "Romance films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/117>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Grunnlover"@no, "Constitutions"@en.
 
 <https://id.nb.no/vocabulary/ntsf/438>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Juridisk materiale"@no, "Law materials"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1175>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Spionfilmer"@no, "Spy films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/118>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Grøssere"@no, "Horror fiction"@en.
 
 <https://id.nb.no/vocabulary/ntsf/578>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Krim og spenning"@no, "Crime and thriller fiction"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1181>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Thrillere (film)"@no, "Thrillers (Motion pictures)"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1184>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Western (film)"@no, "Western films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1191>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Dystopiske filmer"@no, "Dystopian films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1188>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Science fiction (film)"@no, "Science fiction films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1199>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Film noir"@no, "Film noir"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1196>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Krim (film)"@no, "Crime films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1213>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Historiske filmer"@no, "Historical films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1218>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Mini-serier"@no, "Television mini series"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1209>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Serier"@no, "Television series"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1221>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Mokumentarfilmer"@no, "Documentary-style films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1227>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Reality (TV-programmer)"@no, "Reality television programs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1205>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "TV-programmer"@no, "Television programs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1233>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "TV-filmer"@no, "Made-for-TV-movies"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1236>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Naturfilmer"@no, "Nature films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1202>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Dokumentarfilmer"@no, "Documantary films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1237>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Operafilmer"@no, "Opera films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1240>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Spillefilmer"@no, "Feature films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1246>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Kronikker"@no, "Opinion pieces"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1248>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Vitenskapelige artikler"@no, "Peer reviewed articles"@en.
 
 <https://id.nb.no/vocabulary/ntsf/125>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Historiske fortellinger"@no, "Historical fiction"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1252>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Musikkanmeldelser"@no, "Music reviews"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1255>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Musikalprogrammer"@no, "Musical programs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1258>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Musikalfilmer"@no, "Musical films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/126>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Hovedoppgaver"@no, "Post-graduate theses"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1270>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Kunstnerbøker"@no, "Artists' books"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1274>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Operaanmeldelser"@no, "Opera recensions"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1295>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Fiksjonsfilmer"@no, "Fiction films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/13>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Anekdoter"@no, "Anecdotes"@en.
 
 <https://id.nb.no/vocabulary/ntsf/127>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Humor"@no, "Humor"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1301>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Eventyrfilmer"@no, "Adventure films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1307>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Amatørfilmer"@no, "Amateur films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/131>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Hørespill"@no, "Radio plays"@en.
 
 <https://id.nb.no/vocabulary/ntsf/280>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Dramatikk"@no, "Drama"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1311>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Anime (film)"@no, "Anime"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1135>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Animasjonsfilmer"@no, "Animated films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1312>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Animasjonsinnslag"@no, "Live-action/animation films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1316>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Dokumentasjonsopptak (film)"@no, "Unedited footage"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1319>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Drama (film)"@no, "Dramas (motion pictures)"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1321>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Eksperimentelle filmer"@no, "Experimental films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1330>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Fjernsynsteater"@no, "Television plays"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1333>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Grøssere (film)"@no, "Horror films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/134>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Innledninger"@no, "Introductions"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1344>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Konsertfilmer"@no, "Concert films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1347>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Musikkvideoer"@no, "Music videos"@en.
 
 <https://id.nb.no/vocabulary/ntsf/135>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Intervjuer"@no, "Interviews"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1350>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Oppdragsfilmer"@no, "Sponsored films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1353>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Politisk reklame (film)"@no, "Political commercials (film)"@en.
 
 <https://id.nb.no/vocabulary/ntsf/137>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Julehefter"@no, "Christmas magazines"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1378>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Superhelter (film)"@no, "Superhero films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1381>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Interaktive fortellinger"@no, "Choose-your-own-stories"@en.
 
 <https://id.nb.no/vocabulary/ntsf/107>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Fortellinger"@no, "Stories"@en.
 
 <https://id.nb.no/vocabulary/ntsf/147>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Romantikk"@no, "Romance fiction"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1472>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Etnografiske atlas"@no, "Ethnographic atlases"@en.
 
 <https://id.nb.no/vocabulary/ntsf/17>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Atlas"@no, "Atlases"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1473>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Historiske atlas"@no, "Historical atlases"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1474>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Språkatlas"@no, "Language atlases"@en.
 
 <https://id.nb.no/vocabulary/ntsf/148>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Klaffebøker"@no, "Lift-the-flap books"@en.
 
 <https://id.nb.no/vocabulary/ntsf/425>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Lekebøker"@no, "Toy and moveable books"@en.
 
 <https://id.nb.no/vocabulary/ntsf/15>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Antologier"@no, "Anthologies"@en.
 
 <https://id.nb.no/vocabulary/ntsf/150>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Kokebøker"@no, "Cookbooks"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1528>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Språkkurs"@no, "Language courses"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1533>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Rollespill"@no, "Role-playing games"@en.
 
 <https://id.nb.no/vocabulary/ntsf/479>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Tidsfordriv"@no, "Recreational works"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1547>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Forlagskataloger"@no, "Publishers' catalogues"@en.
 
 <https://id.nb.no/vocabulary/ntsf/356>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Salgskataloger"@no, "Sales catalogs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1554>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Nasjonalbibliografier"@no, "National bibliographies"@en.
 
 <https://id.nb.no/vocabulary/ntsf/29>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Bibliografier"@no, "Bibliographies"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1559>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Samkataloger"@no, "Union catalogues"@en.
 
 <https://id.nb.no/vocabulary/ntsf/144>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Kataloger"@no, "Catalogues"@en.
 
 <https://id.nb.no/vocabulary/ntsf/156>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Kortprosa"@no, "Flash fiction"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1563>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Universalbibliografier"@no, "Universal bibliographies"@en.
 
 <https://id.nb.no/vocabulary/ntsf/157>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Kortromaner"@no, "Novellas"@en.
 
 <https://id.nb.no/vocabulary/ntsf/258>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Romaner"@no, "Novels"@en.
 
 <https://id.nb.no/vocabulary/ntsf/159>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Krim"@no, "Crime fiction"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1636>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Aviser"@no, "Newspapers"@en.
 
 <https://id.nb.no/vocabulary/ntsf/340>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Periodika"@no, "Serial publications"@en.
 
 <https://id.nb.no/vocabulary/ntsf/164>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Kunngjøringer"@no, "Announcements"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1642>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Barneblader"@no, "Children's magazines"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1648>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Nianpu"@no, "Nianpu"@en.
 
 <https://id.nb.no/vocabulary/ntsf/36>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Biografier"@no, "Biographies"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1652>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Blåbøker"@no, "Blue books"@en.
 
 <https://id.nb.no/vocabulary/ntsf/338>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Informative verk"@no, "Informational works"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1666>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Brukerveiledninger"@no, "User guides"@en.
 
 <https://id.nb.no/vocabulary/ntsf/167>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Lagerkataloger"@no, "Stock lists"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1678>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Eksegeser"@no, "Exegeses"@en.
 
 <https://id.nb.no/vocabulary/ntsf/503>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Religiøst materiale"@no, "Religious materials"@en.
 
 <https://id.nb.no/vocabulary/ntsf/168>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Legender"@no, "Legends"@en.
 
 <https://id.nb.no/vocabulary/ntsf/508>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Folkediktning"@no, "Folk literature"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1681>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Encyklikaer"@no, "Encyclicals"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1684>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Statskalendere"@no, "State calendars"@en.
 
 <https://id.nb.no/vocabulary/ntsf/336>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Årbøker"@no, "Yearbooks"@en.
 
 <https://id.nb.no/vocabulary/ntsf/169>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Leksika"@no, "Encyclopedias"@en.
 
 <https://id.nb.no/vocabulary/ntsf/339>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Oppslagsverk"@no, "Reference works"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1695>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Kronologier"@no, "Chronologies"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1714>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Religiøse traktater"@no, "Religious treaties"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1718>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Folketellinger"@no, "Censuses"@en.
 
 <https://id.nb.no/vocabulary/ntsf/286>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Statistikk"@no, "Statistics"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1726>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Studiehefter"@no, "Study booklets"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1729>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Trontaler"@no, "Speeches from the throne"@en.
 
 <https://id.nb.no/vocabulary/ntsf/296>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Taler"@no, "Speeches"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1737>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Tidebøker"@no, "Books of hours"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1069>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Bønnebøker"@no, "Prayers"@en.
 
 <https://id.nb.no/vocabulary/ntsf/174>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Lisensiatavhandlinger"@no, "Licentiate theses"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1767>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Forskningsrapporter"@no, "Research reports"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1772>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Evalueringsrapporter"@no, "Evaluation reports"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1788>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Pensumlister"@no, "Reading lists"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1794>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Pamfletter"@no, "Pamphlets"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1658>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Brosjyrer"@no, "Brochures"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1797>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Magiske formler"@no, "Magic formulas"@en.
 
 <https://id.nb.no/vocabulary/ntsf/18>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Auksjonskataloger"@no, "Auction catalogues"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1819>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Kalendarier"@no, "Calendars (Stationery)"@en.
 
 <https://id.nb.no/vocabulary/ntsf/138>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Kalendere"@no, "Calendars"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1823>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Etnografiske filmer"@no, "Ethnographic films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1838>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Kallsbøker"@no, "Parish protocols"@en.
 
 <https://id.nb.no/vocabulary/ntsf/602>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Kildeskrifter"@no, "Sources"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1845>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Supplikker"@no, "Supplications"@en.
 
 <https://id.nb.no/vocabulary/ntsf/185>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Lærerveiledninger"@no, "Teachers' guides"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1851>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Fasiter"@no, "Answer books"@en.
 
 <https://id.nb.no/vocabulary/ntsf/524>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Oppgavebøker"@no, "Problems and exercises"@en.
 
 <https://id.nb.no/vocabulary/ntsf/186>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Magisk realisme"@no, "Magic realist ficion"@en.
 
 <https://id.nb.no/vocabulary/ntsf/577>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Fantastisk litteratur"@no, "Fantastic literature"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1861>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Kirkebøker"@no, "Parish registers"@en.
 
 <https://id.nb.no/vocabulary/ntsf/187>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Magistergradsavhandlinger"@no, "Magister degrees"@en.
 
 <https://id.nb.no/vocabulary/ntsf/188>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Manga"@no, "Manga"@en.
 
 <https://id.nb.no/vocabulary/ntsf/301>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Tegneserier"@no, "Comics (Graphic works)"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1882>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Kompendier"@no, "Compendia"@en.
 
 <https://id.nb.no/vocabulary/ntsf/184>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Lærebøker"@no, "Textbooks"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1891>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Monografiserier"@no, "Monograph series"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1896>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Referatorganer"@no, "Abstract organs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/190>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Masteroppgaver"@no, "Master's theses"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1945>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Stamtavler"@no, "Genealogical tables"@en.
 
 <https://id.nb.no/vocabulary/ntsf/295>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Tabeller"@no, "Tables"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1954>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Standarder"@no, "Standards"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1957>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Historisk statistikk"@no, "Historical statistics"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1960>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Gavebrev"@no, "Gift letters"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1963>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Gjeldsbrev"@no, "Debt instruments"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1969>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Kongebrev"@no, "Royal charters"@en.
 
 <https://id.nb.no/vocabulary/ntsf/199>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Myldrebøker"@no, "Wimmelbilderbuch"@en.
 
 <https://id.nb.no/vocabulary/ntsf/33>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Bildebøker"@no, "Picture books"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1993>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Baklengsordbøker"@no, "Reverse dictionaries"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Adressebøker"@no, "Directories"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2005>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Innstillinger"@no, "Nominations"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2009>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Håndskrifter"@no, "Manuscripts"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2015>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Klagebrev"@no, "Letters of complaint"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2024>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Manifester"@no, "Manifestos"@en.
 
 <https://id.nb.no/vocabulary/ntsf/239>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Proklamasjoner"@no, "Proclamations"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2029>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Utgravningsrapporter"@no, "Excavation reports"@en.
 
 <https://id.nb.no/vocabulary/ntsf/203>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Nomenklaturer"@no, "Nomenclatures"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2036>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Skolier"@no, "Scholia"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2040>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Dialektprøver"@no, "Dialect samples"@en.
 
 <https://id.nb.no/vocabulary/ntsf/207>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Notiser"@no, "Notifications"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2071>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Tegneseriejournalistikk"@no, "Comics journalism"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2074>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Museumsguider"@no, "Museum guides"@en.
 
 <https://id.nb.no/vocabulary/ntsf/120>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Guidebøker"@no, "Guidebooks"@en.
 
 <https://id.nb.no/vocabulary/ntsf/21>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Avisartikler"@no, "Newspaper articles"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2100>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Viser"@no, "Scandinavian ballads"@en.
 
 <https://id.nb.no/vocabulary/ntsf/211>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Nyhetsviser"@no, "News ballads"@en.
 
 <https://id.nb.no/vocabulary/ntsf/277>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Skillingsviser"@no, "Broadside ballads"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2111>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Avisindekser"@no, "Newspaper indexes"@en.
 
 <https://id.nb.no/vocabulary/ntsf/800>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Indekser"@no, "Indexes"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2116>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Tidsskriftindekser"@no, "Periodical indexes"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2120>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Drikkeviser"@no, "Drinking songs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2123>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Kjempeviser"@no, "Kjempeviser"@en.
 
 <https://id.nb.no/vocabulary/ntsf/23>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Ballader"@no, "Ballads"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2128>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Kvad"@no, "Scaldic poetry"@en.
 
 <https://id.nb.no/vocabulary/ntsf/592>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Folkeviser"@no, "Folk songs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2133>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Legendeviser"@no, "Religious carols"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2137>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Politiske viser"@no, "Political songs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2141>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Ridderviser"@no, "Ballads of chivalry"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2150>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Tittelindekser"@no, "Title indexes"@en.
 
 <https://id.nb.no/vocabulary/ntsf/216>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Oppvekst"@no, "Coming-of-age"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2160>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Verkfortegnelser"@no, "Comprehensive catalogues"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2169>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Bestandskataloger"@no, "Collection catalogues"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2173>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Skissebøker"@no, "Sketchbooks"@en.
 
 <https://id.nb.no/vocabulary/ntsf/418>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Illustrerte verk"@no, "Illustrated works"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2182>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Avisfortegnelser"@no, "Newspaper listings"@en.
 
 <https://id.nb.no/vocabulary/ntsf/22>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Bacheloroppgaver"@no, "Bachelor thesis"@en.
 
 <https://id.nb.no/vocabulary/ntsf/220>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Orienteringskart"@no, "Orienteering maps"@en.
 
 <https://id.nb.no/vocabulary/ntsf/310>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Topografiske kart"@no, "Topographic maps"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2202>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Klassifikasjonssystemer"@no, "Classification systems"@en.
 
 <https://id.nb.no/vocabulary/ntsf/221>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Oversiktsverk"@no, "Synoptic histories"@en.
 
 <https://id.nb.no/vocabulary/ntsf/223>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Parodier"@no, "Parodies (literature)"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2234>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Skjemteeventyr"@no, "Humorous fairy tales"@en.
 
 <https://id.nb.no/vocabulary/ntsf/897>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Folkeeventyr"@no, "Folk tales"@en.
 
 <https://id.nb.no/vocabulary/ntsf/225>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Pekebøker"@no, "Wordless picture books"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2251>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Arbeidersanger"@no, "Working songs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2261>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Dødsfallslister"@no, "Death records"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2266>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Partiprogrammer"@no, "Party platforms"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2275>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Sangleker"@no, "Singing games"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2278>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Skipperskrøner"@no, "Tall tales of the sea"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2283>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Telefonkataloger"@no, "Telephone directories"@en.
 
 <https://id.nb.no/vocabulary/ntsf/229>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Plansjeverk"@no, "Plate books"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2304>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Klagesanger"@no, "Laments"@en.
 
 <https://id.nb.no/vocabulary/ntsf/580>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Dikt"@no, "Poems"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2328>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Periodikafortegnelser"@no, "Periodicals registers"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2347>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Sangbøker"@no, "Song books"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2361>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Hørespillanmeldelser"@no, "Radio plays reviews"@en.
 
 <https://id.nb.no/vocabulary/ntsf/237>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Postiller"@no, "Postils"@en.
 
 <https://id.nb.no/vocabulary/ntsf/12>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Andaktsbøker"@no, "Meditations"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2379>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Enstrofinger"@no, "Quatrains"@en.
 
 <https://id.nb.no/vocabulary/ntsf/287>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Stev"@no, "Stev"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2416>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Epigrammer"@no, "Epigrams"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2420>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Ledere"@no, "Editor's introductions"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2423>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Leserbrev"@no, "Letters to the editor"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2430>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Kantater (tekster)"@no, "Cantatas"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2436>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Anatomiske atlas"@no, "Anatomy atlases"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2439>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Himmelatlas"@no, "Celestial atlases"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2440>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Geologiske kart"@no, "Geological maps"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2443>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Hydrografiske kart"@no, "Hydrographic maps"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2444>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Stjernekart"@no, "Celestial charts"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2448>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Utbredelseskart"@no, "Distribution maps"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2449>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Vegetasjonskart"@no, "Vegetation maps"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2450>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Barnebøker"@no, "Children's books"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2454>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Omdiktninger"@no, "Retellings"@en.
 
 <https://id.nb.no/vocabulary/ntsf/246>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Reglementer"@no, "Statutes"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2484>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Ballettanmeldelser"@no, "Ballett recensions"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2488>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Litterære kommentarer"@no, "Literary commentaries"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2282>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Kommentarer"@no, "Commentaries"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2492>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Journalistiske kommentarer"@no, "Journalistic commentaries"@en.
 
 <https://id.nb.no/vocabulary/ntsf/250>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Reiseskildringer"@no, "Travel writing"@en.
 
 <https://id.nb.no/vocabulary/ntsf/494>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Litterær sakprosa"@no, "Creative nonfiction"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2512>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Efemerider"@no, "Ephemerides"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2515>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Eksempelsamlinger"@no, "Worked examples"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2518>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Ekskursjonsguider"@no, "Excursion guides"@en.
 
 <https://id.nb.no/vocabulary/ntsf/132>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Håndbøker"@no, "Handbooks and manuals"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2522>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Farmakopeer"@no, "Pharmacopoeias"@en.
 
 <https://id.nb.no/vocabulary/ntsf/253>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Reskripter"@no, "Rescripts"@en.
 
 <https://id.nb.no/vocabulary/ntsf/104>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Forordninger"@no, "Statutes and codes"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2535>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Laboratoriehåndbøker"@no, "Laboratory manuals"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2539>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Memokort"@no, "Flashcards"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2549>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Molekylbyggesett"@no, "Molecular modelling kits"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2552>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Nautiske almanakker"@no, "Nautical almanacs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/9>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Almanakker"@no, "Almanacs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2555>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Plantekataloger"@no, "Plant catalogues"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2558>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Soppfloraer"@no, "Fungi floras"@en.
 
 <https://id.nb.no/vocabulary/ntsf/99>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Floraer"@no, "Floras"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2561>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Spektralatlas"@no, "Spectral atlases"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2564>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Stjernekataloger"@no, "Star catalogues"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2568>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Toktrapporter"@no, "Target reports"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2573>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Verneplaner"@no, "Conservation plans"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1781>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Plandokumenter"@no, "Plans"@en.
 
 <https://id.nb.no/vocabulary/ntsf/260>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Sagaer"@no, "Sagas"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2607>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Seismiske kart"@no, "Seismic maps"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2603>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Geofysiske kart"@no, "Geophysical maps"@en.
 
 <https://id.nb.no/vocabulary/ntsf/261>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Sagn"@no, "Folk legends"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2642>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Rødlister"@no, "IUCN Red List of Threatened Species"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2502>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Artslister"@no, "Species lists"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2684>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Databaser"@no, "Databases"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2688>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Dialektordbøker"@no, "Dialect dictionaries"@en.
 
 <https://id.nb.no/vocabulary/ntsf/27>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Bibelfortellinger"@no, "Bible stories"@en.
 
 <https://id.nb.no/vocabulary/ntsf/251>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Religiøse fortellinger"@no, "Religious fiction"@en.
 
 <https://id.nb.no/vocabulary/ntsf/270>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Satire"@no, "Satirical literature"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2709>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Revyprogrammer"@no, "Revue programs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/271>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Science fiction"@no, "Science fiction"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2712>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Revyanmeldelser"@no, "Revue recensions"@en.
 
 <https://id.nb.no/vocabulary/ntsf/275>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Sjøfortellinger"@no, "Sea fiction"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2753>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Nivåskjemaer"@no, "Level schemes"@en.
 
 <https://id.nb.no/vocabulary/ntsf/276>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Sjøkart"@no, "Nautical charts"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2776>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Multipler (Kunst)"@no, "Multiples (Art)"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2799>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Mosefloraer"@no, "Moss floras"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2809>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Litteraturgjennomganger"@no, "Literature reviews"@en.
 
 <https://id.nb.no/vocabulary/ntsf/281>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Slektsfortellinger"@no, "Family sagas"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2826>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Operetteprogrammer"@no, "Operetta programs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2830>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Lettlest litteratur"@no, "Easy readers"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2845>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "NOU-er"@no, "Official Norwegian reports"@en.
 
 <https://id.nb.no/vocabulary/ntsf/319>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Offentlige utredninger"@no, "Public inquiry reports"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2849>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Høringer"@no, "Hearings"@en.
 
 <https://id.nb.no/vocabulary/ntsf/285>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Spørrebøker"@no, "Quiz books"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2867>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Veiledere"@no, "Guidelines"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2892>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Innbydelsesskrift"@no, "Invitations"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2901>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Arbeidssanger"@no, "Work songs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2904>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Virkelighetskrim"@no, "True crime stories"@en.
 
 <https://id.nb.no/vocabulary/ntsf/291>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Superhelter"@no, "Superhero fiction"@en.
 
 <https://id.nb.no/vocabulary/ntsf/292>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Syngespill"@no, "Light operas"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2922>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Virkelighetskrim (TV-programmer)"@no, "True crime television programs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2931>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Akrostika"@no, "Acrostic poetry"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2935>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Litteraturkritikk"@no, "Literary criticism"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2941>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Bønner"@no, "Prayers"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2944>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Horoskoper"@no, "Horoscopes"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2956>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Soldatsanger"@no, "Soldiers' songs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2962>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Sirkusanmeldelser"@no, "Circus reviews"@en.
 
 <https://id.nb.no/vocabulary/ntsf/297>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Teateranmeldelser"@no, "Theater review"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2971>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Interfolierte bøker"@no, "Interleaved books"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2969>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Taktile verk"@no, "Tactile works"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2976>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Krigsfortellinger"@no, "War fiction"@en.
 
 <https://id.nb.no/vocabulary/ntsf/298>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Teatermanus"@no, "Playscripts"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2981>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Arbeiderlitteratur"@no, "Proletarian literature"@en.
 
 <https://id.nb.no/vocabulary/ntsf/299>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Teaterplakater"@no, "Playbills (posters)"@en.
 
 <https://id.nb.no/vocabulary/ntsf/409>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Plakater"@no, "Posters"@en.
 
 <https://id.nb.no/vocabulary/ntsf/30>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Bibliotekkataloger"@no, "Library catalogues"@en.
 
 <https://id.nb.no/vocabulary/ntsf/300>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Teaterprogrammer"@no, "Theater programs (publications)"@en.
 
 <https://id.nb.no/vocabulary/ntsf/3011>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Nasjonalsanger"@no, "National anthems"@en.
 
 <https://id.nb.no/vocabulary/ntsf/3015>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Studentsanger"@no, "Student songs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/302>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Grafiske romaner"@no, "Graphic novels"@en.
 
 <https://id.nb.no/vocabulary/ntsf/3020>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Revyviser"@no, "Revue songs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/305>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Testamenter"@no, "Wills"@en.
 
 <https://id.nb.no/vocabulary/ntsf/308>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Tidsskriftartikler"@no, "Journal articles"@en.
 
 <https://id.nb.no/vocabulary/ntsf/312>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Traktater"@no, "Treaties"@en.
 
 <https://id.nb.no/vocabulary/ntsf/313>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Trosbekjennelser"@no, "Creeds"@en.
 
 <https://id.nb.no/vocabulary/ntsf/321>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Utstillingskataloger"@no, "Exhibition catalogues"@en.
 
 <https://id.nb.no/vocabulary/ntsf/325>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Veikart"@no, "Road maps"@en.
 
 <https://id.nb.no/vocabulary/ntsf/326>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Villmarksfortellinger"@no, "Wilderness tales"@en.
 
 <https://id.nb.no/vocabulary/ntsf/332>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Vitser"@no, "Jokes"@en.
 
 <https://id.nb.no/vocabulary/ntsf/333>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Western"@no, "Western fiction"@en.
 
 <https://id.nb.no/vocabulary/ntsf/337>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Årsberetninger"@no, "Annual reports"@en.
 
 <https://id.nb.no/vocabulary/ntsf/352>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Studentoppgaver"@no, "Student reports"@en.
 
 <https://id.nb.no/vocabulary/ntsf/366>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Ballettprogrammer"@no, "Ballet programs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/365>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Danseprogrammer"@no, "Dance programs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/375>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Jubileumsbøker"@no, "Jubilee books"@en.
 
 <https://id.nb.no/vocabulary/ntsf/453>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Minnebevarende verk"@no, "Commemorative works"@en.
 
 <https://id.nb.no/vocabulary/ntsf/378>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Konferansepublikasjoner"@no, "Conference papers and procedings"@en.
 
 <https://id.nb.no/vocabulary/ntsf/384>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Operaprogrammer"@no, "Opera programs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/392>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Sitater"@no, "Quotations"@en.
 
 <https://id.nb.no/vocabulary/ntsf/41>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Bokanmeldelser"@no, "Book recensions"@en.
 
 <https://id.nb.no/vocabulary/ntsf/42>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Bokkapitler"@no, "Book chapters"@en.
 
 <https://id.nb.no/vocabulary/ntsf/428>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Utbrettsbøker"@no, "Pop-up books"@en.
 
 <https://id.nb.no/vocabulary/ntsf/434>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "ABC-bøker"@no, "ABC books"@en.
 
 <https://id.nb.no/vocabulary/ntsf/170>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Lesebøker"@no, "Readers (Publications)"@en.
 
 <https://id.nb.no/vocabulary/ntsf/440>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Dommer"@no, "Court decisions and opinions"@en.
 
 <https://id.nb.no/vocabulary/ntsf/458>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Bryllupskrift"@no, "Wedding prints"@en.
 
 <https://id.nb.no/vocabulary/ntsf/459>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Hyldningsskrift"@no, "Tribute materials"@en.
 
 <https://id.nb.no/vocabulary/ntsf/47>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Bygdefortellinger"@no, "Rural fiction"@en.
 
 <https://id.nb.no/vocabulary/ntsf/49>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Bykart"@no, "City maps"@en.
 
 <https://id.nb.no/vocabulary/ntsf/5>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Spionfortellinger"@no, "Spy fiction"@en.
 
 <https://id.nb.no/vocabulary/ntsf/516>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Sørgeskrift"@no, "Mourning scripts"@en.
 
 <https://id.nb.no/vocabulary/ntsf/528>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Bøker med lyd"@no, "Sound books"@en.
 
 <https://id.nb.no/vocabulary/ntsf/55>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Debatter"@no, "Debates"@en.
 
 <https://id.nb.no/vocabulary/ntsf/56>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Dialoger"@no, "Dialogs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/566>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Hørespillmanus"@no, "Radio play scripts"@en.
 
 <https://id.nb.no/vocabulary/ntsf/572>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Kontrafaktisk historie"@no, "Alternative histories (fiction)"@en.
 
 <https://id.nb.no/vocabulary/ntsf/583>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Skuespill"@no, "Plays"@en.
 
 <https://id.nb.no/vocabulary/ntsf/593>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Feelgood"@no, "Feelgood"@en.
 
 <https://id.nb.no/vocabulary/ntsf/60>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Diskografier"@no, "Discographies"@en.
 
 <https://id.nb.no/vocabulary/ntsf/61>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Doktoravhandlinger"@no, "Doctoral dissertations"@en.
 
 <https://id.nb.no/vocabulary/ntsf/641>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Funny animals"@no, "Funny animal comics"@en.
 
 <https://id.nb.no/vocabulary/ntsf/654>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Medlemsfortegnelser"@no, "Membership registers"@en.
 
 <https://id.nb.no/vocabulary/ntsf/655>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Stubber"@no, "Stubs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/665>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Librettoer"@no, "Librettos"@en.
 
 <https://id.nb.no/vocabulary/ntsf/67>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Dreiebøker"@no, "Shooting scripts"@en.
 
 <https://id.nb.no/vocabulary/ntsf/96>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Filmmanus"@no, "Screenplays"@en.
 
 <https://id.nb.no/vocabulary/ntsf/68>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Dystopier"@no, "Dystopian fiction"@en.
 
 <https://id.nb.no/vocabulary/ntsf/70>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Eksamensoppgaver"@no, "Examinations"@en.
 
 <https://id.nb.no/vocabulary/ntsf/71>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Emigrantlitteratur"@no, "Emigrant fiction"@en.
 
 <https://id.nb.no/vocabulary/ntsf/73>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Emigrantviser"@no, "Emigrant songs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/78>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Epos"@no, "Epic poetry"@en.
 
 <https://id.nb.no/vocabulary/ntsf/59>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Lyrikk"@no, "Poetry"@en.
 
 <https://id.nb.no/vocabulary/ntsf/80>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Erotikk"@no, "Erotic fiction"@en.
 
 <https://id.nb.no/vocabulary/ntsf/81>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Essay"@no, "Essays"@en.
 
 <https://id.nb.no/vocabulary/ntsf/82>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Etterord"@no, "Afterwords"@en.
 
 <https://id.nb.no/vocabulary/ntsf/84>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Fabler"@no, "Fables"@en.
 
 <https://id.nb.no/vocabulary/ntsf/88>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Faksimiler"@no, "Facsimiles"@en.
 
 <https://id.nb.no/vocabulary/ntsf/412>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Avledede verk"@no, "Derivative works"@en.
 
 <https://id.nb.no/vocabulary/ntsf/887>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Sudoku"@no, "Sudoku puzzles"@en.
 
 <https://id.nb.no/vocabulary/ntsf/898>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Kunsteventyr"@no, "Art fairy tales"@en.
 
 <https://id.nb.no/vocabulary/ntsf/83>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Eventyr"@no, "Fairy tales"@en.
 
 <https://id.nb.no/vocabulary/ntsf/91>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Fantasy"@no, "Fantasy fiction"@en.
 
 <https://id.nb.no/vocabulary/ntsf/92>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Festivalprogrammer"@no, "Festival programs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/93>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Festskrift"@no, "Festschriften"@en.
 
 <https://id.nb.no/vocabulary/ntsf/95>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Filmanmeldelser"@no, "Motion picture reviews"@en.
 
 <https://id.nb.no/vocabulary/ntsf/97>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Filmografier"@no, "Filmographies"@en.
 
 <https://id.nb.no/vocabulary/ntsf/101>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Forelesninger"@no, "Lectures (Teaching)"@en.
 
 <https://id.nb.no/vocabulary/ntsf/177>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Lover"@no, "Statutes and codes"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1043>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Myter"@no, "Myths"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1048>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Joiketekster"@no, "Yoiks (texts)"@en.
 
 <https://id.nb.no/vocabulary/ntsf/105>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Forskrifter"@no, "Regulations"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1855>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Klosterregler"@no, "Monastic rules"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1050>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Prologer og epiloger"@no, "Prologues and epilogues"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1065>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Læreplaner"@no, "Syllabuses"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1589>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Studiehåndbøker"@no, "Student handbooks"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1083>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Leilighetsdiktning"@no, "Occational poetry"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1084>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Leilighetstrykk"@no, "Occational prints"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1104>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Diktromaner"@no, "Novels in verse"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1125>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Religiøse dikt"@no, "Religious poetry"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1153>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Kortfilmer"@no, "Short films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1304>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Aktualiteter (film)"@no, "Actualities (motion pictures)"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1163>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Stumfilmer"@no, "Silent films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/213>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Oppbyggelig litteratur"@no, "Devotional literature"@en.
 
 <https://id.nb.no/vocabulary/ntsf/121>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Gåter"@no, "Riddles"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1230>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Barnefilmer"@no, "Children's films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1324>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Familiefilmer"@no, "Family films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1243>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Ungdomsfilmer"@no, "Teen films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1374>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Oppvekst (film)"@no, "Coming-of-age-films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1253>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Enqueter"@no, "Enquets"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1708>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Meningsmålinger"@no, "Opinion polls"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1262>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Fotoreportasjer"@no, "Photo reports"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1267>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Bedriftshistorie"@no, "Company history"@en.
 
 <https://id.nb.no/vocabulary/ntsf/130>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Hyrdebrev"@no, "Pastoral letters"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1327>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Filmaviser"@no, "Newsreels"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1340>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Instruksjonsfilmer"@no, "Instructional films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1361>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Promoteringsmateriale"@no, "Promotional materials"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1364>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Teasere og trailere"@no, "Film teasers and trailers"@en.
 
 <https://id.nb.no/vocabulary/ntsf/140>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Karikaturer"@no, "Caricatures"@en.
 
 <https://id.nb.no/vocabulary/ntsf/145>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Katekismer"@no, "Catechisms"@en.
 
 <https://id.nb.no/vocabulary/ntsf/146>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Katekismeforklaringer"@no, "Catechism explanations"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1504>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Ordlister"@no, "Glossaries"@en.
 
 <https://id.nb.no/vocabulary/ntsf/154>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Konkordanser"@no, "Concordances"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1595>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Rettsprotokoller"@no, "Court records"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1910>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Referater"@no, "Meeting reports"@en.
 
 <https://id.nb.no/vocabulary/ntsf/163>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Kryssordbøker"@no, "Crossword puzzles"@en.
 
 <https://id.nb.no/vocabulary/ntsf/166>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Kåserier"@no, "Informal essays"@en.
 
 <https://id.nb.no/vocabulary/ntsf/228>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Petiter"@no, "Paragraphs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1674>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Brukerundersøkelser"@no, "User surveys"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1761>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Reportasjer"@no, "News reports"@en.
 
 <https://id.nb.no/vocabulary/ntsf/178>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Lovforslag"@no, "Legislative bills"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2844>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Stortingsdokumenter"@no, "White papers"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1815>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Rimvarsler"@no, "Rhyming forecasts"@en.
 
 <https://id.nb.no/vocabulary/ntsf/219>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Ordspråk"@no, "Proverbs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1826>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Forelesningskataloger"@no, "Course catalogues"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1833>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Diplomer"@no, "Diplomas"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1836>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Forhandlingsprotokoller"@no, "Negotiation protocols"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1858>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Annaler"@no, "Annals"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1865>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Matrikler"@no, "Cadastres"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1875>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Lensregnskaper"@no, "Account books for feudal overlords"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1929>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Regnskaper"@no, "Accounting"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1878>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Visitasbøker"@no, "Visitation books"@en.
 
 <https://id.nb.no/vocabulary/ntsf/54>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Dagbøker"@no, "Diaries"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1887>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Kontrakter"@no, "Contracts"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1924>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Registreringsrapporter"@no, "Registrations"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2153>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Registranter"@no, "Registrars"@en.
 
 <https://id.nb.no/vocabulary/ntsf/195>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Minneskrift"@no, "Memorial writings"@en.
 
 <https://id.nb.no/vocabulary/ntsf/201>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Nekrologer"@no, "Obituaries"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1982>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Bildeordbøker"@no, "Picture dictionaries"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1999>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Helgenlegender"@no, "Saint's legends"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2019>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Lovkommentarer"@no, "Legal commentaries"@en.
 
 <https://id.nb.no/vocabulary/ntsf/208>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Noveller"@no, "Short stories"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2157>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Tradisjonssamlinger"@no, "Collections of folk literature"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2263>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Helgenkalendere"@no, "Calendars of saints"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2295>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Formularbøker"@no, "Formula books"@en.
 
 <https://id.nb.no/vocabulary/ntsf/232>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Polarlitteratur"@no, "Polar literature"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2327>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Fanziner"@no, "Fanzines"@en.
 
 <https://id.nb.no/vocabulary/ntsf/307>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Tidsskrifter"@no, "Periodicals"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2342>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Biografiske oppslagsverk"@no, "Biographical reference works"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2370>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Tesauruser"@no, "Thesauri"@en.
 
 <https://id.nb.no/vocabulary/ntsf/238>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Prekener"@no, "Sermons"@en.
 
 <https://id.nb.no/vocabulary/ntsf/175>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Likprekener"@no, "Funeral sermons"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2427>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Skoleutgaver"@no, "School editions"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2468>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Bestemmelseslitteratur"@no, "Identification literature"@en.
 
 <https://id.nb.no/vocabulary/ntsf/252>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Religiøse håndbøker"@no, "Religious handbooks"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2525>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Felthåndbøker"@no, "Field guides"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2528>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Formelsamlinger"@no, "Formula handbooks"@en.
 
 <https://id.nb.no/vocabulary/ntsf/255>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Rim og regler"@no, "Rhymes"@en.
 
 <https://id.nb.no/vocabulary/ntsf/272>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Selvbiografier"@no, "Autobiographies"@en.
 
 <https://id.nb.no/vocabulary/ntsf/227>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Personlige beretninger"@no, "Personal narratives"@en.
 
 <https://id.nb.no/vocabulary/ntsf/28>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Bibelkommentarer"@no, "Bible commentaries"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2806>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Byhistorie"@no, "Urban community history"@en.
 
 <https://id.nb.no/vocabulary/ntsf/3024>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Lokalhistorie"@no, "Local histories"@en.
 
 <https://id.nb.no/vocabulary/ntsf/690>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Bygdehistorie"@no, "Rural community history"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2874>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Utfyllingsbøker"@no, "Thematic journals"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2876>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Notatbøker"@no, "Notebooks"@en.
 
 <https://id.nb.no/vocabulary/ntsf/4>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label  "Aforismer"@no, "Aphorisms"@en.
 
 <https://id.nb.no/vocabulary/ntsf/423>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Fotografisamlinger"@no, "Photo collections"@en.
 
 <https://id.nb.no/vocabulary/ntsf/510>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Fotobøker"@no, "Photo books"@en.
 
 <https://id.nb.no/vocabulary/ntsf/529>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Følebøker"@no, "Textured books"@en.
 
 <https://id.nb.no/vocabulary/ntsf/532>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Brevromaner"@no, "Epistolary fiction"@en.
 
 <https://id.nb.no/vocabulary/ntsf/536>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Dagboksfortellinger"@no, "Diary fiction"@en.
 
 <https://id.nb.no/vocabulary/ntsf/581>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Folkebøker"@no, "Chapbooks"@en.
 
 <https://id.nb.no/vocabulary/ntsf/588>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Salmer"@no, "Psalms (music)"@en.
 
 <https://id.nb.no/vocabulary/ntsf/587>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Religiøse sanger"@no, "Religious songs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/598>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Spøkelseshistorier"@no, "Ghost stories"@en.
 
 <https://id.nb.no/vocabulary/ntsf/614>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Gårds- og slektshistorie"@no, "Farm and family history"@en.
 
 <https://id.nb.no/vocabulary/ntsf/610>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Bygdebøker"@no, "Local history books"@en.
 
 <https://id.nb.no/vocabulary/ntsf/603>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Slektshistorie"@no, "Family histories"@en.
 
 <https://id.nb.no/vocabulary/ntsf/62>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Dokumentarromaner"@no, "Nonfiction novels"@en.
 
 <https://id.nb.no/vocabulary/ntsf/38>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Biografiske fortellinger"@no, "Biographical fiction"@en.
 
 <https://id.nb.no/vocabulary/ntsf/647>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Julekalenderbøker"@no, "Advent calendar books"@en.
 
 <https://id.nb.no/vocabulary/ntsf/7>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Aktstykker"@no, "Historical documents"@en.
 
 <https://id.nb.no/vocabulary/ntsf/883>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Skillingstrykk"@no, "Occasional prints"@en.
 
 <https://id.nb.no/vocabulary/ntsf/895>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Salmebøker"@no, "Psalm books"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1337>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Informasjonsfilmer"@no, "Educational films"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1655>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Bondepraktika"@no, "Farmer's almanacs"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1688>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Krøniker"@no, "Chronicles"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1691>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Skifteprotokoller"@no, "Protocols for division of an inheritance"@en.
 
 <https://id.nb.no/vocabulary/ntsf/179>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Lovregistre"@no, "Law digests"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1936>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Sammendrag"@no, "Summaries"@en.
 
 <https://id.nb.no/vocabulary/ntsf/1842>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Regester"@no, "Regests"@en.
 
 <https://id.nb.no/vocabulary/ntsf/222>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Parlører"@no, "Phrasebooks"@en.
 
 <https://id.nb.no/vocabulary/ntsf/6>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Aktivitetsbøker"@no, "Activity books"@en.
 
 <https://id.nb.no/vocabulary/ntsf/2585>
 		a abi:Genretype;
+		abi:order 1;
 		rdfs:label "Kartografisk materiale"@no, "Cartographic materials"@en.

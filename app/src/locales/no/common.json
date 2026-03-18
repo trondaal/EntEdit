@@ -46,7 +46,11 @@
     "manifestationSearch": "Søk etter utgivelser",
     "searchResults": "Søkeresultater",
     "searchPlaceholder": "Søk etter entiteter med fulltekstsøk…",
-    "searchHelp": "Skriv inn søkeord for å finne entiteter via GraphDBs Lucene-kobling. Søket utføres på tvers av navn og titler."
+    "searchHelp": "Skriv inn søkeord for å finne entiteter via GraphDBs Lucene-kobling. Søket utføres på tvers av navn og titler.",
+    "publications": "Publikasjoner",
+    "publicationsCount": "Publikasjoner ({{count}})",
+    "contents": "Innhold",
+    "contentsCount": "Innhold ({{count}})"
   },
   "messages": {
     "selectClass": "Velg en klasse for å se entiteter",

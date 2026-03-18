@@ -11,7 +11,8 @@ import {
   IconButton,
   Tooltip,
 } from "@mui/material";
-import { ExpandMore, ExpandLess, AccountTree } from "@mui/icons-material";
+import { ExpandMore, ExpandLess, AccountTree, ContentCopy } from "@mui/icons-material";
+import { useSnackbar } from "notistack";
 import { useTranslation } from "react-i18next";
 import type { ManifestationSearchResult as ManifestationSearchResultType } from "../hooks/useSearchQueries";
 import type { SparqlEndpointConfig } from "../types/sparql";
@@ -37,6 +38,7 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
   onEntitySearch,
 }) => {
   const { t } = useTranslation();
+  const { enqueueSnackbar } = useSnackbar();
   const [expressionsExpanded, setExpressionsExpanded] = useState(false);
   const graphUrl = getGraphVisualizationUrl(config.url, result.uri);
 
@@ -204,8 +206,11 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
     if (singleExpression.contenttype) {
       allChips.push(...splitSemicolonValues(singleExpression.contenttype));
     }
-    if (singleExpression.worktype) {
-      allChips.push(...splitSemicolonValues(singleExpression.worktype));
+    if (singleExpression.workcategory) {
+      allChips.push(...splitSemicolonValues(singleExpression.workcategory));
+    }
+    if (singleExpression.genre) {
+      allChips.push(...splitSemicolonValues(singleExpression.genre));
     }
   }
 
@@ -233,6 +238,27 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                   >
                     {formatTitleArea()}
                   </Typography>
+                  <Tooltip title={t("entityEditor:tooltips.copyUri")}>
+                    <IconButton
+                      size="small"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        navigator.clipboard.writeText(result.uri).then(
+                          () => enqueueSnackbar(t("entityEditor:messages.uriCopied"), { variant: "success", autoHideDuration: 2000 }),
+                          () => enqueueSnackbar(t("entityEditor:messages.copyFailed"), { variant: "error" }),
+                        );
+                      }}
+                      sx={{
+                        ml: 1,
+                        mt: -0.5,
+                        p: 0.5,
+                        color: 'text.disabled',
+                        '&:hover': { color: 'primary.main' },
+                      }}
+                    >
+                      <ContentCopy sx={{ fontSize: '1rem' }} />
+                    </IconButton>
+                  </Tooltip>
                   {graphUrl && (
                     <Tooltip title={t("common:buttons.graph")}>
                       <IconButton
@@ -242,7 +268,6 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                           window.open(graphUrl, "_blank", "noopener,noreferrer");
                         }}
                         sx={{
-                          ml: 1,
                           mt: -0.5,
                           p: 0.5,
                           color: 'text.disabled',
@@ -441,7 +466,7 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                   ))}
                   {!isSingleExpression && (
                     <Chip
-                      label={result.expression_count != null ? `Contents (${result.expression_count})` : "Contents"}
+                      label={result.expression_count != null ? t('search.contentsCount', { count: result.expression_count }) : t('search.contents')}
                       size="small"
                       variant="outlined"
                       onClick={handleToggleExpressions}

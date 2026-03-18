@@ -11,7 +11,8 @@ import {
   IconButton,
   Tooltip,
 } from "@mui/material";
-import { ExpandMore, ExpandLess, AccountTree } from "@mui/icons-material";
+import { ExpandMore, ExpandLess, AccountTree, ContentCopy } from "@mui/icons-material";
+import { useSnackbar } from "notistack";
 import { useTranslation } from "react-i18next";
 import type { ExpressionSearchResult } from "../hooks/useSearchQueries";
 import type { SparqlEndpointConfig } from "../types/sparql";
@@ -40,6 +41,7 @@ const Expression: React.FC<ExpressionProps> = ({
   onEntitySearch,
 }) => {
   const { t } = useTranslation();
+  const { enqueueSnackbar } = useSnackbar();
   const [manifestationsExpanded, setManifestationsExpanded] = useState(false);
   const graphUrl = getGraphVisualizationUrl(config.url, result.uri);
 
@@ -175,6 +177,27 @@ const Expression: React.FC<ExpressionProps> = ({
                     </Typography>
                   )}
                 </Box>
+                <Tooltip title={t("entityEditor:tooltips.copyUri")}>
+                  <IconButton
+                    size="small"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      navigator.clipboard.writeText(result.uri).then(
+                        () => enqueueSnackbar(t("entityEditor:messages.uriCopied"), { variant: "success", autoHideDuration: 2000 }),
+                        () => enqueueSnackbar(t("entityEditor:messages.copyFailed"), { variant: "error" }),
+                      );
+                    }}
+                    sx={{
+                      ml: 1,
+                      mt: -0.5,
+                      p: 0.5,
+                      color: 'text.disabled',
+                      '&:hover': { color: 'primary.main' },
+                    }}
+                  >
+                    <ContentCopy sx={{ fontSize: '1rem' }} />
+                  </IconButton>
+                </Tooltip>
                 {graphUrl && (
                   <Tooltip title={t("common:buttons.graph")}>
                     <IconButton
@@ -184,7 +207,6 @@ const Expression: React.FC<ExpressionProps> = ({
                         window.open(graphUrl, "_blank", "noopener,noreferrer");
                       }}
                       sx={{
-                        ml: 1,
                         mt: -0.5,
                         p: 0.5,
                         color: 'text.disabled',
@@ -465,10 +487,24 @@ const Expression: React.FC<ExpressionProps> = ({
                       }}
                     />
                   ))}
-                  {splitValues(result.worktype).map((wt, index) => (
+                  {splitValues(result.workcategory).map((wc, index) => (
                     <Chip
-                      key={`wt-${index}`}
-                      label={capitalizeFirstLetter(wt)}
+                      key={`wc-${index}`}
+                      label={capitalizeFirstLetter(wc)}
+                      size="small"
+                      variant="outlined"
+                      sx={{
+                        height: 20,
+                        fontSize: '0.6875rem',
+                        fontWeight: 500,
+                        borderColor: 'divider',
+                      }}
+                    />
+                  ))}
+                  {splitValues(result.genre).map((g, index) => (
+                    <Chip
+                      key={`genre-${index}`}
+                      label={capitalizeFirstLetter(g)}
                       size="small"
                       variant="outlined"
                       sx={{
@@ -480,7 +516,7 @@ const Expression: React.FC<ExpressionProps> = ({
                     />
                   ))}
                   <Chip
-                    label={result.manifestation_count != null ? `Publications (${result.manifestation_count})` : "Publications"}
+                    label={result.manifestation_count != null ? t('search.publicationsCount', { count: result.manifestation_count }) : t('search.publications')}
                     size="small"
                     variant="outlined"
                     onClick={handleToggleManifestations}

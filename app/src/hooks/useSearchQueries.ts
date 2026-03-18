@@ -14,7 +14,8 @@ export interface ExpressionSearchResult {
   expression_creators?: string;
   language?: string;
   contenttype?: string;
-  worktype?: string;
+  workcategory?: string;
+  genre?: string;
   work_to_work_relationships?: string;
   expression_to_expression_relationships?: string;
   manifestation_count?: number;
@@ -79,13 +80,15 @@ PREFIX rdawd: <http://rdaregistry.info/Elements/w/datatype/>
 PREFIX rdawo: <http://rdaregistry.info/Elements/w/object/>
 PREFIX rdamo: <http://rdaregistry.info/Elements/m/object/>
 PREFIX local: <http://oslomet.no/abi/>
+PREFIX vocab: <http://oslomet.no/abi/vocab#>
 
 SELECT DISTINCT ?expression
 		(SAMPLE(?expressiontitle) as ?expression_title)
 		(SAMPLE(?worktitle) as ?work_title)
 		(GROUP_CONCAT(DISTINCT ?language_label ; SEPARATOR=" ; ") as ?language)
 		(GROUP_CONCAT(DISTINCT ?contenttype_label ; SEPARATOR=" ; ") as ?contenttype)
-		(GROUP_CONCAT(DISTINCT ?worktype_label ; SEPARATOR=" ; ") as ?worktype)
+		(GROUP_CONCAT(DISTINCT ?workcategory_label ; SEPARATOR=" ; ") as ?workcategory)
+		(GROUP_CONCAT(DISTINCT ?genre_label ; SEPARATOR=" ; ") as ?genre)
 		(GROUP_CONCAT(DISTINCT CONCAT(?work_agent_relationship_label, ": ", ?work_agent_names) ; SEPARATOR=" ; ") as ?work_creators)
 		(GROUP_CONCAT(DISTINCT CONCAT(?expression_agent_relationship_label, ": ", ?expression_agent_names) ; SEPARATOR=" ; ") as ?expression_creators)
 		(GROUP_CONCAT(DISTINCT CONCAT(?work_to_work_relationship_label, ": ", ?target_work_title) ; SEPARATOR=" ; ") as ?work_to_work_relationships)
@@ -131,9 +134,14 @@ WHERE {
         FILTER(LANG(?contenttype_label) = "${escapeSparqlLiteral(language)}")
     }
     OPTIONAL {
-        ?work rdawo:P10004 ?worktype .
-        ?worktype rdfs:label ?worktype_label .
-        FILTER(LANG(?worktype_label) = "${escapeSparqlLiteral(language)}")
+        ?work vocab:P01 ?workcategory .
+        ?workcategory rdfs:label ?workcategory_label .
+        FILTER(LANG(?workcategory_label) = "${escapeSparqlLiteral(language)}")
+    }
+    OPTIONAL {
+        ?work vocab:P02 ?genre_entity .
+        ?genre_entity rdfs:label ?genre_label .
+        FILTER(LANG(?genre_label) = "${escapeSparqlLiteral(language)}")
     }
 
     #Work to agent relationships
@@ -265,7 +273,8 @@ OFFSET ${pageParam}
         expression_creators: binding.expression_creators?.value,
         language: binding.language?.value,
         contenttype: binding.contenttype?.value,
-        worktype: binding.worktype?.value,
+        workcategory: binding.workcategory?.value,
+        genre: binding.genre?.value,
         work_to_work_relationships: binding.work_to_work_relationships?.value,
         expression_to_expression_relationships:
           binding.expression_to_expression_relationships?.value,
