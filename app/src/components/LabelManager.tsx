@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import {
   Dialog,
   DialogTitle,
@@ -17,10 +17,80 @@ import {
   TableHead,
   TableRow,
   Tooltip,
+  Paper,
+  type PaperProps,
 } from "@mui/material";
-import { Add, Delete, Edit, Save, Cancel, Label } from "@mui/icons-material";
+import { Add, Delete, Edit, Save, Cancel, Label, DragIndicator } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import { SUPPORTED_LANGUAGES } from "../utils/sparqlFragments";
+
+/**
+ * Custom draggable Paper for MUI Dialog.
+ * Uses native pointer events — no external library needed, React 19 safe.
+ */
+const DraggablePaper = React.forwardRef<HTMLDivElement, PaperProps>(
+  function DraggablePaper(props, ref) {
+    const paperRef = useRef<HTMLDivElement>(null);
+    const offsetRef = useRef({ x: 0, y: 0 });
+    const posRef = useRef({ x: 0, y: 0 });
+    const dragging = useRef(false);
+
+    // Merge forwarded ref with local ref
+    const setRef = useCallback(
+      (node: HTMLDivElement | null) => {
+        (paperRef as React.MutableRefObject<HTMLDivElement | null>).current = node;
+        if (typeof ref === "function") ref(node);
+        else if (ref) (ref as React.MutableRefObject<HTMLDivElement | null>).current = node;
+      },
+      [ref],
+    );
+
+    useEffect(() => {
+      const paper = paperRef.current;
+      if (!paper) return;
+
+      const handle = paper.querySelector<HTMLElement>("[data-drag-handle]");
+      if (!handle) return;
+
+      const onPointerDown = (e: PointerEvent) => {
+        // Only drag on the handle itself, not on buttons/inputs inside it
+        if ((e.target as HTMLElement).closest("button, input, select, textarea")) return;
+        dragging.current = true;
+        offsetRef.current = {
+          x: e.clientX - posRef.current.x,
+          y: e.clientY - posRef.current.y,
+        };
+        handle.setPointerCapture(e.pointerId);
+        e.preventDefault();
+      };
+
+      const onPointerMove = (e: PointerEvent) => {
+        if (!dragging.current) return;
+        posRef.current = {
+          x: e.clientX - offsetRef.current.x,
+          y: e.clientY - offsetRef.current.y,
+        };
+        paper.style.transform = `translate(${posRef.current.x}px, ${posRef.current.y}px)`;
+      };
+
+      const onPointerUp = () => {
+        dragging.current = false;
+      };
+
+      handle.addEventListener("pointerdown", onPointerDown);
+      handle.addEventListener("pointermove", onPointerMove);
+      handle.addEventListener("pointerup", onPointerUp);
+
+      return () => {
+        handle.removeEventListener("pointerdown", onPointerDown);
+        handle.removeEventListener("pointermove", onPointerMove);
+        handle.removeEventListener("pointerup", onPointerUp);
+      };
+    }, []);
+
+    return <Paper ref={setRef} {...props} />;
+  },
+);
 
 interface LabelEntry {
   id: string;
@@ -130,8 +200,28 @@ const LabelManager: React.FC<LabelManagerProps> = ({
   };
 
   return (
-    <Dialog open={open} onClose={handleClose} maxWidth="sm" fullWidth>
-      <DialogTitle sx={{ display: "flex", alignItems: "center", gap: 1, pb: 1 }}>
+    <Dialog
+      open={open}
+      onClose={handleClose}
+      maxWidth="sm"
+      fullWidth
+      PaperComponent={DraggablePaper}
+      aria-labelledby="label-manager-dialog-title"
+      hideBackdrop
+      disableScrollLock
+      sx={{
+        // Allow interaction with content behind the dialog
+        pointerEvents: "none",
+        "& .MuiDialog-container": { pointerEvents: "none" },
+        "& .MuiPaper-root": { pointerEvents: "auto" },
+      }}
+    >
+      <DialogTitle
+        data-drag-handle
+        id="label-manager-dialog-title"
+        sx={{ display: "flex", alignItems: "center", gap: 1, pb: 1, cursor: "move", userSelect: "none" }}
+      >
+        <DragIndicator fontSize="small" sx={{ color: "text.disabled" }} />
         <Label fontSize="small" />
         {t("labelManager.title")}
       </DialogTitle>
