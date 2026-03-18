@@ -1,0 +1,18 @@
+{
+  "name": "entedit-db-utils",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "rdf2ttl": "npx tsx rdf-to-turtle.ts"
+  },
+  "dependencies": {
+    "sax": "^1.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/sax": "^1.2.7",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
