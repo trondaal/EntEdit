@@ -14,24 +14,25 @@
 abi:StatusLiteral a rdfs:Datatype ;
     owl:oneOf ("core wemi property" "data property" "object property" "class" "controlled property" "deprecated" "not used") .
 
-abi:status a owl:DatatypeProperty ;
+abi:status
+    a owl:DatatypeProperty ;
     rdfs:range abi:StatusLiteral ;
     rdfs:label "has status (literal)" .
 
 abi:order a owl:DatatypeProperty .
 
 #Adding some classes for the vocabularies used ta facilitate filtering by range
-abi:Contenttype a owl:Class .
-abi:Contenttype rdfs:label "Innholdstyper"@no .
-abi:Contenttype rdfs:label "Content types"@en .
+abi:Contenttype
+  a owl:Class ;
+  rdfs:label "Innholdstype"@no, "Content type"@en .
 
-abi:Carriertype a owl:Class .
-abi:Carriertype rdfs:label "Bærertyper"@no .
-abi:Carriertype rdfs:label "Carrier types"@en .
+abi:Carriertype
+  a owl:Class ;
+  rdfs:label "Bærertype"@no, "Carrier types"@en .
 
 abi:Mediatype
   a owl:Class ;
-  rdfs:label "Medietyper"@no, "Media types"@en .
+  rdfs:label "Medietype"@no, "Media type"@en .
 
 abi:Language
   a owl:Class ;
@@ -39,21 +40,25 @@ abi:Language
 
 abi:Worktype
   a owl:Class ;
-  rdfs:label "Verkstyper"@no, "Work types"@en .
+  rdfs:label "Kategori av verk"@no, "Category of work"@en .
 
 abi:Genretype
   a owl:Class ;
   rdfs:label  "Sjanger og form"@no, "Genre and form"@en .
 
-abi:P01 a owl:ObjectProperty ;
-    abi:status "controlled property" ;
-    rdfs:subPropertyOf rdawo:P10004 ;
-    rdfs:range abi:Worktype ;
-    rdfs:label "Verkstype"@no, "Type of work"@en.
-
-abi:P02 a owl:ObjectProperty ;
+abi:P01
+  a rdf:Property ;
   abi:status "controlled property" ;
   rdfs:subPropertyOf rdawo:P10004 ;
+  rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
+  rdfs:range abi:Worktype ;
+  rdfs:label "Verkstype"@no, "Type of work"@en.
+
+abi:P02
+  a rdf:Property ;
+  abi:status "controlled property" ;
+  rdfs:subPropertyOf rdawo:P10004 ;
+  rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
   rdfs:range abi:Genretype ;
   rdfs:label "Sjanger eller form"@no, "Genre or form"@en.
 
@@ -90,8 +95,15 @@ rdaed:P20315	abi:status "data property" ; abi:order   2 ; rdfs:label "foretrukke
 rdaed:P20316	abi:status "data property" ; abi:order   3 ; rdfs:label "tittelvariant"@no . #"titlevariant"@en .
 #rdaed:P20071	abi:status "data property" ; rdfs:label "har note om uttrykk"@no . #"contentsnote"@en .
 
-rdaeo:P20006	abi:status "controlled property" ; rdfs:range  abi:Language ; rdfs:label "språk"@no . #"language"@en .
-rdaeo:P20001	abi:status "controlled property" ; rdfs:range  abi:Contenttype ; rdfs:label "innholdstype"@no . #"content"@en .
+rdaeo:P20006	abi:status "controlled property" ;
+              rdfs:domain  <http://rdaregistry.info/Elements/c/C10006> ; #missing in RDA
+              rdfs:range  abi:Language ;
+              rdfs:label "språk"@no . #"language"@en .
+
+rdaeo:P20001	abi:status "controlled property" ;
+              rdfs:domain  <http://rdaregistry.info/Elements/c/C10006> ; #missing in RDA
+              rdfs:range  abi:Contenttype ;
+              rdfs:label "innholdstype"@no . #"content"@en .
 
 #Manifestation profile
 rdamd:P30156	abi:status "data property" ; abi:order 1 ; rdfs:label "tittel"@no . #"title"@en .
@@ -138,8 +150,15 @@ rdamd:P30106	abi:status "data property" ; abi:order 20 ; rdfs:label "serieangive
 rdamd:P30165	abi:status "data property" ; abi:order 21 ; rdfs:label "nummerering i serie"@no . #"seriesnumbering"@en .
 #rdamd:P30050	abi:status "data property" ; rdfs:label "har note om hefte, del, eller versjon brukt som grunnlag for identifisering av manifestasjon"@no . #"partnote"@en .
 
-rdamo:P30002	  abi:status "controlled property" ; rdfs:range  abi:Mediatype ; rdfs:label "medietype"@no . #"mediatype"@en .
-rdamo:P30001	  abi:status "controlled property" ;  rdfs:range  abi:Carriertype ; rdfs:label "bærertype"@no . #"carrier"@en .
+rdamo:P30002	  abi:status "controlled property" ;
+                rdfs:domain  <http://rdaregistry.info/Elements/c/C10007> ; #missing in RDA
+                rdfs:range  abi:Mediatype ;
+                rdfs:label "medietype"@no . #"mediatype"@en .
+
+rdamo:P30001	  abi:status "controlled property" ;
+                rdfs:domain  <http://rdaregistry.info/Elements/c/C10007> ; #missing in RDA
+                rdfs:range  abi:Carriertype ;
+                rdfs:label "bærertype"@no . #"carrier"@en .
 
 #Basic WEMI types
 

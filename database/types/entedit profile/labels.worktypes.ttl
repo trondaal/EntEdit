@@ -1,36 +1,40 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix abi: <http://oslomet.no/abi/vocab#> .
+@prefix vtp: <https://schema.nb.no/Bibliographic/Values/> .
 
 #Verkstyper - legger til 'no' label siden orginaldata kun har 'nb', 'nn', og 'en' label
 #Legger alle instanser til en ny ad hoc klasse for å kunne filtrere
 
-<https://schema.nb.no/Bibliographic/Values/V1000>	rdfs:label	"Språkbasert verk"@no .
-<https://schema.nb.no/Bibliographic/Values/V1000>   a           abi:Worktype .
+vtp:V1000
+  a abi:Worktype ;
+  rdfs:label "Språkbasert verk"@no .
 
-<https://schema.nb.no/Bibliographic/Values/V1001>	rdfs:label	"Musikkverk"@no .
-<https://schema.nb.no/Bibliographic/Values/V1001>   a           abi:Worktype .
+vtp:V1001
+  a abi:Worktype ;
+  rdfs:label "Musikkverk"@no .
 
-<https://schema.nb.no/Bibliographic/Values/V1002>	rdfs:label	"Filmverk"@no .
-<https://schema.nb.no/Bibliographic/Values/V1002>   a           abi:Worktype .
 
-<https://schema.nb.no/Bibliographic/Values/V1003>	rdfs:label	"Bildeverk"@no .
-<https://schema.nb.no/Bibliographic/Values/V1003>   a           abi:Worktype .
+vtp:V1002	rdfs:label	"Filmverk"@no .
+vtp:V1002   a           abi:Worktype .
 
-<https://schema.nb.no/Bibliographic/Values/V1004>	rdfs:label	"Kartografisk verk"@no .
-<https://schema.nb.no/Bibliographic/Values/V1004>   a           abi:Worktype .
+vtp:V1003	rdfs:label	"Bildeverk"@no .
+vtp:V1003   a           abi:Worktype .
 
-<https://schema.nb.no/Bibliographic/Values/V1005>	rdfs:label	"Interaktivt verk"@no .
-<https://schema.nb.no/Bibliographic/Values/V1005>   a           abi:Worktype .
+vtp:V1004	rdfs:label	"Kartografisk verk"@no .
+vtp:V1004   a           abi:Worktype .
 
-<https://schema.nb.no/Bibliographic/Values/V1006>	rdfs:label	"Kringkastingsverk"@no .
-<https://schema.nb.no/Bibliographic/Values/V1006>   a           abi:Worktype .
+vtp:V1005	rdfs:label	"Interaktivt verk"@no .
+vtp:V1005   a           abi:Worktype .
 
-<https://schema.nb.no/Bibliographic/Values/V1007>	rdfs:label	"Fysisk objekt som verk"@no .
-<https://schema.nb.no/Bibliographic/Values/V1007>   a           abi:Worktype .
+vtp:V1006	rdfs:label	"Kringkastingsverk"@no .
+vtp:V1006   a           abi:Worktype .
 
-<https://schema.nb.no/Bibliographic/Values/V1008>	rdfs:label	"Sammensatt verk"@no .
-<https://schema.nb.no/Bibliographic/Values/V1008>   a           abi:Worktype .
+vtp:V1007	rdfs:label	"Fysisk objekt som verk"@no .
+vtp:V1007   a           abi:Worktype .
 
-<https://schema.nb.no/Bibliographic/Values/V1009>	rdfs:label	"Framføringsverk"@no .
-<https://schema.nb.no/Bibliographic/Values/V1009>   a           abi:Worktype .
+vtp:V1008	rdfs:label	"Sammensatt verk"@no .
+vtp:V1008   a           abi:Worktype .
+
+vtp:V1009	rdfs:label	"Framføringsverk"@no .
+vtp:V1009   a           abi:Worktype .
