@@ -26,14 +26,13 @@ import { SUPPORTED_LANGUAGES } from "../utils/sparqlFragments";
 
 /**
  * Custom draggable Paper for MUI Dialog.
- * Uses native pointer events — no external library needed, React 19 safe.
+ * Uses mousedown on the handle + document-level mousemove/mouseup so that
+ * pointer capture never interferes with text selection in the main window.
  */
 const DraggablePaper = React.forwardRef<HTMLDivElement, PaperProps>(
   function DraggablePaper(props, ref) {
     const paperRef = useRef<HTMLDivElement>(null);
-    const offsetRef = useRef({ x: 0, y: 0 });
     const posRef = useRef({ x: 0, y: 0 });
-    const dragging = useRef(false);
 
     // Merge forwarded ref with local ref
     const setRef = useCallback(
@@ -52,40 +51,35 @@ const DraggablePaper = React.forwardRef<HTMLDivElement, PaperProps>(
       const handle = paper.querySelector<HTMLElement>("[data-drag-handle]");
       if (!handle) return;
 
-      const onPointerDown = (e: PointerEvent) => {
-        // Only drag on the handle itself, not on buttons/inputs inside it
-        if ((e.target as HTMLElement).closest("button, input, select, textarea")) return;
-        dragging.current = true;
-        offsetRef.current = {
-          x: e.clientX - posRef.current.x,
-          y: e.clientY - posRef.current.y,
+      const onMouseDown = (e: MouseEvent) => {
+        // Only drag on the handle itself, not on interactive children
+        if ((e.target as HTMLElement).closest("button, input, select, textarea, a")) return;
+
+        const startX = e.clientX - posRef.current.x;
+        const startY = e.clientY - posRef.current.y;
+
+        const onMouseMove = (ev: MouseEvent) => {
+          posRef.current = {
+            x: ev.clientX - startX,
+            y: ev.clientY - startY,
+          };
+          paper.style.transform = `translate(${posRef.current.x}px, ${posRef.current.y}px)`;
         };
-        handle.setPointerCapture(e.pointerId);
+
+        const onMouseUp = () => {
+          document.removeEventListener("mousemove", onMouseMove);
+          document.removeEventListener("mouseup", onMouseUp);
+        };
+
+        document.addEventListener("mousemove", onMouseMove);
+        document.addEventListener("mouseup", onMouseUp);
+
+        // Prevent text selection only during the drag gesture
         e.preventDefault();
       };
 
-      const onPointerMove = (e: PointerEvent) => {
-        if (!dragging.current) return;
-        posRef.current = {
-          x: e.clientX - offsetRef.current.x,
-          y: e.clientY - offsetRef.current.y,
-        };
-        paper.style.transform = `translate(${posRef.current.x}px, ${posRef.current.y}px)`;
-      };
-
-      const onPointerUp = () => {
-        dragging.current = false;
-      };
-
-      handle.addEventListener("pointerdown", onPointerDown);
-      handle.addEventListener("pointermove", onPointerMove);
-      handle.addEventListener("pointerup", onPointerUp);
-
-      return () => {
-        handle.removeEventListener("pointerdown", onPointerDown);
-        handle.removeEventListener("pointermove", onPointerMove);
-        handle.removeEventListener("pointerup", onPointerUp);
-      };
+      handle.addEventListener("mousedown", onMouseDown);
+      return () => handle.removeEventListener("mousedown", onMouseDown);
     }, []);
 
     return <Paper ref={setRef} {...props} />;
