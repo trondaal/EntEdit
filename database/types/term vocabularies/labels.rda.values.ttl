@@ -2,7 +2,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
-#Adding rdfs:labels
+#Adding rdfs:labels and associating the carrier types with an ad hoc type for filtering by range
 <http://rdaregistry.info/termList/RDACarrierType/1002> a abi:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1002>	<http://www.w3.org/2000/01/rdf-schema#label>	"Audio cartridge"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1002>	<http://www.w3.org/2000/01/rdf-schema#label>	"Lyd-cartridge"@no	 .

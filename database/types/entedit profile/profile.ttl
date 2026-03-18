@@ -20,38 +20,48 @@ abi:status a owl:DatatypeProperty ;
 
 abi:order a owl:DatatypeProperty .
 
-#Adding some classes for the vocabularies used since difficult to differentiate skos:Concept
+#Adding some classes for the vocabularies used ta facilitate filtering by range
 abi:Contenttype a owl:Class .
 abi:Contenttype rdfs:label "Innholdstyper"@no .
 abi:Contenttype rdfs:label "Content types"@en .
 
-#Adding some semantics to the data
 abi:Carriertype a owl:Class .
 abi:Carriertype rdfs:label "Bærertyper"@no .
 abi:Carriertype rdfs:label "Carrier types"@en .
 
-#Adding some semantics to the data
-abi:Mediatype a owl:Class .
-abi:Mediatype rdfs:label "Medietyper"@no .
-abi:Mediatype rdfs:label "Media types"@en .
+abi:Mediatype
+  a owl:Class ;
+  rdfs:label "Medietyper"@no, "Media types"@en .
 
-#Adding some semantics to the data
-abi:Language a owl:Class .
-abi:Language rdfs:label "Språk"@no .
-abi:Language rdfs:label "Language"@en .
+abi:Language
+  a owl:Class ;
+  rdfs:label "Språk"@no, "Language"@en .
 
-#Classes
-rdac:C10002             abi:status "class" .  # "Agent"@en .
-rdac:C10001             abi:status "class" .  # "Work"@en .
-rdac:C10006             abi:status "class" .  # "Expression"@en .
-rdac:C10007             abi:status "class" .  # "Manifestation"@en .
+abi:Worktype
+  a owl:Class ;
+  rdfs:label "Verkstyper"@no, "Work types"@en .
 
-# <http://www.w3.org/2004/02/skos/core#Concept>			    abi:status "class" .  # "Concept"@en .
-#abi:Worktype		                                        abi:status "class" .  # "Verkstype"@en .
-#abi:Language			                                    abi:status "class" .  # "Språk"@en .
-#abi:Contenttype			                                abi:status "class" .  # "Innholdstype"@en .
-#abi:Carriertype  			                                abi:status "class" .  # "Bærertype"@en .
-#abi:Mediatype			                                    abi:status "class" .  # "Mediatype"@en .
+abi:Genretype
+  a owl:Class ;
+  rdfs:label  "Sjanger og form"@no, "Genre and form"@en .
+
+abi:P01 a owl:ObjectProperty ;
+    abi:status "controlled property" ;
+    rdfs:subPropertyOf rdawo:P10004 ;
+    rdfs:range abi:Worktype ;
+    rdfs:label "Verkstype"@no, "Type of work"@en.
+
+abi:P02 a owl:ObjectProperty ;
+  abi:status "controlled property" ;
+  rdfs:subPropertyOf rdawo:P10004 ;
+  rdfs:range abi:Genretype ;
+  rdfs:label "Sjanger eller form"@no, "Genre or form"@en.
+
+#All classes with status "class" are displayed in the entity browsers class display
+rdac:C10002 abi:status "class" .  # "Agent"@en .
+rdac:C10001 abi:status "class" .  # "Work"@en .
+rdac:C10006 abi:status "class" .  # "Expression"@en .
+rdac:C10007 abi:status "class" .  # "Manifestation"@en .
 
 #Agent profile, data properties
 rdaad:P50385	abi:status "data property" ; abi:order 1 ; rdfs:label "navn"@no . #"name"@en .
@@ -70,7 +80,7 @@ rdawd:P10330	abi:status "data property" ; abi:order 8 ; rdfs:label "note"@no . #
 
 # Defining the object type version of this property the type "controlled property"
 # Also using ad hoc range type to be able to filter the relevant values in the user interface
-rdawo:P10004	    abi:status "controlled property" ; rdfs:range abi:Worktype ; rdfs:label "verkstype"@no . #"type"@en .
+#rdawo:P10004	    abi:status "controlled property" ; rdfs:range abi:Worktype ; rdfs:label "verkstype"@no . #"type"@en .
 
 #Expression profile, data properties
 #rdaed:P20006	abi:status "data property" ; rdfs:label "har språk i uttrykk"@no . #"language"@en .

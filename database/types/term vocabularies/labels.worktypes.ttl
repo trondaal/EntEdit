@@ -2,11 +2,6 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix abi: <http://oslomet.no/abi/vocab#> .
 
-#Adding some semantics to the data
-abi:Worktype a owl:Class .
-abi:Worktype rdfs:label "Verkstyper"@no .
-abi:Worktype rdfs:label "Work types"@en .
-
 #Verkstyper - legger til 'no' label siden orginaldata kun har 'nb', 'nn', og 'en' label
 #Legger alle instanser til en ny ad hoc klasse for å kunne filtrere
 
