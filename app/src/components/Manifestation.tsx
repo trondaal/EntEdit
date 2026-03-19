@@ -6,6 +6,7 @@ import {
   Typography,
   Box,
   Chip,
+  Link,
 } from "@mui/material";
 import type { Manifestation as ManifestationType } from "../hooks/useManifestationQueries";
 
@@ -14,12 +15,14 @@ interface ManifestationProps {
   isSelected: boolean;
   onSelect: (uri: string) => void;
   selectedLanguage: string;
+  onEntitySearch?: (name: string) => void;
 }
 
 const Manifestation: React.FC<ManifestationProps> = ({
   manifestation,
   isSelected,
   onSelect,
+  onEntitySearch,
 }) => {
   // Helper function to capitalize first letter
   const capitalizeFirstLetter = (text: string | undefined): string | undefined => {
@@ -187,7 +190,34 @@ const Manifestation: React.FC<ManifestationProps> = ({
                       </Box>
                       {' '}
                       <Box component="span">
-                        {creator.names.join(' ; ')}
+                        {creator.names.map((name, nameIndex) => (
+                          <React.Fragment key={nameIndex}>
+                            {nameIndex > 0 && ' ; '}
+                            {onEntitySearch ? (
+                              <Link
+                                component="button"
+                                variant="body2"
+                                onClick={(e: React.MouseEvent) => {
+                                  e.stopPropagation();
+                                  onEntitySearch(name);
+                                }}
+                                sx={{
+                                  textDecoration: 'none',
+                                  '&:hover': { textDecoration: 'underline' },
+                                  cursor: 'pointer',
+                                  color: 'inherit',
+                                  verticalAlign: 'baseline',
+                                  fontSize: 'inherit',
+                                  lineHeight: 'inherit',
+                                }}
+                              >
+                                {name}
+                              </Link>
+                            ) : (
+                              name
+                            )}
+                          </React.Fragment>
+                        ))}
                       </Box>
                     </Typography>
                   ))}

@@ -546,6 +546,7 @@ const Expression: React.FC<ExpressionProps> = ({
           selectedManifestationUri={selectedManifestationUri}
           onManifestationSelect={onManifestationSelect}
           selectedLanguage={selectedLanguage}
+          onEntitySearch={onEntitySearch}
         />
       </Collapse>
       <Box

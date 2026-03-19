@@ -269,7 +269,7 @@ const LabelManager: React.FC<LabelManagerProps> = ({
                       ))}
                     </Select>
                   </TableCell>
-                  <TableCell sx={{ py: 0.5 }}>
+                  <TableCell sx={{ py: 0.5, whiteSpace: "nowrap" }}>
                     <Tooltip title={t("labelManager.tooltips.save")}>
                       <IconButton size="small" onClick={handleSaveRow} color="primary">
                         <Save fontSize="small" />
@@ -288,7 +288,7 @@ const LabelManager: React.FC<LabelManagerProps> = ({
                   <TableCell sx={{ color: "text.secondary", fontSize: "0.8rem" }}>
                     {label.language ? label.language.toUpperCase() : "—"}
                   </TableCell>
-                  <TableCell>
+                  <TableCell sx={{ whiteSpace: "nowrap" }}>
                     <Tooltip title={t("labelManager.tooltips.edit")}>
                       <span>
                         <IconButton

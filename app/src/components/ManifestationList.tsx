@@ -15,6 +15,7 @@ interface ManifestationListProps {
   selectedManifestationUri: string | null;
   onManifestationSelect: (uri: string) => void;
   selectedLanguage: string;
+  onEntitySearch?: (name: string) => void;
 }
 
 const ManifestationList: React.FC<ManifestationListProps> = ({
@@ -23,6 +24,7 @@ const ManifestationList: React.FC<ManifestationListProps> = ({
   selectedManifestationUri,
   onManifestationSelect,
   selectedLanguage,
+  onEntitySearch,
 }) => {
   const {
     data: manifestations,
@@ -67,6 +69,7 @@ const ManifestationList: React.FC<ManifestationListProps> = ({
           isSelected={selectedManifestationUri === manifestation.uri}
           onSelect={onManifestationSelect}
           selectedLanguage={selectedLanguage}
+          onEntitySearch={onEntitySearch}
         />
       ))}
     </List>
