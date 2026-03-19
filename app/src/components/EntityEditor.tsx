@@ -141,11 +141,8 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       const query = `
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX entedit: <http://oslomet.no/abi/vocab#>
-        SELECT DISTINCT ?property ?value ?order ?valueOrder WHERE {
+        SELECT DISTINCT ?property ?value ?valueOrder WHERE {
           <${sanitizedUri}> ?property ?value .
-          OPTIONAL{
-            ?property entedit:order ?order
-          }
           OPTIONAL {
             << <${sanitizedUri}> ?property ?value >> entedit:valueOrder ?valueOrder .
           }
@@ -189,7 +186,8 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
             : undefined;
           const order = explicitOrder ?? propertyCounters[property];
           propertyCounters[property] = Math.max(propertyCounters[property], order) + 1;
-          data[property].push({ value, order });
+          const isUri = binding.value.type === "uri";
+          data[property].push({ value, order, isUri });
         }
       });
 
@@ -284,11 +282,13 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
       Object.entries(entityData).forEach(([property, values]) => {
         const hasMultipleValues = values.filter(({ value }) => value.trim()).length > 1;
-        values.forEach(({ value, order }) => {
+        values.forEach(({ value, order, isUri }) => {
           if (value.trim()) {
             const sanitizedProp = sanitizeSparqlUri(property);
             let objectValue: string;
-            if (objectPropertyUris.has(property)) {
+            // Use isUri from the SPARQL binding type as fallback for properties
+            // not in objectPropertyUris (e.g. untagged relationship properties)
+            if (objectPropertyUris.has(property) || isUri) {
               objectValue = `<${sanitizeSparqlUri(value)}>`;
             } else {
               objectValue = `"${escapeSparqlLiteral(value)}"`;
@@ -314,32 +314,81 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       `;
 
       if (entityUri) {
-        // For existing entities, delete old triples and RDF-star annotations
+        // For existing entities, only delete properties that the editor manages.
+        // Unmanaged properties (those without the correct entedit:status or
+        // incoming-only triples from other entities) are left untouched.
         const sanitizedUri = sanitizeSparqlUri(entityUri!);
-        // First delete RDF-star annotations on outgoing triples
+
+        // Managed properties: rdf:type, rdfs:label, all data properties, all object properties
+        const managedPropertyUris = new Set<string>();
+        managedPropertyUris.add("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
+        managedPropertyUris.add("http://www.w3.org/2000/01/rdf-schema#label");
+        properties.forEach((p) => managedPropertyUris.add(p.uri));
+        objectPropertyUris.forEach((uri) => managedPropertyUris.add(uri));
+
+        const managedValues = [...managedPropertyUris]
+          .map((uri) => `<${sanitizeSparqlUri(uri)}>`)
+          .join(" ");
+
+        // Delete RDF-star annotations on managed outgoing triples
         const deleteAnnotationsQuery = `
-          DELETE WHERE {
+          DELETE {
             << <${sanitizedUri}> ?p ?o >> ?annotPred ?annotVal .
+          }
+          WHERE {
+            << <${sanitizedUri}> ?p ?o >> ?annotPred ?annotVal .
+            VALUES ?p { ${managedValues} }
           }
         `;
         await client.update(deleteAnnotationsQuery);
-        // Then delete both outgoing and incoming statements to handle inverse properties
+
+        // Delete managed outgoing triples only
         const deleteQuery = `
           DELETE {
             <${sanitizedUri}> ?p ?o .
-            ?s ?p2 <${sanitizedUri}> .
           }
           WHERE {
-            {
-              <${sanitizedUri}> ?p ?o .
-            }
-            UNION
-            {
-              ?s ?p2 <${sanitizedUri}> .
-            }
+            <${sanitizedUri}> ?p ?o .
+            VALUES ?p { ${managedValues} }
           }
         `;
         await client.update(deleteQuery);
+
+        // Handle inverse properties: find object property values that were
+        // removed by the user and delete incoming triples from those entities.
+        // This ensures that when a user removes a relationship that was stored
+        // in the inverse direction, the asserted incoming triple is also cleaned up.
+        const oldData = existingEntity?.data ?? {};
+        const removedEntityUris = new Set<string>();
+        for (const [prop, oldValues] of Object.entries(oldData)) {
+          // Only check properties where values are URIs (object properties)
+          if (!oldValues.some((v) => v.isUri)) continue;
+          const newValues = new Set(
+            (entityData[prop] || []).map((v) => v.value),
+          );
+          for (const ov of oldValues) {
+            if (ov.isUri && ov.value && !newValues.has(ov.value)) {
+              removedEntityUris.add(ov.value);
+            }
+          }
+        }
+
+        if (removedEntityUris.size > 0) {
+          // For each removed entity, delete any incoming triples pointing to us
+          const removedUriValues = [...removedEntityUris]
+            .map((uri) => `<${sanitizeSparqlUri(uri)}>`)
+            .join(" ");
+          const deleteInverseQuery = `
+            DELETE {
+              ?s ?p <${sanitizedUri}> .
+            }
+            WHERE {
+              ?s ?p <${sanitizedUri}> .
+              VALUES ?s { ${removedUriValues} }
+            }
+          `;
+          await client.update(deleteInverseQuery);
+        }
       }
 
       await client.update(insertQuery);
@@ -369,7 +418,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     } finally {
       setSaving(false);
     }
-  }, [classUri, config, entityUri, customEntityUri, entityData, entityLabels, queryClient, onEntitySaved]);
+  }, [classUri, config, entityUri, customEntityUri, entityData, entityLabels, existingEntity, queryClient, onEntitySaved]);
 
   const handleDelete = useCallback(async () => {
     if (!entityUri) return;
@@ -514,7 +563,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           : 0;
         return {
           ...prev,
-          [propertyUri]: [...currentValues, { value: entityUri, order: maxOrder }],
+          [propertyUri]: [...currentValues, { value: entityUri, order: maxOrder, isUri: true }],
         };
       });
       setIsDirty(true);

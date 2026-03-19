@@ -581,8 +581,8 @@ rdamo:P30083	abi:status	"object property" ; rdfs:label "har utgiver"@no . #	has 
 rdaao:P50242	abi:status	"object property" ; rdfs:label "er papirprodusent"@no . #	is papermaker agent of	rdac:C10002	rdac:C10007
 rdamo:P30215	abi:status	"object property" ; rdfs:label "har papirprodusent"@no . #	has papermaker agent	rdac:C10007	rdac:C10002
 
-#rdaao:P50307	abi:status	"object property" ; rdfs:label "har manifestasjon relatert til agent"@no . #	has related manifestation of agent	rdac:C10002	rdac:C10007
-#rdamo:P30267	abi:status	"object property" ; rdfs:label "har agent relatert til manifestasjon"@no . #	has related agent of manifestation	rdac:C10007	rdac:C10002
+rdaao:P50307	abi:status	"object property" ; rdfs:label "har manifestasjon relatert til agent"@no . #	has related manifestation of agent	rdac:C10002	rdac:C10007
+rdamo:P30267	abi:status	"object property" ; rdfs:label "har agent relatert til manifestasjon"@no . #	has related agent of manifestation	rdac:C10007	rdac:C10002
 
 rdaao:P50459	abi:status	"object property" ; rdfs:label "er musikk-bidragsyter"@no . #	is contributor agent of music of	rdac:C10002	rdac:C10007
 rdamo:P30311	abi:status	"object property" ; rdfs:label "har musikk-bidragsyter"@no . #	has contributor agent of music	rdac:C10007	rdac:C10002

@@ -67,6 +67,7 @@ EntEdit/
 - `DataPropertiesSection` - Manages datatype properties (text values)
 - `EntityLabelsSection` - Manages rdfs:label in multiple languages
 - `ObjectPropertySection` - Displays and manages object property values
+- `OrderableValueList` - Drag-and-drop reordering for multi-value properties (@dnd-kit)
 
 **WEMI Display:**
 - `Expression`, `ExpressionList` - Expression view and list
@@ -128,6 +129,48 @@ EntEdit/
 - Property ordering via `entedit:order` predicate
 - Language-aware queries with COALESCE fallback (selected → untagged → fallback)
 - GraphDB Lucene connector for full-text search (`lucene:query`)
+- RDF-star annotations for value ordering: `<< <s> <p> <o> >> entedit:valueOrder N`
+
+### Entity Save/Delete Strategy
+
+The entity load query runs WITH inference (`infer: true`), so it returns both
+asserted triples and inferred inverse properties. This has critical implications:
+
+**Save (targeted delete + re-insert):**
+1. Only delete outgoing triples for **managed** properties (rdf:type, rdfs:label,
+   data properties from `properties`, object properties from `objectPropertyUris`)
+2. Diff old vs new `entityData` to find removed object property URI values
+3. For each removed URI value, delete incoming triples from that entity
+   (`<removedEntity> ?p <thisEntity>`) to clean up asserted inverse triples
+4. Re-insert all current data from `entityData`
+
+**Why targeted delete:** A blanket `DELETE { <e> ?p ?o . ?s ?p2 <e> . }` destroys
+incoming triples from other entities and properties not managed by the editor
+(those without `entedit:status`). These can't be restored because they may never
+appear in `entityData` (incoming-only) or get serialized as literals instead of URIs.
+
+**Entity delete (full blanket):** Deletes ALL outgoing + incoming triples and
+RDF-star annotations to avoid dangling references.
+
+**URI type tracking:** `OrderedValue.isUri` is captured from the SPARQL binding
+type during load. During save, `objectPropertyUris.has(prop) || isUri` determines
+whether to serialize as `<uri>` or `"literal"`. This prevents unmanaged relationship
+properties from being corrupted into string literals.
+
+### SPARQL Syntax Gotchas (GraphDB)
+
+- `DELETE WHERE { ... VALUES ?x { } }` is invalid — use long form `DELETE { } WHERE { ... VALUES }`
+- `OPTIONAL` with extra variables (e.g., `?order`) in `SELECT DISTINCT` can cause
+  duplicate rows if the optional matches multiple times through inference
+- RDF-star `<< s p o >>` OPTIONAL clauses may interact unpredictably with inference;
+  consider separate queries if results are affected
+- `SparqlClient.query()` = inference ON; `SparqlClient.queryWithoutInference()` = inference OFF
+
+### UI Patterns
+
+- `LabelManager` dialog uses `hideBackdrop`, `disableEnforceFocus`, `disableAutoFocus`,
+  `disableRestoreFocus` to allow interaction with content behind it (non-modal)
+- Drag-and-drop reordering via @dnd-kit only shows controls when editing with 2+ values
 
 ### Localization
 
@@ -149,5 +192,8 @@ Language fallback: selected language → no language tag → opposite language (
 The application expects:
 - `entedit:status` predicate to mark active classes/properties
 - `entedit:order` predicate for property display ordering
+- `entedit:valueOrder` predicate (via RDF-star) for multi-value ordering within a property
 - Standard RDFS vocabulary (rdfs:label, rdfs:domain, rdfs:range)
 - RDA vocabulary for bibliographic entities (Work, Expression, Manifestation, Item)
+- Properties must have correct `entedit:status` to appear in the editor UI;
+  untagged properties are preserved during save but not displayed or editable
