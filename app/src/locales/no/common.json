@@ -58,7 +58,9 @@
     "noResultsFor": "Ingen resultater funnet for «{{query}}»",
     "searchFailed": "Søket feilet: {{message}}",
     "errorLoadingExpressions": "Feil ved lasting av uttrykk: {{message}}",
-    "noExpressionsFound": "Ingen uttrykk funnet"
+    "noExpressionsFound": "Ingen uttrykk funnet",
+    "errorLoadingManifestations": "Feil ved lasting av manifestasjoner: {{message}}",
+    "noManifestationsFound": "Ingen manifestasjoner funnet"
   },
   "messages": {
     "selectClass": "Velg en klasse for å se entiteter",

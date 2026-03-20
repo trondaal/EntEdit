@@ -58,7 +58,9 @@
     "noResultsFor": "No results found for \"{{query}}\"",
     "searchFailed": "Search failed: {{message}}",
     "errorLoadingExpressions": "Error loading expressions: {{message}}",
-    "noExpressionsFound": "No expressions found"
+    "noExpressionsFound": "No expressions found",
+    "errorLoadingManifestations": "Error loading manifestations: {{message}}",
+    "noManifestationsFound": "No manifestations found"
   },
   "messages": {
     "selectClass": "Select a class to view entities",

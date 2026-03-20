@@ -5,6 +5,7 @@ import {
   Typography,
   Box,
 } from "@mui/material";
+import { useTranslation } from "react-i18next";
 import Manifestation from "./Manifestation";
 import { useManifestations } from "../hooks/useManifestationQueries";
 import type { SparqlEndpointConfig } from "../types/sparql";
@@ -26,6 +27,7 @@ const ManifestationList: React.FC<ManifestationListProps> = ({
   selectedLanguage,
   onEntitySearch,
 }) => {
+  const { t } = useTranslation();
   const {
     data: manifestations,
     isLoading,
@@ -44,7 +46,7 @@ const ManifestationList: React.FC<ManifestationListProps> = ({
     return (
       <Box sx={{ p: 2, pl: 4 }}>
         <Typography variant="body2" color="error">
-          Error loading manifestations: {(error as Error).message}
+          {t("search.errorLoadingManifestations", { message: (error as Error).message })}
         </Typography>
       </Box>
     );
@@ -54,7 +56,7 @@ const ManifestationList: React.FC<ManifestationListProps> = ({
     return (
       <Box sx={{ p: 2, pl: 4 }}>
         <Typography variant="body2" color="text.secondary">
-          No manifestations found
+          {t("search.noManifestationsFound")}
         </Typography>
       </Box>
     );

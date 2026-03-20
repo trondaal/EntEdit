@@ -18,6 +18,7 @@ import type { ExpressionSearchResult } from "../hooks/useSearchQueries";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import { getGraphVisualizationUrl } from "../utils/graphUtils";
 import ManifestationList from "./ManifestationList";
+import { capitalizeFirstLetter, splitSemicolonValues, parseCreators } from "../utils/textFormatters";
 
 interface ExpressionProps {
   result: ExpressionSearchResult;
@@ -56,48 +57,6 @@ const Expression: React.FC<ExpressionProps> = ({
   // 2. expression_title exists (so work_title is not already the primary title) AND
   // 3. they are different
   const showWorkTitle = result.work_title && result.expression_title && result.work_title !== result.expression_title;
-
-  // Helper function to capitalize first letter
-  const capitalizeFirstLetter = (text: string | undefined): string | undefined => {
-    if (!text) return text;
-    return text.charAt(0).toUpperCase() + text.slice(1);
-  };
-
-  // Helper function to split semicolon-separated values into array
-  const splitValues = (value: string | undefined): string[] => {
-    if (!value) return [];
-    return value.split(/\s*;\s*/).map(v => v.trim()).filter(v => v.length > 0);
-  };
-
-  // Helper function to parse creator strings
-  // Example input: "rolelabel: name = uri & name = uri ; rolelabel: name = uri"
-  // Output: Array of { role, names: Array<{ name, uri? }> }
-  const parseCreators = (creatorString: string | undefined) => {
-    if (!creatorString) return [] as Array<{ role: string; names: Array<{ name: string; uri?: string }> }>;
-
-    // Split by semicolon to get individual role groups
-    const roleGroups = creatorString.split(';').map(group => group.trim());
-
-    return roleGroups.flatMap(group => {
-      // Split by colon to separate role from names
-      const colonIndex = group.indexOf(':');
-      if (colonIndex === -1) return [];
-
-      const role = group.substring(0, colonIndex).trim();
-      const namesString = group.substring(colonIndex + 1).trim();
-
-      // Split by ' & ' to get individual "name = uri" entries
-      const names = namesString.split('&').map(entry => {
-        const parts = entry.trim().split(' = ');
-        return {
-          name: parts[0]?.trim() || '',
-          uri: parts.length > 1 ? parts[1]?.trim() : undefined,
-        };
-      }).filter(entry => entry.name.length > 0);
-
-      return [{ role, names }];
-    });
-  };
 
   // Helper function to parse and format relationship strings
   // Example input: "har del av verk: All the pretty horses = http://viaf.org/viaf/214001528 & Cities of the plain = http://viaf.org/viaf/3417153653286155900001 ; er bearbeidet som spillefilm (verk): All the pretty horses = https://www.imdb.com/title/tt0149624"
@@ -158,7 +117,7 @@ const Expression: React.FC<ExpressionProps> = ({
                   <Typography
                     component="span"
                     sx={{
-                      fontWeight: 600,
+                      fontWeight: 500,
                       fontSize: '0.9375rem',
                       lineHeight: 1.4,
                     }}
@@ -234,7 +193,7 @@ const Expression: React.FC<ExpressionProps> = ({
                             key={index}
                             variant="body2"
                             color="text.secondary"
-                            sx={{ lineHeight: 1.5 }}
+                            sx={{ lineHeight: 1.5, fontSize: '0.8125rem' }}
                           >
                             <Box
                               component="span"
@@ -286,7 +245,7 @@ const Expression: React.FC<ExpressionProps> = ({
                             key={index}
                             variant="body2"
                             color="text.secondary"
-                            sx={{ lineHeight: 1.5 }}
+                            sx={{ lineHeight: 1.5, fontSize: '0.8125rem' }}
                           >
                             <Box
                               component="span"
@@ -461,7 +420,7 @@ const Expression: React.FC<ExpressionProps> = ({
                   gap: 0.75,
                   mt: 0.25,
                 }}>
-                  {splitValues(result.language).map((lang, index) => (
+                  {splitSemicolonValues(result.language).map((lang, index) => (
                     <Chip
                       key={`lang-${index}`}
                       label={capitalizeFirstLetter(lang)}
@@ -475,7 +434,7 @@ const Expression: React.FC<ExpressionProps> = ({
                       }}
                     />
                   ))}
-                  {splitValues(result.contenttype).map((ct, index) => (
+                  {splitSemicolonValues(result.contenttype).map((ct, index) => (
                     <Chip
                       key={`ct-${index}`}
                       label={capitalizeFirstLetter(ct)}
@@ -489,7 +448,7 @@ const Expression: React.FC<ExpressionProps> = ({
                       }}
                     />
                   ))}
-                  {splitValues(result.workcategory).map((wc, index) => (
+                  {splitSemicolonValues(result.workcategory).map((wc, index) => (
                     <Chip
                       key={`wc-${index}`}
                       label={capitalizeFirstLetter(wc)}
@@ -503,7 +462,7 @@ const Expression: React.FC<ExpressionProps> = ({
                       }}
                     />
                   ))}
-                  {splitValues(result.genre).map((g, index) => (
+                  {splitSemicolonValues(result.genre).map((g, index) => (
                     <Chip
                       key={`genre-${index}`}
                       label={capitalizeFirstLetter(g)}

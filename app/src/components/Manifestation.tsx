@@ -59,6 +59,7 @@ const Manifestation: React.FC<ManifestationProps> = ({
                 variant="body2"
                 sx={{
                   fontWeight: 500,
+                  fontSize: '0.875rem',
                   lineHeight: 1.5,
                 }}
               >

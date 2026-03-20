@@ -220,10 +220,6 @@ function App() {
           {appConfig?.isConfigured && !showWizard && (
             <Box
               sx={{
-                maxWidth: 1536,
-                width: "100%",
-                mx: "auto",
-                px: { xs: 1, sm: 2, md: 3 },
                 minHeight: "100vh",
                 display: "flex",
                 flexDirection: "column",
@@ -236,32 +232,44 @@ function App() {
                 onLanguageChange={handleLanguageChange}
                 onResetConfiguration={handleResetConfiguration}
               />
-              <Box sx={{ borderBottom: 1, borderColor: "divider", bgcolor: "background.paper" }}>
-                <Tabs
-                  value={activeTab}
-                  onChange={(_, newValue) => setActiveTab(newValue)}
-                  aria-label="main navigation tabs"
-                >
-                  <Tab label={t("tabs.entityBrowser")} />
-                  {showSearchTab && <Tab label={t("tabs.search")} />}
-                </Tabs>
-              </Box>
+              <Box
+                sx={{
+                  maxWidth: 1536,
+                  width: "100%",
+                  mx: "auto",
+                  px: { xs: 2, sm: 3, md: 4 },
+                  flexGrow: 1,
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <Box sx={{ borderBottom: 1, borderColor: "divider", bgcolor: "background.paper" }}>
+                  <Tabs
+                    value={activeTab}
+                    onChange={(_, newValue) => setActiveTab(newValue)}
+                    aria-label="main navigation tabs"
+                  >
+                    <Tab label={t("tabs.entityBrowser")} />
+                    {showSearchTab && <Tab label={t("tabs.search")} />}
+                  </Tabs>
+                </Box>
 
-              <Box sx={{ py: 3, flexGrow: 1 }}>
-                <Suspense fallback={<Box sx={{ display: "flex", justifyContent: "center", pt: 8 }}><CircularProgress /></Box>}>
-                  {activeTab === 0 && (
-                    <EntityBrowser
-                      config={appConfig.endpoint}
-                      selectedLanguage={appConfig.language}
-                    />
-                  )}
-                  {activeTab === 1 && showSearchTab && (
-                    <SearchInterface
-                      config={appConfig.endpoint}
-                      selectedLanguage={appConfig.language}
-                    />
-                  )}
-                </Suspense>
+                <Box sx={{ py: 3, flexGrow: 1 }}>
+                  <Suspense fallback={<Box sx={{ display: "flex", justifyContent: "center", pt: 8 }}><CircularProgress /></Box>}>
+                    {activeTab === 0 && (
+                      <EntityBrowser
+                        config={appConfig.endpoint}
+                        selectedLanguage={appConfig.language}
+                      />
+                    )}
+                    {activeTab === 1 && showSearchTab && (
+                      <SearchInterface
+                        config={appConfig.endpoint}
+                        selectedLanguage={appConfig.language}
+                      />
+                    )}
+                  </Suspense>
+                </Box>
               </Box>
             </Box>
           )}

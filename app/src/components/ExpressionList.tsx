@@ -113,6 +113,7 @@ const ExpressionList: React.FC<ExpressionListProps> = ({
                     variant="body2"
                     sx={{
                       fontWeight: 500,
+                      fontSize: '0.875rem',
                       lineHeight: 1.5,
                       mb: 0.5,
                     }}
