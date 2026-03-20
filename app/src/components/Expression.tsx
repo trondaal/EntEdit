@@ -19,6 +19,7 @@ import type { SparqlEndpointConfig } from "../types/sparql";
 import { getGraphVisualizationUrl } from "../utils/graphUtils";
 import ManifestationList from "./ManifestationList";
 import { capitalizeFirstLetter, splitSemicolonValues, parseCreators } from "../utils/textFormatters";
+import { getContentTypeIcon, typeIconSx } from "../utils/contentTypeIcons";
 
 interface ExpressionProps {
   result: ExpressionSearchResult;
@@ -98,6 +99,8 @@ const Expression: React.FC<ExpressionProps> = ({
     return result;
   };
 
+  const ContentTypeIcon = getContentTypeIcon(result.contenttype);
+
   const handleToggleManifestations = (e: React.MouseEvent) => {
     e.stopPropagation();
     setManifestationsExpanded(!manifestationsExpanded);
@@ -113,6 +116,7 @@ const Expression: React.FC<ExpressionProps> = ({
           <ListItemText
             primary={
               <Box sx={{ display: 'flex', alignItems: 'flex-start', mb: 0.5 }}>
+                <ContentTypeIcon sx={typeIconSx} />
                 <Box sx={{ flex: 1, minWidth: 0 }}>
                   <Typography
                     component="span"

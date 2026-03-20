@@ -17,6 +17,7 @@ import {
   formatNotes,
   formatIdentifiers,
 } from "../utils/textFormatters";
+import { getCarrierTypeIcon, typeIconSmallSx } from "../utils/contentTypeIcons";
 
 interface ManifestationProps {
   manifestation: ManifestationType;
@@ -32,6 +33,7 @@ const Manifestation: React.FC<ManifestationProps> = ({
   onSelect,
   onEntitySearch,
 }) => {
+  const CarrierIcon = getCarrierTypeIcon(manifestation.carriertype, manifestation.mediatype);
   const titleArea = formatTitleArea(manifestation);
   const publicationLine = formatPublicationPhysicalSeries(manifestation);
   const notesLine = formatNotes(manifestation.notes);
@@ -55,16 +57,19 @@ const Manifestation: React.FC<ManifestationProps> = ({
           primary={
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.5 }}>
               {/* Line 1: Title area */}
-              <Typography
-                variant="body2"
-                sx={{
-                  fontWeight: 500,
-                  fontSize: '0.875rem',
-                  lineHeight: 1.5,
-                }}
-              >
-                {titleArea}
-              </Typography>
+              <Box sx={{ display: 'flex', alignItems: 'flex-start' }}>
+                <CarrierIcon sx={typeIconSmallSx} />
+                <Typography
+                  variant="body2"
+                  sx={{
+                    fontWeight: 500,
+                    fontSize: '0.875rem',
+                    lineHeight: 1.5,
+                  }}
+                >
+                  {titleArea}
+                </Typography>
+              </Box>
 
               {/* Creators */}
               {manifestation.manifestation_creators && (

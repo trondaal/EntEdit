@@ -29,6 +29,7 @@ import {
   formatNotes,
   formatIdentifiers,
 } from "../utils/textFormatters";
+import { getCarrierTypeIcon, typeIconSx } from "../utils/contentTypeIcons";
 
 interface ManifestationSearchResultProps {
   result: ManifestationSearchResultType;
@@ -57,6 +58,8 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
   const autoFetchUri = isSingleExpression ? result.uri : null;
   const { data: expressions } = useExpressionsByManifestation(config, autoFetchUri, selectedLanguage);
   const singleExpression = expressions?.[0];
+
+  const CarrierIcon = getCarrierTypeIcon(result.carriertype, result.mediatype);
 
   const handleToggleExpressions = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -105,6 +108,7 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.5 }}>
                 {/* Line 1: Title area with visualization button */}
                 <Box sx={{ display: 'flex', alignItems: 'flex-start' }}>
+                  <CarrierIcon sx={typeIconSx} />
                   <Typography
                     variant="body1"
                     sx={{

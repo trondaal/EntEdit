@@ -18,6 +18,7 @@ import {
   parseCreators,
   splitSemicolonValues,
 } from "../utils/textFormatters";
+import { getContentTypeIcon, typeIconSmallSx } from "../utils/contentTypeIcons";
 
 interface ExpressionListProps {
   config: SparqlEndpointConfig;
@@ -70,7 +71,8 @@ const ExpressionList: React.FC<ExpressionListProps> = ({
   return (
     <List dense disablePadding>
       {expressions.map((expression) => {
-        // Determine primary title
+        // Determine primary title and icon
+        const ContentTypeIcon = getContentTypeIcon(expression.contenttype);
         const primaryTitle = expression.title || expression.work_title || expression.uri;
         const showWorkTitle = expression.work_title && expression.title && expression.work_title !== expression.title;
 
@@ -109,16 +111,17 @@ const ExpressionList: React.FC<ExpressionListProps> = ({
               <ListItemText
               primary={
                 <Box>
-                  <Typography
-                    variant="body2"
-                    sx={{
-                      fontWeight: 500,
-                      fontSize: '0.875rem',
-                      lineHeight: 1.5,
-                      mb: 0.5,
-                    }}
-                  >
-                    {primaryTitle}
+                  <Box sx={{ display: 'flex', alignItems: 'flex-start', mb: 0.5 }}>
+                    <ContentTypeIcon sx={typeIconSmallSx} />
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        fontWeight: 500,
+                        fontSize: '0.875rem',
+                        lineHeight: 1.5,
+                      }}
+                    >
+                      {primaryTitle}
                     {showWorkTitle && (
                       <Typography
                         component="span"
@@ -130,6 +133,7 @@ const ExpressionList: React.FC<ExpressionListProps> = ({
                       </Typography>
                     )}
                   </Typography>
+                  </Box>
 
                   {/* Creators */}
                   {allCreators.length > 0 && (
