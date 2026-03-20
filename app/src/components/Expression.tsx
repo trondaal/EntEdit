@@ -28,6 +28,7 @@ interface ExpressionProps {
   onManifestationSelect: (uri: string) => void;
   selectedLanguage: string;
   onEntitySearch: (name: string) => void;
+  initialExpanded?: boolean;
 }
 
 const Expression: React.FC<ExpressionProps> = ({
@@ -39,10 +40,11 @@ const Expression: React.FC<ExpressionProps> = ({
   onManifestationSelect,
   selectedLanguage,
   onEntitySearch,
+  initialExpanded = false,
 }) => {
   const { t } = useTranslation();
   const { enqueueSnackbar } = useSnackbar();
-  const [manifestationsExpanded, setManifestationsExpanded] = useState(false);
+  const [manifestationsExpanded, setManifestationsExpanded] = useState(initialExpanded);
   const graphUrl = getGraphVisualizationUrl(config.url, result.uri);
 
   // Determine the primary display title

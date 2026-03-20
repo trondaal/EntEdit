@@ -100,6 +100,7 @@ const ResultSet: React.FC<ResultSetProps> = ({
               onManifestationSelect={onManifestationSelect}
               selectedLanguage={selectedLanguage}
               onEntitySearch={onEntitySearch}
+              initialExpanded={index < 5 && result.manifestation_count != null && result.manifestation_count <= 2}
             />
           ))}
 
