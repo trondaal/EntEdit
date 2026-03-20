@@ -1,0 +1,81 @@
+# Generate ISBD labels (Areas 1, 2, 4) for all Manifestations (C10007)
+# Replaces any existing rdfs:label values, saves with both @en and @no tags
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdac: <http://rdaregistry.info/Elements/c/>
+PREFIX rdamd: <http://rdaregistry.info/Elements/m/datatype/>
+
+DELETE {
+  ?m rdfs:label ?oldLabel .
+}
+WHERE {
+  ?m a rdac:C10007 .
+  ?m rdfs:label ?oldLabel .
+};
+
+INSERT {
+  ?m rdfs:label ?labelEn .
+  ?m rdfs:label ?labelNo .
+}
+WHERE {
+  ?m a rdac:C10007 .
+
+  # Area 1: Title and statement of responsibility
+  OPTIONAL { ?m rdamd:P30156 ?title . }
+  OPTIONAL { ?m rdamd:P30142 ?otherTitle . }
+  OPTIONAL { ?m rdamd:P30117 ?responsibility . }
+
+  # Area 2: Edition
+  OPTIONAL { ?m rdamd:P30107 ?edition . }
+
+  # Area 4: Publication
+  OPTIONAL { ?m rdamd:P30088 ?place . }
+  OPTIONAL { ?m rdamd:P30076 ?publisher . }
+  OPTIONAL { ?m rdamd:P30011 ?date . }
+
+  # Must have at least a title
+  FILTER(BOUND(?title))
+
+  # Build Area 1: Title proper : other title info / responsibility
+  BIND(
+    CONCAT(
+      ?title,
+      IF(BOUND(?otherTitle), CONCAT(" : ", ?otherTitle), ""),
+      IF(BOUND(?responsibility), CONCAT(" / ", ?responsibility), "")
+    ) AS ?area1
+  )
+
+  # Build Area 2: Edition statement
+  BIND(
+    IF(BOUND(?edition), ?edition, "")
+    AS ?area2
+  )
+
+  # Build Area 4: Place : Publisher, Date
+  BIND(
+    CONCAT(
+      IF(BOUND(?place), ?place, ""),
+      IF(BOUND(?publisher),
+        IF(BOUND(?place), CONCAT(" : ", ?publisher), ?publisher),
+        ""),
+      IF(BOUND(?date),
+        IF(BOUND(?place) || BOUND(?publisher), CONCAT(", ", ?date), ?date),
+        "")
+    ) AS ?area4
+  )
+
+  # Combine areas with ISBD area separator " . – "
+  BIND(
+    CONCAT(
+      ?area1,
+      IF(?area2 != "", CONCAT(". – ", ?area2), ""),
+      IF(?area4 != "",
+        CONCAT(". – ", ?area4),
+        "")
+    ) AS ?rawLabel
+  )
+
+  # Create language-tagged versions
+  BIND(STRLANG(?rawLabel, "en") AS ?labelEn)
+  BIND(STRLANG(?rawLabel, "no") AS ?labelNo)
+}
