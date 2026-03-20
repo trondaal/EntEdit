@@ -19,6 +19,16 @@ import type { SparqlEndpointConfig } from "../types/sparql";
 import { getGraphVisualizationUrl } from "../utils/graphUtils";
 import { useExpressionsByManifestation } from "../hooks/useExpressionQueries";
 import ExpressionList from "./ExpressionList";
+import {
+  capitalizeFirstLetter,
+  parseCreators,
+  splitPipeValues,
+  splitSemicolonValues,
+  formatTitleArea,
+  formatPublicationPhysicalSeries,
+  formatNotes,
+  formatIdentifiers,
+} from "../utils/textFormatters";
 
 interface ManifestationSearchResultProps {
   result: ManifestationSearchResultType;
@@ -53,150 +63,19 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
     setExpressionsExpanded(!expressionsExpanded);
   };
 
-  // Helper function to capitalize first letter
-  const capitalizeFirstLetter = (text: string | undefined): string | undefined => {
-    if (!text) return text;
-    return text.charAt(0).toUpperCase() + text.slice(1);
-  };
-
-  // Helper function to parse creator strings
-  // Example input: "rolelabel: name = uri & name = uri ; rolelabel: name = uri"
-  // Output: Array of { role, names: Array<{ name, uri? }> }
-  const parseCreators = (creatorString: string | undefined) => {
-    if (!creatorString) return [] as Array<{ role: string; names: Array<{ name: string; uri?: string }> }>;
-
-    const roleGroups = creatorString.split(';').map(group => group.trim());
-
-    return roleGroups.flatMap(group => {
-      const colonIndex = group.indexOf(':');
-      if (colonIndex === -1) return [];
-
-      const role = group.substring(0, colonIndex).trim();
-      const namesString = group.substring(colonIndex + 1).trim();
-      const names = namesString.split('&').map(entry => {
-        const parts = entry.trim().split(' = ');
-        return {
-          name: parts[0]?.trim() || '',
-          uri: parts.length > 1 ? parts[1]?.trim() : undefined,
-        };
-      }).filter(entry => entry.name.length > 0);
-
-      return [{ role, names }];
-    });
-  };
-
-  // Helper function to split pipe-separated values into array (manifestation data)
-  const splitValues = (value: string | undefined): string[] => {
-    if (!value) return [];
-    return value.split(/\s*\|\s*/).map(v => v.trim()).filter(v => v.length > 0);
-  };
-
-  // Helper function to split semicolon-separated values into array (expression data)
-  const splitSemicolonValues = (value: string | undefined): string[] => {
-    if (!value) return [];
-    return value.split(/\s*;\s*/).map(v => v.trim()).filter(v => v.length > 0);
-  };
-
-  // Line 1: Title area (Title proper : Other title information / Statement of responsibility)
-  const formatTitleArea = () => {
-    if (!result.title) return result.uri;
-
-    let formatted = result.title;
-    if (result.other) {
-      formatted += ` : ${result.other}`;
-    }
-    if (result.responsibilityStatement) {
-      formatted += ` / ${result.responsibilityStatement}`;
-    }
-    return formatted;
-  };
-
-  // Line 2: Publication area + Physical description + Series
-  // (Edition . – Place : Publisher , Date . – Extent ; Dimensions . – (Series ; Numbering))
-  const formatPublicationPhysicalSeries = () => {
-    const parts: string[] = [];
-
-    // Publication area
-    if (result.edition) {
-      parts.push(result.edition);
-    }
-
-    const pubParts: string[] = [];
-    if (result.place) {
-      pubParts.push(result.place);
-    }
-    if (result.publisher) {
-      pubParts.push(result.place ? ` : ${result.publisher}` : result.publisher);
-    }
-    if (result.date) {
-      pubParts.push(pubParts.length > 0 ? ` , ${result.date}` : result.date);
-    }
-
-    if (pubParts.length > 0) {
-      if (parts.length > 0) {
-        parts.push(` . – ${pubParts.join('')}`);
-      } else {
-        parts.push(pubParts.join(''));
-      }
-    }
-
-    // Physical description
-    const physParts: string[] = [];
-    if (result.extent) {
-      physParts.push(result.extent);
-    }
-    if (result.dimensions) {
-      physParts.push(result.extent ? ` ; ${result.dimensions}` : result.dimensions);
-    }
-
-    if (physParts.length > 0) {
-      if (parts.length > 0) {
-        parts.push(` . – ${physParts.join('')}`);
-      } else {
-        parts.push(physParts.join(''));
-      }
-    }
-
-    // Series
-    if (result.series || result.seriesNumbering) {
-      let seriesFormatted = '';
-      if (result.series) {
-        seriesFormatted = result.series;
-      }
-      if (result.seriesNumbering) {
-        seriesFormatted += seriesFormatted ? ` ; ${result.seriesNumbering}` : result.seriesNumbering;
-      }
-      if (seriesFormatted) {
-        if (parts.length > 0) {
-          parts.push(` . – (${seriesFormatted})`);
-        } else {
-          parts.push(`(${seriesFormatted})`);
-        }
-      }
-    }
-
-    return parts.length > 0 ? parts.join('') : null;
-  };
-
-  // Line 3: Notes (all on one line, separated by ' ; ')
-  const formatNotes = () => {
-    if (!result.notes) return null;
-    return splitValues(result.notes).join(' ; ');
-  };
-
-  // Line 4: Identifiers (all on one line, separated by ' ; ')
-  const formatIdentifiers = () => {
-    if (!result.identifiers) return null;
-    return splitValues(result.identifiers).join(' ; ');
-  };
+  // Pre-compute formatted values to avoid double-calling in render
+  const titleArea = formatTitleArea(result);
+  const publicationLine = formatPublicationPhysicalSeries(result);
+  const notesLine = formatNotes(result.notes);
+  const identifiersLine = formatIdentifiers(result.identifiers);
 
   // Collect all metadata chips (manifestation-level)
   const allChips: string[] = [];
   if (result.mediatype) {
-    allChips.push(...splitValues(result.mediatype));
+    allChips.push(...splitPipeValues(result.mediatype));
   }
   if (result.carriertype) {
-    allChips.push(...splitValues(result.carriertype));
+    allChips.push(...splitPipeValues(result.carriertype));
   }
   // Add expression-level chips when single expression is loaded
   if (singleExpression) {
@@ -236,7 +115,7 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                       fontSize: '0.9375rem',
                     }}
                   >
-                    {formatTitleArea()}
+                    {titleArea}
                   </Typography>
                   <Tooltip title={t("entityEditor:tooltips.copyUri")}>
                     <IconButton
@@ -404,7 +283,7 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                 )}
 
                 {/* Line 2: Publication area + Physical description + Series */}
-                {formatPublicationPhysicalSeries() && (
+                {publicationLine && (
                   <Typography
                     variant="body2"
                     color="text.secondary"
@@ -413,12 +292,12 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                       fontSize: '0.8125rem',
                     }}
                   >
-                    {formatPublicationPhysicalSeries()}
+                    {publicationLine}
                   </Typography>
                 )}
 
                 {/* Line 3: Notes (all on one line) */}
-                {formatNotes() && (
+                {notesLine && (
                   <Typography
                     variant="caption"
                     color="text.secondary"
@@ -426,12 +305,12 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                       lineHeight: 1.4,
                     }}
                   >
-                    {formatNotes()}
+                    {notesLine}
                   </Typography>
                 )}
 
                 {/* Line 4: Identifiers (all on one line) */}
-                {formatIdentifiers() && (
+                {identifiersLine && (
                   <Typography
                     variant="caption"
                     color="text.secondary"
@@ -439,7 +318,7 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                       lineHeight: 1.4,
                     }}
                   >
-                    {formatIdentifiers()}
+                    {identifiersLine}
                   </Typography>
                 )}
 

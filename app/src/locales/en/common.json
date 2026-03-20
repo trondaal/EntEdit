@@ -50,7 +50,15 @@
     "publications": "Publications",
     "publicationsCount": "Publications ({{count}})",
     "contents": "Contents",
-    "contentsCount": "Contents ({{count}})"
+    "contentsCount": "Contents ({{count}})",
+    "foundCount": "{{count}} found",
+    "foundCountMore": "{{count}}+ found",
+    "enterSearchQuery": "Enter a search query to find entities",
+    "enterSearchQueryManifestations": "Enter a search query to find manifestations",
+    "noResultsFor": "No results found for \"{{query}}\"",
+    "searchFailed": "Search failed: {{message}}",
+    "errorLoadingExpressions": "Error loading expressions: {{message}}",
+    "noExpressionsFound": "No expressions found"
   },
   "messages": {
     "selectClass": "Select a class to view entities",

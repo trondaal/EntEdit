@@ -36,6 +36,10 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
   // Debounce the search query to avoid firing expensive SPARQL queries on every keystroke
   const debouncedQuery = useDebouncedValue(searchInput, 500);
 
+  // Only fire the query for the active search tab to avoid unnecessary SPARQL queries
+  const expressionQuery = searchMode === 'expression' ? debouncedQuery : '';
+  const manifestationQuery = searchMode === 'manifestation' ? debouncedQuery : '';
+
   const {
     data: searchData,
     isLoading: searchLoading,
@@ -43,7 +47,7 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
     hasNextPage: searchHasNextPage,
     isFetchingNextPage: searchIsFetchingNextPage,
     fetchNextPage: searchFetchNextPage,
-  } = useSearchExpressions(config, debouncedQuery, selectedLanguage);
+  } = useSearchExpressions(config, expressionQuery, selectedLanguage);
 
   const {
     data: manifestationSearchData,
@@ -52,7 +56,7 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
     hasNextPage: manifestationHasNextPage,
     isFetchingNextPage: manifestationIsFetchingNextPage,
     fetchNextPage: manifestationFetchNextPage,
-  } = useSearchManifestations(config, debouncedQuery, selectedLanguage);
+  } = useSearchManifestations(config, manifestationQuery, selectedLanguage);
 
   // Flatten infinite query pages into flat arrays
   const searchResults = useMemo(

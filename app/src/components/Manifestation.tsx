@@ -9,6 +9,14 @@ import {
   Link,
 } from "@mui/material";
 import type { Manifestation as ManifestationType } from "../hooks/useManifestationQueries";
+import {
+  capitalizeFirstLetter,
+  parseCreators,
+  formatTitleArea,
+  formatPublicationPhysicalSeries,
+  formatNotes,
+  formatIdentifiers,
+} from "../utils/textFormatters";
 
 interface ManifestationProps {
   manifestation: ManifestationType;
@@ -24,128 +32,10 @@ const Manifestation: React.FC<ManifestationProps> = ({
   onSelect,
   onEntitySearch,
 }) => {
-  // Helper function to capitalize first letter
-  const capitalizeFirstLetter = (text: string | undefined): string | undefined => {
-    if (!text) return text;
-    return text.charAt(0).toUpperCase() + text.slice(1);
-  };
-
-  // Helper function to parse creator strings
-  const parseCreators = (creatorString: string | undefined): Array<{ role: string; names: string[] }> => {
-    if (!creatorString) return [];
-
-    const roleGroups = creatorString.split(';').map(group => group.trim());
-
-    return roleGroups.map(group => {
-      const colonIndex = group.indexOf(':');
-      if (colonIndex === -1) return null;
-
-      const role = group.substring(0, colonIndex).trim();
-      const namesString = group.substring(colonIndex + 1).trim();
-      const names = namesString.split('&').map(name => name.trim()).filter(name => name.length > 0);
-
-      return { role, names };
-    }).filter((group): group is { role: string; names: string[] } => group !== null);
-  };
-
-  // Helper function to split pipe-separated values into array
-  const splitValues = (value: string | undefined): string[] => {
-    if (!value) return [];
-    return value.split(/\s*\|\s*/).map(v => v.trim()).filter(v => v.length > 0);
-  };
-
-  // Line 1: Title area (Title proper : Other title information / Statement of responsibility)
-  const formatTitleArea = () => {
-    if (!manifestation.title) return manifestation.uri;
-
-    let formatted = manifestation.title;
-    if (manifestation.other) {
-      formatted += ` : ${manifestation.other}`;
-    }
-    if (manifestation.responsibilityStatement) {
-      formatted += ` / ${manifestation.responsibilityStatement}`;
-    }
-    return formatted;
-  };
-
-  // Line 2: Publication area + Physical description + Series
-  // (Edition . – Place : Publisher , Date . – Extent ; Dimensions . – (Series ; Numbering))
-  const formatPublicationPhysicalSeries = () => {
-    const parts: string[] = [];
-
-    // Publication area
-    if (manifestation.edition) {
-      parts.push(manifestation.edition);
-    }
-
-    const pubParts: string[] = [];
-    if (manifestation.place) {
-      pubParts.push(manifestation.place);
-    }
-    if (manifestation.publisher) {
-      pubParts.push(manifestation.place ? ` : ${manifestation.publisher}` : manifestation.publisher);
-    }
-    if (manifestation.date) {
-      pubParts.push(pubParts.length > 0 ? ` , ${manifestation.date}` : manifestation.date);
-    }
-
-    if (pubParts.length > 0) {
-      if (parts.length > 0) {
-        parts.push(` . – ${pubParts.join('')}`);
-      } else {
-        parts.push(pubParts.join(''));
-      }
-    }
-
-    // Physical description
-    const physParts: string[] = [];
-    if (manifestation.extent) {
-      physParts.push(manifestation.extent);
-    }
-    if (manifestation.dimensions) {
-      physParts.push(manifestation.extent ? ` ; ${manifestation.dimensions}` : manifestation.dimensions);
-    }
-
-    if (physParts.length > 0) {
-      if (parts.length > 0) {
-        parts.push(` . – ${physParts.join('')}`);
-      } else {
-        parts.push(physParts.join(''));
-      }
-    }
-
-    // Series
-    if (manifestation.series || manifestation.seriesNumbering) {
-      let seriesFormatted = '';
-      if (manifestation.series) {
-        seriesFormatted = manifestation.series;
-      }
-      if (manifestation.seriesNumbering) {
-        seriesFormatted += seriesFormatted ? ` ; ${manifestation.seriesNumbering}` : manifestation.seriesNumbering;
-      }
-      if (seriesFormatted) {
-        if (parts.length > 0) {
-          parts.push(` . – (${seriesFormatted})`);
-        } else {
-          parts.push(`(${seriesFormatted})`);
-        }
-      }
-    }
-
-    return parts.length > 0 ? parts.join('') : null;
-  };
-
-  // Line 3: Notes (all on one line, separated by ' ; ')
-  const formatNotes = () => {
-    if (!manifestation.notes) return null;
-    return splitValues(manifestation.notes).join(' ; ');
-  };
-
-  // Line 4: Identifiers (all on one line, separated by ' ; ')
-  const formatIdentifiers = () => {
-    if (!manifestation.identifiers) return null;
-    return splitValues(manifestation.identifiers).join(' ; ');
-  };
+  const titleArea = formatTitleArea(manifestation);
+  const publicationLine = formatPublicationPhysicalSeries(manifestation);
+  const notesLine = formatNotes(manifestation.notes);
+  const identifiersLine = formatIdentifiers(manifestation.identifiers);
 
   return (
     <ListItem
@@ -172,7 +62,7 @@ const Manifestation: React.FC<ManifestationProps> = ({
                   lineHeight: 1.5,
                 }}
               >
-                {formatTitleArea()}
+                {titleArea}
               </Typography>
 
               {/* Creators */}
@@ -190,7 +80,7 @@ const Manifestation: React.FC<ManifestationProps> = ({
                       </Box>
                       {' '}
                       <Box component="span">
-                        {creator.names.map((name, nameIndex) => (
+                        {creator.names.map((entry, nameIndex) => (
                           <React.Fragment key={nameIndex}>
                             {nameIndex > 0 && ' ; '}
                             {onEntitySearch ? (
@@ -199,7 +89,7 @@ const Manifestation: React.FC<ManifestationProps> = ({
                                 variant="body2"
                                 onClick={(e: React.MouseEvent) => {
                                   e.stopPropagation();
-                                  onEntitySearch(name);
+                                  onEntitySearch(entry.name);
                                 }}
                                 sx={{
                                   textDecoration: 'none',
@@ -211,10 +101,10 @@ const Manifestation: React.FC<ManifestationProps> = ({
                                   lineHeight: 'inherit',
                                 }}
                               >
-                                {name}
+                                {entry.name}
                               </Link>
                             ) : (
-                              name
+                              entry.name
                             )}
                           </React.Fragment>
                         ))}
@@ -225,7 +115,7 @@ const Manifestation: React.FC<ManifestationProps> = ({
               )}
 
               {/* Line 2: Publication area + Physical description + Series */}
-              {formatPublicationPhysicalSeries() && (
+              {publicationLine && (
                 <Typography
                   variant="body2"
                   color="text.secondary"
@@ -234,12 +124,12 @@ const Manifestation: React.FC<ManifestationProps> = ({
                     fontSize: '0.8125rem',
                   }}
                 >
-                  {formatPublicationPhysicalSeries()}
+                  {publicationLine}
                 </Typography>
               )}
 
               {/* Line 3: Notes (all on one line) */}
-              {formatNotes() && (
+              {notesLine && (
                 <Typography
                   variant="caption"
                   color="text.secondary"
@@ -247,12 +137,12 @@ const Manifestation: React.FC<ManifestationProps> = ({
                     lineHeight: 1.4,
                   }}
                 >
-                  {formatNotes()}
+                  {notesLine}
                 </Typography>
               )}
 
               {/* Line 4: Identifiers (all on one line) */}
-              {formatIdentifiers() && (
+              {identifiersLine && (
                 <Typography
                   variant="caption"
                   color="text.secondary"
@@ -260,7 +150,7 @@ const Manifestation: React.FC<ManifestationProps> = ({
                     lineHeight: 1.4,
                   }}
                 >
-                  {formatIdentifiers()}
+                  {identifiersLine}
                 </Typography>
               )}
 

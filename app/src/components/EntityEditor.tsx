@@ -591,6 +591,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       const values = prev[property] || [];
       const newValues = values.filter((_, i) => i !== index);
       if (newValues.length === 0) {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const { [property]: _, ...rest } = prev;
         return rest;
       } else {

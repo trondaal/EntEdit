@@ -7,6 +7,7 @@ import {
   CircularProgress,
   Alert,
 } from "@mui/material";
+import { useTranslation } from "react-i18next";
 import Expression from "./Expression";
 import type { ExpressionSearchResult } from "../hooks/useSearchQueries";
 import type { SparqlEndpointConfig } from "../types/sparql";
@@ -44,6 +45,8 @@ const ResultSet: React.FC<ResultSetProps> = ({
   onFetchNextPage,
   onEntitySearch,
 }) => {
+  const { t } = useTranslation();
+
   // Fetch next page when user scrolls near the bottom
   const handleScroll = useCallback(
     (e: React.UIEvent<HTMLUListElement>) => {
@@ -60,10 +63,12 @@ const ResultSet: React.FC<ResultSetProps> = ({
     <Paper elevation={1} sx={{ height: "fit-content", minHeight: 700 }}>
       <Box sx={{ p: 2, borderBottom: 1, borderColor: "divider" }}>
         <Typography variant="h6" sx={{ display: "flex", alignItems: "center" }}>
-          Search Results
+          {t("search.searchResults")}
           {searchResults.length > 0 && searchQuery && (
             <Typography variant="body2" color="text.secondary" sx={{ ml: 2 }}>
-              ({searchResults.length}{hasNextPage ? "+" : ""} found)
+              ({hasNextPage
+                ? t("search.foundCountMore", { count: searchResults.length })
+                : t("search.foundCount", { count: searchResults.length })})
             </Typography>
           )}
         </Typography>
@@ -71,13 +76,13 @@ const ResultSet: React.FC<ResultSetProps> = ({
 
       {searchError && (
         <Alert severity="error" sx={{ m: 2 }}>
-          Search failed: {searchError.message}
+          {t("search.searchFailed", { message: searchError.message })}
         </Alert>
       )}
 
       {!searchQuery ? (
         <Box sx={{ p: 3, textAlign: "center", color: "text.secondary" }}>
-          Enter a search query to find entities
+          {t("search.enterSearchQuery")}
         </Box>
       ) : searchLoading ? (
         <Box sx={{ display: "flex", justifyContent: "center", p: 3 }}>
@@ -85,7 +90,7 @@ const ResultSet: React.FC<ResultSetProps> = ({
         </Box>
       ) : searchResults.length === 0 ? (
         <Box sx={{ p: 3, textAlign: "center", color: "text.secondary" }}>
-          No results found for "{searchQuery}"
+          {t("search.noResultsFor", { query: searchQuery })}
         </Box>
       ) : (
         <List sx={{ maxHeight: 600, overflow: "auto" }} onScroll={handleScroll}>

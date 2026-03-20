@@ -10,8 +10,14 @@ import {
   Chip,
   Link,
 } from "@mui/material";
+import { useTranslation } from "react-i18next";
 import { useExpressionsByManifestation } from "../hooks/useExpressionQueries";
 import type { SparqlEndpointConfig } from "../types/sparql";
+import {
+  capitalizeFirstLetter,
+  parseCreators,
+  splitSemicolonValues,
+} from "../utils/textFormatters";
 
 interface ExpressionListProps {
   config: SparqlEndpointConfig;
@@ -26,48 +32,12 @@ const ExpressionList: React.FC<ExpressionListProps> = ({
   selectedLanguage,
   onEntitySearch,
 }) => {
+  const { t } = useTranslation();
   const {
     data: expressions,
     isLoading,
     error,
   } = useExpressionsByManifestation(config, manifestationUri, selectedLanguage);
-
-  // Helper function to capitalize first letter
-  const capitalizeFirstLetter = (text: string | undefined): string | undefined => {
-    if (!text) return text;
-    return text.charAt(0).toUpperCase() + text.slice(1);
-  };
-
-  // Helper function to split semicolon-separated values into array
-  const splitValues = (value: string | undefined): string[] => {
-    if (!value) return [];
-    return value.split(/\s*;\s*/).map(v => v.trim()).filter(v => v.length > 0);
-  };
-
-  // Parse creator strings with URI support
-  // Input format: "rolelabel: name = uri & name = uri ; rolelabel: name = uri"
-  const parseCreators = (creatorString: string | undefined) => {
-    if (!creatorString) return [] as Array<{ role: string; names: Array<{ name: string; uri?: string }> }>;
-
-    const roleGroups = creatorString.split(';').map(group => group.trim());
-
-    return roleGroups.flatMap(group => {
-      const colonIndex = group.indexOf(':');
-      if (colonIndex === -1) return [];
-
-      const role = group.substring(0, colonIndex).trim();
-      const namesString = group.substring(colonIndex + 1).trim();
-      const names = namesString.split('&').map(entry => {
-        const parts = entry.trim().split(' = ');
-        return {
-          name: parts[0]?.trim() || '',
-          uri: parts.length > 1 ? parts[1]?.trim() : undefined,
-        };
-      }).filter(entry => entry.name.length > 0);
-
-      return [{ role, names }];
-    });
-  };
 
   if (isLoading) {
     return (
@@ -81,7 +51,7 @@ const ExpressionList: React.FC<ExpressionListProps> = ({
     return (
       <Box sx={{ p: 2, pl: 4 }}>
         <Typography variant="body2" color="error">
-          Error loading expressions: {(error as Error).message}
+          {t("search.errorLoadingExpressions", { message: (error as Error).message })}
         </Typography>
       </Box>
     );
@@ -91,7 +61,7 @@ const ExpressionList: React.FC<ExpressionListProps> = ({
     return (
       <Box sx={{ p: 2, pl: 4 }}>
         <Typography variant="body2" color="text.secondary">
-          No expressions found
+          {t("search.noExpressionsFound")}
         </Typography>
       </Box>
     );
@@ -107,16 +77,16 @@ const ExpressionList: React.FC<ExpressionListProps> = ({
         // Collect all metadata chips
         const allChips: string[] = [];
         if (expression.language) {
-          allChips.push(...splitValues(expression.language));
+          allChips.push(...splitSemicolonValues(expression.language));
         }
         if (expression.contenttype) {
-          allChips.push(...splitValues(expression.contenttype));
+          allChips.push(...splitSemicolonValues(expression.contenttype));
         }
         if (expression.workcategory) {
-          allChips.push(...splitValues(expression.workcategory));
+          allChips.push(...splitSemicolonValues(expression.workcategory));
         }
         if (expression.genre) {
-          allChips.push(...splitValues(expression.genre));
+          allChips.push(...splitSemicolonValues(expression.genre));
         }
 
         // Parse creators with URI support

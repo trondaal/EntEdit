@@ -266,7 +266,7 @@ function App() {
             </Box>
           )}
 
-          <ReactQueryDevtools initialIsOpen={false} />
+          {import.meta.env.DEV && <ReactQueryDevtools initialIsOpen={false} />}
         </SnackbarProvider>
       </ThemeProvider>
     </QueryClientProvider>

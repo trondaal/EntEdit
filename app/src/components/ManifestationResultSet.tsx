@@ -62,7 +62,9 @@ const ManifestationResultSet: React.FC<ManifestationResultSetProps> = ({
           {t("search.searchResults")}
           {searchResults.length > 0 && searchQuery && (
             <Typography variant="body2" color="text.secondary" sx={{ ml: 2 }}>
-              ({searchResults.length}{hasNextPage ? "+" : ""} found)
+              ({hasNextPage
+                ? t("search.foundCountMore", { count: searchResults.length })
+                : t("search.foundCount", { count: searchResults.length })})
             </Typography>
           )}
         </Typography>
@@ -70,13 +72,13 @@ const ManifestationResultSet: React.FC<ManifestationResultSetProps> = ({
 
       {searchError && (
         <Alert severity="error" sx={{ m: 2 }}>
-          Search failed: {searchError.message}
+          {t("search.searchFailed", { message: searchError.message })}
         </Alert>
       )}
 
       {!searchQuery ? (
         <Box sx={{ p: 3, textAlign: "center", color: "text.secondary" }}>
-          Enter a search query to find manifestations
+          {t("search.enterSearchQueryManifestations")}
         </Box>
       ) : searchLoading ? (
         <Box sx={{ display: "flex", justifyContent: "center", p: 3 }}>
@@ -84,7 +86,7 @@ const ManifestationResultSet: React.FC<ManifestationResultSetProps> = ({
         </Box>
       ) : searchResults.length === 0 ? (
         <Box sx={{ p: 3, textAlign: "center", color: "text.secondary" }}>
-          No results found for "{searchQuery}"
+          {t("search.noResultsFor", { query: searchQuery })}
         </Box>
       ) : (
         <List sx={{ maxHeight: 600, overflow: "auto" }} onScroll={handleScroll}>

@@ -43,15 +43,21 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
   const { t } = useTranslation("entityEditor");
 
   // Get available properties (excluding rdfs:label)
-  const availableProperties = properties.filter(
-    (property) => property.uri !== "http://www.w3.org/2000/01/rdf-schema#label",
+  const availableProperties = useMemo(
+    () => properties.filter(
+      (property) => property.uri !== "http://www.w3.org/2000/01/rdf-schema#label",
+    ),
+    [properties],
   );
 
   // Get properties that have values, using the order from the already-sorted properties array
-  const dataPropertiesWithValues = properties
-    .filter((p) => p.uri !== "http://www.w3.org/2000/01/rdf-schema#label")
-    .filter((p) => entityData[p.uri] && entityData[p.uri].length > 0)
-    .map((p) => p.uri);
+  const dataPropertiesWithValues = useMemo(
+    () => properties
+      .filter((p) => p.uri !== "http://www.w3.org/2000/01/rdf-schema#label")
+      .filter((p) => entityData[p.uri] && entityData[p.uri].length > 0)
+      .map((p) => p.uri),
+    [properties, entityData],
+  );
 
   // Generate stable IDs for sortable items per property
   const itemIdsMap = useMemo(() => {

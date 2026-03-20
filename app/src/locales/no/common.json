@@ -50,7 +50,15 @@
     "publications": "Publikasjoner",
     "publicationsCount": "Publikasjoner ({{count}})",
     "contents": "Innhold",
-    "contentsCount": "Innhold ({{count}})"
+    "contentsCount": "Innhold ({{count}})",
+    "foundCount": "{{count}} funnet",
+    "foundCountMore": "{{count}}+ funnet",
+    "enterSearchQuery": "Skriv inn et søk for å finne entiteter",
+    "enterSearchQueryManifestations": "Skriv inn et søk for å finne manifestasjoner",
+    "noResultsFor": "Ingen resultater funnet for «{{query}}»",
+    "searchFailed": "Søket feilet: {{message}}",
+    "errorLoadingExpressions": "Feil ved lasting av uttrykk: {{message}}",
+    "noExpressionsFound": "Ingen uttrykk funnet"
   },
   "messages": {
     "selectClass": "Velg en klasse for å se entiteter",
