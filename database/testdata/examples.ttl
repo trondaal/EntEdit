@@ -1,0 +1,131 @@
+@prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
+@prefix rdac: <http://rdaregistry.info/Elements/c/> .
+@prefix rdaco: <http://rdaregistry.info/termList/RDAContentType/> .
+@prefix rdact: <http://rdaregistry.info/termList/RDACarrierType/> .
+@prefix rdaed: <http://rdaregistry.info/Elements/e/datatype/> .
+@prefix rdaeo: <http://rdaregistry.info/Elements/e/object/> .
+@prefix rdamd: <http://rdaregistry.info/Elements/m/datatype/> .
+@prefix rdamo: <http://rdaregistry.info/Elements/m/object/> .
+@prefix rdamt: <http://rdaregistry.info/termList/RDAMediaType/> .
+@prefix rdat: <http://rdaregistry.info/termList/> .
+@prefix rdawd: <http://rdaregistry.info/Elements/w/datatype/> .
+@prefix rdawo: <http://rdaregistry.info/Elements/w/object/> .
+@prefix rdaxd: <http://rdaregistry.info/Elements/x/datatype/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://viaf.org/viaf/220031159>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/220031159" ;
+    rdawd:P10088 "The road" ;
+    rdfs:label "The road (McCarthy, Cormac)" ;
+    rdaxd:P00029 "Roman" ;
+    rdawo:P10061 <http://viaf.org/viaf/29558386> .
+
+<http://viaf.org/viaf/294124367>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/294124367" ;
+    rdawd:P10088 "Markens grøde" ;
+    rdfs:label "Markens grøde (Hamsun, Knut)" ;
+    rdaxd:P00029 "novel" ;
+    rdawd:P10004 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawo:P10061 <http://viaf.org/viaf/59083692> .
+
+<http://viaf.org/viaf/29558386>
+    a rdac:C10002 ;
+    rdaxd:P00018 "http://viaf.org/viaf/29558386" ;
+    rdaad:P50385 "McCarthy, Cormac" ;
+    rdfs:label "McCarthy, Cormac" ;
+    rdaad:P50339 "1933-2023" .
+
+<http://viaf.org/viaf/59083692>
+    a rdac:C10002 ;
+    rdaxd:P00018 "http://viaf.org/viaf/59083692" ;
+    rdaad:P50385 "Hamsun, Knut" ;
+    rdfs:label "Hamsun, Knut" ;
+    rdaad:P50339 "1859-1952" .
+
+<http://viaf.org/viaf/220031159/exp/eng/1020/>
+    a rdac:C10006 ;
+    rdaed:P20316 "The road" ;
+    rdaxd:P00029 "standalone" ;
+    rdaed:P20312 "The road" ;
+    rdfs:label "The road (McCarthy, Cormac)" ;
+    rdaed:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaed:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/220031159> .
+
+<http://viaf.org/viaf/294124367/exp/nob/nor/1020/>
+    a rdac:C10006 ;
+    rdaed:P20316 "Markens grøde" ;
+    rdaxd:P00029 "standalone" ;
+    rdaed:P20312 "Markens grøde" ;
+    rdfs:label "Markens grøde (Hamsun, Knut)" ;
+    rdaed:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaed:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ,
+                 <http://id.loc.gov/vocabulary/iso639-2/nor> ;
+    rdaeo:P20231 <http://viaf.org/viaf/294124367> .
+
+<http://example.org/isbn-0330468464>
+    a rdac:C10007 ;
+    rdamd:P30004 "ISBN 0330468464 (pbk.)" , "ISBN 9780330468466 (pbk.)" ;
+    rdaxd:P00018 "isbn-0330468464" , "isbn-9780330468466" ;
+    rdfs:label "The road / Cormac McCarthy. --Picador, 2009" ;
+    rdamd:P30156 "The road" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2009" ;
+    rdamd:P30083 "Picador" ;
+    rdamd:P30011 "2009" ;
+    rdamd:P30182 "307 p., 20 cm." ;
+    rdamd:P30137 "Film tie-in." , "Formerly CIP." , "Originally published: 2006." ;
+    rdamd:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamd:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/220031159/exp/eng/1020/> .
+
+<http://example.org/isbn-8205277478>
+    a rdac:C10007 ;
+    rdamd:P30004 "ISBN 8205277478" ;
+    rdaxd:P00018 "isbn-8205277478" ;
+    rdfs:label "Markens grøde / Knut Hamsun. --Gyldendal, 2001" ;
+    rdamd:P30156 "Markens grøde" ;
+    rdamd:P30117 "Knut Hamsun" ;
+    rdamd:P30088 "[Oslo]" ;
+    rdamd:P30111 "[Oslo] : Gyldendal, 2001" ;
+    rdamd:P30083 "Gyldendal" ;
+    rdamd:P30011 "2001" ;
+    rdamd:P30182 "277 s." ;
+    rdamd:P30106 "Gyldendals 10 store" ;
+    rdamd:P30137 "1. utg. Kristiania ; København : Gyldendalske Boghandel, 1917 i 2 b." ;
+    rdamd:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamd:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/294124367/exp/nob/nor/1020/> .
+
+<http://id.loc.gov/vocabulary/iso639-2/eng>
+    a skos:Concept ;
+    rdfs:label "eng" .
+
+<http://id.loc.gov/vocabulary/iso639-2/nob>
+    a skos:Concept ;
+    rdfs:label "nob" .
+
+<http://id.loc.gov/vocabulary/iso639-2/nor>
+    a skos:Concept ;
+    skos:subjectIndicator "nor" .
+
+<http://rdaregistry.info/termList/RDACarrierType/1049>
+    a skos:Concept ;
+    skos:subjectIndicator "http://rdaregistry.info/termList/RDACarrierType/1049" .
+
+<http://rdaregistry.info/termList/RDAContentType/1020>
+    a skos:Concept ;
+    skos:subjectIndicator "http://rdaregistry.info/termList/RDAContentType/1020" .
+
+<http://rdaregistry.info/termList/RDAMediaType/1007>
+    a skos:Concept ;
+    skos:subjectIndicator "http://rdaregistry.info/termList/RDAMediaType/1007" .
+
+<https://schema.nb.no/Bibliographic/Values/V1000>
+    a skos:Concept ;
+    skos:subjectIndicator "https://schema.nb.no/Bibliographic/Values/V1000" .
