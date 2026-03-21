@@ -9,6 +9,7 @@ export interface Expression {
   work_title?: string;
   language?: string;
   contenttype?: string;
+  contenttypeUri?: string;
   workcategory?: string;
   genre?: string;
   work_creators?: string;
@@ -49,6 +50,7 @@ export const useExpressionsByManifestation = (
                (SAMPLE(?worktitle) as ?work_title)
                (GROUP_CONCAT(DISTINCT ?language_label ; SEPARATOR=" ; ") as ?language)
                (GROUP_CONCAT(DISTINCT ?contenttype_label ; SEPARATOR=" ; ") as ?contenttype)
+               (SAMPLE(?contenttype) as ?contenttype_uri)
                (GROUP_CONCAT(DISTINCT ?workcategory_label ; SEPARATOR=" ; ") as ?workcategory)
                (GROUP_CONCAT(DISTINCT ?genre_label ; SEPARATOR=" ; ") as ?genre)
                (GROUP_CONCAT(DISTINCT CONCAT(?work_agent_relationship_label, ": ", ?work_agent_names) ; SEPARATOR=" ; ") as ?work_creators)
@@ -162,6 +164,7 @@ export const useExpressionsByManifestation = (
         work_title: binding.work_title?.value,
         language: binding.language?.value,
         contenttype: binding.contenttype?.value,
+        contenttypeUri: binding.contenttype_uri?.value,
         workcategory: binding.workcategory?.value,
         genre: binding.genre?.value,
         work_creators: binding.work_creators?.value,

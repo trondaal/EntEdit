@@ -99,7 +99,7 @@ const Expression: React.FC<ExpressionProps> = ({
     return result;
   };
 
-  const ContentTypeIcon = getContentTypeIcon(result.contenttype);
+  const ContentTypeIcon = getContentTypeIcon(result.contenttypeUri);
 
   const handleToggleManifestations = (e: React.MouseEvent) => {
     e.stopPropagation();

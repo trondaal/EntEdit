@@ -26,7 +26,9 @@ export interface Manifestation {
   identifiers?: string;              // rdamd:P30004 - GROUP_CONCAT
   // Additional metadata
   mediatype?: string;
+  mediatypeUri?: string;
   carriertype?: string;
+  carriertypeUri?: string;
   // Agents
   manifestation_creators?: string;
 }
@@ -69,7 +71,9 @@ export const useManifestations = (
                (GROUP_CONCAT(DISTINCT ?note_val; SEPARATOR=" | ") as ?notes)
                (GROUP_CONCAT(DISTINCT ?identifier_val; SEPARATOR=" | ") as ?identifiers)
                (SAMPLE(?mediatypelabel) as ?mediatypelabel)
+               (SAMPLE(?mediatype_uri_val) as ?mediatype_uri)
                (SAMPLE(?carriertypelabel) as ?carriertypelabel)
+               (SAMPLE(?carriertype_uri_val) as ?carriertype_uri)
                (GROUP_CONCAT(DISTINCT CONCAT(?manifestation_agent_relationship_label, ": ", ?manifestation_agent_names) ; SEPARATOR=" ; ") as ?manifestation_creators)
         FROM <http://www.ontotext.com/explicit>
         WHERE {
@@ -133,6 +137,7 @@ export const useManifestations = (
               FILTER(LANG(?mediatypelabel_en) = "en")
           }
           BIND(COALESCE(?mediatypelabel_chosen, ?mediatypelabel_en) AS ?mediatypelabel)
+          BIND(COALESCE(?mediatype_chosen, ?mediatype_en) AS ?mediatype_uri_val)
            #carriertype label, we use english as default
           OPTIONAL {
               ?manifestation rdamo:P30001  ?carriertype_chosen .
@@ -145,6 +150,7 @@ export const useManifestations = (
               FILTER(LANG(?carriertypelabel_en) = "en")
           }
           BIND(COALESCE(?carriertypelabel_chosen, ?carriertypelabel_en) AS ?carriertypelabel)
+          BIND(COALESCE(?carriertype_chosen, ?carriertype_en) AS ?carriertype_uri_val)
 
           #Manifestation to agent relationships
           OPTIONAL {
@@ -192,7 +198,9 @@ export const useManifestations = (
         notes: binding.notes?.value,
         identifiers: binding.identifiers?.value,
         mediatype: binding.mediatypelabel?.value,
+        mediatypeUri: binding.mediatype_uri?.value,
         carriertype: binding.carriertypelabel?.value,
+        carriertypeUri: binding.carriertype_uri?.value,
         manifestation_creators: binding.manifestation_creators?.value,
       }));
     },

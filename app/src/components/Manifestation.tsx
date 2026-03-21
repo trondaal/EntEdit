@@ -33,7 +33,7 @@ const Manifestation: React.FC<ManifestationProps> = ({
   onSelect,
   onEntitySearch,
 }) => {
-  const CarrierIcon = getCarrierTypeIcon(manifestation.carriertype, manifestation.mediatype);
+  const CarrierIcon = getCarrierTypeIcon(manifestation.carriertypeUri, manifestation.mediatypeUri);
   const titleArea = formatTitleArea(manifestation);
   const publicationLine = formatPublicationPhysicalSeries(manifestation);
   const notesLine = formatNotes(manifestation.notes);

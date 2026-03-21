@@ -72,7 +72,7 @@ const ExpressionList: React.FC<ExpressionListProps> = ({
     <List dense disablePadding>
       {expressions.map((expression) => {
         // Determine primary title and icon
-        const ContentTypeIcon = getContentTypeIcon(expression.contenttype);
+        const ContentTypeIcon = getContentTypeIcon(expression.contenttypeUri);
         const primaryTitle = expression.title || expression.work_title || expression.uri;
         const showWorkTitle = expression.work_title && expression.title && expression.work_title !== expression.title;
 

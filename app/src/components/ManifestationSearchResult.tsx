@@ -59,7 +59,7 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
   const { data: expressions } = useExpressionsByManifestation(config, autoFetchUri, selectedLanguage);
   const singleExpression = expressions?.[0];
 
-  const CarrierIcon = getCarrierTypeIcon(result.carriertype, result.mediatype);
+  const CarrierIcon = getCarrierTypeIcon(result.carriertypeUri, result.mediatypeUri);
 
   const handleToggleExpressions = (e: React.MouseEvent) => {
     e.stopPropagation();

@@ -14,6 +14,7 @@ export interface ExpressionSearchResult {
   expression_creators?: string;
   language?: string;
   contenttype?: string;
+  contenttypeUri?: string;
   workcategory?: string;
   genre?: string;
   work_to_work_relationships?: string;
@@ -45,7 +46,9 @@ export interface ManifestationSearchResult {
   identifiers?: string;              // rdamd:P30004 - GROUP_CONCAT
   // Additional metadata
   mediatype?: string;
+  mediatypeUri?: string;
   carriertype?: string;
+  carriertypeUri?: string;
   // Agents
   manifestation_creators?: string;
   // Count
@@ -87,6 +90,7 @@ SELECT DISTINCT ?expression
 		(SAMPLE(?worktitle) as ?work_title)
 		(GROUP_CONCAT(DISTINCT ?language_label ; SEPARATOR=" ; ") as ?language)
 		(GROUP_CONCAT(DISTINCT ?contenttype_label ; SEPARATOR=" ; ") as ?contenttype)
+		(SAMPLE(?contenttype) as ?contenttype_uri)
 		(GROUP_CONCAT(DISTINCT ?workcategory_label ; SEPARATOR=" ; ") as ?workcategory)
 		(GROUP_CONCAT(DISTINCT ?genre_label ; SEPARATOR=" ; ") as ?genre)
 		(GROUP_CONCAT(DISTINCT CONCAT(?work_agent_relationship_label, ": ", ?work_agent_names) ; SEPARATOR=" ; ") as ?work_creators)
@@ -273,6 +277,7 @@ OFFSET ${pageParam}
         expression_creators: binding.expression_creators?.value,
         language: binding.language?.value,
         contenttype: binding.contenttype?.value,
+        contenttypeUri: binding.contenttype_uri?.value,
         workcategory: binding.workcategory?.value,
         genre: binding.genre?.value,
         work_to_work_relationships: binding.work_to_work_relationships?.value,
@@ -332,7 +337,9 @@ SELECT DISTINCT ?manifestation
     (GROUP_CONCAT(DISTINCT ?note_val; SEPARATOR=" | ") as ?notes)
     (GROUP_CONCAT(DISTINCT ?identifier_val; SEPARATOR=" | ") as ?identifiers)
     (SAMPLE(?mediatype_label) as ?mediatype)
+    (SAMPLE(?mediatype_uri_val) as ?mediatype_uri)
     (SAMPLE(?carriertype_label) as ?carriertype)
+    (SAMPLE(?carriertype_uri_val) as ?carriertype_uri)
     (GROUP_CONCAT(DISTINCT CONCAT(?manifestation_agent_relationship_label, ": ", ?manifestation_agent_names) ; SEPARATOR=" ; ") as ?manifestation_creators)
     (COUNT(DISTINCT ?expression) as ?expression_count)
 FROM <http://www.ontotext.com/explicit>
@@ -407,6 +414,7 @@ WHERE {
         FILTER(LANG(?mediatype_label_en) = "en")
     }
     BIND(COALESCE(?mediatype_label_chosen, ?mediatype_label_en) AS ?mediatype_label)
+    BIND(COALESCE(?mediatype_chosen, ?mediatype_en) AS ?mediatype_uri_val)
 
     # Carrier type with language fallback
     OPTIONAL {
@@ -420,6 +428,7 @@ WHERE {
         FILTER(LANG(?carriertype_label_en) = "en")
     }
     BIND(COALESCE(?carriertype_label_chosen, ?carriertype_label_en) AS ?carriertype_label)
+    BIND(COALESCE(?carriertype_chosen, ?carriertype_en) AS ?carriertype_uri_val)
 
     #Manifestation to agent relationships
     OPTIONAL {
@@ -470,7 +479,9 @@ OFFSET ${pageParam}
         notes: binding.notes?.value,
         identifiers: binding.identifiers?.value,
         mediatype: binding.mediatype?.value,
+        mediatypeUri: binding.mediatype_uri?.value,
         carriertype: binding.carriertype?.value,
+        carriertypeUri: binding.carriertype_uri?.value,
         manifestation_creators: binding.manifestation_creators?.value,
         expression_count: binding.expression_count
           ? parseInt(binding.expression_count.value, 10)
