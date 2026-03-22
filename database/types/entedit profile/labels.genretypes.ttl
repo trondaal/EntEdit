@@ -5,14 +5,20 @@
 abi:T01
     a skos:Concept ;
     a abi:Genretype;
-    skos:prefLabel "Short story collections"@en, "Novellesamlinger"@nb, "Novellesamlinger"@nn ;
-    rdfs:label "Novellesamlinger"@no, "Short story collections"@en.
+    skos:prefLabel "Short story collection"@en, "Novellesamling"@nb, "Novellesamling"@nn ;
+    rdfs:label "Novellesamling"@no, "Short story collection"@en.
 
 abi:T02
   a skos:Concept ;
   a abi:Genretype;
-  skos:prefLabel "Individual short stories"@en, "Enkeltnoveller"@nb, "Enkeltnoveller"@nn ;
-        rdfs:label "Enkeltnoveller"@no, "Individual short stories"@en.
+  skos:prefLabel "Individual short story"@en, "Enkeltnovelle"@nb, "Enkeltnovelle"@nn ;
+        rdfs:label "Enkeltnovelle"@no, "Individual short story"@en.
+
+abi:T03
+  a skos:Concept ;
+  a abi:Genretype;
+  skos:prefLabel "Novel sequence"@en, "Roman syklus"@nb, "Roman syklus"@nn ;
+  rdfs:label "Roman syklus"@no, "Novel sequence"@en.
 
 
 <https://id.nb.no/vocabulary/ntsf/1130>
