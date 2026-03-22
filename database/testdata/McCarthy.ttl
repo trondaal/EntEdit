@@ -13,13 +13,15 @@
 @prefix rdaxd: <http://rdaregistry.info/Elements/x/datatype/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vtp: <https://schema.nb.no/Bibliographic/Values/> .
 
 <http://viaf.org/viaf/175871715>
     a rdac:C10001 ;
     rdaxd:P00018 "http://viaf.org/viaf/175871715" ;
     rdawd:P10088 "The border trilogy" ;
     rdfs:label "The border trilogy (McCarthy, Cormac)" ;
-    rdaxd:P00029 "Novel collection" ;
+    abi:P02 abi:T03 ;
+    abi:P01 vtp:V1000;
     rdawo:P10061 <http://viaf.org/viaf/29558386> ;
     rdawo:P10147 <http://viaf.org/viaf/214001528> ,
                  <http://viaf.org/viaf/3417153653286155900001> ,
@@ -30,7 +32,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/188298726" ;
     rdawd:P10088 "Suttree" ;
     rdfs:label "Suttree (McCarthy, Cormac)" ;
-    rdaxd:P00029 "Novel" ;
+    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    abi:P01 vtp:V1000;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
 
 <http://viaf.org/viaf/188670330>
@@ -38,7 +41,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/188670330" ;
     rdawd:P10088 "Child of God" ;
     rdfs:label "Child of God (McCarthy, Cormac)" ;
-    rdaxd:P00029 "Novel" ;
+    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    abi:P01 vtp:V1000;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
 
 <http://viaf.org/viaf/191524645>
@@ -46,7 +50,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/191524645" ;
     rdawd:P10088 "Blood meridian, or The evening redness in the west" ;
     rdfs:label "Blood meridian, or The evening redness in the west (McCarthy, Cormac)" ;
-    rdaxd:P00029 "Novel" ;
+    abi:P01 vtp:V1000;
+    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
     rdawd:P10330 "Romanen utkom opprinnelig i 1985 og rammene er følgende: En tenåringsgutt rømmer hjemmefra og slår seg sammen med den morderiske banden Glanton-gjengen. Denne banden lever av å skalpere indianere og andre på den meksikansk-amerikanske grensen i 1849 og 1850. Skildringen av Glanton-gjengen og den demoniske John Joel Holden er bygget på faktiske personer og hendelser. Holden er en kaldblodig morder og fullstendig oppslukt av vold og konflikt. Den amerikanske litteraturviteren Harold Bloom har kalt Holden-skikkelsen \"den mest skremmende skikkelsen i amerikansk litteratur\"." ;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
 
@@ -55,16 +60,18 @@
     rdaxd:P00018 "http://viaf.org/viaf/191907343" ;
     rdawd:P10088 "The orchard keeper" ;
     rdfs:label "The orchard keeper (McCarthy, Cormac)" ;
-    rdaxd:P00029 "Novel" ;
+    abi:P01 vtp:V1000;
+    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
 
 <http://viaf.org/viaf/214001528>
     a rdac:C10001 ;
     rdaxd:P00018 "http://viaf.org/viaf/214001528" ;
     rdawd:P10088 "All the pretty horses" ;
-    rdfs:label "All the pretty horses (McCarthy, Cormac)" ,
-               "Alle de vakre hestene (McCarthy, Cormac)" ;
-    rdaxd:P00029 "Novel" ;
+    rdfs:label "All the pretty horses (McCarthy, Cormac)"@en ,
+               "Alle de vakre hestene (McCarthy, Cormac)"@no;
+    abi:P01 vtp:V1000;
+    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
     rdawd:P10330 "Denne romanen er både en dannelsesroman og en western. Vi møter den seksten år gamle John Grady Cole på en ranch i West-Texas i 1949. Guttens bestefar er nettopp død. Faren er merket av krigen og bor i byen. Morens høyeste ønske er å komme seg ut av Texas for godt. John er for ung til å overta ranchen, og dermed er han stengt ute fra den eneste tilværelse han eri stand til å forestille seg. Sammen med vennen Lacey Rawlins drar han over grensen til Mexico og videre sørover. Her opplever han både idyll og komikk, men også blod." ,
                  "The story of John Grady Cole, who at 16 finds himself at the dying end of a long line of Texas ranchers, cut off from the only life he has ever imagined for himself. To escape a society moving all the wrong directions, Cole and two companions decide to seek their fortune in Mexico. But what begins as an idyllic adventure leads to a place where dreams are paid for in blood." ;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
@@ -74,7 +81,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/214012164" ;
     rdawd:P10088 "No country for old men" ;
     rdfs:label "No country for old men (McCarthy, Cormac)" ;
-    rdaxd:P00029 "Novel" ;
+    abi:P01 vtp:V1000;
+    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
 
 <http://viaf.org/viaf/215254416>
@@ -82,7 +90,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/215254416" ;
     rdawd:P10088 "Outer dark" ;
     rdfs:label "Outer dark (McCarthy, Cormac)" ;
-    rdaxd:P00029 "Novel" ;
+    abi:P01 vtp:V1000;
+    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
 
 <http://viaf.org/viaf/220031159>
@@ -90,7 +99,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/220031159" ;
     rdawd:P10088 "The road" ;
     rdfs:label "The road (McCarthy, Cormac)" ;
-    rdaxd:P00029 "Novel" ;
+    abi:P01 vtp:V1000;
+    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
     rdawd:P10330 "Veien forteller om en reise i en fremtid uten håp. En far og en sønn går alene gjennom restene av et amerikansk landskap. Ingenting beveger seg, bortsett fra asken som flyr i vinden. Det er iskaldt, og det snør grå snø. Himmelen er mørk. Det er ti år siden verden brøt sammen. De går mot kysten, med bare en pistol å forsvare seg med mot de lovløse bandene langs veien. De har bare klærne de går i og litt frukt, men en stor hengivenhet og ømhet for hverandre.." ;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
 
@@ -99,6 +109,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/29558386/counselor" ;
     rdawd:P10088 "The counselor" ;
     rdfs:label "The counselor (McCarthy, Cormac)" ;
+    abi:P01 vtp:V1000;
+    abi:P02 <https://id.nb.no/vocabulary/ntsf/298>;
     rdaxd:P00029 "Screenplay" ;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
 
@@ -107,6 +119,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/29558386/gardenersson" ;
     rdawd:P10088 "The gardener's son" ;
     rdfs:label "The gardener's son (McCarthy, Cormac)" ;
+    abi:P01 vtp:V1000;
+    abi:P02 <https://id.nb.no/vocabulary/ntsf/298>;
     rdaxd:P00029 "Screenplay" ;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
 
@@ -115,7 +129,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/309357400" ;
     rdawd:P10088 "The crossing" ;
     rdfs:label "The crossing (McCarthy, Cormac)" ;
-    rdaxd:P00029 "Novel" ;
+    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    abi:P01 vtp:V1000;
     rdawd:P10330 "1972, Black River Falls, Wisconsin. Alicia Western, tjue år gammel og med førti tusen dollar i en plastpose, ber om å bli innlagt på et sykehus. Hun holder på å ta en doktorgrad i matematikk ved University of Chicago, og er diagnostisert med paranoid schizofrreni. Hun vil ikke snakke om broren sin, Bobby. I stedet reflekterer hun over psykiske lidelser, og hvordan mennesker insisterer på én felles oppfatning av verden. Hun husker en barndom der hennes egen bestemor fryktet for henne da hun bare var syv år gammel. Hun drøfter skjæringspunktet mellom fysikk og filosofi, og hun introduserer hallusinasjonene bare hun kan se. Og hele tiden sørger hun over Bobby, som fortsatt ikke er helt død, og som ikke er helt hennes. «Stella Maris» bli kun fortalt gjennom transkripsjoner av Alicias terapitimer." ,
                  "Billy and Boyd Parham are two boys living in New Mexico on the cusp of unimaginable events in the years before the Second World War. First comes a trespassing Indian and the dream of wolves running wild among cattle. Billy traps a she-wolf, intending to restore it to the mountains of New Mexico. But when he returns, he finds everything he left behind utterly transformed." ;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
@@ -125,7 +140,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/3417153653286155900001" ;
     rdawd:P10088 "Cities of the plain" ;
     rdfs:label "Cities of the plain (McCarthy, Cormac)" ;
-    rdaxd:P00029 "Novel" ;
+    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    abi:P01 vtp:V1000;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
 
 <http://viaf.org/viaf/4440159478236227990002>
@@ -133,7 +149,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/4440159478236227990002" ;
     rdawd:P10088 "The Sunset Limited" ;
     rdfs:label "The Sunset Limited (McCarthy, Cormac)" ;
-    rdaxd:P00029 "Novel" ;
+    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    abi:P01 vtp:V1000;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
 
 <http://viaf.org/viaf/470166838899836200007>
@@ -141,7 +158,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/470166838899836200007" ;
     rdawd:P10088 "The passenger" ;
     rdfs:label "The passenger (McCarthy, Cormac)" ;
-    rdaxd:P00029 "Novel" ;
+    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    abi:P01 vtp:V1000;
     rdawd:P10330 "Mississippi, 1980: Klokken tre om natten ikler Bobby Western seg våtdrakt og dykker ned i et mørkt hav. I et styrtet fly på havbunnen ser han ni døde passasjerer fastspent i setene, med flytende hår og tomme blikk. Den tiende passasjeren og flyets svarte boks er borte. Etter dette hjemsøkes Bobby Western av politimenn og myndigheter, av spøkelset etter faren som var med på oppfinnelsen av atombomben, og ikke minst av kjærligheten til søsteren som mistet forstanden. En av de største amerikanske forfatterne i vår tid, Cormac McCarthy, er endelig tilbake med en kompleks, dyp og elegant roman. Med Passasjeren leverer han nok et slagferdig epos om maskulinitet, krig, død, tap og skjønnhet. Boken utgis samtidig i Norge som i USA og England." ,
                  "\"Pass Christian, Mississippi, 1980: It is three in the morning when Bobby Western zips up the jacket of his wet suit and plunges from a Coast Guard tender into darkness. His dive light illuminates the sunken jet, nine bodies still buckled in their seats, hair floating, eyes devoid of speculation. Missing from the crash site are the pilot's flight bag, the plane's black box, and the tenth passenger. But how? A collateral witness to machinations that can only bring him harm, Western is shadowed in body and spirit--by men with badges; by the ghost of his father, an inventor of the bomb that melted glass and flesh in Hiroshima; and by his sister, the love and ruin of his soul.\"--Dust jacket flap." ;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
@@ -151,7 +169,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/470166838899836200007/stellamaris" ;
     rdawd:P10088 "Stella Maris" ;
     rdfs:label "Stella Maris (McCarthy, Cormac)" ;
-    rdaxd:P00029 "Novel" ;
+    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    abi:P01 vtp:V1000;
     rdawd:P10330 "1972, Black River Falls, Wiscounsin. Alicia Western, tjue år gammel og med førti tusen dollar i en plastpose, ber om å bli innlagt på et sykehus. Hun holder på å ta en doktorgrad i matematikk ved University of Chicago, og er diagnostisert med paranoid schizofrreni. Hun vil ikke snakke om broren sin, Bobby. I stedet reflekterer hun over psykiske lidelser, og hvordan mennesker insisterer på én felles oppfatning av verden. Hun husker en barndom der hennes egen bestemor fryktet for henne da hun bare var syv år gammel. Hun drøfter skjæringspunktet mellom fysikk og filosofi, og hun introduserer hallusinasjonene bare hun kan se. Og hele tiden sørger hun over Bobby, som fortsatt ikke er helt død, og som ikke er helt hennes. «Stella Maris» bli kun fortalt gjennom transkripsjoner av Alicias terapitimer." ,
                  "1972, Black River Falls, Wisconsin. Alicia Western, tjue år gammel og med førti tusen dollar i en plastpose, ber om å bli innlagt på et sykehus. Hun holder på å ta en doktorgrad i matematikk ved University of Chicago, og er diagnostisert med paranoid schizofrreni. Hun vil ikke snakke om broren sin, Bobby. I stedet reflekterer hun over psykiske lidelser, og hvordan mennesker insisterer på én felles oppfatning av verden. Hun husker en barndom der hennes egen bestemor fryktet for henne da hun bare var syv år gammel. Hun drøfter skjæringspunktet mellom fysikk og filosofi, og hun introduserer hallusinasjonene bare hun kan se. Og hele tiden sørger hun over Bobby, som fortsatt ikke er helt død, og som ikke er helt hennes. «Stella Maris» bli kun fortalt gjennom transkripsjoner av Alicias terapitimer." ,
                  "\"From the best-selling, Pulitzer Prize-winning author of The Road comes the second volume of a two-volume masterpiece: Stella Maris is an intimate portrait of grief and longing, as a young woman in a psychiatric facility seeks to understand her own existence. Black River Falls, Wisconsin, 1972: Alicia Western, twenty years old, with forty thousand dollars in a plastic bag, admits herself to the hospital. A doctoral candidate in mathematics at the University of Chicago, Alicia has been diagnosed with paranoid schizophrenia, and she does not want to talk about her brother, Bobby. Instead, she contemplates the nature of madness, the human insistence on one common experience of the world; she recalls a childhood where, by the age of seven, her own grandmother feared for her; she surveys the intersection of physics and philosophy; and she introduces her cohorts, her chimeras, the hallucinations that only she can see. All the while, she grieves for Bobby, not quite dead, not quite hers. Told entirely through the transcripts of Alicia's psychiatric sessions, Stella Maris is a searching, rigorous, intellectually challenging coda to The Passenger, a philosophical inquiry that questions our notions of God, truth, and existence\"--" ;
@@ -163,6 +182,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/5191807/theroad" ;
     rdawd:P10088 "The road" ;
     rdfs:label "The road (Penhall, Joe)" ;
+    abi:P01 vtp:V1000;
+    abi:P02 <https://id.nb.no/vocabulary/ntsf/298>;
     rdaxd:P00029 "Screenplay" ;
     rdawo:P10061 <http://viaf.org/viaf/5191807> ;
     rdawo:P10134 <http://viaf.org/viaf/220031159> .
@@ -173,6 +194,8 @@
     rdawd:P10088 "The stonemason" ;
     rdfs:label "The stonemason (McCarthy, Cormac)" ;
     rdaxd:P00029 "Play" ;
+    abi:P01 vtp:V1000;
+    abi:P02 <https://id.nb.no/vocabulary/ntsf/67>;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
 
 <http://viaf.org/viaf/92910249/seriousnoticing>
@@ -181,6 +204,8 @@
     rdawd:P10088 "Serious noticing" ;
     rdfs:label "Serious noticing (Wood, James)" ;
     rdaxd:P00029 "Essay collection" ;
+    abi:P01 vtp:V1000;
+    abi:P02 <https://id.nb.no/vocabulary/ntsf/15>;
     rdawo:P10061 <http://viaf.org/viaf/92910249> .
 
 <http://viaf.org/viaf/92910249/seriousnoticing/01>
@@ -390,83 +415,6 @@
                  <https://isni.org/isni/0000000063018399> ;
     rdawo:P10203 <http://viaf.org/viaf/29558386> .
 
-<https://isni.org/isni/0000000046450913/collateral>
-    a rdac:C10001 ;
-    rdaxd:P00018 "https://isni.org/isni/0000000046450913/collateral" ;
-    rdawd:P10088 "Colleteral" ;
-    rdfs:label "Colleteral (McCarthy, Cormac)" ;
-    rdaxd:P00029 "Recordings collection" ;
-    rdawo:P10147 <https://isni.org/isni/0000000046450913/collateral/01> ,
-                 <https://isni.org/isni/0000000046450913/collateral/02> ,
-                 <https://isni.org/isni/0000000046450913/collateral/03> ,
-                 <https://isni.org/isni/0000000046450913/collateral/04> ,
-                 <https://isni.org/isni/0000000046450913/collateral/05> ,
-                 <https://isni.org/isni/0000000046450913/collateral/06> ,
-                 <https://isni.org/isni/0000000046450913/collateral/07> ,
-                 <https://isni.org/isni/0000000046450913/collateral/08> ,
-                 <https://isni.org/isni/0000000046450913/collateral/09> ,
-                 <https://isni.org/isni/0000000046450913/collateral/10> .
-
-<https://isni.org/isni/0000000046450913/collateral/01>
-    a rdac:C10001 ;
-    rdaxd:P00018 "https://isni.org/isni/0000000046450913/collateral/01" ;
-    rdawd:P10088 "Gotta keep movin'" ;
-    rdfs:label "Gotta keep movin' (McCarthy, Cormac)" .
-
-<https://isni.org/isni/0000000046450913/collateral/02>
-    a rdac:C10001 ;
-    rdaxd:P00018 "https://isni.org/isni/0000000046450913/collateral/02" ;
-    rdawd:P10088 "The working poor" ;
-    rdfs:label "The working poor (McCarthy, Cormac)" .
-
-<https://isni.org/isni/0000000046450913/collateral/03>
-    a rdac:C10001 ;
-    rdaxd:P00018 "https://isni.org/isni/0000000046450913/collateral/03" ;
-    rdawd:P10088 "Cadillac man" ;
-    rdfs:label "Cadillac man (McCarthy, Cormac)" .
-
-<https://isni.org/isni/0000000046450913/collateral/04>
-    a rdac:C10001 ;
-    rdaxd:P00018 "https://isni.org/isni/0000000046450913/collateral/04" ;
-    rdawd:P10088 "Back when I worked on the railroad" ;
-    rdfs:label "Back when I worked on the railroad (McCarthy, Cormac)" .
-
-<https://isni.org/isni/0000000046450913/collateral/05>
-    a rdac:C10001 ;
-    rdaxd:P00018 "https://isni.org/isni/0000000046450913/collateral/05" ;
-    rdawd:P10088 "The crossroads" ;
-    rdfs:label "The crossroads (McCarthy, Cormac)" .
-
-<https://isni.org/isni/0000000046450913/collateral/06>
-    a rdac:C10001 ;
-    rdaxd:P00018 "https://isni.org/isni/0000000046450913/collateral/06" ;
-    rdawd:P10088 "One a night like this" ;
-    rdfs:label "One a night like this (McCarthy, Cormac)" .
-
-<https://isni.org/isni/0000000046450913/collateral/07>
-    a rdac:C10001 ;
-    rdaxd:P00018 "https://isni.org/isni/0000000046450913/collateral/07" ;
-    rdawd:P10088 "You can't outrun the hounds" ;
-    rdfs:label "You can't outrun the hounds (McCarthy, Cormac)" .
-
-<https://isni.org/isni/0000000046450913/collateral/08>
-    a rdac:C10001 ;
-    rdaxd:P00018 "https://isni.org/isni/0000000046450913/collateral/08" ;
-    rdawd:P10088 "Walking on solid ground" ;
-    rdfs:label "Walking on solid ground (McCarthy, Cormac)" .
-
-<https://isni.org/isni/0000000046450913/collateral/09>
-    a rdac:C10001 ;
-    rdaxd:P00018 "https://isni.org/isni/0000000046450913/collateral/09" ;
-    rdawd:P10088 "Jailhouse bound" ;
-    rdfs:label "Jailhouse bound (McCarthy, Cormac)" .
-
-<https://isni.org/isni/0000000046450913/collateral/10>
-    a rdac:C10001 ;
-    rdaxd:P00018 "https://isni.org/isni/0000000046450913/collateral/10" ;
-    rdawd:P10088 "Doppelganger" ;
-    rdfs:label "Doppelganger (McCarthy, Cormac)" .
-
 <https://www.imdb.com/title/tt0149624>
     a rdac:C10001 ;
     rdaxd:P00018 "https://www.imdb.com/title/tt0149624" ;
@@ -557,12 +505,6 @@
     rdaxd:P00018 "https://isni.org/isni/0000000042755920" ;
     rdaad:P50385 "Salerno, Robert" ;
     rdfs:label "Salerno, Robert" .
-
-<https://isni.org/isni/0000000046450913>
-    a rdac:C10002 ;
-    rdaxd:P00018 "https://isni.org/isni/0000000046450913" ;
-    rdaad:P50385 "McCarthy, Cormac" ;
-    rdfs:label "McCarthy, Cormac" .
 
 <https://isni.org/isni/0000000063018399>
     a rdac:C10002 ;
@@ -857,13 +799,8 @@
     a rdac:C10006 ;
     rdaed:P20316 "All the pretty horses" ;
     rdaxd:P00029 "standalone" , "part" ;
-    rdaed:P20312 "Alle de vakre hestene" ,
-                 "Grensetrilogien : 1 : Alle de vakre hestene" ,
-                 "Grensetrilogien : B. 1 : Alle de vakre hestene" ,
-                 "All the pretty horses" ;
-    rdfs:label "Alle de vakre hestene (McCarthy, Cormac)" ,
-               "Grensetrilogien (McCarthy, Cormac)" ,
-               "All the pretty horses (McCarthy, Cormac)" ;
+    rdaed:P20312 "Alle de vakre hestene" ;
+    rdfs:label "Alle de vakre hestene (McCarthy, Cormac)";
     rdaed:P20315 "Alle de vakre hestene" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
@@ -1089,287 +1026,6 @@
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/8419162723677961290005> .
 
-<http://viaf.org/viaf/92910249/seriousnoticing/01/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaed:P20312 "Fun stuff: homage to Keith Moon" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "Fun stuff: homage to Keith Moon (Wood, James)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/01> .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/02/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaed:P20312 "What Chekhov meant by life" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "What Chekhov meant by life (Wood, James)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/02> .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/03/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaed:P20312 "Serious noticing" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "Serious noticing (Wood, James)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/03> .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/04/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaed:P20312 "Saul Bellow's comic style" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "Saul Bellow's comic style (Wood, James)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/04> .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/05/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaed:P20312 "Anna Karenina and characterization" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "Anna Karenina and characterization (Wood, James)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/05> .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/06/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaed:P20312 "Joseph Roth's empire of signs" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "Joseph Roth's empire of signs (Wood, James)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/06> .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/07/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaed:P20312 "Paul Auster's shallowness" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "Paul Auster's shallowness (Wood, James)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/07> .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/08/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaed:P20312 "Hysterical realism" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "Hysterical realism (Wood, James)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/08> .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/09/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaed:P20312 "Bohumil Hrabal's comic world" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "Bohumil Hrabal's comic world (Wood, James)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/09> .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/11/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaed:P20312 "George Orwell's very English revolution" , "Jane Austen's heroic consciousness" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "George Orwell's very English revolution (Wood, James)" ,
-               "Jane Austen's heroic consciousness (Wood, James)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/11> .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/12/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaed:P20312 "Cormac McCarthy's the road" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "Cormac McCarthy's the road (Wood, James)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/12> .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/13/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaed:P20312 "Reality examined to the point of madness': László Krasznahorkai" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "Reality examined to the point of madness': László Krasznahorkai (Wood, James)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/13> .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/14/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaed:P20312 "Wounder and wounded" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "Wounder and wounded (Wood, James)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/14> .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/15/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaed:P20312 "On not going home" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "On not going home (Wood, James)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/15> .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/16/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaed:P20312 "Other side of silence: rereading W. G. Sebald" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "Other side of silence: rereading W. G. Sebald (Wood, James)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/16> .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/17/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaed:P20312 "Becoming them" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "Becoming them (Wood, James)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/17> .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/18/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaed:P20312 "Don Quixote's old and new testaments" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "Don Quixote's old and new testaments (Wood, James)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/18> .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/19/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaed:P20312 "Dostoevsky's god" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "Dostoevsky's god (Wood, James)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/19> .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/20/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaed:P20312 "Helen Garner's savage honesty" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "Helen Garner's savage honesty (Wood, James)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/20> .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/21/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaed:P20312 "All and the if: God and metaphor in Melville" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "All and the if: God and metaphor in Melville (Wood, James)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/21> .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/22/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaed:P20312 "Elena Ferrante" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "Elena Ferrante (Wood, James)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/22> .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/23/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaed:P20312 "Virginia Woolf's Mysticism" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "Virginia Woolf's Mysticism (Wood, James)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/23> .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/24/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaed:P20312 "Job existed: Primo Levi" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "Job existed: Primo Levi (Wood, James)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/24> .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/25/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaed:P20312 "Marilynne Robinson" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "Marilynne Robinson (Wood, James)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/25> .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/26/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaed:P20312 "Ismail Kadare" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "Ismail Kadare (Wood, James)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/26> .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/27/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaed:P20312 "Jenny Erpenbeck" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "Jenny Erpenbeck (Wood, James)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/27> .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/28/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaed:P20312 "Packing my father-in-law's library" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "Packing my father-in-law's library (Wood, James)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/28> .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaed:P20316 "Serious noticing" ;
-    rdaxd:P00029 "aggregate" ;
-    rdaed:P20312 "Serious noticing : selected essays, 1997-2019" ;
-    rdfs:label "Serious noticing (Wood, James)" ;
-    rdaed:P20071 "Fun stuff: homage to Keith Moon -- What Chekhov meant by life -- Serious noticing -- Saul Bellow's comic style -- Anna Karenina and characterization -- Joseph Roth's empire of signs -- Paul Auster's shallowness -- Hysterical realism -- Bohumil Hrabal's comic world -- George Orwell's very English revolution -- Jane Austen's heroic consciousness -- Cormac McCarthy's the road -- Reality examined to the point of madness': László Krasznahorkai -- Wounder and wounded -- On not going home -- Other side of silence: rereading W. G. Sebald -- Becoming them -- Don Quixote's old and new testaments -- Dostoevsky's god -- Helen Garner's savage honesty -- All and the if: God and metaphor in Melville -- Elena Ferrante -- Virginia Woolf's Mysticism -- Job existed: Primo Levi -- Marilynne Robinson -- Ismail Kadare -- Jenny Erpenbeck -- Packing my father-in-law's library." ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing> ;
-    rdaeo:P20319 <http://viaf.org/viaf/92910249/seriousnoticing/01/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/02/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/03/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/04/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/05/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/06/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/07/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/08/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/09/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/11/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/12/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/13/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/14/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/15/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/16/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/17/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/18/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/19/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/20/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/21/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/22/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/23/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/24/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/25/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/26/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/27/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/28/exp/eng/1020> .
 
 <http://www.wikidata.org/entity/Q3061599/exp/1023>
     a rdac:C10006 ;
@@ -1391,128 +1047,6 @@
                  <https://isni.org/isni/0000000114380049> ;
     rdaeo:P20055 <https://isni.org/isni/000000011477315X> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q3061599> .
-
-<https://isni.org/isni/0000000046450913/collateral/01/exp/eng/1011>
-    a rdac:C10006 ;
-    rdaed:P20312 "Gotta keep movin'" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "Gotta keep movin' (McCarthy, Cormac)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1011> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20039 <https://isni.org/isni/0000000046450913> ;
-    rdaeo:P20231 <https://isni.org/isni/0000000046450913/collateral/01> .
-
-<https://isni.org/isni/0000000046450913/collateral/02/exp/eng/1011>
-    a rdac:C10006 ;
-    rdaed:P20312 "The working poor" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "The working poor (McCarthy, Cormac)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1011> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20039 <https://isni.org/isni/0000000046450913> ;
-    rdaeo:P20231 <https://isni.org/isni/0000000046450913/collateral/02> .
-
-<https://isni.org/isni/0000000046450913/collateral/03/exp/eng/1011>
-    a rdac:C10006 ;
-    rdaed:P20312 "Cadillac man" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "Cadillac man (McCarthy, Cormac)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1011> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20039 <https://isni.org/isni/0000000046450913> ;
-    rdaeo:P20231 <https://isni.org/isni/0000000046450913/collateral/03> .
-
-<https://isni.org/isni/0000000046450913/collateral/04/exp/eng/1011>
-    a rdac:C10006 ;
-    rdaed:P20312 "Back when I worked on the railroad" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "Back when I worked on the railroad (McCarthy, Cormac)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1011> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20039 <https://isni.org/isni/0000000046450913> ;
-    rdaeo:P20231 <https://isni.org/isni/0000000046450913/collateral/04> .
-
-<https://isni.org/isni/0000000046450913/collateral/05/exp/eng/1011>
-    a rdac:C10006 ;
-    rdaed:P20312 "The crossroads" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "The crossroads (McCarthy, Cormac)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1011> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20039 <https://isni.org/isni/0000000046450913> ;
-    rdaeo:P20231 <https://isni.org/isni/0000000046450913/collateral/05> .
-
-<https://isni.org/isni/0000000046450913/collateral/06/exp/eng/1011>
-    a rdac:C10006 ;
-    rdaed:P20312 "One a night like this" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "One a night like this (McCarthy, Cormac)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1011> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20039 <https://isni.org/isni/0000000046450913> ;
-    rdaeo:P20231 <https://isni.org/isni/0000000046450913/collateral/06> .
-
-<https://isni.org/isni/0000000046450913/collateral/07/exp/eng/1011>
-    a rdac:C10006 ;
-    rdaed:P20312 "You can't outrun the hounds" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "You can't outrun the hounds (McCarthy, Cormac)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1011> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20039 <https://isni.org/isni/0000000046450913> ;
-    rdaeo:P20231 <https://isni.org/isni/0000000046450913/collateral/07> .
-
-<https://isni.org/isni/0000000046450913/collateral/08/exp/eng/1011>
-    a rdac:C10006 ;
-    rdaed:P20312 "Walking on solid ground" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "Walking on solid ground (McCarthy, Cormac)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1011> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20039 <https://isni.org/isni/0000000046450913> ;
-    rdaeo:P20231 <https://isni.org/isni/0000000046450913/collateral/08> .
-
-<https://isni.org/isni/0000000046450913/collateral/09/exp/eng/1011>
-    a rdac:C10006 ;
-    rdaed:P20312 "Jailhouse bound" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "Jailhouse bound (McCarthy, Cormac)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1011> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20039 <https://isni.org/isni/0000000046450913> ;
-    rdaeo:P20231 <https://isni.org/isni/0000000046450913/collateral/09> .
-
-<https://isni.org/isni/0000000046450913/collateral/10/exp/eng/1011>
-    a rdac:C10006 ;
-    rdaed:P20312 "Doppelganger" ;
-    rdaxd:P00029 "part" ;
-    rdfs:label "Doppelganger (McCarthy, Cormac)" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1011> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20039 <https://isni.org/isni/0000000046450913> ;
-    rdaeo:P20231 <https://isni.org/isni/0000000046450913/collateral/10> .
-
-<https://isni.org/isni/0000000046450913/collateral/exp/eng/1011>
-    a rdac:C10006 ;
-    rdaed:P20316 "Colleteral" ;
-    rdaxd:P00029 "parent" ;
-    rdaed:P20312 "Collateral" ;
-    rdfs:label "Collateral (McCarthy, Cormac)" ;
-    rdaed:P20071 "Gotta keep movin' -- The working poor -- Cadillac man -- Back when I worked on the railroad -- The crossroads -- One a night like this -- You can't outrun the hounds -- Walking on solid ground -- Jailhouse bound -- Doppelganger." ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1011> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20039 <https://isni.org/isni/0000000046450913> ;
-    rdaeo:P20145 <https://isni.org/isni/0000000046450913/collateral/01/exp/eng/1011> ,
-                 <https://isni.org/isni/0000000046450913/collateral/02/exp/eng/1011> ,
-                 <https://isni.org/isni/0000000046450913/collateral/03/exp/eng/1011> ,
-                 <https://isni.org/isni/0000000046450913/collateral/04/exp/eng/1011> ,
-                 <https://isni.org/isni/0000000046450913/collateral/05/exp/eng/1011> ,
-                 <https://isni.org/isni/0000000046450913/collateral/06/exp/eng/1011> ,
-                 <https://isni.org/isni/0000000046450913/collateral/07/exp/eng/1011> ,
-                 <https://isni.org/isni/0000000046450913/collateral/08/exp/eng/1011> ,
-                 <https://isni.org/isni/0000000046450913/collateral/09/exp/eng/1011> ,
-                 <https://isni.org/isni/0000000046450913/collateral/10/exp/eng/1011> ;
-    rdaeo:P20231 <https://isni.org/isni/0000000046450913/collateral> .
 
 <https://www.imdb.com/title/tt0149624/exp/1023>
     a rdac:C10006 ;
@@ -1781,32 +1315,6 @@
     rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1008> ;
     rdamo:P30139 <http://www.wikidata.org/entity/Q3061599/exp/1023> .
 
-<http://example.org/UPC-793447355627>
-    a rdac:C10007 ;
-    rdamd:P30004 "UPC 793447355627" ;
-    rdaxd:P00018 "UPC-793447355627" ;
-    rdamd:P30156 "Collateral" ;
-    rdamd:P30117 "Cormac McCarthy" ;
-    rdamd:P30088 "South Berwick, ME" ;
-    rdamd:P30111 "South Berwick, ME : Rakish Tilt Records, [2012]" ;
-    rdamd:P30076 "Rakish Tilt Records" ;
-    rdamd:P30011 "[2012]" ;
-    rdamd:P30182 "1 sound disc : digital, 4 3/4 in." ;
-    rdamd:P30137 "Compact disc." ;
-    rdamd:P30033 "Gotta keep movin' -- The working poor -- Cadillac man -- Back when I worked on the railroad -- The crossroads -- One a night like this -- You can't outrun the hounds -- Walking on solid ground -- Jailhouse bound -- Doppelganger." ;
-    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1013> ;
-    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1001> ;
-    rdamo:P30139 <https://isni.org/isni/0000000046450913/collateral/exp/eng/1011> ,
-                 <https://isni.org/isni/0000000046450913/collateral/01/exp/eng/1011> ,
-                 <https://isni.org/isni/0000000046450913/collateral/02/exp/eng/1011> ,
-                 <https://isni.org/isni/0000000046450913/collateral/03/exp/eng/1011> ,
-                 <https://isni.org/isni/0000000046450913/collateral/04/exp/eng/1011> ,
-                 <https://isni.org/isni/0000000046450913/collateral/05/exp/eng/1011> ,
-                 <https://isni.org/isni/0000000046450913/collateral/06/exp/eng/1011> ,
-                 <https://isni.org/isni/0000000046450913/collateral/07/exp/eng/1011> ,
-                 <https://isni.org/isni/0000000046450913/collateral/08/exp/eng/1011> ,
-                 <https://isni.org/isni/0000000046450913/collateral/09/exp/eng/1011> ,
-                 <https://isni.org/isni/0000000046450913/collateral/10/exp/eng/1011> .
 
 <http://example.org/isbn-0233956506>
     a rdac:C10007 ;
@@ -2459,55 +1967,6 @@
     rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
     rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
     rdamo:P30139 <http://viaf.org/viaf/4440159478236227990002/exp/eng/1020> .
-
-<http://example.org/isbn-0374261164>
-    a rdac:C10007 ;
-    rdamd:P30004 "ISBN 0374261164" , "ISBN 9780374261160" , "IAN 9780374261160" ;
-    rdaxd:P00018 "isbn-0374261164" , "isbn-9780374261160" , "IAN-9780374261160" ;
-    rdfs:label "ISBN0374261164" , "ISBN9780374261160" ;
-    rdamd:P30156 "Serious noticing" ;
-    rdamd:P30142 "selected essays, 1997-2019" ;
-    rdamd:P30117 "James Wood" ;
-    rdamd:P30107 "First American edition" ;
-    rdamd:P30088 "New York" ;
-    rdamd:P30111 "New York : Farrar, Straus and Giroux, 2020" ;
-    rdamd:P30076 "Farrar, Straus and Giroux" ;
-    rdamd:P30011 "2020" ;
-    rdamd:P30007 "©2019" ;
-    rdamd:P30182 "vi, 510 pages, 22 cm." ;
-    rdamd:P30137 "\"These essays originally appeared, in slightly different form, in The New Yorker, London Review of Books, and The New Republic\"--Title page verso." ,
-                 "Originally published in 2019 by Vintage, Great Britain, as Serious noticing: selected essays." ;
-    rdamd:P30033 "Fun stuff: homage to Keith Moon -- What Chekhov meant by life -- Serious noticing -- Saul Bellow's comic style -- Anna Karenina and characterization -- Joseph Roth's empire of signs -- Paul Auster's shallowness -- Hysterical realism -- Bohumil Hrabal's comic world -- George Orwell's very English revolution -- Jane Austen's heroic consciousness -- Cormac McCarthy's the road -- Reality examined to the point of madness': László Krasznahorkai -- Wounder and wounded -- On not going home -- Other side of silence: rereading W. G. Sebald -- Becoming them -- Don Quixote's old and new testaments -- Dostoevsky's god -- Helen Garner's savage honesty -- All and the if: God and metaphor in Melville -- Elena Ferrante -- Virginia Woolf's Mysticism -- Job existed: Primo Levi -- Marilynne Robinson -- Ismail Kadare -- Jenny Erpenbeck -- Packing my father-in-law's library." ;
-    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
-    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
-    rdamo:P30139 <http://viaf.org/viaf/92910249/seriousnoticing/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/01/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/02/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/03/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/04/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/05/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/06/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/07/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/08/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/09/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/11/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/12/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/13/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/14/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/15/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/16/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/17/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/18/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/19/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/20/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/21/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/22/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/23/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/24/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/25/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/26/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/27/exp/eng/1020> ,
-                 <http://viaf.org/viaf/92910249/seriousnoticing/28/exp/eng/1020> .
 
 <http://example.org/isbn-0375406778>
     a rdac:C10007 ;
