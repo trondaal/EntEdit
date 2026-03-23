@@ -35,14 +35,14 @@
 <http://viaf.org/viaf/29558386>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/29558386" ;
-    rdaad:P50385 "McCarthy, Cormac" ;
+    rdaad:P50413 "McCarthy, Cormac" ;
     rdfs:label "McCarthy, Cormac" ;
     rdaad:P50339 "1933-2023" .
 
 <http://viaf.org/viaf/59083692>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/59083692" ;
-    rdaad:P50385 "Hamsun, Knut" ;
+    rdaad:P50413 "Hamsun, Knut" ;
     rdfs:label "Hamsun, Knut" ;
     rdaad:P50339 "1859-1952" .
 

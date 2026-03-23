@@ -1615,192 +1615,192 @@
 <http://viaf.org/viaf/103212466>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/103212466" ;
-    rdaad:P50385 "Brunner, John Kilian Houston" ;
+    rdaad:P50413 "Brunner, John Kilian Houston" ;
     rdfs:label "Brunner, John Kilian Houston" ;
     rdaad:P50339 "1925-" .
 
 <http://viaf.org/viaf/109386240>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/109386240" ;
-    rdaad:P50385 "Silverberg, Robert" ;
+    rdaad:P50413 "Silverberg, Robert" ;
     rdfs:label "Silverberg, Robert" .
 
 <http://viaf.org/viaf/111614127>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/111614127" ;
-    rdaad:P50385 "Vance, Jack" ;
+    rdaad:P50413 "Vance, Jack" ;
     rdfs:label "Vance, Jack" .
 
 <http://viaf.org/viaf/12304119>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/12304119" ;
-    rdaad:P50385 "Anderson, Poul" ;
+    rdaad:P50413 "Anderson, Poul" ;
     rdfs:label "Anderson, Poul" ;
     rdaad:P50339 "1925-" .
 
 <http://viaf.org/viaf/172050597>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/172050597" ;
-    rdaad:P50385 "Elder, Joseph" ;
+    rdaad:P50413 "Elder, Joseph" ;
     rdfs:label "Elder, Joseph" .
 
 <http://viaf.org/viaf/172957858>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/172957858" ;
-    rdaad:P50385 "Beckman, Frida" ;
+    rdaad:P50413 "Beckman, Frida" ;
     rdfs:label "Beckman, Frida" .
 
 <http://viaf.org/viaf/24606270>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/24606270" ;
-    rdaad:P50385 "Peake, Mervyn Laurence" ;
+    rdaad:P50413 "Peake, Mervyn Laurence" ;
     rdfs:label "Peake, Mervyn Laurence" ;
     rdaad:P50339 "1911-1968" .
 
 <http://viaf.org/viaf/2465493>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/2465493" ;
-    rdaad:P50385 "Aldiss, Brian W." ;
+    rdaad:P50413 "Aldiss, Brian W." ;
     rdfs:label "Aldiss, Brian W." ;
     rdaad:P50339 "1925-" .
 
 <http://viaf.org/viaf/27062571>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/27062571" ;
-    rdaad:P50385 "Clarke, Arthur C." ;
+    rdaad:P50413 "Clarke, Arthur C." ;
     rdfs:label "Clarke, Arthur C." ;
     rdaad:P50339 "1925-" .
 
 <http://viaf.org/viaf/33278380>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/33278380" ;
-    rdaad:P50385 "Hartwell, David G." ;
+    rdaad:P50413 "Hartwell, David G." ;
     rdfs:label "Hartwell, David G." .
 
 <http://viaf.org/viaf/36913662>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/36913662" ;
-    rdaad:P50385 "Amis, Martin" ;
+    rdaad:P50413 "Amis, Martin" ;
     rdfs:label "Amis, Martin" .
 
 <http://viaf.org/viaf/43347281>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/43347281" ;
-    rdaad:P50385 "Ray, Joyce M." ;
+    rdaad:P50413 "Ray, Joyce M." ;
     rdfs:label "Ray, Joyce M." .
 
 <http://viaf.org/viaf/43347281/researchdatamanagement/chronopolis/1>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/43347281/researchdatamanagement/chronopolis/1" ;
-    rdaad:P50385 "Minor, David" ;
+    rdaad:P50413 "Minor, David" ;
     rdfs:label "Minor, David" .
 
 <http://viaf.org/viaf/43347281/researchdatamanagement/chronopolis/2>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/43347281/researchdatamanagement/chronopolis/2" ;
-    rdaad:P50385 "Schottlaender, Brian E. C." ;
+    rdaad:P50413 "Schottlaender, Brian E. C." ;
     rdfs:label "Schottlaender, Brian E. C." .
 
 <http://viaf.org/viaf/43347281/researchdatamanagement/chronopolis/3>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/43347281/researchdatamanagement/chronopolis/3" ;
-    rdaad:P50385 "Kozbial, Ardys" ;
+    rdaad:P50413 "Kozbial, Ardys" ;
     rdfs:label "Kozbial, Ardys" .
 
 <http://viaf.org/viaf/54154517>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/54154517" ;
-    rdaad:P50385 "Spinrad, Norman" ;
+    rdaad:P50413 "Spinrad, Norman" ;
     rdfs:label "Spinrad, Norman" .
 
 <http://viaf.org/viaf/71388189>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/71388189" ;
-    rdaad:P50385 "Burgess, Anthony" ;
+    rdaad:P50413 "Burgess, Anthony" ;
     rdfs:label "Burgess, Anthony" .
 
 <http://viaf.org/viaf/762106>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/762106" ;
-    rdaad:P50385 "Fadiman, Clifton" ;
+    rdaad:P50413 "Fadiman, Clifton" ;
     rdfs:label "Fadiman, Clifton" ;
     rdaad:P50339 "1904-1999" .
 
 <http://viaf.org/viaf/79304712>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/79304712" ;
-    rdaad:P50385 "Carr, Terry" ;
+    rdaad:P50413 "Carr, Terry" ;
     rdfs:label "Carr, Terry" ;
     rdaad:P50339 "1925-" .
 
 <http://viaf.org/viaf/84181241>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/84181241" ;
-    rdaad:P50385 "Bayley, Barrington J" ;
+    rdaad:P50413 "Bayley, Barrington J" ;
     rdfs:label "Bayley, Barrington J" .
 
 <http://viaf.org/viaf/9842556>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/9842556" ;
-    rdaad:P50385 "Ballard, J. G." ;
+    rdaad:P50413 "Ballard, J. G." ;
     rdfs:label "Ballard, J. G." ;
     rdaad:P50339 "1930-2009" .
 
 <https://en.wikipedia.org/wiki/Franklin_Cox>
     a rdac:C10002 ;
     rdaxd:P00018 "https://en.wikipedia.org/wiki/Franklin_Cox" ;
-    rdaad:P50385 "Cox, Frank" ;
+    rdaad:P50413 "Cox, Frank" ;
     rdfs:label "Cox, Frank" ;
     rdaad:P50339 "1961-" .
 
 <https://isni.org/isni/0000000007828549>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/0000000007828549" ;
-    rdaad:P50385 "Potter, Jeffrey Knight" ;
+    rdaad:P50413 "Potter, Jeffrey Knight" ;
     rdfs:label "Potter, Jeffrey Knight" .
 
 <https://isni.org/isni/0000000033066226>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/0000000033066226" ;
-    rdaad:P50385 "Cella, Lisa" ;
+    rdaad:P50413 "Cella, Lisa" ;
     rdfs:label "Cella, Lisa" .
 
 <https://isni.org/isni/0000000064014891>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/0000000064014891" ;
-    rdaad:P50385 "McKimmey, J." ;
+    rdaad:P50413 "McKimmey, J." ;
     rdfs:label "McKimmey, J." .
 
 <https://isni.org/isni/000000008169370X>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/000000008169370X" ;
-    rdaad:P50385 "Jakes, John Williams" ;
+    rdaad:P50413 "Jakes, John Williams" ;
     rdfs:label "Jakes, John Williams" ;
     rdaad:P50339 "1925-" .
 
 <https://isni.org/isni/0000000109520828>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/0000000109520828" ;
-    rdaad:P50385 "Laumer, K." ;
+    rdaad:P50413 "Laumer, K." ;
     rdfs:label "Laumer, K." .
 
 <https://isni.org/isni/0000000372289205>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/0000000372289205" ;
-    rdaad:P50385 "Van Moll, Erwin" ;
+    rdaad:P50413 "Van Moll, Erwin" ;
     rdfs:label "Van Moll, Erwin" .
 
 <https://isni.org/isni/000000043862402X>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/000000043862402X" ;
-    rdaad:P50385 "Edin, Fredrik" ;
+    rdaad:P50413 "Edin, Fredrik" ;
     rdfs:label "Edin, Fredrik" ;
     rdaad:P50339 "1967-" .
 
 <https://isni.org/isni/000000044534099X>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/000000044534099X" ;
-    rdaad:P50385 "Modular K." ;
+    rdaad:P50413 "Modular K." ;
     rdfs:label "Modular K." .
 
 <http://example.com/innerlandscape/exp/eng/1020>

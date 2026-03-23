@@ -1154,1235 +1154,1235 @@
 <http://example.org/alcobadaniel>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/alcobadaniel" ;
-    rdaad:P50385 "Alcoba, Daniel" ;
+    rdaad:P50413 "Alcoba, Daniel" ;
     rdfs:label "Alcoba, Daniel" .
 
 <http://example.org/andersoncarll>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/andersoncarll" ;
-    rdaad:P50385 "Anderson, Carl L." ;
+    rdaad:P50413 "Anderson, Carl L." ;
     rdfs:label "Anderson, Carl L." .
 
 <http://example.org/arntzeneven>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/arntzeneven" ;
-    rdaad:P50385 "Arntzen, Even" ;
+    rdaad:P50413 "Arntzen, Even" ;
     rdfs:label "Arntzen, Even" ;
     rdaad:P50339 "1962-" .
 
 <http://example.org/atcatherined>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/atcatherined" ;
-    rdaad:P50385 "At, Catherine d'" ;
+    rdaad:P50413 "At, Catherine d'" ;
     rdfs:label "At, Catherine d'" .
 
 <http://example.org/atweldeveygaricardo>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/atweldeveygaricardo" ;
-    rdaad:P50385 "Atwel de Veyga, Ricardo" ;
+    rdaad:P50413 "Atwel de Veyga, Ricardo" ;
     rdfs:label "Atwel de Veyga, Ricardo" .
 
 <http://example.org/austerpaul>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/austerpaul" ;
-    rdaad:P50385 "Auster, Paul" ;
+    rdaad:P50413 "Auster, Paul" ;
     rdfs:label "Auster, Paul" ;
     rdaad:P50339 "1947-" .
 
 <http://example.org/ayderaggioamalia>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/ayderaggioamalia" ;
-    rdaad:P50385 "Aydée Raggio, Amalia" ;
+    rdaad:P50413 "Aydée Raggio, Amalia" ;
     rdfs:label "Aydée Raggio, Amalia" .
 
 <http://example.org/baldizfrancisco>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/baldizfrancisco" ;
-    rdaad:P50385 "Baldiz, Francisco" ;
+    rdaad:P50413 "Baldiz, Francisco" ;
     rdfs:label "Baldiz, Francisco" .
 
 <http://example.org/barraultjeanlouis>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/barraultjeanlouis" ;
-    rdaad:P50385 "Barrault, Jean-Louis" ;
+    rdaad:P50413 "Barrault, Jean-Louis" ;
     rdfs:label "Barrault, Jean-Louis" .
 
 <http://example.org/baumgartnerwalter>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/baumgartnerwalter" ;
-    rdaad:P50385 "Baumgartner, Walter" ;
+    rdaad:P50413 "Baumgartner, Walter" ;
     rdfs:label "Baumgartner, Walter" .
 
 <http://example.org/bienhorst>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/bienhorst" ;
-    rdaad:P50385 "Bien, Horst" ;
+    rdaad:P50413 "Bien, Horst" ;
     rdfs:label "Bien, Horst" .
 
 <http://example.org/bjrkmanedwin>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/bjrkmanedwin" ;
-    rdaad:P50385 "Björkman, Edwin" ;
+    rdaad:P50413 "Björkman, Edwin" ;
     rdfs:label "Björkman, Edwin" .
 
 <http://example.org/blancafortmanuelr>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/blancafortmanuelr" ;
-    rdaad:P50385 "Blancafort, Manuel R." ;
+    rdaad:P50413 "Blancafort, Manuel R." ;
     rdfs:label "Blancafort, Manuel R." .
 
 <http://example.org/blekenhkon>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/blekenhkon" ;
-    rdaad:P50385 "Bleken, Håkon" ;
+    rdaad:P50413 "Bleken, Håkon" ;
     rdfs:label "Bleken, Håkon" ;
     rdaad:P50339 "1929-" .
 
 <http://example.org/blyrobert>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/blyrobert" ;
-    rdaad:P50385 "Bly, Robert" ;
+    rdaad:P50413 "Bly, Robert" ;
     rdfs:label "Bly, Robert" ;
     rdaad:P50339 "1926-" .
 
 <http://example.org/borchmarievon>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/borchmarievon" ;
-    rdaad:P50385 "Borch, Marie von" ;
+    rdaad:P50413 "Borch, Marie von" ;
     rdfs:label "Borch, Marie von" ;
     rdaad:P50339 "1853-1895" .
 
 <http://example.org/bothmergerry>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/bothmergerry" ;
-    rdaad:P50385 "Bothmer, Gerry" ;
+    rdaad:P50413 "Bothmer, Gerry" ;
     rdfs:label "Bothmer, Gerry" .
 
 <http://example.org/boyerregis>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/boyerregis" ;
-    rdaad:P50385 "Boyer, Régis" ;
+    rdaad:P50413 "Boyer, Régis" ;
     rdfs:label "Boyer, Régis" .
 
 <http://example.org/brausewetterernst>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/brausewetterernst" ;
-    rdaad:P50385 "Brausewetter, Ernst" ;
+    rdaad:P50413 "Brausewetter, Ernst" ;
     rdfs:label "Brausewetter, Ernst" .
 
 <http://example.org/bruckedgarpedro>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/bruckedgarpedro" ;
-    rdaad:P50385 "Bruck, Edgar Pedro" ;
+    rdaad:P50413 "Bruck, Edgar Pedro" ;
     rdfs:label "Bruck, Edgar Pedro" .
 
 <http://example.org/brunsalken>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/brunsalken" ;
-    rdaad:P50385 "Bruns, Alken" ;
+    rdaad:P50413 "Bruns, Alken" ;
     rdfs:label "Bruns, Alken" ;
     rdaad:P50339 "1944-" .
 
 <http://example.org/bullfrancis>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/bullfrancis" ;
-    rdaad:P50385 "Bull, Francis" ;
+    rdaad:P50413 "Bull, Francis" ;
     rdfs:label "Bull, Francis" ;
     rdaad:P50339 "1887-1974" .
 
 <http://example.org/camprubdejimnezzenobia>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/camprubdejimnezzenobia" ;
-    rdaad:P50385 "Camprubí de Jiménez, Zenobia" ;
+    rdaad:P50413 "Camprubí de Jiménez, Zenobia" ;
     rdfs:label "Camprubí de Jiménez, Zenobia" ;
     rdaad:P50339 "1887-1956" .
 
 <http://example.org/carlsenhenning>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/carlsenhenning" ;
-    rdaad:P50385 "Carlsen, Henning" ;
+    rdaad:P50413 "Carlsen, Henning" ;
     rdfs:label "Carlsen, Henning" .
 
 <http://example.org/chaterarthurg>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/chaterarthurg" ;
-    rdaad:P50385 "Chater, Arthur G." ;
+    rdaad:P50413 "Chater, Arthur G." ;
     rdfs:label "Chater, Arthur G." .
 
 <http://example.org/christensenlarssaabye>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/christensenlarssaabye" ;
-    rdaad:P50385 "Christensen, Lars Saabye" ;
+    rdaad:P50413 "Christensen, Lars Saabye" ;
     rdfs:label "Christensen, Lars Saabye" ;
     rdaad:P50339 "1953-" .
 
 <http://example.org/claramundabesjosmara>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/claramundabesjosmara" ;
-    rdaad:P50385 "Claramunda Bes, José María" ;
+    rdaad:P50413 "Claramunda Bes, José María" ;
     rdfs:label "Claramunda Bes, José María" .
 
 <http://example.org/costamontserrat>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/costamontserrat" ;
-    rdaad:P50385 "Costa, Montserrat" ;
+    rdaad:P50413 "Costa, Montserrat" ;
     rdfs:label "Costa, Montserrat" .
 
 <http://example.org/cubehellmutvon>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/cubehellmutvon" ;
-    rdaad:P50385 "Cube, Hellmut von" ;
+    rdaad:P50413 "Cube, Hellmut von" ;
     rdfs:label "Cube, Hellmut von" .
 
 <http://example.org/curielberta>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/curielberta" ;
-    rdaad:P50385 "Curiel, Berta" ;
+    rdaad:P50413 "Curiel, Berta" ;
     rdfs:label "Curiel, Berta" .
 
 <http://example.org/deteringheinrich>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/deteringheinrich" ;
-    rdaad:P50385 "Detering, Heinrich" ;
+    rdaad:P50413 "Detering, Heinrich" ;
     rdfs:label "Detering, Heinrich" .
 
 <http://example.org/dietlrobert>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/dietlrobert" ;
-    rdaad:P50385 "Dietl, Robert" ;
+    rdaad:P50413 "Dietl, Robert" ;
     rdfs:label "Dietl, Robert" .
 
 <http://example.org/dumlinghans>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/dumlinghans" ;
-    rdaad:P50385 "Däumling, Hans" ;
+    rdaad:P50413 "Däumling, Hans" ;
     rdfs:label "Däumling, Hans" .
 
 <http://example.org/ecclesrichard>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/ecclesrichard" ;
-    rdaad:P50385 "Eccles, Richard" ;
+    rdaad:P50413 "Eccles, Richard" ;
     rdfs:label "Eccles, Richard" .
 
 <http://example.org/egertongeorge>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/egertongeorge" ;
-    rdaad:P50385 "Egerton, George" ;
+    rdaad:P50413 "Egerton, George" ;
     rdfs:label "Egerton, George" .
 
 <http://example.org/eggeneinar>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/eggeneinar" ;
-    rdaad:P50385 "Eggen, Einar" ;
+    rdaad:P50413 "Eggen, Einar" ;
     rdfs:label "Eggen, Einar" ;
     rdaad:P50339 "1929-" .
 
 <http://example.org/engelsenjanniche>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/engelsenjanniche" ;
-    rdaad:P50385 "Engelsen, Janniche" ;
+    rdaad:P50413 "Engelsen, Janniche" ;
     rdfs:label "Engelsen, Janniche" .
 
 <http://example.org/engelstadcarlfredrik>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/engelstadcarlfredrik" ;
-    rdaad:P50385 "Engelstad, Carl Fredrik" ;
+    rdaad:P50413 "Engelstad, Carl Fredrik" ;
     rdfs:label "Engelstad, Carl Fredrik" ;
     rdaad:P50339 "1915-1996" .
 
 <http://example.org/ferrervidaljorge>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/ferrervidaljorge" ;
-    rdaad:P50385 "Ferrer-Vidal, Jorge" ;
+    rdaad:P50413 "Ferrer-Vidal, Jorge" ;
     rdfs:label "Ferrer-Vidal, Jorge" ;
     rdaad:P50339 "1926-2001" .
 
 <http://example.org/ferrorafaela>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/ferrorafaela" ;
-    rdaad:P50385 "Ferro, Rafaela" ;
+    rdaad:P50413 "Ferro, Rafaela" ;
     rdfs:label "Ferro, Rafaela" .
 
 <http://example.org/figurteateretinordland>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/figurteateretinordland" ;
-    rdaad:P50385 "Figurteateret i Nordland" ;
+    rdaad:P50413 "Figurteateret i Nordland" ;
     rdfs:label "Figurteateret i Nordland" .
 
 <http://example.org/flobergbjrn>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/flobergbjrn" ;
-    rdaad:P50385 "Floberg, Bjørn" ;
+    rdaad:P50413 "Floberg, Bjørn" ;
     rdfs:label "Floberg, Bjørn" ;
     rdaad:P50339 "1947-" .
 
 <http://example.org/friedrichsenuwe>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/friedrichsenuwe" ;
-    rdaad:P50385 "Friedrichsen, Uwe" ;
+    rdaad:P50413 "Friedrichsen, Uwe" ;
     rdfs:label "Friedrichsen, Uwe" ;
     rdaad:P50339 "1934-2016" .
 
 <http://example.org/frlandolepetter>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/frlandolepetter" ;
-    rdaad:P50385 "Førland, Ole Petter" ;
+    rdaad:P50413 "Førland, Ole Petter" ;
     rdfs:label "Førland, Ole Petter" .
 
 <http://example.org/galtieringunn>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/galtieringunn" ;
-    rdaad:P50385 "Galtier, Ingunn" ;
+    rdaad:P50413 "Galtier, Ingunn" ;
     rdfs:label "Galtier, Ingunn" .
 
 <http://example.org/garbarekjan>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/garbarekjan" ;
-    rdaad:P50385 "Garbarek, Jan" ;
+    rdaad:P50413 "Garbarek, Jan" ;
     rdfs:label "Garbarek, Jan" ;
     rdaad:P50339 "1947-" .
 
 <http://example.org/garcabadellregino>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/garcabadellregino" ;
-    rdaad:P50385 "García Badell, Regino" ;
+    rdaad:P50413 "García Badell, Regino" ;
     rdfs:label "García Badell, Regino" .
 
 <http://example.org/gaytiffteugene>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/gaytiffteugene" ;
-    rdaad:P50385 "Gay-Tifft, Eugene" ;
+    rdaad:P50413 "Gay-Tifft, Eugene" ;
     rdfs:label "Gay-Tifft, Eugene" .
 
 <http://example.org/geddestom>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/geddestom" ;
-    rdaad:P50385 "Geddes, Tom" ;
+    rdaad:P50413 "Geddes, Tom" ;
     rdfs:label "Geddes, Tom" .
 
 <http://example.org/gideandr>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/gideandr" ;
-    rdaad:P50385 "Gide, André" ;
+    rdaad:P50413 "Gide, André" ;
     rdfs:label "Gide, André" ;
     rdaad:P50339 "1869-1951" .
 
 <http://example.org/goebelheinrich>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/goebelheinrich" ;
-    rdaad:P50385 "Goebel, Heinrich" ;
+    rdaad:P50413 "Goebel, Heinrich" ;
     rdfs:label "Goebel, Heinrich" .
 
 <http://example.org/gossg>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/gossg" ;
-    rdaad:P50385 "Gossé, G." ;
+    rdaad:P50413 "Gossé, G." ;
     rdfs:label "Gossé, G." .
 
 <http://example.org/gossl>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/gossl" ;
-    rdaad:P50385 "Gossé, L." ;
+    rdaad:P50413 "Gossé, L." ;
     rdfs:label "Gossé, L." ;
     rdaad:P50339 "1916-2001" .
 
 <http://example.org/grblsofie>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/grblsofie" ;
-    rdaad:P50385 "Gråbøl, Sofie" ;
+    rdaad:P50413 "Gråbøl, Sofie" ;
     rdfs:label "Gråbøl, Sofie" ;
     rdaad:P50339 "1968-" .
 
 <http://example.org/griegharald>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/griegharald" ;
-    rdaad:P50385 "Grieg, Harald" ;
+    rdaad:P50413 "Grieg, Harald" ;
     rdfs:label "Grieg, Harald" ;
     rdaad:P50339 "1895-1972" .
 
 <http://example.org/grouixpierre>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/grouixpierre" ;
-    rdaad:P50385 "Grouix, Pierre" ;
+    rdaad:P50413 "Grouix, Pierre" ;
     rdfs:label "Grouix, Pierre" .
 
 <http://example.org/grunauwernervon>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/grunauwernervon" ;
-    rdaad:P50385 "Grünau, Werner von" ;
+    rdaad:P50413 "Grünau, Werner von" ;
     rdfs:label "Grünau, Werner von" ;
     rdaad:P50339 "1910-1974" .
 
 <http://example.org/guilhonalainpierre>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/guilhonalainpierre" ;
-    rdaad:P50385 "Guilhon, Alain-Pierre" ;
+    rdaad:P50413 "Guilhon, Alain-Pierre" ;
     rdfs:label "Guilhon, Alain-Pierre" .
 
 <http://example.org/guilhoningunn>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/guilhoningunn" ;
-    rdaad:P50385 "Guilhon, Ingunn" ;
+    rdaad:P50413 "Guilhon, Ingunn" ;
     rdfs:label "Guilhon, Ingunn" .
 
 <http://example.org/gullvaghakon>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/gullvaghakon" ;
-    rdaad:P50385 "Gullvåg, Håkon" ;
+    rdaad:P50413 "Gullvåg, Håkon" ;
     rdfs:label "Gullvåg, Håkon" .
 
 <http://example.org/gullvghkon>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/gullvghkon" ;
-    rdaad:P50385 "Gullvåg, Håkon" ;
+    rdaad:P50413 "Gullvåg, Håkon" ;
     rdfs:label "Gullvåg, Håkon" ;
     rdaad:P50339 "1959-" .
 
 <http://example.org/gustavsonerik>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/gustavsonerik" ;
-    rdaad:P50385 "Gustavson, Erik" ;
+    rdaad:P50413 "Gustavson, Erik" ;
     rdfs:label "Gustavson, Erik" ;
     rdaad:P50339 "1955-" .
 
 <http://example.org/gutirrezfernando>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/gutirrezfernando" ;
-    rdaad:P50385 "Gutiérrez, Fernando" ;
+    rdaad:P50413 "Gutiérrez, Fernando" ;
     rdfs:label "Gutiérrez, Fernando" ;
     rdaad:P50339 "1911-1984" .
 
 <http://example.org/halvorsenleif>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/halvorsenleif" ;
-    rdaad:P50385 "Halvorsen, Leif" ;
+    rdaad:P50413 "Halvorsen, Leif" ;
     rdfs:label "Halvorsen, Leif" ;
     rdaad:P50339 "1887-1959" .
 
 <http://example.org/harthernernst>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/harthernernst" ;
-    rdaad:P50385 "Harthern, Ernst" ;
+    rdaad:P50413 "Harthern, Ernst" ;
     rdfs:label "Harthern, Ernst" ;
     rdaad:P50339 "1884-1969" .
 
 <http://example.org/hauerrutger>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/hauerrutger" ;
-    rdaad:P50385 "Hauer, Rutger" ;
+    rdaad:P50413 "Hauer, Rutger" ;
     rdfs:label "Hauer, Rutger" ;
     rdaad:P50339 "1944-" .
 
 <http://example.org/hauganjrgen>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/hauganjrgen" ;
-    rdaad:P50385 "Haugan, Jørgen" ;
+    rdaad:P50413 "Haugan, Jørgen" ;
     rdfs:label "Haugan, Jørgen" ;
     rdaad:P50339 "1941-" .
 
 <http://example.org/havrevoldolafr>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/havrevoldolafr" ;
-    rdaad:P50385 "Havrevold, Olafr" ;
+    rdaad:P50413 "Havrevold, Olafr" ;
     rdfs:label "Havrevold, Olafr" .
 
 <http://example.org/heinethomastheodor>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/heinethomastheodor" ;
-    rdaad:P50385 "Heine, Thomas Theodor" ;
+    rdaad:P50413 "Heine, Thomas Theodor" ;
     rdfs:label "Heine, Thomas Theodor" ;
     rdaad:P50339 "1867-1948" .
 
 <http://example.org/hennieaksel>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/hennieaksel" ;
-    rdaad:P50385 "Hennie, Aksel" ;
+    rdaad:P50413 "Hennie, Aksel" ;
     rdfs:label "Hennie, Aksel" ;
     rdaad:P50339 "1975-" .
 
 <http://example.org/hiltbrunnerhermann>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/hiltbrunnerhermann" ;
-    rdaad:P50385 "Hiltbrunner, Hermann" ;
+    rdaad:P50413 "Hiltbrunner, Hermann" ;
     rdfs:label "Hiltbrunner, Hermann" ;
     rdaad:P50339 "1893-1961" .
 
 <http://example.org/hoffmannpaul>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/hoffmannpaul" ;
-    rdaad:P50385 "Hoffmann, Paul" ;
+    rdaad:P50413 "Hoffmann, Paul" ;
     rdfs:label "Hoffmann, Paul" .
 
 <http://example.org/hoyerniels>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/hoyerniels" ;
-    rdaad:P50385 "Hoyer, Niels" ;
+    rdaad:P50413 "Hoyer, Niels" ;
     rdfs:label "Hoyer, Niels" ;
     rdaad:P50339 "1820-1889" .
 
 <http://example.org/hyllestedcarlchristian>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/hyllestedcarlchristian" ;
-    rdaad:P50385 "Hyllested, Carl Christian" ;
+    rdaad:P50413 "Hyllested, Carl Christian" ;
     rdfs:label "Hyllested, Carl Christian" .
 
 <http://example.org/iglesiasisabel>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/iglesiasisabel" ;
-    rdaad:P50385 "Iglesias, Isabel" ;
+    rdaad:P50413 "Iglesias, Isabel" ;
     rdfs:label "Iglesias, Isabel" .
 
 <http://example.org/ihleelisabeth>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/ihleelisabeth" ;
-    rdaad:P50385 "Ihle, Elisabeth" ;
+    rdaad:P50413 "Ihle, Elisabeth" ;
     rdfs:label "Ihle, Elisabeth" ;
     rdaad:P50339 "1893-" .
 
 <http://example.org/imbeckgert>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/imbeckgert" ;
-    rdaad:P50385 "Imbeck, Gert" ;
+    rdaad:P50413 "Imbeck, Gert" ;
     rdfs:label "Imbeck, Gert" .
 
 <http://example.org/ipb>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/ipb" ;
-    rdaad:P50385 "I. P. B." ;
+    rdaad:P50413 "I. P. B." ;
     rdfs:label "I. P. B." .
 
 <http://example.org/jenssenolavchristopher>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/jenssenolavchristopher" ;
-    rdaad:P50385 "Jenssen, Olav Christopher" ;
+    rdaad:P50413 "Jenssen, Olav Christopher" ;
     rdfs:label "Jenssen, Olav Christopher" ;
     rdaad:P50339 "1954-" .
 
 <http://example.org/jervelmarialana>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/jervelmarialana" ;
-    rdaad:P50385 "Jervel. Maria Lana" ;
+    rdaad:P50413 "Jervel. Maria Lana" ;
     rdfs:label "Jervel. Maria Lana" .
 
 <http://example.org/johannessenjens>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/johannessenjens" ;
-    rdaad:P50385 "Johannessen, Jens" ;
+    rdaad:P50413 "Johannessen, Jens" ;
     rdfs:label "Johannessen, Jens" ;
     rdaad:P50339 "1934-" .
 
 <http://example.org/johnsonnils>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/johnsonnils" ;
-    rdaad:P50385 "Johnson, Nils" ;
+    rdaad:P50413 "Johnson, Nils" ;
     rdfs:label "Johnson, Nils" ;
     rdaad:P50339 "1956-" .
 
 <http://example.org/jordalhelge>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/jordalhelge" ;
-    rdaad:P50385 "Jordal, Helge" ;
+    rdaad:P50413 "Jordal, Helge" ;
     rdfs:label "Jordal, Helge" ;
     rdaad:P50339 "1946-" .
 
 <http://example.org/keelaldo>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/keelaldo" ;
-    rdaad:P50385 "Keel, Aldo" ;
+    rdaad:P50413 "Keel, Aldo" ;
     rdfs:label "Keel, Aldo" ;
     rdaad:P50339 "1948-" .
 
 <http://example.org/keelingeborg>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/keelingeborg" ;
-    rdaad:P50385 "Keel, Ingeborg" ;
+    rdaad:P50413 "Keel, Ingeborg" ;
     rdfs:label "Keel, Ingeborg" .
 
 <http://example.org/kehlmanndaniel>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/kehlmanndaniel" ;
-    rdaad:P50385 "Kehlmann, Daniel" ;
+    rdaad:P50413 "Kehlmann, Daniel" ;
     rdfs:label "Kehlmann, Daniel" ;
     rdaad:P50339 "1975-" .
 
 <http://example.org/kiyhermann>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/kiyhermann" ;
-    rdaad:P50385 "Kiy, Hermann" ;
+    rdaad:P50413 "Kiy, Hermann" ;
     rdfs:label "Kiy, Hermann" .
 
 <http://example.org/knustjutta>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/knustjutta" ;
-    rdaad:P50385 "Knust, Jutta" ;
+    rdaad:P50413 "Knust, Jutta" ;
     rdfs:label "Knust, Jutta" .
 
 <http://example.org/knusttheodor>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/knusttheodor" ;
-    rdaad:P50385 "Knust, Theodor" ;
+    rdaad:P50413 "Knust, Theodor" ;
     rdfs:label "Knust, Theodor" ;
     rdaad:P50339 "1908-" .
 
 <http://example.org/knutsennilsm>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/knutsennilsm" ;
-    rdaad:P50385 "Knutsen, Nils M." ;
+    rdaad:P50413 "Knutsen, Nils M." ;
     rdfs:label "Knutsen, Nils M." ;
     rdaad:P50339 "1943-" .
 
 <http://example.org/knutsennilsmagne>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/knutsennilsmagne" ;
-    rdaad:P50385 "Knutsen, Nils Magne" ;
+    rdaad:P50413 "Knutsen, Nils Magne" ;
     rdfs:label "Knutsen, Nils Magne" .
 
 <http://example.org/kolsrudlasse>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/kolsrudlasse" ;
-    rdaad:P50385 "Kolsrud, Lasse" ;
+    rdaad:P50413 "Kolsrud, Lasse" ;
     rdfs:label "Kolsrud, Lasse" ;
     rdaad:P50339 "1959-" .
 
 <http://example.org/kosterkahugo>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/kosterkahugo" ;
-    rdaad:P50385 "Kosterka, Hugo" ;
+    rdaad:P50413 "Kosterka, Hugo" ;
     rdfs:label "Kosterka, Hugo" ;
     rdaad:P50339 "1867-1956" .
 
 <http://example.org/kristelsylvia>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/kristelsylvia" ;
-    rdaad:P50385 "Kristel, Sylvia" ;
+    rdaad:P50413 "Kristel, Sylvia" ;
     rdfs:label "Kristel, Sylvia" ;
     rdaad:P50339 "1952-2012" .
 
 <http://example.org/kristiansenhansivar>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/kristiansenhansivar" ;
-    rdaad:P50385 "Kristiansen, Hans-Ivar" ;
+    rdaad:P50413 "Kristiansen, Hans-Ivar" ;
     rdfs:label "Kristiansen, Hans-Ivar" ;
     rdaad:P50339 "1947-" .
 
 <http://example.org/krohgper>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/krohgper" ;
-    rdaad:P50385 "Krohg, Per" ;
+    rdaad:P50413 "Krohg, Per" ;
     rdfs:label "Krohg, Per" ;
     rdaad:P50339 "1889-1965" .
 
 <http://example.org/kullejarl>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/kullejarl" ;
-    rdaad:P50385 "Kulle, Jarl" ;
+    rdaad:P50413 "Kulle, Jarl" ;
     rdfs:label "Kulle, Jarl" ;
     rdaad:P50339 "1927-" .
 
 <http://example.org/lagercrantzmarika>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/lagercrantzmarika" ;
-    rdaad:P50385 "Lagercrantz, Marika" ;
+    rdaad:P50413 "Lagercrantz, Marika" ;
     rdfs:label "Lagercrantz, Marika" ;
     rdaad:P50339 "1954" .
 
 <http://example.org/lanajorvellmara>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/lanajorvellmara" ;
-    rdaad:P50385 "Lana Jorvell, María" ;
+    rdaad:P50413 "Lana Jorvell, María" ;
     rdfs:label "Lana Jorvell, María" .
 
 <http://example.org/lanamara>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/lanamara" ;
-    rdaad:P50385 "Lana, María" ;
+    rdaad:P50413 "Lana, María" ;
     rdfs:label "Lana, María" .
 
 <http://example.org/lindblomgunnel>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/lindblomgunnel" ;
-    rdaad:P50385 "Lindblom, Gunnel" ;
+    rdaad:P50413 "Lindblom, Gunnel" ;
     rdfs:label "Lindblom, Gunnel" .
 
 <http://example.org/lindgrenhans>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/lindgrenhans" ;
-    rdaad:P50385 "Lindgren, Hans" ;
+    rdaad:P50413 "Lindgren, Hans" ;
     rdfs:label "Lindgren, Hans" ;
     rdaad:P50339 "1947-2013" .
 
 <http://example.org/luacesjuangde>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/luacesjuangde" ;
-    rdaad:P50385 "Luaces, Juan G. de" ;
+    rdaad:P50413 "Luaces, Juan G. de" ;
     rdfs:label "Luaces, Juan G. de" ;
     rdaad:P50339 "1906-1963" .
 
 <http://example.org/lussanetpaulde>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/lussanetpaulde" ;
-    rdaad:P50385 "Lussanet, Paul de" ;
+    rdaad:P50413 "Lussanet, Paul de" ;
     rdfs:label "Lussanet, Paul de" .
 
 <http://example.org/maagereva>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/maagereva" ;
-    rdaad:P50385 "Maagerö, Eva" ;
+    rdaad:P50413 "Maagerö, Eva" ;
     rdfs:label "Maagerö, Eva" .
 
 <http://example.org/mannmathilde>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/mannmathilde" ;
-    rdaad:P50385 "Mann, Mathilde" ;
+    rdaad:P50413 "Mann, Mathilde" ;
     rdfs:label "Mann, Mathilde" ;
     rdaad:P50339 "1859-1925" .
 
 <http://example.org/mathesonfredrik>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/mathesonfredrik" ;
-    rdaad:P50385 "Matheson, Fredrik" ;
+    rdaad:P50413 "Matheson, Fredrik" ;
     rdfs:label "Matheson, Fredrik" .
 
 <http://example.org/mcfarlanejameswalter>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/mcfarlanejameswalter" ;
-    rdaad:P50385 "McFarlane, James Walter" , "McFarlane, James" ;
+    rdaad:P50413 "McFarlane, James Walter" , "McFarlane, James" ;
     rdfs:label "McFarlane, James Walter" , "McFarlane, James" .
 
 <http://example.org/mcleanduncan>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/mcleanduncan" ;
-    rdaad:P50385 "McLean, Duncan" ;
+    rdaad:P50413 "McLean, Duncan" ;
     rdfs:label "McLean, Duncan" ;
     rdaad:P50339 "1859-1952" .
 
 <http://example.org/melandkarin>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/melandkarin" ;
-    rdaad:P50385 "Meland, Karin" ;
+    rdaad:P50413 "Meland, Karin" ;
     rdfs:label "Meland, Karin" .
 
 <http://example.org/millerhenry>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/millerhenry" ;
-    rdaad:P50385 "Miller, Henry" ;
+    rdaad:P50413 "Miller, Henry" ;
     rdfs:label "Miller, Henry" .
 
 <http://example.org/mllerrobby>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/mllerrobby" ;
-    rdaad:P50385 "Müller, Robby" ;
+    rdaad:P50413 "Müller, Robby" ;
     rdfs:label "Müller, Robby" ;
     rdaad:P50339 "1940-" .
 
 <http://example.org/moanhenny>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/moanhenny" ;
-    rdaad:P50385 "Moan, Henny" ;
+    rdaad:P50413 "Moan, Henny" ;
     rdfs:label "Moan, Henny" .
 
 <http://example.org/molinscorrealuis>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/molinscorrealuis" ;
-    rdaad:P50385 "Molins Correa, Luis" ;
+    rdaad:P50413 "Molins Correa, Luis" ;
     rdfs:label "Molins Correa, Luis" .
 
 <http://example.org/molinsluis>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/molinsluis" ;
-    rdaad:P50385 "Molins, Luis" ;
+    rdaad:P50413 "Molins, Luis" ;
     rdfs:label "Molins, Luis" .
 
 <http://example.org/morburgercarl>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/morburgercarl" ;
-    rdaad:P50385 "Morburger, Carl" ;
+    rdaad:P50413 "Morburger, Carl" ;
     rdfs:label "Morburger, Carl" .
 
 <http://example.org/morgensternchristian>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/morgensternchristian" ;
-    rdaad:P50385 "Morgenstern, Christian" ;
+    rdaad:P50413 "Morgenstern, Christian" ;
     rdfs:label "Morgenstern, Christian" ;
     rdaad:P50339 "1871-1914" .
 
 <http://example.org/morgridgebarbaragordon>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/morgridgebarbaragordon" ;
-    rdaad:P50385 "Morgridge, Barbara Gordon" ;
+    rdaad:P50413 "Morgridge, Barbara Gordon" ;
     rdfs:label "Morgridge, Barbara Gordon" .
 
 <http://example.org/morkgeir>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/morkgeir" ;
-    rdaad:P50385 "Mork, Geir" ;
+    rdaad:P50413 "Mork, Geir" ;
     rdfs:label "Mork, Geir" .
 
 <http://example.org/munchtrondpeterstams>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/munchtrondpeterstams" ;
-    rdaad:P50385 "Munch, Trond Peter Stamsø" ;
+    rdaad:P50413 "Munch, Trond Peter Stamsø" ;
     rdfs:label "Munch, Trond Peter Stamsø" ;
     rdaad:P50339 "1960-" .
 
 <http://example.org/nadalalfonso>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/nadalalfonso" ;
-    rdaad:P50385 "Nadal, Alfonso" ;
+    rdaad:P50413 "Nadal, Alfonso" ;
     rdfs:label "Nadal, Alfonso" ;
     rdaad:P50339 "1886-1943" .
 
 <http://example.org/naumannhermann>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/naumannhermann" ;
-    rdaad:P50385 "Naumann, Hermann" ;
+    rdaad:P50413 "Naumann, Hermann" ;
     rdfs:label "Naumann, Hermann" ;
     rdaad:P50339 "1930-" .
 
 <http://example.org/nesbjo>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/nesbjo" ;
-    rdaad:P50385 "Nesbø, Jo" ;
+    rdaad:P50413 "Nesbø, Jo" ;
     rdfs:label "Nesbø, Jo" ;
     rdaad:P50339 "1960-" .
 
 <http://example.org/nordmojorun>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/nordmojorun" ;
-    rdaad:P50385 "Nordmo, Jorun" ;
+    rdaad:P50413 "Nordmo, Jorun" ;
     rdfs:label "Nordmo, Jorun" ;
     rdaad:P50339 "1949-" .
 
 <http://example.org/olsenarnethomas>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/olsenarnethomas" ;
-    rdaad:P50385 "Olsen, Arne Thomas" ;
+    rdaad:P50413 "Olsen, Arne Thomas" ;
     rdfs:label "Olsen, Arne Thomas" ;
     rdaad:P50339 "1909-2000" .
 
 <http://example.org/oscarssonper>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/oscarssonper" ;
-    rdaad:P50385 "Oscarsson, Per" ;
+    rdaad:P50413 "Oscarsson, Per" ;
     rdfs:label "Oscarsson, Per" ;
     rdaad:P50339 "1927-" .
 
 <http://example.org/paytuvdesierracarlos>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/paytuvdesierracarlos" ;
-    rdaad:P50385 "Paytuví de Sierra, Carlos" ;
+    rdaad:P50413 "Paytuví de Sierra, Carlos" ;
     rdfs:label "Paytuví de Sierra, Carlos" .
 
 <http://example.org/petithuguenin>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/petithuguenin" ;
-    rdaad:P50385 "Petithuguenin, Jean" ;
+    rdaad:P50413 "Petithuguenin, Jean" ;
     rdfs:label "Petithuguenin, Jean" .
 
 <http://example.org/pickledimage>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/pickledimage" ;
-    rdaad:P50385 "Pickled Image" ;
+    rdaad:P50413 "Pickled Image" ;
     rdfs:label "Pickled Image" .
 
 <http://example.org/prezbancesjosramn>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/prezbancesjosramn" ;
-    rdaad:P50385 "Pérez Bances, José Ramón" ;
+    rdaad:P50413 "Pérez Bances, José Ramón" ;
     rdfs:label "Pérez Bances, José Ramón" ;
     rdaad:P50339 "1880-1933" .
 
 <http://example.org/riberaantonio>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/riberaantonio" ;
-    rdaad:P50385 "Ribera, Antonio" ;
+    rdaad:P50413 "Ribera, Antonio" ;
     rdfs:label "Ribera, Antonio" ;
     rdaad:P50339 "1920-2001" .
 
 <http://example.org/richardsonmarie>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/richardsonmarie" ;
-    rdaad:P50385 "Richardson, Marie" ;
+    rdaad:P50413 "Richardson, Marie" ;
     rdfs:label "Richardson, Marie" ;
     rdaad:P50339 "1959-" .
 
 <http://example.org/rooyenlaurensvan>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/rooyenlaurensvan" ;
-    rdaad:P50385 "Rooyen, Laurens van" ;
+    rdaad:P50413 "Rooyen, Laurens van" ;
     rdfs:label "Rooyen, Laurens van" .
 
 <http://example.org/rottemystein>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/rottemystein" ;
-    rdaad:P50385 "Rottem, Øystein" ;
+    rdaad:P50413 "Rottem, Øystein" ;
     rdfs:label "Rottem, Øystein" ;
     rdaad:P50339 "1946-2004" .
 
 <http://example.org/rudborgbjrn>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/rudborgbjrn" ;
-    rdaad:P50385 "Rudborg, Bjørn" ;
+    rdaad:P50413 "Rudborg, Bjørn" ;
     rdfs:label "Rudborg, Bjørn" ;
     rdaad:P50339 "1964-" .
 
 <http://example.org/rudborghild>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/rudborghild" ;
-    rdaad:P50385 "Rud, Borghild" ;
+    rdaad:P50413 "Rud, Borghild" ;
     rdfs:label "Rud, Borghild" ;
     rdaad:P50339 "1910-1999" .
 
 <http://example.org/rydlandamund>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/rydlandamund" ;
-    rdaad:P50385 "Rydland, Amund" ;
+    rdaad:P50413 "Rydland, Amund" ;
     rdfs:label "Rydland, Amund" ;
     rdaad:P50339 "1888-1967" .
 
 <http://example.org/sainzderoblesfedericocarlos>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/sainzderoblesfedericocarlos" ;
-    rdaad:P50385 "Sainz de Robles, Federico Carlos" ;
+    rdaad:P50413 "Sainz de Robles, Federico Carlos" ;
     rdfs:label "Sainz de Robles, Federico Carlos" ;
     rdaad:P50339 "1898-1982" .
 
 <http://example.org/sandveim>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/sandveim" ;
-    rdaad:P50385 "Sandvei, M." ;
+    rdaad:P50413 "Sandvei, M." ;
     rdfs:label "Sandvei, M." .
 
 <http://example.org/sautreaugeorges>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/sautreaugeorges" ;
-    rdaad:P50385 "Sautreau, Georges" ;
+    rdaad:P50413 "Sautreau, Georges" ;
     rdfs:label "Sautreau, Georges" .
 
 <http://example.org/schaperedzard>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/schaperedzard" ;
-    rdaad:P50385 "Schaper, Edzard" ;
+    rdaad:P50413 "Schaper, Edzard" ;
     rdfs:label "Schaper, Edzard" ;
     rdaad:P50339 "1908-1984" .
 
 <http://example.org/schillerwalter>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/schillerwalter" ;
-    rdaad:P50385 "Schiller, Walter" ;
+    rdaad:P50413 "Schiller, Walter" ;
     rdfs:label "Schiller, Walter" ;
     rdaad:P50339 "1920-2008" .
 
 <http://example.org/scholzvctor>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/scholzvctor" ;
-    rdaad:P50385 "Scholz, Víctor" ;
+    rdaad:P50413 "Scholz, Víctor" ;
     rdfs:label "Scholz, Víctor" .
 
 <http://example.org/schwenzenper>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/schwenzenper" ;
-    rdaad:P50385 "Schwenzen, Per" ;
+    rdaad:P50413 "Schwenzen, Per" ;
     rdfs:label "Schwenzen, Per" .
 
 <http://example.org/seebergpeter>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/seebergpeter" ;
-    rdaad:P50385 "Seeberg, Peter" ;
+    rdaad:P50413 "Seeberg, Peter" ;
     rdfs:label "Seeberg, Peter" ;
     rdaad:P50339 "1925-1999" .
 
 <http://example.org/seeklausvon>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/seeklausvon" ;
-    rdaad:P50385 "See, Klaus von" ;
+    rdaad:P50413 "See, Klaus von" ;
     rdfs:label "See, Klaus von" .
 
 <http://example.org/singerisaacbashevis>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/singerisaacbashevis" ;
-    rdaad:P50385 "Singer, Isaac Bashevis" ;
+    rdaad:P50413 "Singer, Isaac Bashevis" ;
     rdfs:label "Singer, Isaac Bashevis" .
 
 <http://example.org/solumola>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/solumola" ;
-    rdaad:P50385 "Solum, Ola" ;
+    rdaad:P50413 "Solum, Ola" ;
     rdfs:label "Solum, Ola" ;
     rdaad:P50339 "1943-1996" .
 
 <http://example.org/sommerfeldtgunnar>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/sommerfeldtgunnar" ;
-    rdaad:P50385 "Sommerfeldt, Gunnar" ;
+    rdaad:P50413 "Sommerfeldt, Gunnar" ;
     rdfs:label "Sommerfeldt, Gunnar" ;
     rdaad:P50339 "1890-1947" .
 
 <http://example.org/stallybrassgunnvor>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/stallybrassgunnvor" ;
-    rdaad:P50385 "Stallybrass, Gunnvor" ;
+    rdaad:P50413 "Stallybrass, Gunnvor" ;
     rdfs:label "Stallybrass, Gunnvor" .
 
 <http://example.org/stallybrassoliver>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/stallybrassoliver" ;
-    rdaad:P50385 "Stallybrass, Oliver" ;
+    rdaad:P50413 "Stallybrass, Oliver" ;
     rdfs:label "Stallybrass, Oliver" .
 
 <http://example.org/stenstadvoldhkon>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/stenstadvoldhkon" ;
-    rdaad:P50385 "Stenstadvold, Håkon" ;
+    rdaad:P50413 "Stenstadvold, Håkon" ;
     rdfs:label "Stenstadvold, Håkon" .
 
 <http://example.org/stoblingruth>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/stoblingruth" ;
-    rdaad:P50385 "Stöbling, Ruth" ;
+    rdaad:P50413 "Stöbling, Ruth" ;
     rdfs:label "Stöbling, Ruth" .
 
 <http://example.org/stormoenkjell>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/stormoenkjell" ;
-    rdaad:P50385 "Stormoen, Kjell" ;
+    rdaad:P50413 "Stormoen, Kjell" ;
     rdfs:label "Stormoen, Kjell" ;
     rdaad:P50339 "1921-2010" .
 
 <http://example.org/strmdahlwenche>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/strmdahlwenche" ;
-    rdaad:P50385 "Strømdahl, Wenche" ;
+    rdaad:P50413 "Strømdahl, Wenche" ;
     rdfs:label "Strømdahl, Wenche" .
 
 <http://example.org/sundquistbjrn>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/sundquistbjrn" ;
-    rdaad:P50385 "Sundquist, Bjørn" ;
+    rdaad:P50413 "Sundquist, Bjørn" ;
     rdfs:label "Sundquist, Bjørn" ;
     rdaad:P50339 "1948-" .
 
 <http://example.org/thalbitzerkaren>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/thalbitzerkaren" ;
-    rdaad:P50385 "Thalbitzer, Karen" ;
+    rdaad:P50413 "Thalbitzer, Karen" ;
     rdfs:label "Thalbitzer, Karen" .
 
 <http://example.org/tushinghamrita>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/tushinghamrita" ;
-    rdaad:P50385 "Tushingham, Rita" ;
+    rdaad:P50413 "Tushingham, Rita" ;
     rdfs:label "Tushingham, Rita" ;
     rdaad:P50339 "1942-" .
 
 <http://example.org/ueackerheiko>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/ueackerheiko" ;
-    rdaad:P50385 "Uecker, Heiko" ;
+    rdaad:P50413 "Uecker, Heiko" ;
     rdfs:label "Uecker, Heiko" .
 
 <http://example.org/veguetaluisgde>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/veguetaluisgde" ;
-    rdaad:P50385 "Vegueta, Luis G. de" ;
+    rdaad:P50413 "Vegueta, Luis G. de" ;
     rdfs:label "Vegueta, Luis G. de" .
 
 <http://example.org/vivesfrancisco>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/vivesfrancisco" ;
-    rdaad:P50385 "Vives, Francisco" ;
+    rdaad:P50413 "Vives, Francisco" ;
     rdfs:label "Vives, Francisco" .
 
 <http://example.org/vivesfrans>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/vivesfrans" ;
-    rdaad:P50385 "Vives, Frans" ;
+    rdaad:P50413 "Vives, Frans" ;
     rdfs:label "Vives, Frans" .
 
 <http://example.org/weibelsiegfried>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/weibelsiegfried" ;
-    rdaad:P50385 "Weibel, Siegfried" ;
+    rdaad:P50413 "Weibel, Siegfried" ;
     rdfs:label "Weibel, Siegfried" .
 
 <http://example.org/werkmsterbarbro>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/werkmsterbarbro" ;
-    rdaad:P50385 "Werkmäster, Barbro" ;
+    rdaad:P50413 "Werkmäster, Barbro" ;
     rdfs:label "Werkmäster, Barbro" .
 
 <http://example.org/werneroskar>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/werneroskar" ;
-    rdaad:P50385 "Werner, Oskar" ;
+    rdaad:P50413 "Werner, Oskar" ;
     rdfs:label "Werner, Oskar" .
 
 <http://example.org/wettergreenragna>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/wettergreenragna" ;
-    rdaad:P50385 "Wettergreen, Ragna" ;
+    rdaad:P50413 "Wettergreen, Ragna" ;
     rdfs:label "Wettergreen, Ragna" ;
     rdaad:P50339 "1864-1958" .
 
 <http://example.org/wikingpaula>
     a rdac:C10002 ;
     rdaxd:P00018 "http://example.org/wikingpaula" ;
-    rdaad:P50385 "Wiking, Paula" ;
+    rdaad:P50413 "Wiking, Paula" ;
     rdfs:label "Wiking, Paula" .
 
 <http://personid.no/10165>
     a rdac:C10002 ;
     rdaxd:P00018 "http://personid.no/10165" ;
-    rdaad:P50385 "F. C." ;
+    rdaad:P50413 "F. C." ;
     rdfs:label "F. C." .
 
 <http://viaf.org/viaf/107756506>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/107756506" ;
-    rdaad:P50385 "Larsen, Lars Frode" ;
+    rdaad:P50413 "Larsen, Lars Frode" ;
     rdfs:label "Larsen, Lars Frode" ;
     rdaad:P50339 "1948-" .
 
 <http://viaf.org/viaf/111655332>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/111655332" ;
-    rdaad:P50385 "Lyngstad, Sverre" ;
+    rdaad:P50413 "Lyngstad, Sverre" ;
     rdfs:label "Lyngstad, Sverre" ;
     rdaad:P50339 "1926-" .
 
 <http://viaf.org/viaf/117364598>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/117364598" ;
-    rdaad:P50385 "Klaiber-Gottschau, Pauline" ;
+    rdaad:P50413 "Klaiber-Gottschau, Pauline" ;
     rdfs:label "Klaiber-Gottschau, Pauline" ;
     rdaad:P50339 "1855-1930" , "1855-1944" .
 
 <http://viaf.org/viaf/14863655>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/14863655" ;
-    rdaad:P50385 "Harr, Karl Erik" ;
+    rdaad:P50413 "Harr, Karl Erik" ;
     rdfs:label "Harr, Karl Erik" ;
     rdaad:P50339 "1940-" .
 
 <http://viaf.org/viaf/162089799>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/162089799" ;
-    rdaad:P50385 "Angermann, Sophie" , "Angermann, S." ;
+    rdaad:P50413 "Angermann, Sophie" , "Angermann, S." ;
     rdfs:label "Angermann, Sophie" , "Angermann, S." ;
     rdaad:P50339 "1892-1973" .
 
 <http://viaf.org/viaf/17979510>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/17979510" ;
-    rdaad:P50385 "Magnus, Erwin" ;
+    rdaad:P50413 "Magnus, Erwin" ;
     rdfs:label "Magnus, Erwin" ;
     rdaad:P50339 "1881-1947" .
 
 <http://viaf.org/viaf/24608356>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/24608356" ;
-    rdaad:P50385 "Tagore, Rabindranath" ;
+    rdaad:P50413 "Tagore, Rabindranath" ;
     rdfs:label "Tagore, Rabindranath" ;
     rdaad:P50339 "1861-1941" .
 
 <http://viaf.org/viaf/49458459>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/49458459" ;
-    rdaad:P50385 "Kolloen, Ingar Sletten" ;
+    rdaad:P50413 "Kolloen, Ingar Sletten" ;
     rdfs:label "Kolloen, Ingar Sletten" ;
     rdaad:P50339 "1951-" .
 
 <http://viaf.org/viaf/54151065>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/54151065" ;
-    rdaad:P50385 "Mann, Thomas" ;
+    rdaad:P50413 "Mann, Thomas" ;
     rdfs:label "Mann, Thomas" ;
     rdaad:P50339 "1875-1955" .
 
 <http://viaf.org/viaf/59083692>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/59083692" ;
-    rdaad:P50385 "Hamsun, Knut" ;
+    rdaad:P50413 "Hamsun, Knut" ;
     rdfs:label "Hamsun, Knut" ;
     rdaad:P50339 "1859-1952" .
 
 <http://viaf.org/viaf/59960174>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/59960174" ;
-    rdaad:P50385 "Sandmeier, Julius" ;
+    rdaad:P50413 "Sandmeier, Julius" ;
     rdfs:label "Sandmeier, Julius" ;
     rdaad:P50339 "1881-1941" .
 
 <http://viaf.org/viaf/61541730>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/61541730" ;
-    rdaad:P50385 "Bergson, Henri" ;
+    rdaad:P50413 "Bergson, Henri" ;
     rdfs:label "Bergson, Henri" ;
     rdaad:P50339 "1859-1941" .
 
 <http://viaf.org/viaf/61595218>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/61595218" ;
-    rdaad:P50385 "Hamsun, Tore" ;
+    rdaad:P50413 "Hamsun, Tore" ;
     rdfs:label "Hamsun, Tore" ;
     rdaad:P50339 "1912-1995" .
 
 <http://viaf.org/viaf/65684351>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/65684351" ;
-    rdaad:P50385 "Camacho, Pedro" ;
+    rdaad:P50413 "Camacho, Pedro" ;
     rdfs:label "Camacho, Pedro" .
 
 <http://viaf.org/viaf/66602903>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/66602903" ;
-    rdaad:P50385 "Boyer, Régis" ;
+    rdaad:P50413 "Boyer, Régis" ;
     rdfs:label "Boyer, Régis" ;
     rdaad:P50339 "1932-" .
 
 <http://viaf.org/viaf/7014928>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/7014928" ;
-    rdaad:P50385 "Worster, W.W" ;
+    rdaad:P50413 "Worster, W.W" ;
     rdfs:label "Worster, W.W" .
 
 <http://viaf.org/viaf/76448961>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/76448961" ;
-    rdaad:P50385 "Hernández Catá, Alfonso" ;
+    rdaad:P50413 "Hernández Catá, Alfonso" ;
     rdfs:label "Hernández Catá, Alfonso" ;
     rdaad:P50339 "1885-1940" .
 
 <http://viaf.org/viaf/86820581>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/86820581" ;
-    rdaad:P50385 "Viana, José" ;
+    rdaad:P50413 "Viana, José" ;
     rdfs:label "Viana, José" .
 
 <http://viaf.org/viaf/86862248>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/86862248" ;
-    rdaad:P50385 "Lorenzo, Asunción" , "Lorenzo, Ascunión" ;
+    rdaad:P50413 "Lorenzo, Asunción" , "Lorenzo, Ascunión" ;
     rdfs:label "Lorenzo, Asunción" , "Lorenzo, Ascunión" .
 
 <http://viaf.org/viaf/86862314>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/86862314" ;
-    rdaad:P50385 "Baggethun, Kirsti" ;
+    rdaad:P50413 "Baggethun, Kirsti" ;
     rdfs:label "Baggethun, Kirsti" ;
     rdaad:P50339 "1944-" .
 
 <http://viaf.org/viaf/92839136>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/92839136" ;
-    rdaad:P50385 "Ferguson, Robert" ;
+    rdaad:P50413 "Ferguson, Robert" ;
     rdfs:label "Ferguson, Robert" ;
     rdaad:P50339 "1948-" .
 
 <https://isni.org/isni/0000000361689449>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/0000000361689449" ;
-    rdaad:P50385 "Sørensen, Reidar" ;
+    rdaad:P50413 "Sørensen, Reidar" ;
     rdfs:label "Sørensen, Reidar" ;
     rdaad:P50339 "1956-" .
 

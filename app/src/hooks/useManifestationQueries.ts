@@ -161,14 +161,14 @@ export const useManifestations = (
               {
                 OPTIONAL {
                   ?manifestation ?manifestation_agent_relationship ?manifestation_agent .
-                  ?manifestation_agent <http://rdaregistry.info/Elements/a/datatype/P50385> ?manifestation_agent_name_x .
+                  ?manifestation_agent <http://rdaregistry.info/Elements/a/datatype/P50413> ?manifestation_agent_name_x .
                   ?manifestation_agent_relationship rdfs:label ?manifestation_agent_relationship_label .
                   FILTER(LANG(?manifestation_agent_relationship_label) = "${escapeSparqlLiteral(language)}") .
                 }
               } UNION {
                 OPTIONAL {
                   ?manifestation_agent ?manifestation_agent_relationship ?manifestation .
-                  ?manifestation_agent <http://rdaregistry.info/Elements/a/datatype/P50385> ?manifestation_agent_name_x .
+                  ?manifestation_agent <http://rdaregistry.info/Elements/a/datatype/P50413> ?manifestation_agent_name_x .
                   ?manifestation_agent_relationship_inverse owl:inverseOf ?manifestation_agent_relationship .
                   ?manifestation_agent_relationship_inverse rdfs:label ?manifestation_agent_relationship_label .
                   FILTER(LANG(?manifestation_agent_relationship_label) = "${escapeSparqlLiteral(language)}") .

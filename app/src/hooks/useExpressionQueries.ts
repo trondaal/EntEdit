@@ -112,14 +112,14 @@ export const useExpressionsByManifestation = (
               {
                 OPTIONAL {
                   ?work ?work_agent_relationship ?work_agent .
-                  ?work_agent <http://rdaregistry.info/Elements/a/datatype/P50385> ?work_agent_name_x .
+                  ?work_agent <http://rdaregistry.info/Elements/a/datatype/P50413> ?work_agent_name_x .
                   ?work_agent_relationship rdfs:label ?work_agent_relationship_label .
                   FILTER(LANG(?work_agent_relationship_label) = "${language}") .
                 }
               }UNION{
                 OPTIONAL {
                   ?work_agent ?work_agent_relationship ?work .
-                  ?work_agent <http://rdaregistry.info/Elements/a/datatype/P50385> ?work_agent_name_x .
+                  ?work_agent <http://rdaregistry.info/Elements/a/datatype/P50413> ?work_agent_name_x .
                   ?work_agent_relationship_inverse owl:inverseOf ?work_agent_relationship .
                   ?work_agent_relationship_inverse rdfs:label ?work_agent_relationship_label .
                   FILTER(LANG(?work_agent_relationship_label) = "${language}") .
@@ -137,14 +137,14 @@ export const useExpressionsByManifestation = (
               {
                 OPTIONAL {
                   ?expression ?expression_agent_relationship ?expression_agent .
-                  ?expression_agent <http://rdaregistry.info/Elements/a/datatype/P50385> ?expression_agent_name_x .
+                  ?expression_agent <http://rdaregistry.info/Elements/a/datatype/P50413> ?expression_agent_name_x .
                   ?expression_agent_relationship rdfs:label ?expression_agent_relationship_label .
                   FILTER(LANG(?expression_agent_relationship_label) = "${language}") .
                 }
               }UNION{
                 OPTIONAL {
                   ?expression_agent ?expression_agent_relationship ?expression .
-                  ?expression_agent <http://rdaregistry.info/Elements/a/datatype/P50385> ?expression_agent_name_x .
+                  ?expression_agent <http://rdaregistry.info/Elements/a/datatype/P50413> ?expression_agent_name_x .
                   ?expression_agent_relationship_inverse owl:inverseOf ?expression_agent_relationship .
                   ?expression_agent_relationship_inverse rdfs:label ?expression_agent_relationship_label .
                   FILTER(LANG(?expression_agent_relationship_label) = "${language}") .

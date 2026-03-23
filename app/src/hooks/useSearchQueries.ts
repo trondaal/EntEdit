@@ -205,14 +205,14 @@ WHERE {
             {
                 OPTIONAL {
                     ?work ?work_agent_relationship ?work_agent .
-                    ?work_agent <http://rdaregistry.info/Elements/a/datatype/P50385> ?work_agent_name_x .
+                    ?work_agent <http://rdaregistry.info/Elements/a/datatype/P50413> ?work_agent_name_x .
                     ?work_agent_relationship rdfs:label ?work_agent_relationship_label .
                     FILTER(LANG(?work_agent_relationship_label) = "${escapedLanguage}") .
                 }
             } UNION {
                 OPTIONAL {
                     ?work_agent ?work_agent_relationship ?work .
-                    ?work_agent <http://rdaregistry.info/Elements/a/datatype/P50385> ?work_agent_name_x .
+                    ?work_agent <http://rdaregistry.info/Elements/a/datatype/P50413> ?work_agent_name_x .
                     ?work_agent_relationship_inverse owl:inverseOf ?work_agent_relationship .
                     ?work_agent_relationship_inverse rdfs:label ?work_agent_relationship_label .
                     FILTER(LANG(?work_agent_relationship_label) = "${escapedLanguage}") .
@@ -230,14 +230,14 @@ WHERE {
             {
                 OPTIONAL {
                     ?expression ?expression_agent_relationship ?expression_agent .
-                    ?expression_agent <http://rdaregistry.info/Elements/a/datatype/P50385> ?expression_agent_name_x .
+                    ?expression_agent <http://rdaregistry.info/Elements/a/datatype/P50413> ?expression_agent_name_x .
                     ?expression_agent_relationship rdfs:label ?expression_agent_relationship_label .
                     FILTER(LANG(?expression_agent_relationship_label) = "${escapedLanguage}") .
                 }
             } UNION {
                 OPTIONAL {
                     ?expression_agent ?expression_agent_relationship ?expression .
-                    ?expression_agent <http://rdaregistry.info/Elements/a/datatype/P50385> ?expression_agent_name_x .
+                    ?expression_agent <http://rdaregistry.info/Elements/a/datatype/P50413> ?expression_agent_name_x .
                     ?expression_agent_relationship_inverse owl:inverseOf ?expression_agent_relationship .
                     ?expression_agent_relationship_inverse rdfs:label ?expression_agent_relationship_label .
                     FILTER(LANG(?expression_agent_relationship_label) = "${escapedLanguage}") .
@@ -538,14 +538,14 @@ WHERE {
             {
                 OPTIONAL {
                     ?manifestation ?manifestation_agent_relationship ?manifestation_agent .
-                    ?manifestation_agent <http://rdaregistry.info/Elements/a/datatype/P50385> ?manifestation_agent_name_x .
+                    ?manifestation_agent <http://rdaregistry.info/Elements/a/datatype/P50413> ?manifestation_agent_name_x .
                     ?manifestation_agent_relationship rdfs:label ?manifestation_agent_relationship_label .
                     FILTER(LANG(?manifestation_agent_relationship_label) = "${escapedLanguage}") .
                 }
             } UNION {
                 OPTIONAL {
                     ?manifestation_agent ?manifestation_agent_relationship ?manifestation .
-                    ?manifestation_agent <http://rdaregistry.info/Elements/a/datatype/P50385> ?manifestation_agent_name_x .
+                    ?manifestation_agent <http://rdaregistry.info/Elements/a/datatype/P50413> ?manifestation_agent_name_x .
                     ?manifestation_agent_relationship_inverse owl:inverseOf ?manifestation_agent_relationship .
                     ?manifestation_agent_relationship_inverse rdfs:label ?manifestation_agent_relationship_label .
                     FILTER(LANG(?manifestation_agent_relationship_label) = "${escapedLanguage}") .
