@@ -220,8 +220,8 @@
 <https://www.imdb.com/title/tt0149624>
     a rdac:C10001 ;
     rdaxd:P00018 "https://www.imdb.com/title/tt0149624" ;
-    rdawd:P10223 "All the pretty horses (Motion Picture : 2000)" ;
-    rdfs:label "All the pretty horses (Motion Picture: 2000)" ;
+    rdawd:P10223 "All the pretty horses (Motion picture : 2000)" ;
+    rdfs:label "All the pretty horses (Motion picture: 2000)" ;
     rdaxd:P00029 "Movie" ;
     abi:P01 vtp:V1002;
     abi:P02 <https://id.nb.no/vocabulary/ntsf/1130>;
@@ -832,7 +832,7 @@
 
 <https://www.imdb.com/title/tt0477348/exp/1023>
     a rdac:C10006 ;
-    rdaed:P20315 "No country for old men" , "No country for old men (Motion picture)" ;
+    rdaed:P20315 "No country for old men" ;
     #rdaed:P20312 "No country for old men" ;
     rdfs:label "No country for old men" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1023> ;
