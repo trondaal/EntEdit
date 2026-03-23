@@ -18,7 +18,7 @@
 <http://viaf.org/viaf/175871715>
     a rdac:C10001 ;
     rdaxd:P00018 "http://viaf.org/viaf/175871715" ;
-    rdawd:P10088 "The border trilogy" ;
+    rdawd:P10223 "The border trilogy" ;
     rdfs:label "The border trilogy (McCarthy, Cormac)" ;
     abi:P02 abi:T03 ;
     abi:P01 vtp:V1000;
@@ -30,7 +30,7 @@
 <http://viaf.org/viaf/188298726>
     a rdac:C10001 ;
     rdaxd:P00018 "http://viaf.org/viaf/188298726" ;
-    rdawd:P10088 "Suttree" ;
+    rdawd:P10223 "Suttree" ;
     rdfs:label "Suttree (McCarthy, Cormac)" ;
     abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
     abi:P01 vtp:V1000;
@@ -39,7 +39,7 @@
 <http://viaf.org/viaf/188670330>
     a rdac:C10001 ;
     rdaxd:P00018 "http://viaf.org/viaf/188670330" ;
-    rdawd:P10088 "Child of God" ;
+    rdawd:P10223 "Child of God" ;
     rdfs:label "Child of God (McCarthy, Cormac)" ;
     abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
     abi:P01 vtp:V1000;
@@ -48,7 +48,7 @@
 <http://viaf.org/viaf/191524645>
     a rdac:C10001 ;
     rdaxd:P00018 "http://viaf.org/viaf/191524645" ;
-    rdawd:P10088 "Blood meridian, or The evening redness in the west" ;
+    rdawd:P10223 "Blood meridian, or the evening redness in the west" ;
     rdfs:label "Blood meridian, or The evening redness in the west (McCarthy, Cormac)" ;
     abi:P01 vtp:V1000;
     abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
@@ -58,7 +58,7 @@
 <http://viaf.org/viaf/191907343>
     a rdac:C10001 ;
     rdaxd:P00018 "http://viaf.org/viaf/191907343" ;
-    rdawd:P10088 "The orchard keeper" ;
+    rdawd:P10223 "The orchard keeper" ;
     rdfs:label "The orchard keeper (McCarthy, Cormac)" ;
     abi:P01 vtp:V1000;
     abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
@@ -67,7 +67,7 @@
 <http://viaf.org/viaf/214001528>
     a rdac:C10001 ;
     rdaxd:P00018 "http://viaf.org/viaf/214001528" ;
-    rdawd:P10088 "All the pretty horses" ;
+    rdawd:P10223 "All the pretty horses" ;
     rdfs:label "All the pretty horses (McCarthy, Cormac)"@en ,
                "Alle de vakre hestene (McCarthy, Cormac)"@no;
     abi:P01 vtp:V1000;
@@ -79,7 +79,7 @@
 <http://viaf.org/viaf/214012164>
     a rdac:C10001 ;
     rdaxd:P00018 "http://viaf.org/viaf/214012164" ;
-    rdawd:P10088 "No country for old men" ;
+    rdawd:P10223 "No country for old men" ;
     rdfs:label "No country for old men (McCarthy, Cormac)" ;
     abi:P01 vtp:V1000;
     abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
@@ -88,7 +88,7 @@
 <http://viaf.org/viaf/215254416>
     a rdac:C10001 ;
     rdaxd:P00018 "http://viaf.org/viaf/215254416" ;
-    rdawd:P10088 "Outer dark" ;
+    rdawd:P10223 "Outer dark" ;
     rdfs:label "Outer dark (McCarthy, Cormac)" ;
     abi:P01 vtp:V1000;
     abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
@@ -97,7 +97,7 @@
 <http://viaf.org/viaf/220031159>
     a rdac:C10001 ;
     rdaxd:P00018 "http://viaf.org/viaf/220031159" ;
-    rdawd:P10088 "The road" ;
+    rdawd:P10223 "The road" ;
     rdfs:label "The road (McCarthy, Cormac)" ;
     abi:P01 vtp:V1000;
     abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
@@ -107,7 +107,7 @@
 <http://viaf.org/viaf/29558386/counselor>
     a rdac:C10001 ;
     rdaxd:P00018 "http://viaf.org/viaf/29558386/counselor" ;
-    rdawd:P10088 "The counselor" ;
+    rdawd:P10223 "The counselor" ;
     rdfs:label "The counselor (McCarthy, Cormac)" ;
     abi:P01 vtp:V1000;
     abi:P02 <https://id.nb.no/vocabulary/ntsf/298>;
@@ -117,7 +117,7 @@
 <http://viaf.org/viaf/29558386/gardenersson>
     a rdac:C10001 ;
     rdaxd:P00018 "http://viaf.org/viaf/29558386/gardenersson" ;
-    rdawd:P10088 "The gardener's son" ;
+    rdawd:P10223 "The gardener's son" ;
     rdfs:label "The gardener's son (McCarthy, Cormac)" ;
     abi:P01 vtp:V1000;
     abi:P02 <https://id.nb.no/vocabulary/ntsf/298>;
@@ -127,7 +127,7 @@
 <http://viaf.org/viaf/309357400>
     a rdac:C10001 ;
     rdaxd:P00018 "http://viaf.org/viaf/309357400" ;
-    rdawd:P10088 "The crossing" ;
+    rdawd:P10223 "The crossing" ;
     rdfs:label "The crossing (McCarthy, Cormac)" ;
     abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
     abi:P01 vtp:V1000;
@@ -138,7 +138,7 @@
 <http://viaf.org/viaf/3417153653286155900001>
     a rdac:C10001 ;
     rdaxd:P00018 "http://viaf.org/viaf/3417153653286155900001" ;
-    rdawd:P10088 "Cities of the plain" ;
+    rdawd:P10223 "Cities of the plain" ;
     rdfs:label "Cities of the plain (McCarthy, Cormac)" ;
     abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
     abi:P01 vtp:V1000;
@@ -147,7 +147,7 @@
 <http://viaf.org/viaf/4440159478236227990002>
     a rdac:C10001 ;
     rdaxd:P00018 "http://viaf.org/viaf/4440159478236227990002" ;
-    rdawd:P10088 "The Sunset Limited" ;
+    rdawd:P10223 "The Sunset Limited" ;
     rdfs:label "The Sunset Limited (McCarthy, Cormac)" ;
     abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
     abi:P01 vtp:V1000;
@@ -156,7 +156,7 @@
 <http://viaf.org/viaf/470166838899836200007>
     a rdac:C10001 ;
     rdaxd:P00018 "http://viaf.org/viaf/470166838899836200007" ;
-    rdawd:P10088 "The passenger" ;
+    rdawd:P10223 "The passenger" ;
     rdfs:label "The passenger (McCarthy, Cormac)" ;
     abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
     abi:P01 vtp:V1000;
@@ -167,7 +167,7 @@
 <http://viaf.org/viaf/470166838899836200007/stellamaris>
     a rdac:C10001 ;
     rdaxd:P00018 "http://viaf.org/viaf/470166838899836200007/stellamaris" ;
-    rdawd:P10088 "Stella Maris" ;
+    rdawd:P10223 "Stella Maris" ;
     rdfs:label "Stella Maris (McCarthy, Cormac)" ;
     abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
     abi:P01 vtp:V1000;
@@ -180,7 +180,7 @@
 <http://viaf.org/viaf/5191807/theroad>
     a rdac:C10001 ;
     rdaxd:P00018 "http://viaf.org/viaf/5191807/theroad" ;
-    rdawd:P10088 "The road" ;
+    rdawd:P10223 "The road" ;
     rdfs:label "The road (Penhall, Joe)" ;
     abi:P01 vtp:V1000;
     abi:P02 <https://id.nb.no/vocabulary/ntsf/298>;
@@ -191,7 +191,7 @@
 <http://viaf.org/viaf/8419162723677961290005>
     a rdac:C10001 ;
     rdaxd:P00018 "http://viaf.org/viaf/8419162723677961290005" ;
-    rdawd:P10088 "The stonemason" ;
+    rdawd:P10223 "The stonemason" ;
     rdfs:label "The stonemason (McCarthy, Cormac)" ;
     rdaxd:P00029 "Play" ;
     abi:P01 vtp:V1000;
@@ -202,9 +202,8 @@
 <http://www.wikidata.org/entity/Q3061599>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.wikidata.org/entity/Q3061599" ;
-    rdawd:P10088 "Counselor (Motion picture : 2013)" ;
+    rdawd:P10223 "Counselor (Motion picture : 2013)" ;
     rdfs:label "Counselor (Motion picture : 2013)" ;
-    rdaxd:P00029 "Movie" ;
     abi:P01 vtp:V1002;
     abi:P02 <https://id.nb.no/vocabulary/ntsf/1130>;
     rdawd:P10330 "\"Ridley Scott's The Counselor, from a script by Cormac McCarthy, stars Michael Fassbender as the title character, a slick lawyer who is madly in love with Laura (Penelope Cruz). He asks her to marry him, and she agrees, though she is unaware that serious financial troubles have prompted him to fund a drug deal with a shady but established middle man named Westray (Brad Pitt), that could bring in millions. Part of the counselor's financial troubles stem from the fact that he's investing in a club being opened by his best friend Reiner (Javier Bardem), a hedonist and occasional client who has attained his wealth by any means necessary, and likes to keep his wife, Malkina (Cameron Diaz) covered in all the accoutrements the wealthy enjoy. However, when the drug deal starts to go wrong, the counselor finds himself unprepared to deal with the fallout, and soon he's trying to protect his bride-to-be as well as himself from the wrath of a drug cartel that has no qualms about exacting revenge\"--Allmovie.com, viewed March 12, 2018." ,
@@ -221,8 +220,8 @@
 <https://www.imdb.com/title/tt0149624>
     a rdac:C10001 ;
     rdaxd:P00018 "https://www.imdb.com/title/tt0149624" ;
-    rdawd:P10088 "All the pretty horses (Motion Picture)" ;
-    rdfs:label "All the pretty horses (Motion Picture)" ;
+    rdawd:P10223 "All the pretty horses (Motion Picture : 2000)" ;
+    rdfs:label "All the pretty horses (Motion Picture: 2000)" ;
     rdaxd:P00029 "Movie" ;
     abi:P01 vtp:V1002;
     abi:P02 <https://id.nb.no/vocabulary/ntsf/1130>;
@@ -234,8 +233,8 @@
 <https://www.imdb.com/title/tt0477348>
     a rdac:C10001 ;
     rdaxd:P00018 "https://www.imdb.com/title/tt0477348" ;
-    rdawd:P10088 "No country for old men (Motion picture)" ;
-    rdfs:label "No country for old men (Motion picture)" ;
+    rdawd:P10223 "No country for old men (Motion picture : 2007)" ;
+    rdfs:label "No country for old men (Motion picture : 2007)" ;
     rdaxd:P00029 "Movie" ;
     abi:P01 vtp:V1002;
     abi:P02 <https://id.nb.no/vocabulary/ntsf/1130>;
@@ -253,7 +252,7 @@
 <https://www.imdb.com/title/tt0898367>
     a rdac:C10001 ;
     rdaxd:P00018 "https://www.imdb.com/title/tt0898367" ;
-    rdawd:P10088 "The Road (Motion picture : 2009)" ;
+    rdawd:P10223 "The Road (Motion picture : 2009)" ;
     rdfs:label "The Road (Motion picture : 2009)" ;
     rdaxd:P00029 "Movie" ;
     abi:P01 vtp:V1002;
@@ -267,223 +266,221 @@
 <http://viaf.org/viaf/225596267>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/225596267" ;
-    rdaad:P50385 "Ofstad, Knut" ;
+    rdaad:P50413 "Ofstad, Knut" ;
     rdfs:label "Ofstad, Knut" .
 
 <http://viaf.org/viaf/266451311>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/266451311" ;
-    rdaad:P50385 "Johansen, Knut" ;
+    rdaad:P50413 "Johansen, Knut" ;
     rdfs:label "Johansen, Knut" .
 
 <http://viaf.org/viaf/27122071>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/27122071" ;
-    rdaad:P50385 "Brænne, Trond" ;
+    rdaad:P50413 "Brænne, Trond" ;
     rdfs:label "Brænne, Trond" ;
     rdaad:P50339 "1953-2013" .
 
 <http://viaf.org/viaf/29558386>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/29558386" ;
-    rdaad:P50385 "McCarthy, Cormac" ;
+    rdaad:P50413 "McCarthy, Cormac" ;
     rdfs:label "McCarthy, Cormac" ;
     rdaad:P50339 "1933-2023" .
 
 <http://viaf.org/viaf/5191807>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/5191807" ;
-    rdaad:P50385 "Penhall, Joe" ;
+    rdaad:P50413 "Penhall, Joe" ;
     rdfs:label "Penhall, Joe" .
 
 <http://viaf.org/viaf/92910249>
     a rdac:C10002 ;
     rdaxd:P00018 "http://viaf.org/viaf/92910249" ;
-    rdaad:P50385 "Wood, James" ;
+    rdaad:P50413 "Wood, James" ;
     rdfs:label "Wood, James" ;
     rdaad:P50339 "1965-" .
 
 <https://isni.org/isni/0000000003044835>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/0000000003044835" ;
-    rdaad:P50385 "Pemberton, Daniel" ;
+    rdaad:P50413 "Pemberton, Daniel" ;
     rdfs:label "Pemberton, Daniel" .
 
 <https://isni.org/isni/0000000042755920>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/0000000042755920" ;
-    rdaad:P50385 "Salerno, Robert" ;
+    rdaad:P50413 "Salerno, Robert" ;
     rdfs:label "Salerno, Robert" .
 
 <https://isni.org/isni/0000000063018399>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/0000000063018399" ;
-    rdaad:P50385 "Wechsler, Nick" ;
+    rdaad:P50413 "Wechsler, Nick" ;
     rdfs:label "Wechsler, Nick" .
 
 <https://isni.org/isni/0000000080773273>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/0000000080773273" ;
-    rdaad:P50385 "Rudin, Scott" ;
+    rdaad:P50413 "Rudin, Scott" ;
     rdfs:label "Rudin, Scott" ;
     rdaad:P50339 "1958-" .
 
 <https://isni.org/isni/0000000108589241>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/0000000108589241" ;
-    rdaad:P50385 "Hillcoat, John" ;
+    rdaad:P50413 "Hillcoat, John" ;
     rdfs:label "Hillcoat, John" ;
     rdaad:P50339 "1961-" .
 
 <https://isni.org/isni/0000000108854789>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/0000000108854789" ;
-    rdaad:P50385 "Thomas, Henry" ;
+    rdaad:P50413 "Thomas, Henry" ;
     rdfs:label "Thomas, Henry" ;
     rdaad:P50339 "1971-" .
 
 <https://isni.org/isni/0000000109011804>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/0000000109011804" ;
-    rdaad:P50385 "Cruz, Penélope" , "Cruz, Penélope" ;
-    rdfs:label "Cruz, Penélope" , "Cruz, Penélope" ;
+    rdaad:P50413 "Cruz, Penélope";
+    rdfs:label "Cruz, Penélope";
     rdaad:P50339 "1974-" .
 
 <https://isni.org/isni/0000000109217300>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/0000000109217300" ;
-    rdaad:P50385 "Brolin, Josh" ;
+    rdaad:P50413 "Brolin, Josh" ;
     rdfs:label "Brolin, Josh" ;
     rdaad:P50339 "1968-" .
 
 <https://isni.org/isni/000000010921736X>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/000000010921736X" ;
-    rdaad:P50385 "Jones, Tommy Lee" ;
+    rdaad:P50413 "Jones, Tommy Lee" ;
     rdfs:label "Jones, Tommy Lee" ;
     rdaad:P50339 "1946-" .
 
 <https://isni.org/isni/0000000110296296>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/0000000110296296" ;
-    rdaad:P50385 "Mortensen, Viggo" ;
+    rdaad:P50413 "Mortensen, Viggo" ;
     rdfs:label "Mortensen, Viggo" ;
     rdaad:P50339 "1958-" .
 
 <https://isni.org/isni/0000000114380049>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/0000000114380049" ;
-    rdaad:P50385 "Pitt, Brad" ;
+    rdaad:P50413 "Pitt, Brad" ;
     rdfs:label "Pitt, Brad" ;
     rdaad:P50339 "1963-" .
 
 <https://isni.org/isni/0000000114558548>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/0000000114558548" ;
-    rdaad:P50385 "Duvall, Robert" ;
+    rdaad:P50413 "Duvall, Robert" ;
     rdfs:label "Duvall, Robert" ;
     rdaad:P50339 "1931-" .
 
 <https://isni.org/isni/0000000114563013>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/0000000114563013" ;
-    rdaad:P50385 "Smit-McPhee, Kodi" ;
+    rdaad:P50413 "Smit-McPhee, Kodi" ;
     rdfs:label "Smit-McPhee, Kodi" ;
     rdaad:P50339 "1996-" .
 
 <https://isni.org/isni/000000011471482X>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/000000011471482X" ;
-    rdaad:P50385 "Diaz, Cameron" ;
+    rdaad:P50413 "Diaz, Cameron" ;
     rdfs:label "Diaz, Cameron" .
 
 <https://isni.org/isni/000000011477315X>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/000000011477315X" ;
-    rdaad:P50385 "Scalia, Pietro" ;
+    rdaad:P50413 "Scalia, Pietro" ;
     rdfs:label "Scalia, Pietro" ;
     rdaad:P50339 "1960-" .
 
 <https://isni.org/isni/0000000114973899>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/0000000114973899" ;
-    rdaad:P50385 "Theron, Charlize" ;
+    rdaad:P50413 "Theron, Charlize" ;
     rdfs:label "Theron, Charlize" ;
     rdaad:P50339 "1975-" .
 
 <https://isni.org/isni/0000000115669792>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/0000000115669792" ;
-    rdaad:P50385 "Fassbender, Michael" ;
+    rdaad:P50413 "Fassbender, Michael" ;
     rdfs:label "Fassbender, Michael" ;
     rdaad:P50339 "1977-" .
 
 <https://isni.org/isni/0000000116794245>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/0000000116794245" ;
-    rdaad:P50385 "Wolski, Dariusz A" ;
+    rdaad:P50413 "Wolski, Dariusz A" ;
     rdfs:label "Wolski, Dariusz A" .
 
 <https://isni.org/isni/0000000116899928>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/0000000116899928" ;
-    rdaad:P50385 "Scott, Ridley" ;
+    rdaad:P50413 "Scott, Ridley" ;
     rdfs:label "Scott, Ridley" .
 
 <https://isni.org/isni/0000000120296767>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/0000000120296767" ;
-    rdaad:P50385 "Coen, Joel" ;
+    rdaad:P50413 "Coen, Joel" ;
     rdfs:label "Coen, Joel" ;
     rdaad:P50339 "1954-" .
 
 <https://isni.org/isni/0000000120961536>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/0000000120961536" ;
-    rdaad:P50385 "Thornton, Billy Bob" ;
+    rdaad:P50413 "Thornton, Billy Bob" ;
     rdfs:label "Thornton, Billy Bob" ;
     rdaad:P50339 "1955-" .
 
 <https://isni.org/isni/0000000121413793>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/0000000121413793" ;
-    rdaad:P50385 "Bardem, Javier" ;
+    rdaad:P50413 "Bardem, Javier" ;
     rdfs:label "Bardem, Javier" ;
     rdaad:P50339 "1969-" .
 
 <https://isni.org/isni/0000000121417460>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/0000000121417460" ;
-    rdaad:P50385 "Coen, Ethan" ;
+    rdaad:P50413 "Coen, Ethan" ;
     rdfs:label "Coen, Ethan" ;
     rdaad:P50339 "1957-" .
 
 <https://isni.org/isni/000000012142082X>
     a rdac:C10002 ;
     rdaxd:P00018 "https://isni.org/isni/000000012142082X" ;
-    rdaad:P50385 "Damon, Matt" ;
+    rdaad:P50413 "Damon, Matt" ;
     rdfs:label "Damon, Matt" ;
     rdaad:P50339 "1970-" .
 
 <https://www.imdb.com/name/nm0777455>
     a rdac:C10002 ;
     rdaxd:P00018 "https://www.imdb.com/name/nm0777455" ;
-    rdaad:P50385 "Schwartz, Steve" ;
+    rdaad:P50413 "Schwartz, Steve" ;
     rdfs:label "Schwartz, Steve" .
 
 <https://www.imdb.com/name/nm2445382>
     a rdac:C10002 ;
     rdaxd:P00018 "https://www.imdb.com/name/nm2445382" ;
-    rdaad:P50385 "Schwartz, Paula Mae" ;
+    rdaad:P50413 "Schwartz, Paula Mae" ;
     rdfs:label "Schwartz, Paula Mae" .
 
 <http://viaf.org/viaf/175871715/exp/eng/1020>
     a rdac:C10006 ;
-    rdaed:P20316 "The border trilogy" ;
-    rdaxd:P00029 "parent" ;
-    rdaed:P20312 "The border trilogy" ,
-                 "The border trilogy : All the pretty horses, The Crossing, Cities of the plain" ;
     rdfs:label "The border trilogy (McCarthy, Cormac)" ;
+    #rdaed:P20312 "The border trilogy" ;
+    rdaed:P20315 "The border trilogy" ;
     rdaed:P20071 "All the pretty horses -- The crossing -- Cities of the plain" ;
     rdaed:P20315 "The border trilogy" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
@@ -495,12 +492,10 @@
 
 <http://viaf.org/viaf/175871715/exp/nob/1020/225596267>
     a rdac:C10006 ;
-    rdaed:P20316 "The border trilogy" ;
-    rdaxd:P00029 "parent" ;
-    rdaed:P20312 "Grensetrilogien" ;
-    rdaed:P20071 "Alle de vakre hestene -- Over grensen -- Byene på høysletten" ;
-    rdaed:P20315 "Grensetriologien" ;
     rdfs:label "Grensetriologien (McCarthy, Cormac)" ;
+    #rdaed:P20312 "Grensetrilogien" ;
+    rdaed:P20315 "Grensetriologien" ;
+    rdaed:P20071 "Alle de vakre hestene -- Over grensen -- Byene på høysletten" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20037 <http://viaf.org/viaf/225596267> ;
@@ -511,19 +506,17 @@
 
 <http://viaf.org/viaf/188298726/exp/eng/1020>
     a rdac:C10006 ;
-    rdaed:P20316 "Suttree" ;
-    rdaxd:P00029 "standalone" ;
-    rdaed:P20312 "Suttree" ;
     rdfs:label "Suttree (McCarthy, Cormac)" ;
+    rdaed:P20315 "Suttree" ;
+    #rdaed:P20312 "Suttree" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/188298726> .
 
 <http://viaf.org/viaf/188670330/exp/eng/1020>
     a rdac:C10006 ;
-    rdaed:P20316 "Child of God" ;
-    rdaxd:P00029 "standalone" ;
-    rdaed:P20312 "Child of God" ;
+    rdaed:P20315 "Child of God" ;
+    #rdaed:P20312 "Child of God" ;
     rdfs:label "Child of God (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
@@ -531,9 +524,8 @@
 
 <http://viaf.org/viaf/188670330/exp/nob/1020/266451311>
     a rdac:C10006 ;
-    rdaed:P20316 "Child of God" ;
-    rdaxd:P00029 "standalone" ;
-    rdaed:P20312 "Et Guds barn" ;
+    rdaed:P20315 "Child of God" ;
+    #rdaed:P20312 "Et Guds barn" ;
     rdfs:label "Et Guds barn (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
@@ -542,9 +534,8 @@
 
 <http://viaf.org/viaf/191524645/exp/eng/1020>
     a rdac:C10006 ;
-    rdaed:P20316 "Blood meridian, or The evening redness in the west" ;
-    rdaxd:P00029 "standalone" ;
-    rdaed:P20312 "Blood meridian" , "Blood meridian, or, The evening redness in the West" ;
+    rdaed:P20315 "Blood meridian, or the evening redness in the west" ;
+    #rdaed:P20312 "Blood meridian" , "Blood meridian, or, The evening redness in the West" ;
     rdfs:label "Blood meridian (McCarthy, Cormac)" ,
                "Blood meridian, or, The evening redness in the West (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
@@ -553,10 +544,9 @@
 
 <http://viaf.org/viaf/191524645/exp/nob/1020/225596267>
     a rdac:C10006 ;
-    rdaed:P20316 "Blood meridian, or The evening redness in the west" ;
-    rdaxd:P00029 "standalone" ;
-    rdaed:P20312 "Blodmeridianen, eller Aftenrøden i vest" ;
-    rdfs:label "Blodmeridianen, eller Aftenrøden i vest (McCarthy, Cormac)" ;
+    rdaed:P20315 "Blodmeridianen, eller aftenrøden i vest" ;
+    #rdaed:P20312 "Blodmeridianen, eller Aftenrøden i vest" ;
+    rdfs:label "Blodmeridianen, eller aftenrøden i vest (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20037 <http://viaf.org/viaf/225596267> ;
@@ -564,9 +554,8 @@
 
 <http://viaf.org/viaf/191907343/exp/eng/1020>
     a rdac:C10006 ;
-    rdaed:P20316 "The orchard keeper" ;
-    rdaxd:P00029 "standalone" ;
-    rdaed:P20312 "The orchard keeper" ;
+    rdaed:P20315 "The orchard keeper" ;
+    #rdaed:P20312 "The orchard keeper" ;
     rdfs:label "The orchard keeper (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
@@ -574,9 +563,8 @@
 
 <http://viaf.org/viaf/191907343/exp/nob/1020/225596267>
     a rdac:C10006 ;
-    rdaed:P20316 "The orchard keeper" ;
-    rdaxd:P00029 "standalone" ;
-    rdaed:P20312 "Frukthagen" ;
+    rdaed:P20315 "Frukthagen" ;
+    #rdaed:P20312 "Frukthagen" ;
     rdfs:label "Frukthagen (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
@@ -585,9 +573,8 @@
 
 <http://viaf.org/viaf/214001528/exp/eng/1013/0000000114380049>
     a rdac:C10006 ;
-    rdaed:P20316 "All the pretty horses" ;
-    rdaxd:P00029 "standalone" ;
-    rdaed:P20312 "All the pretty horses" ;
+    rdaed:P20315 "All the pretty horses" ;
+    #rdaed:P20312 "All the pretty horses" ;
     rdfs:label "All the pretty horses (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
@@ -596,9 +583,8 @@
 
 <http://viaf.org/viaf/214001528/exp/eng/1020>
     a rdac:C10006 ;
-    rdaed:P20316 "All the pretty horses" ;
-    rdaxd:P00029 "standalone" , "part" ;
-    rdaed:P20312 "All the Pretty Horses" ;
+    rdaed:P20315 "All the pretty horses" ;
+    #rdaed:P20312 "All the Pretty Horses" ;
     rdfs:label "All the Pretty Horses (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
@@ -606,11 +592,8 @@
 
 <http://viaf.org/viaf/214001528/exp/nob/1020/225596267>
     a rdac:C10006 ;
-    rdaed:P20316 "All the pretty horses" ;
-    rdaxd:P00029 "standalone" , "part" ;
-    rdaed:P20312 "Alle de vakre hestene" ;
-    rdfs:label "Alle de vakre hestene (McCarthy, Cormac)";
     rdaed:P20315 "Alle de vakre hestene" ;
+    rdfs:label "Alle de vakre hestene (McCarthy, Cormac)";
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20037 <http://viaf.org/viaf/225596267> ;
@@ -618,9 +601,8 @@
 
 <http://viaf.org/viaf/214012164/exp/eng/1020>
     a rdac:C10006 ;
-    rdaed:P20316 "No country for old men" ;
-    rdaxd:P00029 "standalone" ;
-    rdaed:P20312 "No country for old men" ;
+    rdaed:P20315 "No country for old men" ;
+    #rdaed:P20312 "No country for old men" ;
     rdfs:label "No country for old men (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
@@ -628,9 +610,8 @@
 
 <http://viaf.org/viaf/214012164/exp/nob/1020/225596267>
     a rdac:C10006 ;
-    rdaed:P20316 "No country for old men" ;
-    rdaxd:P00029 "standalone" ;
-    rdaed:P20312 "Ikke et land for gamle menn" ;
+    #rdaed:P20315 "No country for old men" ;
+    rdaed:P20315 "Ikke et land for gamle menn" ;
     rdfs:label "Ikke et land for gamle menn (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
@@ -639,9 +620,8 @@
 
 <http://viaf.org/viaf/215254416/exp/eng/1020>
     a rdac:C10006 ;
-    rdaed:P20316 "Outer dark" ;
-    rdaxd:P00029 "standalone" ;
-    rdaed:P20312 "Outer dark" ;
+    rdaed:P20315 "Outer dark" ;
+    #rdaed:P20312 "Outer dark" ;
     rdfs:label "Outer dark (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
@@ -649,9 +629,8 @@
 
 <http://viaf.org/viaf/220031159/exp/eng/1020>
     a rdac:C10006 ;
-    rdaed:P20316 "The road" ;
-    rdaxd:P00029 "standalone" ;
-    rdaed:P20312 "The road" ;
+    rdaed:P20315 "The road" ;
+    #rdaed:P20312 "The road" ;
     rdfs:label "The road (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
@@ -659,9 +638,8 @@
 
 <http://viaf.org/viaf/220031159/exp/nob/1013/225596267/27122071>
     a rdac:C10006 ;
-    rdaed:P20316 "The road" ;
-    rdaxd:P00029 "standalone" ;
-    rdaed:P20312 "Veien" ;
+    #rdaed:P20315 "The road" ;
+    rdaed:P20315 "Veien" ;
     rdfs:label "Veien (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
@@ -671,9 +649,8 @@
 
 <http://viaf.org/viaf/220031159/exp/nob/1020/225596267>
     a rdac:C10006 ;
-    rdaed:P20316 "The road" ;
-    rdaxd:P00029 "standalone" ;
-    rdaed:P20312 "Veien" ;
+    #rdaed:P20315 "The road" ;
+    rdaed:P20315 "Veien" ;
     rdfs:label "Veien (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
@@ -682,9 +659,8 @@
 
 <http://viaf.org/viaf/29558386/counselor/exp/eng/1020>
     a rdac:C10006 ;
-    rdaed:P20316 "The counselor" ;
-    rdaxd:P00029 "standalone" ;
-    rdaed:P20312 "The counselor : a screenplay" ;
+    rdaed:P20315 "The counselor" ;
+    #rdaed:P20312 "The counselor : a screenplay" ;
     rdfs:label "The counselor (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
@@ -692,9 +668,8 @@
 
 <http://viaf.org/viaf/29558386/gardenersson/exp/eng/1020>
     a rdac:C10006 ;
-    rdaed:P20316 "The gardener's son" ;
-    rdaxd:P00029 "standalone" ;
-    rdaed:P20312 "The gardener's son" , "The gardener's son : a screenplay" ;
+    rdaed:P20315 "The gardener's son" ;
+    #rdaed:P20312 "The gardener's son" , "The gardener's son : a screenplay" ;
     rdfs:label "The gardener's son (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
@@ -702,9 +677,8 @@
 
 <http://viaf.org/viaf/309357400/exp/eng/1013/0000000114380049>
     a rdac:C10006 ;
-    rdaed:P20316 "The crossing" ;
-    rdaxd:P00029 "standalone" ;
-    rdaed:P20312 "The crossing" ;
+    rdaed:P20315 "The crossing" ;
+    #rdaed:P20312 "The crossing" ;
     rdfs:label "The crossing (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
@@ -713,9 +687,9 @@
 
 <http://viaf.org/viaf/309357400/exp/eng/1020>
     a rdac:C10006 ;
-    rdaed:P20316 "The crossing" ;
+    rdaed:P20315 "The crossing" ;
     rdaxd:P00029 "standalone" , "part" ;
-    rdaed:P20312 "The crossing" ;
+    #rdaed:P20312 "The crossing" ;
     rdfs:label "The crossing (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
@@ -723,12 +697,10 @@
 
 <http://viaf.org/viaf/309357400/exp/nob/1020/225596267>
     a rdac:C10006 ;
-    rdaed:P20316 "The crossing" ;
+    rdaed:P20315 "Over grensen" ;
     rdaxd:P00029 "standalone" , "part" ;
-    rdaed:P20312 "Grensetrilogien : 2 : Over grensen" , "Over grensen" , "The crossing" ;
-    rdfs:label "Grensetrilogien (McCarthy, Cormac)" ,
-               "Over grensen (McCarthy, Cormac)" ,
-               "The crossing (McCarthy, Cormac)" ;
+    #rdaed:P20312 "Grensetrilogien : 2 : Over grensen" , "Over grensen" , "The crossing" ;
+    rdfs:label "Over grensen (McCarthy, Cormac)";
     rdaed:P20315 "Over grensen" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
@@ -737,9 +709,9 @@
 
 <http://viaf.org/viaf/3417153653286155900001/exp/eng/1020>
     a rdac:C10006 ;
-    rdaed:P20316 "Cities of the plain" ;
+    rdaed:P20315 "Cities of the plain" ;
     rdaxd:P00029 "standalone" , "part" ;
-    rdaed:P20312 "Cities of the plain" ;
+    #rdaed:P20312 "Cities of the plain" ;
     rdfs:label "Cities of the plain (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
@@ -747,15 +719,9 @@
 
 <http://viaf.org/viaf/3417153653286155900001/exp/nob/1020/225596267>
     a rdac:C10006 ;
-    rdaed:P20316 "Cities of the plain" ;
-    rdaxd:P00029 "standalone" , "part" ;
-    rdaed:P20312 "Grensetrilogien : B. 3 : Byene på høysletten" ,
-                 "Byene på høysletten" ,
-                 "Cities of the plain" ;
-    rdfs:label "Grensetrilogien (McCarthy, Cormac)" ,
-               "Byene på høysletten (McCarthy, Cormac)" ,
-               "Cities of the plain (McCarthy, Cormac)" ;
-    rdaed:P20315 "Byene på høysletten" ;
+    #rdaed:P20312 "Byene på høysletten" ;
+    rdaed:P20315 "Byene på høysletten";
+    rdfs:label "Byene på høysletten (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20037 <http://viaf.org/viaf/225596267> ;
@@ -763,9 +729,8 @@
 
 <http://viaf.org/viaf/4440159478236227990002/exp/eng/1020>
     a rdac:C10006 ;
-    rdaed:P20316 "The Sunset Limited" ;
-    rdaxd:P00029 "standalone" ;
-    rdaed:P20312 "The Sunset Limited : a novel in dramatic form" ;
+    #rdaed:P20312 "The Sunset Limited" ;
+    rdaed:P20315 "The Sunset Limited" ;
     rdfs:label "The Sunset Limited (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
@@ -773,9 +738,8 @@
 
 <http://viaf.org/viaf/470166838899836200007/exp/eng/1020>
     a rdac:C10006 ;
-    rdaed:P20316 "The passenger" ;
-    rdaxd:P00029 "standalone" ;
-    rdaed:P20312 "The passenger" ;
+    rdaed:P20315 "The passenger" ;
+    #rdaed:P20312 "The passenger" ;
     rdfs:label "The passenger (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
@@ -783,8 +747,7 @@
 
 <http://viaf.org/viaf/470166838899836200007/exp/nob/1020/225596267>
     a rdac:C10006 ;
-    rdaed:P20316 "The passenger" ;
-    rdaxd:P00029 "standalone" ;
+    #rdaed:P20315 "The passenger" ;
     rdaed:P20312 "Passasjeren" ;
     rdfs:label "Passasjeren (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
@@ -794,9 +757,8 @@
 
 <http://viaf.org/viaf/470166838899836200007/stellamaris/exp/eng/1020>
     a rdac:C10006 ;
-    rdaed:P20316 "Stella Maris" ;
-    rdaxd:P00029 "standalone" ;
-    rdaed:P20312 "Stella Maris" ;
+    rdaed:P20315 "Stella Maris" ;
+    #rdaed:P20312 "Stella Maris" ;
     rdfs:label "Stella Maris (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
@@ -804,9 +766,8 @@
 
 <http://viaf.org/viaf/470166838899836200007/stellamaris/exp/nob/1020/225596267>
     a rdac:C10006 ;
-    rdaed:P20316 "Stella Maris" ;
-    rdaxd:P00029 "standalone" ;
-    rdaed:P20312 "Stella Maris" ;
+    rdaed:P20315 "Stella Maris" ;
+    #rdaed:P20312 "Stella Maris" ;
     rdfs:label "Stella Maris (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
@@ -815,9 +776,8 @@
 
 <http://viaf.org/viaf/5191807/theroad/exp/eng/1020>
     a rdac:C10006 ;
-    rdaed:P20316 "The road" ;
-    rdaxd:P00029 "standalone" ;
-    rdaed:P20312 "The road" , "The road : based on the novel by Cormac McCarthy" ;
+    rdaed:P20315 "The road" ;
+    #rdaed:P20312 "The road" , "The road : based on the novel by Cormac McCarthy" ;
     rdfs:label "The road (Penhall, Joe)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
@@ -825,22 +785,20 @@
 
 <http://viaf.org/viaf/8419162723677961290005/exp/eng/1020>
     a rdac:C10006 ;
-    rdaed:P20316 "The stonemason" ;
-    rdaxd:P00029 "standalone" ;
-    rdaed:P20312 "The stonemason" ,
-                 "The stonemason : a play in five acts" ,
-                 "Stonemason : A Play in five acts" ;
+    rdaed:P20315 "The stonemason" ;
+    #rdaed:P20312 "The stonemason" ,
+    #             "The stonemason : a play in five acts" ,
+    #             "Stonemason : A Play in five acts" ;
     rdfs:label "The stonemason (McCarthy, Cormac)" , "Stonemason (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/8419162723677961290005> .
 
-
 <http://www.wikidata.org/entity/Q3061599/exp/1023>
     a rdac:C10006 ;
-    rdaed:P20316 "The Counselor (Motion picture : 2013)" , "Counselor (Motion picture : 2013)" ;
-    rdaed:P20312 "The counselor" ;
-    rdfs:label "The counselor" ;
+    rdfs:label "The counselor (Motion picture : 2013)" ;
+    #rdaed:P20312 "The counselor";
+    rdaed:P20315 "The counselor" ;
     rdaed:P20071 "disc 1. The counselor (Theatrical version) (117 in.) -- disc 2. The counselor (Unrated extended cut) (138 min.)." ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1023> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ,
@@ -859,9 +817,9 @@
 
 <https://www.imdb.com/title/tt0149624/exp/1023>
     a rdac:C10006 ;
-    rdaed:P20316 "All the pretty horses" ;
+    rdaed:P20315 "All the pretty horses" ;
     rdaxd:P00029 "aggregate" ;
-    rdaed:P20312 "All the pretty horses" ;
+    #rdaed:P20312 "All the pretty horses" ;
     rdfs:label "All the pretty horses" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1023> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/mul> ,
@@ -874,8 +832,8 @@
 
 <https://www.imdb.com/title/tt0477348/exp/1023>
     a rdac:C10006 ;
-    rdaed:P20316 "No country for old men" , "No country for old men (Motion picture)" ;
-    rdaed:P20312 "No country for old men" ;
+    rdaed:P20315 "No country for old men" , "No country for old men (Motion picture)" ;
+    #rdaed:P20312 "No country for old men" ;
     rdfs:label "No country for old men" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1023> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
@@ -889,8 +847,8 @@
 
 <https://www.imdb.com/title/tt0898367/exp/1023>
     a rdac:C10006 ;
-    rdaed:P20316 "The Road" , "Road (Motion picture : 2009)" ;
-    rdaed:P20312 "The Road" ;
+    rdaed:P20315 "The Road" , "Road (Motion picture : 2009)" ;
+    #rdaed:P20312 "The Road" ;
     rdfs:label "The Road" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1023> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;

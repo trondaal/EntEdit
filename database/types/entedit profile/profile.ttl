@@ -74,7 +74,7 @@ rdaad:P50415	abi:status "data property" ; abi:order 2 ; rdfs:label "variant av n
 rdaad:P50339	abi:status "data property" ; abi:order 3 ; rdfs:label "årstall"@no . #"dates"@en .
 
 #Work profile, data properties
-rdawd:P10088	abi:status "data property" ; abi:order 1 ; rdfs:label "tittel"@no . #"title"@en .
+#rdawd:P10088	abi:status "data property" ; abi:order 1 ; rdfs:label "tittel"@no . #"title"@en .
 rdawd:P10223	abi:status "data property" ; abi:order 2 ; rdfs:label "foretrukket tittel"@no . #"titlepreferred"@en .
 rdawd:P10086	abi:status "data property" ; abi:order 3 ; rdfs:label "tittelvariant"@no . #"titlevariant"@en .
 rdawd:P10012	abi:status "data property" ; abi:order 4 ; rdfs:label "nummerering"@no . #"numbering"@en .
@@ -90,7 +90,7 @@ rdawd:P10330	abi:status "data property" ; abi:order 8 ; rdfs:label "note"@no . #
 #Expression profile, data properties
 #rdaed:P20006	abi:status "data property" ; rdfs:label "har språk i uttrykk"@no . #"language"@en .
 #rdaed:P20001	abi:status "data property" ; rdfs:label "har innholdstype"@no . #"content"@en .
-rdaed:P20312	abi:status "data property" ; abi:order   1 ; rdfs:label "tittel"@no . #"title"@en .
+#rdaed:P20312	abi:status "data property" ; abi:order   1 ; rdfs:label "tittel"@no . #"title"@en .
 rdaed:P20315	abi:status "data property" ; abi:order   2 ; rdfs:label "foretrukket tittel"@no . #"titlepreferred"@en .
 rdaed:P20316	abi:status "data property" ; abi:order   3 ; rdfs:label "tittelvariant"@no . #"titlevariant"@en .
 #rdaed:P20071	abi:status "data property" ; rdfs:label "har note om uttrykk"@no . #"contentsnote"@en .
@@ -449,8 +449,8 @@ rdaeo:P20053	abi:status	"object property" ; rdfs:label "har skaper for uttrykk"@
 rdaao:P50180	abi:status	"object property" ; rdfs:label "er programleder for"@no . #	is presenter agent of	rdac:C10002	rdac:C10006
 rdaeo:P20054	abi:status	"object property" ; rdfs:label "har agent som presenterer"@no . #	has presenter agent	rdac:C10006	rdac:C10002
 
-#rdaao:P50183	abi:status	"object property" ; rdfs:label "er redigerer av verk i form av levende bilder"@no . #	is editor agent of moving image work of	rdac:C10002	rdac:C10006
-#rdaeo:P20055	abi:status	"object property" ; rdfs:label "har redigerer av verk i form av levende bilder"@no . #	has editor agent of moving image work	rdac:C10006	rdac:C10002
+rdaao:P50183	abi:status	"object property" ; rdfs:label "er film editor for"@no . #	is editor agent of moving image work of	rdac:C10002	rdac:C10006
+rdaeo:P20055	abi:status	"object property" ; rdfs:label "har film editor"@no . #	has editor agent of moving image work	rdac:C10006	rdac:C10002
 
 rdaao:P50198	abi:status	"object property" ; rdfs:label "er produksjonsdesigner for"@no . #	is production designer agent of	rdac:C10002	rdac:C10006
 rdaeo:P20056	abi:status	"object property" ; rdfs:label "har produksjonsdesigner"@no . #	has production designer agent	rdac:C10006	rdac:C10002
