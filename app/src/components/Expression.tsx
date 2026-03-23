@@ -18,7 +18,7 @@ import type { ExpressionSearchResult } from "../hooks/useSearchQueries";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import { getGraphVisualizationUrl } from "../utils/graphUtils";
 import ManifestationList from "./ManifestationList";
-import { capitalizeFirstLetter, splitSemicolonValues, parseCreators } from "../utils/textFormatters";
+import { capitalizeFirstLetter, splitSemicolonValues, parseCreators, SPARQL_SEP } from "../utils/textFormatters";
 import { getContentTypeIcon, typeIconSx } from "../utils/contentTypeIcons";
 
 interface ExpressionProps {
@@ -59,31 +59,31 @@ const Expression: React.FC<ExpressionProps> = ({
   // 3. they are different
   const showWorkTitle = result.work_title && result.expression_title && result.work_title !== result.expression_title;
 
-  // Helper function to parse and format relationship strings
-  // Example input: "har del av verk: All the pretty horses = http://viaf.org/viaf/214001528 & Cities of the plain = http://viaf.org/viaf/3417153653286155900001 ; er bearbeidet som spillefilm (verk): All the pretty horses = https://www.imdb.com/title/tt0149624"
+  // Helper function to parse and format relationship strings built with SPARQL_SEP separators.
+  // Example input: "har del av verk ‡ All the pretty horses ‖ http://viaf.org/... † Cities of the plain ‖ http://viaf.org/... §§ er bearbeidet som spillefilm (verk) ‡ All the pretty horses ‖ https://www.imdb.com/title/tt0149624"
   // Output: Array of { relationshipLabel, titles: Array<{ title, uri? }> }
   const parseRelationships = (relationshipString: string | undefined): Array<{ relationshipLabel: string; titles: Array<{ title: string; uri?: string }> }> => {
     if (!relationshipString) return [];
 
     const result: Array<{ relationshipLabel: string; titles: Array<{ title: string; uri?: string }> }> = [];
 
-    // Split by semicolon to get individual relationship groups (already grouped by label from SPARQL)
-    const relationshipGroups = relationshipString.split(';').map(group => group.trim());
+    // Split by group separator to get individual relationship groups
+    const relationshipGroups = relationshipString.split(SPARQL_SEP.GROUP).map(group => group.trim());
 
     relationshipGroups.forEach(group => {
-      // Split by colon to separate relationship label from title+URI pairs
-      const colonIndex = group.indexOf(':');
-      if (colonIndex === -1) return;
+      // Split by label separator to separate relationship label from title+URI pairs
+      const labelIndex = group.indexOf(SPARQL_SEP.LABEL.trim());
+      if (labelIndex === -1) return;
 
-      const relationshipLabel = group.substring(0, colonIndex).trim();
-      const titleAndUriPairs = group.substring(colonIndex + 1).trim();
+      const relationshipLabel = group.substring(0, labelIndex).trim();
+      const titleAndUriPairs = group.substring(labelIndex + SPARQL_SEP.LABEL.trim().length).trim();
 
-      // Split by ' & ' to get individual title=URI pairs
+      // Split by name separator to get individual title‖URI pairs
       const titles: Array<{ title: string; uri?: string }> = [];
-      const pairs = titleAndUriPairs.split('&').map(pair => pair.trim());
+      const pairs = titleAndUriPairs.split(SPARQL_SEP.NAME).map(pair => pair.trim());
 
       pairs.forEach(pair => {
-        const parts = pair.split(' = ');
+        const parts = pair.split(SPARQL_SEP.URI);
         const title = parts[0]?.trim();
         const uri = parts[1]?.trim();
         if (title) {

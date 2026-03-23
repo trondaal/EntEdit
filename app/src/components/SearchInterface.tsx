@@ -82,7 +82,9 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
   };
 
   const handleEntitySearch = (name: string) => {
-    setSearchInput(`"${name}"`);
+    // Wrap in quotes for Lucene phrase search; escape any embedded quotes
+    const escapedName = name.replace(/"/g, '\\"');
+    setSearchInput(`"${escapedName}"`);
     setSelectedResult(null);
     setSelectedManifestation(null);
     setSelectedManifestationResult(null);

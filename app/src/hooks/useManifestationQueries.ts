@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { SparqlClient } from "../utils/sparqlClient";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import { sanitizeSparqlUri, escapeSparqlLiteral } from "../utils/labelUtils";
+import { SPARQL_SEP } from "../utils/textFormatters";
 
 export interface Manifestation {
   uri: string;
@@ -74,7 +75,7 @@ export const useManifestations = (
                (SAMPLE(?mediatype_uri_val) as ?mediatype_uri)
                (SAMPLE(?carriertypelabel) as ?carriertypelabel)
                (SAMPLE(?carriertype_uri_val) as ?carriertype_uri)
-               (GROUP_CONCAT(DISTINCT CONCAT(?manifestation_agent_relationship_label, ": ", ?manifestation_agent_names) ; SEPARATOR=" ; ") as ?manifestation_creators)
+               (GROUP_CONCAT(DISTINCT CONCAT(?manifestation_agent_relationship_label, "${SPARQL_SEP.LABEL}", ?manifestation_agent_names) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?manifestation_creators)
         FROM <http://www.ontotext.com/explicit>
         WHERE {
           { <${sanitizeSparqlUri(expressionUri)}> rdaeo:P20059 ?manifestation . }
@@ -155,7 +156,7 @@ export const useManifestations = (
           #Manifestation to agent relationships
           OPTIONAL {
             SELECT DISTINCT ?manifestation ?manifestation_agent_relationship_label
-            (GROUP_CONCAT(DISTINCT ?manifestation_agent_name_x ; SEPARATOR=" & ") as ?manifestation_agent_names)
+            (GROUP_CONCAT(DISTINCT ?manifestation_agent_name_x ; SEPARATOR="${SPARQL_SEP.NAME}") as ?manifestation_agent_names)
             WHERE {
               {
                 OPTIONAL {

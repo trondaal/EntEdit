@@ -1,6 +1,7 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { SparqlClient } from "../utils/sparqlClient";
 import { escapeSparqlLiteral, sanitizeSparqlUri } from "../utils/labelUtils";
+import { SPARQL_SEP } from "../utils/textFormatters";
 import type { SparqlEndpointConfig } from "../types/sparql";
 
 /** Number of search results fetched per page */
@@ -144,10 +145,10 @@ SELECT ?expression
     (SAMPLE(?contenttype) as ?contenttype_uri)
     (GROUP_CONCAT(DISTINCT ?workcategory_label ; SEPARATOR=" ; ") as ?workcategory)
     (GROUP_CONCAT(DISTINCT ?genre_label ; SEPARATOR=" ; ") as ?genre)
-    (GROUP_CONCAT(DISTINCT CONCAT(?work_agent_relationship_label, ": ", ?work_agent_names) ; SEPARATOR=" ; ") as ?work_creators)
-    (GROUP_CONCAT(DISTINCT CONCAT(?expression_agent_relationship_label, ": ", ?expression_agent_names) ; SEPARATOR=" ; ") as ?expression_creators)
-    (GROUP_CONCAT(DISTINCT CONCAT(?work_to_work_relationship_label, ": ", ?target_work_title) ; SEPARATOR=" ; ") as ?work_to_work_relationships)
-    (GROUP_CONCAT(DISTINCT CONCAT(?expression_to_expression_relationship_label, ": ", ?target_expression_title) ; SEPARATOR=" ; ") as ?expression_to_expression_relationships)
+    (GROUP_CONCAT(DISTINCT CONCAT(?work_agent_relationship_label, "${SPARQL_SEP.LABEL}", ?work_agent_names) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?work_creators)
+    (GROUP_CONCAT(DISTINCT CONCAT(?expression_agent_relationship_label, "${SPARQL_SEP.LABEL}", ?expression_agent_names) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?expression_creators)
+    (GROUP_CONCAT(DISTINCT CONCAT(?work_to_work_relationship_label, "${SPARQL_SEP.LABEL}", ?target_work_title) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?work_to_work_relationships)
+    (GROUP_CONCAT(DISTINCT CONCAT(?expression_to_expression_relationship_label, "${SPARQL_SEP.LABEL}", ?target_expression_title) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?expression_to_expression_relationships)
     (COUNT(DISTINCT ?manifestation) as ?manifestation_count)
 FROM <http://www.ontotext.com/explicit>
 WHERE {
@@ -168,10 +169,10 @@ WHERE {
 
     # Titles (no language tag expected)
     OPTIONAL {
-        ?expression rdaed:P20312 ?expressiontitle .
+        ?expression rdaed:P20315 ?expressiontitle .
     }
     OPTIONAL {
-        ?work rdawd:P10088 ?worktitle .
+        ?work rdawd:P10223 ?worktitle .
     }
 
     # Language label
@@ -199,7 +200,7 @@ WHERE {
     # Work to agent relationships
     OPTIONAL {
         SELECT DISTINCT ?work ?work_agent_relationship_label
-        (GROUP_CONCAT(DISTINCT CONCAT(?work_agent_name_x, " = ", STR(?work_agent)) ; SEPARATOR=" & ") as ?work_agent_names)
+        (GROUP_CONCAT(DISTINCT CONCAT(?work_agent_name_x, "${SPARQL_SEP.URI}", STR(?work_agent)) ; SEPARATOR="${SPARQL_SEP.NAME}") as ?work_agent_names)
         WHERE {
             {
                 OPTIONAL {
@@ -224,7 +225,7 @@ WHERE {
     # Expression to agent relationships
     OPTIONAL {
         SELECT DISTINCT ?expression ?expression_agent_relationship_label
-        (GROUP_CONCAT(DISTINCT CONCAT(?expression_agent_name_x, " = ", STR(?expression_agent)) ; SEPARATOR=" & ") as ?expression_agent_names)
+        (GROUP_CONCAT(DISTINCT CONCAT(?expression_agent_name_x, "${SPARQL_SEP.URI}", STR(?expression_agent)) ; SEPARATOR="${SPARQL_SEP.NAME}") as ?expression_agent_names)
         WHERE {
             {
                 OPTIONAL {
@@ -247,15 +248,19 @@ WHERE {
     }
 
     # Work to work relationships
+    # Uses rdfs:label for target work title (chosen language → no language tag)
     OPTIONAL {
         SELECT DISTINCT ?work ?work_to_work_relationship_label
-        (GROUP_CONCAT(DISTINCT CONCAT(?target_work_title, " = ", STR(?target_work)) ; SEPARATOR=" & ") as ?target_work_title)
+        (GROUP_CONCAT(DISTINCT CONCAT(?target_work_title, "${SPARQL_SEP.URI}", STR(?target_work)) ; SEPARATOR="${SPARQL_SEP.NAME}") as ?target_work_title)
         WHERE {
             {
                 OPTIONAL {
                     ?work ?work_to_work_relationship ?target_work .
                     ?target_work a <http://rdaregistry.info/Elements/c/C10001> .
-                    ?target_work rdawd:P10088 ?target_work_title .
+                    OPTIONAL { ?target_work rdfs:label ?tw_label_lang . FILTER(LANG(?tw_label_lang) = "${escapedLanguage}") }
+                    OPTIONAL { ?target_work rdfs:label ?tw_label_none . FILTER(LANG(?tw_label_none) = "") }
+                    BIND(COALESCE(?tw_label_lang, ?tw_label_none) AS ?target_work_title)
+                    FILTER(BOUND(?target_work_title))
                     ?work_to_work_relationship rdfs:label ?work_to_work_relationship_label .
                     FILTER(LANG(?work_to_work_relationship_label) = "${escapedLanguage}") .
                     FILTER NOT EXISTS {
@@ -266,7 +271,10 @@ WHERE {
                 OPTIONAL {
                     ?target_work ?work_to_work_relationship ?work .
                     ?target_work a <http://rdaregistry.info/Elements/c/C10001> .
-                    ?target_work rdawd:P10088 ?target_work_title .
+                    OPTIONAL { ?target_work rdfs:label ?tw_label_lang2 . FILTER(LANG(?tw_label_lang2) = "${escapedLanguage}") }
+                    OPTIONAL { ?target_work rdfs:label ?tw_label_none2 . FILTER(LANG(?tw_label_none2) = "") }
+                    BIND(COALESCE(?tw_label_lang2, ?tw_label_none2) AS ?target_work_title)
+                    FILTER(BOUND(?target_work_title))
                     ?work_to_work_relationship_inverse owl:inverseOf ?work_to_work_relationship .
                     ?work_to_work_relationship_inverse rdfs:label ?work_to_work_relationship_label .
                     FILTER(LANG(?work_to_work_relationship_label) = "${escapedLanguage}") .
@@ -280,15 +288,19 @@ WHERE {
     }
 
     # Expression to expression relationships
+    # Uses rdfs:label for target expression title (chosen language → no language tag)
     OPTIONAL {
         SELECT DISTINCT ?expression ?expression_to_expression_relationship_label
-        (GROUP_CONCAT(DISTINCT CONCAT(?target_expression_title, " = ", STR(?target_expression)) ; SEPARATOR=" & ") as ?target_expression_title)
+        (GROUP_CONCAT(DISTINCT CONCAT(?target_expression_title, "${SPARQL_SEP.URI}", STR(?target_expression)) ; SEPARATOR="${SPARQL_SEP.NAME}") as ?target_expression_title)
         WHERE {
             {
                 OPTIONAL {
                     ?expression ?expression_to_expression_relationship ?target_expression .
                     ?target_expression a <http://rdaregistry.info/Elements/c/C10006> .
-                    ?target_expression rdaed:P20315 ?target_expression_title .
+                    OPTIONAL { ?target_expression rdfs:label ?te_label_lang . FILTER(LANG(?te_label_lang) = "${escapedLanguage}") }
+                    OPTIONAL { ?target_expression rdfs:label ?te_label_none . FILTER(LANG(?te_label_none) = "") }
+                    BIND(COALESCE(?te_label_lang, ?te_label_none) AS ?target_expression_title)
+                    FILTER(BOUND(?target_expression_title))
                     ?expression_to_expression_relationship rdfs:label ?expression_to_expression_relationship_label .
                     FILTER(LANG(?expression_to_expression_relationship_label) = "${escapedLanguage}") .
                 }
@@ -296,7 +308,10 @@ WHERE {
                 OPTIONAL {
                     ?target_expression ?expression_to_expression_relationship ?expression .
                     ?target_expression a <http://rdaregistry.info/Elements/c/C10006> .
-                    ?target_expression rdaed:P20315 ?target_expression_title .
+                    OPTIONAL { ?target_expression rdfs:label ?te_label_lang2 . FILTER(LANG(?te_label_lang2) = "${escapedLanguage}") }
+                    OPTIONAL { ?target_expression rdfs:label ?te_label_none2 . FILTER(LANG(?te_label_none2) = "") }
+                    BIND(COALESCE(?te_label_lang2, ?te_label_none2) AS ?target_expression_title)
+                    FILTER(BOUND(?target_expression_title))
                     ?expression_to_expression_relationship_inverse owl:inverseOf ?expression_to_expression_relationship .
                     ?expression_to_expression_relationship_inverse rdfs:label ?expression_to_expression_relationship_label .
                     FILTER(LANG(?expression_to_expression_relationship_label) = "${escapedLanguage}") .
@@ -428,7 +443,7 @@ SELECT ?manifestation
     (SAMPLE(?mediatype_uri_val) as ?mediatype_uri)
     (SAMPLE(?carriertype_label) as ?carriertype)
     (SAMPLE(?carriertype_uri_val) as ?carriertype_uri)
-    (GROUP_CONCAT(DISTINCT CONCAT(?manifestation_agent_relationship_label, ": ", ?manifestation_agent_names) ; SEPARATOR=" ; ") as ?manifestation_creators)
+    (GROUP_CONCAT(DISTINCT CONCAT(?manifestation_agent_relationship_label, "${SPARQL_SEP.LABEL}", ?manifestation_agent_names) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?manifestation_creators)
     (COUNT(DISTINCT ?expression) as ?expression_count)
 FROM <http://www.ontotext.com/explicit>
 WHERE {
@@ -518,7 +533,7 @@ WHERE {
     # Manifestation to agent relationships
     OPTIONAL {
         SELECT DISTINCT ?manifestation ?manifestation_agent_relationship_label
-        (GROUP_CONCAT(DISTINCT CONCAT(?manifestation_agent_name_x, " = ", STR(?manifestation_agent)) ; SEPARATOR=" & ") as ?manifestation_agent_names)
+        (GROUP_CONCAT(DISTINCT CONCAT(?manifestation_agent_name_x, "${SPARQL_SEP.URI}", STR(?manifestation_agent)) ; SEPARATOR="${SPARQL_SEP.NAME}") as ?manifestation_agent_names)
         WHERE {
             {
                 OPTIONAL {

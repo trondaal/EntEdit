@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { SparqlClient } from "../utils/sparqlClient";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import { sanitizeSparqlUri } from "../utils/labelUtils";
+import { SPARQL_SEP } from "../utils/textFormatters";
 
 export interface Expression {
   uri: string;
@@ -53,8 +54,8 @@ export const useExpressionsByManifestation = (
                (SAMPLE(?contenttype) as ?contenttype_uri)
                (GROUP_CONCAT(DISTINCT ?workcategory_label ; SEPARATOR=" ; ") as ?workcategory)
                (GROUP_CONCAT(DISTINCT ?genre_label ; SEPARATOR=" ; ") as ?genre)
-               (GROUP_CONCAT(DISTINCT CONCAT(?work_agent_relationship_label, ": ", ?work_agent_names) ; SEPARATOR=" ; ") as ?work_creators)
-               (GROUP_CONCAT(DISTINCT CONCAT(?expression_agent_relationship_label, ": ", ?expression_agent_names) ; SEPARATOR=" ; ") as ?expression_creators)
+               (GROUP_CONCAT(DISTINCT CONCAT(?work_agent_relationship_label, "${SPARQL_SEP.LABEL}", ?work_agent_names) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?work_creators)
+               (GROUP_CONCAT(DISTINCT CONCAT(?expression_agent_relationship_label, "${SPARQL_SEP.LABEL}", ?expression_agent_names) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?expression_creators)
                FROM <http://www.ontotext.com/explicit>
                WHERE {
           # Navigate from manifestation to expression
@@ -69,10 +70,10 @@ export const useExpressionsByManifestation = (
 
           # Expression and Work titles
           OPTIONAL {
-            ?expression rdaed:P20312 ?expressiontitle .
+            ?expression rdaed:P20315 ?expressiontitle .
           }
           OPTIONAL {
-            ?work rdawd:P10088 ?worktitle .
+            ?work rdawd:P10223 ?worktitle .
           }
 
           # Language
@@ -106,7 +107,7 @@ export const useExpressionsByManifestation = (
           # Work to agent relationships
           OPTIONAL {
             SELECT DISTINCT ?work ?work_agent_relationship_label
-            (GROUP_CONCAT(DISTINCT CONCAT(?work_agent_name_x, " = ", STR(?work_agent)) ; SEPARATOR=" & ") as ?work_agent_names)
+            (GROUP_CONCAT(DISTINCT CONCAT(?work_agent_name_x, "${SPARQL_SEP.URI}", STR(?work_agent)) ; SEPARATOR="${SPARQL_SEP.NAME}") as ?work_agent_names)
             WHERE {
               {
                 OPTIONAL {
@@ -131,7 +132,7 @@ export const useExpressionsByManifestation = (
           # Expression to agent relationships
           OPTIONAL {
             SELECT DISTINCT ?expression ?expression_agent_relationship_label
-            (GROUP_CONCAT(DISTINCT CONCAT(?expression_agent_name_x, " = ", STR(?expression_agent)) ; SEPARATOR=" & ") as ?expression_agent_names)
+            (GROUP_CONCAT(DISTINCT CONCAT(?expression_agent_name_x, "${SPARQL_SEP.URI}", STR(?expression_agent)) ; SEPARATOR="${SPARQL_SEP.NAME}") as ?expression_agent_names)
             WHERE {
               {
                 OPTIONAL {

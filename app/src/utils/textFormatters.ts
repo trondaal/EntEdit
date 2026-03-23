@@ -3,6 +3,26 @@
  */
 
 /**
+ * Separator characters for structured strings built with SPARQL GROUP_CONCAT/CONCAT
+ * and parsed client-side. These use Unicode characters that will not appear in
+ * natural-language labels, URIs, or ISBD bibliographic data, avoiding the ambiguity
+ * of using `;`, `:`, `&`, or `=` which occur naturally in those contexts.
+ *
+ * Used in: useSearchQueries.ts (SPARQL generation), Expression.tsx and
+ * textFormatters.ts (client-side parsing).
+ */
+export const SPARQL_SEP = {
+  /** Between relationship/role groups — e.g. "role1‡names §§ role2‡names" */
+  GROUP: " §§ ",
+  /** Between role label and content — e.g. "forfatter ‡ Navn1 † Navn2" */
+  LABEL: " ‡ ",
+  /** Between name entries within a group — e.g. "Name1†uri1 † Name2†uri2" */
+  NAME: " † ",
+  /** Between a name and its URI — e.g. "Cormac McCarthy ‖ http://viaf.org/..." */
+  URI: " ‖ ",
+} as const;
+
+/**
  * Capitalizes the first letter of a string.
  */
 export const capitalizeFirstLetter = (text: string | undefined): string | undefined => {
@@ -41,24 +61,25 @@ export interface CreatorGroup {
 /**
  * Parses a creator string into structured role/name groups.
  *
- * Input format: "rolelabel: name = uri & name = uri ; rolelabel: name = uri"
- * The "= uri" part is optional per name entry.
+ * Input format (using SPARQL_SEP characters):
+ *   "rolelabel ‡ name ‖ uri † name ‖ uri §§ rolelabel ‡ name ‖ uri"
+ * The "‖ uri" part is optional per name entry.
  *
  * @returns Array of { role, names: Array<{ name, uri? }> }
  */
 export const parseCreators = (creatorString: string | undefined): CreatorGroup[] => {
   if (!creatorString) return [];
 
-  const roleGroups = creatorString.split(';').map(group => group.trim());
+  const roleGroups = creatorString.split(SPARQL_SEP.GROUP).map(group => group.trim());
 
   return roleGroups.flatMap(group => {
-    const colonIndex = group.indexOf(':');
-    if (colonIndex === -1) return [];
+    const labelIndex = group.indexOf(SPARQL_SEP.LABEL.trim());
+    if (labelIndex === -1) return [];
 
-    const role = group.substring(0, colonIndex).trim();
-    const namesString = group.substring(colonIndex + 1).trim();
-    const names = namesString.split('&').map(entry => {
-      const parts = entry.trim().split(' = ');
+    const role = group.substring(0, labelIndex).trim();
+    const namesString = group.substring(labelIndex + SPARQL_SEP.LABEL.trim().length).trim();
+    const names = namesString.split(SPARQL_SEP.NAME).map(entry => {
+      const parts = entry.trim().split(SPARQL_SEP.URI);
       return {
         name: parts[0]?.trim() || '',
         uri: parts.length > 1 ? parts[1]?.trim() : undefined,
