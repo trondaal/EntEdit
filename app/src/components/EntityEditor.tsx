@@ -203,6 +203,8 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
   useEffect(() => {
     if (existingEntity) {
+      // Don't overwrite in-progress edits when cache invalidation refreshes the data
+      if (isEditing && isDirty) return;
       setEntityData(existingEntity.data);
       setIsEditing(false);
       setIsDirty(false);
@@ -214,7 +216,72 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       setCustomEntityUri(""); // Clear custom URI for new entities
       setEntityLabels([]);
     }
+    // Note: isEditing and isDirty are intentionally excluded from deps —
+    // we only want to re-sync when the server data or selected entity changes,
+    // not when the user toggles editing mode.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [existingEntity, entityUri]);
+
+  // Section configurations for the object property groups
+  const objectPropertySections = useMemo(() => [
+    {
+      key: "controlled",
+      sectionTitleKey: "sections.controlledValues",
+      addLabelKey: "common:labels.addCategory",
+      selectorPromptKey: "messages.selectEntity",
+      properties: objectProperties,
+      statusFilter: "controlled property",
+    },
+    {
+      key: "agents",
+      sectionTitleKey: "sections.relatedAgents",
+      addLabelKey: "common:labels.addAgent",
+      selectorPromptKey: "messages.selectRelatedAgent",
+      properties: agentProperties,
+      statusFilter: "object property",
+    },
+    {
+      key: "wemi",
+      sectionTitleKey: "sections.wemiRelationships",
+      addLabelKey: "common:labels.addWEMI",
+      selectorPromptKey: "messages.selectWEMIEntity",
+      properties: wemiProperties,
+      statusFilter: "core wemi property",
+    },
+    {
+      key: "relatedWorks",
+      sectionTitleKey: "sections.relatedWorks",
+      addLabelKey: "common:labels.addRelatedWork",
+      selectorPromptKey: "messages.selectRelatedWork",
+      properties: relatedWorkProperties,
+      statusFilter: "object property",
+    },
+    {
+      key: "relatedExpressions",
+      sectionTitleKey: "sections.relatedExpressions",
+      addLabelKey: "common:labels.addRelatedExpression",
+      selectorPromptKey: "messages.selectRelatedExpression",
+      properties: relatedExpressionProperties,
+      statusFilter: "object property",
+    },
+    {
+      key: "relatedManifestations",
+      sectionTitleKey: "sections.relatedManifestations",
+      addLabelKey: "common:labels.addRelatedManifestation",
+      selectorPromptKey: "messages.selectRelatedManifestation",
+      properties: relatedManifestationProperties,
+      statusFilter: "object property",
+    },
+  ], [objectProperties, agentProperties, wemiProperties, relatedWorkProperties, relatedExpressionProperties, relatedManifestationProperties]);
+
+  // Set of all object property URIs — used to distinguish object vs data properties when serializing
+  const objectPropertyUris = useMemo(() => {
+    const uris = new Set<string>();
+    objectPropertySections.forEach((section) =>
+      section.properties.forEach((p) => uris.add(p.uri)),
+    );
+    return uris;
+  }, [objectPropertySections]);
 
   const handleSave = useCallback(async () => {
     if (!classUri) return; // Don't save if no class is selected
@@ -317,6 +384,10 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         // For existing entities, only delete properties that the editor manages.
         // Unmanaged properties (those without the correct entedit:status or
         // incoming-only triples from other entities) are left untouched.
+        //
+        // All delete + insert operations are combined into a single SPARQL Update
+        // request (semicolon-separated) so GraphDB processes them atomically
+        // within one transaction — preventing partial deletes on network failure.
         const sanitizedUri = sanitizeSparqlUri(entityUri!);
 
         // Managed properties: rdf:type, rdfs:label, all data properties, all object properties
@@ -330,8 +401,10 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           .map((uri) => `<${sanitizeSparqlUri(uri)}>`)
           .join(" ");
 
-        // Delete RDF-star annotations on managed outgoing triples
-        const deleteAnnotationsQuery = `
+        const updateOperations: string[] = [];
+
+        // 1. Delete RDF-star annotations on managed outgoing triples
+        updateOperations.push(`
           DELETE {
             << <${sanitizedUri}> ?p ?o >> ?annotPred ?annotVal .
           }
@@ -339,11 +412,10 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
             << <${sanitizedUri}> ?p ?o >> ?annotPred ?annotVal .
             VALUES ?p { ${managedValues} }
           }
-        `;
-        await client.update(deleteAnnotationsQuery);
+        `);
 
-        // Delete managed outgoing triples only
-        const deleteQuery = `
+        // 2. Delete managed outgoing triples only
+        updateOperations.push(`
           DELETE {
             <${sanitizedUri}> ?p ?o .
           }
@@ -351,10 +423,9 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
             <${sanitizedUri}> ?p ?o .
             VALUES ?p { ${managedValues} }
           }
-        `;
-        await client.update(deleteQuery);
+        `);
 
-        // Handle inverse properties: find object property values that were
+        // 3. Handle inverse properties: find object property values that were
         // removed by the user and delete incoming triples from those entities.
         // This ensures that when a user removes a relationship that was stored
         // in the inverse direction, the asserted incoming triple is also cleaned up.
@@ -374,11 +445,10 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         }
 
         if (removedEntityUris.size > 0) {
-          // For each removed entity, delete any incoming triples pointing to us
           const removedUriValues = [...removedEntityUris]
             .map((uri) => `<${sanitizeSparqlUri(uri)}>`)
             .join(" ");
-          const deleteInverseQuery = `
+          updateOperations.push(`
             DELETE {
               ?s ?p <${sanitizedUri}> .
             }
@@ -386,12 +456,18 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
               ?s ?p <${sanitizedUri}> .
               VALUES ?s { ${removedUriValues} }
             }
-          `;
-          await client.update(deleteInverseQuery);
+          `);
         }
-      }
 
-      await client.update(insertQuery);
+        // 4. Re-insert all current data
+        updateOperations.push(insertQuery);
+
+        // Send all operations as a single atomic request
+        await client.update(updateOperations.join(" ;\n"));
+      } else {
+        // New entity: just insert
+        await client.update(insertQuery);
+      }
 
       // Invalidate caches using utility function
       invalidateEntityCaches(
@@ -418,7 +494,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     } finally {
       setSaving(false);
     }
-  }, [classUri, config, entityUri, customEntityUri, entityData, entityLabels, existingEntity, queryClient, onEntitySaved]);
+  }, [classUri, config, entityUri, customEntityUri, entityData, entityLabels, existingEntity, objectPropertyUris, queryClient, onEntitySaved]);
 
   const handleDelete = useCallback(async () => {
     if (!entityUri) return;
@@ -618,67 +694,6 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     });
     setIsDirty(true);
   }, []);
-
-  // Section configurations for the object property groups
-  const objectPropertySections = useMemo(() => [
-    {
-      key: "controlled",
-      sectionTitleKey: "sections.controlledValues",
-      addLabelKey: "common:labels.addCategory",
-      selectorPromptKey: "messages.selectEntity",
-      properties: objectProperties,
-      statusFilter: "controlled property",
-    },
-    {
-      key: "agents",
-      sectionTitleKey: "sections.relatedAgents",
-      addLabelKey: "common:labels.addAgent",
-      selectorPromptKey: "messages.selectRelatedAgent",
-      properties: agentProperties,
-      statusFilter: "object property",
-    },
-    {
-      key: "wemi",
-      sectionTitleKey: "sections.wemiRelationships",
-      addLabelKey: "common:labels.addWEMI",
-      selectorPromptKey: "messages.selectWEMIEntity",
-      properties: wemiProperties,
-      statusFilter: "core wemi property",
-    },
-    {
-      key: "relatedWorks",
-      sectionTitleKey: "sections.relatedWorks",
-      addLabelKey: "common:labels.addRelatedWork",
-      selectorPromptKey: "messages.selectRelatedWork",
-      properties: relatedWorkProperties,
-      statusFilter: "object property",
-    },
-    {
-      key: "relatedExpressions",
-      sectionTitleKey: "sections.relatedExpressions",
-      addLabelKey: "common:labels.addRelatedExpression",
-      selectorPromptKey: "messages.selectRelatedExpression",
-      properties: relatedExpressionProperties,
-      statusFilter: "object property",
-    },
-    {
-      key: "relatedManifestations",
-      sectionTitleKey: "sections.relatedManifestations",
-      addLabelKey: "common:labels.addRelatedManifestation",
-      selectorPromptKey: "messages.selectRelatedManifestation",
-      properties: relatedManifestationProperties,
-      statusFilter: "object property",
-    },
-  ], [objectProperties, agentProperties, wemiProperties, relatedWorkProperties, relatedExpressionProperties, relatedManifestationProperties]);
-
-  // Set of all object property URIs — used to distinguish object vs data properties when serializing
-  const objectPropertyUris = useMemo(() => {
-    const uris = new Set<string>();
-    objectPropertySections.forEach((section) =>
-      section.properties.forEach((p) => uris.add(p.uri)),
-    );
-    return uris;
-  }, [objectPropertySections]);
 
   const uriError = useMemo(() => {
     return customEntityUri && !isValidUri(customEntityUri);

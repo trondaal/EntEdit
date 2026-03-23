@@ -1,8 +1,16 @@
 import type { SparqlEndpointConfig } from "../types/sparql";
+import { SUPPORTED_LANGUAGES } from "./sparqlFragments";
 
 const CONFIG_STORAGE_KEY = "entEdit.config";
 const CREDENTIALS_STORAGE_KEY = "entEdit.credentials";
 const LANGUAGE_STORAGE_KEY = "entEdit.language";
+const DEFAULT_LANGUAGE = "en";
+
+/** Validate that a language value is one of the supported languages */
+const validateLanguage = (language: string | null): string =>
+  language && (SUPPORTED_LANGUAGES as readonly string[]).includes(language)
+    ? language
+    : DEFAULT_LANGUAGE;
 
 export interface AppConfiguration {
   endpoint: SparqlEndpointConfig;
@@ -26,7 +34,7 @@ export const saveConfiguration = (
       CONFIG_STORAGE_KEY,
       JSON.stringify({ url: config.url }),
     );
-    localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
+    localStorage.setItem(LANGUAGE_STORAGE_KEY, validateLanguage(language));
 
     // Store credentials in sessionStorage (cleared on tab close)
     if (config.username || config.password) {
@@ -104,7 +112,7 @@ export const loadConfiguration = (): AppConfiguration | null => {
         username,
         password,
       },
-      language: language || "en",
+      language: validateLanguage(language),
       isConfigured: true,
     };
   } catch (error) {

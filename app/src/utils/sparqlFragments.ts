@@ -53,6 +53,35 @@ export const createLanguageFallbackFragment = (
 };
 
 /**
+ * Generates a SPARQL fragment for schema label selection (classes and properties).
+ *
+ * For schema elements, labels are expected to have a language tag. The fallback
+ * priority is: chosen language → English. Untagged labels are not considered —
+ * missing language tags should be fixed in the data rather than worked around.
+ *
+ * @param subject - The SPARQL variable for the subject (e.g., "?class", "?property")
+ * @param language - The primary language code (e.g., "en", "no")
+ * @param labelVar - The base name for the label variable (default: "label")
+ * @returns SPARQL fragment as a string
+ */
+export const createSchemaLabelFragment = (
+  subject: string,
+  language: string,
+  labelVar: string = "label",
+): string => {
+  return `
+          OPTIONAL {
+            ${subject} rdfs:label ?${labelVar}_chosen .
+            FILTER(LANGMATCHES(LANG(?${labelVar}_chosen), "${language}")) .
+          }
+          OPTIONAL {
+            ${subject} rdfs:label ?${labelVar}_en .
+            FILTER(LANGMATCHES(LANG(?${labelVar}_en), "en")) .
+          }
+          BIND(COALESCE(?${labelVar}_chosen, ?${labelVar}_en) AS ?${labelVar})`;
+};
+
+/**
  * Determines the fallback language based on the primary language
  * Currently supports English <-> Norwegian fallback
  *

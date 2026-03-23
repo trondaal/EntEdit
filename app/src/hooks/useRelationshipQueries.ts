@@ -1,8 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { SparqlClient } from "../utils/sparqlClient";
 import {
-  createLanguageFallbackFragment,
-  getFallbackLanguage,
+  createSchemaLabelFragment,
 } from "../utils/sparqlFragments";
 import { sanitizeSparqlUri } from "../utils/labelUtils";
 import type {
@@ -20,7 +19,6 @@ export const useWEMIProperties = (
     queryKey: ["wemi-properties", config.url, classUri, language],
     queryFn: async (): Promise<RdfProperty[]> => {
       const client = new SparqlClient(config);
-      const fallbackLanguage = getFallbackLanguage(language);
       const query = `
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -36,7 +34,7 @@ export const useWEMIProperties = (
           ?property a rdf:Property .
           ?property entedit:status ?status.
           FILTER(?status = "core wemi property") .
-          ${createLanguageFallbackFragment("?property", language, fallbackLanguage)}
+          ${createSchemaLabelFragment("?property", language)}
           ?property rdfs:domain ?domain .
           ?property rdfs:range ?range .
 
@@ -69,7 +67,6 @@ export const useAgentProperties = (
     queryKey: ["agent-properties", config.url, classUri, language],
     queryFn: async (): Promise<RdfProperty[]> => {
       const client = new SparqlClient(config);
-      const fallbackLanguage = getFallbackLanguage(language);
       const query = `
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -81,7 +78,7 @@ export const useAgentProperties = (
           ?property a rdf:Property .
           ?property entedit:status ?status.
           FILTER(?status = "controlled property" || ?status = "object property") .
-          ${createLanguageFallbackFragment("?property", language, fallbackLanguage)}
+          ${createSchemaLabelFragment("?property", language)}
           ?property rdfs:domain ?domain .
           ?property rdfs:range ?range .
     	    FILTER(?range = <http://rdaregistry.info/Elements/c/C10002> ) .
@@ -114,7 +111,6 @@ export const useRelatedWorkProperties = (
     queryKey: ["related-work-properties", config.url, classUri, language],
     queryFn: async (): Promise<RdfProperty[]> => {
       const client = new SparqlClient(config);
-      const fallbackLanguage = getFallbackLanguage(language);
       const query = `
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -129,7 +125,7 @@ export const useRelatedWorkProperties = (
           ?property a rdf:Property .
           ?property entedit:status ?status.
           FILTER(?status = "object property") .
-          ${createLanguageFallbackFragment("?property", language, fallbackLanguage)}
+          ${createSchemaLabelFragment("?property", language)}
 
           ?property rdfs:domain ?domain .
           ?property rdfs:range ?range .
@@ -164,7 +160,6 @@ export const useRelatedExpressionProperties = (
     queryKey: ["related-expression-properties", config.url, classUri, language],
     queryFn: async (): Promise<RdfProperty[]> => {
       const client = new SparqlClient(config);
-      const fallbackLanguage = getFallbackLanguage(language);
       const query = `
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -179,7 +174,7 @@ export const useRelatedExpressionProperties = (
           ?property a rdf:Property .
           ?property entedit:status ?status.
           FILTER(?status = "object property") .
-${createLanguageFallbackFragment("?property", language, fallbackLanguage)}
+          ${createSchemaLabelFragment("?property", language)}
 
           ?property rdfs:domain ?domain .
           ?property rdfs:range ?range .
@@ -214,7 +209,6 @@ export const useRelatedManifestationProperties = (
     queryKey: ["related-manifestation-properties", config.url, classUri, language],
     queryFn: async (): Promise<RdfProperty[]> => {
       const client = new SparqlClient(config);
-      const fallbackLanguage = getFallbackLanguage(language);
       const query = `
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -229,7 +223,7 @@ export const useRelatedManifestationProperties = (
           ?property a rdf:Property .
           ?property entedit:status ?status.
           FILTER(?status = "object property") .
-${createLanguageFallbackFragment("?property", language, fallbackLanguage)}
+          ${createSchemaLabelFragment("?property", language)}
 
           ?property rdfs:domain ?domain .
           ?property rdfs:range ?range .

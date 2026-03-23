@@ -1,10 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
 import { SparqlClient } from "../utils/sparqlClient";
 import {
-  createLanguageFallbackFragment,
-  getFallbackLanguage,
+  createSchemaLabelFragment,
 } from "../utils/sparqlFragments";
-import { sanitizeSparqlUri, escapeSparqlLiteral } from "../utils/labelUtils";
+import { sanitizeSparqlUri } from "../utils/labelUtils";
 import type {
   SparqlEndpointConfig,
   RdfClass,
@@ -28,10 +27,7 @@ export const useRdfClasses = (
         WHERE {
           ?class a owl:Class .
           ?class entedit:status "class" .
-          OPTIONAL {
-            ?class rdfs:label ?label .
-            FILTER(LANG(?label) = "${escapeSparqlLiteral(language)}" || LANG(?label) = "")
-          }
+          ${createSchemaLabelFragment("?class", language)}
         }
         ORDER BY desc(?label)
       `;
@@ -57,7 +53,6 @@ export const useRdfProperties = (
     queryKey: ["rdf-properties", config.url, classUri, language],
     queryFn: async (): Promise<RdfProperty[]> => {
       const client = new SparqlClient(config);
-      const fallbackLanguage = getFallbackLanguage(language);
       const query = `
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -69,7 +64,7 @@ export const useRdfProperties = (
           ?property a rdf:Property .
           ?property entedit:status "data property" .
           ?property entedit:order ?order
-          ${createLanguageFallbackFragment("?property", language, fallbackLanguage)}
+          ${createSchemaLabelFragment("?property", language)}
 
           OPTIONAL { ?property rdfs:domain ?domain }
           OPTIONAL { ?property rdfs:range ?range }
@@ -101,7 +96,6 @@ export const useRdfObjectProperties = (
     queryKey: ["rdf-object-properties", config.url, classUri, language],
     queryFn: async (): Promise<RdfProperty[]> => {
       const client = new SparqlClient(config);
-      const fallbackLanguage = getFallbackLanguage(language);
       const query = `
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -113,7 +107,7 @@ export const useRdfObjectProperties = (
           ?property a rdf:Property .
           ?property entedit:status ?status.
           FILTER(?status = "controlled property" || ?status = "object property") .
-         ${createLanguageFallbackFragment("?property", language, fallbackLanguage)}
+         ${createSchemaLabelFragment("?property", language)}
 
           ?property rdfs:domain ?domain .
           ?property rdfs:range ?range .

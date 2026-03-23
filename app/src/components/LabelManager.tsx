@@ -112,9 +112,14 @@ const LabelManager: React.FC<LabelManagerProps> = ({
   const [tempLanguage, setTempLanguage] = useState("");
   const [error, setError] = useState<string | null>(null);
 
+  // Only sync from parent when the dialog opens, not on every parent re-render,
+  // to avoid discarding in-progress label edits
   useEffect(() => {
-    setLabels(initialLabels);
-  }, [initialLabels]);
+    if (open) {
+      setLabels(initialLabels);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open]);
 
   const handleAddLabel = () => {
     const newId = `new-${Date.now()}`;
