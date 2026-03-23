@@ -227,6 +227,113 @@ INSERT DATA {
       "facet": true
     },
     {
+      "fieldName": "labels$expression",
+      "propertyChain": [
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "labels$sourceexpression",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/e/object/P20574",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "labels$work",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/e/object/P20231",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "labels$transformationof",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/e/object/P20231",
+        "http://rdaregistry.info/Elements/w/object/P10337",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "labels$augmentationof",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/e/object/P20231",
+        "http://rdaregistry.info/Elements/w/object/P10192",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "labels$haspartwork",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/e/object/P20231",
+        "http://rdaregistry.info/Elements/w/object/P10147",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "labels$ispartwork",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/e/object/P20231",
+        "http://rdaregistry.info/Elements/w/object/P10019",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "labels$manifestation",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/e/object/P20059",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
       "fieldName": "categories$carrier",
       "propertyChain": [
         "http://rdaregistry.info/Elements/e/object/P20059",
