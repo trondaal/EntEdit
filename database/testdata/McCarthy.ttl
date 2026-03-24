@@ -739,7 +739,6 @@
 <http://viaf.org/viaf/470166838899836200007/exp/eng/1020>
     a rdac:C10006 ;
     rdaed:P20315 "The passenger" ;
-    #rdaed:P20312 "The passenger" ;
     rdfs:label "The passenger (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
@@ -747,7 +746,6 @@
 
 <http://viaf.org/viaf/470166838899836200007/exp/nob/1020/225596267>
     a rdac:C10006 ;
-    #rdaed:P20315 "The passenger" ;
     rdaed:P20312 "Passasjeren" ;
     rdfs:label "Passasjeren (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
@@ -758,7 +756,6 @@
 <http://viaf.org/viaf/470166838899836200007/stellamaris/exp/eng/1020>
     a rdac:C10006 ;
     rdaed:P20315 "Stella Maris" ;
-    #rdaed:P20312 "Stella Maris" ;
     rdfs:label "Stella Maris (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
@@ -789,7 +786,7 @@
     #rdaed:P20312 "The stonemason" ,
     #             "The stonemason : a play in five acts" ,
     #             "Stonemason : A Play in five acts" ;
-    rdfs:label "The stonemason (McCarthy, Cormac)" , "Stonemason (McCarthy, Cormac)" ;
+    rdfs:label "The stonemason : a play in five acts (McCarthy, Cormac)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/8419162723677961290005> .
@@ -797,7 +794,6 @@
 <http://www.wikidata.org/entity/Q3061599/exp/1023>
     a rdac:C10006 ;
     rdfs:label "The counselor (Motion picture : 2013)" ;
-    #rdaed:P20312 "The counselor";
     rdaed:P20315 "The counselor" ;
     rdaed:P20071 "disc 1. The counselor (Theatrical version) (117 in.) -- disc 2. The counselor (Unrated extended cut) (138 min.)." ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1023> ;
@@ -818,8 +814,6 @@
 <https://www.imdb.com/title/tt0149624/exp/1023>
     a rdac:C10006 ;
     rdaed:P20315 "All the pretty horses" ;
-    rdaxd:P00029 "aggregate" ;
-    #rdaed:P20312 "All the pretty horses" ;
     rdfs:label "All the pretty horses" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1023> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/mul> ,
@@ -847,9 +841,9 @@
 
 <https://www.imdb.com/title/tt0898367/exp/1023>
     a rdac:C10006 ;
-    rdaed:P20315 "The Road" , "Road (Motion picture : 2009)" ;
+    rdaed:P20315 "The road" ;
     #rdaed:P20312 "The Road" ;
-    rdfs:label "The Road" ;
+    rdfs:label "The road (motion picture : 2009)" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1023> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20012 <https://isni.org/isni/0000000114558548> ,
@@ -860,6 +854,8 @@
 
 <http://example.org/002304722>
     a rdac:C10007 ;
+    rdfs:label "The Orchard keeper"@no ,
+               "The Orchard keeper"@en ;
     rdamd:P30156 "The Orchard keeper" ;
     rdamd:P30088 "London" ;
     rdamd:P30111 "London : André Deutsch, 1966" ;
@@ -872,6 +868,8 @@
 
 <http://example.org/15039940>
     a rdac:C10007 ;
+    rdfs:label "All the pretty horses / by Cormac McCarthy"@no ,
+               "All the pretty horses / by Cormac McCarthy"@en ;
     rdamd:P30156 "All the pretty horses" ;
     rdamd:P30117 "by Cormac McCarthy" ;
     rdamd:P30088 "New York, NY" ;
@@ -888,6 +886,8 @@
 
 <http://example.org/15894496>
     a rdac:C10007 ;
+    rdfs:label "No country for old men / a Miramax, Paramount Vantage presentation of a Scott Rudin/Mike Zoss production ; directed, written by Joel Coen, Ethan Coen ; produced by Scott Rudin, Ethan Coen, Joel Coen"@no ,
+               "No country for old men / a Miramax, Paramount Vantage presentation of a Scott Rudin/Mike Zoss production ; directed, written by Joel Coen, Ethan Coen ; produced by Scott Rudin, Ethan Coen, Joel Coen"@en ;
     rdamd:P30156 "No country for old men" ;
     rdamd:P30117 "a Miramax, Paramount Vantage presentation of a Scott Rudin/Mike Zoss production ; directed, written by Joel Coen, Ethan Coen ; produced by Scott Rudin, Ethan Coen, Joel Coen" ;
     rdamd:P30088 "United States" ;
@@ -905,6 +905,8 @@
 
 <http://example.org/20395066>
     a rdac:C10007 ;
+    rdfs:label "The counselor / a Fox 2000 Pictures presentation of a Scott Free/Nick Wechsler/Chockstone Pictures production, made in association with TSG Entertainment, Ingenious Media ; directed by Ridley Scott ; produced by Ridley Scott, Wechsler, Steve Schwartz, Paula Mae Schwartz ; written by Cormac McCarthy"@no ,
+               "The counselor / a Fox 2000 Pictures presentation of a Scott Free/Nick Wechsler/Chockstone Pictures production, made in association with TSG Entertainment, Ingenious Media ; directed by Ridley Scott ; produced by Ridley Scott, Wechsler, Steve Schwartz, Paula Mae Schwartz ; written by Cormac McCarthy"@en ;
     rdamd:P30156 "The counselor" ;
     rdamd:P30117 "a Fox 2000 Pictures presentation of a Scott Free/Nick Wechsler/Chockstone Pictures production, made in association with TSG Entertainment, Ingenious Media ; directed by Ridley Scott ; produced by Ridley Scott, Wechsler, Steve Schwartz, Paula Mae Schwartz ; written by Cormac McCarthy" ;
     rdamd:P30088 "United States" ;
@@ -921,6 +923,8 @@
 
 <http://example.org/20691857>
     a rdac:C10007 ;
+    rdfs:label "The road / a Dimension Films release presented with 2929 Productions of a Nick Wechsler and Chockstone Pictures production ; directed by John Hillcoat ; produced by Nick Wechsler, Paula Mae Schwartz, Steve Schwartz ; screenplay by Joe Penhall"@no ,
+               "The road / a Dimension Films release presented with 2929 Productions of a Nick Wechsler and Chockstone Pictures production ; directed by John Hillcoat ; produced by Nick Wechsler, Paula Mae Schwartz, Steve Schwartz ; screenplay by Joe Penhall"@en ;
     rdamd:P30156 "The road" ;
     rdamd:P30117 "a Dimension Films release presented with 2929 Productions of a Nick Wechsler and Chockstone Pictures production ; directed by John Hillcoat ; produced by Nick Wechsler, Paula Mae Schwartz, Steve Schwartz ; screenplay by Joe Penhall" ;
     rdamd:P30088 "United States" ;
@@ -938,6 +942,8 @@
 
 <http://example.org/23017180>
     a rdac:C10007 ;
+    rdfs:label "Stonemason : A Play in five acts"@no ,
+               "Stonemason : A Play in five acts"@en ;
     rdamd:P30156 "Stonemason" ;
     rdamd:P30142 "A Play in five acts" ;
     rdamd:P30088 "New York" ;
@@ -951,6 +957,8 @@
 
 <http://example.org/3120806>
     a rdac:C10007 ;
+    rdfs:label "Outer dark"@no ,
+               "Outer dark"@en ;
     rdamd:P30156 "Outer dark" ;
     rdamd:P30088 "New York" ;
     rdamd:P30111 "New York : Random House, [1968]" ;
@@ -964,6 +972,8 @@
 
 <http://example.org/8474754>
     a rdac:C10007 ;
+    rdfs:label "The orchard keeper"@no ,
+               "The orchard keeper"@en ;
     rdamd:P30156 "The orchard keeper" ;
     rdamd:P30088 "London" ;
     rdamd:P30111 "London : Deutsch, 1966 [c1965]" ;
@@ -976,6 +986,8 @@
 
 <http://example.org/8928727>
     a rdac:C10007 ;
+    rdfs:label "The orchard keeper"@no ,
+               "The orchard keeper"@en ;
     rdamd:P30156 "The orchard keeper" ;
     rdamd:P30088 "New York" ;
     rdamd:P30111 "New York : Random House, [1965]" ;
@@ -991,6 +1003,8 @@
 
 <http://example.org/999920049602702202>
     a rdac:C10007 ;
+    rdfs:label "The Road / regi: John Hillcoat"@no ,
+               "The Road / regi: John Hillcoat"@en ;
     rdamd:P30156 "The Road" ;
     rdamd:P30117 "regi: John Hillcoat" ;
     rdamd:P30088 "[S.l.]" ;
@@ -1010,6 +1024,8 @@
 
 <http://example.org/IAN-5050582404920>
     a rdac:C10007 ;
+    rdfs:label "All the pretty horses / directed by Billy Bob Thornton ; produced by Robert Salerno and Billy Bob Thornton"@no ,
+               "All the pretty horses / directed by Billy Bob Thornton ; produced by Robert Salerno and Billy Bob Thornton"@en ;
     rdamd:P30004 "IAN 5050582404920" ;
     rdaxd:P00018 "IAN-5050582404920" ;
     rdamd:P30156 "All the pretty horses" ;
@@ -1034,6 +1050,8 @@
 
 <http://example.org/IAN-7332431029293>
     a rdac:C10007 ;
+    rdfs:label "No country for old men / en film fra Coen brødrene"@no ,
+               "No country for old men / en film fra Coen brødrene"@en ;
     rdamd:P30004 "IAN 7332431029293" ;
     rdaxd:P00018 "IAN-7332431029293" ;
     rdamd:P30156 "No country for old men" ;
@@ -1059,6 +1077,8 @@
 
 <http://example.org/UPC-024543899990>
     a rdac:C10007 ;
+    rdfs:label "The counselor / Fox 2000 Pictures presents a Scott Free/Nick Wechsler/Chockstone Pictures production ; produced by Ridley Scott, Nick Wechsler, Steve Schwartz, Paula Mae Schwartz ; written by Cormac McCarthy ; director, Ridley Scott"@no ,
+               "The counselor / Fox 2000 Pictures presents a Scott Free/Nick Wechsler/Chockstone Pictures production ; produced by Ridley Scott, Nick Wechsler, Steve Schwartz, Paula Mae Schwartz ; written by Cormac McCarthy ; director, Ridley Scott"@en ;
     rdamd:P30004 "UPC 024543899990" , "UPC 024543900009" ;
     rdaxd:P00018 "UPC-024543899990" , "UPC-024543900009" ;
     rdamd:P30156 "The counselor" ;
@@ -1085,6 +1105,8 @@
 
 <http://example.org/isbn-0233956506>
     a rdac:C10007 ;
+    rdfs:label "Outer dark"@no ,
+               "Outer dark"@en ;
     rdamd:P30004 "ISBN 0233956506" ;
     rdaxd:P00018 "isbn-0233956506" ;
     rdfs:label "ISBN0233956506" ;
@@ -1101,6 +1123,8 @@
 
 <http://example.org/isbn-0307265439>
     a rdac:C10007 ;
+    rdfs:label "The road / Cormac McCarthy"@no ,
+               "The road / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0307265439" , "ISBN 9780307265432" ;
     rdaxd:P00018 "isbn-0307265439" , "isbn-9780307265432" ;
     rdfs:label "ISBN0307265439" , "ISBN9780307265432" ;
@@ -1119,6 +1143,8 @@
 
 <http://example.org/isbn-0307268993>
     a rdac:C10007 ;
+    rdfs:label "The passenger / Cormac McCarthy"@no ,
+               "The passenger / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0307268993" ,
                  "ISBN 1524712396" ,
                  "ISBN 9780307268990" ,
@@ -1144,6 +1170,8 @@
 
 <http://example.org/isbn-0307269000>
     a rdac:C10007 ;
+    rdfs:label "Stella Maris / Cormac McCarthy"@no ,
+               "Stella Maris / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0307269000" , "ISBN 9780307269003" ;
     rdaxd:P00018 "isbn-0307269000" , "isbn-9780307269003" ;
     rdfs:label "ISBN0307269000" , "ISBN9780307269003" ;
@@ -1163,6 +1191,8 @@
 
 <http://example.org/isbn-0307278360>
     a rdac:C10007 ;
+    rdfs:label "The Sunset Limited : a novel in dramatic form / Cormac McCarthy"@no ,
+               "The Sunset Limited : a novel in dramatic form / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0307278360" , "ISBN 9780307278364" ;
     rdaxd:P00018 "isbn-0307278360" , "isbn-9780307278364" ;
     rdfs:label "ISBN0307278360" , "ISBN9780307278364" ;
@@ -1182,6 +1212,8 @@
 
 <http://example.org/isbn-033030643>
     a rdac:C10007 ;
+    rdfs:label "Child of God / Cormac McCarthy"@no ,
+               "Child of God / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 033030643X (pbk)" ;
     rdaxd:P00018 "isbn-033030643" ;
     rdfs:label "ISBN033030643X (pbk)" ;
@@ -1198,6 +1230,8 @@
 
 <http://example.org/isbn-0330312561>
     a rdac:C10007 ;
+    rdfs:label "Blood meridian, or, The evening redness in the west"@no ,
+               "Blood meridian, or, The evening redness in the west"@en ;
     rdamd:P30004 "ISBN 0330312561 (pbk)" ;
     rdaxd:P00018 "isbn-0330312561" ;
     rdfs:label "ISBN0330312561 (pbk)" ;
@@ -1212,6 +1246,8 @@
 
 <http://example.org/isbn-0330314912>
     a rdac:C10007 ;
+    rdfs:label "The orchard keeper"@no ,
+               "The orchard keeper"@en ;
     rdamd:P30004 "ISBN 0330314912 (pbk)" ;
     rdaxd:P00018 "isbn-0330314912" ;
     rdfs:label "ISBN0330314912 (pbk)" ;
@@ -1227,6 +1263,8 @@
 
 <http://example.org/isbn-0330314920>
     a rdac:C10007 ;
+    rdfs:label "Outer dark"@no ,
+               "Outer dark"@en ;
     rdamd:P30004 "ISBN 0330314920 (pbk)" ;
     rdaxd:P00018 "isbn-0330314920" ;
     rdfs:label "ISBN0330314920 (pbk)" ;
@@ -1242,6 +1280,8 @@
 
 <http://example.org/isbn-0330325310>
     a rdac:C10007 ;
+    rdfs:label "All the pretty horses"@no ,
+               "All the pretty horses"@en ;
     rdamd:P30004 "ISBN 0330325310" ;
     rdaxd:P00018 "isbn-0330325310" ;
     rdfs:label "ISBN0330325310" ;
@@ -1256,6 +1296,8 @@
 
 <http://example.org/isbn-0330331698>
     a rdac:C10007 ;
+    rdfs:label "All the pretty horses"@no ,
+               "All the pretty horses"@en ;
     rdamd:P30004 "ISBN 0330331698 (pbk)" ;
     rdaxd:P00018 "isbn-0330331698" ;
     rdfs:label "ISBN0330331698 (pbk)" ;
@@ -1273,6 +1315,8 @@
 
 <http://example.org/isbn-0330334611>
     a rdac:C10007 ;
+    rdfs:label "The border trilogy : All the pretty horses, The Crossing, Cities of the plain / Cormac McCarthy"@no ,
+               "The border trilogy : All the pretty horses, The Crossing, Cities of the plain / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0330334611 (pbk.)" ;
     rdaxd:P00018 "isbn-0330334611" ;
     rdfs:label "ISBN0330334611 (pbk.)" ;
@@ -1294,6 +1338,8 @@
 
 <http://example.org/isbn-033033462>
     a rdac:C10007 ;
+    rdfs:label "The crossing"@no ,
+               "The crossing"@en ;
     rdamd:P30004 "ISBN 033033462X" ;
     rdaxd:P00018 "isbn-033033462" ;
     rdfs:label "ISBN033033462X" ;
@@ -1309,6 +1355,8 @@
 
 <http://example.org/isbn-033034448>
     a rdac:C10007 ;
+    rdfs:label "Cities of the plain / Cormac McCarthy"@no ,
+               "Cities of the plain / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 033034448X" ;
     rdaxd:P00018 "isbn-033034448" ;
     rdfs:label "ISBN033034448X" ;
@@ -1327,6 +1375,8 @@
 
 <http://example.org/isbn-0330350331>
     a rdac:C10007 ;
+    rdfs:label "The stonemason : a play in five acts / Cormac McCarthy"@no ,
+               "The stonemason : a play in five acts / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0330350331 (pbk)" ;
     rdaxd:P00018 "isbn-0330350331" ;
     rdfs:label "ISBN0330350331 (pbk)" ;
@@ -1345,6 +1395,8 @@
 
 <http://example.org/isbn-0330440101>
     a rdac:C10007 ;
+    rdfs:label "No country for old men / Cormac McCarthy"@no ,
+               "No country for old men / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0330440101 (cased)" , "ISBN 0330440306 (pbk.)" ;
     rdaxd:P00018 "isbn-0330440101" , "isbn-0330440306" ;
     rdfs:label "ISBN0330440101 (cased)" , "ISBN0330440306 (pbk.)" ;
@@ -1362,6 +1414,8 @@
 
 <http://example.org/isbn-033044753>
     a rdac:C10007 ;
+    rdfs:label "The road / Cormac McCarthy"@no ,
+               "The road / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 033044753X (hbk.)" ,
                  "ISBN 0330447556 (pbk.)" ,
                  "ISBN 9780330447539" ,
@@ -1388,6 +1442,8 @@
 
 <http://example.org/isbn-0330468464>
     a rdac:C10007 ;
+    rdfs:label "The road / Cormac McCarthy"@no ,
+               "The road / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0330468464 (pbk.)" , "ISBN 9780330468466 (pbk.)" ;
     rdaxd:P00018 "isbn-0330468464" , "isbn-9780330468466" ;
     rdfs:label "ISBN0330468464 (pbk.)" , "ISBN9780330468466 (pbk.)" ;
@@ -1405,6 +1461,8 @@
 
 <http://example.org/isbn-0330472755>
     a rdac:C10007 ;
+    rdfs:label "The Road / Cormac McCarthy"@no ,
+               "The Road / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0330472755" , "ISBN 9780330472753" ;
     rdaxd:P00018 "isbn-0330472755" , "isbn-9780330472753" ;
     rdfs:label "ISBN0330472755" , "ISBN9780330472753" ;
@@ -1421,6 +1479,8 @@
 
 <http://example.org/isbn-0330474677>
     a rdac:C10007 ;
+    rdfs:label "All the pretty horses / Cormac McCarthy"@no ,
+               "All the pretty horses / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0330474677" , "ISBN 9780330474672" ;
     rdaxd:P00018 "isbn-0330474677" , "isbn-9780330474672" ;
     rdfs:label "ISBN0330474677" , "ISBN9780330474672" ;
@@ -1439,6 +1499,8 @@
 
 <http://example.org/isbn-0330474731>
     a rdac:C10007 ;
+    rdfs:label "Cities of the plain / Cormac McCarthy"@no ,
+               "Cities of the plain / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0330474731" , "ISBN 9780330474733" ;
     rdaxd:P00018 "isbn-0330474731" , "isbn-9780330474733" ;
     rdfs:label "ISBN0330474731" , "ISBN9780330474733" ;
@@ -1457,6 +1519,8 @@
 
 <http://example.org/isbn-0330474774>
     a rdac:C10007 ;
+    rdfs:label "No country for old men / Cormac McCarthy"@no ,
+               "No country for old men / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0330474774" , "ISBN 9780330474771" ;
     rdaxd:P00018 "isbn-0330474774" , "isbn-9780330474771" ;
     rdfs:label "ISBN0330474774" , "ISBN9780330474771" ;
@@ -1473,6 +1537,8 @@
 
 <http://example.org/isbn-0330474804>
     a rdac:C10007 ;
+    rdfs:label "Outer dark / Cormac McCarthy"@no ,
+               "Outer dark / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0330474804" , "ISBN 9780330474801" ;
     rdaxd:P00018 "isbn-0330474804" , "isbn-9780330474801" ;
     rdfs:label "ISBN0330474804" , "ISBN9780330474801" ;
@@ -1489,6 +1555,8 @@
 
 <http://example.org/isbn-0330474901>
     a rdac:C10007 ;
+    rdfs:label "Suttree / Cormac McCarthy"@no ,
+               "Suttree / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0330474901" , "ISBN 9780330474900" ;
     rdaxd:P00018 "isbn-0330474901" , "isbn-9780330474900" ;
     rdfs:label "ISBN0330474901" , "ISBN9780330474900" ;
@@ -1505,6 +1573,8 @@
 
 <http://example.org/isbn-0330474936>
     a rdac:C10007 ;
+    rdfs:label "The crossing / Cormac McCarthy"@no ,
+               "The crossing / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0330474936" , "ISBN 9780330474931" ;
     rdaxd:P00018 "isbn-0330474936" , "isbn-9780330474931" ;
     rdfs:label "ISBN0330474936" , "ISBN9780330474931" ;
@@ -1523,6 +1593,8 @@
 
 <http://example.org/isbn-0330474960>
     a rdac:C10007 ;
+    rdfs:label "Child of God / Cormac McCarthy"@no ,
+               "Child of God / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0330474960" , "ISBN 9780330474962" ;
     rdaxd:P00018 "isbn-0330474960" , "isbn-9780330474962" ;
     rdfs:label "ISBN0330474960" , "ISBN9780330474962" ;
@@ -1539,6 +1611,8 @@
 
 <http://example.org/isbn-0330475002>
     a rdac:C10007 ;
+    rdfs:label "The orchard keeper / Cormac McCarthy"@no ,
+               "The orchard keeper / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0330475002" , "ISBN 9780330475006" ;
     rdaxd:P00018 "isbn-0330475002" , "isbn-9780330475006" ;
     rdfs:label "ISBN0330475002" , "ISBN9780330475006" ;
@@ -1555,6 +1629,8 @@
 
 <http://example.org/isbn-0330503820>
     a rdac:C10007 ;
+    rdfs:label "The road / Cormac McCarthy"@no ,
+               "The road / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0330503820" , "ISBN 9780330503822" ;
     rdaxd:P00018 "isbn-0330503820" , "isbn-9780330503822" ;
     rdfs:label "ISBN0330503820" , "ISBN9780330503822" ;
@@ -1571,6 +1647,8 @@
 
 <http://example.org/isbn-0330510932>
     a rdac:C10007 ;
+    rdfs:label "All the pretty horses / Cormac McCarthy"@no ,
+               "All the pretty horses / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0330510932 (pbk.)" , "ISBN 9780330510936 (pbk.)" ;
     rdaxd:P00018 "isbn-0330510932" , "isbn-9780330510936" ;
     rdfs:label "ISBN0330510932 (pbk.)" , "ISBN9780330510936 (pbk.)" ;
@@ -1591,6 +1669,8 @@
 
 <http://example.org/isbn-0330510940>
     a rdac:C10007 ;
+    rdfs:label "Blood meridian, or, The evening redness in the West / Cormac McCarthy"@no ,
+               "Blood meridian, or, The evening redness in the West / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0330510940 (pbk.)" , "ISBN 9780330510943 (pbk.)" ;
     rdaxd:P00018 "isbn-0330510940" , "isbn-9780330510943" ;
     rdfs:label "ISBN0330510940 (pbk.)" , "ISBN9780330510943 (pbk.)" ;
@@ -1609,6 +1689,8 @@
 
 <http://example.org/isbn-0330511203>
     a rdac:C10007 ;
+    rdfs:label "Cities of the plain / Cormac McCarthy"@no ,
+               "Cities of the plain / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0330511203 (pbk.)" , "ISBN 9780330511209 (pbk.)" ;
     rdaxd:P00018 "isbn-0330511203" , "isbn-9780330511209" ;
     rdfs:label "ISBN0330511203 (pbk.)" , "ISBN9780330511209 (pbk.)" ;
@@ -1629,6 +1711,8 @@
 
 <http://example.org/isbn-033051122>
     a rdac:C10007 ;
+    rdfs:label "Outer dark / Cormac McCarthy"@no ,
+               "Outer dark / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 033051122X (pbk.)" , "ISBN 9780330511223 (pbk.)" ;
     rdaxd:P00018 "isbn-033051122" , "isbn-9780330511223" ;
     rdfs:label "ISBN033051122X (pbk.)" , "ISBN9780330511223 (pbk.)" ;
@@ -1647,6 +1731,8 @@
 
 <http://example.org/isbn-0330511238>
     a rdac:C10007 ;
+    rdfs:label "Suttree / Cormac McCarthy"@no ,
+               "Suttree / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0330511238 (pbk.)" , "ISBN 9780330511230 (pbk.)" ;
     rdaxd:P00018 "isbn-0330511238" , "isbn-9780330511230" ;
     rdfs:label "ISBN0330511238 (pbk.)" , "ISBN9780330511230 (pbk.)" ;
@@ -1665,6 +1751,8 @@
 
 <http://example.org/isbn-0330511246>
     a rdac:C10007 ;
+    rdfs:label "The crossing / Cormac McCarthy"@no ,
+               "The crossing / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0330511246 (pbk.)" , "ISBN 9780330511247 (pbk.)" ;
     rdaxd:P00018 "isbn-0330511246" , "isbn-9780330511247" ;
     rdfs:label "ISBN0330511246 (pbk.)" , "ISBN9780330511247 (pbk.)" ;
@@ -1684,6 +1772,8 @@
 
 <http://example.org/isbn-0330511254>
     a rdac:C10007 ;
+    rdfs:label "The orchard keeper / Cormac McCarthy"@no ,
+               "The orchard keeper / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0330511254 (pbk.)" , "ISBN 9780330511254 (pbk.)" ;
     rdaxd:P00018 "isbn-0330511254" , "isbn-9780330511254" ;
     rdfs:label "ISBN0330511254 (pbk.)" , "ISBN9780330511254 (pbk.)" ;
@@ -1701,6 +1791,8 @@
 
 <http://example.org/isbn-0330518194>
     a rdac:C10007 ;
+    rdfs:label "The Sunset Limited : a novel in dramatic form / Cormac McCarthy"@no ,
+               "The Sunset Limited : a novel in dramatic form / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0330518194 (pbk.)" , "ISBN 9780330518192 (pbk.)" ;
     rdaxd:P00018 "isbn-0330518194" , "isbn-9780330518192" ;
     rdfs:label "ISBN0330518194 (pbk.)" , "ISBN9780330518192 (pbk.)" ;
@@ -1720,6 +1812,8 @@
 
 <http://example.org/isbn-0330535757>
     a rdac:C10007 ;
+    rdfs:label "The Sunset Limited : a novel in dramatic form / Cormac McCarthy"@no ,
+               "The Sunset Limited : a novel in dramatic form / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0330535757" , "ISBN 9780330535755" ;
     rdaxd:P00018 "isbn-0330535757" , "isbn-9780330535755" ;
     rdfs:label "ISBN0330535757" , "ISBN9780330535755" ;
@@ -1737,6 +1831,8 @@
 
 <http://example.org/isbn-0375406778>
     a rdac:C10007 ;
+    rdfs:label "No country for old men / Cormac McCarthy"@no ,
+               "No country for old men / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0375406778" ;
     rdaxd:P00018 "isbn-0375406778" ;
     rdfs:label "ISBN0375406778" ;
@@ -1754,6 +1850,8 @@
 
 <http://example.org/isbn-0375407936>
     a rdac:C10007 ;
+    rdfs:label "The border trilogy / Cormac McCarthy"@no ,
+               "The border trilogy / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0375407936 (alk. paper)" ;
     rdaxd:P00018 "isbn-0375407936" ;
     rdfs:label "ISBN0375407936 (alk. paper)" ;
@@ -1775,6 +1873,8 @@
 
 <http://example.org/isbn-0394400275>
     a rdac:C10007 ;
+    rdfs:label "Blood meridian, or, The evening redness in the West / Cormac McCarthy"@no ,
+               "Blood meridian, or, The evening redness in the West / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0394400275" ;
     rdaxd:P00018 "isbn-0394400275" ;
     rdfs:label "ISBN0394400275" ;
@@ -1792,6 +1892,8 @@
 
 <http://example.org/isbn-0394482131>
     a rdac:C10007 ;
+    rdfs:label "Suttree / Cormac McCarthy"@no ,
+               "Suttree / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0394482131" ;
     rdaxd:P00018 "isbn-0394482131" ;
     rdfs:label "ISBN0394482131" ;
@@ -1810,6 +1912,8 @@
 
 <http://example.org/isbn-0394487710>
     a rdac:C10007 ;
+    rdfs:label "Child of God"@no ,
+               "Child of God"@en ;
     rdamd:P30004 "ISBN 0394487710" ;
     rdaxd:P00018 "isbn-0394487710" ;
     rdfs:label "ISBN0394487710" ;
@@ -1826,6 +1930,8 @@
 
 <http://example.org/isbn-0394574745>
     a rdac:C10007 ;
+    rdfs:label "All the pretty horses / Cormac McCarthy"@no ,
+               "All the pretty horses / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0394574745" ;
     rdaxd:P00018 "isbn-0394574745" ;
     rdfs:label "ISBN0394574745" ;
@@ -1844,6 +1950,8 @@
 
 <http://example.org/isbn-0394574753>
     a rdac:C10007 ;
+    rdfs:label "The crossing / by Cormac McCarthy"@no ,
+               "The crossing / by Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0394574753" ;
     rdaxd:P00018 "isbn-0394574753" ;
     rdfs:label "ISBN0394574753" ;
@@ -1863,6 +1971,8 @@
 
 <http://example.org/isbn-0394741455>
     a rdac:C10007 ;
+    rdfs:label "Suttree / Cormac McCarthy"@no ,
+               "Suttree / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0394741455 (pbk.)" ;
     rdaxd:P00018 "isbn-0394741455" ;
     rdfs:label "ISBN0394741455 (pbk.)" ;
@@ -1881,6 +1991,8 @@
 
 <http://example.org/isbn-0679423907>
     a rdac:C10007 ;
+    rdfs:label "Cities of the plain / Cormac McCarthy"@no ,
+               "Cities of the plain / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0679423907 (alk. paper)" ;
     rdaxd:P00018 "isbn-0679423907" ;
     rdfs:label "ISBN0679423907 (alk. paper)" ;
@@ -1900,6 +2012,8 @@
 
 <http://example.org/isbn-0679427031>
     a rdac:C10007 ;
+    rdfs:label "The crossing / by Cormac McCarthy"@no ,
+               "The crossing / by Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0679427031" , "IAN 9780679427032" ;
     rdaxd:P00018 "isbn-0679427031" , "IAN-9780679427032" ;
     rdfs:label "ISBN0679427031" ;
@@ -1919,6 +2033,8 @@
 
 <http://example.org/isbn-0679641041>
     a rdac:C10007 ;
+    rdfs:label "Blood meridian, or, The evening redness in the West / Cormac McCarthy ; introduction by Harold Bloom"@no ,
+               "Blood meridian, or, The evening redness in the West / Cormac McCarthy ; introduction by Harold Bloom"@en ;
     rdamd:P30004 "ISBN 0679641041 (alk. paper)" ;
     rdaxd:P00018 "isbn-0679641041" ;
     rdfs:label "ISBN0679641041 (alk. paper)" ;
@@ -1936,6 +2052,8 @@
 
 <http://example.org/isbn-067964265>
     a rdac:C10007 ;
+    rdfs:label "Suttree / Cormac McCarthy"@no ,
+               "Suttree / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 067964265X (acid-free paper)" ;
     rdaxd:P00018 "isbn-067964265" ;
     rdfs:label "ISBN067964265X (acid-free paper)" ;
@@ -1953,6 +2071,8 @@
 
 <http://example.org/isbn-0679728724>
     a rdac:C10007 ;
+    rdfs:label "The orchard keeper / Cormac McCarthy"@no ,
+               "The orchard keeper / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0679728724 (pbk.)" ;
     rdaxd:P00018 "isbn-0679728724" ;
     rdfs:label "ISBN0679728724 (pbk.)" ;
@@ -1971,6 +2091,8 @@
 
 <http://example.org/isbn-0679728732>
     a rdac:C10007 ;
+    rdfs:label "Outer dark / Cormac McCarthy"@no ,
+               "Outer dark / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0679728732" ;
     rdaxd:P00018 "isbn-0679728732" ;
     rdfs:label "ISBN0679728732" ;
@@ -1988,6 +2110,8 @@
 
 <http://example.org/isbn-0679728740>
     a rdac:C10007 ;
+    rdfs:label "Child of God / Cormac McCarthy"@no ,
+               "Child of God / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0679728740" ;
     rdaxd:P00018 "isbn-0679728740" ;
     rdfs:label "ISBN0679728740" ;
@@ -2005,6 +2129,8 @@
 
 <http://example.org/isbn-0679728759>
     a rdac:C10007 ;
+    rdfs:label "Blood meridian, or, The evening redness in the West / Cormac McCarthy"@no ,
+               "Blood meridian, or, The evening redness in the West / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0679728759" ;
     rdaxd:P00018 "isbn-0679728759" ;
     rdfs:label "ISBN0679728759" ;
@@ -2022,6 +2148,8 @@
 
 <http://example.org/isbn-0679744398>
     a rdac:C10007 ;
+    rdfs:label "All the pretty horses / Cormac McCarthy"@no ,
+               "All the pretty horses / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0679744398" ;
     rdaxd:P00018 "isbn-0679744398" ;
     rdfs:label "ISBN0679744398" ;
@@ -2041,6 +2169,8 @@
 
 <http://example.org/isbn-0679762809>
     a rdac:C10007 ;
+    rdfs:label "The stonemason : a play in five acts / Cormac McCarthy"@no ,
+               "The stonemason : a play in five acts / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0679762809" ;
     rdaxd:P00018 "isbn-0679762809" ;
     rdfs:label "ISBN0679762809" ;
@@ -2060,6 +2190,8 @@
 
 <http://example.org/isbn-0701120959>
     a rdac:C10007 ;
+    rdfs:label "Child of God / Cormac McCarthy"@no ,
+               "Child of God / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0701120959" ;
     rdaxd:P00018 "isbn-0701120959" ;
     rdfs:label "ISBN0701120959" ;
@@ -2077,6 +2209,8 @@
 
 <http://example.org/isbn-0701125063>
     a rdac:C10007 ;
+    rdfs:label "Suttree / Cormac McCarthy"@no ,
+               "Suttree / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0701125063" ;
     rdaxd:P00018 "isbn-0701125063" ;
     rdfs:label "ISBN0701125063" ;
@@ -2094,6 +2228,8 @@
 
 <http://example.org/isbn-0788884492>
     a rdac:C10007 ;
+    rdfs:label "No country for old men / Miramax Films and Paramount Vantage present a Scott Rudin/Mike Zoss production ; produced by Scott Rudin, Ethan Coen, Joel Coen ; written for the screen and directed by Joel Coen & Ethan Coen"@no ,
+               "No country for old men / Miramax Films and Paramount Vantage present a Scott Rudin/Mike Zoss production ; produced by Scott Rudin, Ethan Coen, Joel Coen ; written for the screen and directed by Joel Coen & Ethan Coen"@en ;
     rdamd:P30004 "ISBN 0788884492" ,
                  "ISBN 9780788884498" ,
                  "UPC 786936750034" ,
@@ -2123,6 +2259,8 @@
 
 <http://example.org/isbn-0880010096>
     a rdac:C10007 ;
+    rdfs:label "The orchard keeper / Cormac McCarthy"@no ,
+               "The orchard keeper / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0880010096 (pbk.)" ;
     rdaxd:P00018 "isbn-0880010096" ;
     rdfs:label "ISBN0880010096 (pbk.)" ;
@@ -2140,6 +2278,8 @@
 
 <http://example.org/isbn-0880010649>
     a rdac:C10007 ;
+    rdfs:label "Outer dark / Cormac McCarthy"@no ,
+               "Outer dark / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0880010649 (pbk.)" ;
     rdaxd:P00018 "isbn-0880010649" ;
     rdfs:label "ISBN0880010649 (pbk.)" ;
@@ -2156,6 +2296,8 @@
 
 <http://example.org/isbn-0880010657>
     a rdac:C10007 ;
+    rdfs:label "Child of God / Cormac McCarthy"@no ,
+               "Child of God / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0880010657 (pbk.)" ;
     rdaxd:P00018 "isbn-0880010657" ;
     rdfs:label "ISBN0880010657 (pbk.)" ;
@@ -2173,6 +2315,8 @@
 
 <http://example.org/isbn-0880010924>
     a rdac:C10007 ;
+    rdfs:label "Blood meridian, or, The evening redness in the West / Cormac McCarthy"@no ,
+               "Blood meridian, or, The evening redness in the West / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0880010924 (pbk.)" ;
     rdaxd:P00018 "isbn-0880010924" ;
     rdfs:label "ISBN0880010924 (pbk.)" ;
@@ -2190,6 +2334,8 @@
 
 <http://example.org/isbn-0880013591>
     a rdac:C10007 ;
+    rdfs:label "The stonemason : a play in five acts / Cormac McCarthy"@no ,
+               "The stonemason : a play in five acts / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0880013591" ;
     rdaxd:P00018 "isbn-0880013591" ;
     rdfs:label "ISBN0880013591" ;
@@ -2208,6 +2354,8 @@
 
 <http://example.org/isbn-0880014814>
     a rdac:C10007 ;
+    rdfs:label "The Gardener's son : a screenplay / Cormac McCarthy"@no ,
+               "The Gardener's son : a screenplay / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 0880014814 (case)" ;
     rdaxd:P00018 "isbn-0880014814" ;
     rdfs:label "ISBN0880014814 (case)" ;
@@ -2226,6 +2374,8 @@
 
 <http://example.org/isbn-1405613947>
     a rdac:C10007 ;
+    rdfs:label "No country for old men / Cormac McCarthy"@no ,
+               "No country for old men / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 1405613947 (hbk.)" ,
                  "ISBN 1405613955 (pbk.)" ,
                  "ISBN 9781405613941 (hbk.)" ,
@@ -2253,6 +2403,8 @@
 
 <http://example.org/isbn-1408127423>
     a rdac:C10007 ;
+    rdfs:label "The road / Joe Penhall ; based on the novel by Cormac McCarthy"@no ,
+               "The road / Joe Penhall ; based on the novel by Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 1408127423 (pbk.)" , "ISBN 9781408127421 (pbk.)" ;
     rdaxd:P00018 "isbn-1408127423" , "isbn-9781408127421" ;
     rdfs:label "ISBN1408127423 (pbk.)" , "ISBN9781408127421 (pbk.)" ;
@@ -2269,6 +2421,8 @@
 
 <http://example.org/isbn-1408134829>
     a rdac:C10007 ;
+    rdfs:label "The road : based on the novel by Cormac McCarthy / Joe Penhall ; activities by Paul Bunyan and Ruth Moore"@no ,
+               "The road : based on the novel by Cormac McCarthy / Joe Penhall ; activities by Paul Bunyan and Ruth Moore"@en ;
     rdamd:P30004 "ISBN 1408134829 (pbk.)" , "ISBN 9781408134825 (pbk.)" ;
     rdaxd:P00018 "isbn-1408134829" , "isbn-9781408134825" ;
     rdfs:label "ISBN1408134829 (pbk.)" , "ISBN9781408134825 (pbk.)" ;
@@ -2289,6 +2443,8 @@
 
 <http://example.org/isbn-1408138719>
     a rdac:C10007 ;
+    rdfs:label "The road / Joe Penhall ; based on the novel by Cormac McCarthy"@no ,
+               "The road / Joe Penhall ; based on the novel by Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 1408138719" ,
                  "ISBN 1408138727" ,
                  "ISBN 9781408138717" ,
@@ -2313,6 +2469,8 @@
 
 <http://example.org/isbn-1447220706>
     a rdac:C10007 ;
+    rdfs:label "All the Pretty Horses / Cormac McCarthy"@no ,
+               "All the Pretty Horses / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 1447220706" , "ISBN 9781447220701" ;
     rdaxd:P00018 "isbn-1447220706" , "isbn-9781447220701" ;
     rdfs:label "ISBN1447220706" , "ISBN9781447220701" ;
@@ -2330,6 +2488,8 @@
 
 <http://example.org/isbn-1447227670>
     a rdac:C10007 ;
+    rdfs:label "The counselor : a screenplay / Cormac McCarthy"@no ,
+               "The counselor : a screenplay / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 1447227670" , "ISBN 9781447227670" ;
     rdaxd:P00018 "isbn-1447227670" , "isbn-9781447227670" ;
     rdfs:label "ISBN1447227670" , "ISBN9781447227670" ;
@@ -2347,6 +2507,8 @@
 
 <http://example.org/isbn-1447267842>
     a rdac:C10007 ;
+    rdfs:label "The border trilogy / Cormac McCarthy"@no ,
+               "The border trilogy / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 1447267842" , "ISBN 9781447267843" ;
     rdaxd:P00018 "isbn-1447267842" , "isbn-9781447267843" ;
     rdfs:label "ISBN1447267842" , "ISBN9781447267843" ;
@@ -2368,6 +2530,8 @@
 
 <http://example.org/isbn-1472539354>
     a rdac:C10007 ;
+    rdfs:label "The road : based on the novel by Cormac McCarthy / Joe Penhall ; activities by Paul Bunyan and Ruth Moore"@no ,
+               "The road : based on the novel by Cormac McCarthy / Joe Penhall ; activities by Paul Bunyan and Ruth Moore"@en ;
     rdamd:P30004 "ISBN 1472539354" , "ISBN 9781472539359" ;
     rdaxd:P00018 "isbn-1472539354" , "isbn-9781472539359" ;
     rdfs:label "ISBN1472539354" , "ISBN9781472539359" ;
@@ -2386,6 +2550,8 @@
 
 <http://example.org/isbn-8205180504>
     a rdac:C10007 ;
+    rdfs:label "Et Guds barn / Cormac McCarthy ; oversatt av Knut Johansen"@no ,
+               "Et Guds barn / Cormac McCarthy ; oversatt av Knut Johansen"@en ;
     rdamd:P30004 "ISBN 8205180504" ;
     rdaxd:P00018 "isbn-8205180504" ;
     rdfs:label "ISBN8205180504" ;
@@ -2403,6 +2569,8 @@
 
 <http://example.org/isbn-8205218358>
     a rdac:C10007 ;
+    rdfs:label "Grensetrilogien"@no ,
+               "Grensetrilogien"@en ;
     rdamd:P30004 "ISBN 8205218358" ;
     rdaxd:P00018 "isbn-8205218358" ;
     rdfs:label "ISBN8205218358" ;
@@ -2420,6 +2588,8 @@
 
 <http://example.org/isbn-8205223556>
     a rdac:C10007 ;
+    rdfs:label "Et Guds barn / Cormac McCarthy ; oversatt av Knut Johansen"@no ,
+               "Et Guds barn / Cormac McCarthy ; oversatt av Knut Johansen"@en ;
     rdamd:P30004 "ISBN 8205223556" ;
     rdaxd:P00018 "isbn-8205223556" ;
     rdfs:label "ISBN8205223556" ;
@@ -2438,6 +2608,8 @@
 
 <http://example.org/isbn-8205229740>
     a rdac:C10007 ;
+    rdfs:label "Grensetrilogien"@no ,
+               "Grensetrilogien"@en ;
     rdamd:P30004 "ISBN 8205229740" , "ISBN 8257410977" ;
     rdaxd:P00018 "isbn-8205229740" , "isbn-8257410977" ;
     rdfs:label "ISBN8205229740" , "ISBN8257410977" ;
@@ -2455,6 +2627,8 @@
 
 <http://example.org/isbn-8205244731>
     a rdac:C10007 ;
+    rdfs:label "Grensetrilogien"@no ,
+               "Grensetrilogien"@en ;
     rdamd:P30004 "ISBN 8205244731" ;
     rdaxd:P00018 "isbn-8205244731" ;
     rdfs:label "ISBN8205244731" ;
@@ -2474,6 +2648,8 @@
 
 <http://example.org/isbn-8205257027>
     a rdac:C10007 ;
+    rdfs:label "Grensetrilogien"@no ,
+               "Grensetrilogien"@en ;
     rdamd:P30004 "ISBN 8205257027" ;
     rdaxd:P00018 "isbn-8205257027" ;
     rdfs:label "ISBN8205257027" ;
@@ -2491,6 +2667,8 @@
 
 <http://example.org/isbn-8205312923>
     a rdac:C10007 ;
+    rdfs:label "Et Guds barn / Cormac McCarthy ; oversatt av Knut Johansen"@no ,
+               "Et Guds barn / Cormac McCarthy ; oversatt av Knut Johansen"@en ;
     rdamd:P30004 "ISBN 8205312923" ;
     rdaxd:P00018 "isbn-8205312923" ;
     rdfs:label "ISBN8205312923" ;
@@ -2509,6 +2687,8 @@
 
 <http://example.org/isbn-8205351619>
     a rdac:C10007 ;
+    rdfs:label "Grensetrilogien / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@no ,
+               "Grensetrilogien / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@en ;
     rdamd:P30004 "ISBN 8205351619" , "ISBN 9788205351615" ;
     rdaxd:P00018 "isbn-8205351619" , "isbn-9788205351615" ;
     rdfs:label "ISBN8205351619" , "ISBN9788205351615" ;
@@ -2533,6 +2713,8 @@
 
 <http://example.org/isbn-8205352267>
     a rdac:C10007 ;
+    rdfs:label "Ikke et land for gamle menn / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@no ,
+               "Ikke et land for gamle menn / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@en ;
     rdamd:P30004 "ISBN 8205352267" , "ISBN 9788205352261" ;
     rdaxd:P00018 "isbn-8205352267" , "isbn-9788205352261" ;
     rdfs:label "ISBN8205352267" , "ISBN9788205352261" ;
@@ -2549,6 +2731,8 @@
 
 <http://example.org/isbn-9780307455291>
     a rdac:C10007 ;
+    rdfs:label "The road / Cormac McCarthy"@no ,
+               "The road / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 9780307455291 (pbk.)" ;
     rdaxd:P00018 "isbn-9780307455291" ;
     rdfs:label "ISBN9780307455291 (pbk.)" ;
@@ -2566,6 +2750,8 @@
 
 <http://example.org/isbn-9780307476302>
     a rdac:C10007 ;
+    rdfs:label "The road / Cormac McCarthy"@no ,
+               "The road / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 9780307476302 (pbk.)" ;
     rdaxd:P00018 "isbn-9780307476302" ;
     rdfs:label "ISBN9780307476302 (pbk.)" ;
@@ -2583,6 +2769,8 @@
 
 <http://example.org/isbn-9780330513005>
     a rdac:C10007 ;
+    rdfs:label "The road / Cormac McCarthy"@no ,
+               "The road / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 9780330513005" ;
     rdaxd:P00018 "isbn-9780330513005" ;
     rdfs:label "ISBN9780330513005" ;
@@ -2599,6 +2787,8 @@
 
 <http://example.org/isbn-9780345803597>
     a rdac:C10007 ;
+    rdfs:label "The counselor : a screenplay / Cormac McCarthy"@no ,
+               "The counselor : a screenplay / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 9780345803597 (pbk.)" ;
     rdaxd:P00018 "isbn-9780345803597" ;
     rdfs:label "ISBN9780345803597 (pbk.)" ;
@@ -2617,6 +2807,8 @@
 
 <http://example.org/isbn-9780375407932>
     a rdac:C10007 ;
+    rdfs:label "The border trilogy / Cormac McCarthy"@no ,
+               "The border trilogy / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 9780375407932 (US : hbk.)" , "ISBN 9781857152616 (UK : hbk.)" ;
     rdaxd:P00018 "isbn-9780375407932" , "isbn-9781857152616" ;
     rdfs:label "ISBN9780375407932 (US : hbk.)" , "ISBN9781857152616 (UK : hbk.)" ;
@@ -2640,6 +2832,8 @@
 
 <http://example.org/isbn-9781447227632>
     a rdac:C10007 ;
+    rdfs:label "The counselor : a screenplay / Cormac McCarthy"@no ,
+               "The counselor : a screenplay / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 9781447227632 (hardback)" , "ISBN 9781447229803 (paperback)" ;
     rdaxd:P00018 "isbn-9781447227632" , "isbn-9781447229803" ;
     rdfs:label "ISBN9781447227632 (hardback)" , "ISBN9781447229803 (paperback)" ;
@@ -2658,6 +2852,8 @@
 
 <http://example.org/isbn-9781447245834>
     a rdac:C10007 ;
+    rdfs:label "The passenger / Cormac McCarthy"@no ,
+               "The passenger / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 9781447245834 (ePub ebook)" ;
     rdaxd:P00018 "isbn-9781447245834" ;
     rdfs:label "ISBN9781447245834 (ePub ebook)" ;
@@ -2674,6 +2870,8 @@
 
 <http://example.org/isbn-9781447272168>
     a rdac:C10007 ;
+    rdfs:label "The stonemason / Cormac McCarthy"@no ,
+               "The stonemason / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 9781447272168 (pbk.)" ;
     rdaxd:P00018 "isbn-9781447272168" ;
     rdfs:label "ISBN9781447272168 (pbk.)" ;
@@ -2691,6 +2889,8 @@
 
 <http://example.org/isbn-9781447273134>
     a rdac:C10007 ;
+    rdfs:label "The gardener's son : a screenplay / Cormac McCarthy"@no ,
+               "The gardener's son : a screenplay / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 9781447273134 (pbk.)" ;
     rdaxd:P00018 "isbn-9781447273134" ;
     rdfs:label "ISBN9781447273134 (pbk.)" ;
@@ -2709,6 +2909,8 @@
 
 <http://example.org/isbn-9781447273141>
     a rdac:C10007 ;
+    rdfs:label "The gardener's son / Cormac McCarthy"@no ,
+               "The gardener's son / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 9781447273141 (ePub ebook)" ;
     rdaxd:P00018 "isbn-9781447273141" ;
     rdfs:label "ISBN9781447273141 (ePub ebook)" ;
@@ -2725,6 +2927,8 @@
 
 <http://example.org/isbn-9781447289456>
     a rdac:C10007 ;
+    rdfs:label "Blood meridian / Cormac McCarthy"@no ,
+               "Blood meridian / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 9781447289456 (pbk.)" ;
     rdaxd:P00018 "isbn-9781447289456" ;
     rdfs:label "ISBN9781447289456 (pbk.)" ;
@@ -2745,6 +2949,8 @@
 
 <http://example.org/isbn-9781447289463>
     a rdac:C10007 ;
+    rdfs:label "Blood meridian / Cormac McCarthy"@no ,
+               "Blood meridian / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 9781447289463 (ePub ebook)" ;
     rdaxd:P00018 "isbn-9781447289463" ;
     rdfs:label "ISBN9781447289463 (ePub ebook)" ;
@@ -2764,6 +2970,8 @@
 
 <http://example.org/isbn-9781447294023>
     a rdac:C10007 ;
+    rdfs:label "Stella Maris / Cormac McCarthy"@no ,
+               "Stella Maris / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 9781447294023 (ePub ebook)" ;
     rdaxd:P00018 "isbn-9781447294023" ;
     rdfs:label "ISBN9781447294023 (ePub ebook)" ;
@@ -2780,6 +2988,8 @@
 
 <http://example.org/isbn-9781509852031>
     a rdac:C10007 ;
+    rdfs:label "The border trilogy / Cormac McCarthy"@no ,
+               "The border trilogy / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 9781509852031 (ePub ebook)" ;
     rdaxd:P00018 "isbn-9781509852031" ;
     rdfs:label "ISBN9781509852031 (ePub ebook)" ;
@@ -2802,6 +3012,8 @@
 
 <http://example.org/isbn-9781529014587>
     a rdac:C10007 ;
+    rdfs:label "The road / Cormac McCarthy"@no ,
+               "The road / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 9781529014587 (ebook)" ;
     rdaxd:P00018 "isbn-9781529014587" ;
     rdfs:label "ISBN9781529014587 (ebook)" ;
@@ -2821,6 +3033,8 @@
 
 <http://example.org/isbn-9781846329166>
     a rdac:C10007 ;
+    rdfs:label "The road / Cormac McCarthy"@no ,
+               "The road / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 9781846329166 (hbk.)" ;
     rdaxd:P00018 "isbn-9781846329166" ;
     rdfs:label "ISBN9781846329166 (hbk.)" ;
@@ -2839,6 +3053,8 @@
 
 <http://example.org/isbn-9788205331730>
     a rdac:C10007 ;
+    rdfs:label "Blodmeridianen, eller Aftenrøden i vest / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@no ,
+               "Blodmeridianen, eller Aftenrøden i vest / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@en ;
     rdamd:P30004 "ISBN 9788205331730" ;
     rdaxd:P00018 "isbn-9788205331730" ;
     rdfs:label "ISBN9788205331730" ;
@@ -2856,6 +3072,8 @@
 
 <http://example.org/isbn-9788205367739>
     a rdac:C10007 ;
+    rdfs:label "Ikke et land for gamle menn / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@no ,
+               "Ikke et land for gamle menn / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@en ;
     rdamd:P30004 "ISBN 9788205367739" ;
     rdaxd:P00018 "isbn-9788205367739" ;
     rdfs:label "ISBN9788205367739" ;
@@ -2874,6 +3092,8 @@
 
 <http://example.org/isbn-9788205373860>
     a rdac:C10007 ;
+    rdfs:label "Veien / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@no ,
+               "Veien / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@en ;
     rdamd:P30004 "ISBN 9788205373860" ;
     rdaxd:P00018 "isbn-9788205373860" ;
     rdfs:label "ISBN9788205373860" ;
@@ -2890,6 +3110,8 @@
 
 <http://example.org/isbn-9788205385030>
     a rdac:C10007 ;
+    rdfs:label "Ikke et land for gamle menn / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@no ,
+               "Ikke et land for gamle menn / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@en ;
     rdamd:P30004 "ISBN 9788205385030" ;
     rdaxd:P00018 "isbn-9788205385030" ;
     rdfs:label "ISBN9788205385030" ;
@@ -2908,6 +3130,8 @@
 
 <http://example.org/isbn-9788205394964>
     a rdac:C10007 ;
+    rdfs:label "Veien / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@no ,
+               "Veien / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@en ;
     rdamd:P30004 "ISBN 9788205394964" ;
     rdaxd:P00018 "isbn-9788205394964" ;
     rdfs:label "ISBN9788205394964" ;
@@ -2927,6 +3151,8 @@
 
 <http://example.org/isbn-9788205405318>
     a rdac:C10007 ;
+    rdfs:label "Alle de vakre hestene / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@no ,
+               "Alle de vakre hestene / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@en ;
     rdamd:P30004 "ISBN 9788205405318" ;
     rdaxd:P00018 "isbn-9788205405318" ;
     rdfs:label "ISBN9788205405318" ;
@@ -2945,6 +3171,8 @@
 
 <http://example.org/isbn-9788205405325>
     a rdac:C10007 ;
+    rdfs:label "Et Guds barn / Cormac McCarthy ; oversatt fra engelsk av Knut Johansen"@no ,
+               "Et Guds barn / Cormac McCarthy ; oversatt fra engelsk av Knut Johansen"@en ;
     rdamd:P30004 "ISBN 9788205405325" ;
     rdaxd:P00018 "isbn-9788205405325" ;
     rdfs:label "ISBN9788205405325" ;
@@ -2963,6 +3191,8 @@
 
 <http://example.org/isbn-9788205408715>
     a rdac:C10007 ;
+    rdfs:label "Blodmeridianen, eller Aftenrøden i vest / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@no ,
+               "Blodmeridianen, eller Aftenrøden i vest / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@en ;
     rdamd:P30004 "ISBN 9788205408715" ;
     rdaxd:P00018 "isbn-9788205408715" ;
     rdfs:label "ISBN9788205408715" ;
@@ -2981,6 +3211,8 @@
 
 <http://example.org/isbn-9788205413399>
     a rdac:C10007 ;
+    rdfs:label "Frukthagen / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@no ,
+               "Frukthagen / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@en ;
     rdamd:P30004 "ISBN 9788205413399" ;
     rdaxd:P00018 "isbn-9788205413399" ;
     rdfs:label "ISBN9788205413399" ;
@@ -2997,6 +3229,8 @@
 
 <http://example.org/isbn-9788205576780>
     a rdac:C10007 ;
+    rdfs:label "Alle de vakre hestene / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@no ,
+               "Alle de vakre hestene / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@en ;
     rdamd:P30004 "ISBN 9788205576780" ;
     rdaxd:P00018 "isbn-9788205576780" ;
     rdfs:label "ISBN9788205576780" ;
@@ -3017,6 +3251,8 @@
 
 <http://example.org/isbn-9788205576797>
     a rdac:C10007 ;
+    rdfs:label "Over grensen / Cormac McCarthy"@no ,
+               "Over grensen / Cormac McCarthy"@en ;
     rdamd:P30004 "ISBN 9788205576797" ;
     rdaxd:P00018 "isbn-9788205576797" ;
     rdfs:label "ISBN9788205576797" ;
@@ -3037,6 +3273,8 @@
 
 <http://example.org/isbn-9788205576803>
     a rdac:C10007 ;
+    rdfs:label "Byene på høysletten / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@no ,
+               "Byene på høysletten / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@en ;
     rdamd:P30004 "ISBN 9788205576803" ;
     rdaxd:P00018 "isbn-9788205576803" ;
     rdfs:label "ISBN9788205576803" ;
@@ -3056,6 +3294,8 @@
 
 <http://example.org/isbn-9788205577015>
     a rdac:C10007 ;
+    rdfs:label "Passasjeren / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@no ,
+               "Passasjeren / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@en ;
     rdamd:P30004 "ISBN 9788205577015" ;
     rdaxd:P00018 "isbn-9788205577015" ;
     rdfs:label "ISBN9788205577015" ;
@@ -3072,6 +3312,8 @@
 
 <http://example.org/isbn-9788205577046>
     a rdac:C10007 ;
+    rdfs:label "Stella Maris / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@no ,
+               "Stella Maris / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@en ;
     rdamd:P30004 "ISBN 9788205577046" ;
     rdaxd:P00018 "isbn-9788205577046" ;
     rdfs:label "ISBN9788205577046" ;
@@ -3088,6 +3330,8 @@
 
 <http://example.org/isbn-9788205577121>
     a rdac:C10007 ;
+    rdfs:label "Veien / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@no ,
+               "Veien / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@en ;
     rdamd:P30004 "ISBN 9788205577121" ;
     rdaxd:P00018 "isbn-9788205577121" ;
     rdfs:label "ISBN9788205577121" ;
@@ -3106,6 +3350,8 @@
 
 <http://example.org/isbn-9788205577138>
     a rdac:C10007 ;
+    rdfs:label "Ikke et land for gamle menn / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@no ,
+               "Ikke et land for gamle menn / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@en ;
     rdamd:P30004 "ISBN 9788205577138" ;
     rdaxd:P00018 "isbn-9788205577138" ;
     rdfs:label "ISBN9788205577138" ;
@@ -3124,6 +3370,8 @@
 
 <http://example.org/isbn-9788205577145>
     a rdac:C10007 ;
+    rdfs:label "Blodmeridianen, eller Aftenrøden i vest / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@no ,
+               "Blodmeridianen, eller Aftenrøden i vest / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@en ;
     rdamd:P30004 "ISBN 9788205577145" ;
     rdaxd:P00018 "isbn-9788205577145" ;
     rdfs:label "ISBN9788205577145" ;
@@ -3142,6 +3390,8 @@
 
 <http://example.org/isbn-9788205586307>
     a rdac:C10007 ;
+    rdfs:label "Passasjeren / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@no ,
+               "Passasjeren / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@en ;
     rdamd:P30004 "ISBN 9788205586307" ;
     rdaxd:P00018 "isbn-9788205586307" ;
     rdfs:label "ISBN9788205586307" ;
@@ -3161,6 +3411,8 @@
 
 <http://example.org/isbn-9788205588387>
     a rdac:C10007 ;
+    rdfs:label "Stella Maris / Cormac McCarthy ; oversatt av Knut Ofstad"@no ,
+               "Stella Maris / Cormac McCarthy ; oversatt av Knut Ofstad"@en ;
     rdamd:P30004 "ISBN 9788205588387" ;
     rdaxd:P00018 "isbn-9788205588387" ;
     rdfs:label "ISBN9788205588387" ;
@@ -3181,6 +3433,8 @@
 
 <http://example.org/isbn-9788242148407>
     a rdac:C10007 ;
+    rdfs:label "Veien / Cormac McCarthy ; oversatt av Knut Ofstad"@no ,
+               "Veien / Cormac McCarthy ; oversatt av Knut Ofstad"@en ;
     rdamd:P30004 "ISBN 9788242148407" ;
     rdaxd:P00018 "isbn-9788242148407" ;
     rdfs:label "ISBN9788242148407" ;
@@ -3198,6 +3452,8 @@
 
 <http://example.org/isbn-9788242148490>
     a rdac:C10007 ;
+    rdfs:label "Veien / Cormac McCarthy ; [oversatt av Knut Ofstad]"@no ,
+               "Veien / Cormac McCarthy ; [oversatt av Knut Ofstad]"@en ;
     rdamd:P30004 "ISBN 9788242148490" ;
     rdaxd:P00018 "isbn-9788242148490" ;
     rdfs:label "ISBN9788242148490" ;
@@ -3215,6 +3471,8 @@
 
 <http://example.org/isbn-9788252574920>
     a rdac:C10007 ;
+    rdfs:label "Veien / Cormac McCarthy ; oversatt av Knut Ofstad"@no ,
+               "Veien / Cormac McCarthy ; oversatt av Knut Ofstad"@en ;
     rdamd:P30004 "ISBN 9788252574920" ;
     rdaxd:P00018 "isbn-9788252574920" ;
     rdfs:label "ISBN9788252574920" ;
