@@ -90,6 +90,58 @@ export const parseCreators = (creatorString: string | undefined): CreatorGroup[]
   });
 };
 
+export interface RelationshipEntry {
+  title: string;
+  uri?: string;
+}
+
+export interface RelationshipGroup {
+  relationshipLabel: string;
+  titles: RelationshipEntry[];
+}
+
+/**
+ * Parses a relationship string into structured groups of relationship label + title/URI pairs.
+ *
+ * Input format (using SPARQL_SEP characters):
+ *   "relationship label ‡ title ‖ uri † title ‖ uri §§ relationship label ‡ title ‖ uri"
+ *
+ * @returns Array of { relationshipLabel, titles: Array<{ title, uri? }> }
+ */
+export const parseRelationships = (relationshipString: string | undefined): RelationshipGroup[] => {
+  if (!relationshipString) return [];
+
+  const result: RelationshipGroup[] = [];
+
+  const relationshipGroups = relationshipString.split(SPARQL_SEP.GROUP).map(group => group.trim());
+
+  relationshipGroups.forEach(group => {
+    const labelIndex = group.indexOf(SPARQL_SEP.LABEL.trim());
+    if (labelIndex === -1) return;
+
+    const relationshipLabel = group.substring(0, labelIndex).trim();
+    const titleAndUriPairs = group.substring(labelIndex + SPARQL_SEP.LABEL.trim().length).trim();
+
+    const titles: RelationshipEntry[] = [];
+    const pairs = titleAndUriPairs.split(SPARQL_SEP.NAME).map(pair => pair.trim());
+
+    pairs.forEach(pair => {
+      const parts = pair.split(SPARQL_SEP.URI);
+      const title = parts[0]?.trim();
+      const uri = parts[1]?.trim();
+      if (title) {
+        titles.push({ title, uri });
+      }
+    });
+
+    if (titles.length > 0) {
+      result.push({ relationshipLabel, titles });
+    }
+  });
+
+  return result;
+};
+
 export interface ManifestationLike {
   title?: string;
   other?: string;

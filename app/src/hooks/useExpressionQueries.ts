@@ -15,6 +15,8 @@ export interface Expression {
   genre?: string;
   work_creators?: string;
   expression_creators?: string;
+  work_to_work_relationships?: string;
+  expression_to_expression_relationships?: string;
 }
 
 export const useExpressionsByManifestation = (
@@ -56,6 +58,8 @@ export const useExpressionsByManifestation = (
                (GROUP_CONCAT(DISTINCT ?genre_label ; SEPARATOR=" ; ") as ?genre)
                (GROUP_CONCAT(DISTINCT CONCAT(?work_agent_relationship_label, "${SPARQL_SEP.LABEL}", ?work_agent_names) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?work_creators)
                (GROUP_CONCAT(DISTINCT CONCAT(?expression_agent_relationship_label, "${SPARQL_SEP.LABEL}", ?expression_agent_names) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?expression_creators)
+               (GROUP_CONCAT(DISTINCT CONCAT(?work_to_work_relationship_label, "${SPARQL_SEP.LABEL}", ?target_work_title) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?work_to_work_relationships)
+               (GROUP_CONCAT(DISTINCT CONCAT(?expression_to_expression_relationship_label, "${SPARQL_SEP.LABEL}", ?target_expression_title) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?expression_to_expression_relationships)
                FROM <http://www.ontotext.com/explicit>
                WHERE {
           # Navigate from manifestation to expression
@@ -153,6 +157,78 @@ export const useExpressionsByManifestation = (
             }
             GROUP BY ?expression ?expression_agent_relationship_label
           }
+
+          # Work to work relationships
+          OPTIONAL {
+            SELECT DISTINCT ?work ?work_to_work_relationship_label
+            (GROUP_CONCAT(DISTINCT CONCAT(?target_work_title, "${SPARQL_SEP.URI}", STR(?target_work)) ; SEPARATOR="${SPARQL_SEP.NAME}") as ?target_work_title)
+            WHERE {
+              {
+                OPTIONAL {
+                  ?work ?work_to_work_relationship ?target_work .
+                  ?target_work a <http://rdaregistry.info/Elements/c/C10001> .
+                  OPTIONAL { ?target_work rdfs:label ?tw_label_lang . FILTER(LANG(?tw_label_lang) = "${language}") }
+                  OPTIONAL { ?target_work rdfs:label ?tw_label_none . FILTER(LANG(?tw_label_none) = "") }
+                  BIND(COALESCE(?tw_label_lang, ?tw_label_none) AS ?target_work_title)
+                  FILTER(BOUND(?target_work_title))
+                  ?work_to_work_relationship rdfs:label ?work_to_work_relationship_label .
+                  FILTER(LANG(?work_to_work_relationship_label) = "${language}") .
+                  FILTER NOT EXISTS {
+                    ?work_to_work_relationship rdfs:subPropertyOf* <http://rdaregistry.info/Elements/w/P10336> .
+                  }
+                }
+              } UNION {
+                OPTIONAL {
+                  ?target_work ?work_to_work_relationship ?work .
+                  ?target_work a <http://rdaregistry.info/Elements/c/C10001> .
+                  OPTIONAL { ?target_work rdfs:label ?tw_label_lang2 . FILTER(LANG(?tw_label_lang2) = "${language}") }
+                  OPTIONAL { ?target_work rdfs:label ?tw_label_none2 . FILTER(LANG(?tw_label_none2) = "") }
+                  BIND(COALESCE(?tw_label_lang2, ?tw_label_none2) AS ?target_work_title)
+                  FILTER(BOUND(?target_work_title))
+                  ?work_to_work_relationship_inverse owl:inverseOf ?work_to_work_relationship .
+                  ?work_to_work_relationship_inverse rdfs:label ?work_to_work_relationship_label .
+                  FILTER(LANG(?work_to_work_relationship_label) = "${language}") .
+                  FILTER NOT EXISTS {
+                    ?work_to_work_relationship_inverse rdfs:subPropertyOf* <http://rdaregistry.info/Elements/w/P10336> .
+                  }
+                }
+              }
+            }
+            GROUP BY ?work ?work_to_work_relationship_label
+          }
+
+          # Expression to expression relationships
+          OPTIONAL {
+            SELECT DISTINCT ?expression ?expression_to_expression_relationship_label
+            (GROUP_CONCAT(DISTINCT CONCAT(?target_expression_title, "${SPARQL_SEP.URI}", STR(?target_expression)) ; SEPARATOR="${SPARQL_SEP.NAME}") as ?target_expression_title)
+            WHERE {
+              {
+                OPTIONAL {
+                  ?expression ?expression_to_expression_relationship ?target_expression .
+                  ?target_expression a <http://rdaregistry.info/Elements/c/C10006> .
+                  OPTIONAL { ?target_expression rdfs:label ?te_label_lang . FILTER(LANG(?te_label_lang) = "${language}") }
+                  OPTIONAL { ?target_expression rdfs:label ?te_label_none . FILTER(LANG(?te_label_none) = "") }
+                  BIND(COALESCE(?te_label_lang, ?te_label_none) AS ?target_expression_title)
+                  FILTER(BOUND(?target_expression_title))
+                  ?expression_to_expression_relationship rdfs:label ?expression_to_expression_relationship_label .
+                  FILTER(LANG(?expression_to_expression_relationship_label) = "${language}") .
+                }
+              } UNION {
+                OPTIONAL {
+                  ?target_expression ?expression_to_expression_relationship ?expression .
+                  ?target_expression a <http://rdaregistry.info/Elements/c/C10006> .
+                  OPTIONAL { ?target_expression rdfs:label ?te_label_lang2 . FILTER(LANG(?te_label_lang2) = "${language}") }
+                  OPTIONAL { ?target_expression rdfs:label ?te_label_none2 . FILTER(LANG(?te_label_none2) = "") }
+                  BIND(COALESCE(?te_label_lang2, ?te_label_none2) AS ?target_expression_title)
+                  FILTER(BOUND(?target_expression_title))
+                  ?expression_to_expression_relationship_inverse owl:inverseOf ?expression_to_expression_relationship .
+                  ?expression_to_expression_relationship_inverse rdfs:label ?expression_to_expression_relationship_label .
+                  FILTER(LANG(?expression_to_expression_relationship_label) = "${language}") .
+                }
+              }
+            }
+            GROUP BY ?expression ?expression_to_expression_relationship_label
+          }
         }
         GROUP BY ?expression
       `;
@@ -170,6 +246,8 @@ export const useExpressionsByManifestation = (
         genre: binding.genre?.value,
         work_creators: binding.work_creators?.value,
         expression_creators: binding.expression_creators?.value,
+        work_to_work_relationships: binding.work_to_work_relationships?.value,
+        expression_to_expression_relationships: binding.expression_to_expression_relationships?.value,
       }));
     },
     enabled: Boolean(manifestationUri),

@@ -22,6 +22,7 @@ import ExpressionList from "./ExpressionList";
 import {
   capitalizeFirstLetter,
   parseCreators,
+  parseRelationships,
   splitPipeValues,
   splitSemicolonValues,
   formatTitleArea,
@@ -163,6 +164,46 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                   )}
                 </Box>
 
+                {/* Line 2: Publication area + Physical description + Series */}
+                {publicationLine && (
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    sx={{
+                      lineHeight: 1.5,
+                      fontSize: '0.8125rem',
+                    }}
+                  >
+                    {publicationLine}
+                  </Typography>
+                )}
+
+                {/* Line 3: Notes (all on one line) */}
+                {notesLine && (
+                  <Typography
+                    variant="caption"
+                    color="text.secondary"
+                    sx={{
+                      lineHeight: 1.4,
+                    }}
+                  >
+                    {notesLine}
+                  </Typography>
+                )}
+
+                {/* Line 4: Identifiers (all on one line) */}
+                {identifiersLine && (
+                  <Typography
+                    variant="caption"
+                    color="text.secondary"
+                    sx={{
+                      lineHeight: 1.4,
+                    }}
+                  >
+                    {identifiersLine}
+                  </Typography>
+                )}
+
                 {/* Creators (manifestation-level + expression-level when single expression) */}
                 {(result.manifestation_creators || (singleExpression && (singleExpression.work_creators || singleExpression.expression_creators))) && (
                   <Box>
@@ -286,44 +327,124 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                   </Box>
                 )}
 
-                {/* Line 2: Publication area + Physical description + Series */}
-                {publicationLine && (
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    sx={{
-                      lineHeight: 1.5,
-                      fontSize: '0.8125rem',
-                    }}
-                  >
-                    {publicationLine}
-                  </Typography>
-                )}
-
-                {/* Line 3: Notes (all on one line) */}
-                {notesLine && (
-                  <Typography
-                    variant="caption"
-                    color="text.secondary"
-                    sx={{
-                      lineHeight: 1.4,
-                    }}
-                  >
-                    {notesLine}
-                  </Typography>
-                )}
-
-                {/* Line 4: Identifiers (all on one line) */}
-                {identifiersLine && (
-                  <Typography
-                    variant="caption"
-                    color="text.secondary"
-                    sx={{
-                      lineHeight: 1.4,
-                    }}
-                  >
-                    {identifiersLine}
-                  </Typography>
+                {/* Relationships (expression-level when single expression) */}
+                {singleExpression && (singleExpression.work_to_work_relationships || singleExpression.expression_to_expression_relationships) && (
+                  <Box>
+                    {singleExpression.work_to_work_relationships && (
+                      <Box sx={{ mb: 0.5 }}>
+                        {parseRelationships(singleExpression.work_to_work_relationships).map((rel, index) => (
+                          <Typography
+                            key={`w2w-${index}`}
+                            variant="body2"
+                            color="text.secondary"
+                            sx={{
+                              fontSize: '0.8125rem',
+                              lineHeight: 1.5,
+                              display: 'flex',
+                              alignItems: 'baseline',
+                              '&:not(:last-child)': { mb: 0.25 }
+                            }}
+                          >
+                            <Box
+                              component="span"
+                              sx={{
+                                color: 'text.disabled',
+                                fontSize: '0.75rem',
+                                mr: 0.5,
+                              }}
+                            >
+                              →
+                            </Box>
+                            <Box component="span">
+                              {capitalizeFirstLetter(rel.relationshipLabel)}:{' '}
+                              {rel.titles.map((entry, titleIndex) => (
+                                <React.Fragment key={titleIndex}>
+                                  {titleIndex > 0 && ' ; '}
+                                  <Link
+                                    component="button"
+                                    variant="body2"
+                                    onClick={(e: React.MouseEvent) => {
+                                      e.stopPropagation();
+                                      onEntitySearch(entry.title);
+                                    }}
+                                    sx={{
+                                      textDecoration: 'none',
+                                      fontStyle: 'italic',
+                                      '&:hover': { textDecoration: 'underline' },
+                                      cursor: 'pointer',
+                                      color: 'inherit',
+                                      fontSize: 'inherit',
+                                      lineHeight: 'inherit',
+                                      verticalAlign: 'baseline',
+                                    }}
+                                  >
+                                    {entry.title}
+                                  </Link>
+                                </React.Fragment>
+                              ))}
+                            </Box>
+                          </Typography>
+                        ))}
+                      </Box>
+                    )}
+                    {singleExpression.expression_to_expression_relationships && (
+                      <Box>
+                        {parseRelationships(singleExpression.expression_to_expression_relationships).map((rel, index) => (
+                          <Typography
+                            key={`e2e-${index}`}
+                            variant="body2"
+                            color="text.secondary"
+                            sx={{
+                              fontSize: '0.8125rem',
+                              lineHeight: 1.5,
+                              display: 'flex',
+                              alignItems: 'baseline',
+                              '&:not(:last-child)': { mb: 0.25 }
+                            }}
+                          >
+                            <Box
+                              component="span"
+                              sx={{
+                                color: 'text.disabled',
+                                fontSize: '0.75rem',
+                                mr: 0.5,
+                              }}
+                            >
+                              →
+                            </Box>
+                            <Box component="span">
+                              {capitalizeFirstLetter(rel.relationshipLabel)}:{' '}
+                              {rel.titles.map((entry, titleIndex) => (
+                                <React.Fragment key={titleIndex}>
+                                  {titleIndex > 0 && ' ; '}
+                                  <Link
+                                    component="button"
+                                    variant="body2"
+                                    onClick={(e: React.MouseEvent) => {
+                                      e.stopPropagation();
+                                      onEntitySearch(entry.title);
+                                    }}
+                                    sx={{
+                                      textDecoration: 'none',
+                                      fontStyle: 'italic',
+                                      '&:hover': { textDecoration: 'underline' },
+                                      cursor: 'pointer',
+                                      color: 'inherit',
+                                      fontSize: 'inherit',
+                                      lineHeight: 'inherit',
+                                      verticalAlign: 'baseline',
+                                    }}
+                                  >
+                                    {entry.title}
+                                  </Link>
+                                </React.Fragment>
+                              ))}
+                            </Box>
+                          </Typography>
+                        ))}
+                      </Box>
+                    )}
+                  </Box>
                 )}
 
                 {/* Metadata chips */}
