@@ -11,16 +11,11 @@ import {
   Select,
   MenuItem,
   Alert,
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableRow,
   Tooltip,
   Paper,
   type PaperProps,
 } from "@mui/material";
-import { Add, Delete, Edit, Save, Cancel, Label, DragIndicator } from "@mui/icons-material";
+import { Add, Delete, Label, DragIndicator, Save } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import { SUPPORTED_LANGUAGES } from "../utils/sparqlFragments";
 
@@ -107,16 +102,20 @@ const LabelManager: React.FC<LabelManagerProps> = ({
 }) => {
   const { t } = useTranslation("entityEditor");
   const [labels, setLabels] = useState<LabelEntry[]>(initialLabels);
-  const [editingId, setEditingId] = useState<string | null>(null);
-  const [tempValue, setTempValue] = useState("");
-  const [tempLanguage, setTempLanguage] = useState("");
   const [error, setError] = useState<string | null>(null);
+  const newRowRef = useRef<HTMLInputElement>(null);
 
   // Only sync from parent when the dialog opens, not on every parent re-render,
   // to avoid discarding in-progress label edits
   useEffect(() => {
     if (open) {
-      setLabels(initialLabels);
+      // Start with one empty row if there are no labels, so the user
+      // can type immediately without clicking Add first.
+      const startLabels = initialLabels.length > 0
+        ? initialLabels
+        : [{ id: `new-${Date.now()}`, value: "", language: "" }];
+      setLabels(startLabels);
+      setError(null);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
@@ -124,84 +123,61 @@ const LabelManager: React.FC<LabelManagerProps> = ({
   const handleAddLabel = () => {
     const newId = `new-${Date.now()}`;
     setLabels((prev) => [...prev, { id: newId, value: "", language: "" }]);
-    setEditingId(newId);
-    setTempValue("");
-    setTempLanguage("");
+    setError(null);
+    // Focus the new row's text field after render
+    setTimeout(() => newRowRef.current?.focus(), 0);
+  };
+
+  const handleValueChange = (id: string, value: string) => {
+    setLabels((prev) => prev.map((l) => (l.id === id ? { ...l, value } : l)));
     setError(null);
   };
 
-  const handleEditLabel = (label: LabelEntry) => {
-    setEditingId(label.id);
-    setTempValue(label.value);
-    setTempLanguage(label.language);
-    setError(null);
-  };
-
-  const handleSaveRow = () => {
-    if (!tempValue.trim()) {
-      setError(t("labelManager.errors.emptyValue"));
-      return;
-    }
-    const duplicate = labels.find(
-      (l) => l.id !== editingId && l.language === tempLanguage
-    );
-    if (duplicate) {
-      setError(
-        tempLanguage
-          ? t("labelManager.errors.duplicateLanguage", { lang: tempLanguage })
-          : t("labelManager.errors.duplicateNoLanguage")
-      );
-      return;
-    }
-    setLabels((prev) =>
-      prev.map((l) =>
-        l.id === editingId
-          ? { ...l, value: tempValue.trim(), language: tempLanguage }
-          : l
-      )
-    );
-    setEditingId(null);
-    setError(null);
-  };
-
-  const handleCancelRow = () => {
-    if (editingId?.startsWith("new-")) {
-      setLabels((prev) => prev.filter((l) => l.id !== editingId));
-    }
-    setEditingId(null);
-    setTempValue("");
-    setTempLanguage("");
+  const handleLanguageChange = (id: string, language: string) => {
+    setLabels((prev) => prev.map((l) => (l.id === id ? { ...l, language } : l)));
     setError(null);
   };
 
   const handleDeleteLabel = (id: string) => {
     setLabels((prev) => prev.filter((l) => l.id !== id));
-    if (editingId === id) {
-      setEditingId(null);
-      setError(null);
+    setError(null);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent, index: number) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      if (index === labels.length - 1) {
+        // Last row: add a new one
+        handleAddLabel();
+      }
     }
   };
 
   const handleApply = () => {
-    if (editingId) {
-      setError(t("labelManager.errors.unsavedEdit"));
-      return;
-    }
-    onSave(labels);
-  };
+    // Strip empty labels
+    const nonEmpty = labels.filter((l) => l.value.trim());
 
-  const handleClose = () => {
-    if (editingId) {
-      setError(t("labelManager.errors.unsavedEdit"));
-      return;
+    // Check for duplicate language tags
+    const seen = new Set<string>();
+    for (const label of nonEmpty) {
+      if (seen.has(label.language)) {
+        setError(
+          label.language
+            ? t("labelManager.errors.duplicateLanguage", { lang: label.language })
+            : t("labelManager.errors.duplicateNoLanguage"),
+        );
+        return;
+      }
+      seen.add(label.language);
     }
-    onClose();
+
+    onSave(nonEmpty);
   };
 
   return (
     <Dialog
       open={open}
-      onClose={handleClose}
+      onClose={onClose}
       maxWidth="sm"
       fullWidth
       PaperComponent={DraggablePaper}
@@ -235,101 +211,52 @@ const LabelManager: React.FC<LabelManagerProps> = ({
           </Alert>
         )}
 
-        <Table size="small">
-          <TableHead>
-            <TableRow>
-              <TableCell>{t("labelManager.columns.label")}</TableCell>
-              <TableCell sx={{ width: 110 }}>{t("labelManager.columns.language")}</TableCell>
-              <TableCell sx={{ width: 80 }} />
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {labels.map((label) =>
-              editingId === label.id ? (
-                <TableRow key={label.id}>
-                  <TableCell sx={{ py: 0.5 }}>
-                    <TextField
-                      size="small"
-                      fullWidth
-                      value={tempValue}
-                      onChange={(e) => setTempValue(e.target.value)}
-                      autoFocus
-                      error={!tempValue.trim()}
-                      onKeyDown={(e) => e.key === "Enter" && handleSaveRow()}
-                      placeholder={t("labelManager.placeholders.labelValue")}
-                    />
-                  </TableCell>
-                  <TableCell sx={{ py: 0.5 }}>
-                    <Select
-                      size="small"
-                      fullWidth
-                      value={tempLanguage}
-                      onChange={(e) => setTempLanguage(e.target.value)}
-                    >
-                      <MenuItem value=""><em>—</em></MenuItem>
-                      {SUPPORTED_LANGUAGES.map((lang) => (
-                        <MenuItem key={lang} value={lang}>
-                          {lang.toUpperCase()}
-                        </MenuItem>
-                      ))}
-                    </Select>
-                  </TableCell>
-                  <TableCell sx={{ py: 0.5, whiteSpace: "nowrap" }}>
-                    <Tooltip title={t("labelManager.tooltips.save")}>
-                      <IconButton size="small" onClick={handleSaveRow} color="primary">
-                        <Save fontSize="small" />
-                      </IconButton>
-                    </Tooltip>
-                    <Tooltip title={t("labelManager.tooltips.cancel")}>
-                      <IconButton size="small" onClick={handleCancelRow}>
-                        <Cancel fontSize="small" />
-                      </IconButton>
-                    </Tooltip>
-                  </TableCell>
-                </TableRow>
-              ) : (
-                <TableRow key={label.id} hover>
-                  <TableCell>{label.value}</TableCell>
-                  <TableCell sx={{ color: "text.secondary", fontSize: "0.8rem" }}>
-                    {label.language ? label.language.toUpperCase() : "—"}
-                  </TableCell>
-                  <TableCell sx={{ whiteSpace: "nowrap" }}>
-                    <Tooltip title={t("labelManager.tooltips.edit")}>
-                      <span>
-                        <IconButton
-                          size="small"
-                          onClick={() => handleEditLabel(label)}
-                          disabled={!!editingId}
-                        >
-                          <Edit fontSize="small" />
-                        </IconButton>
-                      </span>
-                    </Tooltip>
-                    <Tooltip title={t("labelManager.tooltips.delete")}>
-                      <span>
-                        <IconButton
-                          size="small"
-                          onClick={() => handleDeleteLabel(label.id)}
-                          disabled={!!editingId}
-                          color="error"
-                        >
-                          <Delete fontSize="small" />
-                        </IconButton>
-                      </span>
-                    </Tooltip>
-                  </TableCell>
-                </TableRow>
-              )
-            )}
-            {labels.length === 0 && (
-              <TableRow>
-                <TableCell colSpan={3} sx={{ color: "text.disabled", textAlign: "center", py: 2 }}>
-                  {t("labelManager.empty")}
-                </TableCell>
-              </TableRow>
-            )}
-          </TableBody>
-        </Table>
+        {labels.length === 0 ? (
+          <Box sx={{ color: "text.disabled", textAlign: "center", py: 3 }}>
+            {t("labelManager.empty")}
+          </Box>
+        ) : (
+          <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
+            {labels.map((label, index) => (
+              <Box
+                key={label.id}
+                sx={{ display: "flex", alignItems: "center", gap: 1 }}
+              >
+                <TextField
+                  size="small"
+                  fullWidth
+                  value={label.value}
+                  onChange={(e) => handleValueChange(label.id, e.target.value)}
+                  onKeyDown={(e) => handleKeyDown(e, index)}
+                  placeholder={t("labelManager.placeholders.labelValue")}
+                  inputRef={index === labels.length - 1 ? newRowRef : undefined}
+                />
+                <Select
+                  size="small"
+                  value={label.language}
+                  onChange={(e) => handleLanguageChange(label.id, e.target.value)}
+                  sx={{ minWidth: 80 }}
+                >
+                  <MenuItem value=""><em>—</em></MenuItem>
+                  {SUPPORTED_LANGUAGES.map((lang) => (
+                    <MenuItem key={lang} value={lang}>
+                      {lang.toUpperCase()}
+                    </MenuItem>
+                  ))}
+                </Select>
+                <Tooltip title={t("labelManager.tooltips.delete")}>
+                  <IconButton
+                    size="small"
+                    onClick={() => handleDeleteLabel(label.id)}
+                    color="error"
+                  >
+                    <Delete fontSize="small" />
+                  </IconButton>
+                </Tooltip>
+              </Box>
+            ))}
+          </Box>
+        )}
       </DialogContent>
 
       <DialogActions sx={{ justifyContent: "space-between", px: 3 }}>
@@ -337,18 +264,16 @@ const LabelManager: React.FC<LabelManagerProps> = ({
           size="small"
           startIcon={<Add />}
           onClick={handleAddLabel}
-          disabled={!!editingId}
         >
           {t("common:buttons.add")}
         </Button>
         <Box sx={{ display: "flex", gap: 1 }}>
-          <Button onClick={handleClose} disabled={!!editingId}>
+          <Button onClick={onClose}>
             {t("common:buttons.cancel")}
           </Button>
           <Button
             variant="contained"
             onClick={handleApply}
-            disabled={!!editingId}
             startIcon={<Save />}
           >
             {t("common:buttons.apply")}
