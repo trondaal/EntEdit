@@ -34,8 +34,14 @@ export const LoggingProvider: React.FC<{ children: React.ReactNode }> = ({ child
   }, []);
 
   const startSession = useCallback((endpointUrl: string, language: string) => {
+    // crypto.randomUUID() requires a secure context (HTTPS or localhost).
+    // Fall back to a timestamp-based ID for HTTP deployments.
+    const sessionId = typeof crypto.randomUUID === "function"
+      ? crypto.randomUUID()
+      : `${Date.now()}-${Math.random().toString(36).slice(2, 11)}`;
+
     const session: LogSession = {
-      sessionId: crypto.randomUUID(),
+      sessionId,
       startedAt: new Date().toISOString(),
       endedAt: null,
       endpointUrl,
