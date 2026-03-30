@@ -30,7 +30,6 @@ const LoggingControls: React.FC<LoggingControlsProps> = ({
   const { t } = useTranslation();
   const {
     isRecording,
-    sessionDuration,
     startSession,
     stopSession,
     hasOrphanedSession,

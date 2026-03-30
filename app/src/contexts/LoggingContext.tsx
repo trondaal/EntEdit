@@ -1,5 +1,5 @@
 import React, { createContext, useRef, useState, useCallback, useEffect } from "react";
-import type { LogSession, LogEvent } from "../types/logging";
+import type { LogSession, LogEventInput } from "../types/logging";
 
 const SESSION_STORAGE_KEY = "entEdit.activeLogSession";
 
@@ -8,7 +8,7 @@ interface LoggingContextValue {
   sessionDuration: number;
   startSession: (endpointUrl: string, language: string) => void;
   stopSession: () => LogSession | null;
-  logEvent: (event: Omit<LogEvent, "timestamp" | "sequenceNumber">) => void;
+  logEvent: (event: LogEventInput) => void;
   getSession: () => LogSession | null;
   hasOrphanedSession: () => boolean;
   recoverOrphanedSession: () => LogSession | null;
@@ -102,14 +102,14 @@ export const LoggingProvider: React.FC<{ children: React.ReactNode }> = ({ child
     return session;
   }, []);
 
-  const logEvent = useCallback((event: Omit<LogEvent, "timestamp" | "sequenceNumber">) => {
+  const logEvent = useCallback((event: LogEventInput) => {
     if (!sessionRef.current) return;
 
     const fullEvent = {
       ...event,
       timestamp: new Date().toISOString(),
       sequenceNumber: ++sequenceRef.current,
-    } as LogEvent;
+    } as LogEventInput & { timestamp: string; sequenceNumber: number };
 
     sessionRef.current.events.push(fullEvent);
   }, []);

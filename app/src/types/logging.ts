@@ -103,3 +103,7 @@ export type LogEvent =
   | SearchPerformedEvent
   | SearchResultSelectedEvent
   | TabSwitchedEvent;
+
+export type LogEventInput = {
+  [K in LogEvent["type"]]: Omit<Extract<LogEvent, { type: K }>, "timestamp" | "sequenceNumber">;
+}[LogEvent["type"]];
