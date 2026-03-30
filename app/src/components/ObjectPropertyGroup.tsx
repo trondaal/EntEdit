@@ -12,10 +12,12 @@ import type { SparqlEndpointConfig, RdfProperty, OrderedValue } from "../types/s
 import { formatLabel } from "../utils/labelUtils";
 import EntityPickerPanel from "./EntityPickerPanel";
 import ObjectPropertySection from "./ObjectPropertySection";
+import { useLogging } from "../hooks/useLogging";
 
 interface ObjectPropertyGroupProps {
   config: SparqlEndpointConfig;
   sectionTitle: string;
+  sectionKey?: string;
   addLabel: string;
   selectorPromptLabel: string;
   properties: RdfProperty[];
@@ -23,6 +25,7 @@ interface ObjectPropertyGroupProps {
   entityData: Record<string, OrderedValue[]>;
   isEditing: boolean;
   classUri: string;
+  entityUri?: string | null;
   selectedLanguage: string;
   onUpdateValue: (property: string, index: number, value: string) => void;
   onRemoveValue: (property: string, index: number) => void;
@@ -33,6 +36,7 @@ interface ObjectPropertyGroupProps {
 const ObjectPropertyGroup: React.FC<ObjectPropertyGroupProps> = ({
   config,
   sectionTitle,
+  sectionKey,
   addLabel,
   selectorPromptLabel,
   properties,
@@ -40,12 +44,14 @@ const ObjectPropertyGroup: React.FC<ObjectPropertyGroupProps> = ({
   entityData,
   isEditing,
   classUri,
+  entityUri: sourceEntityUri,
   selectedLanguage,
   onUpdateValue,
   onRemoveValue,
   onReorderValues,
   onAddProperty,
 }) => {
+  const { logEvent, isRecording } = useLogging();
   const [selectedProperty, setSelectedProperty] = useState("");
 
   const availableProperties = useMemo(
@@ -80,11 +86,20 @@ const ObjectPropertyGroup: React.FC<ObjectPropertyGroupProps> = ({
         const existing = entityData[selectedProperty] || [];
         if (!existing.some((v) => v.value === entityUri)) {
           onAddProperty(selectedProperty, entityUri);
+          if (isRecording) {
+            logEvent({
+              type: "relationship_added",
+              sourceEntityUri: sourceEntityUri || "",
+              propertyUri: selectedProperty,
+              targetEntityUri: entityUri,
+              section: sectionKey || sectionTitle,
+            });
+          }
         }
         setSelectedProperty("");
       }
     },
-    [selectedProperty, entityData, onAddProperty],
+    [selectedProperty, entityData, onAddProperty, isRecording, logEvent, sourceEntityUri, sectionKey, sectionTitle],
   );
 
   const handleCancel = useCallback(() => setSelectedProperty(""), []);

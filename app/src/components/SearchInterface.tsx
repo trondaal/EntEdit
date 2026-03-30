@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect, useRef } from "react";
 import {
   Paper,
   Typography,
@@ -16,6 +16,7 @@ import { useSearchExpressions, useSearchManifestations } from "../hooks/useSearc
 import { useDebouncedValue } from "../hooks/useDebouncedValue";
 import ResultSet from "./ResultSet";
 import ManifestationResultSet from "./ManifestationResultSet";
+import { useLogging } from "../hooks/useLogging";
 
 interface SearchInterfaceProps {
   config: SparqlEndpointConfig;
@@ -27,6 +28,7 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
   selectedLanguage,
 }) => {
   const { t } = useTranslation();
+  const { logEvent, isRecording } = useLogging();
   const [searchInput, setSearchInput] = useState<string>("");
   const [searchMode, setSearchMode] = useState<'expression' | 'manifestation'>('expression');
   const [selectedResult, setSelectedResult] = useState<string | null>(null);
@@ -68,6 +70,15 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
     () => manifestationSearchData?.pages.flat() ?? [],
     [manifestationSearchData],
   );
+
+  // Log search when the debounced query fires
+  const prevDebouncedRef = useRef(debouncedQuery);
+  useEffect(() => {
+    if (isRecording && debouncedQuery && debouncedQuery !== prevDebouncedRef.current) {
+      logEvent({ type: "search_performed", query: debouncedQuery, mode: searchMode });
+    }
+    prevDebouncedRef.current = debouncedQuery;
+  }, [debouncedQuery, searchMode, isRecording, logEvent]);
 
   const handleSearch = (value: string) => {
     setSearchInput(value);
@@ -168,7 +179,12 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
               searchLoading={searchLoading}
               searchError={searchError as Error | null}
               selectedResult={selectedResult}
-              onSelectResult={setSelectedResult}
+              onSelectResult={(uri: string | null) => {
+                setSelectedResult(uri);
+                if (isRecording && uri) {
+                  logEvent({ type: "search_result_selected", resultUri: uri, query: debouncedQuery, mode: "expression" });
+                }
+              }}
               config={config}
               selectedManifestationUri={selectedManifestation}
               onManifestationSelect={setSelectedManifestation}
@@ -185,7 +201,12 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
               searchLoading={manifestationSearchLoading}
               searchError={manifestationSearchError as Error | null}
               selectedResult={selectedManifestationResult}
-              onSelectResult={setSelectedManifestationResult}
+              onSelectResult={(uri: string | null) => {
+                setSelectedManifestationResult(uri);
+                if (isRecording && uri) {
+                  logEvent({ type: "search_result_selected", resultUri: uri, query: debouncedQuery, mode: "manifestation" });
+                }
+              }}
               config={config}
               selectedLanguage={selectedLanguage}
               hasNextPage={manifestationHasNextPage}

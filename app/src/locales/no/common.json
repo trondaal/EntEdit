@@ -129,5 +129,33 @@
     "saveConfiguration": "Lagre konfigurasjon",
     "reset": "Tilbakestill",
     "reconfigureDatabase": "Konfigurer database på nytt"
+  },
+  "logging": {
+    "record": "Ta opp",
+    "recording": "Opptak",
+    "startRecording": "Start opptak",
+    "stopRecording": "Stopp opptak",
+    "consentTitle": "Start interaksjonslogging",
+    "consentDescription": "Denne funksjonen registrerer dine interaksjoner med katalogiseringssystemet for undervisningsforskning. Opptaket starter når du godtar og stopper når du trykker Stopp.",
+    "whatIsRecorded": "Hva registreres:",
+    "recordedItem1": "Hvilke entiteter du oppretter og i hvilken rekkefølge",
+    "recordedItem2": "Hvordan du kobler entiteter med relasjoner",
+    "recordedItem3": "Søk du utfører og resultater du velger",
+    "recordedItem4": "Hvilke klasser og entiteter du utforsker",
+    "whatIsNotRecorded": "Hva registreres IKKE:",
+    "notRecordedItem1": "Passord, påloggingsdetaljer eller personlig informasjon",
+    "notRecordedItem2": "Selve teksten du skriver i beskrivelsesfelt",
+    "consentCheckbox": "Jeg forstår hva som registreres og godtar at logging startes",
+    "submitTitle": "Opptak av økt fullført",
+    "submitDescription": "Interaksjonsloggen er klar. Du kan laste den ned som en JSON-fil for å levere til din instruktør.",
+    "eventCount": "{{count}} interaksjoner registrert",
+    "sessionDuration": "Varighet: {{duration}}",
+    "studentIdLabel": "Ditt navn eller student-ID (valgfritt)",
+    "studentIdHelper": "Dette inkluderes i loggfilen for å identifisere økten din",
+    "downloadJson": "Last ned logg",
+    "orphanTitle": "Ulagret opptak funnet",
+    "orphanDescription": "Et tidligere opptak ble ikke fullført (nettleseren kan ha blitt lukket). Vil du gjenopprette det og laste ned dataene, eller forkaste det?",
+    "orphanRecover": "Gjenopprett og last ned",
+    "orphanDiscard": "Forkast"
   }
 }

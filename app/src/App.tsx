@@ -6,6 +6,8 @@ import { CssBaseline, Box, CircularProgress, Typography, Tabs, Tab } from "@mui/
 import { useTranslation } from "react-i18next";
 import { SnackbarProvider } from "notistack";
 import { queryClient } from "./utils/queryClient";
+import { LoggingProvider } from "./contexts/LoggingContext";
+import { useLogging } from "./hooks/useLogging";
 import AppHeader from "./components/AppHeader";
 const EntityBrowser = lazy(() => import("./components/EntityBrowser"));
 const SearchInterface = lazy(() => import("./components/SearchInterface"));
@@ -186,17 +188,25 @@ const theme = createTheme({
 });
 
 function App() {
+  return (
+    <LoggingProvider>
+      <AppInner />
+    </LoggingProvider>
+  );
+}
+
+function AppInner() {
   const { t, i18n } = useTranslation();
   const [appConfig, setAppConfig] = useState<AppConfiguration | null>(null);
   const [loading, setLoading] = useState(true);
   const [showWizard, setShowWizard] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
 
-  // Check if search tab should be hidden based on URL parameter
-  const showSearchTab = useMemo(
-    () => !new URLSearchParams(window.location.search).has("nosearch"),
-    [],
-  );
+  const urlParams = useMemo(() => new URLSearchParams(window.location.search), []);
+  const showSearchTab = useMemo(() => !urlParams.has("nosearch"), [urlParams]);
+  const showLogging = useMemo(() => !urlParams.has("nologging"), [urlParams]);
+
+  const { logEvent, isRecording } = useLogging();
 
   // Sync i18next language with app language selection
   useEffect(() => {
@@ -325,6 +335,7 @@ function App() {
                 selectedLanguage={appConfig.language}
                 onLanguageChange={handleLanguageChange}
                 onResetConfiguration={handleResetConfiguration}
+                showLogging={showLogging}
               />
               <Box
                 sx={{
@@ -340,7 +351,15 @@ function App() {
                 <Box sx={{ borderBottom: 1, borderColor: "divider", bgcolor: "background.paper" }}>
                   <Tabs
                     value={activeTab}
-                    onChange={(_, newValue) => setActiveTab(newValue)}
+                    onChange={(_, newValue) => {
+                      setActiveTab(newValue);
+                      if (isRecording) {
+                        logEvent({
+                          type: "tab_switched",
+                          tab: newValue === 0 ? "entityBrowser" : "search",
+                        });
+                      }
+                    }}
                     aria-label="main navigation tabs"
                   >
                     <Tab label={t("tabs.entityBrowser")} />

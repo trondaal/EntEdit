@@ -35,6 +35,7 @@ import {
 import { useDebouncedValue } from "../hooks/useDebouncedValue";
 import EntityEditor from "./EntityEditor";
 import { formatLabel } from "../utils/labelUtils";
+import { useLogging } from "../hooks/useLogging";
 
 interface EntityBrowserProps {
   config: SparqlEndpointConfig;
@@ -48,6 +49,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
   selectedLanguage,
 }) => {
   const { t } = useTranslation();
+  const { logEvent, isRecording } = useLogging();
   const [selectedClass, setSelectedClass] = useState<string | null>(null);
   const [selectedEntity, setSelectedEntity] = useState<string | null>(null);
   const [entityFilter, setEntityFilter] = useState<string>("");
@@ -150,17 +152,22 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
   const handleClassSelect = useCallback((classUri: string) => {
     setSelectedClass(classUri);
     setSelectedEntity(null);
-  }, []);
+    if (isRecording) {
+      logEvent({ type: "class_selected", classUri });
+    }
+  }, [isRecording, logEvent]);
 
   const handleEntitySelect = useCallback((entityUri: string) => {
     if (isEditorEditing && entityUri !== selectedEntity) {
-      // Editor has unsaved changes on an existing entity — ask for confirmation before switching
       setPendingEntityUri(entityUri);
       setSwitchEntityDialogOpen(true);
     } else {
       setSelectedEntity(entityUri);
+      if (isRecording && selectedClass) {
+        logEvent({ type: "entity_selected", entityUri, classUri: selectedClass, source: "browser" });
+      }
     }
-  }, [isEditorEditing, selectedEntity]);
+  }, [isEditorEditing, selectedEntity, isRecording, selectedClass, logEvent]);
 
   const handleEntityDeselect = useCallback(() => {
     setSelectedEntity(null);

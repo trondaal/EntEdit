@@ -13,6 +13,7 @@ import { useTranslation } from "react-i18next";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import LanguageSelector from "./LanguageSelector";
 import EndpointConfig from "./EndpointConfig";
+import LoggingControls from "./LoggingControls";
 
 interface AppHeaderProps {
   config: SparqlEndpointConfig;
@@ -20,6 +21,7 @@ interface AppHeaderProps {
   selectedLanguage: string;
   onLanguageChange: (language: string) => void;
   onResetConfiguration?: () => void;
+  showLogging?: boolean;
 }
 
 const AppHeader: React.FC<AppHeaderProps> = ({
@@ -28,6 +30,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({
   selectedLanguage,
   onLanguageChange,
   onResetConfiguration,
+  showLogging = true,
 }) => {
   const { t } = useTranslation();
   const [configDialogOpen, setConfigDialogOpen] = useState(false);
@@ -109,6 +112,14 @@ const AppHeader: React.FC<AppHeaderProps> = ({
                 },
               }}
             />
+
+            {/* Interaction Logging Controls */}
+            {showLogging && (
+              <LoggingControls
+                endpointUrl={config.url}
+                language={selectedLanguage}
+              />
+            )}
 
             {/* Language Selector - styled for header */}
             <Box

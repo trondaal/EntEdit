@@ -129,5 +129,33 @@
     "saveConfiguration": "Save Configuration",
     "reset": "Reset",
     "reconfigureDatabase": "Reconfigure Database"
+  },
+  "logging": {
+    "record": "Record",
+    "recording": "Recording",
+    "startRecording": "Start Recording",
+    "stopRecording": "Stop Recording",
+    "consentTitle": "Start Interaction Logging",
+    "consentDescription": "This feature records your interactions with the cataloguing system for educational research. The recording starts when you agree and stops when you click Stop.",
+    "whatIsRecorded": "What is recorded:",
+    "recordedItem1": "Which entities you create and in what order",
+    "recordedItem2": "How you connect entities with relationships",
+    "recordedItem3": "Search queries you perform and results you select",
+    "recordedItem4": "Which classes and entities you browse",
+    "whatIsNotRecorded": "What is NOT recorded:",
+    "notRecordedItem1": "Passwords, credentials, or personal information",
+    "notRecordedItem2": "The actual text you type into description fields",
+    "consentCheckbox": "I understand what is recorded and agree to start logging",
+    "submitTitle": "Session Recording Complete",
+    "submitDescription": "Your interaction log is ready. You can download it as a JSON file to submit to your instructor.",
+    "eventCount": "{{count}} interactions recorded",
+    "sessionDuration": "Session duration: {{duration}}",
+    "studentIdLabel": "Your name or student ID (optional)",
+    "studentIdHelper": "This will be included in the log file to identify your session",
+    "downloadJson": "Download Log",
+    "orphanTitle": "Unsaved Recording Found",
+    "orphanDescription": "A previous recording session was not completed (the browser may have been closed). Would you like to recover it and download the data, or discard it?",
+    "orphanRecover": "Recover & Download",
+    "orphanDiscard": "Discard"
   }
 }

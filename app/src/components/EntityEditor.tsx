@@ -37,6 +37,7 @@ import DataPropertiesSection from "./DataPropertiesSection";
 import ObjectPropertyGroup from "./ObjectPropertyGroup";
 import { invalidateEntityCaches } from "../utils/queryInvalidation";
 import { escapeSparqlLiteral, isValidUri, formatLabel, sanitizeSparqlUri } from "../utils/labelUtils";
+import { useLogging } from "../hooks/useLogging";
 
 interface EntityEditorProps {
   config: SparqlEndpointConfig;
@@ -70,6 +71,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   const { t } = useTranslation("entityEditor");
   const queryClient = useQueryClient();
   const { enqueueSnackbar } = useSnackbar();
+  const { logEvent, isRecording } = useLogging();
 
   // Fetch properties for the specialized sections
   const { data: wemiProperties = [], isLoading: wemiPropertiesLoading } =
@@ -480,9 +482,16 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
       // If this was a new entity, reset the create form
       if (!entityUri) {
+        if (isRecording) {
+          logEvent({ type: "entity_created", classUri, entityUri: currentEntityUri });
+          logEvent({ type: "entity_saved", entityUri: currentEntityUri, classUri, isNew: true });
+        }
         resetCreateForm();
         enqueueSnackbar(t("messages.entityCreated"), { variant: "success", autoHideDuration: 3000 });
       } else {
+        if (isRecording) {
+          logEvent({ type: "entity_saved", entityUri, classUri, isNew: false });
+        }
         setIsEditing(false);
         setIsDirty(false);
         enqueueSnackbar(t("messages.entitySaved"), { variant: "success", autoHideDuration: 3000 });
@@ -563,6 +572,10 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
       // Close dialog and clear the entity selection
       setDeleteDialogOpen(false);
+
+      if (isRecording) {
+        logEvent({ type: "entity_deleted", entityUri, classUri });
+      }
 
       // Show success notification
       enqueueSnackbar(t("messages.entityDeleted"), { variant: "success", autoHideDuration: 3000 });
@@ -916,6 +929,8 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
             key={section.key}
             config={config}
             sectionTitle={t(section.sectionTitleKey)}
+            sectionKey={section.key}
+            entityUri={entityUri}
             addLabel={t(section.addLabelKey, { ns: "common" })}
             selectorPromptLabel={t(section.selectorPromptKey)}
             properties={section.properties}
