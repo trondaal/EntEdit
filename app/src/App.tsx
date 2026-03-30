@@ -26,11 +26,11 @@ const theme = createTheme({
         root: {
           "&.Mui-disabled": {
             "& .MuiOutlinedInput-notchedOutline": {
-              borderColor: "rgba(0, 0, 0, 0.23)", // Keep border visible
+              borderColor: "rgba(0, 0, 0, 0.23)",
             },
           },
           "&:focus-within": {
-            boxShadow: "0 0 0 3px rgba(25, 118, 210, 0.2)", // Focus ring for accessibility
+            boxShadow: "0 0 0 3px rgba(139, 92, 42, 0.18)",
           },
         },
       },
@@ -40,9 +40,15 @@ const theme = createTheme({
         root: {
           "&:focus-visible": {
             outline: "3px solid",
-            outlineColor: "#1976d2",
+            outlineColor: "#8B5C2A",
             outlineOffset: "2px",
-            backgroundColor: "rgba(0, 0, 0, 0.04)",
+            backgroundColor: "rgba(139, 92, 42, 0.06)",
+          },
+          "&.Mui-selected": {
+            backgroundColor: "rgba(139, 92, 42, 0.10)",
+            "&:hover": {
+              backgroundColor: "rgba(139, 92, 42, 0.15)",
+            },
           },
         },
       },
@@ -52,7 +58,7 @@ const theme = createTheme({
         root: {
           "&:focus-visible": {
             outline: "3px solid",
-            outlineColor: "#1976d2",
+            outlineColor: "#8B5C2A",
             outlineOffset: "2px",
           },
         },
@@ -63,9 +69,41 @@ const theme = createTheme({
         root: {
           "&:focus-visible": {
             outline: "3px solid",
-            outlineColor: "#1976d2",
+            outlineColor: "#8B5C2A",
             outlineOffset: "2px",
           },
+        },
+      },
+    },
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          background: "linear-gradient(135deg, #3D2E1F 0%, #5C3D2E 100%)",
+        },
+      },
+    },
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          fontWeight: 500,
+          letterSpacing: "0.02em",
+          "&.Mui-selected": {
+            fontWeight: 600,
+          },
+        },
+      },
+    },
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          borderColor: "rgba(139, 92, 42, 0.12)",
+        },
+      },
+    },
+    MuiChip: {
+      styleOverrides: {
+        root: {
+          fontWeight: 500,
         },
       },
     },
@@ -73,19 +111,76 @@ const theme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#1976d2",
+      main: "#8B5C2A",
+      light: "#B07D3A",
+      dark: "#5C3D1C",
+      contrastText: "#FFFFFF",
     },
     secondary: {
-      main: "#dc004e",
+      main: "#C2713A",
+      light: "#E09060",
+      dark: "#8E4F24",
+      contrastText: "#FFFFFF",
+    },
+    background: {
+      default: "#FAF8F5",
+      paper: "#FFFFFF",
     },
     text: {
-      disabled: "rgba(0, 0, 0, 0.55)", // Improved contrast for accessibility
+      primary: "rgba(45, 30, 15, 0.87)",
+      secondary: "rgba(45, 30, 15, 0.60)",
+      disabled: "rgba(45, 30, 15, 0.45)",
+    },
+    divider: "rgba(139, 92, 42, 0.12)",
+    info: {
+      main: "#5B7FA4",
+      light: "#E8F0F7",
+      dark: "#3D5A7A",
+      contrastText: "#1A3A5C",
+    },
+    success: {
+      main: "#5A8A5C",
+      light: "#E6F2E6",
+      dark: "#3D6B3F",
+      contrastText: "#1A3D1C",
+    },
+    warning: {
+      main: "#C2713A",
+      light: "#FFF3E0",
+      dark: "#8E4F24",
+    },
+    error: {
+      main: "#C0392B",
+      light: "#FDECEA",
+      dark: "#8B2820",
+    },
+    grey: {
+      50: "#FAF8F5",
+      100: "#F5F0EB",
+      200: "#E8E0D8",
+      300: "#D4C8BC",
+      400: "#B0A090",
+      500: "#8C7A68",
+      600: "#6B5B4D",
+      700: "#4A3D32",
+      800: "#3D2E1F",
+      900: "#2A1F14",
+    },
+    action: {
+      hover: "rgba(139, 92, 42, 0.06)",
+      selected: "rgba(139, 92, 42, 0.10)",
+      focus: "rgba(139, 92, 42, 0.12)",
     },
   },
   typography: {
+    fontFamily: '"Inter", "Roboto", "Helvetica", "Arial", sans-serif',
     subtitle1: {
-      color: "rgba(0, 0, 0, 0.6)",
+      color: "rgba(45, 30, 15, 0.60)",
       fontWeight: 600,
+    },
+    h6: {
+      fontWeight: 600,
+      letterSpacing: "-0.01em",
     },
   },
 });
@@ -98,7 +193,6 @@ function App() {
   const [activeTab, setActiveTab] = useState(0);
 
   // Check if search tab should be hidden based on URL parameter
-  // By default, search tab is shown unless 'nosearch' parameter is present
   const showSearchTab = useMemo(
     () => !new URLSearchParams(window.location.search).has("nosearch"),
     [],

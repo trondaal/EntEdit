@@ -61,11 +61,13 @@ const AppHeader: React.FC<AppHeaderProps> = ({
     <>
       <AppBar
         position="sticky"
-        elevation={1}
+        elevation={0}
         sx={{
           top: 0,
           zIndex: 1200,
           borderRadius: 1,
+          borderBottom: "1px solid rgba(255, 255, 255, 0.08)",
+          boxShadow: "0 1px 3px rgba(45, 30, 15, 0.12), 0 1px 2px rgba(45, 30, 15, 0.08)",
         }}
       >
         <Toolbar
@@ -75,9 +77,12 @@ const AppHeader: React.FC<AppHeaderProps> = ({
             px: 2,
           }}
         >
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            {t("appTitle")}
-          </Typography>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 1.5, flexGrow: 1 }}>
+            <img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="" width={28} height={28} />
+            <Typography variant="h6" component="div">
+              {t("appTitle")}
+            </Typography>
+          </Box>
 
           <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
             {/* Endpoint Configuration Chip */}
@@ -90,16 +95,17 @@ const AppHeader: React.FC<AppHeaderProps> = ({
               sx={{
                 minWidth: 140,
                 maxWidth: 180,
-                backgroundColor: "rgba(255, 255, 255, 0.1)",
-                color: "white",
-                "& .MuiChip-icon": { color: "white" },
+                backgroundColor: "rgba(255, 255, 255, 0.12)",
+                color: "rgba(255, 255, 255, 0.95)",
+                borderColor: "rgba(255, 255, 255, 0.20)",
+                "& .MuiChip-icon": { color: "rgba(255, 255, 255, 0.80)" },
                 "& .MuiChip-label": {
                   overflow: "hidden",
                   textOverflow: "ellipsis",
                   whiteSpace: "nowrap",
                 },
                 "&:hover": {
-                  backgroundColor: "rgba(255, 255, 255, 0.2)",
+                  backgroundColor: "rgba(255, 255, 255, 0.22)",
                 },
               }}
             />

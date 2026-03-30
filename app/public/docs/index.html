@@ -3,23 +3,26 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
         <title>EntEdit — Cataloguing Guide</title>
         <style>
             :root {
-                --primary: #1565c0;
-                --primary-light: #e3f2fd;
-                --accent: #e65100;
-                --bg: #fafafa;
+                --primary: #8B5C2A;
+                --primary-light: #F5EDE4;
+                --accent: #C2713A;
+                --bg: #FAF8F5;
                 --surface: #ffffff;
-                --text: #212121;
-                --text-secondary: #616161;
-                --border: #e0e0e0;
-                --code-bg: #f5f5f5;
-                --work-color: #1565c0;
-                --expression-color: #2e7d32;
-                --manifestation-color: #e65100;
-                --item-color: #6a1b9a;
-                --agent-color: #c62828;
+                --text: #2D1E0F;
+                --text-secondary: #6B5B4D;
+                --border: #E8E0D8;
+                --code-bg: #F5F0EB;
+                --work-color: #8B5C2A;
+                --expression-color: #5A8A5C;
+                --manifestation-color: #C2713A;
+                --item-color: #7B5B8D;
+                --agent-color: #A85044;
             }
             * {
                 box-sizing: border-box;
@@ -28,7 +31,7 @@
             }
             body {
                 font-family:
-                    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
                     "Helvetica Neue", Arial, sans-serif;
                 color: var(--text);
                 background: var(--bg);
@@ -36,7 +39,7 @@
                 font-size: 16px;
             }
             .page-header {
-                background: var(--primary);
+                background: linear-gradient(135deg, #3D2E1F 0%, #5C3D2E 100%);
                 color: white;
                 padding: 2.5rem 2rem;
                 text-align: center;
@@ -187,12 +190,12 @@
                 border-radius: 0 6px 6px 0;
             }
             .info-box.tip {
-                background: #fff3e0;
+                background: #FFF3E0;
                 border-left-color: var(--accent);
             }
             .info-box.warning {
-                background: #fce4ec;
-                border-left-color: #c62828;
+                background: #FDECEA;
+                border-left-color: #C0392B;
             }
             .info-box strong {
                 display: block;
