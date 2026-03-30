@@ -47,25 +47,16 @@
   },
   "labelManager": {
     "title": "Manage Labels",
-    "columns": {
-      "label": "Label",
-      "language": "Language"
-    },
     "empty": "No labels yet — click Add to create one",
     "placeholders": {
       "labelValue": "Label value"
     },
     "tooltips": {
-      "save": "Save",
-      "cancel": "Cancel",
-      "edit": "Edit",
       "delete": "Delete"
     },
     "errors": {
-      "emptyValue": "Label value cannot be empty",
       "duplicateLanguage": "A label with language \"{{lang}}\" already exists",
-      "duplicateNoLanguage": "A label without a language tag already exists",
-      "unsavedEdit": "Please save or cancel the current edit first"
+      "duplicateNoLanguage": "A label without a language tag already exists"
     }
   },
   "dialogs": {
