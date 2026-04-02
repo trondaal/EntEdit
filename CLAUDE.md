@@ -49,6 +49,11 @@ EntEdit/
 ├── docker/                # Docker deployment configs
 │   ├── nginx/             # nginx SPA + proxy config
 │   └── graphdb/           # Repository definition + init script
+├── docs/                   # → served from app/public/docs/
+│   ├── en/                 # English docs (primary/canonical)
+│   ├── no/                 # Norwegian docs (translation)
+│   ├── index.html          # Language redirector (reads localStorage)
+│   └── setup.html          # Language redirector
 ├── scripts/               # Ad hoc scripts (gitignored, not for sharing)
 ├── docker-compose.yml
 └── CLAUDE.md
@@ -188,6 +193,28 @@ Two namespaces in `app/src/locales/{lang}/`:
 - `entityEditor.json` - Entity editor specific labels
 
 Language fallback: selected language → no language tag → opposite language (en↔no)
+
+### Documentation
+
+User-facing docs are static HTML in `app/public/docs/{lang}/`:
+- `index.html` — Cataloguing guide (WEMI model, examples, exercises)
+- `setup.html` — Database setup guide (Docker, GraphDB, ontology)
+
+English (`en/`) is the primary language; Norwegian (`no/`) is a translation that must
+be updated whenever English changes. Redirectors at `docs/index.html` and `docs/setup.html`
+read `entEdit.language` from localStorage to pick the language folder.
+
+A terminology glossary at `docs/glossary.json` maps English terms to each language.
+It covers class names, property labels, relationship names, UI section headings, and
+general domain terms. Property labels marked `"ui": true` come from the database and
+must match what the user actually sees in the application for that language. Always
+consult the glossary when translating documentation.
+
+Adding a new language: create `docs/{lang}/` with translated files, add the language code
+to the redirectors' JS and to `AppHeader.tsx`'s help button URL logic, and add a column
+for the new language in `docs/glossary.json`.
+
+Vite base path is `/entedit/`, so dev server serves docs at `/entedit/docs/{lang}/`.
 
 ### Configuration
 

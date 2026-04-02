@@ -156,7 +156,8 @@ const AppHeader: React.FC<AppHeaderProps> = ({
               color="inherit"
               aria-label={t("labels.help")}
               onClick={() => {
-                window.open("./docs/index.html", "_blank", "noopener,noreferrer");
+                const lang = ["no"].includes(selectedLanguage) ? selectedLanguage : "en";
+                window.open(`./docs/${lang}/index.html`, "_blank", "noopener,noreferrer");
               }}
             >
               <Help />

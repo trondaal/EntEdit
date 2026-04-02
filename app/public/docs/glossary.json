@@ -1,0 +1,134 @@
+{
+  "_comment": "Terminology glossary for translating EntEdit documentation. English is the source language. Property labels (marked with 'ui: true') are what the user sees in the application — use these exact terms in documentation. This file is maintained alongside the English docs and consulted when translating.",
+
+  "classes": {
+    "_policy": "WEMI class names are translated in each language. They appear in entity badges, prose, entity-tree diagrams, and example cards.",
+    "Work":           { "no": "Verk" },
+    "Expression":     { "no": "Uttrykk" },
+    "Manifestation":  { "no": "Manifestasjon" },
+    "Item":           { "no": "Eksemplar" },
+    "Agent":          { "no": "Agent" }
+  },
+
+  "wemi_relationships": {
+    "_policy": "These are the labels the user sees on relationship dropdowns in the UI. When the user has Norwegian selected, the database returns the Norwegian label. Documentation for each language should use the label the user actually sees.",
+    "has expression of work":           { "no": "har uttrykk av verk",      "ui": true },
+    "is expression of work":            { "no": "er uttrykk av verk",       "ui": true },
+    "has expression manifested":        { "no": "har uttrykk",              "ui": true },
+    "has manifestation of expression":  { "no": "har manifestasjon",        "ui": true }
+  },
+
+  "agent_relationships": {
+    "_policy": "Same as WEMI relationships — use the label the user sees in the UI for the given language.",
+    "has author":               { "no": "har forfatter",                "ui": true },
+    "is author of":             { "no": "forfatter",                    "ui": true },
+    "has translator":           { "no": "har oversetter",               "ui": true },
+    "is translator of":         { "no": "er oversetter av",             "ui": true },
+    "has performer":            { "no": "har utøver",                   "ui": true },
+    "is performer of":          { "no": "er utøver i",                  "ui": true },
+    "has narrator":             { "no": "har forteller",                "ui": true },
+    "is narrator of":           { "no": "er forteller av",              "ui": true },
+    "has publisher":            { "no": "har utgiver",                  "ui": true },
+    "has creator":              { "no": "har skaper",                   "ui": true },
+    "is creator of":            { "no": "er skaper av",                 "ui": true },
+    "has editor":               { "no": "har redaktør",                 "ui": true },
+    "is editor of":             { "no": "er redaktør av",               "ui": true },
+    "has director":             { "no": "har regissør",                 "ui": true },
+    "has film director":        { "no": "har filmregissør",             "ui": true },
+    "has composer":             { "no": "har komponist for verk",       "ui": true },
+    "has conductor":            { "no": "har dirigent",                 "ui": true },
+    "has singer":               { "no": "har sanger",                   "ui": true },
+    "has instrumentalist":      { "no": "har instrumentalist",          "ui": true },
+    "has actor":                { "no": "har skuespiller",              "ui": true }
+  },
+
+  "work_relationships": {
+    "is motion picture adaptation of":  { "no": "er filmatisering av",  "ui": true },
+    "has subject (work)":               { "no": "har emne (verk)",      "ui": true },
+    "has subject (agent)":              { "no": "har emne (agent)",     "ui": true }
+  },
+
+  "data_properties": {
+    "_policy": "These are the labels shown in the 'Text metadata' and 'Controlled values' sections of the editor. They come from the database.",
+    "title of work":            { "no": "tittel",               "ui": true },
+    "title variant":            { "no": "tittelvariant",        "ui": true },
+    "title of expression":      { "no": "tittel",               "ui": true },
+    "title proper":             { "no": "tittel",               "ui": true },
+    "other title information":  { "no": "annen tittelinformasjon", "ui": true },
+    "statement of responsibility": { "no": "ansvarsangivelse",  "ui": true },
+    "access point name":        { "no": "navn",                 "ui": true },
+    "name variant":             { "no": "variant av navn",      "ui": true },
+    "dates":                    { "no": "årstall",              "ui": true },
+    "place of publication":     { "no": "utgivelsessted",       "ui": true },
+    "publisher name":           { "no": "navn på utgiver",      "ui": true },
+    "date of publication":      { "no": "utgivelsesdato",       "ui": true },
+    "edition":                  { "no": "utgave",               "ui": true },
+    "extent":                   { "no": "omfang",               "ui": true },
+    "dimensions":               { "no": "dimensjon",            "ui": true },
+    "identifier":               { "no": "identifikator",        "ui": true },
+    "note":                     { "no": "note",                 "ui": true },
+    "series statement":         { "no": "serieangivelse",       "ui": true },
+    "series numbering":         { "no": "nummerering i serie",  "ui": true },
+    "numbering":                { "no": "nummerering",          "ui": true },
+    "subject":                  { "no": "emne",                 "ui": true },
+    "date":                     { "no": "dato",                 "ui": true }
+  },
+
+  "controlled_properties": {
+    "_policy": "Section headings and dropdown labels for controlled values.",
+    "Language":         { "no": "Språk",            "ui": true },
+    "Content type":     { "no": "Innholdstype",     "ui": true },
+    "Media type":       { "no": "Medietype",        "ui": true },
+    "Carrier type":     { "no": "Bærertype",        "ui": true },
+    "Category of work": { "no": "Kategori av verk", "ui": true },
+    "Genre and form":   { "no": "Sjanger og form",  "ui": true }
+  },
+
+  "ui_sections": {
+    "_policy": "Section headings and button labels in the application UI. These come from the i18n locale files.",
+    "Text metadata":             { "no": "Tekstmetadata" },
+    "Controlled values":         { "no": "Kontrollerte verdier" },
+    "WEMI relationships":        { "no": "WEMI-relasjoner" },
+    "Related Agents":            { "no": "Relaterte agenter" },
+    "Related Works":             { "no": "Relaterte verk" },
+    "Related Expressions":       { "no": "Relaterte uttrykk" },
+    "Related Manifestations":    { "no": "Relaterte manifestasjoner" },
+    "Edit":                      { "no": "Rediger" },
+    "Save":                      { "no": "Lagre" },
+    "Cancel":                    { "no": "Avbryt" },
+    "Delete":                    { "no": "Slett" },
+    "New":                       { "no": "Ny" },
+    "Add":                       { "no": "Legg til" },
+    "Apply":                     { "no": "Bruk" },
+    "Export as Turtle":          { "no": "Eksporter som Turtle" },
+    "Graph":                     { "no": "Graf" },
+    "Download .ttl":             { "no": "Last ned .ttl" },
+    "Copy to Clipboard":         { "no": "Kopier til utklippstavle" },
+    "Entity Browser":            { "no": "Entitetsnettleser" },
+    "Search":                    { "no": "Søk" }
+  },
+
+  "general_terms": {
+    "_policy": "Domain terms used in descriptive text throughout the documentation.",
+    "entity":               { "no": "entitet" },
+    "entity (plural)":      { "no": "entiteter" },
+    "class":                { "no": "klasse" },
+    "class (plural)":       { "no": "klasser" },
+    "property":             { "no": "egenskap" },
+    "property (plural)":    { "no": "egenskaper" },
+    "label":                { "no": "etikett" },
+    "label (plural)":       { "no": "etiketter" },
+    "relationship":         { "no": "relasjon" },
+    "relationship (plural)":{ "no": "relasjoner" },
+    "triple":               { "no": "trippel" },
+    "graph database":       { "no": "grafdatabase" },
+    "endpoint":             { "no": "endepunkt" },
+    "ontology":             { "no": "ontologi" },
+    "vocabulary":           { "no": "vokabular" },
+    "translation":          { "no": "oversettelse" },
+    "adaptation":           { "no": "tilpasning" },
+    "omnibus":              { "no": "omnibus" },
+    "anthology":            { "no": "antologi" },
+    "cataloguing":          { "no": "katalogisering" }
+  }
+}

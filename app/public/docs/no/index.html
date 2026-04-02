@@ -1,0 +1,2057 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <title>EntEdit — Katalogiseringsveiledning</title>
+        <style>
+            :root {
+                --primary: #8B5C2A;
+                --primary-light: #F5EDE4;
+                --accent: #C2713A;
+                --bg: #FAF8F5;
+                --surface: #ffffff;
+                --text: #2D1E0F;
+                --text-secondary: #6B5B4D;
+                --border: #E8E0D8;
+                --code-bg: #F5F0EB;
+                --work-color: #8B5C2A;
+                --expression-color: #5A8A5C;
+                --manifestation-color: #C2713A;
+                --item-color: #7B5B8D;
+                --agent-color: #A85044;
+            }
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family:
+                    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    "Helvetica Neue", Arial, sans-serif;
+                color: var(--text);
+                background: var(--bg);
+                line-height: 1.7;
+                font-size: 16px;
+            }
+            .page-header {
+                background: linear-gradient(135deg, #3D2E1F 0%, #5C3D2E 100%);
+                color: white;
+                padding: 2.5rem 2rem;
+                text-align: center;
+            }
+            .page-header h1 {
+                font-size: 2rem;
+                font-weight: 600;
+                margin-bottom: 0.3rem;
+            }
+            .page-header p {
+                font-size: 1.05rem;
+                opacity: 0.9;
+            }
+
+            .container {
+                max-width: 52rem;
+                margin: 0 auto;
+                padding: 2rem 1.5rem 4rem;
+            }
+
+            /* Table of contents */
+            .toc {
+                background: var(--surface);
+                border: 1px solid var(--border);
+                border-radius: 8px;
+                padding: 1.5rem 2rem;
+                margin-bottom: 2.5rem;
+            }
+            .toc h2 {
+                font-size: 1.1rem;
+                margin-bottom: 0.75rem;
+                color: var(--text-secondary);
+                text-transform: uppercase;
+                letter-spacing: 0.04em;
+            }
+            .toc ol {
+                padding-left: 1.25rem;
+            }
+            .toc li {
+                margin-bottom: 0.35rem;
+            }
+            .toc a {
+                color: var(--primary);
+                text-decoration: none;
+            }
+            .toc a:hover {
+                text-decoration: underline;
+            }
+            .toc ol ol {
+                margin-top: 0.3rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+                font-weight: 600;
+                color: var(--primary);
+                margin-top: 3rem;
+                margin-bottom: 1rem;
+                padding-bottom: 0.4rem;
+                border-bottom: 2px solid var(--primary-light);
+            }
+            h3 {
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin-top: 2rem;
+                margin-bottom: 0.75rem;
+            }
+            h4 {
+                font-size: 1.05rem;
+                font-weight: 600;
+                margin-top: 1.5rem;
+                margin-bottom: 0.5rem;
+            }
+            p {
+                margin-bottom: 1rem;
+            }
+            ul,
+            ol {
+                margin-bottom: 1rem;
+                padding-left: 1.5rem;
+            }
+            li {
+                margin-bottom: 0.4rem;
+            }
+
+            /* Entity type badges */
+            .entity-badge {
+                display: inline-block;
+                padding: 0.15em 0.55em;
+                border-radius: 4px;
+                font-size: 0.85em;
+                font-weight: 600;
+                color: white;
+                vertical-align: middle;
+            }
+            .badge-work {
+                background: var(--work-color);
+            }
+            .badge-expression {
+                background: var(--expression-color);
+            }
+            .badge-manifestation {
+                background: var(--manifestation-color);
+            }
+            .badge-item {
+                background: var(--item-color);
+            }
+            .badge-agent {
+                background: var(--agent-color);
+            }
+
+            /* WEMI diagram */
+            .wemi-diagram {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.5rem;
+                margin: 1.5rem 0 2rem;
+                flex-wrap: wrap;
+            }
+            .wemi-box {
+                padding: 0.75rem 1.25rem;
+                border-radius: 8px;
+                color: white;
+                font-weight: 600;
+                font-size: 0.95rem;
+                text-align: center;
+                min-width: 7rem;
+            }
+            .wemi-box small {
+                display: block;
+                font-weight: 400;
+                font-size: 0.75rem;
+                opacity: 0.9;
+                margin-top: 0.2rem;
+            }
+            .wemi-arrow {
+                font-size: 1.4rem;
+                color: var(--text-secondary);
+            }
+
+            /* Info/tip boxes */
+            .info-box {
+                background: var(--primary-light);
+                border-left: 4px solid var(--primary);
+                padding: 1rem 1.25rem;
+                margin: 1.25rem 0;
+                border-radius: 0 6px 6px 0;
+            }
+            .info-box.tip {
+                background: #FFF3E0;
+                border-left-color: var(--accent);
+            }
+            .info-box.warning {
+                background: #FDECEA;
+                border-left-color: #C0392B;
+            }
+            .info-box strong {
+                display: block;
+                margin-bottom: 0.3rem;
+            }
+
+            /* Step-by-step instructions */
+            .steps {
+                counter-reset: step-counter;
+                list-style: none;
+                padding-left: 0;
+            }
+            .steps li {
+                counter-increment: step-counter;
+                position: relative;
+                padding-left: 2.75rem;
+                margin-bottom: 1.25rem;
+            }
+            .steps li::before {
+                content: counter(step-counter);
+                position: absolute;
+                left: 0;
+                top: 0.05rem;
+                width: 2rem;
+                height: 2rem;
+                background: var(--primary);
+                color: white;
+                font-weight: 600;
+                font-size: 0.9rem;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            /* Example card */
+            .example-card {
+                background: var(--surface);
+                border: 1px solid var(--border);
+                border-radius: 8px;
+                padding: 1.5rem;
+                margin: 1.5rem 0;
+            }
+            .example-card h4 {
+                margin-top: 0;
+                color: var(--primary);
+            }
+
+            /* Property table */
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 1rem 0 1.5rem;
+                font-size: 0.93rem;
+            }
+            th,
+            td {
+                text-align: left;
+                padding: 0.6rem 0.75rem;
+                border-bottom: 1px solid var(--border);
+            }
+            th {
+                background: var(--code-bg);
+                font-weight: 600;
+                font-size: 0.85rem;
+                text-transform: uppercase;
+                letter-spacing: 0.03em;
+                color: var(--text-secondary);
+            }
+            td code {
+                background: var(--code-bg);
+                padding: 0.15em 0.4em;
+                border-radius: 3px;
+                font-size: 0.88em;
+            }
+
+            /* Keyboard shortcuts */
+            kbd {
+                display: inline-block;
+                background: var(--code-bg);
+                border: 1px solid var(--border);
+                border-radius: 4px;
+                padding: 0.1em 0.45em;
+                font-family: inherit;
+                font-size: 0.88em;
+                box-shadow: 0 1px 0 var(--border);
+            }
+
+            /* WEMI entity tree visual */
+            .entity-tree {
+                font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+                font-size: 0.88rem;
+                background: var(--surface);
+                border: 1px solid var(--border);
+                border-radius: 8px;
+                padding: 1.25rem 1.5rem;
+                margin: 1.25rem 0;
+                line-height: 1.9;
+                overflow-x: auto;
+            }
+            .entity-tree .work {
+                color: var(--work-color);
+                font-weight: 600;
+            }
+            .entity-tree .expression {
+                color: var(--expression-color);
+                font-weight: 600;
+            }
+            .entity-tree .manifestation {
+                color: var(--manifestation-color);
+                font-weight: 600;
+            }
+            .entity-tree .agent {
+                color: var(--agent-color);
+                font-weight: 600;
+            }
+            .entity-tree .dim {
+                color: var(--text-secondary);
+            }
+
+            /* Responsive */
+            @media (max-width: 600px) {
+                .page-header {
+                    padding: 1.5rem 1rem;
+                }
+                .page-header h1 {
+                    font-size: 1.5rem;
+                }
+                .container {
+                    padding: 1.25rem 1rem 3rem;
+                }
+                h2 {
+                    font-size: 1.35rem;
+                }
+                .wemi-diagram {
+                    flex-direction: column;
+                }
+                .wemi-arrow {
+                    transform: rotate(90deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="page-header">
+            <h1>EntEdit — Katalogiseringsveiledning</h1>
+            <p>
+                En praktisk introduksjon til entitetsorientert katalogisering med
+                IFLA-LRM og RDA
+            </p>
+        </div>
+
+        <div class="container">
+            <!-- INNHOLDSFORTEGNELSE -->
+            <nav class="toc">
+                <h2>Innhold</h2>
+                <ol>
+                    <li>
+                        <a href="#getting-started">Komme i gang</a>
+                        <ol>
+                            <li>
+                                <a href="#config-wizard"
+                                    >Konfigurasjonsveiviser</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#connecting-database"
+                                    >Koble til en database</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#language-selection"
+                                    >Valg av spr&aring;k</a
+                                >
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#what-is-entity-cataloguing"
+                            >Hva er entitetsorientert katalogisering?</a
+                        >
+                    </li>
+                    <li><a href="#wemi-model">WEMI-modellen</a></li>
+                    <li>
+                        <a href="#navigating-entedit">Navigere i EntEdit</a>
+                        <ol>
+                            <li>
+                                <a href="#entity-browser">Entitetsnettleseren</a>
+                            </li>
+                            <li>
+                                <a href="#editing-entities">Redigere entiteter</a>
+                            </li>
+                            <li>
+                                <a href="#more-actions"
+                                    >Flere handlinger-menyen</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#search-interface"
+                                    >S&oslash;kegrensesnittet</a
+                                >
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#example-the-road"
+                            >Eksempel 1 — <em>The Road</em> av Cormac McCarthy</a
+                        >
+                        <ol>
+                            <li>
+                                <a href="#road-agent">Opprette Agent</a>
+                            </li>
+                            <li><a href="#road-work">Opprette Verk</a></li>
+                            <li>
+                                <a href="#road-expression"
+                                    >Opprette Uttrykk</
+                                >
+                            </li>
+                            <li>
+                                <a href="#road-manifestation"
+                                    >Opprette Manifestasjon</
+                                >
+                            </li>
+                            <li>
+                                <a href="#road-film"
+                                    >Legge til filmatiseringen</a
+                                >
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#example-sult"
+                            >Eksempel 2 — <em>Sult</em> av Knut Hamsun</a
+                        >
+                        <ol>
+                            <li>
+                                <a href="#sult-translation"
+                                    >Oversettelser som separate Uttrykk</
+                                >
+                            </li>
+                            <li>
+                                <a href="#sult-editions"
+                                    >Flere utgaver som Manifestasjoner</
+                                >
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#example-omnibus"
+                            >Eksempel 3 — <em>Agatha Christie 1960s Omnibus</em></a
+                        >
+                        <ol>
+                            <li>
+                                <a href="#omnibus-structure"
+                                    >En Manifestasjon, flere Uttrykk</
+                                >
+                            </li>
+                            <li>
+                                <a href="#omnibus-steps"
+                                    >Opprette omnibus-utgaven steg for steg</a
+                                >
+                            </li>
+                        </ol>
+                    </li>
+                    <li><a href="#exercises">Praktiske oppgaver</a></li>
+                    <li><a href="#key-concepts">Referanse for n&oslash;kkelbegreper</a></li>
+                </ol>
+            </nav>
+
+            <!-- 1. KOMME I GANG -->
+            <h2 id="getting-started">1. Komme i gang</h2>
+
+            <p>
+                EntEdit krever en tilkobling til en SPARQL-kompatibel
+                grafdatabase satt opp for bibliografiske beskrivelser med
+                RDA-vokabularet. Ved f&oslash;rste oppstart vil en konfigurasjonsveiviser
+                lede deg gjennom oppsettet.
+            </p>
+
+            <h3 id="config-wizard">1.1 Konfigurasjonsveiviser</h3>
+
+            <p>
+                N&aring;r du &aring;pner EntEdit for f&oslash;rste gang, vises en veiviser med tre steg:
+            </p>
+            <ol class="steps">
+                <li>
+                    <strong>Databasetilkobling</strong> — Skriv inn URL-en til
+                    SPARQL-endepunktet ditt, og eventuelt brukernavn og passord
+                    hvis endepunktet krever autentisering.
+                </li>
+                <li>
+                    <strong>Test tilkobling</strong> — EntEdit bekrefter at den
+                    kan n&aring; databasen og kj&oslash;re sp&oslash;rringer mot den.
+                </li>
+                <li>
+                    <strong>Spr&aring;k</strong> — Velg ditt foretrukne spr&aring;k (for tiden engelsk eller norsk). </li>
+            </ol>
+            <p>
+                Du kan endre disse innstillingene n&aring;r som helst ved &aring; klikke p&aring;
+                endepunkt-brikken eller innstillingsikonet i topplinjen.
+            </p>
+
+            <h3 id="connecting-database">1.2 Koble til en database</h3>
+
+            <p>Det finnes flere m&aring;ter &aring; f&aring; en database i gang p&aring;:</p>
+
+            <table>
+                <tr>
+                    <th>Alternativ</th>
+                    <th>Endepunkt-URL</th>
+                    <th>Beskrivelse</th>
+                </tr>
+                <tr>
+                    <td><strong>Demodatabase</strong></td>
+                    <td>
+                        <code
+                            >http://dijon.idi.ntnu.no:8080/repositories/EntEdit</code
+                        >
+                    </td>
+                    <td>
+                        En delt demoinstans forh&aring;ndslastet med eksempeldata. Bra
+                        for &aring; pr&oslash;ve applikasjonen uten lokalt oppsett.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Docker (anbefalt)</strong></td>
+                    <td>
+                        <code
+                            >http://localhost/graphdb/repositories/EntEdit</code
+                        >
+                    </td>
+                    <td>
+                        Kj&oslash;r hele stakken lokalt med
+                        <code>docker compose up -d</code>. Dette starter b&aring;de
+                        webapplikasjonen og en GraphDB-instans med eksempeldata.
+                        Applikasjonen er da tilgjengelig p&aring;
+                        <code>http://localhost/entedit/</code>.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Egen database</strong></td>
+                    <td><em>(varierer)</em></td>
+                    <td>
+                        Sett opp en GraphDB eller annen SPARQL-kompatibel database
+                        med egne data og ontologi. Se
+                        <a href="setup.html">Veiledning for databaseoppsett</a> for
+                        detaljerte instruksjoner.
+                    </td>
+                </tr>
+            </table>
+
+            <div class="info-box tip">
+                <strong>Tips:</strong> Hvis du er student i et emne, vil foreleseren din fortelle deg hvilken endepunkt-URL du skal bruke. I de fleste tilfeller vil du bruke Docker for &aring; kj&oslash;re applikasjonen og databasen.  </div>
+
+            <h3 id="language-selection">1.3 Valg av spr&aring;k</h3>
+
+            <p>
+                Spr&aring;kinnstillingen (tilgjengelig i topplinjen og i
+                konfigurasjonsveiviseren) p&aring;virker to ting:
+            </p>
+            <ul>
+                <li>
+                    <strong>Brukergrensesnittet</strong> — Alle knapper, etiketter og
+                    meldinger i applikasjonen vises p&aring; det valgte spr&aring;ket.
+                </li>
+                <li>
+                    <strong>Databaseinnhold</strong> — N&aring;r databasen inneholder etiketter p&aring; flere spr&aring;k (for klasser, egenskaper og kontrollerte verdier), vil EntEdit bruke etiketter merket med det valgte spr&aring;ket. Hvis en etikett ikke er tilgjengelig p&aring; det valgte spr&aring;ket, faller den tilbake til engelsk eller til verdier uten spr&aring;kmerke.</li>
+            </ul>
+            <p>
+                EntEdit st&oslash;tter for tiden engelsk og norsk. Du kan bytte
+                spr&aring;k n&aring;r som helst uten &aring; miste arbeidet ditt.
+            </p>
+
+            <!-- 2. HVA ER ENTITETSORIENTERT KATALOGISERING -->
+            <h2 id="what-is-entity-cataloguing">
+                2. Hva er entitetsorientert katalogisering?
+            </h2>
+
+            <p> Tradisjonell bibliotekskatalogisering fokuserer p&aring; &aring; beskrive <em>publikasjoner</em> — de fysiske eller digitale elementene du finner p&aring; en hylle eller p&aring; nett. Entitetsorientert katalogisering tar en annen tiln&aelig;rming: den beskriver verden av intellektuell og kunstnerisk virksomhet som et nettverk av distinkte <strong>entiteter</strong> og <strong>relasjoner</strong> mellom dem. </p>
+            <p> I stedet for &aring; opprette &eacute;n post som blander informasjon om en roman, forfatteren, en bestemt oversettelse og en spesifikk trykt utgave, skiller entitetsorientert katalogisering disse i distinkte entiteter — hver beskrevet individuelt og lenket sammen. Dette gj&oslash;r det mulig &aring; klart representere fakta som: </p>
+            <ul>
+                <li>
+                    En roman finnes i flere oversettelser, hver med sin egen
+                    oversetter.
+                </li>
+                <li> Utgaver som deler den samme teksten, men som er forskjellige n&aring;r det gjelder forlag, &aring;r eller format. </li>
+                <li> En film er basert p&aring; en roman — de er relaterte, men betraktes som forskjellige kreative verk. </li>
+            </ul>
+            <p> EntEdit implementerer <strong>IFLA Library Reference Model</strong> (IFLA-LRM) ved hjelp av <strong>RDA</strong>-vokabularet (Resource Description and Access). Begge er veletablerte internasjonale standarder for biblioteksmetadata. </p>
+
+            <!-- 3. WEMI-MODELLEN -->
+            <h2 id="wemi-model">3. WEMI-modellen</h2>
+
+            <p>
+                I hjertet av IFLA-LRM ligger <strong>WEMI-modellen</strong>,
+                som organiserer bibliografisk informasjon i fire
+                abstraksjonsniv&aring;er:
+            </p>
+
+            <div class="wemi-diagram">
+                <div class="wemi-box" style="background: var(--work-color)">
+                    Verk <small>Intellektuell skapelse</small>
+                </div>
+                <div class="wemi-arrow">&rarr;</div>
+                <div
+                    class="wemi-box"
+                    style="background: var(--expression-color)"
+                >
+                    Uttrykk <small>Realisering</small>
+                </div>
+                <div class="wemi-arrow">&rarr;</div>
+                <div
+                    class="wemi-box"
+                    style="background: var(--manifestation-color)"
+                >
+                    Manifestasjon <small>Legemliggj&oslash;ring</small>
+                </div>
+                <div class="wemi-arrow">&rarr;</div>
+                <div class="wemi-box" style="background: var(--item-color)"
+                        > Eksemplar <small>Individuelt eksemplar</small>
+                </div>
+            </div>
+
+            <p>
+                Hvert niv&aring; fanger opp et distinkt aspekt ved en bibliografisk
+                ressurs:
+            </p>
+
+            <table>
+                <tr>
+                    <th>Entitet</th>
+                    <th>Hva den representerer</th>
+                    <th>Eksempel</th>
+                </tr>
+                <tr>
+                    <td><span class="entity-badge badge-work">Verk</span></td>
+                    <td>
+                        Den abstrakte intellektuelle eller kunstneriske skapelsen — konseptet
+                        &laquo;denne romanen&raquo; eller &laquo;denne symfonien&raquo; uavhengig
+                        av en bestemt versjon eller utgave.
+                    </td>
+                    <td>Cormac McCarthys roman <em>The Road</em></td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="entity-badge badge-expression"
+                            >Uttrykk</span
+                        >
+                    </td>
+                    <td>
+                        En spesifikk intellektuell realisering av et Verk. Hver
+                        oversettelse, framf&oslash;ring eller arrangement er et separat
+                        Uttrykk.
+                    </td>
+                    <td>
+                        Den originale engelske teksten til <em>The Road</em>; en
+                        norsk oversettelse; en lydbokinlesning
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="entity-badge badge-manifestation"
+                            >Manifestasjon</span
+                        >
+                    </td>
+                    <td>
+                        En fysisk eller digital legemliggj&oslash;ring av et Uttrykk — en
+                        bestemt publikasjon, pressing eller fil.
+                    </td>
+                    <td>Picador-pocketboken fra 2009 (ISBN 978-0-330-46846-6)</td>
+                </tr>
+                <tr>
+                    <td><span class="entity-badge badge-item">Eksemplar</span></td>
+                    <td>
+                        Et enkelt eksemplar av en Manifestasjon — en
+                        spesifikk bok p&aring; en bestemt hylle.
+                    </td>
+                    <td>
+                        Eksemplaret p&aring; Deichmanske bibliotek med strekkode 03010712345
+                    </td>
+                </tr>
+            </table>
+
+            <p>I tillegg til WEMI-entitetene har vi:</p>
+
+            <table>
+                <tr>
+                    <th>Entitet</th>
+                    <th>Hva den representerer</th>
+                    <th>Eksempel</th>
+                </tr>
+                <tr>
+                    <td><span class="entity-badge badge-agent">Agent</span></td>
+                    <td>
+                        En person, organisasjon eller familie som har en relasjon
+                        til et Verk, et Uttrykk eller en Manifestasjon — forfattere,
+                        oversettere, forlag, utf&oslash;rende, osv.
+                    </td>
+                    <td>Cormac McCarthy (forfatter), Picador (forlag)</td>
+                </tr>
+            </table>
+
+            <div class="info-box">
+                <strong>Hvorfor skille disse niv&aring;ene?</strong>
+                Tenk p&aring; det slik: et Verk kan ha mange Uttrykk
+                (oversettelser, forkortelser, framf&oslash;ringer). Hvert Uttrykk kan
+                forekomme i mange Manifestasjoner (innbundet, pocket, e-bok,
+                forskjellige forlag). Denne strukturen lar oss si ting som
+                &laquo;alle norske oversettelser av Sult av Hamsun&raquo; eller &laquo;alle
+                utgaver av den engelske teksten&raquo; — sp&oslash;rringer som er sv&aelig;rt vanskelige
+                med flate katalogposter.
+            </div>
+
+            <!-- 4. NAVIGERE I ENTEDIT -->
+            <h2 id="navigating-entedit">4. Navigere i EntEdit</h2>
+
+            <h3 id="entity-browser">4.1 Entitetsnettleseren</h3>
+
+            <p>
+                Entitetsnettleseren er hovedgrensesnittet, organisert i tre
+                paneler:
+            </p>
+
+            <table>
+                <tr>
+                    <th>Panel</th>
+                    <th>Form&aring;l</th>
+                </tr>
+                <tr>
+                    <td><strong>Venstre — Klasser</strong></td>
+                    <td>
+                        Lister entitetstypene (Verk, Uttrykk, Manifestasjon,
+                        Eksemplar, Agent, osv.). Klikk p&aring; en klasse for &aring; se dens instanser.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Midten — Entiteter</strong></td>
+                    <td>
+                        Viser alle entiteter av den valgte klassen. Bruk
+                        filterfeltet for &aring; begrense listen. Bla ned for &aring; laste flere.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>H&oslash;yre — Redigeringsvindu</strong></td>
+                    <td>
+                        Viser og redigerer egenskapene til den valgte
+                        entiteten.
+                    </td>
+                </tr>
+            </table>
+
+            <h3 id="editing-entities">4.2 Redigere entiteter</h3>
+
+            <h4>Om etiketter</h4>
+            <p>
+                Hver entitet i EntEdit har en
+                <strong>etikett</strong> (<code>rdfs:label</code>). Dette er ikke en
+                RDA-katalogiseringsegenskap — det er en generell konvensjon
+                fra den semantiske webben som brukes for &aring; gi entiteter et kort, lesbart navn. I
+                EntEdit er etiketter det du ser i entitetslistene og
+                s&oslash;keresultatene. Uten en etikett ville en entitet bare vises med sin
+                URI, noe som ikke er spesielt nyttig.
+            </p>
+            <p> Tenk p&aring; etiketten som et visningsnavn for entiteten. Du kan lage en hvilken som helst etikett du finner nyttig, men det er lurt &aring; v&aelig;re konsekvent og lage informative etiketter. Eksempler p&aring; etiketter: </p>
+            <ul>
+                <li>
+                    <strong>Verk:</strong> Tittel etterfulgt av forfatteren i parentes, f.eks. &laquo;The Road (McCarthy, Cormac)&raquo;  </li>
+                <li><strong>Uttrykk:</strong> Tittel etterfulgt av spr&aring;k og innholdstype i parentes, f.eks. &laquo;The road (english text)&raquo;</li>
+                <li>
+                    <strong>Manifestasjoner:</strong> En kort siteringsstreng, f.eks. basert p&aring; ISBD &laquo;The road / Cormac McCarthy. — Picador, 2009&raquo; </li>
+                <li>
+                    <strong>Agenter:</strong> Navnet, f.eks. &laquo;McCarthy, Cormac&raquo;
+                </li>
+            </ul>
+            <p>
+                Etiketter kan legges til p&aring; flere spr&aring;k. De er atskilt
+                fra de formelle RDA-egenskapene (som
+                <em>tittel</em> eller <em>navn</em>) som inneholder
+                de faktiske katalogiseringsdataene.
+            </p>
+
+            <h4>Etikettredigereren</h4>
+            <p>
+                Klikk p&aring; <strong>etikettikonet</strong> i redigeringshodet for &aring; &aring;pne etikettredigereren.
+                Den &aring;pnes som en flyttbar dialog som du kan omplassere mens du fortsatt samhandler med entitetsredigereren bak den.
+            </p>
+            <p>
+                Hver etikett vises som en redigerbar rad med et tekstfelt og en spr&aring;krullgardin. Du kan:
+            </p>
+            <ul>
+                <li>Skrive direkte i en hvilken som helst etikettrad — alle rader er alltid redigerbare.</li>
+                <li>Velge et spr&aring;kmerke (f.eks. EN, NO) fra rullegardinlisten, eller la det st&aring; tomt for ingen spr&aring;kmerking.</li>
+                <li>Klikke p&aring; <strong>Legg til</strong>-knappen (eller trykke <kbd>Enter</kbd> p&aring; siste rad) for &aring; legge til en ny etikettrad.</li>
+                <li>Klikke p&aring; s&oslash;ppelb&oslash;tteikonet for &aring; fjerne en etikett.</li>
+                <li>Klikke p&aring; <strong>Bruk</strong> for &aring; lagre endringene, eller <strong>Avbryt</strong> for &aring; forkaste dem.</li>
+            </ul>
+            <p>Tomme rader fjernes automatisk n&aring;r du bruker endringene.</p>
+
+            <h4>Opprette en ny entitet</h4>
+            <ol class="steps">
+                <li>
+                    Velg en klasse i venstrepanelet (f.eks.
+                    <span class="entity-badge badge-work">Verk</span>).
+                </li>
+                <li> Hvis du ikke har valgt en eksisterende entitet, kan du redigere en ny entitet direkte.</li>
+                <li>Hvis en eksisterende entitet er valgt, klikk p&aring; <strong>&#x22EE;</strong> (flere handlinger)-menyen i redigeringspanelet og velg <strong>Ny</strong> for &aring; opprette en ny entitet av den valgte klassen. </li>
+                <li> Skriv eventuelt inn en URI i identifikasjonsfeltet, eller la det st&aring; tomt for automatisk generering av en ad hoc-entitet.</li>
+                <li> Klikk p&aring; <strong>etikettikonet</strong> i redigeringshodet for &aring; &aring;pne etikettredigereren. Legg til en etikett slik at entiteten er gjenkjennelig i lister. Merk etiketten med spr&aring;ket du bruker — du kan legge til etiketter p&aring; forskjellige spr&aring;k. </li>
+                <li> Fyll ut tekstmetadata ved hjelp av <strong>Legg til</strong>-rullegardinlisten under &laquo;Tekstmetadata&raquo; — det er her de beskrivende katalogiseringsdataene legges inn. </li>
+                <li> Legg til kontrollerte verdier, relasjoner og agentlenker fra de respektive seksjonene. I disse feltene legger du inn verdier ved &aring; velge fra listen som vises.</li>
+                <li> N&aring;r du er ferdig, klikk p&aring; <strong>Lagre</strong> (eller trykk <kbd>Ctrl</kbd>+<kbd>S</kbd>). </li>
+            </ol>
+
+            <h4>Redigere en eksisterende entitet</h4>
+            <ol class="steps">
+                <li>Velg entiteten i midtpanelet.</li>
+                <li>
+                    Klikk p&aring; <strong>Rediger</strong>-knappen i redigeringspanelet.
+                </li>
+                <li>&Aring;pne egenskaper, etiketter eller relasjoner for endring.</li>
+                <li>
+                    Klikk p&aring; <strong>Lagre</strong> for &aring; lagre, eller
+                    <strong>Avbryt</strong> for &aring; forkaste endringene.
+                </li>
+            </ol>
+
+            <h4>Lenke entiteter sammen</h4>
+            <p>
+                Relasjoner legges til gjennom dedikerte seksjoner i
+                redigeringsvinduet:
+            </p>
+            <ul>
+                <li>
+                    <strong>WEMI-relasjoner</strong> — Lenk et Verk til dets
+                    Uttrykk, et Uttrykk til dets Manifestasjoner, osv.
+                </li>
+                <li>
+                    <strong>Relaterte agenter</strong> — Lenk en entitet til dens
+                    forfattere, oversettere, forlag, osv.
+                </li>
+                <li>
+                    <strong
+                        >Relaterte verk / Relaterte uttrykk / Relaterte manifestasjoner</strong
+                    >
+                    — Lenk entiteter av samme type (f.eks. et filmatiserings-Verk
+                    til roman-Verket det er basert p&aring;).
+                </li>
+            </ul>
+
+            <p>For &aring; legge til en relasjon:</p>
+            <ol class="steps">
+                <li>S&oslash;rg for at entiteten er i redigeringsmodus.</li>
+                <li>
+                    &Aring;pne den relevante relasjonsseksjonen (f.eks. &laquo;Relaterte
+                    agenter&raquo;).
+                </li>
+                <li>
+                    Bruk <strong>Legg til</strong>-rullegardinlisten for &aring; velge typen
+                    relasjon.
+                </li>
+                <li>
+                    En entitetsvelger vises — filtrer og velg m&aring;lentiteten.
+                </li>
+                <li>
+                    Relasjonen er lagt til. Klikk p&aring; <strong>Lagre</strong> for &aring;
+                    lagre.
+                </li>
+            </ol>
+
+            <div class="info-box tip">
+                <strong>Tips:</strong> Du m&aring; kanskje opprette m&aring;lentiteten
+                f&oslash;rst. For eksempel, f&oslash;r du lenker et Verk til dets forfatter, m&aring;
+                du s&oslash;rge for at Agent-entiteten for den forfatteren allerede finnes i
+                databasen.
+            </div>
+
+            <h3 id="more-actions">4.3 Flere handlinger-menyen</h3>
+
+            <p>
+                <strong>&#x22EE;</strong> (flere handlinger)-knappen &oslash;verst til h&oslash;yre i entitetsredigereren gir tilgang til flere tilleggsfunksjoner:
+            </p>
+
+            <table>
+                <tr>
+                    <th>Handling</th>
+                    <th>Beskrivelse</th>
+                </tr>
+                <tr>
+                    <td><strong>Ny</strong></td>
+                    <td>T&oslash;m redigeringsvinduet og begynn &aring; opprette en ny entitet av den valgte klassen.</td>
+                </tr>
+                <tr>
+                    <td><strong>Graf</strong></td>
+                    <td>&Aring;pne entiteten i GraphDB Workbench-grafvisualiseringen, der du kan utforske relasjonene visuelt i en ny nettleserfane.</td>
+                </tr>
+                <tr>
+                    <td><strong>Eksporter som Turtle</strong></td>
+                    <td>Eksporter entitetens RDF-data i Turtle-format — se nedenfor.</td>
+                </tr>
+                <tr>
+                    <td><strong>Slett</strong></td>
+                    <td>Slett entiteten permanent med alle dens utsagn fra databasen — se nedenfor.</td>
+                </tr>
+            </table>
+
+            <h4>Eksportere som Turtle</h4>
+            <p>
+                Valget <strong>Eksporter som Turtle</strong> genererer en Turtle-representasjon (<code>.ttl</code>) av entiteten, inkludert alle dens egenskaper og relasjoner. En dialog &aring;pnes som viser den formaterte Turtle-teksten, med to alternativer:
+            </p>
+            <ul>
+                <li><strong>Last ned .ttl</strong> — lagrer entiteten som en Turtle-fil.</li>
+                <li><strong>Kopier til utklippstavle</strong> — kopierer Turtle-teksten slik at du kan lime den inn andre steder.</li>
+            </ul>
+
+            <div class="info-box">
+                <strong>Merk:</strong> Du m&aring; lagre eventuelle ulagrede endringer f&oslash;r du eksporterer. Eksportknappen er deaktivert n&aring;r entiteten har blitt endret — lagre f&oslash;rst, deretter eksporter.
+            </div>
+
+            <h4>Slette en entitet</h4>
+            <p>
+                Valget <strong>Slett</strong> fjerner entiteten permanent med alle dens utsagn (b&aring;de utg&aring;ende og innkommende) fra databasen. En bekreftelsesdialog vises f&oslash;r slettingen utf&oslash;res. Denne handlingen kan ikke angres.
+            </p>
+
+            <div class="info-box warning">
+                <strong>Viktig:</strong> Sletting av en entitet fjerner ogs&aring; alle referanser til den fra andre entiteter. For eksempel vil sletting av en Agent fjerne forfatterlenker fra alle Verk som refererte til den Agenten.
+            </div>
+
+            <h4>Omordne flerverdi-egenskaper</h4>
+            <p>
+                N&aring;r en egenskap har mer enn &eacute;n verdi (f.eks. flere noter p&aring; en Manifestasjon), kan du omordne dem i redigeringsmodus. Dra-h&aring;ndtak og opp/ned-pilknapper vises ved siden av hver verdi, slik at du kan angi foretrukket visningsrekkef&oslash;lge ved &aring; dra eller klikke p&aring; pilene.
+            </p>
+
+            <h3 id="search-interface">4.4 S&oslash;kegrensesnittet</h3>
+
+            <p>
+                S&oslash;kefanen tilbyr fullteksts&oslash;k p&aring; tvers av databasen med
+                to moduser:
+            </p>
+            <ul>
+                <li>
+                    <strong>Uttrykk-s&oslash;k</strong> — Finner Uttrykk (og
+                    viser deres relaterte Verk, agenter og Manifestasjoner).
+                    Utvid et resultat for &aring; se alle Manifestasjoner av det
+                    Uttrykket.
+                </li>
+                <li>
+                    <strong>Manifestasjon-s&oslash;k</strong> — Finner Manifestasjoner
+                    direkte via tittel, forlag, identifikatorer eller annen
+                    metadata.
+                </li>
+            </ul>
+            <p>
+                S&oslash;keresultatene viser agenter, metadata og relasjoner i et
+                kompakt format, slik at du raskt kan f&aring; oversikt over hva som allerede
+                er katalogisert.
+            </p>
+
+            <!-- 5. EKSEMPEL 1: THE ROAD -->
+            <h2 id="example-the-road">
+                5. Eksempel 1 — <em>The Road</em> av Cormac McCarthy
+            </h2>
+
+            <p>
+                La oss g&aring; gjennom katalogiseringen av Cormac McCarthys
+                <em>The Road</em> — en postapokalyptisk roman utgitt i 2006,
+                senere filmatisert i 2009. Dette eksempelet demonstrerer
+                den grunnleggende WEMI-kjeden og hvordan man uttrykker en tilpasningsrelasjon
+                mellom to Verk.
+            </p>
+
+            <p>
+                Slik vil entitetsstrukturen v&aring;r se ut n&aring;r vi er
+                ferdige:
+            </p>
+
+            <div class="entity-tree">
+                <span class="agent">Agent: McCarthy, Cormac</span>
+                <span class="dim">(1933–2023)</span><br />
+                <span class="dim"> │</span><br />
+                <span class="dim"> ├── forfatter av ──▸ </span
+                ><span class="work">Verk: The Road</span><br />
+                <span class="dim"> │ │</span><br />
+                <span class="dim"> │ ├── har uttrykk ──▸ </span
+                ><span class="expression"
+                    >Uttrykk: The Road (English text)</span
+                ><br />
+                <span class="dim"> │ │ │</span><br />
+                <span class="dim"> │ │ └── har manifestasjon ──▸ </span
+                ><span class="manifestation">Manifestasjon: Picador, 2009</span
+                ><br />
+                <span class="dim"> │ │</span><br />
+                <span class="dim"> │ └── tilpasset som ──▸ </span
+                ><span class="work">Verk: The Road (Film, 2009)</span><br />
+                <span class="dim"> │</span><br />
+                <span class="dim"> └── forfatter av ──▸ </span
+                ><span class="work">Verk: No Country for Old Men</span><br />
+                <span class="dim"> ⋮</span>
+            </div>
+
+            <h3 id="road-agent">5.1 Opprette Agent</h3>
+
+            <p>
+                Vi begynner med &aring; opprette forfatteren, siden vi vil lenke til denne
+                Agenten fra Verket.
+            </p>
+
+            <div class="example-card">
+                <h4>
+                    <span class="entity-badge badge-agent">Agent</span>
+                    McCarthy, Cormac
+                </h4>
+                <table>
+                    <tr>
+                        <th>Egenskap</th>
+                        <th>Verdi</th>
+                    </tr>
+                    <tr>
+                        <td>Etikett</td>
+                        <td>McCarthy, Cormac</td>
+                    </tr>
+                    <tr>
+                        <td>navn</td>
+                        <td>McCarthy, Cormac</td>
+                    </tr>
+                    <tr>
+                        <td>årstall</td>
+                        <td>1933–2023</td>
+                    </tr>
+                </table>
+            </div>
+
+            <ol class="steps">
+                <li>
+                    I entitetsnettleseren, velg
+                    <span class="entity-badge badge-agent">Agent</span> i
+                    klassepanelet.
+                </li>
+                <li>Klikk p&aring; <strong>&#x22EE; &rarr; Ny</strong> i redigeringsvinduet.</li>
+                <li>
+                    Klikk p&aring; <strong>etikettikonet</strong> i redigeringshodet og legg til etiketten
+                    &laquo;McCarthy, Cormac&raquo; (slik at Agenten er gjenkjennelig i lister).
+                </li>
+                <li>
+                    Under Tekstmetadata, bruk <strong>Legg til</strong> for &aring; legge til RDA-egenskapene: <em>navn</em> og <em>årstall</em> knyttet til agenten.
+                </li>
+                <li>Klikk p&aring; <strong>Lagre</strong>.</li>
+            </ol>
+
+            <h3 id="road-work">5.2 Opprette Verk</h3>
+
+            <p>
+                Verket representerer romanen som en abstrakt intellektuell
+                skapelse — uavhengig av en bestemt utgave eller format.
+            </p>
+
+            <div class="example-card">
+                <h4>
+                    <span class="entity-badge badge-work">Verk</span> The Road
+                </h4>
+                <table>
+                    <tr>
+                        <th>Egenskap</th>
+                        <th>Verdi</th>
+                    </tr>
+                    <tr>
+                        <td>Etikett</td>
+                        <td>The Road (McCarthy, Cormac)</td>
+                    </tr>
+                    <tr>
+                        <td>tittel</td>
+                        <td>The Road</td>
+                    </tr>
+                    <tr>
+                        <td>har forfatter</td>
+                        <td>&rarr; Agent: McCarthy, Cormac</td>
+                    </tr>
+                </table>
+            </div>
+
+            <ol class="steps">
+                <li>
+                    Velg <span class="entity-badge badge-work">Verk</span> i
+                    klassepanelet, deretter <strong>&#x22EE; &rarr; Ny</strong>.
+                </li>
+                <li>
+                    Legg til en etikett, f.eks. &laquo;The Road (McCarthy, Cormac)&raquo;. &Aring; inkludere
+                    forfatteren i parentes er en vanlig konvensjon som hjelper med
+                    &aring; skille Verk med samme tittel i entitetslister.
+                </li>
+                <li>
+                    Legg til RDA-tekstegenskapen <em>tittel</em> med verdien
+                    &laquo;The Road&raquo;.
+                </li>
+                <li>
+                    I seksjonen <strong>Relaterte agenter</strong>, legg til
+                    relasjonen &laquo;har forfatter&raquo; og velg Agenten &laquo;McCarthy,
+                    Cormac&raquo; fra entitetsvelgeren.
+                </li>
+                <li>Klikk p&aring; <strong>Lagre</strong>.</li>
+            </ol>
+
+            <div class="info-box">
+                <strong>Etikett vs. tittel:</strong> Husk at
+                etiketten bare er et visningsnavn for bruk i lister — den er ikke en del
+                av RDA-beskrivelsen. <em>tittel</em> er den formelle
+                RDA-egenskapen som registrerer den faktiske tittelen. Derfor legger vi til
+                &laquo;The Road&raquo; som en tekstmetadata-egenskap selv om etiketten
+                allerede inneholder den.
+            </div>
+
+            <h3 id="road-expression">5.3 Opprette Uttrykk</h3>
+
+            <p>
+                Et Uttrykk representerer en spesifikk intellektuell realisering av
+                Verket. For en roman er den originale engelske teksten ett
+                Uttrykk. En norsk oversettelse ville v&aelig;re et annet
+                Uttrykk av det samme Verket.
+            </p>
+
+            <div class="example-card">
+                <h4>
+                    <span class="entity-badge badge-expression"
+                        >Uttrykk</span
+                    >
+                    The Road — English text
+                </h4>
+                <table>
+                    <tr>
+                        <th>Egenskap</th>
+                        <th>Verdi</th>
+                    </tr>
+                    <tr>
+                        <td>Etikett</td>
+                        <td>The Road (McCarthy, Cormac)</td>
+                    </tr>
+                    <tr>
+                        <td>tittel</td>
+                        <td>The Road</td>
+                    </tr>
+                    <tr>
+                        <td>Språk</td>
+                        <td>English</td>
+                    </tr>
+                    <tr>
+                        <td>Innholdstype</td>
+                        <td>text</td>
+                    </tr>
+                    <tr>
+                        <td>er uttrykk av verk</td>
+                        <td>&rarr; Verk: The Road</td>
+                    </tr>
+                </table>
+            </div>
+
+            <ol class="steps">
+                <li>
+                    Velg
+                    <span class="entity-badge badge-expression">Uttrykk</span
+                    >, deretter <strong>&#x22EE; &rarr; Ny</strong>.
+                </li>
+                <li>
+                    Legg til en etikett (f.eks. &laquo;The Road (McCarthy, Cormac)&raquo;) og RDA-egenskapen <em>tittel</em>.
+                </li>
+                <li>
+                    Under <strong>Kontrollerte verdier</strong>, legg til
+                    <em>Språk</em> &rarr; English og <em>Innholdstype</em> &rarr;
+                    text.
+                </li>
+                <li>
+                    Under <strong>WEMI-relasjoner</strong>, legg til &laquo;er
+                    uttrykk av verk&raquo; og velg Verket &laquo;The Road&raquo;.
+                </li>
+                <li>Klikk p&aring; <strong>Lagre</strong>.</li>
+            </ol>
+
+            <h3 id="road-manifestation">5.4 Opprette Manifestasjon</h3>
+
+            <p>
+                En Manifestasjon er en spesifikk utgitt utgave. Det er her
+                vi registrerer de fysiske detaljene som er kjente fra tradisjonell
+                katalogisering: forlag, dato, omfang, ISBN.
+            </p>
+
+            <div class="example-card">
+                <h4>
+                    <span class="entity-badge badge-manifestation"
+                        >Manifestasjon</span
+                    >
+                    The Road — Picador, 2009
+                </h4>
+                <table>
+                    <tr>
+                        <th>Egenskap</th>
+                        <th>Verdi</th>
+                    </tr>
+                    <tr>
+                        <td>Etikett</td>
+                        <td>The road / Cormac McCarthy. — Picador, 2009</td>
+                    </tr>
+                    <tr>
+                        <td>tittel</td>
+                        <td>The road</td>
+                    </tr>
+                    <tr>
+                        <td>ansvarsangivelse</td>
+                        <td>Cormac McCarthy</td>
+                    </tr>
+                    <tr>
+                        <td>utgivelsessted</td>
+                        <td>London</td>
+                    </tr>
+                    <tr>
+                        <td>navn på utgiver</td>
+                        <td>Picador</td>
+                    </tr>
+                    <tr>
+                        <td>utgivelsesdato</td>
+                        <td>2009</td>
+                    </tr>
+                    <tr>
+                        <td>omfang</td>
+                        <td>307 p., 20 cm.</td>
+                    </tr>
+                    <tr>
+                        <td>identifikator</td>
+                        <td>ISBN 978-0-330-46846-6 (pbk.)</td>
+                    </tr>
+                    <tr>
+                        <td>note</td>
+                        <td>Film tie-in.</td>
+                    </tr>
+                    <tr>
+                        <td>note</td>
+                        <td>Originally published: 2006.</td>
+                    </tr>
+                    <tr>
+                        <td>Medietype</td>
+                        <td>unmediated</td>
+                    </tr>
+                    <tr>
+                        <td>Bærertype</td>
+                        <td>volume</td>
+                    </tr>
+                    <tr>
+                        <td>har uttrykk</td>
+                        <td>&rarr; Uttrykk: The Road (English text)</td>
+                    </tr>
+                </table>
+            </div>
+
+            <ol class="steps">
+                <li>
+                    Velg
+                    <span class="entity-badge badge-manifestation"
+                        >Manifestasjon</span
+                    >, deretter <strong>&#x22EE; &rarr; Ny</strong>.
+                </li>
+                <li>
+                    Legg til en etikett. En vanlig konvensjon for Manifestasjon-etiketter
+                    er: <em>Tittel / Ansvar. — Forlag, Dato</em>.
+                </li>
+                <li>
+                    Legg til RDA-tekstmetadata: tittel, ansvarsangivelse,
+                    publikasjonsdetaljer, omfang, identifikatorer
+                    og noter.
+                </li>
+                <li>
+                    Under <strong>Kontrollerte verdier</strong>, sett Medietype og
+                    Bærertype.
+                </li>
+                <li>
+                    Under <strong>WEMI-relasjoner</strong>, legg til &laquo;har
+                    uttrykk&raquo; og velg Uttrykket du
+                    opprettet.
+                </li>
+                <li>Klikk p&aring; <strong>Lagre</strong>.</li>
+            </ol>
+
+            <div class="info-box tip">
+                <strong>Tips:</strong> En Manifestasjon kan ha flere noter
+                og flere identifikatorer. Bruk <strong>Legg til</strong>-rullegardinlisten
+                gjentatte ganger for &aring; legge til mer enn &eacute;n verdi for samme egenskap.
+            </div>
+
+            <h3 id="road-film">5.5 Legge til filmatiseringen</h3>
+
+            <p>
+                <em>The Road</em> ble filmatisert av regiss&oslash;r John
+                Hillcoat i 2009. I WEMI-modellen er dette et
+                <em>nytt Verk</em> — en distinkt intellektuell skapelse som er
+                relatert til den opprinnelige romanen gjennom en tilpasningsrelasjon.
+            </p>
+
+            <div class="example-card">
+                <h4>
+                    <span class="entity-badge badge-work">Verk</span> The Road
+                    (Film, 2009)
+                </h4>
+                <table>
+                    <tr>
+                        <th>Egenskap</th>
+                        <th>Verdi</th>
+                    </tr>
+                    <tr>
+                        <td>Etikett</td>
+                        <td>Road (Motion picture : 2009)</td>
+                    </tr>
+                    <tr>
+                        <td>tittel</td>
+                        <td>The Road</td>
+                    </tr>
+                    <tr>
+                        <td>er filmatisering av</td>
+                        <td>&rarr; Verk: The Road (McCarthy, Cormac)</td>
+                    </tr>
+                </table>
+            </div>
+
+            <ol class="steps">
+                <li>
+                    Opprett et nytt
+                    <span class="entity-badge badge-work">Verk</span> for
+                    filmen.
+                </li>
+                <li>
+                    Under <strong>Relaterte verk</strong>, legg til relasjonen
+                    &laquo;er filmatisering av&raquo; og velg romanens
+                    Verk-entitet.
+                </li>
+                <li>Klikk p&aring; <strong>Lagre</strong>.</li>
+            </ol>
+
+            <p>
+                Dette oppretter en eksplisitt lenke som viser at filmen stammer fra
+                romanen, samtidig som de holdes som separate kreative verk med
+                egne Uttrykk og Manifestasjoner (f.eks. en DVD-utgivelse
+                ville v&aelig;re en Manifestasjon av filmens Uttrykk).
+            </p>
+
+            <div class="info-box">
+                <strong>Tilpasning vs. Uttrykk:</strong> En oversettelse er et
+                nytt <em>Uttrykk</em> av det samme Verket — det intellektuelle
+                innholdet er i hovedsak det samme, bare p&aring; et annet spr&aring;k. En
+                filmatisering er et nytt <em>Verk</em> — det er en annen
+                intellektuell skapelse inspirert av originalen. Denne distinksjonen
+                er grunnleggende i WEMI-modellen.
+            </div>
+
+            <!-- 6. EKSEMPEL 2: SULT -->
+            <h2 id="example-sult">
+                6. Eksempel 2 — <em>Sult</em> av Knut Hamsun
+            </h2>
+
+            <p>
+                Knut Hamsuns <em>Sult</em> (1890) er et utmerket eksempel for
+                &aring; forst&aring; hvordan oversettelser og flere utgaver
+                modelleres. Romanen har blitt oversatt til engelsk under
+                tittelen <em>Hunger</em> av flere forskjellige oversettere, og
+                utgitt i en rekke utgaver p&aring; b&aring;de norsk og engelsk.
+            </p>
+
+            <div class="entity-tree">
+                <span class="agent">Agent: Hamsun, Knut</span>
+                <span class="dim">(1859–1952)</span><br />
+                <span class="dim"> │</span><br />
+                <span class="dim"> └── forfatter av ──▸ </span
+                ><span class="work">Verk: Sult</span><br />
+                <span class="dim"> │</span><br />
+                <span class="dim"> ├── har uttrykk ──▸ </span
+                ><span class="expression"
+                    >Uttrykk: Sult (Norwegian text)</span
+                ><br />
+                <span class="dim"> │ ├── </span
+                ><span class="manifestation"
+                    >Manifestasjon: Gyldendal, 2001</span
+                ><br />
+                <span class="dim"> │ ├── </span
+                ><span class="manifestation"
+                    >Manifestasjon: Gyldendal, 2009</span
+                ><br />
+                <span class="dim"> │ └── </span
+                ><span class="manifestation"
+                    >Manifestasjon: ⋮ (flere utgaver)</span
+                ><br />
+                <span class="dim"> │</span><br />
+                <span class="dim"> ├── har uttrykk ──▸ </span
+                ><span class="expression"
+                    >Uttrykk: Hunger (English, transl. Lyngstad)</span
+                ><br />
+                <span class="dim"> │ ├── </span
+                ><span class="manifestation">Manifestasjon: Penguin, 1998</span
+                ><br />
+                <span class="dim"> │ └── </span
+                ><span class="manifestation"
+                    >Manifestasjon: Canongate, 2006</span
+                ><br />
+                <span class="dim"> │</span><br />
+                <span class="dim"> └── har uttrykk ──▸ </span
+                ><span class="expression"
+                    >Uttrykk: Hunger (English, transl. Bly)</span
+                ><br />
+                <span class="dim"> └── </span
+                ><span class="manifestation"
+                    >Manifestasjon: Farrar, Straus &amp; Giroux, 1967</span
+                >
+            </div>
+
+            <h3 id="sult-translation">
+                6.1 Oversettelser som separate Uttrykk
+            </h3>
+
+            <p>
+                Hver oversettelse av <em>Sult</em> er et separat Uttrykk
+                fordi oversetteren skaper en ny intellektuell realisering av
+                Verket. Selv to engelske oversettelser er forskjellige
+                Uttrykk hvis de er av forskjellige oversettere:
+            </p>
+
+            <div class="example-card">
+                <h4>Ett Verk, flere Uttrykk</h4>
+                <table>
+                    <tr>
+                        <th>Entitet</th>
+                        <th>Beskrivelse</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="entity-badge badge-work">Verk</span>
+                        </td>
+                        <td><em>Sult</em> — den abstrakte romanen av Hamsun</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="entity-badge badge-expression"
+                                >Uttrykk 1</span
+                            >
+                        </td>
+                        <td>
+                            Den originale norske teksten (spr&aring;k: norsk)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="entity-badge badge-expression"
+                                >Uttrykk 2</span
+                            >
+                        </td>
+                        <td>
+                            Engelsk oversettelse av Sverre Lyngstad (spr&aring;k:
+                            engelsk, oversetter: Lyngstad)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="entity-badge badge-expression"
+                                >Uttrykk 3</span
+                            >
+                        </td>
+                        <td>
+                            Engelsk oversettelse av Robert Bly (spr&aring;k:
+                            engelsk, oversetter: Bly)
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <p>For &aring; opprette et oversatt Uttrykk:</p>
+            <ol class="steps">
+                <li>
+                    Opprett en ny
+                    <span class="entity-badge badge-expression">Uttrykk</span
+                    >.
+                </li>
+                <li>Sett spr&aring;ket til m&aring;lspr&aring;ket (f.eks. engelsk).</li>
+                <li>
+                    Sett tittel til den oversatte tittelen (f.eks.
+                    &laquo;Hunger&raquo;).
+                </li>
+                <li>Lenk den til Verket via &laquo;er uttrykk av verk&raquo; &rarr; Sult.</li>
+                <li>
+                    Under <strong>Relaterte agenter</strong>, legg til oversetteren
+                    med relasjonen &laquo;har oversetter&raquo;.
+                </li>
+                <li>Klikk p&aring; <strong>Lagre</strong>.</li>
+            </ol>
+
+            <div class="info-box">
+                <strong>Viktig innsikt:</strong> <em>Forfatteren</em> (Hamsun) er
+                lenket p&aring; Verk-niv&aring;et — han er skaperen av det intellektuelle
+                innholdet. <em>Oversetteren</em> er lenket p&aring; Uttrykk-niv&aring;et — de skapte denne spesifikke realiseringen. Denne separasjonen
+                betyr at vi bare registrerer Hamsuns forfatterskap &eacute;n gang, ikke p&aring; hver
+                utgave.
+            </div>
+
+            <h3 id="sult-editions">6.2 Flere utgaver som Manifestasjoner</h3>
+
+            <p>
+                Forskjellige publiserte utgaver av den samme teksten er separate
+                Manifestasjoner av det samme Uttrykket. For eksempel har den
+                norske teksten av <em>Sult</em> kommet ut i en rekke
+                utgaver siden 1890, hver med et annet forlag, dato,
+                format eller ISBN — men de deler alle det samme Uttrykket.
+            </p>
+
+            <div class="example-card">
+                <h4>Et Uttrykk, flere Manifestasjoner</h4>
+                <table>
+                    <tr>
+                        <th>Manifestasjon</th>
+                        <th>Forlag</th>
+                        <th>Dato</th>
+                        <th>Format</th>
+                    </tr>
+                    <tr>
+                        <td>Sult (innbundet)</td>
+                        <td>Gyldendal</td>
+                        <td>2001</td>
+                        <td>277 s., volum</td>
+                    </tr>
+                    <tr>
+                        <td>Sult (lydbok)</td>
+                        <td>Lydbokforlaget</td>
+                        <td>2009</td>
+                        <td>lydplate</td>
+                    </tr>
+                    <tr>
+                        <td>Sult (e-bok)</td>
+                        <td>Gyldendal</td>
+                        <td>2015</td>
+                        <td>nettressurs</td>
+                    </tr>
+                </table>
+                <p
+                    style="
+                        margin-top: 0.75rem;
+                        margin-bottom: 0;
+                        color: var(--text-secondary);
+                        font-size: 0.9rem;
+                    "
+                >
+                    Alle disse deler det samme Uttrykket (norsk tekst av
+                    Hamsun), men skiller seg i hvordan teksten er legemliggjort.
+                </p>
+            </div>
+
+            <div class="info-box tip">
+                <strong>Tips:</strong> En lydbokinlesning betraktes ofte som
+                et nytt Uttrykk (siden oppleser bidrar med en kreativ
+                framf&oslash;ring) snarere enn bare en ny Manifestasjon. Bruk ditt
+                skj&oslash;nn: hvis det intellektuelle innholdet har blitt vesentlig
+                transformert, kan det begrunne et separat Uttrykk.
+            </div>
+
+            <!-- 7. EKSEMPEL 3: AGATHA CHRISTIE OMNIBUS -->
+            <h2 id="example-omnibus">
+                7. Eksempel 3 — <em>Agatha Christie 1960s Omnibus</em>
+            </h2>
+
+            <p>
+                De foreg&aring;ende eksemplene viste ett Uttrykk per Manifestasjon.
+                Men WEMI-modellen st&oslash;tter ogs&aring; det omvendte: en enkelt
+                Manifestasjon som legemliggj&oslash;r <em>flere</em> Uttrykk. Dette
+                er vanlig for antologier, omnibus-utgaver og samlede verker.
+            </p>
+
+            <p>
+                <em>Agatha Christie 1960s Omnibus</em> (HarperCollins, 2006)
+                samler fire av Christies romaner fra slutten av 1960-tallet og tidlig
+                p&aring; 1970-tallet i ett bind. Hver roman er et separat Verk med sitt
+                eget Uttrykk, og omnibus-Manifestasjonen lenker til alle fire
+                Uttrykk.
+            </p>
+
+            <h3 id="omnibus-structure">
+                7.1 En Manifestasjon, flere Uttrykk
+            </h3>
+
+            <p>Her er entitetsstrukturen for omnibus-utgaven:</p>
+
+            <div class="entity-tree">
+                <span class="agent">Agent: Christie, Agatha</span>
+                <span class="dim">(1890–1976)</span><br />
+                <span class="dim"> │</span><br />
+                <span class="dim"> ├── forfatter av ──▸ </span
+                ><span class="work">Verk: Endless Night</span><br />
+                <span class="dim"> │ └── har uttrykk ──▸ </span
+                ><span class="expression"
+                    >Uttrykk: Endless Night (English text)</span
+                ><span class="dim"> ─────────────┐</span><br />
+                <span class="dim"> │</span><br />
+                <span class="dim"> ├── forfatter av ──▸ </span
+                ><span class="work">Verk: By the Pricking of My Thumbs</span
+                ><br />
+                <span class="dim"> │ └── har uttrykk ──▸ </span
+                ><span class="expression"
+                    >Uttrykk: By the Pricking… (English text)</span
+                ><span class="dim"> ──────┤</span><br />
+                <span class="dim"> │</span><br />
+                <span class="dim"> ├── forfatter av ──▸ </span
+                ><span class="work">Verk: Passenger to Frankfurt</span><br />
+                <span class="dim"> │ └── har uttrykk ──▸ </span
+                ><span class="expression"
+                    >Uttrykk: Passenger to Frankfurt (English text)</span
+                ><span class="dim"> ──┤</span><br />
+                <span class="dim"> │</span><br />
+                <span class="dim"> └── forfatter av ──▸ </span
+                ><span class="work">Verk: Postern of Fate</span><br />
+                <span class="dim">   └── har uttrykk ──▸ </span
+                ><span class="expression"
+                    >Uttrykk: Postern of Fate (English text)</span
+                ><span class="dim"> ────────┘</span><br />
+                <span class="dim">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼</span><br />
+                <span class="dim">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+                ><span class="manifestation"
+                    >Manifestasjon: Agatha Christie 1960s Omnibus</span
+                >
+            </div>
+
+            <div class="info-box">
+                <strong>Viktig innsikt:</strong> I de foreg&aring;ende eksemplene lenket hver
+                Manifestasjon til et enkelt Uttrykk. Her lenker &eacute;n
+                Manifestasjon til <em>fire</em> Uttrykk — ett for hver
+                roman i omnibus-utgaven. Relasjonen
+                &laquo;har uttrykk&raquo; kan brukes flere ganger p&aring; den
+                samme Manifestasjonen. Dette er mange-til-mange-naturen til
+                Uttrykk–Manifestasjon-relasjonen i WEMI.
+            </div>
+
+            <h3 id="omnibus-steps">
+                7.2 Opprette omnibus-utgaven steg for steg
+            </h3>
+
+            <p>
+                I dette eksempelet antar vi at du allerede har opprettet Agenten
+                for Agatha Christie. Hvis ikke, opprett Agenten f&oslash;rst (som i
+                <a href="#road-agent">Eksempel 1</a>).
+            </p>
+
+            <h4>Steg 1 — Opprett de fire Verkene</h4>
+            <p>
+                Hver roman er sitt eget Verk. Opprett fire
+                <span class="entity-badge badge-work">Verk</span>-entiteter:
+            </p>
+
+            <div class="example-card">
+                <h4>Fire Verk av Agatha Christie</h4>
+                <table>
+                    <tr>
+                        <th>Verk-etikett</th>
+                        <th>tittel</th>
+                    </tr>
+                    <tr>
+                        <td>Endless Night (Christie, Agatha)</td>
+                        <td>Endless Night</td>
+                    </tr>
+                    <tr>
+                        <td>By the Pricking of My Thumbs (Christie, Agatha)</td>
+                        <td>By the Pricking of My Thumbs</td>
+                    </tr>
+                    <tr>
+                        <td>Passenger to Frankfurt (Christie, Agatha)</td>
+                        <td>Passenger to Frankfurt</td>
+                    </tr>
+                    <tr>
+                        <td>Postern of Fate (Christie, Agatha)</td>
+                        <td>Postern of Fate</td>
+                    </tr>
+                </table>
+            </div>
+
+            <p>
+                For hvert Verk, lenk det til Agenten &laquo;Christie, Agatha&raquo; via
+                <strong>Relaterte agenter</strong> &rarr; &laquo;har forfatter&raquo;.
+            </p>
+
+            <h4>Steg 2 — Opprett de fire Uttrykkene</h4>
+            <p>
+                Hvert Verk har ett Uttrykk som representerer den originale engelske
+                teksten. Opprett fire
+                <span class="entity-badge badge-expression">Uttrykk</span>-entiteter, hvert med:
+            </p>
+            <ul>
+                <li>En etikett, f.eks. &laquo;Endless Night (english text)&raquo;</li>
+                <li>tittel som samsvarer med romantittelen</li>
+                <li>Språk: English</li>
+                <li>Innholdstype: text</li>
+                <li>
+                    En WEMI-lenke &laquo;er uttrykk av verk&raquo; som peker til det
+                    tilsvarende Verket
+                </li>
+            </ul>
+
+            <h4>Steg 3 — Opprett omnibus-Manifestasjonen</h4>
+            <p>
+                Opprett n&aring;
+                <span class="entity-badge badge-manifestation"
+                    >Manifestasjon</span
+                >
+                for selve omnibus-utgaven:
+            </p>
+
+            <div class="example-card">
+                <h4>
+                    <span class="entity-badge badge-manifestation"
+                        >Manifestasjon</span
+                    >
+                    Agatha Christie 1960s Omnibus
+                </h4>
+                <table>
+                    <tr>
+                        <th>Egenskap</th>
+                        <th>Verdi</th>
+                    </tr>
+                    <tr>
+                        <td>Etikett</td>
+                        <td>Agatha Christie 1960s omnibus. — HarperCollins, 2006</td>
+                    </tr>
+                    <tr>
+                        <td>tittel</td>
+                        <td>Agatha Christie 1960s omnibus</td>
+                    </tr>
+                    <tr>
+                        <td>ansvarsangivelse</td>
+                        <td>Agatha Christie</td>
+                    </tr>
+                    <tr>
+                        <td>navn på utgiver</td>
+                        <td>HarperCollins</td>
+                    </tr>
+                    <tr>
+                        <td>utgivelsesdato</td>
+                        <td>2006</td>
+                    </tr>
+                    <tr>
+                        <td>omfang</td>
+                        <td>784 pages, 12.9 x 4.9 x 19.8 cm</td>
+                    </tr>
+                    <tr>
+                        <td>Medietype</td>
+                        <td>unmediated</td>
+                    </tr>
+                    <tr>
+                        <td>Bærertype</td>
+                        <td>volume</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h4>Steg 4 — Lenk alle fire Uttrykkene</h4>
+            <p>
+                Dette er det avgj&oslash;rende steget som skiller omnibus-utgaven fra en
+                vanlig enkeltverk-Manifestasjon. Under
+                <strong>WEMI-relasjoner</strong>, legg til &laquo;har
+                uttrykk&raquo; <em>fire ganger</em> — ett for hvert Uttrykk:
+            </p>
+            <ol class="steps">
+                <li>Legg til &laquo;har uttrykk&raquo; &rarr; Endless Night (english text)</li>
+                <li>Legg til &laquo;har uttrykk&raquo; &rarr; By the Pricking of My Thumbs (english text)</li>
+                <li>Legg til &laquo;har uttrykk&raquo; &rarr; Passenger to Frankfurt (english text)</li>
+                <li>Legg til &laquo;har uttrykk&raquo; &rarr; Postern of Fate (english text)</li>
+            </ol>
+            <p>Klikk p&aring; <strong>Lagre</strong> for &aring; lagre Manifestasjonen.</p>
+
+            <div class="info-box tip">
+                <strong>Tips:</strong> Rekkef&oslash;lgen p&aring; &laquo;har
+                uttrykk&raquo;-lenkene gjenspeiler rekkef&oslash;lgen romanene vises i
+                omnibus-utgaven. Du kan omordne dem ved &aring; dra-og-slippe eller bruke
+                opp/ned-pilene i redigeringsmodus.
+            </div>
+
+            <div class="info-box">
+                <strong>Merk om delte Uttrykk:</strong> Hvis noen av
+                disse romanene allerede var katalogisert som separate utgaver
+                (f.eks. en separat pocket av <em>Endless Night</em>), ville
+                du gjenbruke den <em>samme</em> Uttrykk-entiteten. B&aring;de den
+                fritst&aring;ende Manifestasjonen og omnibus-Manifestasjonen ville
+                lenke til den. Dette er styrken i WEMI-modellen — et Uttrykk
+                kan legemliggj&oslash;res i mange Manifestasjoner, og en Manifestasjon kan
+                legemliggj&oslash;re mange Uttrykk.
+            </div>
+
+            <!-- 8. PRAKTISKE OPPGAVER -->
+            <h2 id="exercises">8. Praktiske oppgaver</h2>
+
+            <p>
+                Pr&oslash;v disse oppgavene for &aring; &oslash;ve p&aring; det du har l&aelig;rt. Begynn
+                med de enklere oppgavene og jobb deg oppover.
+            </p>
+
+            <h3>Oppgave A — En enkel bok</h3>
+            <p>
+                Katalogiser en bok du har p&aring; pulten eller finn en i et biblioteks
+                katalog. Opprett:
+            </p>
+            <ol>
+                <li>
+                    En <span class="entity-badge badge-agent">Agent</span> for
+                    forfatteren.
+                </li>
+                <li>
+                    Et <span class="entity-badge badge-work">Verk</span> med
+                    tittelen og en forfatterlenke.
+                </li>
+                <li>
+                    En
+                    <span class="entity-badge badge-expression"
+                        >Uttrykk</span
+                    >
+                    med spr&aring;k og innholdstype, lenket til Verket.
+                </li>
+                <li>
+                    En
+                    <span class="entity-badge badge-manifestation"
+                        >Manifestasjon</span
+                    >
+                    med publikasjonsdetaljer, lenket til Uttrykket.
+                </li>
+            </ol>
+
+            <h3>Oppgave B — En oversatt roman</h3>
+            <p>
+                Velg en roman som har blitt oversatt. Katalogiser den etter
+                <em>Sult</em>-m&oslash;nsteret:
+            </p>
+            <ol>
+                <li>Opprett Verket og Agenten for originalforfatteren.</li>
+                <li>
+                    Opprett to Uttrykk — originalspr&aring;ket og ett
+                    oversettelse.
+                </li>
+                <li>
+                    Opprett en Agent for oversetteren og lenk den til den
+                    oversatte Uttrykket.
+                </li>
+                <li>Opprett minst &eacute;n Manifestasjon for hvert Uttrykk.</li>
+            </ol>
+
+            <h3>Oppgave C — En filmatisering</h3>
+            <p>
+                Velg en roman som har blitt filmatisert. F&oslash;lg
+                <em>The Road</em>-m&oslash;nsteret:
+            </p>
+            <ol>
+                <li>
+                    Katalogiser romanen som Verk &rarr; Uttrykk &rarr; Manifestasjon.
+                </li>
+                <li>Opprett et andre Verk for filmatiseringen.</li>
+                <li>
+                    Lenk film-Verket til roman-Verket med &laquo;er filmatisering
+                    av&raquo;.
+                </li>
+                <li>
+                    Opprett et Uttrykk og en Manifestasjon for filmen (f.eks. en
+                    DVD- eller str&oslash;mmeutgivelse).
+                </li>
+            </ol>
+
+            <h3>Oppgave D — Samlede verker</h3>
+            <p>
+                Avansert: Katalogiser et samleverk (f.eks. &laquo;De samlede
+                novellene til...&raquo;). Tenk over:
+            </p>
+            <ul>
+                <li>
+                    Er dette et nytt Verk, eller et Uttrykk av et eksisterende Verk?
+                </li>
+                <li>
+                    Hvordan representerer du de individuelle historiene og deres
+                    relasjon til samlingen?
+                </li>
+                <li>Hvilken rolle spiller redakt&oslash;ren?</li>
+            </ul>
+
+            <!-- 9. N&Oslash;KKELBEGREPER -->
+            <h2 id="key-concepts">9. Referanse for n&oslash;kkelbegreper</h2>
+
+            <h3>Oppsummering av WEMI-relasjoner</h3>
+            <table>
+                <tr>
+                    <th>Fra</th>
+                    <th>Relasjon</th>
+                    <th>Til</th>
+                </tr>
+                <tr>
+                    <td><span class="entity-badge badge-work">Verk</span></td>
+                    <td>har uttrykk av verk</td>
+                    <td>
+                        <span class="entity-badge badge-expression"
+                            >Uttrykk</span
+                        >
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="entity-badge badge-expression"
+                            >Uttrykk</span
+                        >
+                    </td>
+                    <td>er uttrykk av verk</td>
+                    <td><span class="entity-badge badge-work">Verk</span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="entity-badge badge-expression"
+                            >Uttrykk</span
+                        >
+                    </td>
+                    <td>har manifestasjon</td>
+                    <td>
+                        <span class="entity-badge badge-manifestation"
+                            >Manifestasjon</span
+                        >
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="entity-badge badge-manifestation"
+                            >Manifestasjon</span
+                        >
+                    </td>
+                    <td>har uttrykk</td>
+                    <td>
+                        <span class="entity-badge badge-expression"
+                            >Uttrykk</span
+                        >
+                    </td>
+                </tr>
+            </table>
+
+            <h3>Vanlige agentrelasjoner</h3>
+            <table>
+                <tr>
+                    <th>Niv&aring;</th>
+                    <th>Relasjon</th>
+                    <th>Eksempel</th>
+                </tr>
+                <tr>
+                    <td><span class="entity-badge badge-work">Verk</span></td>
+                    <td>har forfatter</td>
+                    <td>Romanforfatteren, komponisten, dramatikeren</td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="entity-badge badge-expression"
+                            >Uttrykk</span
+                        >
+                    </td>
+                    <td>har oversetter</td>
+                    <td>Personen som oversatte teksten</td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="entity-badge badge-expression"
+                            >Uttrykk</span
+                        >
+                    </td>
+                    <td>har utøver</td>
+                    <td>En musiker som framf&oslash;rer et musikkstykke</td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="entity-badge badge-expression"
+                            >Uttrykk</span
+                        >
+                    </td>
+                    <td>har forteller</td>
+                    <td>Oppleseren av en lydbok</td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="entity-badge badge-manifestation"
+                            >Manifestasjon</span
+                        >
+                    </td>
+                    <td>har utgiver</td>
+                    <td>Gyldendal, Picador, Penguin</td>
+                </tr>
+            </table>
+
+            <h3>N&aring;r skal man opprette et nytt Verk vs. et nytt Uttrykk</h3>
+            <table>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Entitetstype</th>
+                    <th>Begrunnelse</th>
+                </tr>
+                <tr>
+                    <td>Oversettelse</td>
+                    <td>
+                        Ny
+                        <span class="entity-badge badge-expression"
+                            >Uttrykk</span
+                        >
+                    </td>
+                    <td>Samme intellektuelle innhold, annet spr&aring;k</td>
+                </tr>
+                <tr>
+                    <td>Forkortelse</td>
+                    <td>
+                        Ny
+                        <span class="entity-badge badge-expression"
+                            >Uttrykk</span
+                        >
+                    </td>
+                    <td>Samme Verk, modifisert tekst</td>
+                </tr>
+                <tr>
+                    <td>Lydbokinlesning</td>
+                    <td>
+                        Ny
+                        <span class="entity-badge badge-expression"
+                            >Uttrykk</span
+                        >
+                    </td>
+                    <td>Framf&oslash;ring tilfører kreativt innhold</td>
+                </tr>
+                <tr>
+                    <td>Filmatisering</td>
+                    <td>
+                        Nytt <span class="entity-badge badge-work">Verk</span>
+                    </td>
+                    <td>Vesentlig annerledes kreativ skapelse</td>
+                </tr>
+                <tr>
+                    <td>Scenetilpasning</td>
+                    <td>
+                        Nytt <span class="entity-badge badge-work">Verk</span>
+                    </td>
+                    <td>Ny kunstnerisk tolkning med annet medium</td>
+                </tr>
+                <tr>
+                    <td>Kritikk eller studie av et verk</td>
+                    <td>
+                        Nytt <span class="entity-badge badge-work">Verk</span>
+                    </td>
+                    <td>Original intellektuell skapelse om et annet Verk</td>
+                </tr>
+                <tr>
+                    <td>Ny utgave, samme tekst</td>
+                    <td>
+                        Ny
+                        <span class="entity-badge badge-manifestation"
+                            >Manifestasjon</span
+                        >
+                    </td>
+                    <td>Samme Uttrykk, annen publikasjon</td>
+                </tr>
+            </table>
+
+            <div class="info-box">
+                <strong>Husk:</strong> WEMI-modellen er en m&aring;te &aring; tenke
+                p&aring; bibliografiske ressurser. I praksis vil det v&aelig;re
+                grensetilfeller. Det viktige er &aring; v&aelig;re konsekvent og &aring;
+                tenke n&oslash;ye gjennom hvilket aspekt av ressursen du
+                beskriver p&aring; hvert niv&aring;.
+            </div>
+        </div>
+    </body>
+</html>
