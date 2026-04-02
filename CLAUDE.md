@@ -210,6 +210,11 @@ general domain terms. Property labels marked `"ui": true` come from the database
 must match what the user actually sees in the application for that language. Always
 consult the glossary when translating documentation.
 
+WEMI class names are translated: Work=Verk, Expression=Uttrykk, Manifestation=Manifestasjon,
+Item=Eksemplar, Agent=Agent. Norwegian gender: Verk/Uttrykk are neuter (et/nytt),
+Manifestasjon/Agent are masculine (en/ny). When listing classes, use the order:
+Work → Expression → Manifestation → (Item) → Agent.
+
 Adding a new language: create `docs/{lang}/` with translated files, add the language code
 to the redirectors' JS and to `AppHeader.tsx`'s help button URL logic, and add a column
 for the new language in `docs/glossary.json`.
