@@ -107,6 +107,8 @@ EntEdit/
 
 ### Utilities (app/src/utils/)
 
+- `turtleSerializer.ts` - Turtle serialization with configurable namespace prefix registry (`KNOWN_PREFIXES` map);
+  only predicates/datatypes are prefix-compacted, subject/object URIs stay as full `<uri>`
 - `sparqlClient.ts` - SparqlClient class with query/update methods and auth support
 - `configManager.ts` - localStorage persistence for app configuration
 - `labelUtils.ts` - URI label extraction, formatting, SPARQL escaping
@@ -117,6 +119,8 @@ EntEdit/
 
 ### Data Flow
 
+- Incoming triples (`?s ?p <entity>`) are converted to entity's perspective via
+  `?inverseProp owl:inverseOf ?p` — used in search, expression, manifestation, and export queries
 1. User selects RDF class → `useEntitiesByClass` fetches instances
 2. User selects entity → `useEntity` loads all properties
 3. Properties rendered dynamically based on rdfs:domain/range
@@ -159,6 +163,9 @@ properties from being corrupted into string literals.
 
 ### SPARQL Syntax Gotchas (GraphDB)
 
+- `FROM <http://www.ontotext.com/explicit>` restricts query to explicitly asserted triples only
+  (excludes materialized inferences from forward-chaining); use when inferred supertypes/
+  superproperties would cause unwanted duplicates
 - `DELETE WHERE { ... VALUES ?x { } }` is invalid — use long form `DELETE { } WHERE { ... VALUES }`
 - `OPTIONAL` with extra variables (e.g., `?order`) in `SELECT DISTINCT` can cause
   duplicate rows if the optional matches multiple times through inference
@@ -168,6 +175,8 @@ properties from being corrupted into string literals.
 
 ### UI Patterns
 
+- Features depending on saved database state (e.g., Turtle export) must be disabled when
+  `isDirty` — pass `isDirty` to header and disable with tooltip explaining "save first"
 - `LabelManager` dialog uses `hideBackdrop`, `disableEnforceFocus`, `disableAutoFocus`,
   `disableRestoreFocus` to allow interaction with content behind it (non-modal)
 - Drag-and-drop reordering via @dnd-kit only shows controls when editing with 2+ values
