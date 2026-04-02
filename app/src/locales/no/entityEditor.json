@@ -69,6 +69,14 @@
       "title": "Forkaste endringer?",
       "message": "Du har ulagrede endringer. Avbryt vil forkaste alle endringer gjort i denne sesjonen.",
       "confirm": "Forkast endringer"
+    },
+    "turtleExport": {
+      "title": "Eksporter som Turtle",
+      "copyButton": "Kopier til utklippstavle",
+      "downloadButton": "Last ned .ttl",
+      "copied": "Turtle kopiert til utklippstavlen",
+      "copyFailed": "Kunne ikke kopiere til utklippstavlen",
+      "errorMessage": "Feil ved henting av entitetsdata: {{message}}"
     }
   }
 }

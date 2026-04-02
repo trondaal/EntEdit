@@ -13,7 +13,9 @@
     "graph": "Graph",
     "editLabels": "Edit Labels",
     "moreActions": "More actions",
-    "apply": "Apply"
+    "apply": "Apply",
+    "exportTurtle": "Export as Turtle",
+    "exportTurtleSaveFirst": "Save changes before exporting"
   },
   "labels": {
     "language": "Language",

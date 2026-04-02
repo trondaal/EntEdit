@@ -20,6 +20,7 @@ import {
   AccountTree,
   MoreVert,
   Label,
+  Code,
 } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 
@@ -39,6 +40,8 @@ interface EntityEditorHeaderProps {
   onNew: () => void;
   onOpenGraph: (event: React.MouseEvent) => void;
   onEditLabels: () => void;
+  onExportTurtle: () => void;
+  isDirty: boolean;
 }
 
 const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
@@ -57,6 +60,8 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
   onNew,
   onOpenGraph,
   onEditLabels,
+  onExportTurtle,
+  isDirty,
 }) => {
   const { t } = useTranslation("entityEditor");
   const [menuAnchor, setMenuAnchor] = useState<null | HTMLElement>(null);
@@ -186,6 +191,22 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
             </ListItemIcon>
             <ListItemText>{t("common:buttons.graph", { ns: "common" })}</ListItemText>
           </MenuItem>
+          <Tooltip
+            title={isDirty ? t("common:buttons.exportTurtleSaveFirst", { ns: "common" }) : ""}
+            placement="left"
+          >
+            <span>
+              <MenuItem
+                onClick={() => { handleMenuClose(); onExportTurtle(); }}
+                disabled={isDirty}
+              >
+                <ListItemIcon>
+                  <Code fontSize="small" />
+                </ListItemIcon>
+                <ListItemText>{t("common:buttons.exportTurtle", { ns: "common" })}</ListItemText>
+              </MenuItem>
+            </span>
+          </Tooltip>
           <Divider />
           <MenuItem
             onClick={() => { handleMenuClose(); onDelete(); }}

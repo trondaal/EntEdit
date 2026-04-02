@@ -69,6 +69,14 @@
       "title": "Discard changes?",
       "message": "You have unsaved changes. Cancelling will discard all changes made in this session.",
       "confirm": "Discard changes"
+    },
+    "turtleExport": {
+      "title": "Export as Turtle",
+      "copyButton": "Copy to Clipboard",
+      "downloadButton": "Download .ttl",
+      "copied": "Turtle copied to clipboard",
+      "copyFailed": "Failed to copy to clipboard",
+      "errorMessage": "Failed to fetch entity data: {{message}}"
     }
   }
 }

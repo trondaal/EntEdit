@@ -13,7 +13,9 @@
     "graph": "Graf",
     "editLabels": "Rediger etiketter",
     "moreActions": "Flere handlinger",
-    "apply": "Bruk"
+    "apply": "Bruk",
+    "exportTurtle": "Eksporter som Turtle",
+    "exportTurtleSaveFirst": "Lagre endringer før eksportering"
   },
   "labels": {
     "language": "Språk",

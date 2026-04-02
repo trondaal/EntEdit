@@ -32,12 +32,14 @@ import {
   useRelatedManifestationProperties
 } from "../hooks/useRelationshipQueries";
 import LabelManager from "./LabelManager";
+import TurtleExportDialog from "./TurtleExportDialog";
 import EntityEditorHeader from "./EntityEditorHeader";
 import DataPropertiesSection from "./DataPropertiesSection";
 import ObjectPropertyGroup from "./ObjectPropertyGroup";
 import { invalidateEntityCaches } from "../utils/queryInvalidation";
 import { escapeSparqlLiteral, isValidUri, formatLabel, sanitizeSparqlUri } from "../utils/labelUtils";
 import { useLogging } from "../hooks/useLogging";
+import { useTurtleExportQuery } from "../hooks/useTurtleExportQuery";
 
 interface EntityEditorProps {
   config: SparqlEndpointConfig;
@@ -104,6 +106,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   const [deleteError, setDeleteError] = useState<string | null>(null);
   const [discardDialogOpen, setDiscardDialogOpen] = useState(false);
   const [labelManagerOpen, setLabelManagerOpen] = useState(false);
+  const [turtleDialogOpen, setTurtleDialogOpen] = useState(false);
   const [entityLabels, setEntityLabels] = useState<
     Array<{ id: string; value: string; language: string }>
   >([]);
@@ -772,6 +775,13 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   const handleNew = useCallback(() => onEntityDeselected?.(), [onEntityDeselected]);
   const handleEditLabels = useCallback(() => setLabelManagerOpen(true), []);
 
+  // Turtle export
+  const { turtle, isLoading: turtleLoading, error: turtleError, refetch: fetchTurtle } = useTurtleExportQuery(config, entityUri);
+  const handleExportTurtle = useCallback(() => {
+    setTurtleDialogOpen(true);
+    void fetchTurtle();
+  }, [fetchTurtle]);
+
   const handlePropertySelect = useCallback((propertyUri: string) => {
     addProperty(propertyUri);
     setSelectedProperty("");
@@ -837,6 +847,8 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         onNew={handleNew}
         onOpenGraph={handleOpenGraph}
         onEditLabels={handleEditLabels}
+        onExportTurtle={handleExportTurtle}
+        isDirty={isDirty}
       />
 
       <Box sx={{ p: 3, flex: 1, overflow: "auto" }}>
@@ -996,6 +1008,16 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           </Button>
         </DialogActions>
       </Dialog>
+
+      {/* Turtle Export Dialog */}
+      <TurtleExportDialog
+        open={turtleDialogOpen}
+        onClose={() => setTurtleDialogOpen(false)}
+        turtle={turtle}
+        isLoading={turtleLoading}
+        error={turtleError}
+        entityUri={entityUri}
+      />
 
       {/* Discard Changes Confirmation Dialog */}
       <Dialog
