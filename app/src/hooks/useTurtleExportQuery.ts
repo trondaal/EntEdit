@@ -27,19 +27,31 @@ export function useTurtleExportQuery(
       const sanitizedUri = sanitizeSparqlUri(entityUri);
       const query = `
         PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
         SELECT ?predicate ?object
         FROM <http://www.ontotext.com/explicit>
         WHERE {
           {
-            # Outgoing explicitly asserted triples
+            # Outgoing explicitly asserted triples.
+            # Drop rdf:type assertions to a supertype when a more specific
+            # type is also asserted on the same subject.
             <${sanitizedUri}> ?predicate ?object .
+            FILTER NOT EXISTS {
+              <${sanitizedUri}> a ?moreSpecific .
+              ?moreSpecific rdfs:subClassOf+ ?object .
+              FILTER(?moreSpecific != ?object && ?predicate = rdf:type)
+            }
           }
           UNION
           {
-            # Incoming triples converted via owl:inverseOf
+            # Incoming triples converted via owl:inverseOf.
+            # Skip when the explicit outgoing triple already exists, to
+            # avoid duplicating it via the inverse property.
             ?object ?incomingPred <${sanitizedUri}> .
             ?predicate owl:inverseOf ?incomingPred .
+            FILTER NOT EXISTS { <${sanitizedUri}> ?predicate ?object }
           }
         }
         ORDER BY ?predicate ?object

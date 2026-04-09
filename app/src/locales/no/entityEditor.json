@@ -72,11 +72,17 @@
     },
     "turtleExport": {
       "title": "Eksporter som Turtle",
+      "classTitle": "Eksporter alle {{className}} som Turtle",
       "copyButton": "Kopier til utklippstavle",
       "downloadButton": "Last ned .ttl",
       "copied": "Turtle kopiert til utklippstavlen",
       "copyFailed": "Kunne ikke kopiere til utklippstavlen",
-      "errorMessage": "Feil ved henting av entitetsdata: {{message}}"
+      "errorMessage": "Feil ved henting av entitetsdata: {{message}}",
+      "exportAllMenu": "Eksporter alle som Turtle",
+      "exportAllMenuWithCount": "Eksporter alle {{count}} som Turtle",
+      "largeExportConfirmTitle": "Eksporter {{count}} entiteter?",
+      "largeExportConfirmMessage": "Dette vil hente og serialisere alle tripler for {{count}} entiteter av type {{className}}. Resultatet kan bli stort. Fortsette?",
+      "largeExportConfirm": "Eksporter"
     }
   }
 }

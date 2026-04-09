@@ -118,33 +118,29 @@ function compactUri(
   return `<${uri}>`;
 }
 
+const RDF_TYPE = "http://www.w3.org/1999/02/22-rdf-syntax-ns#type";
+const RDFS_LABEL = "http://www.w3.org/2000/01/rdf-schema#label";
+
+type PredObjBinding = { predicate: SparqlBinding; object: SparqlBinding };
+
 /**
- * Serializes SPARQL bindings for a single subject into formatted Turtle.
- *
- * @param subjectUri - The URI of the entity being exported
- * @param bindings - SPARQL result bindings with `predicate` and `object` variables
- * @returns Formatted Turtle string
+ * Builds a fresh prefix registry. Returns the namespace→prefix map (used for
+ * compaction) plus a `register` function for adding URIs as they are seen.
  */
-export function serializeToTurtle(
-  subjectUri: string,
-  bindings: Array<{ predicate: SparqlBinding; object: SparqlBinding }>,
-): string {
-  // 1. Collect all URIs and build the prefix map
+function createPrefixRegistry() {
   const usedNamespaces = new Map<string, string>(); // namespace → prefix
   const prefixToNamespace = new Map<string, string>(); // prefix → namespace
   let autoCounter = 0;
 
-  function registerUri(uri: string) {
+  function register(uri: string) {
     const ns = extractNamespace(uri);
     if (!ns || usedNamespaces.has(ns)) return;
 
-    // Check if this namespace has a known prefix
     const knownPrefix = KNOWN_PREFIXES.get(ns);
     if (knownPrefix && !prefixToNamespace.has(knownPrefix)) {
       usedNamespaces.set(ns, knownPrefix);
       prefixToNamespace.set(knownPrefix, ns);
     } else if (!knownPrefix) {
-      // Auto-generate prefix for unknown namespaces
       let prefix: string;
       do {
         prefix = `ns${autoCounter++}`;
@@ -154,18 +150,33 @@ export function serializeToTurtle(
     }
   }
 
-  // Register only predicate and datatype URIs (subject and objects stay as full URIs)
+  return { usedNamespaces, prefixToNamespace, register };
+}
+
+function registerBindingNamespaces(
+  bindings: PredObjBinding[],
+  register: (uri: string) => void,
+) {
   for (const b of bindings) {
-    registerUri(b.predicate.value);
+    register(b.predicate.value);
     if (
       b.object.datatype &&
       b.object.datatype !== "http://www.w3.org/2001/XMLSchema#string"
     ) {
-      registerUri(b.object.datatype);
+      register(b.object.datatype);
     }
   }
+}
 
-  // 2. Group bindings by predicate
+/**
+ * Builds the property-list block (lines after the subject) for a single
+ * subject. Does not include the subject line itself or the prefix header.
+ */
+function buildSubjectBlock(
+  bindings: PredObjBinding[],
+  usedNamespaces: Map<string, string>,
+): string[] {
+  // Group bindings by predicate
   const grouped = new Map<string, SparqlBinding[]>();
   for (const b of bindings) {
     const pred = b.predicate.value;
@@ -173,10 +184,7 @@ export function serializeToTurtle(
     grouped.get(pred)!.push(b.object);
   }
 
-  // 3. Sort predicates: rdf:type first, rdfs:label second, then alphabetically by compact name
-  const RDF_TYPE = "http://www.w3.org/1999/02/22-rdf-syntax-ns#type";
-  const RDFS_LABEL = "http://www.w3.org/2000/01/rdf-schema#label";
-
+  // Sort predicates: rdf:type first, rdfs:label second, then alphabetically by compact name
   const predicateOrder = [...grouped.keys()].sort((a, b) => {
     if (a === RDF_TYPE) return -1;
     if (b === RDF_TYPE) return 1;
@@ -187,18 +195,7 @@ export function serializeToTurtle(
     return aCompact.localeCompare(bCompact);
   });
 
-  // 4. Build prefix declarations
-  const sortedPrefixes = [...prefixToNamespace.entries()].sort((a, b) =>
-    a[0].localeCompare(b[0]),
-  );
-  const prefixLines = sortedPrefixes.map(
-    ([prefix, ns]) => `@prefix ${prefix}: <${ns}> .`,
-  );
-
-  // 5. Build the subject block using property list notation
-  const subjectCompact = `<${subjectUri}>`;
   const propertyLines: string[] = [];
-
   for (let i = 0; i < predicateOrder.length; i++) {
     const pred = predicateOrder[i];
     const objects = grouped.get(pred)!;
@@ -213,7 +210,6 @@ export function serializeToTurtle(
     if (objectStrings.length === 1) {
       propertyLines.push(`    ${predCompact} ${objectStrings[0]}${separator}`);
     } else {
-      // Multiple objects: one per line with comma separation
       const lastIdx = objectStrings.length - 1;
       propertyLines.push(`    ${predCompact}`);
       objectStrings.forEach((obj, j) => {
@@ -223,14 +219,60 @@ export function serializeToTurtle(
     }
   }
 
-  // 6. Assemble the full Turtle document
+  return propertyLines;
+}
+
+function buildPrefixLines(prefixToNamespace: Map<string, string>): string[] {
+  const sortedPrefixes = [...prefixToNamespace.entries()].sort((a, b) =>
+    a[0].localeCompare(b[0]),
+  );
+  return sortedPrefixes.map(
+    ([prefix, ns]) => `@prefix ${prefix}: <${ns}> .`,
+  );
+}
+
+/**
+ * Serializes SPARQL bindings for a single subject into formatted Turtle.
+ */
+export function serializeToTurtle(
+  subjectUri: string,
+  bindings: PredObjBinding[],
+): string {
+  const subjectMap = new Map<string, PredObjBinding[]>();
+  subjectMap.set(subjectUri, bindings);
+  return serializeGraphToTurtle(subjectMap);
+}
+
+/**
+ * Serializes multiple subjects into a single formatted Turtle document.
+ * Prefixes are collected once across all subjects and emitted in a shared
+ * header. Subjects are written in the order they appear in `subjectBindings`.
+ */
+export function serializeGraphToTurtle(
+  subjectBindings: Map<string, PredObjBinding[]>,
+): string {
+  const { usedNamespaces, prefixToNamespace, register } = createPrefixRegistry();
+
+  // Register predicate and datatype URIs across all subjects
+  for (const bindings of subjectBindings.values()) {
+    registerBindingNamespaces(bindings, register);
+  }
+
+  const prefixLines = buildPrefixLines(prefixToNamespace);
+
   const parts: string[] = [];
   if (prefixLines.length > 0) {
     parts.push(prefixLines.join("\n"));
     parts.push("");
   }
-  parts.push(subjectCompact);
-  parts.push(...propertyLines);
+
+  let first = true;
+  for (const [subjectUri, bindings] of subjectBindings) {
+    if (!first) parts.push("");
+    first = false;
+    parts.push(`<${subjectUri}>`);
+    parts.push(...buildSubjectBlock(bindings, usedNamespaces));
+  }
 
   return parts.join("\n") + "\n";
 }

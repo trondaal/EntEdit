@@ -9,7 +9,11 @@ export function getGraphVisualizationUrl(
 ): string | null {
   try {
     const url = new URL(endpointUrl);
-    const baseUrl = `${url.protocol}//${url.host}`;
+    // When the endpoint is proxied through /graphdb, GraphDB Workbench
+    // is not available via the proxy — use port 7200 on the same host.
+    const baseUrl = url.pathname.startsWith("/graphdb")
+      ? `${url.protocol}//${url.hostname}:7200`
+      : `${url.protocol}//${url.host}`;
     const encodedUri = encodeURIComponent(entityUri);
     return `${baseUrl}/graphs-visualizations?uri=${encodedUri}`;
   } catch (error) {

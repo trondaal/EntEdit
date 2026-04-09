@@ -22,6 +22,10 @@ interface TurtleExportDialogProps {
   isLoading: boolean;
   error: Error | null;
   entityUri: string | null;
+  /** Optional override for the dialog title; defaults to single-entity title. */
+  title?: string;
+  /** Optional override for the downloaded filename stem (without `.ttl`). */
+  filenameStem?: string;
 }
 
 const TurtleExportDialog: React.FC<TurtleExportDialogProps> = ({
@@ -31,6 +35,8 @@ const TurtleExportDialog: React.FC<TurtleExportDialogProps> = ({
   isLoading,
   error,
   entityUri,
+  title,
+  filenameStem,
 }) => {
   const { t } = useTranslation(["entityEditor", "common"]);
   const { enqueueSnackbar } = useSnackbar();
@@ -44,9 +50,13 @@ const TurtleExportDialog: React.FC<TurtleExportDialogProps> = ({
   }, [turtle, enqueueSnackbar, t]);
 
   const handleDownload = useCallback(() => {
-    if (!turtle || !entityUri) return;
-    const fragment = extractUriFragment(entityUri).replace(/[/\\:*?"<>|]/g, "_");
-    const filename = `${fragment || "entity"}.ttl`;
+    if (!turtle) return;
+    const sanitize = (s: string) => s.replace(/[/\\:*?"<>|]/g, "_");
+    let stem = filenameStem ? sanitize(filenameStem) : "";
+    if (!stem && entityUri) {
+      stem = sanitize(extractUriFragment(entityUri));
+    }
+    const filename = `${stem || "entity"}.ttl`;
     const blob = new Blob([turtle], { type: "text/turtle;charset=utf-8" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -54,7 +64,7 @@ const TurtleExportDialog: React.FC<TurtleExportDialogProps> = ({
     a.download = filename;
     a.click();
     URL.revokeObjectURL(url);
-  }, [turtle, entityUri]);
+  }, [turtle, entityUri, filenameStem]);
 
   return (
     <Dialog
@@ -68,7 +78,7 @@ const TurtleExportDialog: React.FC<TurtleExportDialogProps> = ({
         id="turtle-export-dialog-title"
         sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}
       >
-        {t("entityEditor:dialogs.turtleExport.title")}
+        {title ?? t("entityEditor:dialogs.turtleExport.title")}
         <IconButton onClick={onClose} size="small" aria-label={t("common:buttons.cancel")}>
           <Close />
         </IconButton>

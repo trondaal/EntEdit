@@ -15,29 +15,162 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-<http://viaf.org/viaf/220031159>
-    a rdac:C10001 ;
-    rdaxd:P00018 "http://viaf.org/viaf/220031159" ;
-    rdawd:P10088 "The road" ;
-    rdfs:label "The road (McCarthy, Cormac)" ;
-    rdaxd:P00029 "Roman" ;
-    rdawo:P10061 <http://viaf.org/viaf/29558386> .
 
-<http://viaf.org/viaf/294124367>
+# Knut Hamsun beste : ungdomsverker
+
+<http://example.org/isbn-8205340781>
+    a rdac:C10007 ;
+    rdamd:P30004 "ISBN 8205340781" ;
+    rdaxd:P00018 "isbn-8205340781" ;
+    rdfs:label "ISBN8205340781" ;
+    rdamd:P30156 "Hamsuns beste" ;
+    rdamd:P30142 "ungdomsverker" ;
+    rdamd:P30117 "Knut Hamsun" ;
+    rdamd:P30076 "Gyldendal" ;
+    rdamd:P30088 "[Oslo]" ;
+    rdamd:P30011 "2005" ;
+    rdamd:P30111 "[Oslo] : Gyldendal, 2005" ;
+    rdamd:P30182 "619 s." ;
+    rdamd:P30106 "Forfatternes beste" ;
+    rdamd:P30137 "Inneholder også tre frittstående noveller" ,
+                 "Sult -- Mysterier -- Pan -- Victoria -- Onde dager -- En ganske alminnelig flue av alminnelig størrelse -- En æreskjælm",
+                 "1. utg. av Sult, Mysterier og Pan: København : Philipsen, henholdsvis 1890, 1892 og 1894. 1. utg. av Victoria: Oslo : Cammermeyer, 1898" ;
+    rdamd:P30033 "Sult -- Mysterier -- Pan -- Victoria -- Onde dager -- En ganske alminnelig flue av alminnelig størrelse -- En æreskjælm" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/220443771/exp/nob/1020> ,
+                 <http://viaf.org/viaf/194765531/exp/nob/1020> ,
+                 <http://viaf.org/viaf/395147270538135700001/exp/nob/1020> ,
+                 <http://viaf.org/viaf/206863699/exp/nob/1020> ,
+                 <http://viaf.org/viaf/59083692/ondedager/exp/nob/1020> ,
+                 <http://viaf.org/viaf/59083692/ganskealminneligflue/exp/nob/1020> ,
+                 <http://viaf.org/viaf/59083692/æreskjælm/exp/nob/1020> .
+
+<http://viaf.org/viaf/220443771/exp/nob/1020>
+    a rdac:C10006 ;
+    rdaed:P20315 "Sult" ;
+    rdfs:label "Sult (Hamsun, Knut)" ;
+    rdaed:P20315 "Sult" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://viaf.org/viaf/220443771> .
+
+<http://viaf.org/viaf/194765531/exp/nob/1020>
+    a rdac:C10006 ;
+    rdaed:P20315 "Pan" ;
+    rdaed:P20312 "Pan : af Løjtnant Thomas Glahns Papirer" ;
+    rdfs:label "Pan (Hamsun, Knut)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://viaf.org/viaf/194765531> .
+
+
+<http://viaf.org/viaf/395147270538135700001/exp/nob/1020>
+    a rdac:C10006 ;
+    rdaed:P20315 "Victoria" ;
+    rdaed:P20312 "Victoria : en kjærligheds historie" ;
+    rdfs:label "Victoria (Hamsun, Knut)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://viaf.org/viaf/395147270538135700001> .
+
+
+<http://viaf.org/viaf/206863699/exp/nob/1020>
+    a rdac:C10006 ;
+    rdaed:P20315 "Mysterier" ;
+    rdaed:P20312 "Mysterier" ;
+    rdfs:label "Mysterier (Hamsun, Knut)" ;
+    rdaed:P20315 "Mysterier" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://viaf.org/viaf/206863699> .
+
+<http://viaf.org/viaf/59083692/ondedager/exp/nob/1020>
+    a rdac:C10006 ;
+    rdaed:P20315 "Onde dager" ;
+    rdfs:label "Onde dager (Hamsun, Knut)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://viaf.org/viaf/59083692/ondedager> .
+
+<http://viaf.org/viaf/59083692/ganskealminneligflue/exp/nob/1020>
+    a rdac:C10006 ;
+    rdaed:P20315 "En ganske alminnelig flue av alminnelig størrelse" ;
+    rdfs:label "En ganske alminnelig flue av alminnelig størrelse (Hamsun, Knut)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://viaf.org/viaf/59083692/ganskealminneligflue> .
+
+<http://viaf.org/viaf/59083692/æreskjælm/exp/nob/1020>
+    a rdac:C10006 ;
+    rdaed:P20315 "En æreskjælm" ;
+    rdfs:label "En æreskjælm (Hamsun, Knut)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://viaf.org/viaf/59083692/æreskjælm> .
+
+<http://viaf.org/viaf/220443771>
     a rdac:C10001 ;
-    rdaxd:P00018 "http://viaf.org/viaf/294124367" ;
-    rdawd:P10088 "Markens grøde" ;
-    rdfs:label "Markens grøde (Hamsun, Knut)" ;
-    rdaxd:P00029 "novel" ;
-    rdawd:P10004 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdaxd:P00018 "http://viaf.org/viaf/220443771" ;
+    rdawd:P10223 "Sult" ;
+    rdfs:label "Sult (Hamsun, Knut)" ;
+    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    abi:P01 vtp:V1000;
     rdawo:P10061 <http://viaf.org/viaf/59083692> .
 
-<http://viaf.org/viaf/29558386>
-    a rdac:C10002 ;
-    rdaxd:P00018 "http://viaf.org/viaf/29558386" ;
-    rdaad:P50413 "McCarthy, Cormac" ;
-    rdfs:label "McCarthy, Cormac" ;
-    rdaad:P50339 "1933-2023" .
+<http://viaf.org/viaf/194765531>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/194765531" ;
+    rdawd:P10223 "Pan" ;
+    rdfs:label "Pan (Hamsun, Knut)" ;
+    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    abi:P01 vtp:V1000;
+    rdawo:P10061 <http://viaf.org/viaf/59083692> .
+
+<http://viaf.org/viaf/395147270538135700001>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/395147270538135700001" ;
+    rdawd:P10223 "Victoria" ;
+    rdfs:label "Victoria (Hamsun, Knut)" ;
+    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    abi:P01 vtp:V1000;
+    rdawo:P10061 <http://viaf.org/viaf/59083692> .
+
+<http://viaf.org/viaf/206863699>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/206863699" ;
+    rdawd:P10223 "Mysterier" ;
+    rdfs:label "Mysterier (Hamsun, Knut)" ;
+    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    abi:P01 vtp:V1000;
+    rdawo:P10061 <http://viaf.org/viaf/59083692> .
+
+<http://viaf.org/viaf/59083692/ondedager>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/59083692/ondedager" ;
+    rdawd:P10223 "Onde dager" ;
+    rdfs:label "Onde dager (Hamsun, Knut)" ;
+    abi:P02 abi:T02;
+    abi:P01 vtp:V1000;
+    rdawo:P10061 <http://viaf.org/viaf/59083692> .
+
+<http://viaf.org/viaf/59083692/ganskealminneligflue>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/59083692/ganskealminneligflue" ;
+    rdawd:P10223 "En ganske alminnelig flue av alminnelig størrelse" ;
+    rdfs:label "En ganske alminnelig flue av alminnelig størrelse (Hamsun, Knut)" ;
+    abi:P02 abi:T02;
+    abi:P01 vtp:V1000;
+    rdawo:P10061 <http://viaf.org/viaf/59083692> .
+
+<http://viaf.org/viaf/59083692/æreskjælm>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/59083692/æreskjælm" ;
+    rdawd:P10223 "En æreskjælm" ;
+    rdfs:label "En æreskjælm (Hamsun, Knut)" ;
+    abi:P02 abi:T02;
+    abi:P01 vtp:V1000;
+    rdawo:P10061 <http://viaf.org/viaf/59083692> .
 
 <http://viaf.org/viaf/59083692>
     a rdac:C10002 ;
@@ -45,87 +178,3 @@
     rdaad:P50413 "Hamsun, Knut" ;
     rdfs:label "Hamsun, Knut" ;
     rdaad:P50339 "1859-1952" .
-
-<http://viaf.org/viaf/220031159/exp/eng/1020/>
-    a rdac:C10006 ;
-    rdaed:P20316 "The road" ;
-    rdaxd:P00029 "standalone" ;
-    rdaed:P20312 "The road" ;
-    rdfs:label "The road (McCarthy, Cormac)" ;
-    rdaed:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaed:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/220031159> .
-
-<http://viaf.org/viaf/294124367/exp/nob/nor/1020/>
-    a rdac:C10006 ;
-    rdaed:P20316 "Markens grøde" ;
-    rdaxd:P00029 "standalone" ;
-    rdaed:P20312 "Markens grøde" ;
-    rdfs:label "Markens grøde (Hamsun, Knut)" ;
-    rdaed:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaed:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ,
-                 <http://id.loc.gov/vocabulary/iso639-2/nor> ;
-    rdaeo:P20231 <http://viaf.org/viaf/294124367> .
-
-<http://example.org/isbn-0330468464>
-    a rdac:C10007 ;
-    rdamd:P30004 "ISBN 0330468464 (pbk.)" , "ISBN 9780330468466 (pbk.)" ;
-    rdaxd:P00018 "isbn-0330468464" , "isbn-9780330468466" ;
-    rdfs:label "The road / Cormac McCarthy. --Picador, 2009" ;
-    rdamd:P30156 "The road" ;
-    rdamd:P30117 "Cormac McCarthy" ;
-    rdamd:P30088 "London" ;
-    rdamd:P30111 "London : Picador, 2009" ;
-    rdamd:P30083 "Picador" ;
-    rdamd:P30011 "2009" ;
-    rdamd:P30182 "307 p., 20 cm." ;
-    rdamd:P30137 "Film tie-in." , "Formerly CIP." , "Originally published: 2006." ;
-    rdamd:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
-    rdamd:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
-    rdamo:P30139 <http://viaf.org/viaf/220031159/exp/eng/1020/> .
-
-<http://example.org/isbn-8205277478>
-    a rdac:C10007 ;
-    rdamd:P30004 "ISBN 8205277478" ;
-    rdaxd:P00018 "isbn-8205277478" ;
-    rdfs:label "Markens grøde / Knut Hamsun. --Gyldendal, 2001" ;
-    rdamd:P30156 "Markens grøde" ;
-    rdamd:P30117 "Knut Hamsun" ;
-    rdamd:P30088 "[Oslo]" ;
-    rdamd:P30111 "[Oslo] : Gyldendal, 2001" ;
-    rdamd:P30083 "Gyldendal" ;
-    rdamd:P30011 "2001" ;
-    rdamd:P30182 "277 s." ;
-    rdamd:P30106 "Gyldendals 10 store" ;
-    rdamd:P30137 "1. utg. Kristiania ; København : Gyldendalske Boghandel, 1917 i 2 b." ;
-    rdamd:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
-    rdamd:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
-    rdamo:P30139 <http://viaf.org/viaf/294124367/exp/nob/nor/1020/> .
-
-<http://id.loc.gov/vocabulary/iso639-2/eng>
-    a skos:Concept ;
-    rdfs:label "eng" .
-
-<http://id.loc.gov/vocabulary/iso639-2/nob>
-    a skos:Concept ;
-    rdfs:label "nob" .
-
-<http://id.loc.gov/vocabulary/iso639-2/nor>
-    a skos:Concept ;
-    skos:subjectIndicator "nor" .
-
-<http://rdaregistry.info/termList/RDACarrierType/1049>
-    a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDACarrierType/1049" .
-
-<http://rdaregistry.info/termList/RDAContentType/1020>
-    a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDAContentType/1020" .
-
-<http://rdaregistry.info/termList/RDAMediaType/1007>
-    a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDAMediaType/1007" .
-
-<https://schema.nb.no/Bibliographic/Values/V1000>
-    a skos:Concept ;
-    skos:subjectIndicator "https://schema.nb.no/Bibliographic/Values/V1000" .

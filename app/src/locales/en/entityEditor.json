@@ -72,11 +72,17 @@
     },
     "turtleExport": {
       "title": "Export as Turtle",
+      "classTitle": "Export all {{className}} as Turtle",
       "copyButton": "Copy to Clipboard",
       "downloadButton": "Download .ttl",
       "copied": "Turtle copied to clipboard",
       "copyFailed": "Failed to copy to clipboard",
-      "errorMessage": "Failed to fetch entity data: {{message}}"
+      "errorMessage": "Failed to fetch entity data: {{message}}",
+      "exportAllMenu": "Export all as Turtle",
+      "exportAllMenuWithCount": "Export all {{count}} as Turtle",
+      "largeExportConfirmTitle": "Export {{count}} entities?",
+      "largeExportConfirmMessage": "This will fetch and serialize all triples for {{count}} entities of type {{className}}. The result may be large. Continue?",
+      "largeExportConfirm": "Export"
     }
   }
 }
