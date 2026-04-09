@@ -124,7 +124,7 @@ const ObjectPropertyGroup: React.FC<ObjectPropertyGroupProps> = ({
           mb: 1.5,
         }}
       >
-        <Typography variant="subtitle1">{sectionTitle}</Typography>
+        <Typography variant="subtitle1" sx={{ color: "text.primary" }}>{sectionTitle}</Typography>
 
         {isEditing && availableProperties.length > 0 && (
           <FormControl size="small" sx={{ minWidth: 200 }}>

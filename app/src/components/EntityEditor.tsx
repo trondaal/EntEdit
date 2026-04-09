@@ -774,6 +774,8 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   const handleDeleteDialog = useCallback(() => setDeleteDialogOpen(true), []);
   const handleNew = useCallback(() => onEntityDeselected?.(), [onEntityDeselected]);
   const handleEditLabels = useCallback(() => setLabelManagerOpen(true), []);
+  const [uriDialogOpen, setUriDialogOpen] = useState(false);
+  const handleEditUri = useCallback(() => setUriDialogOpen(true), []);
 
   // Turtle export
   const { turtle, isLoading: turtleLoading, error: turtleError, refetch: fetchTurtle } = useTurtleExportQuery(config, entityUri);
@@ -847,82 +849,31 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         onNew={handleNew}
         onOpenGraph={handleOpenGraph}
         onEditLabels={handleEditLabels}
+        onEditUri={handleEditUri}
         onExportTurtle={handleExportTurtle}
         isDirty={isDirty}
       />
 
       <Box sx={{ p: 3, flex: 1, overflow: "auto" }}>
-        {!classUri && (
-          <Alert severity="info" sx={{ mb: 2 }}>
-            {t("messages.selectClass")}
-          </Alert>
-        )}
         {saveError && (
           <Alert severity="error" sx={{ mb: 2 }}>
             {saveError}
           </Alert>
         )}
 
-        {entityUri ? (
-          /* Existing entity — locked URI, read-only display with copy button */
-          <Box
-            sx={{
-              mb: 2,
-              px: 1.25,
-              py: 0.75,
-              border: 1,
-              borderColor: "divider",
-              borderRadius: 1,
-              backgroundColor: "action.hover",
-              display: "flex",
-              alignItems: "center",
-              gap: 0.5,
-              minHeight: 38,
-            }}
-          >
-            <Lock sx={{ fontSize: "0.9rem", color: "text.disabled", flexShrink: 0 }} />
-            <Typography
-              variant="body2"
-              noWrap
-              sx={{ flex: 1, color: "text.secondary", fontFamily: "monospace", fontSize: "0.8rem" }}
+        <Tooltip
+          title={!classUri ? t("messages.selectClass") : ""}
+          followCursor
+          disableHoverListener={!!classUri}
+        >
+          <Box>
+            <Box
+              sx={{
+                opacity: classUri ? 1 : 0.45,
+                pointerEvents: classUri ? "auto" : "none",
+                transition: "opacity 0.2s",
+              }}
             >
-              {entityUri}
-            </Typography>
-            <Tooltip title={t("tooltips.copyUri")}>
-              <IconButton
-                size="small"
-                sx={{ p: 0.5 }}
-                aria-label={t("tooltips.copyUri")}
-                onClick={() =>
-                  navigator.clipboard.writeText(entityUri).then(
-                    () => enqueueSnackbar(t("messages.uriCopied"), { variant: "success", autoHideDuration: 2000 }),
-                    () => enqueueSnackbar(t("messages.copyFailed"), { variant: "error" }),
-                  )
-                }
-              >
-                <ContentCopy sx={{ fontSize: "0.9rem" }} />
-              </IconButton>
-            </Tooltip>
-          </Box>
-        ) : (
-          /* New entity — editable URI field */
-          <TextField
-            fullWidth
-            label={t("common:labels.identifier", { ns: "common" })}
-            value={customEntityUri}
-            onChange={(e) => setCustomEntityUri(e.target.value)}
-            disabled={!isEditing}
-            error={!!uriError}
-            sx={{
-              mb: 2,
-              "& .MuiInputBase-input": { fontSize: "0.875rem", py: 0.75 },
-              "& .MuiInputLabel-outlined": { fontSize: "0.875rem" },
-            }}
-            size="small"
-            placeholder={t("placeholders.enterUri")}
-          />
-        )}
-
         <DataPropertiesSection
           entityData={entityData}
           properties={properties}
@@ -957,7 +908,81 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
             onAddProperty={addObjectProperty}
           />
         ))}
+            </Box>
+          </Box>
+        </Tooltip>
       </Box>
+
+      {/* URI Dialog */}
+      <Dialog
+        open={uriDialogOpen}
+        onClose={() => setUriDialogOpen(false)}
+        maxWidth="sm"
+        fullWidth
+      >
+        <DialogTitle>{t("common:labels.identifier", { ns: "common" })}</DialogTitle>
+        <DialogContent>
+          {entityUri ? (
+            <Box
+              sx={{
+                mt: 1,
+                px: 1.25,
+                py: 0.75,
+                border: 1,
+                borderColor: "divider",
+                borderRadius: 1,
+                backgroundColor: "action.hover",
+                display: "flex",
+                alignItems: "center",
+                gap: 0.5,
+                minHeight: 38,
+              }}
+            >
+              <Lock sx={{ fontSize: "0.9rem", color: "text.disabled", flexShrink: 0 }} />
+              <Typography
+                variant="body2"
+                sx={{ flex: 1, color: "text.secondary", fontFamily: "monospace", fontSize: "0.8rem", wordBreak: "break-all" }}
+              >
+                {entityUri}
+              </Typography>
+              <Tooltip title={t("tooltips.copyUri")}>
+                <IconButton
+                  size="small"
+                  sx={{ p: 0.5 }}
+                  aria-label={t("tooltips.copyUri")}
+                  onClick={() =>
+                    navigator.clipboard.writeText(entityUri).then(
+                      () => enqueueSnackbar(t("messages.uriCopied"), { variant: "success", autoHideDuration: 2000 }),
+                      () => enqueueSnackbar(t("messages.copyFailed"), { variant: "error" }),
+                    )
+                  }
+                >
+                  <ContentCopy sx={{ fontSize: "0.9rem" }} />
+                </IconButton>
+              </Tooltip>
+            </Box>
+          ) : (
+            <TextField
+              fullWidth
+              autoFocus
+              label={t("common:labels.identifier", { ns: "common" })}
+              value={customEntityUri}
+              onChange={(e) => setCustomEntityUri(e.target.value)}
+              disabled={!isEditing}
+              error={!!uriError}
+              helperText={t("placeholders.enterUri")}
+              sx={{ mt: 1 }}
+              size="small"
+              placeholder={t("placeholders.enterUri")}
+            />
+          )}
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setUriDialogOpen(false)}>
+            {t("common:buttons.close", { ns: "common" })}
+          </Button>
+        </DialogActions>
+      </Dialog>
 
       {/* Label Manager Dialog */}
       <LabelManager

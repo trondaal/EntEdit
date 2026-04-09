@@ -4,7 +4,6 @@ import {
   Typography,
   TextField,
   IconButton,
-  Divider,
   Select,
   MenuItem,
   FormControl,
@@ -75,8 +74,6 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
     <>
       {(isEditing || dataPropertiesWithValues.length > 0) && (
         <>
-          <Divider sx={{ my: 1.5 }} />
-
           <Box
             sx={{
               display: "flex",
@@ -85,7 +82,7 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
               mb: 1.5,
             }}
           >
-            <Typography variant="subtitle1">
+            <Typography variant="subtitle1" sx={{ color: "text.primary" }}>
               {t("sections.textMetadata")}
             </Typography>
 

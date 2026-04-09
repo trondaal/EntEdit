@@ -19,8 +19,9 @@ import {
   DeleteForever,
   AccountTree,
   MoreVert,
-  Label,
+  LabelOutlined,
   Code,
+  Link as LinkIcon,
 } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 
@@ -40,6 +41,7 @@ interface EntityEditorHeaderProps {
   onNew: () => void;
   onOpenGraph: (event: React.MouseEvent) => void;
   onEditLabels: () => void;
+  onEditUri: () => void;
   onExportTurtle: () => void;
   isDirty: boolean;
 }
@@ -60,6 +62,7 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
   onNew,
   onOpenGraph,
   onEditLabels,
+  onEditUri,
   onExportTurtle,
   isDirty,
 }) => {
@@ -73,8 +76,10 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
       : t("title.create", { className: resolvedClassName }));
   const titleMuted = !entityLabel;
 
-  // Menu is only meaningful when an entity is selected
-  const menuDisabled = !entityUri;
+  // Menu is available as soon as a class is selected;
+  // items that require a saved entity are individually disabled below.
+  const menuDisabled = !classUri;
+  const entityActionsDisabled = !entityUri;
   const handleMenuClose = () => setMenuAnchor(null);
 
   return (
@@ -83,10 +88,11 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
         p: 2,
         borderBottom: 1,
         borderColor: "divider",
+        height: 64,
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        minHeight: 64,
+        gap: 1,
       }}
     >
       {/* Left: label as title + label-edit icon */}
@@ -94,23 +100,16 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
         <Typography
           variant="h6"
           noWrap
-          sx={{ color: titleMuted ? "text.disabled" : "text.primary", fontStyle: titleMuted ? "italic" : "normal" }}
+          sx={{
+            color: "text.primary",
+            fontStyle: titleMuted ? "italic" : "normal",
+            display: "flex",
+            alignItems: "center",
+          }}
         >
+          <Edit sx={{ mr: 1 }} />
           {titleText}
         </Typography>
-        <Tooltip title={t("common:buttons.editLabels", { ns: "common" })}>
-          <span>
-            <IconButton
-              size="small"
-              onClick={onEditLabels}
-              disabled={!isEditing || !classUri}
-              aria-label={t("common:buttons.editLabels", { ns: "common" })}
-              sx={{ color: isEditing && classUri ? "primary.main" : "text.disabled", flexShrink: 0 }}
-            >
-              <Label fontSize="small" />
-            </IconButton>
-          </span>
-        </Tooltip>
       </Box>
 
       {/* Right: action buttons */}
@@ -173,7 +172,30 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
           anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
           transformOrigin={{ vertical: "top", horizontal: "right" }}
         >
-          <MenuItem onClick={() => { handleMenuClose(); onNew(); }}>
+          <MenuItem
+            onClick={() => { handleMenuClose(); onEditUri(); }}
+          >
+            <ListItemIcon>
+              <LinkIcon fontSize="small" sx={{ color: uriError ? "error.main" : undefined }} />
+            </ListItemIcon>
+            <ListItemText>
+              {t(entityUri ? "common:buttons.showUri" : "common:buttons.addUri", { ns: "common" })}
+            </ListItemText>
+          </MenuItem>
+          <MenuItem
+            onClick={() => { handleMenuClose(); onEditLabels(); }}
+            disabled={!isEditing}
+          >
+            <ListItemIcon>
+              <LabelOutlined fontSize="small" />
+            </ListItemIcon>
+            <ListItemText>{t("common:buttons.editLabels", { ns: "common" })}</ListItemText>
+          </MenuItem>
+          <Divider />
+          <MenuItem
+            onClick={() => { handleMenuClose(); onNew(); }}
+            disabled={entityActionsDisabled}
+          >
             <ListItemIcon>
               <Add fontSize="small" />
             </ListItemIcon>
@@ -182,9 +204,10 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
           <MenuItem
             onClick={(e) => { handleMenuClose(); onOpenGraph(e); }}
             component="a"
-            href={graphUrl || undefined}
+            href={entityActionsDisabled ? undefined : (graphUrl || undefined)}
             target="_blank"
             rel="noopener noreferrer"
+            disabled={entityActionsDisabled}
           >
             <ListItemIcon>
               <AccountTree fontSize="small" />
@@ -198,7 +221,7 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
             <span>
               <MenuItem
                 onClick={() => { handleMenuClose(); onExportTurtle(); }}
-                disabled={isDirty}
+                disabled={isDirty || entityActionsDisabled}
               >
                 <ListItemIcon>
                   <Code fontSize="small" />
@@ -210,10 +233,11 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
           <Divider />
           <MenuItem
             onClick={() => { handleMenuClose(); onDelete(); }}
-            sx={{ color: "error.main" }}
+            disabled={entityActionsDisabled}
+            sx={{ color: entityActionsDisabled ? undefined : "error.main" }}
           >
             <ListItemIcon>
-              <DeleteForever fontSize="small" sx={{ color: "error.main" }} />
+              <DeleteForever fontSize="small" sx={{ color: entityActionsDisabled ? undefined : "error.main" }} />
             </ListItemIcon>
             <ListItemText>{t("common:buttons.delete", { ns: "common" })}</ListItemText>
           </MenuItem>
