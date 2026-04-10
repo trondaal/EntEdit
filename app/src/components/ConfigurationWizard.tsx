@@ -17,6 +17,8 @@ import {
   List,
   ListItem,
   ListItemText,
+  FormControlLabel,
+  Checkbox,
 } from "@mui/material";
 import { Storage, CheckCircle, Error, Language } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
@@ -29,6 +31,7 @@ interface ConfigurationWizardProps {
   onConfigurationComplete: (
     config: SparqlEndpointConfig,
     language: string,
+    preferences: { warnAutoUri: boolean; warnAutoLabel: boolean },
   ) => void;
   initialConfig?: SparqlEndpointConfig;
   initialLanguage?: string;
@@ -50,6 +53,8 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
     },
   );
   const [selectedLanguage, setSelectedLanguage] = useState(initialLanguage);
+  const [warnAutoUri, setWarnAutoUri] = useState(false);
+  const [warnAutoLabel, setWarnAutoLabel] = useState(false);
   const [testing, setTesting] = useState(false);
   const [testResult, setTestResult] = useState<{
     success: boolean;
@@ -61,6 +66,7 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
     t("wizard.steps.connection"),
     t("wizard.steps.test"),
     t("wizard.steps.language"),
+    t("wizard.steps.settings"),
   ];
 
   const testConnection = async () => {
@@ -147,7 +153,7 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
   };
 
   const handleComplete = () => {
-    onConfigurationComplete(config, selectedLanguage);
+    onConfigurationComplete(config, selectedLanguage, { warnAutoUri, warnAutoLabel });
   };
 
   const renderStepContent = (step: number) => {
@@ -312,6 +318,39 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
                 onLanguageChange={setSelectedLanguage}
               />
             </Box>
+          </Box>
+        );
+
+      case 3:
+        return (
+          <Box sx={{ minHeight: 300 }}>
+            <Typography variant="h6" sx={{ mb: 2 }}>
+              {t("wizard.settingsStep.title")}
+            </Typography>
+            <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
+              {t("wizard.settingsStep.description")}
+            </Typography>
+
+            <Box sx={{ mb: 3 }}>
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    checked={warnAutoUri}
+                    onChange={(e) => setWarnAutoUri(e.target.checked)}
+                  />
+                }
+                label={t("endpointConfig.warnAutoUri")}
+              />
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    checked={warnAutoLabel}
+                    onChange={(e) => setWarnAutoLabel(e.target.checked)}
+                  />
+                }
+                label={t("endpointConfig.warnAutoLabel")}
+              />
+            </Box>
 
             <Paper
               sx={{
@@ -370,6 +409,20 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
         return (
           <Box sx={{ display: "flex", gap: 1 }}>
             <Button variant="outlined" onClick={() => setActiveStep(1)}>
+              {t("wizard.buttons.back")}
+            </Button>
+            <Button
+              variant="contained"
+              onClick={() => setActiveStep(3)}
+            >
+              {t("wizard.buttons.nextSettings")}
+            </Button>
+          </Box>
+        );
+      case 3:
+        return (
+          <Box sx={{ display: "flex", gap: 1 }}>
+            <Button variant="outlined" onClick={() => setActiveStep(2)}>
               {t("wizard.buttons.back")}
             </Button>
             <Button

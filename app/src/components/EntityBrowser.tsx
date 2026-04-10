@@ -18,12 +18,8 @@ import {
   DialogContentText,
   DialogActions,
   Button,
-  IconButton,
-  Menu,
-  MenuItem,
-  ListItemIcon,
 } from "@mui/material";
-import { Class, Code, Description, Edit, MoreVert, Search, Tag } from "@mui/icons-material";
+import { Class, Description, Edit, Search, Tag } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import { useVirtualizer } from "@tanstack/react-virtual";
 import type { SparqlEndpointConfig } from "../types/sparql";
@@ -38,16 +34,14 @@ import {
 } from "../hooks/useEntityQueries";
 import { useDebouncedValue } from "../hooks/useDebouncedValue";
 import EntityEditor from "./EntityEditor";
-import TurtleExportDialog from "./TurtleExportDialog";
-import { useClassTurtleExportQuery } from "../hooks/useClassTurtleExportQuery";
-import { formatLabel, extractUriFragment } from "../utils/labelUtils";
+import { formatLabel } from "../utils/labelUtils";
 import { useLogging } from "../hooks/useLogging";
-
-const LARGE_EXPORT_THRESHOLD = 1000;
 
 interface EntityBrowserProps {
   config: SparqlEndpointConfig;
   selectedLanguage: string;
+  warnAutoUri: boolean;
+  warnAutoLabel: boolean;
 }
 
 const ITEM_HEIGHT = 42; // Approximate height of a single entity list item
@@ -55,6 +49,8 @@ const ITEM_HEIGHT = 42; // Approximate height of a single entity list item
 const EntityBrowser: React.FC<EntityBrowserProps> = ({
   config,
   selectedLanguage,
+  warnAutoUri,
+  warnAutoLabel,
 }) => {
   const { t } = useTranslation();
   const { logEvent, isRecording } = useLogging();
@@ -65,10 +61,6 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
   // URI that the user clicked while the editor had unsaved changes
   const [pendingEntityUri, setPendingEntityUri] = useState<string | null>(null);
   const [switchEntityDialogOpen, setSwitchEntityDialogOpen] = useState(false);
-  const [exportMenuAnchor, setExportMenuAnchor] = useState<HTMLElement | null>(null);
-  const [classExportDialogOpen, setClassExportDialogOpen] = useState(false);
-  const [largeExportConfirmOpen, setLargeExportConfirmOpen] = useState(false);
-
   // Debounce the filter text so SPARQL queries don't fire on every keystroke
   const debouncedFilter = useDebouncedValue(entityFilter, 300);
 
@@ -198,52 +190,6 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
     setPendingEntityUri(null);
     setSwitchEntityDialogOpen(false);
   }, []);
-
-  // Class-level Turtle export
-  const {
-    turtle: classTurtle,
-    isLoading: classTurtleLoading,
-    error: classTurtleError,
-    refetch: fetchClassTurtle,
-  } = useClassTurtleExportQuery(config, selectedClass);
-
-  const startClassExport = useCallback(() => {
-    setClassExportDialogOpen(true);
-    void fetchClassTurtle();
-  }, [fetchClassTurtle]);
-
-  const handleExportMenuOpen = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>) => {
-      setExportMenuAnchor(e.currentTarget);
-    },
-    [],
-  );
-  const handleExportMenuClose = useCallback(() => setExportMenuAnchor(null), []);
-
-  const handleExportAllClick = useCallback(() => {
-    setExportMenuAnchor(null);
-    if (totalCount != null && totalCount > LARGE_EXPORT_THRESHOLD) {
-      setLargeExportConfirmOpen(true);
-    } else {
-      startClassExport();
-    }
-  }, [totalCount, startClassExport]);
-
-  const handleLargeExportConfirm = useCallback(() => {
-    setLargeExportConfirmOpen(false);
-    startClassExport();
-  }, [startClassExport]);
-
-  const selectedClassLabel = useMemo(
-    () =>
-      selectedClass
-        ? formatLabel(
-            classes?.find((c) => c.uri === selectedClass)?.label,
-            selectedClass,
-          )
-        : "",
-    [selectedClass, classes],
-  );
 
   // Build the count label for the entity panel header
   // (must be before early return to satisfy Rules of Hooks)
@@ -386,39 +332,6 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
                 }}
               />
 
-              <Tooltip
-                title={t("entityEditor:dialogs.turtleExport.exportAllMenu", { ns: "entityEditor" })}
-              >
-                <span>
-                  <IconButton
-                    size="small"
-                    onClick={handleExportMenuOpen}
-                    disabled={!selectedClass || !totalCount}
-                    aria-label={t("entityEditor:dialogs.turtleExport.exportAllMenu", { ns: "entityEditor" })}
-                  >
-                    <MoreVert fontSize="small" />
-                  </IconButton>
-                </span>
-              </Tooltip>
-              <Menu
-                anchorEl={exportMenuAnchor}
-                open={Boolean(exportMenuAnchor)}
-                onClose={handleExportMenuClose}
-              >
-                <MenuItem onClick={handleExportAllClick} disabled={!selectedClass || !totalCount}>
-                  <ListItemIcon>
-                    <Code fontSize="small" />
-                  </ListItemIcon>
-                  <ListItemText>
-                    {totalCount != null
-                      ? t("entityEditor:dialogs.turtleExport.exportAllMenuWithCount", {
-                          ns: "entityEditor",
-                          count: totalCount,
-                        })
-                      : t("entityEditor:dialogs.turtleExport.exportAllMenu", { ns: "entityEditor" })}
-                  </ListItemText>
-                </MenuItem>
-              </Menu>
             </Box>
 
             {!selectedClass ? (
@@ -529,6 +442,8 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
             propertiesLoading={propertiesLoading}
             objectPropertiesLoading={objectPropertiesLoading}
             selectedLanguage={selectedLanguage}
+            warnAutoUri={warnAutoUri}
+            warnAutoLabel={warnAutoLabel}
             onEntitySaved={() => {
               // Optionally refetch entities list
             }}
@@ -561,54 +476,6 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
         </DialogActions>
       </Dialog>
 
-      {/* Confirm large class export */}
-      <Dialog
-        open={largeExportConfirmOpen}
-        onClose={() => setLargeExportConfirmOpen(false)}
-      >
-        <DialogTitle>
-          {t("entityEditor:dialogs.turtleExport.largeExportConfirmTitle", {
-            ns: "entityEditor",
-            count: totalCount ?? 0,
-          })}
-        </DialogTitle>
-        <DialogContent>
-          <DialogContentText>
-            {t("entityEditor:dialogs.turtleExport.largeExportConfirmMessage", {
-              ns: "entityEditor",
-              count: totalCount ?? 0,
-              className: selectedClassLabel,
-            })}
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={() => setLargeExportConfirmOpen(false)}>
-            {t("buttons.cancel")}
-          </Button>
-          <Button onClick={handleLargeExportConfirm} variant="contained">
-            {t("entityEditor:dialogs.turtleExport.largeExportConfirm", { ns: "entityEditor" })}
-          </Button>
-        </DialogActions>
-      </Dialog>
-
-      {/* Class-level Turtle export dialog */}
-      <TurtleExportDialog
-        open={classExportDialogOpen}
-        onClose={() => setClassExportDialogOpen(false)}
-        turtle={classTurtle}
-        isLoading={classTurtleLoading}
-        error={classTurtleError}
-        entityUri={null}
-        title={t("entityEditor:dialogs.turtleExport.classTitle", {
-          ns: "entityEditor",
-          className: selectedClassLabel,
-        })}
-        filenameStem={
-          selectedClass
-            ? `${extractUriFragment(selectedClass)}-all`
-            : undefined
-        }
-      />
     </Box>
   );
 };

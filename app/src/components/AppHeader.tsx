@@ -7,21 +7,25 @@ import {
   Dialog,
   IconButton,
   Box,
+  Tooltip,
 } from "@mui/material";
-import { Settings, Help } from "@mui/icons-material";
+import { Settings, Help, Download } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import LanguageSelector from "./LanguageSelector";
 import EndpointConfig from "./EndpointConfig";
+import ExportDialog from "./ExportDialog";
 import LoggingControls from "./LoggingControls";
 
 interface AppHeaderProps {
   config: SparqlEndpointConfig;
-  onConfigChange: (config: SparqlEndpointConfig) => void;
+  onConfigChange: (config: SparqlEndpointConfig, warnAutoUri: boolean, warnAutoLabel: boolean) => void;
   selectedLanguage: string;
   onLanguageChange: (language: string) => void;
   onResetConfiguration?: () => void;
   showLogging?: boolean;
+  warnAutoUri: boolean;
+  warnAutoLabel: boolean;
 }
 
 const AppHeader: React.FC<AppHeaderProps> = ({
@@ -31,9 +35,12 @@ const AppHeader: React.FC<AppHeaderProps> = ({
   onLanguageChange,
   onResetConfiguration,
   showLogging = true,
+  warnAutoUri,
+  warnAutoLabel,
 }) => {
   const { t } = useTranslation();
   const [configDialogOpen, setConfigDialogOpen] = useState(false);
+  const [exportDialogOpen, setExportDialogOpen] = useState(false);
 
   const getEndpointDisplayName = (url: string): string => {
     try {
@@ -151,6 +158,17 @@ const AppHeader: React.FC<AppHeaderProps> = ({
               />
             </Box>
 
+            {/* Export Button */}
+            <Tooltip title={t("buttons.export")}>
+              <IconButton
+                color="inherit"
+                aria-label={t("buttons.export")}
+                onClick={() => setExportDialogOpen(true)}
+              >
+                <Download />
+              </IconButton>
+            </Tooltip>
+
             {/* Help Button */}
             <IconButton
               color="inherit"
@@ -175,8 +193,8 @@ const AppHeader: React.FC<AppHeaderProps> = ({
       >
         <EndpointConfig
           config={config}
-          onConfigChange={(newConfig) => {
-            onConfigChange(newConfig);
+          onConfigChange={(newConfig, newWarnAutoUri, newWarnAutoLabel) => {
+            onConfigChange(newConfig, newWarnAutoUri, newWarnAutoLabel);
             setConfigDialogOpen(false);
           }}
           selectedLanguage={selectedLanguage}
@@ -186,8 +204,18 @@ const AppHeader: React.FC<AppHeaderProps> = ({
             setConfigDialogOpen(false);
             onResetConfiguration?.();
           }}
+          warnAutoUri={warnAutoUri}
+          warnAutoLabel={warnAutoLabel}
         />
       </Dialog>
+
+      {/* Export Dialog */}
+      <ExportDialog
+        open={exportDialogOpen}
+        onClose={() => setExportDialogOpen(false)}
+        config={config}
+        selectedLanguage={selectedLanguage}
+      />
     </>
   );
 };

@@ -18,8 +18,10 @@
     "close": "Close",
     "moreActions": "More actions",
     "apply": "Apply",
-    "exportTurtle": "Export as Turtle",
-    "exportTurtleSaveFirst": "Save changes before exporting"
+    "exportTurtle": "Turtle RDF",
+    "export": "Export",
+    "exportTurtleSaveFirst": "Save changes before exporting",
+    "back": "Back"
   },
   "labels": {
     "language": "Language",
@@ -84,7 +86,8 @@
     "steps": {
       "connection": "Database Connection",
       "test": "Test Connection",
-      "language": "Language Selection"
+      "language": "Language Selection",
+      "settings": "Other Settings"
     },
     "connection": {
       "title": "Configure Database Connection",
@@ -119,9 +122,14 @@
       "successTitle": "Configuration Complete!",
       "successDescription": "Your configuration will be saved locally and the application will connect to your database."
     },
+    "settingsStep": {
+      "title": "Other Settings",
+      "description": "Select these to get a warning when saving entities with auto-generated URIs or labels. This can help you create good quality RDF with established URIs and descriptive labels."
+    },
     "buttons": {
       "nextTest": "Next: Test Connection",
       "nextLanguage": "Next: Language",
+      "nextSettings": "Next: Settings",
       "back": "Back",
       "complete": "Complete Setup"
     }
@@ -134,7 +142,10 @@
     "password": "Password (optional)",
     "saveConfiguration": "Save Configuration",
     "reset": "Reset",
-    "reconfigureDatabase": "Reconfigure Database"
+    "reconfigureDatabase": "Reconfigure Database",
+    "saveWarnings": "Save warnings",
+    "warnAutoUri": "Warn when saving with auto-generated URI",
+    "warnAutoLabel": "Warn when saving with auto-generated label"
   },
   "logging": {
     "record": "Record",

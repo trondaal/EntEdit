@@ -70,6 +70,21 @@
       "message": "You have unsaved changes. Cancelling will discard all changes made in this session.",
       "confirm": "Discard changes"
     },
+    "saveWarning": {
+      "title": "Auto-generated values",
+      "messageBoth": "This entity will be saved with an auto-generated URI and an auto-generated label. Are you sure you want to continue?",
+      "messageUri": "This entity will be saved with an auto-generated URI. Are you sure you want to continue?",
+      "messageLabel": "This entity will be saved with an auto-generated label. Are you sure you want to continue?",
+      "confirm": "Save anyway"
+    },
+    "export": {
+      "title": "Export Entities",
+      "description": "Select the entity types you want to export as a Turtle RDF file.",
+      "selectAll": "Select all",
+      "largeWarning": "You are about to export {{count}} entities. The result may be large and take some time to generate.",
+      "exportAnyway": "Export anyway",
+      "exportButton": "Export ({{count}})"
+    },
     "turtleExport": {
       "title": "Export as Turtle",
       "classTitle": "Export all {{className}} as Turtle",
@@ -80,8 +95,12 @@
       "errorMessage": "Failed to fetch entity data: {{message}}",
       "exportAllMenu": "Export all as Turtle",
       "exportAllMenuWithCount": "Export all {{count}} as Turtle",
+      "exportAllEntities": "Export all entity types as Turtle",
+      "allEntitiesTitle": "Export all entities as Turtle",
       "largeExportConfirmTitle": "Export {{count}} entities?",
       "largeExportConfirmMessage": "This will fetch and serialize all triples for {{count}} entities of type {{className}}. The result may be large. Continue?",
+      "allLargeExportConfirmTitle": "Export {{count}} entities?",
+      "allLargeExportConfirmMessage": "This will fetch and serialize all triples for {{count}} entities across all types. The result may be large. Continue?",
       "largeExportConfirm": "Export"
     }
   }

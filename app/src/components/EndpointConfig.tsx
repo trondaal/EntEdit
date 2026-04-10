@@ -10,6 +10,9 @@ import {
   DialogTitle,
   DialogContent,
   DialogActions,
+  FormControlLabel,
+  Checkbox,
+  Divider,
 } from "@mui/material";
 import { ExpandMore, ExpandLess, Settings } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
@@ -18,11 +21,13 @@ import LanguageSelector from "./LanguageSelector";
 
 interface EndpointConfigProps {
   config: SparqlEndpointConfig;
-  onConfigChange: (config: SparqlEndpointConfig) => void;
+  onConfigChange: (config: SparqlEndpointConfig, warnAutoUri: boolean, warnAutoLabel: boolean) => void;
   selectedLanguage: string;
   onLanguageChange: (language: string) => void;
   isModal?: boolean;
   onResetConfiguration?: () => void;
+  warnAutoUri: boolean;
+  warnAutoLabel: boolean;
 }
 
 const EndpointConfig: React.FC<EndpointConfigProps> = ({
@@ -32,13 +37,17 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
   onLanguageChange,
   isModal = false,
   onResetConfiguration,
+  warnAutoUri,
+  warnAutoLabel,
 }) => {
   const { t } = useTranslation();
   const [expanded, setExpanded] = useState(false);
   const [localConfig, setLocalConfig] = useState(config);
+  const [localWarnAutoUri, setLocalWarnAutoUri] = useState(warnAutoUri);
+  const [localWarnAutoLabel, setLocalWarnAutoLabel] = useState(warnAutoLabel);
 
   const handleSave = () => {
-    onConfigChange(localConfig);
+    onConfigChange(localConfig, localWarnAutoUri, localWarnAutoLabel);
     if (!isModal) {
       setExpanded(false);
     }
@@ -46,6 +55,8 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
 
   const handleReset = () => {
     setLocalConfig(config);
+    setLocalWarnAutoUri(warnAutoUri);
+    setLocalWarnAutoLabel(warnAutoLabel);
   };
 
   if (isModal) {
@@ -89,6 +100,29 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
                 setLocalConfig({ ...localConfig, password: e.target.value })
               }
               sx={{ mb: 2 }}
+            />
+
+            <Divider sx={{ my: 1 }} />
+            <Typography variant="subtitle2" sx={{ mb: 1 }}>
+              {t("endpointConfig.saveWarnings")}
+            </Typography>
+            <FormControlLabel
+              control={
+                <Checkbox
+                  checked={localWarnAutoUri}
+                  onChange={(e) => setLocalWarnAutoUri(e.target.checked)}
+                />
+              }
+              label={t("endpointConfig.warnAutoUri")}
+            />
+            <FormControlLabel
+              control={
+                <Checkbox
+                  checked={localWarnAutoLabel}
+                  onChange={(e) => setLocalWarnAutoLabel(e.target.checked)}
+                />
+              }
+              label={t("endpointConfig.warnAutoLabel")}
             />
           </Box>
         </DialogContent>
@@ -161,6 +195,30 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
             onChange={(e) =>
               setLocalConfig({ ...localConfig, password: e.target.value })
             }
+            sx={{ mb: 2 }}
+          />
+
+          <Divider sx={{ my: 1 }} />
+          <Typography variant="subtitle2" sx={{ mb: 1 }}>
+            {t("endpointConfig.saveWarnings")}
+          </Typography>
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={localWarnAutoUri}
+                onChange={(e) => setLocalWarnAutoUri(e.target.checked)}
+              />
+            }
+            label={t("endpointConfig.warnAutoUri")}
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={localWarnAutoLabel}
+                onChange={(e) => setLocalWarnAutoLabel(e.target.checked)}
+              />
+            }
+            label={t("endpointConfig.warnAutoLabel")}
             sx={{ mb: 2 }}
           />
 

@@ -70,6 +70,21 @@
       "message": "Du har ulagrede endringer. Avbryt vil forkaste alle endringer gjort i denne sesjonen.",
       "confirm": "Forkast endringer"
     },
+    "saveWarning": {
+      "title": "Autogenererte verdier",
+      "messageBoth": "Denne entiteten vil bli lagret med en autogenerert URI og en autogenerert etikett. Er du sikker på at du vil fortsette?",
+      "messageUri": "Denne entiteten vil bli lagret med en autogenerert URI. Er du sikker på at du vil fortsette?",
+      "messageLabel": "Denne entiteten vil bli lagret med en autogenerert etikett. Er du sikker på at du vil fortsette?",
+      "confirm": "Lagre likevel"
+    },
+    "export": {
+      "title": "Eksporter entiteter",
+      "description": "Velg entitetstypene du vil eksportere som en Turtle RDF-fil.",
+      "selectAll": "Velg alle",
+      "largeWarning": "Du er i ferd med å eksportere {{count}} entiteter. Resultatet kan bli stort og ta litt tid å generere.",
+      "exportAnyway": "Eksporter likevel",
+      "exportButton": "Eksporter ({{count}})"
+    },
     "turtleExport": {
       "title": "Eksporter som Turtle",
       "classTitle": "Eksporter alle {{className}} som Turtle",
@@ -80,8 +95,12 @@
       "errorMessage": "Feil ved henting av entitetsdata: {{message}}",
       "exportAllMenu": "Eksporter alle som Turtle",
       "exportAllMenuWithCount": "Eksporter alle {{count}} som Turtle",
+      "exportAllEntities": "Eksporter alle entitetstyper som Turtle",
+      "allEntitiesTitle": "Eksporter alle entiteter som Turtle",
       "largeExportConfirmTitle": "Eksporter {{count}} entiteter?",
       "largeExportConfirmMessage": "Dette vil hente og serialisere alle tripler for {{count}} entiteter av type {{className}}. Resultatet kan bli stort. Fortsette?",
+      "allLargeExportConfirmTitle": "Eksporter {{count}} entiteter?",
+      "allLargeExportConfirmMessage": "Dette vil hente og serialisere alle tripler for {{count}} entiteter på tvers av alle typer. Resultatet kan bli stort. Fortsette?",
       "largeExportConfirm": "Eksporter"
     }
   }

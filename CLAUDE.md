@@ -177,6 +177,10 @@ properties from being corrupted into string literals.
 - RDF-star `<< s p o >>` OPTIONAL clauses may interact unpredictably with inference;
   consider separate queries if results are affected
 - `SparqlClient.query()` = inference ON; `SparqlClient.queryWithoutInference()` = inference OFF
+- Schema property queries (`useRdfProperties`, `useRdfObjectProperties`, relationship hooks)
+  run with inference and no JS-side deduplication — stale/duplicate annotation triples
+  (e.g., multiple `entedit:order` values) cause duplicate properties in the editor UI;
+  when reloading vocabulary files, delete old annotation triples first
 
 ### UI Patterns
 

@@ -230,29 +230,37 @@ function AppInner() {
     setLoading(false);
   }, []);
 
-  const handleConfigurationComplete = (config: SparqlEndpointConfig, language: string) => {
+  const handleConfigurationComplete = (
+    config: SparqlEndpointConfig,
+    language: string,
+    preferences: { warnAutoUri: boolean; warnAutoLabel: boolean },
+  ) => {
     // Save to localStorage
-    saveConfiguration(config, language);
-    
+    saveConfiguration(config, language, preferences);
+
     // Update app state
     const newAppConfig: AppConfiguration = {
       endpoint: config,
       language,
       isConfigured: true,
+      warnAutoUri: preferences.warnAutoUri,
+      warnAutoLabel: preferences.warnAutoLabel,
     };
-    
+
     setAppConfig(newAppConfig);
     setShowWizard(false);
   };
 
-  const handleConfigChange = (newConfig: SparqlEndpointConfig) => {
+  const handleConfigChange = (newConfig: SparqlEndpointConfig, warnAutoUri: boolean, warnAutoLabel: boolean) => {
     if (appConfig) {
       const updatedConfig = {
         ...appConfig,
         endpoint: newConfig,
+        warnAutoUri,
+        warnAutoLabel,
       };
       setAppConfig(updatedConfig);
-      saveConfiguration(newConfig, appConfig.language);
+      saveConfiguration(newConfig, appConfig.language, { warnAutoUri, warnAutoLabel });
     }
   };
 
@@ -336,6 +344,8 @@ function AppInner() {
                 onLanguageChange={handleLanguageChange}
                 onResetConfiguration={handleResetConfiguration}
                 showLogging={showLogging}
+                warnAutoUri={appConfig.warnAutoUri}
+                warnAutoLabel={appConfig.warnAutoLabel}
               />
               <Box
                 sx={{
@@ -373,6 +383,8 @@ function AppInner() {
                       <EntityBrowser
                         config={appConfig.endpoint}
                         selectedLanguage={appConfig.language}
+                        warnAutoUri={appConfig.warnAutoUri}
+                        warnAutoLabel={appConfig.warnAutoLabel}
                       />
                     )}
                     {activeTab === 1 && showSearchTab && (

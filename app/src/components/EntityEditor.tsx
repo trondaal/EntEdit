@@ -51,6 +51,8 @@ interface EntityEditorProps {
   propertiesLoading: boolean;
   objectPropertiesLoading: boolean;
   selectedLanguage: string;
+  warnAutoUri: boolean;
+  warnAutoLabel: boolean;
   onEntitySaved: () => void;
   onEntityDeselected?: () => void;
   onEditingChange?: (isEditing: boolean) => void;
@@ -66,6 +68,8 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   propertiesLoading,
   objectPropertiesLoading,
   selectedLanguage,
+  warnAutoUri,
+  warnAutoLabel,
   onEntitySaved,
   onEntityDeselected,
   onEditingChange,
@@ -105,6 +109,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   const [deleting, setDeleting] = useState(false);
   const [deleteError, setDeleteError] = useState<string | null>(null);
   const [discardDialogOpen, setDiscardDialogOpen] = useState(false);
+  const [saveWarningDialogOpen, setSaveWarningDialogOpen] = useState(false);
   const [labelManagerOpen, setLabelManagerOpen] = useState(false);
   const [turtleDialogOpen, setTurtleDialogOpen] = useState(false);
   const [entityLabels, setEntityLabels] = useState<
@@ -522,6 +527,19 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     }
   }, [classUri, config, entityUri, customEntityUri, entityData, entityLabels, existingEntity, objectPropertyUris, properties, queryClient, onEntitySaved]);
 
+  const requestSave = useCallback(() => {
+    // Only check warnings for new entities (existing entities already have URIs and labels)
+    if (!entityUri) {
+      const willAutoUri = warnAutoUri && !customEntityUri.trim();
+      const willAutoLabel = warnAutoLabel && !entityLabels.some((l) => l.value.trim());
+      if (willAutoUri || willAutoLabel) {
+        setSaveWarningDialogOpen(true);
+        return;
+      }
+    }
+    handleSave();
+  }, [entityUri, warnAutoUri, warnAutoLabel, customEntityUri, entityLabels, handleSave]);
+
   const handleDelete = useCallback(async () => {
     if (!entityUri) return;
 
@@ -747,12 +765,12 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     const handler = (e: KeyboardEvent) => {
       if ((e.ctrlKey || e.metaKey) && e.key === "s") {
         e.preventDefault();
-        handleSave();
+        requestSave();
       }
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, [isEditing, handleSave]);
+  }, [isEditing, requestSave]);
 
   // Additional handlers for the header component
   const handleEdit = useCallback(() => setIsEditing(true), []);
@@ -856,7 +874,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         uriError={!!uriError}
         classUri={classUri}
         graphUrl={getGraphUrl}
-        onSave={handleSave}
+        onSave={requestSave}
         onEdit={handleEdit}
         onCancel={handleCancel}
         onDelete={handleDeleteDialog}
@@ -1079,6 +1097,43 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           </Button>
           <Button onClick={performCancel} color="warning" variant="contained">
             {t("dialogs.discard.confirm")}
+          </Button>
+        </DialogActions>
+      </Dialog>
+
+      {/* Save Warning Dialog for auto-generated URI/label */}
+      <Dialog
+        open={saveWarningDialogOpen}
+        onClose={() => setSaveWarningDialogOpen(false)}
+        aria-labelledby="save-warning-dialog-title"
+        aria-describedby="save-warning-dialog-description"
+      >
+        <DialogTitle id="save-warning-dialog-title">
+          {t("dialogs.saveWarning.title")}
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText id="save-warning-dialog-description">
+            {(() => {
+              const willAutoUri = warnAutoUri && !entityUri && !customEntityUri.trim();
+              const willAutoLabel = warnAutoLabel && !entityLabels.some((l) => l.value.trim());
+              if (willAutoUri && willAutoLabel) return t("dialogs.saveWarning.messageBoth");
+              if (willAutoUri) return t("dialogs.saveWarning.messageUri");
+              return t("dialogs.saveWarning.messageLabel");
+            })()}
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setSaveWarningDialogOpen(false)}>
+            {t("common:buttons.cancel", { ns: "common" })}
+          </Button>
+          <Button
+            onClick={() => {
+              setSaveWarningDialogOpen(false);
+              handleSave();
+            }}
+            variant="contained"
+          >
+            {t("dialogs.saveWarning.confirm")}
           </Button>
         </DialogActions>
       </Dialog>

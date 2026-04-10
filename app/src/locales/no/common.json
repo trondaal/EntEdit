@@ -18,8 +18,10 @@
     "close": "Lukk",
     "moreActions": "Flere handlinger",
     "apply": "Bruk",
-    "exportTurtle": "Eksporter som Turtle",
-    "exportTurtleSaveFirst": "Lagre endringer før eksportering"
+    "exportTurtle": "Turtle RDF",
+    "export": "Eksporter",
+    "exportTurtleSaveFirst": "Lagre endringer før eksportering",
+    "back": "Tilbake"
   },
   "labels": {
     "language": "Språk",
@@ -84,7 +86,8 @@
     "steps": {
       "connection": "Databasetilkobling",
       "test": "Test tilkobling",
-      "language": "Språkvalg"
+      "language": "Språkvalg",
+      "settings": "Andre innstillinger"
     },
     "connection": {
       "title": "Konfigurer databasetilkobling",
@@ -119,9 +122,14 @@
       "successTitle": "Konfigurasjon fullført!",
       "successDescription": "Konfigurasjonen din lagres lokalt og applikasjonen kobler til databasen din."
     },
+    "settingsStep": {
+      "title": "Andre innstillinger",
+      "description": "Velg disse for å få en advarsel når du lagrer entiteter med autogenererte URI-er eller etiketter. Dette kan hjelpe deg med å lage god RDF med etablerte URI-er og beskrivende etiketter."
+    },
     "buttons": {
       "nextTest": "Neste: Test tilkobling",
       "nextLanguage": "Neste: Språk",
+      "nextSettings": "Neste: Innstillinger",
       "back": "Tilbake",
       "complete": "Fullfør oppsett"
     }
@@ -134,7 +142,10 @@
     "password": "Passord (valgfritt)",
     "saveConfiguration": "Lagre konfigurasjon",
     "reset": "Tilbakestill",
-    "reconfigureDatabase": "Konfigurer database på nytt"
+    "reconfigureDatabase": "Konfigurer database på nytt",
+    "saveWarnings": "Lagringsvarsler",
+    "warnAutoUri": "Varsle ved lagring med autogenerert URI",
+    "warnAutoLabel": "Varsle ved lagring med autogenerert etikett"
   },
   "logging": {
     "record": "Ta opp",

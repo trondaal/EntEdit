@@ -4,6 +4,7 @@ import { SUPPORTED_LANGUAGES } from "./sparqlFragments";
 const CONFIG_STORAGE_KEY = "entEdit.config";
 const CREDENTIALS_STORAGE_KEY = "entEdit.credentials";
 const LANGUAGE_STORAGE_KEY = "entEdit.language";
+const PREFERENCES_STORAGE_KEY = "entEdit.preferences";
 const DEFAULT_LANGUAGE = "en";
 
 /** Validate that a language value is one of the supported languages */
@@ -16,6 +17,8 @@ export interface AppConfiguration {
   endpoint: SparqlEndpointConfig;
   language: string;
   isConfigured: boolean;
+  warnAutoUri: boolean;
+  warnAutoLabel: boolean;
 }
 
 /**
@@ -27,6 +30,7 @@ export interface AppConfiguration {
 export const saveConfiguration = (
   config: SparqlEndpointConfig,
   language: string,
+  preferences?: { warnAutoUri: boolean; warnAutoLabel: boolean },
 ): void => {
   try {
     // Persist non-sensitive settings in localStorage
@@ -35,6 +39,14 @@ export const saveConfiguration = (
       JSON.stringify({ url: config.url }),
     );
     localStorage.setItem(LANGUAGE_STORAGE_KEY, validateLanguage(language));
+
+    // Persist user preferences in localStorage
+    if (preferences) {
+      localStorage.setItem(
+        PREFERENCES_STORAGE_KEY,
+        JSON.stringify(preferences),
+      );
+    }
 
     // Store credentials in sessionStorage (cleared on tab close)
     if (config.username || config.password) {
@@ -106,6 +118,19 @@ export const loadConfiguration = (): AppConfiguration | null => {
       password = credentials.password || "";
     }
 
+    // Load user preferences from localStorage (default to true)
+    let warnAutoUri = false;
+    let warnAutoLabel = false;
+    const preferencesStr = localStorage.getItem(PREFERENCES_STORAGE_KEY);
+    if (preferencesStr) {
+      const preferences = JSON.parse(preferencesStr) as {
+        warnAutoUri?: boolean;
+        warnAutoLabel?: boolean;
+      };
+      warnAutoUri = preferences.warnAutoUri === true;
+      warnAutoLabel = preferences.warnAutoLabel === true;
+    }
+
     return {
       endpoint: {
         url: config.url,
@@ -114,6 +139,8 @@ export const loadConfiguration = (): AppConfiguration | null => {
       },
       language: validateLanguage(language),
       isConfigured: true,
+      warnAutoUri,
+      warnAutoLabel,
     };
   } catch (error) {
     console.warn("Failed to load configuration:", error);
@@ -128,6 +155,7 @@ export const clearConfiguration = (): void => {
   try {
     localStorage.removeItem(CONFIG_STORAGE_KEY);
     localStorage.removeItem(LANGUAGE_STORAGE_KEY);
+    localStorage.removeItem(PREFERENCES_STORAGE_KEY);
     sessionStorage.removeItem(CREDENTIALS_STORAGE_KEY);
   } catch (error) {
     console.warn("Failed to clear configuration:", error);
@@ -154,5 +182,7 @@ export const getDefaultConfiguration = (): AppConfiguration => {
     },
     language: "en",
     isConfigured: false,
+    warnAutoUri: false,
+    warnAutoLabel: false,
   };
 };
