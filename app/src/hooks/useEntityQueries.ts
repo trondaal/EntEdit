@@ -170,6 +170,7 @@ export const useEntitiesByRange = (
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
         SELECT DISTINCT ?entity ?label
+        FROM <http://www.ontotext.com/explicit>
         WHERE {
           ?entity a <${sanitizeSparqlUri(rangeUri)}> .
 ${createLanguageFallbackFragment("?entity", language, fallbackLanguage, "label", false)}
@@ -225,6 +226,7 @@ export const useInfiniteEntitiesByRange = (
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
         SELECT DISTINCT ?entity (SAMPLE(?label) AS ?label)
+        FROM <http://www.ontotext.com/explicit>
         WHERE {
           ?entity a <${sanitizeSparqlUri(rangeUri)}> .
 ${createLanguageFallbackFragment("?entity", language, fallbackLanguage, "label", false)}
@@ -289,6 +291,7 @@ export const useEntityCountByRange = (
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
         SELECT (COUNT(DISTINCT ?entity) AS ?count)
+        FROM <http://www.ontotext.com/explicit>
         WHERE {
           ?entity a <${sanitizeSparqlUri(rangeUri)}> .
 ${createLanguageFallbackFragment("?entity", language, fallbackLanguage, "label", false)}

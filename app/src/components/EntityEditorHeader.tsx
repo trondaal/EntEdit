@@ -22,6 +22,7 @@ import {
   LabelOutlined,
   Code,
   Link as LinkIcon,
+  ArticleOutlined,
 } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 
@@ -107,7 +108,7 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
             alignItems: "center",
           }}
         >
-          <Edit sx={{ mr: 1 }} />
+          <ArticleOutlined sx={{ mr: 1 }} />
           {titleText}
         </Typography>
       </Box>

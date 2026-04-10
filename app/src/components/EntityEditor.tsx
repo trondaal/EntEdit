@@ -341,6 +341,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       const orderAnnotations: string[] = [];
 
       // Add labels from the label manager
+      const hasUserLabel = entityLabels.some((l) => l.value.trim());
       entityLabels.forEach((label) => {
         if (label.value.trim()) {
           const escapedValue = escapeSparqlLiteral(label.value);
@@ -351,6 +352,19 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           triples.push(labelTriple);
         }
       });
+
+      // Fallback: if user has not provided any label, derive a default
+      // (untagged) label from the value of the property with order 1.
+      if (!hasUserLabel) {
+        const primaryProperty = properties.find((p) => p.order === 1);
+        const primaryValue = primaryProperty
+          ? (entityData[primaryProperty.uri] || []).find((v) => v.value.trim() && !v.isUri)?.value.trim()
+          : undefined;
+        if (primaryValue) {
+          const labelTriple = `<${sanitizedEntityUri}> <http://www.w3.org/2000/01/rdf-schema#label> "${escapeSparqlLiteral(primaryValue)}" .`;
+          triples.push(labelTriple);
+        }
+      }
 
       Object.entries(entityData).forEach(([property, values]) => {
         const hasMultipleValues = values.filter(({ value }) => value.trim()).length > 1;
@@ -506,7 +520,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     } finally {
       setSaving(false);
     }
-  }, [classUri, config, entityUri, customEntityUri, entityData, entityLabels, existingEntity, objectPropertyUris, queryClient, onEntitySaved]);
+  }, [classUri, config, entityUri, customEntityUri, entityData, entityLabels, existingEntity, objectPropertyUris, properties, queryClient, onEntitySaved]);
 
   const handleDelete = useCallback(async () => {
     if (!entityUri) return;
