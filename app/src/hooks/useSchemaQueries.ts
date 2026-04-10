@@ -1,8 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { SparqlClient } from "../utils/sparqlClient";
-import {
-  createSchemaLabelFragment,
-} from "../utils/sparqlFragments";
+import { createSchemaLabelFragment } from "../utils/sparqlFragments";
 import { sanitizeSparqlUri } from "../utils/labelUtils";
 import type {
   SparqlEndpointConfig,
@@ -28,8 +26,11 @@ export const useRdfClasses = (
           ?class a owl:Class .
           ?class entedit:status "class" .
           ${createSchemaLabelFragment("?class", language)}
+          OPTIONAL{
+            ?class entedit:order ?order .
+          }
         }
-        ORDER BY desc(?label)
+        ORDER BY asc(?order) desc(?label)
       `;
 
       const response = await client.query(query);
@@ -80,7 +81,9 @@ export const useRdfProperties = (
         comment: binding.comment?.value,
         domain: binding.domain?.value,
         range: binding.range?.value,
-        order: binding.order?.value ? parseInt(binding.order.value, 10) : undefined,
+        order: binding.order?.value
+          ? parseInt(binding.order.value, 10)
+          : undefined,
       }));
     },
     enabled: !!config.url,

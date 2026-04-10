@@ -6,10 +6,12 @@
 @prefix rdawo: <http://rdaregistry.info/Elements/w/object/> .
 @prefix rdaeo: <http://rdaregistry.info/Elements/e/object/> .
 @prefix rdamo: <http://rdaregistry.info/Elements/m/object/> .
+@prefix rdaio: <http://rdaregistry.info/Elements/i/object/> .
 @prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
 @prefix rdawd: <http://rdaregistry.info/Elements/w/datatype/> .
 @prefix rdaed: <http://rdaregistry.info/Elements/e/datatype/> .
 @prefix rdamd: <http://rdaregistry.info/Elements/m/datatype/> .
+@prefix rdaid: <http://rdaregistry.info/Elements/i/datatype/> .
 
 abi:StatusLiteral a rdfs:Datatype ;
     owl:oneOf ("core wemi property" "data property" "object property" "class" "controlled property" "deprecated" "not used") .
@@ -63,10 +65,11 @@ abi:P02
   rdfs:label "Sjanger eller form"@no, "Genre or form"@en.
 
 #All classes with status "class" are displayed in the entity browsers class display
-rdac:C10002 abi:status "class" .  # "Agent"@en .
-rdac:C10001 abi:status "class" .  # "Work"@en .
-rdac:C10006 abi:status "class" .  # "Expression"@en .
-rdac:C10007 abi:status "class" .  # "Manifestation"@en .
+rdac:C10002 abi:order 1 ; abi:status "class" .  # "Agent"@en .
+rdac:C10001 abi:order 2 ; abi:status "class" .  # "Work"@en .
+rdac:C10006 abi:order 3 ; abi:status "class" .  # "Expression"@en .
+rdac:C10007 abi:order 4 ; abi:status "class" .  # "Manifestation"@en .
+rdac:C10003 abi:order 5 ; abi:status "class" .  # "Item"@en .
 
 #Agent profile, data properties
 rdaad:P50413	abi:status "data property" ; abi:order 1 ; rdfs:label "navn"@no . #"name"@en . Foretrukket navn
@@ -75,12 +78,12 @@ rdaad:P50339	abi:status "data property" ; abi:order 3 ; rdfs:label "årstall"@no
 
 #Work profile, data properties
 #rdawd:P10088	abi:status "data property" ; abi:order 1 ; rdfs:label "tittel"@no . #"title"@en .
-rdawd:P10223	abi:status "data property" ; abi:order 2 ; rdfs:label "tittel"@no . #"titlepreferred"@en .
-rdawd:P10086	abi:status "data property" ; abi:order 3 ; rdfs:label "tittelvariant"@no . #"titlevariant"@en .
-rdawd:P10012	abi:status "data property" ; abi:order 4 ; rdfs:label "nummerering"@no . #"numbering"@en .
-rdawd:P10256	abi:status "data property" ; abi:order 6 ; rdfs:label "emne"@no . #"emne"@en .
-rdawd:P10219	abi:status "data property" ; abi:order 7 ; rdfs:label "dato"@no . #"date"@en ;
-rdawd:P10330	abi:status "data property" ; abi:order 8 ; rdfs:label "note"@no . #"note on Work"@en .
+rdawd:P10223	abi:status "data property" ; abi:order 1 ; rdfs:label "tittel"@no . #"titlepreferred"@en .
+rdawd:P10086	abi:status "data property" ; abi:order 2 ; rdfs:label "tittelvariant"@no . #"titlevariant"@en .
+rdawd:P10012	abi:status "data property" ; abi:order 3 ; rdfs:label "nummerering"@no . #"numbering"@en .
+rdawd:P10256	abi:status "data property" ; abi:order 4 ; rdfs:label "emne"@no . #"emne"@en .
+rdawd:P10219	abi:status "data property" ; abi:order 5 ; rdfs:label "dato"@no . #"date"@en ;
+rdawd:P10330	abi:status "data property" ; abi:order 6 ; rdfs:label "note"@no . #"note on Work"@en .
 #rdawd:P10004	abi:status "data property" ; rdfs:label "har kategori av verk"@no . #"type"@en .
 
 # Defining the object type version of this property the type "controlled property"
@@ -91,8 +94,8 @@ rdawd:P10330	abi:status "data property" ; abi:order 8 ; rdfs:label "note"@no . #
 #rdaed:P20006	abi:status "data property" ; rdfs:label "har språk i uttrykk"@no . #"language"@en .
 #rdaed:P20001	abi:status "data property" ; rdfs:label "har innholdstype"@no . #"content"@en .
 #rdaed:P20312	abi:status "data property" ; abi:order   1 ; rdfs:label "tittel"@no . #"title"@en .
-rdaed:P20315	abi:status "data property" ; abi:order   2 ; rdfs:label "tittel"@no . #"titlepreferred"@en .
-rdaed:P20316	abi:status "data property" ; abi:order   3 ; rdfs:label "tittelvariant"@no . #"titlevariant"@en .
+rdaed:P20315	abi:status "data property" ; abi:order   1; rdfs:label "tittel"@no . #"titlepreferred"@en .
+rdaed:P20316	abi:status "data property" ; abi:order   2 ; rdfs:label "tittelvariant"@no . #"titlevariant"@en .
 #rdaed:P20071	abi:status "data property" ; rdfs:label "har note om uttrykk"@no . #"contentsnote"@en .
 
 rdaeo:P20006	abi:status "controlled property" ;
@@ -160,6 +163,10 @@ rdamo:P30001	  abi:status "controlled property" ;
                 rdfs:range  abi:Carriertype ;
                 rdfs:label "bærertype"@no . #"carrier"@en .
 
+#Item properties
+rdaid:P40001 abi:status "data property" ; abi:order 1 ; rdfs:label "identifikator"@no . #"identifier"@en .
+rdaid:P40028 abi:status "data property" ; abi:order 2 ; rdfs:label "note"@no . #"note"@en .
+
 #Basic WEMI types
 
 rdawo:P10078	abi:status	"core wemi property" ; rdfs:label "har uttrykk av verk"@no . #	has expression of work	rdac:C10001	rdac:C10006
@@ -167,6 +174,9 @@ rdaeo:P20231	abi:status	"core wemi property" ; rdfs:label "er uttrykk av verk"@n
 
 rdamo:P30139	abi:status	"core wemi property" ; rdfs:label "har uttrykk"@no . #	has expression manifested	rdac:C10007	rdac:C10006
 rdaeo:P20059	abi:status	"core wemi property" ; rdfs:label "har manifestasjon"@no . #	has manifestation of expression	rdac:C10006	rdac:C10007
+
+rdamo:P30103  abi:status	"core wemi property" ; rdfs:label "har eksemplar"@no . # has item of manifestation
+rdaio:P40049  abi:status	"core wemi property" ; rdfs:label "er eksemplar av"@no . #"has manifestation exemplified" [@en; no @no]
 
 #Subject properties
 
@@ -1225,14 +1235,67 @@ rdamo:P30093	abi:status	"object property" ; rdfs:label "er opptrykk av manifesta
 rdamo:P30039	abi:status	"object property" ; rdfs:label "er reprodusert som manifestasjon"@no . #	is reproduced as manifestation	rdac:C10007	rdac:C10007
 rdamo:P30043	abi:status	"object property" ; rdfs:label "er reproduksjon av manifestasjon av"@no . #	is reproduction of manifestation of	rdac:C10007	rdac:C10007
 
+
 #rdamo:P30048	abi:status	"object property" ; rdfs:label "har relatert manifestasjon av manifestasjon"@no . #	has related manifestation of manifestation	rdac:C10007	rdac:C10007
-
-
 #rdamo:P30458	abi:status	"object property"	 . #	has subcollection	rdac:C10007	rdac:C10007
 #rdamo:P30459	abi:status	"object property"	 . #	is subcollection of	rdac:C10007	rdac:C10007
 
-#
-#
+#Item object properties
+
+#rdaio:P40072	abi:status	"object property" ; rdfs:label ""@no . #	"has related agent of item"@en
+#rdaao:P50308	abi:status	"object property" ; rdfs:label ""@no . #	has related item of agent"@en
+
+rdaio:P40013	abi:status	"object property" ; rdfs:label "er innbundet av"@no . #		"has binder agent"@en
+rdaao:P50123	abi:status	"object property" ; rdfs:label "er innbinder av"@no . #	is binder agent of"@en
+
+#rdaio:P40093	abi:status	"object property" ; rdfs:label ""@no . #	has modifier agent"@en
+#rdaao:P50446	abi:status	"object property" ; rdfs:label ""@no . #	is modifier agent of"@en
+
+#rdaio:P40005	abi:status	"object property" ; rdfs:label ""@no . #	has collection registrar agent (Deprecated)"@en
+#rdaao:P50046	abi:status	"object property" ; rdfs:label ""@no . #	is collection registrar agent of (Deprecated)"@en
+
+#rdaio:P40017	abi:status	"object property" ; rdfs:label ""@no . #	has curator agent (Deprecated)"@en
+#rdaao:P50133	abi:status	"object property" ; rdfs:label ""@no . #	is curator agent of (Deprecated)"@en
+
+#rdaio:P40004	abi:status	"object property" ; rdfs:label ""@no . #	has collector agent (Deprecated)"@en
+#rdaao:P50045	abi:status	"object property" ; rdfs:label ""@no . #	is collector agent of (Deprecated)"@en
+
+#rdaio:P40018	abi:status	"object property" ; rdfs:label ""@no . #	has current owner agent"@en
+#rdaao:P50162	abi:status	"object property" ; rdfs:label ""@no . #	is current owner agent of"@en
+
+rdaio:P40021	abi:status	"object property" ; rdfs:label "har eier"@no . #	has owner agent"@en
+rdaao:P50165	abi:status	"object property" ; rdfs:label "er eier av"@no . #	is owner agent of"@en
+
+#rdaio:P40006	abi:status	"object property" ; rdfs:label ""@no . #	has depositor agent"@en
+#rdaao:P50047	abi:status	"object property" ; rdfs:label ""@no . #	is depositor agent of"@en
+
+#rdaio:P40020	abi:status	"object property" ; rdfs:label ""@no . #	has custodian agent"@en
+#rdaao:P50164	abi:status	"object property" ; rdfs:label ""@no . #	is custodian agent of"@en
+
+#rdaio:P40025	abi:status	"object property" ; rdfs:label ""@no . #	has dedicatee agent of item"@en
+#rdaao:P50210	abi:status	"object property" ; rdfs:label ""@no . #	is dedicatee agent of item of"@en
+
+#rdaio:P40007	abi:status	"object property" ; rdfs:label "er donert av"@no . #	has donor agent"@en
+#rdaao:P50066	abi:status	"object property" ; rdfs:label "har donert"@no . #	is donor agent of"@en
+
+#rdaio:P40019	abi:status	"object property" ; rdfs:label ""@no . #	has former owner agent"@en
+#rdaao:P50163	abi:status	"object property" ; rdfs:label ""@no . #	is former owner agent of"@en
+
+#rdaio:P40008	abi:status	"object property" ; rdfs:label "er solgt av"@no . #	has seller agent"@en
+#rdaao:P50067	abi:status	"object property" ; rdfs:label ""@no . #	is seller agent of"@en
+
+#rdaio:P40022	abi:status	"object property" ; rdfs:label ""@no . #	has honouree agent of item"@en
+#rdaao:P50167	abi:status	"object property" ; rdfs:label ""@no . #	is honouree agent of item of"@en
+
+#rdaio:P40012	abi:status	"object property" ; rdfs:label ""@no . #	has illuminator agent"@en
+#rdaao:P50092	abi:status	"object property" ; rdfs:label ""@no . #	is illuminator agent of"@en
+
+#rdaio:P40024	abi:status	"object property" ; rdfs:label ""@no . #	has restorationist agent of item"@en
+#rdaao:P50206	abi:status	"object property" ; rdfs:label ""@no . #	is restorationist agent of item of"@en
+
+#rdaio:P40023	abi:status	"object property" ; rdfs:label ""@no . #	has other agent associated with item (Deprecated)"@en
+#rdaao:P50182	abi:status	"object property" ; rdfs:label ""@no . #	is other agent associated with item of (Deprecated)"@en
+
 
 
 <http://id.loc.gov/vocabulary/iso639-2/aar>	a	abi:Language	 .
