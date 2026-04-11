@@ -356,108 +356,55 @@
                     <li>
                         <a href="#getting-started">Getting started</a>
                         <ol>
-                            <li>
-                                <a href="#config-wizard"
-                                    >Configuration wizard</a
-                                >
-                            </li>
-                            <li>
-                                <a href="#connecting-database"
-                                    >Connecting to a database</a
-                                >
-                            </li>
-                            <li>
-                                <a href="#language-selection"
-                                    >Language selection</a
-                                >
-                            </li>
+                            <li><a href="#config-wizard">Configuration wizard</a></li>
+                            <li><a href="#connecting-database">Connecting to a database</a></li>
+                            <li><a href="#language-selection">Language selection</a></li>
                         </ol>
                     </li>
-                    <li>
-                        <a href="#what-is-entity-cataloguing"
-                            >What is entity-oriented cataloguing?</a
-                        >
-                    </li>
+                    <li><a href="#what-is-entity-cataloguing">What is entity-oriented cataloguing?</a></li>
                     <li><a href="#wemi-model">The WEMI model</a></li>
                     <li>
-                        <a href="#navigating-entedit">Navigating EntEdit</a>
+                        <a href="#navigating-entedit">Using EntEdit</a>
                         <ol>
-                            <li>
-                                <a href="#entity-browser">The Entity Browser</a>
-                            </li>
-                            <li>
-                                <a href="#editing-entities">Editing entities</a>
-                            </li>
-                            <li>
-                                <a href="#more-actions"
-                                    >More actions menu</a
-                                >
-                            </li>
-                            <li>
-                                <a href="#search-interface"
-                                    >The Search interface</a
-                                >
-                            </li>
+                            <li><a href="#entity-browser">The Entity Browser</a></li>
+                            <li><a href="#editing-entities">Creating and editing entities</a></li>
+                            <li><a href="#more-actions">More actions menu</a></li>
+                            <li><a href="#search-interface">The Search interface</a></li>
                         </ol>
                     </li>
                     <li>
-                        <a href="#example-the-road"
-                            >Example 1 — <em>The Road</em> by Cormac McCarthy</a
-                        >
+                        <a href="#rdf-export">RDF, URIs, and labels</a>
                         <ol>
-                            <li>
-                                <a href="#road-agent">Creating the Agent</a>
-                            </li>
+                            <li><a href="#what-is-rdf">What is RDF?</a></li>
+                            <li><a href="#uris-and-labels">URIs and labels</a></li>
+                            <li><a href="#auto-generation">Auto-generation of URIs and labels</a></li>
+                            <li><a href="#what-is-turtle">Turtle format</a></li>
+                            <li><a href="#exporting-turtle">Exporting data as Turtle</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#example-the-road">Example 1 — <em>The Road</em> by Cormac McCarthy</a>
+                        <ol>
+                            <li><a href="#road-agent">Creating the Agent</a></li>
                             <li><a href="#road-work">Creating the Work</a></li>
-                            <li>
-                                <a href="#road-expression"
-                                    >Creating the Expression</a
-                                >
-                            </li>
-                            <li>
-                                <a href="#road-manifestation"
-                                    >Creating the Manifestation</a
-                                >
-                            </li>
-                            <li>
-                                <a href="#road-film"
-                                    >Adding the film adaptation</a
-                                >
-                            </li>
+                            <li><a href="#road-expression">Creating the Expression</a></li>
+                            <li><a href="#road-manifestation">Creating the Manifestation</a></li>
+                            <li><a href="#road-item">Creating an Item</a></li>
+                            <li><a href="#road-film">Adding the film adaptation</a></li>
                         </ol>
                     </li>
                     <li>
-                        <a href="#example-sult"
-                            >Example 2 — <em>Sult</em> by Knut Hamsun</a
-                        >
+                        <a href="#example-sult">Example 2 — <em>Sult</em> by Knut Hamsun</a>
                         <ol>
-                            <li>
-                                <a href="#sult-translation"
-                                    >Translations as separate Expressions</a
-                                >
-                            </li>
-                            <li>
-                                <a href="#sult-editions"
-                                    >Multiple editions as Manifestations</a
-                                >
-                            </li>
+                            <li><a href="#sult-translation">Translations as separate Expressions</a></li>
+                            <li><a href="#sult-editions">Multiple editions as Manifestations</a></li>
                         </ol>
                     </li>
                     <li>
-                        <a href="#example-omnibus"
-                            >Example 3 — <em>Agatha Christie 1960s Omnibus</em></a
-                        >
+                        <a href="#example-omnibus">Example 3 — <em>Agatha Christie 1960s Omnibus</em></a>
                         <ol>
-                            <li>
-                                <a href="#omnibus-structure"
-                                    >One Manifestation, multiple Expressions</a
-                                >
-                            </li>
-                            <li>
-                                <a href="#omnibus-steps"
-                                    >Creating the omnibus step by step</a
-                                >
-                            </li>
+                            <li><a href="#omnibus-structure">One Manifestation, multiple Expressions</a></li>
+                            <li><a href="#omnibus-steps">Creating the omnibus step by step</a></li>
                         </ol>
                     </li>
                     <li><a href="#exercises">Practice exercises</a></li>
@@ -478,7 +425,7 @@
             <h3 id="config-wizard">1.1 Configuration wizard</h3>
 
             <p>
-                When you open EntEdit for the first time, a three-step wizard
+                When you open EntEdit for the first time, a four-step wizard
                 appears:
             </p>
             <ol class="steps">
@@ -492,7 +439,11 @@
                     can reach the database and query it.
                 </li>
                 <li>
-                    <strong>Language</strong> — Choose your preferred language (currently English or Norwegian). </li>
+                    <strong>Language</strong> — Choose your preferred language (currently English or Norwegian).
+                </li>
+                <li>
+                    <strong>Settings</strong> — Configure optional save warnings. You can enable warnings that remind you when you are about to save an entity with an auto-generated URI or an auto-generated label. These warnings are off by default — see <a href="#auto-generation">Auto-generation of URIs and labels</a> for details.
+                </li>
             </ol>
             <p>
                 You can change these settings at any time by clicking the
@@ -681,6 +632,17 @@
                 </tr>
             </table>
 
+            <div class="info-box">
+                <strong>Why separate these levels?</strong>
+                Think of it this way: a Work can have many Expressions
+                (translations, abridgements, performances). Each Expression can
+                appear in many Manifestations (hardback, paperback, e-book,
+                different publishers). This structure lets us say things like
+                "all Norwegian translations of Hunger by Hamsun" or "every
+                edition of the English text" — queries that are very difficult
+                with flat catalogue records.
+            </div>
+
             <p>In addition to the WEMI entities, we have:</p>
 
             <table>
@@ -701,18 +663,11 @@
             </table>
 
             <div class="info-box">
-                <strong>Why separate these levels?</strong>
-                Think of it this way: a Work can have many Expressions
-                (translations, abridgements, performances). Each Expression can
-                appear in many Manifestations (hardback, paperback, e-book,
-                different publishers). This structure lets us say things like
-                "all Norwegian translations of Hunger by Hamsun" or "every
-                edition of the English text" — queries that are very difficult
-                with flat catalogue records.
+                <strong>Note on Agent:</strong> In the full RDA model, Agent is a supertype with more specific subtypes such as Person, Collective Agent, and Family. EntEdit uses only the general Agent class as a simplification — since we only use properties that are common to all agents (such as name and dates), there is no need to distinguish between persons and organisations.
             </div>
 
             <!-- 4. NAVIGATING ENTEDIT -->
-            <h2 id="navigating-entedit">4. Navigating EntEdit</h2>
+            <h2 id="navigating-entedit">4. Using EntEdit</h2>
 
             <h3 id="entity-browser">4.1 The Entity Browser</h3>
 
@@ -723,25 +678,29 @@
 
             <table>
                 <tr>
+                    <th>Position</th>
                     <th>Panel</th>
                     <th>Purpose</th>
                 </tr>
                 <tr>
-                    <td><strong>Left — Classes</strong></td>
+                    <td>Left</td>
+                    <td><strong>Classes</strong></td>
                     <td>
                         Lists the entity types (Work, Expression, Manifestation,
                         Item, Agent, etc.). Click a class to see its instances.
                     </td>
                 </tr>
                 <tr>
-                    <td><strong>Middle — Entities</strong></td>
+                    <td>Middle</td>
+                    <td><strong>Entities</strong></td>
                     <td>
                         Shows all entities of the selected class. Use the filter
                         field to narrow the list. Scroll down to load more.
                     </td>
                 </tr>
                 <tr>
-                    <td><strong>Right — Editor</strong></td>
+                    <td>Right</td>
+                    <td><strong>Editor</strong></td>
                     <td>
                         Displays and edits the properties of the selected
                         entity.
@@ -749,52 +708,7 @@
                 </tr>
             </table>
 
-            <h3 id="editing-entities">4.2 Editing entities</h3>
-
-            <h4>About labels</h4>
-            <p>
-                Every entity in EntEdit has a
-                <strong>label</strong> (<code>rdfs:label</code>). This is not an
-                RDA cataloguing property — it is a general semantic web
-                convention used to give entities a short, readable name. In
-                EntEdit, labels are what you see in the entity lists and search
-                results. Without a label, an entity would only be shown by its
-                URI, which is not very helpful.
-            </p>
-            <p> Think of the label as a display name for the entity. You are free to make whatever label you find useful, but it is good advice to be consistent and create informative labels. Example labels: </p>
-            <ul>
-                <li>
-                    <strong>Works:</strong> Title followed by the author in parentheses, e.g. "The Road (McCarthy, Cormac)"  </li>
-                <li><strong>Expressions:</strong>  Title followed by language and content type in parentheses, e.g. "The road (english text)"</li>
-                <li>
-                    <strong>Manifestations:</strong> A brief citation-style string, e.g. based on ISBD "The road / Cormac McCarthy. — Picador, 2009" </li>
-                <li>
-                    <strong>Agents:</strong> The name, e.g. "McCarthy, Cormac"
-                </li>
-            </ul>
-            <p>
-                Labels can be added in multiple languages. They are separate
-                from the formal RDA properties (such as
-                <em>title of work</em> or <em>access point name</em>) that carry
-                the actual cataloguing data.
-            </p>
-
-            <h4>The label editor</h4>
-            <p>
-                Click the <strong>label icon</strong> in the editor header to open the label editor.
-                It opens as a draggable dialog that you can reposition while still interacting with the entity editor behind it.
-            </p>
-            <p>
-                Each label is shown as an editable row with a text field and a language dropdown. You can:
-            </p>
-            <ul>
-                <li>Type directly into any label row — all rows are always editable.</li>
-                <li>Select a language tag (e.g. EN, NO) from the dropdown, or leave it empty for no language tag.</li>
-                <li>Click the <strong>Add</strong> button (or press <kbd>Enter</kbd> on the last row) to add a new label row.</li>
-                <li>Click the trash icon to remove a label.</li>
-                <li>Click <strong>Apply</strong> to save your changes, or <strong>Cancel</strong> to discard them.</li>
-            </ul>
-            <p>Empty rows are automatically removed when you apply.</p>
+            <h3 id="editing-entities">4.2 Creating and editing entities</h3>
 
             <h4>Creating a new entity</h4>
             <ol class="steps">
@@ -802,14 +716,15 @@
                     Select a class in the left panel (e.g.
                     <span class="entity-badge badge-work">Work</span>).
                 </li>
-                <li> If you have not selected an exisiting entity, you can edit a new entity directly</li>
-                <li>If an exsisting entity is selected, click the <strong>⋮</strong> (more actions) menu in the editor panel and choose <strong>New</strong> to create a new entity of the selected class. </li>
-                <li> Optionally enter a URI in the identifier field, or leave it blank for auto-generation of an ad hoc entity.</li>
-                <li> Click the <strong>label icon</strong> in the editor header to open the label editor. Add a label so the entity is recognisable in lists. Tag the label with the language you are using — you can add labels in different languages. </li>
+                <li> If you have not selected an existing entity, you can edit a new entity directly.</li>
+                <li>If an existing entity is selected, click the <strong>⋮</strong> (more actions) menu in the editor panel and choose <strong>New</strong> to create a new entity of the selected class. </li>
                 <li> Fill in text metadata using the <strong>Add</strong> dropdown under "Text metadata" — this is where the descriptive cataloguing data goes. </li>
-                <li> Add controlled values, relationships, and agent links from the respective sections.  In these fields, you enter values by selecting from the list that is displayed.</li>
+                <li> Add controlled values, relationships, and agent links from the respective sections. In these fields, you enter values by selecting from the list that is displayed.</li>
                 <li> When done, click <strong>Save</strong> (or press <kbd>Ctrl</kbd>+<kbd>S</kbd>). </li>
             </ol>
+            <p>
+                You do not need to provide a URI or a label — both are auto-generated if left blank (see <a href="#auto-generation">Auto-generation of URIs and labels</a>). If you want to set these manually, use the identifier field for the URI and the label editor for the label.
+            </p>
 
             <h4>Editing an existing entity</h4>
             <ol class="steps">
@@ -895,8 +810,8 @@
                     <td>Open the entity in the GraphDB Workbench graph visualization, where you can explore its relationships visually in a new browser tab.</td>
                 </tr>
                 <tr>
-                    <td><strong>Export as Turtle</strong></td>
-                    <td>Export the entity's RDF data in Turtle format — see below.</td>
+                    <td><strong>Turtle RDF</strong></td>
+                    <td>Export the entity's RDF data in Turtle format — see <a href="#rdf-export">RDF and Turtle export</a>.</td>
                 </tr>
                 <tr>
                     <td><strong>Delete</strong></td>
@@ -904,17 +819,13 @@
                 </tr>
             </table>
 
-            <h4>Exporting as Turtle</h4>
+            <h4>Exporting an entity as Turtle RDF</h4>
             <p>
-                The <strong>Export as Turtle</strong> option generates a Turtle (<code>.ttl</code>) representation of the entity, including all its properties and relationships. A dialog opens showing the formatted Turtle text, with two options:
+                The <strong>Turtle RDF</strong> menu option exports the current entity's data as Turtle — see <a href="#rdf-export">RDF and Turtle export</a> for a full description of Turtle and the export features.
             </p>
-            <ul>
-                <li><strong>Download .ttl</strong> — saves the entity as a Turtle file.</li>
-                <li><strong>Copy to Clipboard</strong> — copies the Turtle text so you can paste it elsewhere.</li>
-            </ul>
 
             <div class="info-box">
-                <strong>Note:</strong> You must save any unsaved changes before exporting. The export button is disabled when the entity has been modified — save first, then export.
+                <strong>Note:</strong> You must save any unsaved changes before exporting. The export option is disabled when the entity has been modified — save first, then export.
             </div>
 
             <h4>Deleting an entity</h4>
@@ -956,9 +867,173 @@
                 catalogued.
             </p>
 
-            <!-- 5. EXAMPLE 1: THE ROAD -->
+            <!-- 5. RDF, URIs, AND LABELS -->
+            <h2 id="rdf-export">5. RDF, URIs, and labels</h2>
+
+            <h3 id="what-is-rdf">5.1 What is RDF?</h3>
+
+            <p>
+                All data in EntEdit is stored as <strong>RDF</strong> (Resource Description Framework) — the standard data model of the semantic web. In RDF, every piece of information is expressed as a <strong>triple</strong>: a subject, a predicate, and an object.
+            </p>
+
+            <div class="example-card">
+                <h4>An RDF triple</h4>
+                <p style="font-family: monospace; font-size: 0.95em; padding: 0.5rem 0;">
+                    &lt;The&nbsp;Road&gt; &nbsp; &lt;has&nbsp;author&gt; &nbsp; &lt;McCarthy,&nbsp;Cormac&gt; .
+                </p>
+                <p style="color: var(--text-secondary); font-size: 0.9em;">
+                    subject → predicate → object
+                </p>
+            </div>
+
+            <p>
+                The subject and predicate are always identified by <strong>URIs</strong> (Uniform Resource Identifiers) — globally unique web addresses that name things unambiguously. The object can be either another URI (linking to another entity) or a <strong>literal</strong> value such as a text string, number, or date.
+            </p>
+
+            <p>
+                When you create an entity in EntEdit and fill in its properties, you are building a collection of RDF triples. For example, a Work entity with a title, a language, and a link to its author becomes three triples — each connecting the entity URI to a value via a property URI.
+            </p>
+
+            <h3 id="uris-and-labels">5.2 URIs and labels</h3>
+
+            <p>
+                Every entity in RDF is identified by a <strong>URI</strong>. This is its unique identifier — no two entities share the same URI. In a production setting, you would typically use established identifiers from authority services such as VIAF (e.g. <code>http://viaf.org/viaf/29558386</code> for Cormac McCarthy) or from your institution's own namespace, but for learning and experimentation, EntEdit can generate URIs automatically.
+            </p>
+
+            <p>
+                In addition to the URI, every entity in EntEdit has a
+                <strong>label</strong> (<code>rdfs:label</code>). This is not an
+                RDA cataloguing property — it is a general semantic web
+                convention used to give entities a short, readable name. In
+                EntEdit, labels are what you see in the entity lists and search
+                results. Without a label, an entity would only be shown by its
+                URI, which is not very helpful.
+            </p>
+
+            <p>
+                Labels can be added in multiple languages. They are separate
+                from the formal RDA properties (such as
+                <em>title of work</em> or <em>access point name</em>) that carry
+                the actual cataloguing data.
+            </p>
+
+            <h3 id="auto-generation">5.3 Auto-generation of URIs and labels</h3>
+
+            <p>
+                EntEdit is designed to let you focus on the cataloguing data. By default, both the entity URI and the label are generated automatically when you save:
+            </p>
+
+            <table>
+                <tr>
+                    <th>Field</th>
+                    <th>What happens when left blank</th>
+                </tr>
+                <tr>
+                    <td><strong>URI</strong></td>
+                    <td>A unique URI is generated based on a timestamp (e.g. <code>http://example.org/entity-1712345678901</code>). This is suitable for learning and experimentation. In a production setting you would typically provide a meaningful URI from your institution's namespace.</td>
+                </tr>
+                <tr>
+                    <td><strong>Label</strong></td>
+                    <td>The value of the entity's primary property (the first text metadata field, e.g. <em>title of work</em> or <em>access point name</em>) is used as an untagged <code>rdfs:label</code>.</td>
+                </tr>
+            </table>
+
+            <p>
+                This means you can create a complete entity by just filling in the cataloguing properties and clicking Save — the URI and label are taken care of for you.
+            </p>
+
+            <p>
+                You can always override the auto-generated values using the <strong>⋮</strong> (more actions) menu in the entity editor. Use the URI option to enter a pre-existing identifier (e.g. a VIAF URI for an Agent), and the label option to create custom, language-tagged labels.
+            </p>
+
+            <p>
+                Custom labels can be more informative than auto-generated ones. Example labels:
+            </p>
+            <ul>
+                <li>
+                    <strong>Works:</strong> Title followed by the author in parentheses, e.g. "The Road (McCarthy, Cormac)"</li>
+                <li><strong>Expressions:</strong> Title followed by language and content type in parentheses, e.g. "The road (english text)"</li>
+                <li>
+                    <strong>Manifestations:</strong> A brief citation-style string, e.g. based on ISBD "The road / Cormac McCarthy. — Picador, 2009"</li>
+                <li>
+                    <strong>Agents:</strong> The name, e.g. "McCarthy, Cormac"
+                </li>
+            </ul>
+
+            <h4>The label editor</h4>
+            <p>
+                Click the <strong>label icon</strong> in the editor header to open the label editor.
+                It opens as a draggable dialog that you can reposition while still interacting with the entity editor behind it.
+            </p>
+            <p>
+                Each label is shown as an editable row with a text field and a language dropdown. You can:
+            </p>
+            <ul>
+                <li>Type directly into any label row — all rows are always editable.</li>
+                <li>Select a language tag (e.g. EN, NO) from the dropdown, or leave it empty for no language tag.</li>
+                <li>Click the <strong>Add</strong> button (or press <kbd>Enter</kbd> on the last row) to add a new label row.</li>
+                <li>Click the trash icon to remove a label.</li>
+                <li>Click <strong>Apply</strong> to save your changes, or <strong>Cancel</strong> to discard them.</li>
+            </ul>
+            <p>Empty rows are automatically removed when you apply.</p>
+
+            <h4>Save warnings</h4>
+            <p>
+                If you want to be reminded to enter URIs and labels manually, you can enable <strong>save warnings</strong> in the configuration wizard (step 4) or in the settings. When enabled, EntEdit will show a confirmation dialog before saving an entity with an auto-generated URI or label, giving you the chance to go back and enter them yourself.
+            </p>
+            <p>
+                These warnings are useful when you want to ensure high-quality RDF data with established URIs and descriptive, language-tagged labels.
+            </p>
+
+            <h3 id="what-is-turtle">5.4 Turtle format</h3>
+
+            <p>
+                <strong>Turtle</strong> (<code>.ttl</code>) is a compact, human-readable way of writing RDF triples. It uses <strong>prefixes</strong> to shorten long URIs, making the data easier to read. Here is an example of how a Work might look in Turtle:
+            </p>
+
+            <pre><code>@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix rda:  &lt;http://rdaregistry.info/Elements/w/&gt; .
+
+&lt;http://example.org/entity-123&gt;
+    a &lt;http://rdaregistry.info/Elements/c/C10001&gt; ;
+    rdfs:label "The Road" ;
+    rda:P10088 "The Road" ;
+    rda:P10436 &lt;http://example.org/entity-456&gt; .</code></pre>
+
+            <p>
+                In this notation, <code>a</code> means "is of type", the semicolons separate properties of the same entity, and angle brackets enclose full URIs. Prefixed names like <code>rdfs:label</code> expand to full URIs using the prefix declarations at the top.
+            </p>
+
+            <h3 id="exporting-turtle">5.5 Exporting data as Turtle</h3>
+
+            <p>
+                EntEdit offers two ways to export data as Turtle RDF:
+            </p>
+
+            <h4>Single-entity export</h4>
+            <p>
+                From the entity editor, open the <strong>⋮</strong> (more actions) menu and choose <strong>Turtle RDF</strong>. This exports the currently selected entity with all its properties and relationships. A dialog opens showing the formatted Turtle text, with two options:
+            </p>
+            <ul>
+                <li><strong>Download .ttl</strong> — saves the entity as a Turtle file.</li>
+                <li><strong>Copy to Clipboard</strong> — copies the Turtle text so you can paste it elsewhere.</li>
+            </ul>
+            <p>
+                The entity must be saved before exporting — the menu option is disabled when there are unsaved changes.
+            </p>
+
+            <h4>Bulk export</h4>
+            <p>
+                The <strong>Download</strong> button in the application header lets you export multiple entity types at once. A dialog shows all available classes with entity counts. Select the classes you want to include (or use "Select All") and click Export. The result is a single Turtle file containing all entities of the selected types.
+            </p>
+
+            <div class="info-box tip">
+                <strong>Tip:</strong> Turtle files can be opened in any text editor or loaded into other RDF tools and triple stores. This makes the export useful for backups, sharing data, and interoperability with other systems.
+            </div>
+
+            <!-- 6. EXAMPLE 1: THE ROAD -->
             <h2 id="example-the-road">
-                5. Example 1 — <em>The Road</em> by Cormac McCarthy
+                6. Example 1 — <em>The Road</em> by Cormac McCarthy
             </h2>
 
             <p>
@@ -989,6 +1064,10 @@
                 <span class="dim"> │ │ └── has manifestation ──▸ </span
                 ><span class="manifestation">Manifestation: Picador, 2009</span
                 ><br />
+                <span class="dim"> │ │   │</span><br />
+                <span class="dim"> │ │   └── has item ──▸ </span
+                ><span class="item">Item: Oslo Public Library copy</span
+                ><br />
                 <span class="dim"> │ │</span><br />
                 <span class="dim"> │ └── adapted as ──▸ </span
                 ><span class="work">Work: The Road (Film, 2009)</span><br />
@@ -998,7 +1077,7 @@
                 <span class="dim"> ⋮</span>
             </div>
 
-            <h3 id="road-agent">5.1 Creating the Agent</h3>
+            <h3 id="road-agent">6.1 Creating the Agent</h3>
 
             <p>
                 We start by creating the author, since we will link to this
@@ -1049,7 +1128,7 @@
                 <li>Click <strong>Save</strong>.</li>
             </ol>
 
-            <h3 id="road-work">5.2 Creating the Work</h3>
+            <h3 id="road-work">6.2 Creating the Work</h3>
 
             <p>
                 The Work represents the novel as an abstract intellectual
@@ -1111,7 +1190,7 @@
                 already contains it.
             </div>
 
-            <h3 id="road-expression">5.3 Creating the Expression</h3>
+            <h3 id="road-expression">6.3 Creating the Expression</h3>
 
             <p>
                 An Expression represents a specific intellectual realisation of
@@ -1177,7 +1256,7 @@
                 <li>Click <strong>Save</strong>.</li>
             </ol>
 
-            <h3 id="road-manifestation">5.4 Creating the Manifestation</h3>
+            <h3 id="road-manifestation">6.4 Creating the Manifestation</h3>
 
             <p>
                 A Manifestation is a specific published edition. This is where
@@ -1286,7 +1365,55 @@
                 repeatedly to add more than one value for the same property.
             </div>
 
-            <h3 id="road-film">5.5 Adding the film adaptation</h3>
+            <h3 id="road-item">6.5 Creating an Item</h3>
+
+            <p>
+                An Item represents a specific copy of a Manifestation — a particular book on a particular shelf. Items are useful when you need to track individual copies, for example in a library collection.
+            </p>
+
+            <div class="example-card">
+                <h4>
+                    <span class="entity-badge badge-item">Item</span>
+                    Oslo Public Library copy
+                </h4>
+                <table>
+                    <tr>
+                        <th>Property</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>Identifier</td>
+                        <td>03010712345</td>
+                    </tr>
+                    <tr>
+                        <td>Note</td>
+                        <td>Copy in good condition.</td>
+                    </tr>
+                    <tr>
+                        <td>Is item of</td>
+                        <td>→ Manifestation: The road / Cormac McCarthy. — Picador, 2009</td>
+                    </tr>
+                </table>
+            </div>
+
+            <ol class="steps">
+                <li>
+                    Select <span class="entity-badge badge-item">Item</span> in the classes panel, then <strong>⋮ → New</strong>.
+                </li>
+                <li>
+                    Under Text metadata, add the <em>identifier</em> (e.g. a barcode or accession number) and optionally a <em>note</em>.
+                </li>
+                <li>
+                    Under <strong>WEMI relationships</strong>, add "is item of" and select the Manifestation "The road / Cormac McCarthy. — Picador, 2009".
+                </li>
+                <li>Click <strong>Save</strong>.</li>
+            </ol>
+
+            <div class="info-box">
+                <strong>When to use Items:</strong> Not every cataloguing scenario requires Item entities. Items are most useful when you need to track individual copies for circulation, inventory, or provenance purposes. For many purposes, the Manifestation level is sufficient.
+            </div>
+
+            <h3 id="road-film">6.6 Adding the film adaptation</h3>
 
             <p>
                 <em>The Road</em> was adapted into a film directed by John
@@ -1351,9 +1478,9 @@
                 is fundamental to the WEMI model.
             </div>
 
-            <!-- 6. EXAMPLE 2: SULT -->
+            <!-- 7. EXAMPLE 2: SULT -->
             <h2 id="example-sult">
-                6. Example 2 — <em>Sult</em> by Knut Hamsun
+                7. Example 2 — <em>Sult</em> by Knut Hamsun
             </h2>
 
             <p>
@@ -1411,7 +1538,7 @@
             </div>
 
             <h3 id="sult-translation">
-                6.1 Translations as separate Expressions
+                7.1 Translations as separate Expressions
             </h3>
 
             <p>
@@ -1498,7 +1625,7 @@
                 edition.
             </div>
 
-            <h3 id="sult-editions">6.2 Multiple editions as Manifestations</h3>
+            <h3 id="sult-editions">7.2 Multiple editions as Manifestations</h3>
 
             <p>
                 Different published editions of the same text are separate
@@ -1557,9 +1684,9 @@
                 transformed, it may warrant a separate Expression.
             </div>
 
-            <!-- 7. EXAMPLE 3: AGATHA CHRISTIE OMNIBUS -->
+            <!-- 8. EXAMPLE 3: AGATHA CHRISTIE OMNIBUS -->
             <h2 id="example-omnibus">
-                7. Example 3 — <em>Agatha Christie 1960s Omnibus</em>
+                8. Example 3 — <em>Agatha Christie 1960s Omnibus</em>
             </h2>
 
             <p>
@@ -1578,7 +1705,7 @@
             </p>
 
             <h3 id="omnibus-structure">
-                7.1 One Manifestation, multiple Expressions
+                8.1 One Manifestation, multiple Expressions
             </h3>
 
             <p>Here is the entity structure for the omnibus:</p>
@@ -1590,36 +1717,28 @@
                 <span class="dim"> ├── author of ──▸ </span
                 ><span class="work">Work: Endless Night</span><br />
                 <span class="dim"> │ └── has expression ──▸ </span
-                ><span class="expression"
-                    >Expression: Endless Night (English text)</span
-                ><span class="dim"> ─────────────┐</span><br />
+                ><span class="expression">Expression: Endless Night (English text)</span
+                ><br />
                 <span class="dim"> │</span><br />
                 <span class="dim"> ├── author of ──▸ </span
-                ><span class="work">Work: By the Pricking of My Thumbs</span
-                ><br />
+                ><span class="work">Work: By the Pricking of My Thumbs</span><br />
                 <span class="dim"> │ └── has expression ──▸ </span
-                ><span class="expression"
-                    >Expression: By the Pricking… (English text)</span
-                ><span class="dim"> ──────┤</span><br />
+                ><span class="expression">Expression: By the Pricking… (English text)</span
+                ><br />
                 <span class="dim"> │</span><br />
                 <span class="dim"> ├── author of ──▸ </span
                 ><span class="work">Work: Passenger to Frankfurt</span><br />
                 <span class="dim"> │ └── has expression ──▸ </span
-                ><span class="expression"
-                    >Expression: Passenger to Frankfurt (English text)</span
-                ><span class="dim"> ──┤</span><br />
+                ><span class="expression">Expression: Passenger to Frankfurt (Eng. text)</span
+                ><br />
                 <span class="dim"> │</span><br />
                 <span class="dim"> └── author of ──▸ </span
                 ><span class="work">Work: Postern of Fate</span><br />
                 <span class="dim">   └── has expression ──▸ </span
-                ><span class="expression"
-                    >Expression: Postern of Fate (English text)</span
-                ><span class="dim"> ────────┘</span><br />
-                <span class="dim">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼</span><br />
-                <span class="dim">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
-                ><span class="manifestation"
-                    >Manifestation: Agatha Christie 1960s Omnibus</span
-                >
+                ><span class="expression">Expression: Postern of Fate (English text)</span
+                ><br /><br />
+                <span class="dim">   All four Expressions ──▸ has manifestation ──▸ </span
+                ><span class="manifestation">Manifestation: Agatha Christie 1960s Omnibus</span>
             </div>
 
             <div class="info-box">
@@ -1633,7 +1752,7 @@
             </div>
 
             <h3 id="omnibus-steps">
-                7.2 Creating the omnibus step by step
+                8.2 Creating the omnibus step by step
             </h3>
 
             <p>
@@ -1786,8 +1905,8 @@
                 embody many Expressions.
             </div>
 
-            <!-- 8. PRACTICE EXERCISES -->
-            <h2 id="exercises">8. Practice exercises</h2>
+            <!-- 9. PRACTICE EXERCISES -->
+            <h2 id="exercises">9. Practice exercises</h2>
 
             <p>
                 Try these exercises to practice what you have learned. Start
@@ -1821,6 +1940,11 @@
                         >Manifestation</span
                     >
                     with publication details, linked to the Expression.
+                </li>
+                <li>
+                    (Optional) An
+                    <span class="entity-badge badge-item">Item</span>
+                    representing a specific copy — add an identifier and link it to the Manifestation.
                 </li>
             </ol>
 
@@ -1878,8 +2002,8 @@
                 <li>What role does the editor play?</li>
             </ul>
 
-            <!-- 8. KEY CONCEPTS -->
-            <h2 id="key-concepts">9. Key concepts reference</h2>
+            <!-- 10. KEY CONCEPTS -->
+            <h2 id="key-concepts">10. Key concepts reference</h2>
 
             <h3>WEMI relationship summary</h3>
             <table>
@@ -1929,6 +2053,28 @@
                     <td>
                         <span class="entity-badge badge-expression"
                             >Expression</span
+                        >
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="entity-badge badge-manifestation"
+                            >Manifestation</span
+                        >
+                    </td>
+                    <td>has item of manifestation</td>
+                    <td>
+                        <span class="entity-badge badge-item">Item</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="entity-badge badge-item">Item</span>
+                    </td>
+                    <td>is item of</td>
+                    <td>
+                        <span class="entity-badge badge-manifestation"
+                            >Manifestation</span
                         >
                     </td>
                 </tr>
@@ -1992,6 +2138,27 @@
                     <th>Reasoning</th>
                 </tr>
                 <tr>
+                    <td>Film adaptation</td>
+                    <td>
+                        New <span class="entity-badge badge-work">Work</span>
+                    </td>
+                    <td>Substantially different creative creation</td>
+                </tr>
+                <tr>
+                    <td>Stage adaptation</td>
+                    <td>
+                        New <span class="entity-badge badge-work">Work</span>
+                    </td>
+                    <td>New artistic interpretation with different medium</td>
+                </tr>
+                <tr>
+                    <td>Critique or study of a work</td>
+                    <td>
+                        New <span class="entity-badge badge-work">Work</span>
+                    </td>
+                    <td>Original intellectual creation about another Work</td>
+                </tr>
+                <tr>
                     <td>Translation</td>
                     <td>
                         New
@@ -2020,27 +2187,6 @@
                         >
                     </td>
                     <td>Performance adds creative content</td>
-                </tr>
-                <tr>
-                    <td>Film adaptation</td>
-                    <td>
-                        New <span class="entity-badge badge-work">Work</span>
-                    </td>
-                    <td>Substantially different creative creation</td>
-                </tr>
-                <tr>
-                    <td>Stage adaptation</td>
-                    <td>
-                        New <span class="entity-badge badge-work">Work</span>
-                    </td>
-                    <td>New artistic interpretation with different medium</td>
-                </tr>
-                <tr>
-                    <td>Critique or study of a work</td>
-                    <td>
-                        New <span class="entity-badge badge-work">Work</span>
-                    </td>
-                    <td>Original intellectual creation about another Work</td>
                 </tr>
                 <tr>
                     <td>New edition, same text</td>
