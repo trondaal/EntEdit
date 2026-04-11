@@ -120,14 +120,6 @@ const AppHeader: React.FC<AppHeaderProps> = ({
               }}
             />
 
-            {/* Interaction Logging Controls */}
-            {showLogging && (
-              <LoggingControls
-                endpointUrl={config.url}
-                language={selectedLanguage}
-              />
-            )}
-
             {/* Language Selector - styled for header */}
             <Box
               sx={{
@@ -157,6 +149,14 @@ const AppHeader: React.FC<AppHeaderProps> = ({
                 onLanguageChange={onLanguageChange}
               />
             </Box>
+
+            {/* Interaction Logging Controls */}
+            {showLogging && (
+              <LoggingControls
+                endpointUrl={config.url}
+                language={selectedLanguage}
+              />
+            )}
 
             {/* Export Button */}
             <Tooltip title={t("buttons.export")}>
