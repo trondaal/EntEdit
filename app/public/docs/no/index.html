@@ -366,7 +366,7 @@
                     <li>
                         <a href="#navigating-entedit">Bruke EntEdit</a>
                         <ol>
-                            <li><a href="#entity-browser">Entitetsnettleseren</a></li>
+                            <li><a href="#entity-browser">Entitetsapplikasjonen</a></li>
                             <li><a href="#editing-entities">Opprette og redigere entiteter</a></li>
                             <li><a href="#more-actions">Flere handlinger-menyen</a></li>
                             <li><a href="#search-interface">Søkegrensesnittet</a></li>
@@ -378,7 +378,7 @@
                             <li><a href="#what-is-rdf">Hva er RDF?</a></li>
                             <li><a href="#uris-and-labels">URI-er og etiketter</a></li>
                             <li><a href="#auto-generation">Auto-generering av URI-er og etiketter</a></li>
-                            <li><a href="#what-is-turtle">Turtle-format</a></li>
+                            <li><a href="#what-is-turtle">Turtle-formatet</a></li>
                             <li><a href="#exporting-turtle">Eksporter data som Turtle</a></li>
                         </ol>
                     </li>
@@ -665,10 +665,10 @@
             <!-- 4. BRUKE ENTEDIT -->
             <h2 id="navigating-entedit">4. Bruke EntEdit</h2>
 
-            <h3 id="entity-browser">4.1 Entitetsnettleseren</h3>
+            <h3 id="entity-browser">4.1 Entitetsapplikasjonen</h3>
 
             <p>
-                Entitetsnettleseren er hovedgrensesnittet, organisert i tre
+                Entitetsapplikasjonen er hovedgrensesnittet, organisert i tre
                 paneler:
             </p>
 
@@ -802,7 +802,7 @@
                 </tr>
                 <tr>
                     <td><strong>Turtle RDF</strong></td>
-                    <td>Eksporter entitetens RDF-data i Turtle-format — se <a href="#rdf-export">RDF og Turtle-eksport</a>.</td>
+                    <td>Eksporter entitetens RDF-data i Turtle-formatet — se <a href="#rdf-export">RDF og Turtle-eksport</a>.</td>
                 </tr>
                 <tr>
                     <td><strong>Slett</strong></td>
@@ -952,7 +952,7 @@
 
             <h4>Etiketteditor</h4>
             <p>
-                Klikk <strong>etiketter-ikonet</strong> i redigeringshuvudet for å åpne etiketteditor.
+                Åpne <strong>⋮</strong> (flere handlinger) menyen og velg etikett-alternativet for å åpne etiketteditor.
                 Den åpnes som en dragbar dialog som du kan omposisjonere mens du fremdeles samhandler med entitetsredigeringen bak den.
             </p>
             <p>
@@ -975,7 +975,7 @@
                 Disse varslene er nyttige når du vil sikre RDF-data av høy kvalitet med etablerte URI-er og beskrivende, språkkodifiserte etiketter.
             </p>
 
-            <h3 id="what-is-turtle">5.4 Turtle-format</h3>
+            <h3 id="what-is-turtle">5.4 Turtle-formatet</h3>
 
             <p>
                 <strong>Turtle</strong> (<code>.ttl</code>) er en kompakt, menneskelesbar måte å skrive RDF-trippel på. Den bruker <strong>prefikser</strong> for å forkorte lange URI-er, noe som gjør dataene lettere å lese. Her er et eksempel på hvordan et verk kan se ut i Turtle:
@@ -1012,13 +1012,13 @@
                 Entiteten må lagres før eksport — menyalternativet er deaktivert når det er ulagrede endringer.
             </p>
 
-            <h4>Sameksport</h4>
+            <h4>Eksport av alle entiteter</h4>
             <p>
-                <strong>Last ned</strong> knappen i applikasjons-headeren lar deg eksportere flere entitetstyper på en gang. En dialog viser alle tilgjengelige klasser med entitetsantal. Velg klassene du vil inkludere (eller bruk «Velg alle») og klikk Eksporter. Resultatet er en enkelt Turtle-fil som inneholder alle entiteter av de valgte typene.
+                <strong>Last ned</strong> knappen i applikasjons-headeren lar deg eksportere flere entitetstyper på en gang. En dialog viser alle tilgjengelige klasser med antall entiteter. Velg klassene du vil inkludere (eller bruk «Velg alle») og klikk Eksporter. Resultatet er en enkelt Turtle-fil som inneholder alle entiteter av de valgte typene.
             </p>
 
             <div class="info-box tip">
-                <strong>Tips:</strong> Turtle-filer kan åpnes i en hvilken som helst teksteditor eller lastes inn i andre RDF-verktøy og triple stores. Dette gjør eksporten nyttig for sikkerhetskopier, datadeling og samoperabilitet med andre systemer.
+                <strong>Tips:</strong> Turtle-filer kan åpnes i en hvilken som helst teksteditor eller lastes inn i andre RDF-verktøy og triple stores. Dette gjør eksporten nyttig for sikkerhetskopier, datadeling og interoperabilitet med andre systemer.
             </div>
 
             <!-- 6. EKSEMPEL 1: THE ROAD -->
@@ -1030,8 +1030,7 @@
                 La oss gå gjennom katalogiseringen av Cormac McCarthys
                 <em>The Road</em> — en post-apokalyptisk roman publisert i 2006,
                 senere tilpasset til en film i 2009. Dette eksemplet demonstrerer
-                kjernens WEMI-kjede og hvordan man uttrykker et adaptas-forhold
-                mellom to verk.
+                kjernens WEMI-kjede og hvordan man uttrykker adaptasjon av verk.
             </p>
 
             <p>
@@ -1085,6 +1084,10 @@
                         <th>Verdi</th>
                     </tr>
                     <tr>
+                        <td>URI</td>
+                        <td><code>http://viaf.org/viaf/29558386</code></td>
+                    </tr>
+                    <tr>
                         <td>Etikett</td>
                         <td>McCarthy, Cormac</td>
                     </tr>
@@ -1101,19 +1104,28 @@
 
             <ol class="steps">
                 <li>
-                    I entitetsnettleseren, velg
+                    I entitetsapplikasjonen, velg
                     <span class="entity-badge badge-agent">Agent</span> i
                     klassepanelet.
                 </li>
                 <li>Klikk <strong>⋮ → Ny</strong> i redigeringen.</li>
                 <li>
-                    Klikk <strong>etiketter-ikonet</strong> i redigeringshuvudet og legg til etiketten
-                    "McCarthy, Cormac" (slik at agenten er gjenkjennelig i lister).
-                </li>
-                <li>
                     Under tekstmetadata, bruk <strong>Legg til</strong> for å legge til RDA-
                     egenskaper: navnet på agenten og datoen assosiert
                     med agenten.
+                </li>
+                <li>
+                    Valgfritt: åpne <strong>⋮</strong> (flere handlinger) menyen og velg
+                    etikett-alternativet for å legge til en etikett, f.eks. "McCarthy,
+                    Cormac" (slik at agenten er gjenkjennelig i lister). Hvis den
+                    utelates, auto-genereres en etikett fra den primære egenskapen.
+                </li>
+                <li>
+                    Valgfritt: åpne <strong>⋮</strong> (flere handlinger) menyen og velg
+                    URI-alternativet for å oppgi en etablert identifikator. For Cormac
+                    McCarthy, bruk VIAF-URI-en:
+                    <code>http://viaf.org/viaf/29558386</code>.
+                    Hvis den utelates, auto-genereres en URI.
                 </li>
                 <li>Klikk <strong>Lagre</strong>.</li>
             </ol>
@@ -1133,6 +1145,10 @@
                     <tr>
                         <th>Egenskap</th>
                         <th>Verdi</th>
+                    </tr>
+                    <tr>
+                        <td>URI</td>
+                        <td><code>http://viaf.org/viaf/220031159</code></td>
                     </tr>
                     <tr>
                         <td>Etikett</td>
@@ -1155,11 +1171,6 @@
                     klassepanelet, så <strong>⋮ → Ny</strong>.
                 </li>
                 <li>
-                    Legg til etikett, f.eks. "The Road (McCarthy, Cormac)". Å inkludere
-                    forfatteren i parentes er en vanlig konvensjon for å hjelpe
-                    med å skille verk med samme tittel i entitetslister.
-                </li>
-                <li>
                     Legg til RDA-tekstegenskapen <em>tittel</em> med verdi
                     "The Road".
                 </li>
@@ -1167,6 +1178,19 @@
                     I <strong>Relaterte agenter</strong> seksjonen, legg til
                     relasjonen "har forfatter" og velg agenten "McCarthy,
                     Cormac" fra entitetsvelgeren.
+                </li>
+                <li>
+                    Valgfritt: legg til etikett, f.eks. "The Road (McCarthy, Cormac)".
+                    Å inkludere forfatteren i parentes er en vanlig konvensjon for å
+                    hjelpe med å skille verk med samme tittel i entitetslister.
+                    Hvis den utelates, auto-genereres en etikett fra den primære
+                    egenskapen.
+                </li>
+                <li>
+                    Valgfritt: åpne <strong>⋮</strong> (flere handlinger) menyen og oppgi
+                    VIAF-URI-en for The Road:
+                    <code>http://viaf.org/viaf/220031159</code>.
+                    Hvis den utelates, auto-genereres en URI.
                 </li>
                 <li>Klikk <strong>Lagre</strong>.</li>
             </ol>
@@ -1231,8 +1255,7 @@
                     >, så <strong>⋮ → Ny</strong>.
                 </li>
                 <li>
-                    Legg til etikett (f.eks. "The Road (McCarthy, Cormac)") og RDA-
-                    egenskapen <em>tittel</em>.
+                    Legg til RDA-egenskapen <em>tittel</em>.
                 </li>
                 <li>
                     Under <strong>Kontrollerte verdier</strong>, legg til
@@ -1243,8 +1266,21 @@
                     Under <strong>WEMI-relasjoner</strong>, legg til "er
                     uttrykk av" og velg verket "The Road".
                 </li>
+                <li>
+                    Valgfritt: legg til etikett (f.eks. "The Road (McCarthy, Cormac)").
+                    Hvis den utelates, auto-genereres en etikett fra den primære
+                    egenskapen.
+                </li>
                 <li>Klikk <strong>Lagre</strong>.</li>
             </ol>
+
+            <div class="info-box">
+                <strong>URI-er for uttrykk og manifestasjoner:</strong> I motsetning til
+                agenter og verk, der etablerte identifikatorer fra autoritetstjenester som
+                VIAF ofte er tilgjengelige, finnes det for uttrykk og manifestasjoner
+                sjelden gode etablerte identifikatorer. I disse tilfellene anbefales det å
+                bruke auto-genererte URI-er fra EntEdit.
+            </div>
 
             <h3 id="road-manifestation">6.4 Opprette manifestasjonen</h3>
 
@@ -1329,10 +1365,6 @@
                     >, så <strong>⋮ → Ny</strong>.
                 </li>
                 <li>
-                    Legg til etikett. En vanlig konvensjon for manifestasjons-etiketter
-                    er: <em>Tittel / Ansvar. — Utgiver, År</em>.
-                </li>
-                <li>
                     Legg til RDA-tekstmetadata: tittel, ansvarsangivelse, utgivedetaljer, omfang, identifikatorer
                     og noter.
                 </li>
@@ -1344,6 +1376,13 @@
                     Under <strong>WEMI-relasjoner</strong>, legg til "har
                     uttrykk" og velg uttrykket du
                     opprettet.
+                </li>
+                <li>
+                    Valgfritt: legg til etikett. En vanlig konvensjon for
+                    manifestasjons-etiketter er:
+                    <em>Tittel / Ansvar. — Utgiver, År</em>.
+                    Hvis den utelates, auto-genereres en etikett fra den primære
+                    egenskapen.
                 </li>
                 <li>Klikk <strong>Lagre</strong>.</li>
             </ol>
@@ -1408,7 +1447,7 @@
                 <em>The Road</em> ble tilpasset til en film regissert av John
                 Hillcoat i 2009. I WEMI-modellen er dette et
                 <em>nytt verk</em> — en distinkt intellektuell skapelse som er
-                relatert til originalen gjennom et adaptas-forhold.
+                relatert til originalen som en adaptasjon av verk.
             </p>
 
             <div class="example-card">

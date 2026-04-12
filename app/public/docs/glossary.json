@@ -104,7 +104,7 @@
     "Graph":                     { "no": "Graf" },
     "Download .ttl":             { "no": "Last ned .ttl" },
     "Copy to Clipboard":         { "no": "Kopier til utklippstavle" },
-    "Entity Browser":            { "no": "Entitetsnettleser" },
+    "Entity Browser":            { "no": "Entitetsapplikasjon" },
     "Search":                    { "no": "Søk" }
   },
 
@@ -129,6 +129,8 @@
     "adaptation":           { "no": "tilpasning" },
     "omnibus":              { "no": "omnibus" },
     "anthology":            { "no": "antologi" },
-    "cataloguing":          { "no": "katalogisering" }
+    "cataloguing":          { "no": "katalogisering" },
+    "format":               { "no": "format", "_note": "Neuter noun (et format). Use definite form 'formatet' when referring to a specific format, e.g. 'Turtle-formatet'." },
+    "interoperability":     { "no": "interoperabilitet", "_note": "Always 'interoperabilitet', never 'samoperabilitet'." }
   }
 }

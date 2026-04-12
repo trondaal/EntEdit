@@ -962,7 +962,7 @@
 
             <h4>The label editor</h4>
             <p>
-                Click the <strong>label icon</strong> in the editor header to open the label editor.
+                Open the <strong>⋮</strong> (more actions) menu and select the label option to open the label editor.
                 It opens as a draggable dialog that you can reposition while still interacting with the entity editor behind it.
             </p>
             <p>
@@ -1095,6 +1095,10 @@
                         <th>Value</th>
                     </tr>
                     <tr>
+                        <td>URI</td>
+                        <td><code>http://viaf.org/viaf/29558386</code></td>
+                    </tr>
+                    <tr>
                         <td>Label</td>
                         <td>McCarthy, Cormac</td>
                     </tr>
@@ -1117,13 +1121,22 @@
                 </li>
                 <li>Click <strong>⋮ → New</strong> in the editor.</li>
                 <li>
-                    Click the <strong>label icon</strong> in the editor header and add the label
-                    "McCarthy, Cormac" (so the Agent is recognisable in lists).
-                </li>
-                <li>
                     Under Text metadata, use <strong>Add</strong> to add the RDA
                     properties: the access point name and the dates associated
                     with the agent.
+                </li>
+                <li>
+                    Optionally, open the <strong>⋮</strong> (more actions) menu and select
+                    the label option to add a label, e.g. "McCarthy, Cormac" (so
+                    the Agent is recognisable in lists). If omitted, a label is
+                    auto-generated from the primary property.
+                </li>
+                <li>
+                    Optionally, open the <strong>⋮</strong> (more actions) menu and select the
+                    URI option to enter an established identifier. For Cormac McCarthy,
+                    use the VIAF URI:
+                    <code>http://viaf.org/viaf/29558386</code>.
+                    If omitted, a URI is auto-generated.
                 </li>
                 <li>Click <strong>Save</strong>.</li>
             </ol>
@@ -1143,6 +1156,10 @@
                     <tr>
                         <th>Property</th>
                         <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>URI</td>
+                        <td><code>http://viaf.org/viaf/220031159</code></td>
                     </tr>
                     <tr>
                         <td>Label</td>
@@ -1165,11 +1182,6 @@
                     the classes panel, then <strong>⋮ → New</strong>.
                 </li>
                 <li>
-                    Add a label, e.g. "The Road (McCarthy, Cormac)". Including
-                    the author in parentheses is a common convention to help
-                    distinguish Works with the same title in entity lists.
-                </li>
-                <li>
                     Add the RDA text property <em>Title of work</em> with value
                     "The Road".
                 </li>
@@ -1177,6 +1189,18 @@
                     In the <strong>Related Agents</strong> section, add the
                     relationship "has author" and select the Agent "McCarthy,
                     Cormac" from the entity picker.
+                </li>
+                <li>
+                    Optionally, add a label, e.g. "The Road (McCarthy, Cormac)".
+                    Including the author in parentheses is a common convention to
+                    help distinguish Works with the same title in entity lists.
+                    If omitted, a label is auto-generated from the primary property.
+                </li>
+                <li>
+                    Optionally, open the <strong>⋮</strong> (more actions) menu and enter the
+                    VIAF URI for The Road:
+                    <code>http://viaf.org/viaf/220031159</code>.
+                    If omitted, a URI is auto-generated.
                 </li>
                 <li>Click <strong>Save</strong>.</li>
             </ol>
@@ -1241,8 +1265,7 @@
                     >, then <strong>⋮ → New</strong>.
                 </li>
                 <li>
-                    Add a label (e.g. "The Road (McCarthy, Cormac)") and the RDA
-                    property <em>title of expression</em>.
+                    Add the RDA property <em>title of expression</em>.
                 </li>
                 <li>
                     Under <strong>Controlled values</strong>, add
@@ -1253,8 +1276,20 @@
                     Under <strong>WEMI relationships</strong>, add "is
                     expression of" and select the Work "The Road".
                 </li>
+                <li>
+                    Optionally, add a label (e.g. "The Road (McCarthy, Cormac)").
+                    If omitted, a label is auto-generated from the primary property.
+                </li>
                 <li>Click <strong>Save</strong>.</li>
             </ol>
+
+            <div class="info-box">
+                <strong>URIs for Expressions and Manifestations:</strong> Unlike
+                Agents and Works, where established identifiers from authority services
+                such as VIAF are often available, there are rarely good established
+                identifiers for Expressions and Manifestations. In these cases, it is
+                recommended to use auto-generated URIs from EntEdit.
+            </div>
 
             <h3 id="road-manifestation">6.4 Creating the Manifestation</h3>
 
@@ -1339,10 +1374,6 @@
                     >, then <strong>⋮ → New</strong>.
                 </li>
                 <li>
-                    Add a label. A common convention for manifestation labels
-                    is: <em>Title / Responsibility. — Publisher, Date</em>.
-                </li>
-                <li>
                     Add the RDA text metadata: title proper, statement of
                     responsibility, publication details, extent, identifiers,
                     and notes.
@@ -1355,6 +1386,11 @@
                     Under <strong>WEMI relationships</strong>, add "has
                     expression manifested" and select the Expression you
                     created.
+                </li>
+                <li>
+                    Optionally, add a label. A common convention for manifestation
+                    labels is: <em>Title / Responsibility. — Publisher, Date</em>.
+                    If omitted, a label is auto-generated from the primary property.
                 </li>
                 <li>Click <strong>Save</strong>.</li>
             </ol>
