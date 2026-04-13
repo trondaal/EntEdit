@@ -1,0 +1,183 @@
+@prefix entedit: <http://oslomet.no/abi/vocab#> .
+@prefix rdaed: <http://rdaregistry.info/Elements/e/datatype/> .
+@prefix rdaeo: <http://rdaregistry.info/Elements/e/object/> .
+@prefix rdamd: <http://rdaregistry.info/Elements/m/datatype/> .
+@prefix rdamo: <http://rdaregistry.info/Elements/m/object/> .
+@prefix rdawd: <http://rdaregistry.info/Elements/w/datatype/> .
+@prefix rdawo: <http://rdaregistry.info/Elements/w/object/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
+@prefix rdaao: <http://rdaregistry.info/Elements/a/object/> .
+
+<http://example.org/entity-1775731224739>
+    a <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:label "Den himmelske makrell / Tor Åge Bringsværd - Cappelen Damm, 2023" ;
+    rdamd:P30011 "2023" ;
+    rdamd:P30076 "Cappelen Damm" ;
+    rdamd:P30107 "1. utgave" ;
+    rdamd:P30117 "Tor Åge Bringsværd" ;
+    rdamd:P30156 "Den himmelske makrell" ;
+    rdamd:P30182 "182 sider" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/entity-1775732741954> .
+
+<http://example.org/entity-1775731319698>
+    a <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:label "Farvel, Farah Diba / Karin Fossum - Cappelen Damm, 2024." ;
+    rdamd:P30004 "ISBN : 9788202829575" ;
+    rdamd:P30011 "2024" ;
+    rdamd:P30076 "Cappelen Damm" ;
+    rdamd:P30088 "Oslo" ;
+    rdamd:P30107 "1. utgave 2023" ;
+    rdamd:P30117 "Karin Fossum" ;
+    rdamd:P30156 "Farvel, Farah Diba" ;
+    rdamd:P30182 "315 sider" ;
+    rdamo:P30139 <http://example.org/entity-1775732880259> .
+
+<http://example.org/entity-1775731586840>
+    a <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:label "Den slaviske tragedien / Hans Wilhelm Steinfeld - Orkana, 2023." ;
+    rdamd:P30004 "ISBN : 9788281045910" ;
+    rdamd:P30011 "2024" ;
+    rdamd:P30076 "Orkana" ;
+    rdamd:P30088 "Stamsund" ;
+    rdamd:P30117 "Hans-Wilhelm Steinfeld" ;
+    rdamd:P30156 "Den slaviske tragedien" ;
+    rdamd:P30182 "207 sider illustrasjoner i farger" ;
+    rdamo:P30139 <http://example.org/entity-1775732155719> .
+
+<http://example.org/entity-1775731955680>
+    a <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:label "Steinfeld, Hans-Wilhelm" ;
+    rdaad:P50339 "1951-" ;
+    rdaad:P50413 "Steinfeld, Hans-Wilhelm" ;
+    rdaao:P50195 <http://example.org/entity-1775732108777> .
+
+<http://example.org/entity-1775732108777>
+    a <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:label "Den slaviske tragedien (Steinfeld, Hans-Wilhelm)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/494> ;
+    rdawd:P10223 "Den slaviske tragedien" ;
+    rdawo:P10061 <http://example.org/entity-1775731955680> ;
+    rdawo:P10078 <http://example.org/entity-1775732155719> .
+
+<http://example.org/entity-1775732155719>
+    a <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:label "Den slaviske tragedien (norsk tekst)" ;
+    rdaed:P20315 "Den slaviske tragedien" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nor> ;
+    rdaeo:P20059 <http://example.org/entity-1775731586840> ;
+    rdaeo:P20231 <http://example.org/entity-1775732108777> .
+
+<http://example.org/entity-1775732362134>
+    a <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:label "Den himmelske makrell (Bringsværd, Tor Åge)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawd:P10223 "Den himmelske makrell" ;
+    rdawo:P10061 <http://viaf.org/viaf/301771064> ;
+    rdawo:P10078 <http://example.org/entity-1775732741954> .
+
+<http://example.org/entity-1775732454499>
+    a <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:label "Farvel, Farah Diba (Karin Fossum)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawd:P10223 "Farvel, Farah Diba" ;
+    rdawo:P10061 <http://viaf.org/viaf/120627630> ;
+    rdawo:P10078
+        <http://example.org/entity-1775732880259> ,
+        <http://example.org/entity-1775733233673> ,
+        <http://example.org/entity-1775734685118> .
+
+<http://example.org/entity-1775732741954>
+    a <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:label "Den himmelske makrell (norsk tekst)" ;
+    rdaed:P20315 "Den himmelske makrell" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nor> ;
+    rdaeo:P20059 <http://example.org/entity-1775731224739> ;
+    rdaeo:P20231 <http://example.org/entity-1775732362134> .
+
+<http://example.org/entity-1775732880259>
+    a <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:label "Farvel, Farah Diba (norsk tekst)" ;
+    rdaed:P20315 "Farvel, Farah Diba" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nor> ;
+    rdaeo:P20059 <http://example.org/entity-1775731319698> ;
+    rdaeo:P20203 <http://example.org/entity-1775734685118> ;
+    rdaeo:P20231 <http://example.org/entity-1775732454499> .
+
+<http://example.org/entity-1775733233673>
+    a <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:label " Farväl, Farah Diba (svensk tekst)" ;
+    rdaed:P20315 " Farväl, Farah Diba" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/swe> ;
+    rdaeo:P20037 <http://viaf.org/viaf/7371041> ;
+    rdaeo:P20231 <http://example.org/entity-1775732454499> .
+
+<http://example.org/entity-1775733593803>
+    a <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:label "Farväl, Farah Diba / Karin Fossum - " ;
+    rdamd:P30004 "ISBN 9788727307398" ;
+    rdamd:P30011 "2026" ;
+    rdamd:P30076 "Saga Egmont" ;
+    rdamd:P30106 "Eddie Feber" ;
+    rdamd:P30117 "Karin Fossum" ;
+    rdamd:P30156 "Farväl, Farah Diba" ;
+    rdamd:P30165 "del 3" ;
+    rdamd:P30182 "351 sider" .
+
+<http://example.org/entity-1775734685118>
+    a <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:label " Farvel, Farah Diba (norsk lydbok)" ;
+    rdaed:P20315 " Farvel, Farah Diba" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nor> ;
+    rdaeo:P20022 <http://viaf.org/viaf/224052734> ;
+    rdaeo:P20204 <http://example.org/entity-1775732880259> ;
+    rdaeo:P20231 <http://example.org/entity-1775732454499> .
+
+<http://example.org/entity-1775734829465>
+    a <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:label "Farvel, Farah Diba /  Karin Fossum ; lest av Kim Haugen" ;
+    rdamd:P30011 "2023" ;
+    rdamd:P30076 "Cappelen Damm" ;
+    rdamd:P30117 " Karin Fossum ; lest av Kim Haugen" ;
+    rdamd:P30156 "Farvel, Farah Diba" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1001> .
+
+<http://viaf.org/viaf/120627630>
+    a <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:label "Fossum, Karin" ;
+    rdaad:P50339 "1954-" ;
+    rdaad:P50413 "Fossum, Karin" ;
+    rdaao:P50195 <http://example.org/entity-1775732454499> .
+
+<http://viaf.org/viaf/224052734>
+    a <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:label "Haugen, Kim" ;
+    rdaad:P50339 "1958-" ;
+    rdaad:P50413 "Haugen, Kim" ;
+    rdaao:P50081 <http://example.org/entity-1775734685118> .
+
+<http://viaf.org/viaf/301771064>
+    a <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:label "Bringsværd, Tor Åge" ;
+    rdaad:P50339 "1939-2025" ;
+    rdaad:P50413 "Bringsværd, Tor Åge" ;
+    rdaao:P50195 <http://example.org/entity-1775732362134> .
+
+<http://viaf.org/viaf/7371041>
+    a <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:label "Hemmel, Sara" ;
+    rdaad:P50339 "1963-" ;
+    rdaad:P50413 "Hemmel, Sara" ;
+    rdaao:P50145 <http://example.org/entity-1775733233673> .
