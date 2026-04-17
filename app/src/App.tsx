@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, lazy, Suspense } from "react";
+import { useState, useEffect, useMemo, useRef, useCallback, lazy, Suspense } from "react";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
@@ -6,6 +6,7 @@ import { CssBaseline, Box, CircularProgress, Typography, Tabs, Tab } from "@mui/
 import { useTranslation } from "react-i18next";
 import { SnackbarProvider } from "notistack";
 import { queryClient } from "./utils/queryClient";
+import { invalidateAllEntityData } from "./utils/queryInvalidation";
 import { LoggingProvider } from "./contexts/LoggingContext";
 import { useLogging } from "./hooks/useLogging";
 import AppHeader from "./components/AppHeader";
@@ -201,6 +202,35 @@ function AppInner() {
   const [loading, setLoading] = useState(true);
   const [showWizard, setShowWizard] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
+  const [isEditorDirty, setIsEditorDirty] = useState(false);
+  // Refs holding the active editor's save / discard functions (if any).
+  // EntityEditor registers/unregisters these based on its dirty state, so the
+  // header Refresh button can offer "Save & refresh" and "Discard & refresh"
+  // without prop-drilling the editor's mutators back up through the tree.
+  const saveHandlerRef = useRef<(() => Promise<void>) | null>(null);
+  const discardHandlerRef = useRef<(() => void) | null>(null);
+  const registerEditorSave = useCallback(
+    (handler: (() => Promise<void>) | null) => {
+      saveHandlerRef.current = handler;
+    },
+    [],
+  );
+  const registerEditorDiscard = useCallback(
+    (handler: (() => void) | null) => {
+      discardHandlerRef.current = handler;
+    },
+    [],
+  );
+  const handleRefresh = useCallback(async (saveFirst: boolean) => {
+    if (saveFirst) {
+      if (saveHandlerRef.current) await saveHandlerRef.current();
+    } else if (discardHandlerRef.current) {
+      // Dirty + user chose Discard: reset editor state so the refetched data
+      // is actually shown (EntityEditor guards against clobbering unsaved edits).
+      discardHandlerRef.current();
+    }
+    invalidateAllEntityData(queryClient);
+  }, []);
 
   const urlParams = useMemo(() => new URLSearchParams(window.location.search), []);
   const showSearchTab = useMemo(() => !urlParams.has("nosearch"), [urlParams]);
@@ -346,6 +376,8 @@ function AppInner() {
                 showLogging={showLogging}
                 warnAutoUri={appConfig.warnAutoUri}
                 warnAutoLabel={appConfig.warnAutoLabel}
+                isDirty={isEditorDirty}
+                onRefresh={handleRefresh}
               />
               <Box
                 sx={{
@@ -385,6 +417,9 @@ function AppInner() {
                         selectedLanguage={appConfig.language}
                         warnAutoUri={appConfig.warnAutoUri}
                         warnAutoLabel={appConfig.warnAutoLabel}
+                        onEditingChange={setIsEditorDirty}
+                        onRegisterSave={registerEditorSave}
+                        onRegisterDiscard={registerEditorDiscard}
                       />
                     )}
                     {activeTab === 1 && showSearchTab && (

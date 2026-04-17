@@ -21,7 +21,16 @@
     "exportTurtle": "Turtle RDF",
     "export": "Eksporter",
     "exportTurtleSaveFirst": "Lagre endringer før eksportering",
-    "back": "Tilbake"
+    "back": "Tilbake",
+    "refresh": "Oppdater"
+  },
+  "dialogs": {
+    "refresh": {
+      "title": "Oppdater data?",
+      "message": "Du har ulagrede endringer. Oppdatering laster data på nytt fra databasen — endringene dine går tapt med mindre du lagrer først.",
+      "saveAndRefresh": "Lagre og oppdater",
+      "discardAndRefresh": "Forkast og oppdater"
+    }
   },
   "labels": {
     "language": "Språk",
@@ -80,7 +89,9 @@
     "entityBeingEdited": "Ulagrede endringer",
     "switchEntityTitle": "Ulagrede endringer",
     "switchEntityMessage": "Den gjeldende entiteten har ulagrede endringer. Å bytte til en annen entitet vil forkaste dem.",
-    "switchEntityConfirm": "Forkast og bytt"
+    "switchEntityConfirm": "Forkast og bytt",
+    "dataRefreshed": "Data oppdatert",
+    "refreshFailed": "Oppdatering feilet: {{message}}"
   },
   "wizard": {
     "steps": {

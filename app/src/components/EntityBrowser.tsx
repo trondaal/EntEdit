@@ -42,6 +42,9 @@ interface EntityBrowserProps {
   selectedLanguage: string;
   warnAutoUri: boolean;
   warnAutoLabel: boolean;
+  onEditingChange?: (isEditing: boolean) => void;
+  onRegisterSave?: (handler: (() => Promise<void>) | null) => void;
+  onRegisterDiscard?: (handler: (() => void) | null) => void;
 }
 
 const ITEM_HEIGHT = 42; // Approximate height of a single entity list item
@@ -51,6 +54,9 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
   selectedLanguage,
   warnAutoUri,
   warnAutoLabel,
+  onEditingChange,
+  onRegisterSave,
+  onRegisterDiscard,
 }) => {
   const { t } = useTranslation();
   const { logEvent, isRecording } = useLogging();
@@ -448,7 +454,12 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
               // Optionally refetch entities list
             }}
             onEntityDeselected={handleEntityDeselect}
-            onEditingChange={setIsEditorEditing}
+            onEditingChange={(isEditing) => {
+              setIsEditorEditing(isEditing);
+              onEditingChange?.(isEditing);
+            }}
+            onRegisterSave={onRegisterSave}
+            onRegisterDiscard={onRegisterDiscard}
           />
         </Box>
       </Box>

@@ -21,7 +21,16 @@
     "exportTurtle": "Turtle RDF",
     "export": "Export",
     "exportTurtleSaveFirst": "Save changes before exporting",
-    "back": "Back"
+    "back": "Back",
+    "refresh": "Refresh"
+  },
+  "dialogs": {
+    "refresh": {
+      "title": "Refresh data?",
+      "message": "You have unsaved changes. Refreshing will reload data from the database — your changes will be lost unless you save first.",
+      "saveAndRefresh": "Save & refresh",
+      "discardAndRefresh": "Discard & refresh"
+    }
   },
   "labels": {
     "language": "Language",
@@ -80,7 +89,9 @@
     "entityBeingEdited": "Unsaved changes",
     "switchEntityTitle": "Unsaved changes",
     "switchEntityMessage": "The current entity has unsaved changes. Switching to another entity will discard them.",
-    "switchEntityConfirm": "Discard and switch"
+    "switchEntityConfirm": "Discard and switch",
+    "dataRefreshed": "Data refreshed",
+    "refreshFailed": "Refresh failed: {{message}}"
   },
   "wizard": {
     "steps": {

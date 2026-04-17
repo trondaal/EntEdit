@@ -5,12 +5,18 @@ import {
   Typography,
   Chip,
   Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
+  DialogActions,
+  Button,
   IconButton,
   Box,
   Tooltip,
 } from "@mui/material";
-import { Settings, Help, Download } from "@mui/icons-material";
+import { Settings, Help, Download, Refresh } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
+import { useSnackbar } from "notistack";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import LanguageSelector from "./LanguageSelector";
 import EndpointConfig from "./EndpointConfig";
@@ -26,6 +32,8 @@ interface AppHeaderProps {
   showLogging?: boolean;
   warnAutoUri: boolean;
   warnAutoLabel: boolean;
+  isDirty?: boolean;
+  onRefresh?: (saveFirst: boolean) => Promise<void>;
 }
 
 const AppHeader: React.FC<AppHeaderProps> = ({
@@ -37,10 +45,43 @@ const AppHeader: React.FC<AppHeaderProps> = ({
   showLogging = true,
   warnAutoUri,
   warnAutoLabel,
+  isDirty = false,
+  onRefresh,
 }) => {
   const { t } = useTranslation();
+  const { enqueueSnackbar } = useSnackbar();
   const [configDialogOpen, setConfigDialogOpen] = useState(false);
   const [exportDialogOpen, setExportDialogOpen] = useState(false);
+  const [refreshDialogOpen, setRefreshDialogOpen] = useState(false);
+  const [refreshing, setRefreshing] = useState(false);
+
+  const doRefresh = async (saveFirst: boolean) => {
+    if (!onRefresh) return;
+    setRefreshing(true);
+    try {
+      await onRefresh(saveFirst);
+      enqueueSnackbar(t("messages.dataRefreshed"), {
+        variant: "success",
+        autoHideDuration: 3000,
+      });
+      setRefreshDialogOpen(false);
+    } catch (error) {
+      enqueueSnackbar(
+        t("messages.refreshFailed", { message: (error as Error).message }),
+        { variant: "error" },
+      );
+    } finally {
+      setRefreshing(false);
+    }
+  };
+
+  const handleRefreshClick = async () => {
+    if (isDirty) {
+      setRefreshDialogOpen(true);
+      return;
+    }
+    await doRefresh(false);
+  };
 
   const getEndpointDisplayName = (url: string): string => {
     try {
@@ -158,6 +199,23 @@ const AppHeader: React.FC<AppHeaderProps> = ({
               />
             )}
 
+            {/* Refresh Button — invalidates entity caches to pick up changes
+                made by other users sharing the same database */}
+            {onRefresh && (
+              <Tooltip title={t("buttons.refresh")}>
+                <span>
+                  <IconButton
+                    color="inherit"
+                    aria-label={t("buttons.refresh")}
+                    onClick={handleRefreshClick}
+                    disabled={refreshing}
+                  >
+                    <Refresh />
+                  </IconButton>
+                </span>
+              </Tooltip>
+            )}
+
             {/* Export Button */}
             <Tooltip title={t("buttons.export")}>
               <IconButton
@@ -216,6 +274,44 @@ const AppHeader: React.FC<AppHeaderProps> = ({
         config={config}
         selectedLanguage={selectedLanguage}
       />
+
+      {/* Refresh confirmation dialog — only shown when there are unsaved edits */}
+      <Dialog
+        open={refreshDialogOpen}
+        onClose={() => !refreshing && setRefreshDialogOpen(false)}
+        aria-labelledby="refresh-dialog-title"
+      >
+        <DialogTitle id="refresh-dialog-title">
+          {t("dialogs.refresh.title")}
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            {t("dialogs.refresh.message")}
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button
+            onClick={() => setRefreshDialogOpen(false)}
+            disabled={refreshing}
+          >
+            {t("buttons.cancel")}
+          </Button>
+          <Button
+            onClick={() => doRefresh(false)}
+            color="warning"
+            disabled={refreshing}
+          >
+            {t("dialogs.refresh.discardAndRefresh")}
+          </Button>
+          <Button
+            onClick={() => doRefresh(true)}
+            variant="contained"
+            disabled={refreshing}
+          >
+            {t("dialogs.refresh.saveAndRefresh")}
+          </Button>
+        </DialogActions>
+      </Dialog>
     </>
   );
 };

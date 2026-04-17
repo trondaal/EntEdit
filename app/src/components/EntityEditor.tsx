@@ -56,6 +56,8 @@ interface EntityEditorProps {
   onEntitySaved: () => void;
   onEntityDeselected?: () => void;
   onEditingChange?: (isEditing: boolean) => void;
+  onRegisterSave?: (handler: (() => Promise<void>) | null) => void;
+  onRegisterDiscard?: (handler: (() => void) | null) => void;
 }
 
 const EntityEditor: React.FC<EntityEditorProps> = ({
@@ -73,6 +75,8 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   onEntitySaved,
   onEntityDeselected,
   onEditingChange,
+  onRegisterSave,
+  onRegisterDiscard,
 }) => {
   const { t } = useTranslation("entityEditor");
   const queryClient = useQueryClient();
@@ -540,6 +544,14 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     handleSave();
   }, [entityUri, warnAutoUri, warnAutoLabel, customEntityUri, entityLabels, handleSave]);
 
+  // Register/unregister handleSave with the parent so the header Refresh
+  // button can offer a "Save & refresh" option when there are unsaved edits.
+  useEffect(() => {
+    if (!onRegisterSave) return;
+    onRegisterSave(isDirty ? handleSave : null);
+    return () => onRegisterSave(null);
+  }, [isDirty, handleSave, onRegisterSave]);
+
   const handleDelete = useCallback(async () => {
     if (!entityUri) return;
 
@@ -782,6 +794,14 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     setEntityLabels(existingEntity?.labels || []);
     setDiscardDialogOpen(false);
   }, [existingEntity]);
+
+  // Register/unregister discard handler so the header Refresh button's
+  // "Discard & refresh" option can drop unsaved edits before invalidation.
+  useEffect(() => {
+    if (!onRegisterDiscard) return;
+    onRegisterDiscard(isDirty ? performCancel : null);
+    return () => onRegisterDiscard(null);
+  }, [isDirty, performCancel, onRegisterDiscard]);
 
   const handleCancel = useCallback(() => {
     const dataChanged =
