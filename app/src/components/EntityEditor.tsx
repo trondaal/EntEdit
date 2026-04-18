@@ -40,6 +40,11 @@ import { invalidateEntityCaches } from "../utils/queryInvalidation";
 import { escapeSparqlLiteral, isValidUri, formatLabel, sanitizeSparqlUri } from "../utils/labelUtils";
 import { useLogging } from "../hooks/useLogging";
 import { useTurtleExportQuery } from "../hooks/useTurtleExportQuery";
+import { EntityLabelsProvider, useEntityLabels, type EntityLabelsMap } from "../hooks/useEntityLabels";
+
+// Stable empty map reference to avoid re-rendering context consumers while the
+// batched labels query is in flight or returns no URIs.
+const EMPTY_ENTITY_LABELS: EntityLabelsMap = new Map();
 
 interface EntityEditorProps {
   config: SparqlEndpointConfig;
@@ -296,6 +301,27 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     );
     return uris;
   }, [objectPropertySections]);
+
+  // Collect all URI-typed object property values so we can batch-fetch their
+  // rdfs:label in a single SPARQL query instead of firing one query per value
+  // (the old pattern in ObjectPropertyValue). The resolved map is provided
+  // through EntityLabelsProvider and consumed by ObjectPropertyValue.
+  const relatedEntityUris = useMemo(() => {
+    const uris: string[] = [];
+    for (const [property, values] of Object.entries(entityData)) {
+      const isObjectProp = objectPropertyUris.has(property);
+      for (const v of values) {
+        if ((isObjectProp || v.isUri) && v.value) uris.push(v.value);
+      }
+    }
+    return uris;
+  }, [entityData, objectPropertyUris]);
+
+  const { data: relatedEntityLabels } = useEntityLabels(
+    config,
+    relatedEntityUris,
+    selectedLanguage,
+  );
 
   const handleSave = useCallback(async () => {
     if (!classUri) return; // Don't save if no class is selected
@@ -939,27 +965,29 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           getPropertyLabel={getPropertyLabel}
         />
 
-        {objectPropertySections.map((section) => (
-          <ObjectPropertyGroup
-            key={section.key}
-            config={config}
-            sectionTitle={t(section.sectionTitleKey)}
-            sectionKey={section.key}
-            entityUri={entityUri}
-            addLabel={t(section.addLabelKey, { ns: "common" })}
-            selectorPromptLabel={t(section.selectorPromptKey)}
-            properties={section.properties}
-            statusFilter={section.statusFilter}
-            entityData={entityData}
-            isEditing={isEditing}
-            classUri={classUri}
-            selectedLanguage={selectedLanguage}
-            onUpdateValue={updatePropertyValue}
-            onRemoveValue={removePropertyValue}
-            onReorderValues={reorderPropertyValues}
-            onAddProperty={addObjectProperty}
-          />
-        ))}
+        <EntityLabelsProvider value={relatedEntityLabels ?? EMPTY_ENTITY_LABELS}>
+          {objectPropertySections.map((section) => (
+            <ObjectPropertyGroup
+              key={section.key}
+              config={config}
+              sectionTitle={t(section.sectionTitleKey)}
+              sectionKey={section.key}
+              entityUri={entityUri}
+              addLabel={t(section.addLabelKey, { ns: "common" })}
+              selectorPromptLabel={t(section.selectorPromptKey)}
+              properties={section.properties}
+              statusFilter={section.statusFilter}
+              entityData={entityData}
+              isEditing={isEditing}
+              classUri={classUri}
+              selectedLanguage={selectedLanguage}
+              onUpdateValue={updatePropertyValue}
+              onRemoveValue={removePropertyValue}
+              onReorderValues={reorderPropertyValues}
+              onAddProperty={addObjectProperty}
+            />
+          ))}
+        </EntityLabelsProvider>
             </Box>
           </Box>
         </Tooltip>
