@@ -46,9 +46,3 @@ export interface OrderedValue {
   order: number;
   isUri?: boolean;
 }
-
-export interface EntityData {
-  uri: string;
-  type: string;
-  properties: Record<string, string | string[]>;
-}

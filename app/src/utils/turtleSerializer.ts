@@ -21,7 +21,7 @@ export const KNOWN_PREFIXES: ReadonlyMap<string, string> = new Map([
   // EntEdit
   ["http://oslomet.no/abi/vocab#", "entedit"],
   //RDA Classes
-  ["http://rdaregistry.info/Elements/c/", "rdaw"],
+  ["http://rdaregistry.info/Elements/c/", "rdac"],
   // RDA object property namespaces
   ["http://rdaregistry.info/Elements/w/", "rdaw"],
   ["http://rdaregistry.info/Elements/e/", "rdae"],
