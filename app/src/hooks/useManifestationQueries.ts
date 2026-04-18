@@ -41,7 +41,7 @@ export const useManifestations = (
 ) => {
   return useQuery({
     queryKey: ["manifestations", config.url, expressionUri, language],
-    queryFn: async (): Promise<Manifestation[]> => {
+    queryFn: async ({ signal }): Promise<Manifestation[]> => {
       if (!expressionUri) {
         return [];
       }
@@ -181,7 +181,7 @@ export const useManifestations = (
         GROUP BY ?manifestation
       `;
 
-      const response = await client.query(sparqlQuery);
+      const response = await client.query(sparqlQuery, { signal });
 
       return response.results.bindings.map((binding) => ({
         uri: binding.manifestation.value,

@@ -39,7 +39,7 @@ export const useEntityQuery = (
 ) => {
   return useQuery({
     queryKey: ["entity", config.url, entityUri],
-    queryFn: async (): Promise<LoadedEntity | null> => {
+    queryFn: async ({ signal }): Promise<LoadedEntity | null> => {
       if (!entityUri) return null;
 
       const client = new SparqlClient(config);
@@ -61,7 +61,7 @@ export const useEntityQuery = (
         ORDER BY ?property ?valueOrder
       `;
 
-      const response = await client.query(query);
+      const response = await client.query(query, { signal });
       const data: Record<string, OrderedValue[]> = {};
       const labels: EntityLabel[] = [];
 
@@ -113,7 +113,7 @@ export const useEntitiesByClass = (
 ) => {
   return useQuery({
     queryKey: ["entities-by-class", config.url, classUri, language],
-    queryFn: async () => {
+    queryFn: async ({ signal }) => {
       const client = new SparqlClient(config);
       const fallbackLanguage = getFallbackLanguage(language);
       const query = `
@@ -129,7 +129,7 @@ ${createLanguageFallbackFragment("?entity", language, fallbackLanguage)}
         ORDER BY ?label ?entity
       `;
 
-      const response = await client.query(query);
+      const response = await client.query(query, { signal });
       return response.results.bindings.map((binding) => ({
         uri: binding.entity.value,
         label: binding.label?.value || binding.entity.value,
@@ -158,7 +158,7 @@ export const useInfiniteEntitiesByClass = (
       language,
       filter,
     ],
-    queryFn: async ({ pageParam = 0 }) => {
+    queryFn: async ({ pageParam = 0, signal }) => {
       const client = new SparqlClient(config);
       const fallbackLanguage = getFallbackLanguage(language);
       const escapedFilter = filter ? escapeSparqlLiteral(filter.toLowerCase()) : "";
@@ -181,7 +181,7 @@ ${createLanguageFallbackFragment("?entity", language, fallbackLanguage)}
         OFFSET ${pageParam}
       `;
 
-      const response = await client.query(query);
+      const response = await client.query(query, { signal });
       return response.results.bindings.map((binding) => ({
         uri: binding.entity.value,
         label: binding.label?.value || binding.entity.value,
@@ -216,7 +216,7 @@ export const useEntityCountByClass = (
       language,
       filter,
     ],
-    queryFn: async () => {
+    queryFn: async ({ signal }) => {
       const client = new SparqlClient(config);
 
       if (!filter) {
@@ -227,7 +227,7 @@ export const useEntityCountByClass = (
             ?entity a <${sanitizeSparqlUri(classUri)}> .
           }
         `;
-        const response = await client.query(query);
+        const response = await client.query(query, { signal });
         return parseInt(response.results.bindings[0]?.count?.value || "0", 10);
       }
 
@@ -244,7 +244,7 @@ ${createLanguageFallbackFragment("?entity", language, fallbackLanguage)}
           FILTER(CONTAINS(LCASE(STR(?label)), "${escapedFilter}"))
         }
       `;
-      const response = await client.query(query);
+      const response = await client.query(query, { signal });
       return parseInt(response.results.bindings[0]?.count?.value || "0", 10);
     },
     enabled: !!config.url && !!classUri,
@@ -259,7 +259,7 @@ export const useEntitiesByRange = (
 ) => {
   return useQuery({
     queryKey: ["entities-by-range", config.url, rangeUri, language],
-    queryFn: async () => {
+    queryFn: async ({ signal }) => {
       const client = new SparqlClient(config);
       const fallbackLanguage = getFallbackLanguage(language);
       const query = `
@@ -275,7 +275,7 @@ ${createLanguageFallbackFragment("?entity", language, fallbackLanguage, "label",
         ORDER BY STR(?label) ?entity
       `;
 
-      const response = await client.query(query);
+      const response = await client.query(query, { signal });
       const seen = new Set<string>();
       return response.results.bindings
         .map((binding) => ({
@@ -310,7 +310,7 @@ export const useInfiniteEntitiesByRange = (
       language,
       filter,
     ],
-    queryFn: async ({ pageParam = 0 }) => {
+    queryFn: async ({ pageParam = 0, signal }) => {
       const client = new SparqlClient(config);
       const fallbackLanguage = getFallbackLanguage(language);
       const escapedFilter = filter ? escapeSparqlLiteral(filter.toLowerCase()) : "";
@@ -334,7 +334,7 @@ ${createLanguageFallbackFragment("?entity", language, fallbackLanguage, "label",
         OFFSET ${pageParam}
       `;
 
-      const response = await client.query(query);
+      const response = await client.query(query, { signal });
       return response.results.bindings.map((binding) => ({
         uri: binding.entity.value,
         label: binding.label?.value || binding.entity.value,
@@ -367,7 +367,7 @@ export const useEntityCountByRange = (
       language,
       filter,
     ],
-    queryFn: async () => {
+    queryFn: async ({ signal }) => {
       const client = new SparqlClient(config);
 
       if (!filter) {
@@ -377,7 +377,7 @@ export const useEntityCountByRange = (
             ?entity a <${sanitizeSparqlUri(rangeUri)}> .
           }
         `;
-        const response = await client.query(query);
+        const response = await client.query(query, { signal });
         return parseInt(response.results.bindings[0]?.count?.value || "0", 10);
       }
 
@@ -394,7 +394,7 @@ ${createLanguageFallbackFragment("?entity", language, fallbackLanguage, "label",
           FILTER(CONTAINS(LCASE(STR(?label)), "${escapedFilter}"))
         }
       `;
-      const response = await client.query(query);
+      const response = await client.query(query, { signal });
       return parseInt(response.results.bindings[0]?.count?.value || "0", 10);
     },
     enabled: !!config.url && !!rangeUri,

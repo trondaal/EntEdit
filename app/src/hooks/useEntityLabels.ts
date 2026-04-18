@@ -53,7 +53,7 @@ export function useEntityLabels(
       selectedLanguage,
       sortedUris,
     ],
-    queryFn: async (): Promise<EntityLabelsMap> => {
+    queryFn: async ({ signal }): Promise<EntityLabelsMap> => {
       if (sortedUris.length === 0) return EMPTY_LABELS;
 
       const client = new SparqlClient(config);
@@ -70,7 +70,7 @@ export function useEntityLabels(
         }
       `;
 
-      const response = await client.query(query);
+      const response = await client.query(query, { signal });
 
       // Group all labels per URI, then pick the best one per language preference.
       const byUri = new Map<
