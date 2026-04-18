@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from "react";
+import React, { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import {
   Paper,
   TextField,
@@ -122,10 +122,22 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     entityUri,
   );
 
+  // Mirror isEditing/isDirty into refs that update during render. The sync
+  // effect below reads these refs rather than closure values so a refetch
+  // under React's concurrent rendering can't see stale snapshots and
+  // accidentally overwrite in-progress edits. Refs don't belong in the
+  // effect's dependency array, which is exactly the behavior we want: the
+  // effect should re-run only when server data or the selected entity
+  // changes — not when the user toggles edit mode.
+  const isEditingRef = useRef(isEditing);
+  const isDirtyRef = useRef(isDirty);
+  isEditingRef.current = isEditing;
+  isDirtyRef.current = isDirty;
+
   useEffect(() => {
     if (existingEntity) {
       // Don't overwrite in-progress edits when cache invalidation refreshes the data
-      if (isEditing && isDirty) return;
+      if (isEditingRef.current && isDirtyRef.current) return;
       setEntityData(existingEntity.data);
       setIsEditing(false);
       setIsDirty(false);
@@ -137,10 +149,6 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       setCustomEntityUri(""); // Clear custom URI for new entities
       setEntityLabels([]);
     }
-    // Note: isEditing and isDirty are intentionally excluded from deps —
-    // we only want to re-sync when the server data or selected entity changes,
-    // not when the user toggles editing mode.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [existingEntity, entityUri]);
 
   // Section configurations for the object property groups
