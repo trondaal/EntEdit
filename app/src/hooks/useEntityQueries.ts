@@ -5,10 +5,106 @@ import {
   getFallbackLanguage,
 } from "../utils/sparqlFragments";
 import { sanitizeSparqlUri, escapeSparqlLiteral } from "../utils/labelUtils";
-import type { SparqlEndpointConfig } from "../types/sparql";
+import type { SparqlEndpointConfig, OrderedValue } from "../types/sparql";
 
 /** Number of entities fetched per page in infinite queries */
 export const ENTITIES_PAGE_SIZE = 50;
+
+/** A language-tagged rdfs:label loaded from the entity. */
+export interface EntityLabel {
+  id: string;
+  value: string;
+  language: string;
+}
+
+/** Shape returned by `useEntityQuery` — all outgoing triples grouped by property,
+ * plus rdfs:label entries separated out for the LabelManager. */
+export interface LoadedEntity {
+  data: Record<string, OrderedValue[]>;
+  labels: EntityLabel[];
+}
+
+/**
+ * Loads all outgoing triples for a single entity, with RDF-star valueOrder
+ * annotations for multi-value ordering. Labels are returned separately so the
+ * label manager and the rest of the editor don't have to filter them out.
+ *
+ * Runs with inference ON, so inferred inverse/superproperty triples may
+ * appear; the `FILTER NOT EXISTS` sub-property block removes entries that
+ * would duplicate a more specific predicate.
+ */
+export const useEntityQuery = (
+  config: SparqlEndpointConfig,
+  entityUri: string | null,
+) => {
+  return useQuery({
+    queryKey: ["entity", config.url, entityUri],
+    queryFn: async (): Promise<LoadedEntity | null> => {
+      if (!entityUri) return null;
+
+      const client = new SparqlClient(config);
+      const sanitizedUri = sanitizeSparqlUri(entityUri);
+      const query = `
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX entedit: <http://oslomet.no/abi/vocab#>
+        SELECT DISTINCT ?property ?value ?valueOrder WHERE {
+          <${sanitizedUri}> ?property ?value .
+          OPTIONAL {
+            << <${sanitizedUri}> ?property ?value >> entedit:valueOrder ?valueOrder .
+          }
+          FILTER NOT EXISTS {
+            <${sanitizedUri}> ?subProperty ?value .
+            ?subProperty rdfs:subPropertyOf+ ?property .
+            FILTER (?subProperty != ?property)
+          }
+        }
+        ORDER BY ?property ?valueOrder
+      `;
+
+      const response = await client.query(query);
+      const data: Record<string, OrderedValue[]> = {};
+      const labels: EntityLabel[] = [];
+
+      // Track per-property auto-increment for values without explicit order
+      const propertyCounters: Record<string, number> = {};
+
+      response.results.bindings.forEach((binding) => {
+        const property = binding.property.value;
+        const value = binding.value.value;
+
+        if (property === "http://www.w3.org/2000/01/rdf-schema#label") {
+          const language = binding.value["xml:lang"] || "";
+          labels.push({
+            id: `label-${labels.length}`,
+            value,
+            language,
+          });
+        } else {
+          if (!data[property]) {
+            data[property] = [];
+            propertyCounters[property] = 0;
+          }
+          const explicitOrder = binding.valueOrder?.value
+            ? parseInt(binding.valueOrder.value, 10)
+            : undefined;
+          const order = explicitOrder ?? propertyCounters[property];
+          propertyCounters[property] =
+            Math.max(propertyCounters[property], order) + 1;
+          const isUri = binding.value.type === "uri";
+          data[property].push({ value, order, isUri });
+        }
+      });
+
+      // Sort values within each property by order
+      Object.values(data).forEach((values) => {
+        values.sort((a, b) => a.order - b.order);
+      });
+
+      return { data, labels };
+    },
+    enabled: !!entityUri && !!config.url,
+  });
+};
 
 export const useEntitiesByClass = (
   config: SparqlEndpointConfig,
