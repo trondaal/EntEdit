@@ -178,3 +178,651 @@
     rdaad:P50413 "Hamsun, Knut" ;
     rdfs:label "Hamsun, Knut" ;
     rdaad:P50339 "1859-1952" .
+
+
+<http://viaf.org/viaf/8151110735637062585>
+    a <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:label
+        "Korsgaard, Thomas"@en ,
+        "Korsgaard, Thomas"@no ;
+    rdaad:P50339 "1995-" ;
+    rdaad:P50413 "Korsgaard, Thomas" .
+
+    @prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
+    @prefix rdac: <http://rdaregistry.info/Elements/c/> .
+    @prefix rdaco: <http://rdaregistry.info/termList/RDAContentType/> .
+    @prefix rdact: <http://rdaregistry.info/termList/RDACarrierType/> .
+    @prefix rdaed: <http://rdaregistry.info/Elements/e/datatype/> .
+    @prefix rdaeo: <http://rdaregistry.info/Elements/e/object/> .
+    @prefix rdamd: <http://rdaregistry.info/Elements/m/datatype/> .
+    @prefix rdamo: <http://rdaregistry.info/Elements/m/object/> .
+    @prefix rdamt: <http://rdaregistry.info/termList/RDAMediaType/> .
+    @prefix rdat: <http://rdaregistry.info/termList/> .
+    @prefix rdawd: <http://rdaregistry.info/Elements/w/datatype/> .
+    @prefix rdawo: <http://rdaregistry.info/Elements/w/object/> .
+    @prefix rdaxd: <http://rdaregistry.info/Elements/x/datatype/> .
+    @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix vtp: <https://schema.nb.no/Bibliographic/Values/> .
+
+    <http://viaf.org/viaf/29558386>
+        a rdac:C10002 ;
+        rdaxd:P00018 "http://viaf.org/viaf/29558386" ;
+        rdaad:P50413 "McCarthy, Cormac" ;
+        rdfs:label "McCarthy, Cormac" ;
+        rdaad:P50339 "1933-2023" .
+
+    <http://viaf.org/viaf/5191807>
+        a rdac:C10002 ;
+        rdaxd:P00018 "http://viaf.org/viaf/5191807" ;
+        rdaad:P50413 "Penhall, Joe" ;
+        rdfs:label "Penhall, Joe" .
+
+    <https://isni.org/isni/0000000108589241>
+        a rdac:C10002 ;
+        rdaxd:P00018 "https://isni.org/isni/0000000108589241" ;
+        rdaad:P50413 "Hillcoat, John" ;
+        rdfs:label "Hillcoat, John" ;
+        rdaad:P50339 "1961-" .
+
+    <https://www.imdb.com/name/nm2445382>
+        a rdac:C10002 ;
+        rdaxd:P00018 "https://www.imdb.com/name/nm2445382" ;
+        rdaad:P50413 "Schwartz, Paula Mae" ;
+        rdfs:label "Schwartz, Paula Mae" .
+
+    <https://isni.org/isni/0000000063018399>
+        a rdac:C10002 ;
+        rdaxd:P00018 "https://isni.org/isni/0000000063018399" ;
+        rdaad:P50413 "Wechsler, Nick" ;
+        rdfs:label "Wechsler, Nick" .
+
+    <http://viaf.org/viaf/225596267>
+        a rdac:C10002 ;
+        rdaxd:P00018 "http://viaf.org/viaf/225596267" ;
+        rdaad:P50413 "Ofstad, Knut" ;
+        rdfs:label "Ofstad, Knut" .
+
+    <http://viaf.org/viaf/27122071>
+        a rdac:C10002 ;
+        rdaxd:P00018 "http://viaf.org/viaf/27122071" ;
+        rdaad:P50413 "Brænne, Trond" ;
+        rdfs:label "Brænne, Trond" ;
+        rdaad:P50339 "1953-2013" .
+
+    <https://isni.org/isni/0000000114558548>
+        a rdac:C10002 ;
+        rdaxd:P00018 "https://isni.org/isni/0000000114558548" ;
+        rdaad:P50413 "Duvall, Robert" ;
+        rdfs:label "Duvall, Robert" ;
+        rdaad:P50339 "1931-" .
+
+    <https://isni.org/isni/0000000110296296>
+        a rdac:C10002 ;
+        rdaxd:P00018 "https://isni.org/isni/0000000110296296" ;
+        rdaad:P50413 "Mortensen, Viggo" ;
+        rdfs:label "Mortensen, Viggo" ;
+        rdaad:P50339 "1958-" .
+
+    <https://isni.org/isni/0000000114563013>
+        a rdac:C10002 ;
+        rdaxd:P00018 "https://isni.org/isni/0000000114563013" ;
+        rdaad:P50413 "Smit-McPhee, Kodi" ;
+        rdfs:label "Smit-McPhee, Kodi" ;
+        rdaad:P50339 "1996-" .
+
+    <https://isni.org/isni/0000000114973899>
+        a rdac:C10002 ;
+        rdaxd:P00018 "https://isni.org/isni/0000000114973899" ;
+        rdaad:P50413 "Theron, Charlize" ;
+        rdfs:label "Theron, Charlize" ;
+        rdaad:P50339 "1975-" .
+
+    <http://viaf.org/viaf/220031159>
+        a rdac:C10001 ;
+        rdaxd:P00018 "http://viaf.org/viaf/220031159" ;
+        rdawd:P10223 "The road" ;
+        rdfs:label "The road (McCarthy, Cormac)" ;
+        abi:P01 vtp:V1000;
+        abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+        rdawd:P10330 "Veien forteller om en reise i en fremtid uten håp. En far og en sønn går alene gjennom restene av et amerikansk landskap. Ingenting beveger seg, bortsett fra asken som flyr i vinden. Det er iskaldt, og det snør grå snø. Himmelen er mørk. Det er ti år siden verden brøt sammen. De går mot kysten, med bare en pistol å forsvare seg med mot de lovløse bandene langs veien. De har bare klærne de går i og litt frukt, men en stor hengivenhet og ømhet for hverandre.." ;
+        rdawo:P10061 <http://viaf.org/viaf/29558386> .
+
+    <https://www.imdb.com/title/tt0898367>
+	    a rdac:C10001 ;
+	    rdaxd:P00018 "https://www.imdb.com/title/tt0898367" ;
+	    rdawd:P10223 "The Road (Motion picture : 2009)" ;
+	    rdfs:label "The Road (Motion picture : 2009)" ;
+	    rdaxd:P00029 "Movie" ;
+	    abi:P01 vtp:V1002;
+	    abi:P02 <https://id.nb.no/vocabulary/ntsf/1130>;
+	    rdawd:P10330 "\"A father (Viggo Mortensen) and son make their way across a post-apocalyptic United States in hopes of finding civilization amongst the nomadic cannibal tribes in 2929 Productions' adaptation of Cormac McCarthy's thrilling Pulitzer Prize-winning novel The Road. John Hillcoat (The Proposition) directs from a screenplay provided by Joe Penhall. Charlize Theron co-stars in the Dimension Films release\"--Allmovie.com, viewed October 1, 2018." ;
+	    rdawo:P10013 <https://isni.org/isni/0000000108589241> ;
+	    rdawo:P10073 <https://www.imdb.com/name/nm2445382> , <https://isni.org/isni/0000000063018399> ;
+	    rdawo:P10129 <http://viaf.org/viaf/220031159> ;
+	    rdawo:P10203 <http://viaf.org/viaf/5191807> .
+
+    <http://viaf.org/viaf/5191807/theroad>
+        a rdac:C10001 ;
+        rdaxd:P00018 "http://viaf.org/viaf/5191807/theroad" ;
+        rdawd:P10223 "The road" ;
+        rdfs:label "The road (Screenplay)" ;
+        abi:P01 vtp:V1000;
+        abi:P02 <https://id.nb.no/vocabulary/ntsf/298>;
+        rdaxd:P00029 "Screenplay" ;
+        rdawo:P10061 <http://viaf.org/viaf/5191807> ;
+        rdawo:P10134 <http://viaf.org/viaf/220031159> .
+
+
+    <http://viaf.org/viaf/220031159/exp/eng/1020>
+        a rdac:C10006 ;
+        rdaed:P20315 "The road" ;
+        rdfs:label "The road (McCarthy, Cormac)" ;
+        rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+        rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdaeo:P20231 <http://viaf.org/viaf/220031159> .
+
+    <http://viaf.org/viaf/220031159/exp/nob/1013/225596267/27122071>
+        a rdac:C10006 ;
+        rdaed:P20315 "Veien" ;
+        rdfs:label "Veien (McCarthy, Cormac / Brænne, Trond)" ;
+        rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
+        rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+        rdaeo:P20022 <http://viaf.org/viaf/27122071> ;
+        rdaeo:P20037 <http://viaf.org/viaf/225596267> ;
+        rdaeo:P20231 <http://viaf.org/viaf/220031159> .
+
+    <http://viaf.org/viaf/220031159/exp/nob/1020/225596267>
+        a rdac:C10006 ;
+        rdaed:P20315 "Veien" ;
+        rdfs:label "Veien (McCarthy, Cormac)" ;
+        rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+        rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+        rdaeo:P20037 <http://viaf.org/viaf/225596267> ;
+        rdaeo:P20231 <http://viaf.org/viaf/220031159> .
+
+    <http://viaf.org/viaf/5191807/theroad/exp/eng/1020>
+        a rdac:C10006 ;
+        rdaed:P20315 "The road" ;
+        rdfs:label "The road (Penhall, Joe)" ;
+        rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+        rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdaeo:P20231 <http://viaf.org/viaf/5191807/theroad> .
+
+    <https://www.imdb.com/title/tt0898367/exp/1023>
+        a rdac:C10006 ;
+        rdaed:P20315 "The road" ;
+        rdfs:label "The road (Motion picture : 2009)" ;
+        rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1023> ;
+        rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdaeo:P20012 <https://isni.org/isni/0000000114558548> ,
+                     <https://isni.org/isni/0000000110296296> ,
+                     <https://isni.org/isni/0000000114563013> ,
+                     <https://isni.org/isni/0000000114973899> ;
+        rdaeo:P20231 <https://www.imdb.com/title/tt0898367> .
+
+    <http://example.org/20691857>
+        a rdac:C10007 ;
+        rdfs:label "The road / a Dimension Films release presented with 2929 Productions of a Nick Wechsler and Chockstone Pictures production ; directed by John Hillcoat ; produced by Nick Wechsler, Paula Mae Schwartz, Steve Schwartz ; screenplay by Joe Penhall"@no ,
+                   "The road / a Dimension Films release presented with 2929 Productions of a Nick Wechsler and Chockstone Pictures production ; directed by John Hillcoat ; produced by Nick Wechsler, Paula Mae Schwartz, Steve Schwartz ; screenplay by Joe Penhall"@en ;
+        rdamd:P30156 "The road" ;
+        rdamd:P30117 "a Dimension Films release presented with 2929 Productions of a Nick Wechsler and Chockstone Pictures production ; directed by John Hillcoat ; produced by Nick Wechsler, Paula Mae Schwartz, Steve Schwartz ; screenplay by Joe Penhall" ;
+        rdamd:P30088 "United States" ;
+        rdamd:P30111 "United States : Dimension, 2009" ;
+        rdamd:P30076 "Dimension" ;
+        rdamd:P30011 "2009" ;
+        rdamd:P30182 "12 film reels of 12 on 6 (2009 min., 9,990 ft.) : anamorphic, sd. (opt, Dolby SR, digital, Dolby SR-D, SDDS, DTS), col., 35 mm." ;
+        rdamd:P30137 "Aspect ratio is 2.35:1." ,
+                     "Based on the novel by Cormac McCarthy." ,
+                     "Not viewed." ,
+                     "Sources used: Internet movie database, October 1, 2018; Variety, September 3, 2009; Copyright catalog online." ;
+        rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1069> ;
+        rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1008> ;
+        rdamo:P30139 <https://www.imdb.com/title/tt0898367/exp/1023> .
+
+
+    <http://example.org/isbn-033044753>
+        a rdac:C10007 ;
+        rdfs:label "The road / Cormac McCarthy"@no ,
+                   "The road / Cormac McCarthy"@en ;
+        rdamd:P30004 "ISBN 033044753X (hbk.)" ,
+                     "ISBN 0330447556 (pbk.)" ,
+                     "ISBN 9780330447539" ,
+                     "ISBN 9780330447553 (pbk.)" ;
+        rdaxd:P00018 "isbn-033044753" ,
+                     "isbn-0330447556" ,
+                     "isbn-9780330447539" ,
+                     "isbn-9780330447553" ;
+        rdfs:label "ISBN033044753X (hbk.)" ,
+                   "ISBN0330447556 (pbk.)" ,
+                   "ISBN9780330447539" ,
+                   "ISBN9780330447553 (pbk.)" ;
+        rdamd:P30156 "The road" ;
+        rdamd:P30117 "Cormac McCarthy" ;
+        rdamd:P30088 "London" ;
+        rdamd:P30111 "London : Picador, 2006" ;
+        rdamd:P30076 "Picador" ;
+        rdamd:P30011 "2006" ;
+        rdamd:P30182 "241 p., 22 cm." ;
+        rdamd:P30137 "Formerly CIP." ;
+        rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+        rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+        rdamo:P30139 <http://viaf.org/viaf/220031159/exp/eng/1020> .
+
+    <http://example.org/isbn-0330468464>
+        a rdac:C10007 ;
+        rdfs:label "The road / Cormac McCarthy"@no ,
+                   "The road / Cormac McCarthy"@en ;
+        rdamd:P30004 "ISBN 0330468464 (pbk.)" , "ISBN 9780330468466 (pbk.)" ;
+        rdaxd:P00018 "isbn-0330468464" , "isbn-9780330468466" ;
+        rdfs:label "ISBN0330468464 (pbk.)" , "ISBN9780330468466 (pbk.)" ;
+        rdamd:P30156 "The road" ;
+        rdamd:P30117 "Cormac McCarthy" ;
+        rdamd:P30088 "London" ;
+        rdamd:P30111 "London : Picador, 2009" ;
+        rdamd:P30076 "Picador" ;
+        rdamd:P30011 "2009" ;
+        rdamd:P30182 "307 p., 20 cm." ;
+        rdamd:P30137 "Film tie-in." , "Formerly CIP." , "Originally published: 2006." ;
+        rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+        rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+        rdamo:P30139 <http://viaf.org/viaf/220031159/exp/eng/1020> .
+
+    <http://example.org/isbn-0330472755>
+        a rdac:C10007 ;
+        rdfs:label "The Road / Cormac McCarthy"@no ,
+                   "The Road / Cormac McCarthy"@en ;
+        rdamd:P30004 "ISBN 0330472755" , "ISBN 9780330472753" ;
+        rdaxd:P00018 "isbn-0330472755" , "isbn-9780330472753" ;
+        rdfs:label "ISBN0330472755" , "ISBN9780330472753" ;
+        rdamd:P30156 "The Road" ;
+        rdamd:P30117 "Cormac McCarthy" ;
+        rdamd:P30088 "London" ;
+        rdamd:P30111 "London : Picador, 2010" ;
+        rdamd:P30076 "Picador" ;
+        rdamd:P30011 "2010" ;
+        rdamd:P30182 "1 online resource (256 pages)." ;
+        rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+        rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+        rdamo:P30139 <http://viaf.org/viaf/220031159/exp/eng/1020> .
+
+    <http://example.org/isbn-0330503820>
+        a rdac:C10007 ;
+        rdfs:label "The road / Cormac McCarthy"@no ,
+                   "The road / Cormac McCarthy"@en ;
+        rdamd:P30004 "ISBN 0330503820" , "ISBN 9780330503822" ;
+        rdaxd:P00018 "isbn-0330503820" , "isbn-9780330503822" ;
+        rdfs:label "ISBN0330503820" , "ISBN9780330503822" ;
+        rdamd:P30156 "The road" ;
+        rdamd:P30117 "Cormac McCarthy" ;
+        rdamd:P30088 "London" ;
+        rdamd:P30111 "London : Picador, 2010" ;
+        rdamd:P30076 "Picador" ;
+        rdamd:P30011 "2010" ;
+        rdamd:P30182 "1 online resource." ;
+        rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+        rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+        rdamo:P30139 <http://viaf.org/viaf/220031159/exp/eng/1020> .
+
+    <http://example.org/isbn-1408127423>
+        a rdac:C10007 ;
+        rdfs:label "The road / Joe Penhall ; based on the novel by Cormac McCarthy"@no ,
+                   "The road / Joe Penhall ; based on the novel by Cormac McCarthy"@en ;
+        rdamd:P30004 "ISBN 1408127423 (pbk.)" , "ISBN 9781408127421 (pbk.)" ;
+        rdaxd:P00018 "isbn-1408127423" , "isbn-9781408127421" ;
+        rdfs:label "ISBN1408127423 (pbk.)" , "ISBN9781408127421 (pbk.)" ;
+        rdamd:P30156 "The road" ;
+        rdamd:P30117 "Joe Penhall ; based on the novel by Cormac McCarthy" ;
+        rdamd:P30088 "London" ;
+        rdamd:P30111 "London : Methuen Drama, 2010" ;
+        rdamd:P30076 "Methuen Drama" ;
+        rdamd:P30011 "2010" ;
+        rdamd:P30182 "102 p., 20 cm." ;
+        rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+        rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+        rdamo:P30139 <http://viaf.org/viaf/5191807/theroad/exp/eng/1020> .
+
+    <http://example.org/isbn-1408138719>
+        a rdac:C10007 ;
+        rdfs:label "The road / Joe Penhall ; based on the novel by Cormac McCarthy"@no ,
+                   "The road / Joe Penhall ; based on the novel by Cormac McCarthy"@en ;
+        rdamd:P30004 "ISBN 1408138719" ,
+                     "ISBN 1408138727" ,
+                     "ISBN 9781408138717" ,
+                     "ISBN 9781408138724" ;
+        rdaxd:P00018 "isbn-1408138719" ,
+                     "isbn-1408138727" ,
+                     "isbn-9781408138717" ,
+                     "isbn-9781408138724" ;
+        rdfs:label "ISBN1408138719" , "ISBN1408138727" , "ISBN9781408138717" , "ISBN9781408138724" ;
+        rdamd:P30156 "The road" ;
+        rdamd:P30117 "Joe Penhall ; based on the novel by Cormac McCarthy" ;
+        rdamd:P30088 "London [England]" , "New York, New York" ;
+        rdamd:P30111 "London [England] ; New York, New York : Bloomsbury, 2009" ;
+        rdamd:P30076 "Bloomsbury" ;
+        rdamd:P30011 "2009" ;
+        rdamd:P30007 "©2009" ;
+        rdamd:P30182 "1 online resource (107 pages)." ;
+        rdamd:P30106 "Methuen/drama" ;
+        rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+        rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+        rdamo:P30139 <http://viaf.org/viaf/5191807/theroad/exp/eng/1020> .
+
+
+    <http://example.org/isbn-9780307455291>
+        a rdac:C10007 ;
+        rdfs:label "The road / Cormac McCarthy"@no ,
+                   "The road / Cormac McCarthy"@en ;
+        rdamd:P30004 "ISBN 9780307455291 (pbk.)" ;
+        rdaxd:P00018 "isbn-9780307455291" ;
+        rdfs:label "ISBN9780307455291 (pbk.)" ;
+        rdamd:P30156 "The road" ;
+        rdamd:P30117 "Cormac McCarthy" ;
+        rdamd:P30107 "1st Vintage International ed" ;
+        rdamd:P30088 "New York" ;
+        rdamd:P30111 "New York : Vintage International, c2008" ;
+        rdamd:P30076 "Vintage International" ;
+        rdamd:P30011 "c2008" ;
+        rdamd:P30182 "287 p., 21 cm." ;
+        rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+        rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+        rdamo:P30139 <http://viaf.org/viaf/220031159/exp/eng/1020> .
+
+    <http://example.org/isbn-9780330513005>
+        a rdac:C10007 ;
+        rdfs:label "The road / Cormac McCarthy"@no ,
+                   "The road / Cormac McCarthy"@en ;
+        rdamd:P30004 "ISBN 9780330513005" ;
+        rdaxd:P00018 "isbn-9780330513005" ;
+        rdfs:label "ISBN9780330513005" ;
+        rdamd:P30156 "The road" ;
+        rdamd:P30117 "Cormac McCarthy" ;
+        rdamd:P30088 "London" ;
+        rdamd:P30111 "London : Picador, 2010" ;
+        rdamd:P30076 "Picador" ;
+        rdamd:P30011 "2010" ;
+        rdamd:P30182 "306 s." ;
+        rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+        rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+        rdamo:P30139 <http://viaf.org/viaf/220031159/exp/eng/1020> .
+
+    <http://example.org/isbn-9788205373860>
+        a rdac:C10007 ;
+        rdfs:label "Veien / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@no ,
+                   "Veien / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@en ;
+        rdamd:P30004 "ISBN 9788205373860" ;
+        rdaxd:P00018 "isbn-9788205373860" ;
+        rdfs:label "ISBN9788205373860" ;
+        rdamd:P30156 "Veien" ;
+        rdamd:P30117 "Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad" ;
+        rdamd:P30088 "[Oslo]" ;
+        rdamd:P30111 "[Oslo] : Gyldendal, 2008" ;
+        rdamd:P30076 "Gyldendal" ;
+        rdamd:P30011 "2008" ;
+        rdamd:P30182 "253 s." ;
+        rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+        rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+        rdamo:P30139 <http://viaf.org/viaf/220031159/exp/nob/1020/225596267> .
+
+    <http://example.org/isbn-9788205394964>
+        a rdac:C10007 ;
+        rdfs:label "Veien / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@no ,
+                   "Veien / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@en ;
+        rdamd:P30004 "ISBN 9788205394964" ;
+        rdaxd:P00018 "isbn-9788205394964" ;
+        rdfs:label "ISBN9788205394964" ;
+        rdamd:P30156 "Veien" ;
+        rdamd:P30117 "Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad" ;
+        rdamd:P30107 "[Ny utg.]" ;
+        rdamd:P30088 "[Oslo]" ;
+        rdamd:P30111 "[Oslo] : Gyldendal, 2009" ;
+        rdamd:P30076 "Gyldendal" ;
+        rdamd:P30011 "2009" ;
+        rdamd:P30182 "253 s." ;
+        rdamd:P30106 "Gyldendal pocket" ;
+        rdamd:P30137 "1. norske utg. 2008" ;
+        rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+        rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+        rdamo:P30139 <http://viaf.org/viaf/220031159/exp/nob/1020/225596267> .
+
+    <http://example.org/isbn-9788205577121>
+        a rdac:C10007 ;
+        rdfs:label "Veien / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@no ,
+                   "Veien / Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad"@en ;
+        rdamd:P30004 "ISBN 9788205577121" ;
+        rdaxd:P00018 "isbn-9788205577121" ;
+        rdfs:label "ISBN9788205577121" ;
+        rdamd:P30156 "Veien" ;
+        rdamd:P30117 "Cormac McCarthy ; oversatt fra engelsk av Knut Ofstad" ;
+        rdamd:P30107 "Ny utgave" ;
+        rdamd:P30088 "Oslo" ;
+        rdamd:P30111 "Oslo : Gyldendal, 2022" ;
+        rdamd:P30076 "Gyldendal" ;
+        rdamd:P30011 "2022" ;
+        rdamd:P30182 "253 sider." ;
+        rdamd:P30137 "1. norske utgave 2008" ;
+        rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+        rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+        rdamo:P30139 <http://viaf.org/viaf/220031159/exp/nob/1020/225596267> .
+
+    <http://example.org/isbn-9788242148407>
+        a rdac:C10007 ;
+        rdfs:label "Veien / Cormac McCarthy ; oversatt av Knut Ofstad"@no ,
+                   "Veien / Cormac McCarthy ; oversatt av Knut Ofstad"@en ;
+        rdamd:P30004 "ISBN 9788242148407" ;
+        rdaxd:P00018 "isbn-9788242148407" ;
+        rdfs:label "ISBN9788242148407" ;
+        rdamd:P30156 "Veien" ;
+        rdamd:P30117 "Cormac McCarthy ; oversatt av Knut Ofstad" ;
+        rdamd:P30088 "[Melhus]" ;
+        rdamd:P30111 "[Melhus] : Lydbokforl., 2010" ;
+        rdamd:P30076 "Lydbokforl" ;
+        rdamd:P30011 "2010" ;
+        rdamd:P30182 "6 plater (CD) (6 t, 41 min) : digital, 12 cm, i eske." ;
+        rdamd:P30137 "Lest av Trond Brænne" ;
+        rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1004> ;
+        rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1001> ;
+        rdamo:P30139 <http://viaf.org/viaf/220031159/exp/nob/1013/225596267/27122071> .
+
+    <http://example.org/isbn-9788242148490>
+        a rdac:C10007 ;
+        rdfs:label "Veien / Cormac McCarthy ; [oversatt av Knut Ofstad]"@no ,
+                   "Veien / Cormac McCarthy ; [oversatt av Knut Ofstad]"@en ;
+        rdamd:P30004 "ISBN 9788242148490" ;
+        rdaxd:P00018 "isbn-9788242148490" ;
+        rdfs:label "ISBN9788242148490" ;
+        rdamd:P30156 "Veien" ;
+        rdamd:P30117 "Cormac McCarthy ; [oversatt av Knut Ofstad]" ;
+        rdamd:P30088 "[Melhus]" ;
+        rdamd:P30111 "[Melhus] : Lydbokforl., 2010" ;
+        rdamd:P30076 "Lydbokforl" ;
+        rdamd:P30011 "2010" ;
+        rdamd:P30182 "1 avspiller med lydfil (6 t, 40 min) : digital." ;
+        rdamd:P30137 "Digital lydbok med integrert avspilling (digibok)" , "Lest av: Trond Brænne" ;
+        rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1004> ;
+        rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1001> ;
+        rdamo:P30139 <http://viaf.org/viaf/220031159/exp/nob/1013/225596267/27122071> .
+
+        @prefix entedit: <http://oslomet.no/abi/vocab#> .
+        @prefix rdaed: <http://rdaregistry.info/Elements/e/datatype/> .
+        @prefix rdaeo: <http://rdaregistry.info/Elements/e/object/> .
+        @prefix rdamd: <http://rdaregistry.info/Elements/m/datatype/> .
+        @prefix rdamo: <http://rdaregistry.info/Elements/m/object/> .
+        @prefix rdawd: <http://rdaregistry.info/Elements/w/datatype/> .
+        @prefix rdawo: <http://rdaregistry.info/Elements/w/object/> .
+        @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+        @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+        @prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
+        @prefix rdaao: <http://rdaregistry.info/Elements/a/object/> .
+
+        <http://example.org/entity-1775731224739>
+            a <http://rdaregistry.info/Elements/c/C10007> ;
+            rdfs:label "Den himmelske makrell / Tor Åge Bringsværd - Cappelen Damm, 2023" ;
+            rdamd:P30011 "2023" ;
+            rdamd:P30076 "Cappelen Damm" ;
+            rdamd:P30107 "1. utgave" ;
+            rdamd:P30117 "Tor Åge Bringsværd" ;
+            rdamd:P30156 "Den himmelske makrell" ;
+            rdamd:P30182 "182 sider" ;
+            rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+            rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+            rdamo:P30139 <http://example.org/entity-1775732741954> .
+
+        <http://example.org/entity-1775731319698>
+            a <http://rdaregistry.info/Elements/c/C10007> ;
+            rdfs:label "Farvel, Farah Diba / Karin Fossum - Cappelen Damm, 2024." ;
+            rdamd:P30004 "ISBN : 9788202829575" ;
+            rdamd:P30011 "2024" ;
+            rdamd:P30076 "Cappelen Damm" ;
+            rdamd:P30088 "Oslo" ;
+            rdamd:P30107 "1. utgave 2023" ;
+            rdamd:P30117 "Karin Fossum" ;
+            rdamd:P30156 "Farvel, Farah Diba" ;
+            rdamd:P30182 "315 sider" ;
+            rdamo:P30139 <http://example.org/entity-1775732880259> .
+
+        <http://example.org/entity-1775731586840>
+            a <http://rdaregistry.info/Elements/c/C10007> ;
+            rdfs:label "Den slaviske tragedien / Hans Wilhelm Steinfeld - Orkana, 2023." ;
+            rdamd:P30004 "ISBN : 9788281045910" ;
+            rdamd:P30011 "2024" ;
+            rdamd:P30076 "Orkana" ;
+            rdamd:P30088 "Stamsund" ;
+            rdamd:P30117 "Hans-Wilhelm Steinfeld" ;
+            rdamd:P30156 "Den slaviske tragedien" ;
+            rdamd:P30182 "207 sider illustrasjoner i farger" ;
+            rdamo:P30139 <http://example.org/entity-1775732155719> .
+
+        <http://example.org/entity-1775731955680>
+            a <http://rdaregistry.info/Elements/c/C10002> ;
+            rdfs:label "Steinfeld, Hans-Wilhelm" ;
+            rdaad:P50339 "1951-" ;
+            rdaad:P50413 "Steinfeld, Hans-Wilhelm" ;
+            rdaao:P50195 <http://example.org/entity-1775732108777> .
+
+        <http://example.org/entity-1775732108777>
+            a <http://rdaregistry.info/Elements/c/C10001> ;
+            rdfs:label "Den slaviske tragedien (Steinfeld, Hans-Wilhelm)" ;
+            entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+            entedit:P02 <https://id.nb.no/vocabulary/ntsf/494> ;
+            rdawd:P10223 "Den slaviske tragedien" ;
+            rdawo:P10061 <http://example.org/entity-1775731955680> ;
+            rdawo:P10078 <http://example.org/entity-1775732155719> .
+
+        <http://example.org/entity-1775732155719>
+            a <http://rdaregistry.info/Elements/c/C10006> ;
+            rdfs:label "Den slaviske tragedien (norsk tekst)" ;
+            rdaed:P20315 "Den slaviske tragedien" ;
+            rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+            rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nor> ;
+            rdaeo:P20059 <http://example.org/entity-1775731586840> ;
+            rdaeo:P20231 <http://example.org/entity-1775732108777> .
+
+        <http://example.org/entity-1775732362134>
+            a <http://rdaregistry.info/Elements/c/C10001> ;
+            rdfs:label "Den himmelske makrell (Bringsværd, Tor Åge)" ;
+            entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+            entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+            rdawd:P10223 "Den himmelske makrell" ;
+            rdawo:P10061 <http://viaf.org/viaf/301771064> ;
+            rdawo:P10078 <http://example.org/entity-1775732741954> .
+
+        <http://example.org/entity-1775732454499>
+            a <http://rdaregistry.info/Elements/c/C10001> ;
+            rdfs:label "Farvel, Farah Diba (Karin Fossum)" ;
+            entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+            entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+            rdawd:P10223 "Farvel, Farah Diba" ;
+            rdawo:P10061 <http://viaf.org/viaf/120627630> ;
+            rdawo:P10078
+                <http://example.org/entity-1775732880259> ,
+                <http://example.org/entity-1775733233673> ,
+                <http://example.org/entity-1775734685118> .
+
+        <http://example.org/entity-1775732741954>
+            a <http://rdaregistry.info/Elements/c/C10006> ;
+            rdfs:label "Den himmelske makrell (norsk tekst)" ;
+            rdaed:P20315 "Den himmelske makrell" ;
+            rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+            rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nor> ;
+            rdaeo:P20059 <http://example.org/entity-1775731224739> ;
+            rdaeo:P20231 <http://example.org/entity-1775732362134> .
+
+        <http://example.org/entity-1775732880259>
+            a <http://rdaregistry.info/Elements/c/C10006> ;
+            rdfs:label "Farvel, Farah Diba (norsk tekst)" ;
+            rdaed:P20315 "Farvel, Farah Diba" ;
+            rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+            rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nor> ;
+            rdaeo:P20059 <http://example.org/entity-1775731319698> ;
+            rdaeo:P20203 <http://example.org/entity-1775734685118> ;
+            rdaeo:P20231 <http://example.org/entity-1775732454499> .
+
+        <http://example.org/entity-1775733233673>
+            a <http://rdaregistry.info/Elements/c/C10006> ;
+            rdfs:label " Farväl, Farah Diba (svensk tekst)" ;
+            rdaed:P20315 " Farväl, Farah Diba" ;
+            rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+            rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/swe> ;
+            rdaeo:P20037 <http://viaf.org/viaf/7371041> ;
+            rdaeo:P20231 <http://example.org/entity-1775732454499> .
+
+        <http://example.org/entity-1775733593803>
+            a <http://rdaregistry.info/Elements/c/C10007> ;
+            rdfs:label "Farväl, Farah Diba / Karin Fossum - " ;
+            rdamd:P30004 "ISBN 9788727307398" ;
+            rdamd:P30011 "2026" ;
+            rdamd:P30076 "Saga Egmont" ;
+            rdamd:P30106 "Eddie Feber" ;
+            rdamd:P30117 "Karin Fossum" ;
+            rdamd:P30156 "Farväl, Farah Diba" ;
+            rdamd:P30165 "del 3" ;
+            rdamd:P30182 "351 sider" .
+
+        <http://example.org/entity-1775734685118>
+            a <http://rdaregistry.info/Elements/c/C10006> ;
+            rdfs:label " Farvel, Farah Diba (norsk lydbok)" ;
+            rdaed:P20315 " Farvel, Farah Diba" ;
+            rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
+            rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nor> ;
+            rdaeo:P20022 <http://viaf.org/viaf/224052734> ;
+            rdaeo:P20204 <http://example.org/entity-1775732880259> ;
+            rdaeo:P20231 <http://example.org/entity-1775732454499> .
+
+        <http://example.org/entity-1775734829465>
+            a <http://rdaregistry.info/Elements/c/C10007> ;
+            rdfs:label "Farvel, Farah Diba /  Karin Fossum ; lest av Kim Haugen" ;
+            rdamd:P30011 "2023" ;
+            rdamd:P30076 "Cappelen Damm" ;
+            rdamd:P30117 " Karin Fossum ; lest av Kim Haugen" ;
+            rdamd:P30156 "Farvel, Farah Diba" ;
+            rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+            rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1001> .
+
+        <http://viaf.org/viaf/120627630>
+            a <http://rdaregistry.info/Elements/c/C10002> ;
+            rdfs:label "Fossum, Karin" ;
+            rdaad:P50339 "1954-" ;
+            rdaad:P50413 "Fossum, Karin" ;
+            rdaao:P50195 <http://example.org/entity-1775732454499> .
+
+        <http://viaf.org/viaf/224052734>
+            a <http://rdaregistry.info/Elements/c/C10002> ;
+            rdfs:label "Haugen, Kim" ;
+            rdaad:P50339 "1958-" ;
+            rdaad:P50413 "Haugen, Kim" ;
+            rdaao:P50081 <http://example.org/entity-1775734685118> .
+
+        <http://viaf.org/viaf/301771064>
+            a <http://rdaregistry.info/Elements/c/C10002> ;
+            rdfs:label "Bringsværd, Tor Åge" ;
+            rdaad:P50339 "1939-2025" ;
+            rdaad:P50413 "Bringsværd, Tor Åge" ;
+            rdaao:P50195 <http://example.org/entity-1775732362134> .
+
+        <http://viaf.org/viaf/7371041>
+            a <http://rdaregistry.info/Elements/c/C10002> ;
+            rdfs:label "Hemmel, Sara" ;
+            rdaad:P50339 "1963-" ;
+            rdaad:P50413 "Hemmel, Sara" ;
+            rdaao:P50145 <http://example.org/entity-1775733233673> .
