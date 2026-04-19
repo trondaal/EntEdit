@@ -8,13 +8,30 @@ import type {
   RdfProperty,
 } from "../types/sparql";
 
+/**
+ * Deduplicates schema items by URI, keeping the first occurrence.
+ *
+ * Schema queries include non-identifying columns in SELECT (e.g. `?order`
+ * or `?status`) which can yield multiple rows per property when the
+ * ontology has duplicate `entedit:order` annotations. `DISTINCT` does
+ * not help in that case because the rows differ in the extra column.
+ * This defensive pass keeps the editor UI stable against such data.
+ */
+function dedupeByUri<T extends { uri: string }>(items: T[]): T[] {
+  const seen = new Map<string, T>();
+  for (const item of items) {
+    if (!seen.has(item.uri)) seen.set(item.uri, item);
+  }
+  return [...seen.values()];
+}
+
 export const useRdfClasses = (
   config: SparqlEndpointConfig,
   language: string = "en",
 ) => {
   return useQuery({
     queryKey: ["rdf-classes", config.url, language],
-    queryFn: async (): Promise<RdfClass[]> => {
+    queryFn: async ({ signal }): Promise<RdfClass[]> => {
       const client = new SparqlClient(config);
       const query = `
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -33,12 +50,14 @@ export const useRdfClasses = (
         ORDER BY asc(?order) desc(?label)
       `;
 
-      const response = await client.query(query);
-      return response.results.bindings.map((binding) => ({
-        uri: binding.class.value,
-        label: binding.label?.value,
-        comment: binding.comment?.value,
-      }));
+      const response = await client.query(query, { signal });
+      return dedupeByUri(
+        response.results.bindings.map((binding) => ({
+          uri: binding.class.value,
+          label: binding.label?.value,
+          comment: binding.comment?.value,
+        })),
+      );
     },
     enabled: !!config.url,
   });
@@ -52,7 +71,7 @@ export const useRdfProperties = (
 ) => {
   return useQuery({
     queryKey: ["rdf-properties", config.url, classUri, language],
-    queryFn: async (): Promise<RdfProperty[]> => {
+    queryFn: async ({ signal }): Promise<RdfProperty[]> => {
       const client = new SparqlClient(config);
       const query = `
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -74,17 +93,19 @@ export const useRdfProperties = (
         ORDER BY ?order ?label ?property
       `;
 
-      const response = await client.query(query);
-      return response.results.bindings.map((binding) => ({
-        uri: binding.property.value,
-        label: binding.label?.value,
-        comment: binding.comment?.value,
-        domain: binding.domain?.value,
-        range: binding.range?.value,
-        order: binding.order?.value
-          ? parseInt(binding.order.value, 10)
-          : undefined,
-      }));
+      const response = await client.query(query, { signal });
+      return dedupeByUri(
+        response.results.bindings.map((binding) => ({
+          uri: binding.property.value,
+          label: binding.label?.value,
+          comment: binding.comment?.value,
+          domain: binding.domain?.value,
+          range: binding.range?.value,
+          order: binding.order?.value
+            ? parseInt(binding.order.value, 10)
+            : undefined,
+        })),
+      );
     },
     enabled: !!config.url,
   });
@@ -97,7 +118,7 @@ export const useRdfObjectProperties = (
 ) => {
   return useQuery({
     queryKey: ["rdf-object-properties", config.url, classUri, language],
-    queryFn: async (): Promise<RdfProperty[]> => {
+    queryFn: async ({ signal }): Promise<RdfProperty[]> => {
       const client = new SparqlClient(config);
       const query = `
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -120,15 +141,17 @@ export const useRdfObjectProperties = (
         ORDER BY ?range STR(?label)
       `;
 
-      const response = await client.query(query);
-      return response.results.bindings.map((binding) => ({
-        uri: binding.property.value,
-        label: binding.label?.value,
-        comment: binding.comment?.value,
-        domain: binding.domain?.value,
-        range: binding.range?.value,
-        status: binding.status?.value,
-      }));
+      const response = await client.query(query, { signal });
+      return dedupeByUri(
+        response.results.bindings.map((binding) => ({
+          uri: binding.property.value,
+          label: binding.label?.value,
+          comment: binding.comment?.value,
+          domain: binding.domain?.value,
+          range: binding.range?.value,
+          status: binding.status?.value,
+        })),
+      );
     },
     enabled: !!config.url,
   });

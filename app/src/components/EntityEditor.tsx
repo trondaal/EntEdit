@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from "react";
+import React, { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import {
   Paper,
   TextField,
@@ -21,9 +21,7 @@ import { ContentCopy, DeleteForever, Lock } from "@mui/icons-material";
 import { useSnackbar } from "notistack";
 import { useTranslation } from "react-i18next";
 import type { SparqlEndpointConfig, RdfProperty, OrderedValue } from "../types/sparql";
-import { SparqlClient } from "../utils/sparqlClient";
 import { getGraphVisualizationUrl } from "../utils/graphUtils";
-import { useQuery, useQueryClient } from "@tanstack/react-query";
 import {
   useWEMIProperties,
   useAgentProperties,
@@ -36,10 +34,15 @@ import TurtleExportDialog from "./TurtleExportDialog";
 import EntityEditorHeader from "./EntityEditorHeader";
 import DataPropertiesSection from "./DataPropertiesSection";
 import ObjectPropertyGroup from "./ObjectPropertyGroup";
-import { invalidateEntityCaches } from "../utils/queryInvalidation";
-import { escapeSparqlLiteral, isValidUri, formatLabel, sanitizeSparqlUri } from "../utils/labelUtils";
-import { useLogging } from "../hooks/useLogging";
+import { isValidUri, formatLabel } from "../utils/labelUtils";
 import { useTurtleExportQuery } from "../hooks/useTurtleExportQuery";
+import { EntityLabelsProvider, useEntityLabels, type EntityLabelsMap } from "../hooks/useEntityLabels";
+import { useEntityQuery } from "../hooks/useEntityQueries";
+import { useEntityMutations } from "../hooks/useEntityMutations";
+
+// Stable empty map reference to avoid re-rendering context consumers while the
+// batched labels query is in flight or returns no URIs.
+const EMPTY_ENTITY_LABELS: EntityLabelsMap = new Map();
 
 interface EntityEditorProps {
   config: SparqlEndpointConfig;
@@ -79,9 +82,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   onRegisterDiscard,
 }) => {
   const { t } = useTranslation("entityEditor");
-  const queryClient = useQueryClient();
   const { enqueueSnackbar } = useSnackbar();
-  const { logEvent, isRecording } = useLogging();
 
   // Fetch properties for the specialized sections
   const { data: wemiProperties = [], isLoading: wemiPropertiesLoading } =
@@ -105,13 +106,9 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   useEffect(() => {
     onEditingChange?.(isDirty);
   }, [isDirty, onEditingChange]);
-  const [saving, setSaving] = useState(false);
-  const [saveError, setSaveError] = useState<string | null>(null);
   const [selectedProperty, setSelectedProperty] = useState<string>("");
   const [customEntityUri, setCustomEntityUri] = useState<string>("");
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
-  const [deleting, setDeleting] = useState(false);
-  const [deleteError, setDeleteError] = useState<string | null>(null);
   const [discardDialogOpen, setDiscardDialogOpen] = useState(false);
   const [saveWarningDialogOpen, setSaveWarningDialogOpen] = useState(false);
   const [labelManagerOpen, setLabelManagerOpen] = useState(false);
@@ -120,105 +117,27 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     Array<{ id: string; value: string; language: string }>
   >([]);
 
-  // Reset form when entity type (classUri) changes
-  useEffect(() => {
-    if (!entityUri) {
-      // Only reset for new entity creation
-      setEntityData({});
-      setCustomEntityUri("");
-      setSelectedProperty("");
-      setSaveError(null);
-      setIsEditing(true);
-      setIsDirty(false);
-      setEntityLabels([]);
-    }
-  }, [classUri, entityUri]);
+  const { data: existingEntity, isLoading: entityLoading } = useEntityQuery(
+    config,
+    entityUri,
+  );
 
-  // Reset form after successful save of new entity
-  const resetCreateForm = () => {
-    setEntityData({});
-    setCustomEntityUri("");
-    setSelectedProperty("");
-    setSaveError(null);
-    setIsEditing(true);
-    setIsDirty(false);
-    setEntityLabels([]);
-  };
-
-  const { data: existingEntity, isLoading: entityLoading } = useQuery({
-    queryKey: ["entity", config.url, entityUri],
-    queryFn: async () => {
-      if (!entityUri) return null;
-
-      const client = new SparqlClient(config);
-      const sanitizedUri = sanitizeSparqlUri(entityUri!);
-      const query = `
-        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        PREFIX entedit: <http://oslomet.no/abi/vocab#>
-        SELECT DISTINCT ?property ?value ?valueOrder WHERE {
-          <${sanitizedUri}> ?property ?value .
-          OPTIONAL {
-            << <${sanitizedUri}> ?property ?value >> entedit:valueOrder ?valueOrder .
-          }
-          FILTER NOT EXISTS {
-            <${sanitizedUri}> ?subProperty ?value .
-            ?subProperty rdfs:subPropertyOf+ ?property .
-            FILTER (?subProperty != ?property)
-          }
-        }
-        ORDER BY ?property ?valueOrder
-      `;
-
-      const response = await client.query(query);
-      const data: Record<string, OrderedValue[]> = {};
-
-      const labels: Array<{ id: string; value: string; language: string }> = [];
-
-      // Track per-property auto-increment for values without explicit order
-      const propertyCounters: Record<string, number> = {};
-
-      response.results.bindings.forEach((binding) => {
-        const property = binding.property.value;
-        const value = binding.value.value;
-
-        // Extract language from rdfs:label if available
-        if (property === "http://www.w3.org/2000/01/rdf-schema#label") {
-          const language = binding.value["xml:lang"] || "";
-          labels.push({
-            id: `label-${labels.length}`,
-            value: value,
-            language: language,
-          });
-        } else {
-          // Non-label properties
-          if (!data[property]) {
-            data[property] = [];
-            propertyCounters[property] = 0;
-          }
-          const explicitOrder = binding.valueOrder?.value
-            ? parseInt(binding.valueOrder.value, 10)
-            : undefined;
-          const order = explicitOrder ?? propertyCounters[property];
-          propertyCounters[property] = Math.max(propertyCounters[property], order) + 1;
-          const isUri = binding.value.type === "uri";
-          data[property].push({ value, order, isUri });
-        }
-      });
-
-      // Sort values within each property by order
-      Object.values(data).forEach((values) => {
-        values.sort((a, b) => a.order - b.order);
-      });
-
-      return { data, labels };
-    },
-    enabled: !!entityUri && !!config.url,
-  });
+  // Mirror isEditing/isDirty into refs that update during render. The sync
+  // effect below reads these refs rather than closure values so a refetch
+  // under React's concurrent rendering can't see stale snapshots and
+  // accidentally overwrite in-progress edits. Refs don't belong in the
+  // effect's dependency array, which is exactly the behavior we want: the
+  // effect should re-run only when server data or the selected entity
+  // changes — not when the user toggles edit mode.
+  const isEditingRef = useRef(isEditing);
+  const isDirtyRef = useRef(isDirty);
+  isEditingRef.current = isEditing;
+  isDirtyRef.current = isDirty;
 
   useEffect(() => {
     if (existingEntity) {
       // Don't overwrite in-progress edits when cache invalidation refreshes the data
-      if (isEditing && isDirty) return;
+      if (isEditingRef.current && isDirtyRef.current) return;
       setEntityData(existingEntity.data);
       setIsEditing(false);
       setIsDirty(false);
@@ -230,10 +149,6 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       setCustomEntityUri(""); // Clear custom URI for new entities
       setEntityLabels([]);
     }
-    // Note: isEditing and isDirty are intentionally excluded from deps —
-    // we only want to re-sync when the server data or selected entity changes,
-    // not when the user toggles editing mode.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [existingEntity, entityUri]);
 
   // Section configurations for the object property groups
@@ -297,239 +212,90 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     return uris;
   }, [objectPropertySections]);
 
-  const handleSave = useCallback(async () => {
-    if (!classUri) return; // Don't save if no class is selected
-
-    setSaving(true);
-    setSaveError(null);
-
-    try {
-      const client = new SparqlClient(config);
-      // Use existing URI, custom URI, or generate one
-      const currentEntityUri =
-        entityUri ||
-        customEntityUri.trim() ||
-        `http://example.org/entity-${Date.now()}`;
-
-      // Collect all affected entity URIs (entities that are objects in relationships)
-      const affectedEntityUris = new Set<string>();
-
-      // If updating an existing entity, query for all related entities before deletion
-      if (entityUri) {
-        const findRelatedQuery = `
-          SELECT DISTINCT ?relatedEntity WHERE {
-            {
-              <${sanitizeSparqlUri(entityUri!)}> ?p ?relatedEntity .
-              FILTER (isIRI(?relatedEntity))
-            }
-            UNION
-            {
-              ?relatedEntity ?p2 <${sanitizeSparqlUri(entityUri!)}> .
-            }
-          }
-        `;
-        const relatedEntities = await client.query(findRelatedQuery);
-        relatedEntities.results.bindings.forEach((binding) => {
-          if (binding.relatedEntity?.value) {
-            affectedEntityUris.add(binding.relatedEntity.value);
-          }
-        });
+  // Collect all URI-typed object property values so we can batch-fetch their
+  // rdfs:label in a single SPARQL query instead of firing one query per value
+  // (the old pattern in ObjectPropertyValue). The resolved map is provided
+  // through EntityLabelsProvider and consumed by ObjectPropertyValue.
+  const relatedEntityUris = useMemo(() => {
+    const uris: string[] = [];
+    for (const [property, values] of Object.entries(entityData)) {
+      const isObjectProp = objectPropertyUris.has(property);
+      for (const v of values) {
+        if ((isObjectProp || v.isUri) && v.value) uris.push(v.value);
       }
+    }
+    return uris;
+  }, [entityData, objectPropertyUris]);
 
-      // Also collect entity URIs from the new data being saved (object properties only)
-      Object.entries(entityData).forEach(([property, values]) => {
-        if (objectPropertyUris.has(property)) {
-          values.forEach(({ value }) => {
-            if (value.trim()) affectedEntityUris.add(value);
-          });
-        }
-      });
+  const { data: relatedEntityLabels } = useEntityLabels(
+    config,
+    relatedEntityUris,
+    selectedLanguage,
+  );
 
-      const sanitizedEntityUri = sanitizeSparqlUri(currentEntityUri);
-      const triples = [`<${sanitizedEntityUri}> a <${sanitizeSparqlUri(classUri)}> .`];
-      const orderAnnotations: string[] = [];
-
-      // Add labels from the label manager
-      const hasUserLabel = entityLabels.some((l) => l.value.trim());
-      entityLabels.forEach((label) => {
-        if (label.value.trim()) {
-          const escapedValue = escapeSparqlLiteral(label.value);
-          const formattedValue = label.language
-            ? `"${escapedValue}"@${label.language}`
-            : `"${escapedValue}"`;
-          const labelTriple = `<${sanitizedEntityUri}> <http://www.w3.org/2000/01/rdf-schema#label> ${formattedValue} .`;
-          triples.push(labelTriple);
-        }
-      });
-
-      // Fallback: if user has not provided any label, derive a default
-      // (untagged) label from the value of the property with order 1.
-      if (!hasUserLabel) {
-        const primaryProperty = properties.find((p) => p.order === 1);
-        const primaryValue = primaryProperty
-          ? (entityData[primaryProperty.uri] || []).find((v) => v.value.trim() && !v.isUri)?.value.trim()
-          : undefined;
-        if (primaryValue) {
-          const labelTriple = `<${sanitizedEntityUri}> <http://www.w3.org/2000/01/rdf-schema#label> "${escapeSparqlLiteral(primaryValue)}" .`;
-          triples.push(labelTriple);
-        }
-      }
-
-      Object.entries(entityData).forEach(([property, values]) => {
-        const hasMultipleValues = values.filter(({ value }) => value.trim()).length > 1;
-        values.forEach(({ value, order, isUri }) => {
-          if (value.trim()) {
-            const sanitizedProp = sanitizeSparqlUri(property);
-            let objectValue: string;
-            // Use isUri from the SPARQL binding type as fallback for properties
-            // not in objectPropertyUris (e.g. untagged relationship properties)
-            if (objectPropertyUris.has(property) || isUri) {
-              objectValue = `<${sanitizeSparqlUri(value)}>`;
-            } else {
-              objectValue = `"${escapeSparqlLiteral(value)}"`;
-            }
-            triples.push(
-              `<${sanitizedEntityUri}> <${sanitizedProp}> ${objectValue} .`,
-            );
-            // Add RDF-star order annotation when there are multiple values
-            if (hasMultipleValues) {
-              orderAnnotations.push(
-                `<< <${sanitizedEntityUri}> <${sanitizedProp}> ${objectValue} >> <http://oslomet.no/abi/vocab#valueOrder> ${order} .`,
-              );
-            }
-          }
-        });
-      });
-
-      const allTriples = [...triples, ...orderAnnotations];
-      const insertQuery = `
-        INSERT DATA {
-          ${allTriples.join("\n          ")}
-        }
-      `;
-
-      if (entityUri) {
-        // For existing entities, only delete properties that the editor manages.
-        // Unmanaged properties (those without the correct entedit:status or
-        // incoming-only triples from other entities) are left untouched.
-        //
-        // All delete + insert operations are combined into a single SPARQL Update
-        // request (semicolon-separated) so GraphDB processes them atomically
-        // within one transaction — preventing partial deletes on network failure.
-        const sanitizedUri = sanitizeSparqlUri(entityUri!);
-
-        // Managed properties: rdf:type, rdfs:label, all data properties, all object properties
-        const managedPropertyUris = new Set<string>();
-        managedPropertyUris.add("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
-        managedPropertyUris.add("http://www.w3.org/2000/01/rdf-schema#label");
-        properties.forEach((p) => managedPropertyUris.add(p.uri));
-        objectPropertyUris.forEach((uri) => managedPropertyUris.add(uri));
-
-        const managedValues = [...managedPropertyUris]
-          .map((uri) => `<${sanitizeSparqlUri(uri)}>`)
-          .join(" ");
-
-        const updateOperations: string[] = [];
-
-        // 1. Delete RDF-star annotations on managed outgoing triples
-        updateOperations.push(`
-          DELETE {
-            << <${sanitizedUri}> ?p ?o >> ?annotPred ?annotVal .
-          }
-          WHERE {
-            << <${sanitizedUri}> ?p ?o >> ?annotPred ?annotVal .
-            VALUES ?p { ${managedValues} }
-          }
-        `);
-
-        // 2. Delete managed outgoing triples only
-        updateOperations.push(`
-          DELETE {
-            <${sanitizedUri}> ?p ?o .
-          }
-          WHERE {
-            <${sanitizedUri}> ?p ?o .
-            VALUES ?p { ${managedValues} }
-          }
-        `);
-
-        // 3. Handle inverse properties: find object property values that were
-        // removed by the user and delete incoming triples from those entities.
-        // This ensures that when a user removes a relationship that was stored
-        // in the inverse direction, the asserted incoming triple is also cleaned up.
-        const oldData = existingEntity?.data ?? {};
-        const removedEntityUris = new Set<string>();
-        for (const [prop, oldValues] of Object.entries(oldData)) {
-          // Only check properties where values are URIs (object properties)
-          if (!oldValues.some((v) => v.isUri)) continue;
-          const newValues = new Set(
-            (entityData[prop] || []).map((v) => v.value),
-          );
-          for (const ov of oldValues) {
-            if (ov.isUri && ov.value && !newValues.has(ov.value)) {
-              removedEntityUris.add(ov.value);
-            }
-          }
-        }
-
-        if (removedEntityUris.size > 0) {
-          const removedUriValues = [...removedEntityUris]
-            .map((uri) => `<${sanitizeSparqlUri(uri)}>`)
-            .join(" ");
-          updateOperations.push(`
-            DELETE {
-              ?s ?p <${sanitizedUri}> .
-            }
-            WHERE {
-              ?s ?p <${sanitizedUri}> .
-              VALUES ?s { ${removedUriValues} }
-            }
-          `);
-        }
-
-        // 4. Re-insert all current data
-        updateOperations.push(insertQuery);
-
-        // Send all operations as a single atomic request
-        await client.update(updateOperations.join(" ;\n"));
+  // Called by useEntityMutations on successful save. Resets the create form
+  // for new entities, or flips out of edit mode for existing ones, then bubbles
+  // up to the parent so the entity list can refresh.
+  const handleSaveSuccess = useCallback(
+    ({ isNew }: { isNew: boolean; savedEntityUri: string }) => {
+      if (isNew) {
+        setEntityData({});
+        setCustomEntityUri("");
+        setSelectedProperty("");
+        setIsEditing(true);
+        setIsDirty(false);
+        setEntityLabels([]);
       } else {
-        // New entity: just insert
-        await client.update(insertQuery);
-      }
-
-      // Invalidate caches using utility function
-      invalidateEntityCaches(
-        queryClient,
-        config.url,
-        classUri,
-        entityUri || currentEntityUri,
-        affectedEntityUris,
-      );
-
-      // If this was a new entity, reset the create form
-      if (!entityUri) {
-        if (isRecording) {
-          logEvent({ type: "entity_created", classUri, entityUri: currentEntityUri });
-          logEvent({ type: "entity_saved", entityUri: currentEntityUri, classUri, isNew: true });
-        }
-        resetCreateForm();
-        enqueueSnackbar(t("messages.entityCreated"), { variant: "success", autoHideDuration: 3000 });
-      } else {
-        if (isRecording) {
-          logEvent({ type: "entity_saved", entityUri, classUri, isNew: false });
-        }
         setIsEditing(false);
         setIsDirty(false);
-        enqueueSnackbar(t("messages.entitySaved"), { variant: "success", autoHideDuration: 3000 });
       }
-
       onEntitySaved();
-    } catch (error) {
-      setSaveError((error as Error).message);
-    } finally {
-      setSaving(false);
+    },
+    [onEntitySaved],
+  );
+
+  // Called by useEntityMutations on successful delete.
+  const handleDeleteSuccess = useCallback(() => {
+    setDeleteDialogOpen(false);
+    onEntityDeselected?.();
+    onEntitySaved();
+  }, [onEntityDeselected, onEntitySaved]);
+
+  const {
+    handleSave,
+    handleDelete,
+    saving,
+    deleting,
+    saveError,
+    deleteError,
+    clearSaveError,
+  } = useEntityMutations({
+    config,
+    classUri,
+    entityUri,
+    customEntityUri,
+    entityData,
+    entityLabels,
+    existingEntity,
+    properties,
+    objectPropertyUris,
+    onSaveSuccess: handleSaveSuccess,
+    onDeleteSuccess: handleDeleteSuccess,
+  });
+
+  // Reset the create form when the user switches class (only for new entities).
+  // Placed after useEntityMutations so clearSaveError is in scope.
+  useEffect(() => {
+    if (!entityUri) {
+      setEntityData({});
+      setCustomEntityUri("");
+      setSelectedProperty("");
+      clearSaveError();
+      setIsEditing(true);
+      setIsDirty(false);
+      setEntityLabels([]);
     }
-  }, [classUri, config, entityUri, customEntityUri, entityData, entityLabels, existingEntity, objectPropertyUris, properties, queryClient, onEntitySaved]);
+  }, [classUri, entityUri, clearSaveError]);
 
   const requestSave = useCallback(() => {
     // Only check warnings for new entities (existing entities already have URIs and labels)
@@ -551,95 +317,6 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     onRegisterSave(isDirty ? handleSave : null);
     return () => onRegisterSave(null);
   }, [isDirty, handleSave, onRegisterSave]);
-
-  const handleDelete = useCallback(async () => {
-    if (!entityUri) return;
-
-    setDeleting(true);
-    setDeleteError(null);
-
-    try {
-      const client = new SparqlClient(config);
-
-      // First, find all related entities before deletion so we can invalidate their caches
-      const findRelatedQuery = `
-        SELECT DISTINCT ?relatedEntity WHERE {
-          {
-            <${sanitizeSparqlUri(entityUri!)}> ?p ?relatedEntity .
-            FILTER (isIRI(?relatedEntity))
-          }
-          UNION
-          {
-            ?relatedEntity ?p2 <${sanitizeSparqlUri(entityUri!)}> .
-          }
-        }
-      `;
-      const relatedEntities = await client.query(findRelatedQuery);
-      const affectedEntityUris = new Set<string>();
-      relatedEntities.results.bindings.forEach((binding) => {
-        if (binding.relatedEntity?.value) {
-          affectedEntityUris.add(binding.relatedEntity.value);
-        }
-      });
-
-      // Delete RDF-star annotations first, then outgoing and incoming statements
-      const sanitizedUri = sanitizeSparqlUri(entityUri!);
-      const deleteAnnotationsQuery = `
-        DELETE WHERE {
-          << <${sanitizedUri}> ?p ?o >> ?annotPred ?annotVal .
-        }
-      `;
-      await client.update(deleteAnnotationsQuery);
-
-      const deleteQuery = `
-        DELETE {
-          <${sanitizedUri}> ?p ?o .
-          ?s ?p2 <${sanitizedUri}> .
-        }
-        WHERE {
-          {
-            <${sanitizedUri}> ?p ?o .
-          }
-          UNION
-          {
-            ?s ?p2 <${sanitizedUri}> .
-          }
-        }
-      `;
-      await client.update(deleteQuery);
-
-      // Invalidate caches using utility function
-      invalidateEntityCaches(
-        queryClient,
-        config.url,
-        classUri,
-        undefined,
-        affectedEntityUris,
-      );
-
-      // Close dialog and clear the entity selection
-      setDeleteDialogOpen(false);
-
-      if (isRecording) {
-        logEvent({ type: "entity_deleted", entityUri, classUri });
-      }
-
-      // Show success notification
-      enqueueSnackbar(t("messages.entityDeleted"), { variant: "success", autoHideDuration: 3000 });
-
-      // Deselect the entity to show the "Create New Entity" form
-      if (onEntityDeselected) {
-        onEntityDeselected();
-      }
-
-      // Trigger a refresh of the entity list
-      onEntitySaved();
-    } catch (error) {
-      setDeleteError((error as Error).message);
-    } finally {
-      setDeleting(false);
-    }
-  }, [entityUri, config, classUri, queryClient, onEntityDeselected, onEntitySaved]);
 
   const getGraphUrl = useMemo(
     () => entityUri ? getGraphVisualizationUrl(config.url, entityUri) : null,
@@ -939,27 +616,29 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           getPropertyLabel={getPropertyLabel}
         />
 
-        {objectPropertySections.map((section) => (
-          <ObjectPropertyGroup
-            key={section.key}
-            config={config}
-            sectionTitle={t(section.sectionTitleKey)}
-            sectionKey={section.key}
-            entityUri={entityUri}
-            addLabel={t(section.addLabelKey, { ns: "common" })}
-            selectorPromptLabel={t(section.selectorPromptKey)}
-            properties={section.properties}
-            statusFilter={section.statusFilter}
-            entityData={entityData}
-            isEditing={isEditing}
-            classUri={classUri}
-            selectedLanguage={selectedLanguage}
-            onUpdateValue={updatePropertyValue}
-            onRemoveValue={removePropertyValue}
-            onReorderValues={reorderPropertyValues}
-            onAddProperty={addObjectProperty}
-          />
-        ))}
+        <EntityLabelsProvider value={relatedEntityLabels ?? EMPTY_ENTITY_LABELS}>
+          {objectPropertySections.map((section) => (
+            <ObjectPropertyGroup
+              key={section.key}
+              config={config}
+              sectionTitle={t(section.sectionTitleKey)}
+              sectionKey={section.key}
+              entityUri={entityUri}
+              addLabel={t(section.addLabelKey, { ns: "common" })}
+              selectorPromptLabel={t(section.selectorPromptKey)}
+              properties={section.properties}
+              statusFilter={section.statusFilter}
+              entityData={entityData}
+              isEditing={isEditing}
+              classUri={classUri}
+              selectedLanguage={selectedLanguage}
+              onUpdateValue={updatePropertyValue}
+              onRemoveValue={removePropertyValue}
+              onReorderValues={reorderPropertyValues}
+              onAddProperty={addObjectProperty}
+            />
+          ))}
+        </EntityLabelsProvider>
             </Box>
           </Box>
         </Tooltip>

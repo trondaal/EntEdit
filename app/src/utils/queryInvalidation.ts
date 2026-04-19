@@ -54,9 +54,10 @@ export const invalidateEntityCaches = (
     queryKey: ["entity-count-by-class", endpointUrl, classUri],
   });
 
-  // Invalidate entity label queries
+  // Invalidate batched entity label queries (used by ObjectPropertyValue via
+  // useEntityLabels to resolve rdfs:label for URI-typed property values).
   queryClient.invalidateQueries({
-    queryKey: ["entity-label", endpointUrl],
+    queryKey: ["entity-labels-batch", endpointUrl],
   });
 
   // Invalidate entities-by-range so entity pickers reflect the latest data (legacy + infinite)

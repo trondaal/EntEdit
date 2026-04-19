@@ -1,13 +1,16 @@
 import React from "react";
 import { Box, Typography, IconButton, Tooltip } from "@mui/material";
 import { Delete, Tag } from "@mui/icons-material";
-import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import type { SparqlEndpointConfig } from "../types/sparql";
-import { SparqlClient } from "../utils/sparqlClient";
-import { extractUriFragment, getPrimaryLabel, sanitizeSparqlUri } from "../utils/labelUtils";
+import { extractUriFragment } from "../utils/labelUtils";
+import { useEntityLabel } from "../hooks/useEntityLabels";
 
 interface ObjectPropertyValueProps {
+  // Retained so the prop surface stays stable for callers and future features
+  // (e.g. inline link to the target entity's endpoint), even though labels are
+  // now resolved via the batched EntityLabelsContext rather than a per-value
+  // SPARQL query.
   config: SparqlEndpointConfig;
   value: string;
   rangeUri?: string;
@@ -18,42 +21,16 @@ interface ObjectPropertyValueProps {
 }
 
 const ObjectPropertyValue: React.FC<ObjectPropertyValueProps> = ({
-  config,
   value,
   isEditing,
-  selectedLanguage,
   onRemove,
 }) => {
   const { t } = useTranslation("common");
-  const { data: entity } = useQuery({
-    queryKey: ["entity-label", config.url, value, selectedLanguage],
-    queryFn: async () => {
-      if (!value) return null;
 
-      const client = new SparqlClient(config);
-      const query = `
-        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        SELECT ?label ?lang
-        WHERE {
-          <${sanitizeSparqlUri(value)}> rdfs:label ?label .
-          BIND(LANG(?label) AS ?lang)
-        }
-      `;
-
-      const response = await client.query(query);
-      const labels = response.results.bindings.map((binding) => ({
-        value: binding.label.value,
-        language: binding.lang?.value || "",
-      }));
-
-      if (labels.length === 0) return null;
-
-      return getPrimaryLabel(labels, selectedLanguage);
-    },
-    enabled: !!value && !!config.url,
-  });
-
-  const displayLabel = entity || extractUriFragment(value);
+  // Label is provided by the parent's batched useEntityLabels query; fall back
+  // to the URI fragment until the batch resolves or for URIs without rdfs:label.
+  const label = useEntityLabel(value);
+  const displayLabel = label || extractUriFragment(value);
 
   return (
     <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 0.5 }}>

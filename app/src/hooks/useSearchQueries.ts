@@ -69,7 +69,7 @@ export const useSearchExpressions = (
 ) => {
   return useInfiniteQuery({
     queryKey: ["searchExpressions", config.url, query, language],
-    queryFn: async ({ pageParam = 0 }): Promise<ExpressionSearchResult[]> => {
+    queryFn: async ({ pageParam = 0, signal }): Promise<ExpressionSearchResult[]> => {
       if (!query || query.trim().length === 0) {
         return [];
       }
@@ -103,7 +103,7 @@ LIMIT ${SEARCH_PAGE_SIZE}
 OFFSET ${pageParam}
       `;
 
-      const searchResponse = await client.query(searchQuery);
+      const searchResponse = await client.query(searchQuery, { signal });
       const hits = searchResponse.results.bindings;
 
       if (hits.length === 0) return [];
@@ -324,7 +324,7 @@ WHERE {
 GROUP BY ?expression
       `;
 
-      const detailResponse = await client.query(detailQuery);
+      const detailResponse = await client.query(detailQuery, { signal });
 
       // Build a map from expression URI → detail bindings
       const detailMap = new Map<string, typeof detailResponse.results.bindings[0]>();
@@ -373,7 +373,7 @@ export const useSearchManifestations = (
 ) => {
   return useInfiniteQuery({
     queryKey: ["searchManifestations", config.url, query, language],
-    queryFn: async ({ pageParam = 0 }): Promise<ManifestationSearchResult[]> => {
+    queryFn: async ({ pageParam = 0, signal }): Promise<ManifestationSearchResult[]> => {
       if (!query || query.trim().length === 0) {
         return [];
       }
@@ -401,7 +401,7 @@ LIMIT ${SEARCH_PAGE_SIZE}
 OFFSET ${pageParam}
       `;
 
-      const searchResponse = await client.query(searchQuery);
+      const searchResponse = await client.query(searchQuery, { signal });
       const hits = searchResponse.results.bindings;
 
       if (hits.length === 0) return [];
@@ -558,7 +558,7 @@ WHERE {
 GROUP BY ?manifestation
       `;
 
-      const detailResponse = await client.query(detailQuery);
+      const detailResponse = await client.query(detailQuery, { signal });
 
       // Build a map from manifestation URI → detail bindings
       const detailMap = new Map<string, typeof detailResponse.results.bindings[0]>();

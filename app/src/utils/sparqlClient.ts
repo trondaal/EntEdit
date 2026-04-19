@@ -1,5 +1,12 @@
 import type { SparqlEndpointConfig, SparqlResponse } from "../types/sparql";
 
+/** Options accepted by read methods. `signal` is typically the `signal`
+ * provided by TanStack Query's `queryFn` context, forwarded to `fetch` so
+ * cancelled queries also cancel their in-flight HTTP request. */
+export interface SparqlQueryOptions {
+  signal?: AbortSignal;
+}
+
 export class SparqlClient {
   private config: SparqlEndpointConfig;
 
@@ -7,15 +14,25 @@ export class SparqlClient {
     this.config = config;
   }
 
-  async query(sparql: string): Promise<SparqlResponse> {
-    return this.queryWithInference(sparql, true);
+  async query(
+    sparql: string,
+    options?: SparqlQueryOptions,
+  ): Promise<SparqlResponse> {
+    return this.queryWithInference(sparql, true, options);
   }
 
-  async queryWithoutInference(sparql: string): Promise<SparqlResponse> {
-    return this.queryWithInference(sparql, false);
+  async queryWithoutInference(
+    sparql: string,
+    options?: SparqlQueryOptions,
+  ): Promise<SparqlResponse> {
+    return this.queryWithInference(sparql, false, options);
   }
 
-  private async queryWithInference(sparql: string, infer: boolean): Promise<SparqlResponse> {
+  private async queryWithInference(
+    sparql: string,
+    infer: boolean,
+    options?: SparqlQueryOptions,
+  ): Promise<SparqlResponse> {
     const formData = new URLSearchParams({
       query: sparql,
       format: "application/sparql-results+json",
@@ -37,6 +54,7 @@ export class SparqlClient {
       method: "POST",
       headers,
       body: formData,
+      signal: options?.signal,
     });
 
     if (!response.ok) {
