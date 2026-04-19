@@ -1,4 +1,4 @@
-@prefix abi: <http://oslomet.no/abi/vocab#> .
+@prefix entedit: <http://oslomet.no/abi/vocab#> .
 @prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
 @prefix rdac: <http://rdaregistry.info/Elements/c/> .
 @prefix rdaco: <http://rdaregistry.info/termList/RDAContentType/> .
@@ -20,28 +20,28 @@
     rdaxd:P00018 "http://example.com/innerlandscape" ;
     rdawd:P10088 "The inner landscape" ;
     rdfs:label "The inner landscape" ;
-    abi:P02 abi:T01 .
+    entedit:P02 entedit:T01 .
 
 <http://viaf.org/viaf/172050597/reaches>
     a rdac:C10001 ;
     rdaxd:P00018 "http://viaf.org/viaf/172050597/reaches" ;
     rdawd:P10088 "The farthest reaches" ;
     rdfs:label "The farthest reaches (Elder, Joseph)" ;
-    abi:P02 abi:T01 .
+    entedit:P02 entedit:T01 .
 
 <http://viaf.org/viaf/172957858/culturecontrolcritique>
     a rdac:C10001 ;
     rdaxd:P00018 "http://viaf.org/viaf/172957858/culturecontrolcritique" ;
     rdawd:P10088 "Culture control critique : allegories of reading the present" ;
     rdfs:label "Culture control critique : allegories of reading the present (Beckman, Frida)" ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/494> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/494> ;
     rdawo:P10061 <http://viaf.org/viaf/172957858> ;
     rdawo:P10147 <http://viaf.org/viaf/172957858/culturecontrolcritique/chronopolis> .
 
 <http://viaf.org/viaf/172957858/culturecontrolcritique/chronopolis>
     a rdac:C10001 ;
     rdaxd:P00018 "http://viaf.org/viaf/172957858/culturecontrolcritique/chronopolis" ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/494> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/494> ;
     rdawd:P10088 "In and out of time: \"Chronopolis\" and in time" ;
     rdfs:label "In and out of time: \"Chronopolis\" and in time (Beckman, Frida)" ;
     rdawo:P10061 <http://viaf.org/viaf/172957858> .
@@ -51,13 +51,13 @@
     rdaxd:P00018 "http://viaf.org/viaf/180997771" ;
     rdawd:P10088 "Empire of the sun" ;
     rdfs:label "Empire of the sun (Ballard, J. G.)" ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
 
 <http://viaf.org/viaf/183421260>
     a rdac:C10001 ;
     rdaxd:P00018 "http://viaf.org/viaf/183421260" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Danger, Religion!" ;
     rdfs:label "Danger, Religion! (Aldiss, Brian W.)" ;
     rdawo:P10061 <http://viaf.org/viaf/2465493> .
@@ -67,7 +67,7 @@
     rdaxd:P00018 "http://viaf.org/viaf/183430784" ;
     rdawd:P10088 "The four-dimensional nightmare" ;
     rdfs:label "The four-dimensional nightmare (Ballard, J. G.)" ;
-    abi:P02 abi:T01 ;
+    entedit:P02 entedit:T01 ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> ;
     rdawo:P10147 <http://viaf.org/viaf/311471559> ,
                  <http://www.isfdb.org/cgi-bin/title.cgi?44514> ,
@@ -83,7 +83,7 @@
     rdaxd:P00018 "http://viaf.org/viaf/202977755" ;
     rdawd:P10088 "Hello America" ;
     rdfs:label "Hello America (Ballard, J. G.)" ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
 
 <http://viaf.org/viaf/305922109>
@@ -91,7 +91,7 @@
     rdaxd:P00018 "http://viaf.org/viaf/305922109" ;
     rdawd:P10088 "Crash" ;
     rdfs:label "Crash (Ballard, J. G.)" ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
     rdawd:P10330 "In this hallucinatory novel, an automobile provides the hellish tableau in which Vaughan, a \"TV scientist\" turned \"nightmare angel of the highways,\" experiments with erotic atrocities among auto crash victims, each more sinister than the last. James Ballard, his friend and fellow obsessive, tells the story of this twisted visionary as he careens rapidly toward his own demise in an internationally orchestrated car crash with Elizabeth Taylor." ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
 
@@ -100,7 +100,7 @@
     rdaxd:P00018 "http://viaf.org/viaf/307992426" ;
     rdawd:P10088 "The day of forever" ;
     rdfs:label "The day of forever (Ballard, J. G.)" ;
-    abi:P02 abi:T01 ;
+    entedit:P02 entedit:T01 ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
 
 <http://viaf.org/viaf/308025936>
@@ -108,7 +108,7 @@
     rdaxd:P00018 "http://viaf.org/viaf/308025936" ;
     rdawd:P10088 "The day of creation" ;
     rdfs:label "The day of creation (Ballard, J. G.)" ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
 
 <http://viaf.org/viaf/309308512>
@@ -121,7 +121,7 @@
 <http://viaf.org/viaf/311471559>
     a rdac:C10001 ;
     rdaxd:P00018 "http://viaf.org/viaf/311471559" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The voices of time" ;
     rdfs:label "The voices of time (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -131,7 +131,7 @@
     rdaxd:P00018 "http://viaf.org/viaf/33278380/treasure" ;
     rdawd:P10088 "The world treasury of science fiction" ;
     rdfs:label "The world treasury of science fiction" ;
-    abi:P02 abi:T01 ;
+    entedit:P02 entedit:T01 ;
     rdawd:P10330 "Includes Vonnegut, Kurt Jr., \"Harrison Bergeron\"/Campbell, John W. Jr., \"Forgetfulness\"/Berryman, John, \"Special Flight\"/Ballard, J. G., \"Chronopolis\"/Tensei, Kono, \"Triceratops\"/Sturgeon, Theodore, \"The Man Who Lost the Sea\"/Armer, Karl Michael, \"On the Inside Track\"/Davidson, Avram, \"The Golem\"/Rebetez-Cortes, Rene, \"The New Prehistory\"/Clarke, Arthur C., \"A Meeting with Medusa\"/Klein, Gerard, \"The Valley of Echoes\"/Wolfe, Gene, \"The Fifth Head of Cerberus\"/Updike, John, \"The Chaste Planet\"/Henneberg, Nathalie-Charles, \"The Blind Pilot\"/Bester, Alfred, \"The Men Who Murdered Mohammed\"/Pairpuppets, \"Manuel van Loggem\"/Kornbluth, C.M., \"Two Dooms\"/Lem, Stanislaw, \"Tale of the Computer that Fought a Dragon\"/Heinlein, Robert A., \"The Green Hills of Earth\"/Sheckley, Robert, \"Ghost V\"/Varley, John, \"The Phantom of Kansas\"/Nesvadba, Josef, \"Captain Nemo's Last Adventure\"/Niven, Larry, \"Inconstant Moon\"/Pohl, Frederik, \"The Gold at the Starbow's End\"/Calvino, Italo, \"A Sign in Space\" \"The Spiral\"/Asimov Isaac, \"The Dead Past\"/van Ewyck, Annemarie, \"The Lens\"/Sturgeon, Theodore, \"The Hurkle Is a Happy Beast\"/Bradbury, Ray, \"Zero Hour\"/Le Guin, Ursula K., \"Nine Lives\"/Burgess, Anthony, \"The Muse\"/Allen, Steve, \"The Public Hating\"/Leiber, Fritz, \"Poor Superman\"/Disch, Thomas M., \"Angouleme\"/Knight, Damon, \"Stranger Station\" and more." .
 
 <http://viaf.org/viaf/43347281/researchdatamanagement>
@@ -139,7 +139,7 @@
     rdaxd:P00018 "http://viaf.org/viaf/43347281/researchdatamanagement" ;
     rdawd:P10088 "Research data management : practical strategies for information professionals" ;
     rdfs:label "Research data management : practical strategies for information professionals (Ray, Joyce M.)" ;
-    abi:P02 abi:T01 ;
+    entedit:P02 entedit:T01 ;
     rdawd:P10330 "\"It has become increasingly accepted that important digital data must be retained and shared in order to preserve and promote knowledge, advance research in and across all disciplines of scholarly endeavor, and maximize the return on investment of public funds. To meet this challenge, colleges and universities are adding data services to existing infrastructures by drawing on the expertise of information professionals who are already involved in the acquisition, management and preservation of data in their daily jobs. Data services include planning and implementing good data management practices, thereby increasing researchers' ability to compete for grant funding and ensuring that data collections with continuing value are preserved for reuse. This volume provides a framework to guide information professionals in academic libraries, presses, and data centers through the process of managing research data from the planning stages through the life of a grant project and beyond. It illustrates principles of good practice with use-case examples and illuminates promising data service models through case studies of innovative, successful projects and collaborations\"--" ;
     rdawo:P10055 <http://viaf.org/viaf/43347281> ;
     rdawo:P10147 <http://viaf.org/viaf/43347281/researchdatamanagement/chronopolis> .
@@ -147,7 +147,7 @@
 <http://viaf.org/viaf/43347281/researchdatamanagement/chronopolis>
     a rdac:C10001 ;
     rdaxd:P00018 "http://viaf.org/viaf/43347281/researchdatamanagement/chronopolis" ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/494> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/494> ;
     rdawd:P10088 "Chronopolis repository service" ;
     rdfs:label "Chronopolis repository service (David Minor, Brian E. C. Schottlaender, and Ardys Kozbial)" ;
     rdawo:P10061 <http://viaf.org/viaf/43347281/researchdatamanagement/chronopolis/1> ,
@@ -159,7 +159,7 @@
     rdaxd:P00018 "http://viaf.org/viaf/84181241/gateway" ;
     rdawd:P10088 "Barrington Bayley SF gateway omnibus" ;
     rdfs:label "Barrington Bayley SF gateway omnibus (Bayley, Barrington J.)" ;
-    abi:P02 abi:T01 ;
+    entedit:P02 entedit:T01 ;
     rdawo:P10061 <http://viaf.org/viaf/84181241> .
 
 <http://viaf.org/viaf/9842556/complete>
@@ -167,7 +167,7 @@
     rdaxd:P00018 "http://viaf.org/viaf/9842556/complete" ;
     rdawd:P10088 "The complete stories of J.G. Ballard" ;
     rdfs:label "The complete stories of J.G. Ballard (Ballard, J. G.)" ;
-    abi:P02 abi:T01 ;
+    entedit:P02 entedit:T01 ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
 
 <http://www.isfdb.org/cgi-bin/pe.cgi?41887>
@@ -180,7 +180,7 @@
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57609" ,
                  "http://www.isfdb.org/cgi-bin/title.cgi?1042004" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Notes towards a mental breakdown" ;
     rdfs:label "Notes towards a mental breakdown (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -188,7 +188,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?1042032>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?1042032" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Report from an obscure planet" ;
     rdfs:label "Report from an obscure planet (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -240,7 +240,7 @@
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?1274485" ;
     rdawd:P10088 "Why I want to fuck Ronald Reagan" ;
     rdfs:label "Why I want to fuck Ronald Reagan (Ballard, J. G.)" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
 
 <http://www.isfdb.org/cgi-bin/title.cgi?1564888>
@@ -300,7 +300,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?37126>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?37126" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The terminal beach" ;
     rdfs:label "The terminal beach (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -386,7 +386,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?41235>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?41235" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Kyrie" ;
     rdfs:label "Kyrie (Anderson, Poul)" ;
     rdawo:P10061 <http://viaf.org/viaf/12304119> .
@@ -394,7 +394,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?41280>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?41280" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The insane ones" ;
     rdfs:label "The insane ones (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -426,7 +426,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?41516>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?41516" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The dance of the changer and the three" ;
     rdfs:label "The dance of the changer and the three (Carr, Terry)" ;
     rdawo:P10061 <http://viaf.org/viaf/79304712> .
@@ -434,7 +434,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?41557>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?41557" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Chronopolis" ;
     rdfs:label "Chronopolis (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -454,7 +454,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?42206>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?42206" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The recognition" ;
     rdfs:label "The recognition (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -462,7 +462,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?43928>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?43928" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The volcano dances" ;
     rdfs:label "The volcano dances (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -470,7 +470,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?43949>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?43949" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The drowned giant" ;
     rdfs:label "The drowned giant (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -478,7 +478,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?44123>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?44123" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The cage of sand" ;
     rdfs:label "The cage of sand (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -486,7 +486,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?44449>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?44449" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Escapement" ;
     rdfs:label "Escapement (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -494,7 +494,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?44450>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?44450" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Prima belladonna" ;
     rdfs:label "Prima belladonna (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -502,7 +502,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?44451>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?44451" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The concentration city" , "Build-up" ;
     rdfs:label "The concentration city (Ballard, J. G.)" , "Build-up (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -510,7 +510,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?44454>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?44454" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Manhole 69" ;
     rdfs:label "Manhole 69 (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -518,7 +518,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?44455>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?44455" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The waiting grounds" ;
     rdfs:label "The waiting grounds (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -526,7 +526,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?44456>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?44456" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Studio 5, the stars" ;
     rdfs:label "Studio 5, the stars (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -534,7 +534,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?44457>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?44457" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Deep end" ;
     rdfs:label "Deep end (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -542,7 +542,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?44458>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?44458" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The garden of time" ;
     rdfs:label "The garden of time (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -550,7 +550,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?44459>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?44459" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The subliminal man" ;
     rdfs:label "The subliminal man (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -558,7 +558,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?44460>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?44460" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "A question of re-entry" ;
     rdfs:label "A question of re-entry (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -566,7 +566,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?44461>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?44461" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The time-tombs" ;
     rdfs:label "The time-tombs (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -574,7 +574,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?44463>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?44463" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The air disaster" ;
     rdfs:label "The air disaster (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -582,7 +582,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?44464>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?44464" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The smile" ;
     rdfs:label "The smile (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -590,7 +590,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?44465>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?44465" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The dead time" ;
     rdfs:label "The dead time (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -598,7 +598,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?44466>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?44466" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The ultimate city" ;
     rdfs:label "The ultimate city (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -606,7 +606,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?44514>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?44514" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The sound-sweep" ;
     rdfs:label "The sound-sweep (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -620,7 +620,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?45330>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?45330" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Memories of the space age" ;
     rdfs:label "Memories of the space age (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -628,7 +628,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?45331>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?45331" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The object of the attack" ;
     rdfs:label "The object of the attack (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -642,7 +642,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?46455>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?46455" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The man who walked on the moon" ;
     rdfs:label "The man who walked on the moon (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -650,7 +650,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?46600>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?46600" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The enormous space" ;
     rdfs:label "The enormous space (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -658,7 +658,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?46817>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?46817" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "A guide to virtual death" ;
     rdfs:label "A guide to virtual death (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -666,7 +666,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?46818>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?46818" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The message from Mars" ;
     rdfs:label "The message from Mars (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -674,7 +674,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?47004>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?47004" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The dying fall" ;
     rdfs:label "The dying fall (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -682,7 +682,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?47005>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?47005" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The secret autobiography of J.G.B." ;
     rdfs:label "The secret autobiography of J.G.B. (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -696,7 +696,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?48153>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?48153" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "War fever" ;
     rdfs:label "War fever (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -704,7 +704,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?49122>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?49122" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Myths of the near future" ;
     rdfs:label "Myths of the near future (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -724,7 +724,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?53869>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?53869" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Cry hope, cry fury!" ;
     rdfs:label "Cry hope, cry fury! (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -732,7 +732,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?54044>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?54044" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The cloud-sculptors of Coral D" ;
     rdfs:label "The cloud-sculptors of Coral D (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -740,7 +740,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?54219>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?54219" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Venus smiles" ;
     rdfs:label "Venus smiles (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -748,7 +748,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?54304>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?54304" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The Comsat angels" ;
     rdfs:label "The Comsat angels (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -768,7 +768,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?56908>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?56908" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The worm that flies" ;
     rdfs:label "The worm that flies (Aldiss, Brian W.)" ;
     rdawo:P10061 <http://viaf.org/viaf/2465493> .
@@ -776,7 +776,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57575>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57575" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The 60 minute zoom" ;
     rdfs:label "The 60 minute zoom (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -784,7 +784,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57577>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57577" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Answers to a quesionnaire" ;
     rdfs:label "Answers to a quesionnaire (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -792,7 +792,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57579>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57579" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The assassination of John Fitzgerald Kennedy considered as a downhill motor race" ;
     rdfs:label "The assassination of John Fitzgerald Kennedy considered as a downhill motor race (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -800,7 +800,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57581>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57581" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The beach murders" ;
     rdfs:label "The beach murders (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -808,7 +808,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57582>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57582" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The day of forever" ;
     rdfs:label "The day of forever (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -816,7 +816,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57583>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57583" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The dead astronaut" ;
     rdfs:label "The dead astronaut (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -824,7 +824,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57584>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57584" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The delta at sunset" ;
     rdfs:label "The delta at sunset (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -832,7 +832,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57585>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57585" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Dream cargoes" ;
     rdfs:label "Dream cargoes (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -840,7 +840,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57586>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57586" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "End-game" ;
     rdfs:label "End-game (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -848,7 +848,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57587>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57587" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The gentle assassin" ;
     rdfs:label "The gentle assassin (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -856,7 +856,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57588>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57588" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The Gioconda of the twilight noon" ;
     rdfs:label "The Gioconda of the twilight noon (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -864,7 +864,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57589>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57589" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The greatest television show on earth" ;
     rdfs:label "The greatest television show on earth (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -872,7 +872,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57590>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57590" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Having a wonderful time" ;
     rdfs:label "Having a wonderful time (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -880,7 +880,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57591>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57591" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "A host of furious fancies" ;
     rdfs:label "A host of furious fancies (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -888,7 +888,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57592>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57592" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The illuminated man" ;
     rdfs:label "The illuminated man (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -896,7 +896,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57593>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57593" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The impossible man" ;
     rdfs:label "The impossible man (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -904,7 +904,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57594>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57594" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The index" ;
     rdfs:label "The index (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -912,7 +912,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57595>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57595" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The intensive care unit" ;
     rdfs:label "The intensive care unit (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -920,7 +920,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57596>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57596" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The killing ground" ;
     rdfs:label "The killing ground (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -928,7 +928,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57597>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57597" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The largest theme park in the world" ;
     rdfs:label "The largest theme park in the world (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -936,7 +936,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57598>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57598" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The last world of Mr. Goddard" ;
     rdfs:label "The last world of Mr. Goddard (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -944,7 +944,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57599>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57599" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The life and death of God" ;
     rdfs:label "The life and death of God (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -952,7 +952,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57600>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57600" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The lost Leonardo" ;
     rdfs:label "The lost Leonardo (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -960,7 +960,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57601>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57601" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Love in a colder climate" ;
     rdfs:label "Love in a colder climate (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -968,7 +968,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57602>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57602" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Low-flying aircraft" ;
     rdfs:label "Low-flying aircraft (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -976,7 +976,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57603>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57603" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The man on the 99th floor" ;
     rdfs:label "The man on the 99th floor (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -984,7 +984,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57604>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57604" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Minus one" ;
     rdfs:label "Minus one (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -992,7 +992,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57605>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57605" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Motel architecture" ;
     rdfs:label "Motel architecture (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1000,7 +1000,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57606>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57606" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Mr. F is Mr. F" ;
     rdfs:label "Mr. F is Mr. F (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1008,7 +1008,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57607>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57607" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "My dream of flying to Wake Island" ;
     rdfs:label "My dream of flying to Wake Island (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1016,7 +1016,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57608>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57608" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "News from the sun" ;
     rdfs:label "News from the sun (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1024,7 +1024,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57610>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57610" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Now wakes the sea" ;
     rdfs:label "Now wakes the sea (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1032,7 +1032,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57611>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57611" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Now : zero" ;
     rdfs:label "Now : zero (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1040,7 +1040,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57612>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57612" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "One afternoon at Utah Beach" ;
     rdfs:label "One afternoon at Utah Beach (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1048,7 +1048,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57613>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57613" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The overloaded man" ;
     rdfs:label "The overloaded man (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1056,7 +1056,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57614>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57614" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Passport to eternity" ;
     rdfs:label "Passport to eternity (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1064,7 +1064,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57615>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57615" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "A place and a time to die" ;
     rdfs:label "A place and a time to die (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1072,7 +1072,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57617>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57617" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Prisoner of the coral deep" ;
     rdfs:label "Prisoner of the coral deep (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1080,7 +1080,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57618>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57618" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Report on an unidentified space station" ;
     rdfs:label "Report on an unidentified space station (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1088,7 +1088,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57619>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57619" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The reptile enclosure" ;
     rdfs:label "The reptile enclosure (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1096,7 +1096,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57621>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57621" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Say goodbye to the wind" ;
     rdfs:label "Say goodbye to the wind (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1104,7 +1104,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57622>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57622" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The screen game" ;
     rdfs:label "The screen game (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1112,7 +1112,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57623>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57623" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The secret history of World War 3" ;
     rdfs:label "The secret history of World War 3 (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1120,7 +1120,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57624>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57624" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The singing statues" ;
     rdfs:label "The singing statues (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1128,7 +1128,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57625>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57625" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Storm-bird, storm-dreamer" ;
     rdfs:label "Storm-bird, storm-dreamer (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1136,7 +1136,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57626>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57626" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The sudden afternoon" ;
     rdfs:label "The sudden afternoon (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1144,7 +1144,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57627>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57627" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Theatre of war" ;
     rdfs:label "Theatre of war (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1152,7 +1152,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57628>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57628" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Thirteen to Centaurus" ;
     rdfs:label "Thirteen to Centaurus (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1160,7 +1160,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57629>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57629" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The thousand dreams of Stellavista" ;
     rdfs:label "The thousand dreams of Stellavista (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1168,7 +1168,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57630>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57630" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Time of passage" ;
     rdfs:label "Time of passage (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1176,7 +1176,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57631>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57631" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Tomorrow is a million years" ;
     rdfs:label "Tomorrow is a million years (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1184,7 +1184,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57632>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57632" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Track 12" ;
     rdfs:label "Track 12 (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1192,7 +1192,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57633>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57633" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The Venus hunters" ;
     rdfs:label "The Venus hunters (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1200,7 +1200,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57635>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57635" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The watch-tower" , "The watch-towers" ;
     rdfs:label "The watch-tower (Ballard, J. G.)" , "The watch-towers (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1208,7 +1208,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57636>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57636" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Zodiac 2000" ;
     rdfs:label "Zodiac 2000 (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1216,7 +1216,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57637>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57637" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Zone of terror" ;
     rdfs:label "Zone of terror (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1224,7 +1224,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?57905>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?57905" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Mind out of time" ;
     rdfs:label "Mind out of time (Laumer, K.)" ;
     rdawo:P10061 <https://isni.org/isni/0000000109520828> .
@@ -1244,7 +1244,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?62005>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?62005" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Crusade" ;
     rdfs:label "Crusade (Clarke, Arthur C.)" ;
     rdawo:P10061 <http://viaf.org/viaf/27062571> .
@@ -1252,7 +1252,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?64948>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?64948" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "To the dark star" ;
     rdfs:label "To the dark star (Silverberg, Robert)" ;
     rdawo:P10061 <http://viaf.org/viaf/109386240> .
@@ -1260,7 +1260,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?65075>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?65075" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Billenium" ;
     rdfs:label "Billenium (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1286,7 +1286,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?71516>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?71516" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "A night in elf hill" ;
     rdfs:label "A night in elf hill (Spinrad, Norman)" ;
     rdawo:P10061 <http://viaf.org/viaf/54154517> .
@@ -1306,7 +1306,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?94038>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?94038" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Pond water" ;
     rdfs:label "Pond water (Brunner, J.)" ;
     rdawo:P10061 <http://viaf.org/viaf/103212466> , <http://viaf.org/viaf/111614127> .
@@ -1320,14 +1320,14 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?97136>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?97136" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Sulwen's planet" ;
     rdfs:label "Sulwen's planet (Vance, J.)" .
 
 <http://www.isfdb.org/cgi-bin/title.cgi?97137>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?97137" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The inspector" ;
     rdfs:label "The inspector (McKimmey, J.)" ;
     rdawo:P10061 <https://isni.org/isni/0000000064014891> .
@@ -1335,7 +1335,7 @@
 <http://www.isfdb.org/cgi-bin/title.cgi?97138>
     a rdac:C10001 ;
     rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?97138" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Ranging" ;
     rdfs:label "Ranging (Jakes, J.)" ;
     rdawo:P10061 <https://isni.org/isni/000000008169370X> .
@@ -1345,7 +1345,7 @@
     rdaxd:P00018 "http://www.wikidata.org/entity/Q5114250" ;
     rdawd:P10088 "Chronopolis, and other stories" ;
     rdfs:label "Chronopolis, and other stories (Ballard, J. G.)" ;
-    abi:P02 abi:T01 ;
+    entedit:P02 entedit:T01 ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
 
 <http://www.wikidata.org/entity/Q6692707>
@@ -1353,7 +1353,7 @@
     rdaxd:P00018 "http://www.wikidata.org/entity/Q6692707" ;
     rdawd:P10088 "Low-flying aircraft, and other stories" ;
     rdfs:label "Low-flying aircraft, and other stories (Ballard, J. G.)" ;
-    abi:P02 abi:T01 ;
+    entedit:P02 entedit:T01 ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> ;
     rdawo:P10147 <http://www.isfdb.org/cgi-bin/title.cgi?44466> ,
                  <http://www.isfdb.org/cgi-bin/title.cgi?57602> ,
@@ -1370,14 +1370,14 @@
     rdaxd:P00018 "http://www.wikidata.org/entity/Q6815642" ;
     rdawd:P10088 "Memories of the space age" ;
     rdfs:label "Memories of the space age (Ballard, J. G.)" ;
-    abi:P02 abi:T01 ;
+    entedit:P02 entedit:T01 ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
 
 <https://en.wikipedia.org/wiki/Franklin_Cox/chronopolis>
     a rdac:C10001 ;
     rdaxd:P00018 "https://en.wikipedia.org/wiki/Franklin_Cox/chronopolis" ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/414> ;
-    abi:P01 <https://schema.nb.no/Bibliographic/Values/V1006> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/414> ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1006> ;
     rdawd:P10088 "Chronopolis" ;
     rdfs:label "Chronopolis (Cox, Frank)" ;
     rdawo:P10053 <https://en.wikipedia.org/wiki/Franklin_Cox> .
@@ -1387,7 +1387,7 @@
     rdaxd:P00018 "https://isni.org/isni/0000000033066226/islenoise" ;
     rdawd:P10088 "The isle is full of noises" ;
     rdfs:label "The isle is full of noises (Cella, Lisa.)" ;
-    abi:P02 abi:T01 ;
+    entedit:P02 entedit:T01 ;
     rdawo:P10147 <https://en.wikipedia.org/wiki/Franklin_Cox/chronopolis> .
 
 <https://isni.org/isni/0000000372289205/dreamcargoes>
@@ -1395,7 +1395,7 @@
     rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes" ;
     rdawd:P10088 "Dream cargoes" ;
     rdfs:label "Dream cargoes (Van Moll, Erwin.)" ;
-    abi:P02 abi:T01 ;
+    entedit:P02 entedit:T01 ;
     rdawo:P10053 <https://isni.org/isni/0000000372289205> ,
                  <https://isni.org/isni/000000044534099X> ;
     rdawo:P10147 <https://isni.org/isni/0000000372289205/dreamcargoes/1> ,
@@ -1414,8 +1414,8 @@
 <https://isni.org/isni/0000000372289205/dreamcargoes/1>
     a rdac:C10001 ;
     rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/1" ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/414> ;
-    abi:P01 <https://schema.nb.no/Bibliographic/Values/V1006> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/414> ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1006> ;
     rdawd:P10088 "Chronopolis" ;
     rdfs:label "Chronopolis (Van Moll, Erwin)" ;
     rdawo:P10053 <https://isni.org/isni/0000000372289205> ,
@@ -1426,8 +1426,8 @@
 <https://isni.org/isni/0000000372289205/dreamcargoes/10>
     a rdac:C10001 ;
     rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/10" ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/414> ;
-    abi:P01 <https://schema.nb.no/Bibliographic/Values/V1006> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/414> ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1006> ;
     rdawd:P10088 "Now: zero" ;
     rdfs:label "Now: zero (Van Moll, Erwin)" ;
     rdawo:P10053 <https://isni.org/isni/0000000372289205> ,
@@ -1438,8 +1438,8 @@
 <https://isni.org/isni/0000000372289205/dreamcargoes/2>
     a rdac:C10001 ;
     rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/2" ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/414> ;
-    abi:P01 <https://schema.nb.no/Bibliographic/Values/V1006> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/414> ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1006> ;
     rdawd:P10088 "The last world of Mr. Goddard" ;
     rdfs:label "The last world of Mr. Goddard (Van Moll, Erwin)" ;
     rdawo:P10053 <https://isni.org/isni/0000000372289205> ,
@@ -1450,8 +1450,8 @@
 <https://isni.org/isni/0000000372289205/dreamcargoes/3>
     a rdac:C10001 ;
     rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/3" ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/414> ;
-    abi:P01 <https://schema.nb.no/Bibliographic/Values/V1006> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/414> ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1006> ;
     rdawd:P10088 "Dream cargoes" ;
     rdfs:label "Dream cargoes (Van Moll, Erwin)" ;
     rdawo:P10053 <https://isni.org/isni/0000000372289205> ,
@@ -1462,8 +1462,8 @@
 <https://isni.org/isni/0000000372289205/dreamcargoes/4>
     a rdac:C10001 ;
     rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/4" ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/414> ;
-    abi:P01 <https://schema.nb.no/Bibliographic/Values/V1006> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/414> ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1006> ;
     rdawd:P10088 "The Delta at sunset" ;
     rdfs:label "The Delta at sunset (Van Moll, Erwin)" ;
     rdawo:P10053 <https://isni.org/isni/0000000372289205> ,
@@ -1474,8 +1474,8 @@
 <https://isni.org/isni/0000000372289205/dreamcargoes/5>
     a rdac:C10001 ;
     rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/5" ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/414> ;
-    abi:P01 <https://schema.nb.no/Bibliographic/Values/V1006> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/414> ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1006> ;
     rdawd:P10088 "End-game (feat. Edward Capel)" ;
     rdfs:label "End-game (feat. Edward Capel) (Van Moll, Erwin)" ;
     rdawo:P10053 <https://isni.org/isni/0000000372289205> ,
@@ -1486,8 +1486,8 @@
 <https://isni.org/isni/0000000372289205/dreamcargoes/6>
     a rdac:C10001 ;
     rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/6" ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/414> ;
-    abi:P01 <https://schema.nb.no/Bibliographic/Values/V1006> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/414> ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1006> ;
     rdawd:P10088 "Now wakes the sea" ;
     rdfs:label "Now wakes the sea (Van Moll, Erwin)" ;
     rdawo:P10053 <https://isni.org/isni/0000000372289205> ,
@@ -1498,8 +1498,8 @@
 <https://isni.org/isni/0000000372289205/dreamcargoes/7>
     a rdac:C10001 ;
     rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/7" ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/414> ;
-    abi:P01 <https://schema.nb.no/Bibliographic/Values/V1006> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/414> ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1006> ;
     rdawd:P10088 "Studio 5, the stars" ;
     rdfs:label "Studio 5, the stars (Van Moll, Erwin)" ;
     rdawo:P10053 <https://isni.org/isni/0000000372289205> ,
@@ -1510,8 +1510,8 @@
 <https://isni.org/isni/0000000372289205/dreamcargoes/8>
     a rdac:C10001 ;
     rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/8" ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/414> ;
-    abi:P01 <https://schema.nb.no/Bibliographic/Values/V1006> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/414> ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1006> ;
     rdawd:P10088 "The sound-sweep" ;
     rdfs:label "The sound-sweep (Van Moll, Erwin)" ;
     rdawo:P10053 <https://isni.org/isni/0000000372289205> ,
@@ -1522,8 +1522,8 @@
 <https://isni.org/isni/0000000372289205/dreamcargoes/9>
     a rdac:C10001 ;
     rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/9" ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/414> ;
-    abi:P01 <https://schema.nb.no/Bibliographic/Values/V1006> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/414> ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1006> ;
     rdawd:P10088 "Memories of the space age" ;
     rdfs:label "Memories of the space age (Van Moll, Erwin)" ;
     rdawo:P10053 <https://isni.org/isni/0000000372289205> ,
@@ -1536,7 +1536,7 @@
     rdaxd:P00018 "https://isni.org/isni/000000043862402X/Kronopolis" ;
     rdawd:P10088 "Chronopolis : Time, Power and Mediatization in Malmø" ;
     rdfs:label "Chronopolis : Time, Power and Mediatization in Malmø (Edin, Fredrik)" ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/19> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/19> ;
     rdawo:P10061 <https://isni.org/isni/000000043862402X> .
 
 <https://www.isfdb.org/cgi-bin/pl.cgi?279033>
@@ -1545,7 +1545,7 @@
     rdawd:P10088 "The best of J. G. Ballard" , "The best short stories of J.G. Ballard" ;
     rdfs:label "The best of J. G. Ballard (Ballard, J. G.)" ,
                "The best short stories of J.G. Ballard (Ballard, J. G.)" ;
-    abi:P02 abi:T01 ;
+    entedit:P02 entedit:T01 ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
 
 <https://www.isfdb.org/cgi-bin/pl.cgi?35804>
@@ -1553,13 +1553,13 @@
     rdaxd:P00018 "https://www.isfdb.org/cgi-bin/pl.cgi?35804" ;
     rdawd:P10088 "The best of J. G. Ballard" ;
     rdfs:label "The best of J. G. Ballard (Ballard, J. G.)" ;
-    abi:P02 abi:T01 ;
+    entedit:P02 entedit:T01 ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
 
 <https://www.isfdb.org/cgi-bin/title.cgi?37224>
     a rdac:C10001 ;
     rdaxd:P00018 "https://www.isfdb.org/cgi-bin/title.cgi?37224" ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
     rdawd:P10088 "Knights of the limits" ;
     rdfs:label "Knights of the limits (Bayley, Barrington J.)" ;
     rdawo:P10061 <http://viaf.org/viaf/84181241> .
@@ -1567,7 +1567,7 @@
 <https://www.isfdb.org/cgi-bin/title.cgi?4531>
     a rdac:C10001 ;
     rdaxd:P00018 "https://www.isfdb.org/cgi-bin/title.cgi?4531" ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
     rdawd:P10088 "Soul of the robot" ;
     rdfs:label "Soul of the robot (Bayley, Barrington J.)" ;
     rdawo:P10061 <http://viaf.org/viaf/84181241> .
@@ -1577,13 +1577,13 @@
     rdaxd:P00018 "https://www.isfdb.org/cgi-bin/title.cgi?4537" ;
     rdawd:P10088 "Fall of Chronopolis" ;
     rdfs:label "Fall of Chronopolis (Bayley, Barrington J.)" ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
     rdawo:P10061 <http://viaf.org/viaf/84181241> .
 
 <https://www.isfdb.org/cgi-bin/title.cgi?575437>
     a rdac:C10001 ;
     rdaxd:P00018 "https://www.isfdb.org/cgi-bin/title.cgi?575437" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The sound sweep" ;
     rdfs:label "The sound sweep (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1591,7 +1591,7 @@
 <https://www.isfdb.org/cgi-bin/title.cgi?57580>
     a rdac:C10001 ;
     rdaxd:P00018 "https://www.isfdb.org/cgi-bin/title.cgi?57580" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The atrocity exhibition" ;
     rdfs:label "The atrocity exhibition (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1599,7 +1599,7 @@
 <https://www.isfdb.org/cgi-bin/title.cgi?57598>
     a rdac:C10001 ;
     rdaxd:P00018 "https://www.isfdb.org/cgi-bin/title.cgi?57598" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "The Last World of Mr Goddard" ;
     rdfs:label "The Last World of Mr Goddard (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -1607,7 +1607,7 @@
 <https://www.isfdb.org/cgi-bin/title.cgi?57616>
     a rdac:C10001 ;
     rdaxd:P00018 "https://www.isfdb.org/cgi-bin/title.cgi?57616" ;
-    abi:P02 abi:T02 ;
+    entedit:P02 entedit:T02 ;
     rdawd:P10088 "Plan for the Assassination of Jacqueline Kennedy" ;
     rdfs:label "Plan for the Assassination of Jacqueline Kennedy (Ballard, J. G.)" ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .

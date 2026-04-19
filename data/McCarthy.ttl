@@ -1,3 +1,4 @@
+@prefix entedit: <http://oslomet.no/abi/vocab#> .
 @prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
 @prefix rdac: <http://rdaregistry.info/Elements/c/> .
 @prefix rdaco: <http://rdaregistry.info/termList/RDAContentType/> .
@@ -20,8 +21,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/175871715" ;
     rdawd:P10223 "The border trilogy" ;
     rdfs:label "The border trilogy (McCarthy, Cormac)" ;
-    abi:P02 abi:T03 ;
-    abi:P01 vtp:V1000;
+    entedit:P02 entedit:T03 ;
+    entedit:P01 vtp:V1000;
     rdawo:P10061 <http://viaf.org/viaf/29558386> ;
     rdawo:P10147 <http://viaf.org/viaf/214001528> ,
                  <http://viaf.org/viaf/3417153653286155900001> ,
@@ -32,8 +33,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/188298726" ;
     rdawd:P10223 "Suttree" ;
     rdfs:label "Suttree (McCarthy, Cormac)" ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
-    abi:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    entedit:P01 vtp:V1000;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
 
 <http://viaf.org/viaf/188670330>
@@ -41,8 +42,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/188670330" ;
     rdawd:P10223 "Child of God" ;
     rdfs:label "Child of God (McCarthy, Cormac)" ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
-    abi:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    entedit:P01 vtp:V1000;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
 
 <http://viaf.org/viaf/191524645>
@@ -50,8 +51,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/191524645" ;
     rdawd:P10223 "Blood meridian, or the evening redness in the west" ;
     rdfs:label "Blood meridian, or the evening redness in the west (McCarthy, Cormac)" ;
-    abi:P01 vtp:V1000;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    entedit:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
     rdawd:P10330 "Romanen utkom opprinnelig i 1985 og rammene er følgende: En tenåringsgutt rømmer hjemmefra og slår seg sammen med den morderiske banden Glanton-gjengen. Denne banden lever av å skalpere indianere og andre på den meksikansk-amerikanske grensen i 1849 og 1850. Skildringen av Glanton-gjengen og den demoniske John Joel Holden er bygget på faktiske personer og hendelser. Holden er en kaldblodig morder og fullstendig oppslukt av vold og konflikt. Den amerikanske litteraturviteren Harold Bloom har kalt Holden-skikkelsen \"den mest skremmende skikkelsen i amerikansk litteratur\"." ;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
 
@@ -60,8 +61,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/191907343" ;
     rdawd:P10223 "The orchard keeper" ;
     rdfs:label "The orchard keeper (McCarthy, Cormac)" ;
-    abi:P01 vtp:V1000;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    entedit:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
 
 <http://viaf.org/viaf/214001528>
@@ -69,8 +70,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/214001528" ;
     rdawd:P10223 "All the pretty horses" ;
     rdfs:label "All the pretty horses (McCarthy, Cormac)";
-    abi:P01 vtp:V1000;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    entedit:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
     rdawd:P10330 "Denne romanen er både en dannelsesroman og en western. Vi møter den seksten år gamle John Grady Cole på en ranch i West-Texas i 1949. Guttens bestefar er nettopp død. Faren er merket av krigen og bor i byen. Morens høyeste ønske er å komme seg ut av Texas for godt. John er for ung til å overta ranchen, og dermed er han stengt ute fra den eneste tilværelse han eri stand til å forestille seg. Sammen med vennen Lacey Rawlins drar han over grensen til Mexico og videre sørover. Her opplever han både idyll og komikk, men også blod." ,
                  "The story of John Grady Cole, who at 16 finds himself at the dying end of a long line of Texas ranchers, cut off from the only life he has ever imagined for himself. To escape a society moving all the wrong directions, Cole and two companions decide to seek their fortune in Mexico. But what begins as an idyllic adventure leads to a place where dreams are paid for in blood." ;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
@@ -80,8 +81,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/214012164" ;
     rdawd:P10223 "No country for old men" ;
     rdfs:label "No country for old men (McCarthy, Cormac)" ;
-    abi:P01 vtp:V1000;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    entedit:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
 
 <http://viaf.org/viaf/215254416>
@@ -89,8 +90,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/215254416" ;
     rdawd:P10223 "Outer dark" ;
     rdfs:label "Outer dark (McCarthy, Cormac)" ;
-    abi:P01 vtp:V1000;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    entedit:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
 
 <http://viaf.org/viaf/220031159>
@@ -98,8 +99,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/220031159" ;
     rdawd:P10223 "The road" ;
     rdfs:label "The road (McCarthy, Cormac)" ;
-    abi:P01 vtp:V1000;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    entedit:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
     rdawd:P10330 "Veien forteller om en reise i en fremtid uten håp. En far og en sønn går alene gjennom restene av et amerikansk landskap. Ingenting beveger seg, bortsett fra asken som flyr i vinden. Det er iskaldt, og det snør grå snø. Himmelen er mørk. Det er ti år siden verden brøt sammen. De går mot kysten, med bare en pistol å forsvare seg med mot de lovløse bandene langs veien. De har bare klærne de går i og litt frukt, men en stor hengivenhet og ømhet for hverandre.." ;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
 
@@ -108,8 +109,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/29558386/counselor" ;
     rdawd:P10223 "The counselor" ;
     rdfs:label "The counselor (McCarthy, Cormac)" ;
-    abi:P01 vtp:V1000;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/298>;
+    entedit:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/298>;
     rdaxd:P00029 "Screenplay" ;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
 
@@ -118,8 +119,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/29558386/gardenersson" ;
     rdawd:P10223 "The gardener's son" ;
     rdfs:label "The gardener's son (McCarthy, Cormac)" ;
-    abi:P01 vtp:V1000;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/298>;
+    entedit:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/298>;
     rdaxd:P00029 "Screenplay" ;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
 
@@ -128,8 +129,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/309357400" ;
     rdawd:P10223 "The crossing" ;
     rdfs:label "The crossing (McCarthy, Cormac)" ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
-    abi:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    entedit:P01 vtp:V1000;
     rdawd:P10330 "1972, Black River Falls, Wisconsin. Alicia Western, tjue år gammel og med førti tusen dollar i en plastpose, ber om å bli innlagt på et sykehus. Hun holder på å ta en doktorgrad i matematikk ved University of Chicago, og er diagnostisert med paranoid schizofrreni. Hun vil ikke snakke om broren sin, Bobby. I stedet reflekterer hun over psykiske lidelser, og hvordan mennesker insisterer på én felles oppfatning av verden. Hun husker en barndom der hennes egen bestemor fryktet for henne da hun bare var syv år gammel. Hun drøfter skjæringspunktet mellom fysikk og filosofi, og hun introduserer hallusinasjonene bare hun kan se. Og hele tiden sørger hun over Bobby, som fortsatt ikke er helt død, og som ikke er helt hennes. «Stella Maris» bli kun fortalt gjennom transkripsjoner av Alicias terapitimer." ,
                  "Billy and Boyd Parham are two boys living in New Mexico on the cusp of unimaginable events in the years before the Second World War. First comes a trespassing Indian and the dream of wolves running wild among cattle. Billy traps a she-wolf, intending to restore it to the mountains of New Mexico. But when he returns, he finds everything he left behind utterly transformed." ;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
@@ -139,8 +140,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/3417153653286155900001" ;
     rdawd:P10223 "Cities of the plain" ;
     rdfs:label "Cities of the plain (McCarthy, Cormac)" ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
-    abi:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    entedit:P01 vtp:V1000;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
 
 <http://viaf.org/viaf/4440159478236227990002>
@@ -148,8 +149,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/4440159478236227990002" ;
     rdawd:P10223 "The Sunset Limited" ;
     rdfs:label "The Sunset Limited (McCarthy, Cormac)" ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
-    abi:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    entedit:P01 vtp:V1000;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
 
 <http://viaf.org/viaf/470166838899836200007>
@@ -157,8 +158,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/470166838899836200007" ;
     rdawd:P10223 "The passenger" ;
     rdfs:label "The passenger (McCarthy, Cormac)" ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
-    abi:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    entedit:P01 vtp:V1000;
     rdawd:P10330 "Mississippi, 1980: Klokken tre om natten ikler Bobby Western seg våtdrakt og dykker ned i et mørkt hav. I et styrtet fly på havbunnen ser han ni døde passasjerer fastspent i setene, med flytende hår og tomme blikk. Den tiende passasjeren og flyets svarte boks er borte. Etter dette hjemsøkes Bobby Western av politimenn og myndigheter, av spøkelset etter faren som var med på oppfinnelsen av atombomben, og ikke minst av kjærligheten til søsteren som mistet forstanden. En av de største amerikanske forfatterne i vår tid, Cormac McCarthy, er endelig tilbake med en kompleks, dyp og elegant roman. Med Passasjeren leverer han nok et slagferdig epos om maskulinitet, krig, død, tap og skjønnhet. Boken utgis samtidig i Norge som i USA og England." ,
                  "\"Pass Christian, Mississippi, 1980: It is three in the morning when Bobby Western zips up the jacket of his wet suit and plunges from a Coast Guard tender into darkness. His dive light illuminates the sunken jet, nine bodies still buckled in their seats, hair floating, eyes devoid of speculation. Missing from the crash site are the pilot's flight bag, the plane's black box, and the tenth passenger. But how? A collateral witness to machinations that can only bring him harm, Western is shadowed in body and spirit--by men with badges; by the ghost of his father, an inventor of the bomb that melted glass and flesh in Hiroshima; and by his sister, the love and ruin of his soul.\"--Dust jacket flap." ;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
@@ -168,8 +169,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/470166838899836200007/stellamaris" ;
     rdawd:P10223 "Stella Maris" ;
     rdfs:label "Stella Maris (McCarthy, Cormac)" ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
-    abi:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    entedit:P01 vtp:V1000;
     rdawd:P10330 "1972, Black River Falls, Wiscounsin. Alicia Western, tjue år gammel og med førti tusen dollar i en plastpose, ber om å bli innlagt på et sykehus. Hun holder på å ta en doktorgrad i matematikk ved University of Chicago, og er diagnostisert med paranoid schizofrreni. Hun vil ikke snakke om broren sin, Bobby. I stedet reflekterer hun over psykiske lidelser, og hvordan mennesker insisterer på én felles oppfatning av verden. Hun husker en barndom der hennes egen bestemor fryktet for henne da hun bare var syv år gammel. Hun drøfter skjæringspunktet mellom fysikk og filosofi, og hun introduserer hallusinasjonene bare hun kan se. Og hele tiden sørger hun over Bobby, som fortsatt ikke er helt død, og som ikke er helt hennes. «Stella Maris» bli kun fortalt gjennom transkripsjoner av Alicias terapitimer." ,
                  "1972, Black River Falls, Wisconsin. Alicia Western, tjue år gammel og med førti tusen dollar i en plastpose, ber om å bli innlagt på et sykehus. Hun holder på å ta en doktorgrad i matematikk ved University of Chicago, og er diagnostisert med paranoid schizofrreni. Hun vil ikke snakke om broren sin, Bobby. I stedet reflekterer hun over psykiske lidelser, og hvordan mennesker insisterer på én felles oppfatning av verden. Hun husker en barndom der hennes egen bestemor fryktet for henne da hun bare var syv år gammel. Hun drøfter skjæringspunktet mellom fysikk og filosofi, og hun introduserer hallusinasjonene bare hun kan se. Og hele tiden sørger hun over Bobby, som fortsatt ikke er helt død, og som ikke er helt hennes. «Stella Maris» bli kun fortalt gjennom transkripsjoner av Alicias terapitimer." ,
                  "\"From the best-selling, Pulitzer Prize-winning author of The Road comes the second volume of a two-volume masterpiece: Stella Maris is an intimate portrait of grief and longing, as a young woman in a psychiatric facility seeks to understand her own existence. Black River Falls, Wisconsin, 1972: Alicia Western, twenty years old, with forty thousand dollars in a plastic bag, admits herself to the hospital. A doctoral candidate in mathematics at the University of Chicago, Alicia has been diagnosed with paranoid schizophrenia, and she does not want to talk about her brother, Bobby. Instead, she contemplates the nature of madness, the human insistence on one common experience of the world; she recalls a childhood where, by the age of seven, her own grandmother feared for her; she surveys the intersection of physics and philosophy; and she introduces her cohorts, her chimeras, the hallucinations that only she can see. All the while, she grieves for Bobby, not quite dead, not quite hers. Told entirely through the transcripts of Alicia's psychiatric sessions, Stella Maris is a searching, rigorous, intellectually challenging coda to The Passenger, a philosophical inquiry that questions our notions of God, truth, and existence\"--" ;
@@ -181,8 +182,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/5191807/theroad" ;
     rdawd:P10223 "The road" ;
     rdfs:label "The road (Penhall, Joe)" ;
-    abi:P01 vtp:V1000;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/298>;
+    entedit:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/298>;
     rdaxd:P00029 "Screenplay" ;
     rdawo:P10061 <http://viaf.org/viaf/5191807> ;
     rdawo:P10134 <http://viaf.org/viaf/220031159> .
@@ -193,8 +194,8 @@
     rdawd:P10223 "The stonemason" ;
     rdfs:label "The stonemason (McCarthy, Cormac)" ;
     rdaxd:P00029 "Play" ;
-    abi:P01 vtp:V1000;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/67>;
+    entedit:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/67>;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
 
 
@@ -203,8 +204,8 @@
     rdaxd:P00018 "http://www.wikidata.org/entity/Q3061599" ;
     rdawd:P10223 "Counselor (Motion picture : 2013)" ;
     rdfs:label "Counselor (Motion picture : 2013)" ;
-    abi:P01 vtp:V1002;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/1130>;
+    entedit:P01 vtp:V1002;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/1130>;
     rdawd:P10330 "\"Ridley Scott's The Counselor, from a script by Cormac McCarthy, stars Michael Fassbender as the title character, a slick lawyer who is madly in love with Laura (Penelope Cruz). He asks her to marry him, and she agrees, though she is unaware that serious financial troubles have prompted him to fund a drug deal with a shady but established middle man named Westray (Brad Pitt), that could bring in millions. Part of the counselor's financial troubles stem from the fact that he's investing in a club being opened by his best friend Reiner (Javier Bardem), a hedonist and occasional client who has attained his wealth by any means necessary, and likes to keep his wife, Malkina (Cameron Diaz) covered in all the accoutrements the wealthy enjoy. However, when the drug deal starts to go wrong, the counselor finds himself unprepared to deal with the fallout, and soon he's trying to protect his bride-to-be as well as himself from the wrath of a drug cartel that has no qualms about exacting revenge\"--Allmovie.com, viewed March 12, 2018." ,
                  "A lawyer makes a risky entrance into the drug trade, and gambles that the consequences won't catch up with him." ;
     rdawo:P10013 <https://isni.org/isni/0000000116899928> ;
@@ -222,8 +223,8 @@
     rdawd:P10223 "All the pretty horses (Motion picture : 2000)" ;
     rdfs:label "All the pretty horses (Motion picture: 2000)" ;
     rdaxd:P00029 "Movie" ;
-    abi:P01 vtp:V1002;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/1130>;
+    entedit:P01 vtp:V1002;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/1130>;
     rdawo:P10013 <https://isni.org/isni/0000000120961536> ;
     rdawo:P10073 <https://isni.org/isni/0000000120961536> ,
                  <https://isni.org/isni/0000000042755920> ;
@@ -235,8 +236,8 @@
     rdawd:P10223 "No country for old men (Motion picture : 2007)" ;
     rdfs:label "No country for old men (Motion picture : 2007)" ;
     rdaxd:P00029 "Movie" ;
-    abi:P01 vtp:V1002;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/1130>;
+    entedit:P01 vtp:V1002;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/1130>;
     rdawd:P10330 "When a Vietnam veteran discovers two million dollars while wandering through the aftermath of a Texas drug deal gone awry, his decision to abscond with the cash sets off a violent chain reaction in a once peaceful Texas town." ,
                  "Llewelyn Moss is a Vietnam vet who could use a break. One morning while hunting antelope, he spies several trucks surrounded by dead bodies. He decides to examine the site. He finds a case filled with $2 million and a truck loaded with heroin. Moss takes it with him, tells his wife he's going away for awhile, and hits the road until he can determine his next move. On his the way from El Paso to the Mexican border, he discovers he's being followed by ex-special ops agent Chigurh. Chigurh's weapon of choice is a cattle gun, and he uses it on everyone who gets in his way. Just as Sheriff Bell, a World War II vet, is on Moss's trail, Chigurh's former colleague, Wells, is on his." ;
     rdawo:P10013 <https://isni.org/isni/0000000121417460> ,
@@ -254,8 +255,8 @@
     rdawd:P10223 "The Road (Motion picture : 2009)" ;
     rdfs:label "The Road (Motion picture : 2009)" ;
     rdaxd:P00029 "Movie" ;
-    abi:P01 vtp:V1002;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/1130>;
+    entedit:P01 vtp:V1002;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/1130>;
     rdawd:P10330 "\"A father (Viggo Mortensen) and son make their way across a post-apocalyptic United States in hopes of finding civilization amongst the nomadic cannibal tribes in 2929 Productions' adaptation of Cormac McCarthy's thrilling Pulitzer Prize-winning novel The Road. John Hillcoat (The Proposition) directs from a screenplay provided by Joe Penhall. Charlize Theron co-stars in the Dimension Films release\"--Allmovie.com, viewed October 1, 2018." ;
     rdawo:P10013 <https://isni.org/isni/0000000108589241> ;
     rdawo:P10073 <https://www.imdb.com/name/nm2445382> , <https://isni.org/isni/0000000063018399> ;

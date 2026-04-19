@@ -1,4 +1,5 @@
-﻿@prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
+﻿@prefix entedit: <http://oslomet.no/abi/vocab#> .
+@prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
 @prefix rdac: <http://rdaregistry.info/Elements/c/> .
 @prefix rdaco: <http://rdaregistry.info/termList/RDAContentType/> .
 @prefix rdact: <http://rdaregistry.info/termList/RDACarrierType/> .
@@ -93,8 +94,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/220031159" ;
     rdawd:P10223 "The road" ;
     rdfs:label "The road (McCarthy, Cormac)" ;
-    abi:P01 vtp:V1000;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    entedit:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
     rdawd:P10330 "Veien forteller om en reise i en fremtid uten håp. En far og en sønn går alene gjennom restene av et amerikansk landskap. Ingenting beveger seg, bortsett fra asken som flyr i vinden. Det er iskaldt, og det snør grå snø. Himmelen er mørk. Det er ti år siden verden brøt sammen. De går mot kysten, med bare en pistol å forsvare seg med mot de lovløse bandene langs veien. De har bare klærne de går i og litt frukt, men en stor hengivenhet og ømhet for hverandre.." ;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
 	
@@ -104,8 +105,8 @@
 	    rdawd:P10223 "The Road (Motion picture : 2009)" ;
 	    rdfs:label "The Road (Motion picture : 2009)" ;
 	    rdaxd:P00029 "Movie" ;
-	    abi:P01 vtp:V1002;
-	    abi:P02 <https://id.nb.no/vocabulary/ntsf/1130>;
+	    entedit:P01 vtp:V1002;
+	    entedit:P02 <https://id.nb.no/vocabulary/ntsf/1130>;
 	    rdawd:P10330 "\"A father (Viggo Mortensen) and son make their way across a post-apocalyptic United States in hopes of finding civilization amongst the nomadic cannibal tribes in 2929 Productions' adaptation of Cormac McCarthy's thrilling Pulitzer Prize-winning novel The Road. John Hillcoat (The Proposition) directs from a screenplay provided by Joe Penhall. Charlize Theron co-stars in the Dimension Films release\"--Allmovie.com, viewed October 1, 2018." ;
 	    rdawo:P10013 <https://isni.org/isni/0000000108589241> ;
 	    rdawo:P10073 <https://www.imdb.com/name/nm2445382> , <https://isni.org/isni/0000000063018399> ;
@@ -117,8 +118,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/5191807/theroad" ;
     rdawd:P10223 "The road" ;
     rdfs:label "The road (Screenplay)" ;
-    abi:P01 vtp:V1000;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/298>;
+    entedit:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/298>;
     rdaxd:P00029 "Screenplay" ;
     rdawo:P10061 <http://viaf.org/viaf/5191807> ;
     rdawo:P10134 <http://viaf.org/viaf/220031159> .

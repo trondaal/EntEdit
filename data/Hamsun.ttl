@@ -1,4 +1,4 @@
-@prefix abi: <http://oslomet.no/abi/vocab#> .
+@prefix entedit: <http://oslomet.no/abi/vocab#> .
 @prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
 @prefix rdac: <http://rdaregistry.info/Elements/c/> .
 @prefix rdaco: <http://rdaregistry.info/termList/RDAContentType/> .
@@ -46,8 +46,8 @@
     rdaxd:P00018 "http://example.org/engelstadcarlfredrik/segelfoss" ;
     rdawd:P10088 "Segelfoss" ;
     rdfs:label "Segelfoss (Engelstad, Carl Fredrik)" ;
-    abi:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    abi:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
     rdawo:P10061 <http://example.org/engelstadcarlfredrik> ;
     rdawo:P10142 <http://viaf.org/viaf/8450149068552765730000> .
 
