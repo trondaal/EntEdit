@@ -87,8 +87,8 @@ EntEdit/
 ├── database/              # RDF data and GraphDB configuration
 │   ├── types/             # Vocabulary files loaded on first startup
 │   ├── graphdb/           # SPARQL connector query definitions
-│   ├── lucene connectors/ # Full-text index definitions
-│   └── inference rules/   # GraphDB inference rule sets
+│   ├── lucene_connectors/ # Full-text index definitions
+│   └── inference_rules/   # GraphDB inference rule sets
 ├── docker/                # Docker deployment configuration
 │   └── graphdb/           # Repository definition and init script
 └── docker-compose.yml

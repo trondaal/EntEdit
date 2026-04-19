@@ -18,12 +18,17 @@ services:
     volumes:
       - ./database/types:/import-data/types:ro
       - ./database/testdata:/import-data/testdata:ro
-      - "./database/lucene connectors:/sparql-updates:ro"
+      - ./database/lucene_connectors:/sparql-updates:ro
       - ./docker/graphdb/repositories/EntEdit/config.ttl:/repo-config.ttl:ro
       - ./docker/graphdb/import-types.sh:/import-types.sh:ro
     environment:
       - GRAPHDB_URL=http://graphdb:7200
       - GRAPHDB_REPO=EntEdit
+      # Set FORCE_REINIT=1 (e.g. via Docker Desktop) and restart this
+      # container to wipe all repository data + connectors and re-import
+      # from scratch. Leave unset for normal startups — the script will
+      # detect the init marker and skip re-initialization.
+      - FORCE_REINIT=${FORCE_REINIT:-0}
     depends_on:
       graphdb:
         condition: service_healthy

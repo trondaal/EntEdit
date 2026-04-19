@@ -1,248 +1,248 @@
-@prefix abi: <http://oslomet.no/abi/vocab#> .
+@prefix entedit: <http://oslomet.no/abi/vocab#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
 #Adding rdfs:labels and associating the carrier types with an ad hoc type for filtering by range
-<http://rdaregistry.info/termList/RDACarrierType/1002> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1002> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1002>	<http://www.w3.org/2000/01/rdf-schema#label>	"Audio cartridge"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1002>	<http://www.w3.org/2000/01/rdf-schema#label>	"Lyd-cartridge"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1003> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1003> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1003>	<http://www.w3.org/2000/01/rdf-schema#label>	"Audio cylinder"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1003>	<http://www.w3.org/2000/01/rdf-schema#label>	"Fonografrull"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1004> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1004> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1004>	<http://www.w3.org/2000/01/rdf-schema#label>	"Audio disc"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1004>	<http://www.w3.org/2000/01/rdf-schema#label>	"Lydplate"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1005> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1005> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1005>	<http://www.w3.org/2000/01/rdf-schema#label>	"Sound-track reel"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1005>	<http://www.w3.org/2000/01/rdf-schema#label>	"Lydfilmspole"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1006> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1006> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1006>	<http://www.w3.org/2000/01/rdf-schema#label>	"Audio roll"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1006>	<http://www.w3.org/2000/01/rdf-schema#label>	"Pianorull"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1007> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1007> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1007>	<http://www.w3.org/2000/01/rdf-schema#label>	"Audiocassette"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1007>	<http://www.w3.org/2000/01/rdf-schema#label>	"Lydkassett"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1008> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1008> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1008>	<http://www.w3.org/2000/01/rdf-schema#label>	"Audiotape reel"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1008>	<http://www.w3.org/2000/01/rdf-schema#label>	"Lydbåndspole"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1011> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1011> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1011>	<http://www.w3.org/2000/01/rdf-schema#label>	"Computer card"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1011>	<http://www.w3.org/2000/01/rdf-schema#label>	"Datakort"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1012> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1012> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1012>	<http://www.w3.org/2000/01/rdf-schema#label>	"Computer chip cartridge"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1012>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kretskortkassett"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1013> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1013> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1013>	<http://www.w3.org/2000/01/rdf-schema#label>	"Computer disc"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1013>	<http://www.w3.org/2000/01/rdf-schema#label>	"Dataplate"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1014> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1014> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1014>	<http://www.w3.org/2000/01/rdf-schema#label>	"Computer disc cartridge"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1014>	<http://www.w3.org/2000/01/rdf-schema#label>	"Dataplatekassett"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1015> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1015> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1015>	<http://www.w3.org/2000/01/rdf-schema#label>	"Computer tape cartridge"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1015>	<http://www.w3.org/2000/01/rdf-schema#label>	"Databånd-cartridge"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1016> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1016> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1016>	<http://www.w3.org/2000/01/rdf-schema#label>	"Computer tape cassette"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1016>	<http://www.w3.org/2000/01/rdf-schema#label>	"Databåndkassett"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1017> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1017> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1017>	<http://www.w3.org/2000/01/rdf-schema#label>	"Computer tape reel"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1017>	<http://www.w3.org/2000/01/rdf-schema#label>	"Databåndspole"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1018> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1018> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1018>	<http://www.w3.org/2000/01/rdf-schema#label>	"Online resource"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1018>	<http://www.w3.org/2000/01/rdf-schema#label>	"Online (nettilkoblet) ressurs"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1021> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1021> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1021>	<http://www.w3.org/2000/01/rdf-schema#label>	"Aperture card"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1021>	<http://www.w3.org/2000/01/rdf-schema#label>	"Vinduskort"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1022> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1022> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1022>	<http://www.w3.org/2000/01/rdf-schema#label>	"Microfiche"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1022>	<http://www.w3.org/2000/01/rdf-schema#label>	"Mikrofilmkort"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1023> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1023> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1023>	<http://www.w3.org/2000/01/rdf-schema#label>	"Microfiche cassette"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1023>	<http://www.w3.org/2000/01/rdf-schema#label>	"Mikrofilmkortkassett"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1024> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1024> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1024>	<http://www.w3.org/2000/01/rdf-schema#label>	"Microfilm cartridge"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1024>	<http://www.w3.org/2000/01/rdf-schema#label>	"Mikrofilm-cartridge"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1025> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1025> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1025>	<http://www.w3.org/2000/01/rdf-schema#label>	"Microfilm cassette"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1025>	<http://www.w3.org/2000/01/rdf-schema#label>	"Mikrofilmkassett"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1026> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1026> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1026>	<http://www.w3.org/2000/01/rdf-schema#label>	"Microfilm reel"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1026>	<http://www.w3.org/2000/01/rdf-schema#label>	"Mikrofilmspole"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1027> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1027> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1027>	<http://www.w3.org/2000/01/rdf-schema#label>	"Microfilm slip"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1027>	<http://www.w3.org/2000/01/rdf-schema#label>	"Mikrofilmremse"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1028> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1028> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1028>	<http://www.w3.org/2000/01/rdf-schema#label>	"Microopaque"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1028>	<http://www.w3.org/2000/01/rdf-schema#label>	"Mikro-opak"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1030> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1030> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1030>	<http://www.w3.org/2000/01/rdf-schema#label>	"Microscope slide"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1030>	<http://www.w3.org/2000/01/rdf-schema#label>	"Mikroskopdia"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1032> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1032> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1032>	<http://www.w3.org/2000/01/rdf-schema#label>	"Film cartridge"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1032>	<http://www.w3.org/2000/01/rdf-schema#label>	"Film-cartridge"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1033> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1033> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1033>	<http://www.w3.org/2000/01/rdf-schema#label>	"Film cassette"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1033>	<http://www.w3.org/2000/01/rdf-schema#label>	"Filmkassett"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1034> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1034> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1034>	<http://www.w3.org/2000/01/rdf-schema#label>	"Film reel"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1034>	<http://www.w3.org/2000/01/rdf-schema#label>	"Filmspole"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1035> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1035> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1035>	<http://www.w3.org/2000/01/rdf-schema#label>	"Filmslip"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1035>	<http://www.w3.org/2000/01/rdf-schema#label>	"Filmstrimmel"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1036> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1036> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1036>	<http://www.w3.org/2000/01/rdf-schema#label>	"Filmstrip"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1036>	<http://www.w3.org/2000/01/rdf-schema#label>	"Filmremse"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1037> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1037> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1037>	<http://www.w3.org/2000/01/rdf-schema#label>	"Filmstrip cartridge"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1037>	<http://www.w3.org/2000/01/rdf-schema#label>	"Filmremsekassett"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1039> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1039> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1039>	<http://www.w3.org/2000/01/rdf-schema#label>	"Overhead transparency"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1039>	<http://www.w3.org/2000/01/rdf-schema#label>	"Overheadtransparent"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1040> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1040> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1040>	<http://www.w3.org/2000/01/rdf-schema#label>	"Slide"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1040>	<http://www.w3.org/2000/01/rdf-schema#label>	"Lysbilde"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1042> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1042> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1042>	<http://www.w3.org/2000/01/rdf-schema#label>	"Stereograph card"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1042>	<http://www.w3.org/2000/01/rdf-schema#label>	"Stereobilde"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1043> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1043> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1043>	<http://www.w3.org/2000/01/rdf-schema#label>	"Stereograph disc"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1043>	<http://www.w3.org/2000/01/rdf-schema#label>	"Stereografisk plate"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1045> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1045> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1045>	<http://www.w3.org/2000/01/rdf-schema#label>	"Card"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1045>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kort"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1046> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1046> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1046>	<http://www.w3.org/2000/01/rdf-schema#label>	"Flipchart"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1046>	<http://www.w3.org/2000/01/rdf-schema#label>	"Flippover"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1047> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1047> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1047>	<http://www.w3.org/2000/01/rdf-schema#label>	"Roll"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1047>	<http://www.w3.org/2000/01/rdf-schema#label>	"Rull"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1048> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1048> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1048>	<http://www.w3.org/2000/01/rdf-schema#label>	"Sheet"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1048>	<http://www.w3.org/2000/01/rdf-schema#label>	"Ark"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1049> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1049> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1049>	<http://www.w3.org/2000/01/rdf-schema#label>	"Volume"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1049>	<http://www.w3.org/2000/01/rdf-schema#label>	"Bind"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1051> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1051> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1051>	<http://www.w3.org/2000/01/rdf-schema#label>	"Video cartridge"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1051>	<http://www.w3.org/2000/01/rdf-schema#label>	"Video-cartridge"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1052> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1052> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1052>	<http://www.w3.org/2000/01/rdf-schema#label>	"Videocassette"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1052>	<http://www.w3.org/2000/01/rdf-schema#label>	"Videokassett"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1053> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1053> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1053>	<http://www.w3.org/2000/01/rdf-schema#label>	"Videotape reel"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1053>	<http://www.w3.org/2000/01/rdf-schema#label>	"Videobåndspole"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1056> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1056> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1056>	<http://www.w3.org/2000/01/rdf-schema#label>	"Microfilm roll"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1056>	<http://www.w3.org/2000/01/rdf-schema#label>	"Mikrofilmrull"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1059> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1059> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1059>	<http://www.w3.org/2000/01/rdf-schema#label>	"Object"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1059>	<http://www.w3.org/2000/01/rdf-schema#label>	"Gjenstand"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1060> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1060> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1060>	<http://www.w3.org/2000/01/rdf-schema#label>	"Videodisc"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1060>	<http://www.w3.org/2000/01/rdf-schema#label>	"Videodisk"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1069> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1069> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1069>	<http://www.w3.org/2000/01/rdf-schema#label>	"Film roll"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1069>	<http://www.w3.org/2000/01/rdf-schema#label>	"Filmrull"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1070> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1070> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1070>	<http://www.w3.org/2000/01/rdf-schema#label>	"Audio belt"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1070>	<http://www.w3.org/2000/01/rdf-schema#label>	"Audio belt"@no	 .
-<http://rdaregistry.info/termList/RDACarrierType/1071> a abi:Carriertype .
+<http://rdaregistry.info/termList/RDACarrierType/1071> a entedit:Carriertype .
 <http://rdaregistry.info/termList/RDACarrierType/1071>	<http://www.w3.org/2000/01/rdf-schema#label>	"Audio wire reel"@en	 .
 <http://rdaregistry.info/termList/RDACarrierType/1071>	<http://www.w3.org/2000/01/rdf-schema#label>	"Lydtrådspole"@no	 .
 
-<http://rdaregistry.info/termList/RDAContentType/1001>  a abi:Contenttype .
+<http://rdaregistry.info/termList/RDAContentType/1001>  a entedit:Contenttype .
 <http://rdaregistry.info/termList/RDAContentType/1001>	<http://www.w3.org/2000/01/rdf-schema#label>	"Cartographic dataset"@en	 .
 <http://rdaregistry.info/termList/RDAContentType/1001>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kartografisk datasett"@no	 .
-<http://rdaregistry.info/termList/RDAContentType/1002>  a abi:Contenttype .
+<http://rdaregistry.info/termList/RDAContentType/1002>  a entedit:Contenttype .
 <http://rdaregistry.info/termList/RDAContentType/1002>	<http://www.w3.org/2000/01/rdf-schema#label>	"Cartographic image"@en	 .
 <http://rdaregistry.info/termList/RDAContentType/1002>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kartografisk bilde"@no	 .
-<http://rdaregistry.info/termList/RDAContentType/1003>  a abi:Contenttype .
+<http://rdaregistry.info/termList/RDAContentType/1003>  a entedit:Contenttype .
 <http://rdaregistry.info/termList/RDAContentType/1003>	<http://www.w3.org/2000/01/rdf-schema#label>	"Cartographic moving image"@en	 .
 <http://rdaregistry.info/termList/RDAContentType/1003>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kartografisk levende bilde"@no	 .
-<http://rdaregistry.info/termList/RDAContentType/1004>  a abi:Contenttype .
+<http://rdaregistry.info/termList/RDAContentType/1004>  a entedit:Contenttype .
 <http://rdaregistry.info/termList/RDAContentType/1004>	<http://www.w3.org/2000/01/rdf-schema#label>	"Cartographic tactile image"@en	 .
 <http://rdaregistry.info/termList/RDAContentType/1004>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kartografisk taktilt bilde"@no	 .
-<http://rdaregistry.info/termList/RDAContentType/1005>  a abi:Contenttype .
+<http://rdaregistry.info/termList/RDAContentType/1005>  a entedit:Contenttype .
 <http://rdaregistry.info/termList/RDAContentType/1005>	<http://www.w3.org/2000/01/rdf-schema#label>	"Cartographic tactile three-dimensional form"@en	 .
 <http://rdaregistry.info/termList/RDAContentType/1005>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kartografisk taktil tredimensjonal form"@no	 .
-<http://rdaregistry.info/termList/RDAContentType/1006>  a abi:Contenttype .
+<http://rdaregistry.info/termList/RDAContentType/1006>  a entedit:Contenttype .
 <http://rdaregistry.info/termList/RDAContentType/1006>	<http://www.w3.org/2000/01/rdf-schema#label>	"Cartographic three-dimensional form"@en	 .
 <http://rdaregistry.info/termList/RDAContentType/1006>	<http://www.w3.org/2000/01/rdf-schema#label>	"Kartografisk tredimensjonal form"@no	 .
-<http://rdaregistry.info/termList/RDAContentType/1007>  a abi:Contenttype .
+<http://rdaregistry.info/termList/RDAContentType/1007>  a entedit:Contenttype .
 <http://rdaregistry.info/termList/RDAContentType/1007>	<http://www.w3.org/2000/01/rdf-schema#label>	"Computer dataset"@en	 .
 <http://rdaregistry.info/termList/RDAContentType/1007>	<http://www.w3.org/2000/01/rdf-schema#label>	"Datasett"@no	 .
-<http://rdaregistry.info/termList/RDAContentType/1008>  a abi:Contenttype .
+<http://rdaregistry.info/termList/RDAContentType/1008>  a entedit:Contenttype .
 <http://rdaregistry.info/termList/RDAContentType/1008>	<http://www.w3.org/2000/01/rdf-schema#label>	"Computer program"@en	 .
 <http://rdaregistry.info/termList/RDAContentType/1008>	<http://www.w3.org/2000/01/rdf-schema#label>	"Dataprogram"@no	 .
-<http://rdaregistry.info/termList/RDAContentType/1009>  a abi:Contenttype .
+<http://rdaregistry.info/termList/RDAContentType/1009>  a entedit:Contenttype .
 <http://rdaregistry.info/termList/RDAContentType/1009>	<http://www.w3.org/2000/01/rdf-schema#label>	"Notated movement"@en	 .
 <http://rdaregistry.info/termList/RDAContentType/1009>	<http://www.w3.org/2000/01/rdf-schema#label>	"Bevegelsesnotasjon"@no	 .
-<http://rdaregistry.info/termList/RDAContentType/1010>  a abi:Contenttype .
+<http://rdaregistry.info/termList/RDAContentType/1010>  a entedit:Contenttype .
 <http://rdaregistry.info/termList/RDAContentType/1010>	<http://www.w3.org/2000/01/rdf-schema#label>	"Notated music"@en	 .
 <http://rdaregistry.info/termList/RDAContentType/1010>	<http://www.w3.org/2000/01/rdf-schema#label>	"Nedskrevet musikk"@no	 .
-<http://rdaregistry.info/termList/RDAContentType/1011>  a abi:Contenttype .
+<http://rdaregistry.info/termList/RDAContentType/1011>  a entedit:Contenttype .
 <http://rdaregistry.info/termList/RDAContentType/1011>	<http://www.w3.org/2000/01/rdf-schema#label>	"Performed music"@en	 .
 <http://rdaregistry.info/termList/RDAContentType/1011>	<http://www.w3.org/2000/01/rdf-schema#label>	"Framført musikk"@no	 .
-<http://rdaregistry.info/termList/RDAContentType/1012>  a abi:Contenttype .
+<http://rdaregistry.info/termList/RDAContentType/1012>  a entedit:Contenttype .
 <http://rdaregistry.info/termList/RDAContentType/1012>	<http://www.w3.org/2000/01/rdf-schema#label>	"Sounds"@en	 .
 <http://rdaregistry.info/termList/RDAContentType/1012>	<http://www.w3.org/2000/01/rdf-schema#label>	"Lyder"@no	 .
-<http://rdaregistry.info/termList/RDAContentType/1013>  a abi:Contenttype .
+<http://rdaregistry.info/termList/RDAContentType/1013>  a entedit:Contenttype .
 <http://rdaregistry.info/termList/RDAContentType/1013>	<http://www.w3.org/2000/01/rdf-schema#label>	"Spoken word"@en	 .
 <http://rdaregistry.info/termList/RDAContentType/1013>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tale"@no	 .
-<http://rdaregistry.info/termList/RDAContentType/1014>  a abi:Contenttype .
+<http://rdaregistry.info/termList/RDAContentType/1014>  a entedit:Contenttype .
 <http://rdaregistry.info/termList/RDAContentType/1014>	<http://www.w3.org/2000/01/rdf-schema#label>	"Still image"@en	 .
 <http://rdaregistry.info/termList/RDAContentType/1014>	<http://www.w3.org/2000/01/rdf-schema#label>	"Stillbilde"@no	 .
-<http://rdaregistry.info/termList/RDAContentType/1015>  a abi:Contenttype .
+<http://rdaregistry.info/termList/RDAContentType/1015>  a entedit:Contenttype .
 <http://rdaregistry.info/termList/RDAContentType/1015>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tactile image"@en	 .
 <http://rdaregistry.info/termList/RDAContentType/1015>	<http://www.w3.org/2000/01/rdf-schema#label>	"Taktilt bilde"@no	 .
-<http://rdaregistry.info/termList/RDAContentType/1016>  a abi:Contenttype .
+<http://rdaregistry.info/termList/RDAContentType/1016>  a entedit:Contenttype .
 <http://rdaregistry.info/termList/RDAContentType/1016>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tactile notated music"@en	 .
 <http://rdaregistry.info/termList/RDAContentType/1016>	<http://www.w3.org/2000/01/rdf-schema#label>	"Taktil musikknotasjon"@no	 .
-<http://rdaregistry.info/termList/RDAContentType/1017>  a abi:Contenttype .
+<http://rdaregistry.info/termList/RDAContentType/1017>  a entedit:Contenttype .
 <http://rdaregistry.info/termList/RDAContentType/1017>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tactile notated movement"@en	 .
 <http://rdaregistry.info/termList/RDAContentType/1017>	<http://www.w3.org/2000/01/rdf-schema#label>	"Taktil bevegelsesnotasjon"@no	 .
-<http://rdaregistry.info/termList/RDAContentType/1018>  a abi:Contenttype .
+<http://rdaregistry.info/termList/RDAContentType/1018>  a entedit:Contenttype .
 <http://rdaregistry.info/termList/RDAContentType/1018>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tactile text"@en	 .
 <http://rdaregistry.info/termList/RDAContentType/1018>	<http://www.w3.org/2000/01/rdf-schema#label>	"Taktil tekst"@no	 .
-<http://rdaregistry.info/termList/RDAContentType/1019>  a abi:Contenttype .
+<http://rdaregistry.info/termList/RDAContentType/1019>  a entedit:Contenttype .
 <http://rdaregistry.info/termList/RDAContentType/1019>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tactile three-dimensional form"@en	 .
 <http://rdaregistry.info/termList/RDAContentType/1019>	<http://www.w3.org/2000/01/rdf-schema#label>	"Taktil tredimensjonal form"@no	 .
-<http://rdaregistry.info/termList/RDAContentType/1020>  a abi:Contenttype .
+<http://rdaregistry.info/termList/RDAContentType/1020>  a entedit:Contenttype .
 <http://rdaregistry.info/termList/RDAContentType/1020>	<http://www.w3.org/2000/01/rdf-schema#label>	"Text"@en	 .
 <http://rdaregistry.info/termList/RDAContentType/1020>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tekst"@no	 .
-<http://rdaregistry.info/termList/RDAContentType/1021>  a abi:Contenttype .
+<http://rdaregistry.info/termList/RDAContentType/1021>  a entedit:Contenttype .
 <http://rdaregistry.info/termList/RDAContentType/1021>	<http://www.w3.org/2000/01/rdf-schema#label>	"Three-dimensional form"@en	 .
 <http://rdaregistry.info/termList/RDAContentType/1021>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tredimensjonal form"@no	 .
-<http://rdaregistry.info/termList/RDAContentType/1022>  a abi:Contenttype .
+<http://rdaregistry.info/termList/RDAContentType/1022>  a entedit:Contenttype .
 <http://rdaregistry.info/termList/RDAContentType/1022>	<http://www.w3.org/2000/01/rdf-schema#label>	"Three-dimensional moving image"@en	 .
 <http://rdaregistry.info/termList/RDAContentType/1022>	<http://www.w3.org/2000/01/rdf-schema#label>	"Tredimensjonalt levende bilde"@no	 .
-<http://rdaregistry.info/termList/RDAContentType/1023>  a abi:Contenttype .
+<http://rdaregistry.info/termList/RDAContentType/1023>  a entedit:Contenttype .
 <http://rdaregistry.info/termList/RDAContentType/1023>	<http://www.w3.org/2000/01/rdf-schema#label>	"Two-dimensional moving image"@en	 .
 <http://rdaregistry.info/termList/RDAContentType/1023>	<http://www.w3.org/2000/01/rdf-schema#label>	"Todimensjonalt levende bilde"@no	 .
-<http://rdaregistry.info/termList/RDAContentType/1024>  a abi:Contenttype .
+<http://rdaregistry.info/termList/RDAContentType/1024>  a entedit:Contenttype .
 <http://rdaregistry.info/termList/RDAContentType/1024>	<http://www.w3.org/2000/01/rdf-schema#label>	"Performed movement"@en	 .
 <http://rdaregistry.info/termList/RDAContentType/1024>	<http://www.w3.org/2000/01/rdf-schema#label>	"Fremført bevegelse"@en	 .
 
 
-<http://rdaregistry.info/termList/RDAMediaType/1001>    a   abi:Mediatype .
+<http://rdaregistry.info/termList/RDAMediaType/1001>    a   entedit:Mediatype .
 <http://rdaregistry.info/termList/RDAMediaType/1001>	<http://www.w3.org/2000/01/rdf-schema#label>	"Audio"@en	 .
 <http://rdaregistry.info/termList/RDAMediaType/1001>	<http://www.w3.org/2000/01/rdf-schema#label>	"Lydmedier"@no	 .
-<http://rdaregistry.info/termList/RDAMediaType/1002>    a   abi:Mediatype .
+<http://rdaregistry.info/termList/RDAMediaType/1002>    a   entedit:Mediatype .
 <http://rdaregistry.info/termList/RDAMediaType/1002>	<http://www.w3.org/2000/01/rdf-schema#label>	"Microform"@en	 .
 <http://rdaregistry.info/termList/RDAMediaType/1002>	<http://www.w3.org/2000/01/rdf-schema#label>	"Mikroform"@no	 .
-<http://rdaregistry.info/termList/RDAMediaType/1003>    a   abi:Mediatype .
+<http://rdaregistry.info/termList/RDAMediaType/1003>    a   entedit:Mediatype .
 <http://rdaregistry.info/termList/RDAMediaType/1003>	<http://www.w3.org/2000/01/rdf-schema#label>	"Computer"@en	 .
 <http://rdaregistry.info/termList/RDAMediaType/1003>	<http://www.w3.org/2000/01/rdf-schema#label>	"Datamaskin"@no	 .
-<http://rdaregistry.info/termList/RDAMediaType/1004>    a   abi:Mediatype .
+<http://rdaregistry.info/termList/RDAMediaType/1004>    a   entedit:Mediatype .
 <http://rdaregistry.info/termList/RDAMediaType/1004>	<http://www.w3.org/2000/01/rdf-schema#label>	"Microscopic"@en	 .
 <http://rdaregistry.info/termList/RDAMediaType/1004>	<http://www.w3.org/2000/01/rdf-schema#label>	"Mikroskopisk"@no	 .
-<http://rdaregistry.info/termList/RDAMediaType/1005>    a   abi:Mediatype .
+<http://rdaregistry.info/termList/RDAMediaType/1005>    a   entedit:Mediatype .
 <http://rdaregistry.info/termList/RDAMediaType/1005>	<http://www.w3.org/2000/01/rdf-schema#label>	"Projected"@en	 .
 <http://rdaregistry.info/termList/RDAMediaType/1005>	<http://www.w3.org/2000/01/rdf-schema#label>	"Projisert"@no	 .
-<http://rdaregistry.info/termList/RDAMediaType/1006>    a   abi:Mediatype .
+<http://rdaregistry.info/termList/RDAMediaType/1006>    a   entedit:Mediatype .
 <http://rdaregistry.info/termList/RDAMediaType/1006>	<http://www.w3.org/2000/01/rdf-schema#label>	"Stereographic"@en	 .
 <http://rdaregistry.info/termList/RDAMediaType/1006>	<http://www.w3.org/2000/01/rdf-schema#label>	"Stereografisk"@no	 .
-<http://rdaregistry.info/termList/RDAMediaType/1007>    a   abi:Mediatype .
+<http://rdaregistry.info/termList/RDAMediaType/1007>    a   entedit:Mediatype .
 <http://rdaregistry.info/termList/RDAMediaType/1007>	<http://www.w3.org/2000/01/rdf-schema#label>	"Unmediated"@en	 .
 <http://rdaregistry.info/termList/RDAMediaType/1007>	<http://www.w3.org/2000/01/rdf-schema#label>	"Uformidlet"@no	 .
-<http://rdaregistry.info/termList/RDAMediaType/1008>    a   abi:Mediatype .
+<http://rdaregistry.info/termList/RDAMediaType/1008>    a   entedit:Mediatype .
 <http://rdaregistry.info/termList/RDAMediaType/1008>	<http://www.w3.org/2000/01/rdf-schema#label>	"Video"@en	 .
 <http://rdaregistry.info/termList/RDAMediaType/1008>	<http://www.w3.org/2000/01/rdf-schema#label>	"Video"@no	 .

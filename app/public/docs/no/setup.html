@@ -279,7 +279,7 @@ EntEdit/<br>
 │   ├── types/          <span style="color: var(--text-secondary);">← Vokabularfiler (lastes inn i GraphDB)</span><br>
 │   ├── testdata/       <span style="color: var(--text-secondary);">← Eksempel-RDF-entiteter</span><br>
 │   ├── graphdb/        <span style="color: var(--text-secondary);">← SPARQL-koblingsdefinisjoner</span><br>
-│   └── inference rules/<span style="color: var(--text-secondary);">← GraphDB-resonneringsregler</span><br>
+│   └── inference_rules/<span style="color: var(--text-secondary);">← GraphDB-resonneringsregler</span><br>
 ├── docker/<br>
 │   ├── graphdb/        <span style="color: var(--text-secondary);">← Repositoriumkonfigurasjon + init-skript</span><br>
 │   └── nginx/          <span style="color: var(--text-secondary);">← Webserver- og proxy-konfigurasjon</span><br>
@@ -345,15 +345,15 @@ EntEdit/<br>
     <th>Innhold</th>
   </tr>
   <tr>
-    <td><code>database/types/entedit profile/</code></td>
+    <td><code>database/types/entedit_profile/</code></td>
     <td>EntEdit-applikasjonsprofilen — definerer hvilke klasser og egenskaper som er aktive, visningsrekkefølgen og status. <strong>Denne er påkrevd.</strong></td>
   </tr>
   <tr>
-    <td><code>database/types/rda vocabulary/</code></td>
+    <td><code>database/types/rda_vocabulary/</code></td>
     <td>RDA-ontologien (Resource Description and Access) — klasse- og egenskapsdefinisjoner med etiketter på flere språk.</td>
   </tr>
   <tr>
-    <td><code>database/types/term vocabularies/</code></td>
+    <td><code>database/types/term_vocabularies/</code></td>
     <td>Kontrollerte verdilister — språk, innholdstyper, medietyper, bærertyper, verktyper.</td>
   </tr>
 </table>

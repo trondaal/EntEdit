@@ -1,0 +1,1794 @@
+@prefix entedit: <http://oslomet.no/abi/vocab#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdac: <http://rdaregistry.info/Elements/c/> .
+@prefix rdaao: <http://rdaregistry.info/Elements/a/object/> .
+@prefix rdawo: <http://rdaregistry.info/Elements/w/object/> .
+@prefix rdaeo: <http://rdaregistry.info/Elements/e/object/> .
+@prefix rdamo: <http://rdaregistry.info/Elements/m/object/> .
+@prefix rdaio: <http://rdaregistry.info/Elements/i/object/> .
+@prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
+@prefix rdawd: <http://rdaregistry.info/Elements/w/datatype/> .
+@prefix rdaed: <http://rdaregistry.info/Elements/e/datatype/> .
+@prefix rdamd: <http://rdaregistry.info/Elements/m/datatype/> .
+@prefix rdaid: <http://rdaregistry.info/Elements/i/datatype/> .
+
+entedit:StatusLiteral a rdfs:Datatype ;
+    owl:oneOf ("core wemi property" "data property" "object property" "class" "controlled property" "deprecated" "not used") .
+
+entedit:status
+    a owl:DatatypeProperty ;
+    rdfs:range entedit:StatusLiteral ;
+    rdfs:label "has status (literal)" .
+
+entedit:order a owl:DatatypeProperty .
+
+#Adding some classes for the vocabularies used ta facilitate filtering by range
+entedit:Contenttype
+  a owl:Class ;
+  rdfs:label "Innholdstype"@no, "Content type"@en .
+
+entedit:Carriertype
+  a owl:Class ;
+  rdfs:label "Bærertype"@no, "Carrier types"@en .
+
+entedit:Mediatype
+  a owl:Class ;
+  rdfs:label "Medietype"@no, "Media type"@en .
+
+entedit:Language
+  a owl:Class ;
+  rdfs:label "Språk"@no, "Language"@en .
+
+entedit:Worktype
+  a owl:Class ;
+  rdfs:label "Kategori av verk"@no, "Category of work"@en .
+
+entedit:Genretype
+  a owl:Class ;
+  rdfs:label  "Sjanger og form"@no, "Genre and form"@en .
+
+entedit:P01
+  a rdf:Property ;
+  entedit:status "controlled property" ;
+  rdfs:subPropertyOf rdawo:P10004 ;
+  rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
+  rdfs:range entedit:Worktype ;
+  rdfs:label "Verkskategori"@no, "Category of work"@en.
+
+entedit:P02
+  a rdf:Property ;
+  entedit:status "controlled property" ;
+  rdfs:subPropertyOf rdawo:P10004 ;
+  rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
+  rdfs:range entedit:Genretype ;
+  rdfs:label "Sjanger eller form"@no, "Genre or form"@en.
+
+#All classes with status "class" are displayed in the entity browsers class display
+rdac:C10002 entedit:order 1 ; entedit:status "class" .  # "Agent"@en .
+rdac:C10001 entedit:order 2 ; entedit:status "class" .  # "Work"@en .
+rdac:C10006 entedit:order 3 ; entedit:status "class" .  # "Expression"@en .
+rdac:C10007 entedit:order 4 ; entedit:status "class" .  # "Manifestation"@en .
+rdac:C10003 entedit:order 5 ; entedit:status "class" .  # "Item"@en .
+
+#Agent profile, data properties
+rdaad:P50413	entedit:status "data property" ; entedit:order 1 ; rdfs:label "navn"@no . #"name"@en . Foretrukket navn
+rdaad:P50415	entedit:status "data property" ; entedit:order 2 ; rdfs:label "variant av navn"@no . #"variantname"@en .
+rdaad:P50339	entedit:status "data property" ; entedit:order 3 ; rdfs:label "årstall"@no . #"dates"@en .
+
+#Work profile, data properties
+#rdawd:P10088	entedit:status "data property" ; entedit:order 1 ; rdfs:label "tittel"@no . #"title"@en .
+rdawd:P10223	entedit:status "data property" ; entedit:order 1 ; rdfs:label "tittel"@no . #"titlepreferred"@en .
+rdawd:P10086	entedit:status "data property" ; entedit:order 2 ; rdfs:label "tittelvariant"@no . #"titlevariant"@en .
+rdawd:P10012	entedit:status "data property" ; entedit:order 3 ; rdfs:label "nummerering"@no . #"numbering"@en .
+rdawd:P10256	entedit:status "data property" ; entedit:order 4 ; rdfs:label "emne"@no . #"emne"@en .
+rdawd:P10219	entedit:status "data property" ; entedit:order 5 ; rdfs:label "dato"@no . #"date"@en ;
+rdawd:P10330	entedit:status "data property" ; entedit:order 6 ; rdfs:label "note"@no . #"note on Work"@en .
+#rdawd:P10004	entedit:status "data property" ; rdfs:label "har kategori av verk"@no . #"type"@en .
+
+# Defining the object type version of this property the type "controlled property"
+# Also using ad hoc range type to be able to filter the relevant values in the user interface
+#rdawo:P10004	    entedit:status "controlled property" ; rdfs:range entedit:Worktype ; rdfs:label "verkstype"@no . #"type"@en .
+
+#Expression profile, data properties
+#rdaed:P20006	entedit:status "data property" ; rdfs:label "har språk i uttrykk"@no . #"language"@en .
+#rdaed:P20001	entedit:status "data property" ; rdfs:label "har innholdstype"@no . #"content"@en .
+#rdaed:P20312	entedit:status "data property" ; entedit:order   1 ; rdfs:label "tittel"@no . #"title"@en .
+rdaed:P20315	entedit:status "data property" ; entedit:order   1; rdfs:label "tittel"@no . #"titlepreferred"@en .
+rdaed:P20316	entedit:status "data property" ; entedit:order   2 ; rdfs:label "tittelvariant"@no . #"titlevariant"@en .
+#rdaed:P20071	entedit:status "data property" ; rdfs:label "har note om uttrykk"@no . #"contentsnote"@en .
+
+rdaeo:P20006	entedit:status "controlled property" ;
+              rdfs:domain  <http://rdaregistry.info/Elements/c/C10006> ; #missing in RDA
+              rdfs:range  entedit:Language ;
+              rdfs:label "språk"@no . #"language"@en .
+
+rdaeo:P20001	entedit:status "controlled property" ;
+              rdfs:domain  <http://rdaregistry.info/Elements/c/C10006> ; #missing in RDA
+              rdfs:range  entedit:Contenttype ;
+              rdfs:label "innholdstype"@no . #"content"@en .
+
+#Manifestation profile
+rdamd:P30156	entedit:status "data property" ; entedit:order 1 ; rdfs:label "tittel"@no . #"title"@en .
+rdamd:P30142	entedit:status "data property" ; entedit:order 2 ; rdfs:label "annen tittelinformasjon"@no . #"subtitle"@en .
+rdamd:P30117	entedit:status "data property" ; entedit:order 3 ; rdfs:label "ansvarsangivelse"@no . #"responsibility"@en .
+#rdamd:P30134	entedit:status "data property" ; entedit:order 4 ; rdfs:label "har tittel for manifestasjon"@no . #"tittel"@en .
+#rdamd:P30014	entedit:status "data property" ; entedit:order 5 ; rdfs:label "nummer for del"@no . #"numbering"@en .
+
+rdamd:P30107	entedit:status "data property" ; entedit:order 6 ; rdfs:label "utgave"@no . #"edition"@en .
+rdamd:P30182	entedit:status "data property" ; entedit:order 7 ; rdfs:label "omfang"@no . #"extent"@en .
+rdamd:P30169	entedit:status "data property" ; entedit:order 8 ; rdfs:label "dimensjon"@no . #"dimensions"@en .
+
+rdamd:P30076	entedit:status "data property" ; entedit:order 9 ; rdfs:label "navn på utgiver"@no . #"publisher"@en
+#rdamd:P30083	entedit:status "data property" ; entedit:order 9 ; rdfs:label "utgiver"@no . #"publisher"@en .
+rdamd:P30088	entedit:status "data property" ; entedit:order 10 ; rdfs:label "utgivelsessted"@no . #"publicationplace"@en .
+rdamd:P30011	entedit:status "data property" ; entedit:order 11 ; rdfs:label "utgivelsesdato"@no . #"publicationdate"@en .
+
+#rdamd:P30007	entedit:status "data property" ; entedit:order 12 ; rdfs:label "har tidsrom for copyright"@no . #"copyright date"@en .
+
+rdamd:P30174	entedit:status "data property" ; rdfs:label "har navn på produsent"@no . #"producer"@en .
+rdamd:P30086	entedit:status "data property" ; rdfs:label "har produksjonssted"@no . #"productionplace"@en .
+rdamd:P30009	entedit:status "data property" ; rdfs:label "har tidsrom for produksjon"@no . #"productiondate"@en .
+
+#rdamd:P30033	entedit:status "data property" ; rdfs:label "har del av manifestasjon"@no . #"contentsnote"@en .
+#rdamd:P30111	entedit:status "data property" ; rdfs:label "har opplysninger om utgivelse"@no . #"publication"@en .
+#rdamd:P30110	entedit:status "data property" ; rdfs:label "har produksjonsangivelse"@no . #"production"@en .
+#rdamd:P30109	entedit:status "data property" ; rdfs:label "har framstillingsangivelse"@no . #"manufacture"@en .
+#rdamd:P30108	entedit:status "data property" ; rdfs:label "har distribusjonsopplysninger"@no . #"distribution"@en .
+
+#rdamd:P30085	entedit:status "data property" ; rdfs:label "har distribusjonssted"@no . #"distributionplace"@en .
+#rdamd:P30173	entedit:status "data property" ; rdfs:label "har navn på distributør"@no . #"distributor"@en .
+#rdamd:P30008	entedit:status "data property" ; rdfs:label "har tidsrom for distribusjon"@no . #"distributiondate"@en .
+
+#rdamd:P30087	entedit:status "data property" ; rdfs:label "har framstillingssted"@no . #"manufactureplace"@en .
+#rdamd:P30175	entedit:status "data property" ; rdfs:label "har navn på tilvirker"@no . #"manufacturer"@en .
+#rdamd:P30010	entedit:status "data property" ; rdfs:label "har tidsrom for framstilling"@no . #"manufacturedate"@en .
+rdamd:P30137	entedit:status "data property" ; entedit:order 30 ; rdfs:label "note"@no . #"note"@en .
+rdamd:P30004	entedit:status "data property" ; entedit:order 31 ; rdfs:label "identifikator"@no . #"identifier"@en .
+
+
+#rdamd:P30002	entedit:status "data property" ; rdfs:label "har medietype"@no . #"mediatype"@en .
+#rdamd:P30001	entedit:status "data property" ; rdfs:label "har bærertype"@no . #"carrier"@en .
+rdamd:P30106	entedit:status "data property" ; entedit:order 20 ; rdfs:label "serieangivelse"@no . #"series"@en .
+rdamd:P30165	entedit:status "data property" ; entedit:order 21 ; rdfs:label "nummerering i serie"@no . #"seriesnumbering"@en .
+#rdamd:P30050	entedit:status "data property" ; rdfs:label "har note om hefte, del, eller versjon brukt som grunnlag for identifisering av manifestasjon"@no . #"partnote"@en .
+
+rdamo:P30002	  entedit:status "controlled property" ;
+                rdfs:domain  <http://rdaregistry.info/Elements/c/C10007> ; #missing in RDA
+                rdfs:range  entedit:Mediatype ;
+                rdfs:label "medietype"@no . #"mediatype"@en .
+
+rdamo:P30001	  entedit:status "controlled property" ;
+                rdfs:domain  <http://rdaregistry.info/Elements/c/C10007> ; #missing in RDA
+                rdfs:range  entedit:Carriertype ;
+                rdfs:label "bærertype"@no . #"carrier"@en .
+
+#Item properties
+rdaid:P40001 entedit:status "data property" ; entedit:order 1 ; rdfs:label "identifikator"@no . #"identifier"@en .
+rdaid:P40028 entedit:status "data property" ; entedit:order 2 ; rdfs:label "note"@no . #"note"@en .
+
+#Basic WEMI types
+
+rdawo:P10078	entedit:status	"core wemi property" ; entedit:order 1 ; rdfs:label "har uttrykk av verk"@no . #	has expression of work	rdac:C10001	rdac:C10006
+rdaeo:P20231	entedit:status	"core wemi property" ; entedit:order 2 ; rdfs:label "er uttrykk av verk"@no . #	has work expressed	rdac:C10006	rdac:C10001
+
+rdamo:P30139	entedit:status	"core wemi property" ; entedit:order 3 ; rdfs:label "har uttrykk"@no . #	has expression manifested	rdac:C10007	rdac:C10006
+rdaeo:P20059	entedit:status	"core wemi property" ; entedit:order 4 ; rdfs:label "har manifestasjon"@no . #	has manifestation of expression	rdac:C10006	rdac:C10007
+
+rdamo:P30103  entedit:status	"core wemi property" ; entedit:order 5 ; rdfs:label "har eksemplar"@no . # has item of manifestation
+rdaio:P40049  entedit:status	"core wemi property" ; entedit:order 6 ; rdfs:label "er eksemplar av"@no . #"has manifestation exemplified" [@en; no @no]
+
+#Subject properties
+
+#rdawo:P10256	entedit:status	"object property" ; rdfs:label "har emne"@no . #   "har emne"@no .
+rdawo:P10319	entedit:status	"object property" ; rdfs:label "har emne (agent)"@no . #   "har emne agent"@no .
+rdaao:P50366	entedit:status	"object property" ; rdfs:label "er emne for"@no . #	is subject agent of	rdac:C10002	rdac:C10001
+
+#rdawo:P10320	entedit:status	"object property" ; rdfs:label "har emne kollektiv agent"@no . #   "har emne kollektiv agent"@no .
+#rdawo:P10263	entedit:status	"object property" ; rdfs:label "har emne (korporasjon)"@no . #   "har emne (korporasjon)"@no .
+#rdawo:P10258	entedit:status	"object property" ; rdfs:label "har emne (uttrykk)"@no . #   "har emne (uttrykk)"@no .
+#rdawo:P10262	entedit:status	"object property" ; rdfs:label "har emne (familie)"@no . #   "har emne (familie)"@no .
+#rdawo:P10260	entedit:status	"object property" ; rdfs:label "har emne (eksemplar)"@no . #   "har emne (eksemplar)"@no .
+#rdawo:P10259	entedit:status	"object property" ; rdfs:label "har emne (manifestasjon)"@no . #   "har emne (manifestasjon)"@no .
+#rdawo:P10323	entedit:status	"object property" ; rdfs:label "har emne nomen"@no . #   "har emne nomen"@no .
+#rdawo:P10261	entedit:status	"object property" ; rdfs:label "har emne (person)"@no . #   "har emne (person)"@no .
+#rdawo:P10321	entedit:status	"object property" ; rdfs:label "har emne sted"@no . #   "har emne sted"@no .
+#rdawo:P10324	entedit:status	"object property" ; rdfs:label "har emne RDA-entitet"@no . #   "har emne RDA-entitet"@no .
+#rdawo:P10322	entedit:status	"object property" ; rdfs:label "har emne tidsrom"@no . #   "har emne tidsrom"@no .
+rdawo:P10257	entedit:status	"object property" ; rdfs:label "har emne (verk)"@no . #   "har emne (verk)"@no .
+rdawo:P10264	entedit:status	"object property" ; rdfs:label "er emne for"@no . #   "er emneverk for"@no .
+
+#Agent object properties
+rdaao:P50048	entedit:status	"object property" ; rdfs:label "er filmregissør for"@no . #	is film director agent of	rdac:C10002	rdac:C10001
+rdawo:P10013	entedit:status	"object property" ; rdfs:label "har filmregissør"@no . #	has film director agent	rdac:C10001	rdac:C10002
+
+rdaao:P50049	entedit:status	"object property" ; rdfs:label "er radioregissør for"@no . #	is radio director agent of	rdac:C10002	rdac:C10001
+rdawo:P10014	entedit:status	"object property" ; rdfs:label "har radioregissør"@no . #	has radio director agent	rdac:C10001	rdac:C10002
+
+rdaao:P50050	entedit:status	"object property" ; rdfs:label "er fjernsynsregissør for"@no . #	is television director agent of	rdac:C10002	rdac:C10001
+rdawo:P10015	entedit:status	"object property" ; rdfs:label "har fjernsynsregissør"@no . #	has television director agent	rdac:C10001	rdac:C10002
+
+#rdaao:P50130	entedit:status	"object property" ; rdfs:label "utgiverorgan"@no . #	is issuing agent of	rdac:C10002	rdac:C10001
+#rdawo:P10046	entedit:status	"object property" ; rdfs:label "har utgiver"@no . #	has issuing agent	rdac:C10001	rdac:C10002
+
+#rdaao:P50132	entedit:status	"object property" ; rdfs:label "er agent som dediserer for"@no . #	is dedicator agent of	rdac:C10002	rdac:C10001
+#rdawo:P10048	entedit:status	"object property" ; rdfs:label "har agent som dediserer"@no . #	has dedicator agent	rdac:C10001	rdac:C10002
+
+#rdaao:P50166	entedit:status	"object property" ; rdfs:label "er beæret agent av verk for"@no . #	is honouree agent of work of	rdac:C10002	rdac:C10001
+#rdawo:P10049	entedit:status	"object property" ; rdfs:label "har beæret agent av verk"@no . #	has honouree agent of work	rdac:C10001	rdac:C10002
+
+rdaao:P50184	entedit:status	"object property" ; rdfs:label "er programmerer av"@no . #	is programmer agent of	rdac:C10002	rdac:C10001
+rdawo:P10050	entedit:status	"object property" ; rdfs:label "har programmerer"@no . #	has programmer agent	rdac:C10001	rdac:C10002
+
+rdaao:P50185	entedit:status	"object property" ; rdfs:label "er designer av"@no . #	is designer agent of	rdac:C10002	rdac:C10001
+rdawo:P10051	entedit:status	"object property" ; rdfs:label "har designer"@no . #	has designer agent	rdac:C10001	rdac:C10002
+
+rdaao:P50186	entedit:status	"object property" ; rdfs:label "er kartograf for"@no . #	is cartographer agent of work of	rdac:C10002	rdac:C10001
+rdawo:P10052	entedit:status	"object property" ; rdfs:label "har kartograf for verk"@no . #	has cartographer agent of work	rdac:C10001	rdac:C10002
+
+rdaao:P50187	entedit:status	"object property" ; rdfs:label "er komponist av"@no . #	is composer agent of work of	rdac:C10002	rdac:C10001
+rdawo:P10053	entedit:status	"object property" ; rdfs:label "har komponist for verk"@no . #	has composer agent of work	rdac:C10001	rdac:C10002
+
+rdaao:P50188	entedit:status	"object property" ; rdfs:label "er oppfinner av"@no . #	is inventor agent of	rdac:C10002	rdac:C10001
+rdawo:P10054	entedit:status	"object property" ; rdfs:label "har oppfinner"@no . #	has inventor agent	rdac:C10001	rdac:C10002
+
+rdaao:P50189	entedit:status	"object property" ; rdfs:label "er utarbeider av"@no . #	is compiler agent of	rdac:C10002	rdac:C10001
+rdawo:P10055	entedit:status	"object property" ; rdfs:label "har utarbeider"@no . #	has compiler agent	rdac:C10001	rdac:C10002
+
+rdaao:P50190	entedit:status	"object property" ; rdfs:label "er fotograf av"@no . #	is photographer agent of work of	rdac:C10002	rdac:C10001
+rdawo:P10056	entedit:status	"object property" ; rdfs:label "har fotograf for verk"@no . #	has photographer agent of work	rdac:C10001	rdac:C10002
+
+rdaao:P50191	entedit:status	"object property" ; rdfs:label "er intervjuer av"@no . #	is interviewer agent of work of	rdac:C10002	rdac:C10001
+rdawo:P10057	entedit:status	"object property" ; rdfs:label "har intervjuer for verk"@no . #	has interviewer agent of work	rdac:C10001	rdac:C10002
+
+rdaao:P50192	entedit:status	"object property" ; rdfs:label "er kunstner av"@no . #	is artist agent of	rdac:C10002	rdac:C10001
+rdawo:P10058	entedit:status	"object property" ; rdfs:label "har kunstner"@no . #	has artist agent	rdac:C10001	rdac:C10002
+
+rdaao:P50193	entedit:status	"object property" ; rdfs:label "er intervjuobjekt for verk for"@no . #	is interviewee agent of work of	rdac:C10002	rdac:C10001
+rdawo:P10059	entedit:status	"object property" ; rdfs:label "har intervjuobjekt for verk"@no . #	has interviewee agent of work	rdac:C10001	rdac:C10002
+
+rdaao:P50194	entedit:status	"object property" ; rdfs:label "er koreograf av"@no . #	is choreographer agent of	rdac:C10002	rdac:C10001
+rdawo:P10060	entedit:status	"object property" ; rdfs:label "har koreograf"@no . #	has choreographer agent	rdac:C10001	rdac:C10002
+
+rdaao:P50195	entedit:status	"object property" ; rdfs:label "forfatter"@no . #	is author agent of	rdac:C10002	rdac:C10001
+rdawo:P10061	entedit:status	"object property" ; rdfs:label "har forfatter"@no . #	has author agent	rdac:C10001	rdac:C10002
+
+rdaao:P50196	entedit:status	"object property" ; rdfs:label "er arkitekt av"@no . #	is architect agent of	rdac:C10002	rdac:C10001
+rdawo:P10062	entedit:status	"object property" ; rdfs:label "har arkitekt"@no . #	has architect agent	rdac:C10001	rdac:C10002
+
+rdaao:P50197	entedit:status	"object property" ; rdfs:label "er filmskaper av"@no . #	is filmmaker agent of	rdac:C10002	rdac:C10001
+rdawo:P10063	entedit:status	"object property" ; rdfs:label "har filmskaper"@no . #	has filmmaker agent	rdac:C10001	rdac:C10002
+
+rdaao:P50201	entedit:status	"object property" ; rdfs:label "er produsent av"@no . #	is producer agent of	rdac:C10002	rdac:C10001
+rdawo:P10064	entedit:status	"object property" ; rdfs:label "har produsent"@no . #	has producer agent	rdac:C10001	rdac:C10002
+
+rdaao:P50204	entedit:status	"object property" ; rdfs:label "er skaper av"@no . #	is creator agent of work of	rdac:C10002	rdac:C10001
+rdawo:P10065	entedit:status	"object property" ; rdfs:label "har skaper"@no . #	has creator agent of work	rdac:C10001	rdac:C10002
+
+rdaao:P50205	entedit:status	"object property" ; rdfs:label "er regissør av"@no . #	is director agent of	rdac:C10002	rdac:C10001
+rdawo:P10066	entedit:status	"object property" ; rdfs:label "har regissør"@no . #	has director agent	rdac:C10001	rdac:C10002
+
+rdaao:P50207	entedit:status	"object property" ; rdfs:label "er filmfotograf av"@no . #	is director agent of photography of	rdac:C10002	rdac:C10001
+rdawo:P10068	entedit:status	"object property" ; rdfs:label "har filmfotograf"@no . #	has director agent of photography	rdac:C10001	rdac:C10002
+
+#rdaao:P50208	entedit:status	"object property" ; rdfs:label "er agent som et verk er dedikert til "@no . #	is dedicatee agent of work of	rdac:C10002	rdac:C10001
+#rdawo:P10069	entedit:status	"object property" ; rdfs:label "har verk tilegnet til"@no . #	has dedicatee agent of work	rdac:C10001	rdac:C10002
+
+#rdaao:P50209	entedit:status	"object property" ; rdfs:label "adressat"@no . #	is addressee agent of	rdac:C10002	rdac:C10001
+#rdawo:P10070	entedit:status	"object property" ; rdfs:label "har adressat"@no . #	has addressee agent	rdac:C10001	rdac:C10002
+
+#rdaao:P50211	entedit:status	"object property" ; rdfs:label "konsulent"@no . #	is consultant agent of	rdac:C10002	rdac:C10001
+#rdawo:P10071	entedit:status	"object property" ; rdfs:label "har konsulent"@no . #	has consultant agent	rdac:C10001	rdac:C10002
+
+rdaao:P50213	entedit:status	"object property" ; rdfs:label "er filmprodusent av"@no . #	is film producer agent of	rdac:C10002	rdac:C10001
+rdawo:P10073	entedit:status	"object property" ; rdfs:label "har filmprodusent"@no . #	has film producer agent	rdac:C10001	rdac:C10002
+
+rdaao:P50214	entedit:status	"object property" ; rdfs:label "er radioprodusent av"@no . #	is radio producer agent of	rdac:C10002	rdac:C10001
+rdawo:P10074	entedit:status	"object property" ; rdfs:label "har radioprodusent"@no . #	has radio producer agent	rdac:C10001	rdac:C10002
+
+rdaao:P50215	entedit:status	"object property" ; rdfs:label "er fjernsynsprodusent av"@no . #	is television producer agent of	rdac:C10002	rdac:C10001
+rdawo:P10075	entedit:status	"object property" ; rdfs:label "har fjernsynsprodusent"@no . #	has television producer agent	rdac:C10001	rdac:C10002
+
+rdaao:P50221	entedit:status	"object property" ; rdfs:label "er landskapsarkitekt av"@no . #	is landscape architect agent of	rdac:C
+rdawo:P10200	entedit:status	"object property" ; rdfs:label "har landskapsarkitekt"@no . #	has landscape architect agent	rdac:C10001	rdac:C10002
+
+rdaao:P50222	entedit:status	"object property" ; rdfs:label "er skulptør av"@no . #	is sculptor agent of	rdac:C10002	rdac:C10001
+rdawo:P10202	entedit:status	"object property" ; rdfs:label "har skulptør"@no . #	has sculptor agent	rdac:C10001	rdac:C10002
+
+rdaao:P50223	entedit:status	"object property" ; rdfs:label "er manusforfatter av"@no . #	is screenwriter agent of	rdac:C10002	rdac:C10001
+rdawo:P10203	entedit:status	"object property" ; rdfs:label "har manusforfatter"@no . #	has screenwriter agent	rdac:C10001	rdac:C10002
+
+rdaao:P50224	entedit:status	"object property" ; rdfs:label "er sangtekstforfatter av"@no . #	is lyricist agent of	rdac:C10002	rdac:C10001
+rdawo:P10204	entedit:status	"object property" ; rdfs:label "har sangtekstforfatter"@no . #	has lyricist agent	rdac:C10001	rdac:C10002
+
+rdaao:P50225	entedit:status	"object property" ; rdfs:label "er librettist av"@no . #	is librettist agent of	rdac:C10002	rdac:C10001
+rdawo:P10205	entedit:status	"object property" ; rdfs:label "har librettist"@no . #	has librettist agent	rdac:C10001	rdac:C10002
+
+#rdaao:P50226	entedit:status	"object property" ; rdfs:label "er sponsor av"@no . #	has sponsored work of agent	rdac:C10002	rdac:C10001
+#rdawo:P10067	entedit:status	"object property" ; rdfs:label "har sponsor"@no . #	has sponsoring agent of work	rdac:C10001	rdac:C10002
+
+#rdaao:P50246	entedit:status	"object property" ; rdfs:label "kalligraf"@no . #	is calligrapher agent of	rdac:C10002	rdac:C10001
+#rdawo:P10253	entedit:status	"object property" ; rdfs:label "har kalligraf"@no . #	has calligrapher agent	rdac:C10001	rdac:C10002
+
+#rdaao:P50247	entedit:status	"object property" ; rdfs:label "bokkunstner"@no . #	is book artist agent of	rdac:C10002	rdac:C10001
+#rdawo:P10254	entedit:status	"object property" ; rdfs:label "har bokkunstner"@no . #	has book artist agent	rdac:C10001	rdac:C10002
+
+#rdaao:P50248	entedit:status	"object property" ; rdfs:label "rapportør"@no . #	is rapporteur agent of	rdac:C10002	rdac:C10001
+#rdawo:P10255	entedit:status	"object property" ; rdfs:label "har rapportør"@no . #	has rapporteur agent	rdac:C10001	rdac:C10002
+
+#rdaao:P50262	entedit:status	"object property" ; rdfs:label "oppdragsgiver"@no . #	is commissioning agent of	rdac:C10002	rdac:C10001
+#rdawo:P10287	entedit:status	"object property" ; rdfs:label "har oppdragsgiver"@no . #	has commissioning agent	rdac:C10001	rdac:C10002
+
+#rdaao:P50265	entedit:status	"object property" ; rdfs:label "forsker"@no . #	is researcher agent of	rdac:C10002	rdac:C10001
+#rdawo:P10293	entedit:status	"object property" ; rdfs:label "har forsker"@no . #	has researcher agent	rdac:C10001	rdac:C10002
+
+#rdaao:P50270	entedit:status	"object property" ; rdfs:label "arrangør"@no . #	is organizer agent of	rdac:C10002	rdac:C10001
+#rdawo:P10297	entedit:status	"object property" ; rdfs:label "har arrangør"@no . #	has organizer agent	rdac:C10001	rdac:C10002
+
+rdaao:P50289	entedit:status	"object property" ; rdfs:label "er redaksjonssjef for"@no . #	is editorial director agent of	rdac:C10002	rdac:C10001
+rdawo:P10298	entedit:status	"object property" ; rdfs:label "har redaksjonssjef"@no . #	has editorial director agent	rdac:C10001	rdac:C10002
+
+#rdaao:P50290	entedit:status	"object property" ; rdfs:label "er grunnlegger av verk av"@no . #	is founder agent of work of	rdac:C10002	rdac:C10001
+#rdawo:P10299	entedit:status	"object property" ; rdfs:label "har grunnlegger av verk"@no . #	has founder agent of work	rdac:C10001	rdac:C10002
+
+rdaao:P50293	entedit:status	"object property" ; rdfs:label "er remikser av"@no . #	is remix artist agent of	rdac:C10002	rdac:C10001
+rdawo:P10306	entedit:status	"object property" ; rdfs:label "har remikser"@no . #	has remix artist agent	rdac:C10001	rdac:C10002
+
+rdaao:P50294	entedit:status	"object property" ; rdfs:label "er casting director for"@no . #	is casting director agent of	rdac:C10002	rdac:C10001
+rdawo:P10305	entedit:status	"object property" ; rdfs:label "har casting director"@no . #	has casting director agent	rdac:C10001	rdac:C10002
+
+rdaao:P50295	entedit:status	"object property" ; rdfs:label "er lydprodusent av"@no . #	is audio producer agent of	rdac:C10002	rdac:C10001
+rdawo:P10304	entedit:status	"object property" ; rdfs:label "har lydprodusent"@no . #	has audio producer agent	rdac:C10001	rdac:C10002
+
+#rdaao:P50305	entedit:status	"object property" ; rdfs:label "har verk relatert til agent"@no . #	has related work of agent	rdac:C10002	rdac:C10001
+#rdawo:P10311	entedit:status	"object property" ; rdfs:label "har agent relatert til verk"@no . #	has related agent of work	rdac:C10001	rdac:C10002
+
+#rdaao:P50426	entedit:status	"object property" ; rdfs:label "er agent beskrevet i "@no . #	is agent described by	rdac:C10002	rdac:C10001
+#rdawo:P10338	entedit:status	"object property" ; rdfs:label "er beskrivelse av agent"@no . #	is description of agent	rdac:C10001	rdac:C10002
+
+rdaao:P50453	entedit:status	"object property" ; rdfs:label "er redaktør av "@no . #	is aggregator agent of	rdac:C10002	rdac:C10001
+rdawo:P10393	entedit:status	"object property" ; rdfs:label "har redaktør"@no . #	has aggregator agent	rdac:C10001	rdac:C10002
+
+#rdaao:P51108	entedit:status	"object property"	 . #	is agent described with metadata by	rdac:C10002	rdac:C10001
+#rdawo:P10610	entedit:status	"object property"	 . #	is metadata description of agent	rdac:C10001	rdac:C10002
+
+#rdaao:P51113	entedit:status	"object property"	 . #	is collector agent of 	rdac:C10002	rdac:C10001
+#rdawo:P10629	entedit:status	"object property"	 . #	has collector agent	rdac:C10001	rdac:C10002
+
+#rdaao:P51118	entedit:status	"object property"	 . #	is collection registrar agent of	rdac:C10002	rdac:C10001
+#rdawo:P10634	entedit:status	"object property"	 . #	has collection registrar agent	rdac:C10001	rdac:C10002
+
+#rdaao:P50309	entedit:status	"object property" ; rdfs:label "har agent relatert til agent"@no . #	has related agent of agent	rdac:C10002	rdac:C10002
+
+rdaao:P50070	entedit:status	"object property" ; rdfs:label "er dirigent av"@no . #	is conductor agent of	rdac:C10002	rdac:C10006
+rdaeo:P20011	entedit:status	"object property" ; rdfs:label "har dirigent"@no . #	has conductor agent	rdac:C10006	rdac:C10002
+
+rdaao:P50071	entedit:status	"object property" ; rdfs:label "er skuespiller i"@no . #	is actor agent of	rdac:C10002	rdac:C10006
+rdaeo:P20012	entedit:status	"object property" ; rdfs:label "har skuespiller"@no . #	has actor agent	rdac:C10006	rdac:C10002
+
+rdaao:P50072	entedit:status	"object property" ; rdfs:label "er programleder for"@no . #	is onscreen presenter agent of	rdac:C10002	rdac:C10006
+rdaeo:P20013	entedit:status	"object property" ; rdfs:label "har programleder"@no . #	has onscreen presenter agent	rdac:C10006	rdac:C10002
+
+rdaao:P50073	entedit:status	"object property" ; rdfs:label "er danser i"@no . #	is dancer agent of	rdac:C10002	rdac:C10006
+rdaeo:P20014	entedit:status	"object property" ; rdfs:label "har danser"@no . #	has dancer agent	rdac:C10006	rdac:C10002
+
+rdaao:P50074	entedit:status	"object property" ; rdfs:label "er instruktør for"@no . #	is instructor agent of	rdac:C10002	rdac:C10006
+rdaeo:P20015	entedit:status	"object property" ; rdfs:label "har instruktør"@no . #	has instructor agent	rdac:C10006	rdac:C10002
+
+#rdaao:P50075	entedit:status	"object property" ; rdfs:label "vert"@no . #	is host agent of	rdac:C10002	rdac:C10006
+#rdaeo:P20016	entedit:status	"object property" ; rdfs:label "har vert"@no . #	has host agent	rdac:C10006	rdac:C10002
+
+#rdaao:P50076	entedit:status	"object property" ; rdfs:label "ordstyrer"@no . #	is moderator agent of	rdac:C10002	rdac:C10006
+#rdaeo:P20017	entedit:status	"object property" ; rdfs:label "har ordstyrer"@no . #	has moderator agent	rdac:C10006	rdac:C10002
+
+rdaao:P50077	entedit:status	"object property" ; rdfs:label "er dukkefører av"@no . #	is puppeteer agent of	rdac:C10002	rdac:C10006
+rdaeo:P20018	entedit:status	"object property" ; rdfs:label "har dukkefører"@no . #	has puppeteer agent	rdac:C10006	rdac:C10002
+
+#rdaao:P50078	entedit:status	"object property" ; rdfs:label "er paneldeltaker i"@no . #	is panelist agent of	rdac:C10002	rdac:C10006
+#rdaeo:P20019	entedit:status	"object property" ; rdfs:label "har paneldeltaker"@no . #	has panelist agent	rdac:C10006	rdac:C10002
+
+rdaao:P50079	entedit:status	"object property" ; rdfs:label "er instrumentalist i"@no . #	is instrumentalist agent of	rdac:C10002	rdac:C10006
+rdaeo:P20020	entedit:status	"object property" ; rdfs:label "har instrumentalist"@no . #	has instrumentalist agent	rdac:C10006	rdac:C10002
+
+rdaao:P50080	entedit:status	"object property" ; rdfs:label "er kommentator i"@no . #	is commentator agent of	rdac:C10002	rdac:C10006
+rdaeo:P20021	entedit:status	"object property" ; rdfs:label "har kommentator"@no . #	has commentator agent	rdac:C10006	rdac:C10002
+
+rdaao:P50081	entedit:status	"object property" ; rdfs:label "er forteller av"@no . #	is narrator agent of	rdac:C10002	rdac:C10006
+rdaeo:P20022	entedit:status	"object property" ; rdfs:label "har forteller"@no . #	has narrator agent	rdac:C10006	rdac:C10002
+
+rdaao:P50082	entedit:status	"object property" ; rdfs:label "er historieforteller av"@no . #	is storyteller agent of	rdac:C10002	rdac:C10006
+rdaeo:P20023	entedit:status	"object property" ; rdfs:label "har historieforteller"@no . #	has storyteller agent	rdac:C10006	rdac:C10002
+
+rdaao:P50083	entedit:status	"object property" ; rdfs:label "er taler i"@no . #	is speaker agent of	rdac:C10002	rdac:C10006
+rdaeo:P20024	entedit:status	"object property" ; rdfs:label "har taler"@no . #	has speaker agent	rdac:C10006	rdac:C10002
+
+rdaao:P50084	entedit:status	"object property" ; rdfs:label "er sanger i"@no . #	is singer agent of	rdac:C10002	rdac:C10006
+rdaeo:P20025	entedit:status	"object property" ; rdfs:label "har sanger"@no . #	has singer agent	rdac:C10006	rdac:C10002
+
+rdaao:P50136	entedit:status	"object property" ; rdfs:label "er animatør i"@no . #	is animator agent of	rdac:C10002	rdac:C10006
+rdaeo:P20028	entedit:status	"object property" ; rdfs:label "har animatør"@no . #	has animator agent	rdac:C10006	rdac:C10002
+
+rdaao:P50137	entedit:status	"object property" ; rdfs:label "er arrangør av musikk for"@no . #	is arranger agent of music of	rdac:C10002	rdac:C10006
+rdaeo:P20029	entedit:status	"object property" ; rdfs:label "har arrangør av musikk"@no . #	has arranger agent of music	rdac:C10006	rdac:C10002
+
+rdaao:P50139	entedit:status	"object property" ; rdfs:label "er sceneregissør for"@no . #	is stage director agent of	rdac:C10002	rdac:C10006
+rdaeo:P20031	entedit:status	"object property" ; rdfs:label "har sceneregissør"@no . #	has stage director agent	rdac:C10006	rdac:C10002
+
+rdaao:P50140	entedit:status	"object property" ; rdfs:label "er intervjuer for uttrykk av"@no . #	is interviewer agent of expression of	rdac:C10002	rdac:C10006
+rdaeo:P20032	entedit:status	"object property" ; rdfs:label "har intervjuer for uttrykk"@no . #	has interviewer agent of expression	rdac:C10006	rdac:C10002
+
+#rdaao:P50141	entedit:status	"object property" ; rdfs:label "er teknisk tegner av"@no . #	is draftsman agent of	rdac:C10002	rdac:C10006
+#rdaeo:P20033	entedit:status	"object property" ; rdfs:label "har teknisk tegner"@no . #	has draftsman agent	rdac:C10006	rdac:C10002
+
+rdaao:P50142	entedit:status	"object property" ; rdfs:label "er avskriver av"@no . #	is transcriber agent of	rdac:C10002	rdac:C10006
+rdaeo:P20034	entedit:status	"object property" ; rdfs:label "har avskriver"@no . #	has transcriber agent	rdac:C10006	rdac:C10002
+
+rdaao:P50143	entedit:status	"object property" ; rdfs:label "er musikalregissør for"@no . #	is musical director agent of	rdac:C10002	rdac:C10006
+rdaeo:P20035	entedit:status	"object property" ; rdfs:label "har musikalregissør"@no . #	has musical director agent	rdac:C10006	rdac:C10002
+
+rdaao:P50144	entedit:status	"object property" ; rdfs:label "er kostymedesigner for"@no . #	is costume designer agent of	rdac:C10002	rdac:C10006
+rdaeo:P20036	entedit:status	"object property" ; rdfs:label "har kostymedesigner"@no . #	has costume designer agent	rdac:C10006	rdac:C10002
+
+rdaao:P50145	entedit:status	"object property" ; rdfs:label "er oversetter av"@no . #	is translator agent of	rdac:C10002	rdac:C10006
+rdaeo:P20037	entedit:status	"object property" ; rdfs:label "har oversetter"@no . #	has translator agent	rdac:C10006	rdac:C10002
+
+rdaao:P50146	entedit:status	"object property" ; rdfs:label "er scenograf i"@no . #	is art director agent of	rdac:C10002	rdac:C10006
+rdaeo:P20038	entedit:status	"object property" ; rdfs:label "har scenograf"@no . #	has art director agent	rdac:C10006	rdac:C10002
+
+rdaao:P50147	entedit:status	"object property" ; rdfs:label "er utøver i"@no . #	is performer agent of	rdac:C10002	rdac:C10006
+rdaeo:P20039	entedit:status	"object property" ; rdfs:label "har utøver"@no . #	has performer agent	rdac:C10006	rdac:C10002
+
+#rdaao:P50148	entedit:status	"object property" ; rdfs:label "protokollfører"@no . #	is court reporter agent of	rdac:C10002	rdac:C10006
+#rdaeo:P20040	entedit:status	"object property" ; rdfs:label "har protokollfører"@no . #	has court reporter agent	rdac:C10006	rdac:C10002
+
+#rdaao:P50155	entedit:status	"object property" ; rdfs:label "er intervjuobjekt for uttrykk for"@no . #	is interviewee agent of expression of	rdac:C10002	rdac:C10006
+#rdaeo:P20047	entedit:status	"object property" ; rdfs:label "har intervjuobjekt for uttrykk"@no . #	has interviewee agent of expression	rdac:C10006	rdac:C10002
+
+rdaao:P50157	entedit:status	"object property" ; rdfs:label "er forkorter av"@no . #	is abridger agent of	rdac:C10002	rdac:C10006
+rdaeo:P20049	entedit:status	"object property" ; rdfs:label "har forkorter"@no . #	has abridger agent	rdac:C10006	rdac:C10002
+
+rdaao:P50158	entedit:status	"object property" ; rdfs:label "er innspillingstekniker for"@no . #	is recording engineer agent of	rdac:C10002	rdac:C10006
+rdaeo:P20050	entedit:status	"object property" ; rdfs:label "har innspillingstekniker"@no . #	has recording engineer agent	rdac:C10006	rdac:C10002
+
+#rdaao:P50160	entedit:status	"object property" ; rdfs:label "er agent som gjør opptak av"@no . #	is recordist agent of	rdac:C10002	rdac:C10006
+#rdaeo:P20052	entedit:status	"object property" ; rdfs:label "har recordist"@no . #	has recordist agent	rdac:C10006	rdac:C10002
+
+rdaao:P50161	entedit:status	"object property" ; rdfs:label "er skaper av uttrykk av"@no . #	is creator agent of expression of	rdac:C10002	rdac:C10006
+rdaeo:P20053	entedit:status	"object property" ; rdfs:label "har skaper for uttrykk"@no . #	has creator agent of expression	rdac:C10006	rdac:C10002
+
+rdaao:P50180	entedit:status	"object property" ; rdfs:label "er programleder for"@no . #	is presenter agent of	rdac:C10002	rdac:C10006
+rdaeo:P20054	entedit:status	"object property" ; rdfs:label "har agent som presenterer"@no . #	has presenter agent	rdac:C10006	rdac:C10002
+
+rdaao:P50183	entedit:status	"object property" ; rdfs:label "er film editor for"@no . #	is editor agent of moving image work of	rdac:C10002	rdac:C10006
+rdaeo:P20055	entedit:status	"object property" ; rdfs:label "har film editor"@no . #	has editor agent of moving image work	rdac:C10006	rdac:C10002
+
+rdaao:P50198	entedit:status	"object property" ; rdfs:label "er produksjonsdesigner for"@no . #	is production designer agent of	rdac:C10002	rdac:C10006
+rdaeo:P20056	entedit:status	"object property" ; rdfs:label "har produksjonsdesigner"@no . #	has production designer agent	rdac:C10006	rdac:C10002
+
+rdaao:P50212	entedit:status	"object property" ; rdfs:label "er referent av"@no . #	is minute taker agent of	rdac:C10002	rdac:C10006
+rdaeo:P20058	entedit:status	"object property" ; rdfs:label "har referent"@no . #	has minute taker agent	rdac:C10006	rdac:C10002
+
+rdaao:P50217	entedit:status	"object property" ; rdfs:label "er stemmeskuespiller i"@no . #	is voice actor agent of	rdac:C10002	rdac:C10006
+rdaeo:P20070	entedit:status	"object property" ; rdfs:label "har stemmeskuespiller"@no . #	has voice actor agent	rdac:C10006	rdac:C10002
+
+rdaao:P50243	entedit:status	"object property" ; rdfs:label "er leverandør av visuelle effekter for"@no . #	is visual effects provider agent of	rdac:C10002	rdac:C10006
+rdaeo:P20257	entedit:status	"object property" ; rdfs:label "har leverandør av visuelle effekter"@no . #	has visual effects provider agent	rdac:C10006	rdac:C10002
+
+rdaao:P50244	entedit:status	"object property" ; rdfs:label "er leverandør av spesialeffekter for"@no . #	is special effects provider agent of	rdac:C10002	rdac:C10006
+rdaeo:P20258	entedit:status	"object property" ; rdfs:label "har leverandør av spesialeffekter"@no . #	has special effects provider agent	rdac:C10006	rdac:C10002
+
+#rdaao:P50245	entedit:status	"object property" ; rdfs:label "letterer"@no . #	is letterer agent of	rdac:C10002	rdac:C10006
+#rdaeo:P20259	entedit:status	"object property" ; rdfs:label "har letterer"@no . #	has letterer agent	rdac:C10006	rdac:C10002
+
+rdaao:P50255	entedit:status	"object property" ; rdfs:label "er lyddesigner i"@no . #	is sound designer agent of	rdac:C10002	rdac:C10006
+rdaeo:P20276	entedit:status	"object property" ; rdfs:label "har lyddesigner"@no . #	has sound designer agent	rdac:C10006	rdac:C10002
+
+rdaao:P50256	entedit:status	"object property" ; rdfs:label "er lysdesigner i"@no . #	is lighting designer agent of	rdac:C10002	rdac:C10006
+rdaeo:P20277	entedit:status	"object property" ; rdfs:label "har lysdesigner"@no . #	has lighting designer agent	rdac:C10006	rdac:C10002
+
+rdaao:P50261	entedit:status	"object property" ; rdfs:label "er deltaker i program"@no . #	is onscreen participant agent of	rdac:C10002	rdac:C10006
+rdaeo:P20279	entedit:status	"object property" ; rdfs:label "har deltaker i program"@no . #	has onscreen participant agent	rdac:C10006	rdac:C10002
+
+rdaao:P50263	entedit:status	"object property" ; rdfs:label "er programvareutvikler"@no . #	is software developer agent of	rdac:C10002	rdac:C10006
+rdaeo:P20280	entedit:status	"object property" ; rdfs:label "har programvareutvikler"@no . #	has software developer agent	rdac:C10006	rdac:C10002
+
+rdaao:P50266	entedit:status	"object property" ; rdfs:label "er fargelegger"@no . #	is colourist agent of	rdac:C10002	rdac:C10006
+rdaeo:P20283	entedit:status	"object property" ; rdfs:label "har fargelegger"@no . #	has colourist agent	rdac:C10006	rdac:C10002
+
+rdaao:P50267	entedit:status	"object property" ; rdfs:label "er sminkør"@no . #	is makeup artist agent of	rdac:C10002	rdac:C10006
+rdaeo:P20284	entedit:status	"object property" ; rdfs:label "har sminkør"@no . #	has makeup artist agent	rdac:C10006	rdac:C10002
+
+rdaao:P50268	entedit:status	"object property" ; rdfs:label "er kordirigent"@no . #	is choral conductor agent of	rdac:C10002	rdac:C10006
+rdaeo:P20285	entedit:status	"object property" ; rdfs:label "har kordirigent"@no . #	has choral conductor agent	rdac:C10006	rdac:C10002
+
+rdaao:P50269	entedit:status	"object property" ; rdfs:label "er instrumentaldirigent"@no . #	is instrumental conductor agent of	rdac:C10002	rdac:C10006
+rdaeo:P20286	entedit:status	"object property" ; rdfs:label "har instrumentaldirigent"@no . #	has instrumental conductor agent	rdac:C10006	rdac:C10002
+
+#rdaao:P50271	entedit:status	"object property" ; rdfs:label "er sensor"@no . #	is censor agent of	rdac:C10002	rdac:C10006
+#rdaeo:P20287	entedit:status	"object property" ; rdfs:label "har sensor"@no . #	has censor agent	rdac:C10006	rdac:C10002
+
+#rdaao:P50273	entedit:status	"object property" ; rdfs:label "er konservator for uttrykk for"@no . #	is restorationist agent of expression of	rdac:C10002	rdac:C10006
+#rdaeo:P20289	entedit:status	"object property" ; rdfs:label "har konservator for uttrykk"@no . #	has restorationist agent of expression	rdac:C10006	rdac:C10002
+
+rdaao:P50296	entedit:status	"object property" ; rdfs:label "er lydtekniker"@no . #	is audio engineer agent of	rdac:C10002	rdac:C10006
+rdaeo:P20292	entedit:status	"object property" ; rdfs:label "har lydtekniker"@no . #	has audio engineer agent	rdac:C10006	rdac:C10002
+
+rdaao:P50297	entedit:status	"object property" ; rdfs:label "er miksetekniker"@no . #	is mixing engineer agent of	rdac:C10002	rdac:C10006
+rdaeo:P20293	entedit:status	"object property" ; rdfs:label "har miksetekniker"@no . #	has mixing engineer agent	rdac:C10006	rdac:C10002
+
+rdaao:P50298	entedit:status	"object property" ; rdfs:label "er DJ"@no . #	is DJ agent of	rdac:C10002	rdac:C10006
+rdaeo:P20296	entedit:status	"object property" ; rdfs:label "har DJ"@no . #	has DJ agent	rdac:C10006	rdac:C10002
+
+rdaao:P50299	entedit:status	"object property" ; rdfs:label "er stemmeregissør"@no . #	is dubbing director agent of	rdac:C10002	rdac:C10006
+rdaeo:P20295	entedit:status	"object property" ; rdfs:label "har stemmeregissør"@no . #	has dubbing director agent	rdac:C10006	rdac:C10002
+
+rdaao:P50300	entedit:status	"object property" ; rdfs:label "er musikkprogrammerer"@no . #	is music programmer agent of	rdac:C10002	rdac:C10006
+rdaeo:P20294	entedit:status	"object property" ; rdfs:label "har musikkprogrammerer"@no . #	has music programmer agent	rdac:C10006	rdac:C10002
+
+#rdaao:P50306	entedit:status	"object property" ; rdfs:label "har uttrykk relatert til agent"@no . #	has related expression of agent	rdac:C10002	rdac:C10006
+#rdaeo:P20301	entedit:status	"object property" ; rdfs:label "har agent relatert til uttrykk"@no . #	has related agent of expression	rdac:C10006	rdac:C10002
+
+rdaao:P50447	entedit:status	"object property" ; rdfs:label "er omarbeider"@no . #	is reviser agent of	rdac:C10002	rdac:C10006
+rdaeo:P20327	entedit:status	"object property" ; rdfs:label "har omarbeider"@no . #	has reviser agent	rdac:C10006	rdac:C10002
+
+#rdaao:P50448	entedit:status	"object property" ; rdfs:label "er bidragsyter til sammenslutning for"@no . #	is contributor agent to amalgamation of	rdac:C10002	rdac:C10006
+#rdaeo:P20328	entedit:status	"object property" ; rdfs:label "har bidragsyter til sammenslutning"@no . #	has contributor agent to amalgamation	rdac:C10006	rdac:C10002
+
+#rdaao:P50449	entedit:status	"object property" ; rdfs:label "er bidragsyter til framføring av"@no . #	is contributor agent to performance of	rdac:C10002	rdac:C10006
+#rdaeo:P20329	entedit:status	"object property" ; rdfs:label "har bidragsyter til framføring"@no . #	has contributor agent to performance	rdac:C10006	rdac:C10002
+
+rdaao:P50450	entedit:status	"object property" ; rdfs:label "er redaktør for"@no . #	is editor agent of	rdac:C10002	rdac:C10006
+rdaeo:P20330	entedit:status	"object property" ; rdfs:label "har redaktør av tekst"@no . #	has editor agent	rdac:C10006	rdac:C10002
+
+rdaao:P50168	entedit:status	"object property" ; rdfs:label "er kringkaster"@no . #	is broadcaster agent of	rdac:C10002	rdac:C10007
+rdamo:P30067	entedit:status	"object property" ; rdfs:label "har kringkaster"@no . #	has broadcaster agent	rdac:C10007	rdac:C10002
+
+rdaao:P50169	entedit:status	"object property" ; rdfs:label "er filmdistributør"@no . #	is film distributor agent of	rdac:C10002	rdac:C10007
+rdamo:P30068	entedit:status	"object property" ; rdfs:label "har filmdistributør"@no . #	has film distributor agent	rdac:C10007	rdac:C10002
+
+rdaao:P50170	entedit:status	"object property" ; rdfs:label "er bokdesigner"@no . #	is book designer agent of	rdac:C10002	rdac:C10007
+rdamo:P30069	entedit:status	"object property" ; rdfs:label "har bokdesigner"@no . #	has book designer agent	rdac:C10007	rdac:C10002
+
+rdaao:P50171	entedit:status	"object property" ; rdfs:label "er gravør"@no . #	is engraver agent of	rdac:C10002	rdac:C10007
+rdamo:P30070	entedit:status	"object property" ; rdfs:label "har gravør"@no . #	has engraver agent	rdac:C10007	rdac:C10002
+
+rdaao:P50172	entedit:status	"object property" ; rdfs:label "er punktskriftpreger"@no . #	is braille embosser agent of	rdac:C10002	rdac:C10007
+rdamo:P30071	entedit:status	"object property" ; rdfs:label "har punktskriftpreger"@no . #	has braille embosser agent	rdac:C10007	rdac:C10002
+
+rdaao:P50173	entedit:status	"object property" ; rdfs:label "er grafiker"@no . #	is printmaker agent of	rdac:C10002	rdac:C10007
+rdamo:P30072	entedit:status	"object property" ; rdfs:label "har grafiker"@no . #	has printmaker agent	rdac:C10007	rdac:C10002
+
+rdaao:P50174	entedit:status	"object property" ; rdfs:label "er støper"@no . #	is caster agent of	rdac:C10002	rdac:C10007
+rdamo:P30073	entedit:status	"object property" ; rdfs:label "har støper"@no . #	has caster agent	rdac:C10007	rdac:C10002
+
+rdaao:P50175	entedit:status	"object property" ; rdfs:label "er litograf"@no . #	is lithographer agent of	rdac:C10002	rdac:C10007
+rdamo:P30074	entedit:status	"object property" ; rdfs:label "har litograf"@no . #	has lithographer agent	rdac:C10007	rdac:C10002
+
+rdaao:P50176	entedit:status	"object property" ; rdfs:label "er trykkplatemaker"@no . #	is platemaker agent of	rdac:C10002	rdac:C10007
+rdamo:P30075	entedit:status	"object property" ; rdfs:label "har trykkplatemaker"@no . #	has platemaker agent	rdac:C10007	rdac:C10002
+
+rdaao:P50177	entedit:status	"object property" ; rdfs:label "er etser"@no . #	is etcher agent of	rdac:C10002	rdac:C10007
+rdamo:P30076	entedit:status	"object property" ; rdfs:label "har etser"@no . #	has etcher agent	rdac:C10007	rdac:C10002
+
+#rdaao:P50178	entedit:status	"object property" ; rdfs:label "er lystrykker"@no . #	is collotyper agent of	rdac:C10002	rdac:C10007
+#rdamo:P30077	entedit:status	"object property" ; rdfs:label "har lystrykker"@no . #	has collotyper agent	rdac:C10007	rdac:C10002
+
+rdaao:P50179	entedit:status	"object property" ; rdfs:label "er trykker"@no . #	is printer agent of	rdac:C10002	rdac:C10007
+rdamo:P30078	entedit:status	"object property" ; rdfs:label "har trykker"@no . #	has printer agent	rdac:C10007	rdac:C10002
+
+rdaao:P50199	entedit:status	"object property" ; rdfs:label "er distributør"@no . #	is distributor agent of	rdac:C10002	rdac:C10007
+rdamo:P30080	entedit:status	"object property" ; rdfs:label "har distributør"@no . #	has distributor agent	rdac:C10007	rdac:C10002
+
+#rdaao:P50200	entedit:status	"object property" ; rdfs:label "er produsent av upublisert manifestasjon av"@no . #	is producer agent of unpublished manifestation of	rdac:C10002	rdac:C10007
+#rdamo:P30081	entedit:status	"object property" ; rdfs:label "har produsent av upublisert manifestasjon"@no . #	has producer agent of unpublished manifestation	rdac:C10007	rdac:C10002
+
+rdaao:P50202	entedit:status	"object property" ; rdfs:label "er tilvirker"@no . #	is manufacturer agent of	rdac:C10002	rdac:C10007
+rdamo:P30082	entedit:status	"object property" ; rdfs:label "har tilvirker"@no . #	has manufacturer agent	rdac:C10007	rdac:C10002
+
+rdaao:P50203	entedit:status	"object property" ; rdfs:label "er utgiver"@no . #	is publisher agent of	rdac:C10002	rdac:C10007
+rdamo:P30083	entedit:status	"object property" ; rdfs:label "har utgiver"@no . #	has publisher agent	rdac:C10007	rdac:C10002
+
+rdaao:P50242	entedit:status	"object property" ; rdfs:label "er papirprodusent"@no . #	is papermaker agent of	rdac:C10002	rdac:C10007
+rdamo:P30215	entedit:status	"object property" ; rdfs:label "har papirprodusent"@no . #	has papermaker agent	rdac:C10007	rdac:C10002
+
+rdaao:P50307	entedit:status	"object property" ; rdfs:label "har manifestasjon relatert til agent"@no . #	has related manifestation of agent	rdac:C10002	rdac:C10007
+rdamo:P30267	entedit:status	"object property" ; rdfs:label "har agent relatert til manifestasjon"@no . #	has related agent of manifestation	rdac:C10007	rdac:C10002
+
+rdaao:P50459	entedit:status	"object property" ; rdfs:label "er musikk-bidragsyter"@no . #	is contributor agent of music of	rdac:C10002	rdac:C10007
+rdamo:P30311	entedit:status	"object property" ; rdfs:label "har musikk-bidragsyter"@no . #	has contributor agent of music	rdac:C10007	rdac:C10002
+
+#rdaao:P50460	entedit:status	"object property" ; rdfs:label "er landmåler"@no . #	is surveyor agent of	rdac:C10002	rdac:C10007
+#rdamo:P30312	entedit:status	"object property" ; rdfs:label "har landmåler"@no . #	has surveyor agent	rdac:C10007	rdac:C10002
+
+rdaao:P50463	entedit:status	"object property" ; rdfs:label "er kartograf-bidragsyter"@no . #	is contributor agent of cartography of	rdac:C10002	rdac:C10007
+rdamo:P30315	entedit:status	"object property" ; rdfs:label "har kartografi-bidragsyter"@no . #	has contributor agent of cartography	rdac:C10007	rdac:C10002
+
+rdaao:P50464	entedit:status	"object property" ; rdfs:label "er koreografi-bidragsyter"@no . #	is contributor agent of choreography of	rdac:C10002	rdac:C10007
+rdamo:P30316	entedit:status	"object property" ; rdfs:label "har koreografi-bidragsyter"@no . #	has contributor agent of choreography	rdac:C10007	rdac:C10002
+
+rdaao:P50469	entedit:status	"object property" ; rdfs:label "er bilde-bidragsyter"@no . #	is contributor agent of still image of	rdac:C10002	rdac:C10007
+rdamo:P30321	entedit:status	"object property" ; rdfs:label "har bilde-bidragsyter"@no . #	has contributor agent of still image	rdac:C10007	rdac:C10002
+
+#rdaao:P50474	entedit:status	"object property" ; rdfs:label "er bidragsyter til levende bilder for"@no . #	is contributor agent of moving image of	rdac:C10002	rdac:C10007
+#rdamo:P30326	entedit:status	"object property" ; rdfs:label "har bidragsyter til levende bilder"@no . #	has contributor agent of moving image	rdac:C10007	rdac:C10002
+
+rdaao:P50475	entedit:status	"object property" ; rdfs:label "er tekst-bidragsyter"@no . #	is contributor agent of text of	rdac:C10002	rdac:C10007
+rdamo:P30328	entedit:status	"object property" ; rdfs:label "har tekst-bidragsyter"@no . #	has contributor agent of text	rdac:C10007	rdac:C10002
+
+rdaao:P50476	entedit:status	"object property" ; rdfs:label "er bidragsyter"@no . #	is contributor agent to aggregate of	rdac:C10002	rdac:C10007
+rdamo:P30327	entedit:status	"object property" ; rdfs:label "har bidragsyter"@no . #	has contributor agent to aggregate	rdac:C10007	rdac:C10002
+
+rdaao:P50477	entedit:status	"object property" ; rdfs:label "er skaper av"@no . #	is creator agent of manifestation of	rdac:C10002	rdac:C10007
+rdamo:P30329	entedit:status	"object property" ; rdfs:label "har skaper"@no . #	has creator agent of manifestation	rdac:C10007	rdac:C10002
+
+rdaao:P50483	entedit:status	"object property" ; rdfs:label "er tale-bidragsyter"@no . #	is contributor agent of speech of	rdac:C10002	rdac:C10007
+rdamo:P30331	entedit:status	"object property" ; rdfs:label "har tale-bidragsyter"@no . #	has contributor agent of speech	rdac:C10007	rdac:C10002
+
+#rdaao:P50484	entedit:status	"object property" ; rdfs:label "er bidragsyter til objekt for"@no . #	is contributor agent of object of	rdac:C10002	rdac:C10007
+#rdamo:P30332	entedit:status	"object property" ; rdfs:label "har bidragsyter til gjenstand"@no . #	has contributor agent of object	rdac:C10007	rdac:C10002
+
+#rdaao:P50485	entedit:status	"object property" ; rdfs:label "er bidragsyter til maskinlesbart innhold for"@no . #	is contributor agent of computer content of	rdac:C10002	rdac:C10007
+#rdamo:P30333	entedit:status	"object property" ; rdfs:label "har bidragsyter til datamaskininnhold"@no . #	has contributor agent of computer content	rdac:C10007	rdac:C10002
+
+rdawo:P10016	entedit:status	"object property" ; rdfs:label "er dramatisert som verk"@no . #	is dramatized as work	rdac:C10001	rdac:C10001
+rdawo:P10127	entedit:status	"object property" ; rdfs:label "er dramatisering av verk"@no . #	is dramatization of work	rdac:C10001	rdac:C10001
+
+rdawo:P10019	entedit:status	"object property" ; rdfs:label "er del av verk"@no . #	is part of work	rdac:C10001	rdac:C10001
+rdawo:P10147	entedit:status	"object property" ; rdfs:label "har del av verk"@no . #	has part work	rdac:C10001	rdac:C10001
+
+rdawo:P10020	entedit:status	"object property" ; rdfs:label "har etterfølger (verk)"@no . #	has sequel work	rdac:C10001	rdac:C10001
+rdawo:P10122	entedit:status	"object property" ; rdfs:label "har forløper (verk)"@no . #	has prequel work	rdac:C10001	rdac:C10001
+
+#rdawo:P10021	entedit:status	"object property" ; rdfs:label "er delvis erstattet av verk"@no . #	is replaced in part by work	rdac:C10001	rdac:C10001
+#rdawo:P10206	entedit:status	"object property" ; rdfs:label "er delvis erstatning for verk"@no . #	is replacement in part of work	rdac:C10001	rdac:C10001
+
+#rdawo:P10022	entedit:status	"object property" ; rdfs:label "er erstattet av verk"@no . #	is replaced by work	rdac:C10001	rdac:C10001
+#rdawo:P10207	entedit:status	"object property" ; rdfs:label "er erstatning av verk"@no . #	is replacement of work	rdac:C10001	rdac:C10001
+
+rdawo:P10023	entedit:status	"object property" ; rdfs:label "er bearbeidet til verseform som verk"@no . #	is adapted in verse as work	rdac:C10001	rdac:C10001
+rdawo:P10128	entedit:status	"object property" ; rdfs:label "er bearbeidelse av verk til verseform"@no . #	is verse adaptation of work	rdac:C10001	rdac:C10001
+
+rdawo:P10025	entedit:status	"object property" ; rdfs:label "er bearbeidet som spillefilm (verk)"@no . #	is adapted as motion picture work	rdac:C10001	rdac:C10001
+rdawo:P10129	entedit:status	"object property" ; rdfs:label "er bearbeidelse av verk til spillefilm"@no . #	is motion picture adaptation of work	rdac:C10001	rdac:C10001
+
+rdawo:P10026	entedit:status	"object property" ; rdfs:label "har kadens (verk)"@no . #	has cadenza work	rdac:C10001	rdac:C10001
+rdawo:P10029	entedit:status	"object property" ; rdfs:label "er kadens komponert for verk"@no . #	is cadenza composed for work	rdac:C10001	rdac:C10001
+
+#rdawo:P10027	entedit:status	"object property" ; rdfs:label "er variasjoner basert på verk"@no . #	is variations based on work	rdac:C10001	rdac:C10001
+#rdawo:P10028	entedit:status	"object property" ; rdfs:label "er modifisert gjennom variasjoner som verk"@no . #	is modified by variation as work	rdac:C10001	rdac:C10001
+
+rdawo:P10030	entedit:status	"object property" ; rdfs:label "er libretto for verk"@no . #	is libretto for work	rdac:C10001	rdac:C10001
+rdawo:P10165	entedit:status	"object property" ; rdfs:label "har libretto (verk)"@no . #	has libretto work	rdac:C10001	rdac:C10001
+
+rdawo:P10031	entedit:status	"object property" ; rdfs:label "har bakgrunnsmusikk (verk)"@no . #	has incidental music work	rdac:C10001	rdac:C10001
+rdawo:P10106	entedit:status	"object property" ; rdfs:label "er bakgrunnsmusikk for verk"@no . #	is incidental music for work	rdac:C10001	rdac:C10001
+
+rdawo:P10032	entedit:status	"object property" ; rdfs:label "er nyinnspilt som verk"@no . #	is remade as work	rdac:C10001	rdac:C10001
+rdawo:P10185	entedit:status	"object property" ; rdfs:label "er nyinnspilling av verk"@no . #	is remake of work	rdac:C10001	rdac:C10001
+
+rdawo:P10033	entedit:status	"object property" ; rdfs:label "er satt til musikk som verk"@no . #	is set to music as work	rdac:C10001	rdac:C10001
+rdawo:P10161	entedit:status	"object property" ; rdfs:label "er musikksetting av verk"@no . #	is musical setting of work	rdac:C10001	rdac:C10001
+
+rdawo:P10034	entedit:status	"object property" ; rdfs:label "er bearbeidet som roman (verk)"@no . #	is adapted as novel work	rdac:C10001	rdac:C10001
+rdawo:P10130	entedit:status	"object property" ; rdfs:label "er bearbeidelse av verk til roman"@no . #	is novelization of work	rdac:C10001	rdac:C10001
+
+rdawo:P10076	entedit:status	"object property" ; rdfs:label "er bearbeidet som radioprogram (verk)"@no . #	is adapted as radio program work	rdac:C10001	rdac:C10001
+rdawo:P10131	entedit:status	"object property" ; rdfs:label "er bearbeidelse av verk for radio"@no . #	is radio adaptation of work	rdac:C10001	rdac:C10001
+
+#rdawo:P10080	entedit:status	"object property" ; rdfs:label "har underserie"@no . #	has subseries	rdac:C10001	rdac:C10001
+#rdawo:P10101	entedit:status	"object property" ; rdfs:label "er underserie av"@no . #	is subseries of	rdac:C10001	rdac:C10001
+
+rdawo:P10085	entedit:status	"object property" ; rdfs:label "er bearbeidet som fjernsynsprogram (verk)"@no . #	is adapted as television program work	rdac:C10001	rdac:C10001
+rdawo:P10132	entedit:status	"object property" ; rdfs:label "er bearbeidelse av verk for fjernsyn"@no . #	is television adaptation of work	rdac:C10001	rdac:C10001
+
+rdawo:P10087	entedit:status	"object property" ; rdfs:label "er bearbeidet som video (verk)"@no . #	is adapted as video work	rdac:C10001	rdac:C10001
+rdawo:P10138	entedit:status	"object property" ; rdfs:label "er bearbeidelse av verk for video"@no . #	is video adaptation of work	rdac:C10001	rdac:C10001
+
+rdawo:P10089	entedit:status	"object property" ; rdfs:label "har sammendrag av verk"@no . #	is abstracted in work	rdac:C10001	rdac:C10001
+rdawo:P10193	entedit:status	"object property" ; rdfs:label "er abstrakt for verk"@no . #	is abstracts for work	rdac:C10001	rdac:C10001
+
+rdawo:P10091	entedit:status	"object property" ; rdfs:label "er bearbeidet som koreografisk verk"@no . #	is adapted as choreography work	rdac:C10001	rdac:C10001
+rdawo:P10183	entedit:status	"object property" ; rdfs:label "er koreografisk bearbeidelse av verk"@no . #	is choreographic adaptation of work	rdac:C10001	rdac:C10001
+
+#rdawo:P10092	entedit:status	"object property" ; rdfs:label "har errata (verk)"@no . #	has errata work	rdac:C10001	rdac:C10001
+#rdawo:P10149	entedit:status	"object property" ; rdfs:label "er errata for verk"@no . #	is errata to work	rdac:C10001	rdac:C10001
+
+rdawo:P10093	entedit:status	"object property" ; rdfs:label "har illustrasjoner (verk)"@no . #	has illustrations work	rdac:C10001	rdac:C10001
+rdawo:P10152	entedit:status	"object property" ; rdfs:label "er illustrasjoner for verk"@no . #	is illustrations for work	rdac:C10001	rdac:C10001
+
+rdawo:P10094	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for spillefilm (verk)"@no . #	is adapted as motion picture screenplay work	rdac:C10001	rdac:C10001
+rdawo:P10134	entedit:status	"object property" ; rdfs:label "er manus for spillefilm basert på verk"@no . #	is motion picture screenplay based on work	rdac:C10001	rdac:C10001
+
+rdawo:P10095	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for skuespill (verk)"@no . #	is adapted as screenplay work	rdac:C10001	rdac:C10001
+rdawo:P10133	entedit:status	"object property" ; rdfs:label "er manus basert på verk"@no . #	is screenplay based on work	rdac:C10001	rdac:C10001
+
+rdawo:P10096	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for fjernsyn (verk)"@no . #	is adapted as television screenplay work	rdac:C10001	rdac:C10001
+rdawo:P10135	entedit:status	"object property" ; rdfs:label "er fjernsynsmanus basert på verk"@no . #	is television screenplay based on work	rdac:C10001	rdac:C10001
+
+rdawo:P10097	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for video (verk)"@no . #	is adapted as video screenplay work	rdac:C10001	rdac:C10001
+rdawo:P10136	entedit:status	"object property" ; rdfs:label "er videomanus basert på verk"@no . #	is video screenplay based on work	rdac:C10001	rdac:C10001
+
+rdawo:P10098	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for radio (verk)"@no . #	is adapted as radio script work	rdac:C10001	rdac:C10001
+rdawo:P10137	entedit:status	"object property" ; rdfs:label "er radiomanus basert på verk"@no . #	is radio script based on work	rdac:C10001	rdac:C10001
+
+#rdawo:P10099	entedit:status	"object property" ; rdfs:label "er fritt oversatt som verk"@no . #	is freely translated as work	rdac:C10001	rdac:C10001
+#rdawo:P10143	entedit:status	"object property" ; rdfs:label "er fri oversettelse av verk"@no . #	is free translation of work	rdac:C10001	rdac:C10001
+
+#rdawo:P10100	entedit:status	"object property" ; rdfs:label "er beskrivelse av verk"@no . #	is description of work	rdac:C10001	rdac:C10001
+#rdawo:P10118	entedit:status	"object property" ; rdfs:label "er verk beskrevet i "@no . #	is work described by	rdac:C10001	rdac:C10001
+
+rdawo:P10103	entedit:status	"object property" ; rdfs:label "er utfylt av verk"@no . #	is complemented by work	rdac:C10001	rdac:C10001
+
+#rdawo:P10104	entedit:status	"object property" ; rdfs:label "fortsettes delvis i verk"@no . #	is separated into work	rdac:C10001	rdac:C10001
+#rdawo:P10169	entedit:status	"object property" ; rdfs:label "er skilt fra verk"@no . #	is separated from work	rdac:C10001	rdac:C10001
+
+rdawo:P10105	entedit:status	"object property" ; rdfs:label "er manus for verk"@no . #	is screenplay for work	rdac:C10001	rdac:C10001
+rdawo:P10159	entedit:status	"object property" ; rdfs:label "har manus (verk)"@no . #	has screenplay work	rdac:C10001	rdac:C10001
+
+rdawo:P10107	entedit:status	"object property" ; rdfs:label "er abstrahert som verk"@no . #	has abstract	rdac:C10001	rdac:C10001
+rdawo:P10126	entedit:status	"object property" ; rdfs:label "er abstrakt av verk"@no . #	is abstract of	rdac:C10001	rdac:C10001
+
+rdawo:P10108	entedit:status	"object property" ; rdfs:label "er utvidet av verk"@no . #	is augmented by work	rdac:C10001	rdac:C10001
+rdawo:P10192	entedit:status	"object property" ; rdfs:label "er utvidelse av verk"@no . #	is augmentation of work	rdac:C10001	rdac:C10001
+
+rdawo:P10109	entedit:status	"object property" ; rdfs:label "er sammendrag som verk"@no . #	has summary	rdac:C10001	rdac:C10001
+rdawo:P10179	entedit:status	"object property" ; rdfs:label "er sammendrag av verk"@no . #	is summary of	rdac:C10001	rdac:C10001
+
+rdawo:P10112	entedit:status	"object property" ; rdfs:label "har tilleggsverk"@no . #	has addenda work	rdac:C10001	rdac:C10001
+rdawo:P10177	entedit:status	"object property" ; rdfs:label "er tillegg til verk"@no . #	is addenda to work	rdac:C10001	rdac:C10001
+
+#rdawo:P10113	entedit:status	"object property" ; rdfs:label "er bearbeidet som libretto (verk)"@no . #	has index	rdac:C10001	rdac:C10001
+#rdawo:P10150	entedit:status	"object property" ; rdfs:label "er studieveiledning til verk"@no . #	is index to	rdac:C10001	rdac:C10001
+
+rdawo:P10114	entedit:status	"object property" ; rdfs:label "er verk anmeldt i "@no . #	has concordance	rdac:C10001	rdac:C10001
+rdawo:P10155	entedit:status	"object property" ; rdfs:label "er bearbeidet som verk"@no . #	is concordance to	rdac:C10001	rdac:C10001
+
+rdawo:P10115	entedit:status	"object property" ; rdfs:label "er verk kritisert i "@no . #	has appendix	rdac:C10001	rdac:C10001
+rdawo:P10182	entedit:status	"object property" ; rdfs:label "er kritikk av verk"@no . #	is appendix to	rdac:C10001	rdac:C10001
+
+rdawo:P10116	entedit:status	"object property" ; rdfs:label "er verk kommentert i"@no . #	is continued in part by work	rdac:C10001	rdac:C10001
+rdawo:P10195	entedit:status	"object property"	 . #	is continuation in part of work	rdac:C10001	rdac:C10001
+
+rdawo:P10117	entedit:status	"object property" ; rdfs:label "er imitert som verk"@no . #	is continued by work	rdac:C10001	rdac:C10001
+rdawo:P10196	entedit:status	"object property" ; rdfs:label "er imitasjon av verk"@no . #	is continuation of work	rdac:C10001	rdac:C10001
+
+rdawo:P10119	entedit:status	"object property" ; rdfs:label "er utvidet som verk"@no . #	is imitated as work	rdac:C10001	rdac:C10001
+rdawo:P10145	entedit:status	"object property" ; rdfs:label "er innlemmet i verk"@no . #	is imitation of work	rdac:C10001	rdac:C10001
+
+#rdawo:P10120	entedit:status	"object property" ; rdfs:label "er verk evaluert i "@no . #	is absorbed in part by work	rdac:C10001	rdac:C10001
+#rdawo:P10181	entedit:status	"object property" ; rdfs:label "er konkordans for verk"@no . #	is absorption in part of work	rdac:C10001	rdac:C10001
+
+#rdawo:P10121	entedit:status	"object property" ; rdfs:label "er verk analysert i "@no . #	is absorbed by work	rdac:C10001	rdac:C10001
+#rdawo:P10180	entedit:status	"object property" ; rdfs:label "er katalog over verk"@no . #	is absorption of work	rdac:C10001	rdac:C10001
+
+rdawo:P10123	entedit:status	"object property" ; rdfs:label "har bilag (verk)"@no . #	is parodied as work	rdac:C10001	rdac:C10001
+rdawo:P10146	entedit:status	"object property" ; rdfs:label "er delvis innlemmet i verk"@no . #	is parody of work	rdac:C10001	rdac:C10001
+
+#rdawo:P10124	entedit:status	"object property" ; rdfs:label "har studieveiledning (verk)"@no . #	is revived as work	rdac:C10001	rdac:C10001
+#rdawo:P10188	entedit:status	"object property" ; rdfs:label "er indeks for verk"@no . #	is revival of work	rdac:C10001	rdac:C10001
+
+#rdawo:P10125	entedit:status	"object property" ; rdfs:label "er forkortelse av verk"@no . #	is digest of work	rdac:C10001	rdac:C10001
+#rdawo:P10189	entedit:status	"object property" ; rdfs:label "er libretto basert på verk"@no . #	is digested as work	rdac:C10001	rdac:C10001
+
+rdawo:P10139	entedit:status	"object property" ; rdfs:label "er resymé av verk"@no . #	has adaptation	rdac:C10001	rdac:C10001
+rdawo:P10190	entedit:status	"object property" ; rdfs:label "er basert på verk"@no . #	is adapted as work	rdac:C10001	rdac:C10001
+
+rdawo:P10140	entedit:status	"object property" ; rdfs:label "er analyse av verk"@no . #	is adaptation of	rdac:C10001	rdac:C10001
+rdawo:P10191	entedit:status	"object property" ; rdfs:label "er fortsatt i verk"@no . #	is adapted as (derivative)	rdac:C10001	rdac:C10001
+
+rdawo:P10142	entedit:status	"object property" ; rdfs:label "er bearbeidelse av verk"@no . #	is paraphrased as work	rdac:C10001	rdac:C10001
+rdawo:P10144	entedit:status	"object property" ; rdfs:label "er parodiert som verk"@no . #	is paraphrase of work	rdac:C10001	rdac:C10001
+
+rdawo:P10148	entedit:status	"object property" ; rdfs:label "har avledet verk"@no . #	has supplement work	rdac:C10001	rdac:C10001
+rdawo:P10178	entedit:status	"object property" ; rdfs:label "er anmeldelse av verk"@no . #	is supplement to work	rdac:C10001	rdac:C10001
+
+#rdawo:P10151	entedit:status	"object property" ; rdfs:label "er bilag til verk"@no . #	is on disc with work	rdac:C10001	rdac:C10001
+#rdawo:P10184	entedit:status	"object property" ; rdfs:label "er utvidet versjon av verk"@no . #	has on disc work	rdac:C10001	rdac:C10001
+
+#rdawo:P10153	entedit:status	"object property" ; rdfs:label "er evaluering av verk"@no . #	has equivalent work	rdac:C10001	rdac:C10001
+
+rdawo:P10154	entedit:status	"object property" ; rdfs:label "er supplement til verk"@no . #	is commentary in work	rdac:C10001	rdac:C10001
+rdawo:P10186	entedit:status	"object property" ; rdfs:label "er omskriving av verk"@no . #	is commentary on work	rdac:C10001	rdac:C10001
+
+rdawo:P10156	entedit:status	"object property" ; rdfs:label "etterfølger verk"@no . #	has derivative work	rdac:C10001	rdac:C10001
+rdawo:P10187	entedit:status	"object property" ; rdfs:label "er kommentar til verk"@no . #	is derivative of	rdac:C10001	rdac:C10001
+
+rdawo:P10157	entedit:status	"object property" ; rdfs:label "har veiledning (verk)"@no . #	has guide work	rdac:C10001	rdac:C10001
+
+#rdawo:P10158	entedit:status	"object property" ; rdfs:label "har indeks (verk)"@no . #	has whole-part work relationship with	rdac:C10001	rdac:C10001
+
+
+rdawo:P10160	entedit:status	"object property"	 . #	is critique of work	rdac:C10001	rdac:C10001
+rdawo:P10197	entedit:status	"object property" ; rdfs:label "er parodi på verk"@no . #	is critiqued in work	rdac:C10001	rdac:C10001
+
+
+rdawo:P10162	entedit:status	"object property" ; rdfs:label "har radiomanus (verk)"@no . #	is reviewed by work	rdac:C10001	rdac:C10001
+rdawo:P10198	entedit:status	"object property" ; rdfs:label "har relatert verk av verk"@no . #	is review of work	rdac:C10001	rdac:C10001
+
+rdawo:P10163	entedit:status	"object property" ; rdfs:label "har fjernsynsmanus (verk)"@no . #	has cartographic data set work	rdac:C10001	rdac:C10001
+rdawo:P10164	entedit:status	"object property" ; rdfs:label "har videomanus (verk)"@no . #	is in cartographic work	rdac:C10001	rdac:C10001
+
+
+rdawo:P10166	entedit:status	"object property" ; rdfs:label "er omskrevet som verk"@no . #	has music work	rdac:C10001	rdac:C10001
+rdawo:P10167	entedit:status	"object property" ; rdfs:label "er forkortet som verk"@no . #	is music for work	rdac:C10001	rdac:C10001
+
+#rdawo:P10168	entedit:status	"object property" ; rdfs:label "er delvis fortsettelse av verk"@no . #	is split into work	rdac:C10001	rdac:C10001
+#rdawo:P10199	entedit:status	"object property" ; rdfs:label "har epoke"@no . #	is split from work	rdac:C10001	rdac:C10001
+
+#rdawo:P10170	entedit:status	"object property" ; rdfs:label "er avløst av verk"@no . #	is merged to form work	rdac:C10001	rdac:C10001
+
+rdawo:P10171	entedit:status	"object property" ; rdfs:label "er forkortet som verk"@no . #	is expanded version of work	rdac:C10001	rdac:C10001
+rdawo:P10201	entedit:status	"object property" ; rdfs:label "er veiledning til verk"@no . #	has expanded version	rdac:C10001	rdac:C10001
+
+rdawo:P10172	entedit:status	"object property" ; rdfs:label "har supplement (verk)"@no . #	is analysis of work	rdac:C10001	rdac:C10001
+
+#rdawo:P10173	entedit:status	"object property" ; rdfs:label "er manus for spillefilm (verk)"@no . #	has related work	rdac:C10001	rdac:C10001
+
+rdawo:P10174	entedit:status	"object property" ; rdfs:label "er manus for fjernsynsprogram (verk)"@no . #	is based on work	rdac:C10001	rdac:C10001
+
+
+#rdawo:P10176	entedit:status	"object property" ; rdfs:label "er manus for radioprogram (verk)"@no . #	is reprinted as work	rdac:C10001	rdac:C10001
+#rdawo:P10208	entedit:status	"object property"	 . #	is reprint of work	rdac:C10001	rdac:C10001
+
+
+rdawo:P10194	entedit:status	"object property" ; rdfs:label "er indeksering for verk"@no . #	is screenplay for television program	rdac:C10001	rdac:C10006
+rdawo:P10330	entedit:status	"object property" ; rdfs:label "note"@no . #	has screenplay for television program	rdac:C10006	rdac:C10001
+
+
+rdawo:P10290	entedit:status	"object property" ; rdfs:label "inspirert av"@no . #	is inspired by	rdac:C10001	rdac:C10001
+rdawo:P10291	entedit:status	"object property" ; rdfs:label "inspirasjon for"@no . #	is inspiration for	rdac:C10001	rdac:C10001
+
+#rdawo:P10294	entedit:status	"object property" ; rdfs:label "har minneskrift"@no . #	has commemoration	rdac:C10001	rdac:C10001
+#rdawo:P10295	entedit:status	"object property" ; rdfs:label "er minneskrift for"@no . #	is commemoration of	rdac:C10001	rdac:C10001
+
+rdawo:P10336	entedit:status	"object property" ; rdfs:label "har transformasjon"@no . #	has transformation	rdac:C10001	rdac:C10001
+rdawo:P10337	entedit:status	"object property" ; rdfs:label "transformasjon av"@no . #	is transformation of	rdac:C10001	rdac:C10001
+
+#rdawo:P10340	entedit:status	"object property" ; rdfs:label "har transformasjon av stil"@no . #	has transformation by style	rdac:C10001	rdac:C10001
+#rdawo:P10341	entedit:status	"object property" ; rdfs:label "er transformasjon av stil fra"@no . #	is transformation by style of	rdac:C10001	rdac:C10001
+
+#rdawo:P10342	entedit:status	"object property" ; rdfs:label "har transformasjon av sjanger"@no . #	has transformation by genre	rdac:C10001	rdac:C10001
+#rdawo:P10343	entedit:status	"object property" ; rdfs:label "er transformasjon av sjanger fra"@no . #	is transformation by genre of	rdac:C10001	rdac:C10001
+
+#rdawo:P10344	entedit:status	"object property" ; rdfs:label "har transformasjon av retningslinjer"@no . #	has transformation by policy	rdac:C10001	rdac:C10001
+#rdawo:P10345	entedit:status	"object property" ; rdfs:label "er transformasjon av retningslinjer fra"@no . #	is transformation by policy of	rdac:C10001	rdac:C10001
+
+rdawo:P10369	entedit:status	"object property" ; rdfs:label "sangtekst for"@no . #	is lyrics for work	rdac:C10001	rdac:C10001
+rdawo:P10370	entedit:status	"object property" ; rdfs:label "har sangtekst"@no . #	has lyrics work	rdac:C10001	rdac:C10001
+
+#rdawo:P10371	entedit:status	"object property" ; rdfs:label "har tekstlig verk"@no . #	has text work	rdac:C10001	rdac:C10001
+#rdawo:P10372	entedit:status	"object property" ; rdfs:label "er tekst for verk"@no . #	is text for work	rdac:C10001	rdac:C10001
+
+#rdawo:P10373	entedit:status	"object property" ; rdfs:label "har tale (verk)"@no . #	has spoken word work	rdac:C10001	rdac:C10001
+#rdawo:P10375	entedit:status	"object property" ; rdfs:label "er tale for verk"@no . #	is spoken word for work	rdac:C10001	rdac:C10001
+
+#rdawo:P10374	entedit:status	"object property" ; rdfs:label "har lyd (verk)"@no . #	has sounds work	rdac:C10001	rdac:C10001
+#rdawo:P10376	entedit:status	"object property" ; rdfs:label "er lyd for verk"@no . #	is sounds for work	rdac:C10001	rdac:C10001
+
+#rdawo:P10377	entedit:status	"object property" ; rdfs:label "har transformasjon ved utvidelsesplan"@no . #	has transformation by extension plan	rdac:C10001	rdac:C10001
+#rdawo:P10378	entedit:status	"object property" ; rdfs:label "er transformasjon ved utvidelsesplan for"@no . #	is transformation by extension plan of	rdac:C10001	rdac:C10001
+
+#rdawo:P10379	entedit:status	"object property" ; rdfs:label "har etterfølgende versjon"@no . #	has sequential version	rdac:C10001	rdac:C10001
+#rdawo:P10380	entedit:status	"object property" ; rdfs:label "er etterfølgende versjon av "@no . #	is sequential version of	rdac:C10001	rdac:C10001
+
+#rdawo:P10381	entedit:status	"object property" ; rdfs:label "har serialisert versjon"@no . #	has serialized version	rdac:C10001	rdac:C10001
+#rdawo:P10391	entedit:status	"object property" ; rdfs:label "er serialisert versjon av"@no . #	is serialized version of	rdac:C10001	rdac:C10001
+
+#rdawo:P10382	entedit:status	"object property" ; rdfs:label "har statisk versjon"@no . #	has static version	rdac:C10001	rdac:C10001
+#rdawo:P10392	entedit:status	"object property" ; rdfs:label "er statisk versjon av"@no . #	is static version of	rdac:C10001	rdac:C10001
+
+#rdawo:P10383	entedit:status	"object property" ; rdfs:label "har transformasjon ved målgruppe"@no . #	has transformation by audience	rdac:C10001	rdac:C10001
+#rdawo:P10384	entedit:status	"object property" ; rdfs:label "er transformasjon ved målgruppe for"@no . #	is transformation by audience of	rdac:C10001	rdac:C10001
+
+#rdawo:P10385	entedit:status	"object property" ; rdfs:label "har språklig versjon"@no . #	has language version	rdac:C10001	rdac:C10001
+#rdawo:P10388	entedit:status	"object property" ; rdfs:label "er språklig versjon av"@no . #	is language version of	rdac:C10001	rdac:C10001
+
+#rdawo:P10386	entedit:status	"object property" ; rdfs:label "har regional versjon"@no . #	has regional version	rdac:C10001	rdac:C10001
+#rdawo:P10389	entedit:status	"object property" ; rdfs:label "er regional versjon av "@no . #	is regional version of	rdac:C10001	rdac:C10001
+
+#rdawo:P10387	entedit:status	"object property" ; rdfs:label "har bærerversjon"@no . #	has carrier version	rdac:C10001	rdac:C10001
+#rdawo:P10390	entedit:status	"object property" ; rdfs:label "er bærerversjon av"@no . #	is carrier version of	rdac:C10001	rdac:C10001
+
+#rdawo:P10410	entedit:status	"object property" ; rdfs:label "har spesialnummer"@no . #	has special issue	rdac:C10001	rdac:C10001
+#rdawo:P10411	entedit:status	"object property" ; rdfs:label "er spesialnummer av"@no . #	is special issue of	rdac:C10001	rdac:C10001
+
+#rdawo:P10621	entedit:status	"object property"	 . #	is metadata description of work	rdac:C10001	rdac:C10001
+#rdawo:P10623	entedit:status	"object property"	 . #	is work described with metadata by	rdac:C10001	rdac:C10001
+
+#rdaeo:P20268	entedit:status	"object property" ; rdfs:label "er emne for uttrykk for"@no . #	is subject expression of	rdac:C10006	rdac:C10001
+
+#rdawo:P10277	entedit:status	"object property" ; rdfs:label "er beskrivelse av uttrykk"@no . #	is description of expression	rdac:C10001	rdac:C10006
+#rdaeo:P20269	entedit:status	"object property" ; rdfs:label "er uttrykk beskrevet i"@no . #	is expression described by	rdac:C10006	rdac:C10001
+
+#rdawo:P10278	entedit:status	"object property" ; rdfs:label "er analyse av uttrykk"@no . #	is analysis of expression	rdac:C10001	rdac:C10006
+#rdaeo:P20270	entedit:status	"object property" ; rdfs:label "er uttrykk analysert i"@no . #	is expression analysed in	rdac:C10006	rdac:C10001
+
+#rdawo:P10279	entedit:status	"object property" ; rdfs:label "er evaluering av uttrykk"@no . #	is evaluation of expression	rdac:C10001	rdac:C10006
+#rdaeo:P20273	entedit:status	"object property" ; rdfs:label "er uttrykk evaluert i"@no . #	is expression evaluated by	rdac:C10006	rdac:C10001
+
+rdawo:P10280	entedit:status	"object property" ; rdfs:label "er anmeldelse av uttrykk"@no . #	is review of expression	rdac:C10001	rdac:C10006
+rdaeo:P20274	entedit:status	"object property" ; rdfs:label "er uttrykk anmeldt i"@no . #	is expression reviewed by	rdac:C10006	rdac:C10001
+
+rdawo:P10281	entedit:status	"object property" ; rdfs:label "er kritikk av uttrykk"@no . #	is critique of expression	rdac:C10001	rdac:C10006
+rdaeo:P20272	entedit:status	"object property" ; rdfs:label "er uttrykk kritisert i"@no . #	is expression critiqued by	rdac:C10006	rdac:C10001
+
+rdawo:P10282	entedit:status	"object property" ; rdfs:label "er kommentar til uttrykk"@no . #	is commentary on expression	rdac:C10001	rdac:C10006
+rdaeo:P20271	entedit:status	"object property" ; rdfs:label "er uttrykk kommentert i"@no . #	is expression commentary in	rdac:C10006	rdac:C10001
+
+#rdawo:P10308	entedit:status	"object property" ; rdfs:label "har uttrykk relatert til verk"@no . #	has related expression of work	rdac:C10001	rdac:C10006
+#rdaeo:P20298	entedit:status	"object property" ; rdfs:label "har verk relatert til uttrykk"@no . #	has related work of expression	rdac:C10006	rdac:C10001
+
+#rdawo:P10346	entedit:status	"object property" ; rdfs:label "har representativt uttrykk"@no . #	has representative expression	rdac:C10001	rdac:C10006
+#rdaeo:P20325	entedit:status	"object property" ; rdfs:label "er representativt uttrykk av"@no . #	is representative expression of	rdac:C10006	rdac:C10001
+
+#rdawo:P10615	entedit:status	"object property"	 . #	is metadata description of expression	rdac:C10001	rdac:C10006
+#rdaeo:P20576	entedit:status	"object property"	 . #	is expression described with metadata by	rdac:C10006	rdac:C10001
+
+
+#rdawo:P10628	entedit:status	"object property" ; rdfs:label "er konkordans for verk"@no . #	is concordance work for	rdac:C10001	rdac:C10006
+#rdaeo:P20577	entedit:status	"object property"	 . #	has concordance work	rdac:C10006	rdac:C10001
+
+#rdawo:P10072	entedit:status	"object property" ; rdfs:label "har manifestasjon av verk"@no . #	has manifestation of work	rdac:C10001	rdac:C10007
+#rdamo:P30135	entedit:status	"object property" ; rdfs:label "har verk manifestert"@no . #	has work manifested	rdac:C10007	rdac:C10001
+
+#rdamo:P30253	entedit:status	"object property" ; rdfs:label "er emne for manifestasjon av "@no . #	is subject manifestation of	rdac:C10007	rdac:C10001
+
+#rdawo:P10271	entedit:status	"object property" ; rdfs:label "er beskrivelse av manifestasjon"@no . #	is description of manifestation	rdac:C10001	rdac:C10007
+#rdamo:P30254	entedit:status	"object property" ; rdfs:label "er manifestasjon beskrevet i "@no . #	is manifestation described by	rdac:C10007	rdac:C10001
+
+#rdawo:P10272	entedit:status	"object property" ; rdfs:label "er analyse av manifestasjon"@no . #	is analysis of manifestation	rdac:C10001	rdac:C10007
+#rdamo:P30255	entedit:status	"object property" ; rdfs:label "er manifestasjon analysert i "@no . #	is manifestation analysed in	rdac:C10007	rdac:C10001
+
+#rdawo:P10273	entedit:status	"object property" ; rdfs:label "er evaluering av manifestasjon"@no . #	is evaluation of manifestation	rdac:C10001	rdac:C10007
+#rdamo:P30258	entedit:status	"object property" ; rdfs:label "er manifestasjon evaluert i "@no . #	is manifestation evaluated by	rdac:C10007	rdac:C10001
+
+#rdawo:P10274	entedit:status	"object property" ; rdfs:label "er anmeldelse av manifestasjon"@no . #	is review of manifestation	rdac:C10001	rdac:C10007
+#rdamo:P30259	entedit:status	"object property" ; rdfs:label "er manifestasjon anmeldt i "@no . #	is manifestation reviewed by	rdac:C10007	rdac:C10001
+
+#rdawo:P10275	entedit:status	"object property" ; rdfs:label "er kritikk av manifestasjon"@no . #	is critique of manifestation	rdac:C10001	rdac:C10007
+#rdamo:P30257	entedit:status	"object property" ; rdfs:label "er manifestasjon kritisert i"@no . #	is manifestation critiqued by	rdac:C10007	rdac:C10001
+
+#rdawo:P10276	entedit:status	"object property" ; rdfs:label "er kommentar til manifestasjon"@no . #	is commentary on manifestation	rdac:C10001	rdac:C10007
+#rdamo:P30256	entedit:status	"object property" ; rdfs:label "er manifestasjon kommentert i "@no . #	is manifestation commentary in	rdac:C10007	rdac:C10001
+
+#rdawo:P10309	entedit:status	"object property" ; rdfs:label "har manifestasjon relatert til verk"@no . #	has related manifestation of work	rdac:C10001	rdac:C10007
+#rdamo:P30265	entedit:status	"object property" ; rdfs:label "har verk relatert til manifestasjon"@no . #	has related work of manifestation	rdac:C10007	rdac:C10001
+
+#rdawo:P10363	entedit:status	"object property" ; rdfs:label "er innbinding av manifestasjon for"@no . #	is binding of manifestation of	rdac:C10001	rdac:C10007
+#rdamo:P30310	entedit:status	"object property" ; rdfs:label "har innbinding for manifestasjon"@no . #	has binding of manifestation	rdac:C10007	rdac:C10001
+
+#rdawo:P10406	entedit:status	"object property" ; rdfs:label "har konsultert kilde"@no . #	has source consulted	rdac:C10001	rdac:C10007
+#rdamo:P30334	entedit:status	"object property" ; rdfs:label "er kilde konsultert for"@no . #	is source consulted of	rdac:C10007	rdac:C10001
+
+#rdawo:P10617	entedit:status	"object property"	 . #	is metadata description of manifestation	rdac:C10001	rdac:C10007
+#rdamo:P30462	entedit:status	"object property"	 . #	is manifestation described with metadata by	rdac:C10007	rdac:C10001
+
+#rdawo:P10624	entedit:status	"object property"	 . #	is finding aid of	rdac:C10001	rdac:C10007
+#rdamo:P30463	entedit:status	"object property"	 . #	has finding aid	rdac:C10007	rdac:C10001
+
+#rdawo:P10625	entedit:status	"object property"	 . #	is catalogue of	rdac:C10001	rdac:C10007
+#rdamo:P30464	entedit:status	"object property"	 . #	has catalogue	rdac:C10007	rdac:C10001
+
+#rdawo:P10626	entedit:status	"object property"	 . #	is hierarchic finding aid of	rdac:C10001	rdac:C10007
+#rdamo:P30465	entedit:status	"object property"	 . #	has hierarchic finding aid	rdac:C10007	rdac:C10001
+
+#rdawo:P10627	entedit:status	"object property"	 . #	is index for	rdac:C10001	rdac:C10007
+#rdamo:P30466	entedit:status	"object property"	 . #	has index	rdac:C10007	rdac:C10001
+
+
+rdaeo:P20009	entedit:status	"object property" ; rdfs:label "er bearbeidet som spillefilm (uttrykk)"@no . #	is adapted as motion picture expression	rdac:C10006	rdac:C10006
+rdaeo:P20125	entedit:status	"object property" ; rdfs:label "er bearbeidelse av uttrykk til spillefilm"@no . #	is motion picture adaptation of expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20060	entedit:status	"object property" ; rdfs:label "er bearbeidet som radioprogram (uttrykk)"@no . #	is adapted as radio program expression	rdac:C10006	rdac:C10006
+rdaeo:P20127	entedit:status	"object property" ; rdfs:label "er bearbeidelse av uttrykk til radio"@no . #	is radio adaptation of expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20066	entedit:status	"object property" ; rdfs:label "er bearbeidet som fjernsynsprogram (uttrykk)"@no . #	is adapted as television program expression	rdac:C10006	rdac:C10006
+rdaeo:P20128	entedit:status	"object property" ; rdfs:label "er bearbeidelse av uttrykk til fjernsyn"@no . #	is television adaptation of expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20067	entedit:status	"object property" ; rdfs:label "er bearbeidet som video (uttrykk)"@no . #	is adapted as video expression	rdac:C10006	rdac:C10006
+rdaeo:P20134	entedit:status	"object property" ; rdfs:label "er bearbeidelse av uttrykk til video"@no . #	is video adaptation of expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20073	entedit:status	"object property" ; rdfs:label "er dramatisert som uttrykk"@no . #	is dramatized as expression	rdac:C10006	rdac:C10006
+rdaeo:P20123	entedit:status	"object property" ; rdfs:label "er dramatisering av uttrykk"@no . #	is dramatization of expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20074	entedit:status	"object property" ; rdfs:label "er del av uttrykk"@no . #	is part of expression	rdac:C10006	rdac:C10006
+rdaeo:P20145	entedit:status	"object property" ; rdfs:label "har del av uttrykk"@no . #	has part expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20075	entedit:status	"object property" ; rdfs:label "er delvis erstattet av uttrykk"@no . #	is replaced in part by expression	rdac:C10006	rdac:C10006
+rdaeo:P20198	entedit:status	"object property" ; rdfs:label "er delvis erstatning av uttrykk"@no . #	is replacement in part of expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20076	entedit:status	"object property" ; rdfs:label "er erstattet av uttrykk"@no . #	is replaced by expression	rdac:C10006	rdac:C10006
+rdaeo:P20199	entedit:status	"object property" ; rdfs:label "er erstatning av uttrykk"@no . #	is replacement of expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20077	entedit:status	"object property" ; rdfs:label "er bearbeidet til verseform som uttrykk"@no . #	is adapted in verse as expression	rdac:C10006	rdac:C10006
+rdaeo:P20124	entedit:status	"object property" ; rdfs:label "er bearbeidelse av uttrykk til verseform"@no . #	is verse adaptation of expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20078	entedit:status	"object property" ; rdfs:label "er dubbet versjon av"@no . #	is dubbed version of	rdac:C10006	rdac:C10006
+rdaeo:P20079	entedit:status	"object property" ; rdfs:label "har dubbet versjon"@no . #	has dubbed version	rdac:C10006	rdac:C10006
+
+rdaeo:P20080	entedit:status	"object property" ; rdfs:label "har kadens (uttrykk)"@no . #	has cadenza expression	rdac:C10006	rdac:C10006
+rdaeo:P20083	entedit:status	"object property" ; rdfs:label "er kadens komponert for uttrykk"@no . #	is cadenza composed for expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20081	entedit:status	"object property" ; rdfs:label "er variasjoner basert på uttrykk"@no . #	is variations based on expression	rdac:C10006	rdac:C10006
+rdaeo:P20082	entedit:status	"object property" ; rdfs:label "er modifisert gjennom variasjoner som uttrykk"@no . #	is modified by variation as expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20084	entedit:status	"object property" ; rdfs:label "er libretto for uttrykk"@no . #	is libretto for expression	rdac:C10006	rdac:C10006
+rdaeo:P20163	entedit:status	"object property" ; rdfs:label "har libretto (uttrykk)"@no . #	has libretto expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20085	entedit:status	"object property" ; rdfs:label "har bakgrunnsmusikk (uttrykk)"@no . #	has incidental music expression	rdac:C10006	rdac:C10006
+rdaeo:P20103	entedit:status	"object property" ; rdfs:label "er bakgrunnsmusikk for uttrykk"@no . #	is incidental music for expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20086	entedit:status	"object property" ; rdfs:label "er nyinnspilt som uttrykk"@no . #	is remade as expression	rdac:C10006	rdac:C10006
+rdaeo:P20185	entedit:status	"object property" ; rdfs:label "er nyinnspilling av uttrykk"@no . #	is remake of expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20087	entedit:status	"object property" ; rdfs:label "er satt til musikk som uttrykk"@no . #	is set to music as expression	rdac:C10006	rdac:C10006
+rdaeo:P20159	entedit:status	"object property" ; rdfs:label "er musikksetting av uttrykk"@no . #	is musical setting of expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20088	entedit:status	"object property" ; rdfs:label "er bearbeidet som roman (uttrykk)"@no . #	is adapted as novel expression	rdac:C10006	rdac:C10006
+rdaeo:P20126	entedit:status	"object property" ; rdfs:label "er roman basert på uttrykk"@no . #	is novelization of expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20089	entedit:status	"object property" ; rdfs:label "er bilag til uttrykk"@no . #	is appendix to expression	rdac:C10006	rdac:C10006
+rdaeo:P20118	entedit:status	"object property" ; rdfs:label "har bilag (uttrykk)"@no . #	has appendix expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20090	entedit:status	"object property" ; rdfs:label "er sammendrag i uttrykk"@no . #	is abstracted in expression	rdac:C10006	rdac:C10006
+rdaeo:P20193	entedit:status	"object property" ; rdfs:label "er sammendrag for uttrykk"@no . #	is abstracts for expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20092	entedit:status	"object property" ; rdfs:label "er bearbeidet som koreografi (uttrykk)"@no . #	is adapted as choreography expression	rdac:C10006	rdac:C10006
+rdaeo:P20183	entedit:status	"object property" ; rdfs:label "er koreografisk bearbeidelse av uttrykk"@no . #	is choreographic adaptation of expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20093	entedit:status	"object property" ; rdfs:label "har errata (uttrykk)"@no . #	has errata expression	rdac:C10006	rdac:C10006
+rdaeo:P20146	entedit:status	"object property" ; rdfs:label "er errata til uttrykk"@no . #	is errata to expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20094	entedit:status	"object property" ; rdfs:label "har illustrasjoner (uttrykk)"@no . #	has illustrations expression	rdac:C10006	rdac:C10006
+rdaeo:P20148	entedit:status	"object property" ; rdfs:label "er illustrasjoner for uttrykk"@no . #	is illustrations for expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20095	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for spillefilm (uttrykk)"@no . #	is adapted as motion picture screenplay expression	rdac:C10006	rdac:C10006
+rdaeo:P20130	entedit:status	"object property" ; rdfs:label "er manus for spillefilm basert på uttrykk"@no . #	is motion picture screenplay based on expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20096	entedit:status	"object property" ; rdfs:label "er bearbeidet som filmmanus (uttrykk)"@no . #	is adapted as screenplay expression	rdac:C10006	rdac:C10006
+rdaeo:P20129	entedit:status	"object property" ; rdfs:label "er filmmanus basert på uttrykk"@no . #	is screenplay based on expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20097	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for fjernsyn (uttrykk)"@no . #	is adapted as television screenplay expression	rdac:C10006	rdac:C10006
+rdaeo:P20131	entedit:status	"object property" ; rdfs:label "er fjernsynsmanus basert på uttrykk"@no . #	is television screenplay based on expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20098	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for video (uttrykk)"@no . #	is adapted as video screenplay expression	rdac:C10006	rdac:C10006
+rdaeo:P20132	entedit:status	"object property" ; rdfs:label "er videomanus basert på uttrykk"@no . #	is video screenplay based on expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20099	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for radio (uttrykk)"@no . #	is adapted as radio script expression	rdac:C10006	rdac:C10006
+rdaeo:P20133	entedit:status	"object property" ; rdfs:label "er radiomanus basert på uttrykk"@no . #	is radio script based on expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20100	entedit:status	"object property" ; rdfs:label "er utfylt av uttrykk"@no . #	is complemented by expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20101	entedit:status	"object property" ; rdfs:label "fortsettes delvis i uttrykk"@no . #	is separated into expression	rdac:C10006	rdac:C10006
+rdaeo:P20168	entedit:status	"object property" ; rdfs:label "er utskilt fra uttrykk"@no . #	is separated from expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20102	entedit:status	"object property" ; rdfs:label "er filmmanus for uttrykk"@no . #	is screenplay for expression	rdac:C10006	rdac:C10006
+rdaeo:P20157	entedit:status	"object property" ; rdfs:label "har filmmanus (uttrykk)"@no . #	has screenplay expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20105	entedit:status	"object property" ; rdfs:label "er utvidet av uttrykk"@no . #	is augmented by expression	rdac:C10006	rdac:C10006
+rdaeo:P20192	entedit:status	"object property" ; rdfs:label "er utvidelse av uttrykk"@no . #	is augmentation of expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20108	entedit:status	"object property" ; rdfs:label "har konkordans (uttrykk)"@no . #	has concordance expression	rdac:C10006	rdac:C10006
+rdaeo:P20181	entedit:status	"object property" ; rdfs:label "er konkordans for uttrykk"@no . #	is concordance to expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20109	entedit:status	"object property" ; rdfs:label "har tillegg (uttrykk)"@no . #	has addenda expression	rdac:C10006	rdac:C10006
+rdaeo:P20177	entedit:status	"object property" ; rdfs:label "er tillegg til uttrykk"@no . #	is addenda to expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20110	entedit:status	"object property" ; rdfs:label "er bearbeidet som libretto (uttrykk)"@no . #	is adapted as libretto expression	rdac:C10006	rdac:C10006
+rdaeo:P20190	entedit:status	"object property" ; rdfs:label "er libretto basert på uttrykk"@no . #	is libretto based on expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20114	entedit:status	"object property" ; rdfs:label "er imitert som uttrykk"@no . #	is imitated as expression	rdac:C10006	rdac:C10006
+rdaeo:P20195	entedit:status	"object property" ; rdfs:label "er imitasjon av uttrykk"@no . #	is imitation of expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20115	entedit:status	"object property" ; rdfs:label "er utvidet som uttrykk"@no . #	is expanded as expression	rdac:C10006	rdac:C10006
+rdaeo:P20184	entedit:status	"object property" ; rdfs:label "er utvidet versjon av uttrykk"@no . #	is expanded version of expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20119	entedit:status	"object property" ; rdfs:label "er fritt oversatt som uttrykk"@no . #	is freely translated as expression	rdac:C10006	rdac:C10006
+rdaeo:P20140	entedit:status	"object property" ; rdfs:label "er fri oversettelse av uttrykk"@no . #	is free translation of expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20120	entedit:status	"object property" ; rdfs:label "har studieveiledning (uttrykk)"@no . #	has guide expression	rdac:C10006	rdac:C10006
+rdaeo:P20147	entedit:status	"object property" ; rdfs:label "er studieveiledning til uttrykk"@no . #	is guide to expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20121	entedit:status	"object property" ; rdfs:label "er forkortelse av uttrykk"@no . #	is abridgement of expression	rdac:C10006	rdac:C10006
+rdaeo:P20166	entedit:status	"object property" ; rdfs:label "er forkortet som uttrykk"@no . #	is abridged as expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20135	entedit:status	"object property" ; rdfs:label "er resymé av uttrykk"@no . #	is digest of expression	rdac:C10006	rdac:C10006
+rdaeo:P20170	entedit:status	"object property" ; rdfs:label "er sammenfattet til uttrykk"@no . #	is digested as expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20137	entedit:status	"object property" ; rdfs:label "er innlemmelse av uttrykk"@no . #	is absorption of expression	rdac:C10006	rdac:C10006
+rdaeo:P20143	entedit:status	"object property" ; rdfs:label "er innlemmet i uttrykk"@no . #	is absorbed by expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20138	entedit:status	"object property" ; rdfs:label "er delvis innlemmelse av uttrykk"@no . #	is absorption in part of expression	rdac:C10006	rdac:C10006
+rdaeo:P20144	entedit:status	"object property" ; rdfs:label "er delvis innlemmet i uttrykk"@no . #	is absorbed in part by expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20139	entedit:status	"object property" ; rdfs:label "er arrangement av"@no . #	is arrangement of	rdac:C10006	rdac:C10006
+rdaeo:P20165	entedit:status	"object property" ; rdfs:label "er arrangert som"@no . #	is arranged as	rdac:C10006	rdac:C10006
+
+rdaeo:P20141	entedit:status	"object property" ; rdfs:label "er oversettelse av"@no . #	is translation of	rdac:C10006	rdac:C10006
+rdaeo:P20171	entedit:status	"object property" ; rdfs:label "er oversatt som"@no . #	is translated as	rdac:C10006	rdac:C10006
+
+rdaeo:P20142	entedit:status	"object property" ; rdfs:label "er parodiert som uttrykk"@no . #	is parodied as expression	rdac:C10006	rdac:C10006
+rdaeo:P20196	entedit:status	"object property" ; rdfs:label "er parodi på uttrykk"@no . #	is parody of expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20149	entedit:status	"object property" ; rdfs:label "er fortsettelse av uttrykk"@no . #	is continuation of expression	rdac:C10006	rdac:C10006
+rdaeo:P20191	entedit:status	"object property" ; rdfs:label "er fortsatt i uttrykk"@no . #	is continued by expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20151	entedit:status	"object property" ; rdfs:label "er supplement til uttrykk"@no . #	is supplement to expression	rdac:C10006	rdac:C10006
+rdaeo:P20172	entedit:status	"object property" ; rdfs:label "har supplement (uttrykk)"@no . #	has supplement expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20152	entedit:status	"object property" ; rdfs:label "er bearbeidelse av uttrykk"@no . #	is adaptation of expression	rdac:C10006	rdac:C10006
+rdaeo:P20153	entedit:status	"object property" ; rdfs:label "er bearbeidet som uttrykk"@no . #	is adapted as expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20154	entedit:status	"object property" ; rdfs:label "er etterfulgt av uttrykk"@no . #	is preceded by expression	rdac:C10006	rdac:C10006
+rdaeo:P20169	entedit:status	"object property" ; rdfs:label "er avløst av uttrykk"@no . #	is succeeded by expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20158	entedit:status	"object property" ; rdfs:label "har manus for spillefilm (uttrykk)"@no . #	has motion picture screenplay expression	rdac:C10006	rdac:C10006
+rdaeo:P20173	entedit:status	"object property" ; rdfs:label "er manus for spillefilm (uttrykk)"@no . #	is screenplay for motion picture expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20160	entedit:status	"object property" ; rdfs:label "har radiomanus (uttrykk)"@no . #	has radio script expression	rdac:C10006	rdac:C10006
+rdaeo:P20176	entedit:status	"object property" ; rdfs:label "er manus for radioprogram (uttrykk)"@no . #	is script for radio program expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20161	entedit:status	"object property" ; rdfs:label "har fjernsynsmanus (uttrykk)"@no . #	has television screenplay expression	rdac:C10006	rdac:C10006
+rdaeo:P20174	entedit:status	"object property" ; rdfs:label "er manus for fjernsynsprogram (uttrykk)"@no . #	is screenplay for television program expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20162	entedit:status	"object property" ; rdfs:label "har videomanus (uttrykk)"@no . #	has video screenplay expression	rdac:C10006	rdac:C10006
+rdaeo:P20175	entedit:status	"object property" ; rdfs:label "er manus for video (uttrykk)"@no . #	is screenplay for video expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20164	entedit:status	"object property" ; rdfs:label "er omskrevet til uttrykk"@no . #	is paraphrased as expression	rdac:C10006	rdac:C10006
+rdaeo:P20186	entedit:status	"object property" ; rdfs:label "er omskriving av uttrykk"@no . #	is paraphrase of expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20167	entedit:status	"object property" ; rdfs:label "er skilt fra uttrykk"@no . #	is split from expression	rdac:C10006	rdac:C10006
+rdaeo:P20200	entedit:status	"object property" ; rdfs:label "er delt opp i uttrykk"@no . #	is split into expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20189	entedit:status	"object property" ; rdfs:label "er revisjon av"@no . #	is revision of	rdac:C10006	rdac:C10006
+rdaeo:P20211	entedit:status	"object property" ; rdfs:label "er revidert som"@no . #	is revised as	rdac:C10006	rdac:C10006
+
+rdaeo:P20201	entedit:status	"object property" ; rdfs:label "er sammenslåing av uttrykk"@no . #	is merger of expression	rdac:C10006	rdac:C10006
+rdaeo:P20212	entedit:status	"object property" ; rdfs:label "er slått sammen til uttrykk"@no . #	is merged to form expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20203	entedit:status	"object property" ; rdfs:label "har avledet uttrykk"@no . #	has expression of derivative work	rdac:C10006	rdac:C10006
+rdaeo:P20204	entedit:status	"object property" ; rdfs:label "er basert på uttrykk"@no . #	has expression of source work	rdac:C10006	rdac:C10006
+
+#rdaeo:P20205	entedit:status	"object property" ; rdfs:label "har relatert uttrykk av uttrykk"@no . #	has related expression of expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20239	entedit:status	"object property" ; rdfs:label "er bearbeidelse av uttrykk til musikal"@no . #	is musical theatre adaptation of expression	rdac:C10006	rdac:C10006
+rdaeo:P20241	entedit:status	"object property" ; rdfs:label "er bearbeidet som musikal (uttrykk)"@no . #	is adapted as musical theatre expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20240	entedit:status	"object property" ; rdfs:label "er bearbeidelse av uttrykk til opera"@no . #	is opera adaptation of expression	rdac:C10006	rdac:C10006
+rdaeo:P20242	entedit:status	"object property" ; rdfs:label "er bearbeidet som opera (uttrykk)"@no . #	is adapted as opera expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20243	entedit:status	"object property" ; rdfs:label "har musikk (uttrykk)"@no . #	has music expression	rdac:C10006	rdac:C10006
+rdaeo:P20244	entedit:status	"object property" ; rdfs:label "er musikk for uttrykk"@no . #	is music for expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20245	entedit:status	"object property" ; rdfs:label "har videomusikk (uttrykk)"@no . #	has video music expression	rdac:C10006	rdac:C10006
+rdaeo:P20246	entedit:status	"object property" ; rdfs:label "er musikk for video (uttrykk)"@no . #	is music for video expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20247	entedit:status	"object property" ; rdfs:label "har fjernsynsmusikk (uttrykk)"@no . #	has television program music expression	rdac:C10006	rdac:C10006
+rdaeo:P20248	entedit:status	"object property" ; rdfs:label "er musikk for fjernsynsprogram (uttrykk)"@no . #	is music for television program expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20249	entedit:status	"object property" ; rdfs:label "har radiomusikk (uttrykk)"@no . #	has radio program music expression	rdac:C10006	rdac:C10006
+rdaeo:P20250	entedit:status	"object property" ; rdfs:label "er musikk for radioprogram (uttrykk)"@no . #	is music for radio program expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20251	entedit:status	"object property" ; rdfs:label "har filmmusikk for spillefilm (uttrykk)"@no . #	has motion picture music expression	rdac:C10006	rdac:C10006
+rdaeo:P20252	entedit:status	"object property" ; rdfs:label "er musikk for spillefilm (uttrykk)"@no . #	is music for motion picture expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20253	entedit:status	"object property" ; rdfs:label "har koreografi (uttrykk)"@no . #	has choreography expression	rdac:C10006	rdac:C10006
+rdaeo:P20254	entedit:status	"object property" ; rdfs:label "er koreografi for uttrykk"@no . #	is choreography for expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20255	entedit:status	"object property" ; rdfs:label "er bearbeidet som tegneserieroman (uttrykk)"@no . #	is adapted as graphic novel expression	rdac:C10006	rdac:C10006
+rdaeo:P20256	entedit:status	"object property" ; rdfs:label "er tegneserieroman basert på (uttrykk)"@no . #	is graphic novelization of expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20281	entedit:status	"object property" ; rdfs:label "er bearbeidelse av uttrykk til oratorium"@no . #	is oratorio adaptation of expression	rdac:C10006	rdac:C10006
+rdaeo:P20282	entedit:status	"object property" ; rdfs:label "er bearbeidet som oratorium (uttrykk)"@no . #	is adapted as oratorio expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20319	entedit:status	"object property" ; rdfs:label "aggregerer"@no . #	aggregates	rdac:C10006	rdac:C10006
+rdaeo:P20320	entedit:status	"object property" ; rdfs:label "er aggregert av"@no . #	is aggregated by	rdac:C10006	rdac:C10006
+
+rdaeo:P20334	entedit:status	"object property" ; rdfs:label "har forløper (uttrykk)"@no . #	has prequel expression	rdac:C10006	rdac:C10006
+rdaeo:P20335	entedit:status	"object property" ; rdfs:label "har etterfølger (uttrykk)"@no . #	has sequel expression	rdac:C10006	rdac:C10006
+
+rdaeo:P20574	entedit:status	"object property"	 . #	has source expression	rdac:C10006	rdac:C10006
+rdaeo:P20575	entedit:status	"object property"	 . #	has derivative expression	rdac:C10006	rdac:C10006
+
+#rdaeo:P20299	entedit:status	"object property" ; rdfs:label "har manifestasjon relatert til uttrykk"@no . #	has related manifestation of expression	rdac:C10006	rdac:C10007
+#rdamo:P30266	entedit:status	"object property" ; rdfs:label "har uttrykk relatert til manifestasjon"@no . #	has related expression of manifestation	rdac:C10007	rdac:C10006
+
+rdamo:P30016	entedit:status	"object property" ; rdfs:label "har elektronisk reproduksjon av manifestasjon"@no . #	has electronic reproduction of manifestation	rdac:C10007	rdac:C10007
+rdamo:P30136	entedit:status	"object property" ; rdfs:label "har elektronisk reproduksjon av manifestasjon av"@no . #	is electronic reproduction of manifestation of	rdac:C10007	rdac:C10007
+
+rdamo:P30019	entedit:status	"object property" ; rdfs:label "har faksimile som del av"@no . #	is facsimile part of	rdac:C10007	rdac:C10007
+rdamo:P30046	entedit:status	"object property" ; rdfs:label "har faksimile som del"@no . #	has facsimile part	rdac:C10007	rdac:C10007
+
+rdamo:P30020	entedit:status	"object property" ; rdfs:label "har del av manifestasjon"@no . #	is part of manifestation	rdac:C10007	rdac:C10007
+rdamo:P30033	entedit:status	"object property" ; rdfs:label "har del av manifestasjon"@no . #	has part manifestation	rdac:C10007	rdac:C10007
+
+rdamo:P30021	entedit:status	"object property" ; rdfs:label "har bevaringskopi av manifestasjon"@no . #	has preservation facsimile of manifestation	rdac:C10007	rdac:C10007
+rdamo:P30045	entedit:status	"object property" ; rdfs:label "er bevaringskopi av manifestasjon av"@no . #	is preservation facsimile of manifestation of	rdac:C10007	rdac:C10007
+
+rdamo:P30022	entedit:status	"object property" ; rdfs:label "har innlegg"@no . #	has insert	rdac:C10007	rdac:C10007
+rdamo:P30025	entedit:status	"object property" ; rdfs:label "er lagt inn i"@no . #	is inserted in	rdac:C10007	rdac:C10007
+
+rdamo:P30024	entedit:status	"object property" ; rdfs:label "har ekvivalent manifestasjon"@no . #	has equivalent manifestation	rdac:C10007	rdac:C10007
+
+#rdamo:P30026	entedit:status	"object property" ; rdfs:label "er også utgitt som"@no . #	is also issued as	rdac:C10007	rdac:C10007
+
+rdamo:P30027	entedit:status	"object property" ; rdfs:label "er ledsaget av manifestasjon"@no . #	is accompanied by manifestation	rdac:C10007	rdac:C10007
+
+rdamo:P30028	entedit:status	"object property" ; rdfs:label "har speilside"@no . #	has mirror site	rdac:C10007	rdac:C10007
+
+rdamo:P30029	entedit:status	"object property" ; rdfs:label "har digital overføring av manifestasjon"@no . #	has digital transfer of manifestation	rdac:C10007	rdac:C10007
+rdamo:P30040	entedit:status	"object property" ; rdfs:label "er digital overføring av manifestasjon av"@no . #	is digital transfer of manifestation of	rdac:C10007	rdac:C10007
+
+rdamo:P30031	entedit:status	"object property" ; rdfs:label "har faksimile av manifestasjon"@no . #	has facsimile of manifestation	rdac:C10007	rdac:C10007
+rdamo:P30047	entedit:status	"object property" ; rdfs:label "er faksimile av manifestasjon av"@no . #	is facsimile of manifestation of	rdac:C10007	rdac:C10007
+
+
+rdamo:P30035	entedit:status	"object property" ; rdfs:label "er utgitt sammen med"@no . #	is on carrier unit with	rdac:C10007	rdac:C10007
+
+rdamo:P30036	entedit:status	"object property" ; rdfs:label "er på plate med manifestasjon"@no . #	is on disc with manifestation	rdac:C10007	rdac:C10007
+
+rdamo:P30037	entedit:status	"object property" ; rdfs:label "er på film med manifestasjon"@no . #	is filmed with manifestation	rdac:C10007	rdac:C10007
+
+rdamo:P30038	entedit:status	"object property" ; rdfs:label "er opptrykt som manifestasjon"@no . #	is reprinted as manifestation	rdac:C10007	rdac:C10007
+rdamo:P30093	entedit:status	"object property" ; rdfs:label "er opptrykk av manifestasjon av"@no . #	is reprint of manifestation of	rdac:C10007	rdac:C10007
+
+rdamo:P30039	entedit:status	"object property" ; rdfs:label "er reprodusert som manifestasjon"@no . #	is reproduced as manifestation	rdac:C10007	rdac:C10007
+rdamo:P30043	entedit:status	"object property" ; rdfs:label "er reproduksjon av manifestasjon av"@no . #	is reproduction of manifestation of	rdac:C10007	rdac:C10007
+
+
+#rdamo:P30048	entedit:status	"object property" ; rdfs:label "har relatert manifestasjon av manifestasjon"@no . #	has related manifestation of manifestation	rdac:C10007	rdac:C10007
+#rdamo:P30458	entedit:status	"object property"	 . #	has subcollection	rdac:C10007	rdac:C10007
+#rdamo:P30459	entedit:status	"object property"	 . #	is subcollection of	rdac:C10007	rdac:C10007
+
+#Item object properties
+
+#rdaio:P40072	entedit:status	"object property" ; rdfs:label ""@no . #	"has related agent of item"@en
+#rdaao:P50308	entedit:status	"object property" ; rdfs:label ""@no . #	has related item of agent"@en
+
+rdaio:P40013	entedit:status	"object property" ; rdfs:label "er innbundet av"@no . #		"has binder agent"@en
+rdaao:P50123	entedit:status	"object property" ; rdfs:label "er innbinder av"@no . #	is binder agent of"@en
+
+#rdaio:P40093	entedit:status	"object property" ; rdfs:label ""@no . #	has modifier agent"@en
+#rdaao:P50446	entedit:status	"object property" ; rdfs:label ""@no . #	is modifier agent of"@en
+
+#rdaio:P40005	entedit:status	"object property" ; rdfs:label ""@no . #	has collection registrar agent (Deprecated)"@en
+#rdaao:P50046	entedit:status	"object property" ; rdfs:label ""@no . #	is collection registrar agent of (Deprecated)"@en
+
+#rdaio:P40017	entedit:status	"object property" ; rdfs:label ""@no . #	has curator agent (Deprecated)"@en
+#rdaao:P50133	entedit:status	"object property" ; rdfs:label ""@no . #	is curator agent of (Deprecated)"@en
+
+#rdaio:P40004	entedit:status	"object property" ; rdfs:label ""@no . #	has collector agent (Deprecated)"@en
+#rdaao:P50045	entedit:status	"object property" ; rdfs:label ""@no . #	is collector agent of (Deprecated)"@en
+
+#rdaio:P40018	entedit:status	"object property" ; rdfs:label ""@no . #	has current owner agent"@en
+#rdaao:P50162	entedit:status	"object property" ; rdfs:label ""@no . #	is current owner agent of"@en
+
+rdaio:P40021	entedit:status	"object property" ; rdfs:label "har eier"@no . #	has owner agent"@en
+rdaao:P50165	entedit:status	"object property" ; rdfs:label "er eier av"@no . #	is owner agent of"@en
+
+#rdaio:P40006	entedit:status	"object property" ; rdfs:label ""@no . #	has depositor agent"@en
+#rdaao:P50047	entedit:status	"object property" ; rdfs:label ""@no . #	is depositor agent of"@en
+
+#rdaio:P40020	entedit:status	"object property" ; rdfs:label ""@no . #	has custodian agent"@en
+#rdaao:P50164	entedit:status	"object property" ; rdfs:label ""@no . #	is custodian agent of"@en
+
+#rdaio:P40025	entedit:status	"object property" ; rdfs:label ""@no . #	has dedicatee agent of item"@en
+#rdaao:P50210	entedit:status	"object property" ; rdfs:label ""@no . #	is dedicatee agent of item of"@en
+
+#rdaio:P40007	entedit:status	"object property" ; rdfs:label "er donert av"@no . #	has donor agent"@en
+#rdaao:P50066	entedit:status	"object property" ; rdfs:label "har donert"@no . #	is donor agent of"@en
+
+#rdaio:P40019	entedit:status	"object property" ; rdfs:label ""@no . #	has former owner agent"@en
+#rdaao:P50163	entedit:status	"object property" ; rdfs:label ""@no . #	is former owner agent of"@en
+
+#rdaio:P40008	entedit:status	"object property" ; rdfs:label "er solgt av"@no . #	has seller agent"@en
+#rdaao:P50067	entedit:status	"object property" ; rdfs:label ""@no . #	is seller agent of"@en
+
+#rdaio:P40022	entedit:status	"object property" ; rdfs:label ""@no . #	has honouree agent of item"@en
+#rdaao:P50167	entedit:status	"object property" ; rdfs:label ""@no . #	is honouree agent of item of"@en
+
+#rdaio:P40012	entedit:status	"object property" ; rdfs:label ""@no . #	has illuminator agent"@en
+#rdaao:P50092	entedit:status	"object property" ; rdfs:label ""@no . #	is illuminator agent of"@en
+
+#rdaio:P40024	entedit:status	"object property" ; rdfs:label ""@no . #	has restorationist agent of item"@en
+#rdaao:P50206	entedit:status	"object property" ; rdfs:label ""@no . #	is restorationist agent of item of"@en
+
+#rdaio:P40023	entedit:status	"object property" ; rdfs:label ""@no . #	has other agent associated with item (Deprecated)"@en
+#rdaao:P50182	entedit:status	"object property" ; rdfs:label ""@no . #	is other agent associated with item of (Deprecated)"@en
+
+
+
+<http://id.loc.gov/vocabulary/iso639-2/aar>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/abk>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ace>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ach>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ada>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ady>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/afa>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/afh>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/afr>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ain>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/aka>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/akk>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/alb>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ale>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/alg>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/alt>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/amh>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ang>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/anp>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/apa>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ara>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/arc>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/arg>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/arm>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/arn>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/arp>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/art>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/arw>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/asm>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ast>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ath>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/aus>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ava>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ave>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/awa>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/aym>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/aze>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bad>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bai>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bak>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bal>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bam>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ban>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/baq>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bas>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bat>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bej>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bel>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bem>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ben>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ber>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bho>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bih>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bik>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bin>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bis>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bla>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bnt>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bod>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bos>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bra>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bre>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/btk>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bua>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bug>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bul>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/bur>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/byn>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cad>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cai>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/car>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cat>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cau>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ceb>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cel>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ces>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cha>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/chb>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/che>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/chg>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/chi>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/chk>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/chm>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/chn>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cho>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/chp>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/chr>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/chu>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/chv>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/chy>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cmc>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cnr>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cop>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cor>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cos>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cpe>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cpf>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cpp>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cre>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/crh>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/crp>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/csb>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cus>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cym>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/cze>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/dak>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/dan>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/dar>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/day>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/del>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/den>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/deu>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/dgr>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/din>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/div>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/doi>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/dra>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/dsb>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/dua>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/dum>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/dut>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/dyu>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/dzo>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/efi>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/egy>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/eka>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ell>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/elx>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/eng>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/enm>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/epo>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/est>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ewe>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ewo>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/fan>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/fao>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/fas>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/fat>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/fij>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/fil>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/fin>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/fiu>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/fon>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/fra>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/fre>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/frm>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/fro>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/frr>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/frs>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/fry>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ful>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/fur>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/gaa>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/gay>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/gba>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/gem>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/geo>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ger>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/gez>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/gil>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/gla>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/gle>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/glg>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/glv>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/gmh>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/goh>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/gon>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/gor>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/got>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/grb>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/grc>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/grn>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/gsw>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/guj>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/gwi>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/hai>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/hat>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/hau>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/haw>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/heb>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/her>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/hil>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/him>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/hin>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/hit>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/hmn>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/hmo>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/hrv>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/hsb>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/hun>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/hup>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/iba>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ibo>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ice>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ido>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/iii>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ijo>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/iku>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ile>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ilo>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ina>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/inc>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ind>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ine>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/inh>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ipk>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ira>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/iro>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ita>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/jav>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/jbo>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/jpn>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/jpr>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/jrb>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kaa>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kab>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kac>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kal>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kam>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kan>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kar>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kas>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kau>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kaw>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kaz>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kbd>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kha>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/khi>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/khm>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kho>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kik>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kin>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kir>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kmb>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kok>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kom>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kon>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kor>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kos>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kpe>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/krc>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/krl>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kro>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kru>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kua>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kum>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kur>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/kut>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lad>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lah>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lam>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lao>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lat>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lav>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lez>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lim>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lin>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lit>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lol>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/loz>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ltz>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lua>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lub>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lug>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lui>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lun>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/luo>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/lus>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mac>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mad>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mag>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mah>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mai>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mak>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mal>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/man>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mao>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/map>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mar>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mas>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/may>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mdf>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mdr>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/men>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mga>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mic>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/min>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mis>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mkh>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mlg>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mlt>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mnc>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mni>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mno>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/moh>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mon>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mos>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mul>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mun>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mus>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mwl>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/mwr>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/myn>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/myv>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nah>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nai>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nap>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nau>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nav>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nbl>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nde>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ndo>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nds>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nep>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/new>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nia>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nic>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/niu>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nno>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nob>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nog>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/non>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nor>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nqo>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nso>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nub>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nwc>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nya>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nym>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nyn>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nyo>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/nzi>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/oci>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/oji>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ori>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/orm>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/osa>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/oss>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ota>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/oto>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/paa>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/pag>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/pal>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/pam>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/pan>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/pap>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/pau>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/peo>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/per>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/phi>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/phn>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/pli>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/pol>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/pon>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/por>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/pra>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/pro>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/pus>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/qaa-qtz>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/que>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/raj>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/rap>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/rar>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/roa>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/roh>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/rom>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ron>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/rum>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/run>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/rup>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/rus>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sad>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sag>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sah>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sai>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sal>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sam>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/san>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sas>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sat>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/scn>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sco>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sel>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sem>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sga>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sgn>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/shn>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sid>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sin>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sio>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sit>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sla>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/slk>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/slv>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sma>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sme>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/smi>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/smj>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/smn>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/smo>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sms>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sna>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/snd>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/snk>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sog>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/som>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/son>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sot>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/spa>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/srd>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/srn>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/srp>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/srr>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ssa>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ssw>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/suk>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sun>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sus>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/sux>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/swa>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/swe>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/syc>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/syr>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tah>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tai>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tam>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tat>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tel>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tem>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ter>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tet>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tgk>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tgl>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tha>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tig>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tir>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tiv>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tkl>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tlh>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tli>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tmh>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tog>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ton>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tpi>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tsi>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tsn>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tso>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tuk>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tum>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tup>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tur>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tut>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tvl>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/twi>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/tyv>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/udm>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/uga>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/uig>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ukr>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/umb>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/und>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/urd>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/uzb>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/vai>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ven>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/vie>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/vol>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/vot>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/wak>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/wal>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/war>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/was>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/wel>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/wen>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/wln>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/wol>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/xal>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/xho>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/yao>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/yap>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/yid>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/yor>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/ypk>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/zap>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/zbl>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/zen>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/zgh>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/zha>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/znd>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/zul>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/zun>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/zxx>	a	entedit:Language	 .
+<http://id.loc.gov/vocabulary/iso639-2/zza>	a	entedit:Language	 .

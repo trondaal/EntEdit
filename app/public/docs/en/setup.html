@@ -279,7 +279,7 @@ EntEdit/<br>
 │   ├── types/          <span style="color: var(--text-secondary);">← Vocabulary files (loaded into GraphDB)</span><br>
 │   ├── testdata/       <span style="color: var(--text-secondary);">← Sample RDF entities</span><br>
 │   ├── graphdb/        <span style="color: var(--text-secondary);">← SPARQL connector definitions</span><br>
-│   └── inference rules/<span style="color: var(--text-secondary);">← GraphDB reasoning rules</span><br>
+│   └── inference_rules/<span style="color: var(--text-secondary);">← GraphDB reasoning rules</span><br>
 ├── docker/<br>
 │   ├── graphdb/        <span style="color: var(--text-secondary);">← Repository config + init script</span><br>
 │   └── nginx/          <span style="color: var(--text-secondary);">← Web server + proxy config</span><br>
@@ -345,15 +345,15 @@ EntEdit/<br>
     <th>Contents</th>
   </tr>
   <tr>
-    <td><code>database/types/entedit profile/</code></td>
+    <td><code>database/types/entedit_profile/</code></td>
     <td>The EntEdit application profile — defines which classes and properties are active, their display order, and status. <strong>This is required.</strong></td>
   </tr>
   <tr>
-    <td><code>database/types/rda vocabulary/</code></td>
+    <td><code>database/types/rda_vocabulary/</code></td>
     <td>The RDA (Resource Description and Access) ontology — class and property definitions with labels in multiple languages.</td>
   </tr>
   <tr>
-    <td><code>database/types/term vocabularies/</code></td>
+    <td><code>database/types/term_vocabularies/</code></td>
     <td>Controlled value lists — languages, content types, media types, carrier types, work types.</td>
   </tr>
 </table>
@@ -361,7 +361,7 @@ EntEdit/<br>
 <p>Import all files from these directories via <strong>Import → RDF</strong> in the GraphDB Workbench, or use the GraphDB REST API.</p>
 
 <div class="info-box warning">
-  <strong>Important:</strong> All three directories must be imported. Without the EntEdit profile, no classes or properties will appear in the application. Without the RDA vocabulary, labels will be missing. Without the term vocabularies, controlled value dropdowns will be empty.
+  <strong>Important:</strong> All three directories must be imported. Without the EntEdit profile, no classes or properties will appear in the application. Without the RDA vocabulary, labels will be missing. Without the term_vocabularies, controlled value dropdowns will be empty.
 </div>
 
 <h3>Step 3: Set up the Lucene connectors</h3>
