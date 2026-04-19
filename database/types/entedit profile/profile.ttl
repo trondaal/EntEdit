@@ -169,14 +169,14 @@ rdaid:P40028 abi:status "data property" ; abi:order 2 ; rdfs:label "note"@no . #
 
 #Basic WEMI types
 
-rdawo:P10078	abi:status	"core wemi property" ; rdfs:label "har uttrykk av verk"@no . #	has expression of work	rdac:C10001	rdac:C10006
-rdaeo:P20231	abi:status	"core wemi property" ; rdfs:label "er uttrykk av verk"@no . #	has work expressed	rdac:C10006	rdac:C10001
+rdawo:P10078	abi:status	"core wemi property" ; abi:order 1 ; rdfs:label "har uttrykk av verk"@no . #	has expression of work	rdac:C10001	rdac:C10006
+rdaeo:P20231	abi:status	"core wemi property" ; abi:order 2 ; rdfs:label "er uttrykk av verk"@no . #	has work expressed	rdac:C10006	rdac:C10001
 
-rdamo:P30139	abi:status	"core wemi property" ; rdfs:label "har uttrykk"@no . #	has expression manifested	rdac:C10007	rdac:C10006
-rdaeo:P20059	abi:status	"core wemi property" ; rdfs:label "har manifestasjon"@no . #	has manifestation of expression	rdac:C10006	rdac:C10007
+rdamo:P30139	abi:status	"core wemi property" ; abi:order 3 ; rdfs:label "har uttrykk"@no . #	has expression manifested	rdac:C10007	rdac:C10006
+rdaeo:P20059	abi:status	"core wemi property" ; abi:order 4 ; rdfs:label "har manifestasjon"@no . #	has manifestation of expression	rdac:C10006	rdac:C10007
 
-rdamo:P30103  abi:status	"core wemi property" ; rdfs:label "har eksemplar"@no . # has item of manifestation
-rdaio:P40049  abi:status	"core wemi property" ; rdfs:label "er eksemplar av"@no . #"has manifestation exemplified" [@en; no @no]
+rdamo:P30103  abi:status	"core wemi property" ; abi:order 5 ; rdfs:label "har eksemplar"@no . # has item of manifestation
+rdaio:P40049  abi:status	"core wemi property" ; abi:order 6 ; rdfs:label "er eksemplar av"@no . #"has manifestation exemplified" [@en; no @no]
 
 #Subject properties
 

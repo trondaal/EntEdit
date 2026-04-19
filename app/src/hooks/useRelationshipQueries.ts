@@ -56,7 +56,7 @@ function useRelatedPropertiesByRange(
         PREFIX rdaeo: <http://rdaregistry.info/Elements/e/object/>
         PREFIX rdamo: <http://rdaregistry.info/Elements/m/object/>
 
-        SELECT DISTINCT ?property ?label ?domain ?range ?status
+        SELECT DISTINCT ?property ?label ?domain ?range ?status ?order
         WHERE {
           ?property a rdf:Property .
           ?property entedit:status ?status.
@@ -65,11 +65,12 @@ function useRelatedPropertiesByRange(
 
           ?property rdfs:domain ?domain .
           ?property rdfs:range ?range .
+          OPTIONAL { ?property entedit:order ?order }
           FILTER(?range = <${sanitizeSparqlUri(rangeUri)}>) .
           FILTER(?property NOT IN (${RELATED_EXCLUDED_PROPERTIES})) .
           ${classUri ? `FILTER(?domain = <${sanitizeSparqlUri(classUri)}>)` : ""}
         }
-        ORDER BY ?range STR(?label)
+        ORDER BY ?range asc(?order) STR(?label)
       `;
 
       const response = await client.query(query, { signal });
@@ -108,7 +109,7 @@ export const useWEMIProperties = (
         PREFIX rdamo: <http://rdaregistry.info/Elements/m/object/>
 
 
-        SELECT DISTINCT ?property ?label ?domain ?range ?status
+        SELECT DISTINCT ?property ?label ?domain ?range ?status ?order
         WHERE {
           ?property a rdf:Property .
           ?property entedit:status ?status.
@@ -116,10 +117,11 @@ export const useWEMIProperties = (
           ${createSchemaLabelFragment("?property", language)}
           ?property rdfs:domain ?domain .
           ?property rdfs:range ?range .
+          OPTIONAL { ?property entedit:order ?order }
 
           ${classUri ? `FILTER(?domain = <${sanitizeSparqlUri(classUri)}>)` : ""}
         }
-        ORDER BY ?range STR(?label)
+        ORDER BY ?range asc(?order) STR(?label)
       `;
 
       const response = await client.query(query, { signal });
