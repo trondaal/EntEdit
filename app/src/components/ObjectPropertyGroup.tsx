@@ -61,13 +61,14 @@ const ObjectPropertyGroup: React.FC<ObjectPropertyGroupProps> = ({
 
   const propertiesWithValues = useMemo(
     () =>
-      Object.keys(entityData).filter((prop) => {
-        const hasValues = entityData[prop] && entityData[prop].length > 0;
-        const matches = properties.some(
-          (p) => p.uri === prop && p.status === statusFilter,
-        );
-        return hasValues && matches;
-      }),
+      properties
+        .filter(
+          (p) =>
+            p.status === statusFilter &&
+            entityData[p.uri] &&
+            entityData[p.uri].length > 0,
+        )
+        .map((p) => p.uri),
     [entityData, properties, statusFilter],
   );
 

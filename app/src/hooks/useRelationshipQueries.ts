@@ -1,13 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { SparqlClient } from "../utils/sparqlClient";
-import {
-  createSchemaLabelFragment,
-} from "../utils/sparqlFragments";
+import { createSchemaLabelFragment } from "../utils/sparqlFragments";
 import { sanitizeSparqlUri } from "../utils/labelUtils";
-import type {
-  SparqlEndpointConfig,
-  RdfProperty,
-} from "../types/sparql";
+import type { SparqlEndpointConfig, RdfProperty } from "../types/sparql";
 
 /**
  * Properties excluded from the related-Work/Expression/Manifestation sections
@@ -121,7 +116,7 @@ export const useWEMIProperties = (
 
           ${classUri ? `FILTER(?domain = <${sanitizeSparqlUri(classUri)}>)` : ""}
         }
-        ORDER BY ?range asc(?order) STR(?label)
+        ORDER BY asc(?order) ?range STR(?label)
       `;
 
       const response = await client.query(query, { signal });
