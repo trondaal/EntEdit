@@ -1,0 +1,51 @@
+@prefix entedit: <http://oslomet.no/abi/vocab#> .
+@prefix rdaed: <http://rdaregistry.info/Elements/e/datatype/> .
+@prefix rdaeo: <http://rdaregistry.info/Elements/e/object/> .
+@prefix rdamd: <http://rdaregistry.info/Elements/m/datatype/> .
+@prefix rdamo: <http://rdaregistry.info/Elements/m/object/> .
+@prefix rdawd: <http://rdaregistry.info/Elements/w/datatype/> .
+@prefix rdawo: <http://rdaregistry.info/Elements/w/object/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
+@prefix rdaao: <http://rdaregistry.info/Elements/a/object/> .
+
+<http://example.org/entity-1775731224739>
+    a <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:label "Den himmelske makrell / Tor Åge Bringsværd - Cappelen Damm, 2023" ;
+    rdamd:P30011 "2023" ;
+    rdamd:P30076 "Cappelen Damm" ;
+    rdamd:P30107 "1. utgave" ;
+    rdamd:P30117 "Tor Åge Bringsværd" ;
+    rdamd:P30156 "Den himmelske makrell" ;
+    rdamd:P30182 "182 sider" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/entity-1775732741954> .
+
+
+<http://example.org/entity-1775732362134>
+    a <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:label "Den himmelske makrell (Bringsværd, Tor Åge)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawd:P10223 "Den himmelske makrell" ;
+    rdawo:P10061 <http://viaf.org/viaf/301771064> ;
+    rdawo:P10078 <http://example.org/entity-1775732741954> .
+
+
+<http://example.org/entity-1775732741954>
+    a <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:label "Den himmelske makrell (norsk tekst)" ;
+    rdaed:P20315 "Den himmelske makrell" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nor> ;
+    rdaeo:P20059 <http://example.org/entity-1775731224739> ;
+    rdaeo:P20231 <http://example.org/entity-1775732362134> .
+
+<http://viaf.org/viaf/301771064>
+    a <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:label "Bringsværd, Tor Åge" ;
+    rdaad:P50339 "1939-2025" ;
+    rdaad:P50413 "Bringsværd, Tor Åge" ;
+    rdaao:P50195 <http://example.org/entity-1775732362134> .

@@ -1,0 +1,193 @@
+@prefix entedit: <http://oslomet.no/abi/vocab#> .
+@prefix rdaed: <http://rdaregistry.info/Elements/e/datatype/> .
+@prefix rdaeo: <http://rdaregistry.info/Elements/e/object/> .
+@prefix rdamd: <http://rdaregistry.info/Elements/m/datatype/> .
+@prefix rdamo: <http://rdaregistry.info/Elements/m/object/> .
+@prefix rdawd: <http://rdaregistry.info/Elements/w/datatype/> .
+@prefix rdawo: <http://rdaregistry.info/Elements/w/object/> .
+@prefix rdaxd: <http://rdaregistry.info/Elements/x/datatype/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
+@prefix rdaao: <http://rdaregistry.info/Elements/a/object/> .
+
+<http://example.org/isbn-8205340781>
+    a <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:label "Hamsuns beste : ungdomsverker / Knut Hamsun" ;
+    rdamd:P30004 "ISBN 8205340781" ;
+    rdamd:P30011 "2005" ;
+    rdamd:P30033 "Sult -- Mysterier -- Pan -- Victoria -- Onde dager -- En ganske alminnelig flue av alminnelig størrelse -- En æreskjælm" ;
+    rdamd:P30076 "Gyldendal" ;
+    rdamd:P30088 "[Oslo]" ;
+    rdamd:P30106 "Forfatternes beste" ;
+    rdamd:P30111 "[Oslo] : Gyldendal, 2005" ;
+    rdamd:P30117 "Knut Hamsun" ;
+    rdamd:P30137
+        "1. utg. av Sult, Mysterier og Pan: København : Philipsen, henholdsvis 1890, 1892 og 1894. 1. utg. av Victoria: Oslo : Cammermeyer, 1898" ,
+        "Inneholder også tre frittstående noveller" ,
+        "Sult -- Mysterier -- Pan -- Victoria -- Onde dager -- En ganske alminnelig flue av alminnelig størrelse -- En æreskjælm" ;
+    rdamd:P30142 "ungdomsverker" ;
+    rdamd:P30156 "Hamsuns beste" ;
+    rdamd:P30182 "619 s." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139
+        <http://viaf.org/viaf/194765531/exp/nob/1020> ,
+        <http://viaf.org/viaf/206863699/exp/nob/1020> ,
+        <http://viaf.org/viaf/220443771/exp/nob/1020> ,
+        <http://viaf.org/viaf/395147270538135700001/exp/nob/1020> ,
+        <http://viaf.org/viaf/59083692/ganskealminneligflue/exp/nob/1020> ,
+        <http://viaf.org/viaf/59083692/ondedager/exp/nob/1020> ,
+        <http://viaf.org/viaf/59083692/æreskjælm/exp/nob/1020> ;
+    rdaxd:P00018 "isbn-8205340781" .
+
+<http://viaf.org/viaf/194765531>
+    a <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:label "Pan (Hamsun, Knut)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawd:P10223 "Pan" ;
+    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
+    rdawo:P10078 <http://viaf.org/viaf/194765531/exp/nob/1020> ;
+    rdaxd:P00018 "http://viaf.org/viaf/194765531" .
+
+<http://viaf.org/viaf/194765531/exp/nob/1020>
+    a <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:label "Pan (Hamsun, Knut)" ;
+    rdaed:P20312 "Pan : af Løjtnant Thomas Glahns Papirer" ;
+    rdaed:P20315 "Pan" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20059 <http://example.org/isbn-8205340781> ;
+    rdaeo:P20231 <http://viaf.org/viaf/194765531> .
+
+<http://viaf.org/viaf/206863699>
+    a <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:label "Mysterier (Hamsun, Knut)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawd:P10223 "Mysterier" ;
+    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
+    rdawo:P10078 <http://viaf.org/viaf/206863699/exp/nob/1020> ;
+    rdaxd:P00018 "http://viaf.org/viaf/206863699" .
+
+<http://viaf.org/viaf/206863699/exp/nob/1020>
+    a <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:label "Mysterier (Hamsun, Knut)" ;
+    rdaed:P20312 "Mysterier" ;
+    rdaed:P20315 "Mysterier" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20059 <http://example.org/isbn-8205340781> ;
+    rdaeo:P20231 <http://viaf.org/viaf/206863699> .
+
+<http://viaf.org/viaf/220443771>
+    a <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:label "Sult (Hamsun, Knut)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawd:P10223 "Sult" ;
+    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
+    rdawo:P10078 <http://viaf.org/viaf/220443771/exp/nob/1020> ;
+    rdaxd:P00018 "http://viaf.org/viaf/220443771" .
+
+<http://viaf.org/viaf/220443771/exp/nob/1020>
+    a <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:label "Sult (Hamsun, Knut)" ;
+    rdaed:P20315 "Sult" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20059 <http://example.org/isbn-8205340781> ;
+    rdaeo:P20231 <http://viaf.org/viaf/220443771> .
+
+<http://viaf.org/viaf/395147270538135700001>
+    a <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:label "Victoria (Hamsun, Knut)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawd:P10223 "Victoria" ;
+    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
+    rdawo:P10078 <http://viaf.org/viaf/395147270538135700001/exp/nob/1020> ;
+    rdaxd:P00018 "http://viaf.org/viaf/395147270538135700001" .
+
+<http://viaf.org/viaf/395147270538135700001/exp/nob/1020>
+    a <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:label "Victoria (Hamsun, Knut)" ;
+    rdaed:P20312 "Victoria : en kjærligheds historie" ;
+    rdaed:P20315 "Victoria" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20059 <http://example.org/isbn-8205340781> ;
+    rdaeo:P20231 <http://viaf.org/viaf/395147270538135700001> .
+
+<http://viaf.org/viaf/59083692>
+    a <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:label "Hamsun, Knut" ;
+    rdaxd:P00018 "http://viaf.org/viaf/59083692" ;
+    rdaad:P50339 "1859-1952" ;
+    rdaad:P50413 "Hamsun, Knut" ;
+    rdaao:P50195
+        <http://viaf.org/viaf/194765531> ,
+        <http://viaf.org/viaf/206863699> ,
+        <http://viaf.org/viaf/220443771> ,
+        <http://viaf.org/viaf/395147270538135700001> ,
+        <http://viaf.org/viaf/59083692/ganskealminneligflue> ,
+        <http://viaf.org/viaf/59083692/ondedager> ,
+        <http://viaf.org/viaf/59083692/æreskjælm> .
+
+<http://viaf.org/viaf/59083692/ganskealminneligflue>
+    a <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:label "En ganske alminnelig flue av alminnelig størrelse (Hamsun, Knut)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    entedit:P02 <http://oslomet.no/abi/vocab#T02> ;
+    rdawd:P10223 "En ganske alminnelig flue av alminnelig størrelse" ;
+    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
+    rdawo:P10078 <http://viaf.org/viaf/59083692/ganskealminneligflue/exp/nob/1020> ;
+    rdaxd:P00018 "http://viaf.org/viaf/59083692/ganskealminneligflue" .
+
+<http://viaf.org/viaf/59083692/ganskealminneligflue/exp/nob/1020>
+    a <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:label "En ganske alminnelig flue av alminnelig størrelse (Hamsun, Knut)" ;
+    rdaed:P20315 "En ganske alminnelig flue av alminnelig størrelse" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20059 <http://example.org/isbn-8205340781> ;
+    rdaeo:P20231 <http://viaf.org/viaf/59083692/ganskealminneligflue> .
+
+<http://viaf.org/viaf/59083692/ondedager>
+    a <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:label "Onde dager (Hamsun, Knut)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    entedit:P02 <http://oslomet.no/abi/vocab#T02> ;
+    rdawd:P10223 "Onde dager" ;
+    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
+    rdawo:P10078 <http://viaf.org/viaf/59083692/ondedager/exp/nob/1020> ;
+    rdaxd:P00018 "http://viaf.org/viaf/59083692/ondedager" .
+
+<http://viaf.org/viaf/59083692/ondedager/exp/nob/1020>
+    a <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:label "Onde dager (Hamsun, Knut)" ;
+    rdaed:P20315 "Onde dager" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20059 <http://example.org/isbn-8205340781> ;
+    rdaeo:P20231 <http://viaf.org/viaf/59083692/ondedager> .
+
+<http://viaf.org/viaf/59083692/æreskjælm>
+    a <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:label "En æreskjælm (Hamsun, Knut)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    entedit:P02 <http://oslomet.no/abi/vocab#T02> ;
+    rdawd:P10223 "En æreskjælm" ;
+    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
+    rdawo:P10078 <http://viaf.org/viaf/59083692/æreskjælm/exp/nob/1020> ;
+    rdaxd:P00018 "http://viaf.org/viaf/59083692/æreskjælm" .
+
+<http://viaf.org/viaf/59083692/æreskjælm/exp/nob/1020>
+    a <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:label "En æreskjælm (Hamsun, Knut)" ;
+    rdaed:P20315 "En æreskjælm" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20059 <http://example.org/isbn-8205340781> ;
+    rdaeo:P20231 <http://viaf.org/viaf/59083692/æreskjælm> .
