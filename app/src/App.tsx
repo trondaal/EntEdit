@@ -22,6 +22,8 @@ import {
   type AppConfiguration
 } from "./utils/configManager";
 
+const DEMO_ENDPOINT_URL = "http://dijon.idi.ntnu.no:8080/repositories/EntEdit";
+
 const theme = createTheme({
   components: {
     MuiOutlinedInput: {
@@ -235,6 +237,7 @@ function AppInner() {
   const urlParams = useMemo(() => new URLSearchParams(window.location.search), []);
   const showSearchTab = useMemo(() => !urlParams.has("nosearch"), [urlParams]);
   const showLogging = useMemo(() => !urlParams.has("nologging"), [urlParams]);
+  const isDemoMode = useMemo(() => urlParams.has("demo"), [urlParams]);
 
   const { logEvent, isRecording } = useLogging();
 
@@ -247,6 +250,20 @@ function AppInner() {
 
   // Load configuration on app start
   useEffect(() => {
+    if (isDemoMode) {
+      const savedConfig = loadConfiguration();
+      setAppConfig({
+        endpoint: { url: DEMO_ENDPOINT_URL, username: "", password: "" },
+        language: savedConfig?.language ?? "en",
+        isConfigured: true,
+        warnAutoUri: savedConfig?.warnAutoUri ?? false,
+        warnAutoLabel: savedConfig?.warnAutoLabel ?? false,
+      });
+      setShowWizard(false);
+      setLoading(false);
+      return;
+    }
+
     const savedConfig = loadConfiguration();
 
     if (savedConfig && savedConfig.isConfigured) {
@@ -258,7 +275,7 @@ function AppInner() {
     }
 
     setLoading(false);
-  }, []);
+  }, [isDemoMode]);
 
   const handleConfigurationComplete = (
     config: SparqlEndpointConfig,
@@ -290,7 +307,9 @@ function AppInner() {
         warnAutoLabel,
       };
       setAppConfig(updatedConfig);
-      saveConfiguration(newConfig, appConfig.language, { warnAutoUri, warnAutoLabel });
+      if (!isDemoMode) {
+        saveConfiguration(newConfig, appConfig.language, { warnAutoUri, warnAutoLabel });
+      }
     }
   };
 
@@ -301,7 +320,9 @@ function AppInner() {
         language: newLanguage,
       };
       setAppConfig(updatedConfig);
-      saveConfiguration(appConfig.endpoint, newLanguage);
+      if (!isDemoMode) {
+        saveConfiguration(appConfig.endpoint, newLanguage);
+      }
     }
   };
 
