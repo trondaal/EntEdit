@@ -216,7 +216,7 @@ const ExportDialog: React.FC<ExportDialogProps> = ({
                 />
               }
               label={
-                <Typography variant="body2" fontWeight={600}>
+                <Typography variant="body2" sx={{ fontWeight: 600 }}>
                   {t("entityEditor:dialogs.export.selectAll")}
                 </Typography>
               }

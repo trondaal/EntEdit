@@ -274,7 +274,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
                       <ListItemText
                         primary={formatLabel(rdfClass.label, rdfClass.uri)}
                         secondary={rdfClass.comment}
-                        secondaryTypographyProps={{ noWrap: true }}
+                        slotProps={{ secondary: { noWrap: true } }}
                       />
                     </ListItemButton>
                   </ListItem>

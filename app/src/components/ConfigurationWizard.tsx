@@ -444,7 +444,6 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
       open={open}
       maxWidth="md"
       fullWidth
-      disableEscapeKeyDown
       sx={{
         "& .MuiDialog-paper": {
           minHeight: 500,
