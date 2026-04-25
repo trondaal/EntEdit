@@ -7,7 +7,7 @@ import type {
   RdfProperty,
   OrderedValue,
 } from "../types/sparql";
-import { SparqlClient } from "../utils/sparqlClient";
+import { SparqlClient, SparqlError } from "../utils/sparqlClient";
 import {
   escapeSparqlLiteral,
   sanitizeSparqlUri,
@@ -84,6 +84,16 @@ export function useEntityMutations({
   const [saveError, setSaveError] = useState<string | null>(null);
   const [deleting, setDeleting] = useState(false);
   const [deleteError, setDeleteError] = useState<string | null>(null);
+
+  const formatMutationError = useCallback(
+    (error: unknown): string => {
+      if (error instanceof SparqlError) {
+        return t(`messages.writeError.${error.code}`);
+      }
+      return (error as Error).message;
+    },
+    [t],
+  );
 
   // Keep existingEntity in a ref so handleSave's identity isn't churned by
   // background cache refetches.
@@ -332,7 +342,7 @@ export function useEntityMutations({
         onSaveSuccess({ isNew: false, savedEntityUri: entityUri });
       }
     } catch (error) {
-      setSaveError((error as Error).message);
+      setSaveError(formatMutationError(error));
     } finally {
       setSaving(false);
     }
@@ -351,6 +361,7 @@ export function useEntityMutations({
     isRecording,
     logEvent,
     onSaveSuccess,
+    formatMutationError,
   ]);
 
   const handleDelete = useCallback(async () => {
@@ -428,7 +439,7 @@ export function useEntityMutations({
 
       onDeleteSuccess();
     } catch (error) {
-      setDeleteError((error as Error).message);
+      setDeleteError(formatMutationError(error));
     } finally {
       setDeleting(false);
     }
@@ -442,6 +453,7 @@ export function useEntityMutations({
     isRecording,
     logEvent,
     onDeleteSuccess,
+    formatMutationError,
   ]);
 
   const clearSaveError = useCallback(() => setSaveError(null), []);

@@ -43,7 +43,13 @@
     "entityCreated": "Entity created successfully",
     "entityDeleted": "Entity deleted successfully",
     "uriCopied": "URI copied to clipboard",
-    "copyFailed": "Failed to copy URI"
+    "copyFailed": "Failed to copy URI",
+    "writeError": {
+      "network": "Cannot reach the database. This may be a read-only demo server, an offline endpoint, or a cross-origin restriction. Your changes were not saved.",
+      "unauthorized": "The database requires a username and password to accept changes. Open Settings to provide credentials.",
+      "forbidden": "The database refused the change. This endpoint is read-only — typical for a demo server. Configure a writable endpoint in Settings to save.",
+      "server": "The database reported an error and did not apply the change. Please try again or check the server logs."
+    }
   },
   "labelManager": {
     "title": "Manage Labels",

@@ -43,7 +43,13 @@
     "entityCreated": "Entitet opprettet",
     "entityDeleted": "Entitet slettet",
     "uriCopied": "URI kopiert til utklippstavlen",
-    "copyFailed": "Kunne ikke kopiere URI"
+    "copyFailed": "Kunne ikke kopiere URI",
+    "writeError": {
+      "network": "Kan ikke nå databasen. Dette kan være en skrivebeskyttet demoserver, et endepunkt som er nede, eller en kryssopprinnelsesbegrensning. Endringene dine ble ikke lagret.",
+      "unauthorized": "Databasen krever brukernavn og passord for å ta imot endringer. Åpne Innstillinger for å oppgi legitimasjon.",
+      "forbidden": "Databasen avviste endringen. Dette endepunktet er skrivebeskyttet — vanlig for en demoserver. Konfigurer et skrivbart endepunkt i Innstillinger for å lagre.",
+      "server": "Databasen rapporterte en feil og utførte ikke endringen. Prøv igjen eller sjekk serverloggene."
+    }
   },
   "labelManager": {
     "title": "Administrer etiketter",
