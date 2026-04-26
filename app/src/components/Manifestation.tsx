@@ -33,7 +33,6 @@ const Manifestation: React.FC<ManifestationProps> = ({
   onSelect,
   onEntitySearch,
 }) => {
-  const CarrierIcon = getCarrierTypeIcon(manifestation.carriertypeUri, manifestation.mediatypeUri);
   const titleArea = formatTitleArea(manifestation);
   const publicationLine = formatPublicationPhysicalSeries(manifestation);
   const notesLine = formatNotes(manifestation.notes);
@@ -58,7 +57,10 @@ const Manifestation: React.FC<ManifestationProps> = ({
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.5 }}>
               {/* Line 1: Title area */}
               <Box sx={{ display: 'flex', alignItems: 'flex-start' }}>
-                <CarrierIcon sx={typeIconSmallSx} />
+                {React.createElement(
+                  getCarrierTypeIcon(manifestation.carriertypeUri, manifestation.mediatypeUri),
+                  { sx: typeIconSmallSx },
+                )}
                 <Typography
                   variant="body2"
                   sx={{

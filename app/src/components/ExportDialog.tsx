@@ -78,7 +78,8 @@ const ExportDialog: React.FC<ExportDialogProps> = ({
     enabled: open && !!config.url,
   });
 
-  // Select all classes by default when dialog opens
+  // Select all classes by default when dialog opens.
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- initialize selection on open
   useEffect(() => {
     if (open && classes) {
       setSelectedClasses(new Set(classes.map((c) => c.uri)));

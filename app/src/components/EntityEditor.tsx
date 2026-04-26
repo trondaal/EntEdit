@@ -122,18 +122,20 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     entityUri,
   );
 
-  // Mirror isEditing/isDirty into refs that update during render. The sync
-  // effect below reads these refs rather than closure values so a refetch
-  // under React's concurrent rendering can't see stale snapshots and
-  // accidentally overwrite in-progress edits. Refs don't belong in the
-  // effect's dependency array, which is exactly the behavior we want: the
-  // effect should re-run only when server data or the selected entity
-  // changes — not when the user toggles edit mode.
+  // Mirror isEditing/isDirty into refs so the sync effect below can read
+  // committed values without depending on them — we want the effect to
+  // re-run only when server data or the selected entity changes, not when
+  // the user toggles edit mode.
   const isEditingRef = useRef(isEditing);
   const isDirtyRef = useRef(isDirty);
-  isEditingRef.current = isEditing;
-  isDirtyRef.current = isDirty;
+  useEffect(() => {
+    isEditingRef.current = isEditing;
+    isDirtyRef.current = isDirty;
+  });
 
+  // Sync local form state with the loaded server entity. Initialization-from-source
+  // pattern, not derivable during render because we also clear edit/dirty flags.
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => {
     if (existingEntity) {
       // Don't overwrite in-progress edits when cache invalidation refreshes the data
@@ -285,6 +287,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
   // Reset the create form when the user switches class (only for new entities).
   // Placed after useEntityMutations so clearSaveError is in scope.
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- form reset on class change
   useEffect(() => {
     if (!entityUri) {
       setEntityData({});

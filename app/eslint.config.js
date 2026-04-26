@@ -19,6 +19,12 @@ export default tseslint.config(
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
+      // React Compiler readiness rules: surface real anti-patterns but don't
+      // block the build for code that works correctly today.
+      'react-hooks/set-state-in-effect': 'warn',
+      'react-hooks/static-components': 'warn',
+      'react-hooks/refs': 'warn',
+      'react-hooks/purity': 'warn',
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },

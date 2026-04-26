@@ -248,7 +248,8 @@ function AppInner() {
     }
   }, [appConfig?.language, i18n]);
 
-  // Load configuration on app start
+  // One-time mount-time bootstrap: read from localStorage and seed app state.
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- mount initialization, not derived state
   useEffect(() => {
     if (isDemoMode) {
       const savedConfig = loadConfiguration();

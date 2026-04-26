@@ -60,8 +60,6 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
   const { data: expressions } = useExpressionsByManifestation(config, autoFetchUri, selectedLanguage);
   const singleExpression = expressions?.[0];
 
-  const CarrierIcon = getCarrierTypeIcon(result.carriertypeUri, result.mediatypeUri);
-
   const handleToggleExpressions = (e: React.MouseEvent) => {
     e.stopPropagation();
     setExpressionsExpanded(!expressionsExpanded);
@@ -109,7 +107,10 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.5 }}>
                 {/* Line 1: Title area with visualization button */}
                 <Box sx={{ display: 'flex', alignItems: 'flex-start' }}>
-                  <CarrierIcon sx={typeIconSx} />
+                  {React.createElement(
+                    getCarrierTypeIcon(result.carriertypeUri, result.mediatypeUri),
+                    { sx: typeIconSx },
+                  )}
                   <Typography
                     variant="body1"
                     sx={{

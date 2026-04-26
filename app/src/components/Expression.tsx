@@ -59,8 +59,6 @@ const Expression: React.FC<ExpressionProps> = ({
   // 3. they are different
   const showWorkTitle = result.work_title && result.expression_title && result.work_title !== result.expression_title;
 
-  const ContentTypeIcon = getContentTypeIcon(result.contenttypeUri);
-
   const handleToggleManifestations = (e: React.MouseEvent) => {
     e.stopPropagation();
     setManifestationsExpanded(!manifestationsExpanded);
@@ -76,7 +74,10 @@ const Expression: React.FC<ExpressionProps> = ({
           <ListItemText
             primary={
               <Box sx={{ display: 'flex', alignItems: 'flex-start', mb: 0.5 }}>
-                <ContentTypeIcon sx={typeIconSx} />
+                {React.createElement(
+                  getContentTypeIcon(result.contenttypeUri),
+                  { sx: typeIconSx },
+                )}
                 <Box sx={{ flex: 1, minWidth: 0 }}>
                   <Typography
                     component="span"

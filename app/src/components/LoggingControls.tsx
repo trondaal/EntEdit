@@ -44,7 +44,8 @@ const LoggingControls: React.FC<LoggingControlsProps> = ({
   const [studentId, setStudentId] = useState("");
   const [orphanDialogOpen, setOrphanDialogOpen] = useState(false);
 
-  // Check for orphaned session on mount
+  // Check for orphaned session on mount.
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- mount-time check
   useEffect(() => {
     if (hasOrphanedSession()) {
       setOrphanDialogOpen(true);

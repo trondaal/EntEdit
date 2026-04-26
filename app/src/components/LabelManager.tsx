@@ -107,6 +107,7 @@ const LabelManager: React.FC<LabelManagerProps> = ({
 
   // Only sync from parent when the dialog opens, not on every parent re-render,
   // to avoid discarding in-progress label edits
+  // eslint-disable-next-line react-hooks/set-state-in-effect, react-hooks/exhaustive-deps -- seed editable labels when dialog opens
   useEffect(() => {
     if (open) {
       // Start with one empty row if there are no labels, so the user
@@ -117,10 +118,10 @@ const LabelManager: React.FC<LabelManagerProps> = ({
       setLabels(startLabels);
       setError(null);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 
   const handleAddLabel = () => {
+    // eslint-disable-next-line react-hooks/purity -- event handler, not render
     const newId = `new-${Date.now()}`;
     setLabels((prev) => [...prev, { id: newId, value: "", language: "" }]);
     setError(null);
