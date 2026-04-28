@@ -178,7 +178,7 @@
     "submitDescription": "Interaksjonsloggen er klar. Du kan laste den ned som en JSON-fil for å levere til din instruktør.",
     "eventCount": "{{count}} interaksjoner registrert",
     "sessionDuration": "Varighet: {{duration}}",
-    "studentIdLabel": "Ditt navn eller student-ID (valgfritt)",
+    "studentIdLabel": "Sesjons id, navn eller student-id (valgfritt)",
     "studentIdHelper": "Dette inkluderes i loggfilen for å identifisere økten din",
     "downloadJson": "Last ned logg",
     "orphanTitle": "Ulagret opptak funnet",

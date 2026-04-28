@@ -178,7 +178,7 @@
     "submitDescription": "Your interaction log is ready. You can download it as a JSON file to submit to your instructor.",
     "eventCount": "{{count}} interactions recorded",
     "sessionDuration": "Session duration: {{duration}}",
-    "studentIdLabel": "Your name or student ID (optional)",
+    "studentIdLabel": "Session identifier, name or student ID (optional)",
     "studentIdHelper": "This will be included in the log file to identify your session",
     "downloadJson": "Download Log",
     "orphanTitle": "Unsaved Recording Found",
