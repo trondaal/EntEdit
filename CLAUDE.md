@@ -44,7 +44,6 @@ EntEdit/
 │   ├── types/             # Vocabulary files loaded into GraphDB on init
 │   ├── sparql/            # SPARQL query definitions
 │   ├── lucene_connectors/ # Lucene index configurations
-│   ├── inference_rules/   # GraphDB inference rule sets
 │   └── testdata/          # Sample RDF entities for testing
 ├── docker/                # Docker deployment configs
 │   ├── nginx/             # nginx SPA + proxy config
