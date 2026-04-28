@@ -67,10 +67,13 @@ entedit:P02
 
 #All classes with status "class" are displayed in the entity browsers class display
 rdac:C10002 entedit:order 1 ; entedit:status "class" .  # "Agent"@en .
-rdac:C10001 entedit:order 2 ; entedit:status "class" .  # "Work"@en .
-rdac:C10006 entedit:order 3 ; entedit:status "class" .  # "Expression"@en .
-rdac:C10007 entedit:order 4 ; entedit:status "class" .  # "Manifestation"@en .
-rdac:C10003 entedit:order 5 ; entedit:status "class" .  # "Item"@en .
+rdac:C10004 entedit:order 2 ; entedit:status "class" .  # "Person"@en .
+rdac:C10005 entedit:order 3 ; entedit:status "class" .  # "Corporate Body"@en .
+#rdac:C10008 entedit:order 1 ; entedit:status "class" .  # "Family"@en .
+rdac:C10001 entedit:order 4 ; entedit:status "class" .  # "Work"@en .
+rdac:C10006 entedit:order 5 ; entedit:status "class" .  # "Expression"@en .
+rdac:C10007 entedit:order 6 ; entedit:status "class" .  # "Manifestation"@en .
+rdac:C10003 entedit:order 7 ; entedit:status "class" .  # "Item"@en .
 
 #Agent profile, data properties
 rdaad:P50413	entedit:status "data property" ; entedit:order 1 ; rdfs:label "navn"@no . #"name"@en . Foretrukket navn

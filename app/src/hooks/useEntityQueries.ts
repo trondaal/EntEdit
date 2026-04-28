@@ -268,7 +268,8 @@ export const useEntitiesByRange = (
         SELECT DISTINCT ?entity ?label
         FROM <http://www.ontotext.com/explicit>
         WHERE {
-          ?entity a <${sanitizeSparqlUri(rangeUri)}> .
+          ?entity a ?type .
+          ?type rdfs:subClassOf* <${sanitizeSparqlUri(rangeUri)}> .
 ${createLanguageFallbackFragment("?entity", language, fallbackLanguage, "label", false)}
 
         }
@@ -324,7 +325,8 @@ export const useInfiniteEntitiesByRange = (
         SELECT DISTINCT ?entity (SAMPLE(?label) AS ?label)
         FROM <http://www.ontotext.com/explicit>
         WHERE {
-          ?entity a <${sanitizeSparqlUri(rangeUri)}> .
+          ?entity a ?type .
+          ?type rdfs:subClassOf* <${sanitizeSparqlUri(rangeUri)}> .
 ${createLanguageFallbackFragment("?entity", language, fallbackLanguage, "label", false)}
           ${filterClause}
         }
@@ -372,9 +374,13 @@ export const useEntityCountByRange = (
 
       if (!filter) {
         const query = `
+          PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
           SELECT (COUNT(DISTINCT ?entity) AS ?count)
+          FROM <http://www.ontotext.com/explicit>
           WHERE {
-            ?entity a <${sanitizeSparqlUri(rangeUri)}> .
+            ?entity a ?type .
+            ?type rdfs:subClassOf* <${sanitizeSparqlUri(rangeUri)}> .
           }
         `;
         const response = await client.query(query, { signal });
@@ -389,7 +395,8 @@ export const useEntityCountByRange = (
         SELECT (COUNT(DISTINCT ?entity) AS ?count)
         FROM <http://www.ontotext.com/explicit>
         WHERE {
-          ?entity a <${sanitizeSparqlUri(rangeUri)}> .
+          ?entity a ?type .
+          ?type rdfs:subClassOf* <${sanitizeSparqlUri(rangeUri)}> .
 ${createLanguageFallbackFragment("?entity", language, fallbackLanguage, "label", false)}
           FILTER(CONTAINS(LCASE(STR(?label)), "${escapedFilter}"))
         }

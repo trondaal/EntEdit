@@ -63,7 +63,7 @@ function useRelatedPropertiesByRange(
           OPTIONAL { ?property entedit:order ?order }
           FILTER(?range = <${sanitizeSparqlUri(rangeUri)}>) .
           FILTER(?property NOT IN (${RELATED_EXCLUDED_PROPERTIES})) .
-          ${classUri ? `FILTER(?domain = <${sanitizeSparqlUri(classUri)}>)` : ""}
+          ${classUri ? `<${sanitizeSparqlUri(classUri)}> rdfs:subClassOf* ?domain .` : ""}
         }
         ORDER BY ?range asc(?order) STR(?label)
       `;
@@ -114,7 +114,7 @@ export const useWEMIProperties = (
           ?property rdfs:range ?range .
           OPTIONAL { ?property entedit:order ?order }
 
-          ${classUri ? `FILTER(?domain = <${sanitizeSparqlUri(classUri)}>)` : ""}
+          ${classUri ? `<${sanitizeSparqlUri(classUri)}> rdfs:subClassOf* ?domain .` : ""}
         }
         ORDER BY asc(?order) ?range STR(?label)
       `;
@@ -160,7 +160,7 @@ export const useAgentProperties = (
           ?property rdfs:domain ?domain .
           ?property rdfs:range ?range .
     	    FILTER(?range = <http://rdaregistry.info/Elements/c/C10002> ) .
-          ${classUri ? `FILTER(?domain = <${sanitizeSparqlUri(classUri)}>)` : ""}
+          ${classUri ? `<${sanitizeSparqlUri(classUri)}> rdfs:subClassOf* ?domain .` : ""}
         }
         ORDER BY ?range STR(?label)
       `;
