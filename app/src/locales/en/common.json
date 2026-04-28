@@ -159,8 +159,8 @@
     "warnAutoLabel": "Warn when saving with auto-generated label"
   },
   "logging": {
-    "record": "Record",
-    "recording": "Recording",
+    "record": "Start logging",
+    "recording": "Logging",
     "startRecording": "Start Recording",
     "stopRecording": "Stop Recording",
     "consentTitle": "Start Interaction Logging",

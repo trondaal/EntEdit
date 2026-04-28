@@ -159,8 +159,8 @@
     "warnAutoLabel": "Varsle ved lagring med autogenerert etikett"
   },
   "logging": {
-    "record": "Ta opp",
-    "recording": "Opptak",
+    "record": "Start logging",
+    "recording": "Logger",
     "startRecording": "Start opptak",
     "stopRecording": "Stopp opptak",
     "consentTitle": "Start interaksjonslogging",
