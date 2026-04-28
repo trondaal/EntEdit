@@ -238,6 +238,10 @@ function AppInner() {
   const showSearchTab = useMemo(() => !urlParams.has("nosearch"), [urlParams]);
   const showLogging = useMemo(() => !urlParams.has("nologging"), [urlParams]);
   const isDemoMode = useMemo(() => urlParams.has("demo"), [urlParams]);
+  const langParam = useMemo(() => {
+    const value = urlParams.get("lang");
+    return value === "en" || value === "no" ? value : null;
+  }, [urlParams]);
 
   const { logEvent, isRecording } = useLogging();
 
@@ -255,7 +259,7 @@ function AppInner() {
       const savedConfig = loadConfiguration();
       setAppConfig({
         endpoint: { url: DEMO_ENDPOINT_URL, username: "", password: "" },
-        language: savedConfig?.language ?? "en",
+        language: langParam ?? savedConfig?.language ?? "en",
         isConfigured: true,
         warnAutoUri: savedConfig?.warnAutoUri ?? false,
         warnAutoLabel: savedConfig?.warnAutoLabel ?? false,
@@ -268,15 +272,16 @@ function AppInner() {
     const savedConfig = loadConfiguration();
 
     if (savedConfig && savedConfig.isConfigured) {
-      setAppConfig(savedConfig);
+      setAppConfig(langParam ? { ...savedConfig, language: langParam } : savedConfig);
       setShowWizard(false);
     } else {
-      setAppConfig(getDefaultConfiguration());
+      const defaultConfig = getDefaultConfiguration();
+      setAppConfig(langParam ? { ...defaultConfig, language: langParam } : defaultConfig);
       setShowWizard(true);
     }
 
     setLoading(false);
-  }, [isDemoMode]);
+  }, [isDemoMode, langParam]);
 
   const handleConfigurationComplete = (
     config: SparqlEndpointConfig,
