@@ -24,7 +24,7 @@
     rdamo:P30139 <http://example.org/entity-1775732155719> .
 
 <http://example.org/entity-1775731955680>
-    a <http://rdaregistry.info/Elements/c/C10002> ;
+    a <http://rdaregistry.info/Elements/c/C10004> ;
     rdfs:label "Steinfeld, Hans-Wilhelm" ;
     rdaad:P50339 "1951-" ;
     rdaad:P50413 "Steinfeld, Hans-Wilhelm" ;

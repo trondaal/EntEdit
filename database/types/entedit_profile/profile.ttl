@@ -66,7 +66,7 @@ entedit:P02
   rdfs:label "Sjanger eller form"@no, "Genre or form"@en.
 
 #All classes with status "class" are displayed in the entity browsers class display
-rdac:C10002 entedit:order 1 ; entedit:status "class" .  # "Agent"@en .
+#rdac:C10002 entedit:order 1 ; entedit:status "class" .  # "Agent"@en .
 rdac:C10004 entedit:order 2 ; entedit:status "class" .  # "Person"@en .
 rdac:C10005 entedit:order 3 ; entedit:status "class" .  # "Corporate Body"@en .
 #rdac:C10008 entedit:order 1 ; entedit:status "class" .  # "Family"@en .

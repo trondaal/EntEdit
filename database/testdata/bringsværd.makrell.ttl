@@ -44,7 +44,7 @@
     rdaeo:P20231 <http://example.org/entity-1775732362134> .
 
 <http://viaf.org/viaf/301771064>
-    a <http://rdaregistry.info/Elements/c/C10002> ;
+    a <http://rdaregistry.info/Elements/c/C10004> ;
     rdfs:label "Bringsværd, Tor Åge" ;
     rdaad:P50339 "1939-2025" ;
     rdaad:P50413 "Bringsværd, Tor Åge" ;
