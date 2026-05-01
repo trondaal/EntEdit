@@ -21,6 +21,7 @@
     "exportTurtle": "Turtle RDF",
     "export": "Eksporter",
     "exportTurtleSaveFirst": "Lagre endringer før eksportering",
+    "import": "Importer",
     "back": "Tilbake",
     "refresh": "Oppdater"
   },
@@ -30,6 +31,19 @@
       "message": "Du har ulagrede endringer. Oppdatering laster data på nytt fra databasen — endringene dine går tapt med mindre du lagrer først.",
       "saveAndRefresh": "Lagre og oppdater",
       "discardAndRefresh": "Forkast og oppdater"
+    },
+    "import": {
+      "title": "Importer RDF-data",
+      "description": "Velg en Turtle- (.ttl), N-Triples- (.nt) eller RDF/XML-fil (.rdf) for å laste inn i databasen. Importerte tripler legges til; eksisterende data erstattes ikke.",
+      "chooseFile": "Velg fil…",
+      "graphUriLabel": "URI for navngitt graf (valgfritt)",
+      "graphUriHelper": "La stå tom for å importere til standardgrafen.",
+      "importButton": "Importer",
+      "importing": "Importerer…",
+      "success": "Importerte {{filename}}",
+      "errors": {
+        "unknownFormat": "Ukjent filendelse. Bruk .ttl, .nt eller .rdf."
+      }
     }
   },
   "labels": {

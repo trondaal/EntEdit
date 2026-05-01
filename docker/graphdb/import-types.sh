@@ -79,6 +79,12 @@ else
 fi
 
 # --- Phase 3: Import RDF data files ---
+#
+# Files under /import-data/testdata go into a named graph so example data can be
+# managed (e.g. dropped/reloaded) independently from the vocabulary in the
+# default graph. Everything else goes into the default graph.
+
+EXAMPLES_GRAPH="http://oslomet.no/abi/examples"
 
 find "$DATA_DIR" -type f \( -name "*.ttl" -o -name "*.nt" -o -name "*.rdf" \) | sort | while read -r file; do
   filename=$(basename "$file")
@@ -91,9 +97,20 @@ find "$DATA_DIR" -type f \( -name "*.ttl" -o -name "*.nt" -o -name "*.rdf" \) | 
     *)   echo "  SKIP: $filename (unknown extension)"; continue ;;
   esac
 
-  printf "  Importing %-50s" "$filename..."
+  case "$file" in
+    "$DATA_DIR"/testdata/*)
+      target_url="${GRAPHDB_URL}/repositories/${REPO}/statements?context=$(printf '%s' "<${EXAMPLES_GRAPH}>" | sed 's|<|%3C|;s|>|%3E|;s|#|%23|g')"
+      target_label="(examples graph)"
+      ;;
+    *)
+      target_url="${GRAPHDB_URL}/repositories/${REPO}/statements"
+      target_label="(default graph)"
+      ;;
+  esac
+
+  printf "  Importing %-50s %s " "$filename..." "$target_label"
   http_code=$(curl -s -o /dev/null -w "%{http_code}" \
-    -X POST "${GRAPHDB_URL}/repositories/${REPO}/statements" \
+    -X POST "$target_url" \
     -H "Content-Type: ${ctype}" \
     --data-binary "@${file}")
 
