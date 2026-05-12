@@ -90,6 +90,60 @@ export class SparqlClient {
     return response.json();
   }
 
+  /** POST RDF data to the repository's statements endpoint. If `graphUri` is
+   * provided, the data is loaded into that named graph via `?context=<uri>`;
+   * otherwise it goes into the default graph. Append-only — does not clear
+   * the target graph first. */
+  async import(
+    data: string | Blob,
+    contentType: string,
+    graphUri?: string,
+  ): Promise<void> {
+    const headers: HeadersInit = {
+      "Content-Type": contentType,
+    };
+
+    if (this.config.username && this.config.password) {
+      const authString = `${this.config.username}:${this.config.password}`;
+      const encodedAuth = btoa(authString);
+      headers["Authorization"] = `Basic ${encodedAuth}`;
+    }
+
+    const trimmed = graphUri?.trim();
+    const url = trimmed
+      ? `${this.config.url}/statements?context=${encodeURIComponent(`<${trimmed}>`)}`
+      : `${this.config.url}/statements`;
+
+    let response: Response;
+    try {
+      response = await fetch(url, {
+        method: "POST",
+        headers,
+        body: data,
+      });
+    } catch (err) {
+      throw new SparqlError(
+        "network",
+        `RDF import network error: ${(err as Error).message}`,
+      );
+    }
+
+    if (!response.ok) {
+      const errorText = await response.text().catch(() => "Unknown error");
+      const code: SparqlErrorCode =
+        response.status === 401
+          ? "unauthorized"
+          : response.status === 403 || response.status === 405
+            ? "forbidden"
+            : "server";
+      throw new SparqlError(
+        code,
+        `RDF import failed: ${response.status} ${response.statusText}. ${errorText}`,
+        response.status,
+      );
+    }
+  }
+
   async update(sparql: string): Promise<void> {
     const headers: HeadersInit = {
       "Content-Type": "application/sparql-update",

@@ -14,13 +14,14 @@ import {
   Box,
   Tooltip,
 } from "@mui/material";
-import { Settings, Help, Download, Refresh } from "@mui/icons-material";
+import { Settings, Help, Download, Upload, Refresh } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import { useSnackbar } from "notistack";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import LanguageSelector from "./LanguageSelector";
 import EndpointConfig from "./EndpointConfig";
 import ExportDialog from "./ExportDialog";
+import ImportDialog from "./ImportDialog";
 import LoggingControls from "./LoggingControls";
 
 interface AppHeaderProps {
@@ -52,6 +53,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({
   const { enqueueSnackbar } = useSnackbar();
   const [configDialogOpen, setConfigDialogOpen] = useState(false);
   const [exportDialogOpen, setExportDialogOpen] = useState(false);
+  const [importDialogOpen, setImportDialogOpen] = useState(false);
   const [refreshDialogOpen, setRefreshDialogOpen] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
 
@@ -216,6 +218,17 @@ const AppHeader: React.FC<AppHeaderProps> = ({
               </Tooltip>
             )}
 
+            {/* Import Button */}
+            <Tooltip title={t("buttons.import")}>
+              <IconButton
+                color="inherit"
+                aria-label={t("buttons.import")}
+                onClick={() => setImportDialogOpen(true)}
+              >
+                <Upload />
+              </IconButton>
+            </Tooltip>
+
             {/* Export Button */}
             <Tooltip title={t("buttons.export")}>
               <IconButton
@@ -273,6 +286,13 @@ const AppHeader: React.FC<AppHeaderProps> = ({
         onClose={() => setExportDialogOpen(false)}
         config={config}
         selectedLanguage={selectedLanguage}
+      />
+
+      {/* Import Dialog */}
+      <ImportDialog
+        open={importDialogOpen}
+        onClose={() => setImportDialogOpen(false)}
+        config={config}
       />
 
       {/* Refresh confirmation dialog — only shown when there are unsaved edits */}

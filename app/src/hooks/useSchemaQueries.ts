@@ -88,7 +88,7 @@ export const useRdfProperties = (
 
           OPTIONAL { ?property rdfs:domain ?domain }
           OPTIONAL { ?property rdfs:range ?range }
-          ${classUri ? `FILTER(?domain = <${sanitizeSparqlUri(classUri)}>)` : ""}
+          ${classUri ? `<${sanitizeSparqlUri(classUri)}> rdfs:subClassOf* ?domain .` : ""}
         }
         ORDER BY ?order ?label ?property
       `;
@@ -136,7 +136,7 @@ export const useRdfObjectProperties = (
           ?property rdfs:domain ?domain .
           ?property rdfs:range ?range .
     	    FILTER(?range != <http://www.w3.org/2004/02/skos/core#Concept> ) .
-          ${classUri ? `FILTER(?domain = <${sanitizeSparqlUri(classUri)}>)` : ""}
+          ${classUri ? `<${sanitizeSparqlUri(classUri)}> rdfs:subClassOf* ?domain .` : ""}
         }
         ORDER BY ?range STR(?label)
       `;

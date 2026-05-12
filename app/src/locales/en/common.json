@@ -21,6 +21,7 @@
     "exportTurtle": "Turtle RDF",
     "export": "Export",
     "exportTurtleSaveFirst": "Save changes before exporting",
+    "import": "Import",
     "back": "Back",
     "refresh": "Refresh"
   },
@@ -30,6 +31,19 @@
       "message": "You have unsaved changes. Refreshing will reload data from the database — your changes will be lost unless you save first.",
       "saveAndRefresh": "Save & refresh",
       "discardAndRefresh": "Discard & refresh"
+    },
+    "import": {
+      "title": "Import RDF data",
+      "description": "Select a Turtle (.ttl), N-Triples (.nt), or RDF/XML (.rdf) file to load into the database. Imported triples are appended; existing data is not replaced.",
+      "chooseFile": "Choose file…",
+      "graphUriLabel": "Named graph URI (optional)",
+      "graphUriHelper": "Leave empty to import into the default graph.",
+      "importButton": "Import",
+      "importing": "Importing…",
+      "success": "Imported {{filename}}",
+      "errors": {
+        "unknownFormat": "Unrecognized file extension. Use .ttl, .nt, or .rdf."
+      }
     }
   },
   "labels": {

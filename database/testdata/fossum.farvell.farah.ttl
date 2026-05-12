@@ -87,21 +87,21 @@
     rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1001> .
 
 <http://viaf.org/viaf/120627630>
-    a <http://rdaregistry.info/Elements/c/C10002> ;
+    a <http://rdaregistry.info/Elements/c/C10004> ;
     rdfs:label "Fossum, Karin" ;
     rdaad:P50339 "1954-" ;
     rdaad:P50413 "Fossum, Karin" ;
     rdaao:P50195 <http://example.org/entity-1775732454499> .
 
 <http://viaf.org/viaf/224052734>
-    a <http://rdaregistry.info/Elements/c/C10002> ;
+    a <http://rdaregistry.info/Elements/c/C10004> ;
     rdfs:label "Haugen, Kim" ;
     rdaad:P50339 "1958-" ;
     rdaad:P50413 "Haugen, Kim" ;
     rdaao:P50081 <http://example.org/entity-1775734685118> .
 
 <http://viaf.org/viaf/7371041>
-    a <http://rdaregistry.info/Elements/c/C10002> ;
+    a <http://rdaregistry.info/Elements/c/C10004> ;
     rdfs:label "Hemmel, Sara" ;
     rdaad:P50339 "1963-" ;
     rdaad:P50413 "Hemmel, Sara" ;

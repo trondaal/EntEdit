@@ -121,7 +121,7 @@
     rdaeo:P20231 <http://viaf.org/viaf/395147270538135700001> .
 
 <http://viaf.org/viaf/59083692>
-    a <http://rdaregistry.info/Elements/c/C10002> ;
+    a <http://rdaregistry.info/Elements/c/C10004> ;
     rdfs:label "Hamsun, Knut" ;
     rdaxd:P00018 "http://viaf.org/viaf/59083692" ;
     rdaad:P50339 "1859-1952" ;
