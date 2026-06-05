@@ -254,7 +254,7 @@ rdawo:P10059	entedit:status	"object property" ; rdfs:label "har intervjuobjekt f
 rdaao:P50194	entedit:status	"object property" ; rdfs:label "er koreograf av"@no . #	is choreographer agent of	rdac:C10002	rdac:C10001
 rdawo:P10060	entedit:status	"object property" ; rdfs:label "har koreograf"@no . #	has choreographer agent	rdac:C10001	rdac:C10002
 
-rdaao:P50195	entedit:status	"object property" ; rdfs:label "forfatter"@no . #	is author agent of	rdac:C10002	rdac:C10001
+rdaao:P50195	entedit:status	"object property" ; rdfs:label "er forfatter av"@no . #	is author agent of	rdac:C10002	rdac:C10001
 rdawo:P10061	entedit:status	"object property" ; rdfs:label "har forfatter"@no . #	has author agent	rdac:C10001	rdac:C10002
 
 rdaao:P50196	entedit:status	"object property" ; rdfs:label "er arkitekt av"@no . #	is architect agent of	rdac:C10002	rdac:C10001
