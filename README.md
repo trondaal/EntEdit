@@ -27,6 +27,9 @@ and a pre-configured GraphDB database together. The web app runs from a
 **pre-built image on [Docker Hub](https://hub.docker.com/r/trondaal/entedit)** —
 you do **not** need to build anything yourself or have Node.js installed.
 
+> The commands below are run from a **terminal** (Command Prompt or PowerShell on
+> Windows, Terminal on macOS/Linux), from inside the project folder.
+
 **1. Install Docker.** If you don't already have it, install
 [Docker Desktop](https://www.docker.com/products/docker-desktop/) (Windows, macOS,
 Linux) — it includes Docker Engine and Compose. See the
