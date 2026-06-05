@@ -1,0 +1,69 @@
+@prefix entedit: <http://oslomet.no/abi/vocab#> .
+@prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
+@prefix rdac: <http://rdaregistry.info/Elements/c/> .
+@prefix rdaco: <http://rdaregistry.info/termList/RDAContentType/> .
+@prefix rdact: <http://rdaregistry.info/termList/RDACarrierType/> .
+@prefix rdaed: <http://rdaregistry.info/Elements/e/datatype/> .
+@prefix rdaeo: <http://rdaregistry.info/Elements/e/object/> .
+@prefix rdamd: <http://rdaregistry.info/Elements/m/datatype/> .
+@prefix rdamo: <http://rdaregistry.info/Elements/m/object/> .
+@prefix rdamt: <http://rdaregistry.info/termList/RDAMediaType/> .
+@prefix rdat: <http://rdaregistry.info/termList/> .
+@prefix rdawd: <http://rdaregistry.info/Elements/w/datatype/> .
+@prefix rdawo: <http://rdaregistry.info/Elements/w/object/> .
+@prefix rdaxd: <http://rdaregistry.info/Elements/x/datatype/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vtp: <https://schema.nb.no/Bibliographic/Values/> .
+
+<http://viaf.org/viaf/175871715>
+  a rdac:C10001 ;
+  rdaxd:P00018 "http://viaf.org/viaf/175871715" ;
+  rdawd:P10223 "The border trilogy" ;
+  rdfs:label "The border trilogy (McCarthy, Cormac)" ;
+  entedit:P02 entedit:T03 ;
+  entedit:P01 vtp:V1000;
+  rdawo:P10061  <http://viaf.org/viaf/29558386> ;
+  rdawo:P10147  <http://viaf.org/viaf/214001528> ,
+                <http://viaf.org/viaf/3417153653286155900001> ,
+                <http://viaf.org/viaf/309357400> .
+
+<http://viaf.org/viaf/214001528>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/214001528" ;
+    rdawd:P10223 "All the pretty horses" ;
+    rdfs:label "All the pretty horses (McCarthy, Cormac)";
+    entedit:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    rdawd:P10330 "Denne romanen er både en dannelsesroman og en western. Vi møter den seksten år gamle John Grady Cole på en ranch i West-Texas i 1949. Guttens bestefar er nettopp død. Faren er merket av krigen og bor i byen. Morens høyeste ønske er å komme seg ut av Texas for godt. John er for ung til å overta ranchen, og dermed er han stengt ute fra den eneste tilværelse han eri stand til å forestille seg. Sammen med vennen Lacey Rawlins drar han over grensen til Mexico og videre sørover. Her opplever han både idyll og komikk, men også blod." ,
+                "The story of John Grady Cole, who at 16 finds himself at the dying end of a long line of Texas ranchers, cut off from the only life he has ever imagined for himself. To escape a society moving all the wrong directions, Cole and two companions decide to seek their fortune in Mexico. But what begins as an idyllic adventure leads to a place where dreams are paid for in blood." ;
+    rdawo:P10061 <http://viaf.org/viaf/29558386> .
+
+<http://viaf.org/viaf/309357400>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/309357400" ;
+    rdawd:P10223 "The crossing" ;
+    rdfs:label "The crossing (McCarthy, Cormac)" ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    entedit:P01 vtp:V1000;
+    rdawd:P10330 "1972, Black River Falls, Wisconsin. Alicia Western, tjue år gammel og med førti tusen dollar i en plastpose, ber om å bli innlagt på et sykehus. Hun holder på å ta en doktorgrad i matematikk ved University of Chicago, og er diagnostisert med paranoid schizofrreni. Hun vil ikke snakke om broren sin, Bobby. I stedet reflekterer hun over psykiske lidelser, og hvordan mennesker insisterer på én felles oppfatning av verden. Hun husker en barndom der hennes egen bestemor fryktet for henne da hun bare var syv år gammel. Hun drøfter skjæringspunktet mellom fysikk og filosofi, og hun introduserer hallusinasjonene bare hun kan se. Og hele tiden sørger hun over Bobby, som fortsatt ikke er helt død, og som ikke er helt hennes. «Stella Maris» bli kun fortalt gjennom transkripsjoner av Alicias terapitimer." ,
+                  "Billy and Boyd Parham are two boys living in New Mexico on the cusp of unimaginable events in the years before the Second World War. First comes a trespassing Indian and the dream of wolves running wild among cattle. Billy traps a she-wolf, intending to restore it to the mountains of New Mexico. But when he returns, he finds everything he left behind utterly transformed." ;
+    rdawo:P10061 <http://viaf.org/viaf/29558386> .
+
+<http://viaf.org/viaf/3417153653286155900001>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/3417153653286155900001" ;
+    rdawd:P10223 "Cities of the plain" ;
+    rdfs:label "Cities of the plain (McCarthy, Cormac)" ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    entedit:P01 vtp:V1000;
+    rdawo:P10061 <http://viaf.org/viaf/29558386> .
+
+<http://viaf.org/viaf/214012164>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/214012164" ;
+    rdawd:P10223 "No country for old men" ;
+    rdfs:label "No country for old men (McCarthy, Cormac)" ;
+    entedit:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    rdawo:P10061 <http://viaf.org/viaf/29558386> .
