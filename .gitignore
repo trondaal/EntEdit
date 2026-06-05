@@ -33,3 +33,6 @@ scripts/
 .claude/worktrees/cranky-hodgkin-fd3632/
 data/docker.access.token
 docker.access.token
+
+.claude-*
+.claude/
