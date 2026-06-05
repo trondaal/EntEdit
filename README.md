@@ -4,6 +4,10 @@
 
 A web-based editor for RDF entities, designed for cataloguing bibliographic resources using the IFLA-LRM/RDA vocabulary. EntEdit connects to a GraphDB triple store and provides a structured interface for browsing, searching, and editing Works, Expressions, Manifestations, Items, and related agents.
 
+## Live demo
+
+A read-only online demo is available at **[entedit.org/?demo](http://entedit.org/?demo)** — no installation required. Explore the interface with sample bibliographic data; editing is disabled in the demo. To run your own editable instance, see [Getting started](#getting-started) below.
+
 ## Features
 
 - Browse RDF entities by class
@@ -18,11 +22,30 @@ A web-based editor for RDF entities, designed for cataloguing bibliographic reso
 
 ### With Docker (recommended)
 
-Requires [Docker Desktop](https://www.docker.com/products/docker-desktop/) or Docker Engine with Compose.
+The easiest way to run EntEdit is with Docker Compose, which starts the web app
+and a pre-configured GraphDB database together.
+
+**1. Install Docker.** If you don't already have it, install
+[Docker Desktop](https://www.docker.com/products/docker-desktop/) (Windows, macOS,
+Linux) — it includes Docker Engine and Compose. See the
+[official installation guide](https://docs.docker.com/get-docker/) for details.
+
+**2. Get the project files.** Clone this repository (you need the
+`docker-compose.yml` and the `database/` and `docker/` configuration files):
+
+```bash
+git clone https://github.com/trondaal/EntEdit.git
+cd EntEdit
+```
+
+**3. Start it.** From the project root:
 
 ```bash
 docker compose up -d
 ```
+
+The web app image (`trondaal/entedit`) is pulled automatically from
+[Docker Hub](https://hub.docker.com/r/trondaal/entedit) — no local build needed.
 
 This starts two services:
 
@@ -70,6 +93,25 @@ npm run build    # Production build
 npm run lint     # Run ESLint
 npm run preview  # Preview production build locally
 ```
+
+## Publishing to Docker Hub
+
+The web app image is published as `trondaal/entedit`. To build and push a new
+release (maintainers only):
+
+```bash
+docker login                          # use a Personal Access Token
+
+docker buildx create --use            # once, creates a multi-arch builder
+docker buildx build --platform linux/amd64,linux/arm64 \
+  -t trondaal/entedit:1.0.0 -t trondaal/entedit:latest \
+  --push ./app
+```
+
+This builds for both `amd64` (Intel/AMD) and `arm64` (Apple Silicon / ARM
+servers) and pushes in one step. Multi-arch images cannot be loaded into the
+local Docker engine, so they go straight to the registry via `--push`. Always
+publish a versioned tag (e.g. `1.0.0`) alongside `latest`.
 
 ## Repository structure
 

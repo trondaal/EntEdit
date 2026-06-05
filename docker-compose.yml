@@ -35,6 +35,9 @@ services:
     restart: "no"
 
   web:
+    image: trondaal/entedit:latest
+    # `build` lets `docker compose build` produce the publishable image locally;
+    # `docker compose up` pulls the published image by default.
     build: ./app
     ports:
       - "80:80"
