@@ -17,16 +17,53 @@
 @prefix vtp: <https://schema.nb.no/Bibliographic/Values/> .
 
 <http://viaf.org/viaf/175871715>
-  a rdac:C10001 ;
-  rdaxd:P00018 "http://viaf.org/viaf/175871715" ;
-  rdawd:P10223 "The border trilogy" ;
-  rdfs:label "The border trilogy (McCarthy, Cormac)" ;
-  entedit:P02 entedit:T03 ;
-  entedit:P01 vtp:V1000;
-  rdawo:P10061  <http://viaf.org/viaf/29558386> ;
-  rdawo:P10147  <http://viaf.org/viaf/214001528> ,
-                <http://viaf.org/viaf/3417153653286155900001> ,
-                <http://viaf.org/viaf/309357400> .
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/175871715" ;
+    rdawd:P10223 "The border trilogy" ;
+    rdfs:label "The border trilogy (McCarthy, Cormac)" ;
+    entedit:P02 entedit:T03 ;
+    entedit:P01 vtp:V1000;
+    rdawo:P10061 <http://viaf.org/viaf/29558386> ;
+    rdawo:P10147 <http://viaf.org/viaf/214001528> ,
+                 <http://viaf.org/viaf/3417153653286155900001> ,
+                 <http://viaf.org/viaf/309357400> .
+
+<http://viaf.org/viaf/188298726>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/188298726" ;
+    rdawd:P10223 "Suttree" ;
+    rdfs:label "Suttree (McCarthy, Cormac)" ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    entedit:P01 vtp:V1000;
+    rdawo:P10061 <http://viaf.org/viaf/29558386> .
+
+<http://viaf.org/viaf/188670330>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/188670330" ;
+    rdawd:P10223 "Child of God" ;
+    rdfs:label "Child of God (McCarthy, Cormac)" ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    entedit:P01 vtp:V1000;
+    rdawo:P10061 <http://viaf.org/viaf/29558386> .
+
+<http://viaf.org/viaf/191524645>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/191524645" ;
+    rdawd:P10223 "Blood meridian, or the evening redness in the west" ;
+    rdfs:label "Blood meridian, or the evening redness in the west (McCarthy, Cormac)" ;
+    entedit:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    rdawd:P10330 "Romanen utkom opprinnelig i 1985 og rammene er følgende: En tenåringsgutt rømmer hjemmefra og slår seg sammen med den morderiske banden Glanton-gjengen. Denne banden lever av å skalpere indianere og andre på den meksikansk-amerikanske grensen i 1849 og 1850. Skildringen av Glanton-gjengen og den demoniske John Joel Holden er bygget på faktiske personer og hendelser. Holden er en kaldblodig morder og fullstendig oppslukt av vold og konflikt. Den amerikanske litteraturviteren Harold Bloom har kalt Holden-skikkelsen \"den mest skremmende skikkelsen i amerikansk litteratur\"." ;
+    rdawo:P10061 <http://viaf.org/viaf/29558386> .
+
+<http://viaf.org/viaf/191907343>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/191907343" ;
+    rdawd:P10223 "The orchard keeper" ;
+    rdfs:label "The orchard keeper (McCarthy, Cormac)" ;
+    entedit:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    rdawo:P10061 <http://viaf.org/viaf/29558386> .
 
 <http://viaf.org/viaf/214001528>
     a rdac:C10001 ;
@@ -35,8 +72,55 @@
     rdfs:label "All the pretty horses (McCarthy, Cormac)";
     entedit:P01 vtp:V1000;
     entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
-    rdawd:P10330 "Denne romanen er både en dannelsesroman og en western. Vi møter den seksten år gamle John Grady Cole på en ranch i West-Texas i 1949. Guttens bestefar er nettopp død. Faren er merket av krigen og bor i byen. Morens høyeste ønske er å komme seg ut av Texas for godt. John er for ung til å overta ranchen, og dermed er han stengt ute fra den eneste tilværelse han eri stand til å forestille seg. Sammen med vennen Lacey Rawlins drar han over grensen til Mexico og videre sørover. Her opplever han både idyll og komikk, men også blod." ,
-                "The story of John Grady Cole, who at 16 finds himself at the dying end of a long line of Texas ranchers, cut off from the only life he has ever imagined for himself. To escape a society moving all the wrong directions, Cole and two companions decide to seek their fortune in Mexico. But what begins as an idyllic adventure leads to a place where dreams are paid for in blood." ;
+    rdawd:P10330 "The story of John Grady Cole, who at 16 finds himself at the dying end of a long line of Texas ranchers, cut off from the only life he has ever imagined for himself. To escape a society moving all the wrong directions, Cole and two companions decide to seek their fortune in Mexico. But what begins as an idyllic adventure leads to a place where dreams are paid for in blood." ;
+    rdawo:P10061 <http://viaf.org/viaf/29558386> .
+
+<http://viaf.org/viaf/214012164>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/214012164" ;
+    rdawd:P10223 "No country for old men" ;
+    rdfs:label "No country for old men (McCarthy, Cormac)" ;
+    entedit:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    rdawo:P10061 <http://viaf.org/viaf/29558386> .
+
+<http://viaf.org/viaf/215254416>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/215254416" ;
+    rdawd:P10223 "Outer dark" ;
+    rdfs:label "Outer dark (McCarthy, Cormac)" ;
+    entedit:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    rdawo:P10061 <http://viaf.org/viaf/29558386> .
+
+<http://viaf.org/viaf/220031159>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/220031159" ;
+    rdawd:P10223 "The road" ;
+    rdfs:label "The road (McCarthy, Cormac)" ;
+    entedit:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    rdawd:P10330 "Veien forteller om en reise i en fremtid uten håp. En far og en sønn går alene gjennom restene av et amerikansk landskap. Ingenting beveger seg, bortsett fra asken som flyr i vinden. Det er iskaldt, og det snør grå snø. Himmelen er mørk. Det er ti år siden verden brøt sammen. De går mot kysten, med bare en pistol å forsvare seg med mot de lovløse bandene langs veien. De har bare klærne de går i og litt frukt, men en stor hengivenhet og ømhet for hverandre.." ;
+    rdawo:P10061 <http://viaf.org/viaf/29558386> .
+
+<http://viaf.org/viaf/29558386/counselor>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/29558386/counselor" ;
+    rdawd:P10223 "The counselor" ;
+    rdfs:label "The counselor (McCarthy, Cormac)" ;
+    entedit:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/298>;
+    rdaxd:P00029 "Screenplay" ;
+    rdawo:P10061 <http://viaf.org/viaf/29558386> .
+
+<http://viaf.org/viaf/29558386/gardenersson>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/29558386/gardenersson" ;
+    rdawd:P10223 "The gardener's son" ;
+    rdfs:label "The gardener's son (McCarthy, Cormac)" ;
+    entedit:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/298>;
+    rdaxd:P00029 "Screenplay" ;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
 
 <http://viaf.org/viaf/309357400>
@@ -47,7 +131,7 @@
     entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
     entedit:P01 vtp:V1000;
     rdawd:P10330 "1972, Black River Falls, Wisconsin. Alicia Western, tjue år gammel og med førti tusen dollar i en plastpose, ber om å bli innlagt på et sykehus. Hun holder på å ta en doktorgrad i matematikk ved University of Chicago, og er diagnostisert med paranoid schizofrreni. Hun vil ikke snakke om broren sin, Bobby. I stedet reflekterer hun over psykiske lidelser, og hvordan mennesker insisterer på én felles oppfatning av verden. Hun husker en barndom der hennes egen bestemor fryktet for henne da hun bare var syv år gammel. Hun drøfter skjæringspunktet mellom fysikk og filosofi, og hun introduserer hallusinasjonene bare hun kan se. Og hele tiden sørger hun over Bobby, som fortsatt ikke er helt død, og som ikke er helt hennes. «Stella Maris» bli kun fortalt gjennom transkripsjoner av Alicias terapitimer." ,
-                  "Billy and Boyd Parham are two boys living in New Mexico on the cusp of unimaginable events in the years before the Second World War. First comes a trespassing Indian and the dream of wolves running wild among cattle. Billy traps a she-wolf, intending to restore it to the mountains of New Mexico. But when he returns, he finds everything he left behind utterly transformed." ;
+                 "Billy and Boyd Parham are two boys living in New Mexico on the cusp of unimaginable events in the years before the Second World War. First comes a trespassing Indian and the dream of wolves running wild among cattle. Billy traps a she-wolf, intending to restore it to the mountains of New Mexico. But when he returns, he finds everything he left behind utterly transformed." ;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
 
 <http://viaf.org/viaf/3417153653286155900001>
@@ -59,11 +143,2601 @@
     entedit:P01 vtp:V1000;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
 
-<http://viaf.org/viaf/214012164>
+<http://viaf.org/viaf/4440159478236227990002>
     a rdac:C10001 ;
-    rdaxd:P00018 "http://viaf.org/viaf/214012164" ;
-    rdawd:P10223 "No country for old men" ;
-    rdfs:label "No country for old men (McCarthy, Cormac)" ;
-    entedit:P01 vtp:V1000;
+    rdaxd:P00018 "http://viaf.org/viaf/4440159478236227990002" ;
+    rdawd:P10223 "The Sunset Limited" ;
+    rdfs:label "The Sunset Limited (McCarthy, Cormac)" ;
     entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    entedit:P01 vtp:V1000;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
+
+<http://viaf.org/viaf/470166838899836200007>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/470166838899836200007" ;
+    rdawd:P10223 "The passenger" ;
+    rdfs:label "The passenger (McCarthy, Cormac)" ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    entedit:P01 vtp:V1000;
+    rdawd:P10330 "Mississippi, 1980: Klokken tre om natten ikler Bobby Western seg våtdrakt og dykker ned i et mørkt hav. I et styrtet fly på havbunnen ser han ni døde passasjerer fastspent i setene, med flytende hår og tomme blikk. Den tiende passasjeren og flyets svarte boks er borte. Etter dette hjemsøkes Bobby Western av politimenn og myndigheter, av spøkelset etter faren som var med på oppfinnelsen av atombomben, og ikke minst av kjærligheten til søsteren som mistet forstanden. En av de største amerikanske forfatterne i vår tid, Cormac McCarthy, er endelig tilbake med en kompleks, dyp og elegant roman. Med Passasjeren leverer han nok et slagferdig epos om maskulinitet, krig, død, tap og skjønnhet. Boken utgis samtidig i Norge som i USA og England." ,
+                 "\"Pass Christian, Mississippi, 1980: It is three in the morning when Bobby Western zips up the jacket of his wet suit and plunges from a Coast Guard tender into darkness. His dive light illuminates the sunken jet, nine bodies still buckled in their seats, hair floating, eyes devoid of speculation. Missing from the crash site are the pilot's flight bag, the plane's black box, and the tenth passenger. But how? A collateral witness to machinations that can only bring him harm, Western is shadowed in body and spirit--by men with badges; by the ghost of his father, an inventor of the bomb that melted glass and flesh in Hiroshima; and by his sister, the love and ruin of his soul.\"--Dust jacket flap." ;
+    rdawo:P10061 <http://viaf.org/viaf/29558386> .
+
+<http://viaf.org/viaf/470166838899836200007/stellamaris>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/470166838899836200007/stellamaris" ;
+    rdawd:P10223 "Stella Maris" ;
+    rdfs:label "Stella Maris (McCarthy, Cormac)" ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>;
+    entedit:P01 vtp:V1000;
+    rdawd:P10330 "1972, Black River Falls, Wiscounsin. Alicia Western, tjue år gammel og med førti tusen dollar i en plastpose, ber om å bli innlagt på et sykehus. Hun holder på å ta en doktorgrad i matematikk ved University of Chicago, og er diagnostisert med paranoid schizofrreni. Hun vil ikke snakke om broren sin, Bobby. I stedet reflekterer hun over psykiske lidelser, og hvordan mennesker insisterer på én felles oppfatning av verden. Hun husker en barndom der hennes egen bestemor fryktet for henne da hun bare var syv år gammel. Hun drøfter skjæringspunktet mellom fysikk og filosofi, og hun introduserer hallusinasjonene bare hun kan se. Og hele tiden sørger hun over Bobby, som fortsatt ikke er helt død, og som ikke er helt hennes. «Stella Maris» bli kun fortalt gjennom transkripsjoner av Alicias terapitimer." ,
+                 "1972, Black River Falls, Wisconsin. Alicia Western, tjue år gammel og med førti tusen dollar i en plastpose, ber om å bli innlagt på et sykehus. Hun holder på å ta en doktorgrad i matematikk ved University of Chicago, og er diagnostisert med paranoid schizofrreni. Hun vil ikke snakke om broren sin, Bobby. I stedet reflekterer hun over psykiske lidelser, og hvordan mennesker insisterer på én felles oppfatning av verden. Hun husker en barndom der hennes egen bestemor fryktet for henne da hun bare var syv år gammel. Hun drøfter skjæringspunktet mellom fysikk og filosofi, og hun introduserer hallusinasjonene bare hun kan se. Og hele tiden sørger hun over Bobby, som fortsatt ikke er helt død, og som ikke er helt hennes. «Stella Maris» bli kun fortalt gjennom transkripsjoner av Alicias terapitimer." ,
+                 "\"From the best-selling, Pulitzer Prize-winning author of The Road comes the second volume of a two-volume masterpiece: Stella Maris is an intimate portrait of grief and longing, as a young woman in a psychiatric facility seeks to understand her own existence. Black River Falls, Wisconsin, 1972: Alicia Western, twenty years old, with forty thousand dollars in a plastic bag, admits herself to the hospital. A doctoral candidate in mathematics at the University of Chicago, Alicia has been diagnosed with paranoid schizophrenia, and she does not want to talk about her brother, Bobby. Instead, she contemplates the nature of madness, the human insistence on one common experience of the world; she recalls a childhood where, by the age of seven, her own grandmother feared for her; she surveys the intersection of physics and philosophy; and she introduces her cohorts, her chimeras, the hallucinations that only she can see. All the while, she grieves for Bobby, not quite dead, not quite hers. Told entirely through the transcripts of Alicia's psychiatric sessions, Stella Maris is a searching, rigorous, intellectually challenging coda to The Passenger, a philosophical inquiry that questions our notions of God, truth, and existence\"--" ;
+    rdawo:P10061 <http://viaf.org/viaf/29558386> ;
+    rdawo:P10122 <http://viaf.org/viaf/470166838899836200007> .
+
+<http://viaf.org/viaf/5191807/theroad>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/5191807/theroad" ;
+    rdawd:P10223 "The road" ;
+    rdfs:label "The road (Penhall, Joe)" ;
+    entedit:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/298>;
+    rdaxd:P00029 "Screenplay" ;
+    rdawo:P10061 <http://viaf.org/viaf/5191807> ;
+    rdawo:P10134 <http://viaf.org/viaf/220031159> .
+
+<http://viaf.org/viaf/8419162723677961290005>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/8419162723677961290005" ;
+    rdawd:P10223 "The stonemason" ;
+    rdfs:label "The stonemason (McCarthy, Cormac)" ;
+    rdaxd:P00029 "Play" ;
+    entedit:P01 vtp:V1000;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/67>;
+    rdawo:P10061 <http://viaf.org/viaf/29558386> .
+
+
+<http://www.wikidata.org/entity/Q3061599>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://www.wikidata.org/entity/Q3061599" ;
+    rdawd:P10223 "Counselor (Motion picture : 2013)" ;
+    rdfs:label "Counselor (Motion picture : 2013)" ;
+    entedit:P01 vtp:V1002;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/1130>;
+    rdawd:P10330 "\"Ridley Scott's The Counselor, from a script by Cormac McCarthy, stars Michael Fassbender as the title character, a slick lawyer who is madly in love with Laura (Penelope Cruz). He asks her to marry him, and she agrees, though she is unaware that serious financial troubles have prompted him to fund a drug deal with a shady but established middle man named Westray (Brad Pitt), that could bring in millions. Part of the counselor's financial troubles stem from the fact that he's investing in a club being opened by his best friend Reiner (Javier Bardem), a hedonist and occasional client who has attained his wealth by any means necessary, and likes to keep his wife, Malkina (Cameron Diaz) covered in all the accoutrements the wealthy enjoy. However, when the drug deal starts to go wrong, the counselor finds himself unprepared to deal with the fallout, and soon he's trying to protect his bride-to-be as well as himself from the wrath of a drug cartel that has no qualms about exacting revenge\"--Allmovie.com, viewed March 12, 2018." ,
+                 "A lawyer makes a risky entrance into the drug trade, and gambles that the consequences won't catch up with him." ;
+    rdawo:P10013 <https://isni.org/isni/0000000116899928> ;
+    rdawo:P10053 <https://isni.org/isni/0000000003044835> ;
+    rdawo:P10068 <https://isni.org/isni/0000000116794245> ;
+    rdawo:P10073 <https://www.imdb.com/name/nm2445382> ,
+                 <https://www.imdb.com/name/nm0777455> ,
+                 <https://isni.org/isni/0000000116899928> ,
+                 <https://isni.org/isni/0000000063018399> ;
+    rdawo:P10203 <http://viaf.org/viaf/29558386> .
+
+<https://www.imdb.com/title/tt0149624>
+    a rdac:C10001 ;
+    rdaxd:P00018 "https://www.imdb.com/title/tt0149624" ;
+    rdawd:P10223 "All the pretty horses (Motion picture : 2000)" ;
+    rdfs:label "All the pretty horses (Motion picture: 2000)" ;
+    rdaxd:P00029 "Movie" ;
+    entedit:P01 vtp:V1002;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/1130>;
+    rdawo:P10013 <https://isni.org/isni/0000000120961536> ;
+    rdawo:P10073 <https://isni.org/isni/0000000120961536> ,
+                 <https://isni.org/isni/0000000042755920> ;
+    rdawo:P10129 <http://viaf.org/viaf/214001528> .
+
+<https://www.imdb.com/title/tt0477348>
+    a rdac:C10001 ;
+    rdaxd:P00018 "https://www.imdb.com/title/tt0477348" ;
+    rdawd:P10223 "No country for old men (Motion picture : 2007)" ;
+    rdfs:label "No country for old men (Motion picture : 2007)" ;
+    rdaxd:P00029 "Movie" ;
+    entedit:P01 vtp:V1002;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/1130>;
+    rdawd:P10330 "When a Vietnam veteran discovers two million dollars while wandering through the aftermath of a Texas drug deal gone awry, his decision to abscond with the cash sets off a violent chain reaction in a once peaceful Texas town." ,
+                 "Llewelyn Moss is a Vietnam vet who could use a break. One morning while hunting antelope, he spies several trucks surrounded by dead bodies. He decides to examine the site. He finds a case filled with $2 million and a truck loaded with heroin. Moss takes it with him, tells his wife he's going away for awhile, and hits the road until he can determine his next move. On his the way from El Paso to the Mexican border, he discovers he's being followed by ex-special ops agent Chigurh. Chigurh's weapon of choice is a cattle gun, and he uses it on everyone who gets in his way. Just as Sheriff Bell, a World War II vet, is on Moss's trail, Chigurh's former colleague, Wells, is on his." ;
+    rdawo:P10013 <https://isni.org/isni/0000000121417460> ,
+                 <https://isni.org/isni/0000000120296767> ;
+    rdawo:P10073 <https://isni.org/isni/0000000121417460> ,
+                 <https://isni.org/isni/0000000120296767> ,
+                 <https://isni.org/isni/0000000080773273> ;
+    rdawo:P10129 <http://viaf.org/viaf/214012164> ;
+    rdawo:P10203 <https://isni.org/isni/0000000121417460> ,
+                 <https://isni.org/isni/0000000120296767> .
+
+<https://www.imdb.com/title/tt0898367>
+    a rdac:C10001 ;
+    rdaxd:P00018 "https://www.imdb.com/title/tt0898367" ;
+    rdawd:P10223 "The Road (Motion picture : 2009)" ;
+    rdfs:label "The Road (Motion picture : 2009)" ;
+    rdaxd:P00029 "Movie" ;
+    entedit:P01 vtp:V1002;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/1130>;
+    rdawd:P10330 "\"A father (Viggo Mortensen) and son make their way across a post-apocalyptic United States in hopes of finding civilization amongst the nomadic cannibal tribes in 2929 Productions' adaptation of Cormac McCarthy's thrilling Pulitzer Prize-winning novel The Road. John Hillcoat (The Proposition) directs from a screenplay provided by Joe Penhall. Charlize Theron co-stars in the Dimension Films release\"--Allmovie.com, viewed October 1, 2018." ;
+    rdawo:P10013 <https://isni.org/isni/0000000108589241> ;
+    rdawo:P10073 <https://www.imdb.com/name/nm2445382> , <https://isni.org/isni/0000000063018399> ;
+    rdawo:P10129 <http://viaf.org/viaf/220031159> ;
+    rdawo:P10203 <http://viaf.org/viaf/5191807> .
+
+<http://viaf.org/viaf/225596267>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/225596267" ;
+    rdaad:P50413 "Ofstad, Knut" ;
+    rdfs:label "Ofstad, Knut" .
+
+<http://viaf.org/viaf/266451311>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/266451311" ;
+    rdaad:P50413 "Johansen, Knut" ;
+    rdfs:label "Johansen, Knut" .
+
+<http://viaf.org/viaf/27122071>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/27122071" ;
+    rdaad:P50413 "Brænne, Trond" ;
+    rdfs:label "Brænne, Trond" ;
+    rdaad:P50339 "1953-2013" .
+
+<http://viaf.org/viaf/29558386>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/29558386" ;
+    rdaad:P50413 "McCarthy, Cormac" ;
+    rdfs:label "McCarthy, Cormac" ;
+    rdaad:P50339 "1933-2023" .
+
+<http://viaf.org/viaf/5191807>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/5191807" ;
+    rdaad:P50413 "Penhall, Joe" ;
+    rdfs:label "Penhall, Joe" .
+
+<http://viaf.org/viaf/92910249>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/92910249" ;
+    rdaad:P50413 "Wood, James" ;
+    rdfs:label "Wood, James" ;
+    rdaad:P50339 "1965-" .
+
+<https://isni.org/isni/0000000003044835>
+    a rdac:C10004 ;
+    rdaxd:P00018 "https://isni.org/isni/0000000003044835" ;
+    rdaad:P50413 "Pemberton, Daniel" ;
+    rdfs:label "Pemberton, Daniel" .
+
+<https://isni.org/isni/0000000042755920>
+    a rdac:C10004 ;
+    rdaxd:P00018 "https://isni.org/isni/0000000042755920" ;
+    rdaad:P50413 "Salerno, Robert" ;
+    rdfs:label "Salerno, Robert" .
+
+<https://isni.org/isni/0000000063018399>
+    a rdac:C10004 ;
+    rdaxd:P00018 "https://isni.org/isni/0000000063018399" ;
+    rdaad:P50413 "Wechsler, Nick" ;
+    rdfs:label "Wechsler, Nick" .
+
+<https://isni.org/isni/0000000080773273>
+    a rdac:C10004 ;
+    rdaxd:P00018 "https://isni.org/isni/0000000080773273" ;
+    rdaad:P50413 "Rudin, Scott" ;
+    rdfs:label "Rudin, Scott" ;
+    rdaad:P50339 "1958-" .
+
+<https://isni.org/isni/0000000108589241>
+    a rdac:C10004 ;
+    rdaxd:P00018 "https://isni.org/isni/0000000108589241" ;
+    rdaad:P50413 "Hillcoat, John" ;
+    rdfs:label "Hillcoat, John" ;
+    rdaad:P50339 "1961-" .
+
+<https://isni.org/isni/0000000108854789>
+    a rdac:C10004 ;
+    rdaxd:P00018 "https://isni.org/isni/0000000108854789" ;
+    rdaad:P50413 "Thomas, Henry" ;
+    rdfs:label "Thomas, Henry" ;
+    rdaad:P50339 "1971-" .
+
+<https://isni.org/isni/0000000109011804>
+    a rdac:C10004 ;
+    rdaxd:P00018 "https://isni.org/isni/0000000109011804" ;
+    rdaad:P50413 "Cruz, Penélope";
+    rdfs:label "Cruz, Penélope";
+    rdaad:P50339 "1974-" .
+
+<https://isni.org/isni/0000000109217300>
+    a rdac:C10004 ;
+    rdaxd:P00018 "https://isni.org/isni/0000000109217300" ;
+    rdaad:P50413 "Brolin, Josh" ;
+    rdfs:label "Brolin, Josh" ;
+    rdaad:P50339 "1968-" .
+
+<https://isni.org/isni/000000010921736X>
+    a rdac:C10004 ;
+    rdaxd:P00018 "https://isni.org/isni/000000010921736X" ;
+    rdaad:P50413 "Jones, Tommy Lee" ;
+    rdfs:label "Jones, Tommy Lee" ;
+    rdaad:P50339 "1946-" .
+
+<https://isni.org/isni/0000000110296296>
+    a rdac:C10004 ;
+    rdaxd:P00018 "https://isni.org/isni/0000000110296296" ;
+    rdaad:P50413 "Mortensen, Viggo" ;
+    rdfs:label "Mortensen, Viggo" ;
+    rdaad:P50339 "1958-" .
+
+<https://isni.org/isni/0000000114380049>
+    a rdac:C10004 ;
+    rdaxd:P00018 "https://isni.org/isni/0000000114380049" ;
+    rdaad:P50413 "Pitt, Brad" ;
+    rdfs:label "Pitt, Brad" ;
+    rdaad:P50339 "1963-" .
+
+<https://isni.org/isni/0000000114558548>
+    a rdac:C10004 ;
+    rdaxd:P00018 "https://isni.org/isni/0000000114558548" ;
+    rdaad:P50413 "Duvall, Robert" ;
+    rdfs:label "Duvall, Robert" ;
+    rdaad:P50339 "1931-" .
+
+<https://isni.org/isni/0000000114563013>
+    a rdac:C10004 ;
+    rdaxd:P00018 "https://isni.org/isni/0000000114563013" ;
+    rdaad:P50413 "Smit-McPhee, Kodi" ;
+    rdfs:label "Smit-McPhee, Kodi" ;
+    rdaad:P50339 "1996-" .
+
+<https://isni.org/isni/000000011471482X>
+    a rdac:C10004 ;
+    rdaxd:P00018 "https://isni.org/isni/000000011471482X" ;
+    rdaad:P50413 "Diaz, Cameron" ;
+    rdfs:label "Diaz, Cameron" .
+
+<https://isni.org/isni/000000011477315X>
+    a rdac:C10004 ;
+    rdaxd:P00018 "https://isni.org/isni/000000011477315X" ;
+    rdaad:P50413 "Scalia, Pietro" ;
+    rdfs:label "Scalia, Pietro" ;
+    rdaad:P50339 "1960-" .
+
+<https://isni.org/isni/0000000114973899>
+    a rdac:C10004 ;
+    rdaxd:P00018 "https://isni.org/isni/0000000114973899" ;
+    rdaad:P50413 "Theron, Charlize" ;
+    rdfs:label "Theron, Charlize" ;
+    rdaad:P50339 "1975-" .
+
+<https://isni.org/isni/0000000115669792>
+    a rdac:C10004 ;
+    rdaxd:P00018 "https://isni.org/isni/0000000115669792" ;
+    rdaad:P50413 "Fassbender, Michael" ;
+    rdfs:label "Fassbender, Michael" ;
+    rdaad:P50339 "1977-" .
+
+<https://isni.org/isni/0000000116794245>
+    a rdac:C10004 ;
+    rdaxd:P00018 "https://isni.org/isni/0000000116794245" ;
+    rdaad:P50413 "Wolski, Dariusz A" ;
+    rdfs:label "Wolski, Dariusz A" .
+
+<https://isni.org/isni/0000000116899928>
+    a rdac:C10004 ;
+    rdaxd:P00018 "https://isni.org/isni/0000000116899928" ;
+    rdaad:P50413 "Scott, Ridley" ;
+    rdfs:label "Scott, Ridley" .
+
+<https://isni.org/isni/0000000120296767>
+    a rdac:C10004 ;
+    rdaxd:P00018 "https://isni.org/isni/0000000120296767" ;
+    rdaad:P50413 "Coen, Joel" ;
+    rdfs:label "Coen, Joel" ;
+    rdaad:P50339 "1954-" .
+
+<https://isni.org/isni/0000000120961536>
+    a rdac:C10004 ;
+    rdaxd:P00018 "https://isni.org/isni/0000000120961536" ;
+    rdaad:P50413 "Thornton, Billy Bob" ;
+    rdfs:label "Thornton, Billy Bob" ;
+    rdaad:P50339 "1955-" .
+
+<https://isni.org/isni/0000000121413793>
+    a rdac:C10004 ;
+    rdaxd:P00018 "https://isni.org/isni/0000000121413793" ;
+    rdaad:P50413 "Bardem, Javier" ;
+    rdfs:label "Bardem, Javier" ;
+    rdaad:P50339 "1969-" .
+
+<https://isni.org/isni/0000000121417460>
+    a rdac:C10004 ;
+    rdaxd:P00018 "https://isni.org/isni/0000000121417460" ;
+    rdaad:P50413 "Coen, Ethan" ;
+    rdfs:label "Coen, Ethan" ;
+    rdaad:P50339 "1957-" .
+
+<https://isni.org/isni/000000012142082X>
+    a rdac:C10004 ;
+    rdaxd:P00018 "https://isni.org/isni/000000012142082X" ;
+    rdaad:P50413 "Damon, Matt" ;
+    rdfs:label "Damon, Matt" ;
+    rdaad:P50339 "1970-" .
+
+<https://www.imdb.com/name/nm0777455>
+    a rdac:C10004 ;
+    rdaxd:P00018 "https://www.imdb.com/name/nm0777455" ;
+    rdaad:P50413 "Schwartz, Steve" ;
+    rdfs:label "Schwartz, Steve" .
+
+<https://www.imdb.com/name/nm2445382>
+    a rdac:C10004 ;
+    rdaxd:P00018 "https://www.imdb.com/name/nm2445382" ;
+    rdaad:P50413 "Schwartz, Paula Mae" ;
+    rdfs:label "Schwartz, Paula Mae" .
+
+<http://viaf.org/viaf/175871715/exp/eng/1020>
+    a rdac:C10006 ;
+    rdfs:label "The border trilogy (McCarthy, Cormac)" ;
+    #rdaed:P20312 "The border trilogy" ;
+    rdaed:P20315 "The border trilogy" ;
+    rdaed:P20071 "All the pretty horses -- The crossing -- Cities of the plain" ;
+    rdaed:P20315 "The border trilogy" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20145 <http://viaf.org/viaf/214001528/exp/eng/1020> ,
+                 <http://viaf.org/viaf/3417153653286155900001/exp/eng/1020> ,
+                 <http://viaf.org/viaf/309357400/exp/eng/1020> ;
+    rdaeo:P20231 <http://viaf.org/viaf/175871715> .
+
+<http://viaf.org/viaf/175871715/exp/nob/1020/225596267>
+    a rdac:C10006 ;
+    rdfs:label "Grensetriologien (McCarthy, Cormac)" ;
+    rdaed:P20315 "Grensetriologien" ;
+    rdaed:P20071 "Alle de vakre hestene -- Over grensen -- Byene på høysletten" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20037 <http://viaf.org/viaf/225596267> ;
+    rdaeo:P20145 <http://viaf.org/viaf/214001528/exp/nob/1020/225596267> ,
+                 <http://viaf.org/viaf/3417153653286155900001/exp/nob/1020/225596267> ,
+                 <http://viaf.org/viaf/309357400/exp/nob/1020/225596267> ;
+    rdaeo:P20231 <http://viaf.org/viaf/175871715> .
+
+<http://viaf.org/viaf/188298726/exp/eng/1020>
+    a rdac:C10006 ;
+    rdfs:label "Suttree (McCarthy, Cormac)" ;
+    rdaed:P20315 "Suttree" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/188298726> .
+
+<http://viaf.org/viaf/188670330/exp/eng/1020>
+    a rdac:C10006 ;
+    rdaed:P20315 "Child of God" ;
+    rdfs:label "Child of God (McCarthy, Cormac)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/188670330> .
+
+<http://viaf.org/viaf/188670330/exp/nob/1020/266451311>
+    a rdac:C10006 ;
+    rdaed:P20315 "Child of God" ;
+    rdfs:label "Et Guds barn (McCarthy, Cormac)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20037 <http://viaf.org/viaf/266451311> ;
+    rdaeo:P20231 <http://viaf.org/viaf/188670330> .
+
+<http://viaf.org/viaf/191524645/exp/eng/1020>
+    a rdac:C10006 ;
+    rdaed:P20315 "Blood meridian, or the evening redness in the west" ;
+    rdfs:label "Blood meridian, or, The evening redness in the West (McCarthy, Cormac)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/191524645> .
+
+<http://viaf.org/viaf/191524645/exp/nob/1020/225596267>
+    a rdac:C10006 ;
+    rdaed:P20315 "Blodmeridianen, eller aftenrøden i vest" ;
+    rdfs:label "Blodmeridianen, eller aftenrøden i vest (McCarthy, Cormac)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20037 <http://viaf.org/viaf/225596267> ;
+    rdaeo:P20231 <http://viaf.org/viaf/191524645> .
+
+<http://viaf.org/viaf/191907343/exp/eng/1020>
+    a rdac:C10006 ;
+    rdaed:P20315 "The orchard keeper" ;
+    rdfs:label "The orchard keeper (McCarthy, Cormac)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/191907343> .
+
+<http://viaf.org/viaf/191907343/exp/nob/1020/225596267>
+    a rdac:C10006 ;
+    rdaed:P20315 "Frukthagen" ;
+    rdfs:label "Frukthagen (McCarthy, Cormac)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20037 <http://viaf.org/viaf/225596267> ;
+    rdaeo:P20231 <http://viaf.org/viaf/191907343> .
+
+<http://viaf.org/viaf/214001528/exp/eng/1013/0000000114380049>
+    a rdac:C10006 ;
+    rdaed:P20315 "All the pretty horses" ;
+    rdfs:label "All the pretty horses (McCarthy, Cormac / Pitt, Brad)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20022 <https://isni.org/isni/0000000114380049> ;
+    rdaeo:P20231 <http://viaf.org/viaf/214001528> .
+
+<http://viaf.org/viaf/214001528/exp/eng/1020>
+    a rdac:C10006 ;
+    rdaed:P20315 "All the pretty horses" ;
+    rdfs:label "All the pretty Horses (McCarthy, Cormac)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/214001528> .
+
+<http://viaf.org/viaf/214001528/exp/nob/1020/225596267>
+    a rdac:C10006 ;
+    rdaed:P20315 "Alle de vakre hestene" ;
+    rdfs:label "Alle de vakre hestene (McCarthy, Cormac)";
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20037 <http://viaf.org/viaf/225596267> ;
+    rdaeo:P20231 <http://viaf.org/viaf/214001528> .
+
+<http://viaf.org/viaf/214012164/exp/eng/1020>
+    a rdac:C10006 ;
+    rdaed:P20315 "No country for old men" ;
+    rdfs:label "No country for old men (McCarthy, Cormac)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/214012164> .
+
+<http://viaf.org/viaf/214012164/exp/nob/1020/225596267>
+    a rdac:C10006 ;
+    rdaed:P20315 "Ikke et land for gamle menn" ;
+    rdfs:label "Ikke et land for gamle menn (McCarthy, Cormac)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20037 <http://viaf.org/viaf/225596267> ;
+    rdaeo:P20231 <http://viaf.org/viaf/214012164> .
+
+<http://viaf.org/viaf/215254416/exp/eng/1020>
+    a rdac:C10006 ;
+    rdaed:P20315 "Outer dark" ;
+    rdfs:label "Outer dark (McCarthy, Cormac)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/215254416> .
+
+<http://viaf.org/viaf/220031159/exp/eng/1020>
+    a rdac:C10006 ;
+    rdaed:P20315 "The road" ;
+    rdfs:label "The road (McCarthy, Cormac)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/220031159> .
+
+<http://viaf.org/viaf/220031159/exp/nob/1013/225596267/27122071>
+    a rdac:C10006 ;
+    rdaed:P20315 "Veien" ;
+    rdfs:label "Veien (McCarthy, Cormac / Brænne, Trond)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20022 <http://viaf.org/viaf/27122071> ;
+    rdaeo:P20037 <http://viaf.org/viaf/225596267> ;
+    rdaeo:P20231 <http://viaf.org/viaf/220031159> .
+
+<http://viaf.org/viaf/220031159/exp/nob/1020/225596267>
+    a rdac:C10006 ;
+    rdaed:P20315 "Veien" ;
+    rdfs:label "Veien (McCarthy, Cormac)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20037 <http://viaf.org/viaf/225596267> ;
+    rdaeo:P20231 <http://viaf.org/viaf/220031159> .
+
+<http://viaf.org/viaf/29558386/counselor/exp/eng/1020>
+    a rdac:C10006 ;
+    rdaed:P20315 "The counselor" ;
+    rdfs:label "The counselor (McCarthy, Cormac)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/29558386/counselor> .
+
+<http://viaf.org/viaf/29558386/gardenersson/exp/eng/1020>
+    a rdac:C10006 ;
+    rdaed:P20315 "The gardener's son" ;
+    rdfs:label "The gardener's son (McCarthy, Cormac)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/29558386/gardenersson> .
+
+<http://viaf.org/viaf/309357400/exp/eng/1013/0000000114380049>
+    a rdac:C10006 ;
+    rdaed:P20315 "The crossing" ;
+    rdfs:label "The crossing (McCarthy, Cormac / Pitt, Brad)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20022 <https://isni.org/isni/0000000114380049> ;
+    rdaeo:P20231 <http://viaf.org/viaf/309357400> .
+
+<http://viaf.org/viaf/309357400/exp/eng/1020>
+    a rdac:C10006 ;
+    rdaed:P20315 "The crossing" ;
+    rdfs:label "The crossing (McCarthy, Cormac)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/309357400> .
+
+<http://viaf.org/viaf/309357400/exp/nob/1020/225596267>
+    a rdac:C10006 ;
+    rdaed:P20315 "Over grensen" ;
+    rdfs:label "Over grensen (McCarthy, Cormac)";
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20037 <http://viaf.org/viaf/225596267> ;
+    rdaeo:P20231 <http://viaf.org/viaf/309357400> .
+
+<http://viaf.org/viaf/3417153653286155900001/exp/eng/1020>
+    a rdac:C10006 ;
+    rdaed:P20315 "Cities of the plain" ;
+    rdfs:label "Cities of the plain (McCarthy, Cormac)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/3417153653286155900001> .
+
+<http://viaf.org/viaf/3417153653286155900001/exp/nob/1020/225596267>
+    a rdac:C10006 ;
+    rdaed:P20315 "Byene på høysletten";
+    rdfs:label "Byene på høysletten (McCarthy, Cormac)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20037 <http://viaf.org/viaf/225596267> ;
+    rdaeo:P20231 <http://viaf.org/viaf/3417153653286155900001> .
+
+<http://viaf.org/viaf/4440159478236227990002/exp/eng/1020>
+    a rdac:C10006 ;
+    rdaed:P20315 "The Sunset Limited" ;
+    rdfs:label "The Sunset Limited (McCarthy, Cormac)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/4440159478236227990002> .
+
+<http://viaf.org/viaf/470166838899836200007/exp/eng/1020>
+    a rdac:C10006 ;
+    rdaed:P20315 "The passenger" ;
+    rdfs:label "The passenger (McCarthy, Cormac)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/470166838899836200007> .
+
+<http://viaf.org/viaf/470166838899836200007/exp/nob/1020/225596267>
+    a rdac:C10006 ;
+    rdaed:P20312 "Passasjeren" ;
+    rdfs:label "Passasjeren (McCarthy, Cormac)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20037 <http://viaf.org/viaf/225596267> ;
+    rdaeo:P20231 <http://viaf.org/viaf/470166838899836200007> .
+
+<http://viaf.org/viaf/470166838899836200007/stellamaris/exp/eng/1020>
+    a rdac:C10006 ;
+    rdaed:P20315 "Stella Maris" ;
+    rdfs:label "Stella Maris (McCarthy, Cormac)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/470166838899836200007/stellamaris> .
+
+<http://viaf.org/viaf/470166838899836200007/stellamaris/exp/nob/1020/225596267>
+    a rdac:C10006 ;
+    rdaed:P20315 "Stella Maris" ;
+    rdfs:label "Stella Maris (McCarthy, Cormac)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20037 <http://viaf.org/viaf/225596267> ;
+    rdaeo:P20231 <http://viaf.org/viaf/470166838899836200007/stellamaris> .
+
+<http://viaf.org/viaf/5191807/theroad/exp/eng/1020>
+    a rdac:C10006 ;
+    rdaed:P20315 "The road" ;
+    rdfs:label "The road (Penhall, Joe)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/5191807/theroad> .
+
+<http://viaf.org/viaf/8419162723677961290005/exp/eng/1020>
+    a rdac:C10006 ;
+    rdaed:P20315 "The stonemason" ;
+    rdfs:label "The stonemason (McCarthy, Cormac)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/8419162723677961290005> .
+
+<http://www.wikidata.org/entity/Q3061599/exp/1023>
+    a rdac:C10006 ;
+    rdfs:label "The counselor (Motion picture : 2013)" ;
+    rdaed:P20315 "The counselor" ;
+    rdaed:P20071 "disc 1. The counselor (Theatrical version) (117 in.) -- disc 2. The counselor (Unrated extended cut) (138 min.)." ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1023> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ,
+                 <http://id.loc.gov/vocabulary/iso639-2/fre> ,
+                 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+    rdaed:P20065 <http://id.loc.gov/vocabulary/iso639-2/spa> ,
+                 <http://id.loc.gov/vocabulary/iso639-2/eng> ,
+                 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+    rdaeo:P20012 <https://isni.org/isni/0000000121413793> ,
+                 <https://isni.org/isni/0000000109011804> ,
+                 <https://isni.org/isni/000000011471482X> ,
+                 <https://isni.org/isni/0000000115669792> ,
+                 <https://isni.org/isni/0000000114380049> ;
+    rdaeo:P20055 <https://isni.org/isni/000000011477315X> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q3061599> .
+
+<https://www.imdb.com/title/tt0149624/exp/1023>
+    a rdac:C10006 ;
+    rdaed:P20315 "All the pretty horses" ;
+    rdfs:label "All the pretty horses (Motion picture : 2000)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1023> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/mul> ,
+                 <http://id.loc.gov/vocabulary/iso639-2/eng> ,
+                 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20012 <https://isni.org/isni/0000000109011804> ,
+                 <https://isni.org/isni/000000012142082X> ,
+                 <https://isni.org/isni/0000000108854789> ;
+    rdaeo:P20231 <https://www.imdb.com/title/tt0149624> .
+
+<https://www.imdb.com/title/tt0477348/exp/1023>
+    a rdac:C10006 ;
+    rdaed:P20315 "No country for old men (Motion picture : 2007)" ;
+    rdfs:label "No country for old men" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1023> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaed:P20065 <http://id.loc.gov/vocabulary/iso639-2/eng> ,
+                 <http://id.loc.gov/vocabulary/iso639-2/fre> ,
+                 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+    rdaeo:P20012 <https://isni.org/isni/0000000121413793> ,
+                 <https://isni.org/isni/0000000109217300> ,
+                 <https://isni.org/isni/000000010921736X> ;
+    rdaeo:P20231 <https://www.imdb.com/title/tt0477348> .
+
+<https://www.imdb.com/title/tt0898367/exp/1023>
+    a rdac:C10006 ;
+    rdaed:P20315 "The road" ;
+    rdfs:label "The road (Motion picture : 2009)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1023> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20012 <https://isni.org/isni/0000000114558548> ,
+                 <https://isni.org/isni/0000000110296296> ,
+                 <https://isni.org/isni/0000000114563013> ,
+                 <https://isni.org/isni/0000000114973899> ;
+    rdaeo:P20231 <https://www.imdb.com/title/tt0898367> .
+
+<http://example.org/002304722>
+    a rdac:C10007 ;
+    rdfs:label "The orchard keeper";
+    rdamd:P30156 "The Orchard keeper" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : André Deutsch, 1966" ;
+    rdamd:P30076 "André Deutsch" ;
+    rdamd:P30011 "1966" ;
+    rdamd:P30182 "246 pages, (8º)." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/191907343/exp/eng/1020> .
+
+<http://example.org/15039940>
+    a rdac:C10007 ;
+    rdfs:label "All the pretty horses / by Cormac McCarthy"@no ,
+               "All the pretty horses / by Cormac McCarthy"@en ;
+    rdamd:P30156 "All the pretty horses" ;
+    rdamd:P30117 "by Cormac McCarthy" ;
+    rdamd:P30088 "New York, NY" ;
+    rdamd:P30111 "New York, NY : Random House AudioBooks, p1993" ;
+    rdamd:P30076 "Random House AudioBooks" ;
+    rdamd:P30011 "p1993" ;
+    rdamd:P30182 "2 sound cassettes (3 hrs.) : analog." ;
+    rdamd:P30106 "The Border trilogy" ;
+    rdamd:P30165 "v. 1" ;
+    rdamd:P30137 "Abridged." , "In container (18 cm.)." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1007> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1001> ;
+    rdamo:P30139 <http://viaf.org/viaf/214001528/exp/eng/1013/0000000114380049> .
+
+<http://example.org/15894496>
+    a rdac:C10007 ;
+    rdfs:label "No country for old men / a Miramax, Paramount Vantage presentation of a Scott Rudin/Mike Zoss production ; directed, written by Joel Coen, Ethan Coen ; produced by Scott Rudin, Ethan Coen, Joel Coen"@no ,
+               "No country for old men / a Miramax, Paramount Vantage presentation of a Scott Rudin/Mike Zoss production ; directed, written by Joel Coen, Ethan Coen ; produced by Scott Rudin, Ethan Coen, Joel Coen"@en ;
+    rdamd:P30156 "No country for old men" ;
+    rdamd:P30117 "a Miramax, Paramount Vantage presentation of a Scott Rudin/Mike Zoss production ; directed, written by Joel Coen, Ethan Coen ; produced by Scott Rudin, Ethan Coen, Joel Coen" ;
+    rdamd:P30088 "United States" ;
+    rdamd:P30111 "United States : Miramax Films, 2007" ;
+    rdamd:P30076 "Miramax Films" ;
+    rdamd:P30011 "2007" ;
+    rdamd:P30182 "12 film reels of 12 on 6 (ca. 122 min., ca. 10,980 ft.) : sd. (opt, Dolby SR, digital, Dolby SRD, SDDS), col., 35 mm." ;
+    rdamd:P30137 "Based on the novel by Cormac McCarthy." ,
+                 "Not viewed." ,
+                 "Sources used: copyright database; All-movie guide WWW site, Sept. 4, 2009; Variety WWW site, review posted May 18, 2007, viewed Sept. 4, 2009; Internet movie database, via WWW, Sept. 4, 2009; FirstSearch, via WWW, OCLC 184908513, Sept. 4, 2009." ,
+                 "Summary adapted from All-movie guide WWW site, Sept. 4, 2009, Sept. 4, 2009." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1069> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1008> ;
+    rdamo:P30139 <https://www.imdb.com/title/tt0477348/exp/1023> .
+
+<http://example.org/20395066>
+    a rdac:C10007 ;
+    rdfs:label "The counselor / a Fox 2000 Pictures presentation of a Scott Free/Nick Wechsler/Chockstone Pictures production, made in association with TSG Entertainment, Ingenious Media ; directed by Ridley Scott ; produced by Ridley Scott, Wechsler, Steve Schwartz, Paula Mae Schwartz ; written by Cormac McCarthy"@no ,
+               "The counselor / a Fox 2000 Pictures presentation of a Scott Free/Nick Wechsler/Chockstone Pictures production, made in association with TSG Entertainment, Ingenious Media ; directed by Ridley Scott ; produced by Ridley Scott, Wechsler, Steve Schwartz, Paula Mae Schwartz ; written by Cormac McCarthy"@en ;
+    rdamd:P30156 "The counselor" ;
+    rdamd:P30117 "a Fox 2000 Pictures presentation of a Scott Free/Nick Wechsler/Chockstone Pictures production, made in association with TSG Entertainment, Ingenious Media ; directed by Ridley Scott ; produced by Ridley Scott, Wechsler, Steve Schwartz, Paula Mae Schwartz ; written by Cormac McCarthy" ;
+    rdamd:P30088 "United States" ;
+    rdamd:P30111 "United States : 20th Century Fox, 2013" ;
+    rdamd:P30076 "20th Century Fox" ;
+    rdamd:P30011 "2013" ;
+    rdamd:P30182 "14 film reels of 14 on 7 (113 min., 10,170 ft.) : anamorphic, sd. (opt, Dolby SR), col., 35 mm." ;
+    rdamd:P30137 "Aspect ratio is 2.35:1." ,
+                 "Not viewed." ,
+                 "Sources used: Internet movie database, March 12, 2018; Variety, October 24, 2013; Copyright catalog online." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1069> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1008> ;
+    rdamo:P30139 <http://www.wikidata.org/entity/Q3061599/exp/1023> .
+
+<http://example.org/20691857>
+    a rdac:C10007 ;
+    rdfs:label "The road / a Dimension Films release presented with 2929 Productions of a Nick Wechsler and Chockstone Pictures production ; directed by John Hillcoat ; produced by Nick Wechsler, Paula Mae Schwartz, Steve Schwartz ; screenplay by Joe Penhall"@no ,
+               "The road / a Dimension Films release presented with 2929 Productions of a Nick Wechsler and Chockstone Pictures production ; directed by John Hillcoat ; produced by Nick Wechsler, Paula Mae Schwartz, Steve Schwartz ; screenplay by Joe Penhall"@en ;
+    rdamd:P30156 "The road" ;
+    rdamd:P30117 "a Dimension Films release presented with 2929 Productions of a Nick Wechsler and Chockstone Pictures production ; directed by John Hillcoat ; produced by Nick Wechsler, Paula Mae Schwartz, Steve Schwartz ; screenplay by Joe Penhall" ;
+    rdamd:P30088 "United States" ;
+    rdamd:P30111 "United States : Dimension, 2009" ;
+    rdamd:P30076 "Dimension" ;
+    rdamd:P30011 "2009" ;
+    rdamd:P30182 "12 film reels of 12 on 6 (2009 min., 9,990 ft.) : anamorphic, sd. (opt, Dolby SR, digital, Dolby SR-D, SDDS, DTS), col., 35 mm." ;
+    rdamd:P30137 "Aspect ratio is 2.35:1." ,
+                 "Based on the novel by Cormac McCarthy." ,
+                 "Not viewed." ,
+                 "Sources used: Internet movie database, October 1, 2018; Variety, September 3, 2009; Copyright catalog online." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1069> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1008> ;
+    rdamo:P30139 <https://www.imdb.com/title/tt0898367/exp/1023> .
+
+<http://example.org/23017180>
+    a rdac:C10007 ;
+    rdfs:label "Stonemason : A Play in five acts"@no ,
+               "Stonemason : A Play in five acts"@en ;
+    rdamd:P30156 "Stonemason" ;
+    rdamd:P30142 "A Play in five acts" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Ecco, 1994" ;
+    rdamd:P30076 "Ecco" ;
+    rdamd:P30011 "1994" ;
+    rdamd:P30182 "1 v." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/8419162723677961290005/exp/eng/1020> .
+
+<http://example.org/3120806>
+    a rdac:C10007 ;
+    rdfs:label "Outer dark"@no ,
+               "Outer dark"@en ;
+    rdamd:P30156 "Outer dark" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Random House, [1968]" ;
+    rdamd:P30076 "Random House" ;
+    rdamd:P30011 "[1968]" ;
+    rdamd:P30182 "242 p., 22 cm." ;
+    rdamd:P30137 "Bookmark with notes on it inserted." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/215254416/exp/eng/1020> .
+
+<http://example.org/8474754>
+    a rdac:C10007 ;
+    rdfs:label "The orchard keeper"@no ,
+               "The orchard keeper"@en ;
+    rdamd:P30156 "The orchard keeper" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Deutsch, 1966 [c1965]" ;
+    rdamd:P30076 "Deutsch" ;
+    rdamd:P30011 "1966 [c1965]" ;
+    rdamd:P30182 "246 p., 21 cm." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/191907343/exp/eng/1020> .
+
+<http://example.org/8928727>
+    a rdac:C10007 ;
+    rdfs:label "The orchard keeper"@no ,
+               "The orchard keeper"@en ;
+    rdamd:P30156 "The orchard keeper" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Random House, [1965]" ;
+    rdamd:P30076 "Random House" ;
+    rdamd:P30011 "[1965]" ;
+    rdamd:P30182 "246 p., 22 cm." ;
+    rdamd:P30137 "Enthusiastic note of praise for book and author on the stationary of Ralph Ellison inserted." ,
+                 "Review copy?." ,
+                 "Signed by Ralph Ellison on front free endpaper." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/191907343/exp/eng/1020> .
+
+<http://example.org/999920049602702202>
+    a rdac:C10007 ;
+    rdfs:label "The Road / regi: John Hillcoat"@no ,
+               "The Road / regi: John Hillcoat"@en ;
+    rdamd:P30156 "The Road" ;
+    rdamd:P30117 "regi: John Hillcoat" ;
+    rdamd:P30088 "[S.l.]" ;
+    rdamd:P30111 "[S.l.] : Dimension Films : 2929 Productions : Scanbox Entertainment Denmark, 2009" ;
+    rdamd:P30076 "Dimension Films" , "2929 Productions" , "Scanbox Entertainment Denmark" ;
+    rdamd:P30011 "2009" ;
+    rdamd:P30182 "1 plate (DVD-video) (111 min) : lyd, kol." ;
+    rdamd:P30137 "Basert på: The road / Cormac McCarthy" ,
+                 "Drama/thriller" ,
+                 "Engelsk tale; danske, norske, islandske, svenske og finske undertekster valgbare" ,
+                 "Inneholder ekstramateriell" ,
+                 "Medietilsynet : 150489" ,
+                 "NOS9860SV" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1060> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1008> ;
+    rdamo:P30139 <https://www.imdb.com/title/tt0898367/exp/1023> .
+
+<http://example.org/IAN-5050582404920>
+    a rdac:C10007 ;
+    rdfs:label "All the pretty horses / directed by Billy Bob Thornton ; produced by Robert Salerno and Billy Bob Thornton"@no ,
+               "All the pretty horses / directed by Billy Bob Thornton ; produced by Robert Salerno and Billy Bob Thornton"@en ;
+    rdamd:P30004 "IAN 5050582404920" ;
+    rdaxd:P00018 "IAN-5050582404920" ;
+    rdamd:P30156 "All the pretty horses" ;
+    rdamd:P30117 "directed by Billy Bob Thornton ; produced by Robert Salerno and Billy Bob Thornton" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : SPHE, 2005" ;
+    rdamd:P30076 "SPHE" ;
+    rdamd:P30011 "2005" ;
+    rdamd:P30182 "1 plate (DVD-video) (1 t. 52 min) : lyd, kol." ;
+    rdamd:P30137 "Drama." ,
+                 "Ekstramateriale: trailere, filmografier" ,
+                 "Engelsk tale, norsk tekst." ,
+                 "Filmen bygger på en roman av Cormac McCarthy." ,
+                 "Kodet for region 2" ,
+                 "Norsk tittel: Alle de vakre hestene" ,
+                 "Produksjon: USA : Columbia/Miramax, 2000." ,
+                 "Rolleliste: Matt Damon, Henry Thomas, Penelope Cruz." ,
+                 "Widescreen." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1060> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1008> ;
+    rdamo:P30139 <https://www.imdb.com/title/tt0149624/exp/1023> .
+
+<http://example.org/IAN-7332431029293>
+    a rdac:C10007 ;
+    rdfs:label "No country for old men / en film fra Coen brødrene"@no ,
+               "No country for old men / en film fra Coen brødrene"@en ;
+    rdamd:P30004 "IAN 7332431029293" ;
+    rdaxd:P00018 "IAN-7332431029293" ;
+    rdamd:P30156 "No country for old men" ;
+    rdamd:P30117 "en film fra Coen brødrene" ;
+    rdamd:P30088 "[Oslo]" ;
+    rdamd:P30111 "[Oslo] : Paramount Home Entertainment (Norway), cop. 2007" ;
+    rdamd:P30076 "Paramount Home Entertainment (Norway)" ;
+    rdamd:P30011 "cop. 2007" ;
+    rdamd:P30182 "1 videoplate (DVD-video) (117 min) : lyd, kol." ;
+    rdamd:P30106 "S film" ;
+    rdamd:P30137 "Aldersgrense: 15 år" ,
+                 "Bygger på: No county for old men / Cormac McCarthy" ,
+                 "Ekstramateriale" ,
+                 "Engelsk tale; norske undertekster valgbare" ,
+                 "Medietilsynet : 123717" ,
+                 "NO1136326" ,
+                 "Produksjon: USA : Paramount Vantage/Miramax Films, 2007" ,
+                 "Rolleliste: Javier Bardem, Tommy Lee Jones, Josh Brolin" ,
+                 "Thriller" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1060> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1008> ;
+    rdamo:P30139 <https://www.imdb.com/title/tt0477348/exp/1023> .
+
+<http://example.org/UPC-024543899990>
+    a rdac:C10007 ;
+    rdfs:label "The counselor / Fox 2000 Pictures presents a Scott Free/Nick Wechsler/Chockstone Pictures production ; produced by Ridley Scott, Nick Wechsler, Steve Schwartz, Paula Mae Schwartz ; written by Cormac McCarthy ; director, Ridley Scott"@no ,
+               "The counselor / Fox 2000 Pictures presents a Scott Free/Nick Wechsler/Chockstone Pictures production ; produced by Ridley Scott, Nick Wechsler, Steve Schwartz, Paula Mae Schwartz ; written by Cormac McCarthy ; director, Ridley Scott"@en ;
+    rdamd:P30004 "UPC 024543899990" , "UPC 024543900009" ;
+    rdaxd:P00018 "UPC-024543899990" , "UPC-024543900009" ;
+    rdamd:P30156 "The counselor" ;
+    rdamd:P30117 "Fox 2000 Pictures presents a Scott Free/Nick Wechsler/Chockstone Pictures production ; produced by Ridley Scott, Nick Wechsler, Steve Schwartz, Paula Mae Schwartz ; written by Cormac McCarthy ; director, Ridley Scott" ;
+    rdamd:P30107 "Unrated extended cut" ;
+    rdamd:P30088 "Beverly Hills, California" ;
+    rdamd:P30111 "Beverly Hills, California : Twentieth Century Fox Home Entertainment, [2014]" ;
+    rdamd:P30076 "Twentieth Century Fox Home Entertainment" ;
+    rdamd:P30011 "[2014]" ;
+    rdamd:P30007 "©2013" ;
+    rdamd:P30182 "1 videodisc (117 min.) : sound, color, 4 3/4 in. + 1 Blu-ray." ;
+    rdamd:P30137 "\"Includes 2 versions: unrated extended cut & theatrical.\"" ,
+                 "Disc 1. Special features: viral pieces: uncut--Laura (never-before-seen), The counselor, Malkina and Reiner." ,
+                 "Disc 2. Special features: Truth of the situation: making The counselor--an immersive experience with feature-length commentary by Director Ridley Scott." ,
+                 "Originally released as a motion picture in 2013." ,
+                 "Sources used: videodisc container; Copyright catalog online; Internet movie database WWW site, viewed August 11, 2023." ,
+                 "Title from container." ,
+                 "Widescreen (2.40:1)." ;
+    rdamd:P30033 "disc 1. The counselor (Theatrical version) (117 in.) -- disc 2. The counselor (Unrated extended cut) (138 min.)." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1060> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1008> ;
+    rdamo:P30139 <http://www.wikidata.org/entity/Q3061599/exp/1023> .
+
+
+<http://example.org/isbn-0233956506>
+    a rdac:C10007 ;
+    rdfs:label "Outer dark"@no ,
+               "Outer dark"@en ;
+    rdamd:P30004 "ISBN 0233956506" ;
+    rdaxd:P00018 "isbn-0233956506" ;
+    rdamd:P30156 "Outer dark" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Deutsch, 1970" ;
+    rdamd:P30076 "Deutsch" ;
+    rdamd:P30011 "1970" ;
+    rdamd:P30182 "238 p., 21 cm." ;
+    rdamd:P30137 "Originally published, New York: Random House, 1968." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/215254416/exp/eng/1020> .
+
+<http://example.org/isbn-0307265439>
+    a rdac:C10007 ;
+    rdfs:label "The road / Cormac McCarthy"@no ,
+               "The road / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0307265439" , "ISBN 9780307265432" ;
+    rdaxd:P00018 "isbn-0307265439" , "isbn-9780307265432" ;
+    rdamd:P30156 "The road" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30107 "1st ed" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Alfred A. Knopf, 2006" ;
+    rdamd:P30076 "Alfred A. Knopf" ;
+    rdamd:P30011 "2006" ;
+    rdamd:P30182 "241 p., 25 cm." ;
+    rdamd:P30137 "Winner of the Pulitzer Prize in 2006 as well as the James Tait Black Memorial Prize for Fiction. McCarthy is a 1981 MacArthur Fellow." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/220031159/exp/eng/1020> .
+
+<http://example.org/isbn-0307268993>
+    a rdac:C10007 ;
+    rdfs:label "The passenger / Cormac McCarthy"@no ,
+               "The passenger / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0307268993" ,
+                 "ISBN 1524712396" ,
+                 "ISBN 9780307268990" ,
+                 "ISBN 9781524712396" ;
+    rdaxd:P00018 "isbn-0307268993" ,
+                 "isbn-1524712396" ,
+                 "isbn-9780307268990" ,
+                 "isbn-9781524712396" ;
+    rdamd:P30156 "The passenger" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30107 "First edition" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Alfred A. Knopf, 2022" ;
+    rdamd:P30076 "Alfred A. Knopf" ;
+    rdamd:P30011 "2022" ;
+    rdamd:P30007 "©2022" ;
+    rdamd:P30182 "383 pages, 25 cm." ;
+    rdamd:P30137 "\"This is a Borzoi book\"--Title page verso." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/470166838899836200007/exp/eng/1020> .
+
+<http://example.org/isbn-0307269000>
+    a rdac:C10007 ;
+    rdfs:label "Stella Maris / Cormac McCarthy"@no ,
+               "Stella Maris / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0307269000" , "ISBN 9780307269003" ;
+    rdaxd:P00018 "isbn-0307269000" , "isbn-9780307269003" ;
+    rdamd:P30156 "Stella Maris" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30107 "First edition" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Alfred A. Knopf, 2022" ;
+    rdamd:P30076 "Alfred A. Knopf" ;
+    rdamd:P30011 "2022" ;
+    rdamd:P30007 "©2022" ;
+    rdamd:P30182 "189 pages, 25 cm." ;
+    rdamd:P30137 "\"This is a Borzoi book\"-- Title page verso." , "Sequel to: The Passenger." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/470166838899836200007/stellamaris/exp/eng/1020> .
+
+<http://example.org/isbn-0307278360>
+    a rdac:C10007 ;
+    rdfs:label "The Sunset Limited : a novel in dramatic form / Cormac McCarthy"@no ,
+               "The Sunset Limited : a novel in dramatic form / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0307278360" , "ISBN 9780307278364" ;
+    rdaxd:P00018 "isbn-0307278360" , "isbn-9780307278364" ;
+    rdamd:P30156 "The Sunset Limited" ;
+    rdamd:P30142 "a novel in dramatic form" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30107 "1st Vintage International ed" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Vintage Books, 2006" ;
+    rdamd:P30076 "Vintage Books" ;
+    rdamd:P30011 "2006" ;
+    rdamd:P30182 "143 p., 21 cm." ;
+    rdamd:P30137 "\"A Vintage International original.\"" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/4440159478236227990002/exp/eng/1020> .
+
+<http://example.org/isbn-033030643>
+    a rdac:C10007 ;
+    rdfs:label "Child of God / Cormac McCarthy"@no ,
+               "Child of God / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 033030643X (pbk)" ;
+    rdaxd:P00018 "isbn-033030643" ;
+    rdamd:P30156 "Child of God" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 1989" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "1989" ;
+    rdamd:P30182 "197p." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/188670330/exp/eng/1020> .
+
+<http://example.org/isbn-0330312561>
+    a rdac:C10007 ;
+    rdfs:label "Blood meridian, or, The evening redness in the west"@no ,
+               "Blood meridian, or, The evening redness in the west"@en ;
+    rdamd:P30004 "ISBN 0330312561 (pbk)" ;
+    rdaxd:P00018 "isbn-0330312561" ;
+    rdamd:P30156 "Blood meridian, or, The evening redness in the west" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30111 ": Picador, 1990" ;
+    rdamd:P30011 "1990" ;
+    rdamd:P30182 "337p." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/191524645/exp/eng/1020> .
+
+<http://example.org/isbn-0330314912>
+    a rdac:C10007 ;
+    rdfs:label "The orchard keeper"@no ,
+               "The orchard keeper"@en ;
+    rdamd:P30004 "ISBN 0330314912 (pbk)" ;
+    rdaxd:P00018 "isbn-0330314912" ;
+    rdamd:P30156 "The orchard keeper" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 1994" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "1994" ;
+    rdamd:P30182 "246p." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/191907343/exp/eng/1020> .
+
+<http://example.org/isbn-0330314920>
+    a rdac:C10007 ;
+    rdfs:label "Outer dark"@no ,
+               "Outer dark"@en ;
+    rdamd:P30004 "ISBN 0330314920 (pbk)" ;
+    rdaxd:P00018 "isbn-0330314920" ;
+    rdamd:P30156 "Outer dark" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 1994" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "1994" ;
+    rdamd:P30182 "242p." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/215254416/exp/eng/1020> .
+
+<http://example.org/isbn-0330325310>
+    a rdac:C10007 ;
+    rdfs:label "All the pretty horses"@no ,
+               "All the pretty horses"@en ;
+    rdamd:P30004 "ISBN 0330325310" ;
+    rdaxd:P00018 "isbn-0330325310" ;
+    rdamd:P30156 "All the pretty horses" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30111 ": Picador, 1993" ;
+    rdamd:P30011 "1993" ;
+    rdamd:P30182 "301p." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/214001528/exp/eng/1020> .
+
+<http://example.org/isbn-0330331698>
+    a rdac:C10007 ;
+    rdfs:label "All the pretty horses"@no ,
+               "All the pretty horses"@en ;
+    rdamd:P30004 "ISBN 0330331698 (pbk)" ;
+    rdaxd:P00018 "isbn-0330331698" ;
+    rdamd:P30156 "All the pretty horses" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 1993" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "1993" ;
+    rdamd:P30010 "(1994 [printing])" ;
+    rdamd:P30182 "301p., 20cm." ;
+    rdamd:P30137 "Originally published: New York: Knopf, 1992; London: Picador, 1993." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/214001528/exp/eng/1020> .
+
+<http://example.org/isbn-0330334611>
+    a rdac:C10007 ;
+    rdfs:label "The border trilogy : All the pretty horses, The Crossing, Cities of the plain / Cormac McCarthy"@no ,
+               "The border trilogy : All the pretty horses, The Crossing, Cities of the plain / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0330334611 (pbk.)" ;
+    rdaxd:P00018 "isbn-0330334611" ;
+    rdamd:P30156 "The border trilogy" ;
+    rdamd:P30142 "All the pretty horses, The Crossing, Cities of the plain" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2002" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2002" ;
+    rdamd:P30182 "1037 p., 20 cm." ;
+    rdamd:P30033 "All the pretty horses -- The crossing -- Cities of the plain" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/175871715/exp/eng/1020> ,
+                 <http://viaf.org/viaf/214001528/exp/eng/1020> ,
+                 <http://viaf.org/viaf/3417153653286155900001/exp/eng/1020> ,
+                 <http://viaf.org/viaf/309357400/exp/eng/1020> .
+
+<http://example.org/isbn-033033462>
+    a rdac:C10007 ;
+    rdfs:label "The crossing"@no ,
+               "The crossing"@en ;
+    rdamd:P30004 "ISBN 033033462X" ;
+    rdaxd:P00018 "isbn-033033462" ;
+    rdamd:P30156 "The crossing" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 1994" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "1994" ;
+    rdamd:P30182 "425p." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/309357400/exp/eng/1020> .
+
+<http://example.org/isbn-033034448>
+    a rdac:C10007 ;
+    rdfs:label "Cities of the plain / Cormac McCarthy"@no ,
+               "Cities of the plain / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 033034448X" ;
+    rdaxd:P00018 "isbn-033034448" ;
+    rdamd:P30156 "Cities of the plain" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 1998" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "1998" ;
+    rdamd:P30182 "291p., 23cm." ;
+    rdamd:P30106 "Border trilogy" ;
+    rdamd:P30165 "v.3" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/3417153653286155900001/exp/eng/1020> .
+
+<http://example.org/isbn-0330350331>
+    a rdac:C10007 ;
+    rdfs:label "The stonemason : a play in five acts / Cormac McCarthy"@no ,
+               "The stonemason : a play in five acts / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0330350331 (pbk)" ;
+    rdaxd:P00018 "isbn-0330350331" ;
+    rdamd:P30156 "The stonemason" ;
+    rdamd:P30142 "a play in five acts" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 1997, c1994" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "1997, c1994" ;
+    rdamd:P30182 "133p., 20cm." ;
+    rdamd:P30137 "Originally published: Hopewell, N.J. : Ecco, 1994." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/8419162723677961290005/exp/eng/1020> .
+
+<http://example.org/isbn-0330440101>
+    a rdac:C10007 ;
+    rdfs:label "No country for old men / Cormac McCarthy"@no ,
+               "No country for old men / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0330440101 (cased)" , "ISBN 0330440306 (pbk.)" ;
+    rdaxd:P00018 "isbn-0330440101" , "isbn-0330440306" ;
+    rdamd:P30156 "No country for old men" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2005" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2005" ;
+    rdamd:P30182 "309 p., 22 cm." ;
+    rdamd:P30137 "Formerly CIP." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/214012164/exp/eng/1020> .
+
+<http://example.org/isbn-033044753>
+    a rdac:C10007 ;
+    rdfs:label "The road / Cormac McCarthy"@no ,
+               "The road / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 033044753X (hbk.)" ,
+                 "ISBN 0330447556 (pbk.)" ,
+                 "ISBN 9780330447539" ,
+                 "ISBN 9780330447553 (pbk.)" ;
+    rdaxd:P00018 "isbn-033044753" ,
+                 "isbn-0330447556" ,
+                 "isbn-9780330447539" ,
+                 "isbn-9780330447553" ;
+    rdfs:label "ISBN033044753X (hbk.)" ,
+               "ISBN0330447556 (pbk.)" ,
+               "ISBN9780330447539" ,
+               "ISBN9780330447553 (pbk.)" ;
+    rdamd:P30156 "The road" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2006" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2006" ;
+    rdamd:P30182 "241 p., 22 cm." ;
+    rdamd:P30137 "Formerly CIP." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/220031159/exp/eng/1020> .
+
+<http://example.org/isbn-0330468464>
+    a rdac:C10007 ;
+    rdfs:label "The road / Cormac McCarthy"@no ,
+               "The road / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0330468464 (pbk.)" , "ISBN 9780330468466 (pbk.)" ;
+    rdaxd:P00018 "isbn-0330468464" , "isbn-9780330468466" ;
+    rdamd:P30156 "The road" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2009" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2009" ;
+    rdamd:P30182 "307 p., 20 cm." ;
+    rdamd:P30137 "Film tie-in." , "Formerly CIP." , "Originally published: 2006." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/220031159/exp/eng/1020> .
+
+<http://example.org/isbn-0330472755>
+    a rdac:C10007 ;
+    rdfs:label "The Road / Cormac McCarthy"@no ,
+               "The Road / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0330472755" , "ISBN 9780330472753" ;
+    rdaxd:P00018 "isbn-0330472755" , "isbn-9780330472753" ;
+    rdamd:P30156 "The Road" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2010" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2010" ;
+    rdamd:P30182 "1 online resource (256 pages)." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30139 <http://viaf.org/viaf/220031159/exp/eng/1020> .
+
+<http://example.org/isbn-0330474677>
+    a rdac:C10007 ;
+    rdfs:label "All the pretty horses / Cormac McCarthy"@no ,
+               "All the pretty horses / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0330474677" , "ISBN 9780330474672" ;
+    rdaxd:P00018 "isbn-0330474677" , "isbn-9780330474672" ;
+    rdamd:P30156 "All the pretty horses" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2010" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2010" ;
+    rdamd:P30182 "1 online resource." ;
+    rdamd:P30106 "The Border trilogy" ;
+    rdamd:P30165 "v. 1" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30139 <http://viaf.org/viaf/214001528/exp/eng/1020> .
+
+<http://example.org/isbn-0330474731>
+    a rdac:C10007 ;
+    rdfs:label "Cities of the plain / Cormac McCarthy"@no ,
+               "Cities of the plain / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0330474731" , "ISBN 9780330474733" ;
+    rdaxd:P00018 "isbn-0330474731" , "isbn-9780330474733" ;
+    rdamd:P30156 "Cities of the plain" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2010" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2010" ;
+    rdamd:P30182 "1 online resource." ;
+    rdamd:P30106 "The Border trilogy" ;
+    rdamd:P30165 "v. 3" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30139 <http://viaf.org/viaf/3417153653286155900001/exp/eng/1020> .
+
+<http://example.org/isbn-0330474774>
+    a rdac:C10007 ;
+    rdfs:label "No country for old men / Cormac McCarthy"@no ,
+               "No country for old men / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0330474774" , "ISBN 9780330474771" ;
+    rdaxd:P00018 "isbn-0330474774" , "isbn-9780330474771" ;
+    rdamd:P30156 "No country for old men" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2010" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2010" ;
+    rdamd:P30182 "1 online resource." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30139 <http://viaf.org/viaf/214012164/exp/eng/1020> .
+
+<http://example.org/isbn-0330474804>
+    a rdac:C10007 ;
+    rdfs:label "Outer dark / Cormac McCarthy"@no ,
+               "Outer dark / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0330474804" , "ISBN 9780330474801" ;
+    rdaxd:P00018 "isbn-0330474804" , "isbn-9780330474801" ;
+    rdamd:P30156 "Outer dark" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2010" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2010" ;
+    rdamd:P30182 "1 online resource." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30139 <http://viaf.org/viaf/215254416/exp/eng/1020> .
+
+<http://example.org/isbn-0330474901>
+    a rdac:C10007 ;
+    rdfs:label "Suttree / Cormac McCarthy"@no ,
+               "Suttree / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0330474901" , "ISBN 9780330474900" ;
+    rdaxd:P00018 "isbn-0330474901" , "isbn-9780330474900" ;
+    rdamd:P30156 "Suttree" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2010" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2010" ;
+    rdamd:P30182 "1 online resource." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30139 <http://viaf.org/viaf/188298726/exp/eng/1020> .
+
+<http://example.org/isbn-0330474936>
+    a rdac:C10007 ;
+    rdfs:label "The crossing / Cormac McCarthy"@no ,
+               "The crossing / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0330474936" , "ISBN 9780330474931" ;
+    rdaxd:P00018 "isbn-0330474936" , "isbn-9780330474931" ;
+    rdamd:P30156 "The crossing" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2010" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2010" ;
+    rdamd:P30182 "1 online resource." ;
+    rdamd:P30106 "The Border trilogy" ;
+    rdamd:P30165 "v. 2" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30139 <http://viaf.org/viaf/309357400/exp/eng/1020> .
+
+<http://example.org/isbn-0330474960>
+    a rdac:C10007 ;
+    rdfs:label "Child of God / Cormac McCarthy"@no ,
+               "Child of God / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0330474960" , "ISBN 9780330474962" ;
+    rdaxd:P00018 "isbn-0330474960" , "isbn-9780330474962" ;
+    rdamd:P30156 "Child of God" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2010" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2010" ;
+    rdamd:P30182 "1 online resource." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30139 <http://viaf.org/viaf/188670330/exp/eng/1020> .
+
+<http://example.org/isbn-0330475002>
+    a rdac:C10007 ;
+    rdfs:label "The orchard keeper / Cormac McCarthy"@no ,
+               "The orchard keeper / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0330475002" , "ISBN 9780330475006" ;
+    rdaxd:P00018 "isbn-0330475002" , "isbn-9780330475006" ;
+    rdamd:P30156 "The orchard keeper" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2010" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2010" ;
+    rdamd:P30182 "1 online resource." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30139 <http://viaf.org/viaf/191907343/exp/eng/1020> .
+
+<http://example.org/isbn-0330503820>
+    a rdac:C10007 ;
+    rdfs:label "The road / Cormac McCarthy"@no ,
+               "The road / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0330503820" , "ISBN 9780330503822" ;
+    rdaxd:P00018 "isbn-0330503820" , "isbn-9780330503822" ;
+    rdamd:P30156 "The road" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2010" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2010" ;
+    rdamd:P30182 "1 online resource." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30139 <http://viaf.org/viaf/220031159/exp/eng/1020> .
+
+<http://example.org/isbn-0330510932>
+    a rdac:C10007 ;
+    rdfs:label "All the pretty horses / Cormac McCarthy"@no ,
+               "All the pretty horses / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0330510932 (pbk.)" , "ISBN 9780330510936 (pbk.)" ;
+    rdaxd:P00018 "isbn-0330510932" , "isbn-9780330510936" ;
+    rdamd:P30156 "All the pretty horses" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2010" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2010" ;
+    rdamd:P30182 "309 p., 20 cm." ;
+    rdamd:P30106 "The Border trilogy" ;
+    rdamd:P30165 "v. 1" ;
+    rdamd:P30137 "Formerly CIP." ,
+                 "Originally published: New York: Alfred A. Knopf, 1992; London: Pan, 1993." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/214001528/exp/eng/1020> .
+
+<http://example.org/isbn-0330510940>
+    a rdac:C10007 ;
+    rdfs:label "Blood meridian, or, The evening redness in the West / Cormac McCarthy"@no ,
+               "Blood meridian, or, The evening redness in the West / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0330510940 (pbk.)" , "ISBN 9780330510943 (pbk.)" ;
+    rdaxd:P00018 "isbn-0330510940" , "isbn-9780330510943" ;
+    rdamd:P30156 "Blood meridian, or, The evening redness in the West" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2010" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2010" ;
+    rdamd:P30182 "352 p., 20 cm." ;
+    rdamd:P30137 "Formerly CIP." ,
+                 "Originally published: New York: Random House, 1985; London: Picador, 1989." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/191524645/exp/eng/1020> .
+
+<http://example.org/isbn-0330511203>
+    a rdac:C10007 ;
+    rdfs:label "Cities of the plain / Cormac McCarthy"@no ,
+               "Cities of the plain / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0330511203 (pbk.)" , "ISBN 9780330511209 (pbk.)" ;
+    rdaxd:P00018 "isbn-0330511203" , "isbn-9780330511209" ;
+    rdamd:P30156 "Cities of the plain" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2010" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2010" ;
+    rdamd:P30182 "293 p., 20 cm." ;
+    rdamd:P30106 "The Border trilogy" ;
+    rdamd:P30165 "v. 3" ;
+    rdamd:P30137 "Formerly CIP." ,
+                 "Originally published: New York: Alfred A. Knopf; London: Picador, 1998." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/3417153653286155900001/exp/eng/1020> .
+
+<http://example.org/isbn-033051122>
+    a rdac:C10007 ;
+    rdfs:label "Outer dark / Cormac McCarthy"@no ,
+               "Outer dark / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 033051122X (pbk.)" , "ISBN 9780330511223 (pbk.)" ;
+    rdaxd:P00018 "isbn-033051122" , "isbn-9780330511223" ;
+    rdamd:P30156 "Outer dark" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2010" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2010" ;
+    rdamd:P30182 "251 p., 20 cm." ;
+    rdamd:P30137 "Formerly CIP." ,
+                 "Originally published: New York: Random House, 1968; London: Deutsch, 1970." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/215254416/exp/eng/1020> .
+
+<http://example.org/isbn-0330511238>
+    a rdac:C10007 ;
+    rdfs:label "Suttree / Cormac McCarthy"@no ,
+               "Suttree / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0330511238 (pbk.)" , "ISBN 9780330511230 (pbk.)" ;
+    rdaxd:P00018 "isbn-0330511238" , "isbn-9780330511230" ;
+    rdamd:P30156 "Suttree" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2010" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2010" ;
+    rdamd:P30182 "567 p., 20 cm." ;
+    rdamd:P30137 "Formerly CIP." ,
+                 "Originally published: New York: Random House, 1979; London: Chatto & Windus, 1980." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/188298726/exp/eng/1020> .
+
+<http://example.org/isbn-0330511246>
+    a rdac:C10007 ;
+    rdfs:label "The crossing / Cormac McCarthy"@no ,
+               "The crossing / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0330511246 (pbk.)" , "ISBN 9780330511247 (pbk.)" ;
+    rdaxd:P00018 "isbn-0330511246" , "isbn-9780330511247" ;
+    rdamd:P30156 "The crossing" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2010" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2010" ;
+    rdamd:P30182 "436 p., 20 cm." ;
+    rdamd:P30106 "The Border trilogy" ;
+    rdamd:P30165 "v. 2" ;
+    rdamd:P30137 "Formerly CIP." , "Originally published: 1994." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/309357400/exp/eng/1020> .
+
+<http://example.org/isbn-0330511254>
+    a rdac:C10007 ;
+    rdfs:label "The orchard keeper / Cormac McCarthy"@no ,
+               "The orchard keeper / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0330511254 (pbk.)" , "ISBN 9780330511254 (pbk.)" ;
+    rdaxd:P00018 "isbn-0330511254" , "isbn-9780330511254" ;
+    rdamd:P30156 "The orchard keeper" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2010" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2010" ;
+    rdamd:P30182 "259 p., 20 cm." ;
+    rdamd:P30137 "Formerly CIP." , "Originally published: London: Deutsch, 1966." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/191907343/exp/eng/1020> .
+
+<http://example.org/isbn-0330518194>
+    a rdac:C10007 ;
+    rdfs:label "The Sunset Limited : a novel in dramatic form / Cormac McCarthy"@no ,
+               "The Sunset Limited : a novel in dramatic form / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0330518194 (pbk.)" , "ISBN 9780330518192 (pbk.)" ;
+    rdaxd:P00018 "isbn-0330518194" , "isbn-9780330518192" ;
+    rdamd:P30156 "The Sunset Limited" ;
+    rdamd:P30142 "a novel in dramatic form" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2011" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2011" ;
+    rdamd:P30182 "142 p., 20 cm." ;
+    rdamd:P30137 "Formerly CIP." ,
+                 "Originally published: New York: Vintage, 2006; London: Picador, 2010." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/4440159478236227990002/exp/eng/1020> .
+
+<http://example.org/isbn-0330535757>
+    a rdac:C10007 ;
+    rdfs:label "The Sunset Limited : a novel in dramatic form / Cormac McCarthy"@no ,
+               "The Sunset Limited : a novel in dramatic form / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0330535757" , "ISBN 9780330535755" ;
+    rdaxd:P00018 "isbn-0330535757" , "isbn-9780330535755" ;
+    rdamd:P30156 "The Sunset Limited" ;
+    rdamd:P30142 "a novel in dramatic form" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2011" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2011" ;
+    rdamd:P30182 "1 online resource (160 pages)." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30139 <http://viaf.org/viaf/4440159478236227990002/exp/eng/1020> .
+
+<http://example.org/isbn-0375406778>
+    a rdac:C10007 ;
+    rdfs:label "No country for old men / Cormac McCarthy"@no ,
+               "No country for old men / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0375406778" ;
+    rdaxd:P00018 "isbn-0375406778" ;
+    rdamd:P30156 "No country for old men" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30107 "1st ed" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Knopf, 2005" ;
+    rdamd:P30076 "Knopf" ;
+    rdamd:P30011 "2005" ;
+    rdamd:P30182 "309 p., 22 cm." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/214012164/exp/eng/1020> .
+
+<http://example.org/isbn-0375407936>
+    a rdac:C10007 ;
+    rdfs:label "The border trilogy / Cormac McCarthy"@no ,
+               "The border trilogy / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0375407936 (alk. paper)" ;
+    rdaxd:P00018 "isbn-0375407936" ;
+    rdamd:P30156 "The border trilogy" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Knopf, 1999" ;
+    rdamd:P30076 "Knopf" ;
+    rdamd:P30011 "1999" ;
+    rdamd:P30182 "301, 425, 291 p., 21 cm." ;
+    rdamd:P30106 "Everyman's library" ;
+    rdamd:P30165 "261" ;
+    rdamd:P30033 "All the pretty horses -- The crossing -- Cities of the plain." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/214001528/exp/eng/1020> ,
+                 <http://viaf.org/viaf/3417153653286155900001/exp/eng/1020> ,
+                 <http://viaf.org/viaf/309357400/exp/eng/1020> .
+
+<http://example.org/isbn-0394400275>
+    a rdac:C10007 ;
+    rdfs:label "Blood meridian, or, The evening redness in the West / Cormac McCarthy"@no ,
+               "Blood meridian, or, The evening redness in the West / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0394400275" ;
+    rdaxd:P00018 "isbn-0394400275" ;
+    rdamd:P30156 "Blood meridian, or, The evening redness in the West" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30107 "1st ed" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Random House, c1985" ;
+    rdamd:P30076 "Random House" ;
+    rdamd:P30011 "c1985" ;
+    rdamd:P30182 "337 p., 22 cm." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/191524645/exp/eng/1020> .
+
+<http://example.org/isbn-0394482131>
+    a rdac:C10007 ;
+    rdfs:label "Suttree / Cormac McCarthy"@no ,
+               "Suttree / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0394482131" ;
+    rdaxd:P00018 "isbn-0394482131" ;
+    rdamd:P30156 "Suttree" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30107 "1st ed" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Random House, c1979" ;
+    rdamd:P30076 "Random House" ;
+    rdamd:P30011 "c1979" ;
+    rdamd:P30182 "471 p., 22 cm." ;
+    rdamd:P30137 "New York Times book review inserted." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/188298726/exp/eng/1020> .
+
+<http://example.org/isbn-0394487710>
+    a rdac:C10007 ;
+    rdfs:label "Child of God"@no ,
+               "Child of God"@en ;
+    rdamd:P30004 "ISBN 0394487710" ;
+    rdaxd:P00018 "isbn-0394487710" ;
+    rdamd:P30156 "Child of God" ;
+    rdamd:P30107 "[1st ed.]" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Random House, [1974, c1973]" ;
+    rdamd:P30076 "Random House" ;
+    rdamd:P30011 "[1974, c1973]" ;
+    rdamd:P30182 "197 p., 22 cm." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/188670330/exp/eng/1020> .
+
+<http://example.org/isbn-0394574745>
+    a rdac:C10007 ;
+    rdfs:label "All the pretty horses / Cormac McCarthy"@no ,
+               "All the pretty horses / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0394574745" ;
+    rdaxd:P00018 "isbn-0394574745" ;
+    rdamd:P30156 "All the pretty horses" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Knopf, 1992" ;
+    rdamd:P30076 "Knopf" ;
+    rdamd:P30011 "1992" ;
+    rdamd:P30182 "301 p., 22 cm." ;
+    rdamd:P30106 "The Border trilogy" ;
+    rdamd:P30165 "v. 1" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/214001528/exp/eng/1020> .
+
+<http://example.org/isbn-0394574753>
+    a rdac:C10007 ;
+    rdfs:label "The crossing / by Cormac McCarthy"@no ,
+               "The crossing / by Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0394574753" ;
+    rdaxd:P00018 "isbn-0394574753" ;
+    rdamd:P30156 "The crossing" ;
+    rdamd:P30117 "by Cormac McCarthy" ;
+    rdamd:P30107 "1st ed" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : A.A. Knopf : Distributed by Random House, 1994" ;
+    rdamd:P30076 "A.A. Knopf" , "Distributed by Random House" ;
+    rdamd:P30011 "1994" ;
+    rdamd:P30182 "425 p., 22 cm." ;
+    rdamd:P30106 "The Border trilogy" ;
+    rdamd:P30165 "v. 2" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/309357400/exp/eng/1020> .
+
+<http://example.org/isbn-0394741455>
+    a rdac:C10007 ;
+    rdfs:label "Suttree / Cormac McCarthy"@no ,
+               "Suttree / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0394741455 (pbk.)" ;
+    rdaxd:P00018 "isbn-0394741455" ;
+    rdamd:P30156 "Suttree" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30107 "1st Vintage Books ed" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Vintage Books, 1986, c1979" ;
+    rdamd:P30076 "Vintage Books" ;
+    rdamd:P30011 "1986, c1979" ;
+    rdamd:P30182 "471 p., 21 cm." ;
+    rdamd:P30106 "Vintage contemporaries" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/188298726/exp/eng/1020> .
+
+<http://example.org/isbn-0679423907>
+    a rdac:C10007 ;
+    rdfs:label "Cities of the plain / Cormac McCarthy"@no ,
+               "Cities of the plain / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0679423907 (alk. paper)" ;
+    rdaxd:P00018 "isbn-0679423907" ;
+    rdamd:P30156 "Cities of the plain" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30107 "1st ed" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Knopf : Distributed by Random House, 1998" ;
+    rdamd:P30076 "Knopf" , "Distributed by Random House" ;
+    rdamd:P30011 "1998" ;
+    rdamd:P30182 "291 p., 22 cm." ;
+    rdamd:P30106 "The border trilogy" ;
+    rdamd:P30165 "v. 3" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/3417153653286155900001/exp/eng/1020> .
+
+<http://example.org/isbn-0679427031>
+    a rdac:C10007 ;
+    rdfs:label "The crossing / by Cormac McCarthy"@no ,
+               "The crossing / by Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0679427031" , "IAN 9780679427032" ;
+    rdaxd:P00018 "isbn-0679427031" , "IAN-9780679427032" ;
+    rdamd:P30156 "The crossing" ;
+    rdamd:P30117 "by Cormac McCarthy" ;
+    rdamd:P30088 "New York, NY" ;
+    rdamd:P30111 "New York, NY : Random House AudioBooks, p1994" ;
+    rdamd:P30076 "Random House AudioBooks" ;
+    rdamd:P30011 "p1994" ;
+    rdamd:P30182 "2 sound cassettes (3 hr.) : analog." ;
+    rdamd:P30106 "Border trilogy" ;
+    rdamd:P30165 "v. 2" ;
+    rdamd:P30137 "Abridged." , "In container (18 cm.)." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1007> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1001> ;
+    rdamo:P30139 <http://viaf.org/viaf/309357400/exp/eng/1013/0000000114380049> .
+
+<http://example.org/isbn-0679641041>
+    a rdac:C10007 ;
+    rdfs:label "Blood meridian, or, The evening redness in the West / Cormac McCarthy ; introduction by Harold Bloom"@no ,
+               "Blood meridian, or, The evening redness in the West / Cormac McCarthy ; introduction by Harold Bloom"@en ;
+    rdamd:P30004 "ISBN 0679641041 (alk. paper)" ;
+    rdaxd:P00018 "isbn-0679641041" ;
+    rdamd:P30156 "Blood meridian, or, The evening redness in the West" ;
+    rdamd:P30117 "Cormac McCarthy ; introduction by Harold Bloom" ;
+    rdamd:P30107 "Modern Library ed" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Modern Library, 2001" ;
+    rdamd:P30076 "Modern Library" ;
+    rdamd:P30011 "2001" ;
+    rdamd:P30182 "xiii, 337 p., 20 cm." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/191524645/exp/eng/1020> .
+
+<http://example.org/isbn-067964265>
+    a rdac:C10007 ;
+    rdfs:label "Suttree / Cormac McCarthy"@no ,
+               "Suttree / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 067964265X (acid-free paper)" ;
+    rdaxd:P00018 "isbn-067964265" ;
+    rdamd:P30156 "Suttree" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30107 "Modern Library ed" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Modern Library, 2002" ;
+    rdamd:P30076 "Modern Library" ;
+    rdamd:P30011 "2002" ;
+    rdamd:P30182 "471 p., 20 cm." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/188298726/exp/eng/1020> .
+
+<http://example.org/isbn-0679728724>
+    a rdac:C10007 ;
+    rdfs:label "The orchard keeper / Cormac McCarthy"@no ,
+               "The orchard keeper / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0679728724 (pbk.)" ;
+    rdaxd:P00018 "isbn-0679728724" ;
+    rdamd:P30156 "The orchard keeper" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30107 "1st Vintage International ed" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Vintage Books, 1993" ;
+    rdamd:P30076 "Vintage Books" ;
+    rdamd:P30011 "1993" ;
+    rdamd:P30182 "246 p., 21 cm." ;
+    rdamd:P30137 "Originally published in hardcover by Random House, inc., New York, in 1965." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/191907343/exp/eng/1020> .
+
+<http://example.org/isbn-0679728732>
+    a rdac:C10007 ;
+    rdfs:label "Outer dark / Cormac McCarthy"@no ,
+               "Outer dark / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0679728732" ;
+    rdaxd:P00018 "isbn-0679728732" ;
+    rdamd:P30156 "Outer dark" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30107 "1st Vintage International ed" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Vintage Books, 1993" ;
+    rdamd:P30076 "Vintage Books" ;
+    rdamd:P30011 "1993" ;
+    rdamd:P30182 "242 p., 20 cm." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/215254416/exp/eng/1020> .
+
+<http://example.org/isbn-0679728740>
+    a rdac:C10007 ;
+    rdfs:label "Child of God / Cormac McCarthy"@no ,
+               "Child of God / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0679728740" ;
+    rdaxd:P00018 "isbn-0679728740" ;
+    rdamd:P30156 "Child of God" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30107 "1st Vintage International ed" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Vintage Books, 1993" ;
+    rdamd:P30076 "Vintage Books" ;
+    rdamd:P30011 "1993" ;
+    rdamd:P30182 "197 p., 21 cm." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/188670330/exp/eng/1020> .
+
+<http://example.org/isbn-0679728759>
+    a rdac:C10007 ;
+    rdfs:label "Blood meridian, or, The evening redness in the West / Cormac McCarthy"@no ,
+               "Blood meridian, or, The evening redness in the West / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0679728759" ;
+    rdaxd:P00018 "isbn-0679728759" ;
+    rdamd:P30156 "Blood meridian, or, The evening redness in the West" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30107 "1st Vintage International ed" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Vintage Books, 1992" ;
+    rdamd:P30076 "Vintage Books" ;
+    rdamd:P30011 "1992" ;
+    rdamd:P30182 "337 p., 21 cm." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/191524645/exp/eng/1020> .
+
+<http://example.org/isbn-0679744398>
+    a rdac:C10007 ;
+    rdfs:label "All the pretty horses / Cormac McCarthy"@no ,
+               "All the pretty horses / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0679744398" ;
+    rdaxd:P00018 "isbn-0679744398" ;
+    rdamd:P30156 "All the pretty horses" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30107 "1st Vintage International ed" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Vintage Books, 1993" ;
+    rdamd:P30076 "Vintage Books" ;
+    rdamd:P30011 "1993" ;
+    rdamd:P30182 "301 p., 21 cm." ;
+    rdamd:P30106 "The Border trilogy" ;
+    rdamd:P30165 "v. 1" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/214001528/exp/eng/1020> .
+
+<http://example.org/isbn-0679762809>
+    a rdac:C10007 ;
+    rdfs:label "The stonemason : a play in five acts / Cormac McCarthy"@no ,
+               "The stonemason : a play in five acts / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0679762809" ;
+    rdaxd:P00018 "isbn-0679762809" ;
+    rdamd:P30156 "The stonemason" ;
+    rdamd:P30142 "a play in five acts" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30107 "1st Vintage International ed" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Vintage Books, 1995" ;
+    rdamd:P30076 "Vintage Books" ;
+    rdamd:P30011 "1995" ;
+    rdamd:P30182 "133 p., 21 cm." ;
+    rdamd:P30106 "Vintage International" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/8419162723677961290005/exp/eng/1020> .
+
+<http://example.org/isbn-0701120959>
+    a rdac:C10007 ;
+    rdfs:label "Child of God / Cormac McCarthy"@no ,
+               "Child of God / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0701120959" ;
+    rdaxd:P00018 "isbn-0701120959" ;
+    rdamd:P30156 "Child of God" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Chatto and Windus, 1975" ;
+    rdamd:P30076 "Chatto and Windus" ;
+    rdamd:P30011 "1975" ;
+    rdamd:P30182 "197 p., 21 cm." , "[4], 197 p., 21 cm." ;
+    rdamd:P30137 "Originally published, New York: Random House. 1974." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/188670330/exp/eng/1020> .
+
+<http://example.org/isbn-0701125063>
+    a rdac:C10007 ;
+    rdfs:label "Suttree / Cormac McCarthy"@no ,
+               "Suttree / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0701125063" ;
+    rdaxd:P00018 "isbn-0701125063" ;
+    rdamd:P30156 "Suttree" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Chatto and Windus, 1980" ;
+    rdamd:P30076 "Chatto and Windus" ;
+    rdamd:P30011 "1980" ;
+    rdamd:P30182 "[6],471p., 22cm." ;
+    rdamd:P30137 "Originally published : New York : Random House, 1979." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/188298726/exp/eng/1020> .
+
+<http://example.org/isbn-0788884492>
+    a rdac:C10007 ;
+    rdfs:label "No country for old men / Miramax Films and Paramount Vantage present a Scott Rudin/Mike Zoss production ; produced by Scott Rudin, Ethan Coen, Joel Coen ; written for the screen and directed by Joel Coen & Ethan Coen"@no ,
+               "No country for old men / Miramax Films and Paramount Vantage present a Scott Rudin/Mike Zoss production ; produced by Scott Rudin, Ethan Coen, Joel Coen ; written for the screen and directed by Joel Coen & Ethan Coen"@en ;
+    rdamd:P30004 "ISBN 0788884492" ,
+                 "ISBN 9780788884498" ,
+                 "UPC 786936750034" ,
+                 "UPC 031398134848" ;
+    rdaxd:P00018 "isbn-0788884492" ,
+                 "isbn-9780788884498" ,
+                 "UPC-786936750034" ,
+                 "UPC-031398134848" ;
+    rdamd:P30156 "No country for old men" ;
+    rdamd:P30117 "Miramax Films and Paramount Vantage present a Scott Rudin/Mike Zoss production ; produced by Scott Rudin, Ethan Coen, Joel Coen ; written for the screen and directed by Joel Coen & Ethan Coen" ;
+    rdamd:P30085 "Burbank, California" ;
+    rdamd:P30108 "Burbank, California : Distributed by Buena Vista Home Entertainment, [2008]" ;
+    rdamd:P30173 "Distributed by Buena Vista Home Entertainment" ;
+    rdamd:P30008 "[2008]" ;
+    rdamd:P30007 "©2008" ;
+    rdamd:P30182 "1 videodisc (approximately 122 min.) : sound, color, 4 3/4 in." ;
+    rdamd:P30137 "Aspect ratio: widescreen (2.35:1)." ,
+                 "Based on the novel by Cormac McCarthy." ,
+                 "Originally released as a motion picture in 2007." ,
+                 "Special features: Working with the Coens; the making of; diary of a country sheriff; total menus." ,
+                 "Title from container." ;
+    rdamd:P30050 "Snelson (John) Collection (Library of Congress)." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1069> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1008> ;
+    rdamo:P30139 <https://www.imdb.com/title/tt0477348/exp/1023> .
+
+<http://example.org/isbn-0880010096>
+    a rdac:C10007 ;
+    rdfs:label "The orchard keeper / Cormac McCarthy"@no ,
+               "The orchard keeper / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0880010096 (pbk.)" ;
+    rdaxd:P00018 "isbn-0880010096" ;
+    rdamd:P30156 "The orchard keeper" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Ecco Press, 1982, c1965" ;
+    rdamd:P30076 "Ecco Press" ;
+    rdamd:P30011 "1982, c1965" ;
+    rdamd:P30182 "246 p., 20 cm." ;
+    rdamd:P30137 "Reprint. Originally published: New York : Random House, 1965." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/191907343/exp/eng/1020> .
+
+<http://example.org/isbn-0880010649>
+    a rdac:C10007 ;
+    rdfs:label "Outer dark / Cormac McCarthy"@no ,
+               "Outer dark / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0880010649 (pbk.)" ;
+    rdaxd:P00018 "isbn-0880010649" ;
+    rdamd:P30156 "Outer dark" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Ecco Press, 1984, c1968" ;
+    rdamd:P30076 "Ecco Press" ;
+    rdamd:P30011 "1984, c1968" ;
+    rdamd:P30182 "242 p., 21 cm." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/215254416/exp/eng/1020> .
+
+<http://example.org/isbn-0880010657>
+    a rdac:C10007 ;
+    rdfs:label "Child of God / Cormac McCarthy"@no ,
+               "Child of God / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0880010657 (pbk.)" ;
+    rdaxd:P00018 "isbn-0880010657" ;
+    rdamd:P30156 "Child of God" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Ecco Press, 1984, c1973" ;
+    rdamd:P30076 "Ecco Press" ;
+    rdamd:P30011 "1984, c1973" ;
+    rdamd:P30182 "197 p., 21 cm." ;
+    rdamd:P30137 "Reprint. Originally published: New York : Random House, 1974, c1973." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/188670330/exp/eng/1020> .
+
+<http://example.org/isbn-0880010924>
+    a rdac:C10007 ;
+    rdfs:label "Blood meridian, or, The evening redness in the West / Cormac McCarthy"@no ,
+               "Blood meridian, or, The evening redness in the West / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0880010924 (pbk.)" ;
+    rdaxd:P00018 "isbn-0880010924" ;
+    rdamd:P30156 "Blood meridian, or, The evening redness in the West" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Ecco Press, 1986, c1985" ;
+    rdamd:P30076 "Ecco Press" ;
+    rdamd:P30011 "1986, c1985" ;
+    rdamd:P30182 "337 p., 21 cm." ;
+    rdamd:P30137 "Reprint. Originally published: New York : Random House, c1985." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/191524645/exp/eng/1020> .
+
+<http://example.org/isbn-0880013591>
+    a rdac:C10007 ;
+    rdfs:label "The stonemason : a play in five acts / Cormac McCarthy"@no ,
+               "The stonemason : a play in five acts / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0880013591" ;
+    rdaxd:P00018 "isbn-0880013591" ;
+    rdamd:P30156 "The stonemason" ;
+    rdamd:P30142 "a play in five acts" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30107 "1st ed" ;
+    rdamd:P30088 "Hopewell, N.J" ;
+    rdamd:P30111 "Hopewell, N.J. : Ecco Press, c1994" ;
+    rdamd:P30076 "Ecco Press" ;
+    rdamd:P30011 "c1994" ;
+    rdamd:P30182 "133p., 22cm." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/8419162723677961290005/exp/eng/1020> .
+
+<http://example.org/isbn-0880014814>
+    a rdac:C10007 ;
+    rdfs:label "The Gardener's son : a screenplay / Cormac McCarthy"@no ,
+               "The Gardener's son : a screenplay / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 0880014814 (case)" ;
+    rdaxd:P00018 "isbn-0880014814" ;
+    rdamd:P30156 "The Gardener's son" ;
+    rdamd:P30142 "a screenplay" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30107 "1st ed" ;
+    rdamd:P30088 "Hopewell, N.J" ;
+    rdamd:P30111 "Hopewell, N.J. : Ecco Press, 1996" ;
+    rdamd:P30076 "Ecco Press" ;
+    rdamd:P30011 "1996" ;
+    rdamd:P30182 "x, 93 p., 20 cm." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/29558386/gardenersson/exp/eng/1020> .
+
+<http://example.org/isbn-1405613947>
+    a rdac:C10007 ;
+    rdfs:label "No country for old men / Cormac McCarthy"@no ,
+               "No country for old men / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 1405613947 (hbk.)" ,
+                 "ISBN 1405613955 (pbk.)" ,
+                 "ISBN 9781405613941 (hbk.)" ,
+                 "ISBN 9781405613958 (pbk.)" ;
+    rdaxd:P00018 "isbn-1405613947" ,
+                 "isbn-1405613955" ,
+                 "isbn-9781405613941" ,
+                 "isbn-9781405613958" ;
+    rdamd:P30156 "No country for old men" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30107 "Large print ed" ;
+    rdamd:P30088 "Bath" ;
+    rdamd:P30111 "Bath : Windsor, 2006" ;
+    rdamd:P30076 "Windsor" ;
+    rdamd:P30011 "2006" ;
+    rdamd:P30182 "280 p., 25 cm." ;
+    rdamd:P30137 "Originally published: London: Picador, 2005." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/214012164/exp/eng/1020> .
+
+<http://example.org/isbn-1408127423>
+    a rdac:C10007 ;
+    rdfs:label "The road / Joe Penhall ; based on the novel by Cormac McCarthy"@no ,
+               "The road / Joe Penhall ; based on the novel by Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 1408127423 (pbk.)" , "ISBN 9781408127421 (pbk.)" ;
+    rdaxd:P00018 "isbn-1408127423" , "isbn-9781408127421" ;
+    rdamd:P30156 "The road" ;
+    rdamd:P30117 "Joe Penhall ; based on the novel by Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Methuen Drama, 2010" ;
+    rdamd:P30076 "Methuen Drama" ;
+    rdamd:P30011 "2010" ;
+    rdamd:P30182 "102 p., 20 cm." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/5191807/theroad/exp/eng/1020> .
+
+<http://example.org/isbn-1408134829>
+    a rdac:C10007 ;
+    rdfs:label "The road : based on the novel by Cormac McCarthy / Joe Penhall ; activities by Paul Bunyan and Ruth Moore"@no ,
+               "The road : based on the novel by Cormac McCarthy / Joe Penhall ; activities by Paul Bunyan and Ruth Moore"@en ;
+    rdamd:P30004 "ISBN 1408134829 (pbk.)" , "ISBN 9781408134825 (pbk.)" ;
+    rdaxd:P00018 "isbn-1408134829" , "isbn-9781408134825" ;
+    rdamd:P30156 "The road" ;
+    rdamd:P30142 "based on the novel by Cormac McCarthy" ;
+    rdamd:P30117 "Joe Penhall ; activities by Paul Bunyan and Ruth Moore" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Methuen Drama, 2011" ;
+    rdamd:P30076 "Methuen Drama" ;
+    rdamd:P30011 "2011" ;
+    rdamd:P30182 "139 p., 20 cm." ;
+    rdamd:P30106 "Methuen Drama's critical scripts series" ;
+    rdamd:P30137 "\"Critical scripts with teaching activities for Key Stage 3 and GCSE\"--Front cover." ,
+                 "Formerly CIP." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/5191807/theroad/exp/eng/1020> .
+
+<http://example.org/isbn-1408138719>
+    a rdac:C10007 ;
+    rdfs:label "The road / Joe Penhall ; based on the novel by Cormac McCarthy"@no ,
+               "The road / Joe Penhall ; based on the novel by Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 1408138719" ,
+                 "ISBN 1408138727" ,
+                 "ISBN 9781408138717" ,
+                 "ISBN 9781408138724" ;
+    rdaxd:P00018 "isbn-1408138719" ,
+                 "isbn-1408138727" ,
+                 "isbn-9781408138717" ,
+                 "isbn-9781408138724" ;
+    rdamd:P30156 "The road" ;
+    rdamd:P30117 "Joe Penhall ; based on the novel by Cormac McCarthy" ;
+    rdamd:P30088 "London [England]" , "New York, New York" ;
+    rdamd:P30111 "London [England] ; New York, New York : Bloomsbury, 2009" ;
+    rdamd:P30076 "Bloomsbury" ;
+    rdamd:P30011 "2009" ;
+    rdamd:P30007 "©2009" ;
+    rdamd:P30182 "1 online resource (107 pages)." ;
+    rdamd:P30106 "Methuen/drama" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30139 <http://viaf.org/viaf/5191807/theroad/exp/eng/1020> .
+
+<http://example.org/isbn-1447220706>
+    a rdac:C10007 ;
+    rdfs:label "All the Pretty Horses / Cormac McCarthy"@no ,
+               "All the Pretty Horses / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 1447220706" , "ISBN 9781447220701" ;
+    rdaxd:P00018 "isbn-1447220706" , "isbn-9781447220701" ;
+    rdamd:P30156 "All the Pretty Horses" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "Basingstoke" ;
+    rdamd:P30111 "Basingstoke : Picador, 2012" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2012" ;
+    rdamd:P30182 "1 online resource (416 pages)." ;
+    rdamd:P30106 "Picador Collection" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30139 <http://viaf.org/viaf/214001528/exp/eng/1020> .
+
+<http://example.org/isbn-1447227670>
+    a rdac:C10007 ;
+    rdfs:label "The counselor : a screenplay / Cormac McCarthy"@no ,
+               "The counselor : a screenplay / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 1447227670" , "ISBN 9781447227670" ;
+    rdaxd:P00018 "isbn-1447227670" , "isbn-9781447227670" ;
+    rdamd:P30156 "The counselor" ;
+    rdamd:P30142 "a screenplay" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2013" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2013" ;
+    rdamd:P30182 "1 online resource (160 pages)." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30139 <http://viaf.org/viaf/29558386/counselor/exp/eng/1020> .
+
+<http://example.org/isbn-1447267842>
+    a rdac:C10007 ;
+    rdfs:label "The border trilogy / Cormac McCarthy"@no ,
+               "The border trilogy / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 1447267842" , "ISBN 9781447267843" ;
+    rdaxd:P00018 "isbn-1447267842" , "isbn-9781447267843" ;
+    rdamd:P30156 "The border trilogy" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2013" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2013" ;
+    rdamd:P30182 "1 online resource (924 pages)." ;
+    rdamd:P30106 "Border Trilogy" ;
+    rdamd:P30033 "All the pretty horses -- The crossing -- Cities of the plain" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30139 <http://viaf.org/viaf/175871715/exp/eng/1020> ,
+                 <http://viaf.org/viaf/214001528/exp/eng/1020> ,
+                 <http://viaf.org/viaf/3417153653286155900001/exp/eng/1020> ,
+                 <http://viaf.org/viaf/309357400/exp/eng/1020> .
+
+<http://example.org/isbn-1472539354>
+    a rdac:C10007 ;
+    rdfs:label "The road : based on the novel by Cormac McCarthy / Joe Penhall ; activities by Paul Bunyan and Ruth Moore"@no ,
+               "The road : based on the novel by Cormac McCarthy / Joe Penhall ; activities by Paul Bunyan and Ruth Moore"@en ;
+    rdamd:P30004 "ISBN 1472539354" , "ISBN 9781472539359" ;
+    rdaxd:P00018 "isbn-1472539354" , "isbn-9781472539359" ;
+    rdamd:P30156 "The road" ;
+    rdamd:P30142 "based on the novel by Cormac McCarthy" ;
+    rdamd:P30117 "Joe Penhall ; activities by Paul Bunyan and Ruth Moore" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Bloomsbury Methuen Drama, 2013, copyright 2013" ;
+    rdamd:P30076 "Bloomsbury Methuen Drama" ;
+    rdamd:P30011 "2013, copyright 2013" ;
+    rdamd:P30182 "1 online resource (144 pages)." ;
+    rdamd:P30106 "Methuen Drama's critical scripts series" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30139 <http://viaf.org/viaf/5191807/theroad/exp/eng/1020> .
+
+<http://example.org/isbn-9780307455291>
+    a rdac:C10007 ;
+    rdfs:label "The road / Cormac McCarthy"@no ,
+               "The road / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 9780307455291 (pbk.)" ;
+    rdaxd:P00018 "isbn-9780307455291" ;
+    rdamd:P30156 "The road" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30107 "1st Vintage International ed" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Vintage International, c2008" ;
+    rdamd:P30076 "Vintage International" ;
+    rdamd:P30011 "c2008" ;
+    rdamd:P30182 "287 p., 21 cm." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/220031159/exp/eng/1020> .
+
+<http://example.org/isbn-9780307476302>
+    a rdac:C10007 ;
+    rdfs:label "The road / Cormac McCarthy"@no ,
+               "The road / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 9780307476302 (pbk.)" ;
+    rdaxd:P00018 "isbn-9780307476302" ;
+    rdamd:P30156 "The road" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30107 "1st Vintage International ed" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Vintage International, [2009]" ;
+    rdamd:P30076 "Vintage International" ;
+    rdamd:P30011 "[2009]" ;
+    rdamd:P30182 "287 p., 21 cm." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/220031159/exp/eng/1020> .
+
+<http://example.org/isbn-9780330513005>
+    a rdac:C10007 ;
+    rdfs:label "The road / Cormac McCarthy"@no ,
+               "The road / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 9780330513005" ;
+    rdaxd:P00018 "isbn-9780330513005" ;
+    rdamd:P30156 "The road" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2010" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2010" ;
+    rdamd:P30182 "306 p." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/220031159/exp/eng/1020> .
+
+<http://example.org/isbn-9780345803597>
+    a rdac:C10007 ;
+    rdfs:label "The counselor : a screenplay / Cormac McCarthy"@no ,
+               "The counselor : a screenplay / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 9780345803597 (pbk.)" ;
+    rdaxd:P00018 "isbn-9780345803597" ;
+    rdamd:P30156 "The counselor" ;
+    rdamd:P30142 "a screenplay" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30107 "First Vintage International Edition" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30111 "New York : Vintage International, Vintage Books, A Division of Random House, LLC, [2013]" ;
+    rdamd:P30076 "Vintage International, Vintage Books, A Division of Random House, LLC" ;
+    rdamd:P30011 "[2013]" ;
+    rdamd:P30182 "184 pages, 21 cm." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/29558386/counselor/exp/eng/1020> .
+
+<http://example.org/isbn-9780375407932>
+    a rdac:C10007 ;
+    rdfs:label "The border trilogy / Cormac McCarthy"@no ,
+               "The border trilogy / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 9780375407932 (US : hbk.)" , "ISBN 9781857152616 (UK : hbk.)" ;
+    rdaxd:P00018 "isbn-9780375407932" , "isbn-9781857152616" ;
+    rdamd:P30156 "The border trilogy" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "New York" , "[London]" ;
+    rdamd:P30111 "New York : Alfred A. Knopf ; [London] : Distributed by Random House UK, 2008" ;
+    rdamd:P30076 "Alfred A. Knopf" , "Distributed by Random House UK" ;
+    rdamd:P30011 "2008" ;
+    rdamd:P30182 "1 v. (various pagings), 22 cm." ;
+    rdamd:P30106 "Everyman's library" ;
+    rdamd:P30165 "261" ;
+    rdamd:P30137 "\"The border trilogy first published as a single volume in Everyman's Library in the USA, 1999. Individual volumes originally published by Alfred A. Knopf\"--T.p. verso." ;
+    rdamd:P30033 "All the pretty horses -- The crossing -- Cities of the plain." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/175871715/exp/eng/1020> ,
+                 <http://viaf.org/viaf/214001528/exp/eng/1020> ,
+                 <http://viaf.org/viaf/3417153653286155900001/exp/eng/1020> ,
+                 <http://viaf.org/viaf/309357400/exp/eng/1020> .
+
+<http://example.org/isbn-9781447227632>
+    a rdac:C10007 ;
+    rdfs:label "The counselor : a screenplay / Cormac McCarthy"@no ,
+               "The counselor : a screenplay / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 9781447227632 (hardback)" , "ISBN 9781447229803 (paperback)" ;
+    rdaxd:P00018 "isbn-9781447227632" , "isbn-9781447229803" ;
+    rdamd:P30156 "The counselor" ;
+    rdamd:P30142 "a screenplay" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2013" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2013" ;
+    rdamd:P30182 "184 pages, 23 cm." ;
+    rdamd:P30137 "Formerly CIP." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/29558386/counselor/exp/eng/1020> .
+
+<http://example.org/isbn-9781447245834>
+    a rdac:C10007 ;
+    rdfs:label "The passenger / Cormac McCarthy"@no ,
+               "The passenger / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 9781447245834 (ePub ebook)" ;
+    rdaxd:P00018 "isbn-9781447245834" ;
+    rdamd:P30156 "The passenger" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2022" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2022" ;
+    rdamd:P30182 "1 online resource." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30139 <http://viaf.org/viaf/470166838899836200007/exp/eng/1020> .
+
+<http://example.org/isbn-9781447272168>
+    a rdac:C10007 ;
+    rdfs:label "The stonemason / Cormac McCarthy"@no ,
+               "The stonemason / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 9781447272168 (pbk.)" ;
+    rdaxd:P00018 "isbn-9781447272168" ;
+    rdamd:P30156 "The stonemason" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2014" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2014" ;
+    rdamd:P30182 "133 pages, 24 cm." ;
+    rdamd:P30137 "Formerly CIP." , "Originally published: 1997." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/8419162723677961290005/exp/eng/1020> .
+
+<http://example.org/isbn-9781447273134>
+    a rdac:C10007 ;
+    rdfs:label "The gardener's son : a screenplay / Cormac McCarthy"@no ,
+               "The gardener's son : a screenplay / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 9781447273134 (pbk.)" ;
+    rdaxd:P00018 "isbn-9781447273134" ;
+    rdamd:P30156 "The gardener's son" ;
+    rdamd:P30142 "a screenplay" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2014" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2014" ;
+    rdamd:P30182 "ix, 96 pages, 20 cm." ;
+    rdamd:P30137 "Formerly CIP." , "Originally published: Hopewell, N.J. : Ecco Press, 1996." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/29558386/gardenersson/exp/eng/1020> .
+
+<http://example.org/isbn-9781447273141>
+    a rdac:C10007 ;
+    rdfs:label "The gardener's son / Cormac McCarthy"@no ,
+               "The gardener's son / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 9781447273141 (ePub ebook)" ;
+    rdaxd:P00018 "isbn-9781447273141" ;
+    rdamd:P30156 "The gardener's son" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2014" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2014" ;
+    rdamd:P30182 "1 online resource." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30139 <http://viaf.org/viaf/29558386/gardenersson/exp/eng/1020> .
+
+<http://example.org/isbn-9781447289456>
+    a rdac:C10007 ;
+    rdfs:label "Blood meridian / Cormac McCarthy"@no ,
+               "Blood meridian / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 9781447289456 (pbk.)" ;
+    rdaxd:P00018 "isbn-9781447289456" ;
+    rdamd:P30156 "Blood meridian" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30107 "New edition / introduction by Philipp Meyer" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2015" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2015" ;
+    rdamd:P30182 "xiv, 352 pages, 20 cm." ;
+    rdamd:P30106 "Picador classic" ;
+    rdamd:P30137 "Formerly CIP." ,
+                 "Previous edition: published as Blood meridian, or, The evening redness in the West. New York: Random House, 1985." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/191524645/exp/eng/1020> .
+
+<http://example.org/isbn-9781447289463>
+    a rdac:C10007 ;
+    rdfs:label "Blood meridian / Cormac McCarthy"@no ,
+               "Blood meridian / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 9781447289463 (ePub ebook)" ;
+    rdaxd:P00018 "isbn-9781447289463" ;
+    rdamd:P30156 "Blood meridian" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30107 "New edition / introduction by Philipp Meyer" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2015" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2015" ;
+    rdamd:P30182 "1 online resource." ;
+    rdamd:P30106 "Picador classic" ;
+    rdamd:P30137 "Previous edition: published as Blood meridian, or, The evening redness in the West. New York: Random House, 1985." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30139 <http://viaf.org/viaf/191524645/exp/eng/1020> .
+
+<http://example.org/isbn-9781447294023>
+    a rdac:C10007 ;
+    rdfs:label "Stella Maris / Cormac McCarthy"@no ,
+               "Stella Maris / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 9781447294023 (ePub ebook)" ;
+    rdaxd:P00018 "isbn-9781447294023" ;
+    rdamd:P30156 "Stella Maris" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2022" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2022" ;
+    rdamd:P30182 "1 online resource." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30139 <http://viaf.org/viaf/470166838899836200007/stellamaris/exp/eng/1020> .
+
+<http://example.org/isbn-9781509852031>
+    a rdac:C10007 ;
+    rdfs:label "The border trilogy / Cormac McCarthy"@no ,
+               "The border trilogy / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 9781509852031 (ePub ebook)" ;
+    rdaxd:P00018 "isbn-9781509852031" ;
+    rdamd:P30156 "The border trilogy" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2018" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2018" ;
+    rdamd:P30182 "1 online resource." ;
+    rdamd:P30106 "Picador classic" ;
+    rdamd:P30137 "Previously issued in print: 2002." ;
+    rdamd:P30033 "All the pretty horses -- The crossing -- Cities of the plain" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30139 <http://viaf.org/viaf/175871715/exp/eng/1020> ,
+                 <http://viaf.org/viaf/214001528/exp/eng/1020> ,
+                 <http://viaf.org/viaf/3417153653286155900001/exp/eng/1020> ,
+                 <http://viaf.org/viaf/309357400/exp/eng/1020> .
+
+<http://example.org/isbn-9781529014587>
+    a rdac:C10007 ;
+    rdfs:label "The road / Cormac McCarthy"@no ,
+               "The road / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 9781529014587 (ebook)" ;
+    rdaxd:P00018 "isbn-9781529014587" ;
+    rdamd:P30156 "The road" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30107 "New edition / introduction by John Banville" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30111 "London : Picador, 2019" ;
+    rdamd:P30076 "Picador" ;
+    rdamd:P30011 "2019" ;
+    rdamd:P30182 "1 online resource." ;
+    rdamd:P30106 "Picador classic" ;
+    rdamd:P30137 "Previous edition: New York: Alfred A. Knopf; London: Picador, 2006." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30139 <http://viaf.org/viaf/220031159/exp/eng/1020> .
+
+<http://example.org/isbn-9781846329166>
+    a rdac:C10007 ;
+    rdfs:label "The road / Cormac McCarthy"@no ,
+               "The road / Cormac McCarthy"@en ;
+    rdamd:P30004 "ISBN 9781846329166 (hbk.)" ;
+    rdaxd:P00018 "isbn-9781846329166" ;
+    rdamd:P30156 "The road" ;
+    rdamd:P30117 "Cormac McCarthy" ;
+    rdamd:P30107 "Large print ed" ;
+    rdamd:P30088 "Rearsby" ;
+    rdamd:P30111 "Rearsby : W. F. Howes, 2007" ;
+    rdamd:P30076 "W. F. Howes" ;
+    rdamd:P30011 "2007" ;
+    rdamd:P30182 "250 p. (large print), 25 cm." ;
+    rdamd:P30137 "Formerly CIP." , "Originally published: London: Picador, 2006." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/220031159/exp/eng/1020> .
