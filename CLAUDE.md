@@ -112,7 +112,8 @@ EntEdit/
 ### Utilities (app/src/utils/)
 
 - `turtleSerializer.ts` - Turtle serialization with configurable namespace prefix registry (`KNOWN_PREFIXES` map);
-  only predicates/datatypes are prefix-compacted, subject/object URIs stay as full `<uri>`
+  predicates, datatypes, and `rdf:type` object (class) URIs are prefix-compacted; subject and other
+  object URIs (entity references) stay as full `<uri>`
 - `sparqlClient.ts` - SparqlClient class with query/update methods and auth support
 - `configManager.ts` - localStorage persistence for app configuration
 - `labelUtils.ts` - URI label extraction, formatting, SPARQL escaping

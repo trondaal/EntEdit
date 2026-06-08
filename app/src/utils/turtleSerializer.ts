@@ -75,9 +75,12 @@ function extractNamespace(uri: string): string | null {
 function serializeObject(
   binding: SparqlBinding,
   namespaceToPrefixMap: Map<string, string>,
+  compactUriValue = false,
 ): string {
   if (binding.type === "uri") {
-    return `<${binding.value}>`;
+    return compactUriValue
+      ? compactUri(binding.value, namespaceToPrefixMap)
+      : `<${binding.value}>`;
   }
   if (binding.type === "bnode") {
     return `_:${binding.value}`;
@@ -159,6 +162,10 @@ function registerBindingNamespaces(
 ) {
   for (const b of bindings) {
     register(b.predicate.value);
+    // Register class URI namespaces so rdf:type objects can be compacted
+    if (b.predicate.value === RDF_TYPE && b.object.type === "uri") {
+      register(b.object.value);
+    }
     if (
       b.object.datatype &&
       b.object.datatype !== "http://www.w3.org/2001/XMLSchema#string"
@@ -202,7 +209,7 @@ function buildSubjectBlock(
     const predCompact =
       pred === RDF_TYPE ? "a" : compactUri(pred, usedNamespaces);
     const objectStrings = objects.map((obj) =>
-      serializeObject(obj, usedNamespaces),
+      serializeObject(obj, usedNamespaces, pred === RDF_TYPE),
     );
 
     const separator = i < predicateOrder.length - 1 ? " ;" : " .";
