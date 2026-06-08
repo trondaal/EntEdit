@@ -123,7 +123,7 @@ rdamd:P30107	entedit:status "data property" ; entedit:order 6 ; rdfs:label "utga
 rdamd:P30182	entedit:status "data property" ; entedit:order 7 ; rdfs:label "omfang"@no . #"extent"@en .
 rdamd:P30169	entedit:status "data property" ; entedit:order 8 ; rdfs:label "dimensjon"@no . #"dimensions"@en .
 
-rdamd:P30076	entedit:status "data property" ; entedit:order 9 ; rdfs:label "navn på utgiver"@no . #"publisher"@en
+rdamd:P30176	entedit:status "data property" ; entedit:order 9 ; rdfs:label "navn på utgiver"@no . #"publisher"@en
 #rdamd:P30083	entedit:status "data property" ; entedit:order 9 ; rdfs:label "utgiver"@no . #"publisher"@en .
 rdamd:P30088	entedit:status "data property" ; entedit:order 10 ; rdfs:label "utgivelsessted"@no . #"publicationplace"@en .
 rdamd:P30011	entedit:status "data property" ; entedit:order 11 ; rdfs:label "utgivelsesdato"@no . #"publicationdate"@en .
