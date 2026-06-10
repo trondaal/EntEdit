@@ -79,7 +79,7 @@ const ExportDialog: React.FC<ExportDialogProps> = ({
   });
 
   // Select all classes by default when dialog opens.
-  // eslint-disable-next-line react-hooks/set-state-in-effect -- initialize selection on open
+  /* eslint-disable react-hooks/set-state-in-effect -- initialize selection when dialog opens */
   useEffect(() => {
     if (open && classes) {
       setSelectedClasses(new Set(classes.map((c) => c.uri)));
@@ -87,6 +87,7 @@ const ExportDialog: React.FC<ExportDialogProps> = ({
       setShowLargeWarning(false);
     }
   }, [open, classes]);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   const classUrisArray = useMemo(
     () => Array.from(selectedClasses),

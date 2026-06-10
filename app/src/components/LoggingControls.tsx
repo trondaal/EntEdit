@@ -45,12 +45,13 @@ const LoggingControls: React.FC<LoggingControlsProps> = ({
   const [orphanDialogOpen, setOrphanDialogOpen] = useState(false);
 
   // Check for orphaned session on mount.
-  // eslint-disable-next-line react-hooks/set-state-in-effect -- mount-time check
+  /* eslint-disable react-hooks/set-state-in-effect -- mount-time check */
   useEffect(() => {
     if (hasOrphanedSession()) {
       setOrphanDialogOpen(true);
     }
   }, [hasOrphanedSession]);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   const formatDuration = (seconds: number): string => {
     const mins = Math.floor(seconds / 60);

@@ -53,7 +53,7 @@ const ImportDialog: React.FC<ImportDialogProps> = ({
   const [error, setError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
-  // eslint-disable-next-line react-hooks/set-state-in-effect -- reset on open
+  /* eslint-disable react-hooks/set-state-in-effect -- reset form fields when the dialog opens */
   useEffect(() => {
     if (open) {
       setFile(null);
@@ -62,6 +62,7 @@ const ImportDialog: React.FC<ImportDialogProps> = ({
       setImporting(false);
     }
   }, [open]);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const selected = e.target.files?.[0] ?? null;

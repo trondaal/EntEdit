@@ -135,7 +135,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
   // Sync local form state with the loaded server entity. Initialization-from-source
   // pattern, not derivable during render because we also clear edit/dirty flags.
-  // eslint-disable-next-line react-hooks/set-state-in-effect
+  /* eslint-disable react-hooks/set-state-in-effect -- seed form state from the loaded entity */
   useEffect(() => {
     if (existingEntity) {
       // Don't overwrite in-progress edits when cache invalidation refreshes the data
@@ -152,6 +152,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       setEntityLabels([]);
     }
   }, [existingEntity, entityUri]);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   // Section configurations for the object property groups
   const objectPropertySections = useMemo(() => [
@@ -287,7 +288,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
   // Reset the create form when the user switches class (only for new entities).
   // Placed after useEntityMutations so clearSaveError is in scope.
-  // eslint-disable-next-line react-hooks/set-state-in-effect -- form reset on class change
+  /* eslint-disable react-hooks/set-state-in-effect -- form reset on class change */
   useEffect(() => {
     if (!entityUri) {
       setEntityData({});
@@ -299,6 +300,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       setEntityLabels([]);
     }
   }, [classUri, entityUri, clearSaveError]);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   const requestSave = useCallback(() => {
     // Only check warnings for new entities (existing entities already have URIs and labels)

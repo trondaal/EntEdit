@@ -253,7 +253,7 @@ function AppInner() {
   }, [appConfig?.language, i18n]);
 
   // One-time mount-time bootstrap: read from localStorage and seed app state.
-  // eslint-disable-next-line react-hooks/set-state-in-effect -- mount initialization, not derived state
+  /* eslint-disable react-hooks/set-state-in-effect -- mount initialization, not derived state */
   useEffect(() => {
     if (isDemoMode) {
       const savedConfig = loadConfiguration();
@@ -282,6 +282,7 @@ function AppInner() {
 
     setLoading(false);
   }, [isDemoMode, langParam]);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   const handleConfigurationComplete = (
     config: SparqlEndpointConfig,

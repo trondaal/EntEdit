@@ -25,7 +25,12 @@ export const formatLabel = (
  */
 export const extractUriFragment = (uri: string): string => {
   if (!uri) return "";
-  return uri.split("#").pop() || uri.split("/").pop() || uri;
+  // Prefer the hash fragment; otherwise fall back to the last path segment.
+  // Note: `uri.split("#").pop()` returns the whole string when there is no
+  // "#", so we must guard with includes("#") — otherwise slash-delimited URIs
+  // (e.g. RDA .../Elements/c/C10001) would never be shortened.
+  const hashFragment = uri.includes("#") ? uri.split("#").pop() : undefined;
+  return hashFragment || uri.split("/").pop() || uri;
 };
 
 /**

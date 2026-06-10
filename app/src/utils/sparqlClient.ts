@@ -32,11 +32,31 @@ export class SparqlError extends Error {
   }
 }
 
+/** Maps an HTTP status to a SparqlErrorCode. 401 → unauthorized,
+ * 403/405 → forbidden (read-only endpoint), anything else → server. */
+function classifyStatus(status: number): SparqlErrorCode {
+  if (status === 401) return "unauthorized";
+  if (status === 403 || status === 405) return "forbidden";
+  return "server";
+}
+
 export class SparqlClient {
   private config: SparqlEndpointConfig;
 
   constructor(config: SparqlEndpointConfig) {
     this.config = config;
+  }
+
+  /** Builds request headers, adding HTTP Basic auth when credentials are set. */
+  private buildHeaders(base: Record<string, string>): Record<string, string> {
+    const headers = { ...base };
+    if (this.config.username && this.config.password) {
+      const encodedAuth = btoa(
+        `${this.config.username}:${this.config.password}`,
+      );
+      headers["Authorization"] = `Basic ${encodedAuth}`;
+    }
+    return headers;
   }
 
   async query(
@@ -64,27 +84,40 @@ export class SparqlClient {
       infer: infer.toString(),
     });
 
-    const headers: HeadersInit = {
+    const headers = this.buildHeaders({
       "Content-Type": "application/x-www-form-urlencoded",
       Accept: "application/sparql-results+json",
-    };
-
-    if (this.config.username && this.config.password) {
-      const authString = `${this.config.username}:${this.config.password}`;
-      const encodedAuth = btoa(authString);
-      headers["Authorization"] = `Basic ${encodedAuth}`;
-    }
-
-    const response = await fetch(`${this.config.url}`, {
-      method: "POST",
-      headers,
-      body: formData,
-      signal: options?.signal,
     });
 
+    let response: Response;
+    try {
+      response = await fetch(`${this.config.url}`, {
+        method: "POST",
+        headers,
+        body: formData,
+        signal: options?.signal,
+      });
+    } catch (err) {
+      // Re-throw aborts untouched so TanStack Query treats them as cancellations
+      // rather than surfacing a "network" error to the user.
+      if ((err as Error).name === "AbortError") throw err;
+      // fetch() rejects only for network-level failures (TypeError): offline,
+      // DNS, CORS preflight rejection, mixed-content, etc. The browser hides which.
+      throw new SparqlError(
+        "network",
+        `SPARQL query network error: ${(err as Error).message}`,
+      );
+    }
+
     if (!response.ok) {
-      const errorText = await response.text().catch(() => 'No additional error info');
-      throw new Error(`SPARQL query failed: ${response.status} ${response.statusText}. ${errorText}`);
+      const errorText = await response
+        .text()
+        .catch(() => "No additional error info");
+      throw new SparqlError(
+        classifyStatus(response.status),
+        `SPARQL query failed: ${response.status} ${response.statusText}. ${errorText}`,
+        response.status,
+      );
     }
 
     return response.json();
@@ -99,15 +132,7 @@ export class SparqlClient {
     contentType: string,
     graphUri?: string,
   ): Promise<void> {
-    const headers: HeadersInit = {
-      "Content-Type": contentType,
-    };
-
-    if (this.config.username && this.config.password) {
-      const authString = `${this.config.username}:${this.config.password}`;
-      const encodedAuth = btoa(authString);
-      headers["Authorization"] = `Basic ${encodedAuth}`;
-    }
+    const headers = this.buildHeaders({ "Content-Type": contentType });
 
     const trimmed = graphUri?.trim();
     const url = trimmed
@@ -130,14 +155,8 @@ export class SparqlClient {
 
     if (!response.ok) {
       const errorText = await response.text().catch(() => "Unknown error");
-      const code: SparqlErrorCode =
-        response.status === 401
-          ? "unauthorized"
-          : response.status === 403 || response.status === 405
-            ? "forbidden"
-            : "server";
       throw new SparqlError(
-        code,
+        classifyStatus(response.status),
         `RDF import failed: ${response.status} ${response.statusText}. ${errorText}`,
         response.status,
       );
@@ -145,15 +164,9 @@ export class SparqlClient {
   }
 
   async update(sparql: string): Promise<void> {
-    const headers: HeadersInit = {
+    const headers = this.buildHeaders({
       "Content-Type": "application/sparql-update",
-    };
-
-    if (this.config.username && this.config.password) {
-      const authString = `${this.config.username}:${this.config.password}`;
-      const encodedAuth = btoa(authString);
-      headers["Authorization"] = `Basic ${encodedAuth}`;
-    }
+    });
 
     let response: Response;
     try {
@@ -174,14 +187,8 @@ export class SparqlClient {
 
     if (!response.ok) {
       const errorText = await response.text().catch(() => "Unknown error");
-      const code: SparqlErrorCode =
-        response.status === 401
-          ? "unauthorized"
-          : response.status === 403 || response.status === 405
-            ? "forbidden"
-            : "server";
       throw new SparqlError(
-        code,
+        classifyStatus(response.status),
         `SPARQL update failed: ${response.status} ${response.statusText}. ${errorText}`,
         response.status,
       );
