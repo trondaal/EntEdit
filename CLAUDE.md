@@ -39,6 +39,7 @@ EntEdit/
 │   │   ├── locales/       # Translation files (en/, no/)
 │   │   └── App.tsx        # Root component with theme and query client
 │   ├── Dockerfile
+│   ├── nginx.conf         # nginx SPA + proxy config (used by the Docker image)
 │   └── package.json
 ├── database/              # RDF data and GraphDB config
 │   ├── types/             # Vocabulary files loaded into GraphDB on init
@@ -46,7 +47,6 @@ EntEdit/
 │   ├── lucene_connectors/ # Lucene index configurations
 │   └── testdata/          # Sample RDF entities for testing
 ├── docker/                # Docker deployment configs
-│   ├── nginx/             # nginx SPA + proxy config
 │   └── graphdb/           # Repository definition + init script
 ├── docs/                   # → served from app/public/docs/
 │   ├── en/                 # English docs (primary/canonical)

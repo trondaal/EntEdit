@@ -194,7 +194,7 @@
   EntEdit bruker en SPARQL-kompatibel grafdatabase for lagring og spørring av RDF-data. Den anbefalte databasen er <strong>Ontotext GraphDB</strong>, som er inkludert i Docker Compose-oppsettet. Denne guiden forklarer hvordan du setter opp databasen fra bunnen av med Docker, og hvordan du laster inn egne data.
 </p>
 
-<p>Hvis du bare vil prøve EntEdit, kan du hoppe over denne guiden og bruke demodatabasen på <code>http://dijon.idi.ntnu.no:8080/repositories/EntEdit</code>.</p>
+<p>Hvis du bare vil prøve EntEdit, kan du hoppe over denne guiden — en skrivebeskyttet nettdemo med bibliografiske eksempeldata er tilgjengelig på <a href="http://entedit.org/?demo">entedit.org/?demo</a>, ingen installasjon nødvendig.</p>
 
 
 <!-- 2. PREREQUISITES -->
@@ -202,7 +202,7 @@
 
 <ul>
   <li><strong>Docker</strong> og <strong>Docker Compose</strong> — installert og kjørende på maskinen din.</li>
-  <li>EntEdit-repositoriet klonet fra Git.</li>
+  <li>EntEdit-prosjektfilene — klon prosjektet (<code>git clone https://github.com/trondaal/EntEdit.git</code>) eller last det ned som ZIP fra <a href="https://github.com/trondaal/EntEdit">GitHub-siden</a>. De trengs ikke for å bygge applikasjonen, men fordi Docker Compose bruker <code>docker-compose.yml</code> og filene i <code>database/</code> og <code>docker/</code> til å initialisere databasen ved første oppstart.</li>
 </ul>
 
 <div class="info-box tip">
@@ -213,7 +213,7 @@
 <!-- 3. STARTING WITH DOCKER -->
 <h2>3. Starte Docker-miljøet</h2>
 
-<p>Fra rotkatalogen til EntEdit-repositoriet, kjør:</p>
+<p>Fra rotkatalogen til EntEdit-prosjektet, kjør:</p>
 
 <pre><code>docker compose up -d</code></pre>
 
@@ -238,17 +238,25 @@
   <tr>
     <td><strong>Initialisering</strong></td>
     <td>—</td>
-    <td>En engangstjeneste som oppretter repositoriet og importerer data</td>
+    <td>En engangstjeneste som oppretter datalageret (repository) og importerer data</td>
   </tr>
 </table>
 
 <p>
-  Når du bruker Docker-oppsettet, konfigurer EntEdit med endepunkt-URL-en <code>http://localhost/graphdb/repositories/EntEdit</code>. nginx-proxyen videresender forespørsler til GraphDB, noe som unngår kryssopprinnelsesproblemer (CORS).
+  Når du bruker Docker-oppsettet, konfigurer EntEdit med endepunkt-URL-en <code>http://localhost/graphdb/repositories/EntEdit</code>. nginx-proxyen videresender forespørsler til GraphDB, noe som unngår kryssopprinnelsesproblemer (CORS). Ikke bruk <code>http://localhost:7200/...</code> direkte som endepunkt — siden det er en annen opprinnelse, feiler det med en CORS-feil i nettleseren.
 </p>
 
 <div class="info-box">
-  <strong>Merk:</strong> Første gang du kjører <code>docker compose up</code>, vil initialiseringstjenesten opprette GraphDB-repositoriet, importere vokabularfiler og testdata, og sette opp fulltekstsøkeindeksene. Dette kan ta et minutt eller to.
+  <strong>Merk:</strong> Første gang du kjører <code>docker compose up</code>, vil initialiseringstjenesten opprette GraphDB-datalageret, importere vokabularfiler og testdata, og sette opp fulltekstsøkeindeksene. Dette kan ta et minutt eller to.
 </div>
+
+<p>
+  Første oppstart henter automatisk de ferdigbygde imagene fra Docker Hub — webapplikasjonen kjører fra det publiserte <a href="https://hub.docker.com/r/trondaal/entedit"><code>trondaal/entedit</code></a>-imaget, så ingen lokal bygging eller Node.js-installasjon er nødvendig. For å oppdatere til de nyeste publiserte imagene senere, kjør <code>docker compose pull</code>.
+</p>
+
+<p>
+  GraphDB-data lagres i et Docker-volum og overlever omstarter. For å stoppe tjenestene, kjør <code>docker compose down</code>.
+</p>
 
 
 <!-- 4. WHAT GETS INITIALIZED -->
@@ -257,31 +265,31 @@
 <p>Initialiseringstjenesten utfører tre faser:</p>
 
 <ol class="steps">
-  <li><strong>Oppretting av repositorium</strong> — Oppretter et GraphDB-repositorium med navnet <code>EntEdit</code> med RDFS-Plus-resonnering aktivert.</li>
+  <li><strong>Oppretting av datalager</strong> — Oppretter et GraphDB-datalager (repository) med navnet <code>EntEdit</code> med RDFS-Plus-resonnering aktivert.</li>
   <li><strong>Dataimport</strong> — Laster inn alle RDF-filer fra to kataloger:
     <ul style="margin-top: 0.5rem;">
       <li><code>database/types/</code> — Vokabular- og ontologifiler (RDA-egenskaper, klassedefinisjoner, kontrollerte verdilister)</li>
-      <li><code>database/testdata/</code> — Eksempler på bibliografiske entiteter (verk, uttrykk, manifestasjoner, agenter)</li>
+      <li><code>database/testdata/</code> — Eksempler på bibliografiske entiteter (verk, uttrykk, manifestasjoner, agenter). Disse importeres til den navngitte grafen <code>http://oslomet.no/abi/examples</code> slik at eksemplene kan håndteres uavhengig av vokabularet.</li>
     </ul>
   </li>
-  <li><strong>SPARQL-oppdateringer</strong> — Kjører oppsettspørringer fra <code>database/graphdb/</code>, inkludert Lucene-fulltekstsøkekoblingsdefinisjoner som driver Søk-fanen.</li>
+  <li><strong>SPARQL-oppdateringer</strong> — Kjører Lucene-fulltekstsøkekoblingsdefinisjonene fra <code>database/lucene_connectors/</code>, som driver Søk-fanen.</li>
 </ol>
 
 
 <!-- 5. REPOSITORY STRUCTURE -->
 <h2>5. Katalogstruktur</h2>
 
-<p>De relevante katalogene i EntEdit-repositoriet:</p>
+<p>De relevante katalogene i EntEdit-prosjektet:</p>
 
 <div class="file-tree">
 EntEdit/<br>
+├── app/                <span style="color: var(--text-secondary);">← Webapplikasjon (inkl. nginx- og proxy-konfigurasjon)</span><br>
 ├── database/<br>
 │   ├── types/          <span style="color: var(--text-secondary);">← Vokabularfiler (lastes inn i GraphDB)</span><br>
-│   ├── testdata/       <span style="color: var(--text-secondary);">← Eksempel-RDF-entiteter</span><br>
-│   └── graphdb/        <span style="color: var(--text-secondary);">← SPARQL-koblingsdefinisjoner</span><br>
+│   ├── testdata/       <span style="color: var(--text-secondary);">← Eksempel-RDF-entiteter (eksempelgraf)</span><br>
+│   └── lucene_connectors/  <span style="color: var(--text-secondary);">← Lucene-fulltekstindeksdefinisjoner</span><br>
 ├── docker/<br>
-│   ├── graphdb/        <span style="color: var(--text-secondary);">← Repositoriumkonfigurasjon + init-skript</span><br>
-│   └── nginx/          <span style="color: var(--text-secondary);">← Webserver- og proxy-konfigurasjon</span><br>
+│   └── graphdb/        <span style="color: var(--text-secondary);">← Datalagerkonfigurasjon + init-skript</span><br>
 └── docker-compose.yml
 </div>
 
@@ -306,11 +314,13 @@ EntEdit/<br>
 <ol class="steps">
   <li>Åpne <code>http://localhost:7200</code> i nettleseren din.</li>
   <li>Gå til <strong>Import → RDF</strong> i sidemenyen til venstre.</li>
-  <li>Last opp RDF-filene dine og importer dem til <code>EntEdit</code>-repositoriet.</li>
+  <li>Last opp RDF-filene dine og importer dem til <code>EntEdit</code>-datalageret.</li>
 </ol>
 
+<p>Du kan også importere RDF-filer direkte fra EntEdit-applikasjonen: klikk <strong>Importer</strong>-knappen i applikasjons-headeren, velg en <code>.ttl</code>-, <code>.nt</code>- eller <code>.rdf</code>-fil, og klikk <strong>Importer</strong>. Importerte tripler legges til i datalageret; eksisterende data erstattes ikke.</p>
+
 <div class="info-box warning">
-  <strong>Viktig:</strong> Etter import av nye data kan det være nødvendig å gjenskape Lucene-fulltekstsøkeindeksene for at de nye entitetene skal dukke opp i søkeresultatene. Koblingsdefinisjonene finnes i <code>database/graphdb/</code>.
+  <strong>Viktig:</strong> Etter import av nye data kan det være nødvendig å gjenskape Lucene-fulltekstsøkeindeksene for at de nye entitetene skal dukke opp i søkeresultatene. Koblingsdefinisjonene finnes i <code>database/lucene_connectors/</code>.
 </div>
 
 
@@ -321,7 +331,7 @@ EntEdit/<br>
   Hvis du vil bruke EntEdit med din egen GraphDB-instans (utenfor Docker-oppsettet), må du laste inn vokabularfilene og sette opp fulltekstsøkekoblingene. Denne seksjonen dekker de nødvendige minimumsstegene.
 </p>
 
-<h3>Steg 1: Opprett et repositorium</h3>
+<h3>Steg 1: Opprett et datalager (repository)</h3>
 
 <p>
   I GraphDB Workbench (<code>http://localhost:7200</code>), gå til <strong>Setup → Repositories → Create new repository</strong>. Bruk følgende innstillinger:
@@ -370,8 +380,8 @@ EntEdit/<br>
 </p>
 
 <ul>
-  <li><code>database/graphdb/expression.connector.sparql</code> — Oppretter fulltekstindeksen for uttrykkssøk</li>
-  <li><code>database/graphdb/manifestation.connector.sparql</code> — Oppretter fulltekstindeksen for manifestasjonssøk</li>
+  <li><code>database/lucene_connectors/expressions_index.sparql</code> — Oppretter fulltekstindeksen for uttrykkssøk</li>
+  <li><code>database/lucene_connectors/manifestations_index.sparql</code> — Oppretter fulltekstindeksen for manifestasjonssøk</li>
 </ul>
 
 <p>Kjør disse i GraphDB Workbench under <strong>SPARQL → SPARQL Update</strong>, eller via SPARQL-endepunktet. Etter kjøring vil koblingene automatisk indeksere eksisterende data og holde indeksen oppdatert når nye data legges til.</p>
@@ -433,7 +443,7 @@ EntEdit/<br>
 
 <ol class="steps">
   <li>Sørg for at du har <strong>Node.js 20+</strong> installert.</li>
-  <li>Start en GraphDB-instans (enten via Docker eller en frittstående installasjon) med <code>EntEdit</code>-repositoriet.</li>
+  <li>Start en GraphDB-instans (enten via Docker eller en frittstående installasjon) med <code>EntEdit</code>-datalageret.</li>
   <li>
     Installer avhengigheter og start utviklingsserveren:
     <pre style="margin-top: 0.5rem;"><code>cd app

@@ -105,7 +105,14 @@
     "Download .ttl":             { "no": "Last ned .ttl" },
     "Copy to Clipboard":         { "no": "Kopier til utklippstavle" },
     "Entity Browser":            { "no": "Entitetsapplikasjon" },
-    "Search":                    { "no": "Søk" }
+    "Search":                    { "no": "Søk" },
+    "Refresh":                   { "no": "Oppdater" },
+    "Save & refresh":            { "no": "Lagre og oppdater" },
+    "Discard & refresh":         { "no": "Forkast og oppdater" },
+    "Import":                    { "no": "Importer" },
+    "Start logging":             { "no": "Start logging" },
+    "Logging":                   { "no": "Logger", "_note": "Label on the recording indicator chip while a logging session is running." },
+    "Download Log":              { "no": "Last ned logg" }
   },
 
   "general_terms": {
@@ -131,6 +138,10 @@
     "anthology":            { "no": "antologi" },
     "cataloguing":          { "no": "katalogisering" },
     "format":               { "no": "format", "_note": "Neuter noun (et format). Use definite form 'formatet' when referring to a specific format, e.g. 'Turtle-formatet'." },
-    "interoperability":     { "no": "interoperabilitet", "_note": "Always 'interoperabilitet', never 'samoperabilitet'." }
+    "interoperability":     { "no": "interoperabilitet", "_note": "Always 'interoperabilitet', never 'samoperabilitet'." },
+    "interaction logging":  { "no": "interaksjonslogging" },
+    "application header":   { "no": "applikasjons-headeren", "_note": "Definite form as used in running text." },
+    "repository (GraphDB)": { "no": "datalager", "_note": "Never 'repositorium' (not a proper Norwegian word). Add '(repository)' in parentheses at the first mention in a document so users can map the term to the English GraphDB Workbench UI. GraphDB UI labels like 'Repository ID' and menu paths stay in English." },
+    "repository (Git)":     { "no": "prosjektet", "_note": "For the Git/GitHub repository, refer to 'prosjektet' or 'EntEdit-prosjektet' rather than 'repositoriet'." }
   }
 }

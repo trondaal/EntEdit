@@ -194,7 +194,7 @@
   EntEdit uses a SPARQL-compatible graph database to store and query RDF data. The recommended database is <strong>Ontotext GraphDB</strong>, which is included in the Docker Compose setup. This guide walks through setting up the database from scratch using Docker, and explains how to load your own data.
 </p>
 
-<p>If you just want to try EntEdit, you can skip this guide and use the demo database at <code>http://dijon.idi.ntnu.no:8080/repositories/EntEdit</code>.</p>
+<p>If you just want to try EntEdit, you can skip this guide — a read-only online demo with sample bibliographic data is available at <a href="http://entedit.org/?demo">entedit.org/?demo</a>, no installation required.</p>
 
 
 <!-- 2. PREREQUISITES -->
@@ -202,7 +202,7 @@
 
 <ul>
   <li><strong>Docker</strong> and <strong>Docker Compose</strong> — installed and running on your machine.</li>
-  <li>The EntEdit repository cloned from Git.</li>
+  <li>The EntEdit project files — clone the repository (<code>git clone https://github.com/trondaal/EntEdit.git</code>) or download it as a ZIP from the <a href="https://github.com/trondaal/EntEdit">GitHub page</a>. They are needed not to build the app, but because Docker Compose uses <code>docker-compose.yml</code> and the <code>database/</code> and <code>docker/</code> files to initialise the database on first run.</li>
 </ul>
 
 <div class="info-box tip">
@@ -243,12 +243,20 @@
 </table>
 
 <p>
-  When using the Docker setup, configure EntEdit with the endpoint URL <code>http://localhost/graphdb/repositories/EntEdit</code>. The nginx proxy forwards requests to GraphDB, which avoids cross-origin (CORS) issues.
+  When using the Docker setup, configure EntEdit with the endpoint URL <code>http://localhost/graphdb/repositories/EntEdit</code>. The nginx proxy forwards requests to GraphDB, which avoids cross-origin (CORS) issues. Do not use <code>http://localhost:7200/...</code> directly as the endpoint — being a different origin, it fails with a CORS error in the browser.
 </p>
 
 <div class="info-box">
   <strong>Note:</strong> The first time you run <code>docker compose up</code>, the initialization service will create the GraphDB repository, import vocabulary files and test data, and set up the full-text search indexes. This may take a minute or two.
 </div>
+
+<p>
+  The first start automatically pulls the pre-built images from Docker Hub — the web application runs from the published <a href="https://hub.docker.com/r/trondaal/entedit"><code>trondaal/entedit</code></a> image, so no local build or Node.js installation is needed. To update to the latest published images later, run <code>docker compose pull</code>.
+</p>
+
+<p>
+  GraphDB data is persisted in a Docker volume and survives restarts. To stop the services, run <code>docker compose down</code>.
+</p>
 
 
 <!-- 4. WHAT GETS INITIALIZED -->
@@ -261,10 +269,10 @@
   <li><strong>Data import</strong> — Loads all RDF files from two directories:
     <ul style="margin-top: 0.5rem;">
       <li><code>database/types/</code> — Vocabulary and ontology files (RDA properties, class definitions, controlled value lists)</li>
-      <li><code>database/testdata/</code> — Sample bibliographic entities (works, expressions, manifestations, agents)</li>
+      <li><code>database/testdata/</code> — Sample bibliographic entities (works, expressions, manifestations, agents). These are imported into the named graph <code>http://oslomet.no/abi/examples</code> so the examples can be managed independently of the vocabulary.</li>
     </ul>
   </li>
-  <li><strong>SPARQL updates</strong> — Executes setup queries from <code>database/graphdb/</code>, including the Lucene full-text search connector definitions that power the Search tab.</li>
+  <li><strong>SPARQL updates</strong> — Executes the Lucene full-text search connector definitions from <code>database/lucene_connectors/</code>, which power the Search tab.</li>
 </ol>
 
 
@@ -275,13 +283,13 @@
 
 <div class="file-tree">
 EntEdit/<br>
+├── app/                <span style="color: var(--text-secondary);">← Web application (incl. nginx + proxy config)</span><br>
 ├── database/<br>
 │   ├── types/          <span style="color: var(--text-secondary);">← Vocabulary files (loaded into GraphDB)</span><br>
-│   ├── testdata/       <span style="color: var(--text-secondary);">← Sample RDF entities</span><br>
-│   └── graphdb/        <span style="color: var(--text-secondary);">← SPARQL connector definitions</span><br>
+│   ├── testdata/       <span style="color: var(--text-secondary);">← Sample RDF entities (examples graph)</span><br>
+│   └── lucene_connectors/  <span style="color: var(--text-secondary);">← Lucene full-text index definitions</span><br>
 ├── docker/<br>
-│   ├── graphdb/        <span style="color: var(--text-secondary);">← Repository config + init script</span><br>
-│   └── nginx/          <span style="color: var(--text-secondary);">← Web server + proxy config</span><br>
+│   └── graphdb/        <span style="color: var(--text-secondary);">← Repository config + init script</span><br>
 └── docker-compose.yml
 </div>
 
@@ -309,8 +317,10 @@ EntEdit/<br>
   <li>Upload your RDF files and import them into the <code>EntEdit</code> repository.</li>
 </ol>
 
+<p>You can also import RDF files directly from the EntEdit application: click the <strong>Import</strong> button in the application header, choose a <code>.ttl</code>, <code>.nt</code>, or <code>.rdf</code> file, and click <strong>Import</strong>. Imported triples are appended to the repository; existing data is not replaced.</p>
+
 <div class="info-box warning">
-  <strong>Important:</strong> After importing new data, you may need to recreate the Lucene full-text search indexes for the new entities to appear in search results. The connector definitions are in <code>database/graphdb/</code>.
+  <strong>Important:</strong> After importing new data, you may need to recreate the Lucene full-text search indexes for the new entities to appear in search results. The connector definitions are in <code>database/lucene_connectors/</code>.
 </div>
 
 
@@ -370,8 +380,8 @@ EntEdit/<br>
 </p>
 
 <ul>
-  <li><code>database/graphdb/expression.connector.sparql</code> — Creates the full-text index for Expression search</li>
-  <li><code>database/graphdb/manifestation.connector.sparql</code> — Creates the full-text index for Manifestation search</li>
+  <li><code>database/lucene_connectors/expressions_index.sparql</code> — Creates the full-text index for Expression search</li>
+  <li><code>database/lucene_connectors/manifestations_index.sparql</code> — Creates the full-text index for Manifestation search</li>
 </ul>
 
 <p>Execute these in the GraphDB Workbench under <strong>SPARQL → SPARQL Update</strong>, or via the SPARQL endpoint. After execution, the connectors will automatically index existing data and keep the index updated as new data is added.</p>

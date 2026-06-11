@@ -370,6 +370,8 @@
                             <li><a href="#editing-entities">Opprette og redigere entiteter</a></li>
                             <li><a href="#more-actions">Flere handlinger-menyen</a></li>
                             <li><a href="#search-interface">Søkegrensesnittet</a></li>
+                            <li><a href="#refreshing-data">Oppdatere data</a></li>
+                            <li><a href="#interaction-logging">Interaksjonslogging</a></li>
                         </ol>
                     </li>
                     <li>
@@ -380,6 +382,7 @@
                             <li><a href="#auto-generation">Auto-generering av URI-er og etiketter</a></li>
                             <li><a href="#what-is-turtle">Turtle-formatet</a></li>
                             <li><a href="#exporting-turtle">Eksporter data som Turtle</a></li>
+                            <li><a href="#importing-rdf">Importere RDF-data</a></li>
                         </ol>
                     </li>
                     <li>
@@ -460,15 +463,17 @@
                     <th>Beskrivelse</th>
                 </tr>
                 <tr>
-                    <td><strong>Demodb</strong></td>
+                    <td><strong>Nettdemo</strong></td>
                     <td>
-                        <code
-                            >http://dijon.idi.ntnu.no:8080/repositories/EntEdit</code
+                        <a href="http://entedit.org/?demo"
+                            >entedit.org/?demo</a
                         >
                     </td>
                     <td>
-                        En delt demoinstans forhåndsinnlastet med eksempeldata. Bra
-                        for å prøve ut applikasjonen uten lokalt oppsett.
+                        En skrivebeskyttet demo forhåndsinnlastet med
+                        eksempeldata — bare åpne URL-en i nettleseren, ingen
+                        oppsett eller konfigurasjon nødvendig. Redigering er
+                        deaktivert.
                     </td>
                 </tr>
                 <tr>
@@ -880,6 +885,66 @@
                 katalogisert.
             </p>
 
+            <h3 id="refreshing-data">4.5 Oppdatere data</h3>
+
+            <p>
+                EntEdit mellomlagrer data fra databasen for at applikasjonen
+                skal være rask å bruke. Hvis flere personer katalogiserer i
+                samme database, eller data endres utenfor applikasjonen
+                (f.eks. gjennom GraphDB Workbench), kan visningen din bli
+                utdatert. <strong>Oppdater</strong>-knappen (sirkelpil) i
+                applikasjons-headeren laster all data på nytt fra databasen.
+            </p>
+            <p>
+                Hvis du har ulagrede endringer i entitetsredigeringen, spør
+                en dialog om du vil velge <strong>Lagre og oppdater</strong>
+                (lagre endringene først, deretter laste på nytt) eller
+                <strong>Forkast og oppdater</strong> (forkaste de ulagrede
+                endringene og laste på nytt).
+            </p>
+
+            <h3 id="interaction-logging">4.6 Interaksjonslogging</h3>
+
+            <p>
+                <strong>Start logging</strong>-knappen i
+                applikasjons-headeren registrerer hvordan du bruker EntEdit
+                mens du katalogiserer. Den er laget for undervisning: en
+                instruktør kan be deg om å gjøre opptak av en
+                katalogiseringsøkt og levere loggfilen som en del av en
+                oppgave.
+            </p>
+            <p>
+                Når du starter et opptak, åpnes en samtykkedialog som
+                forklarer hva som registreres:
+            </p>
+            <ul>
+                <li>Hvilke entiteter du oppretter og i hvilken rekkefølge</li>
+                <li>Hvordan du kobler entiteter med relasjoner</li>
+                <li>Søk du utfører og resultater du velger</li>
+                <li>Hvilke klasser og entiteter du utforsker</li>
+            </ul>
+            <p>
+                Passord, påloggingsdetaljer, personlig informasjon og selve
+                teksten du skriver i beskrivelsesfelt registreres
+                <em>ikke</em>. Loggen sendes ikke noe sted automatisk — den
+                blir værende i nettleseren din til du laster den ned.
+            </p>
+            <p>
+                Under opptak viser knappen en pulserende
+                <strong>Logger</strong>-indikator. Klikk på den for å stoppe
+                opptaket. En dialog viser deretter antall registrerte
+                interaksjoner og øktens varighet, lar deg eventuelt skrive
+                inn navn eller student-id, og tilbyr <strong>Last ned
+                logg</strong> for å lagre økten som en JSON-fil du kan levere
+                til instruktøren din.
+            </p>
+            <div class="info-box">
+                <strong>Merk:</strong> Hvis nettleseren lukkes mens et opptak
+                pågår, tilbyr EntEdit å gjenopprette det ulagrede opptaket
+                neste gang du åpner applikasjonen — du kan da laste det ned
+                eller forkaste det.
+            </div>
+
             <!-- 5. RDF, URI-ER OG ETIKETTER -->
             <h2 id="rdf-export">5. RDF, URI-er og etiketter</h2>
 
@@ -1041,6 +1106,31 @@
 
             <div class="info-box tip">
                 <strong>Tips:</strong> Turtle-filer kan åpnes i en hvilken som helst teksteditor eller lastes inn i andre RDF-verktøy og triple stores. Dette gjør eksporten nyttig for sikkerhetskopier, datadeling og interoperabilitet med andre systemer.
+            </div>
+
+            <h3 id="importing-rdf">5.6 Importere RDF-data</h3>
+
+            <p>
+                <strong>Importer</strong>-knappen (pil opp) i
+                applikasjons-headeren laster en RDF-fil direkte inn i
+                databasen. Støttede formater er Turtle (<code>.ttl</code>),
+                N-Triples (<code>.nt</code>) og RDF/XML
+                (<code>.rdf</code>).
+            </p>
+            <p>
+                Velg en fil og klikk <strong>Importer</strong>. Importerte
+                tripler legges til i databasen — eksisterende data erstattes
+                ikke. Dialogen lar deg også angi hvilken navngitt graf det
+                skal importeres til; feltet er forhåndsutfylt med en
+                standardverdi, og du kan endre det eller la det stå tomt for
+                å importere til standardgrafen.
+            </p>
+            <div class="info-box tip">
+                <strong>Tips:</strong> Import er en praktisk måte å laste en
+                tidligere eksportert Turtle-fil tilbake i databasen, eller å
+                laste inn eksempeldata uten å bruke GraphDB Workbench.
+                Dataene bør bruke samme RDA-vokabular som resten av databasen
+                — se <a href="setup.html">oppsettguiden for database</a>.
             </div>
 
             <!-- 6. EKSEMPEL 1: THE ROAD -->
@@ -1794,8 +1884,8 @@
                 manifestasjon til <em>fire</em> uttrykk — ett for hver
                 roman som er inneholdt i omnibus. Relasjonen
                 "har uttrykk" kan brukes flere ganger på samme
-                manifestasjon. Dette er the mange-til-mange naturen av
-                uttrykk–manifestasjon relasjonen i WEMI.
+                manifestasjon. Dette er mange-til-mange-naturen til
+                uttrykk–manifestasjon-relasjonen i WEMI.
             </div>
 
             <h3 id="omnibus-steps">

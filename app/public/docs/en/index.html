@@ -370,6 +370,8 @@
                             <li><a href="#editing-entities">Creating and editing entities</a></li>
                             <li><a href="#more-actions">More actions menu</a></li>
                             <li><a href="#search-interface">The Search interface</a></li>
+                            <li><a href="#refreshing-data">Refreshing data</a></li>
+                            <li><a href="#interaction-logging">Interaction logging</a></li>
                         </ol>
                     </li>
                     <li>
@@ -380,6 +382,7 @@
                             <li><a href="#auto-generation">Auto-generation of URIs and labels</a></li>
                             <li><a href="#what-is-turtle">Turtle format</a></li>
                             <li><a href="#exporting-turtle">Exporting data as Turtle</a></li>
+                            <li><a href="#importing-rdf">Importing RDF data</a></li>
                         </ol>
                     </li>
                     <li>
@@ -461,15 +464,16 @@
                     <th>Description</th>
                 </tr>
                 <tr>
-                    <td><strong>Demo database</strong></td>
+                    <td><strong>Online demo</strong></td>
                     <td>
-                        <code
-                            >http://dijon.idi.ntnu.no:8080/repositories/EntEdit</code
+                        <a href="http://entedit.org/?demo"
+                            >entedit.org/?demo</a
                         >
                     </td>
                     <td>
-                        A shared demo instance pre-loaded with sample data. Good
-                        for trying out the application without any local setup.
+                        A hosted read-only demo pre-loaded with sample data —
+                        just open the URL in your browser, no setup or
+                        configuration needed. Editing is disabled.
                     </td>
                 </tr>
                 <tr>
@@ -891,6 +895,65 @@
                 catalogued.
             </p>
 
+            <h3 id="refreshing-data">4.5 Refreshing data</h3>
+
+            <p>
+                EntEdit caches data from the database to keep browsing fast.
+                If several people catalogue in the same database, or data is
+                changed outside the application (e.g. through the GraphDB
+                Workbench), your view can become out of date. The
+                <strong>Refresh</strong> button (circular arrow) in the
+                application header reloads all data from the database.
+            </p>
+            <p>
+                If you have unsaved changes in the entity editor, a dialog
+                asks whether to <strong>Save &amp; refresh</strong> (save
+                your changes first, then reload) or <strong>Discard &amp;
+                refresh</strong> (throw away the unsaved changes and
+                reload).
+            </p>
+
+            <h3 id="interaction-logging">4.6 Interaction logging</h3>
+
+            <p>
+                The <strong>Start logging</strong> button in the application
+                header records how you interact with EntEdit while you
+                catalogue. It is intended for teaching: an instructor may ask
+                you to record a cataloguing session and hand in the log file
+                as part of an exercise.
+            </p>
+            <p>
+                Starting a recording opens a consent dialog explaining what
+                is recorded:
+            </p>
+            <ul>
+                <li>Which entities you create and in what order</li>
+                <li>How you connect entities with relationships</li>
+                <li>Search queries you perform and results you select</li>
+                <li>Which classes and entities you browse</li>
+            </ul>
+            <p>
+                Passwords, credentials, personal information, and the actual
+                text you type into description fields are <em>not</em>
+                recorded. The log is not sent anywhere automatically — it
+                stays in your browser until you download it.
+            </p>
+            <p>
+                While recording, the button shows a pulsing
+                <strong>Logging</strong> indicator. Click it to stop the
+                recording. A dialog then shows the number of recorded
+                interactions and the session duration, lets you optionally
+                enter a name or student ID, and offers <strong>Download
+                Log</strong> to save the session as a JSON file you can
+                submit to your instructor.
+            </p>
+            <div class="info-box">
+                <strong>Note:</strong> If the browser is closed while a
+                recording is running, EntEdit offers to recover the unsaved
+                recording the next time you open the application — you can
+                then download it or discard it.
+            </div>
+
             <!-- 5. RDF, URIs, AND LABELS -->
             <h2 id="rdf-export">5. RDF, URIs, and labels</h2>
 
@@ -1053,6 +1116,32 @@
 
             <div class="info-box tip">
                 <strong>Tip:</strong> Turtle files can be opened in any text editor or loaded into other RDF tools and triple stores. This makes the export useful for backups, sharing data, and interoperability with other systems.
+            </div>
+
+            <h3 id="importing-rdf">5.6 Importing RDF data</h3>
+
+            <p>
+                The <strong>Import</strong> button (upward arrow) in the
+                application header loads an RDF file directly into the
+                database. Supported formats are Turtle (<code>.ttl</code>),
+                N-Triples (<code>.nt</code>), and RDF/XML
+                (<code>.rdf</code>).
+            </p>
+            <p>
+                Choose a file and click <strong>Import</strong>. Imported
+                triples are appended to the database — existing data is not
+                replaced. The dialog also lets you specify which named graph
+                to import into; the field is pre-filled with a default, and
+                you can change it or leave it empty to import into the
+                default graph.
+            </p>
+            <div class="info-box tip">
+                <strong>Tip:</strong> Import is a convenient way to load a
+                previously exported Turtle file back into the database, or to
+                load sample data without using the GraphDB Workbench. The
+                data should use the same RDA vocabulary as the rest of the
+                database — see the <a href="setup.html">Database Setup
+                Guide</a>.
             </div>
 
             <!-- 6. EXAMPLE 1: THE ROAD -->

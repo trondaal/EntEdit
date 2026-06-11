@@ -61,16 +61,25 @@ of time, or to update to the latest published versions later, run:
 docker compose pull
 ```
 
-This starts two services:
+This starts three services:
 
 | Service | URL | Description |
 |---|---|---|
-| Web app | http://localhost/entedit/ | EntEdit interface |
+| Web app | http://localhost/entedit/ | EntEdit interface (served by nginx) |
 | GraphDB Workbench | http://localhost:7200 | Database administration |
+| `graphdb-init` | — | One-time service that creates the repository and imports data |
 
 On first startup, the `graphdb-init` service automatically:
-1. Imports all RDF vocabulary files from `database/types/` into the `EntEdit` repository
-2. Creates the Lucene full-text indexes
+1. Creates the `EntEdit` repository with RDFS-Plus reasoning enabled
+2. Imports the vocabulary files from `database/types/` and the sample data from
+   `database/testdata/` (the samples go into a separate named graph,
+   `http://oslomet.no/abi/examples`, so they can be managed independently)
+3. Creates the Lucene full-text search indexes defined in `database/lucene_connectors/`
+
+For more detail — loading your own data, setting up a database without Docker,
+ontology requirements — see the **Database Setup Guide** in the app documentation
+([app/public/docs/en/setup.html](app/public/docs/en/setup.html), served at
+`http://localhost/entedit/docs/en/setup.html` when the app is running).
 
 When the app loads, open the configuration wizard and enter the SPARQL endpoint:
 
@@ -98,7 +107,7 @@ npm install
 npm run dev
 ```
 
-The dev server proxies `/graphdb` to `http://localhost:7200`, so the same endpoint URL works as above.
+The dev server proxies `/graphdb` to `http://localhost:7200`. Use the endpoint URL `http://localhost:7200/repositories/EntEdit`, or let the proxy handle it.
 
 Other commands (run from `app/`):
 
@@ -142,8 +151,8 @@ EntEdit/
 │   └── package.json
 ├── database/              # RDF data and GraphDB configuration
 │   ├── types/             # Vocabulary files loaded on first startup
-│   ├── graphdb/           # SPARQL connector query definitions
-│   └── lucene_connectors/ # Full-text index definitions
+│   ├── testdata/          # Sample RDF entities loaded on first startup
+│   └── lucene_connectors/ # Lucene full-text index definitions
 ├── docker/                # Docker deployment configuration
 │   └── graphdb/           # Repository definition and init script
 └── docker-compose.yml
@@ -158,8 +167,6 @@ The app stores its configuration in browser localStorage. On first run a configu
 | SPARQL endpoint | URL of the GraphDB repository |
 | Username / password | Optional, for authenticated repositories |
 | Language | Interface language (English / Norwegian) |
-
-The URL parameter `?nosearch` hides the search tab if the Lucene connector is not available.
 
 ## Tech stack
 
