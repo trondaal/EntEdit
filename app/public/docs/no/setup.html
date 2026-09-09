@@ -202,7 +202,8 @@
 
 <ul>
   <li><strong>Docker</strong> og <strong>Docker Compose</strong> — installert og kjørende på maskinen din.</li>
-  <li>EntEdit-prosjektfilene — klon prosjektet (<code>git clone https://github.com/trondaal/EntEdit.git</code>) eller last det ned som ZIP fra <a href="https://github.com/trondaal/EntEdit">GitHub-siden</a>. De trengs ikke for å bygge applikasjonen, men fordi Docker Compose bruker <code>docker-compose.yml</code> og filene i <code>database/</code> og <code>docker/</code> til å initialisere databasen ved første oppstart.</li>
+  <li>Ingenting mer. Alt en vanlig installasjon trenger er publisert på Docker Hub, inkludert dataene som initialiserer databasen.</li>
+  <li>EntEdit-prosjektfilene trengs <em>bare</em> hvis du vil endre vokabularet, eksempeldataene eller søkeindeksene — klon prosjektet (<code>git clone https://github.com/trondaal/EntEdit.git</code>) eller last det ned som ZIP fra <a href="https://github.com/trondaal/EntEdit">GitHub-siden</a>.</li>
 </ul>
 
 <div class="info-box tip">
@@ -213,9 +214,15 @@
 <!-- 3. STARTING WITH DOCKER -->
 <h2>3. Starte Docker-miljøet</h2>
 
-<p>Fra rotkatalogen til EntEdit-prosjektet, kjør:</p>
+<p>Selve Compose-filen er publisert på Docker Hub som et <a href="https://docs.docker.com/compose/how-tos/oci-artifact/">OCI-artefakt</a>, så en vanlig installasjon trenger ingen nedlastede filer i det hele tatt. Kjør denne kommandoen fra hvilken som helst katalog:</p>
 
-<pre><code>docker compose up -d</code></pre>
+<pre><code>docker compose -f oci://docker.io/trondaal/entedit-compose:latest up -d</code></pre>
+
+<p>Siden ingen Compose-fil blir liggende på disken, må du gjenta den samme <code>-f oci://...</code>-referansen i senere kommandoer som <code>down</code>, <code>logs</code> og <code>pull</code>. Hvis din versjon av Docker Compose ikke forstår <code>oci://</code>, kan du laste ned den ene Compose-filen og kjøre <code>docker compose up -d</code> i samme katalog:</p>
+
+<pre><code>curl -O https://raw.githubusercontent.com/trondaal/EntEdit/main/docker-compose.yml</code></pre>
+
+<p>Fra en klone av prosjektet gjør et vanlig <code>docker compose up -d</code> i rotkatalogen det samme.</p>
 
 <p>Dette starter tre tjenester:</p>
 
@@ -251,7 +258,7 @@
 </div>
 
 <p>
-  Første oppstart henter automatisk de ferdigbygde imagene fra Docker Hub — webapplikasjonen kjører fra det publiserte <a href="https://hub.docker.com/r/trondaal/entedit"><code>trondaal/entedit</code></a>-imaget, så ingen lokal bygging eller Node.js-installasjon er nødvendig. For å oppdatere til de nyeste publiserte imagene senere, kjør <code>docker compose pull</code>.
+  Første oppstart henter automatisk de ferdigbygde imagene fra Docker Hub — webapplikasjonen fra <a href="https://hub.docker.com/r/trondaal/entedit"><code>trondaal/entedit</code></a>, og vokabularet, eksempeldataene og repositorydefinisjonen fra <a href="https://hub.docker.com/r/trondaal/entedit-init"><code>trondaal/entedit-init</code></a> — så ingen lokal bygging eller Node.js-installasjon er nødvendig. For å oppdatere til de nyeste publiserte imagene senere, kjør <code>docker compose pull</code>.
 </p>
 
 <p>
@@ -299,7 +306,11 @@ EntEdit/<br>
 
 <h3>Legge til data før første oppstart</h3>
 
-<p>Den enkleste fremgangsmåten er å plassere RDF-filene dine i katalogen <code>database/testdata/</code> før du kjører <code>docker compose up</code> for første gang. Støttede formater:</p>
+<p>Eksempeldataene er bygget inn i initialiseringsimaget, så filer du legger i <code>database/testdata/</code> blir bare tatt med hvis du kjører fra en klone av prosjektet <em>og</em> monterer katalogen inn i initialiseringstjenesten:</p>
+
+<pre><code>docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d</code></pre>
+
+<p>Legg RDF-filene dine i <code>database/testdata/</code> før første oppstart. Støttede formater:</p>
 
 <ul>
   <li><code>.ttl</code> — Turtle</li>

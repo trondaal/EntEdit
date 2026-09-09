@@ -13,14 +13,15 @@ services:
       start_period: 30s
 
   graphdb-init:
-    image: alpine:3
-    command: sh -c "apk add --no-cache curl && sh /import-types.sh"
-    volumes:
-      - ./database/types:/import-data/types:ro
-      - ./database/testdata:/import-data/testdata:ro
-      - ./database/lucene_connectors:/sparql-updates:ro
-      - ./docker/graphdb/repositories/EntEdit/config.ttl:/repo-config.ttl:ro
-      - ./docker/graphdb/import-types.sh:/import-types.sh:ro
+    # Data, repository config and import script are baked into this image, so
+    # nothing is mounted from the source tree — `docker compose up` works from
+    # Docker Hub alone. `build` lets maintainers rebuild it after changing
+    # anything under database/ or docker/graphdb/; to iterate without
+    # rebuilding, add -f docker-compose.dev.yml to mount the local files.
+    image: trondaal/entedit-init:latest
+    build:
+      context: .
+      dockerfile: docker/init/Dockerfile
     environment:
       - GRAPHDB_URL=http://graphdb:7200
       - GRAPHDB_REPO=EntEdit

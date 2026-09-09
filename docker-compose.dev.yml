@@ -1,0 +1,16 @@
+# Maintainer override: mount database/ and docker/graphdb/ into the init service
+# so changes to the vocabulary, sample data, connector queries or import script
+# take effect without rebuilding trondaal/entedit-init.
+#
+#   docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d
+#
+# Combine with FORCE_REINIT=1 to wipe and re-import an existing repository.
+
+services:
+  graphdb-init:
+    volumes:
+      - ./database/types:/import-data/types:ro
+      - ./database/testdata:/import-data/testdata:ro
+      - ./database/lucene_connectors:/sparql-updates:ro
+      - ./docker/graphdb/repositories/EntEdit/config.ttl:/repo-config.ttl:ro
+      - ./docker/graphdb/import-types.sh:/import-types.sh:ro

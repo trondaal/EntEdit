@@ -20,110 +20,35 @@ A read-only online demo is available at **[entedit.org/?demo](http://entedit.org
 
 ## Getting started
 
-### Quick start from Docker Hub (recommended)
+### Quick start — nothing to download (recommended)
 
-Both parts of the system run from **pre-built images on Docker Hub** — the web app
-([`trondaal/entedit`](https://hub.docker.com/r/trondaal/entedit)) and the database
-([`ontotext/graphdb`](https://hub.docker.com/r/ontotext/graphdb)). Nothing is
-compiled on your machine: no Node.js, no `npm install`, no image build.
-
-You do still need this repository's *configuration* files, because Docker Compose
-reads `docker-compose.yml`, and the `database/` and `docker/` folders hold the
-vocabulary, sample data and repository definition that are loaded into GraphDB the
-first time it starts. Fetching them needs neither Git nor a build:
-
-```bash
-curl -L https://github.com/trondaal/EntEdit/archive/refs/heads/main.tar.gz | tar xz
-cd EntEdit-main
-```
-
-(On Windows, or without `curl`, use the green **Code → Download ZIP** button on the
-[GitHub page](https://github.com/trondaal/EntEdit) and unzip it instead.)
-
-Then pull the images and start everything:
-
-```bash
-docker compose pull
-docker compose up -d
-```
-
-Open **http://localhost/entedit/** and, in the configuration wizard, enter the
-SPARQL endpoint:
-
-```
-http://localhost/graphdb/repositories/EntEdit
-```
-
-That is the whole setup — the rest of this section explains the same steps in more
-detail, and what to do if you would rather build the app from source.
-
-### Docker setup in detail
-
-Docker Compose starts the web app and a pre-configured GraphDB database together.
-The web app runs from the **pre-built image on
-[Docker Hub](https://hub.docker.com/r/trondaal/entedit)** — you do **not** need to
-build anything yourself or have Node.js installed.
-
-> The commands below are run from a **terminal** (Command Prompt or PowerShell on
-> Windows, Terminal on macOS/Linux), from inside the project folder.
+Everything comes from Docker Hub: the web app, the GraphDB database, and a
+one-shot initialiser image that carries the vocabulary, sample data and
+repository definition. There is no source code to download, nothing to build,
+and no Node.js or Git needed — just Docker.
 
 **1. Install Docker.** If you don't already have it, install
 [Docker Desktop](https://www.docker.com/products/docker-desktop/) (Windows, macOS,
 Linux) — it includes Docker Engine and Compose. See the
 [official installation guide](https://docs.docker.com/get-docker/) for details.
 
-**2. Get the configuration files.** Download this repository — not to build the
-app, but because Compose needs the `docker-compose.yml` plus the `database/` and
-`docker/` files that initialise the GraphDB database on first run:
+**2. Start the system** with a single command, from any folder:
 
 ```bash
-git clone https://github.com/trondaal/EntEdit.git
-cd EntEdit
+docker compose -f oci://docker.io/trondaal/entedit-compose:latest up -d
 ```
 
-(No Git? Use the green **Code → Download ZIP** button on the
-[GitHub page](https://github.com/trondaal/EntEdit) and unzip it instead.)
-
-**3. Get the images from Docker Hub.** This pulls `trondaal/entedit` and the
-GraphDB image, and is also how you update to the latest published versions later:
+The Compose file itself is published to Docker Hub as an
+[OCI artifact](https://docs.docker.com/compose/how-tos/oci-artifact/), which is
+why no local file is required. There is no compose file on disk afterwards, so
+repeat the same `-f oci://...` reference for other commands:
 
 ```bash
-docker compose pull
+docker compose -f oci://docker.io/trondaal/entedit-compose:latest down
 ```
 
-**4. Start it.** From the project root:
-
-```bash
-docker compose up -d
-```
-
-Compose uses the images pulled in the previous step — no local build. (The
-`build:` entry in `docker-compose.yml` exists so maintainers can run
-`docker compose build`; with an image available, Compose prefers pulling over
-building.) To build the app from source yourself instead, see
-[Local development](#local-development).
-
-This starts three services:
-
-| Service | URL | Description |
-|---|---|---|
-| Web app | http://localhost/entedit/ | EntEdit interface (served by nginx) |
-| GraphDB Workbench | http://localhost:7200 | Database administration |
-| `graphdb-init` | — | One-time service that creates the repository and imports data |
-
-On first startup, the `graphdb-init` service automatically:
-1. Creates the `EntEdit` repository with RDFS-Plus reasoning enabled
-2. Imports the vocabulary files from `database/types/` and the sample data from
-   `database/testdata/` (the samples go into a separate named graph,
-   `http://oslomet.no/abi/examples`, so they can be managed independently)
-3. Creates the Lucene full-text search indexes defined in `database/lucene_connectors/`
-
-For more detail — loading your own data, setting up a database without Docker,
-ontology requirements — see the **Database Setup Guide** in the app documentation
-([app/public/docs/en/setup.html](app/public/docs/en/setup.html), served at
-`http://localhost/entedit/docs/en/setup.html` when the app is running).
-
-When the app loads, open the configuration wizard and enter the SPARQL endpoint:
+**3. Open the app** at **http://localhost/entedit/** and enter this SPARQL
+endpoint in the configuration wizard:
 
 ```
 http://localhost/graphdb/repositories/EntEdit
@@ -133,10 +58,70 @@ http://localhost/graphdb/repositories/EntEdit
 > Accessing GraphDB on port 7200 from the browser causes a CORS error because it is a different origin.
 > The nginx proxy forwards the request server-side, avoiding this entirely.
 
-GraphDB data is persisted in a Docker volume and survives restarts. To stop:
+That's it. Three images are pulled the first time —
+[`trondaal/entedit`](https://hub.docker.com/r/trondaal/entedit) (web app),
+[`ontotext/graphdb`](https://hub.docker.com/r/ontotext/graphdb) (database) and
+[`trondaal/entedit-init`](https://hub.docker.com/r/trondaal/entedit-init)
+(first-run data import).
+
+**If `oci://` is not supported** by your Docker Compose version, download the one
+compose file instead and run it from the folder you put it in — still no source
+checkout, still nothing built locally:
 
 ```bash
-docker compose down
+curl -O https://raw.githubusercontent.com/trondaal/EntEdit/main/docker-compose.yml
+docker compose up -d
+```
+
+### What happens on first startup
+
+Three services are started:
+
+| Service | URL | Description |
+|---|---|---|
+| Web app | http://localhost/entedit/ | EntEdit interface (served by nginx) |
+| GraphDB Workbench | http://localhost:7200 | Database administration |
+| `graphdb-init` | — | One-time service that creates the repository and imports data |
+
+The `graphdb-init` service runs once and then exits, after it has:
+1. Created the `EntEdit` repository with RDFS-Plus reasoning enabled
+2. Imported the vocabulary files and the sample data (the samples go into a
+   separate named graph, `http://oslomet.no/abi/examples`, so they can be managed
+   independently)
+3. Created the Lucene full-text search indexes
+
+It marks the repository as initialised, so later restarts skip the import.
+GraphDB data is persisted in a Docker volume and survives restarts. To wipe the
+data and re-import from scratch, restart the init service with `FORCE_REINIT=1`.
+
+For more detail — loading your own data, setting up a database without Docker,
+ontology requirements — see the **Database Setup Guide** in the app documentation
+([app/public/docs/en/setup.html](app/public/docs/en/setup.html), served at
+`http://localhost/entedit/docs/en/setup.html` when the app is running).
+
+### Running from a source checkout
+
+Useful if you want to change the vocabulary, sample data or connector
+definitions. Clone the repository and start Compose from the project root:
+
+```bash
+git clone https://github.com/trondaal/EntEdit.git
+cd EntEdit
+docker compose up -d
+```
+
+This still pulls the published images. To make Compose use your local
+`database/` and `docker/graphdb/` files instead of the ones baked into
+`trondaal/entedit-init`, add the development override:
+
+```bash
+docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d
+```
+
+To build the web app image from source instead of pulling it:
+
+```bash
+docker compose build web
 ```
 
 ### Local development
@@ -161,22 +146,59 @@ npm run preview  # Preview production build locally
 
 ## Publishing to Docker Hub
 
-The web app image is published as `trondaal/entedit`. To build and push a new
-release (maintainers only):
+Maintainers only. Three artifacts make up a release, and together they are what
+lets users start the system without downloading anything from GitHub:
+
+| Artifact | Contents | Rebuild when |
+|---|---|---|
+| `trondaal/entedit` | Web app (nginx + built React bundle) | `app/` changes |
+| `trondaal/entedit-init` | Vocabulary, sample data, repository config, import script | `database/` or `docker/graphdb/` changes |
+| `trondaal/entedit-compose` | The Compose file itself, as an OCI artifact | `docker-compose.yml` changes |
 
 ```bash
 docker login                          # use a Personal Access Token
-
 docker buildx create --use            # once, creates a multi-arch builder
+```
+
+**Web app image** — built from `app/`:
+
+```bash
 docker buildx build --platform linux/amd64,linux/arm64 \
   -t trondaal/entedit:1.0.0 -t trondaal/entedit:latest \
   --push ./app
 ```
 
-This builds for both `amd64` (Intel/AMD) and `arm64` (Apple Silicon / ARM
-servers) and pushes in one step. Multi-arch images cannot be loaded into the
-local Docker engine, so they go straight to the registry via `--push`. Always
-publish a versioned tag (e.g. `1.0.0`) alongside `latest`.
+**Init image** — build context is the project root, so that `database/` and
+`docker/graphdb/` can be copied in:
+
+```bash
+docker buildx build --platform linux/amd64,linux/arm64 \
+  -f docker/init/Dockerfile \
+  -t trondaal/entedit-init:1.0.0 -t trondaal/entedit-init:latest \
+  --push .
+```
+
+Both build for `amd64` (Intel/AMD) and `arm64` (Apple Silicon / ARM servers) and
+push in one step. Multi-arch images cannot be loaded into the local Docker
+engine, so they go straight to the registry via `--push`. Always publish a
+versioned tag (e.g. `1.0.0`) alongside `latest`.
+
+**Compose file** — published as an OCI artifact so users can run the project
+straight from Docker Hub. Publish it *after* the images above, from the project
+root:
+
+```bash
+docker compose publish trondaal/entedit-compose:latest
+```
+
+Publishing requires the Compose file to be free of bind mounts, which is why
+`graphdb-init` gets its data from the init image rather than from mounted
+folders; the mounts live in `docker-compose.dev.yml` instead, which is not
+published. Verify a release with:
+
+```bash
+docker compose -f oci://docker.io/trondaal/entedit-compose:latest up -d
+```
 
 ## Repository structure
 
@@ -196,8 +218,11 @@ EntEdit/
 │   ├── testdata/          # Sample RDF entities loaded on first startup
 │   └── lucene_connectors/ # Lucene full-text index definitions
 ├── docker/                # Docker deployment configuration
-│   └── graphdb/           # Repository definition and init script
-└── docker-compose.yml
+│   ├── graphdb/           # Repository definition and init script
+│   └── init/              # Dockerfile for the trondaal/entedit-init image
+├── tools/                 # Admin scripts (bulk repository provisioning)
+├── docker-compose.yml     # Published to Docker Hub as an OCI artifact
+└── docker-compose.dev.yml # Maintainer override: mount database/ into the init service
 ```
 
 ## Configuration

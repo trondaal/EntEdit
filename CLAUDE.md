@@ -47,7 +47,9 @@ EntEdit/
 │   ├── lucene_connectors/ # Lucene index configurations
 │   └── testdata/          # Sample RDF entities for testing
 ├── docker/                # Docker deployment configs
-│   └── graphdb/           # Repository definition + init script
+│   ├── graphdb/           # Repository definition + init script
+│   └── init/              # Dockerfile for trondaal/entedit-init (bakes in
+│                          #   database/ + docker/graphdb/ so users need no checkout)
 ├── docs/                   # → served from app/public/docs/
 │   ├── en/                 # English docs (primary/canonical)
 │   ├── no/                 # Norwegian docs (translation)
@@ -55,7 +57,8 @@ EntEdit/
 │   └── setup.html          # Language redirector
 ├── tools/                 # Shared admin scripts (create-student-repos.sh)
 ├── scripts/               # Ad hoc scripts (gitignored, not for sharing)
-├── docker-compose.yml
+├── docker-compose.yml     # No bind mounts — published to Docker Hub as an OCI artifact
+├── docker-compose.dev.yml # Maintainer override: mounts database/ into graphdb-init
 └── CLAUDE.md
 ```
 
@@ -225,6 +228,23 @@ to the redirectors' JS and to `AppHeader.tsx`'s help button URL logic, and add a
 for the new language in `docs/glossary.json`.
 
 Vite base path is `/entedit/`, so dev server serves docs at `/entedit/docs/{lang}/`.
+
+### Docker Distribution
+
+Users start the system entirely from Docker Hub — no GitHub download:
+`docker compose -f oci://docker.io/trondaal/entedit-compose:latest up -d`.
+That requires three published artifacts: `trondaal/entedit` (web app),
+`trondaal/entedit-init` (alpine + curl with `database/` and `docker/graphdb/`
+baked in, built from `docker/init/Dockerfile` with the project root as context),
+and `trondaal/entedit-compose` (the Compose file as an OCI artifact, via
+`docker compose publish`).
+
+`docker-compose.yml` must therefore stay free of bind mounts — OCI publishing
+rejects them. Local `database/` files are mounted through `docker-compose.dev.yml`
+instead; use it whenever testing vocabulary, testdata or connector changes,
+otherwise the baked-in copies from the init image are used. Changes under
+`database/` or `docker/graphdb/` only reach users after `trondaal/entedit-init`
+is rebuilt and pushed.
 
 ### Provisioning Repositories for Teaching
 
