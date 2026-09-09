@@ -20,12 +20,49 @@ A read-only online demo is available at **[entedit.org/?demo](http://entedit.org
 
 ## Getting started
 
-### With Docker (recommended)
+### Quick start from Docker Hub (recommended)
 
-The easiest way to run EntEdit is with Docker Compose, which starts the web app
-and a pre-configured GraphDB database together. The web app runs from a
-**pre-built image on [Docker Hub](https://hub.docker.com/r/trondaal/entedit)** —
-you do **not** need to build anything yourself or have Node.js installed.
+Both parts of the system run from **pre-built images on Docker Hub** — the web app
+([`trondaal/entedit`](https://hub.docker.com/r/trondaal/entedit)) and the database
+([`ontotext/graphdb`](https://hub.docker.com/r/ontotext/graphdb)). Nothing is
+compiled on your machine: no Node.js, no `npm install`, no image build.
+
+You do still need this repository's *configuration* files, because Docker Compose
+reads `docker-compose.yml`, and the `database/` and `docker/` folders hold the
+vocabulary, sample data and repository definition that are loaded into GraphDB the
+first time it starts. Fetching them needs neither Git nor a build:
+
+```bash
+curl -L https://github.com/trondaal/EntEdit/archive/refs/heads/main.tar.gz | tar xz
+cd EntEdit-main
+```
+
+(On Windows, or without `curl`, use the green **Code → Download ZIP** button on the
+[GitHub page](https://github.com/trondaal/EntEdit) and unzip it instead.)
+
+Then pull the images and start everything:
+
+```bash
+docker compose pull
+docker compose up -d
+```
+
+Open **http://localhost/entedit/** and, in the configuration wizard, enter the
+SPARQL endpoint:
+
+```
+http://localhost/graphdb/repositories/EntEdit
+```
+
+That is the whole setup — the rest of this section explains the same steps in more
+detail, and what to do if you would rather build the app from source.
+
+### Docker setup in detail
+
+Docker Compose starts the web app and a pre-configured GraphDB database together.
+The web app runs from the **pre-built image on
+[Docker Hub](https://hub.docker.com/r/trondaal/entedit)** — you do **not** need to
+build anything yourself or have Node.js installed.
 
 > The commands below are run from a **terminal** (Command Prompt or PowerShell on
 > Windows, Terminal on macOS/Linux), from inside the project folder.
@@ -47,19 +84,24 @@ cd EntEdit
 (No Git? Use the green **Code → Download ZIP** button on the
 [GitHub page](https://github.com/trondaal/EntEdit) and unzip it instead.)
 
-**3. Start it.** From the project root:
+**3. Get the images from Docker Hub.** This pulls `trondaal/entedit` and the
+GraphDB image, and is also how you update to the latest published versions later:
+
+```bash
+docker compose pull
+```
+
+**4. Start it.** From the project root:
 
 ```bash
 docker compose up -d
 ```
 
-Compose automatically pulls the `trondaal/entedit` image (and the GraphDB image)
-from Docker Hub the first time — no local build needed. To fetch the images ahead
-of time, or to update to the latest published versions later, run:
-
-```bash
-docker compose pull
-```
+Compose uses the images pulled in the previous step — no local build. (The
+`build:` entry in `docker-compose.yml` exists so maintainers can run
+`docker compose build`; with an image available, Compose prefers pulling over
+building.) To build the app from source yourself instead, see
+[Local development](#local-development).
 
 This starts three services:
 

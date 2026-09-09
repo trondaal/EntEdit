@@ -53,6 +53,7 @@ EntEdit/
 │   ├── no/                 # Norwegian docs (translation)
 │   ├── index.html          # Language redirector (reads localStorage)
 │   └── setup.html          # Language redirector
+├── tools/                 # Shared admin scripts (create-student-repos.sh)
 ├── scripts/               # Ad hoc scripts (gitignored, not for sharing)
 ├── docker-compose.yml
 └── CLAUDE.md
@@ -224,6 +225,25 @@ to the redirectors' JS and to `AppHeader.tsx`'s help button URL logic, and add a
 for the new language in `docs/glossary.json`.
 
 Vite base path is `/entedit/`, so dev server serves docs at `/entedit/docs/{lang}/`.
+
+### Provisioning Repositories for Teaching
+
+`tools/create-student-repos.sh` creates and initializes one GraphDB repository per
+student group on any GraphDB server — same procedure as the Docker init, but
+parameterized:
+
+```
+./tools/create-student-repos.sh -e http://host:7200 -p VBINF6000-H26- -n 12
+```
+
+Names are `<prefix><zero-padded group number>` (`VBINF6000-H26-01` … `-12`).
+Each repository is created from `docker/graphdb/repositories/EntEdit/config.ttl`
+(repository ID and label substituted), loaded with `database/types`, and given the
+Lucene connectors from `database/lucene_connectors`; test data is imported only with
+`--testdata`. Repositories carrying the init marker are skipped unless `--force`.
+When GraphDB security is enabled, the script merges `READ_REPO_`/`WRITE_REPO_`
+authorities for the new repositories into the server's free-access list so students
+need no login (`--access read|write|none`). Run `--help` for all options.
 
 ### Configuration
 
