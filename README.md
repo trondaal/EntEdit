@@ -38,6 +38,11 @@ Linux) — it includes Docker Engine and Compose. See the
 docker compose -f oci://docker.io/trondaal/entedit-compose:latest up -d
 ```
 
+> **Where do I type this?** In a terminal — Terminal on macOS/Linux, Command
+> Prompt or PowerShell on Windows. If you would rather not leave Docker Desktop,
+> it has a terminal built in: click the **Terminal** button in the bottom-right
+> corner of the window, next to the version number, and paste the command there.
+
 The Compose file itself is published to Docker Hub as an
 [OCI artifact](https://docs.docker.com/compose/how-tos/oci-artifact/), which is
 why no local file is required. There is no compose file on disk afterwards, so

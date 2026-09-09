@@ -218,6 +218,10 @@
 
 <pre><code>docker compose -f oci://docker.io/trondaal/entedit-compose:latest up -d</code></pre>
 
+<div class="info-box tip">
+  <strong>Hvor skriver jeg dette?</strong> I et terminalvindu — Terminal på macOS og Linux, Ledetekst (Command Prompt) eller PowerShell på Windows. Vil du helst slippe å forlate Docker Desktop, har programmet en innebygd terminal: klikk <strong>Terminal</strong>-knappen nederst til høyre i vinduet, ved siden av versjonsnummeret, og lim inn kommandoen der.
+</div>
+
 <p>Siden ingen Compose-fil blir liggende på disken, må du gjenta den samme <code>-f oci://...</code>-referansen i senere kommandoer som <code>down</code>, <code>logs</code> og <code>pull</code>. Hvis din versjon av Docker Compose ikke forstår <code>oci://</code>, kan du laste ned den ene Compose-filen og kjøre <code>docker compose up -d</code> i samme katalog:</p>
 
 <pre><code>curl -O https://raw.githubusercontent.com/trondaal/EntEdit/main/docker-compose.yml</code></pre>

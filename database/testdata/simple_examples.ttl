@@ -1,0 +1,34 @@
+@prefix entedit: <http://oslomet.no/abi/vocab#> .
+@prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
+@prefix rdaao: <http://rdaregistry.info/Elements/a/object/> .
+@prefix rdac: <http://rdaregistry.info/Elements/c/> .
+@prefix rdaco: <http://rdaregistry.info/termList/RDAContentType/> .
+@prefix rdact: <http://rdaregistry.info/termList/RDACarrierType/> .
+@prefix rdaed: <http://rdaregistry.info/Elements/e/datatype/> .
+@prefix rdaeo: <http://rdaregistry.info/Elements/e/object/> .
+@prefix rdamd: <http://rdaregistry.info/Elements/m/datatype/> .
+@prefix rdamo: <http://rdaregistry.info/Elements/m/object/> .
+@prefix rdamt: <http://rdaregistry.info/termList/RDAMediaType/> .
+@prefix rdat: <http://rdaregistry.info/termList/> .
+@prefix rdawd: <http://rdaregistry.info/Elements/w/datatype/> .
+@prefix rdawo: <http://rdaregistry.info/Elements/w/object/> .
+@prefix rdaxd: <http://rdaregistry.info/Elements/x/datatype/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vtp: <https://schema.nb.no/Bibliographic/Values/> .
+
+<http://viaf.org/viaf/29558386>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/29558386" ;
+    rdaad:P50413 "McCarthy, Cormac" ;
+    rdfs:label "McCarthy, Cormac" ;
+    rdaad:P50339 "1933-2023" .
+
+<http://viaf.org/viaf/214012164>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/214012164" ;
+    rdawd:P10223 "No country for old men" ;
+    rdfs:label "No country for old men (McCarthy, Cormac)" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/29558386> .
