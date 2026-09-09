@@ -214,19 +214,13 @@
 <!-- 3. STARTING WITH DOCKER -->
 <h2>3. Starting the Docker environment</h2>
 
-<p>The Compose file itself is published to Docker Hub as an <a href="https://docs.docker.com/compose/how-tos/oci-artifact/">OCI artifact</a>, so a standard installation needs no downloaded files at all. Run this from any folder:</p>
+<p>Start the whole system with a single command, run from any folder:</p>
 
 <pre><code>docker compose -f oci://docker.io/trondaal/entedit-compose:latest up -d</code></pre>
 
 <div class="info-box tip">
   <strong>Where do I type this?</strong> In a terminal — Terminal on macOS and Linux, Command Prompt or PowerShell on Windows. If you would rather not leave Docker Desktop, it has a terminal built in: click the <strong>Terminal</strong> button in the bottom-right corner of the window, next to the version number, and paste the command there.
 </div>
-
-<p>Because no Compose file is left on disk, repeat the same <code>-f oci://...</code> reference for later commands such as <code>down</code>, <code>logs</code> and <code>pull</code>. If your version of Docker Compose does not understand <code>oci://</code>, download the single Compose file and run <code>docker compose up -d</code> in the same folder:</p>
-
-<pre><code>curl -O https://raw.githubusercontent.com/trondaal/EntEdit/main/docker-compose.yml</code></pre>
-
-<p>From a checkout of the repository, a plain <code>docker compose up -d</code> in the project root does the same thing.</p>
 
 <p>This starts three services:</p>
 
@@ -254,7 +248,7 @@
 </table>
 
 <p>
-  When using the Docker setup, configure EntEdit with the endpoint URL <code>http://localhost/graphdb/repositories/EntEdit</code>. The nginx proxy forwards requests to GraphDB, which avoids cross-origin (CORS) issues. Do not use <code>http://localhost:7200/...</code> directly as the endpoint — being a different origin, it fails with a CORS error in the browser.
+  When using the Docker setup, configure EntEdit with the endpoint URL <code>http://localhost/graphdb/repositories/EntEdit</code>.
 </p>
 
 <div class="info-box">
@@ -262,11 +256,37 @@
 </div>
 
 <p>
-  The first start automatically pulls the pre-built images from Docker Hub — the web application from <a href="https://hub.docker.com/r/trondaal/entedit"><code>trondaal/entedit</code></a> and the vocabulary, sample data and repository definition from <a href="https://hub.docker.com/r/trondaal/entedit-init"><code>trondaal/entedit-init</code></a> — so no local build or Node.js installation is needed. To update to the latest published images later, run <code>docker compose pull</code>.
+  The first start automatically pulls the pre-built images from Docker Hub — the web application from <a href="https://hub.docker.com/r/trondaal/entedit"><code>trondaal/entedit</code></a> and the vocabulary, sample data and repository definition from <a href="https://hub.docker.com/r/trondaal/entedit-init"><code>trondaal/entedit-init</code></a> — so no local build or Node.js installation is needed.
 </p>
 
 <p>
-  GraphDB data is persisted in a Docker volume and survives restarts. To stop the services, run <code>docker compose down</code>.
+  GraphDB data is persisted in a Docker volume and survives restarts.
+</p>
+
+<h3>Stopping, updating and other commands</h3>
+
+<p>
+  Everything above came from Docker Hub, including the Compose file itself, which is published there as an <a href="https://docs.docker.com/compose/how-tos/oci-artifact/">OCI artifact</a>. That is why nothing had to be downloaded — and it also means there is no Compose file in your folder for later commands to read. Repeat the same <code>-f oci://...</code> reference each time:
+</p>
+
+<ul>
+  <li>Stop the services: <code>docker compose -f oci://docker.io/trondaal/entedit-compose:latest down</code></li>
+  <li>Update to the newest published images: <code>docker compose -f oci://docker.io/trondaal/entedit-compose:latest pull</code></li>
+  <li>See what the services are doing: <code>docker compose -f oci://docker.io/trondaal/entedit-compose:latest logs -f</code></li>
+</ul>
+
+<p>
+  If you would rather have a file on disk — or if your version of Docker Compose does not understand <code>oci://</code> — download the single Compose file into a folder of its own and leave the <code>-f oci://...</code> part out of every command. A checkout of the repository works the same way: run the commands in the project root.
+</p>
+
+<pre><code>curl -O https://raw.githubusercontent.com/trondaal/EntEdit/main/docker-compose.yml
+docker compose up -d</code></pre>
+
+
+<h3>Why not <code>localhost:7200</code>?</h3>
+
+<p>
+  GraphDB Workbench lives at <code>http://localhost:7200</code> and is where you administer the database, but it is not the address EntEdit should use as its endpoint. A browser treats port 7200 as a different site — a different <em>origin</em> — from EntEdit itself, and blocks the requests with a CORS error. The address <code>http://localhost/graphdb/...</code> goes through nginx, which forwards the request to GraphDB server-side, so the problem never arises.
 </p>
 
 

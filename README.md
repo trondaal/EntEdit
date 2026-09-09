@@ -43,15 +43,6 @@ docker compose -f oci://docker.io/trondaal/entedit-compose:latest up -d
 > it has a terminal built in: click the **Terminal** button in the bottom-right
 > corner of the window, next to the version number, and paste the command there.
 
-The Compose file itself is published to Docker Hub as an
-[OCI artifact](https://docs.docker.com/compose/how-tos/oci-artifact/), which is
-why no local file is required. There is no compose file on disk afterwards, so
-repeat the same `-f oci://...` reference for other commands:
-
-```bash
-docker compose -f oci://docker.io/trondaal/entedit-compose:latest down
-```
-
 **3. Open the app** at **http://localhost/entedit/** and enter this SPARQL
 endpoint in the configuration wizard:
 
@@ -59,24 +50,11 @@ endpoint in the configuration wizard:
 http://localhost/graphdb/repositories/EntEdit
 ```
 
-> **Note:** Use the proxied URL above (via nginx on port 80), not `http://localhost:7200/...` directly.
-> Accessing GraphDB on port 7200 from the browser causes a CORS error because it is a different origin.
-> The nginx proxy forwards the request server-side, avoiding this entirely.
-
 That's it. Three images are pulled the first time —
 [`trondaal/entedit`](https://hub.docker.com/r/trondaal/entedit) (web app),
 [`ontotext/graphdb`](https://hub.docker.com/r/ontotext/graphdb) (database) and
 [`trondaal/entedit-init`](https://hub.docker.com/r/trondaal/entedit-init)
 (first-run data import).
-
-**If `oci://` is not supported** by your Docker Compose version, download the one
-compose file instead and run it from the folder you put it in — still no source
-checkout, still nothing built locally:
-
-```bash
-curl -O https://raw.githubusercontent.com/trondaal/EntEdit/main/docker-compose.yml
-docker compose up -d
-```
 
 ### What happens on first startup
 
@@ -87,6 +65,13 @@ Three services are started:
 | Web app | http://localhost/entedit/ | EntEdit interface (served by nginx) |
 | GraphDB Workbench | http://localhost:7200 | Database administration |
 | `graphdb-init` | — | One-time service that creates the repository and imports data |
+
+GraphDB Workbench on port 7200 is for database administration; it is not the
+address EntEdit uses. The endpoint stays
+`http://localhost/graphdb/repositories/EntEdit`, because a browser treats port
+7200 as a different site from EntEdit itself and blocks the requests with a CORS
+error. Port 80 goes through nginx, which forwards the request server-side, so the
+problem never arises.
 
 The `graphdb-init` service runs once and then exits, after it has:
 1. Created the `EntEdit` repository with RDFS-Plus reasoning enabled
@@ -103,6 +88,30 @@ For more detail — loading your own data, setting up a database without Docker,
 ontology requirements — see the **Database Setup Guide** in the app documentation
 ([app/public/docs/en/setup.html](app/public/docs/en/setup.html), served at
 `http://localhost/entedit/docs/en/setup.html` when the app is running).
+
+### Stopping, updating and other commands
+
+Everything came from Docker Hub, including the Compose file itself, which is
+published there as an
+[OCI artifact](https://docs.docker.com/compose/how-tos/oci-artifact/). That is why
+nothing had to be downloaded — and it also means there is no compose file in your
+folder for later commands to read. Repeat the same `-f oci://...` reference each
+time:
+
+```bash
+docker compose -f oci://docker.io/trondaal/entedit-compose:latest down     # stop
+docker compose -f oci://docker.io/trondaal/entedit-compose:latest pull     # update
+docker compose -f oci://docker.io/trondaal/entedit-compose:latest logs -f  # inspect
+```
+
+If you would rather have a file on disk — or if your version of Docker Compose
+does not understand `oci://` — download the one compose file into a folder of its
+own and leave the `-f oci://...` part out of every command:
+
+```bash
+curl -O https://raw.githubusercontent.com/trondaal/EntEdit/main/docker-compose.yml
+docker compose up -d
+```
 
 ### Running from a source checkout
 
