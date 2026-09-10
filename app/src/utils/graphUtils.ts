@@ -9,13 +9,16 @@ export function getGraphVisualizationUrl(
 ): string | null {
   try {
     const url = new URL(endpointUrl);
-    // When the endpoint is proxied through /graphdb, GraphDB Workbench
-    // is not available via the proxy — use port 7200 on the same host.
-    const baseUrl = url.pathname.startsWith("/graphdb")
-      ? `${url.protocol}//${url.hostname}:7200`
-      : `${url.protocol}//${url.host}`;
+    // The Workbench lives at the GraphDB root, which is the endpoint URL with the
+    // trailing /repositories/<id> removed. Deriving it that way keeps the link
+    // correct for every deployment: GraphDB on its own port, or behind a reverse
+    // proxy on any path, where the Workbench is served through the same proxy
+    // rather than on a port of its own.
+    const basePath = url.pathname
+      .replace(/\/repositories\/[^/]+\/?$/, "")
+      .replace(/\/$/, "");
     const encodedUri = encodeURIComponent(entityUri);
-    return `${baseUrl}/graphs-visualizations?uri=${encodedUri}`;
+    return `${url.origin}${basePath}/graphs-visualizations?uri=${encodedUri}`;
   } catch (error) {
     console.error("Failed to generate graph URL:", error);
     return null;
