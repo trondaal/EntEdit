@@ -101,7 +101,7 @@ rdawd:P10330	entedit:status "data property" ; entedit:order 6 ; rdfs:label "note
 rdaed:P20315	entedit:status "data property" ; entedit:order   1; rdfs:label "tittel"@no . #"titlepreferred"@en .
 rdaed:P20316	entedit:status "data property" ; entedit:order   2 ; rdfs:label "tittelvariant"@no . #"titlevariant"@en .
 rdaed:P20214    entedit:status "data property" ; entedit:order   3 ; rdfs:label "dato"@no . #date of expression"@en .
-rdaed:P20071	entedit:status "data property" ; entedit:order   4 ; rdfs:label "har note"@no . #"contentsnote"@en .
+rdaed:P20071	entedit:status "data property" ; entedit:order   4 ; rdfs:label "note"@no . #"contentsnote"@en .
 
 rdaeo:P20006	entedit:status "controlled property" ;
               rdfs:domain  <http://rdaregistry.info/Elements/c/C10006> ; #missing in RDA
