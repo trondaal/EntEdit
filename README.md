@@ -42,6 +42,10 @@ docker compose -f oci://docker.io/trondaal/entedit-compose:latest up -d
 > it has a terminal built in: click the **Terminal** button in the bottom-right
 > corner of the window, next to the version number, and paste the command there.
 
+Compose lists the variables the project uses and asks *"Do you want to proceed
+with these variables? [Y/n]"* — press Enter. Add `-y` to the command to skip that
+prompt, which is what you want when scripting the installation.
+
 **3. Open the app** at **http://localhost/entedit/** and enter this SPARQL
 endpoint in the configuration wizard:
 
