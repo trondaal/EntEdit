@@ -59,6 +59,8 @@ EntEdit/
 ├── scripts/               # Ad hoc scripts (gitignored, not for sharing)
 ├── docker-compose.yml     # No bind mounts — published to Docker Hub as an OCI artifact
 ├── docker-compose.dev.yml # Maintainer override: mounts database/ into graphdb-init
+├── README.md              # User-facing: the two install paths only
+├── ADVANCED.md            # Developers/admins: builds, dev setup, self-hosting, tools/
 └── CLAUDE.md
 ```
 

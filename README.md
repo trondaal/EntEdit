@@ -2,11 +2,17 @@
 
 [![License: CC BY-NC 4.0](https://licensebuttons.net/l/by-nc/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc/4.0/)
 
-A web-based editor for RDF entities, designed for cataloguing bibliographic resources using the IFLA-LRM/RDA vocabulary. EntEdit connects to a GraphDB triple store and provides a structured interface for browsing, searching, and editing Works, Expressions, Manifestations, Items, and related agents.
+A web-based editor for RDF entities, designed for cataloguing bibliographic
+resources using the IFLA-LRM/RDA vocabulary. EntEdit connects to a GraphDB triple
+store and provides a structured interface for browsing, searching, and editing
+Works, Expressions, Manifestations, Items, and related agents.
 
 ## Live demo
 
-A read-only online demo is available at **[entedit.org/?demo](http://entedit.org/?demo)** — no installation required. Explore the interface with sample bibliographic data; editing is disabled in the demo. To run your own editable instance, see [Getting started](#getting-started) below.
+A read-only online demo is available at
+**[entedit.org/?demo](http://entedit.org/?demo)** — no installation required.
+Explore the interface with sample bibliographic data; editing is disabled in the
+demo.
 
 ## Features
 
@@ -20,18 +26,19 @@ A read-only online demo is available at **[entedit.org/?demo](http://entedit.org
 
 ## Getting started
 
-### Quick start — nothing to download (recommended)
+There are two ways to run your own instance. **Option A is the one to choose**
+unless you already run GraphDB yourself or would rather not use Docker.
 
-Everything comes from Docker Hub: the web app, the GraphDB database, and a
-one-shot initialiser image that carries the vocabulary, sample data and
-repository definition.
+### Option A — Everything with Docker
 
-**1. Install Docker.** If you don't already have it, install
+The app, the database and the initial vocabulary all come from Docker Hub.
+Nothing to download, nothing to build.
+
+**1. Install Docker.** If you don't have it, install
 [Docker Desktop](https://www.docker.com/products/docker-desktop/) (Windows, macOS,
-Linux) — it includes Docker Engine and Compose. See the
-[official installation guide](https://docs.docker.com/get-docker/) for details.
+Linux) — it includes everything needed.
 
-**2. Start the system** with a single command in a terminal window:
+**2. Start it** with a single command:
 
 ```bash
 docker compose -f oci://docker.io/trondaal/entedit-compose:latest up -d
@@ -43,63 +50,22 @@ docker compose -f oci://docker.io/trondaal/entedit-compose:latest up -d
 > corner of the window, next to the version number, and paste the command there.
 
 Compose lists the variables the project uses and asks *"Do you want to proceed
-with these variables? [Y/n]"* — press Enter. Add `-y` to the command to skip that
-prompt, which is what you want when scripting the installation.
+with these variables? [Y/n]"* — press Enter.
 
-**3. Open the app** at **http://localhost/entedit/** and enter this SPARQL
-endpoint in the configuration wizard:
+**3. Open** **http://localhost/entedit/** and enter this SPARQL endpoint in the
+configuration wizard:
 
 ```
 http://localhost/graphdb/repositories/EntEdit
 ```
 
-That's it. Three images are pulled the first time —
-[`trondaal/entedit`](https://hub.docker.com/r/trondaal/entedit) (web app),
-[`ontotext/graphdb`](https://hub.docker.com/r/ontotext/graphdb) (database) and
-[`trondaal/entedit-init`](https://hub.docker.com/r/trondaal/entedit-init)
-(first-run data import).
+That's the whole installation. The first start creates the `EntEdit` repository,
+loads the RDA vocabulary and a small set of example entities, and builds the
+full-text search indexes — a minute or two, once.
 
-### What happens on first startup
-
-Three services are started:
-
-| Service | URL | Description |
-|---|---|---|
-| Web app | http://localhost/entedit/ | EntEdit interface (served by nginx) |
-| GraphDB Workbench | http://localhost:7200 | Database administration |
-| `graphdb-init` | — | One-time service that creates the repository and imports data |
-
-GraphDB Workbench on port 7200 is for database administration; it is not the
-address EntEdit uses. The endpoint stays
-`http://localhost/graphdb/repositories/EntEdit`, because a browser treats port
-7200 as a different site from EntEdit itself and blocks the requests with a CORS
-error. Port 80 goes through nginx, which forwards the request server-side, so the
-problem never arises.
-
-The `graphdb-init` service runs once and then exits, after it has:
-1. Created the `EntEdit` repository with RDFS-Plus reasoning enabled
-2. Imported the vocabulary files and the sample data (the samples go into a
-   separate named graph, `http://oslomet.no/abi/examples`, so they can be managed
-   independently)
-3. Created the Lucene full-text search indexes
-
-It marks the repository as initialised, so later restarts skip the import.
-GraphDB data is persisted in a Docker volume and survives restarts. To wipe the
-data and re-import from scratch, restart the init service with `FORCE_REINIT=1`.
-
-For more detail — loading your own data, setting up a database without Docker,
-ontology requirements — see the **Database Setup Guide** in the app documentation
-([app/public/docs/en/setup.html](app/public/docs/en/setup.html), served at
-`http://localhost/entedit/docs/en/setup.html` when the app is running).
-
-### Stopping, updating and other commands
-
-Everything came from Docker Hub, including the Compose file itself, which is
-published there as an
-[OCI artifact](https://docs.docker.com/compose/how-tos/oci-artifact/). That is why
-nothing had to be downloaded — and it also means there is no compose file in your
-folder for later commands to read. Repeat the same `-f oci://...` reference each
-time:
+**Stopping, updating, and looking at logs.** The Compose file itself lives on
+Docker Hub rather than on your disk, so later commands need the same
+`-f oci://...` reference:
 
 ```bash
 docker compose -f oci://docker.io/trondaal/entedit-compose:latest down     # stop
@@ -107,189 +73,80 @@ docker compose -f oci://docker.io/trondaal/entedit-compose:latest pull     # upd
 docker compose -f oci://docker.io/trondaal/entedit-compose:latest logs -f  # inspect
 ```
 
-If you would rather have a file on disk — or if your version of Docker Compose
-does not understand `oci://` — download the one compose file into a folder of its
-own and leave the `-f oci://...` part out of every command:
+Your data lives in a Docker volume and survives stops, restarts and updates.
 
-```bash
-curl -O https://raw.githubusercontent.com/trondaal/EntEdit/main/docker-compose.yml
-docker compose up -d
-```
+> If your version of Docker Compose does not understand `oci://`, download the
+> single Compose file into a folder of its own and run the commands there without
+> the `-f oci://...` part:
+> `curl -O https://raw.githubusercontent.com/trondaal/EntEdit/main/docker-compose.yml`
 
-### Running from a source checkout
+### Option B — The app from source, with your own GraphDB
 
-Useful if you want to change the vocabulary, sample data or connector
-definitions. Clone the repository and start Compose from the project root:
+For those who already run GraphDB, or would rather not use Docker. You will set
+up the database yourself.
+
+**1. Install Node.js.** Version 20 or newer, from
+[nodejs.org](https://nodejs.org/) — it includes `npm`, which the commands below
+use. Check what you have with `node --version`.
+
+**2. Set up a GraphDB repository.** Install
+[GraphDB](https://www.ontotext.com/products/graphdb/), create a repository, load
+the vocabulary files from `database/types/`, and create the Lucene full-text
+indexes by running the SPARQL queries in `database/lucene_connectors/`. The
+**[Database Setup Guide](http://entedit.org/docs/en/setup.html)** walks through
+each step under *Setting up your own database from scratch*.
+
+**3. Build and run the app:**
 
 ```bash
 git clone https://github.com/trondaal/EntEdit.git
-cd EntEdit
-docker compose up -d
-```
-
-This still pulls the published images. To make Compose use your local
-`database/` and `docker/graphdb/` files instead of the ones baked into
-`trondaal/entedit-init`, add the development override:
-
-```bash
-docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d
-```
-
-To build the web app image from source instead of pulling it:
-
-```bash
-docker compose build web
-```
-
-### Local development
-
-Requires Node.js 20+ and a running GraphDB instance at `http://localhost:7200` with an `EntEdit` repository.
-
-```bash
-cd app
+cd EntEdit/app
 npm install
-npm run dev
+npm run build
+npm run preview
 ```
 
-Use the endpoint URL `http://localhost:7200/repositories/EntEdit`, pointing straight
-at your own GraphDB. The dev server also proxies `/graphdb` to
-`http://localhost:7200`, but prefer the direct URL: the graph visualization opens
-GraphDB Workbench, and the Workbench only renders correctly when it is reached at
-the root of its own origin. Going direct also leaves your GraphDB installation
-completely untouched — the app never writes to Workbench settings across origins.
-
-Other commands (run from `app/`):
-
-```bash
-npm run build    # Production build
-npm run lint     # Run ESLint
-npm run preview  # Preview production build locally
-```
-
-### Self-hosting with your own GraphDB
-
-Two topologies work, and the choice affects what the admin has to configure.
-
-**GraphDB proxied under the app's origin** (e.g. app at `https://example.org/entedit/`,
-database at `https://example.org/graphdb/repositories/EntEdit`) is the better option:
-no CORS, no port number, and it keeps working under HTTPS. Two things need attention:
-
-- The Workbench serves `<base href="/">`, so under a sub-path its assets resolve
-  against the site root and fail to load. Either set `graphdb.external-url` (and
-  `graphdb.vhosts`, if GraphDB is reachable at several addresses) on the GraphDB
-  server, or rewrite the tag in the proxy — `Substitute` in Apache, `sub_filter` in
-  nginx, as [app/nginx.conf](app/nginx.conf) does for the Docker image.
-- Keep the SPARQL path out of any such filter. Rewriting requires disabling upstream
-  compression, and you do not want that for query results — match
-  `/graphdb/repositories/` separately and proxy it untouched.
-
-**GraphDB on its own host or port** works with no proxy configuration at all, provided
-CORS is enabled on the GraphDB server. The Workbench sits at the root of its own
-origin, so the visualization is correct as-is. The one difference: users must select
-their repository once in the Workbench, because the app can only pre-select it when
-both are served from the same origin.
-
-## Publishing to Docker Hub
-
-Maintainers only. Three artifacts make up a release, and together they are what
-lets users start the system without downloading anything from GitHub:
-
-| Artifact | Contents | Rebuild when |
-|---|---|---|
-| `trondaal/entedit` | Web app (nginx + built React bundle) | `app/` changes |
-| `trondaal/entedit-init` | Vocabulary, sample data, repository config, import script | `database/` or `docker/graphdb/` changes |
-| `trondaal/entedit-compose` | The Compose file itself, as an OCI artifact | `docker-compose.yml` changes |
-
-```bash
-docker login                          # use a Personal Access Token
-docker buildx create --use            # once, creates a multi-arch builder
-```
-
-**Web app image** — built from `app/`:
-
-```bash
-docker buildx build --platform linux/amd64,linux/arm64 \
-  -t trondaal/entedit:1.0.0 -t trondaal/entedit:latest \
-  --push ./app
-```
-
-**Init image** — build context is the project root, so that `database/` and
-`docker/graphdb/` can be copied in:
-
-```bash
-docker buildx build --platform linux/amd64,linux/arm64 \
-  -f docker/init/Dockerfile \
-  -t trondaal/entedit-init:1.0.0 -t trondaal/entedit-init:latest \
-  --push .
-```
-
-Both build for `amd64` (Intel/AMD) and `arm64` (Apple Silicon / ARM servers) and
-push in one step. Multi-arch images cannot be loaded into the local Docker
-engine, so they go straight to the registry via `--push`. Always publish a
-versioned tag (e.g. `1.0.0`) alongside `latest`.
-
-**Compose file** — published as an OCI artifact so users can run the project
-straight from Docker Hub. Publish it *after* the images above, from the project
-root:
-
-```bash
-docker compose publish trondaal/entedit-compose:latest
-```
-
-Publishing requires the Compose file to be free of bind mounts, which is why
-`graphdb-init` gets its data from the init image rather than from mounted
-folders; the mounts live in `docker-compose.dev.yml` instead, which is not
-published. Verify a release with:
-
-```bash
-docker compose -f oci://docker.io/trondaal/entedit-compose:latest up -d
-```
-
-## Repository structure
+**4. Open** **http://localhost:4173/entedit/** and enter the endpoint for your own
+repository, for example:
 
 ```
-EntEdit/
-├── app/                   # Web application (React 19 + TypeScript + Vite)
-│   ├── src/
-│   │   ├── components/    # UI components
-│   │   ├── hooks/         # TanStack Query data fetching hooks
-│   │   ├── utils/         # SPARQL client, label utilities, etc.
-│   │   ├── locales/       # i18n strings (en/, no/)
-│   │   └── types/         # TypeScript type definitions
-│   ├── Dockerfile
-│   └── package.json
-├── database/              # RDF data and GraphDB configuration
-│   ├── types/             # Vocabulary files loaded on first startup
-│   ├── testdata/          # Sample RDF entities loaded on first startup
-│   └── lucene_connectors/ # Lucene full-text index definitions
-├── docker/                # Docker deployment configuration
-│   ├── graphdb/           # Repository definition and init script
-│   └── init/              # Dockerfile for the trondaal/entedit-init image
-├── tools/                 # Admin scripts (bulk repository provisioning)
-├── docker-compose.yml     # Published to Docker Hub as an OCI artifact
-└── docker-compose.dev.yml # Maintainer override: mount database/ into the init service
+http://localhost:7200/repositories/EntEdit
 ```
 
 ## Configuration
 
-The app stores its configuration in browser localStorage. On first run a configuration wizard appears. Settings can be changed at any time via the gear icon in the header.
+The app stores its configuration in the browser. A configuration wizard appears on
+first run, and the settings can be changed at any time from the gear icon in the
+header.
 
 | Setting | Description |
 |---|---|
 | SPARQL endpoint | URL of the GraphDB repository |
-| Username / password | Optional, for authenticated repositories |
+| Username / password | Optional, for repositories that require a login |
 | Language | Interface language (English / Norwegian) |
 
-## Tech stack
+## Documentation
 
-- **Frontend**: React 19, TypeScript, Vite with SWC
-- **UI**: Material-UI v7
-- **State / caching**: TanStack Query
-- **i18n**: i18next
-- **Database**: GraphDB 10 (SPARQL 1.1, Lucene full-text connector)
+- **[Cataloguing Guide](http://entedit.org/docs/en/index.html)** — the WEMI model,
+  worked examples and exercises
+- **[Database Setup Guide](http://entedit.org/docs/en/setup.html)** — loading your
+  own data, setting up a database from scratch, ontology requirements
+
+Both are also served by your own installation, under `/entedit/docs/`, and are
+available in Norwegian.
+
+## For developers and administrators
+
+Building the images, running a development server, hosting EntEdit and GraphDB on
+your own server, and provisioning repositories in bulk are covered separately in
+**[ADVANCED.md](ADVANCED.md)**.
 
 ## Licence
 
 Copyright (c) 2025 Trond Aalberg
 
-This project is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/) licence. You are free to use, share, and adapt the code for non-commercial purposes, provided you give appropriate credit. Commercial use is not permitted without explicit permission from the author.
+This project is licensed under the
+[Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/)
+licence. You are free to use, share, and adapt the code for non-commercial
+purposes, provided you give appropriate credit. Commercial use is not permitted
+without explicit permission from the author.
