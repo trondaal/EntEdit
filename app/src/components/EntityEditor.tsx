@@ -21,7 +21,7 @@ import { ContentCopy, DeleteForever, Lock } from "@mui/icons-material";
 import { useSnackbar } from "notistack";
 import { useTranslation } from "react-i18next";
 import type { SparqlEndpointConfig, RdfProperty, OrderedValue } from "../types/sparql";
-import { getGraphVisualizationUrl } from "../utils/graphUtils";
+import { getGraphVisualizationUrl, prepareWorkbenchRepository } from "../utils/graphUtils";
 import {
   useWEMIProperties,
   useAgentProperties,
@@ -329,6 +329,11 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   );
 
   const handleOpenGraph = useCallback((event: React.MouseEvent) => {
+    // Seed the Workbench's repository first, so the visualization opens on the
+    // graph rather than on its repository chooser. Done before the modifier-key
+    // check so a Ctrl/Cmd-click, which follows the href directly, benefits too.
+    prepareWorkbenchRepository(config.url);
+
     // If user is holding Ctrl/Cmd, let the default link behavior work
     if (event.ctrlKey || event.metaKey) {
       return;
@@ -340,7 +345,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
     // Open in new tab with security attributes
     window.open(getGraphUrl, "_blank", "noopener,noreferrer");
-  }, [getGraphUrl]);
+  }, [getGraphUrl, config.url]);
 
   const getPropertyLabel = useCallback((propertyUri: string) => {
     const property = properties.find((p) => p.uri === propertyUri);

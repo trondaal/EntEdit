@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { getGraphVisualizationUrl } from "./graphUtils";
+import { getGraphVisualizationUrl, getWorkbenchRepositoryId } from "./graphUtils";
 
 const ENTITY = "http://viaf.org/viaf/29558386";
 const ENCODED = encodeURIComponent(ENTITY);
@@ -48,5 +48,39 @@ describe("getGraphVisualizationUrl", () => {
 
   it("returns null for an unparseable endpoint", () => {
     expect(getGraphVisualizationUrl("not a url", ENTITY)).toBeNull();
+  });
+});
+
+describe("getWorkbenchRepositoryId", () => {
+  it("extracts the repository id from a direct endpoint", () => {
+    expect(getWorkbenchRepositoryId("http://localhost:7200/repositories/EntEdit")).toBe(
+      "EntEdit",
+    );
+  });
+
+  it("extracts it from a proxied endpoint", () => {
+    expect(
+      getWorkbenchRepositoryId("http://entedit.org/graphdb/repositories/VBINF6000-H26-G01"),
+    ).toBe("VBINF6000-H26-G01");
+  });
+
+  it("tolerates a trailing slash", () => {
+    expect(getWorkbenchRepositoryId("http://localhost/graphdb/repositories/EntEdit/")).toBe(
+      "EntEdit",
+    );
+  });
+
+  it("decodes percent-escapes in the id", () => {
+    expect(getWorkbenchRepositoryId("http://localhost:7200/repositories/my%20repo")).toBe(
+      "my repo",
+    );
+  });
+
+  it("returns null when there is no repository segment", () => {
+    expect(getWorkbenchRepositoryId("http://localhost:7200/")).toBeNull();
+  });
+
+  it("returns null for an unparseable endpoint", () => {
+    expect(getWorkbenchRepositoryId("not a url")).toBeNull();
   });
 });

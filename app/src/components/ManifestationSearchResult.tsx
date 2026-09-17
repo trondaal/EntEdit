@@ -16,7 +16,7 @@ import { useSnackbar } from "notistack";
 import { useTranslation } from "react-i18next";
 import type { ManifestationSearchResult as ManifestationSearchResultType } from "../hooks/useSearchQueries";
 import type { SparqlEndpointConfig } from "../types/sparql";
-import { getGraphVisualizationUrl } from "../utils/graphUtils";
+import { getGraphVisualizationUrl, openGraphVisualization } from "../utils/graphUtils";
 import { useExpressionsByManifestation } from "../hooks/useExpressionQueries";
 import ExpressionList from "./ExpressionList";
 import {
@@ -150,7 +150,7 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                         size="small"
                         onClick={(e) => {
                           e.stopPropagation();
-                          window.open(graphUrl, "_blank", "noopener,noreferrer");
+                          openGraphVisualization(config.url, result.uri);
                         }}
                         sx={{
                           mt: -0.5,

@@ -16,7 +16,7 @@ import { useSnackbar } from "notistack";
 import { useTranslation } from "react-i18next";
 import type { ExpressionSearchResult } from "../hooks/useSearchQueries";
 import type { SparqlEndpointConfig } from "../types/sparql";
-import { getGraphVisualizationUrl } from "../utils/graphUtils";
+import { getGraphVisualizationUrl, openGraphVisualization } from "../utils/graphUtils";
 import ManifestationList from "./ManifestationList";
 import { capitalizeFirstLetter, splitSemicolonValues, parseCreators, parseRelationships } from "../utils/textFormatters";
 import { getContentTypeIcon, typeIconSx } from "../utils/contentTypeIcons";
@@ -130,7 +130,7 @@ const Expression: React.FC<ExpressionProps> = ({
                       size="small"
                       onClick={(e) => {
                         e.stopPropagation();
-                        window.open(graphUrl, "_blank", "noopener,noreferrer");
+                        openGraphVisualization(config.url, result.uri);
                       }}
                       sx={{
                         mt: -0.5,
