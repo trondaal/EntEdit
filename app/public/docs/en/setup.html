@@ -509,7 +509,7 @@ npm run dev</code></pre>
 </ol>
 
 <p>
-  The Vite development server proxies <code>/graphdb</code> requests to <code>http://localhost:7200</code>, so you can use the endpoint URL <code>http://localhost:7200/repositories/EntEdit</code> or let the proxy handle it.
+  Use the endpoint URL <code>http://localhost:7200/repositories/EntEdit</code>, pointing straight at your own GraphDB. The Vite development server also proxies <code>/graphdb</code> requests to <code>http://localhost:7200</code>, but prefer the direct URL: the graph visualisation opens GraphDB Workbench, which renders correctly only when it is reached at the root of its own origin. Going direct also leaves your GraphDB installation untouched — EntEdit never writes to Workbench settings across origins.
 </p>
 
 <div class="info-box tip">

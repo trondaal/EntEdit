@@ -239,6 +239,15 @@ baked in, built from `docker/init/Dockerfile` with the project root as context),
 and `trondaal/entedit-compose` (the Compose file as an OCI artifact, via
 `docker compose publish`).
 
+`app/nginx.conf` must keep two things: the `sub_filter` that rewrites the
+Workbench's `<base href="/">` to `/graphdb/` (its relative assets 404 otherwise,
+giving an unstyled page), and the separate `/graphdb/repositories/` location that
+is proxied untouched — the rewrite requires `Accept-Encoding ""`, and SPARQL
+results should stay compressed. The graph-visualization link and its repository
+pre-selection (`prepareWorkbenchRepository` in `graphUtils.ts`) only work when
+GraphDB shares the app's origin; cross-origin deployments fall back to the user
+selecting a repository in the Workbench.
+
 `docker-compose.yml` must therefore stay free of bind mounts — OCI publishing
 rejects them. Local `database/` files are mounted through `docker-compose.dev.yml`
 instead; use it whenever testing vocabulary, testdata or connector changes,
