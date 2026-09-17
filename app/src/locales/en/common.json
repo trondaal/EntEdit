@@ -122,15 +122,14 @@
       "urlPlaceholder": "http://localhost/graphdb/repositories/EntEdit",
       "usernameLabel": "Username (optional)",
       "passwordLabel": "Password (optional)",
-      "popularEndpoints": "Popular SPARQL Endpoints:",
-      "graphdbDocker": "GraphDB (Docker): http://localhost/graphdb/repositories/EntEdit",
-      "graphdbDockerHint": "Default when running via Docker Compose",
-      "graphdbLocal": "GraphDB (local): http://localhost:7200/repositories/[repository]",
-      "graphdbLocalHint": "Direct GraphDB installation",
-      "fuseki": "Fuseki: http://localhost:3030/[dataset]/sparql",
-      "fusekiHint": "Apache Jena Fuseki server",
-      "stardog": "Stardog: http://localhost:5820/[database]/query",
-      "stardogHint": "Stardog graph database"
+      "popularEndpoints": "Example GraphDB endpoints:",
+      "endpointsNote": "EntEdit requires GraphDB — full-text search uses its Lucene connectors.",
+      "graphdbDocker": "http://localhost/graphdb/repositories/EntEdit",
+      "graphdbDockerHint": "Docker installation on this computer",
+      "graphdbServer": "http://dijon.idi.ntnu.no/graphdb/repositories/[repository]",
+      "graphdbServerHint": "Shared server, GraphDB behind the same address as the app",
+      "graphdbPort": "http://example.org:7200/repositories/[repository]",
+      "graphdbPortHint": "GraphDB reached directly on its own port"
     },
     "test": {
       "title": "Test Database Connection",

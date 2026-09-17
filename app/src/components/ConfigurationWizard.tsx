@@ -214,23 +214,20 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
                 </ListItem>
                 <ListItem disablePadding>
                   <ListItemText
-                    primary={t("wizard.connection.graphdbLocal")}
-                    secondary={t("wizard.connection.graphdbLocalHint")}
+                    primary={t("wizard.connection.graphdbServer")}
+                    secondary={t("wizard.connection.graphdbServerHint")}
                   />
                 </ListItem>
                 <ListItem disablePadding>
                   <ListItemText
-                    primary={t("wizard.connection.fuseki")}
-                    secondary={t("wizard.connection.fusekiHint")}
-                  />
-                </ListItem>
-                <ListItem disablePadding>
-                  <ListItemText
-                    primary={t("wizard.connection.stardog")}
-                    secondary={t("wizard.connection.stardogHint")}
+                    primary={t("wizard.connection.graphdbPort")}
+                    secondary={t("wizard.connection.graphdbPortHint")}
                   />
                 </ListItem>
               </List>
+              <Typography variant="caption">
+                {t("wizard.connection.endpointsNote")}
+              </Typography>
             </Paper>
           </Box>
         );
