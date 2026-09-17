@@ -290,6 +290,26 @@ docker compose up -d</code></pre>
 </p>
 
 
+<h3>Drifte GraphDB på egen server</h3>
+
+<p>
+  Kjører du EntEdit og GraphDB selv, finnes det to oppsett som fungerer, og valget avgjør hva du må konfigurere.
+</p>
+
+<p>
+  <strong>GraphDB bak samme opprinnelse som applikasjonen</strong> — for eksempel applikasjonen på <code>https://example.org/entedit/</code> og databasen på <code>https://example.org/graphdb/repositories/EntEdit</code> — er det beste valget: ingen CORS, ingen portnummer i endepunktet, og det fortsetter å virke når du tar i bruk HTTPS. To detaljer krever oppmerksomhet:
+</p>
+
+<ul>
+  <li>Workbench leverer <code>&lt;base href="/"&gt;</code>, så når den nås under en sti-prefiks, slår filene den trenger opp mot roten av nettstedet og lastes ikke — resultatet er en side uten utforming. Enten setter du <code>graphdb.external-url</code> (og <code>graphdb.vhosts</code> hvis GraphDB kan nås på flere adresser) på GraphDB-serveren, eller du skriver om taggen i mellomtjeneren — <code>Substitute</code> i Apache, <code>sub_filter</code> i nginx.</li>
+  <li>Hold SPARQL-stien utenfor en slik omskriving. Omskriving krever at komprimering slås av mot bakenforliggende tjener, og det vil du ikke ha for spørreresultater: la <code>/graphdb/repositories/</code> få sin egen regel som sendes videre urørt.</li>
+</ul>
+
+<p>
+  <strong>GraphDB på egen maskin eller port</strong> trenger ingen konfigurasjon av mellomtjener i det hele tatt, så lenge CORS er slått på i GraphDB. Workbench ligger da i roten av sin egen opprinnelse, og grafvisningen virker som den skal. Den eneste forskjellen er at hver bruker må velge repositoryet sitt én gang i Workbench, siden EntEdit bare kan forhåndsvelge det når begge serveres fra samme opprinnelse.
+</p>
+
+
 <!-- 4. WHAT GETS INITIALIZED -->
 <h2>4. Hva som initialiseres</h2>
 

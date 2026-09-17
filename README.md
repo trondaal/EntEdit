@@ -24,15 +24,14 @@ A read-only online demo is available at **[entedit.org/?demo](http://entedit.org
 
 Everything comes from Docker Hub: the web app, the GraphDB database, and a
 one-shot initialiser image that carries the vocabulary, sample data and
-repository definition. There is no source code to download, nothing to build,
-and no Node.js or Git needed — just Docker.
+repository definition.
 
 **1. Install Docker.** If you don't already have it, install
 [Docker Desktop](https://www.docker.com/products/docker-desktop/) (Windows, macOS,
 Linux) — it includes Docker Engine and Compose. See the
 [official installation guide](https://docs.docker.com/get-docker/) for details.
 
-**2. Start the system** with a single command, from any folder:
+**2. Start the system** with a single command in a terminal window:
 
 ```bash
 docker compose -f oci://docker.io/trondaal/entedit-compose:latest up -d
@@ -148,7 +147,12 @@ npm install
 npm run dev
 ```
 
-The dev server proxies `/graphdb` to `http://localhost:7200`. Use the endpoint URL `http://localhost:7200/repositories/EntEdit`, or let the proxy handle it.
+Use the endpoint URL `http://localhost:7200/repositories/EntEdit`, pointing straight
+at your own GraphDB. The dev server also proxies `/graphdb` to
+`http://localhost:7200`, but prefer the direct URL: the graph visualization opens
+GraphDB Workbench, and the Workbench only renders correctly when it is reached at
+the root of its own origin. Going direct also leaves your GraphDB installation
+completely untouched — the app never writes to Workbench settings across origins.
 
 Other commands (run from `app/`):
 
@@ -157,6 +161,29 @@ npm run build    # Production build
 npm run lint     # Run ESLint
 npm run preview  # Preview production build locally
 ```
+
+### Self-hosting with your own GraphDB
+
+Two topologies work, and the choice affects what the admin has to configure.
+
+**GraphDB proxied under the app's origin** (e.g. app at `https://example.org/entedit/`,
+database at `https://example.org/graphdb/repositories/EntEdit`) is the better option:
+no CORS, no port number, and it keeps working under HTTPS. Two things need attention:
+
+- The Workbench serves `<base href="/">`, so under a sub-path its assets resolve
+  against the site root and fail to load. Either set `graphdb.external-url` (and
+  `graphdb.vhosts`, if GraphDB is reachable at several addresses) on the GraphDB
+  server, or rewrite the tag in the proxy — `Substitute` in Apache, `sub_filter` in
+  nginx, as [app/nginx.conf](app/nginx.conf) does for the Docker image.
+- Keep the SPARQL path out of any such filter. Rewriting requires disabling upstream
+  compression, and you do not want that for query results — match
+  `/graphdb/repositories/` separately and proxy it untouched.
+
+**GraphDB on its own host or port** works with no proxy configuration at all, provided
+CORS is enabled on the GraphDB server. The Workbench sits at the root of its own
+origin, so the visualization is correct as-is. The one difference: users must select
+their repository once in the Workbench, because the app can only pre-select it when
+both are served from the same origin.
 
 ## Publishing to Docker Hub
 

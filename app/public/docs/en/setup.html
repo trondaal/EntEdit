@@ -290,6 +290,26 @@ docker compose up -d</code></pre>
 </p>
 
 
+<h3>Hosting GraphDB on your own server</h3>
+
+<p>
+  If you run EntEdit and GraphDB yourself, there are two working arrangements, and the choice decides what you have to configure.
+</p>
+
+<p>
+  <strong>GraphDB proxied under the same origin as the app</strong> — for example the app at <code>https://example.org/entedit/</code> and the database at <code>https://example.org/graphdb/repositories/EntEdit</code> — is the better option: no CORS, no port number in the endpoint, and it keeps working when you add HTTPS. Two details need care:
+</p>
+
+<ul>
+  <li>The Workbench serves <code>&lt;base href="/"&gt;</code>, so when it is reached under a sub-path its assets resolve against the site root and fail to load, leaving an unstyled page. Either set <code>graphdb.external-url</code> (plus <code>graphdb.vhosts</code> if GraphDB is reachable at several addresses) on the GraphDB server, or rewrite the tag in the proxy — <code>Substitute</code> in Apache, <code>sub_filter</code> in nginx.</li>
+  <li>Keep the SPARQL path out of that filter. Rewriting the response means disabling upstream compression, which you do not want for query results: match <code>/graphdb/repositories/</code> in its own rule and proxy it untouched.</li>
+</ul>
+
+<p>
+  <strong>GraphDB on its own host or port</strong> needs no proxy configuration at all, as long as CORS is enabled on the GraphDB server. The Workbench then sits at the root of its own origin and the graph visualization works as-is. The only difference is that each user has to choose their repository once in the Workbench, because EntEdit can pre-select it only when both are served from the same origin.
+</p>
+
+
 <!-- 4. WHAT GETS INITIALIZED -->
 <h2>4. What gets initialized</h2>
 
