@@ -76,7 +76,7 @@ const ResultSet: React.FC<ResultSetProps> = ({
 
       {searchError && (
         <Alert severity="error" sx={{ m: 2 }}>
-          {t("search.searchFailed", { message: searchError.message })}
+          {t("search.searchFailed")}
         </Alert>
       )}
 
@@ -84,7 +84,7 @@ const ResultSet: React.FC<ResultSetProps> = ({
         <Box sx={{ p: 3, textAlign: "center", color: "text.secondary" }}>
           {t("search.enterSearchQuery")}
         </Box>
-      ) : searchLoading ? (
+      ) : searchError ? null : searchLoading ? (
         <Box sx={{ display: "flex", justifyContent: "center", p: 3 }}>
           <CircularProgress />
         </Box>

@@ -72,7 +72,7 @@ const ManifestationResultSet: React.FC<ManifestationResultSetProps> = ({
 
       {searchError && (
         <Alert severity="error" sx={{ m: 2 }}>
-          {t("search.searchFailed", { message: searchError.message })}
+          {t("search.searchFailed")}
         </Alert>
       )}
 
@@ -80,7 +80,7 @@ const ManifestationResultSet: React.FC<ManifestationResultSetProps> = ({
         <Box sx={{ p: 3, textAlign: "center", color: "text.secondary" }}>
           {t("search.enterSearchQueryManifestations")}
         </Box>
-      ) : searchLoading ? (
+      ) : searchError ? null : searchLoading ? (
         <Box sx={{ display: "flex", justifyContent: "center", p: 3 }}>
           <CircularProgress />
         </Box>
