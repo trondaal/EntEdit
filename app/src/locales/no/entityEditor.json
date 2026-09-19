@@ -24,7 +24,9 @@
     "copyUri": "Kopier URI",
     "dragToReorder": "Dra for å endre rekkefølge",
     "moveUp": "Flytt opp",
-    "moveDown": "Flytt ned"
+    "moveDown": "Flytt ned",
+    "nothingToSave": "Legg til en verdi eller en etikett før du lagrer",
+    "noChanges": "Ingen endringer å lagre"
   },
   "messages": {
     "noLabel": "Ingen etikett",
@@ -49,7 +51,8 @@
       "unauthorized": "Databasen krever brukernavn og passord for å ta imot endringer. Åpne Innstillinger for å oppgi legitimasjon.",
       "forbidden": "Databasen avviste endringen. Dette endepunktet er skrivebeskyttet — vanlig for en demoserver. Konfigurer et skrivbart endepunkt i Innstillinger for å lagre.",
       "server": "Databasen rapporterte en feil og utførte ikke endringen. Prøv igjen eller sjekk serverloggene."
-    }
+    },
+    "uriInUse": "Denne identifikatoren er allerede i bruk av «{{label}}» ({{types}}). Velg en annen identifikator, eller åpne den eksisterende entiteten fra listen."
   },
   "labelManager": {
     "title": "Administrer etiketter",

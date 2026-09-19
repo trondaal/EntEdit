@@ -45,6 +45,8 @@ interface EntityEditorHeaderProps {
   onEditUri: () => void;
   onExportTurtle: () => void;
   isDirty: boolean;
+  /** Why Save is unavailable (nothing entered / no changes), or null when it can be used. */
+  saveBlockedReason: string | null;
 }
 
 const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
@@ -66,6 +68,7 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
   onEditUri,
   onExportTurtle,
   isDirty,
+  saveBlockedReason,
 }) => {
   const { t } = useTranslation("entityEditor");
   const [menuAnchor, setMenuAnchor] = useState<null | HTMLElement>(null);
@@ -117,16 +120,20 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
       <Box sx={{ display: "flex", gap: 1, flexShrink: 0, alignItems: "center" }}>
         {isEditing ? (
           <>
-            <Button
-              variant="contained"
-              size="small"
-              onClick={onSave}
-              disabled={saving || uriError || !classUri}
-              startIcon={saving ? <CircularProgress size={16} /> : <Save />}
-              aria-label={t("common:buttons.save", { ns: "common" })}
-            >
-              {saving ? t("common:buttons.saving", { ns: "common" }) : t("common:buttons.save", { ns: "common" })}
-            </Button>
+            <Tooltip title={!saving && saveBlockedReason ? saveBlockedReason : ""}>
+              <span>
+                <Button
+                  variant="contained"
+                  size="small"
+                  onClick={onSave}
+                  disabled={saving || uriError || !classUri || !!saveBlockedReason}
+                  startIcon={saving ? <CircularProgress size={16} /> : <Save />}
+                  aria-label={t("common:buttons.save", { ns: "common" })}
+                >
+                  {saving ? t("common:buttons.saving", { ns: "common" }) : t("common:buttons.save", { ns: "common" })}
+                </Button>
+              </span>
+            </Tooltip>
             {entityUri && (
               <Button
                 variant="outlined"

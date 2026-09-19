@@ -77,7 +77,7 @@ export function useEntityMutations({
 }: UseEntityMutationsParams): UseEntityMutationsResult {
   const queryClient = useQueryClient();
   const { enqueueSnackbar } = useSnackbar();
-  const { t } = useTranslation("entityEditor");
+  const { t, i18n } = useTranslation("entityEditor");
   const { logEvent, isRecording } = useLogging();
 
   const [saving, setSaving] = useState(false);
@@ -115,6 +115,16 @@ export function useEntityMutations({
         entityUri ||
         customEntityUri.trim() ||
         `http://example.org/entity-${Date.now()}`;
+
+      // A new entity must not reuse an identifier that is already described:
+      // INSERT DATA would silently merge the two (e.g. a Person also becoming a Work).
+      if (!entityUri && customEntityUri.trim()) {
+        const existing = await findExistingEntity(client, currentEntityUri, i18n.language);
+        if (existing) {
+          setSaveError(t("messages.uriInUse", existing));
+          return;
+        }
+      }
 
       // Collect all affected entity URIs (entities that are objects in relationships)
       const affectedEntityUris = new Set<string>();
@@ -362,6 +372,7 @@ export function useEntityMutations({
     logEvent,
     onSaveSuccess,
     formatMutationError,
+    i18n.language,
   ]);
 
   const handleDelete = useCallback(async () => {
@@ -469,4 +480,36 @@ export function useEntityMutations({
     clearSaveError,
     clearDeleteError,
   };
+}
+
+/**
+ * Returns the label and type labels of `uri` if it already has outgoing
+ * statements, or null if the identifier is free. Only explicit statements
+ * count, so a URI that is merely referenced by other entities is free.
+ */
+async function findExistingEntity(
+  client: SparqlClient,
+  uri: string,
+  language: string,
+): Promise<{ label: string; types: string } | null> {
+  const sanitizedUri = sanitizeSparqlUri(uri);
+  const lang = escapeSparqlLiteral(language);
+  const response = await client.queryWithoutInference(`
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    SELECT (COUNT(?p) AS ?count) (SAMPLE(?label) AS ?anyLabel)
+           (GROUP_CONCAT(DISTINCT ?typeLabel; SEPARATOR=", ") AS ?types)
+    FROM <http://www.ontotext.com/explicit>
+    WHERE {
+      <${sanitizedUri}> ?p ?o .
+      OPTIONAL { <${sanitizedUri}> rdfs:label ?label }
+      OPTIONAL {
+        <${sanitizedUri}> a ?type .
+        OPTIONAL { ?type rdfs:label ?typeLabelLang FILTER(LANGMATCHES(LANG(?typeLabelLang), "${lang}")) }
+        BIND(COALESCE(STR(?typeLabelLang), STR(?type)) AS ?typeLabel)
+      }
+    }
+  `);
+  const row = response.results.bindings[0];
+  if (!row || parseInt(row.count?.value ?? "0", 10) === 0) return null;
+  return { label: row.anyLabel?.value ?? uri, types: row.types?.value ?? "" };
 }

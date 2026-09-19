@@ -302,7 +302,20 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   }, [classUri, entityUri, clearSaveError]);
   /* eslint-enable react-hooks/set-state-in-effect */
 
+  // A new entity needs at least one value or label; an existing entity needs a
+  // change. Otherwise Save would create an empty entity or rewrite unchanged data.
+  const hasContent = useMemo(
+    () =>
+      entityLabels.some((l) => l.value.trim()) ||
+      Object.values(entityData).some((values) => values.some((v) => v.value.trim())),
+    [entityData, entityLabels],
+  );
+  const saveBlockedReason = entityUri
+    ? (isDirty ? null : t("tooltips.noChanges"))
+    : (hasContent ? null : t("tooltips.nothingToSave"));
+
   const requestSave = useCallback(() => {
+    if (saveBlockedReason) return;
     // Only check warnings for new entities (existing entities already have URIs and labels)
     if (!entityUri) {
       const willAutoUri = warnAutoUri && !customEntityUri.trim();
@@ -313,15 +326,15 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       }
     }
     handleSave();
-  }, [entityUri, warnAutoUri, warnAutoLabel, customEntityUri, entityLabels, handleSave]);
+  }, [saveBlockedReason, entityUri, warnAutoUri, warnAutoLabel, customEntityUri, entityLabels, handleSave]);
 
   // Register/unregister handleSave with the parent so the header Refresh
   // button can offer a "Save & refresh" option when there are unsaved edits.
   useEffect(() => {
     if (!onRegisterSave) return;
-    onRegisterSave(isDirty ? handleSave : null);
+    onRegisterSave(isDirty && !saveBlockedReason ? handleSave : null);
     return () => onRegisterSave(null);
-  }, [isDirty, handleSave, onRegisterSave]);
+  }, [isDirty, saveBlockedReason, handleSave, onRegisterSave]);
 
   const getGraphUrl = useMemo(
     () => entityUri ? getGraphVisualizationUrl(config.url, entityUri) : null,
@@ -591,6 +604,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         onEditUri={handleEditUri}
         onExportTurtle={handleExportTurtle}
         isDirty={isDirty}
+        saveBlockedReason={saveBlockedReason}
       />
 
       <Box sx={{ p: 3, flex: 1, overflow: "auto" }}>
