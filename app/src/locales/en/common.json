@@ -102,8 +102,8 @@
     "entityCountFiltered": "{{shown}} of {{total}}",
     "entityBeingEdited": "Unsaved changes",
     "switchEntityTitle": "Unsaved changes",
-    "switchEntityMessage": "The current entity has unsaved changes. Switching to another entity will discard them.",
-    "switchEntityConfirm": "Discard and switch",
+    "switchEntityMessage": "The current entity has unsaved changes. If you continue, they will be discarded.",
+    "switchEntityConfirm": "Discard and continue",
     "dataRefreshed": "Data refreshed",
     "refreshFailed": "Refresh failed: {{message}}"
   },

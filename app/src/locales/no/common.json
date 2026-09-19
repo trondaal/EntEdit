@@ -102,8 +102,8 @@
     "entityCountFiltered": "{{shown}} av {{total}}",
     "entityBeingEdited": "Ulagrede endringer",
     "switchEntityTitle": "Ulagrede endringer",
-    "switchEntityMessage": "Den gjeldende entiteten har ulagrede endringer. Å bytte til en annen entitet vil forkaste dem.",
-    "switchEntityConfirm": "Forkast og bytt",
+    "switchEntityMessage": "Den gjeldende entiteten har ulagrede endringer. Hvis du fortsetter, blir de forkastet.",
+    "switchEntityConfirm": "Forkast og fortsett",
     "dataRefreshed": "Data oppdatert",
     "refreshFailed": "Oppdatering feilet: {{message}}"
   },

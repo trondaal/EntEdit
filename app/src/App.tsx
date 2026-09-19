@@ -234,6 +234,16 @@ function AppInner() {
     invalidateAllEntityData(queryClient);
   }, []);
 
+  // Ask the browser to confirm reload/close while the editor has unsaved edits
+  useEffect(() => {
+    if (!isEditorDirty) return;
+    const handler = (event: BeforeUnloadEvent) => {
+      event.preventDefault();
+    };
+    window.addEventListener("beforeunload", handler);
+    return () => window.removeEventListener("beforeunload", handler);
+  }, [isEditorDirty]);
+
   const urlParams = useMemo(() => new URLSearchParams(window.location.search), []);
   const showSearchTab = useMemo(() => !urlParams.has("nosearch"), [urlParams]);
   const showLogging = useMemo(() => !urlParams.has("nologging"), [urlParams]);
@@ -439,7 +449,9 @@ function AppInner() {
 
                 <Box sx={{ py: 3, flexGrow: 1 }}>
                   <Suspense fallback={<Box sx={{ display: "flex", justifyContent: "center", pt: 8 }}><CircularProgress /></Box>}>
-                    {activeTab === 0 && (
+                    {/* Kept mounted while hidden so switching to Search doesn't
+                        discard unsaved edits or the selected class/entity. */}
+                    <Box hidden={activeTab !== 0}>
                       <EntityBrowser
                         config={appConfig.endpoint}
                         selectedLanguage={appConfig.language}
@@ -449,7 +461,7 @@ function AppInner() {
                         onRegisterSave={registerEditorSave}
                         onRegisterDiscard={registerEditorDiscard}
                       />
-                    )}
+                    </Box>
                     {activeTab === 1 && showSearchTab && (
                       <SearchInterface
                         config={appConfig.endpoint}
