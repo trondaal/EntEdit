@@ -227,6 +227,11 @@ properties are not turned into strings.
 - `LabelManager` dialog uses `hideBackdrop`, `disableEnforceFocus`, `disableAutoFocus`,
   `disableRestoreFocus` to allow interaction with content behind it (non-modal)
 - Drag-and-drop reordering via @dnd-kit only shows controls when editing with 2+ values
+- Controls must not move between view and edit mode: the identifier is the same
+  `TextField` in both states (read-only, with lock and copy adornments, once
+  saved) and uses the same monospace type in both, and the identity rows and
+  section headers reserve the height of the controls that only appear while
+  editing (`minHeight: 40`)
 
 ### Localization
 

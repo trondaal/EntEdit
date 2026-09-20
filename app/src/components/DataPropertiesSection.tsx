@@ -92,6 +92,9 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
               alignItems: "center",
               justifyContent: "space-between",
               mb: 1.5,
+              // Reserve the height of the "Add" control, which only appears in
+              // edit mode, so section headings do not shift when editing starts
+              minHeight: 40,
             }}
           >
             <Typography variant="subtitle1" sx={{ color: "text.primary" }}>

@@ -58,78 +58,72 @@ const EntityIdentitySection: React.FC<EntityIdentitySectionProps> = ({
       )}
 
       {showIdentifier && (
-      <Box sx={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 1, mb: 1 }}>
+      <Box sx={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 1, mb: 1, minHeight: 40 }}>
         <Typography variant="body2" color="text.secondary" sx={{ minWidth: 110 }}>
           {t("common:labels.identifier", { ns: "common" })}
         </Typography>
-        {entityUri ? (
-          <Box
-            sx={{
-              flex: "1 1 260px",
-              display: "flex",
-              alignItems: "center",
-              gap: 0.5,
-              px: 1.25,
-              py: 0.5,
-              border: 1,
-              borderColor: "divider",
-              borderRadius: 1,
-              backgroundColor: "action.hover",
-            }}
-          >
-            <Lock sx={{ fontSize: "0.9rem", color: "text.disabled", flexShrink: 0 }} />
-            <Typography
-              variant="body2"
-              sx={{
-                flex: 1,
-                color: "text.secondary",
+        {/* One control in both states — a saved entity gets the same field,
+            read-only — so the row does not move when an entity is opened. */}
+        <TextField
+          sx={{ flex: "1 1 260px" }}
+          size="small"
+          value={entityUri ?? customEntityUri}
+          onChange={(event) => onCustomEntityUriChange(event.target.value)}
+          disabled={!entityUri && !isEditing}
+          error={uriError}
+          helperText={uriError ? t("messages.invalidUri") : undefined}
+          placeholder={t("placeholders.enterUri")}
+          slotProps={{
+            htmlInput: {
+              "aria-label": t("common:labels.identifier", { ns: "common" }),
+              readOnly: !!entityUri,
+            },
+            input: {
+              readOnly: !!entityUri,
+              startAdornment: entityUri ? (
+                <Lock sx={{ fontSize: "0.9rem", color: "text.disabled", mr: 0.75 }} />
+              ) : undefined,
+              endAdornment: entityUri ? (
+                <Tooltip title={t("tooltips.copyUri")}>
+                  <IconButton
+                    size="small"
+                    edge="end"
+                    sx={{ p: 0.5 }}
+                    aria-label={t("tooltips.copyUri")}
+                    onClick={() =>
+                      navigator.clipboard.writeText(entityUri).then(
+                        () =>
+                          enqueueSnackbar(t("messages.uriCopied"), {
+                            variant: "success",
+                            autoHideDuration: 2000,
+                          }),
+                        () => enqueueSnackbar(t("messages.copyFailed"), { variant: "error" }),
+                      )
+                    }
+                  >
+                    <ContentCopy sx={{ fontSize: "0.9rem" }} />
+                  </IconButton>
+                </Tooltip>
+              ) : undefined,
+              // Same type in both states: a URI is technical either way, and
+              // matching the font keeps the field exactly the same height
+              // whether it is being entered or displayed.
+              sx: {
                 fontFamily: "monospace",
                 fontSize: "0.8rem",
-                wordBreak: "break-all",
-              }}
-            >
-              {entityUri}
-            </Typography>
-            <Tooltip title={t("tooltips.copyUri")}>
-              <IconButton
-                size="small"
-                sx={{ p: 0.5 }}
-                aria-label={t("tooltips.copyUri")}
-                onClick={() =>
-                  navigator.clipboard.writeText(entityUri).then(
-                    () =>
-                      enqueueSnackbar(t("messages.uriCopied"), {
-                        variant: "success",
-                        autoHideDuration: 2000,
-                      }),
-                    () => enqueueSnackbar(t("messages.copyFailed"), { variant: "error" }),
-                  )
-                }
-              >
-                <ContentCopy sx={{ fontSize: "0.9rem" }} />
-              </IconButton>
-            </Tooltip>
-          </Box>
-        ) : (
-          <TextField
-            sx={{ flex: "1 1 260px" }}
-            size="small"
-            value={customEntityUri}
-            onChange={(event) => onCustomEntityUriChange(event.target.value)}
-            disabled={!isEditing}
-            error={uriError}
-            placeholder={t("placeholders.enterUri")}
-            helperText={uriError ? t("placeholders.enterUri") : t("messages.uriWillBeGenerated")}
-            slotProps={{
-              htmlInput: { "aria-label": t("common:labels.identifier", { ns: "common" }) },
-            }}
-          />
-        )}
+                ...(entityUri && {
+                  backgroundColor: "action.hover",
+                  color: "text.secondary",
+                }),
+              },
+            },
+          }}
+        />
       </Box>
       )}
 
       {showLabels && (
-      <Box sx={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 1 }}>
+      <Box sx={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 1, minHeight: 40 }}>
         <Typography variant="body2" color="text.secondary" sx={{ minWidth: 110 }}>
           {t("common:labels.labels", { ns: "common" })}
         </Typography>

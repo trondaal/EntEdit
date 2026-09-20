@@ -57,7 +57,7 @@
     },
     "uriInUse": "This identifier is already used by \"{{label}}\" ({{types}}). Choose another identifier, or open the existing entity from the list.",
     "saveConflict": "Someone else changed this entity while you were editing it ({{properties}}). Use Refresh to load their version, then apply your changes again.",
-    "uriWillBeGenerated": "Leave empty to generate an identifier automatically"
+    "invalidUri": "That is not a valid URI"
   },
   "labelManager": {
     "title": "Manage Labels",

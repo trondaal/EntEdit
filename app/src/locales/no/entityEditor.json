@@ -57,7 +57,7 @@
     },
     "uriInUse": "Denne identifikatoren er allerede i bruk av «{{label}}» ({{types}}). Velg en annen identifikator, eller åpne den eksisterende entiteten fra listen.",
     "saveConflict": "Noen andre har endret denne entiteten mens du redigerte den ({{properties}}). Bruk Oppdater for å hente deres versjon, og gjør endringene dine på nytt.",
-    "uriWillBeGenerated": "La stå tom for å generere en identifikator automatisk"
+    "invalidUri": "Dette er ikke en gyldig URI"
   },
   "labelManager": {
     "title": "Administrer etiketter",

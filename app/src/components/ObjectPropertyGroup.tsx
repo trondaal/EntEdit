@@ -123,6 +123,7 @@ const ObjectPropertyGroup: React.FC<ObjectPropertyGroupProps> = ({
           alignItems: "center",
           justifyContent: "space-between",
           mb: 1.5,
+          minHeight: 40,
         }}
       >
         <Typography variant="subtitle1" sx={{ color: "text.primary" }}>{sectionTitle}</Typography>
