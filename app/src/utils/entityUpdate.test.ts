@@ -8,6 +8,7 @@ import {
   type DesiredTerm,
   type StoredTerm,
   findRemovedRelations,
+  pruneEmptyValues,
 } from "./entityUpdate";
 
 const WORK = "http://viaf.org/viaf/214012164";
@@ -314,5 +315,21 @@ describe("findRemovedRelations", () => {
         keptInferred: new Set(),
       }),
     ).toEqual([{ property: HAS_EXPRESSION, value: EXPRESSION }]);
+  });
+});
+
+describe("pruneEmptyValues", () => {
+  it("drops empty values and the properties left without any", () => {
+    expect(
+      pruneEmptyValues({
+        [TITLE]: [{ value: "Kept" }, { value: "" }, { value: "   " }],
+        [AUTHOR]: [{ value: "" }],
+      }),
+    ).toEqual({ [TITLE]: [{ value: "Kept" }] });
+  });
+
+  it("leaves data without empty values untouched", () => {
+    const data = { [TITLE]: [{ value: "A" }, { value: "B" }] };
+    expect(pruneEmptyValues(data)).toEqual(data);
   });
 });

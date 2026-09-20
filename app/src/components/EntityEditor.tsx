@@ -37,6 +37,7 @@ import { EntityLabelsProvider, useEntityLabels, type EntityLabelsMap } from "../
 import { useEntityQuery } from "../hooks/useEntityQueries";
 import { useEntityMutations } from "../hooks/useEntityMutations";
 import type { CatalogingPreferences } from "../utils/catalogingStyle";
+import { pruneEmptyValues } from "../utils/entityUpdate";
 
 // Stable empty map reference to avoid re-rendering context consumers while the
 // batched labels query is in flight or returns no URIs.
@@ -242,6 +243,8 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     ({ isNew, savedEntityUri }: { isNew: boolean; savedEntityUri: string }) => {
       setIsEditing(false);
       setIsDirty(false);
+      // Rows left empty were not written, so they must not linger in the form
+      setEntityData((prev) => pruneEmptyValues(prev));
       if (isNew) {
         // The parent selects the entity just created, so the user can see
         // what was stored and carry on adding relationships to it.
@@ -318,8 +321,24 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       ].filter(Boolean)
     : [];
 
+  // An empty row is not a change: adding one must not offer a save that
+  // writes nothing and then reports success.
+  const hasEffectiveChanges = useMemo(() => {
+    if (!isDirty) return false;
+    const dataChanged =
+      JSON.stringify(pruneEmptyValues(entityData)) !==
+      JSON.stringify(pruneEmptyValues(existingEntity?.data ?? {}));
+    const labelsOf = (labels: Array<{ value: string; language: string }>) =>
+      JSON.stringify(
+        labels
+          .filter((l) => l.value.trim())
+          .map((l) => ({ value: l.value, language: l.language })),
+      );
+    return dataChanged || labelsOf(entityLabels) !== labelsOf(existingEntity?.labels ?? []);
+  }, [isDirty, entityData, entityLabels, existingEntity]);
+
   const saveBlockedReason = entityUri
-    ? (isDirty ? null : t("tooltips.noChanges"))
+    ? (hasEffectiveChanges ? null : t("tooltips.noChanges"))
     : !hasContent
       ? t("tooltips.nothingToSave")
       : missingRequired.length > 0
