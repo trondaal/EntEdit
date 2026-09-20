@@ -1004,6 +1004,32 @@
                 the actual cataloguing data.
             </p>
 
+            <h4 id="value-languages">The language of a text value</h4>
+
+            <p>
+                A text value can record which language it is in — the title
+                <em>Ingen land for gamle menn</em> is Norwegian, <em>No country for old
+                men</em> is English — and RDF stores that alongside the text itself. In
+                the semantic web cataloguing style each text field has a language
+                selector, set to <em>No language</em> until you choose one, and the
+                language is shown beside the value. In the classic style the selector and
+                the tags are hidden, and values are stored without a language unless they
+                already had one.
+            </p>
+
+            <p>
+                One case is shown either way: when a property holds values that differ in
+                language, their tags always appear, whichever style you use. Two titles
+                that look identical but carry different hidden languages would otherwise
+                invite you to delete one as a duplicate.
+            </p>
+
+            <p>
+                Language belongs on values that are natural language — titles, notes,
+                statements of responsibility. Identifiers, dates and numbers should stay
+                untagged.
+            </p>
+
             <h4 id="inferred-values">Inferred values</h4>
 
             <p>

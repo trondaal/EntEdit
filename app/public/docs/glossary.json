@@ -383,6 +383,14 @@
     "Mark values the database inferred": {
       "no": "Merk verdier databasen har utledet",
       "ui": true
+    },
+    "No language": {
+      "no": "Uten språk",
+      "ui": true
+    },
+    "Show the language of text values": {
+      "no": "Vis språket til tekstverdier",
+      "ui": true
     }
   },
   "general_terms": {
@@ -472,6 +480,9 @@
     },
     "inferred value": {
       "no": "utledet verdi"
+    },
+    "language tag": {
+      "no": "språkmerkelapp"
     }
   }
 }
