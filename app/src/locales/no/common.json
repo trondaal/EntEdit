@@ -189,10 +189,8 @@
     "endpointUrlHelper": "Skriv inn URL-en til SPARQL-endepunktet ditt",
     "username": "Brukernavn (valgfritt)",
     "password": "Passord (valgfritt)",
-    "saveConfiguration": "Lagre konfigurasjon",
-    "reconfigureDatabase": "Konfigurer database på nytt",
-    "connectionSection": "Databasetilkobling",
-    "cancel": "Avbryt"
+    "reconfigureDatabase": "Konfigurer database",
+    "connectionSection": "Databasetilkobling"
   },
   "logging": {
     "record": "Start logging",

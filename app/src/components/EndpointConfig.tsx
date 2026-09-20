@@ -110,14 +110,14 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
           </Box>
         </DialogContent>
         <DialogActions>
-          <Button onClick={onCancel}>{t("endpointConfig.cancel")}</Button>
+          <Button onClick={onCancel}>{t("buttons.cancel")}</Button>
           {onResetConfiguration && (
             <Button onClick={onResetConfiguration} color="error">
               {t("endpointConfig.reconfigureDatabase")}
             </Button>
           )}
           <Button variant="contained" onClick={handleSave}>
-            {t("endpointConfig.saveConfiguration")}
+            {t("buttons.save")}
           </Button>
         </DialogActions>
       </>
@@ -191,7 +191,7 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
 
           <Box sx={{ display: "flex", gap: 1 }}>
             <Button variant="contained" onClick={handleSave}>
-              {t("endpointConfig.saveConfiguration")}
+              {t("buttons.save")}
             </Button>
 
           </Box>

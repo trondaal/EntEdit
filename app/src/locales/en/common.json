@@ -189,10 +189,8 @@
     "endpointUrlHelper": "Enter the URL of your SPARQL endpoint",
     "username": "Username (optional)",
     "password": "Password (optional)",
-    "saveConfiguration": "Save Configuration",
     "reconfigureDatabase": "Reconfigure Database",
-    "connectionSection": "Database connection",
-    "cancel": "Cancel"
+    "connectionSection": "Database connection"
   },
   "logging": {
     "record": "Start logging",
