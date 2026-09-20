@@ -997,7 +997,9 @@
             <h3 id="auto-generation">5.3 Auto-generering av URI-er og etiketter</h3>
 
             <p>
-                EntEdit er designet for å la deg fokusere på katalogiseringsdataene. Som standard blir både entitets-URI og etiketten auto-generert når du lagrer:
+                Hvor mye av dette du gjør selv, avhenger av hvilken
+                <a href="#cataloguing-style">katalogiseringsstil</a> installasjonen din er satt til.
+                Hver gang du lar URI-en eller etiketten stå tom, fyller EntEdit den inn for deg når du lagrer:
             </p>
 
             <table>
@@ -1007,7 +1009,7 @@
                 </tr>
                 <tr>
                     <td><strong>URI</strong></td>
-                    <td>En unik URI genereres basert på et tidsstempel (f.eks. <code>http://example.org/entity-1712345678901</code>). Dette er egnet for læring og eksperimentering. I produksjonsmiljø vil du vanligvis oppgi en meningsfull URI fra institusjonens navnerom.</td>
+                    <td>En unik URI genereres fra klassen og en tilfeldig identifikator (f.eks. <code>http://example.org/entedit/C10001/9f1c8b7e-…</code>). Dette er egnet for læring og eksperimentering. I produksjonsmiljø vil du vanligvis oppgi en meningsfull URI fra institusjonens navnerom.</td>
                 </tr>
                 <tr>
                     <td><strong>Etikett</strong></td>
@@ -1020,7 +1022,56 @@
             </p>
 
             <p>
-                Du kan alltid overstyre de auto-genererte verdiene ved hjelp av <strong>⋮</strong> (flere handlinger) menyen i entitetsredigeringen. Bruk URI-alternativet for å oppgi en eksisterende identifikator (f.eks. en VIAF-URI for en agent), og etikettens alternativ for å lage tilpassede, språkkodifiserte etiketter.
+                Du kan også oppgi dem selv. Blokken <strong>Identifikasjon</strong> øverst i
+                entitetsredigeringen inneholder identifikatoren og etikettene: bruk
+                identifikatorfeltet for en eksisterende URI (f.eks. en VIAF-URI for en agent), og
+                <strong>Rediger etiketter</strong> for tilpassede etiketter med språkkode. Hvis
+                installasjonen din skjuler blokken, finner du de samme feltene i menyen
+                <strong>⋮</strong> (flere handlinger) under
+                <em>Identifikator og etiketter …</em>.
+            </p>
+
+            <h4 id="cataloguing-style">Katalogiseringsstil</h4>
+
+            <p>
+                EntEdit støtter to arbeidsmåter. Du velger stil i oppsettsveiviseren og kan endre
+                den når som helst under tannhjulet i topplinjen:
+            </p>
+
+            <table>
+                <tr>
+                    <th>Stil</th>
+                    <th>Slik oppfører editoren seg</th>
+                    <th>Passer for</th>
+                </tr>
+                <tr>
+                    <td><strong>Klassisk katalogisering</strong></td>
+                    <td>Identifikasjonsblokken er skjult, og skjemaet begynner med
+                        katalogiseringsegenskapene. URI-er og etiketter genereres uten at du merker
+                        det, og er fortsatt tilgjengelige fra <strong>⋮</strong>-menyen.</td>
+                    <td>Katalogiseringsøvelser der RDF-identifikatorene ikke er poenget.</td>
+                </tr>
+                <tr>
+                    <td><strong>Semantisk katalogisering</strong></td>
+                    <td>Identifikator og etiketter vises i skjemaet, og Lagre er deaktivert for en
+                        ny entitet til du har fylt inn begge.</td>
+                    <td>Undervisning der det å navngi ting med URI-er og etiketter er en del av
+                        øvelsen.</td>
+                </tr>
+            </table>
+
+            <p>
+                De to innstillingene er uavhengige: du kan vise identifikatorer, men ikke
+                etiketter, eller kreve en etikett uten å kreve en URI. Hver rad i innstillingene har
+                avkrysningsboksene <em>Vis i skjemaet</em> og <em>Påkrevd før lagring</em>, og krav
+                gjelder bare nye entiteter.
+            </p>
+
+            <p>
+                En lenke kan også sette stilen for én økt, noe som er nyttig når en hel klasse skal
+                jobbe på samme måte:
+                <code>…/entedit/?style=classic</code> eller <code>…/entedit/?style=semantic</code>.
+                Dette endrer ikke den lagrede innstillingen.
             </p>
 
             <p>

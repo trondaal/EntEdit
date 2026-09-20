@@ -124,6 +124,15 @@ header.
 | SPARQL endpoint | URL of the GraphDB repository |
 | Username / password | Optional, for repositories that require a login |
 | Language | Interface language (English / Norwegian) |
+| Cataloguing style | How visible RDF identifiers and labels are while editing |
+
+**Cataloguing style** covers two ways of working. *Classic cataloguing* keeps
+identifiers and labels off the form and generates them silently — they stay
+available in the editor's ⋮ menu. *Semantic web cataloguing* shows both and
+requires them on new entities. Identifier and labels are configured
+independently, so you can show one and not the other. Adding `?style=classic` or
+`?style=semantic` to the app's address sets the style for that session only,
+which is handy for handing a class a single link.
 
 ## Documentation
 
