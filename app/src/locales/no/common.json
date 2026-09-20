@@ -231,6 +231,7 @@
     "identifierRow": "Identifikator (URI)",
     "labelsRow": "Labels",
     "hiddenNote": "Et skjult felt er fortsatt tilgjengelig i ⋮-menyen i editoren, og en verdi genereres automatisk hvis du ikke skriver inn noe.",
-    "showInferredMarks": "Merk verdier databasen har utledet (de kan redigeres uansett)"
+    "showInferredMarks": "Merk verdier databasen har utledet (de kan redigeres uansett)",
+    "showLanguageTags": "Vis språket til tekstverdier, og la det settes under redigering"
   }
 }

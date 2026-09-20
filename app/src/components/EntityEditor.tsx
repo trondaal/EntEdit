@@ -409,6 +409,19 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     }
   }, []);
 
+  const updatePropertyValueLanguage = useCallback((
+    property: string,
+    index: number,
+    language: string,
+  ) => {
+    setEntityData((prev) => {
+      const values = [...(prev[property] || [])];
+      values[index] = { ...values[index], lang: language || undefined };
+      return { ...prev, [property]: values };
+    });
+    setIsDirty(true);
+  }, []);
+
   const updatePropertyValue = useCallback((
     property: string,
     index: number,
@@ -648,6 +661,8 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         <DataPropertiesSection
           entityData={entityData}
           showInferredMarks={preferences.showInferredMarks}
+          showLanguageTags={preferences.showLanguageTags}
+          onUpdateValueLanguage={updatePropertyValueLanguage}
           properties={properties}
           isEditing={isEditing}
           classUri={classUri}

@@ -17,6 +17,13 @@ export interface CatalogingPreferences {
   /** Refuse to save a new entity until the user has entered a label. */
   requireLabel: boolean;
   /**
+   * Show the language of a text value, and let the user set it while editing.
+   * Part of the style: tagging values by language is a semantic-web concern.
+   * Even when off, values of one property that differ in language still show
+   * their tag — otherwise they would look like duplicates of each other.
+   */
+  showLanguageTags: boolean;
+  /**
    * Mark values the database inferred rather than stored, with a chip and a
    * dashed outline. Useful when the difference is being taught, noise when it
    * is not — the values behave the same either way.
@@ -35,6 +42,7 @@ export const CLASSIC_PREFERENCES: CatalogingPreferences = {
   showLabels: false,
   requireIdentifier: false,
   requireLabel: false,
+  showLanguageTags: false,
   showInferredMarks: false,
 };
 
@@ -44,6 +52,7 @@ export const SEMANTIC_PREFERENCES: CatalogingPreferences = {
   showLabels: true,
   requireIdentifier: true,
   requireLabel: true,
+  showLanguageTags: true,
   showInferredMarks: false,
 };
 
@@ -55,7 +64,8 @@ const sameAs = (a: CatalogingPreferences, b: CatalogingPreferences) =>
   a.showIdentifier === b.showIdentifier &&
   a.showLabels === b.showLabels &&
   a.requireIdentifier === b.requireIdentifier &&
-  a.requireLabel === b.requireLabel;
+  a.requireLabel === b.requireLabel &&
+  a.showLanguageTags === b.showLanguageTags;
 
 /** Which preset these preferences correspond to, or "custom". */
 export const styleOf = (preferences: CatalogingPreferences): CatalogingStyle => {

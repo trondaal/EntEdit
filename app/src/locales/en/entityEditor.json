@@ -29,7 +29,9 @@
     "nothingToSave": "Add a value or a label before saving",
     "noChanges": "No changes to save",
     "languageOfValue": "Language of this value: {{lang}}",
-    "requiredMissing": "Enter {{fields}} before saving"
+    "requiredMissing": "Enter {{fields}} before saving",
+    "valueLanguage": "Language",
+    "noLanguage": "No language"
   },
   "messages": {
     "noLabel": "No label",

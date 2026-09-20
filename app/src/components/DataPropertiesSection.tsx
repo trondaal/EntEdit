@@ -15,9 +15,13 @@ import { Delete } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import type { RdfProperty, OrderedValue } from "../types/sparql";
 import OrderableValueList from "./OrderableValueList";
+import { languageName, languagesInUse, VALUE_LANGUAGES } from "../utils/languages";
 
 interface DataPropertiesSectionProps {
   entityData: Record<string, OrderedValue[]>;
+  /** Show each value's language, and offer a selector while editing. */
+  showLanguageTags: boolean;
+  onUpdateValueLanguage: (property: string, index: number, language: string) => void;
   properties: RdfProperty[];
   isEditing: boolean;
   showInferredMarks: boolean;
@@ -32,6 +36,8 @@ interface DataPropertiesSectionProps {
 
 const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
   entityData,
+  showLanguageTags,
+  onUpdateValueLanguage,
   properties,
   isEditing,
   showInferredMarks,
@@ -43,7 +49,17 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
   onReorderValues,
   getPropertyLabel,
 }) => {
-  const { t } = useTranslation("entityEditor");
+  const { t, i18n } = useTranslation("entityEditor");
+
+  // A property whose values differ in language always shows the tags, even
+  // when the setting is off: without them the values look like duplicates.
+  const ambiguousProperties = useMemo(() => {
+    const ambiguous = new Set<string>();
+    for (const [property, values] of Object.entries(entityData)) {
+      if (languagesInUse(values).size > 1) ambiguous.add(property);
+    }
+    return ambiguous;
+  }, [entityData]);
   // Focus the field the user just added, instead of leaving focus on the
   // "Add" dropdown, which cost an extra tab on every value.
   const focusRef = React.useRef<HTMLInputElement | null>(null);
@@ -176,15 +192,47 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
                     },
                   }}
                 />
-                {entityData[propertyUri][index].lang && (
-                  <Tooltip title={t("tooltips.languageOfValue", { lang: entityData[propertyUri][index].lang })}>
-                    <Chip
-                      label={entityData[propertyUri][index].lang}
-                      size="small"
-                      variant="outlined"
-                      sx={{ height: 20, fontSize: "0.65rem", textTransform: "uppercase" }}
-                    />
-                  </Tooltip>
+                {isEditing && (showLanguageTags || ambiguousProperties.has(propertyUri)) ? (
+                  <FormControl size="small" sx={{ minWidth: 104, flexShrink: 0 }}>
+                    <Select
+                      value={entityData[propertyUri][index].lang ?? ""}
+                      onChange={(e) =>
+                        onUpdateValueLanguage(propertyUri, index, e.target.value)
+                      }
+                      displayEmpty
+                      disabled={
+                        !classUri || !!entityData[propertyUri][index].inferred
+                      }
+                      inputProps={{ "aria-label": t("tooltips.valueLanguage") }}
+                      sx={{ "& .MuiSelect-select": { py: 0.75, fontSize: "0.8rem" } }}
+                    >
+                      <MenuItem value="">
+                        <em>{t("tooltips.noLanguage")}</em>
+                      </MenuItem>
+                      {VALUE_LANGUAGES.map((code) => (
+                        <MenuItem key={code} value={code} sx={{ fontSize: "0.85rem" }}>
+                          {languageName(code, i18n.language)}
+                        </MenuItem>
+                      ))}
+                    </Select>
+                  </FormControl>
+                ) : (
+                  entityData[propertyUri][index].lang &&
+                  (showLanguageTags || ambiguousProperties.has(propertyUri)) && (
+                    <Tooltip
+                      title={languageName(
+                        entityData[propertyUri][index].lang,
+                        i18n.language,
+                      )}
+                    >
+                      <Chip
+                        label={entityData[propertyUri][index].lang}
+                        size="small"
+                        variant="outlined"
+                        sx={{ height: 20, fontSize: "0.65rem", textTransform: "uppercase" }}
+                      />
+                    </Tooltip>
+                  )
                 )}
                 {entityData[propertyUri][index].inferred && showInferredMarks && (
                   <Tooltip title={t("common:labels.inferredHelp", { ns: "common" })}>

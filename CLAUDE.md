@@ -336,12 +336,18 @@ need no login (`--access read|write|none`). Run `--help` for all options.
 identity is in the editor, supporting both classic cataloguing and semantic-web
 cataloguing from one build:
 
-- Four style preferences: `showIdentifier`, `showLabels`, `requireIdentifier`
-  and `requireLabel`. The presets `CLASSIC_PREFERENCES` (all off) and
+- Five style preferences: `showIdentifier`, `showLabels`, `requireIdentifier`,
+  `requireLabel` and `showLanguageTags`. The presets `CLASSIC_PREFERENCES` (all off) and
   `SEMANTIC_PREFERENCES` (all on) are offered as one-click choices in the wizard
   and the settings dialog (`CatalogingStyleSettings`); any other combination is
   reported as "custom". New installations default to semantic.
-- `showInferredMarks` is a fifth preference that belongs to **no** style: off in
+- `showLanguageTags` shows the language of a text value and offers a selector
+  (`VALUE_LANGUAGES` in `utils/languages.ts`, "no language" by default) while
+  editing. Even when it is off, a property whose values differ in language
+  shows their tags anyway (`languagesInUse`), because values that differ only
+  by an invisible tag look like duplicates and invite a cataloguer to delete
+  one.
+- `showInferredMarks` is a sixth preference that belongs to **no** style: off in
   both presets, excluded from `styleOf`'s comparison so toggling it does not
   read as "custom", and carried across by `applyPreset` so choosing a style
   never changes it. It controls only the "inferred" chip and dashed outline;

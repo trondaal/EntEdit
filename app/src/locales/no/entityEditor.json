@@ -29,7 +29,9 @@
     "nothingToSave": "Legg til en verdi eller en label før du lagrer",
     "noChanges": "Ingen endringer å lagre",
     "languageOfValue": "Språket til denne verdien: {{lang}}",
-    "requiredMissing": "Fyll inn {{fields}} før du lagrer"
+    "requiredMissing": "Fyll inn {{fields}} før du lagrer",
+    "valueLanguage": "Språk",
+    "noLanguage": "Uten språk"
   },
   "messages": {
     "noLabel": "Ingen label",

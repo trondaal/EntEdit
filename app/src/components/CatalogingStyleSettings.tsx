@@ -140,6 +140,19 @@ const CatalogingStyleSettings: React.FC<CatalogingStyleSettingsProps> = ({
           </React.Fragment>
         ))}
       </Box>
+      <FormControlLabel
+        sx={{ mt: 1 }}
+        control={
+          <Checkbox
+            checked={preferences.showLanguageTags}
+            onChange={(event) => toggle("showLanguageTags")(event.target.checked)}
+          />
+        }
+        label={
+          <Typography variant="body2">{t("catalogingStyle.showLanguageTags")}</Typography>
+        }
+      />
+
       {/* Not part of either style: a display preference of its own. */}
       <FormControlLabel
         sx={{ mt: 1.5, pt: 1.5, borderTop: 1, borderColor: "divider", width: "100%" }}
