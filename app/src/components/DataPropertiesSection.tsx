@@ -203,7 +203,17 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
                 {isEditing &&
                 ((showLanguageTags && isLinguistic(propertyUri)) ||
                   ambiguousProperties.has(propertyUri)) ? (
-                  <FormControl size="small" sx={{ minWidth: 104, flexShrink: 0 }}>
+                  <FormControl size="small" sx={{ width: 76, flexShrink: 0 }}>
+                    <Tooltip
+                      title={
+                        entityData[propertyUri][index].lang
+                          ? languageName(
+                              entityData[propertyUri][index].lang,
+                              i18n.language,
+                            )
+                          : t("tooltips.noLanguage")
+                      }
+                    >
                     <Select
                       value={entityData[propertyUri][index].lang ?? ""}
                       onChange={(e) =>
@@ -214,6 +224,11 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
                         !classUri || !!entityData[propertyUri][index].inferred
                       }
                       inputProps={{ "aria-label": t("tooltips.valueLanguage") }}
+                      // Closed: just the code, so the field stays narrow. Open:
+                      // the full name, since a code alone is hard to pick from.
+                      renderValue={(value) =>
+                        value ? (value as string).toUpperCase() : "—"
+                      }
                       sx={{ "& .MuiSelect-select": { py: 0.75, fontSize: "0.8rem" } }}
                     >
                       {/* A dash rather than words: the same "unset" marker
@@ -227,6 +242,7 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
                         </MenuItem>
                       ))}
                     </Select>
+                    </Tooltip>
                   </FormControl>
                 ) : (
                   entityData[propertyUri][index].lang &&
