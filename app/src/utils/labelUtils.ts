@@ -120,3 +120,22 @@ export const formatEntityListLabel = (
   label: string | undefined,
   uri: string,
 ): string => (label && label !== uri ? label : extractUriFragment(uri));
+
+/** Namespace for identifiers the editor generates itself. */
+export const GENERATED_URI_BASE = "http://example.org/entedit/";
+
+/**
+ * Builds an identifier for an entity the user did not name.
+ *
+ * A millisecond timestamp was neither unique across users nor informative;
+ * this includes the class and a UUID, e.g.
+ * `http://example.org/entedit/C10001/3f2c…`.
+ */
+export const generateEntityUri = (classUri: string): string => {
+  const classSegment = extractUriFragment(classUri) || "entity";
+  const id =
+    typeof crypto !== "undefined" && "randomUUID" in crypto
+      ? crypto.randomUUID()
+      : `${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
+  return `${GENERATED_URI_BASE}${classSegment}/${id}`;
+};

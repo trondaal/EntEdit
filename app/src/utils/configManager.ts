@@ -173,10 +173,23 @@ export const isConfigured = (): boolean => {
 /**
  * Get default configuration for first-time setup
  */
+/**
+ * Default endpoint for the first run: the GraphDB proxied by the same server
+ * that served the app. A hard-coded "http://localhost/..." is wrong as soon as
+ * the app runs on another port or is opened from another machine.
+ */
+export const getDefaultEndpointUrl = (): string => {
+  try {
+    return `${window.location.origin}/graphdb/repositories/EntEdit`;
+  } catch {
+    return "http://localhost/graphdb/repositories/EntEdit";
+  }
+};
+
 export const getDefaultConfiguration = (): AppConfiguration => {
   return {
     endpoint: {
-      url: "http://localhost/graphdb/repositories/EntEdit",
+      url: getDefaultEndpointUrl(),
       username: "",
       password: "",
     },

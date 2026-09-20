@@ -160,6 +160,24 @@
       "nextSettings": "Neste: Innstillinger",
       "back": "Tilbake",
       "complete": "Fullfør oppsett"
+    },
+    "testResult": {
+      "noUrl": "Skriv inn en URL til et SPARQL-endepunkt",
+      "success": "Tilkoblingen fungerer!",
+      "successDetails": "Koblet til SPARQL-endepunktet. Databasen inneholder data.",
+      "empty": "Tilkoblingen fungerer, men databasen ser ut til å være tom",
+      "emptyDetails": "Endepunktet svarer, men ingen tripler ble funnet.",
+      "failed": "Tilkoblingen mislyktes",
+      "unauthorized": "Autentisering mislyktes (401 Unauthorized)",
+      "unauthorizedDetails": "Brukernavnet eller passordet er feil. Kontroller påloggingsinformasjonen og prøv igjen.",
+      "forbidden": "Ingen tilgang (403 Forbidden)",
+      "forbiddenDetails": "Kontoen din har ikke tilgang til dette endepunktet. Kontakt databaseadministratoren.",
+      "notFound": "Endepunktet ble ikke funnet (404)",
+      "notFoundDetails": "URL-en til SPARQL-endepunktet er feil, eller databasen kjører ikke. Kontroller URL-en.",
+      "network": "Nettverkstilkoblingen mislyktes",
+      "networkDetails": "Får ikke kontakt med databaseserveren. Mulige årsaker:\n• Databaseserveren kjører ikke\n• URL-en er feil\n• En CORS-regel (kryssopphav) blokkerer forespørselen\n• En brannmur eller nettverksbegrensning\n• Problem med SSL/TLS-sertifikat hvis du bruker HTTPS\n\nPrøv å åpne URL-en direkte i nettleseren for å teste tilkoblingen.",
+      "cors": "CORS-feil (kryssopphav)",
+      "corsDetails": "Databaseserveren må tillate forespørsler fra denne applikasjonen. For GraphDB legger du til disse CORS-hodene:\n• Access-Control-Allow-Origin: *\n• Access-Control-Allow-Methods: GET, POST, OPTIONS\n• Access-Control-Allow-Headers: Content-Type, Authorization"
     }
   },
   "endpointConfig": {

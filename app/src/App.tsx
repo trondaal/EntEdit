@@ -122,7 +122,9 @@ const theme = createTheme({
       contrastText: "#FFFFFF",
     },
     secondary: {
-      main: "#C2713A",
+      // Darkened from #C2713A so white text on a filled control reaches
+      // the WCAG 4.5:1 minimum (was 3.67:1).
+      main: "#A85F2C",
       light: "#E09060",
       dark: "#8E4F24",
       contrastText: "#FFFFFF",
@@ -137,27 +139,31 @@ const theme = createTheme({
       disabled: "rgba(45, 30, 15, 0.45)",
     },
     divider: "rgba(139, 92, 42, 0.12)",
+    // `main` carries white text on filled buttons, so each one meets 4.5:1
+    // against #FFFFFF; the dark tints stay for text on the light backgrounds.
     info: {
-      main: "#5B7FA4",
+      main: "#4E6F92",
       light: "#E8F0F7",
       dark: "#3D5A7A",
-      contrastText: "#1A3A5C",
+      contrastText: "#FFFFFF",
     },
     success: {
-      main: "#5A8A5C",
+      main: "#4A7A4C",
       light: "#E6F2E6",
       dark: "#3D6B3F",
-      contrastText: "#1A3D1C",
+      contrastText: "#FFFFFF",
     },
     warning: {
-      main: "#C2713A",
+      main: "#A55A28",
       light: "#FFF3E0",
       dark: "#8E4F24",
+      contrastText: "#FFFFFF",
     },
     error: {
       main: "#C0392B",
       light: "#FDECEA",
       dark: "#8B2820",
+      contrastText: "#FFFFFF",
     },
     grey: {
       50: "#FAF8F5",

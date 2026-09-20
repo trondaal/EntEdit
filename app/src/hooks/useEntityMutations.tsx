@@ -12,6 +12,7 @@ import { SparqlClient, SparqlError } from "../utils/sparqlClient";
 import {
   escapeSparqlLiteral,
   formatLabel,
+  generateEntityUri,
   sanitizeSparqlUri,
 } from "../utils/labelUtils";
 import {
@@ -127,9 +128,7 @@ export function useEntityMutations({
       const client = new SparqlClient(config);
       // Use existing URI, custom URI, or generate one
       const currentEntityUri =
-        entityUri ||
-        customEntityUri.trim() ||
-        `http://example.org/entity-${Date.now()}`;
+        entityUri || customEntityUri.trim() || generateEntityUri(classUri);
 
       // A new entity must not reuse an identifier that is already described:
       // INSERT DATA would silently merge the two (e.g. a Person also becoming a Work).

@@ -160,6 +160,24 @@
       "nextSettings": "Next: Settings",
       "back": "Back",
       "complete": "Complete Setup"
+    },
+    "testResult": {
+      "noUrl": "Enter a SPARQL endpoint URL",
+      "success": "Connection successful!",
+      "successDetails": "Connected to the SPARQL endpoint. The database contains data.",
+      "empty": "Connection successful, but the database appears to be empty",
+      "emptyDetails": "The endpoint is reachable but no triples were found.",
+      "failed": "Connection failed",
+      "unauthorized": "Authentication failed (401 Unauthorized)",
+      "unauthorizedDetails": "The username or password is incorrect. Please check your credentials and try again.",
+      "forbidden": "Access forbidden (403 Forbidden)",
+      "forbiddenDetails": "Your account doesn't have permission to access this endpoint. Contact your database administrator.",
+      "notFound": "Endpoint not found (404)",
+      "notFoundDetails": "The SPARQL endpoint URL is incorrect or the database is not running. Please verify the URL.",
+      "network": "Network connection failed",
+      "networkDetails": "Cannot reach the database server. This could be:\n• The database server is not running\n• The URL is incorrect\n• A CORS (cross-origin) policy is blocking the request\n• A firewall or network restriction\n• An SSL/TLS certificate problem if using HTTPS\n\nTry opening the URL directly in your browser to test connectivity.",
+      "cors": "CORS (cross-origin) error",
+      "corsDetails": "The database server needs to allow requests from this application. For GraphDB, add these CORS headers:\n• Access-Control-Allow-Origin: *\n• Access-Control-Allow-Methods: GET, POST, OPTIONS\n• Access-Control-Allow-Headers: Content-Type, Authorization"
     }
   },
   "endpointConfig": {
