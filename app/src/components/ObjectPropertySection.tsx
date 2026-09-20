@@ -11,6 +11,7 @@ interface ObjectPropertySectionProps {
   values: OrderedValue[];
   rangeUri?: string;
   isEditing: boolean;
+  showInferredMarks: boolean;
   selectedLanguage: string;
   onUpdateValue: (index: number, value: string) => void;
   onRemoveValue: (index: number) => void;
@@ -24,6 +25,7 @@ const ObjectPropertySection: React.FC<ObjectPropertySectionProps> = ({
   values,
   rangeUri,
   isEditing,
+  showInferredMarks,
   selectedLanguage,
   onUpdateValue,
   onRemoveValue,
@@ -52,6 +54,7 @@ const ObjectPropertySection: React.FC<ObjectPropertySectionProps> = ({
             rangeUri={rangeUri}
             isEditing={isEditing}
             inferred={values[index].inferred}
+            showInferredMarks={showInferredMarks}
             selectedLanguage={selectedLanguage}
             onUpdate={(newValue) => onUpdateValue(index, newValue)}
             onRemove={() => onRemoveValue(index)}

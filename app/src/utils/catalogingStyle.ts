@@ -16,6 +16,12 @@ export interface CatalogingPreferences {
   requireIdentifier: boolean;
   /** Refuse to save a new entity until the user has entered a label. */
   requireLabel: boolean;
+  /**
+   * Mark values the database inferred rather than stored, with a chip and a
+   * dashed outline. Useful when the difference is being taught, noise when it
+   * is not — the values behave the same either way.
+   */
+  showInferredMarks: boolean;
 }
 
 export type CatalogingStyle = "classic" | "semantic" | "custom";
@@ -26,6 +32,7 @@ export const CLASSIC_PREFERENCES: CatalogingPreferences = {
   showLabels: false,
   requireIdentifier: false,
   requireLabel: false,
+  showInferredMarks: false,
 };
 
 /** Both are shown and must be filled in. */
@@ -34,6 +41,7 @@ export const SEMANTIC_PREFERENCES: CatalogingPreferences = {
   showLabels: true,
   requireIdentifier: true,
   requireLabel: true,
+  showInferredMarks: true,
 };
 
 /** New installations start in the semantic-web style. */
@@ -43,7 +51,8 @@ const sameAs = (a: CatalogingPreferences, b: CatalogingPreferences) =>
   a.showIdentifier === b.showIdentifier &&
   a.showLabels === b.showLabels &&
   a.requireIdentifier === b.requireIdentifier &&
-  a.requireLabel === b.requireLabel;
+  a.requireLabel === b.requireLabel &&
+  a.showInferredMarks === b.showInferredMarks;
 
 /** Which preset these preferences correspond to, or "custom". */
 export const styleOf = (preferences: CatalogingPreferences): CatalogingStyle => {

@@ -230,6 +230,7 @@
     "requireColumn": "Påkrevd før lagring",
     "identifierRow": "Identifikator (URI)",
     "labelsRow": "Etiketter",
-    "hiddenNote": "Et skjult felt er fortsatt tilgjengelig i ⋮-menyen i editoren, og en verdi genereres automatisk hvis du ikke skriver inn noe."
+    "hiddenNote": "Et skjult felt er fortsatt tilgjengelig i ⋮-menyen i editoren, og en verdi genereres automatisk hvis du ikke skriver inn noe.",
+    "showInferredMarks": "Merk verdier databasen har utledet (de kan redigeres uansett)"
   }
 }

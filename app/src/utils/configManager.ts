@@ -140,6 +140,8 @@ export const loadConfiguration = (): AppConfiguration | null => {
           DEFAULT_PREFERENCES.requireIdentifier,
         requireLabel:
           stored.requireLabel ?? stored.warnAutoLabel ?? DEFAULT_PREFERENCES.requireLabel,
+        showInferredMarks:
+          stored.showInferredMarks ?? DEFAULT_PREFERENCES.showInferredMarks,
       };
     }
 

@@ -15,8 +15,10 @@ interface ObjectPropertyValueProps {
   value: string;
   rangeUri?: string;
   isEditing: boolean;
-  /** Inferred statements are shown for context but cannot be edited or saved. */
+  /** The statement is inferred: removing it deletes the source statement. */
   inferred?: boolean;
+  /** Whether inferred values are visually marked (a per-user preference). */
+  showInferredMarks?: boolean;
   selectedLanguage: string;
   onUpdate: (value: string) => void;
   onRemove: () => void;
@@ -26,6 +28,7 @@ const ObjectPropertyValue: React.FC<ObjectPropertyValueProps> = ({
   value,
   isEditing,
   inferred,
+  showInferredMarks = true,
   onRemove,
 }) => {
   const { t } = useTranslation("common");
@@ -44,7 +47,11 @@ const ObjectPropertyValue: React.FC<ObjectPropertyValueProps> = ({
           border: 1,
           borderColor: "divider",
           borderRadius: 1,
-          ...(inferred && { borderStyle: "dashed", backgroundColor: "action.hover" }),
+          ...(inferred &&
+            showInferredMarks && {
+              borderStyle: "dashed",
+              backgroundColor: "action.hover",
+            }),
         }}
       >
         <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
@@ -54,7 +61,7 @@ const ObjectPropertyValue: React.FC<ObjectPropertyValueProps> = ({
           <Tooltip title={value} placement="bottom-start">
             <Tag sx={{ fontSize: "0.875rem", color: "text.disabled", flexShrink: 0 }} />
           </Tooltip>
-          {inferred && (
+          {inferred && showInferredMarks && (
             <Tooltip
               title={t("labels.inferredRelationshipHelp", { entity: displayLabel })}
               placement="bottom-start"

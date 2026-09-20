@@ -20,6 +20,7 @@ interface DataPropertiesSectionProps {
   entityData: Record<string, OrderedValue[]>;
   properties: RdfProperty[];
   isEditing: boolean;
+  showInferredMarks: boolean;
   classUri: string;
   selectedProperty: string;
   onPropertySelect: (propertyUri: string) => void;
@@ -33,6 +34,7 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
   entityData,
   properties,
   isEditing,
+  showInferredMarks,
   classUri,
   selectedProperty,
   onPropertySelect,
@@ -184,7 +186,7 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
                     />
                   </Tooltip>
                 )}
-                {entityData[propertyUri][index].inferred && (
+                {entityData[propertyUri][index].inferred && showInferredMarks && (
                   <Tooltip title={t("common:labels.inferredHelp", { ns: "common" })}>
                     <Chip
                       label={t("common:labels.inferred", { ns: "common" })}

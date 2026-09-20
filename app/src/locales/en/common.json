@@ -230,6 +230,7 @@
     "requireColumn": "Require before saving",
     "identifierRow": "Identifier (URI)",
     "labelsRow": "Labels",
-    "hiddenNote": "When a field is hidden it stays available in the editor's ⋮ menu, and a value is generated automatically if you don't enter one."
+    "hiddenNote": "When a field is hidden it stays available in the editor's ⋮ menu, and a value is generated automatically if you don't enter one.",
+    "showInferredMarks": "Mark values the database inferred (they can be edited either way)"
   }
 }

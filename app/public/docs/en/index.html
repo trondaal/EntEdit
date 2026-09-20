@@ -1004,6 +1004,34 @@
                 the actual cataloguing data.
             </p>
 
+            <h4 id="inferred-values">Inferred values</h4>
+
+            <p>
+                Some of what you see in the editor was never typed in by anyone: the
+                database works it out. Relationships in the WEMI model come in pairs — a
+                Work <em>has expression of work</em>, and that Expression <em>has work
+                expressed</em> — and the database derives the second statement from the
+                first. That means it does not matter which way round you record a link:
+                catalogue it from the Work or from the Expression, and both entities show
+                it.
+            </p>
+
+            <p>
+                Derived values are stored only once. If you add the link on the Expression,
+                the Work has no statement of its own — it is shown the relationship because
+                the database concluded it. Removing it from the Work therefore deletes the
+                statement on the Expression, which is what you would want: the link
+                disappears from both, exactly as if you had removed it from the other side.
+            </p>
+
+            <p>
+                By default EntEdit marks such values with a small <em>inferred</em> tag and a
+                dashed outline, so you can tell what is stored from what is concluded. If
+                that distinction is not what you are working on, turn off
+                <em>Mark values the database inferred</em> in the settings — the values
+                behave the same either way.
+            </p>
+
             <h3 id="auto-generation">5.3 Auto-generation of URIs and labels</h3>
 
             <p>

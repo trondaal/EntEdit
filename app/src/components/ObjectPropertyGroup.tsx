@@ -24,6 +24,7 @@ interface ObjectPropertyGroupProps {
   statusFilter: string;
   entityData: Record<string, OrderedValue[]>;
   isEditing: boolean;
+  showInferredMarks: boolean;
   classUri: string;
   entityUri?: string | null;
   selectedLanguage: string;
@@ -43,6 +44,7 @@ const ObjectPropertyGroup: React.FC<ObjectPropertyGroupProps> = ({
   statusFilter,
   entityData,
   isEditing,
+  showInferredMarks,
   classUri,
   entityUri: sourceEntityUri,
   selectedLanguage,
@@ -171,6 +173,7 @@ const ObjectPropertyGroup: React.FC<ObjectPropertyGroupProps> = ({
           values={entityData[propertyUri]}
           rangeUri={properties.find((p) => p.uri === propertyUri)?.range}
           isEditing={isEditing && !!classUri}
+          showInferredMarks={showInferredMarks}
           selectedLanguage={selectedLanguage}
           onUpdateValue={(index, value) =>
             onUpdateValue(propertyUri, index, value)

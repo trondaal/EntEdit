@@ -375,6 +375,14 @@
     "Require before saving": {
       "no": "Påkrevd før lagring",
       "ui": true
+    },
+    "inferred": {
+      "no": "utledet",
+      "ui": true
+    },
+    "Mark values the database inferred": {
+      "no": "Merk verdier databasen har utledet",
+      "ui": true
     }
   },
   "general_terms": {
@@ -461,6 +469,9 @@
     "repository (Git)": {
       "no": "prosjektet",
       "_note": "For the Git/GitHub repository, refer to 'prosjektet' or 'EntEdit-prosjektet' rather than 'repositoriet'."
+    },
+    "inferred value": {
+      "no": "utledet verdi"
     }
   }
 }

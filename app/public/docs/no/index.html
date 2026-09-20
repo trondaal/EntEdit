@@ -994,6 +994,33 @@
                 katalogiseringsdataene.
             </p>
 
+            <h4 id="inferred-values">Utledede verdier</h4>
+
+            <p>
+                Noe av det du ser i editoren, har ingen skrevet inn: databasen har regnet det
+                ut. Relasjoner i WEMI-modellen kommer parvis — et verk <em>har uttrykk av
+                verk</em>, og det uttrykket <em>er uttrykk av verk</em> — og databasen utleder
+                det andre utsagnet fra det første. Derfor spiller det ingen rolle hvilken vei
+                du registrerer en kobling: katalogiser den fra verket eller fra uttrykket, og
+                begge entitetene viser den.
+            </p>
+
+            <p>
+                Utledede verdier lagres bare én gang. Legger du inn koblingen på uttrykket,
+                har verket ikke noe eget utsagn — det får relasjonen vist fordi databasen har
+                sluttet seg til den. Fjerner du den fra verket, slettes derfor utsagnet på
+                uttrykket, og det er nettopp det du vil: koblingen forsvinner fra begge, akkurat
+                som om du hadde fjernet den fra den andre siden.
+            </p>
+
+            <p>
+                Som standard merker EntEdit slike verdier med en liten <em>utledet</em>-merkelapp
+                og en stiplet ramme, slik at du ser hva som er lagret og hva som er utledet. Er
+                ikke det skillet det du jobber med, slår du av
+                <em>Merk verdier databasen har utledet</em> i innstillingene — verdiene oppfører
+                seg likt uansett.
+            </p>
+
             <h3 id="auto-generation">5.3 Auto-generering av URI-er og etiketter</h3>
 
             <p>

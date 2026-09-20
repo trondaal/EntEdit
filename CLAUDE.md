@@ -336,11 +336,15 @@ need no login (`--access read|write|none`). Run `--help` for all options.
 identity is in the editor, supporting both classic cataloguing and semantic-web
 cataloguing from one build:
 
-- Four independent preferences: `showIdentifier`, `showLabels`,
-  `requireIdentifier`, `requireLabel`. The presets `CLASSIC_PREFERENCES` (all
-  off) and `SEMANTIC_PREFERENCES` (all on) are offered as one-click choices in
-  the wizard and the settings dialog (`CatalogingStyleSettings`); any other
-  combination is reported as "custom". New installations default to semantic.
+- Five independent preferences: `showIdentifier`, `showLabels`,
+  `requireIdentifier`, `requireLabel` and `showInferredMarks`. The presets
+  `CLASSIC_PREFERENCES` (all off) and `SEMANTIC_PREFERENCES` (all on) are
+  offered as one-click choices in the wizard and the settings dialog
+  (`CatalogingStyleSettings`); any other combination is reported as "custom".
+  New installations default to semantic.
+- `showInferredMarks` only controls the "inferred" chip and dashed outline on a
+  value. Inferred values behave identically either way — including being
+  removable — so this is presentation, not permission.
 - Hidden fields are not lost: `EntityEditor` offers an "Identifier and labels…"
   dialog from the ⋮ menu whenever either is hidden, and a missing identifier or
   label is generated on save as before.

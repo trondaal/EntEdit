@@ -131,6 +131,19 @@ const CatalogingStyleSettings: React.FC<CatalogingStyleSettingsProps> = ({
           </React.Fragment>
         ))}
       </Box>
+      <FormControlLabel
+        sx={{ mt: 1 }}
+        control={
+          <Checkbox
+            checked={preferences.showInferredMarks}
+            onChange={(event) => toggle("showInferredMarks")(event.target.checked)}
+          />
+        }
+        label={
+          <Typography variant="body2">{t("catalogingStyle.showInferredMarks")}</Typography>
+        }
+      />
+
       <Typography variant="caption" color="text.secondary" sx={{ display: "block", mt: 1 }}>
         {t("catalogingStyle.hiddenNote")}
       </Typography>

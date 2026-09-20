@@ -647,6 +647,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
         <DataPropertiesSection
           entityData={entityData}
+          showInferredMarks={preferences.showInferredMarks}
           properties={properties}
           isEditing={isEditing}
           classUri={classUri}
@@ -672,6 +673,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
               statusFilter={section.statusFilter}
               entityData={entityData}
               isEditing={isEditing}
+              showInferredMarks={preferences.showInferredMarks}
               classUri={classUri}
               selectedLanguage={selectedLanguage}
               onUpdateValue={updatePropertyValue}
