@@ -190,7 +190,6 @@
     "username": "Brukernavn (valgfritt)",
     "password": "Passord (valgfritt)",
     "saveConfiguration": "Lagre konfigurasjon",
-    "reset": "Tilbakestill",
     "reconfigureDatabase": "Konfigurer database på nytt",
     "connectionSection": "Databasetilkobling",
     "cancel": "Avbryt"

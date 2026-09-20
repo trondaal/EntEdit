@@ -190,7 +190,6 @@
     "username": "Username (optional)",
     "password": "Password (optional)",
     "saveConfiguration": "Save Configuration",
-    "reset": "Reset",
     "reconfigureDatabase": "Reconfigure Database",
     "connectionSection": "Database connection",
     "cancel": "Cancel"

@@ -56,11 +56,6 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
     }
   };
 
-  const handleReset = () => {
-    setLocalConfig(config);
-    setLocalPreferences(preferences);
-  };
-
   if (isModal) {
     return (
       <>
@@ -116,7 +111,6 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
         </DialogContent>
         <DialogActions>
           <Button onClick={onCancel}>{t("endpointConfig.cancel")}</Button>
-          <Button onClick={handleReset}>{t("endpointConfig.reset")}</Button>
           {onResetConfiguration && (
             <Button onClick={onResetConfiguration} color="error">
               {t("endpointConfig.reconfigureDatabase")}
@@ -199,9 +193,7 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
             <Button variant="contained" onClick={handleSave}>
               {t("endpointConfig.saveConfiguration")}
             </Button>
-            <Button variant="outlined" onClick={handleReset}>
-              {t("endpointConfig.reset")}
-            </Button>
+
           </Box>
         </Box>
       </Collapse>
