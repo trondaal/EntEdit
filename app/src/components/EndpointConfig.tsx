@@ -30,6 +30,8 @@ interface EndpointConfigProps {
   isModal?: boolean;
   onResetConfiguration?: () => void;
   preferences: CatalogingPreferences;
+  /** Closes the dialog without saving; only meaningful in the modal form. */
+  onCancel?: () => void;
 }
 
 const EndpointConfig: React.FC<EndpointConfigProps> = ({
@@ -40,6 +42,7 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
   isModal = false,
   onResetConfiguration,
   preferences,
+  onCancel,
 }) => {
   const { t } = useTranslation();
   const [expanded, setExpanded] = useState(false);
@@ -68,6 +71,9 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
           </Box>
         </DialogTitle>
         <DialogContent>
+          <Typography variant="subtitle2" sx={{ mb: 1 }}>
+            {t("endpointConfig.connectionSection")}
+          </Typography>
           <Box sx={{ pt: 1 }}>
             <TextField
               fullWidth
@@ -109,6 +115,7 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
           </Box>
         </DialogContent>
         <DialogActions>
+          <Button onClick={onCancel}>{t("endpointConfig.cancel")}</Button>
           <Button onClick={handleReset}>{t("endpointConfig.reset")}</Button>
           {onResetConfiguration && (
             <Button onClick={onResetConfiguration} color="error">

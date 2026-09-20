@@ -327,6 +327,7 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
 
             <Box sx={{ mb: 3 }}>
               <CatalogingStyleSettings
+                hideHeading
                 preferences={preferences}
                 onChange={setPreferences}
               />
@@ -430,10 +431,12 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
         },
       }}
     >
+      {/* One title for the whole flow: the stepper and each step's own
+          heading say which aspect is being configured. */}
       <DialogTitle>
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <Storage sx={{ mr: 1 }} />
-          {t("wizard.steps.connection")}
+          {t("wizard.title")}
         </Box>
       </DialogTitle>
 

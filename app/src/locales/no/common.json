@@ -118,7 +118,7 @@
       "connection": "Databasetilkobling",
       "test": "Test tilkobling",
       "language": "Språkvalg",
-      "settings": "Andre innstillinger"
+      "settings": "Katalogiseringsstil"
     },
     "connection": {
       "title": "Konfigurer databasetilkobling",
@@ -153,13 +153,13 @@
       "successDescription": "Konfigurasjonen din lagres lokalt og applikasjonen kobler til databasen din."
     },
     "settingsStep": {
-      "title": "Andre innstillinger",
+      "title": "Katalogiseringsstil",
       "description": "Velg hvordan editoren behandler RDF-identifikatorer og labels. Du kan endre dette senere i innstillingene."
     },
     "buttons": {
       "nextTest": "Neste: Test tilkobling",
       "nextLanguage": "Neste: Språk",
-      "nextSettings": "Neste: Innstillinger",
+      "nextSettings": "Neste: Katalogiseringsstil",
       "back": "Tilbake",
       "complete": "Fullfør oppsett"
     },
@@ -180,17 +180,20 @@
       "networkDetails": "Får ikke kontakt med databaseserveren. Mulige årsaker:\n• Databaseserveren kjører ikke\n• URL-en er feil\n• En CORS-regel (kryssopphav) blokkerer forespørselen\n• En brannmur eller nettverksbegrensning\n• Problem med SSL/TLS-sertifikat hvis du bruker HTTPS\n\nPrøv å åpne URL-en direkte i nettleseren for å teste tilkoblingen.",
       "cors": "CORS-feil (kryssopphav)",
       "corsDetails": "Databaseserveren må tillate forespørsler fra denne applikasjonen. For GraphDB legger du til disse CORS-hodene:\n• Access-Control-Allow-Origin: *\n• Access-Control-Allow-Methods: GET, POST, OPTIONS\n• Access-Control-Allow-Headers: Content-Type, Authorization"
-    }
+    },
+    "title": "Sett opp EntEdit"
   },
   "endpointConfig": {
-    "title": "SPARQL endepunkt-konfigurasjon",
+    "title": "Innstillinger",
     "endpointUrl": "SPARQL endepunkt-URL",
     "endpointUrlHelper": "Skriv inn URL-en til SPARQL-endepunktet ditt",
     "username": "Brukernavn (valgfritt)",
     "password": "Passord (valgfritt)",
     "saveConfiguration": "Lagre konfigurasjon",
     "reset": "Tilbakestill",
-    "reconfigureDatabase": "Konfigurer database på nytt"
+    "reconfigureDatabase": "Konfigurer database på nytt",
+    "connectionSection": "Databasetilkobling",
+    "cancel": "Avbryt"
   },
   "logging": {
     "record": "Start logging",

@@ -301,6 +301,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({
           selectedLanguage={selectedLanguage}
           onLanguageChange={onLanguageChange}
           isModal={true}
+          onCancel={() => setConfigDialogOpen(false)}
           onResetConfiguration={() => {
             setConfigDialogOpen(false);
             onResetConfiguration?.();

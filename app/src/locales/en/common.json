@@ -118,7 +118,7 @@
       "connection": "Database Connection",
       "test": "Test Connection",
       "language": "Language Selection",
-      "settings": "Other Settings"
+      "settings": "Cataloguing style"
     },
     "connection": {
       "title": "Configure Database Connection",
@@ -153,13 +153,13 @@
       "successDescription": "Your configuration will be saved locally and the application will connect to your database."
     },
     "settingsStep": {
-      "title": "Other Settings",
+      "title": "Cataloguing style",
       "description": "Choose how the editor treats RDF identifiers and labels. You can change this later in Settings."
     },
     "buttons": {
       "nextTest": "Next: Test Connection",
       "nextLanguage": "Next: Language",
-      "nextSettings": "Next: Settings",
+      "nextSettings": "Next: Cataloguing style",
       "back": "Back",
       "complete": "Complete Setup"
     },
@@ -180,17 +180,20 @@
       "networkDetails": "Cannot reach the database server. This could be:\n• The database server is not running\n• The URL is incorrect\n• A CORS (cross-origin) policy is blocking the request\n• A firewall or network restriction\n• An SSL/TLS certificate problem if using HTTPS\n\nTry opening the URL directly in your browser to test connectivity.",
       "cors": "CORS (cross-origin) error",
       "corsDetails": "The database server needs to allow requests from this application. For GraphDB, add these CORS headers:\n• Access-Control-Allow-Origin: *\n• Access-Control-Allow-Methods: GET, POST, OPTIONS\n• Access-Control-Allow-Headers: Content-Type, Authorization"
-    }
+    },
+    "title": "Set up EntEdit"
   },
   "endpointConfig": {
-    "title": "SPARQL Endpoint Configuration",
+    "title": "Settings",
     "endpointUrl": "SPARQL Endpoint URL",
     "endpointUrlHelper": "Enter the URL of your SPARQL endpoint",
     "username": "Username (optional)",
     "password": "Password (optional)",
     "saveConfiguration": "Save Configuration",
     "reset": "Reset",
-    "reconfigureDatabase": "Reconfigure Database"
+    "reconfigureDatabase": "Reconfigure Database",
+    "connectionSection": "Database connection",
+    "cancel": "Cancel"
   },
   "logging": {
     "record": "Start logging",

@@ -18,6 +18,8 @@ import {
 interface CatalogingStyleSettingsProps {
   preferences: CatalogingPreferences;
   onChange: (preferences: CatalogingPreferences) => void;
+  /** Omit the heading where the surrounding step already carries it. */
+  hideHeading?: boolean;
 }
 
 /**
@@ -28,6 +30,7 @@ interface CatalogingStyleSettingsProps {
 const CatalogingStyleSettings: React.FC<CatalogingStyleSettingsProps> = ({
   preferences,
   onChange,
+  hideHeading = false,
 }) => {
   const { t } = useTranslation();
   const style = styleOf(preferences);
@@ -50,12 +53,16 @@ const CatalogingStyleSettings: React.FC<CatalogingStyleSettingsProps> = ({
 
   return (
     <Box>
-      <Typography variant="subtitle2" sx={{ mb: 0.5 }}>
-        {t("catalogingStyle.title")}
-      </Typography>
-      <Typography variant="body2" color="text.secondary" sx={{ mb: 1.5 }}>
-        {t("catalogingStyle.description")}
-      </Typography>
+      {!hideHeading && (
+        <>
+          <Typography variant="subtitle2" sx={{ mb: 0.5 }}>
+            {t("catalogingStyle.title")}
+          </Typography>
+          <Typography variant="body2" color="text.secondary" sx={{ mb: 1.5 }}>
+            {t("catalogingStyle.description")}
+          </Typography>
+        </>
+      )}
 
       <ToggleButtonGroup
         exclusive
