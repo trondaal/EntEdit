@@ -79,11 +79,12 @@ export const useRdfProperties = (
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
         PREFIX entedit: <http://oslomet.no/abi/vocab#>
 
-        SELECT DISTINCT ?property ?label ?domain ?range ?order
+        SELECT DISTINCT ?property ?label ?domain ?range ?order ?linguistic
         WHERE {
           ?property a rdf:Property .
           ?property entedit:status "data property" .
           ?property entedit:order ?order
+          OPTIONAL { ?property entedit:linguistic ?linguistic }
           ${createSchemaLabelFragment("?property", language)}
 
           OPTIONAL { ?property rdfs:domain ?domain }
@@ -104,6 +105,8 @@ export const useRdfProperties = (
           order: binding.order?.value
             ? parseInt(binding.order.value, 10)
             : undefined,
+          // Absent means linguistic: only the exceptions are annotated
+          linguistic: binding.linguistic?.value !== "false",
         })),
       );
     },

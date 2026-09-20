@@ -342,8 +342,11 @@ cataloguing from one build:
   and the settings dialog (`CatalogingStyleSettings`); any other combination is
   reported as "custom". New installations default to semantic.
 - `showLanguageTags` shows the language of a text value and offers a selector
-  (`VALUE_LANGUAGES` in `utils/languages.ts`, "no language" by default) while
-  editing. Even when it is off, a property whose values differ in language
+  (`VALUE_LANGUAGES` in `utils/languages.ts`, unset shown as an em dash) while
+  editing, but only for properties whose values are natural language. The
+  profile marks the exceptions with `entedit:linguistic false` (dates,
+  numbering, dimensions, identifiers); a property without the annotation counts
+  as linguistic, so existing vocabularies keep working. Even when it is off, a property whose values differ in language
   shows their tags anyway (`languagesInUse`), because values that differ only
   by an invisible tag look like duplicates and invite a cataloguer to delete
   one.
@@ -369,6 +372,8 @@ The application expects:
 - `entedit:status` predicate to mark active classes/properties
 - `entedit:order` predicate for property display ordering
 - `entedit:valueOrder` predicate (via RDF-star) for multi-value ordering within a property
+- `entedit:linguistic false` on data properties whose values are not natural
+  language, which suppresses the language selector for them
 - Standard RDFS vocabulary (rdfs:label, rdfs:domain, rdfs:range)
 - RDA vocabulary for bibliographic entities (Work, Expression, Manifestation, Item)
 - Properties must have correct `entedit:status` to appear in the editor UI;

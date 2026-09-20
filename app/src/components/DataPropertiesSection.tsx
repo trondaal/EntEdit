@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useCallback, useMemo } from "react";
 import {
   Box,
   Typography,
@@ -50,6 +50,14 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
   getPropertyLabel,
 }) => {
   const { t, i18n } = useTranslation("entityEditor");
+
+  // Language belongs on names, titles and notes — not on dates, numbering or
+  // measurements, which the profile marks with entedit:linguistic false.
+  const isLinguistic = useCallback(
+    (propertyUri: string) =>
+      properties.find((p) => p.uri === propertyUri)?.linguistic !== false,
+    [properties],
+  );
 
   // A property whose values differ in language always shows the tags, even
   // when the setting is off: without them the values look like duplicates.
@@ -192,7 +200,9 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
                     },
                   }}
                 />
-                {isEditing && (showLanguageTags || ambiguousProperties.has(propertyUri)) ? (
+                {isEditing &&
+                ((showLanguageTags && isLinguistic(propertyUri)) ||
+                  ambiguousProperties.has(propertyUri)) ? (
                   <FormControl size="small" sx={{ minWidth: 104, flexShrink: 0 }}>
                     <Select
                       value={entityData[propertyUri][index].lang ?? ""}
@@ -206,8 +216,10 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
                       inputProps={{ "aria-label": t("tooltips.valueLanguage") }}
                       sx={{ "& .MuiSelect-select": { py: 0.75, fontSize: "0.8rem" } }}
                     >
-                      <MenuItem value="">
-                        <em>{t("tooltips.noLanguage")}</em>
+                      {/* A dash rather than words: the same "unset" marker
+                          the label editor uses. */}
+                      <MenuItem value="" aria-label={t("tooltips.noLanguage")}>
+                        <em>—</em>
                       </MenuItem>
                       {VALUE_LANGUAGES.map((code) => (
                         <MenuItem key={code} value={code} sx={{ fontSize: "0.85rem" }}>
@@ -218,7 +230,8 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
                   </FormControl>
                 ) : (
                   entityData[propertyUri][index].lang &&
-                  (showLanguageTags || ambiguousProperties.has(propertyUri)) && (
+                  ((showLanguageTags && isLinguistic(propertyUri)) ||
+                    ambiguousProperties.has(propertyUri)) && (
                     <Tooltip
                       title={languageName(
                         entityData[propertyUri][index].lang,

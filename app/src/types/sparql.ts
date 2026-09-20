@@ -39,6 +39,12 @@ export interface RdfProperty {
   datatype?: string;
   status?: string;
   order?: number;
+  /**
+   * Whether the property's values are natural language, and so can carry a
+   * language tag (`entedit:linguistic`). A property with no annotation counts
+   * as linguistic; dates, numbering and measurements are marked false.
+   */
+  linguistic?: boolean;
 }
 
 export interface OrderedValue {

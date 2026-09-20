@@ -76,17 +76,20 @@ rdac:C10007 entedit:order 6 ; entedit:status "class" .  # "Manifestation"@en .
 rdac:C10003 entedit:order 7 ; entedit:status "class" .  # "Item"@en .
 
 #Agent profile, data properties
+# entedit:linguistic false marks values that are not natural language (dates,
+# numbering, measurements, identifiers): the editor then offers no language
+# selector for them. Properties without the annotation count as linguistic.
 rdaad:P50413	entedit:status "data property" ; entedit:order 1 ; rdfs:label "navn"@no . #"name"@en . Foretrukket navn
 rdaad:P50415	entedit:status "data property" ; entedit:order 2 ; rdfs:label "variant av navn"@no . #"variantname"@en .
-rdaad:P50339	entedit:status "data property" ; entedit:order 3 ; rdfs:label "årstall"@no . #"dates"@en .
+rdaad:P50339	entedit:status "data property" ; entedit:linguistic false ; entedit:order 3 ; rdfs:label "årstall"@no . #"dates"@en .
 
 #Work profile, data properties
 #rdawd:P10088	entedit:status "data property" ; entedit:order 1 ; rdfs:label "tittel"@no . #"title"@en .
 rdawd:P10223	entedit:status "data property" ; entedit:order 1 ; rdfs:label "tittel"@no . #"titlepreferred"@en .
 rdawd:P10086	entedit:status "data property" ; entedit:order 2 ; rdfs:label "tittelvariant"@no . #"titlevariant"@en .
-rdawd:P10012	entedit:status "data property" ; entedit:order 3 ; rdfs:label "nummerering"@no . #"numbering"@en .
+rdawd:P10012	entedit:status "data property" ; entedit:linguistic false ; entedit:order 3 ; rdfs:label "nummerering"@no . #"numbering"@en .
 rdawd:P10256	entedit:status "data property" ; entedit:order 4 ; rdfs:label "emne"@no . #"emne"@en .
-rdawd:P10219	entedit:status "data property" ; entedit:order 5 ; rdfs:label "dato"@no . #"date"@en ;
+rdawd:P10219	entedit:status "data property" ; entedit:linguistic false ; entedit:order 5 ; rdfs:label "dato"@no . #"date"@en ;
 rdawd:P10330	entedit:status "data property" ; entedit:order 6 ; rdfs:label "note"@no . #"note on Work"@en .
 #rdawd:P10004	entedit:status "data property" ; rdfs:label "har kategori av verk"@no . #"type"@en .
 
@@ -100,7 +103,7 @@ rdawd:P10330	entedit:status "data property" ; entedit:order 6 ; rdfs:label "note
 #rdaed:P20312	entedit:status "data property" ; entedit:order   1 ; rdfs:label "tittel"@no . #"title"@en .
 rdaed:P20315	entedit:status "data property" ; entedit:order   1; rdfs:label "tittel"@no . #"titlepreferred"@en .
 rdaed:P20316	entedit:status "data property" ; entedit:order   2 ; rdfs:label "tittelvariant"@no . #"titlevariant"@en .
-rdaed:P20214    entedit:status "data property" ; entedit:order   3 ; rdfs:label "dato"@no . #date of expression"@en .
+rdaed:P20214    entedit:status "data property" ; entedit:linguistic false ; entedit:order   3 ; rdfs:label "dato"@no . #date of expression"@en .
 rdaed:P20071	entedit:status "data property" ; entedit:order   4 ; rdfs:label "note"@no . #"contentsnote"@en .
 
 rdaeo:P20006	entedit:status "controlled property" ;
@@ -122,18 +125,18 @@ rdamd:P30117	entedit:status "data property" ; entedit:order 3 ; rdfs:label "ansv
 
 rdamd:P30107	entedit:status "data property" ; entedit:order 6 ; rdfs:label "utgave"@no . #"edition"@en .
 rdamd:P30182	entedit:status "data property" ; entedit:order 7 ; rdfs:label "omfang"@no . #"extent"@en .
-rdamd:P30169	entedit:status "data property" ; entedit:order 8 ; rdfs:label "dimensjon"@no . #"dimensions"@en .
+rdamd:P30169	entedit:status "data property" ; entedit:linguistic false ; entedit:order 8 ; rdfs:label "dimensjon"@no . #"dimensions"@en .
 
 rdamd:P30176	entedit:status "data property" ; entedit:order 9 ; rdfs:label "navn på utgiver"@no . #"publisher"@en
 #rdamd:P30083	entedit:status "data property" ; entedit:order 9 ; rdfs:label "utgiver"@no . #"publisher"@en .
 rdamd:P30088	entedit:status "data property" ; entedit:order 10 ; rdfs:label "utgivelsessted"@no . #"publicationplace"@en .
-rdamd:P30011	entedit:status "data property" ; entedit:order 11 ; rdfs:label "utgivelsesdato"@no . #"publicationdate"@en .
+rdamd:P30011	entedit:status "data property" ; entedit:linguistic false ; entedit:order 11 ; rdfs:label "utgivelsesdato"@no . #"publicationdate"@en .
 
 #rdamd:P30007	entedit:status "data property" ; entedit:order 12 ; rdfs:label "har tidsrom for copyright"@no . #"copyright date"@en .
 
 rdamd:P30174	entedit:status "data property" ; rdfs:label "har navn på produsent"@no . #"producer"@en .
 rdamd:P30086	entedit:status "data property" ; rdfs:label "har produksjonssted"@no . #"productionplace"@en .
-rdamd:P30009	entedit:status "data property" ; rdfs:label "har tidsrom for produksjon"@no . #"productiondate"@en .
+rdamd:P30009	entedit:status "data property" ; entedit:linguistic false ; rdfs:label "har tidsrom for produksjon"@no . #"productiondate"@en .
 
 #rdamd:P30033	entedit:status "data property" ; rdfs:label "har del av manifestasjon"@no . #"contentsnote"@en .
 #rdamd:P30111	entedit:status "data property" ; rdfs:label "har opplysninger om utgivelse"@no . #"publication"@en .
@@ -149,7 +152,7 @@ rdamd:P30009	entedit:status "data property" ; rdfs:label "har tidsrom for produk
 #rdamd:P30175	entedit:status "data property" ; rdfs:label "har navn på tilvirker"@no . #"manufacturer"@en .
 #rdamd:P30010	entedit:status "data property" ; rdfs:label "har tidsrom for framstilling"@no . #"manufacturedate"@en .
 rdamd:P30137	entedit:status "data property" ; entedit:order 30 ; rdfs:label "note"@no . #"note"@en .
-rdamd:P30004	entedit:status "data property" ; entedit:order 31 ; rdfs:label "identifikator"@no . #"identifier"@en .
+rdamd:P30004	entedit:status "data property" ; entedit:linguistic false ; entedit:order 31 ; rdfs:label "identifikator"@no . #"identifier"@en .
 
 
 #rdamd:P30002	entedit:status "data property" ; rdfs:label "har medietype"@no . #"mediatype"@en .
