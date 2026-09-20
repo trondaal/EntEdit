@@ -32,6 +32,20 @@ vocabulary), and creates the Lucene full-text indexes. It then writes a marker
 triple, so later restarts skip the import. To wipe the data and import again,
 restart that service with `FORCE_REINIT=1`.
 
+If full-text search ever misses entities that clearly match — or returns them
+inconsistently between identical searches — the Lucene index is out of step with
+the data rather than the query being wrong. Rebuild it from the Workbench's
+SPARQL editor, without touching the data:
+
+```sparql
+PREFIX : <http://www.ontotext.com/connectors/lucene#>
+PREFIX inst: <http://www.ontotext.com/connectors/lucene/instance#>
+INSERT DATA { inst:expressionsIndex :repairConnector "" }
+```
+
+The same works for `inst:manifestationsIndex`. GraphDB logs how many entities it
+reindexed.
+
 GraphDB Workbench on port 7200 is for database administration; it is not the
 address EntEdit uses. The endpoint stays
 `http://localhost/graphdb/repositories/EntEdit`, because a browser treats port
