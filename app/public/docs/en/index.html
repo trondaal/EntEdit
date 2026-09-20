@@ -445,7 +445,7 @@
                     <strong>Language</strong> — Choose your preferred language (currently English or Norwegian).
                 </li>
                 <li>
-                    <strong>Settings</strong> — Configure optional save warnings. You can enable warnings that remind you when you are about to save an entity with an auto-generated URI or an auto-generated label. These warnings are off by default — see <a href="#auto-generation">Auto-generation of URIs and labels</a> for details.
+                    <strong>Settings</strong> — Choose the <a href="#cataloguing-style">cataloguing style</a>: whether the identifier and labels appear on the form, and whether they must be filled in before a new entity can be saved.
                 </li>
             </ol>
             <p>
@@ -1142,12 +1142,18 @@
             </ul>
             <p>Empty rows are automatically removed when you apply.</p>
 
-            <h4>Save warnings</h4>
+            <h4>Requiring URIs and labels</h4>
             <p>
-                If you want to be reminded to enter URIs and labels manually, you can enable <strong>save warnings</strong> in the configuration wizard (step 4) or in the settings. When enabled, EntEdit will show a confirmation dialog before saving an entity with an auto-generated URI or label, giving you the chance to go back and enter them yourself.
+                If you would rather enter URIs and labels yourself than have them generated,
+                turn on <em>Require before saving</em> for either of them in the configuration
+                wizard (step 4) or in the settings. Save then stays disabled on a new entity
+                until the field has a value, and the button explains what is missing.
             </p>
             <p>
-                These warnings are useful when you want to ensure high-quality RDF data with established URIs and descriptive, language-tagged labels.
+                This is useful when you want established URIs and descriptive,
+                language-tagged labels rather than generated ones. It applies to new
+                entities, so an entity that already exists without a label can still be
+                edited.
             </p>
 
             <h3 id="what-is-turtle">5.4 Turtle format</h3>

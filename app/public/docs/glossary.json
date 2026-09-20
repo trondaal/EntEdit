@@ -253,7 +253,7 @@
     }
   },
   "ui_sections": {
-    "_policy": "Section headings and button labels in the application UI. These come from the i18n locale files.",
+    "_policy": "Section headings and button labels in the application UI. These come from the i18n locale files. The term \"label\" is deliberately not translated into Norwegian: it names the rdfs:label property, and \"etikett\" invites confusion with other senses of the word. Plural \"labels\", definite \"labelen\"/\"labelene\".",
     "Text metadata": {
       "no": "Tekstmetadata"
     },
@@ -345,15 +345,15 @@
       "ui": true
     },
     "Labels": {
-      "no": "Etiketter",
+      "no": "Labels",
       "ui": true
     },
     "Edit labels": {
-      "no": "Rediger etiketter",
+      "no": "Rediger labels",
       "ui": true
     },
     "Identifier and labels…": {
-      "no": "Identifikator og etiketter …",
+      "no": "Identifikator og labels …",
       "ui": true
     },
     "Cataloguing style": {
@@ -406,10 +406,10 @@
       "no": "egenskaper"
     },
     "label": {
-      "no": "etikett"
+      "no": "label"
     },
     "label (plural)": {
-      "no": "etiketter"
+      "no": "labels"
     },
     "relationship": {
       "no": "relasjon"

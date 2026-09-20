@@ -375,11 +375,11 @@
                         </ol>
                     </li>
                     <li>
-                        <a href="#rdf-export">RDF, URI-er og etiketter</a>
+                        <a href="#rdf-export">RDF, URI-er og labels</a>
                         <ol>
                             <li><a href="#what-is-rdf">Hva er RDF?</a></li>
-                            <li><a href="#uris-and-labels">URI-er og etiketter</a></li>
-                            <li><a href="#auto-generation">Auto-generering av URI-er og etiketter</a></li>
+                            <li><a href="#uris-and-labels">URI-er og labels</a></li>
+                            <li><a href="#auto-generation">Auto-generering av URI-er og labels</a></li>
                             <li><a href="#what-is-turtle">Turtle-formatet</a></li>
                             <li><a href="#exporting-turtle">Eksporter data som Turtle</a></li>
                             <li><a href="#importing-rdf">Importere RDF-data</a></li>
@@ -444,7 +444,7 @@
                     <strong>Språk</strong> — Velg ditt foretrukne språk (for tiden engelsk eller norsk).
                 </li>
                 <li>
-                    <strong>Innstillinger</strong> — Konfigurer valgfrie lagringsvarsler. Du kan slå på varsler som minner deg på når du er i ferd med å lagre en entitet med en auto-generert URI eller en auto-generert etikett. Disse varslene er slått av som standard — se <a href="#auto-generation">Auto-generering av URI-er og etiketter</a> for detaljer.
+                    <strong>Innstillinger</strong> — Velg <a href="#cataloguing-style">katalogiseringsstil</a>: om identifikatoren og labels vises i skjemaet, og om de må fylles ut før en ny entitet kan lagres.
                 </li>
             </ol>
             <p>
@@ -515,11 +515,11 @@
             </p>
             <ul>
                 <li>
-                    <strong>Brukergrensesnitt</strong> — Alle knapper, etiketter og
+                    <strong>Brukergrensesnitt</strong> — Alle knapper, labels og
                     meldinger i applikasjonen vises på det valgte språket.
                 </li>
                 <li>
-                    <strong>Databaseinnhold</strong> — Når databasen inneholder etiketter på flere språk (for klasser, egenskaper og kontrollerte verdier), bruker EntEdit etiketter merket med det valgte språket. Hvis en etikett ikke er tilgjengelig på det valgte språket, faller det tilbake til engelsk eller verdier uten språkkode.
+                    <strong>Databaseinnhold</strong> — Når databasen inneholder labels på flere språk (for klasser, egenskaper og kontrollerte verdier), bruker EntEdit labels merket med det valgte språket. Hvis en label ikke er tilgjengelig på det valgte språket, faller det tilbake til engelsk eller verdier uten språkkode.
                 </li>
             </ul>
             <p>
@@ -724,7 +724,7 @@
                 <li>Når du er ferdig, klikk <strong>Lagre</strong> (eller trykk <kbd>Ctrl</kbd>+<kbd>S</kbd>).</li>
             </ol>
             <p>
-                Du trenger ikke oppgi en URI eller etikett — begge blir auto-generert hvis de er tomme (se <a href="#auto-generation">Auto-generering av URI-er og etiketter</a>). Hvis du vil angi disse manuelt, bruk identifikatorfeltet for URI og etiketteditor for etiketten.
+                Du trenger ikke oppgi en URI eller label — begge blir auto-generert hvis de er tomme (se <a href="#auto-generation">Auto-generering av URI-er og labels</a>). Hvis du vil angi disse manuelt, bruk identifikatorfeltet for URI og label-editor for labelen.
             </p>
 
             <h4>Redigere en eksisterende entitet</h4>
@@ -733,7 +733,7 @@
                 <li>
                     Klikk <strong>Rediger</strong> knappen i redigeringspanelet.
                 </li>
-                <li>Gjør endringer på egenskaper, etiketter eller relasjoner.</li>
+                <li>Gjør endringer på egenskaper, labels eller relasjoner.</li>
                 <li>
                     Klikk <strong>Lagre</strong> for å persister, eller
                     <strong>Avbryt</strong> for å forkaste endringer.
@@ -945,8 +945,8 @@
                 eller forkaste det.
             </div>
 
-            <!-- 5. RDF, URI-ER OG ETIKETTER -->
-            <h2 id="rdf-export">5. RDF, URI-er og etiketter</h2>
+            <!-- 5. RDF, URI-ER OG LABELS -->
+            <h2 id="rdf-export">5. RDF, URI-er og labels</h2>
 
             <h3 id="what-is-rdf">5.1 Hva er RDF?</h3>
 
@@ -972,7 +972,7 @@
                 Når du oppretter en entitet i EntEdit og fyller inn dens egenskaper, bygger du en samling RDF-trippel. For eksempel blir en verk-entitet med tittel, språk og lenke til forfatter tre trippel — hver som forbinder entitets-URI til en verdi via en egenskap-URI.
             </p>
 
-            <h3 id="uris-and-labels">5.2 URI-er og etiketter</h3>
+            <h3 id="uris-and-labels">5.2 URI-er og labels</h3>
 
             <p>
                 Hver entitet i RDF identifiseres av en <strong>URI</strong>. Dette er dens unike identifikator — ingen to entiteter deler samme URI. I produksjonsmiljø bruker du vanligvis etablerte identifikatorer fra autoritetstjenester som VIAF (f.eks. <code>http://viaf.org/viaf/29558386</code> for Cormac McCarthy) eller fra institusjonens eget navnerom, men for læring og eksperimentering kan EntEdit generere URI-er automatisk.
@@ -980,15 +980,17 @@
 
             <p>
                 I tillegg til URI-en har hver entitet i EntEdit en
-                <strong>etikett</strong> (<code>rdfs:label</code>). Dette er ikke en
-                RDA katalogiserings-egenskap — det er en generell semantisk web
-                konvensjon som brukes for å gi entiteter et kort, lesbart navn. I
-                EntEdit er etiketter hva du ser i entitetslister og søkresultat. Uten etikett
-                ville en entitet bare vises ved sin URI, som ikke er veldig hjelpsomt.
+                <strong>label</strong>. Vi bruker det engelske ordet fordi det viser til
+                egenskapen <code>rdfs:label</code> i RDF, og fordi det er slik begrepet
+                omtales i faglitteraturen — «etikett» kan lett forveksles med etiketter i
+                andre betydninger. En label er ikke en RDA-katalogiseringsegenskap: det er en
+                generell konvensjon på den semantiske veven for å gi en entitet et kort,
+                lesbart navn. I EntEdit er labels det du ser i entitetslister og søkeresultater.
+                Uten en label ville entiteten bare vist URI-en sin, som sier lite.
             </p>
 
             <p>
-                Etiketter kan legges til på flere språk. De er atskilte
+                Labels kan legges til på flere språk. De er atskilte
                 fra de formelle RDA-egenskapene (som
                 <em>tittel</em> eller <em>navn</em>) som bærer det faktiske
                 katalogiseringsdataene.
@@ -1021,12 +1023,12 @@
                 seg likt uansett.
             </p>
 
-            <h3 id="auto-generation">5.3 Auto-generering av URI-er og etiketter</h3>
+            <h3 id="auto-generation">5.3 Auto-generering av URI-er og labels</h3>
 
             <p>
                 Hvor mye av dette du gjør selv, avhenger av hvilken
                 <a href="#cataloguing-style">katalogiseringsstil</a> installasjonen din er satt til.
-                Hver gang du lar URI-en eller etiketten stå tom, fyller EntEdit den inn for deg når du lagrer:
+                Hver gang du lar URI-en eller labelen stå tom, fyller EntEdit den inn for deg når du lagrer:
             </p>
 
             <table>
@@ -1039,23 +1041,23 @@
                     <td>En unik URI genereres fra klassen og en tilfeldig identifikator (f.eks. <code>http://example.org/entedit/C10001/9f1c8b7e-…</code>). Dette er egnet for læring og eksperimentering. I produksjonsmiljø vil du vanligvis oppgi en meningsfull URI fra institusjonens navnerom.</td>
                 </tr>
                 <tr>
-                    <td><strong>Etikett</strong></td>
+                    <td><strong>Label</strong></td>
                     <td>Verdien av entitetens primære egenskap (det første tekstmetadata-feltet, f.eks. <em>tittel</em> eller <em>navn</em>) brukes som en ukodifikert <code>rdfs:label</code>.</td>
                 </tr>
             </table>
 
             <p>
-                Dette betyr at du kan opprette en fullstendig entitet ved bare å fylle inn katalogiserings-egenskapene og klikke Lagre — URI og etikett blir tatt hånd om for deg.
+                Dette betyr at du kan opprette en fullstendig entitet ved bare å fylle inn katalogiserings-egenskapene og klikke Lagre — URI og label blir tatt hånd om for deg.
             </p>
 
             <p>
                 Du kan også oppgi dem selv. Blokken <strong>Identifikasjon</strong> øverst i
-                entitetsredigeringen inneholder identifikatoren og etikettene: bruk
+                entitetsredigeringen inneholder identifikatoren og labelene: bruk
                 identifikatorfeltet for en eksisterende URI (f.eks. en VIAF-URI for en agent), og
-                <strong>Rediger etiketter</strong> for tilpassede etiketter med språkkode. Hvis
+                <strong>Rediger labels</strong> for tilpassede labels med språkkode. Hvis
                 installasjonen din skjuler blokken, finner du de samme feltene i menyen
                 <strong>⋮</strong> (flere handlinger) under
-                <em>Identifikator og etiketter …</em>.
+                <em>Identifikator og labels …</em>.
             </p>
 
             <h4 id="cataloguing-style">Katalogiseringsstil</h4>
@@ -1074,22 +1076,22 @@
                 <tr>
                     <td><strong>Klassisk katalogisering</strong></td>
                     <td>Identifikasjonsblokken er skjult, og skjemaet begynner med
-                        katalogiseringsegenskapene. URI-er og etiketter genereres uten at du merker
+                        katalogiseringsegenskapene. URI-er og labels genereres uten at du merker
                         det, og er fortsatt tilgjengelige fra <strong>⋮</strong>-menyen.</td>
                     <td>Katalogiseringsøvelser der RDF-identifikatorene ikke er poenget.</td>
                 </tr>
                 <tr>
                     <td><strong>Semantisk katalogisering</strong></td>
-                    <td>Identifikator og etiketter vises i skjemaet, og Lagre er deaktivert for en
+                    <td>Identifikator og labels vises i skjemaet, og Lagre er deaktivert for en
                         ny entitet til du har fylt inn begge.</td>
-                    <td>Undervisning der det å navngi ting med URI-er og etiketter er en del av
+                    <td>Undervisning der det å navngi ting med URI-er og labels er en del av
                         øvelsen.</td>
                 </tr>
             </table>
 
             <p>
                 De to innstillingene er uavhengige: du kan vise identifikatorer, men ikke
-                etiketter, eller kreve en etikett uten å kreve en URI. Hver rad i innstillingene har
+                labels, eller kreve en label uten å kreve en URI. Hver rad i innstillingene har
                 avkrysningsboksene <em>Vis i skjemaet</em> og <em>Påkrevd før lagring</em>, og krav
                 gjelder bare nye entiteter.
             </p>
@@ -1102,7 +1104,7 @@
             </p>
 
             <p>
-                Tilpassede etiketter kan være mer informative enn auto-genererte. Eksempel etiketter:
+                Tilpassede labels kan være mer informative enn auto-genererte. Eksempel labels:
             </p>
             <ul>
                 <li>
@@ -1115,29 +1117,34 @@
                 </li>
             </ul>
 
-            <h4>Etiketteditor</h4>
+            <h4>Label-editor</h4>
             <p>
-                Åpne <strong>⋮</strong> (flere handlinger) menyen og velg etikett-alternativet for å åpne etiketteditor.
+                Åpne <strong>⋮</strong> (flere handlinger) menyen og velg label-alternativet for å åpne label-editor.
                 Den åpnes som en dragbar dialog som du kan omposisjonere mens du fremdeles samhandler med entitetsredigeringen bak den.
             </p>
             <p>
-                Hver etikett vises som en redigerbar rad med et tekstfelt og en språk-rullegardin. Du kan:
+                Hver label vises som en redigerbar rad med et tekstfelt og en språk-rullegardin. Du kan:
             </p>
             <ul>
-                <li>Skriv direkte inn i en hvilken som helst etikettrad — alle rader er alltid redigerbare.</li>
+                <li>Skriv direkte inn i en hvilken som helst label-rad — alle rader er alltid redigerbare.</li>
                 <li>Velg en språkkode (f.eks. EN, NO) fra rullegardinen, eller la den være tom for ingen språkkode.</li>
-                <li>Klikk <strong>Legg til</strong> knappen (eller trykk <kbd>Enter</kbd> på den siste raden) for å legge til en ny etikettrad.</li>
-                <li>Klikk søppel-ikonet for å fjerne en etikett.</li>
+                <li>Klikk <strong>Legg til</strong> knappen (eller trykk <kbd>Enter</kbd> på den siste raden) for å legge til en ny label-rad.</li>
+                <li>Klikk søppel-ikonet for å fjerne en label.</li>
                 <li>Klikk <strong>Bruk</strong> for å lagre endringene dine, eller <strong>Avbryt</strong> for å forkaste dem.</li>
             </ul>
             <p>Tomme rader fjernes automatisk når du bruker.</p>
 
-            <h4>Lagringsvarsler</h4>
+            <h4>Krav om URI-er og labels</h4>
             <p>
-                Hvis du vil bli påminnet om å oppgi URI-er og etiketter manuelt, kan du slå på <strong>lagringsvarsler</strong> i konfigurasjonsveiviseren (steg 4) eller i innstillingene. Når aktivert, vil EntEdit vise en bekreftelsesdialog før lagring av en entitet med en auto-generert URI eller etikett, noe som gir deg sjansen til å gå tilbake og oppgi dem selv.
+                Vil du heller oppgi URI-er og labels selv enn å få dem generert, slår du på
+                <em>Påkrevd før lagring</em> for den ene eller begge i konfigurasjonsveiviseren
+                (steg 4) eller i innstillingene. Lagre er da deaktivert for en ny entitet til
+                feltet har en verdi, og knappen forklarer hva som mangler.
             </p>
             <p>
-                Disse varslene er nyttige når du vil sikre RDF-data av høy kvalitet med etablerte URI-er og beskrivende, språkkodifiserte etiketter.
+                Dette er nyttig når du vil ha etablerte URI-er og beskrivende labels med
+                språkkode i stedet for genererte. Kravet gjelder nye entiteter, så en entitet
+                som allerede finnes uten label, kan fortsatt redigeres.
             </p>
 
             <h3 id="what-is-turtle">5.4 Turtle-formatet</h3>
@@ -1278,7 +1285,7 @@
                         <td><code>http://viaf.org/viaf/29558386</code></td>
                     </tr>
                     <tr>
-                        <td>Etikett</td>
+                        <td>Label</td>
                         <td>McCarthy, Cormac</td>
                     </tr>
                     <tr>
@@ -1306,9 +1313,9 @@
                 </li>
                 <li>
                     Valgfritt: åpne <strong>⋮</strong> (flere handlinger) menyen og velg
-                    etikett-alternativet for å legge til en etikett, f.eks. "McCarthy,
+                    label-alternativet for å legge til en label, f.eks. "McCarthy,
                     Cormac" (slik at agenten er gjenkjennelig i lister). Hvis den
-                    utelates, auto-genereres en etikett fra den primære egenskapen.
+                    utelates, auto-genereres en label fra den primære egenskapen.
                 </li>
                 <li>
                     Valgfritt: åpne <strong>⋮</strong> (flere handlinger) menyen og velg
@@ -1341,7 +1348,7 @@
                         <td><code>http://viaf.org/viaf/220031159</code></td>
                     </tr>
                     <tr>
-                        <td>Etikett</td>
+                        <td>Label</td>
                         <td>The Road (McCarthy, Cormac)</td>
                     </tr>
                     <tr>
@@ -1370,10 +1377,10 @@
                     Cormac" fra entitetsvelgeren.
                 </li>
                 <li>
-                    Valgfritt: legg til etikett, f.eks. "The Road (McCarthy, Cormac)".
+                    Valgfritt: legg til label, f.eks. "The Road (McCarthy, Cormac)".
                     Å inkludere forfatteren i parentes er en vanlig konvensjon for å
                     hjelpe med å skille verk med samme tittel i entitetslister.
-                    Hvis den utelates, auto-genereres en etikett fra den primære
+                    Hvis den utelates, auto-genereres en label fra den primære
                     egenskapen.
                 </li>
                 <li>
@@ -1386,11 +1393,11 @@
             </ol>
 
             <div class="info-box">
-                <strong>Etikett vs. tittel:</strong> Husk at
-                etiketten er bare et visningsnavn for bruk i lister — det er ikke del
+                <strong>Label vs. tittel:</strong> Husk at
+                labelen er bare et visningsnavn for bruk i lister — det er ikke del
                 av RDA-beskrivelsen. <em>Tittel</em> er den formelle
                 RDA-egenskapen som registrerer den faktiske tittelen. Det er hvorfor vi legger til
-                "The Road" som tekstmetadata-egenskap selv om etiketten
+                "The Road" som tekstmetadata-egenskap selv om labelen
                 allerede inneholder det.
             </div>
 
@@ -1416,7 +1423,7 @@
                         <th>Verdi</th>
                     </tr>
                     <tr>
-                        <td>Etikett</td>
+                        <td>Label</td>
                         <td>The Road (McCarthy, Cormac)</td>
                     </tr>
                     <tr>
@@ -1457,8 +1464,8 @@
                     uttrykk av" og velg verket "The Road".
                 </li>
                 <li>
-                    Valgfritt: legg til etikett (f.eks. "The Road (McCarthy, Cormac)").
-                    Hvis den utelates, auto-genereres en etikett fra den primære
+                    Valgfritt: legg til label (f.eks. "The Road (McCarthy, Cormac)").
+                    Hvis den utelates, auto-genereres en label fra den primære
                     egenskapen.
                 </li>
                 <li>Klikk <strong>Lagre</strong>.</li>
@@ -1493,7 +1500,7 @@
                         <th>Verdi</th>
                     </tr>
                     <tr>
-                        <td>Etikett</td>
+                        <td>Label</td>
                         <td>The road / Cormac McCarthy. — Picador, 2009</td>
                     </tr>
                     <tr>
@@ -1568,10 +1575,10 @@
                     opprettet.
                 </li>
                 <li>
-                    Valgfritt: legg til etikett. En vanlig konvensjon for
-                    manifestasjons-etiketter er:
+                    Valgfritt: legg til label. En vanlig konvensjon for
+                    manifestasjons-labels er:
                     <em>Tittel / Ansvar. — Utgiver, År</em>.
-                    Hvis den utelates, auto-genereres en etikett fra den primære
+                    Hvis den utelates, auto-genereres en label fra den primære
                     egenskapen.
                 </li>
                 <li>Klikk <strong>Lagre</strong>.</li>
@@ -1651,7 +1658,7 @@
                         <th>Verdi</th>
                     </tr>
                     <tr>
-                        <td>Etikett</td>
+                        <td>Label</td>
                         <td>Road (Motion picture : 2009)</td>
                     </tr>
                     <tr>
@@ -1986,7 +1993,7 @@
                 <h4>Fire verk av Agatha Christie</h4>
                 <table>
                     <tr>
-                        <th>Verk-etikett</th>
+                        <th>Verk-label</th>
                         <th>Tittel</th>
                     </tr>
                     <tr>
@@ -2021,7 +2028,7 @@
                 entiteter, hver med:
             </p>
             <ul>
-                <li>En etikett, f.eks. "Endless Night (english text)"</li>
+                <li>En label, f.eks. "Endless Night (english text)"</li>
                 <li>Tittelen av uttrykk som matcher roman-tittelen</li>
                 <li>Språk: English</li>
                 <li>Innholdstype: text</li>
@@ -2053,7 +2060,7 @@
                         <th>Verdi</th>
                     </tr>
                     <tr>
-                        <td>Etikett</td>
+                        <td>Label</td>
                         <td>Agatha Christie 1960s omnibus. — HarperCollins, 2006</td>
                     </tr>
                     <tr>

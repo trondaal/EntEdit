@@ -5,7 +5,7 @@
     "defaultClassName": "Entitet"
   },
   "sections": {
-    "labels": "Etiketter",
+    "labels": "Labels",
     "textMetadata": "Tekstmetadata",
     "controlledValues": "Kontrollerte verdier",
     "relatedEntities": "Relaterte entiteter",
@@ -26,14 +26,14 @@
     "dragToReorder": "Dra for å endre rekkefølge",
     "moveUp": "Flytt opp",
     "moveDown": "Flytt ned",
-    "nothingToSave": "Legg til en verdi eller en etikett før du lagrer",
+    "nothingToSave": "Legg til en verdi eller en label før du lagrer",
     "noChanges": "Ingen endringer å lagre",
     "languageOfValue": "Språket til denne verdien: {{lang}}",
     "requiredMissing": "Fyll inn {{fields}} før du lagrer"
   },
   "messages": {
-    "noLabel": "Ingen etikett",
-    "noLabels": "Denne entiteten har ingen etiketter. Klikk \"Rediger etiketter\" for å legge til en.",
+    "noLabel": "Ingen label",
+    "noLabels": "Denne entiteten har ingen labels. Klikk \"Rediger labels\" for å legge til en.",
     "selectClass": "Vennligst velg en klasse fra venstre panel for å opprette en ny entitet.",
     "noRangeSpecified": "Ingen rekkevidde spesifisert for denne egenskapen. Kan ikke foreslå entiteter.",
     "noEntitiesFound": "Ingen entiteter funnet av type {{typeName}}",
@@ -60,17 +60,17 @@
     "invalidUri": "Dette er ikke en gyldig URI"
   },
   "labelManager": {
-    "title": "Administrer etiketter",
-    "empty": "Ingen etiketter ennå — klikk Legg til for å opprette en",
+    "title": "Administrer labels",
+    "empty": "Ingen labels ennå — klikk Legg til for å opprette en",
     "placeholders": {
-      "labelValue": "Etikettverdi"
+      "labelValue": "Labelverdi"
     },
     "tooltips": {
       "delete": "Slett"
     },
     "errors": {
-      "duplicateLanguage": "En etikett med språk \"{{lang}}\" finnes allerede",
-      "duplicateNoLanguage": "En etikett uten språktag finnes allerede"
+      "duplicateLanguage": "En label med språk \"{{lang}}\" finnes allerede",
+      "duplicateNoLanguage": "En label uten språktag finnes allerede"
     }
   },
   "dialogs": {

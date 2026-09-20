@@ -11,7 +11,7 @@
     "add": "Legg til",
     "remove": "Fjern",
     "graph": "Graf",
-    "editLabels": "Rediger etiketter",
+    "editLabels": "Rediger labels",
     "editUri": "Rediger URI",
     "addUri": "Legg til URI",
     "showUri": "Vis URI",
@@ -25,7 +25,7 @@
     "back": "Tilbake",
     "refresh": "Oppdater",
     "createAnother": "Opprett ny",
-    "editIdentity": "Identifikator og etiketter …"
+    "editIdentity": "Identifikator og labels …"
   },
   "dialogs": {
     "refresh": {
@@ -65,7 +65,7 @@
     "addRelatedManifestation": "Legg til",
     "inferred": "utledet",
     "inferredHelp": "Utledet av databasen fra andre utsagn. Den kan ikke redigeres her og lagres ikke med entiteten.",
-    "labels": "Etiketter",
+    "labels": "Labels",
     "inferredRelationshipHelp": "Utsagnet ligger på «{{entity}}», ikke her. Fjerner du det, slettes utsagnet, og koblingen forsvinner fra begge entitetene."
   },
   "navigation": {
@@ -148,13 +148,13 @@
     },
     "languageStep": {
       "title": "Velg standardspråk",
-      "description": "Velg foretrukket språk for etiketter og grensesnitttekst. Du kan endre dette senere.",
+      "description": "Velg foretrukket språk for labels og grensesnitttekst. Du kan endre dette senere.",
       "successTitle": "Konfigurasjon fullført!",
       "successDescription": "Konfigurasjonen din lagres lokalt og applikasjonen kobler til databasen din."
     },
     "settingsStep": {
       "title": "Andre innstillinger",
-      "description": "Velg hvordan editoren behandler RDF-identifikatorer og etiketter. Du kan endre dette senere i innstillingene."
+      "description": "Velg hvordan editoren behandler RDF-identifikatorer og labels. Du kan endre dette senere i innstillingene."
     },
     "buttons": {
       "nextTest": "Neste: Test tilkobling",
@@ -222,14 +222,14 @@
   },
   "catalogingStyle": {
     "title": "Katalogiseringsstil",
-    "description": "Velg hvor synlige RDF-identifikatorer og etiketter er under redigering.",
+    "description": "Velg hvor synlige RDF-identifikatorer og labels er under redigering.",
     "classic": "Klassisk katalogisering",
     "semantic": "Semantisk katalogisering",
     "custom": "Egen kombinasjon",
     "showColumn": "Vis i skjemaet",
     "requireColumn": "Påkrevd før lagring",
     "identifierRow": "Identifikator (URI)",
-    "labelsRow": "Etiketter",
+    "labelsRow": "Labels",
     "hiddenNote": "Et skjult felt er fortsatt tilgjengelig i ⋮-menyen i editoren, og en verdi genereres automatisk hvis du ikke skriver inn noe.",
     "showInferredMarks": "Merk verdier databasen har utledet (de kan redigeres uansett)"
   }
