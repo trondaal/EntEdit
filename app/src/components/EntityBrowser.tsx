@@ -34,7 +34,7 @@ import {
 } from "../hooks/useEntityQueries";
 import { useDebouncedValue } from "../hooks/useDebouncedValue";
 import EntityEditor from "./EntityEditor";
-import { formatLabel } from "../utils/labelUtils";
+import { formatLabel, formatEntityListLabel } from "../utils/labelUtils";
 import { useLogging } from "../hooks/useLogging";
 
 interface EntityBrowserProps {
@@ -404,7 +404,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
                             primary={
                               <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
                                 <Typography variant="body2" noWrap sx={{ flex: 1 }}>
-                                  {entity.label}
+                                  {formatEntityListLabel(entity.label, entity.uri)}
                                 </Typography>
                                 {isActiveEditing && (
                                   <Tooltip title={t("messages.entityBeingEdited")} placement="left">

@@ -609,7 +609,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
         <Tooltip
           title={!classUri ? t("messages.selectClass") : ""}
-          followCursor
+          placement="top"
           disableHoverListener={!!classUri}
         >
           <Box>

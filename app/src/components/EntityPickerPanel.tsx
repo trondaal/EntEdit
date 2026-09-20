@@ -22,7 +22,7 @@ import {
   useEntityCountByRange,
 } from "../hooks/useEntityQueries";
 import { useDebouncedValue } from "../hooks/useDebouncedValue";
-import { extractUriFragment } from "../utils/labelUtils";
+import { extractUriFragment, formatEntityListLabel } from "../utils/labelUtils";
 
 interface EntityPickerPanelProps {
   config: SparqlEndpointConfig;
@@ -243,7 +243,7 @@ const EntityPickerPanel: React.FC<EntityPickerPanelProps> = ({
                       primary={
                         <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
                           <Typography variant="body2" noWrap sx={{ flex: 1 }}>
-                            {entity.label}
+                            {formatEntityListLabel(entity.label, entity.uri)}
                           </Typography>
                           <Tooltip title={entity.uri} placement="bottom-start">
                             <Tag

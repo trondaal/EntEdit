@@ -95,6 +95,7 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
     >
       {/* Left: label as title + label-edit icon */}
       <Box sx={{ display: "flex", alignItems: "center", gap: 0.5, minWidth: 0, flex: 1, mr: 1 }}>
+        <Tooltip title={titleText} placement="bottom-start">
         <Typography
           variant="h6"
           noWrap
@@ -108,6 +109,7 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
           <ArticleOutlined sx={{ mr: 1 }} />
           {titleText}
         </Typography>
+        </Tooltip>
       </Box>
 
       {/* Right: action buttons */}

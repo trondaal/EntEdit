@@ -110,3 +110,13 @@ export const isValidUri = (uri: string): boolean => {
     return uriPattern.test(uri);
   }
 };
+
+/**
+ * Display name for an entity in a list: its label when it has one, otherwise
+ * the tail of its URI, so an unlabelled entity reads as
+ * "ux-test" rather than "http://example.org/work/ux-test".
+ */
+export const formatEntityListLabel = (
+  label: string | undefined,
+  uri: string,
+): string => (label && label !== uri ? label : extractUriFragment(uri));
