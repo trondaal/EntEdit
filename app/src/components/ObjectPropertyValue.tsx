@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, IconButton, Tooltip } from "@mui/material";
+import { Box, Typography, IconButton, Tooltip, Chip } from "@mui/material";
 import { Delete, Tag } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import type { SparqlEndpointConfig } from "../types/sparql";
@@ -15,6 +15,8 @@ interface ObjectPropertyValueProps {
   value: string;
   rangeUri?: string;
   isEditing: boolean;
+  /** Inferred statements are shown for context but cannot be edited or saved. */
+  inferred?: boolean;
   selectedLanguage: string;
   onUpdate: (value: string) => void;
   onRemove: () => void;
@@ -23,6 +25,7 @@ interface ObjectPropertyValueProps {
 const ObjectPropertyValue: React.FC<ObjectPropertyValueProps> = ({
   value,
   isEditing,
+  inferred,
   onRemove,
 }) => {
   const { t } = useTranslation("common");
@@ -41,6 +44,7 @@ const ObjectPropertyValue: React.FC<ObjectPropertyValueProps> = ({
           border: 1,
           borderColor: "divider",
           borderRadius: 1,
+          ...(inferred && { borderStyle: "dashed", backgroundColor: "action.hover" }),
         }}
       >
         <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
@@ -50,9 +54,19 @@ const ObjectPropertyValue: React.FC<ObjectPropertyValueProps> = ({
           <Tooltip title={value} placement="bottom-start">
             <Tag sx={{ fontSize: "0.875rem", color: "text.disabled", flexShrink: 0 }} />
           </Tooltip>
+          {inferred && (
+            <Tooltip title={t("labels.inferredHelp")} placement="bottom-start">
+              <Chip
+                label={t("labels.inferred")}
+                size="small"
+                variant="outlined"
+                sx={{ height: 18, fontSize: "0.65rem" }}
+              />
+            </Tooltip>
+          )}
         </Box>
       </Box>
-      {isEditing && (
+      {isEditing && !inferred && (
         <IconButton
           size="small"
           onClick={onRemove}

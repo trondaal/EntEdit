@@ -5,6 +5,8 @@ import {
   getFallbackLanguage,
 } from "../utils/sparqlFragments";
 import { sanitizeSparqlUri, escapeSparqlLiteral } from "../utils/labelUtils";
+import { termFromBinding, termKey } from "../utils/rdfTerms";
+import type { StoredTerm } from "../utils/entityUpdate";
 import type { SparqlEndpointConfig, OrderedValue } from "../types/sparql";
 
 /** Number of entities fetched per page in infinite queries */
@@ -18,20 +20,61 @@ export interface EntityLabel {
 }
 
 /** Shape returned by `useEntityQuery` — all outgoing triples grouped by property,
- * plus rdfs:label entries separated out for the LabelManager. */
+ * plus rdfs:label entries separated out for the LabelManager, plus the
+ * explicit snapshot the save path diffs against. */
 export interface LoadedEntity {
   data: Record<string, OrderedValue[]>;
   labels: EntityLabel[];
+  /** Every explicitly asserted triple, with its term details and named graph. */
+  snapshot: StoredTerm[];
+  /** Graph holding the entity's rdf:type, i.e. where new triples belong. */
+  targetGraph?: string;
 }
 
+const RDFS_LABEL = "http://www.w3.org/2000/01/rdf-schema#label";
+const RDF_TYPE = "http://www.w3.org/1999/02/22-rdf-syntax-ns#type";
+
+/** Explicit triples of one entity: full terms, their graph and value order. */
+const EXPLICIT_QUERY = (uri: string) => `
+        PREFIX entedit: <http://oslomet.no/abi/vocab#>
+        SELECT DISTINCT ?property ?value ?valueOrder ?graph WHERE {
+          <${uri}> ?property ?value .
+          OPTIONAL { GRAPH ?graph { <${uri}> ?property ?value . } }
+          OPTIONAL {
+            << <${uri}> ?property ?value >> entedit:valueOrder ?valueOrder .
+          }
+        }
+        ORDER BY ?property ?valueOrder
+      `;
+
+/** Reads the explicit triples of an entity as a diffable snapshot. */
+export const loadEntitySnapshot = async (
+  client: SparqlClient,
+  entityUri: string,
+  signal?: AbortSignal,
+): Promise<StoredTerm[]> => {
+  const response = await client.queryWithoutInference(
+    EXPLICIT_QUERY(sanitizeSparqlUri(entityUri)),
+    { signal },
+  );
+  return response.results.bindings.map((binding) => ({
+    property: binding.property.value,
+    ...termFromBinding(binding.value),
+    graph: binding.graph?.value,
+    order: binding.valueOrder?.value
+      ? parseInt(binding.valueOrder.value, 10)
+      : undefined,
+  }));
+};
+
 /**
- * Loads all outgoing triples for a single entity, with RDF-star valueOrder
- * annotations for multi-value ordering. Labels are returned separately so the
- * label manager and the rest of the editor don't have to filter them out.
+ * Loads one entity for the editor.
  *
- * Runs with inference ON, so inferred inverse/superproperty triples may
- * appear; the `FILTER NOT EXISTS` sub-property block removes entries that
- * would duplicate a more specific predicate.
+ * Two queries are run: the explicit triples (the snapshot the save path
+ * diffs against, carrying language tags, datatypes and named graphs) and the
+ * inferred view. Statements that exist only through inference are marked
+ * `inferred` so the editor can show them read-only instead of writing them
+ * back as asserted triples.
  */
 export const useEntityQuery = (
   config: SparqlEndpointConfig,
@@ -44,63 +87,86 @@ export const useEntityQuery = (
 
       const client = new SparqlClient(config);
       const sanitizedUri = sanitizeSparqlUri(entityUri);
-      const query = `
+      const inferredQuery = `
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        PREFIX entedit: <http://oslomet.no/abi/vocab#>
-        SELECT DISTINCT ?property ?value ?valueOrder WHERE {
+        SELECT DISTINCT ?property ?value WHERE {
           <${sanitizedUri}> ?property ?value .
-          OPTIONAL {
-            << <${sanitizedUri}> ?property ?value >> entedit:valueOrder ?valueOrder .
-          }
           FILTER NOT EXISTS {
             <${sanitizedUri}> ?subProperty ?value .
             ?subProperty rdfs:subPropertyOf+ ?property .
             FILTER (?subProperty != ?property)
           }
         }
-        ORDER BY ?property ?valueOrder
+        ORDER BY ?property
       `;
 
-      const response = await client.query(query, { signal });
+      const [snapshot, inferredResponse] = await Promise.all([
+        loadEntitySnapshot(client, entityUri, signal),
+        client.query(inferredQuery, { signal }),
+      ]);
+
       const data: Record<string, OrderedValue[]> = {};
       const labels: EntityLabel[] = [];
+      const explicitKeys = new Set(
+        snapshot.map((term) => `${term.property}\u0000${termKey(term)}`),
+      );
 
-      // Track per-property auto-increment for values without explicit order
-      const propertyCounters: Record<string, number> = {};
+      const push = (
+        property: string,
+        term: OrderedValue & { inferred?: boolean },
+      ) => {
+        if (!data[property]) data[property] = [];
+        data[property].push(term);
+      };
 
-      response.results.bindings.forEach((binding) => {
-        const property = binding.property.value;
-        const value = binding.value.value;
-
-        if (property === "http://www.w3.org/2000/01/rdf-schema#label") {
-          const language = binding.value["xml:lang"] || "";
+      // Explicit triples first, in their stored order
+      for (const term of snapshot) {
+        if (term.property === RDFS_LABEL) {
           labels.push({
             id: `label-${labels.length}`,
-            value,
-            language,
+            value: term.value,
+            language: term.lang ?? "",
           });
-        } else {
-          if (!data[property]) {
-            data[property] = [];
-            propertyCounters[property] = 0;
-          }
-          const explicitOrder = binding.valueOrder?.value
-            ? parseInt(binding.valueOrder.value, 10)
-            : undefined;
-          const order = explicitOrder ?? propertyCounters[property];
-          propertyCounters[property] =
-            Math.max(propertyCounters[property], order) + 1;
-          const isUri = binding.value.type === "uri";
-          data[property].push({ value, order, isUri });
+          continue;
         }
-      });
+        push(term.property, {
+          value: term.value,
+          order: term.order ?? (data[term.property]?.length ?? 0),
+          isUri: term.isUri,
+          lang: term.lang,
+          datatype: term.datatype,
+        });
+      }
 
-      // Sort values within each property by order
+      // Then whatever only the reasoner knows about, read-only
+      for (const binding of inferredResponse.results.bindings) {
+        const property = binding.property.value;
+        const term = termFromBinding(binding.value);
+        if (explicitKeys.has(`${property}\u0000${termKey(term)}`)) continue;
+        if (property === RDFS_LABEL) continue;
+        push(property, {
+          ...term,
+          order: data[property]?.length ?? 0,
+          inferred: true,
+        });
+      }
+
+      // Keep values in order, with the editable ones first
       Object.values(data).forEach((values) => {
-        values.sort((a, b) => a.order - b.order);
+        values.sort((a, b) => {
+          if (!!a.inferred !== !!b.inferred) return a.inferred ? 1 : -1;
+          return a.order - b.order;
+        });
+        values.forEach((value, index) => {
+          value.order = index;
+        });
       });
 
-      return { data, labels };
+      const targetGraph = snapshot.find(
+        (term) => term.property === RDF_TYPE && term.graph,
+      )?.graph;
+
+      return { data, labels, snapshot, targetGraph };
     },
     enabled: !!entityUri && !!config.url,
   });

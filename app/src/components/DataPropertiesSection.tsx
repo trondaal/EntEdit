@@ -8,6 +8,8 @@ import {
   MenuItem,
   FormControl,
   InputLabel,
+  Chip,
+  Tooltip,
 } from "@mui/material";
 import { Delete } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
@@ -136,7 +138,9 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
                   onChange={(e) =>
                     onUpdateValue(propertyUri, index, e.target.value)
                   }
-                  disabled={!isEditing || !classUri}
+                  disabled={
+                    !isEditing || !classUri || !!entityData[propertyUri][index].inferred
+                  }
                   size="small"
                   placeholder={t("placeholders.enterValue", { propertyName: getPropertyLabel(propertyUri) })}
                   sx={{
@@ -147,7 +151,27 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
                     },
                   }}
                 />
-                {isEditing && (
+                {entityData[propertyUri][index].lang && (
+                  <Tooltip title={t("tooltips.languageOfValue", { lang: entityData[propertyUri][index].lang })}>
+                    <Chip
+                      label={entityData[propertyUri][index].lang}
+                      size="small"
+                      variant="outlined"
+                      sx={{ height: 20, fontSize: "0.65rem", textTransform: "uppercase" }}
+                    />
+                  </Tooltip>
+                )}
+                {entityData[propertyUri][index].inferred && (
+                  <Tooltip title={t("common:labels.inferredHelp", { ns: "common" })}>
+                    <Chip
+                      label={t("common:labels.inferred", { ns: "common" })}
+                      size="small"
+                      variant="outlined"
+                      sx={{ height: 20, fontSize: "0.65rem" }}
+                    />
+                  </Tooltip>
+                )}
+                {isEditing && !entityData[propertyUri][index].inferred && (
                   <IconButton
                     size="small"
                     onClick={() => onRemoveValue(propertyUri, index)}

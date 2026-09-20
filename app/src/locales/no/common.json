@@ -60,7 +60,9 @@
     "addAgent": "Legg til",
     "addRelatedWork": "Legg til",
     "addRelatedExpression": "Legg til",
-    "addRelatedManifestation": "Legg til"
+    "addRelatedManifestation": "Legg til",
+    "inferred": "utledet",
+    "inferredHelp": "Utledet av databasen fra andre utsagn. Den kan ikke redigeres her og lagres ikke med entiteten."
   },
   "navigation": {
     "classes": "Klasser",

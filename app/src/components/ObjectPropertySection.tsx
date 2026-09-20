@@ -51,6 +51,7 @@ const ObjectPropertySection: React.FC<ObjectPropertySectionProps> = ({
             value={values[index].value}
             rangeUri={rangeUri}
             isEditing={isEditing}
+            inferred={values[index].inferred}
             selectedLanguage={selectedLanguage}
             onUpdate={(newValue) => onUpdateValue(index, newValue)}
             onRemove={() => onRemoveValue(index)}

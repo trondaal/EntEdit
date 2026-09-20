@@ -45,4 +45,13 @@ export interface OrderedValue {
   value: string;
   order: number;
   isUri?: boolean;
+  /** Language tag of a literal value, if it has one. */
+  lang?: string;
+  /** Datatype IRI of a typed literal (xsd:string is left implicit). */
+  datatype?: string;
+  /**
+   * True when the statement is only inferred by the reasoner. Such values are
+   * shown read-only and never written back, so inference is not materialized.
+   */
+  inferred?: boolean;
 }

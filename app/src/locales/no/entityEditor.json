@@ -26,7 +26,8 @@
     "moveUp": "Flytt opp",
     "moveDown": "Flytt ned",
     "nothingToSave": "Legg til en verdi eller en etikett før du lagrer",
-    "noChanges": "Ingen endringer å lagre"
+    "noChanges": "Ingen endringer å lagre",
+    "languageOfValue": "Språket til denne verdien: {{lang}}"
   },
   "messages": {
     "noLabel": "Ingen etikett",
@@ -52,7 +53,8 @@
       "forbidden": "Databasen avviste endringen. Dette endepunktet er skrivebeskyttet — vanlig for en demoserver. Konfigurer et skrivbart endepunkt i Innstillinger for å lagre.",
       "server": "Databasen rapporterte en feil og utførte ikke endringen. Prøv igjen eller sjekk serverloggene."
     },
-    "uriInUse": "Denne identifikatoren er allerede i bruk av «{{label}}» ({{types}}). Velg en annen identifikator, eller åpne den eksisterende entiteten fra listen."
+    "uriInUse": "Denne identifikatoren er allerede i bruk av «{{label}}» ({{types}}). Velg en annen identifikator, eller åpne den eksisterende entiteten fra listen.",
+    "saveConflict": "Noen andre har endret denne entiteten mens du redigerte den ({{properties}}). Bruk Oppdater for å hente deres versjon, og gjør endringene dine på nytt."
   },
   "labelManager": {
     "title": "Administrer etiketter",

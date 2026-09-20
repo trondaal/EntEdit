@@ -60,7 +60,9 @@
     "addAgent": "Add",
     "addRelatedWork": "Add",
     "addRelatedExpression": "Add",
-    "addRelatedManifestation": "Add"
+    "addRelatedManifestation": "Add",
+    "inferred": "inferred",
+    "inferredHelp": "Inferred by the database from other statements. It cannot be edited here and is not saved with the entity."
   },
   "navigation": {
     "classes": "Classes",
