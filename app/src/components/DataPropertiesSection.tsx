@@ -16,6 +16,7 @@ import { useTranslation } from "react-i18next";
 import type { RdfProperty, OrderedValue } from "../types/sparql";
 import OrderableValueList from "./OrderableValueList";
 import { languageName, languagesInUse, VALUE_LANGUAGES } from "../utils/languages";
+import { duplicateValueIndexes } from "../utils/entityUpdate";
 
 interface DataPropertiesSectionProps {
   entityData: Record<string, OrderedValue[]>;
@@ -58,6 +59,16 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
       properties.find((p) => p.uri === propertyUri)?.linguistic !== false,
     [properties],
   );
+
+  // Same text and same language is the same triple: the repeat would be lost
+  // on save, so it is marked here and dropped when the save goes through.
+  const duplicates = useMemo(() => {
+    const map: Record<string, Set<number>> = {};
+    for (const [property, values] of Object.entries(entityData)) {
+      map[property] = duplicateValueIndexes(values);
+    }
+    return map;
+  }, [entityData]);
 
   // A property whose values differ in language always shows the tags, even
   // when the setting is off: without them the values look like duplicates.
@@ -177,6 +188,12 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
               >
                 <TextField
                   fullWidth
+                  error={duplicates[propertyUri]?.has(index) ?? false}
+                  helperText={
+                    duplicates[propertyUri]?.has(index)
+                      ? t("messages.duplicateValue")
+                      : undefined
+                  }
                   inputRef={
                     focusTarget === propertyUri &&
                     index === entityData[propertyUri].length - 1

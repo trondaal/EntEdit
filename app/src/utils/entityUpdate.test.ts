@@ -9,6 +9,8 @@ import {
   type StoredTerm,
   findRemovedRelations,
   pruneEmptyValues,
+  duplicateValueIndexes,
+  pruneDuplicateValues,
 } from "./entityUpdate";
 
 const WORK = "http://viaf.org/viaf/214012164";
@@ -331,5 +333,43 @@ describe("pruneEmptyValues", () => {
   it("leaves data without empty values untouched", () => {
     const data = { [TITLE]: [{ value: "A" }, { value: "B" }] };
     expect(pruneEmptyValues(data)).toEqual(data);
+  });
+});
+
+describe("duplicateValueIndexes", () => {
+  it("finds a repeat of the same text and language", () => {
+    expect(
+      duplicateValueIndexes([{ value: "A" }, { value: "B" }, { value: "A" }]),
+    ).toEqual(new Set([2]));
+  });
+
+  it("does not treat a different language as a duplicate", () => {
+    expect(
+      duplicateValueIndexes([
+        { value: "The Road", lang: "en" },
+        { value: "The Road", lang: "no" },
+        { value: "The Road" },
+      ]),
+    ).toEqual(new Set());
+  });
+
+  it("ignores whitespace-only differences and empty values", () => {
+    expect(
+      duplicateValueIndexes([{ value: "A" }, { value: " A " }, { value: "" }, { value: "" }]),
+    ).toEqual(new Set([1]));
+  });
+});
+
+describe("pruneDuplicateValues", () => {
+  it("keeps the first of each and drops the repeats", () => {
+    expect(
+      pruneDuplicateValues({
+        [TITLE]: [{ value: "A" }, { value: "A" }, { value: "B" }],
+        [AUTHOR]: [{ value: "x", isUri: true }],
+      }),
+    ).toEqual({
+      [TITLE]: [{ value: "A" }, { value: "B" }],
+      [AUTHOR]: [{ value: "x", isUri: true }],
+    });
   });
 });

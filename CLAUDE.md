@@ -237,6 +237,11 @@ properties are not turned into strings.
 - `LabelManager` dialog uses `hideBackdrop`, `disableEnforceFocus`, `disableAutoFocus`,
   `disableRestoreFocus` to allow interaction with content behind it (non-modal)
 - Drag-and-drop reordering via @dnd-kit only shows controls when editing with 2+ values
+- The form must not show edits that were not stored: empty rows and repeats of
+  a value already recorded (same text and language — the same triple) are
+  marked while editing and dropped once a save succeeds
+  (`pruneEmptyValues`, `pruneDuplicateValues`, `duplicateValueIndexes`), and an
+  empty row alone does not enable Save
 - Controls must not move between view and edit mode: the identifier is the same
   `TextField` in both states (read-only, with lock and copy adornments, once
   saved) and uses the same monospace type in both, and the identity rows and

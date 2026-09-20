@@ -37,7 +37,7 @@ import { EntityLabelsProvider, useEntityLabels, type EntityLabelsMap } from "../
 import { useEntityQuery } from "../hooks/useEntityQueries";
 import { useEntityMutations } from "../hooks/useEntityMutations";
 import type { CatalogingPreferences } from "../utils/catalogingStyle";
-import { pruneEmptyValues } from "../utils/entityUpdate";
+import { pruneDuplicateValues, pruneEmptyValues } from "../utils/entityUpdate";
 
 // Stable empty map reference to avoid re-rendering context consumers while the
 // batched labels query is in flight or returns no URIs.
@@ -243,8 +243,9 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     ({ isNew, savedEntityUri }: { isNew: boolean; savedEntityUri: string }) => {
       setIsEditing(false);
       setIsDirty(false);
-      // Rows left empty were not written, so they must not linger in the form
-      setEntityData((prev) => pruneEmptyValues(prev));
+      // Rows left empty, and repeats of a value already recorded, were not
+      // written; they must not linger in the form as though they had been.
+      setEntityData((prev) => pruneDuplicateValues(pruneEmptyValues(prev)));
       if (isNew) {
         // The parent selects the entity just created, so the user can see
         // what was stored and carry on adding relationships to it.
