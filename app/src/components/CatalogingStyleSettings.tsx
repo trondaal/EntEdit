@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import {
-  presetFor,
+  applyPreset,
   styleOf,
   type CatalogingPreferences,
   type CatalogingStyle,
@@ -61,7 +61,9 @@ const CatalogingStyleSettings: React.FC<CatalogingStyleSettingsProps> = ({
         exclusive
         size="small"
         value={style === "custom" ? null : style}
-        onChange={(_, next: CatalogingStyle | null) => next && onChange(presetFor(next))}
+        onChange={(_, next: CatalogingStyle | null) =>
+          next && onChange(applyPreset(next, preferences))
+        }
         sx={{ mb: 2 }}
       >
         <ToggleButton value="classic">{t("catalogingStyle.classic")}</ToggleButton>
@@ -131,8 +133,9 @@ const CatalogingStyleSettings: React.FC<CatalogingStyleSettingsProps> = ({
           </React.Fragment>
         ))}
       </Box>
+      {/* Not part of either style: a display preference of its own. */}
       <FormControlLabel
-        sx={{ mt: 1 }}
+        sx={{ mt: 1.5, pt: 1.5, borderTop: 1, borderColor: "divider", width: "100%" }}
         control={
           <Checkbox
             checked={preferences.showInferredMarks}

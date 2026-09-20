@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  applyPreset,
   applyStyleOverride,
   CLASSIC_PREFERENCES,
   presetFor,
@@ -33,6 +34,30 @@ describe("applyStyleOverride", () => {
     expect(applyStyleOverride(custom, "")).toBe(custom);
     expect(applyStyleOverride(custom, "?style=whatever")).toBe(custom);
     expect(applyStyleOverride(custom, "?demo")).toBe(custom);
+  });
+});
+
+describe("the inferred marker", () => {
+  it("is off in both presets", () => {
+    expect(CLASSIC_PREFERENCES.showInferredMarks).toBe(false);
+    expect(SEMANTIC_PREFERENCES.showInferredMarks).toBe(false);
+  });
+
+  it("does not make a preset read as custom", () => {
+    expect(styleOf({ ...SEMANTIC_PREFERENCES, showInferredMarks: true })).toBe("semantic");
+    expect(styleOf({ ...CLASSIC_PREFERENCES, showInferredMarks: true })).toBe("classic");
+  });
+
+  it("survives switching style, and a style link", () => {
+    const withMarks = { ...CLASSIC_PREFERENCES, showInferredMarks: true };
+    expect(applyPreset("semantic", withMarks)).toEqual({
+      ...SEMANTIC_PREFERENCES,
+      showInferredMarks: true,
+    });
+    expect(applyStyleOverride(withMarks, "?style=semantic")).toEqual({
+      ...SEMANTIC_PREFERENCES,
+      showInferredMarks: true,
+    });
   });
 });
 
