@@ -19,7 +19,8 @@
   "placeholders": {
     "enterUri": "Skriv inn tilpasset URI eller la stå tomt for automatisk generering",
     "enterValue": "Skriv inn {{propertyName}}",
-    "filterEntities": "Filtrer..."
+    "filterEntities": "Filtrer...",
+    "enterOrGenerateUri": "Skriv inn en URI, eller generer en"
   },
   "tooltips": {
     "copyUri": "Kopier URI",

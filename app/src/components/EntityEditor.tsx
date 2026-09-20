@@ -31,7 +31,7 @@ import EntityEditorHeader from "./EntityEditorHeader";
 import DataPropertiesSection from "./DataPropertiesSection";
 import EntityIdentitySection from "./EntityIdentitySection";
 import ObjectPropertyGroup from "./ObjectPropertyGroup";
-import { isValidUri, formatLabel } from "../utils/labelUtils";
+import { isValidUri, formatLabel, generateEntityUri } from "../utils/labelUtils";
 import { useTurtleExportQuery } from "../hooks/useTurtleExportQuery";
 import { EntityLabelsProvider, useEntityLabels, type EntityLabelsMap } from "../hooks/useEntityLabels";
 import { useEntityQuery } from "../hooks/useEntityQueries";
@@ -232,6 +232,11 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     relatedEntityUris,
     selectedLanguage,
   );
+
+  const handleGenerateUri = useCallback(() => {
+    setCustomEntityUri(generateEntityUri(classUri));
+    setIsDirty(true);
+  }, [classUri]);
 
   // "Create another" in the post-save snackbar: back to an empty form.
   const handleNewEntity = useCallback(() => onEntityDeselected?.(), [onEntityDeselected]);
@@ -666,6 +671,8 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         <EntityIdentitySection
           showIdentifier={preferences.showIdentifier}
           showLabels={preferences.showLabels}
+          requireIdentifier={preferences.requireIdentifier}
+          onGenerateUri={handleGenerateUri}
           entityUri={entityUri}
           customEntityUri={customEntityUri}
           onCustomEntityUriChange={(value) => {
@@ -736,6 +743,8 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
             hideHeading
             showIdentifier
             showLabels
+            requireIdentifier={preferences.requireIdentifier}
+            onGenerateUri={handleGenerateUri}
             entityUri={entityUri}
             customEntityUri={customEntityUri}
             onCustomEntityUriChange={(value) => {

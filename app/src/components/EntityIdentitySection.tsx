@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography, TextField, Chip, IconButton, Tooltip, Button } from "@mui/material";
-import { ContentCopy, Edit, Lock } from "@mui/icons-material";
+import { AutoAwesome, ContentCopy, Edit, Lock } from "@mui/icons-material";
 import { useSnackbar } from "notistack";
 import { useTranslation } from "react-i18next";
 
@@ -16,6 +16,10 @@ interface EntityIdentitySectionProps {
   onEditLabels: () => void;
   /** Cataloguing style: which rows belong on the form. */
   showIdentifier: boolean;
+  /** An identifier must be entered before a new entity can be saved. */
+  requireIdentifier?: boolean;
+  /** Fills the field with a generated identifier (new entities only). */
+  onGenerateUri?: () => void;
   showLabels: boolean;
   /** Rendered inside a dialog, so the section heading is redundant. */
   hideHeading?: boolean;
@@ -38,6 +42,8 @@ const EntityIdentitySection: React.FC<EntityIdentitySectionProps> = ({
   onEditLabels,
   showIdentifier,
   showLabels,
+  requireIdentifier = false,
+  onGenerateUri,
   hideHeading = false,
 }) => {
   const { t } = useTranslation("entityEditor");
@@ -72,7 +78,11 @@ const EntityIdentitySection: React.FC<EntityIdentitySectionProps> = ({
           disabled={!entityUri && !isEditing}
           error={uriError}
           helperText={uriError ? t("messages.invalidUri") : undefined}
-          placeholder={t("placeholders.enterUri")}
+          placeholder={
+            requireIdentifier
+              ? t("placeholders.enterOrGenerateUri")
+              : t("placeholders.enterUri")
+          }
           slotProps={{
             htmlInput: {
               "aria-label": t("common:labels.identifier", { ns: "common" }),
@@ -119,6 +129,14 @@ const EntityIdentitySection: React.FC<EntityIdentitySectionProps> = ({
             },
           }}
         />
+        {/* Not every entity has a known URI, and one must be entered when the
+            style requires it — so it can be generated here rather than
+            invented by hand. */}
+        {!entityUri && isEditing && onGenerateUri && (
+          <Button size="small" startIcon={<AutoAwesome />} onClick={onGenerateUri}>
+            {t("common:buttons.generate", { ns: "common" })}
+          </Button>
+        )}
       </Box>
       )}
 

@@ -25,7 +25,8 @@
     "back": "Tilbake",
     "refresh": "Oppdater",
     "createAnother": "Opprett ny",
-    "editIdentity": "Identifikator og labels …"
+    "editIdentity": "Identifikator og labels …",
+    "generate": "Generer"
   },
   "dialogs": {
     "refresh": {

@@ -25,7 +25,8 @@
     "back": "Back",
     "refresh": "Refresh",
     "createAnother": "Create another",
-    "editIdentity": "Identifier and labels…"
+    "editIdentity": "Identifier and labels…",
+    "generate": "Generate"
   },
   "dialogs": {
     "refresh": {

@@ -19,7 +19,8 @@
   "placeholders": {
     "enterUri": "Enter custom URI or leave empty for auto-generation",
     "enterValue": "Enter {{propertyName}}",
-    "filterEntities": "Filter..."
+    "filterEntities": "Filter...",
+    "enterOrGenerateUri": "Enter a URI, or generate one"
   },
   "tooltips": {
     "copyUri": "Copy URI",
