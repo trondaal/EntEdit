@@ -20,6 +20,8 @@ import {
   buildInverseCleanup,
   changedProperties,
   findConflicts,
+  findRemovedRelations,
+  type RemovedRelation,
   RDF_TYPE,
   RDFS_LABEL,
   type DesiredTerm,
@@ -249,19 +251,35 @@ export function useEntityMutations({
         }
       }
 
-      // Relationship values the user removed: their inverse triples on the
-      // other entity have to go too, or the link reappears through inference.
-      const removedRelations: Array<{ property: string; value: string }> = [];
-      const desiredKeys = new Set(
-        desired.map((term) => `${term.property}|${term.value}`),
-      );
-      for (const term of snapshot) {
-        if (!term.isUri || !managedProperties.has(term.property)) continue;
-        if (!desiredKeys.has(`${term.property}|${term.value}`)) {
-          removedRelations.push({ property: term.property, value: term.value });
-          affectedEntityUris.add(term.value);
+      // Relationship values the user removed: the statement that holds the
+      // link has to go too, whether it was asserted here or on the other
+      // entity (an inferred link seen from the other side). Removing it from
+      // either side therefore does what the cataloguer meant.
+      const loadedInferred: RemovedRelation[] = [];
+      for (const [property, values] of Object.entries(loaded?.data ?? {})) {
+        for (const value of values) {
+          if (value.inferred && value.isUri && value.value) {
+            loadedInferred.push({ property, value: value.value });
+          }
         }
       }
+      const keptInferred = new Set<string>();
+      for (const [property, values] of Object.entries(entityData)) {
+        for (const value of values) {
+          if (value.inferred && value.isUri && value.value) {
+            keptInferred.add(`${property}|${value.value}`);
+          }
+        }
+      }
+
+      const removedRelations = findRemovedRelations({
+        snapshot,
+        desired,
+        managedProperties,
+        loadedInferred,
+        keptInferred,
+      });
+      for (const relation of removedRelations) affectedEntityUris.add(relation.value);
 
       const update = [
         buildEntityUpdate({

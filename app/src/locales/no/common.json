@@ -65,7 +65,8 @@
     "addRelatedManifestation": "Legg til",
     "inferred": "utledet",
     "inferredHelp": "Utledet av databasen fra andre utsagn. Den kan ikke redigeres her og lagres ikke med entiteten.",
-    "labels": "Etiketter"
+    "labels": "Etiketter",
+    "inferredRelationshipHelp": "Utsagnet ligger på «{{entity}}», ikke her. Fjerner du det, slettes utsagnet, og koblingen forsvinner fra begge entitetene."
   },
   "navigation": {
     "classes": "Klasser",

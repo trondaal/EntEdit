@@ -55,7 +55,10 @@ const ObjectPropertyValue: React.FC<ObjectPropertyValueProps> = ({
             <Tag sx={{ fontSize: "0.875rem", color: "text.disabled", flexShrink: 0 }} />
           </Tooltip>
           {inferred && (
-            <Tooltip title={t("labels.inferredHelp")} placement="bottom-start">
+            <Tooltip
+              title={t("labels.inferredRelationshipHelp", { entity: displayLabel })}
+              placement="bottom-start"
+            >
               <Chip
                 label={t("labels.inferred")}
                 size="small"
@@ -66,7 +69,7 @@ const ObjectPropertyValue: React.FC<ObjectPropertyValueProps> = ({
           )}
         </Box>
       </Box>
-      {isEditing && !inferred && (
+      {isEditing && (
         <IconButton
           size="small"
           onClick={onRemove}

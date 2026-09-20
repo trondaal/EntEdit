@@ -65,7 +65,8 @@
     "addRelatedManifestation": "Add",
     "inferred": "inferred",
     "inferredHelp": "Inferred by the database from other statements. It cannot be edited here and is not saved with the entity.",
-    "labels": "Labels"
+    "labels": "Labels",
+    "inferredRelationshipHelp": "Stated on “{{entity}}”, not here. Removing it deletes that statement, so the link disappears from both entities."
   },
   "navigation": {
     "classes": "Classes",

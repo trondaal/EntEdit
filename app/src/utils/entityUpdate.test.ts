@@ -7,6 +7,7 @@ import {
   RDFS_LABEL,
   type DesiredTerm,
   type StoredTerm,
+  findRemovedRelations,
 } from "./entityUpdate";
 
 const WORK = "http://viaf.org/viaf/214012164";
@@ -241,5 +242,77 @@ describe("findConflicts", () => {
 
   it("reports nothing when the entity is unchanged", () => {
     expect(findConflicts(opened, [...opened].reverse(), new Set([TITLE, RDFS_LABEL]))).toEqual([]);
+  });
+});
+
+describe("findRemovedRelations", () => {
+  const managed = new Set([AUTHOR, TITLE, RDF_TYPE, RDFS_LABEL]);
+  const EXPRESSION = "http://example.org/expr/1";
+  const HAS_EXPRESSION = "http://rdaregistry.info/Elements/w/object/P10078";
+
+  it("detaches an explicit link the user deleted", () => {
+    expect(
+      findRemovedRelations({
+        snapshot: [{ property: AUTHOR, value: "http://viaf.org/viaf/29558386", isUri: true }],
+        desired: [],
+        managedProperties: managed,
+        loadedInferred: [],
+        keptInferred: new Set(),
+      }),
+    ).toEqual([{ property: AUTHOR, value: "http://viaf.org/viaf/29558386" }]);
+  });
+
+  it("detaches an inferred link the user deleted, though it is on no snapshot", () => {
+    expect(
+      findRemovedRelations({
+        snapshot: [],
+        desired: [],
+        managedProperties: managed,
+        loadedInferred: [{ property: HAS_EXPRESSION, value: EXPRESSION }],
+        keptInferred: new Set(),
+      }),
+    ).toEqual([{ property: HAS_EXPRESSION, value: EXPRESSION }]);
+  });
+
+  it("leaves an inferred link alone while it is still shown", () => {
+    expect(
+      findRemovedRelations({
+        snapshot: [],
+        desired: [],
+        managedProperties: managed,
+        loadedInferred: [{ property: HAS_EXPRESSION, value: EXPRESSION }],
+        keptInferred: new Set([`${HAS_EXPRESSION}|${EXPRESSION}`]),
+      }),
+    ).toEqual([]);
+  });
+
+  it("keeps a link that is still in the form, and ignores unmanaged properties", () => {
+    const unmanaged = "http://rdaregistry.info/Elements/x/object/P00018";
+    expect(
+      findRemovedRelations({
+        snapshot: [
+          { property: AUTHOR, value: "http://viaf.org/viaf/29558386", isUri: true },
+          { property: unmanaged, value: "http://example.org/other", isUri: true },
+        ],
+        desired: [
+          { property: AUTHOR, value: "http://viaf.org/viaf/29558386", isUri: true, order: 0 },
+        ],
+        managedProperties: managed,
+        loadedInferred: [],
+        keptInferred: new Set(),
+      }),
+    ).toEqual([]);
+  });
+
+  it("reports a value removed from both sides only once", () => {
+    expect(
+      findRemovedRelations({
+        snapshot: [{ property: HAS_EXPRESSION, value: EXPRESSION, isUri: true }],
+        desired: [],
+        managedProperties: new Set([HAS_EXPRESSION]),
+        loadedInferred: [{ property: HAS_EXPRESSION, value: EXPRESSION }],
+        keptInferred: new Set(),
+      }),
+    ).toEqual([{ property: HAS_EXPRESSION, value: EXPRESSION }]);
   });
 });

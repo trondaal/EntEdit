@@ -180,6 +180,16 @@ Unchanged triples produce no operations at all, so language tags, datatypes,
 named graphs and unmanaged properties survive untouched, and a save that
 changes one property cannot clobber another.
 
+**Removing an inferred relationship:** inferred values are read-only for
+*editing* but can be *removed*. Cataloguers link A→B or B→A inconsistently, so a
+relationship must be removable from whichever side is open. `findRemovedRelations`
+collects both the explicit links the diff dropped and the inferred ones the user
+deleted from the form; `buildInverseCleanup` then deletes the statement that
+entails the link — which for an inferred one lives on the *other* entity. Nothing
+is materialized: the inferred value is still never written back. Inferred
+*literals* (from superproperty inference) stay read-only, since no single
+reciprocal statement corresponds to them.
+
 **Conflict detection:** before writing, the properties the save will touch
 (`changedProperties`) are compared with a freshly loaded snapshot
 (`findConflicts`). If someone else changed one of them, the save is refused and
