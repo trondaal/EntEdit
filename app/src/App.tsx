@@ -21,6 +21,11 @@ import {
   getDefaultConfiguration,
   type AppConfiguration
 } from "./utils/configManager";
+import {
+  applyStyleOverride,
+  DEFAULT_PREFERENCES,
+  type CatalogingPreferences,
+} from "./utils/catalogingStyle";
 
 const DEMO_ENDPOINT_URL = "http://dijon.idi.ntnu.no:8080/repositories/EntEdit";
 
@@ -277,8 +282,10 @@ function AppInner() {
         endpoint: { url: DEMO_ENDPOINT_URL, username: "", password: "" },
         language: langParam ?? savedConfig?.language ?? "en",
         isConfigured: true,
-        warnAutoUri: savedConfig?.warnAutoUri ?? false,
-        warnAutoLabel: savedConfig?.warnAutoLabel ?? false,
+        preferences: applyStyleOverride(
+          savedConfig?.preferences ?? DEFAULT_PREFERENCES,
+          window.location.search,
+        ),
       });
       setShowWizard(false);
       setLoading(false);
@@ -287,12 +294,19 @@ function AppInner() {
 
     const savedConfig = loadConfiguration();
 
+    // ?style=classic|semantic overrides the stored preferences for this
+    // session, so a teacher can hand out one link for a whole class.
+    const withStyle = (loaded: AppConfiguration): AppConfiguration => ({
+      ...loaded,
+      language: langParam ?? loaded.language,
+      preferences: applyStyleOverride(loaded.preferences, window.location.search),
+    });
+
     if (savedConfig && savedConfig.isConfigured) {
-      setAppConfig(langParam ? { ...savedConfig, language: langParam } : savedConfig);
+      setAppConfig(withStyle(savedConfig));
       setShowWizard(false);
     } else {
-      const defaultConfig = getDefaultConfiguration();
-      setAppConfig(langParam ? { ...defaultConfig, language: langParam } : defaultConfig);
+      setAppConfig(withStyle(getDefaultConfiguration()));
       setShowWizard(true);
     }
 
@@ -303,7 +317,7 @@ function AppInner() {
   const handleConfigurationComplete = (
     config: SparqlEndpointConfig,
     language: string,
-    preferences: { warnAutoUri: boolean; warnAutoLabel: boolean },
+    preferences: CatalogingPreferences,
   ) => {
     // Save to localStorage
     saveConfiguration(config, language, preferences);
@@ -313,25 +327,21 @@ function AppInner() {
       endpoint: config,
       language,
       isConfigured: true,
-      warnAutoUri: preferences.warnAutoUri,
-      warnAutoLabel: preferences.warnAutoLabel,
+      preferences,
     };
 
     setAppConfig(newAppConfig);
     setShowWizard(false);
   };
 
-  const handleConfigChange = (newConfig: SparqlEndpointConfig, warnAutoUri: boolean, warnAutoLabel: boolean) => {
+  const handleConfigChange = (
+    newConfig: SparqlEndpointConfig,
+    preferences: CatalogingPreferences,
+  ) => {
     if (appConfig) {
-      const updatedConfig = {
-        ...appConfig,
-        endpoint: newConfig,
-        warnAutoUri,
-        warnAutoLabel,
-      };
-      setAppConfig(updatedConfig);
+      setAppConfig({ ...appConfig, endpoint: newConfig, preferences });
       if (!isDemoMode) {
-        saveConfiguration(newConfig, appConfig.language, { warnAutoUri, warnAutoLabel });
+        saveConfiguration(newConfig, appConfig.language, preferences);
       }
     }
   };
@@ -418,8 +428,7 @@ function AppInner() {
                 onLanguageChange={handleLanguageChange}
                 onResetConfiguration={handleResetConfiguration}
                 showLogging={showLogging}
-                warnAutoUri={appConfig.warnAutoUri}
-                warnAutoLabel={appConfig.warnAutoLabel}
+                preferences={appConfig.preferences}
                 isDirty={isEditorDirty}
                 onRefresh={handleRefresh}
               />
@@ -461,8 +470,7 @@ function AppInner() {
                       <EntityBrowser
                         config={appConfig.endpoint}
                         selectedLanguage={appConfig.language}
-                        warnAutoUri={appConfig.warnAutoUri}
-                        warnAutoLabel={appConfig.warnAutoLabel}
+                        preferences={appConfig.preferences}
                         onEditingChange={setIsEditorDirty}
                         onRegisterSave={registerEditorSave}
                         onRegisterDiscard={registerEditorDiscard}

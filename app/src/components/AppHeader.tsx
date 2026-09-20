@@ -16,6 +16,7 @@ import {
 } from "@mui/material";
 import { Settings, Help, Download, Upload, Refresh } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
+import type { CatalogingPreferences } from "../utils/catalogingStyle";
 import { useSnackbar } from "notistack";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import LanguageSelector from "./LanguageSelector";
@@ -26,13 +27,15 @@ import LoggingControls from "./LoggingControls";
 
 interface AppHeaderProps {
   config: SparqlEndpointConfig;
-  onConfigChange: (config: SparqlEndpointConfig, warnAutoUri: boolean, warnAutoLabel: boolean) => void;
+  onConfigChange: (
+    config: SparqlEndpointConfig,
+    preferences: CatalogingPreferences,
+  ) => void;
   selectedLanguage: string;
   onLanguageChange: (language: string) => void;
   onResetConfiguration?: () => void;
   showLogging?: boolean;
-  warnAutoUri: boolean;
-  warnAutoLabel: boolean;
+  preferences: CatalogingPreferences;
   isDirty?: boolean;
   onRefresh?: (saveFirst: boolean) => Promise<void>;
 }
@@ -44,8 +47,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({
   onLanguageChange,
   onResetConfiguration,
   showLogging = true,
-  warnAutoUri,
-  warnAutoLabel,
+  preferences,
   isDirty = false,
   onRefresh,
 }) => {
@@ -292,8 +294,8 @@ const AppHeader: React.FC<AppHeaderProps> = ({
       >
         <EndpointConfig
           config={config}
-          onConfigChange={(newConfig, newWarnAutoUri, newWarnAutoLabel) => {
-            onConfigChange(newConfig, newWarnAutoUri, newWarnAutoLabel);
+          onConfigChange={(newConfig, newPreferences) => {
+            onConfigChange(newConfig, newPreferences);
             setConfigDialogOpen(false);
           }}
           selectedLanguage={selectedLanguage}
@@ -303,8 +305,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({
             setConfigDialogOpen(false);
             onResetConfiguration?.();
           }}
-          warnAutoUri={warnAutoUri}
-          warnAutoLabel={warnAutoLabel}
+          preferences={preferences}
         />
       </Dialog>
 

@@ -28,7 +28,8 @@
     "moveDown": "Move down",
     "nothingToSave": "Add a value or a label before saving",
     "noChanges": "No changes to save",
-    "languageOfValue": "Language of this value: {{lang}}"
+    "languageOfValue": "Language of this value: {{lang}}",
+    "requiredMissing": "Enter {{fields}} before saving"
   },
   "messages": {
     "noLabel": "No label",
@@ -82,13 +83,6 @@
       "title": "Discard changes?",
       "message": "You have unsaved changes. Cancelling will discard all changes made in this session.",
       "confirm": "Discard changes"
-    },
-    "saveWarning": {
-      "title": "Auto-generated values",
-      "messageBoth": "This entity will be saved with an auto-generated URI and an auto-generated label. Are you sure you want to continue?",
-      "messageUri": "This entity will be saved with an auto-generated URI. Are you sure you want to continue?",
-      "messageLabel": "This entity will be saved with an auto-generated label. Are you sure you want to continue?",
-      "confirm": "Save anyway"
     },
     "export": {
       "title": "Export Entities",

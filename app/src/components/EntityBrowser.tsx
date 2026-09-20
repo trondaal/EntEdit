@@ -36,12 +36,12 @@ import { useDebouncedValue } from "../hooks/useDebouncedValue";
 import EntityEditor from "./EntityEditor";
 import { formatLabel, formatEntityListLabel } from "../utils/labelUtils";
 import { useLogging } from "../hooks/useLogging";
+import type { CatalogingPreferences } from "../utils/catalogingStyle";
 
 interface EntityBrowserProps {
   config: SparqlEndpointConfig;
   selectedLanguage: string;
-  warnAutoUri: boolean;
-  warnAutoLabel: boolean;
+  preferences: CatalogingPreferences;
   onEditingChange?: (isEditing: boolean) => void;
   onRegisterSave?: (handler: (() => Promise<void>) | null) => void;
   onRegisterDiscard?: (handler: (() => void) | null) => void;
@@ -52,8 +52,7 @@ const ITEM_HEIGHT = 42; // Approximate height of a single entity list item
 const EntityBrowser: React.FC<EntityBrowserProps> = ({
   config,
   selectedLanguage,
-  warnAutoUri,
-  warnAutoLabel,
+  preferences,
   onEditingChange,
   onRegisterSave,
   onRegisterDiscard,
@@ -458,8 +457,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
             propertiesLoading={propertiesLoading}
             objectPropertiesLoading={objectPropertiesLoading}
             selectedLanguage={selectedLanguage}
-            warnAutoUri={warnAutoUri}
-            warnAutoLabel={warnAutoLabel}
+            preferences={preferences}
             onEntitySaved={(saved) => {
               // Open what was just created instead of resetting to a blank form
               if (saved?.isNew) {

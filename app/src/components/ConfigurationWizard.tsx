@@ -17,11 +17,14 @@ import {
   List,
   ListItem,
   ListItemText,
-  FormControlLabel,
-  Checkbox,
 } from "@mui/material";
 import { Storage, CheckCircle, Error, Language } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
+import CatalogingStyleSettings from "./CatalogingStyleSettings";
+import {
+  DEFAULT_PREFERENCES,
+  type CatalogingPreferences,
+} from "../utils/catalogingStyle";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import { SparqlClient } from "../utils/sparqlClient";
 import LanguageSelector from "./LanguageSelector";
@@ -31,7 +34,7 @@ interface ConfigurationWizardProps {
   onConfigurationComplete: (
     config: SparqlEndpointConfig,
     language: string,
-    preferences: { warnAutoUri: boolean; warnAutoLabel: boolean },
+    preferences: CatalogingPreferences,
   ) => void;
   initialConfig?: SparqlEndpointConfig;
   initialLanguage?: string;
@@ -53,8 +56,7 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
     },
   );
   const [selectedLanguage, setSelectedLanguage] = useState(initialLanguage);
-  const [warnAutoUri, setWarnAutoUri] = useState(false);
-  const [warnAutoLabel, setWarnAutoLabel] = useState(false);
+  const [preferences, setPreferences] = useState<CatalogingPreferences>(DEFAULT_PREFERENCES);
   const [testing, setTesting] = useState(false);
   const [testResult, setTestResult] = useState<{
     success: boolean;
@@ -148,7 +150,7 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
   };
 
   const handleComplete = () => {
-    onConfigurationComplete(config, selectedLanguage, { warnAutoUri, warnAutoLabel });
+    onConfigurationComplete(config, selectedLanguage, preferences);
   };
 
   const renderStepContent = (step: number) => {
@@ -195,7 +197,7 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
             />
 
             <Paper
-              sx={{ p: 2, bgcolor: "info.light", color: "info.contrastText" }}
+              sx={{ p: 2, bgcolor: "info.light", color: "info.dark" }}
             >
               <Typography variant="body2">
                 <strong>{t("wizard.connection.popularEndpoints")}</strong>
@@ -324,23 +326,9 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
             </Typography>
 
             <Box sx={{ mb: 3 }}>
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    checked={warnAutoUri}
-                    onChange={(e) => setWarnAutoUri(e.target.checked)}
-                  />
-                }
-                label={t("endpointConfig.warnAutoUri")}
-              />
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    checked={warnAutoLabel}
-                    onChange={(e) => setWarnAutoLabel(e.target.checked)}
-                  />
-                }
-                label={t("endpointConfig.warnAutoLabel")}
+              <CatalogingStyleSettings
+                preferences={preferences}
+                onChange={setPreferences}
               />
             </Box>
 
@@ -348,7 +336,7 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
               sx={{
                 p: 2,
                 bgcolor: "success.light",
-                color: "success.contrastText",
+                color: "success.dark",
               }}
             >
               <Typography

@@ -310,10 +310,32 @@ need no login (`--access read|write|none`). Run `--help` for all options.
 
 ### Configuration
 
-- Persisted to localStorage (`entEdit.config`, `entEdit.language`)
+- Persisted to localStorage (`entEdit.config`, `entEdit.language`,
+  `entEdit.preferences`); credentials live in sessionStorage
 - `ConfigurationWizard` shown on first run or when unconfigured
 - URL parameter `?nosearch` hides the search tab
-- Default endpoint: `http://localhost:7200/repositories/EntEdit`
+- Default endpoint is derived from the app's own origin
+  (`<origin>/graphdb/repositories/EntEdit`), not a hard-coded host
+
+**Cataloguing style** (`utils/catalogingStyle.ts`) decides how prominent RDF
+identity is in the editor, supporting both classic cataloguing and semantic-web
+cataloguing from one build:
+
+- Four independent preferences: `showIdentifier`, `showLabels`,
+  `requireIdentifier`, `requireLabel`. The presets `CLASSIC_PREFERENCES` (all
+  off) and `SEMANTIC_PREFERENCES` (all on) are offered as one-click choices in
+  the wizard and the settings dialog (`CatalogingStyleSettings`); any other
+  combination is reported as "custom". New installations default to semantic.
+- Hidden fields are not lost: `EntityEditor` offers an "Identifier and labels…"
+  dialog from the ⋮ menu whenever either is hidden, and a missing identifier or
+  label is generated on save as before.
+- `require*` blocks saving a **new** entity until the field is filled in
+  (surfaced through `saveBlockedReason`, the same mechanism that prevents empty
+  entities). It replaced the older save-warning dialog and the
+  `warnAutoUri`/`warnAutoLabel` preferences, which are still read from
+  localStorage and migrated.
+- `?style=classic` / `?style=semantic` overrides the stored preferences for one
+  session, so a class can be given a single link (`applyStyleOverride`).
 
 ### Ontology Assumptions
 

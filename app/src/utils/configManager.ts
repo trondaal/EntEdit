@@ -1,5 +1,9 @@
 import type { SparqlEndpointConfig } from "../types/sparql";
 import { SUPPORTED_LANGUAGES } from "./sparqlFragments";
+import {
+  DEFAULT_PREFERENCES,
+  type CatalogingPreferences,
+} from "./catalogingStyle";
 
 const CONFIG_STORAGE_KEY = "entEdit.config";
 const CREDENTIALS_STORAGE_KEY = "entEdit.credentials";
@@ -17,8 +21,7 @@ export interface AppConfiguration {
   endpoint: SparqlEndpointConfig;
   language: string;
   isConfigured: boolean;
-  warnAutoUri: boolean;
-  warnAutoLabel: boolean;
+  preferences: CatalogingPreferences;
 }
 
 /**
@@ -30,7 +33,7 @@ export interface AppConfiguration {
 export const saveConfiguration = (
   config: SparqlEndpointConfig,
   language: string,
-  preferences?: { warnAutoUri: boolean; warnAutoLabel: boolean },
+  preferences?: CatalogingPreferences,
 ): void => {
   try {
     // Persist non-sensitive settings in localStorage
@@ -118,17 +121,26 @@ export const loadConfiguration = (): AppConfiguration | null => {
       password = credentials.password || "";
     }
 
-    // Load user preferences from localStorage (default to true)
-    let warnAutoUri = false;
-    let warnAutoLabel = false;
+    // Load cataloguing preferences, falling back to the defaults for anything
+    // missing. `warnAutoUri`/`warnAutoLabel` are the pre-0.9 names of the two
+    // "require" settings and are still honoured when they are all that is stored.
+    let preferences = { ...DEFAULT_PREFERENCES };
     const preferencesStr = localStorage.getItem(PREFERENCES_STORAGE_KEY);
     if (preferencesStr) {
-      const preferences = JSON.parse(preferencesStr) as {
+      const stored = JSON.parse(preferencesStr) as Partial<CatalogingPreferences> & {
         warnAutoUri?: boolean;
         warnAutoLabel?: boolean;
       };
-      warnAutoUri = preferences.warnAutoUri === true;
-      warnAutoLabel = preferences.warnAutoLabel === true;
+      preferences = {
+        showIdentifier: stored.showIdentifier ?? DEFAULT_PREFERENCES.showIdentifier,
+        showLabels: stored.showLabels ?? DEFAULT_PREFERENCES.showLabels,
+        requireIdentifier:
+          stored.requireIdentifier ??
+          stored.warnAutoUri ??
+          DEFAULT_PREFERENCES.requireIdentifier,
+        requireLabel:
+          stored.requireLabel ?? stored.warnAutoLabel ?? DEFAULT_PREFERENCES.requireLabel,
+      };
     }
 
     return {
@@ -139,8 +151,7 @@ export const loadConfiguration = (): AppConfiguration | null => {
       },
       language: validateLanguage(language),
       isConfigured: true,
-      warnAutoUri,
-      warnAutoLabel,
+      preferences,
     };
   } catch (error) {
     console.warn("Failed to load configuration:", error);
@@ -195,7 +206,6 @@ export const getDefaultConfiguration = (): AppConfiguration => {
     },
     language: "en",
     isConfigured: false,
-    warnAutoUri: false,
-    warnAutoLabel: false,
+    preferences: { ...DEFAULT_PREFERENCES },
   };
 };

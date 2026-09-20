@@ -36,6 +36,7 @@ import { useTurtleExportQuery } from "../hooks/useTurtleExportQuery";
 import { EntityLabelsProvider, useEntityLabels, type EntityLabelsMap } from "../hooks/useEntityLabels";
 import { useEntityQuery } from "../hooks/useEntityQueries";
 import { useEntityMutations } from "../hooks/useEntityMutations";
+import type { CatalogingPreferences } from "../utils/catalogingStyle";
 
 // Stable empty map reference to avoid re-rendering context consumers while the
 // batched labels query is in flight or returns no URIs.
@@ -51,8 +52,7 @@ interface EntityEditorProps {
   propertiesLoading: boolean;
   objectPropertiesLoading: boolean;
   selectedLanguage: string;
-  warnAutoUri: boolean;
-  warnAutoLabel: boolean;
+  preferences: CatalogingPreferences;
   /** Called after a successful save; `savedEntityUri` is set for a new entity. */
   onEntitySaved: (saved?: { entityUri: string; isNew: boolean }) => void;
   onEntityDeselected?: () => void;
@@ -71,8 +71,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   propertiesLoading,
   objectPropertiesLoading,
   selectedLanguage,
-  warnAutoUri,
-  warnAutoLabel,
+  preferences,
   onEntitySaved,
   onEntityDeselected,
   onEditingChange,
@@ -107,8 +106,8 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   const [customEntityUri, setCustomEntityUri] = useState<string>("");
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [discardDialogOpen, setDiscardDialogOpen] = useState(false);
-  const [saveWarningDialogOpen, setSaveWarningDialogOpen] = useState(false);
   const [labelManagerOpen, setLabelManagerOpen] = useState(false);
+  const [identityDialogOpen, setIdentityDialogOpen] = useState(false);
   const [turtleDialogOpen, setTurtleDialogOpen] = useState(false);
   const [entityLabels, setEntityLabels] = useState<
     Array<{ id: string; value: string; language: string }>
@@ -308,23 +307,29 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       Object.values(entityData).some((values) => values.some((v) => v.value.trim())),
     [entityData, entityLabels],
   );
+  const missingRequired = !entityUri
+    ? [
+        preferences.requireIdentifier && !customEntityUri.trim()
+          ? t("common:labels.identifier", { ns: "common" })
+          : null,
+        preferences.requireLabel && !entityLabels.some((l) => l.value.trim())
+          ? t("common:labels.labels", { ns: "common" })
+          : null,
+      ].filter(Boolean)
+    : [];
+
   const saveBlockedReason = entityUri
     ? (isDirty ? null : t("tooltips.noChanges"))
-    : (hasContent ? null : t("tooltips.nothingToSave"));
+    : !hasContent
+      ? t("tooltips.nothingToSave")
+      : missingRequired.length > 0
+        ? t("tooltips.requiredMissing", { fields: missingRequired.join(", ") })
+        : null;
 
   const requestSave = useCallback(() => {
     if (saveBlockedReason) return;
-    // Only check warnings for new entities (existing entities already have URIs and labels)
-    if (!entityUri) {
-      const willAutoUri = warnAutoUri && !customEntityUri.trim();
-      const willAutoLabel = warnAutoLabel && !entityLabels.some((l) => l.value.trim());
-      if (willAutoUri || willAutoLabel) {
-        setSaveWarningDialogOpen(true);
-        return;
-      }
-    }
     handleSave();
-  }, [saveBlockedReason, entityUri, warnAutoUri, warnAutoLabel, customEntityUri, entityLabels, handleSave]);
+  }, [saveBlockedReason, handleSave]);
 
   // Register/unregister handleSave with the parent so the header Refresh
   // button can offer a "Save & refresh" option when there are unsaved edits.
@@ -598,6 +603,11 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         onExportTurtle={handleExportTurtle}
         isDirty={isDirty}
         saveBlockedReason={saveBlockedReason}
+        onEditIdentity={
+          preferences.showIdentifier && preferences.showLabels
+            ? undefined
+            : () => setIdentityDialogOpen(true)
+        }
       />
 
       <Box sx={{ p: 3, flex: 1, overflow: "auto" }}>
@@ -621,6 +631,8 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
               }}
             >
         <EntityIdentitySection
+          showIdentifier={preferences.showIdentifier}
+          showLabels={preferences.showLabels}
           entityUri={entityUri}
           customEntityUri={customEntityUri}
           onCustomEntityUriChange={(value) => {
@@ -673,6 +685,38 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           </Box>
         </Tooltip>
       </Box>
+
+      {/* Whatever the cataloguing style keeps off the form stays reachable here */}
+      <Dialog
+        open={identityDialogOpen}
+        onClose={() => setIdentityDialogOpen(false)}
+        maxWidth="sm"
+        fullWidth
+      >
+        <DialogTitle>{t("sections.identity")}</DialogTitle>
+        <DialogContent>
+          <EntityIdentitySection
+            hideHeading
+            showIdentifier
+            showLabels
+            entityUri={entityUri}
+            customEntityUri={customEntityUri}
+            onCustomEntityUriChange={(value) => {
+              setCustomEntityUri(value);
+              setIsDirty(true);
+            }}
+            uriError={!!uriError}
+            labels={entityLabels}
+            isEditing={isEditing}
+            onEditLabels={handleEditLabels}
+          />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setIdentityDialogOpen(false)}>
+            {t("common:buttons.close", { ns: "common" })}
+          </Button>
+        </DialogActions>
+      </Dialog>
 
       {/* Label Manager Dialog */}
       <LabelManager
@@ -759,42 +803,6 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         </DialogActions>
       </Dialog>
 
-      {/* Save Warning Dialog for auto-generated URI/label */}
-      <Dialog
-        open={saveWarningDialogOpen}
-        onClose={() => setSaveWarningDialogOpen(false)}
-        aria-labelledby="save-warning-dialog-title"
-        aria-describedby="save-warning-dialog-description"
-      >
-        <DialogTitle id="save-warning-dialog-title">
-          {t("dialogs.saveWarning.title")}
-        </DialogTitle>
-        <DialogContent>
-          <DialogContentText id="save-warning-dialog-description">
-            {(() => {
-              const willAutoUri = warnAutoUri && !entityUri && !customEntityUri.trim();
-              const willAutoLabel = warnAutoLabel && !entityLabels.some((l) => l.value.trim());
-              if (willAutoUri && willAutoLabel) return t("dialogs.saveWarning.messageBoth");
-              if (willAutoUri) return t("dialogs.saveWarning.messageUri");
-              return t("dialogs.saveWarning.messageLabel");
-            })()}
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={() => setSaveWarningDialogOpen(false)}>
-            {t("common:buttons.cancel", { ns: "common" })}
-          </Button>
-          <Button
-            onClick={() => {
-              setSaveWarningDialogOpen(false);
-              handleSave();
-            }}
-            variant="contained"
-          >
-            {t("dialogs.saveWarning.confirm")}
-          </Button>
-        </DialogActions>
-      </Dialog>
     </Paper>
   );
 };

@@ -10,24 +10,26 @@ import {
   DialogTitle,
   DialogContent,
   DialogActions,
-  FormControlLabel,
-  Checkbox,
   Divider,
 } from "@mui/material";
 import { ExpandMore, ExpandLess, Settings } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
+import CatalogingStyleSettings from "./CatalogingStyleSettings";
+import type { CatalogingPreferences } from "../utils/catalogingStyle";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import LanguageSelector from "./LanguageSelector";
 
 interface EndpointConfigProps {
   config: SparqlEndpointConfig;
-  onConfigChange: (config: SparqlEndpointConfig, warnAutoUri: boolean, warnAutoLabel: boolean) => void;
+  onConfigChange: (
+    config: SparqlEndpointConfig,
+    preferences: CatalogingPreferences,
+  ) => void;
   selectedLanguage: string;
   onLanguageChange: (language: string) => void;
   isModal?: boolean;
   onResetConfiguration?: () => void;
-  warnAutoUri: boolean;
-  warnAutoLabel: boolean;
+  preferences: CatalogingPreferences;
 }
 
 const EndpointConfig: React.FC<EndpointConfigProps> = ({
@@ -37,17 +39,15 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
   onLanguageChange,
   isModal = false,
   onResetConfiguration,
-  warnAutoUri,
-  warnAutoLabel,
+  preferences,
 }) => {
   const { t } = useTranslation();
   const [expanded, setExpanded] = useState(false);
   const [localConfig, setLocalConfig] = useState(config);
-  const [localWarnAutoUri, setLocalWarnAutoUri] = useState(warnAutoUri);
-  const [localWarnAutoLabel, setLocalWarnAutoLabel] = useState(warnAutoLabel);
+  const [localPreferences, setLocalPreferences] = useState(preferences);
 
   const handleSave = () => {
-    onConfigChange(localConfig, localWarnAutoUri, localWarnAutoLabel);
+    onConfigChange(localConfig, localPreferences);
     if (!isModal) {
       setExpanded(false);
     }
@@ -55,8 +55,7 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
 
   const handleReset = () => {
     setLocalConfig(config);
-    setLocalWarnAutoUri(warnAutoUri);
-    setLocalWarnAutoLabel(warnAutoLabel);
+    setLocalPreferences(preferences);
   };
 
   if (isModal) {
@@ -102,27 +101,10 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
               sx={{ mb: 2 }}
             />
 
-            <Divider sx={{ my: 1 }} />
-            <Typography variant="subtitle2" sx={{ mb: 1 }}>
-              {t("endpointConfig.saveWarnings")}
-            </Typography>
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={localWarnAutoUri}
-                  onChange={(e) => setLocalWarnAutoUri(e.target.checked)}
-                />
-              }
-              label={t("endpointConfig.warnAutoUri")}
-            />
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={localWarnAutoLabel}
-                  onChange={(e) => setLocalWarnAutoLabel(e.target.checked)}
-                />
-              }
-              label={t("endpointConfig.warnAutoLabel")}
+            <Divider sx={{ my: 2 }} />
+            <CatalogingStyleSettings
+              preferences={localPreferences}
+              onChange={setLocalPreferences}
             />
           </Box>
         </DialogContent>
@@ -198,29 +180,13 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
             sx={{ mb: 2 }}
           />
 
-          <Divider sx={{ my: 1 }} />
-          <Typography variant="subtitle2" sx={{ mb: 1 }}>
-            {t("endpointConfig.saveWarnings")}
-          </Typography>
-          <FormControlLabel
-            control={
-              <Checkbox
-                checked={localWarnAutoUri}
-                onChange={(e) => setLocalWarnAutoUri(e.target.checked)}
-              />
-            }
-            label={t("endpointConfig.warnAutoUri")}
-          />
-          <FormControlLabel
-            control={
-              <Checkbox
-                checked={localWarnAutoLabel}
-                onChange={(e) => setLocalWarnAutoLabel(e.target.checked)}
-              />
-            }
-            label={t("endpointConfig.warnAutoLabel")}
-            sx={{ mb: 2 }}
-          />
+          <Divider sx={{ my: 2 }} />
+          <Box sx={{ mb: 2 }}>
+            <CatalogingStyleSettings
+              preferences={localPreferences}
+              onChange={setLocalPreferences}
+            />
+          </Box>
 
           <Box sx={{ display: "flex", gap: 1 }}>
             <Button variant="contained" onClick={handleSave}>

@@ -28,7 +28,8 @@
     "moveDown": "Flytt ned",
     "nothingToSave": "Legg til en verdi eller en etikett før du lagrer",
     "noChanges": "Ingen endringer å lagre",
-    "languageOfValue": "Språket til denne verdien: {{lang}}"
+    "languageOfValue": "Språket til denne verdien: {{lang}}",
+    "requiredMissing": "Fyll inn {{fields}} før du lagrer"
   },
   "messages": {
     "noLabel": "Ingen etikett",
@@ -82,13 +83,6 @@
       "title": "Forkaste endringer?",
       "message": "Du har ulagrede endringer. Avbryt vil forkaste alle endringer gjort i denne sesjonen.",
       "confirm": "Forkast endringer"
-    },
-    "saveWarning": {
-      "title": "Autogenererte verdier",
-      "messageBoth": "Denne entiteten vil bli lagret med en autogenerert URI og en autogenerert etikett. Er du sikker på at du vil fortsette?",
-      "messageUri": "Denne entiteten vil bli lagret med en autogenerert URI. Er du sikker på at du vil fortsette?",
-      "messageLabel": "Denne entiteten vil bli lagret med en autogenerert etikett. Er du sikker på at du vil fortsette?",
-      "confirm": "Lagre likevel"
     },
     "export": {
       "title": "Eksporter entiteter",

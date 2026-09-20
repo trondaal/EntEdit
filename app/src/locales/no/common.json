@@ -24,7 +24,8 @@
     "import": "Importer",
     "back": "Tilbake",
     "refresh": "Oppdater",
-    "createAnother": "Opprett ny"
+    "createAnother": "Opprett ny",
+    "editIdentity": "Identifikator og etiketter …"
   },
   "dialogs": {
     "refresh": {
@@ -152,7 +153,7 @@
     },
     "settingsStep": {
       "title": "Andre innstillinger",
-      "description": "Velg disse for å få en advarsel når du lagrer entiteter med autogenererte URI-er eller etiketter. Dette kan hjelpe deg med å lage god RDF med etablerte URI-er og beskrivende etiketter."
+      "description": "Velg hvordan editoren behandler RDF-identifikatorer og etiketter. Du kan endre dette senere i innstillingene."
     },
     "buttons": {
       "nextTest": "Neste: Test tilkobling",
@@ -188,10 +189,7 @@
     "password": "Passord (valgfritt)",
     "saveConfiguration": "Lagre konfigurasjon",
     "reset": "Tilbakestill",
-    "reconfigureDatabase": "Konfigurer database på nytt",
-    "saveWarnings": "Lagringsvarsler",
-    "warnAutoUri": "Varsle ved lagring med autogenerert URI",
-    "warnAutoLabel": "Varsle ved lagring med autogenerert etikett"
+    "reconfigureDatabase": "Konfigurer database på nytt"
   },
   "logging": {
     "record": "Start logging",
@@ -220,5 +218,17 @@
     "orphanDescription": "Et tidligere opptak ble ikke fullført (nettleseren kan ha blitt lukket). Vil du gjenopprette det og laste ned dataene, eller forkaste det?",
     "orphanRecover": "Gjenopprett og last ned",
     "orphanDiscard": "Forkast"
+  },
+  "catalogingStyle": {
+    "title": "Katalogiseringsstil",
+    "description": "Velg hvor synlige RDF-identifikatorer og etiketter er under redigering.",
+    "classic": "Klassisk katalogisering",
+    "semantic": "Semantisk katalogisering",
+    "custom": "Egen kombinasjon",
+    "showColumn": "Vis i skjemaet",
+    "requireColumn": "Påkrevd før lagring",
+    "identifierRow": "Identifikator (URI)",
+    "labelsRow": "Etiketter",
+    "hiddenNote": "Et skjult felt er fortsatt tilgjengelig i ⋮-menyen i editoren, og en verdi genereres automatisk hvis du ikke skriver inn noe."
   }
 }

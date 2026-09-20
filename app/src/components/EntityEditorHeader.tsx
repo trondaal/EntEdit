@@ -19,6 +19,7 @@ import {
   DeleteForever,
   AccountTree,
   MoreVert,
+  LabelOutlined,
   Code,
   ArticleOutlined,
 } from "@mui/icons-material";
@@ -43,6 +44,8 @@ interface EntityEditorHeaderProps {
   isDirty: boolean;
   /** Why Save is unavailable (nothing entered / no changes), or null when it can be used. */
   saveBlockedReason: string | null;
+  /** Set when the cataloguing style keeps identifier or labels off the form. */
+  onEditIdentity?: () => void;
 }
 
 const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
@@ -63,6 +66,7 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
   onExportTurtle,
   isDirty,
   saveBlockedReason,
+  onEditIdentity,
 }) => {
   const { t } = useTranslation("entityEditor");
   const [menuAnchor, setMenuAnchor] = useState<null | HTMLElement>(null);
@@ -176,6 +180,15 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
           anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
           transformOrigin={{ vertical: "top", horizontal: "right" }}
         >
+          {onEditIdentity && (
+            <MenuItem onClick={() => { handleMenuClose(); onEditIdentity(); }}>
+              <ListItemIcon>
+                <LabelOutlined fontSize="small" />
+              </ListItemIcon>
+              <ListItemText>{t("common:buttons.editIdentity", { ns: "common" })}</ListItemText>
+            </MenuItem>
+          )}
+          {onEditIdentity && <Divider />}
           <MenuItem
             onClick={() => { handleMenuClose(); onNew(); }}
             disabled={entityActionsDisabled}

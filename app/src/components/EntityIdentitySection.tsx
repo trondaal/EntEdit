@@ -14,6 +14,11 @@ interface EntityIdentitySectionProps {
   labels: Array<{ id: string; value: string; language: string }>;
   isEditing: boolean;
   onEditLabels: () => void;
+  /** Cataloguing style: which rows belong on the form. */
+  showIdentifier: boolean;
+  showLabels: boolean;
+  /** Rendered inside a dialog, so the section heading is redundant. */
+  hideHeading?: boolean;
 }
 
 /**
@@ -31,18 +36,28 @@ const EntityIdentitySection: React.FC<EntityIdentitySectionProps> = ({
   labels,
   isEditing,
   onEditLabels,
+  showIdentifier,
+  showLabels,
+  hideHeading = false,
 }) => {
   const { t } = useTranslation("entityEditor");
   const { enqueueSnackbar } = useSnackbar();
 
   const labelsWithValue = labels.filter((label) => label.value.trim());
 
+  // In the classic cataloguing style neither row is shown and the section
+  // disappears; both stay reachable from the editor's ⋮ menu.
+  if (!showIdentifier && !showLabels) return null;
+
   return (
     <Box sx={{ mb: 2.5 }}>
-      <Typography variant="subtitle1" sx={{ color: "text.primary", mb: 1.5 }}>
-        {t("sections.identity")}
-      </Typography>
+      {!hideHeading && (
+        <Typography variant="subtitle1" sx={{ color: "text.primary", mb: 1.5 }}>
+          {t("sections.identity")}
+        </Typography>
+      )}
 
+      {showIdentifier && (
       <Box sx={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 1, mb: 1 }}>
         <Typography variant="body2" color="text.secondary" sx={{ minWidth: 110 }}>
           {t("common:labels.identifier", { ns: "common" })}
@@ -111,7 +126,9 @@ const EntityIdentitySection: React.FC<EntityIdentitySectionProps> = ({
           />
         )}
       </Box>
+      )}
 
+      {showLabels && (
       <Box sx={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 1 }}>
         <Typography variant="body2" color="text.secondary" sx={{ minWidth: 110 }}>
           {t("common:labels.labels", { ns: "common" })}
@@ -138,6 +155,7 @@ const EntityIdentitySection: React.FC<EntityIdentitySectionProps> = ({
           </Button>
         )}
       </Box>
+      )}
     </Box>
   );
 };

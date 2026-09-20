@@ -24,7 +24,8 @@
     "import": "Import",
     "back": "Back",
     "refresh": "Refresh",
-    "createAnother": "Create another"
+    "createAnother": "Create another",
+    "editIdentity": "Identifier and labels…"
   },
   "dialogs": {
     "refresh": {
@@ -152,7 +153,7 @@
     },
     "settingsStep": {
       "title": "Other Settings",
-      "description": "Select these to get a warning when saving entities with auto-generated URIs or labels. This can help you create good quality RDF with established URIs and descriptive labels."
+      "description": "Choose how the editor treats RDF identifiers and labels. You can change this later in Settings."
     },
     "buttons": {
       "nextTest": "Next: Test Connection",
@@ -188,10 +189,7 @@
     "password": "Password (optional)",
     "saveConfiguration": "Save Configuration",
     "reset": "Reset",
-    "reconfigureDatabase": "Reconfigure Database",
-    "saveWarnings": "Save warnings",
-    "warnAutoUri": "Warn when saving with auto-generated URI",
-    "warnAutoLabel": "Warn when saving with auto-generated label"
+    "reconfigureDatabase": "Reconfigure Database"
   },
   "logging": {
     "record": "Start logging",
@@ -220,5 +218,17 @@
     "orphanDescription": "A previous recording session was not completed (the browser may have been closed). Would you like to recover it and download the data, or discard it?",
     "orphanRecover": "Recover & Download",
     "orphanDiscard": "Discard"
+  },
+  "catalogingStyle": {
+    "title": "Cataloguing style",
+    "description": "Choose how visible RDF identifiers and labels are while editing.",
+    "classic": "Classic cataloguing",
+    "semantic": "Semantic web cataloguing",
+    "custom": "Custom combination",
+    "showColumn": "Show in the form",
+    "requireColumn": "Require before saving",
+    "identifierRow": "Identifier (URI)",
+    "labelsRow": "Labels",
+    "hiddenNote": "When a field is hidden it stays available in the editor's ⋮ menu, and a value is generated automatically if you don't enter one."
   }
 }
