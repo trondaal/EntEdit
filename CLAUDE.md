@@ -117,6 +117,11 @@ EntEdit/
 
 ### Utilities (app/src/utils/)
 
+- `entityUpdate.ts` - pure SPARQL Update builder for entity save (diff-based), inverse
+  cleanup and concurrent-edit detection; unit-tested in `entityUpdate.test.ts`
+- `rdfTerms.ts` - RDF term model shared by load and save (IRI / literal with language
+  tag or datatype), SPARQL serialization and term identity for diffing
+- `luceneQuery.ts` - escapes free-text search input for the Lucene connector
 - `turtleSerializer.ts` - Turtle serialization with configurable namespace prefix registry (`KNOWN_PREFIXES` map);
   predicates, datatypes, and `rdf:type` object (class) URIs are prefix-compacted; subject and other
   object URIs (entity references) stay as full `<uri>`
@@ -148,29 +153,50 @@ EntEdit/
 
 ### Entity Save/Delete Strategy
 
-The entity load query runs WITH inference (`infer: true`), so it returns both
-asserted triples and inferred inverse properties. This has critical implications:
+`useEntityQuery` loads an entity twice: the **explicit snapshot**
+(`loadEntitySnapshot`, inference OFF) carrying full RDF terms (language tag,
+datatype), the named graph of each triple and its `entedit:valueOrder`, and the
+**inferred view** (inference ON). Values present only in the inferred view are
+marked `OrderedValue.inferred`, shown read-only with an "inferred" chip, and are
+never written back — otherwise every save would materialize inferred supertypes
+and inverse relationships as asserted triples.
 
-**Save (targeted delete + re-insert):**
-1. Only delete outgoing triples for **managed** properties (rdf:type, rdfs:label,
-   data properties from `properties`, object properties from `objectPropertyUris`)
-2. Diff old vs new `entityData` to find removed object property URI values
-3. For each removed URI value, delete incoming triples from that entity
-   (`<removedEntity> ?p <thisEntity>`) to clean up asserted inverse triples
-4. Re-insert all current data from `entityData`
+**Save (diff, never rewrite):** `buildEntityUpdate` (`utils/entityUpdate.ts`) is
+a pure function that diffs the snapshot against what the form holds and emits a
+single `;`-joined update:
+1. `DELETE DATA` for managed triples that disappeared, **each in the graph it was
+   loaded from** (a `DELETE` without `GRAPH` spans all graphs, while
+   `INSERT DATA` writes to the default graph — that mismatch used to move
+   entities out of their named graph)
+2. `INSERT DATA` for new triples, into the entity's graph (`targetGraph`, the
+   graph of its `rdf:type`)
+3. RDF-star `entedit:valueOrder` annotations rewritten only for properties whose
+   values or order actually changed; data that was never ordered by the editor
+   is left unannotated
+4. `buildInverseCleanup` removes inverse triples (`owl:inverseOf` in either
+   direction) for relationship values the user removed, plus their annotations
 
-**Why targeted delete:** A blanket `DELETE { <e> ?p ?o . ?s ?p2 <e> . }` destroys
-incoming triples from other entities and properties not managed by the editor
-(those without `entedit:status`). These can't be restored because they may never
-appear in `entityData` (incoming-only) or get serialized as literals instead of URIs.
+Unchanged triples produce no operations at all, so language tags, datatypes,
+named graphs and unmanaged properties survive untouched, and a save that
+changes one property cannot clobber another.
 
-**Entity delete (full blanket):** Deletes ALL outgoing + incoming triples and
-RDF-star annotations to avoid dangling references.
+**Conflict detection:** before writing, the properties the save will touch
+(`changedProperties`) are compared with a freshly loaded snapshot
+(`findConflicts`). If someone else changed one of them, the save is refused and
+the user is asked to refresh. Only the properties being written are compared, so
+unrelated concurrent edits don't block a save.
 
-**URI type tracking:** `OrderedValue.isUri` is captured from the SPARQL binding
-type during load. During save, `objectPropertyUris.has(prop) || isUri` determines
-whether to serialize as `<uri>` or `"literal"`. This prevents unmanaged relationship
-properties from being corrupted into string literals.
+**New entities:** a custom URI is checked with a `COUNT` query first — inserting
+into a URI that already has statements would silently merge the two entities.
+Save is disabled until the form holds a value or a label.
+
+**Entity delete (full blanket):** one request deleting RDF-star annotations on
+outgoing *and* incoming triples, then all outgoing + incoming statements.
+
+**URI type tracking:** `OrderedValue.isUri` comes from the SPARQL binding type
+during load. On save, `objectPropertyUris.has(prop) || isUri` decides whether a
+value is serialized as `<uri>` or a literal, so unmanaged relationship
+properties are not turned into strings.
 
 ### SPARQL Syntax Gotchas (GraphDB)
 
@@ -183,6 +209,12 @@ properties from being corrupted into string literals.
 - RDF-star `<< s p o >>` OPTIONAL clauses may interact unpredictably with inference;
   consider separate queries if results are affected
 - `SparqlClient.query()` = inference ON; `SparqlClient.queryWithoutInference()` = inference OFF
+- `DELETE`/`DELETE WHERE` without `GRAPH` removes matching triples from **every**
+  graph, but `INSERT DATA` without `GRAPH` writes to the default graph; use
+  `DELETE DATA`/`INSERT DATA` with an explicit `GRAPH` to keep data in place
+- The Lucene connector rejects bare query syntax (`(`, `"`, `:`, `AND`), so user
+  input goes through `toLuceneQuery` (`utils/luceneQuery.ts`) before it is
+  placed in `lucene:query`
 - Schema property queries (`useRdfProperties`, `useRdfObjectProperties`, relationship hooks)
   run with inference and no JS-side deduplication — stale/duplicate annotation triples
   (e.g., multiple `entedit:order` values) cause duplicate properties in the editor UI;
