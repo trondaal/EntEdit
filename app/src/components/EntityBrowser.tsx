@@ -238,7 +238,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
           overflow: { xs: "visible", md: "hidden" },
         }}
       >
-        <Box sx={{ display: "flex", flexDirection: "column", overflow: { xs: "visible", md: "hidden" } }}>
+        <Box sx={{ display: "flex", flexDirection: "column", minWidth: 0, overflow: { xs: "visible", md: "hidden" } }}>
           <Paper elevation={1} sx={{ height: { xs: "auto", md: "100%" }, display: "flex", flexDirection: "column" }}>
             <Box sx={{ p: 2, borderBottom: 1, borderColor: "divider", height: 64, display: "flex", alignItems: "center", gap: 1 }}>
               <Typography
@@ -290,7 +290,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
           </Paper>
         </Box>
 
-        <Box sx={{ display: "flex", flexDirection: "column", overflow: { xs: "visible", md: "hidden" } }}>
+        <Box sx={{ display: "flex", flexDirection: "column", minWidth: 0, overflow: { xs: "visible", md: "hidden" } }}>
           <Paper elevation={1} sx={{ height: { xs: "auto", md: "100%" }, display: "flex", flexDirection: "column" }}>
             <Box
               sx={{
@@ -441,7 +441,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
           </Paper>
         </Box>
 
-        <Box sx={{ display: "flex", flexDirection: "column", overflow: { xs: "visible", md: "hidden" } }}>
+        <Box sx={{ display: "flex", flexDirection: "column", minWidth: 0, overflow: { xs: "visible", md: "hidden" } }}>
           <EntityEditor
             // A fresh editor per entity: the editor keeps unsaved edits across
             // server refreshes, so reusing it after "Discard and continue" would
@@ -460,8 +460,12 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
             selectedLanguage={selectedLanguage}
             warnAutoUri={warnAutoUri}
             warnAutoLabel={warnAutoLabel}
-            onEntitySaved={() => {
-              // Optionally refetch entities list
+            onEntitySaved={(saved) => {
+              // Open what was just created instead of resetting to a blank form
+              if (saved?.isNew) {
+                setIsEditorEditing(false);
+                setSelectedEntity(saved.entityUri);
+              }
             }}
             onEntityDeselected={handleEntityDeselect}
             onEditingChange={(isEditing) => {

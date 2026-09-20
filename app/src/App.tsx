@@ -447,7 +447,7 @@ function AppInner() {
                   </Tabs>
                 </Box>
 
-                <Box sx={{ py: 3, flexGrow: 1 }}>
+                <Box component="main" sx={{ py: 3, flexGrow: 1 }}>
                   <Suspense fallback={<Box sx={{ display: "flex", justifyContent: "center", pt: 8 }}><CircularProgress /></Box>}>
                     {/* Kept mounted while hidden so switching to Search doesn't
                         discard unsaved edits or the selected class/entity. */}

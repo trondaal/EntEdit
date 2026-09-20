@@ -13,7 +13,8 @@
     "relatedAgents": "Related Agents",
     "relatedWorks": "Related Works",
     "relatedExpressions": "Related Expressions",
-    "relatedManifestations": "Related Manifestations"
+    "relatedManifestations": "Related Manifestations",
+    "identity": "Identity"
   },
   "placeholders": {
     "enterUri": "Enter custom URI or leave empty for auto-generation",
@@ -54,7 +55,8 @@
       "server": "The database reported an error and did not apply the change. Please try again or check the server logs."
     },
     "uriInUse": "This identifier is already used by \"{{label}}\" ({{types}}). Choose another identifier, or open the existing entity from the list.",
-    "saveConflict": "Someone else changed this entity while you were editing it ({{properties}}). Use Refresh to load their version, then apply your changes again."
+    "saveConflict": "Someone else changed this entity while you were editing it ({{properties}}). Use Refresh to load their version, then apply your changes again.",
+    "uriWillBeGenerated": "Leave empty to generate an identifier automatically"
   },
   "labelManager": {
     "title": "Manage Labels",

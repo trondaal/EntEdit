@@ -19,9 +19,7 @@ import {
   DeleteForever,
   AccountTree,
   MoreVert,
-  LabelOutlined,
   Code,
-  Link as LinkIcon,
   ArticleOutlined,
 } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
@@ -41,8 +39,6 @@ interface EntityEditorHeaderProps {
   onDelete: () => void;
   onNew: () => void;
   onOpenGraph: (event: React.MouseEvent) => void;
-  onEditLabels: () => void;
-  onEditUri: () => void;
   onExportTurtle: () => void;
   isDirty: boolean;
   /** Why Save is unavailable (nothing entered / no changes), or null when it can be used. */
@@ -64,8 +60,6 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
   onDelete,
   onNew,
   onOpenGraph,
-  onEditLabels,
-  onEditUri,
   onExportTurtle,
   isDirty,
   saveBlockedReason,
@@ -180,26 +174,6 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
           anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
           transformOrigin={{ vertical: "top", horizontal: "right" }}
         >
-          <MenuItem
-            onClick={() => { handleMenuClose(); onEditUri(); }}
-          >
-            <ListItemIcon>
-              <LinkIcon fontSize="small" sx={{ color: uriError ? "error.main" : undefined }} />
-            </ListItemIcon>
-            <ListItemText>
-              {t(entityUri ? "common:buttons.showUri" : "common:buttons.addUri", { ns: "common" })}
-            </ListItemText>
-          </MenuItem>
-          <MenuItem
-            onClick={() => { handleMenuClose(); onEditLabels(); }}
-            disabled={!isEditing}
-          >
-            <ListItemIcon>
-              <LabelOutlined fontSize="small" />
-            </ListItemIcon>
-            <ListItemText>{t("common:buttons.editLabels", { ns: "common" })}</ListItemText>
-          </MenuItem>
-          <Divider />
           <MenuItem
             onClick={() => { handleMenuClose(); onNew(); }}
             disabled={entityActionsDisabled}

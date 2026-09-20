@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import {
   Paper,
-  TextField,
   Box,
   CircularProgress,
   Skeleton,
@@ -12,13 +11,10 @@ import {
   DialogContent,
   DialogContentText,
   DialogActions,
-  Typography,
   Tooltip,
-  IconButton,
   Button
 } from "@mui/material";
-import { ContentCopy, DeleteForever, Lock } from "@mui/icons-material";
-import { useSnackbar } from "notistack";
+import { DeleteForever } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import type { SparqlEndpointConfig, RdfProperty, OrderedValue } from "../types/sparql";
 import { getGraphVisualizationUrl, prepareWorkbenchRepository } from "../utils/graphUtils";
@@ -33,6 +29,7 @@ import LabelManager from "./LabelManager";
 import TurtleExportDialog from "./TurtleExportDialog";
 import EntityEditorHeader from "./EntityEditorHeader";
 import DataPropertiesSection from "./DataPropertiesSection";
+import EntityIdentitySection from "./EntityIdentitySection";
 import ObjectPropertyGroup from "./ObjectPropertyGroup";
 import { isValidUri, formatLabel } from "../utils/labelUtils";
 import { useTurtleExportQuery } from "../hooks/useTurtleExportQuery";
@@ -56,7 +53,8 @@ interface EntityEditorProps {
   selectedLanguage: string;
   warnAutoUri: boolean;
   warnAutoLabel: boolean;
-  onEntitySaved: () => void;
+  /** Called after a successful save; `savedEntityUri` is set for a new entity. */
+  onEntitySaved: (saved?: { entityUri: string; isNew: boolean }) => void;
   onEntityDeselected?: () => void;
   onEditingChange?: (isEditing: boolean) => void;
   onRegisterSave?: (handler: (() => Promise<void>) | null) => void;
@@ -82,7 +80,6 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   onRegisterDiscard,
 }) => {
   const { t } = useTranslation("entityEditor");
-  const { enqueueSnackbar } = useSnackbar();
 
   // Fetch properties for the specialized sections
   const { data: wemiProperties = [], isLoading: wemiPropertiesLoading } =
@@ -236,23 +233,23 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     selectedLanguage,
   );
 
+  // "Create another" in the post-save snackbar: back to an empty form.
+  const handleNewEntity = useCallback(() => onEntityDeselected?.(), [onEntityDeselected]);
+
   // Called by useEntityMutations on successful save. Resets the create form
   // for new entities, or flips out of edit mode for existing ones, then bubbles
   // up to the parent so the entity list can refresh.
   const handleSaveSuccess = useCallback(
-    ({ isNew }: { isNew: boolean; savedEntityUri: string }) => {
+    ({ isNew, savedEntityUri }: { isNew: boolean; savedEntityUri: string }) => {
+      setIsEditing(false);
+      setIsDirty(false);
       if (isNew) {
-        setEntityData({});
+        // The parent selects the entity just created, so the user can see
+        // what was stored and carry on adding relationships to it.
         setCustomEntityUri("");
         setSelectedProperty("");
-        setIsEditing(true);
-        setIsDirty(false);
-        setEntityLabels([]);
-      } else {
-        setIsEditing(false);
-        setIsDirty(false);
       }
-      onEntitySaved();
+      onEntitySaved({ entityUri: savedEntityUri, isNew });
     },
     [onEntitySaved],
   );
@@ -284,6 +281,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     objectPropertyUris,
     onSaveSuccess: handleSaveSuccess,
     onDeleteSuccess: handleDeleteSuccess,
+    onCreateAnother: handleNewEntity,
   });
 
   // Reset the create form when the user switches class (only for new entities).
@@ -524,10 +522,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     }
   }, [entityData, entityLabels, existingEntity, performCancel]);
   const handleDeleteDialog = useCallback(() => setDeleteDialogOpen(true), []);
-  const handleNew = useCallback(() => onEntityDeselected?.(), [onEntityDeselected]);
   const handleEditLabels = useCallback(() => setLabelManagerOpen(true), []);
-  const [uriDialogOpen, setUriDialogOpen] = useState(false);
-  const handleEditUri = useCallback(() => setUriDialogOpen(true), []);
 
   // Turtle export
   const { turtle, isLoading: turtleLoading, error: turtleError, refetch: fetchTurtle } = useTurtleExportQuery(config, entityUri);
@@ -598,10 +593,8 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         onEdit={handleEdit}
         onCancel={handleCancel}
         onDelete={handleDeleteDialog}
-        onNew={handleNew}
+        onNew={handleNewEntity}
         onOpenGraph={handleOpenGraph}
-        onEditLabels={handleEditLabels}
-        onEditUri={handleEditUri}
         onExportTurtle={handleExportTurtle}
         isDirty={isDirty}
         saveBlockedReason={saveBlockedReason}
@@ -627,6 +620,19 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
                 transition: "opacity 0.2s",
               }}
             >
+        <EntityIdentitySection
+          entityUri={entityUri}
+          customEntityUri={customEntityUri}
+          onCustomEntityUriChange={(value) => {
+            setCustomEntityUri(value);
+            setIsDirty(true);
+          }}
+          uriError={!!uriError}
+          labels={entityLabels}
+          isEditing={isEditing}
+          onEditLabels={handleEditLabels}
+        />
+
         <DataPropertiesSection
           entityData={entityData}
           properties={properties}
@@ -667,77 +673,6 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           </Box>
         </Tooltip>
       </Box>
-
-      {/* URI Dialog */}
-      <Dialog
-        open={uriDialogOpen}
-        onClose={() => setUriDialogOpen(false)}
-        maxWidth="sm"
-        fullWidth
-      >
-        <DialogTitle>{t("common:labels.identifier", { ns: "common" })}</DialogTitle>
-        <DialogContent>
-          {entityUri ? (
-            <Box
-              sx={{
-                mt: 1,
-                px: 1.25,
-                py: 0.75,
-                border: 1,
-                borderColor: "divider",
-                borderRadius: 1,
-                backgroundColor: "action.hover",
-                display: "flex",
-                alignItems: "center",
-                gap: 0.5,
-                minHeight: 38,
-              }}
-            >
-              <Lock sx={{ fontSize: "0.9rem", color: "text.disabled", flexShrink: 0 }} />
-              <Typography
-                variant="body2"
-                sx={{ flex: 1, color: "text.secondary", fontFamily: "monospace", fontSize: "0.8rem", wordBreak: "break-all" }}
-              >
-                {entityUri}
-              </Typography>
-              <Tooltip title={t("tooltips.copyUri")}>
-                <IconButton
-                  size="small"
-                  sx={{ p: 0.5 }}
-                  aria-label={t("tooltips.copyUri")}
-                  onClick={() =>
-                    navigator.clipboard.writeText(entityUri).then(
-                      () => enqueueSnackbar(t("messages.uriCopied"), { variant: "success", autoHideDuration: 2000 }),
-                      () => enqueueSnackbar(t("messages.copyFailed"), { variant: "error" }),
-                    )
-                  }
-                >
-                  <ContentCopy sx={{ fontSize: "0.9rem" }} />
-                </IconButton>
-              </Tooltip>
-            </Box>
-          ) : (
-            <TextField
-              fullWidth
-              autoFocus
-              label={t("common:labels.identifier", { ns: "common" })}
-              value={customEntityUri}
-              onChange={(e) => setCustomEntityUri(e.target.value)}
-              disabled={!isEditing}
-              error={!!uriError}
-              helperText={t("placeholders.enterUri")}
-              sx={{ mt: 1 }}
-              size="small"
-              placeholder={t("placeholders.enterUri")}
-            />
-          )}
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={() => setUriDialogOpen(false)}>
-            {t("common:buttons.close", { ns: "common" })}
-          </Button>
-        </DialogActions>
-      </Dialog>
 
       {/* Label Manager Dialog */}
       <LabelManager

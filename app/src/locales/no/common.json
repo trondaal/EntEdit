@@ -23,7 +23,8 @@
     "exportTurtleSaveFirst": "Lagre endringer før eksportering",
     "import": "Importer",
     "back": "Tilbake",
-    "refresh": "Oppdater"
+    "refresh": "Oppdater",
+    "createAnother": "Opprett ny"
   },
   "dialogs": {
     "refresh": {
@@ -62,7 +63,8 @@
     "addRelatedExpression": "Legg til",
     "addRelatedManifestation": "Legg til",
     "inferred": "utledet",
-    "inferredHelp": "Utledet av databasen fra andre utsagn. Den kan ikke redigeres her og lagres ikke med entiteten."
+    "inferredHelp": "Utledet av databasen fra andre utsagn. Den kan ikke redigeres her og lagres ikke med entiteten.",
+    "labels": "Etiketter"
   },
   "navigation": {
     "classes": "Klasser",

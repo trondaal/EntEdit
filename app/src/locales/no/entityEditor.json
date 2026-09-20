@@ -13,7 +13,8 @@
     "relatedAgents": "Relaterte agenter",
     "relatedWorks": "Relaterte verk",
     "relatedExpressions": "Relaterte uttrykk",
-    "relatedManifestations": "Relaterte manifestasjoner"
+    "relatedManifestations": "Relaterte manifestasjoner",
+    "identity": "Identifikasjon"
   },
   "placeholders": {
     "enterUri": "Skriv inn tilpasset URI eller la stå tomt for automatisk generering",
@@ -54,7 +55,8 @@
       "server": "Databasen rapporterte en feil og utførte ikke endringen. Prøv igjen eller sjekk serverloggene."
     },
     "uriInUse": "Denne identifikatoren er allerede i bruk av «{{label}}» ({{types}}). Velg en annen identifikator, eller åpne den eksisterende entiteten fra listen.",
-    "saveConflict": "Noen andre har endret denne entiteten mens du redigerte den ({{properties}}). Bruk Oppdater for å hente deres versjon, og gjør endringene dine på nytt."
+    "saveConflict": "Noen andre har endret denne entiteten mens du redigerte den ({{properties}}). Bruk Oppdater for å hente deres versjon, og gjør endringene dine på nytt.",
+    "uriWillBeGenerated": "La stå tom for å generere en identifikator automatisk"
   },
   "labelManager": {
     "title": "Administrer etiketter",

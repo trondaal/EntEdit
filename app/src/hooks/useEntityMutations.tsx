@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { Button } from "@mui/material";
 import { useQueryClient } from "@tanstack/react-query";
 import { useSnackbar } from "notistack";
 import { useTranslation } from "react-i18next";
@@ -48,6 +49,8 @@ interface UseEntityMutationsParams {
   onSaveSuccess: (args: { isNew: boolean; savedEntityUri: string }) => void;
   /** Called on successful delete so the parent can deselect the entity. */
   onDeleteSuccess: () => void;
+  /** Called from the "Create another" action after an entity was created. */
+  onCreateAnother: () => void;
 }
 
 export interface UseEntityMutationsResult {
@@ -85,9 +88,10 @@ export function useEntityMutations({
   objectPropertyUris,
   onSaveSuccess,
   onDeleteSuccess,
+  onCreateAnother,
 }: UseEntityMutationsParams): UseEntityMutationsResult {
   const queryClient = useQueryClient();
-  const { enqueueSnackbar } = useSnackbar();
+  const { enqueueSnackbar, closeSnackbar } = useSnackbar();
   const { t, i18n } = useTranslation("entityEditor");
   const { logEvent, isRecording } = useLogging();
 
@@ -293,7 +297,19 @@ export function useEntityMutations({
         }
         enqueueSnackbar(t("messages.entityCreated"), {
           variant: "success",
-          autoHideDuration: 3000,
+          autoHideDuration: 6000,
+          action: (key) => (
+            <Button
+              color="inherit"
+              size="small"
+              onClick={() => {
+                closeSnackbar(key);
+                onCreateAnother();
+              }}
+            >
+              {t("common:buttons.createAnother", { ns: "common" })}
+            </Button>
+          ),
         });
         onSaveSuccess({ isNew: true, savedEntityUri: currentEntityUri });
       } else {
@@ -326,6 +342,8 @@ export function useEntityMutations({
     isRecording,
     logEvent,
     onSaveSuccess,
+    onCreateAnother,
+    closeSnackbar,
     formatMutationError,
     i18n.language,
   ]);

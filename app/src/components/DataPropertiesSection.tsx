@@ -42,6 +42,16 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
   getPropertyLabel,
 }) => {
   const { t } = useTranslation("entityEditor");
+  // Focus the field the user just added, instead of leaving focus on the
+  // "Add" dropdown, which cost an extra tab on every value.
+  const focusRef = React.useRef<HTMLInputElement | null>(null);
+  const [focusTarget, setFocusTarget] = React.useState<string | null>(null);
+  React.useEffect(() => {
+    if (focusTarget && focusRef.current) {
+      focusRef.current.focus();
+      setFocusTarget(null);
+    }
+  }, [focusTarget]);
 
   // Get available properties (excluding rdfs:label)
   const availableProperties = useMemo(
@@ -94,8 +104,12 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
                 <Select
                   value={selectedProperty}
                   label={t("common:labels.addTextValue", { ns: "common" })}
-                  onChange={(e) => onPropertySelect(e.target.value)}
+                  onChange={(e) => {
+                    onPropertySelect(e.target.value);
+                    setFocusTarget(e.target.value);
+                  }}
                   disabled={!classUri}
+                  inputProps={{ "aria-label": t("common:labels.addTextValue", { ns: "common" }) }}
                 >
                   {availableProperties.map((property) => (
                     <MenuItem key={property.uri} value={property.uri}>
@@ -134,6 +148,12 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
               >
                 <TextField
                   fullWidth
+                  inputRef={
+                    focusTarget === propertyUri &&
+                    index === entityData[propertyUri].length - 1
+                      ? focusRef
+                      : undefined
+                  }
                   value={entityData[propertyUri][index].value}
                   onChange={(e) =>
                     onUpdateValue(propertyUri, index, e.target.value)

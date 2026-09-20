@@ -135,6 +135,7 @@ const ObjectPropertyGroup: React.FC<ObjectPropertyGroupProps> = ({
               label={addLabel}
               onChange={(e) => setSelectedProperty(e.target.value)}
               disabled={!classUri}
+              inputProps={{ "aria-label": addLabel }}
             >
               {availableProperties.map((property) => (
                 <MenuItem key={property.uri} value={property.uri}>
