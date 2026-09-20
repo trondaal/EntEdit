@@ -391,6 +391,10 @@
     "Show the language of text values": {
       "no": "Vis språket til tekstverdier",
       "ui": true
+    },
+    "Generate": {
+      "no": "Generer",
+      "ui": true
     }
   },
   "general_terms": {
