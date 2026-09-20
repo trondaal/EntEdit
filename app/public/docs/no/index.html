@@ -1016,8 +1016,11 @@
             </p>
 
             <p>
-                Språk hører hjemme på verdier som er naturlig språk — titler, noter,
-                ansvarsangivelser. Identifikatorer, datoer og tall bør stå uten språk.
+                Språk hører hjemme på verdier som er naturlig språk — titler, navn, noter,
+                ansvarsangivelser. Datoer, nummerering, mål og identifikatorer er ikke
+                språk, og de feltene har derfor ingen språkvelger i det hele tatt:
+                ontologien merker dem med <code>entedit:linguistic false</code>, og en
+                egenskap uten den merkingen regnes som språklig.
             </p>
 
             <h4 id="inferred-values">Utledede verdier</h4>

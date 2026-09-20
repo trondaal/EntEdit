@@ -1025,9 +1025,11 @@
             </p>
 
             <p>
-                Language belongs on values that are natural language — titles, notes,
-                statements of responsibility. Identifiers, dates and numbers should stay
-                untagged.
+                Language belongs on values that are natural language — titles, names,
+                notes, statements of responsibility. Dates, numbering, measurements and
+                identifiers are not language, so those fields offer no language selector
+                at all: the ontology marks them with <code>entedit:linguistic false</code>,
+                and a property without that marking is treated as linguistic.
             </p>
 
             <h4 id="inferred-values">Inferred values</h4>
