@@ -13,7 +13,6 @@
 @prefix rdawo: <http://rdaregistry.info/Elements/w/object/> .
 @prefix rdaxd: <http://rdaregistry.info/Elements/x/datatype/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <http://example.org/001452439> a rdac:C10007 ;
     rdfs:label "The Brass Butterfly. A play in three acts" ;
@@ -289,8 +288,7 @@
     rdamd:P30182 "307, 251, 348 pages : illustrations, 22 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
-    rdamo:P30139 <http://example.org/nobelpresi1983-1985/exp/ger/1020>,
-        <http://viaf.org/viaf/178994871/exp/ger/1020>,
+    rdamo:P30139 <http://viaf.org/viaf/178994871/exp/ger/1020>,
         <http://viaf.org/viaf/198163223/exp/ger/1020>,
         <http://viaf.org/viaf/312341155/exp/ger/1020>,
         <http://viaf.org/viaf/313685914/exp/ger/1020> ;
@@ -1308,8 +1306,7 @@
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/119144648592107423604/exp/eng/1020>,
         <http://viaf.org/viaf/176165653/exp/eng/1020>,
-        <http://viaf.org/viaf/184334172/exp/eng/1020>,
-        <http://viaf.org/viaf/89500102/CollectionX/exp/eng/1020> ;
+        <http://viaf.org/viaf/184334172/exp/eng/1020> ;
     rdaxd:P00018 "http://example.org/isbn-0571133681" .
 
 <http://example.org/isbn-0571134475> a rdac:C10007 ;
@@ -4890,27 +4887,6 @@
     rdaad:P50413 "Stresau, Hermann" ;
     rdaxd:P00018 "http://example.org/names/stresauhermann" .
 
-<http://example.org/nobelpresi1983-1985> a rdac:C10001 ;
-    rdfs:label "Nobelpreis 1983-1985" ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Nobelpreis 1983-1985" ;
-    rdaxd:P00018 "http://example.org/nobelpresi1983-1985" ;
-    rdaxd:P00029 "Collection" .
-
-<http://example.org/nobelpresi1983-1985/exp/ger/1020> a rdac:C10006 ;
-    rdfs:label "Nobelpreis 1983-1985 ()" ;
-    rdaed:P20315 "Nobelpreis 1983-1985" ;
-    rdaed:P20316 "Der Turm der Kathedrale : Nobelpreis 1983 England",
-        "Nobelpreis 1983-1985" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20231 <http://example.org/nobelpresi1983-1985> ;
-    rdaeo:P20319 <http://viaf.org/viaf/178994871/exp/ger/1020>,
-        <http://viaf.org/viaf/198163223/exp/ger/1020>,
-        <http://viaf.org/viaf/312341155/exp/ger/1020>,
-        <http://viaf.org/viaf/313685914/exp/ger/1020> ;
-    rdaxd:P00029 "aggregate" .
-
 <http://oslomet.workid.no/wg/01/exp/ger/1020/47321622> a rdac:C10006 ;
     rdfs:label "Ein ägyptisches Tagebuch (Golding, William)" ;
     rdaed:P20315 "Ein ägyptisches Tagebuch" ;
@@ -4941,15 +4917,6 @@
     rdaeo:P20037 <http://example.org/names/fernndezjavier> ;
     rdaeo:P20231 <http://oslomet.workid.no/wg/05> ;
     rdaxd:P00029 "standalone" .
-
-rdact:1060 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDACarrierType/1060" .
-
-rdaco:1013 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDAContentType/1013" .
-
-rdamt:1001 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDAMediaType/1001" .
 
 <http://viaf.org/viaf/10057685> a rdac:C10004 ;
     rdfs:label "Broch, Nicolai Cleve" ;
@@ -5205,6 +5172,17 @@ rdamt:1001 a skos:Concept ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
     rdawd:P10223 "Route des Flandres" ;
     rdaxd:P00018 "http://viaf.org/viaf/198163223" .
+
+<http://viaf.org/viaf/198163223/exp/ger/1020> a rdac:C10006 ;
+    rdfs:label "Route des Flandres (Simon, Claude)",
+        "Strasse in Flandern (Simon, Claude)" ;
+    rdaed:P20315 "Strasse in Flandern" ;
+    rdaed:P20316 "Route des Flandres" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger>,
+        "ger" ;
+    rdaeo:P20231 <http://viaf.org/viaf/198163223> ;
+    rdaxd:P00029 "part" .
 
 <http://viaf.org/viaf/211743501/exp/ger/1020> a rdac:C10006 ;
     rdfs:label "Das Feuer der Finsternis (Golding, William)" ;
@@ -5564,11 +5542,33 @@ rdamt:1001 a skos:Concept ;
     rdawd:P10223 "Deštník z Piccadilly" ;
     rdaxd:P00018 "http://viaf.org/viaf/312341155" .
 
+<http://viaf.org/viaf/312341155/exp/ger/1020> a rdac:C10006 ;
+    rdfs:label "Deštník z Piccadilly (Seifert, Jaroslav)",
+        "Regenschirm vom Piccadilly (Seifert, Jaroslav)" ;
+    rdaed:P20315 "Regenschirm vom Piccadilly" ;
+    rdaed:P20316 "Deštník z Piccadilly" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger>,
+        "ger" ;
+    rdaeo:P20231 <http://viaf.org/viaf/312341155> ;
+    rdaxd:P00029 "part" .
+
 <http://viaf.org/viaf/313685914> a rdac:C10001 ;
     rdfs:label "Morový sloup (Seifert, Jaroslav)" ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
     rdawd:P10223 "Morový sloup" ;
     rdaxd:P00018 "http://viaf.org/viaf/313685914" .
+
+<http://viaf.org/viaf/313685914/exp/ger/1020> a rdac:C10006 ;
+    rdfs:label "Morový sloup (Seifert, Jaroslav)",
+        "Pestsäule (Seifert, Jaroslav)" ;
+    rdaed:P20315 "Pestsäule" ;
+    rdaed:P20316 "Morový sloup" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger>,
+        "ger" ;
+    rdaeo:P20231 <http://viaf.org/viaf/313685914> ;
+    rdaxd:P00029 "part" .
 
 <http://viaf.org/viaf/31996364> a rdac:C10004 ;
     rdfs:label "Forster, E.M." ;
@@ -5782,27 +5782,6 @@ rdamt:1001 a skos:Concept ;
     rdfs:label "Laurora, Horacio" ;
     rdaad:P50413 "Laurora, Horacio" ;
     rdaxd:P00018 "http://viaf.org/viaf/87945378" .
-
-<http://viaf.org/viaf/89500102/CollectionX> a rdac:C10001 ;
-    rdfs:label "Lord of the flies ; Pincher Martin ; Rites of passage (Golding, William)" ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Lord of the flies ; Pincher Martin ; Rites of passage" ;
-    rdawo:P10061 <http://viaf.org/viaf/89500102> ;
-    rdaxd:P00018 "http://viaf.org/viaf/89500102/CollectionX" ;
-    rdaxd:P00029 "Collection" .
-
-<http://viaf.org/viaf/89500102/CollectionX/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Lord of the flies (Golding, William)" ;
-    rdaed:P20071 "Lord of the flies -- Pincher Martin -- Rites of Passage" ;
-    rdaed:P20315 "Lord of the flies : Pincher Martin ; Rites of passage" ;
-    rdaed:P20316 "Lord of the flies ; Pincher Martin ; Rites of passage" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/89500102/CollectionX> ;
-    rdaeo:P20319 <http://viaf.org/viaf/119144648592107423604/exp/eng/1020>,
-        <http://viaf.org/viaf/176165653/exp/eng/1020>,
-        <http://viaf.org/viaf/184334172/exp/eng/1020> ;
-    rdaxd:P00029 "aggregate" .
 
 <http://viaf.org/viaf/89819722> a rdac:C10004 ;
     rdfs:label "Mahoney, John" ;
@@ -6087,21 +6066,12 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdawo:P10203 <https://www.imdb.com/name/nm0696319> ;
     rdaxd:P00018 "https://www.imdb.com/title/tt0100054" .
 
-<http://id.loc.gov/vocabulary/iso639-2/mul> a skos:Concept ;
-    skos:subjectIndicator "mul" .
-
 <http://oslomet.workid.no/wg/05> a rdac:C10001 ;
     rdfs:label "The Brass Butterfly (Golding, William)" ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
     rdawd:P10223 "The Brass Butterfly" ;
     rdawo:P10061 <http://viaf.org/viaf/89500102> ;
     rdaxd:P00018 "http://oslomet.workid.no/wg/05" .
-
-rdact:1013 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDACarrierType/1013" .
-
-rdaco:1023 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDAContentType/1023" .
 
 <http://viaf.org/viaf/109587997> a rdac:C10004 ;
     rdfs:label "McEwan, Ian" ;
@@ -6181,17 +6151,6 @@ rdaco:1023 a skos:Concept ;
     rdawd:P10223 "The Coral Island" ;
     rdaxd:P00018 "http://viaf.org/viaf/191996024" .
 
-<http://viaf.org/viaf/198163223/exp/ger/1020> a rdac:C10006 ;
-    rdfs:label "Route des Flandres (Simon, Claude)",
-        "Strasse in Flandern (Simon, Claude)" ;
-    rdaed:P20315 "Strasse in Flandern" ;
-    rdaed:P20316 "Route des Flandres" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger>,
-        "ger" ;
-    rdaeo:P20231 <http://viaf.org/viaf/198163223> ;
-    rdaxd:P00029 "part" .
-
 <http://viaf.org/viaf/217036112/exp/ger/1020/42309455> a rdac:C10006 ;
     rdfs:label "Die Erben (Golding, William)" ;
     rdaed:P20315 "Die Erben" ;
@@ -6262,28 +6221,6 @@ rdaco:1023 a skos:Concept ;
     rdaad:P50413 "Bastuk, Emil" ;
     rdaxd:P00018 "http://viaf.org/viaf/311338181" .
 
-<http://viaf.org/viaf/312341155/exp/ger/1020> a rdac:C10006 ;
-    rdfs:label "Deštník z Piccadilly (Seifert, Jaroslav)",
-        "Regenschirm vom Piccadilly (Seifert, Jaroslav)" ;
-    rdaed:P20315 "Regenschirm vom Piccadilly" ;
-    rdaed:P20316 "Deštník z Piccadilly" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger>,
-        "ger" ;
-    rdaeo:P20231 <http://viaf.org/viaf/312341155> ;
-    rdaxd:P00029 "part" .
-
-<http://viaf.org/viaf/313685914/exp/ger/1020> a rdac:C10006 ;
-    rdfs:label "Morový sloup (Seifert, Jaroslav)",
-        "Pestsäule (Seifert, Jaroslav)" ;
-    rdaed:P20315 "Pestsäule" ;
-    rdaed:P20316 "Morový sloup" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger>,
-        "ger" ;
-    rdaeo:P20231 <http://viaf.org/viaf/313685914> ;
-    rdaxd:P00029 "part" .
-
 <http://viaf.org/viaf/47608695/lordoftheflieswilliamgolding/exp/ger/1020> a rdac:C10006 ;
     rdfs:label "Lord of the flies, William Golding (Stannat, Astrid)" ;
     rdaed:P20315 "Lord of the flies, William Golding : Inhalt, Hintergrund, Interpretation ; auf Deutsch - mit englischen Formulierungshilfen!" ;
@@ -6325,9 +6262,6 @@ rdaco:1023 a skos:Concept ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q7762618> ;
     rdaxd:P00029 "parent" .
 
-<https://schema.nb.no/Bibliographic/Values/V1002> a skos:Concept ;
-    skos:subjectIndicator "https://schema.nb.no/Bibliographic/Values/V1002" .
-
 <https://www.imdb.com/name/nm0020767> a rdac:C10004 ;
     rdfs:label "Allen, Lewis M." ;
     rdaad:P50339 "1922-2003" ;
@@ -6362,9 +6296,6 @@ rdaco:1023 a skos:Concept ;
     rdaeo:P20231 <http://oslomet.workid.no/wg/01> ;
     rdaxd:P00029 "standalone" .
 
-rdact:1052 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDACarrierType/1052" .
-
 <http://viaf.org/viaf/14894463> a rdac:C10004 ;
     rdfs:label "Gregor, Ian" ;
     rdaad:P50413 "Gregor, Ian" ;
@@ -6392,6 +6323,19 @@ rdact:1052 a skos:Concept ;
     rdaeo:P20037 <http://viaf.org/viaf/81823873> ;
     rdaeo:P20231 <http://viaf.org/viaf/177762289> ;
     rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/178994871/exp/ger/1020> a rdac:C10006 ;
+    rdfs:label "Der Turm der Kathedrale (Golding, William)",
+        "The Spire (Golding, William)" ;
+    rdaed:P20315 "Der Turm der Kathedrale" ;
+    rdaed:P20316 "Der Turm der Kathedrale : Nobelpreis 1983 England",
+        "The Spire" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger>,
+        "ger" ;
+    rdaeo:P20231 <http://viaf.org/viaf/178994871> ;
+    rdaxd:P00029 "part",
+        "standalone" .
 
 <http://viaf.org/viaf/178994871/exp/ger/1020/42309455> a rdac:C10006 ;
     rdfs:label "Der Turm der Kathedrale (Golding, William)" ;
@@ -6523,9 +6467,6 @@ rdact:1052 a skos:Concept ;
     rdaeo:P20231 <http://oslomet.workid.no/wg/05> ;
     rdaxd:P00029 "standalone" .
 
-rdamt:1008 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDAMediaType/1008" .
-
 <http://viaf.org/viaf/114105318/williamgoldingthemanwhowrotelordoftheflies/exp/eng/1020> a rdac:C10006 ;
     rdfs:label "William Golding (Carey, John)" ;
     rdaed:P20315 "William Golding : the man who wrote Lord of the flies" ;
@@ -6574,19 +6515,6 @@ rdamt:1008 a skos:Concept ;
     rdawo:P10061 <http://viaf.org/viaf/89500102> ;
     rdaxd:P00018 "http://viaf.org/viaf/177762289" ;
     rdaxd:P00029 "Novella" .
-
-<http://viaf.org/viaf/178994871/exp/ger/1020> a rdac:C10006 ;
-    rdfs:label "Der Turm der Kathedrale (Golding, William)",
-        "The Spire (Golding, William)" ;
-    rdaed:P20315 "Der Turm der Kathedrale" ;
-    rdaed:P20316 "Der Turm der Kathedrale : Nobelpreis 1983 England",
-        "The Spire" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger>,
-        "ger" ;
-    rdaeo:P20231 <http://viaf.org/viaf/178994871> ;
-    rdaxd:P00029 "part",
-        "standalone" .
 
 <http://viaf.org/viaf/180585027> a rdac:C10001 ;
     rdfs:label "Clonk Clonk (Golding, William)" ;
@@ -6856,6 +6784,16 @@ rdamt:1008 a skos:Concept ;
     rdaxd:P00029 "parent",
         "standalone" .
 
+<http://viaf.org/viaf/184334172/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Pincher Martin (Golding, William)" ;
+    rdaed:P20315 "Pincher Martin" ;
+    rdaed:P20316 "Pincher Martin" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/184334172> ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
 <http://viaf.org/viaf/217036112/exp/eng/1020> a rdac:C10006 ;
     rdfs:label "The inheritors (Golding, William)" ;
     rdaed:P20315 "The inheritors" ;
@@ -6876,16 +6814,6 @@ rdamt:1008 a skos:Concept ;
     rdaeo:P20231 <http://viaf.org/viaf/119144648592107423604> ;
     rdaxd:P00029 "standalone" .
 
-<http://viaf.org/viaf/184334172/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Pincher Martin (Golding, William)" ;
-    rdaed:P20315 "Pincher Martin" ;
-    rdaed:P20316 "Pincher Martin" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/184334172> ;
-    rdaxd:P00029 "part",
-        "standalone" .
-
 <http://viaf.org/viaf/217036112> a rdac:C10001 ;
     rdfs:label "Inheritors (Golding, William)",
         "The Inheritors (Golding, William)" ;
@@ -6894,13 +6822,6 @@ rdamt:1008 a skos:Concept ;
         "The Inheritors" ;
     rdawo:P10061 <http://viaf.org/viaf/89500102> ;
     rdaxd:P00018 "http://viaf.org/viaf/217036112" .
-
-<http://id.loc.gov/vocabulary/iso639-2/nob> a skos:Concept ;
-    rdfs:label "nob" ;
-    skos:subjectIndicator "nob" .
-
-<http://id.loc.gov/vocabulary/iso639-2/nor> a skos:Concept ;
-    skos:subjectIndicator "nor" .
 
 <http://viaf.org/viaf/174553895/exp/eng/1020> a rdac:C10006 ;
     rdfs:label "Fire down below (Golding, William)" ;
@@ -6972,12 +6893,6 @@ rdamt:1008 a skos:Concept ;
     rdaxd:P00029 "part",
         "standalone" .
 
-rdact:1018 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDACarrierType/1018" .
-
-rdamt:1003 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDAMediaType/1003" .
-
 <http://viaf.org/viaf/119144648592107423604/exp/ger/1020/42309455> a rdac:C10006 ;
     rdfs:label "Herr der Fliegen (Golding, William)" ;
     rdaed:P20315 "Herr der Fliegen" ;
@@ -6990,10 +6905,6 @@ rdamt:1003 a skos:Concept ;
     rdaeo:P20037 <http://viaf.org/viaf/42309455> ;
     rdaeo:P20231 <http://viaf.org/viaf/119144648592107423604> ;
     rdaxd:P00029 "standalone" .
-
-<http://id.loc.gov/vocabulary/iso639-2/spa> a skos:Concept ;
-    rdfs:label "spa" ;
-    skos:subjectIndicator "spa" .
 
 <http://viaf.org/viaf/89500102> a rdac:C10004 ;
     rdfs:label "Golding, William" ;
@@ -7020,30 +6931,10 @@ rdamt:1003 a skos:Concept ;
     rdaxd:P00029 "part",
         "standalone" .
 
-<http://id.loc.gov/vocabulary/iso639-2/ger> a skos:Concept ;
-    rdfs:label "ger" ;
-    skos:subjectIndicator "ger" .
-
-<http://id.loc.gov/vocabulary/iso639-2/eng> a skos:Concept ;
-    rdfs:label "eng" ;
-    skos:subjectIndicator "eng" .
-
 <http://viaf.org/viaf/119144648592107423604> a rdac:C10001 ;
     rdfs:label "Lord of the Flies (Golding, William)" ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
     rdawd:P10223 "Lord of the Flies" ;
     rdawo:P10061 <http://viaf.org/viaf/89500102> ;
     rdaxd:P00018 "http://viaf.org/viaf/119144648592107423604" .
-
-<https://schema.nb.no/Bibliographic/Values/V1000> a skos:Concept ;
-    skos:subjectIndicator "https://schema.nb.no/Bibliographic/Values/V1000" .
-
-rdaco:1020 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDAContentType/1020" .
-
-rdact:1049 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDACarrierType/1049" .
-
-rdamt:1007 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDAMediaType/1007" .
 

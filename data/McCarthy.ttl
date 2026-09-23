@@ -956,8 +956,7 @@
         <http://viaf.org/viaf/92910249/seriousnoticing/25/exp/eng/1020>,
         <http://viaf.org/viaf/92910249/seriousnoticing/26/exp/eng/1020>,
         <http://viaf.org/viaf/92910249/seriousnoticing/27/exp/eng/1020>,
-        <http://viaf.org/viaf/92910249/seriousnoticing/28/exp/eng/1020>,
-        <http://viaf.org/viaf/92910249/seriousnoticing/exp/eng/1020> ;
+        <http://viaf.org/viaf/92910249/seriousnoticing/28/exp/eng/1020> ;
     rdaxd:P00018 "http://example.org/isbn-0374261164" .
 
 <http://example.org/isbn-0375406778> a rdac:C10007 ;
@@ -2480,18 +2479,19 @@
     rdaxd:P00018 "http://viaf.org/viaf/8419162723677961290005" ;
     rdaxd:P00029 "Play" .
 
-<http://viaf.org/viaf/92910249/seriousnoticing> a rdac:C10001 ;
-    rdfs:label "Serious noticing (Wood, James)" ;
-    rdawd:P10223 "Serious noticing" ;
-    rdawo:P10061 <http://viaf.org/viaf/92910249> ;
-    rdaxd:P00018 "http://viaf.org/viaf/92910249/seriousnoticing" ;
-    rdaxd:P00029 "Essay collection" .
-
 <http://viaf.org/viaf/92910249/seriousnoticing/01> a rdac:C10001 ;
     rdfs:label "Fun stuff: homage to Keith Moon (Wood, James)" ;
     rdawd:P10223 "Fun stuff: homage to Keith Moon" ;
     rdawo:P10061 <http://viaf.org/viaf/92910249> ;
     rdaxd:P00018 "http://viaf.org/viaf/92910249/seriousnoticing/01" .
+
+<http://viaf.org/viaf/92910249/seriousnoticing/01/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Fun stuff: homage to Keith Moon (Wood, James)" ;
+    rdaed:P20315 "Fun stuff: homage to Keith Moon" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/01> ;
+    rdaxd:P00029 "part" .
 
 <http://viaf.org/viaf/92910249/seriousnoticing/02> a rdac:C10001 ;
     rdfs:label "What Chekhov meant by life (Wood, James)" ;
@@ -2499,11 +2499,27 @@
     rdawo:P10061 <http://viaf.org/viaf/92910249> ;
     rdaxd:P00018 "http://viaf.org/viaf/92910249/seriousnoticing/02" .
 
+<http://viaf.org/viaf/92910249/seriousnoticing/02/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "What Chekhov meant by life (Wood, James)" ;
+    rdaed:P20315 "What Chekhov meant by life" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/02> ;
+    rdaxd:P00029 "part" .
+
 <http://viaf.org/viaf/92910249/seriousnoticing/03> a rdac:C10001 ;
     rdfs:label "Serious noticing (Wood, James)" ;
     rdawd:P10223 "Serious noticing" ;
     rdawo:P10061 <http://viaf.org/viaf/92910249> ;
     rdaxd:P00018 "http://viaf.org/viaf/92910249/seriousnoticing/03" .
+
+<http://viaf.org/viaf/92910249/seriousnoticing/03/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Serious noticing (Wood, James)" ;
+    rdaed:P20315 "Serious noticing" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/03> ;
+    rdaxd:P00029 "part" .
 
 <http://viaf.org/viaf/92910249/seriousnoticing/04> a rdac:C10001 ;
     rdfs:label "Saul Bellow's comic style (Wood, James)" ;
@@ -2511,11 +2527,27 @@
     rdawo:P10061 <http://viaf.org/viaf/92910249> ;
     rdaxd:P00018 "http://viaf.org/viaf/92910249/seriousnoticing/04" .
 
+<http://viaf.org/viaf/92910249/seriousnoticing/04/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Saul Bellow's comic style (Wood, James)" ;
+    rdaed:P20315 "Saul Bellow's comic style" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/04> ;
+    rdaxd:P00029 "part" .
+
 <http://viaf.org/viaf/92910249/seriousnoticing/05> a rdac:C10001 ;
     rdfs:label "Anna Karenina and characterization (Wood, James)" ;
     rdawd:P10223 "Anna Karenina and characterization" ;
     rdawo:P10061 <http://viaf.org/viaf/92910249> ;
     rdaxd:P00018 "http://viaf.org/viaf/92910249/seriousnoticing/05" .
+
+<http://viaf.org/viaf/92910249/seriousnoticing/05/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Anna Karenina and characterization (Wood, James)" ;
+    rdaed:P20315 "Anna Karenina and characterization" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/05> ;
+    rdaxd:P00029 "part" .
 
 <http://viaf.org/viaf/92910249/seriousnoticing/06> a rdac:C10001 ;
     rdfs:label "Joseph Roth's empire of signs (Wood, James)" ;
@@ -2523,11 +2555,27 @@
     rdawo:P10061 <http://viaf.org/viaf/92910249> ;
     rdaxd:P00018 "http://viaf.org/viaf/92910249/seriousnoticing/06" .
 
+<http://viaf.org/viaf/92910249/seriousnoticing/06/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Joseph Roth's empire of signs (Wood, James)" ;
+    rdaed:P20315 "Joseph Roth's empire of signs" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/06> ;
+    rdaxd:P00029 "part" .
+
 <http://viaf.org/viaf/92910249/seriousnoticing/07> a rdac:C10001 ;
     rdfs:label "Paul Auster's shallowness (Wood, James)" ;
     rdawd:P10223 "Paul Auster's shallowness" ;
     rdawo:P10061 <http://viaf.org/viaf/92910249> ;
     rdaxd:P00018 "http://viaf.org/viaf/92910249/seriousnoticing/07" .
+
+<http://viaf.org/viaf/92910249/seriousnoticing/07/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Paul Auster's shallowness (Wood, James)" ;
+    rdaed:P20315 "Paul Auster's shallowness" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/07> ;
+    rdaxd:P00029 "part" .
 
 <http://viaf.org/viaf/92910249/seriousnoticing/08> a rdac:C10001 ;
     rdfs:label "Hysterical realism (Wood, James)" ;
@@ -2535,11 +2583,27 @@
     rdawo:P10061 <http://viaf.org/viaf/92910249> ;
     rdaxd:P00018 "http://viaf.org/viaf/92910249/seriousnoticing/08" .
 
+<http://viaf.org/viaf/92910249/seriousnoticing/08/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Hysterical realism (Wood, James)" ;
+    rdaed:P20315 "Hysterical realism" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/08> ;
+    rdaxd:P00029 "part" .
+
 <http://viaf.org/viaf/92910249/seriousnoticing/09> a rdac:C10001 ;
     rdfs:label "Bohumil Hrabal's comic world (Wood, James)" ;
     rdawd:P10223 "Bohumil Hrabal's comic world" ;
     rdawo:P10061 <http://viaf.org/viaf/92910249> ;
     rdaxd:P00018 "http://viaf.org/viaf/92910249/seriousnoticing/09" .
+
+<http://viaf.org/viaf/92910249/seriousnoticing/09/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Bohumil Hrabal's comic world (Wood, James)" ;
+    rdaed:P20315 "Bohumil Hrabal's comic world" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/09> ;
+    rdaxd:P00029 "part" .
 
 <http://viaf.org/viaf/92910249/seriousnoticing/11> a rdac:C10001 ;
     rdfs:label "George Orwell's very English revolution (Wood, James)",
@@ -2549,11 +2613,29 @@
     rdawo:P10061 <http://viaf.org/viaf/92910249> ;
     rdaxd:P00018 "http://viaf.org/viaf/92910249/seriousnoticing/11" .
 
+<http://viaf.org/viaf/92910249/seriousnoticing/11/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "George Orwell's very English revolution (Wood, James)",
+        "Jane Austen's heroic consciousness (Wood, James)" ;
+    rdaed:P20315 "Jane Austen's heroic consciousness" ;
+    rdaed:P20316 "George Orwell's very English revolution" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/11> ;
+    rdaxd:P00029 "part" .
+
 <http://viaf.org/viaf/92910249/seriousnoticing/12> a rdac:C10001 ;
     rdfs:label "Cormac McCarthy's the road (Wood, James)" ;
     rdawd:P10223 "Cormac McCarthy's the road" ;
     rdawo:P10061 <http://viaf.org/viaf/92910249> ;
     rdaxd:P00018 "http://viaf.org/viaf/92910249/seriousnoticing/12" .
+
+<http://viaf.org/viaf/92910249/seriousnoticing/12/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Cormac McCarthy's the road (Wood, James)" ;
+    rdaed:P20315 "Cormac McCarthy's the road" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/12> ;
+    rdaxd:P00029 "part" .
 
 <http://viaf.org/viaf/92910249/seriousnoticing/13> a rdac:C10001 ;
     rdfs:label "Reality examined to the point of madness': László Krasznahorkai (Wood, James)" ;
@@ -2561,11 +2643,27 @@
     rdawo:P10061 <http://viaf.org/viaf/92910249> ;
     rdaxd:P00018 "http://viaf.org/viaf/92910249/seriousnoticing/13" .
 
+<http://viaf.org/viaf/92910249/seriousnoticing/13/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Reality examined to the point of madness': László Krasznahorkai (Wood, James)" ;
+    rdaed:P20315 "Reality examined to the point of madness': László Krasznahorkai" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/13> ;
+    rdaxd:P00029 "part" .
+
 <http://viaf.org/viaf/92910249/seriousnoticing/14> a rdac:C10001 ;
     rdfs:label "Wounder and wounded (Wood, James)" ;
     rdawd:P10223 "Wounder and wounded" ;
     rdawo:P10061 <http://viaf.org/viaf/92910249> ;
     rdaxd:P00018 "http://viaf.org/viaf/92910249/seriousnoticing/14" .
+
+<http://viaf.org/viaf/92910249/seriousnoticing/14/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Wounder and wounded (Wood, James)" ;
+    rdaed:P20315 "Wounder and wounded" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/14> ;
+    rdaxd:P00029 "part" .
 
 <http://viaf.org/viaf/92910249/seriousnoticing/15> a rdac:C10001 ;
     rdfs:label "On not going home (Wood, James)" ;
@@ -2573,11 +2671,27 @@
     rdawo:P10061 <http://viaf.org/viaf/92910249> ;
     rdaxd:P00018 "http://viaf.org/viaf/92910249/seriousnoticing/15" .
 
+<http://viaf.org/viaf/92910249/seriousnoticing/15/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "On not going home (Wood, James)" ;
+    rdaed:P20315 "On not going home" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/15> ;
+    rdaxd:P00029 "part" .
+
 <http://viaf.org/viaf/92910249/seriousnoticing/16> a rdac:C10001 ;
     rdfs:label "Other side of silence: rereading W. G. Sebald (Wood, James)" ;
     rdawd:P10223 "Other side of silence: rereading W. G. Sebald" ;
     rdawo:P10061 <http://viaf.org/viaf/92910249> ;
     rdaxd:P00018 "http://viaf.org/viaf/92910249/seriousnoticing/16" .
+
+<http://viaf.org/viaf/92910249/seriousnoticing/16/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Other side of silence: rereading W. G. Sebald (Wood, James)" ;
+    rdaed:P20315 "Other side of silence: rereading W. G. Sebald" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/16> ;
+    rdaxd:P00029 "part" .
 
 <http://viaf.org/viaf/92910249/seriousnoticing/17> a rdac:C10001 ;
     rdfs:label "Becoming them (Wood, James)" ;
@@ -2585,11 +2699,27 @@
     rdawo:P10061 <http://viaf.org/viaf/92910249> ;
     rdaxd:P00018 "http://viaf.org/viaf/92910249/seriousnoticing/17" .
 
+<http://viaf.org/viaf/92910249/seriousnoticing/17/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Becoming them (Wood, James)" ;
+    rdaed:P20315 "Becoming them" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/17> ;
+    rdaxd:P00029 "part" .
+
 <http://viaf.org/viaf/92910249/seriousnoticing/18> a rdac:C10001 ;
     rdfs:label "Don Quixote's old and new testaments (Wood, James)" ;
     rdawd:P10223 "Don Quixote's old and new testaments" ;
     rdawo:P10061 <http://viaf.org/viaf/92910249> ;
     rdaxd:P00018 "http://viaf.org/viaf/92910249/seriousnoticing/18" .
+
+<http://viaf.org/viaf/92910249/seriousnoticing/18/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Don Quixote's old and new testaments (Wood, James)" ;
+    rdaed:P20315 "Don Quixote's old and new testaments" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/18> ;
+    rdaxd:P00029 "part" .
 
 <http://viaf.org/viaf/92910249/seriousnoticing/19> a rdac:C10001 ;
     rdfs:label "Dostoevsky's god (Wood, James)" ;
@@ -2597,11 +2727,27 @@
     rdawo:P10061 <http://viaf.org/viaf/92910249> ;
     rdaxd:P00018 "http://viaf.org/viaf/92910249/seriousnoticing/19" .
 
+<http://viaf.org/viaf/92910249/seriousnoticing/19/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Dostoevsky's god (Wood, James)" ;
+    rdaed:P20315 "Dostoevsky's god" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/19> ;
+    rdaxd:P00029 "part" .
+
 <http://viaf.org/viaf/92910249/seriousnoticing/20> a rdac:C10001 ;
     rdfs:label "Helen Garner's savage honesty (Wood, James)" ;
     rdawd:P10223 "Helen Garner's savage honesty" ;
     rdawo:P10061 <http://viaf.org/viaf/92910249> ;
     rdaxd:P00018 "http://viaf.org/viaf/92910249/seriousnoticing/20" .
+
+<http://viaf.org/viaf/92910249/seriousnoticing/20/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Helen Garner's savage honesty (Wood, James)" ;
+    rdaed:P20315 "Helen Garner's savage honesty" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/20> ;
+    rdaxd:P00029 "part" .
 
 <http://viaf.org/viaf/92910249/seriousnoticing/21> a rdac:C10001 ;
     rdfs:label "All and the if: God and metaphor in Melville (Wood, James)" ;
@@ -2609,11 +2755,27 @@
     rdawo:P10061 <http://viaf.org/viaf/92910249> ;
     rdaxd:P00018 "http://viaf.org/viaf/92910249/seriousnoticing/21" .
 
+<http://viaf.org/viaf/92910249/seriousnoticing/21/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "All and the if: God and metaphor in Melville (Wood, James)" ;
+    rdaed:P20315 "All and the if: God and metaphor in Melville" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/21> ;
+    rdaxd:P00029 "part" .
+
 <http://viaf.org/viaf/92910249/seriousnoticing/22> a rdac:C10001 ;
     rdfs:label "Elena Ferrante (Wood, James)" ;
     rdawd:P10223 "Elena Ferrante" ;
     rdawo:P10061 <http://viaf.org/viaf/92910249> ;
     rdaxd:P00018 "http://viaf.org/viaf/92910249/seriousnoticing/22" .
+
+<http://viaf.org/viaf/92910249/seriousnoticing/22/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Elena Ferrante (Wood, James)" ;
+    rdaed:P20315 "Elena Ferrante" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/22> ;
+    rdaxd:P00029 "part" .
 
 <http://viaf.org/viaf/92910249/seriousnoticing/23> a rdac:C10001 ;
     rdfs:label "Virginia Woolf's Mysticism (Wood, James)" ;
@@ -2621,11 +2783,27 @@
     rdawo:P10061 <http://viaf.org/viaf/92910249> ;
     rdaxd:P00018 "http://viaf.org/viaf/92910249/seriousnoticing/23" .
 
+<http://viaf.org/viaf/92910249/seriousnoticing/23/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Virginia Woolf's Mysticism (Wood, James)" ;
+    rdaed:P20315 "Virginia Woolf's Mysticism" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/23> ;
+    rdaxd:P00029 "part" .
+
 <http://viaf.org/viaf/92910249/seriousnoticing/24> a rdac:C10001 ;
     rdfs:label "Job existed: Primo Levi (Wood, James)" ;
     rdawd:P10223 "Job existed: Primo Levi" ;
     rdawo:P10061 <http://viaf.org/viaf/92910249> ;
     rdaxd:P00018 "http://viaf.org/viaf/92910249/seriousnoticing/24" .
+
+<http://viaf.org/viaf/92910249/seriousnoticing/24/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Job existed: Primo Levi (Wood, James)" ;
+    rdaed:P20315 "Job existed: Primo Levi" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/24> ;
+    rdaxd:P00029 "part" .
 
 <http://viaf.org/viaf/92910249/seriousnoticing/25> a rdac:C10001 ;
     rdfs:label "Marilynne Robinson (Wood, James)" ;
@@ -2633,11 +2811,27 @@
     rdawo:P10061 <http://viaf.org/viaf/92910249> ;
     rdaxd:P00018 "http://viaf.org/viaf/92910249/seriousnoticing/25" .
 
+<http://viaf.org/viaf/92910249/seriousnoticing/25/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Marilynne Robinson (Wood, James)" ;
+    rdaed:P20315 "Marilynne Robinson" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/25> ;
+    rdaxd:P00029 "part" .
+
 <http://viaf.org/viaf/92910249/seriousnoticing/26> a rdac:C10001 ;
     rdfs:label "Ismail Kadare (Wood, James)" ;
     rdawd:P10223 "Ismail Kadare" ;
     rdawo:P10061 <http://viaf.org/viaf/92910249> ;
     rdaxd:P00018 "http://viaf.org/viaf/92910249/seriousnoticing/26" .
+
+<http://viaf.org/viaf/92910249/seriousnoticing/26/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Ismail Kadare (Wood, James)" ;
+    rdaed:P20315 "Ismail Kadare" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/26> ;
+    rdaxd:P00029 "part" .
 
 <http://viaf.org/viaf/92910249/seriousnoticing/27> a rdac:C10001 ;
     rdfs:label "Jenny Erpenbeck (Wood, James)" ;
@@ -2645,48 +2839,27 @@
     rdawo:P10061 <http://viaf.org/viaf/92910249> ;
     rdaxd:P00018 "http://viaf.org/viaf/92910249/seriousnoticing/27" .
 
+<http://viaf.org/viaf/92910249/seriousnoticing/27/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Jenny Erpenbeck (Wood, James)" ;
+    rdaed:P20315 "Jenny Erpenbeck" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/27> ;
+    rdaxd:P00029 "part" .
+
 <http://viaf.org/viaf/92910249/seriousnoticing/28> a rdac:C10001 ;
     rdfs:label "Packing my father-in-law's library (Wood, James)" ;
     rdawd:P10223 "Packing my father-in-law's library" ;
     rdawo:P10061 <http://viaf.org/viaf/92910249> ;
     rdaxd:P00018 "http://viaf.org/viaf/92910249/seriousnoticing/28" .
 
-<http://viaf.org/viaf/92910249/seriousnoticing/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Serious noticing (Wood, James)" ;
-    rdaed:P20071 "Fun stuff: homage to Keith Moon -- What Chekhov meant by life -- Serious noticing -- Saul Bellow's comic style -- Anna Karenina and characterization -- Joseph Roth's empire of signs -- Paul Auster's shallowness -- Hysterical realism -- Bohumil Hrabal's comic world -- George Orwell's very English revolution -- Jane Austen's heroic consciousness -- Cormac McCarthy's the road -- Reality examined to the point of madness': László Krasznahorkai -- Wounder and wounded -- On not going home -- Other side of silence: rereading W. G. Sebald -- Becoming them -- Don Quixote's old and new testaments -- Dostoevsky's god -- Helen Garner's savage honesty -- All and the if: God and metaphor in Melville -- Elena Ferrante -- Virginia Woolf's Mysticism -- Job existed: Primo Levi -- Marilynne Robinson -- Ismail Kadare -- Jenny Erpenbeck -- Packing my father-in-law's library." ;
-    rdaed:P20315 "Serious noticing : selected essays, 1997-2019" ;
-    rdaed:P20316 "Serious noticing" ;
+<http://viaf.org/viaf/92910249/seriousnoticing/28/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Packing my father-in-law's library (Wood, James)" ;
+    rdaed:P20315 "Packing my father-in-law's library" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing> ;
-    rdaeo:P20319 <http://viaf.org/viaf/92910249/seriousnoticing/01/exp/eng/1020>,
-        <http://viaf.org/viaf/92910249/seriousnoticing/02/exp/eng/1020>,
-        <http://viaf.org/viaf/92910249/seriousnoticing/03/exp/eng/1020>,
-        <http://viaf.org/viaf/92910249/seriousnoticing/04/exp/eng/1020>,
-        <http://viaf.org/viaf/92910249/seriousnoticing/05/exp/eng/1020>,
-        <http://viaf.org/viaf/92910249/seriousnoticing/06/exp/eng/1020>,
-        <http://viaf.org/viaf/92910249/seriousnoticing/07/exp/eng/1020>,
-        <http://viaf.org/viaf/92910249/seriousnoticing/08/exp/eng/1020>,
-        <http://viaf.org/viaf/92910249/seriousnoticing/09/exp/eng/1020>,
-        <http://viaf.org/viaf/92910249/seriousnoticing/11/exp/eng/1020>,
-        <http://viaf.org/viaf/92910249/seriousnoticing/12/exp/eng/1020>,
-        <http://viaf.org/viaf/92910249/seriousnoticing/13/exp/eng/1020>,
-        <http://viaf.org/viaf/92910249/seriousnoticing/14/exp/eng/1020>,
-        <http://viaf.org/viaf/92910249/seriousnoticing/15/exp/eng/1020>,
-        <http://viaf.org/viaf/92910249/seriousnoticing/16/exp/eng/1020>,
-        <http://viaf.org/viaf/92910249/seriousnoticing/17/exp/eng/1020>,
-        <http://viaf.org/viaf/92910249/seriousnoticing/18/exp/eng/1020>,
-        <http://viaf.org/viaf/92910249/seriousnoticing/19/exp/eng/1020>,
-        <http://viaf.org/viaf/92910249/seriousnoticing/20/exp/eng/1020>,
-        <http://viaf.org/viaf/92910249/seriousnoticing/21/exp/eng/1020>,
-        <http://viaf.org/viaf/92910249/seriousnoticing/22/exp/eng/1020>,
-        <http://viaf.org/viaf/92910249/seriousnoticing/23/exp/eng/1020>,
-        <http://viaf.org/viaf/92910249/seriousnoticing/24/exp/eng/1020>,
-        <http://viaf.org/viaf/92910249/seriousnoticing/25/exp/eng/1020>,
-        <http://viaf.org/viaf/92910249/seriousnoticing/26/exp/eng/1020>,
-        <http://viaf.org/viaf/92910249/seriousnoticing/27/exp/eng/1020>,
-        <http://viaf.org/viaf/92910249/seriousnoticing/28/exp/eng/1020> ;
-    rdaxd:P00029 "aggregate" .
+    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/28> ;
+    rdaxd:P00029 "part" .
 
 <http://www.wikidata.org/entity/Q3061599> a rdac:C10001 ;
     rdfs:label "Counselor (Motion picture : 2013)" ;
@@ -2949,224 +3122,6 @@
     rdfs:label "Penhall, Joe" ;
     rdaad:P50413 "Penhall, Joe" ;
     rdaxd:P00018 "http://viaf.org/viaf/5191807" .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/01/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Fun stuff: homage to Keith Moon (Wood, James)" ;
-    rdaed:P20315 "Fun stuff: homage to Keith Moon" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/01> ;
-    rdaxd:P00029 "part" .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/02/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "What Chekhov meant by life (Wood, James)" ;
-    rdaed:P20315 "What Chekhov meant by life" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/02> ;
-    rdaxd:P00029 "part" .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/03/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Serious noticing (Wood, James)" ;
-    rdaed:P20315 "Serious noticing" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/03> ;
-    rdaxd:P00029 "part" .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/04/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Saul Bellow's comic style (Wood, James)" ;
-    rdaed:P20315 "Saul Bellow's comic style" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/04> ;
-    rdaxd:P00029 "part" .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/05/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Anna Karenina and characterization (Wood, James)" ;
-    rdaed:P20315 "Anna Karenina and characterization" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/05> ;
-    rdaxd:P00029 "part" .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/06/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Joseph Roth's empire of signs (Wood, James)" ;
-    rdaed:P20315 "Joseph Roth's empire of signs" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/06> ;
-    rdaxd:P00029 "part" .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/07/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Paul Auster's shallowness (Wood, James)" ;
-    rdaed:P20315 "Paul Auster's shallowness" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/07> ;
-    rdaxd:P00029 "part" .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/08/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Hysterical realism (Wood, James)" ;
-    rdaed:P20315 "Hysterical realism" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/08> ;
-    rdaxd:P00029 "part" .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/09/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Bohumil Hrabal's comic world (Wood, James)" ;
-    rdaed:P20315 "Bohumil Hrabal's comic world" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/09> ;
-    rdaxd:P00029 "part" .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/11/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "George Orwell's very English revolution (Wood, James)",
-        "Jane Austen's heroic consciousness (Wood, James)" ;
-    rdaed:P20315 "Jane Austen's heroic consciousness" ;
-    rdaed:P20316 "George Orwell's very English revolution" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/11> ;
-    rdaxd:P00029 "part" .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/12/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Cormac McCarthy's the road (Wood, James)" ;
-    rdaed:P20315 "Cormac McCarthy's the road" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/12> ;
-    rdaxd:P00029 "part" .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/13/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Reality examined to the point of madness': László Krasznahorkai (Wood, James)" ;
-    rdaed:P20315 "Reality examined to the point of madness': László Krasznahorkai" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/13> ;
-    rdaxd:P00029 "part" .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/14/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Wounder and wounded (Wood, James)" ;
-    rdaed:P20315 "Wounder and wounded" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/14> ;
-    rdaxd:P00029 "part" .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/15/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "On not going home (Wood, James)" ;
-    rdaed:P20315 "On not going home" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/15> ;
-    rdaxd:P00029 "part" .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/16/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Other side of silence: rereading W. G. Sebald (Wood, James)" ;
-    rdaed:P20315 "Other side of silence: rereading W. G. Sebald" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/16> ;
-    rdaxd:P00029 "part" .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/17/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Becoming them (Wood, James)" ;
-    rdaed:P20315 "Becoming them" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/17> ;
-    rdaxd:P00029 "part" .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/18/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Don Quixote's old and new testaments (Wood, James)" ;
-    rdaed:P20315 "Don Quixote's old and new testaments" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/18> ;
-    rdaxd:P00029 "part" .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/19/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Dostoevsky's god (Wood, James)" ;
-    rdaed:P20315 "Dostoevsky's god" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/19> ;
-    rdaxd:P00029 "part" .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/20/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Helen Garner's savage honesty (Wood, James)" ;
-    rdaed:P20315 "Helen Garner's savage honesty" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/20> ;
-    rdaxd:P00029 "part" .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/21/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "All and the if: God and metaphor in Melville (Wood, James)" ;
-    rdaed:P20315 "All and the if: God and metaphor in Melville" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/21> ;
-    rdaxd:P00029 "part" .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/22/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Elena Ferrante (Wood, James)" ;
-    rdaed:P20315 "Elena Ferrante" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/22> ;
-    rdaxd:P00029 "part" .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/23/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Virginia Woolf's Mysticism (Wood, James)" ;
-    rdaed:P20315 "Virginia Woolf's Mysticism" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/23> ;
-    rdaxd:P00029 "part" .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/24/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Job existed: Primo Levi (Wood, James)" ;
-    rdaed:P20315 "Job existed: Primo Levi" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/24> ;
-    rdaxd:P00029 "part" .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/25/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Marilynne Robinson (Wood, James)" ;
-    rdaed:P20315 "Marilynne Robinson" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/25> ;
-    rdaxd:P00029 "part" .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/26/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Ismail Kadare (Wood, James)" ;
-    rdaed:P20315 "Ismail Kadare" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/26> ;
-    rdaxd:P00029 "part" .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/27/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Jenny Erpenbeck (Wood, James)" ;
-    rdaed:P20315 "Jenny Erpenbeck" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/27> ;
-    rdaxd:P00029 "part" .
-
-<http://viaf.org/viaf/92910249/seriousnoticing/28/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Packing my father-in-law's library (Wood, James)" ;
-    rdaed:P20315 "Packing my father-in-law's library" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/28> ;
-    rdaxd:P00029 "part" .
 
 <http://www.wikidata.org/entity/Q3061599/exp/1023> a rdac:C10006 ;
     rdfs:label "The counselor (Motion picture : 2013)" ;

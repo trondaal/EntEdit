@@ -12,7 +12,6 @@
 @prefix rdawo: <http://rdaregistry.info/Elements/w/object/> .
 @prefix rdaxd: <http://rdaregistry.info/Elements/x/datatype/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <http://example.org/001489749> a rdac:C10007 ;
     rdamd:P30011 "[1962]" ;
@@ -18822,43 +18821,6 @@
     rdaeo:P20231 <http://example.org/zhangxinyi/formenundfunktionenderintertextualitatinerzahlwerkenvonguntergrass> ;
     rdaxd:P00029 "standalone" .
 
-<http://id.loc.gov/vocabulary/iso639-2/chi> a skos:Concept ;
-    rdfs:label "chi" ;
-    skos:subjectIndicator "chi" .
-
-<http://id.loc.gov/vocabulary/iso639-2/gre> a skos:Concept ;
-    rdfs:label "gre" ;
-    skos:subjectIndicator "gre" .
-
-<http://id.loc.gov/vocabulary/iso639-2/jap> a skos:Concept ;
-    rdfs:label "jap" ;
-    skos:subjectIndicator "jap" .
-
-<http://id.loc.gov/vocabulary/iso639-2/kor> a skos:Concept ;
-    rdfs:label "kor" ;
-    skos:subjectIndicator "kor" .
-
-<http://id.loc.gov/vocabulary/iso639-2/rus> a skos:Concept ;
-    rdfs:label "rus" ;
-    skos:subjectIndicator "rus" .
-
-<http://id.loc.gov/vocabulary/iso639-2/slo> a skos:Concept ;
-    rdfs:label "slo" ;
-    skos:subjectIndicator "slo" .
-
-<http://id.loc.gov/vocabulary/iso639-2/tur> a skos:Concept ;
-    rdfs:label "tur" ;
-    skos:subjectIndicator "tur" .
-
-rdact:1007 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDACarrierType/1007" .
-
-rdact:1022 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDACarrierType/1022" .
-
-rdamt:1002 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDAMediaType/1002" .
-
 <http://viaf.org/viaf/102319859/correspondence> a rdac:C10001 ;
     rdfs:label "Correspondence (Grass, Günter)" ;
     rdawd:P10223 "Correspondence" ;
@@ -21275,30 +21237,6 @@ rdamt:1002 a skos:Concept ;
     rdaeo:P20231 <http://example.org/works/gg/1006> ;
     rdaxd:P00029 "standalone" .
 
-<http://id.loc.gov/vocabulary/iso639-2/bul> a skos:Concept ;
-    rdfs:label "bul" ;
-    skos:subjectIndicator "bul" .
-
-<http://id.loc.gov/vocabulary/iso639-2/heb> a skos:Concept ;
-    rdfs:label "heb" ;
-    skos:subjectIndicator "heb" .
-
-<http://id.loc.gov/vocabulary/iso639-2/mul> a skos:Concept ;
-    skos:subjectIndicator "mul" .
-
-<http://id.loc.gov/vocabulary/iso639-2/rum> a skos:Concept ;
-    rdfs:label "rum" ;
-    skos:subjectIndicator "rum" .
-
-rdact:1052 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDACarrierType/1052" .
-
-rdaco:1018 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDAContentType/1018" .
-
-rdaco:1023 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDAContentType/1023" .
-
 <http://viaf.org/viaf/11146153037605250840/exp/ger/1020> a rdac:C10006 ;
     rdfs:label "Unterwegs von Deutschland nach Deutschland (Grass, Günter)" ;
     rdaed:P20315 "Unterwegs von Deutschland nach Deutschland : Tagebuch 1990" ;
@@ -21767,9 +21705,6 @@ rdaco:1023 a skos:Concept ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q814761> ;
     rdaxd:P00029 "standalone" .
 
-<https://schema.nb.no/Bibliographic/Values/V1002> a skos:Concept ;
-    skos:subjectIndicator "https://schema.nb.no/Bibliographic/Values/V1002" .
-
 <https://www.imdb.com/title/tt0078875> a rdac:C10001 ;
     rdfs:label "Die Blechtrommel" ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000>,
@@ -21864,21 +21799,6 @@ rdaco:1023 a skos:Concept ;
     rdaeo:P20231 <http://example.org/works/gg/1005> ;
     rdaxd:P00029 "part",
         "standalone" .
-
-<http://id.loc.gov/vocabulary/iso639-2/cat> a skos:Concept ;
-    rdfs:label "cat" ;
-    skos:subjectIndicator "cat" .
-
-<http://id.loc.gov/vocabulary/iso639-2/cze> a skos:Concept ;
-    rdfs:label "cze" ;
-    skos:subjectIndicator "cze" .
-
-<http://id.loc.gov/vocabulary/iso639-2/pol> a skos:Concept ;
-    rdfs:label "pol" ;
-    skos:subjectIndicator "pol" .
-
-rdact:1060 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDACarrierType/1060" .
 
 <http://viaf.org/viaf/11146153037605250840/exp/eng/1020/44856030> a rdac:C10006 ;
     rdfs:label "From Germany to Germany (Grass, Günter)" ;
@@ -22218,9 +22138,6 @@ rdact:1060 a skos:Concept ;
     rdaeo:P20231 <http://example.org/works/gg/1004> ;
     rdaxd:P00029 "standalone" .
 
-rdamt:1008 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDAMediaType/1008" .
-
 <http://viaf.org/viaf/11146153037605250840> a rdac:C10001 ;
     rdfs:label "Unterwegs von Deutschland nach Deutschland (Grass, Günter)" ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
@@ -22376,14 +22293,6 @@ rdamt:1008 a skos:Concept ;
         <http://viaf.org/viaf/305872623> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q814761> ;
     rdaxd:P00029 "standalone" .
-
-<http://id.loc.gov/vocabulary/iso639-2/hun> a skos:Concept ;
-    rdfs:label "hun" ;
-    skos:subjectIndicator "hun" .
-
-<http://id.loc.gov/vocabulary/iso639-2/ser> a skos:Concept ;
-    rdfs:label "ser" ;
-    skos:subjectIndicator "ser" .
 
 <http://viaf.org/viaf/12146937706213831421> a rdac:C10001 ;
     rdfs:label "Vonne Endlichkait (Grass, Günter)" ;
@@ -22556,14 +22465,6 @@ rdamt:1008 a skos:Concept ;
     rdaad:P50413 "Steidl, Gerhard" ;
     rdaxd:P00018 "http://example.org/steidlgerhard" .
 
-<http://id.loc.gov/vocabulary/iso639-2/ita> a skos:Concept ;
-    rdfs:label "ita" ;
-    skos:subjectIndicator "ita" .
-
-<http://id.loc.gov/vocabulary/iso639-2/por> a skos:Concept ;
-    rdfs:label "por" ;
-    skos:subjectIndicator "por" .
-
 <http://viaf.org/viaf/185469169/exp/spa/1020/30910939> a rdac:C10006 ;
     rdfs:label "Los años de perro (Grass, Günter)" ;
     rdaed:P20315 "Los años de perro" ;
@@ -22623,14 +22524,6 @@ rdamt:1008 a skos:Concept ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q15805843> ;
     rdaxd:P00029 "standalone" .
-
-<http://id.loc.gov/vocabulary/iso639-2/dan> a skos:Concept ;
-    rdfs:label "dan" ;
-    skos:subjectIndicator "dan" .
-
-<http://id.loc.gov/vocabulary/iso639-2/fin> a skos:Concept ;
-    rdfs:label "fin" ;
-    skos:subjectIndicator "fin" .
 
 <http://viaf.org/viaf/174963765/exp/eng/1020/9864901> a rdac:C10006 ;
     rdfs:label "Cat and Mouse (Grass, Günter)",
@@ -22782,14 +22675,6 @@ rdamt:1008 a skos:Concept ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q814761> ;
     rdaxd:P00029 "standalone" .
 
-<http://id.loc.gov/vocabulary/iso639-2/dut> a skos:Concept ;
-    rdfs:label "dut" ;
-    skos:subjectIndicator "dut" .
-
-<http://id.loc.gov/vocabulary/iso639-2/swe> a skos:Concept ;
-    rdfs:label "swe" ;
-    skos:subjectIndicator "swe" .
-
 <http://viaf.org/viaf/185469169/exp/eng/1020/9864901> a rdac:C10006 ;
     rdfs:label "Dog years (Grass, Günter)",
         "Hundejahre (Grass, Günter)" ;
@@ -22931,10 +22816,6 @@ rdamt:1008 a skos:Concept ;
     rdawo:P10319 <http://viaf.org/viaf/102319859> ;
     rdaxd:P00018 "http://viaf.org/viaf/189370814" .
 
-<http://id.loc.gov/vocabulary/iso639-2/fre> a skos:Concept ;
-    rdfs:label "fre" ;
-    skos:subjectIndicator "fre" .
-
 <http://viaf.org/viaf/205890609> a rdac:C10001 ;
     rdfs:label "Das Treffen in Telgte (Grass, Günter)" ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
@@ -22988,13 +22869,6 @@ rdamt:1008 a skos:Concept ;
     rdaad:P50413 "Sáenz, Miguel" ;
     rdaxd:P00018 "http://viaf.org/viaf/22322043" .
 
-<http://id.loc.gov/vocabulary/iso639-2/nob> a skos:Concept ;
-    rdfs:label "nob" ;
-    skos:subjectIndicator "nob" .
-
-rdaco:1014 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDAContentType/1014" .
-
 <http://www.wikidata.org/entity/Q765047> a rdac:C10001 ;
     rdfs:label "Die Rättin (Grass, Günter)" ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
@@ -23038,21 +22912,6 @@ rdaco:1014 a skos:Concept ;
     rdaxd:P00029 "part",
         "standalone" .
 
-rdact:1004 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDACarrierType/1004" .
-
-rdaco:1013 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDAContentType/1013" .
-
-rdamt:1001 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDAMediaType/1001" .
-
-rdact:1018 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDACarrierType/1018" .
-
-rdamt:1003 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDAMediaType/1003" .
-
 <http://viaf.org/viaf/174963765/exp/ger/1020> a rdac:C10006 ;
     rdfs:label "Danziger Trilogie (Grass, Günter)",
         "Katz und Maus (Grass, Günter)" ;
@@ -23068,14 +22927,6 @@ rdamt:1003 a skos:Concept ;
     rdaeo:P20231 <http://viaf.org/viaf/174963765> ;
     rdaxd:P00029 "part",
         "standalone" .
-
-<http://id.loc.gov/vocabulary/iso639-2/eng> a skos:Concept ;
-    rdfs:label "eng" ;
-    skos:subjectIndicator "eng" .
-
-<http://id.loc.gov/vocabulary/iso639-2/spa> a skos:Concept ;
-    rdfs:label "spa" ;
-    skos:subjectIndicator "spa" .
 
 <http://viaf.org/viaf/174963765> a rdac:C10001 ;
     rdfs:label "Katz und Maus (Grass, Günter)" ;
@@ -23125,20 +22976,4 @@ rdamt:1003 a skos:Concept ;
     rdaad:P50339 "1927-2015" ;
     rdaad:P50413 "Grass, Günter" ;
     rdaxd:P00018 "http://viaf.org/viaf/102319859" .
-
-<https://schema.nb.no/Bibliographic/Values/V1000> a skos:Concept ;
-    skos:subjectIndicator "https://schema.nb.no/Bibliographic/Values/V1000" .
-
-<http://id.loc.gov/vocabulary/iso639-2/ger> a skos:Concept ;
-    rdfs:label "ger" ;
-    skos:subjectIndicator "ger" .
-
-rdaco:1020 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDAContentType/1020" .
-
-rdact:1049 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDACarrierType/1049" .
-
-rdamt:1007 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDAMediaType/1007" .
 

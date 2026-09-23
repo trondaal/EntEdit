@@ -12,7 +12,6 @@
 @prefix rdawo: <http://rdaregistry.info/Elements/w/object/> .
 @prefix rdaxd: <http://rdaregistry.info/Elements/x/datatype/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <http://example.org/006815576> a rdac:C10007 ;
     rdamd:P30011 "1923" ;
@@ -4587,7 +4586,6 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/206863699/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/samledeverker/1930/b2/exp/nob/1020>,
         <http://viaf.org/viaf/995145424555286830372/exp/nob/1020> .
 
 <http://example.org/999312154984702201> a rdac:C10007 ;
@@ -5279,8 +5277,7 @@
     rdamd:P30182 "498 s." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
-    rdamo:P30139 <http://viaf.org/viaf/59083692/samledeverker/1930/b7/exp/nob/1020>,
-        <http://www.wikidata.org/entity/Q15062323/exp/nob/1020>,
+    rdamo:P30139 <http://www.wikidata.org/entity/Q15062323/exp/nob/1020>,
         <http://www.wikidata.org/entity/Q15062328/exp/nob/1020> .
 
 <http://example.org/999729131304702201> a rdac:C10007 ;
@@ -5348,8 +5345,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/206863699/exp/nob/1020>,
-        <http://viaf.org/viaf/220443771/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/samledeverker/1900/b1/exp/nob/1020> .
+        <http://viaf.org/viaf/220443771/exp/nob/1020> .
 
 <http://example.org/999729201534702201> a rdac:C10007 ;
     rdamd:P30011 "<1909>" ;
@@ -5363,8 +5359,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/143144898528950290965/exp/nob/1020>,
-        <http://viaf.org/viaf/5518152200833114400003/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/samledeverker/1900/b2/exp/nob/1020> .
+        <http://viaf.org/viaf/5518152200833114400003/exp/nob/1020> .
 
 <http://example.org/999729202184702201> a rdac:C10007 ;
     rdamd:P30011 "<1909>" ;
@@ -5380,7 +5375,6 @@
     rdamo:P30139 <http://viaf.org/viaf/194765531/exp/nob/1020>,
         <http://viaf.org/viaf/309525997/exp/nob/1020>,
         <http://viaf.org/viaf/395147270538135700001/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/samledeverker/1900/b3/exp/nob/1020>,
         <http://viaf.org/viaf/995145424555286830372/exp/nob/1020> .
 
 <http://example.org/999729202344702201> a rdac:C10007 ;
@@ -5396,7 +5390,6 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/59083692/fortllingerogskildringer/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/samledeverker/1900/b4/exp/nob/1020>,
         <http://www.wikidata.org/entity/Q15062320/exp/nob/1020>,
         <http://www.wikidata.org/entity/Q15062328/exp/nob/1020> .
 
@@ -5415,7 +5408,6 @@
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/309525999/exp/nob/1020>,
         <http://viaf.org/viaf/59083692/fortllingerogskildringer/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/samledeverker/1900/b5/exp/nob/1020>,
         <http://www.wikidata.org/entity/Q12003637/exp/nob/1020> .
 
 <http://example.org/999729229624702201> a rdac:C10007 ;
@@ -10053,8 +10045,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/206863699/exp/nob/1020>,
-        <http://viaf.org/viaf/220443771/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/samledeverker/1990/b1/exp/nob/1020> ;
+        <http://viaf.org/viaf/220443771/exp/nob/1020> ;
     rdaxd:P00018 "isbn-8205253331-1" .
 
 <http://example.org/isbn-8205253331-10> a rdac:C10007 ;
@@ -10141,7 +10132,6 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/316992494/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/samledeverker/1990/b14/exp/nob/1020>,
         <http://viaf.org/viaf/7398163939428301160007/exp/nob/1020>,
         <http://www.wikidata.org/entity/Q15062323/exp/nob/1020>,
         <http://www.wikidata.org/entity/Q15062327/exp/nob/1020> ;
@@ -10165,7 +10155,6 @@
     rdamo:P30139 <http://viaf.org/viaf/30145424502786830193/exp/nob/1020>,
         <http://viaf.org/viaf/312486496/exp/nob/1020>,
         <http://viaf.org/viaf/316368447/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/samledeverker/1990/b15/exp/nob/1020>,
         <http://www.wikidata.org/entity/Q11966095/exp/nob/1020> ;
     rdaxd:P00018 "isbn-8205253331-15" .
 
@@ -10222,7 +10211,6 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/309525997/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/samledeverker/1990/b4/exp/nob/1020>,
         <http://viaf.org/viaf/995145424555286830372/exp/nob/1020>,
         <http://www.wikidata.org/entity/Q12003637/exp/nob/1020>,
         <http://www.wikidata.org/entity/Q15062320/exp/nob/1020> ;
@@ -10245,8 +10233,7 @@
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/1650145424683186830143/exp/nob/1020>,
         <http://viaf.org/viaf/310234238/exp/nob/1020>,
-        <http://viaf.org/viaf/5470149068540465730001/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/samledeverker/1990/b5/exp/nob/1020> ;
+        <http://viaf.org/viaf/5470149068540465730001/exp/nob/1020> ;
     rdaxd:P00018 "isbn-8205253331-5" .
 
 <http://example.org/isbn-8205253331-6> a rdac:C10007 ;
@@ -10370,8 +10357,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/206863699/exp/nob/1020>,
-        <http://viaf.org/viaf/395147270538135700001/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/victoriamysterierdekorert/exp/nob/1020> ;
+        <http://viaf.org/viaf/395147270538135700001/exp/nob/1020> ;
     rdamo:P30321 <http://example.org/stenstadvoldhkon> ;
     rdaxd:P00018 "isbn-8205253749" .
 
@@ -10443,8 +10429,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/206863699/exp/nob/1020>,
-        <http://viaf.org/viaf/220443771/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/samledeverker/1990/b1/exp/nob/1020> ;
+        <http://viaf.org/viaf/220443771/exp/nob/1020> ;
     rdaxd:P00018 "isbn-8205275408-1" .
 
 <http://example.org/isbn-8205275408-10> a rdac:C10007 ;
@@ -10531,7 +10516,6 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/316992494/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/samledeverker/1990/b14/exp/nob/1020>,
         <http://viaf.org/viaf/7398163939428301160007/exp/nob/1020>,
         <http://www.wikidata.org/entity/Q15062323/exp/nob/1020>,
         <http://www.wikidata.org/entity/Q15062327/exp/nob/1020> ;
@@ -10555,7 +10539,6 @@
     rdamo:P30139 <http://viaf.org/viaf/30145424502786830193/exp/nob/1020>,
         <http://viaf.org/viaf/312486496/exp/nob/1020>,
         <http://viaf.org/viaf/316368447/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/samledeverker/1990/b15/exp/nob/1020>,
         <http://www.wikidata.org/entity/Q11966095/exp/nob/1020> ;
     rdaxd:P00018 "isbn-8205275408-15" .
 
@@ -10595,7 +10578,6 @@
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/309525999/exp/nob/1020>,
         <http://viaf.org/viaf/395147270538135700001/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/samledeverker/1990/b3/exp/nob/1020>,
         <http://www.wikidata.org/entity/Q15062328/exp/nob/1020> ;
     rdaxd:P00018 "isbn-8205275408-3" .
 
@@ -10654,7 +10636,6 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/207944253/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/samledeverker/1990/b6/exp/nob/1020>,
         <http://viaf.org/viaf/8450149068552765730000/exp/nob/1020> ;
     rdaxd:P00018 "isbn-8205275408-6" .
 
@@ -10674,8 +10655,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/185380595/exp/nob/1020>,
-        <http://viaf.org/viaf/294124367/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/samledeverker/1990/b7/exp/nob/1020> ;
+        <http://viaf.org/viaf/294124367/exp/nob/1020> ;
     rdaxd:P00018 "isbn-8205275408-7" .
 
 <http://example.org/isbn-8205275408-8> a rdac:C10007 ;
@@ -10873,7 +10853,6 @@
         <http://viaf.org/viaf/220443771/exp/nob/1020>,
         <http://viaf.org/viaf/395147270538135700001/exp/nob/1020>,
         <http://viaf.org/viaf/59083692/ganskealminneligflue/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/hamsunsbesteungdomsverker/exp/nob/1020>,
         <http://viaf.org/viaf/59083692/ondedager/exp/nob/1020>,
         <http://viaf.org/viaf/59083692/æreskjælm/exp/nob/1020> ;
     rdaxd:P00018 "isbn-8205340781" .
@@ -10897,8 +10876,7 @@
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/180078068/exp/nob/1020>,
         <http://viaf.org/viaf/294124367/exp/nob/1020>,
-        <http://viaf.org/viaf/30145424502786830193/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/hamsunsbestesenereverker/exp/nob/1020> ;
+        <http://viaf.org/viaf/30145424502786830193/exp/nob/1020> ;
     rdaxd:P00018 "isbn-8205341958" .
 
 <http://example.org/isbn-8205348863> a rdac:C10007 ;
@@ -10923,8 +10901,7 @@
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/180078068/exp/nob/1020>,
         <http://viaf.org/viaf/294124367/exp/nob/1020>,
-        <http://viaf.org/viaf/30145424502786830193/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/hamsunsbestesenereverker/exp/nob/1020> ;
+        <http://viaf.org/viaf/30145424502786830193/exp/nob/1020> ;
     rdaxd:P00018 "isbn-8205348863",
         "isbn-9788205348868" .
 
@@ -14537,7 +14514,6 @@
         <http://viaf.org/viaf/220443771/exp/nob/1020>,
         <http://viaf.org/viaf/395147270538135700001/exp/nob/1020>,
         <http://viaf.org/viaf/59083692/ganskealminneligflue/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/hamsunsbesteungdomsverker/exp/nob/1020>,
         <http://viaf.org/viaf/59083692/ondedager/exp/nob/1020>,
         <http://viaf.org/viaf/59083692/æreskjælm/exp/nob/1020> ;
     rdaxd:P00018 "isbn-8205348618",
@@ -14579,8 +14555,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/143144898528950290965/exp/nob/1020>,
-        <http://viaf.org/viaf/5518152200833114400003/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/samledeverker/2007/b3/exp/nob/1020> ;
+        <http://viaf.org/viaf/5518152200833114400003/exp/nob/1020> ;
     rdamo:P30267 <http://viaf.org/viaf/107756506> ;
     rdaxd:P00018 "isbn-9788205359086-3" .
 
@@ -14639,7 +14614,6 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/316992494/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/samledeverker/2007/b19/exp/nob/1020>,
         <http://viaf.org/viaf/7398163939428301160007/exp/nob/1020>,
         <http://www.wikidata.org/entity/Q15062327/exp/nob/1020> ;
     rdamo:P30267 <http://viaf.org/viaf/107756506> ;
@@ -14661,8 +14635,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/185380595/exp/nob/1020>,
-        <http://viaf.org/viaf/5470149068540465730001/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/samledeverker/2007/b7/exp/nob/1020> ;
+        <http://viaf.org/viaf/5470149068540465730001/exp/nob/1020> ;
     rdamo:P30267 <http://viaf.org/viaf/107756506> ;
     rdaxd:P00018 "isbn-9788205359161-7" .
 
@@ -14720,7 +14693,6 @@
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/183478381/exp/nob/1020>,
         <http://viaf.org/viaf/312501980/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/samledeverker/2007/b18/exp/nob/1020>,
         <http://workid.oslomet.no/kh/02/exp/nob/1020> ;
     rdamo:P30267 <http://viaf.org/viaf/107756506> ;
     rdaxd:P00018 "isbn-9788205361638-18" .
@@ -14757,7 +14729,6 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/312486496/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/samledeverker/2007/b21/exp/nob/1020>,
         <http://www.wikidata.org/entity/Q11966095/exp/nob/1020> ;
     rdamo:P30267 <http://viaf.org/viaf/107756506> ;
     rdaxd:P00018 "isbn-9788205375611-21" .
@@ -14777,8 +14748,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/30145424502786830193/exp/nob/1020>,
-        <http://viaf.org/viaf/309525999/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/samledeverker/2009/b23/exp/nob/1020> ;
+        <http://viaf.org/viaf/309525999/exp/nob/1020> ;
     rdamo:P30267 <http://viaf.org/viaf/107756506> ;
     rdaxd:P00018 "isbn-9788205375611-23" .
 
@@ -14797,8 +14767,7 @@
     rdamd:P30182 "253 s." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
-    rdamo:P30139 <http://viaf.org/viaf/59083692/samledeverker/2007/b24/exp/nob/1020>,
-        <http://viaf.org/viaf/811145857935523020027/exp/nob/1020>,
+    rdamo:P30139 <http://viaf.org/viaf/811145857935523020027/exp/nob/1020>,
         <http://workid.oslomet.no/kh/03/exp/nob/1020> ;
     rdamo:P30267 <http://viaf.org/viaf/107756506> ;
     rdaxd:P00018 "isbn-9788205375611-24" .
@@ -14819,8 +14788,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/194765531/exp/nob/1020>,
-        <http://viaf.org/viaf/395147270538135700001/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/samledeverker/2007/b4/exp/nob/1020> ;
+        <http://viaf.org/viaf/395147270538135700001/exp/nob/1020> ;
     rdamo:P30267 <http://viaf.org/viaf/107756506> ;
     rdaxd:P00018 "isbn-9788205375611-4" .
 
@@ -14876,8 +14844,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/316368447/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/enfljteldimitblod/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/samledeverker/2007/b22/exp/nob/1020> ;
+        <http://viaf.org/viaf/59083692/enfljteldimitblod/exp/nob/1020> ;
     rdamo:P30267 <http://viaf.org/viaf/107756506> ;
     rdaxd:P00018 "isbn-9788205379466-22" .
 
@@ -16808,16 +16775,6 @@
     rdaad:P50413 "Wiking, Paula" ;
     rdaxd:P00018 "http://example.org/wikingpaula" .
 
-<http://id.loc.gov/vocabulary/iso639-2/dan> a skos:Concept ;
-    skos:subjectIndicator "dan" .
-
-<http://id.loc.gov/vocabulary/iso639-2/nno> a skos:Concept ;
-    rdfs:label "nno" ;
-    skos:subjectIndicator "nno" .
-
-<http://id.loc.gov/vocabulary/iso639-2/swe> a skos:Concept ;
-    skos:subjectIndicator "swe" .
-
 <http://viaf.org/viaf/1000145424544686831283/exp/eng/1020/92839136> a rdac:C10006 ;
     rdfs:label "The Ring is Closed (Hamsun, Knut)" ;
     rdaed:P20315 "The Ring is Closed" ;
@@ -17900,6 +17857,14 @@
     rdawo:P10061 <http://viaf.org/viaf/59083692> ;
     rdaxd:P00018 "http://viaf.org/viaf/59083692/enfljteldimitblod" .
 
+<http://viaf.org/viaf/59083692/enfljteldimitblod/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "En fløjte lød i mit blod (Hamsun, Knut)" ;
+    rdaed:P20315 "En fløjte lød i mit blod" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://viaf.org/viaf/59083692/enfljteldimitblod> ;
+    rdaxd:P00029 "part" .
+
 <http://viaf.org/viaf/59083692/engaderevolution> a rdac:C10001 ;
     rdfs:label "En Gaderevolution (Hamsun, Knut)" ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
@@ -17944,20 +17909,6 @@
     rdawd:P10223 "En ganske alminnelig flue av alminnelig størrelse" ;
     rdawo:P10061 <http://viaf.org/viaf/59083692> ;
     rdaxd:P00018 "http://viaf.org/viaf/59083692/ganskealminneligflue" .
-
-<http://viaf.org/viaf/59083692/hamsunsbestesenereverker> a rdac:C10001 ;
-    rdfs:label "Hamsuns beste : senere verker (Hamsun, Knut)" ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Hamsuns beste : senere verker" ;
-    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
-    rdaxd:P00018 "http://viaf.org/viaf/59083692/hamsunsbestesenereverker" .
-
-<http://viaf.org/viaf/59083692/hamsunsbesteungdomsverker> a rdac:C10001 ;
-    rdfs:label "Hamsuns beste : ungdomsverker (Hamsun, Knut)" ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Hamsuns beste : ungdomsverker" ;
-    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
-    rdaxd:P00018 "http://viaf.org/viaf/59083692/hamsunsbesteungdomsverker" .
 
 <http://viaf.org/viaf/59083692/kvindesejr> a rdac:C10001 ;
     rdfs:label "Kvindesejr (Hamsun, Knut)" ;
@@ -18008,456 +17959,6 @@
     rdaxd:P00018 "http://viaf.org/viaf/59083692/paablaamands" ;
     rdaxd:P00029 "Short story" .
 
-<http://viaf.org/viaf/59083692/samledeverker/1900/b1> a rdac:C10001 ;
-    rdfs:label "Samlede Romaner og Fortællinger B. 1 (Hamsun, Knut)" ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Samlede Romaner og Fortællinger B. 1" ;
-    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
-    rdaxd:P00018 "http://viaf.org/viaf/59083692/samledeverker/1900/b1" .
-
-<http://viaf.org/viaf/59083692/samledeverker/1900/b1/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Samlede Romaner og Fortællinger B. 1 (Hamsun, Knut)" ;
-    rdaed:P20071 "Sult -- Mysterier" ;
-    rdaed:P20315 "Samlede Romaner og Fortællinger B. 1" ;
-    rdaed:P20316 "Samlede Romaner og Fortællinger : B. 1 : Sult ; Mysterier",
-        "Samlede Romaner og Fortællinger B. 1" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/samledeverker/1900/b1> ;
-    rdaeo:P20319 <http://viaf.org/viaf/206863699/exp/nob/1020>,
-        <http://viaf.org/viaf/220443771/exp/nob/1020> ;
-    rdaxd:P00029 "aggregate" .
-
-<http://viaf.org/viaf/59083692/samledeverker/1900/b2> a rdac:C10001 ;
-    rdfs:label "Samlede Romaner og Fortællinger, Bind 2 (Hamsun, Knut)" ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Samlede Romaner og Fortællinger, Bind 2" ;
-    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
-    rdaxd:P00018 "http://viaf.org/viaf/59083692/samledeverker/1900/b2" .
-
-<http://viaf.org/viaf/59083692/samledeverker/1900/b2/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Samlede Romaner og Fortællinger B. 2 (Hamsun, Knut)" ;
-    rdaed:P20071 "Redaktør Lynge -- Ny jord" ;
-    rdaed:P20315 "Samlede Romaner og Fortællinger B. 2" ;
-    rdaed:P20316 "Samlede Romaner og Fortællinger : B. 2 : Redaktør Lynge ; Ny Jord",
-        "Samlede Romaner og Fortællinger, Bind 2" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/samledeverker/1900/b2> ;
-    rdaeo:P20319 <http://viaf.org/viaf/143144898528950290965/exp/nob/1020>,
-        <http://viaf.org/viaf/5518152200833114400003/exp/nob/1020> ;
-    rdaxd:P00029 "aggregate" .
-
-<http://viaf.org/viaf/59083692/samledeverker/1900/b3> a rdac:C10001 ;
-    rdfs:label "Samlede Romaner og Fortællinger, Bind 3 (Hamsun, Knut)" ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Samlede Romaner og Fortællinger, Bind 3" ;
-    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
-    rdaxd:P00018 "http://viaf.org/viaf/59083692/samledeverker/1900/b3" .
-
-<http://viaf.org/viaf/59083692/samledeverker/1900/b3/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Samlede Romaner og Fortællinger, Bind 3 (Hamsun, Knut)" ;
-    rdaed:P20071 "Pan -- Victoria -- Sværmrere -- Under Høststjærnen" ;
-    rdaed:P20315 "Samlede Romaner og Fortællinger, Bind 3" ;
-    rdaed:P20316 "Samlede Romaner og Fortællinger : B. 3 : Pan ; Victoria ; Sværmrere ; Under Høststjærnen",
-        "Samlede Romaner og Fortællinger, Bind 3" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/samledeverker/1900/b3> ;
-    rdaeo:P20319 <http://viaf.org/viaf/194765531/exp/nob/1020>,
-        <http://viaf.org/viaf/309525997/exp/nob/1020>,
-        <http://viaf.org/viaf/395147270538135700001/exp/nob/1020>,
-        <http://viaf.org/viaf/995145424555286830372/exp/nob/1020> ;
-    rdaxd:P00029 "aggregate" .
-
-<http://viaf.org/viaf/59083692/samledeverker/1900/b4> a rdac:C10001 ;
-    rdfs:label "Samlede Romaner og Fortællinger B. 4 (Hamsun, Knut)" ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Samlede Romaner og Fortællinger B. 4" ;
-    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
-    rdaxd:P00018 "http://viaf.org/viaf/59083692/samledeverker/1900/b4" .
-
-<http://viaf.org/viaf/59083692/samledeverker/1900/b4/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Samlede Romaner og Fortællinger B. 4 (Hamsun, Knut)" ;
-    rdaed:P20071 "Siesta -- Kratskog" ;
-    rdaed:P20315 "Samlede Romaner og Fortællinger B. 4" ;
-    rdaed:P20316 "Samlede Romaner og Fortællinger : B. 4 : Siesta ; Kratskog",
-        "Samlede Romaner og Fortællinger B. 4" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/samledeverker/1900/b4> ;
-    rdaeo:P20319 <http://viaf.org/viaf/59083692/fortllingerogskildringer/exp/nob/1020>,
-        <http://www.wikidata.org/entity/Q15062320/exp/nob/1020>,
-        <http://www.wikidata.org/entity/Q15062328/exp/nob/1020> ;
-    rdaxd:P00029 "aggregate" .
-
-<http://viaf.org/viaf/59083692/samledeverker/1900/b5> a rdac:C10001 ;
-    rdfs:label "Samlede Romaner og Fortællinger B. 5 (Hamsun, Knut)" ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Samlede Romaner og Fortællinger B. 5" ;
-    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
-    rdaxd:P00018 "http://viaf.org/viaf/59083692/samledeverker/1900/b5" .
-
-<http://viaf.org/viaf/59083692/samledeverker/1900/b5/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Samlede Romaner og Fortællinger B. 5 (Hamsun, Knut)" ;
-    rdaed:P20071 "Stridende Liv -- I Æventyrland" ;
-    rdaed:P20315 "Samlede Romaner og Fortællinger B. 5" ;
-    rdaed:P20316 "Samlede Romaner og Fortællinger : B. 5 : Stridende Liv ; I Æventyrland",
-        "Samlede Romaner og Fortællinger B. 5" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/samledeverker/1900/b5> ;
-    rdaeo:P20319 <http://viaf.org/viaf/309525999/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/fortllingerogskildringer/exp/nob/1020>,
-        <http://www.wikidata.org/entity/Q12003637/exp/nob/1020> ;
-    rdaxd:P00029 "aggregate" .
-
-<http://viaf.org/viaf/59083692/samledeverker/1930/b2> a rdac:C10001 ;
-    rdfs:label "Samlede verker, Bind 2 (Hamsun, Knut)" ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Samlede verker, Bind 2" ;
-    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
-    rdaxd:P00018 "http://viaf.org/viaf/59083692/samledeverker/1930/b2" .
-
-<http://viaf.org/viaf/59083692/samledeverker/1930/b2/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Samlede verker, Bind 2 (Hamsun, Knut)" ;
-    rdaed:P20071 "Mysterier -- Sværmere" ;
-    rdaed:P20315 "Samlede verker, Bind 2" ;
-    rdaed:P20316 "Samlede Verker : 2 : Mysterier ; Sværmere",
-        "Samlede verker, Bind 2" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/samledeverker/1930/b2> ;
-    rdaeo:P20319 <http://viaf.org/viaf/206863699/exp/nob/1020>,
-        <http://viaf.org/viaf/995145424555286830372/exp/nob/1020> ;
-    rdaxd:P00029 "aggregate" .
-
-<http://viaf.org/viaf/59083692/samledeverker/1930/b7> a rdac:C10001 ;
-    rdfs:label "Samlede verker, Bind 7 (Hamsun, Knut)" ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Samlede verker, Bind 7" ;
-    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
-    rdaxd:P00018 "http://viaf.org/viaf/59083692/samledeverker/1930/b7" .
-
-<http://viaf.org/viaf/59083692/samledeverker/1930/b7/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Samlede verker, Bind 7 (Hamsun, Knut)" ;
-    rdaed:P20071 "Dronning Tamara -- Munken Vendt -- Siesta" ;
-    rdaed:P20315 "Samlede verker, Bind 7" ;
-    rdaed:P20316 "Samlede Verker : 7 : Dronning Tamara ; Munken Vendt ; Siesta",
-        "Samlede verker, Bind 7" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/samledeverker/1930/b7> ;
-    rdaeo:P20319 <http://www.wikidata.org/entity/Q15062323/exp/nob/1020>,
-        <http://www.wikidata.org/entity/Q15062328/exp/nob/1020> ;
-    rdaxd:P00029 "aggregate" .
-
-<http://viaf.org/viaf/59083692/samledeverker/1990/b1> a rdac:C10001 ;
-    rdfs:label "Samlede verker, Bind 1 (Hamsun, Knut)" ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Samlede verker, Bind 1" ;
-    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
-    rdaxd:P00018 "http://viaf.org/viaf/59083692/samledeverker/1990/b1" .
-
-<http://viaf.org/viaf/59083692/samledeverker/1990/b14> a rdac:C10001 ;
-    rdfs:label "Samlede verker, Bind 14 (Hamsun, Knut)" ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Samlede verker, Bind 14" ;
-    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
-    rdaxd:P00018 "http://viaf.org/viaf/59083692/samledeverker/1990/b14" .
-
-<http://viaf.org/viaf/59083692/samledeverker/1990/b15> a rdac:C10001 ;
-    rdfs:label "Samlede verker, Bind 15 (Hamsun, Knut)" ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Samlede verker, Bind 15" ;
-    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
-    rdaxd:P00018 "http://viaf.org/viaf/59083692/samledeverker/1990/b15" .
-
-<http://viaf.org/viaf/59083692/samledeverker/1990/b3> a rdac:C10001 ;
-    rdfs:label "Samlede verker, Bind 3 (Hamsun, Knut)" ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Samlede verker, Bind 3" ;
-    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
-    rdaxd:P00018 "http://viaf.org/viaf/59083692/samledeverker/1990/b3" .
-
-<http://viaf.org/viaf/59083692/samledeverker/1990/b3/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Samlede verker, Bind 3 (Hamsun, Knut)" ;
-    rdaed:P20071 "Siesta -- Victoria -- I æventyrland" ;
-    rdaed:P20315 "Samlede verker, Bind 3" ;
-    rdaed:P20316 "Samlede verker : B. 3 : Siesta ; Victoria ; I æventyrland",
-        "Samlede verker, Bind 3" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/samledeverker/1990/b3> ;
-    rdaeo:P20319 <http://viaf.org/viaf/309525999/exp/nob/1020>,
-        <http://viaf.org/viaf/395147270538135700001/exp/nob/1020>,
-        <http://www.wikidata.org/entity/Q15062328/exp/nob/1020> ;
-    rdaxd:P00029 "aggregate" .
-
-<http://viaf.org/viaf/59083692/samledeverker/1990/b4> a rdac:C10001 ;
-    rdfs:label "Samlede verker, Bind 4 (Hamsun, Knut)" ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Samlede verker, Bind 4" ;
-    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
-    rdaxd:P00018 "http://viaf.org/viaf/59083692/samledeverker/1990/b4" .
-
-<http://viaf.org/viaf/59083692/samledeverker/1990/b4/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Samlede verker, Bind 4 (Hamsun, Knut)" ;
-    rdaed:P20071 "Kratskog -- Sværmere -- Stridende liv -- Under høststjærnen" ;
-    rdaed:P20315 "Samlede verker, Bind 4" ;
-    rdaed:P20316 "Samlede verker : B. 4 : Kratskog ; Sværmere ; Stridende liv ; Under høststjærnen",
-        "Samlede verker, Bind 4" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/samledeverker/1990/b4> ;
-    rdaeo:P20319 <http://viaf.org/viaf/309525997/exp/nob/1020>,
-        <http://viaf.org/viaf/995145424555286830372/exp/nob/1020>,
-        <http://www.wikidata.org/entity/Q12003637/exp/nob/1020>,
-        <http://www.wikidata.org/entity/Q15062320/exp/nob/1020> ;
-    rdaxd:P00029 "aggregate" .
-
-<http://viaf.org/viaf/59083692/samledeverker/1990/b5> a rdac:C10001 ;
-    rdfs:label "Samlede verker, Bind 5 (Hamsun, Knut)" ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Samlede verker, Bind 5" ;
-    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
-    rdaxd:P00018 "http://viaf.org/viaf/59083692/samledeverker/1990/b5" .
-
-<http://viaf.org/viaf/59083692/samledeverker/1990/b5/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Samlede verker, Bind 5 (Hamsun, Knut)" ;
-    rdaed:P20071 "Benoni -- Rosa -- En vandrer spiller med sordin" ;
-    rdaed:P20315 "Samlede verker, Bind 5" ;
-    rdaed:P20316 "Samlede verker : B. 5 : Benoni ; Rosa ; En vandrer spiller med sordin",
-        "Samlede verker, Bind 5" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/samledeverker/1990/b5> ;
-    rdaeo:P20319 <http://viaf.org/viaf/1650145424683186830143/exp/nob/1020>,
-        <http://viaf.org/viaf/310234238/exp/nob/1020>,
-        <http://viaf.org/viaf/5470149068540465730001/exp/nob/1020> ;
-    rdaxd:P00029 "aggregate" .
-
-<http://viaf.org/viaf/59083692/samledeverker/1990/b6> a rdac:C10001 ;
-    rdfs:label "Samlede verker, Bind 6 (Hamsun, Knut)" ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Samlede verker, Bind 6" ;
-    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
-    rdaxd:P00018 "http://viaf.org/viaf/59083692/samledeverker/1990/b6" .
-
-<http://viaf.org/viaf/59083692/samledeverker/1990/b6/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Samlede verker, Bind 6 (Hamsun, Knut)" ;
-    rdaed:P20071 "Børn av tiden -- Segelfoss by" ;
-    rdaed:P20315 "Samlede verker, Bind 6" ;
-    rdaed:P20316 "Samlede verker : B. 6 : Børn av tiden ; Segelfoss by",
-        "Samlede verker, Bind 6" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/samledeverker/1990/b6> ;
-    rdaeo:P20319 <http://viaf.org/viaf/207944253/exp/nob/1020>,
-        <http://viaf.org/viaf/8450149068552765730000/exp/nob/1020> ;
-    rdaxd:P00029 "aggregate" .
-
-<http://viaf.org/viaf/59083692/samledeverker/1990/b7> a rdac:C10001 ;
-    rdfs:label "Samlede verker, Bind 7 (Hamsun, Knut)" ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Samlede verker, Bind 7" ;
-    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
-    rdaxd:P00018 "http://viaf.org/viaf/59083692/samledeverker/1990/b7" .
-
-<http://viaf.org/viaf/59083692/samledeverker/1990/b7/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Samlede verker, Bind 7 (Hamsun, Knut)" ;
-    rdaed:P20071 "Den siste glæde ; Markens grøde" ;
-    rdaed:P20315 "Samlede verker, Bind 7" ;
-    rdaed:P20316 "Samlede verker : B. 7 : Den siste glæde ; Markens grøde",
-        "Samlede verker, Bind 7" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/samledeverker/1990/b7> ;
-    rdaeo:P20319 <http://viaf.org/viaf/185380595/exp/nob/1020>,
-        <http://viaf.org/viaf/294124367/exp/nob/1020> ;
-    rdaxd:P00029 "aggregate" .
-
-<http://viaf.org/viaf/59083692/samledeverker/2007/b18> a rdac:C10001 ;
-    rdfs:label "Samlede verker, Bind 18 (Hamsun, Knut)" ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Samlede verker, Bind 18" ;
-    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
-    rdaxd:P00018 "http://viaf.org/viaf/59083692/samledeverker/2007/b18" .
-
-<http://viaf.org/viaf/59083692/samledeverker/2007/b18/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Samlede verker, Bind 18 (Hamsun, Knut)" ;
-    rdaed:P20071 "Den gåtefulle -- Bjørger -- Livsfragmenter" ;
-    rdaed:P20315 "Samlede verker, Bind 18" ;
-    rdaed:P20316 "Samlede verker : B. 18 : Den gåtefulle ; Bjørger ; Livsfragmenter",
-        "Samlede verker, Bind 18" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/samledeverker/2007/b18> ;
-    rdaeo:P20319 <http://viaf.org/viaf/183478381/exp/nob/1020>,
-        <http://viaf.org/viaf/312501980/exp/nob/1020>,
-        <http://workid.oslomet.no/kh/02/exp/nob/1020> ;
-    rdaxd:P00029 "aggregate" .
-
-<http://viaf.org/viaf/59083692/samledeverker/2007/b19> a rdac:C10001 ;
-    rdfs:label "Samlede verker, Bind 19 (Hamsun, Knut)" ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Samlede verker, Bind 19" ;
-    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
-    rdaxd:P00018 "http://viaf.org/viaf/59083692/samledeverker/2007/b19" .
-
-<http://viaf.org/viaf/59083692/samledeverker/2007/b19/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Samlede verker, Bind 19 (Hamsun, Knut)" ;
-    rdaed:P20071 "Ved rikets port -- Livets spill -- Aftenrøde" ;
-    rdaed:P20315 "Samlede verker, Bind 19" ;
-    rdaed:P20316 "Samlede verker : B. 19 : Ved rikets port ; Livets spill ; Aftenrøde",
-        "Samlede verker, Bind 19" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/samledeverker/2007/b19> ;
-    rdaeo:P20319 <http://viaf.org/viaf/316992494/exp/nob/1020>,
-        <http://viaf.org/viaf/7398163939428301160007/exp/nob/1020>,
-        <http://www.wikidata.org/entity/Q15062327/exp/nob/1020> ;
-    rdaxd:P00029 "aggregate" .
-
-<http://viaf.org/viaf/59083692/samledeverker/2007/b21> a rdac:C10001 ;
-    rdfs:label "Samlede verker, Bind 21 (Hamsun, Knut)" ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Samlede verker, Bind 21" ;
-    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
-    rdaxd:P00018 "http://viaf.org/viaf/59083692/samledeverker/2007/b21" .
-
-<http://viaf.org/viaf/59083692/samledeverker/2007/b21/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Samlede verker, Bind 21 (Hamsun, Knut)" ;
-    rdaed:P20071 "Dronning Tamara -- Livet ivold" ;
-    rdaed:P20315 "Samlede verker, Bind 21" ;
-    rdaed:P20316 "Samlede verker : B. 21 : Dronning Tamara ; Livet ivold",
-        "Samlede verker, Bind 21" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/samledeverker/2007/b21> ;
-    rdaeo:P20319 <http://viaf.org/viaf/312486496/exp/nob/1020>,
-        <http://www.wikidata.org/entity/Q11966095/exp/nob/1020> ;
-    rdaxd:P00029 "aggregate" .
-
-<http://viaf.org/viaf/59083692/samledeverker/2007/b22> a rdac:C10001 ;
-    rdfs:label "Samlede verker, Bind 22 (Hamsun, Knut)" ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Samlede verker, Bind 22" ;
-    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
-    rdaxd:P00018 "http://viaf.org/viaf/59083692/samledeverker/2007/b22" .
-
-<http://viaf.org/viaf/59083692/samledeverker/2007/b22/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Samlede verker, Bind 22 (Hamsun, Knut)" ;
-    rdaed:P20071 "Det vilde kor -- En fløjte lød i mit blod" ;
-    rdaed:P20315 "Samlede verker, Bind 22" ;
-    rdaed:P20316 "Samlede verker : B. 22 : Det vilde kor ; En fløjte lød i mit blod",
-        "Samlede verker, Bind 22" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/samledeverker/2007/b22> ;
-    rdaeo:P20319 <http://viaf.org/viaf/316368447/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/enfljteldimitblod/exp/nob/1020> ;
-    rdaxd:P00029 "aggregate" .
-
-<http://viaf.org/viaf/59083692/samledeverker/2007/b24> a rdac:C10001 ;
-    rdfs:label "Samlede verker, Bind 24 (Hamsun, Knut)" ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Samlede verker, Bind 24" ;
-    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
-    rdaxd:P00018 "http://viaf.org/viaf/59083692/samledeverker/2007/b24" .
-
-<http://viaf.org/viaf/59083692/samledeverker/2007/b24/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Samlede verker, Bind 24 (Hamsun, Knut)" ;
-    rdaed:P20071 "Fra det moderne Amerikas åndsliv -- Lars Oftedal" ;
-    rdaed:P20315 "Samlede verker, Bind 24" ;
-    rdaed:P20316 "Samlede verker : B. 24 : Fra det moderne Amerikas åndsliv ; Lars Oftedal",
-        "Samlede verker, Bind 24" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/samledeverker/2007/b24> ;
-    rdaeo:P20319 <http://viaf.org/viaf/811145857935523020027/exp/nob/1020>,
-        <http://workid.oslomet.no/kh/03/exp/nob/1020> ;
-    rdaxd:P00029 "aggregate" .
-
-<http://viaf.org/viaf/59083692/samledeverker/2007/b3> a rdac:C10001 ;
-    rdfs:label "Samlede verker, Bind 3 (Hamsun, Knut)" ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Samlede verker, Bind 3" ;
-    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
-    rdaxd:P00018 "http://viaf.org/viaf/59083692/samledeverker/2007/b3" .
-
-<http://viaf.org/viaf/59083692/samledeverker/2007/b3/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Samlede verker, Bind 3 (Hamsun, Knut)" ;
-    rdaed:P20071 "Redaltør Lynge -- Ny jord" ;
-    rdaed:P20315 "Samlede verker, Bind 3" ;
-    rdaed:P20316 "Samlede verker : B. 3 : Redaktør Lynge ; Ny jord",
-        "Samlede verker, Bind 3" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/samledeverker/2007/b3> ;
-    rdaeo:P20319 <http://viaf.org/viaf/143144898528950290965/exp/nob/1020>,
-        <http://viaf.org/viaf/5518152200833114400003/exp/nob/1020> ;
-    rdaxd:P00029 "aggregate" .
-
-<http://viaf.org/viaf/59083692/samledeverker/2007/b4> a rdac:C10001 ;
-    rdfs:label "Samlede verker, Bind 4 (Hamsun, Knut)" ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Samlede verker, Bind 4" ;
-    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
-    rdaxd:P00018 "http://viaf.org/viaf/59083692/samledeverker/2007/b4" .
-
-<http://viaf.org/viaf/59083692/samledeverker/2007/b4/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Samlede verker, Bind 4 (Hamsun, Knut)" ;
-    rdaed:P20071 "Pan -- Viktoria" ;
-    rdaed:P20315 "Samlede verker, Bind 4" ;
-    rdaed:P20316 "Samlede verker : B. 4 : Pan ; Victoria",
-        "Samlede verker, Bind 4" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/samledeverker/2007/b4> ;
-    rdaeo:P20319 <http://viaf.org/viaf/194765531/exp/nob/1020>,
-        <http://viaf.org/viaf/395147270538135700001/exp/nob/1020> ;
-    rdaxd:P00029 "aggregate" .
-
-<http://viaf.org/viaf/59083692/samledeverker/2007/b7> a rdac:C10001 ;
-    rdfs:label "Samlede verker, Bind 7 (Hamsun, Knut)" ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Samlede verker, Bind 7" ;
-    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
-    rdaxd:P00018 "http://viaf.org/viaf/59083692/samledeverker/2007/b7" .
-
-<http://viaf.org/viaf/59083692/samledeverker/2007/b7/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Samlede verker, Bind 7 (Hamsun, Knut)" ;
-    rdaed:P20071 "En vandrer spiller med sordin -- Den siste glede" ;
-    rdaed:P20315 "Samlede verker, Bind 7" ;
-    rdaed:P20316 "Samlede verker : B. 7 : En vandrer spiller med sordin ; Den siste glede",
-        "Samlede verker, Bind 7" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/samledeverker/2007/b7> ;
-    rdaeo:P20319 <http://viaf.org/viaf/185380595/exp/nob/1020>,
-        <http://viaf.org/viaf/5470149068540465730001/exp/nob/1020> ;
-    rdaxd:P00029 "aggregate" .
-
-<http://viaf.org/viaf/59083692/samledeverker/2009/b23> a rdac:C10001 ;
-    rdfs:label "Samlede verker, Bind 23 (Hamsun, Knut)" ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Samlede verker, Bind 23" ;
-    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
-    rdaxd:P00018 "http://viaf.org/viaf/59083692/samledeverker/2009/b23" .
-
-<http://viaf.org/viaf/59083692/samledeverker/2009/b23/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Samlede verker, Bind 23 (Hamsun, Knut)" ;
-    rdaed:P20315 "Samlede verker, Bind 23" ;
-    rdaed:P20316 "Samlede verker : B. 23 : I eventyrland ; På gjengrodde stier",
-        "Samlede verker, Bind 23" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/samledeverker/2009/b23> ;
-    rdaeo:P20319 <http://viaf.org/viaf/30145424502786830193/exp/nob/1020>,
-        <http://viaf.org/viaf/309525999/exp/nob/1020> ;
-    rdaxd:P00029 "aggregate" .
-
 <http://viaf.org/viaf/59083692/udisdensommer> a rdac:C10001 ;
     rdfs:label "Udi søden sommer (Hamsun, Knut)" ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
@@ -18492,25 +17993,6 @@
         <http://viaf.org/viaf/59960174> ;
     rdaeo:P20231 <http://viaf.org/viaf/59083692/vagabondsdager> ;
     rdaxd:P00029 "part" .
-
-<http://viaf.org/viaf/59083692/victoriamysterierdekorert> a rdac:C10001 ;
-    rdfs:label "Victoria ; Mysterier (Hamsun, Knut)" ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Victoria ; Mysterier" ;
-    rdawo:P10061 <http://viaf.org/viaf/59083692> ;
-    rdaxd:P00018 "http://viaf.org/viaf/59083692/victoriamysterierdekorert" .
-
-<http://viaf.org/viaf/59083692/victoriamysterierdekorert/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Victoria ; Mysterier (Hamsun, Knut)" ;
-    rdaed:P20315 "Victoria ; Mysterier" ;
-    rdaed:P20316 "Victoria : en kjærligheds historie ; Mysterier",
-        "Victoria ; Mysterier" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/victoriamysterierdekorert> ;
-    rdaeo:P20319 <http://viaf.org/viaf/206863699/exp/nob/1020>,
-        <http://viaf.org/viaf/395147270538135700001/exp/nob/1020> ;
-    rdaxd:P00029 "aggregate" .
 
 <http://viaf.org/viaf/59083692/æreskjælm> a rdac:C10001 ;
     rdfs:label "En æreskjælm (Hamsun, Knut)" ;
@@ -19886,44 +19368,21 @@
     rdaxd:P00018 "http://viaf.org/viaf/59083692/damenfrativoli" ;
     rdaxd:P00029 "short story" .
 
-<http://viaf.org/viaf/59083692/enfljteldimitblod/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "En fløjte lød i mit blod (Hamsun, Knut)" ;
-    rdaed:P20315 "En fløjte lød i mit blod" ;
+<http://viaf.org/viaf/59083692/fortllingerogskildringer/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "Fortællinger og Skildringer (Hamsun, Knut)" ;
+    rdaed:P20315 "Fortællinger og Skildringer" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/enfljteldimitblod> ;
+    rdaeo:P20231 <http://viaf.org/viaf/59083692/fortllingerogskildringer> ;
     rdaxd:P00029 "part" .
 
-<http://viaf.org/viaf/59083692/hamsunsbestesenereverker/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Hamsuns beste (Hamsun, Knut)" ;
-    rdaed:P20071 "Markens grøde -- Landstrykere -- På gjengrodde stier" ;
-    rdaed:P20315 "Hamsuns beste : senere verker" ;
-    rdaed:P20316 "Hamsuns beste : senere verker" ;
+<http://viaf.org/viaf/59083692/ganskealminneligflue/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "En ganske alminnelig flue av alminnelig størrelse (Hamsun, Knut)" ;
+    rdaed:P20315 "En ganske alminnelig flue av alminnelig størrelse" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/hamsunsbestesenereverker> ;
-    rdaeo:P20319 <http://viaf.org/viaf/180078068/exp/nob/1020>,
-        <http://viaf.org/viaf/294124367/exp/nob/1020>,
-        <http://viaf.org/viaf/30145424502786830193/exp/nob/1020> ;
-    rdaxd:P00029 "aggregate" .
-
-<http://viaf.org/viaf/59083692/hamsunsbesteungdomsverker/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Hamsuns beste (Hamsun, Knut)",
-        "Hamsuns beste ungdomsverker (Hamsun, Knut)" ;
-    rdaed:P20071 "Sult ; Mysterier ; Pan ; Victoria; Onde dager; En ganske alminnelig flue av alminnelig størrelse ; En æreskjælm" ;
-    rdaed:P20315 "Hamsuns beste : ungdomsverker" ;
-    rdaed:P20316 "Hamsuns beste : ungdomsverker" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/hamsunsbesteungdomsverker> ;
-    rdaeo:P20319 <http://viaf.org/viaf/194765531/exp/nob/1020>,
-        <http://viaf.org/viaf/206863699/exp/nob/1020>,
-        <http://viaf.org/viaf/220443771/exp/nob/1020>,
-        <http://viaf.org/viaf/395147270538135700001/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/ganskealminneligflue/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/ondedager/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/æreskjælm/exp/nob/1020> ;
-    rdaxd:P00029 "aggregate" .
+    rdaeo:P20231 <http://viaf.org/viaf/59083692/ganskealminneligflue> ;
+    rdaxd:P00029 "part" .
 
 <http://viaf.org/viaf/59083692/hemmeligv> a rdac:C10001 ;
     rdfs:label "Hemmelig vé (Hamsun, Knut)" ;
@@ -19973,6 +19432,14 @@
     rdaxd:P00018 "http://viaf.org/viaf/59083692/medskydshest" ;
     rdaxd:P00029 "short story" .
 
+<http://viaf.org/viaf/59083692/ondedager/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "Onde dager (Hamsun, Knut)" ;
+    rdaed:P20315 "Onde dager" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://viaf.org/viaf/59083692/ondedager> ;
+    rdaxd:P00029 "part" .
+
 <http://viaf.org/viaf/59083692/paabankene> a rdac:C10001 ;
     rdfs:label "Paa bankene (Hamsun, Knut)" ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
@@ -20012,49 +19479,6 @@
     rdawo:P10061 <http://viaf.org/viaf/59083692> ;
     rdaxd:P00018 "http://viaf.org/viaf/59083692/ringen" ;
     rdaxd:P00029 "short story" .
-
-<http://viaf.org/viaf/59083692/samledeverker/1990/b1/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Samlede verker, Bind 1 (Hamsun, Knut)" ;
-    rdaed:P20071 "Sult -- Mysterier" ;
-    rdaed:P20315 "Samlede verker, Bind 1" ;
-    rdaed:P20316 "Samlede verker : B. 1 : Sult ; Mysterier",
-        "Samlede verker, Bind 1" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/samledeverker/1990/b1> ;
-    rdaeo:P20319 <http://viaf.org/viaf/206863699/exp/nob/1020>,
-        <http://viaf.org/viaf/220443771/exp/nob/1020> ;
-    rdaxd:P00029 "aggregate" .
-
-<http://viaf.org/viaf/59083692/samledeverker/1990/b14/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Samlede verker, Bind 14 (Hamsun, Knut)" ;
-    rdaed:P20071 "Ved rikets port -- Livets spil -- Aftenrøde -- Munken Vendt" ;
-    rdaed:P20315 "Samlede verker, Bind 14" ;
-    rdaed:P20316 "Samlede verker : B. 14 : Ved rikets port ; Livets spil ; Aftenrøde ; Munken Vendt",
-        "Samlede verker, Bind 14" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/samledeverker/1990/b14> ;
-    rdaeo:P20319 <http://viaf.org/viaf/316992494/exp/nob/1020>,
-        <http://viaf.org/viaf/7398163939428301160007/exp/nob/1020>,
-        <http://www.wikidata.org/entity/Q15062323/exp/nob/1020>,
-        <http://www.wikidata.org/entity/Q15062327/exp/nob/1020> ;
-    rdaxd:P00029 "aggregate" .
-
-<http://viaf.org/viaf/59083692/samledeverker/1990/b15/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Samlede verker, Bind 15 (Hamsun, Knut)" ;
-    rdaed:P20071 "Dronning Tamara -- Livet ivold -- Det vilde kor -- På gjengrodde stier" ;
-    rdaed:P20315 "Samlede verker, Bind 15" ;
-    rdaed:P20316 "Samlede verker : B. 15 : Dronning Tamara ; Livet ivold ; Det vilde kor ; På gjengrodde stier",
-        "Samlede verker, Bind 15" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/samledeverker/1990/b15> ;
-    rdaeo:P20319 <http://viaf.org/viaf/30145424502786830193/exp/nob/1020>,
-        <http://viaf.org/viaf/312486496/exp/nob/1020>,
-        <http://viaf.org/viaf/316368447/exp/nob/1020>,
-        <http://www.wikidata.org/entity/Q11966095/exp/nob/1020> ;
-    rdaxd:P00029 "aggregate" .
 
 <http://viaf.org/viaf/59083692/udisdensommer/exp/nob/1020> a rdac:C10006 ;
     rdfs:label "Udi søden sommer (Hamsun, Knut)" ;
@@ -20104,6 +19528,14 @@
     rdawo:P10061 <http://viaf.org/viaf/59083692> ;
     rdaxd:P00018 "http://viaf.org/viaf/59083692/vagabondsdager" ;
     rdaxd:P00029 "short story" .
+
+<http://viaf.org/viaf/59083692/æreskjælm/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "En æreskjælm (Hamsun, Knut)" ;
+    rdaed:P20315 "En æreskjælm" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://viaf.org/viaf/59083692/æreskjælm> ;
+    rdaxd:P00029 "part" .
 
 <http://viaf.org/viaf/8450149068552765730000/exp/ger/1020/117364598/59960174/harthernernst> a rdac:C10006 ;
     rdfs:label "Kinder ihrer Zeit (Hamsun, Knut)" ;
@@ -20328,10 +19760,6 @@
     rdaad:P50413 "Stallybrass, Gunnvor" ;
     rdaxd:P00018 "http://example.org/stallybrassgunnvor" .
 
-<http://id.loc.gov/vocabulary/iso639-2/dut> a skos:Concept ;
-    rdfs:label "dut" ;
-    skos:subjectIndicator "dut" .
-
 <http://viaf.org/viaf/143144898528950290965/exp/ger/1020> a rdac:C10006 ;
     rdfs:label "Neue Erde (Hamsun, Knut)" ;
     rdaed:P20315 "Neue Erde" ;
@@ -20526,6 +19954,17 @@
     rdaxd:P00029 "part",
         "standalone" .
 
+<http://viaf.org/viaf/312501980/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "Livsfragmenter (Hamsun, Knut)" ;
+    rdaed:P20315 "Livsfragmenter" ;
+    rdaed:P20316 "Livsfragmenter",
+        "Livsfragmenter : ni noveller" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://viaf.org/viaf/312501980> ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
 <http://viaf.org/viaf/312526705/exp/eng/1020> a rdac:C10006 ;
     rdfs:label "The Women at the Pump (Hamsun, Knut)" ;
     rdaed:P20315 "The Women at the Pump" ;
@@ -20662,14 +20101,6 @@
     rdaeo:P20231 <http://viaf.org/viaf/59083692/damenfrativoli> ;
     rdaxd:P00029 "part" .
 
-<http://viaf.org/viaf/59083692/ganskealminneligflue/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "En ganske alminnelig flue av alminnelig størrelse (Hamsun, Knut)" ;
-    rdaed:P20315 "En ganske alminnelig flue av alminnelig størrelse" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/ganskealminneligflue> ;
-    rdaxd:P00029 "part" .
-
 <http://viaf.org/viaf/59083692/hemmeligv/exp/ger/1020/brausewetterernst> a rdac:C10006 ;
     rdfs:label "Geheimes Weh (Hamsun, Knut)",
         "Hemmelig vé (Hamsun, Knut)" ;
@@ -20751,14 +20182,6 @@
     rdaeo:P20231 <http://viaf.org/viaf/59083692/medskydshest> ;
     rdaxd:P00029 "part" .
 
-<http://viaf.org/viaf/59083692/ondedager/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Onde dager (Hamsun, Knut)" ;
-    rdaed:P20315 "Onde dager" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/ondedager> ;
-    rdaxd:P00029 "part" .
-
 <http://viaf.org/viaf/59083692/paabankene/exp/ger/1020/brausewetterernst> a rdac:C10006 ;
     rdfs:label "Auf den Bänken bei New-foundland (Hamsun, Knut)",
         "Paa bankene (Hamsun, Knut)" ;
@@ -20811,14 +20234,6 @@
     rdfs:label "Vandrer-trilogien (Hamsun, Knut)" ;
     rdawd:P10223 "Vandrer-trilogien" ;
     rdaxd:P00018 "http://viaf.org/viaf/59083692/vandrertriologi" .
-
-<http://viaf.org/viaf/59083692/æreskjælm/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "En æreskjælm (Hamsun, Knut)" ;
-    rdaed:P20315 "En æreskjælm" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/æreskjælm> ;
-    rdaxd:P00029 "part" .
 
 <http://viaf.org/viaf/61541730/lerire/exp/spa/1020/ayderaggioamalia> a rdac:C10006 ;
     rdfs:label "Le rire (Bergson, Henri)" ;
@@ -20980,9 +20395,6 @@
     rdaad:P50413 "Stallybrass, Oliver" ;
     rdaxd:P00018 "http://example.org/stallybrassoliver" .
 
-rdact:1018 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDACarrierType/1018" .
-
 <http://viaf.org/viaf/143144898528950290965/exp/spa/1020/prezbancesjosramn> a rdac:C10006 ;
     rdfs:label "Ny jord (Hamsun, Knut)",
         "Tierra nueva (Hamsun, Knut)" ;
@@ -21087,14 +20499,15 @@ rdact:1018 a skos:Concept ;
     rdaxd:P00029 "part",
         "standalone" .
 
-<http://viaf.org/viaf/312501980/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Livsfragmenter (Hamsun, Knut)" ;
-    rdaed:P20315 "Livsfragmenter" ;
-    rdaed:P20316 "Livsfragmenter",
-        "Livsfragmenter : ni noveller" ;
+<http://viaf.org/viaf/316992494/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "Ved rigets port (Hamsun, Knut)",
+        "Ved rikets port (Hamsun, Knut)" ;
+    rdaed:P20315 "Ved rigets port" ;
+    rdaed:P20316 "Ved rigets port",
+        "Ved rikets port" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/312501980> ;
+    rdaeo:P20231 <http://viaf.org/viaf/316992494> ;
     rdaxd:P00029 "part",
         "standalone" .
 
@@ -21153,20 +20566,25 @@ rdact:1018 a skos:Concept ;
     rdaeo:P20231 <http://viaf.org/viaf/5518152200833114400003> ;
     rdaxd:P00029 "standalone" .
 
-<http://viaf.org/viaf/59083692/fortllingerogskildringer/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Fortællinger og Skildringer (Hamsun, Knut)" ;
-    rdaed:P20315 "Fortællinger og Skildringer" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/59083692/fortllingerogskildringer> ;
-    rdaxd:P00029 "part" .
-
 <http://viaf.org/viaf/86862248> a rdac:C10004 ;
     rdfs:label "Lorenzo, Ascunión",
         "Lorenzo, Asunción" ;
     rdaad:P50413 "Lorenzo, Ascunión",
         "Lorenzo, Asunción" ;
     rdaxd:P00018 "http://viaf.org/viaf/86862248" .
+
+<http://workid.oslomet.no/kh/03/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "Knut Hamsun - mordet på Lars Oftedal (Hamsun, Knut)",
+        "Lars Oftedal (Hamsun, Knut)" ;
+    rdaed:P20315 "Lars Oftedal" ;
+    rdaed:P20316 "Knut Hamsun - mordet på Lars Oftedal",
+        "Lars Oftedal",
+        "Mordet på Lars Oftedal" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://workid.oslomet.no/kh/03> ;
+    rdaxd:P00029 "part",
+        "standalone" .
 
 <http://www.wikidata.org/entity/Q12003637/exp/ger/1020> a rdac:C10006 ;
     rdfs:label "Kämpfende Kräfte (Hamsun, Knut)",
@@ -21224,16 +20642,6 @@ rdact:1018 a skos:Concept ;
     rdaad:P50413 "Sautreau, Georges" ;
     rdaxd:P00018 "http://example.org/sautreaugeorges" .
 
-<http://id.loc.gov/vocabulary/iso639-2/mul> a skos:Concept ;
-    rdfs:label "mul" ;
-    skos:subjectIndicator "mul" .
-
-<http://id.loc.gov/vocabulary/iso639-2/nor> a skos:Concept ;
-    skos:subjectIndicator "nor" .
-
-rdamt:1003 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDAMediaType/1003" .
-
 <http://viaf.org/viaf/1000145424544686831283> a rdac:C10001 ;
     rdfs:label "Ringen sluttet (Hamsun, Knut)" ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
@@ -21241,6 +20649,29 @@ rdamt:1003 a skos:Concept ;
     rdawo:P10061 <http://viaf.org/viaf/59083692> ;
     rdaxd:P00018 "http://viaf.org/viaf/1000145424544686831283" ;
     rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/183478381/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "Den Gaadefulde (Hamsun, Knut)",
+        "Den gåtefulle (Hamsun, Knut)" ;
+    rdaed:P20315 "Den gåtefulle" ;
+    rdaed:P20316 "Den Gaadefulde : en Kjærlighedshistorie fra Nordland",
+        "Den gaadefulde" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://viaf.org/viaf/183478381> ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
+<http://viaf.org/viaf/185380595/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "Den siste glede (Hamsun, Knut)",
+        "Den siste glæde (Hamsun, Knut)" ;
+    rdaed:P20315 "Den siste glede" ;
+    rdaed:P20316 "Den siste glæde" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://viaf.org/viaf/185380595> ;
+    rdaxd:P00029 "part",
+        "standalone" .
 
 <http://viaf.org/viaf/188303684/exp/nob/1020> a rdac:C10006 ;
     rdfs:label "Siste kapitel (Hamsun, Knut)",
@@ -21362,6 +20793,16 @@ rdamt:1003 a skos:Concept ;
     rdaxd:P00018 "http://viaf.org/viaf/316368447" ;
     rdaxd:P00029 "Poetry" .
 
+<http://viaf.org/viaf/5470149068540465730001/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "En vandrer spiller med sordin (Hamsun, Knut)" ;
+    rdaed:P20315 "En vandrer spiller med sordin" ;
+    rdaed:P20316 "En Vandrer spiller med sordin" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://viaf.org/viaf/5470149068540465730001> ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
 <http://viaf.org/viaf/5470149068540465730001/exp/spa/1020/65684351> a rdac:C10006 ;
     rdfs:label "En Vandrer spiller med sordin (Hamsun, Knut)",
         "Un vagabundo toca con sordina (Hamsun, Knut)" ;
@@ -21397,22 +20838,42 @@ rdamt:1003 a skos:Concept ;
     rdaxd:P00018 "http://viaf.org/viaf/811145857935523020027" ;
     rdaxd:P00029 "Essays" .
 
+<http://viaf.org/viaf/811145857935523020027/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "Fra det moderne Amerikas Aandsliv (Hamsun, Knut)",
+        "Fra det moderne Amerikas åndsliv (Hamsun, Knut)" ;
+    rdaed:P20315 "Fra det moderne Amerikas åndsliv" ;
+    rdaed:P20316 "Fra det moderne Amerikas Aandsliv",
+        "Fra det moderne Amerikas aandsliv" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://viaf.org/viaf/811145857935523020027> ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
 <http://viaf.org/viaf/86862314> a rdac:C10004 ;
     rdfs:label "Baggethun, Kirsti" ;
     rdaad:P50339 "1944-" ;
     rdaad:P50413 "Baggethun, Kirsti" ;
     rdaxd:P00018 "http://viaf.org/viaf/86862314" .
 
-<http://workid.oslomet.no/kh/03/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Knut Hamsun - mordet på Lars Oftedal (Hamsun, Knut)",
-        "Lars Oftedal (Hamsun, Knut)" ;
-    rdaed:P20315 "Lars Oftedal" ;
-    rdaed:P20316 "Knut Hamsun - mordet på Lars Oftedal",
-        "Lars Oftedal",
-        "Mordet på Lars Oftedal" ;
+<http://workid.oslomet.no/kh/02/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "Bjørger (Hamsun, Knut)" ;
+    rdaed:P20315 "Bjørger" ;
+    rdaed:P20316 "Bjørger",
+        "Bjørger : fortælling" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://workid.oslomet.no/kh/03> ;
+    rdaeo:P20231 <http://workid.oslomet.no/kh/02> ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
+<http://www.wikidata.org/entity/Q11966095/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "Dronning Tamara (Hamsun, Knut)" ;
+    rdaed:P20315 "Dronning Tamara" ;
+    rdaed:P20316 "Dronning Tamara" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q11966095> ;
     rdaxd:P00029 "part",
         "standalone" .
 
@@ -21423,6 +20884,18 @@ rdamt:1003 a skos:Concept ;
     rdawo:P10061 <http://viaf.org/viaf/59083692> ;
     rdaxd:P00018 "http://www.wikidata.org/entity/Q15062320" ;
     rdaxd:P00029 "Short stories" .
+
+<http://www.wikidata.org/entity/Q15062323/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "Munken Vendt (Hamsun, Knut)" ;
+    rdaed:P20315 "Munken vendt" ;
+    rdaed:P20316 "Munken Vendt",
+        "Munken Vendt : Brigantinens Saga, 1",
+        "Munken vendt" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q15062323> ;
+    rdaxd:P00029 "part",
+        "standalone" .
 
 <http://www.wikidata.org/entity/Q15062328> a rdac:C10001 ;
     rdfs:label "Siesta (Hamsun, Knut)" ;
@@ -21445,17 +20918,15 @@ rdamt:1003 a skos:Concept ;
     rdaxd:P00018 "http://www.wikidata.org/entity/Q15062328" ;
     rdaxd:P00029 "Short stories" .
 
-<https://schema.nb.no/Bibliographic/Values/V1002> a skos:Concept ;
-    skos:subjectIndicator "https://schema.nb.no/Bibliographic/Values/V1002" .
-
-rdact:1060 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDACarrierType/1060" .
-
-rdaco:1023 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDAContentType/1023" .
-
-rdamt:1008 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDAMediaType/1008" .
+<http://www.wikidata.org/entity/Q15062328/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "Siesta (Hamsun, Knut)" ;
+    rdaed:P20315 "Siesta" ;
+    rdaed:P20316 "Siesta" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q15062328> ;
+    rdaxd:P00029 "part",
+        "standalone" .
 
 <http://viaf.org/viaf/117364598> a rdac:C10004 ;
     rdfs:label "Klaiber-Gottschau, Pauline" ;
@@ -21463,6 +20934,16 @@ rdamt:1008 a skos:Concept ;
         "1855-1944" ;
     rdaad:P50413 "Klaiber-Gottschau, Pauline" ;
     rdaxd:P00018 "http://viaf.org/viaf/117364598" .
+
+<http://viaf.org/viaf/143144898528950290965/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "Ny jord (Hamsun, Knut)" ;
+    rdaed:P20315 "Ny jord" ;
+    rdaed:P20316 "Ny jord" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://viaf.org/viaf/143144898528950290965> ;
+    rdaxd:P00029 "part",
+        "standalone" .
 
 <http://viaf.org/viaf/1650145424683186830143/exp/ger/1020/162089799/59960174> a rdac:C10006 ;
     rdfs:label "Rosa (Hamsun, Knut)" ;
@@ -21475,18 +20956,6 @@ rdamt:1008 a skos:Concept ;
         <http://viaf.org/viaf/59960174> ;
     rdaeo:P20231 <http://viaf.org/viaf/1650145424683186830143> ;
     rdaxd:P00029 "standalone" .
-
-<http://viaf.org/viaf/183478381/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Den Gaadefulde (Hamsun, Knut)",
-        "Den gåtefulle (Hamsun, Knut)" ;
-    rdaed:P20315 "Den gåtefulle" ;
-    rdaed:P20316 "Den Gaadefulde : en Kjærlighedshistorie fra Nordland",
-        "Den gaadefulde" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/183478381> ;
-    rdaxd:P00029 "part",
-        "standalone" .
 
 <http://viaf.org/viaf/191146462599827770953> a rdac:C10001 ;
     rdfs:label "Men livet lever (Hamsun, Knut)" ;
@@ -21518,15 +20987,13 @@ rdamt:1008 a skos:Concept ;
     rdaxd:P00029 "Letters",
         "Short stories" .
 
-<http://viaf.org/viaf/316992494/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Ved rigets port (Hamsun, Knut)",
-        "Ved rikets port (Hamsun, Knut)" ;
-    rdaed:P20315 "Ved rigets port" ;
-    rdaed:P20316 "Ved rigets port",
-        "Ved rikets port" ;
+<http://viaf.org/viaf/5518152200833114400003/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "Redaktør Lynge (Hamsun, Knut)" ;
+    rdaed:P20315 "Redaktør Lynge" ;
+    rdaed:P20316 "Redaktør Lynge" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/316992494> ;
+    rdaeo:P20231 <http://viaf.org/viaf/5518152200833114400003> ;
     rdaxd:P00029 "part",
         "standalone" .
 
@@ -21541,26 +21008,15 @@ rdamt:1008 a skos:Concept ;
     rdaad:P50413 "Worster, W.W" ;
     rdaxd:P00018 "http://viaf.org/viaf/7014928" .
 
-<http://viaf.org/viaf/811145857935523020027/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Fra det moderne Amerikas Aandsliv (Hamsun, Knut)",
-        "Fra det moderne Amerikas åndsliv (Hamsun, Knut)" ;
-    rdaed:P20315 "Fra det moderne Amerikas åndsliv" ;
-    rdaed:P20316 "Fra det moderne Amerikas Aandsliv",
-        "Fra det moderne Amerikas aandsliv" ;
+<http://viaf.org/viaf/7398163939428301160007/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "Livets spil (Hamsun, Knut)",
+        "Livets spill (Hamsun, Knut)" ;
+    rdaed:P20315 "Livets spil" ;
+    rdaed:P20316 "Livets spil",
+        "Livets spill" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/811145857935523020027> ;
-    rdaxd:P00029 "part",
-        "standalone" .
-
-<http://workid.oslomet.no/kh/02/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Bjørger (Hamsun, Knut)" ;
-    rdaed:P20315 "Bjørger" ;
-    rdaed:P20316 "Bjørger",
-        "Bjørger : fortælling" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://workid.oslomet.no/kh/02> ;
+    rdaeo:P20231 <http://viaf.org/viaf/7398163939428301160007> ;
     rdaxd:P00029 "part",
         "standalone" .
 
@@ -21571,6 +21027,25 @@ rdamt:1008 a skos:Concept ;
     rdawo:P10061 <http://viaf.org/viaf/59083692> ;
     rdaxd:P00018 "http://www.wikidata.org/entity/Q12003637" ;
     rdaxd:P00029 "Short stories" .
+
+<http://www.wikidata.org/entity/Q15062320/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "Kratskog (Hamsun, Knut)" ;
+    rdaed:P20315 "Kratskog" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q15062320> ;
+    rdaxd:P00029 "part" .
+
+<http://www.wikidata.org/entity/Q15062327/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "Aftenrøde (Hamsun, Knut)" ;
+    rdaed:P20315 "Aftenrøde" ;
+    rdaed:P20316 "Aftenrøde",
+        "Aftenrøde : Slutningsspil" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q15062327> ;
+    rdaxd:P00029 "part",
+        "standalone" .
 
 <http://example.org/johnsonnils> a rdac:C10004 ;
     rdfs:label "Johnson, Nils" ;
@@ -21604,17 +21079,6 @@ rdamt:1008 a skos:Concept ;
     rdawo:P10061 <http://viaf.org/viaf/59083692> ;
     rdaxd:P00018 "http://viaf.org/viaf/143144898528950290965" ;
     rdaxd:P00029 "Novel" .
-
-<http://viaf.org/viaf/185380595/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Den siste glede (Hamsun, Knut)",
-        "Den siste glæde (Hamsun, Knut)" ;
-    rdaed:P20315 "Den siste glede" ;
-    rdaed:P20316 "Den siste glæde" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/185380595> ;
-    rdaxd:P00029 "part",
-        "standalone" .
 
 <http://viaf.org/viaf/188303684> a rdac:C10001 ;
     rdfs:label "Siste kapitel (Hamsun, Knut)" ;
@@ -21662,6 +21126,19 @@ rdamt:1008 a skos:Concept ;
     rdaxd:P00018 "http://viaf.org/viaf/207944253" ;
     rdaxd:P00029 "Novel" .
 
+<http://viaf.org/viaf/207944253/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "Segelfoss by (Hamsun, Knut)" ;
+    rdaed:P20315 "Segelfoss by" ;
+    rdaed:P20316 "Samlede Verker : 10 : Segelfoss By",
+        "Segelfoss By : 1",
+        "Segelfoss By : 2",
+        "Segelfoss by" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://viaf.org/viaf/207944253> ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
 <http://viaf.org/viaf/220443771/exp/ger/1020/weibelsiegfried> a rdac:C10006 ;
     rdfs:label "Hunger (Hamsun, Knut)" ;
     rdaed:P20315 "Hunger" ;
@@ -21698,6 +21175,29 @@ rdamt:1008 a skos:Concept ;
     rdaeo:P20231 <http://viaf.org/viaf/30145424502786830193> ;
     rdaxd:P00029 "standalone" .
 
+<http://viaf.org/viaf/309525997/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "Under høststjernen (Hamsun, Knut)",
+        "Under høststjærnen (Hamsun, Knut)" ;
+    rdaed:P20315 "Under høststjernen" ;
+    rdaed:P20316 "Under høststjærnen" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://viaf.org/viaf/309525997> ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
+<http://viaf.org/viaf/312486496/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "Livet ivold (Hamsun, Knut)" ;
+    rdaed:P20315 "Livet ivold" ;
+    rdaed:P20316 "Livet ivold",
+        "Livet ivold : 1 : Akt I og II",
+        "Livet ivold : 2 : Akt III og IV" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://viaf.org/viaf/312486496> ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
 <http://viaf.org/viaf/3267149068489065730001> a rdac:C10001 ;
     rdfs:label "August (Hamsun, Knut)" ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
@@ -21706,16 +21206,6 @@ rdamt:1008 a skos:Concept ;
     rdawo:P10061 <http://viaf.org/viaf/59083692> ;
     rdaxd:P00018 "http://viaf.org/viaf/3267149068489065730001" ;
     rdaxd:P00029 "Novel" .
-
-<http://viaf.org/viaf/5470149068540465730001/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "En vandrer spiller med sordin (Hamsun, Knut)" ;
-    rdaed:P20315 "En vandrer spiller med sordin" ;
-    rdaed:P20316 "En Vandrer spiller med sordin" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/5470149068540465730001> ;
-    rdaxd:P00029 "part",
-        "standalone" .
 
 <http://viaf.org/viaf/7398163939428301160007/exp/spa/1020/vivesfrans> a rdac:C10006 ;
     rdfs:label "El juego de la vida (Hamsun, Knut)",
@@ -21730,26 +21220,23 @@ rdamt:1008 a skos:Concept ;
     rdaxd:P00029 "part",
         "standalone" .
 
-<http://www.wikidata.org/entity/Q11966095/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Dronning Tamara (Hamsun, Knut)" ;
-    rdaed:P20315 "Dronning Tamara" ;
-    rdaed:P20316 "Dronning Tamara" ;
+<http://www.wikidata.org/entity/Q12003637/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "Stridende liv (Hamsun, Knut)" ;
+    rdaed:P20315 "Stridende liv" ;
+    rdaed:P20316 "Stridende Liv : Skildringer fra Vesten og Østen",
+        "Stridende liv" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://www.wikidata.org/entity/Q11966095> ;
-    rdaxd:P00029 "part",
-        "standalone" .
-
-<http://www.wikidata.org/entity/Q15062323/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Munken Vendt (Hamsun, Knut)" ;
-    rdaed:P20315 "Munken vendt" ;
-    rdaed:P20316 "Munken Vendt",
-        "Munken Vendt : Brigantinens Saga, 1",
-        "Munken vendt" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://www.wikidata.org/entity/Q15062323> ;
-    rdaxd:P00029 "part",
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q12003637> ;
+    rdaeo:P20319 <http://viaf.org/viaf/59083692/aleksanderogleonarda/exp/nob/1020>,
+        <http://viaf.org/viaf/59083692/blandtdyr/exp/nob/1020>,
+        <http://viaf.org/viaf/59083692/kvindesejr/exp/nob/1020>,
+        <http://viaf.org/viaf/59083692/paablaamands/exp/nob/1020>,
+        <http://viaf.org/viaf/59083692/udisdensommer/exp/nob/1020>,
+        <http://viaf.org/viaf/59083692/underhalvmaanen/exp/nob/1020>,
+        <http://viaf.org/viaf/59083692/vagabondsdage/exp/nob/1020> ;
+    rdaxd:P00029 "aggregate",
+        "part",
         "standalone" .
 
 <http://example.org/olsenarnethomas> a rdac:C10004 ;
@@ -21757,16 +21244,6 @@ rdamt:1008 a skos:Concept ;
     rdaad:P50339 "1909-2000" ;
     rdaad:P50413 "Olsen, Arne Thomas" ;
     rdaxd:P00018 "http://example.org/olsenarnethomas" .
-
-<http://viaf.org/viaf/143144898528950290965/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Ny jord (Hamsun, Knut)" ;
-    rdaed:P20315 "Ny jord" ;
-    rdaed:P20316 "Ny jord" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/143144898528950290965> ;
-    rdaxd:P00029 "part",
-        "standalone" .
 
 <http://viaf.org/viaf/185380595/exp/spa/1020/10165/65684351/molinsluis> a rdac:C10006 ;
     rdfs:label "Den siste glæde (Hamsun, Knut)",
@@ -21802,19 +21279,6 @@ rdamt:1008 a skos:Concept ;
     rdaeo:P20037 <http://example.org/mcfarlanejameswalter> ;
     rdaeo:P20231 <http://viaf.org/viaf/194765531> ;
     rdaxd:P00029 "standalone" .
-
-<http://viaf.org/viaf/207944253/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Segelfoss by (Hamsun, Knut)" ;
-    rdaed:P20315 "Segelfoss by" ;
-    rdaed:P20316 "Samlede Verker : 10 : Segelfoss By",
-        "Segelfoss By : 1",
-        "Segelfoss By : 2",
-        "Segelfoss by" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/207944253> ;
-    rdaxd:P00029 "part",
-        "standalone" .
 
 <http://viaf.org/viaf/220443771/exp/ger/1020> a rdac:C10006 ;
     rdfs:label "Hunger (Hamsun, Knut)",
@@ -21875,54 +21339,15 @@ rdamt:1008 a skos:Concept ;
     rdaeo:P20231 <http://viaf.org/viaf/5470149068540465730001> ;
     rdaxd:P00029 "part" .
 
-<http://viaf.org/viaf/5518152200833114400003/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Redaktør Lynge (Hamsun, Knut)" ;
-    rdaed:P20315 "Redaktør Lynge" ;
-    rdaed:P20316 "Redaktør Lynge" ;
+<http://viaf.org/viaf/8450149068552765730000/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "Barn av tiden (Hamsun, Knut)",
+        "Børn av tiden (Hamsun, Knut)" ;
+    rdaed:P20315 "Barn av tiden" ;
+    rdaed:P20316 "Børn av Tiden : Roman",
+        "Børn av tiden" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/5518152200833114400003> ;
-    rdaxd:P00029 "part",
-        "standalone" .
-
-<http://viaf.org/viaf/7398163939428301160007/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Livets spil (Hamsun, Knut)",
-        "Livets spill (Hamsun, Knut)" ;
-    rdaed:P20315 "Livets spil" ;
-    rdaed:P20316 "Livets spil",
-        "Livets spill" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/7398163939428301160007> ;
-    rdaxd:P00029 "part",
-        "standalone" .
-
-<http://www.wikidata.org/entity/Q15062320/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Kratskog (Hamsun, Knut)" ;
-    rdaed:P20315 "Kratskog" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://www.wikidata.org/entity/Q15062320> ;
-    rdaxd:P00029 "part" .
-
-<http://www.wikidata.org/entity/Q15062327/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Aftenrøde (Hamsun, Knut)" ;
-    rdaed:P20315 "Aftenrøde" ;
-    rdaed:P20316 "Aftenrøde",
-        "Aftenrøde : Slutningsspil" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://www.wikidata.org/entity/Q15062327> ;
-    rdaxd:P00029 "part",
-        "standalone" .
-
-<http://www.wikidata.org/entity/Q15062328/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Siesta (Hamsun, Knut)" ;
-    rdaed:P20315 "Siesta" ;
-    rdaed:P20316 "Siesta" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://www.wikidata.org/entity/Q15062328> ;
+    rdaeo:P20231 <http://viaf.org/viaf/8450149068552765730000> ;
     rdaxd:P00029 "part",
         "standalone" .
 
@@ -21964,26 +21389,15 @@ rdamt:1008 a skos:Concept ;
     rdaxd:P00029 "part",
         "standalone" .
 
-<http://viaf.org/viaf/309525997/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Under høststjernen (Hamsun, Knut)",
-        "Under høststjærnen (Hamsun, Knut)" ;
-    rdaed:P20315 "Under høststjernen" ;
-    rdaed:P20316 "Under høststjærnen" ;
+<http://viaf.org/viaf/309525999/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "I eventyrland (Hamsun, Knut)",
+        "I Æventyrland (Hamsun, Knut)" ;
+    rdaed:P20315 "I eventyrland" ;
+    rdaed:P20316 "I Æventyrland : oplevet og drømt i Kaukasien",
+        "I æventyrland" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/309525997> ;
-    rdaxd:P00029 "part",
-        "standalone" .
-
-<http://viaf.org/viaf/312486496/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Livet ivold (Hamsun, Knut)" ;
-    rdaed:P20315 "Livet ivold" ;
-    rdaed:P20316 "Livet ivold",
-        "Livet ivold : 1 : Akt I og II",
-        "Livet ivold : 2 : Akt III og IV" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/312486496> ;
+    rdaeo:P20231 <http://viaf.org/viaf/309525999> ;
     rdaxd:P00029 "part",
         "standalone" .
 
@@ -21994,37 +21408,6 @@ rdamt:1008 a skos:Concept ;
     rdawo:P10061 <http://viaf.org/viaf/59083692> ;
     rdaxd:P00018 "http://viaf.org/viaf/8450149068552765730000" ;
     rdaxd:P00029 "Novel" .
-
-<http://viaf.org/viaf/8450149068552765730000/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Barn av tiden (Hamsun, Knut)",
-        "Børn av tiden (Hamsun, Knut)" ;
-    rdaed:P20315 "Barn av tiden" ;
-    rdaed:P20316 "Børn av Tiden : Roman",
-        "Børn av tiden" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/8450149068552765730000> ;
-    rdaxd:P00029 "part",
-        "standalone" .
-
-<http://www.wikidata.org/entity/Q12003637/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Stridende liv (Hamsun, Knut)" ;
-    rdaed:P20315 "Stridende liv" ;
-    rdaed:P20316 "Stridende Liv : Skildringer fra Vesten og Østen",
-        "Stridende liv" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://www.wikidata.org/entity/Q12003637> ;
-    rdaeo:P20319 <http://viaf.org/viaf/59083692/aleksanderogleonarda/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/blandtdyr/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/kvindesejr/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/paablaamands/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/udisdensommer/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/underhalvmaanen/exp/nob/1020>,
-        <http://viaf.org/viaf/59083692/vagabondsdage/exp/nob/1020> ;
-    rdaxd:P00029 "aggregate",
-        "part",
-        "standalone" .
 
 <http://viaf.org/viaf/111655332> a rdac:C10004 ;
     rdfs:label "Lyngstad, Sverre" ;
@@ -22106,8 +21489,19 @@ rdamt:1008 a skos:Concept ;
     rdaxd:P00029 "part",
         "standalone" .
 
-rdact:1004 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDACarrierType/1004" .
+<http://viaf.org/viaf/316368447/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "Det vilde kor (Hamsun, Knut)",
+        "Det vilde kor og andre dikte (Hamsun, Knut)",
+        "Vildt kor (Hamsun, Knut)" ;
+    rdaed:P20315 "Vildt kor" ;
+    rdaed:P20316 "Det vilde kor",
+        "Det vilde kor : digte",
+        "Det vilde kor : og andre dikte" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://viaf.org/viaf/316368447> ;
+    rdaxd:P00029 "part",
+        "standalone" .
 
 <http://viaf.org/viaf/1650145424683186830143> a rdac:C10001 ;
     rdfs:label "Rosa (Hamsun, Knut)" ;
@@ -22117,6 +21511,17 @@ rdact:1004 a skos:Concept ;
     rdawo:P10156 <http://viaf.org/viaf/310234238> ;
     rdaxd:P00018 "http://viaf.org/viaf/1650145424683186830143" ;
     rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/1650145424683186830143/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "Rosa (Hamsun, Knut)" ;
+    rdaed:P20315 "Rosa" ;
+    rdaed:P20316 "Rosa",
+        "Rosa : af Student Parelius' Papirer" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://viaf.org/viaf/1650145424683186830143> ;
+    rdaxd:P00029 "part",
+        "standalone" .
 
 <http://viaf.org/viaf/180078068/exp/ger/1020/162089799/59960174> a rdac:C10006 ;
     rdfs:label "Landstreicher (Hamsun, Knut)",
@@ -22169,6 +21574,16 @@ rdact:1004 a skos:Concept ;
     rdaxd:P00029 "part",
         "standalone" .
 
+<http://viaf.org/viaf/310234238/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "Benoni (Hamsun, Knut)" ;
+    rdaed:P20315 "Benoni" ;
+    rdaed:P20316 "Benoni" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://viaf.org/viaf/310234238> ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
 <http://viaf.org/viaf/395147270538135700001/exp/ger/1020/59960174> a rdac:C10006 ;
     rdfs:label "Victoria (Hamsun, Knut)" ;
     rdaed:P20315 "Victoria" ;
@@ -22181,17 +21596,6 @@ rdact:1004 a skos:Concept ;
         "ger" ;
     rdaeo:P20037 <http://viaf.org/viaf/59960174> ;
     rdaeo:P20231 <http://viaf.org/viaf/395147270538135700001> ;
-    rdaxd:P00029 "part",
-        "standalone" .
-
-<http://viaf.org/viaf/1650145424683186830143/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Rosa (Hamsun, Knut)" ;
-    rdaed:P20315 "Rosa" ;
-    rdaed:P20316 "Rosa",
-        "Rosa : af Student Parelius' Papirer" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/1650145424683186830143> ;
     rdaxd:P00029 "part",
         "standalone" .
 
@@ -22223,42 +21627,6 @@ rdact:1004 a skos:Concept ;
     rdaeo:P20231 <http://viaf.org/viaf/220443771> ;
     rdaxd:P00029 "standalone" .
 
-<http://viaf.org/viaf/309525999/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "I eventyrland (Hamsun, Knut)",
-        "I Æventyrland (Hamsun, Knut)" ;
-    rdaed:P20315 "I eventyrland" ;
-    rdaed:P20316 "I Æventyrland : oplevet og drømt i Kaukasien",
-        "I æventyrland" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/309525999> ;
-    rdaxd:P00029 "part",
-        "standalone" .
-
-<http://viaf.org/viaf/310234238/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Benoni (Hamsun, Knut)" ;
-    rdaed:P20315 "Benoni" ;
-    rdaed:P20316 "Benoni" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/310234238> ;
-    rdaxd:P00029 "part",
-        "standalone" .
-
-<http://viaf.org/viaf/316368447/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Det vilde kor (Hamsun, Knut)",
-        "Det vilde kor og andre dikte (Hamsun, Knut)",
-        "Vildt kor (Hamsun, Knut)" ;
-    rdaed:P20315 "Vildt kor" ;
-    rdaed:P20316 "Det vilde kor",
-        "Det vilde kor : digte",
-        "Det vilde kor : og andre dikte" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/316368447> ;
-    rdaxd:P00029 "part",
-        "standalone" .
-
 <http://viaf.org/viaf/3267149068489065730001/exp/nob/1020> a rdac:C10006 ;
     rdfs:label "August (Hamsun, Knut)" ;
     rdaed:P20315 "August" ;
@@ -22282,6 +21650,18 @@ rdact:1004 a skos:Concept ;
     rdawo:P10061 <http://viaf.org/viaf/59083692> ;
     rdaxd:P00018 "http://viaf.org/viaf/5470149068540465730001" ;
     rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/995145424555286830372/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "Svermere (Hamsun, Knut)",
+        "Sværmere (Hamsun, Knut)" ;
+    rdaed:P20315 "Svermere" ;
+    rdaed:P20316 "Sværmere",
+        "Sværmere : Roman" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://viaf.org/viaf/995145424555286830372> ;
+    rdaxd:P00029 "part",
+        "standalone" .
 
 <http://example.org/brausewetterernst> a rdac:C10004 ;
     rdfs:label "Brausewetter, Ernst" ;
@@ -22351,6 +21731,21 @@ rdact:1004 a skos:Concept ;
         "http://viaf.org/viaf/995145424555286830372" ;
     rdaxd:P00029 "Novel" .
 
+<http://viaf.org/viaf/180078068/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "Landstrykere (Hamsun, Knut)",
+        "Samlede verker (Hamsun, Knut)" ;
+    rdaed:P20315 "Landstrykere" ;
+    rdaed:P20316 "Landstrykere",
+        "Landstrykere : roman : 1",
+        "Landstrykere : roman : 2",
+        "Samlede Verker : 14 : Landstrykere",
+        "Samlede verker : B. 10 : Landstrykere" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://viaf.org/viaf/180078068> ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
 <http://viaf.org/viaf/194765531/exp/ger/1020/162089799/59960174> a rdac:C10006 ;
     rdfs:label "Pan (Hamsun, Knut)",
         "Pan, aus Leutnant Thomas Glahns Papieren (Hamsun, Knut)" ;
@@ -22389,18 +21784,6 @@ rdact:1004 a skos:Concept ;
     rdaxd:P00018 "http://viaf.org/viaf/294124367" ;
     rdaxd:P00029 "Novel" .
 
-<http://viaf.org/viaf/995145424555286830372/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Svermere (Hamsun, Knut)",
-        "Sværmere (Hamsun, Knut)" ;
-    rdaed:P20315 "Svermere" ;
-    rdaed:P20316 "Sværmere",
-        "Sværmere : Roman" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/995145424555286830372> ;
-    rdaxd:P00029 "part",
-        "standalone" .
-
 <http://viaf.org/viaf/107756506> a rdac:C10004 ;
     rdfs:label "Larsen, Lars Frode" ;
     rdaad:P50339 "1948-" ;
@@ -22414,21 +21797,6 @@ rdact:1004 a skos:Concept ;
     rdaad:P50413 "Angermann, S.",
         "Angermann, Sophie" ;
     rdaxd:P00018 "http://viaf.org/viaf/162089799" .
-
-<http://viaf.org/viaf/180078068/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Landstrykere (Hamsun, Knut)",
-        "Samlede verker (Hamsun, Knut)" ;
-    rdaed:P20315 "Landstrykere" ;
-    rdaed:P20316 "Landstrykere",
-        "Landstrykere : roman : 1",
-        "Landstrykere : roman : 2",
-        "Samlede Verker : 14 : Landstrykere",
-        "Samlede verker : B. 10 : Landstrykere" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/180078068> ;
-    rdaxd:P00029 "part",
-        "standalone" .
 
 <http://viaf.org/viaf/206863699> a rdac:C10001 ;
     rdfs:label "Mysterier (Hamsun, Knut)" ;
@@ -22449,6 +21817,17 @@ rdact:1004 a skos:Concept ;
         "spa" ;
     rdaeo:P20037 <http://viaf.org/viaf/76448961> ;
     rdaeo:P20231 <http://viaf.org/viaf/194765531> ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
+<http://viaf.org/viaf/30145424502786830193/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "Paa gjengrodde stier (Hamsun, Knut)",
+        "På gjengrodde stier (Hamsun, Knut)" ;
+    rdaed:P20315 "På gjengrodde stier" ;
+    rdaed:P20316 "Paa gjengrodde stier" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://viaf.org/viaf/30145424502786830193> ;
     rdaxd:P00029 "part",
         "standalone" .
 
@@ -22494,14 +21873,14 @@ rdact:1004 a skos:Concept ;
     rdaxd:P00029 "part",
         "standalone" .
 
-<http://viaf.org/viaf/30145424502786830193/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Paa gjengrodde stier (Hamsun, Knut)",
-        "På gjengrodde stier (Hamsun, Knut)" ;
-    rdaed:P20315 "På gjengrodde stier" ;
-    rdaed:P20316 "Paa gjengrodde stier" ;
+<http://viaf.org/viaf/206863699/exp/nob/1020> a rdac:C10006 ;
+    rdfs:label "Mysterier (Hamsun, Knut)" ;
+    rdaed:P20315 "Mysterier" ;
+    rdaed:P20316 "Mysterier",
+        "Samlede verker : B. 2 : Mysterier" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/30145424502786830193> ;
+    rdaeo:P20231 <http://viaf.org/viaf/206863699> ;
     rdaxd:P00029 "part",
         "standalone" .
 
@@ -22513,9 +21892,6 @@ rdact:1004 a skos:Concept ;
     rdaxd:P00018 "http://viaf.org/viaf/395147270538135700001" ;
     rdaxd:P00029 "Novel" .
 
-rdamt:1001 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDAMediaType/1001" .
-
 <http://viaf.org/viaf/194765531> a rdac:C10001 ;
     rdfs:label "Pan (Hamsun, Knut)" ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
@@ -22523,18 +21899,6 @@ rdamt:1001 a skos:Concept ;
     rdawo:P10061 <http://viaf.org/viaf/59083692> ;
     rdaxd:P00018 "http://viaf.org/viaf/194765531" ;
     rdaxd:P00029 "Novel" .
-
-<http://viaf.org/viaf/294124367/exp/ger/1020/162089799/59960174> a rdac:C10006 ;
-    rdfs:label "Segen der Erde (Hamsun, Knut)" ;
-    rdaed:P20315 "Segen der Erde" ;
-    rdaed:P20316 "Markens grøde",
-        "Segen der Erde : Roman" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://viaf.org/viaf/162089799>,
-        <http://viaf.org/viaf/59960174> ;
-    rdaeo:P20231 <http://viaf.org/viaf/294124367> ;
-    rdaxd:P00029 "standalone" .
 
 <http://viaf.org/viaf/194765531/exp/nob/1020> a rdac:C10006 ;
     rdfs:label "Pan (Hamsun, Knut)" ;
@@ -22550,17 +21914,6 @@ rdamt:1001 a skos:Concept ;
     rdaxd:P00029 "part",
         "standalone" .
 
-<http://viaf.org/viaf/206863699/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Mysterier (Hamsun, Knut)" ;
-    rdaed:P20315 "Mysterier" ;
-    rdaed:P20316 "Mysterier",
-        "Samlede verker : B. 2 : Mysterier" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://viaf.org/viaf/206863699> ;
-    rdaxd:P00029 "part",
-        "standalone" .
-
 <http://viaf.org/viaf/220443771/exp/nob/1020> a rdac:C10006 ;
     rdfs:label "Sult (Hamsun, Knut)" ;
     rdaed:P20315 "Sult" ;
@@ -22572,8 +21925,17 @@ rdamt:1001 a skos:Concept ;
     rdaxd:P00029 "part",
         "standalone" .
 
-rdaco:1013 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDAContentType/1013" .
+<http://viaf.org/viaf/294124367/exp/ger/1020/162089799/59960174> a rdac:C10006 ;
+    rdfs:label "Segen der Erde (Hamsun, Knut)" ;
+    rdaed:P20315 "Segen der Erde" ;
+    rdaed:P20316 "Markens grøde",
+        "Segen der Erde : Roman" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+    rdaeo:P20037 <http://viaf.org/viaf/162089799>,
+        <http://viaf.org/viaf/59960174> ;
+    rdaeo:P20231 <http://viaf.org/viaf/294124367> ;
+    rdaxd:P00029 "standalone" .
 
 <http://viaf.org/viaf/220443771> a rdac:C10001 ;
     rdfs:label "Sult (Hamsun, Knut)" ;
@@ -22617,41 +21979,9 @@ rdaco:1013 a skos:Concept ;
     rdaxd:P00029 "part",
         "standalone" .
 
-<http://id.loc.gov/vocabulary/iso639-2/fre> a skos:Concept ;
-    rdfs:label "fre" ;
-    skos:subjectIndicator "fre" .
-
-<http://id.loc.gov/vocabulary/iso639-2/eng> a skos:Concept ;
-    rdfs:label "eng" ;
-    skos:subjectIndicator "eng" .
-
-<http://id.loc.gov/vocabulary/iso639-2/spa> a skos:Concept ;
-    rdfs:label "spa" ;
-    skos:subjectIndicator "spa" .
-
 <http://viaf.org/viaf/59083692> a rdac:C10004 ;
     rdfs:label "Hamsun, Knut" ;
     rdaad:P50339 "1859-1952" ;
     rdaad:P50413 "Hamsun, Knut" ;
     rdaxd:P00018 "http://viaf.org/viaf/59083692" .
-
-<http://id.loc.gov/vocabulary/iso639-2/nob> a skos:Concept ;
-    rdfs:label "nob" ;
-    skos:subjectIndicator "nob" .
-
-<http://id.loc.gov/vocabulary/iso639-2/ger> a skos:Concept ;
-    rdfs:label "ger" ;
-    skos:subjectIndicator "ger" .
-
-<https://schema.nb.no/Bibliographic/Values/V1000> a skos:Concept ;
-    skos:subjectIndicator "https://schema.nb.no/Bibliographic/Values/V1000" .
-
-rdaco:1020 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDAContentType/1020" .
-
-rdact:1049 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDACarrierType/1049" .
-
-rdamt:1007 a skos:Concept ;
-    skos:subjectIndicator "http://rdaregistry.info/termList/RDAMediaType/1007" .
 

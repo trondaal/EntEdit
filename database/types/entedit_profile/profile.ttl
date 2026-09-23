@@ -1189,8 +1189,8 @@ rdaeo:P20256	entedit:status	"object property" ; rdfs:label "er tegneserieroman b
 rdaeo:P20281	entedit:status	"object property" ; rdfs:label "er bearbeidelse av uttrykk til oratorium"@no . #	is oratorio adaptation of expression	rdac:C10006	rdac:C10006
 rdaeo:P20282	entedit:status	"object property" ; rdfs:label "er bearbeidet som oratorium (uttrykk)"@no . #	is adapted as oratorio expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20319	entedit:status	"object property" ; rdfs:label "aggregerer"@no . #	aggregates	rdac:C10006	rdac:C10006
-rdaeo:P20320	entedit:status	"object property" ; rdfs:label "er aggregert av"@no . #	is aggregated by	rdac:C10006	rdac:C10006
+#rdaeo:P20319	entedit:status	"object property" ; rdfs:label "aggregerer"@no . #	aggregates	rdac:C10006	rdac:C10006
+#rdaeo:P20320	entedit:status	"object property" ; rdfs:label "er aggregert av"@no . #	is aggregated by	rdac:C10006	rdac:C10006
 
 rdaeo:P20334	entedit:status	"object property" ; rdfs:label "har forløper (uttrykk)"@no . #	has prequel expression	rdac:C10006	rdac:C10006
 rdaeo:P20335	entedit:status	"object property" ; rdfs:label "har etterfølger (uttrykk)"@no . #	has sequel expression	rdac:C10006	rdac:C10006
