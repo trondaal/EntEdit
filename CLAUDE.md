@@ -247,6 +247,14 @@ properties are not turned into strings.
   saved) and uses the same monospace type in both, and the identity rows and
   section headers reserve the height of the controls that only appear while
   editing (`minHeight: 40`)
+- Not every entity has a URI worth citing, so a semantic-web style that
+  requires one cannot rely on the user typing one in: `EntityIdentitySection`
+  shows a **Generate** button next to the identifier field for new entities
+  while editing (`requireIdentifier`/`onGenerateUri` props), filling in the
+  same `generateEntityUri(classUri)` identifier a blank field would get on
+  save. The placeholder changes to "Enter a URI, or generate one" when
+  `requireIdentifier` is set, since the plain "leave empty to auto-generate"
+  text stops being true.
 
 ### Localization
 
