@@ -614,43 +614,43 @@ rdawo:P10179	entedit:status	"object property" ; rdfs:label "er sammendrag av ver
 rdawo:P10112	entedit:status	"object property" ; rdfs:label "har tilleggsverk"@no . #	has addenda work	rdac:C10001	rdac:C10001
 rdawo:P10177	entedit:status	"object property" ; rdfs:label "er tillegg til verk"@no . #	is addenda to work	rdac:C10001	rdac:C10001
 
-rdawo:P10150	entedit:status	"object property" ; entedit:display false ; rdfs:label "er studieveiledning til verk"@no . #	is guide to work	rdac:C10001	rdac:C10001
-rdawo:P10124	entedit:status	"object property" ; rdfs:label "har studieveiledning (verk)"@no . #	has guide work	rdac:C10001	rdac:C10001
+rdawo:P10150	entedit:status	"object property" ; rdfs:label "er veiledning til"@no . #	is guide to work	rdac:C10001	rdac:C10001
+rdawo:P10124	entedit:status	"object property" ; entedit:display false ; rdfs:label "har veiledning "@no . #	has guide work	rdac:C10001	rdac:C10001
 
-rdawo:P10114	entedit:status	"object property" ; rdfs:label "er verk anmeldt i "@no . #	is work reviewed by	rdac:C10001	rdac:C10001
-rdawo:P10178	entedit:status	"object property" ; rdfs:label "er anmeldelse av verk"@no . #	is review of work	rdac:C10001	rdac:C10001
+rdawo:P10114	entedit:status	"object property" ; rdfs:label "er anmeldt i "@no . #	is work reviewed by	rdac:C10001	rdac:C10001
+rdawo:P10178	entedit:status	"object property" ; rdfs:label "er anmeldelse av"@no . #	is review of work	rdac:C10001	rdac:C10001
 
-rdawo:P10155	entedit:status	"object property" ; rdfs:label "er bearbeidet som verk"@no . #	is adapted as work	rdac:C10001	rdac:C10001
-rdawo:P10142	entedit:status	"object property" ; rdfs:label "er bearbeidelse av verk"@no . #	is adaptation of work	rdac:C10001	rdac:C10001
+rdawo:P10155	entedit:status	"object property" ; rdfs:label "er bearbeidet som"@no . #	is adapted as work	rdac:C10001	rdac:C10001
+rdawo:P10142	entedit:status	"object property" ; rdfs:label "er bearbeidelse av"@no . #	is adaptation of work	rdac:C10001	rdac:C10001
 
-rdawo:P10115	entedit:status	"object property" ; rdfs:label "er verk kritisert i "@no . #	is work critiqued by	rdac:C10001	rdac:C10001
-rdawo:P10182	entedit:status	"object property" ; rdfs:label "er kritikk av verk"@no . #	is critique of work	rdac:C10001	rdac:C10001
+rdawo:P10115	entedit:status	"object property" ; rdfs:label "er kritisert i "@no . #	is work critiqued by	rdac:C10001	rdac:C10001
+rdawo:P10182	entedit:status	"object property" ; rdfs:label "er kritikk av"@no . #	is critique of work	rdac:C10001	rdac:C10001
 
-rdawo:P10116	entedit:status	"object property" ; rdfs:label "er verk kommentert i"@no . #	is work commentary in	rdac:C10001	rdac:C10001
-rdawo:P10187	entedit:status	"object property" ; rdfs:label "er kommentar til verk"@no . #	is commentary on work	rdac:C10001	rdac:C10001
+rdawo:P10116	entedit:status	"object property" ; rdfs:label "er kommentert i"@no . #	is work commentary in	rdac:C10001	rdac:C10001
+rdawo:P10187	entedit:status	"object property" ; rdfs:label "er kommentar til"@no . #	is commentary on work	rdac:C10001	rdac:C10001
 
-rdawo:P10117	entedit:status	"object property" ; rdfs:label "er imitert som verk"@no . #	is imitated as work	rdac:C10001	rdac:C10001
-rdawo:P10196	entedit:status	"object property" ; rdfs:label "er imitasjon av verk"@no . #	is imitation of work	rdac:C10001	rdac:C10001
+rdawo:P10117	entedit:status	"object property" ; rdfs:label "er imitert som"@no . #	is imitated as work	rdac:C10001	rdac:C10001
+rdawo:P10196	entedit:status	"object property" ; rdfs:label "er imitasjon av"@no . #	is imitation of work	rdac:C10001	rdac:C10001
 
-rdawo:P10119	entedit:status	"object property" ; rdfs:label "er utvidet som verk"@no . #	is expanded as work	rdac:C10001	rdac:C10001
-rdawo:P10184	entedit:status	"object property" ; rdfs:label "er utvidet versjon av verk"@no . #	is expanded version of work	rdac:C10001	rdac:C10001
+rdawo:P10119	entedit:status	"object property" ; rdfs:label "er utvidet som"@no . #	is expanded as work	rdac:C10001	rdac:C10001
+rdawo:P10184	entedit:status	"object property" ; rdfs:label "er utvidet versjon av"@no . #	is expanded version of work	rdac:C10001	rdac:C10001
 
-rdawo:P10145	entedit:status	"object property" ; rdfs:label "er innlemmet i verk"@no . #	is absorbed by work	rdac:C10001	rdac:C10001
-rdawo:P10224  entedit:status	"object property" ; rdfs:label "er innlemmelse av verk"@no . #is absorption of work
+rdawo:P10145	entedit:status	"object property" ; rdfs:label "er innlemmet i"@no . #	is absorbed by work	rdac:C10001	rdac:C10001
+rdawo:P10224  entedit:status	"object property" ; rdfs:label "er innlemmelse av"@no . #is absorption of work
 
-rdawo:P10121	entedit:status	"object property" ; rdfs:label "er verk analysert i "@no . #	is work analysed in	rdac:C10001	rdac:C10001
-rdawo:P10140	entedit:status	"object property" ; rdfs:label "er analyse av verk"@no . #	is analysis of work	rdac:C10001	rdac:C10001
+rdawo:P10121	entedit:status	"object property" ; rdfs:label "er analysert i "@no . #	is work analysed in	rdac:C10001	rdac:C10001
+rdawo:P10140	entedit:status	"object property" ; rdfs:label "er analyse av"@no . #	is analysis of work	rdac:C10001	rdac:C10001
 
-rdawo:P10123	entedit:status	"object property" ; rdfs:label "har bilag (verk)"@no . #	has appendix work	rdac:C10001	rdac:C10001
-rdawo:P10151	entedit:status	"object property" ; rdfs:label "er bilag til verk"@no . #	is appendix to work	rdac:C10001	rdac:C10001
+rdawo:P10123	entedit:status	"object property" ; rdfs:label "har bilag"@no . #	has appendix work	rdac:C10001	rdac:C10001
+rdawo:P10151	entedit:status	"object property" ; rdfs:label "er bilag til"@no . #	is appendix to work	rdac:C10001	rdac:C10001
 
-rdawo:P10146	entedit:status	"object property" ; rdfs:label "er delvis innlemmet i verk"@no . #	is absorbed in part by work	rdac:C10001	rdac:C10001
+rdawo:P10146	entedit:status	"object property" ; rdfs:label "er delvis innlemmet i"@no . #	is absorbed in part by work	rdac:C10001	rdac:C10001
 
-rdawo:P10188	entedit:status	"object property" ; rdfs:label "er indeks for verk"@no . #	is index to work (Deprecated)	rdac:C10001	rdac:C10001
-rdawo:P10158	entedit:status	"object property" ; rdfs:label "har indeks (verk)"@no . #	has index work (Deprecated)	rdac:C10001	rdac:C10001
+rdawo:P10188	entedit:status	"object property" ; rdfs:label "er indeks for"@no . #	is index to work (Deprecated)	rdac:C10001	rdac:C10001
+rdawo:P10158	entedit:status	"object property" ; rdfs:label "har indeks"@no . #	has index work (Deprecated)	rdac:C10001	rdac:C10001
 
-rdawo:P10125	entedit:status	"object property" ; rdfs:label "er forkortelse av verk"@no . #	is abridgement of work	rdac:C10001	rdac:C10001
-rdawo:P10167	entedit:status	"object property" ; rdfs:label "er forkortet som verk"@no . #	is abridged as work	rdac:C10001	rdac:C10001
+rdawo:P10125	entedit:status	"object property" ; rdfs:label "er forkortelse av"@no . #	is abridgement of work	rdac:C10001	rdac:C10001
+rdawo:P10167	entedit:status	"object property" ; rdfs:label "er forkortet som"@no . #	is abridged as work	rdac:C10001	rdac:C10001
 
 rdawo:P10139	entedit:status	"object property" ; rdfs:label "er resymé av verk"@no . #	is digest of work	rdac:C10001	rdac:C10001
 rdawo:P10171	entedit:status	"object property" ; rdfs:label "har resymé"@no . #	is digested as work	rdac:C10001	rdac:C10001
@@ -685,7 +685,7 @@ rdawo:P10163	entedit:status	"object property" ; rdfs:label "har fjernsynsmanus (
 rdawo:P10174	entedit:status	"object property" ; rdfs:label "er manus for fjernsynsprogram (verk)"@no . #	is screenplay for television program work	rdac:C10001	rdac:C10001
 
 rdawo:P10164	entedit:status	"object property" ; rdfs:label "har videomanus"@no . #	has video screenplay work	rdac:C10001	rdac:C10001
-rdawo:P10164  entedit:status	"object property" ; rdfs:label "er videomanus for"@no . #	is video screenplay for work	rdac:C10001	rdac:C10001
+rdawo:P10175  entedit:status	"object property" ; rdfs:label "er videomanus for"@no . #	is video screenplay for work	rdac:C10001	rdac:C10001
 
 rdawo:P10290	entedit:status	"object property" ; rdfs:label "inspirert av"@no . #	is inspired by	rdac:C10001	rdac:C10001
 rdawo:P10291	entedit:status	"object property" ; rdfs:label "inspirasjon for"@no . #	is inspiration for	rdac:C10001	rdac:C10001
