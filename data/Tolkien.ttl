@@ -724,7 +724,7 @@
         <http://viaf.org/viaf/59153962> ;
     rdawo:P10257 <http://www.wikidata.org/entity/Q15228> ;
     rdaxd:P00018 "http://viaf.org/viaf/9014152502908610800009" ;
-    rdaxd:P00029 "Non-fiction" .
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/494> .
 
 <http://viaf.org/viaf/9349441> a rdac:C10004 ;
     rdfs:label "Agøy, Nils Ivar" ;
@@ -746,8 +746,7 @@
     rdaed:P20316 "The letters of J.R.R. Tolkien" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/95218067/letters> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/95218067/letters> .
 
 <http://viaf.org/viaf/95218067/poemsandsongs> a rdac:C10001 ;
     rdfs:label "Poems and songs of middle earth (Tolkien, J. R. R.)" ;
@@ -762,8 +761,7 @@
     rdaed:P20316 "Poems and songs of middle earth" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/95218067/poemsandsongs> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/95218067/poemsandsongs> .
 
 <http://viaf.org/viaf/95218067/thelostroad> a rdac:C10001 ;
     rdfs:label "The lost road and other writings (Tolkien, J. R. R.)" ;
@@ -799,11 +797,10 @@
         "The fall of Númenor and other tales from the Second Age of Middle-Earth" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://www.wikidata.org/entity/Q112731328> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q112731328> .
 
 <http://www.wikidata.org/entity/Q15228/exp/nob/1020/65245833> a rdac:C10006 ;
-    rdfs:label "Ringenes herre (Tolkien, J.R.R.)" ;
+    rdfs:label "Ringenes herre (Tolkien, J. R. R.)" ;
     rdaed:P20071 "Ringens brorskap -- To tårn -- Atter en konge" ;
     rdaed:P20315 "Ringenes herre" ;
     rdaed:P20316 "Lord of the rings" ;
@@ -814,11 +811,10 @@
     rdaeo:P20145 <http://www.wikidata.org/entity/Q208002/exp/nob/1020/65245833>,
         <http://www.wikidata.org/entity/Q332388/exp/nob/1020/65245833>,
         <http://www.wikidata.org/entity/Q332581/exp/nob/1020/65245833> ;
-    rdaeo:P20231 <http://www.wikidata.org/entity/Q15228> ;
-    rdaxd:P00029 "parent" .
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q15228> .
 
 <http://www.wikidata.org/entity/Q208002/exp/nob/1013/24701800/65245833> a rdac:C10006 ;
-    rdfs:label "Ringens brorskap (Tolkien, J.R.R.)" ;
+    rdfs:label "Ringens brorskap (Tolkien, J. R. R.)" ;
     rdaed:P20315 "Ringens brorskap" ;
     rdaed:P20316 "Fellowship of the ring",
         "Ringenes herre I : ringens brorskap" ;
@@ -827,11 +823,10 @@
     rdaeo:P20022 <http://viaf.org/viaf/24701800> ;
     rdaeo:P20037 <http://viaf.org/viaf/65245833> ;
     rdaeo:P20141 <http://www.wikidata.org/entity/Q208002/exp/eng/1020> ;
-    rdaeo:P20231 <http://www.wikidata.org/entity/Q208002> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q208002> .
 
 <http://www.wikidata.org/entity/Q332388/exp/nob/1013/24701800/65245833> a rdac:C10006 ;
-    rdfs:label "To tårn (Tolkien, J.R.R.)" ;
+    rdfs:label "To tårn (Tolkien, J. R. R.)" ;
     rdaed:P20315 "To tårn" ;
     rdaed:P20316 "Ringenes herre II : to tårn",
         "Two towers" ;
@@ -840,11 +835,10 @@
     rdaeo:P20022 <http://viaf.org/viaf/24701800> ;
     rdaeo:P20037 <http://viaf.org/viaf/65245833> ;
     rdaeo:P20141 <http://www.wikidata.org/entity/Q332388/exp/eng/1020> ;
-    rdaeo:P20231 <http://www.wikidata.org/entity/Q332388> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q332388> .
 
 <http://www.wikidata.org/entity/Q332581/exp/nob/1013/24701800/65245833> a rdac:C10006 ;
-    rdfs:label "Atter en konge (Tolkien, J.R.R.)" ;
+    rdfs:label "Atter en konge (Tolkien, J. R. R.)" ;
     rdaed:P20315 "Atter en konge" ;
     rdaed:P20316 "Return of the king",
         "Ringenes herre III : atter en konge" ;
@@ -853,8 +847,7 @@
     rdaeo:P20022 <http://viaf.org/viaf/24701800> ;
     rdaeo:P20037 <http://viaf.org/viaf/65245833> ;
     rdaeo:P20141 <http://www.wikidata.org/entity/Q332581/exp/eng/1020> ;
-    rdaeo:P20231 <http://www.wikidata.org/entity/Q332581> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q332581> .
 
 <http://www.wikidata.org/entity/Q503325> a rdac:C10001 ;
     rdfs:label "The war of the ring (Tolkien, J. R. R.)" ;
@@ -864,7 +857,7 @@
     rdawo:P10257 <http://www.wikidata.org/entity/Q15228> ;
     rdawo:P10393 <http://viaf.org/viaf/12315790> ;
     rdaxd:P00018 "http://www.wikidata.org/entity/Q503325" ;
-    rdaxd:P00029 "Novel" .
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> .
 
 <http://www.wikidata.org/entity/Q503325/exp/eng/1020> a rdac:C10006 ;
     rdfs:label "The war of the ring (Tolkien, J. R. R.)" ;
@@ -872,8 +865,7 @@
     rdaed:P20316 "The war of the ring" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://www.wikidata.org/entity/Q503325> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q503325> .
 
 <http://www.wikidata.org/entity/Q74287/exp/eng/1014/1020/102370266/85751968> a rdac:C10006 ;
     rdfs:label "The hobbit, or there and back again (Tolkien, J. R. R.)" ;
@@ -885,22 +877,20 @@
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q74287> ;
     rdaeo:P20330 <http://viaf.org/viaf/102370266>,
-        <http://viaf.org/viaf/85751968> ;
-    rdaxd:P00029 "standalone" .
+        <http://viaf.org/viaf/85751968> .
 
 <http://www.wikidata.org/entity/Q74287/exp/nno/1020/267471594> a rdac:C10006 ;
-    rdfs:label "Hobbiten, eller Ditut og attende (Tolkien, J.R.R.)" ;
+    rdfs:label "Hobbiten, eller Ditut og attende (Tolkien, J. R. R.)" ;
     rdaed:P20315 "Hobbiten, eller Ditut og attende" ;
     rdaed:P20316 "The hobbit, or there and back again" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nno> ;
     rdaeo:P20037 <http://viaf.org/viaf/267471594> ;
     rdaeo:P20141 <http://www.wikidata.org/entity/Q74287/exp/eng/1020> ;
-    rdaeo:P20231 <http://www.wikidata.org/entity/Q74287> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q74287> .
 
 <http://www.wikidata.org/entity/Q74287/exp/nob/1013/1169314213724530007/224621493/aasenfinn> a rdac:C10006 ;
-    rdfs:label "Hobbiten (Tolkien, J.R.R.)" ;
+    rdfs:label "Hobbiten (Tolkien, J. R. R.)" ;
     rdaed:P20315 "Hobbiten" ;
     rdaed:P20316 "The hobbit, or there and back again" ;
     rdaeo:P20001 rdaco:1013 ;
@@ -909,19 +899,17 @@
     rdaeo:P20037 <http://viaf.org/viaf/1169314213724530007>,
         <http://www.example.com/aasenfinn> ;
     rdaeo:P20141 <http://www.wikidata.org/entity/Q74287/exp/eng/1020> ;
-    rdaeo:P20231 <http://www.wikidata.org/entity/Q74287> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q74287> .
 
 <http://www.wikidata.org/entity/Q74287/exp/nob/1020/9349441> a rdac:C10006 ;
-    rdfs:label "Hobbiten, eller Fram og tilbake igjen (Tolkien, J.R.R.)" ;
+    rdfs:label "Hobbiten, eller Fram og tilbake igjen (Tolkien, J. R. R.)" ;
     rdaed:P20315 "Hobbiten, eller Fram og tilbake igjen" ;
     rdaed:P20316 "The hobbit, or there and back again" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20037 <http://viaf.org/viaf/9349441> ;
     rdaeo:P20141 <http://www.wikidata.org/entity/Q74287/exp/eng/1020> ;
-    rdaeo:P20231 <http://www.wikidata.org/entity/Q74287> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q74287> .
 
 <https://isni.org/isni/0000000121480873> a rdac:C10004 ;
     rdfs:label "Lee, Alan" ;
@@ -941,44 +929,37 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/183065413> ;
-    rdaeo:P20330 <http://viaf.org/viaf/12315790> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20330 <http://viaf.org/viaf/12315790> .
 
 <http://www.wikidata.org/entity/Q208002/exp/nob/1020/65245833> a rdac:C10006 ;
-    rdfs:label "Fellowship of the ring (Tolkien, J. R. R.)",
-        "Ringens brorskap (Tolkien, J. R. R.)" ;
+    rdfs:label "Ringens brorskap (Tolkien, J. R. R.)" ;
     rdaed:P20315 "Ringens brorskap" ;
     rdaed:P20316 "Fellowship of the ring" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20037 <http://viaf.org/viaf/65245833> ;
     rdaeo:P20141 <http://www.wikidata.org/entity/Q208002/exp/eng/1020> ;
-    rdaeo:P20231 <http://www.wikidata.org/entity/Q208002> ;
-    rdaxd:P00029 "part" .
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q208002> .
 
 <http://www.wikidata.org/entity/Q332388/exp/nob/1020/65245833> a rdac:C10006 ;
-    rdfs:label "To tårn (Tolkien, J. R. R.)",
-        "Two towers (Tolkien, J. R. R.)" ;
+    rdfs:label "To tårn (Tolkien, J. R. R.)" ;
     rdaed:P20315 "To tårn" ;
     rdaed:P20316 "Two towers" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20037 <http://viaf.org/viaf/65245833> ;
     rdaeo:P20141 <http://www.wikidata.org/entity/Q332388/exp/eng/1020> ;
-    rdaeo:P20231 <http://www.wikidata.org/entity/Q332388> ;
-    rdaxd:P00029 "part" .
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q332388> .
 
 <http://www.wikidata.org/entity/Q332581/exp/nob/1020/65245833> a rdac:C10006 ;
-    rdfs:label "Atter en konge (Tolkien, J. R. R.)",
-        "Return of the king (Tolkien, J. R. R.)" ;
+    rdfs:label "Atter en konge (Tolkien, J. R. R.)" ;
     rdaed:P20315 "Atter en konge" ;
     rdaed:P20316 "Return of the king" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20037 <http://viaf.org/viaf/65245833> ;
     rdaeo:P20141 <http://www.wikidata.org/entity/Q332581/exp/eng/1020> ;
-    rdaeo:P20231 <http://www.wikidata.org/entity/Q332581> ;
-    rdaxd:P00029 "part" .
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q332581> .
 
 <https://isni.org/isni/000000008178197X> a rdac:C10004 ;
     rdfs:label "Sibley, Brian" ;
@@ -992,16 +973,13 @@
     rdaxd:P00018 "http://viaf.org/viaf/24701800" .
 
 <http://viaf.org/viaf/9014152502908610800009/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Lord of the rings : a reader's companion (Hammond, Wayne G.)",
-        "The Lord of the rings (Hammond, Wayne G.)" ;
+    rdfs:label "Lord of the rings : a reader's companion (Hammond, Wayne G.)" ;
     rdaed:P20315 "Lord of the rings : a reader's companion" ;
     rdaed:P20316 "Lord of the rings : a reader's companion",
         "The Lord of the rings : a reader's companion" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/9014152502908610800009> ;
-    rdaxd:P00029 "part",
-        "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/9014152502908610800009> .
 
 <http://viaf.org/viaf/219968903/exp/eng/1020> a rdac:C10006 ;
     rdfs:label "Unfinished tales of Númenor and Middle-earth (Tolkien, J. R. R.)" ;
@@ -1011,8 +989,7 @@
         "Unfinished tales of Númenor and Middle-earth" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/219968903> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/219968903> .
 
 <http://www.wikidata.org/entity/Q15228> a rdac:C10001 ;
     rdfs:label "Lord of the rings (Tolkien, J. R. R.)" ;
@@ -1023,18 +1000,16 @@
         <http://www.wikidata.org/entity/Q332388>,
         <http://www.wikidata.org/entity/Q332581> ;
     rdaxd:P00018 "http://www.wikidata.org/entity/Q15228" ;
-    rdaxd:P00029 "Collection",
-        "Novel" .
+    entedit:P02 <http://oslomet.no/abi/vocab#T03>, <https://id.nb.no/vocabulary/ntsf/258> .
 
 <http://www.wikidata.org/entity/Q208002> a rdac:C10001 ;
-    rdfs:label "Fellowship of the ring (Tolkien, J. R. R.)",
-        "The Fellowship of the ring (Tolkien, J. R. R.)" ;
+    rdfs:label "Fellowship of the ring (Tolkien, J. R. R.)" ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Fellowship of the ring",
-        "The Fellowship of the ring" ;
+    rdawd:P10223 "Fellowship of the ring" ;
+    rdawd:P10086 "The Fellowship of the ring" ;
     rdawo:P10061 <http://viaf.org/viaf/95218067> ;
     rdaxd:P00018 "http://www.wikidata.org/entity/Q208002" ;
-    rdaxd:P00029 "Novel" .
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> .
 
 <http://www.wikidata.org/entity/Q332388> a rdac:C10001 ;
     rdfs:label "Two towers (Tolkien, J. R. R.)" ;
@@ -1042,7 +1017,7 @@
     rdawd:P10223 "Two towers" ;
     rdawo:P10061 <http://viaf.org/viaf/95218067> ;
     rdaxd:P00018 "http://www.wikidata.org/entity/Q332388" ;
-    rdaxd:P00029 "Novel" .
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> .
 
 <http://www.wikidata.org/entity/Q332581> a rdac:C10001 ;
     rdfs:label "Return of the king (Tolkien, J. R. R.)" ;
@@ -1050,7 +1025,7 @@
     rdawd:P10223 "Return of the king" ;
     rdawo:P10061 <http://viaf.org/viaf/95218067> ;
     rdaxd:P00018 "http://www.wikidata.org/entity/Q332581" ;
-    rdaxd:P00029 "Novel" .
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> .
 
 <http://www.wikidata.org/entity/Q74287> a rdac:C10001 ;
     rdfs:label "The hobbit, or there and back again (Tolkien, J. R. R.)" ;
@@ -1058,19 +1033,16 @@
     rdawd:P10223 "The hobbit, or there and back again" ;
     rdawo:P10061 <http://viaf.org/viaf/95218067> ;
     rdaxd:P00018 "http://www.wikidata.org/entity/Q74287" ;
-    rdaxd:P00029 "Novel" .
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> .
 
 <http://www.wikidata.org/entity/Q74287/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "The Hobbit",
-        "The hobbit, or there and back again (Tolkien, J. R. R.)" ;
+    rdfs:label "The hobbit, or there and back again (Tolkien, J. R. R.)" ;
     rdaed:P20315 "The hobbit, or there and back again" ;
     rdaed:P20316 "The hobbit, or there and back again" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q74287> ;
-    rdaxd:P00018 "http://www.wikidata.org/entity/Q74287/exp/eng/1020" ;
-    rdaxd:P00029 "part",
-        "standalone" .
+    rdaxd:P00018 "http://www.wikidata.org/entity/Q74287/exp/eng/1020" .
 
 <http://viaf.org/viaf/65245833> a rdac:C10004 ;
     rdfs:label "Høverstad, Torstein Bugge" ;
@@ -1078,9 +1050,7 @@
     rdaxd:P00018 "http://viaf.org/viaf/65245833" .
 
 <http://www.wikidata.org/entity/Q15228/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Lord of the rings (Tolkien, J. R. R.)",
-        "The lord of the rings",
-        "The lord of the rings (Tolkien, J. R. R.)" ;
+    rdfs:label "Lord of the rings (Tolkien, J. R. R.)" ;
     rdaed:P20071 "The fellowship of the ring -- The two towers -- The return of the king." ;
     rdaed:P20315 "Lord of the rings" ;
     rdaed:P20316 "Lord of the rings",
@@ -1091,9 +1061,7 @@
         <http://www.wikidata.org/entity/Q332388/exp/eng/1020>,
         <http://www.wikidata.org/entity/Q332581/exp/eng/1020> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q15228> ;
-    rdaxd:P00018 "http://www.wikidata.org/entity/Q15228/exp/eng/1020" ;
-    rdaxd:P00029 "parent",
-        "part" .
+    rdaxd:P00018 "http://www.wikidata.org/entity/Q15228/exp/eng/1020" .
 
 <http://viaf.org/viaf/12315790> a rdac:C10004 ;
     rdfs:label "Tolkien, Christopher" ;
@@ -1101,18 +1069,14 @@
     rdaxd:P00018 "http://viaf.org/viaf/12315790" .
 
 <http://www.wikidata.org/entity/Q332388/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "The two towers",
-        "Two towers",
-        "Two towers (Tolkien, J. R. R.)" ;
+    rdfs:label "Two towers (Tolkien, J. R. R.)" ;
     rdaed:P20315 "Two towers" ;
     rdaed:P20316 "The two towers : being the second part of The lord of the rings",
         "Two towers" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q332388> ;
-    rdaxd:P00018 "http://www.wikidata.org/entity/Q332388/exp/eng/1020" ;
-    rdaxd:P00029 "part",
-        "standalone" .
+    rdaxd:P00018 "http://www.wikidata.org/entity/Q332388/exp/eng/1020" .
 
 <http://viaf.org/viaf/95218067> a rdac:C10004 ;
     rdfs:label "Tolkien, J. R. R." ;
@@ -1121,10 +1085,7 @@
     rdaxd:P00018 "http://viaf.org/viaf/95218067" .
 
 <http://www.wikidata.org/entity/Q208002/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Fellowship of the ring",
-        "Fellowship of the ring (Tolkien, J. R. R.)",
-        "The Fellowship of the ring (Tolkien, J. R. R.)",
-        "The fellowship of the ring" ;
+    rdfs:label "Fellowship of the ring (Tolkien, J. R. R.)" ;
     rdaed:P20315 "Fellowship of the ring" ;
     rdaed:P20316 "Fellowship of the ring",
         "The Fellowship of the ring",
@@ -1132,22 +1093,15 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q208002> ;
-    rdaxd:P00018 "http://www.wikidata.org/entity/Q208002/exp/eng/1020" ;
-    rdaxd:P00029 "part",
-        "standalone" .
+    rdaxd:P00018 "http://www.wikidata.org/entity/Q208002/exp/eng/1020" .
 
 <http://www.wikidata.org/entity/Q332581/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Return of the king",
-        "Return of the king (Tolkien, J. R. R.)",
-        "The return of the king",
-        "The return of the king (Tolkien, J. R. R.)" ;
+    rdfs:label "Return of the king (Tolkien, J. R. R.)" ;
     rdaed:P20315 "Return of the king" ;
     rdaed:P20316 "Return of the king",
         "The return of the king : being the third part of The lord of the rings" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q332581> ;
-    rdaxd:P00018 "http://www.wikidata.org/entity/Q332581/exp/eng/1020" ;
-    rdaxd:P00029 "part",
-        "standalone" .
+    rdaxd:P00018 "http://www.wikidata.org/entity/Q332581/exp/eng/1020" .
 

@@ -4873,8 +4873,7 @@
         "Lord of the flies : Teacher's guide. / Von Silke Horst" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20231 <http://example.org/names/horstsilke/lordoftheflies> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://example.org/names/horstsilke/lordoftheflies> .
 
 <http://example.org/names/leipeursula> a rdac:C10004 ;
     rdfs:label "Leipe, Ursula" ;
@@ -4895,8 +4894,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/47321622> ;
-    rdaeo:P20231 <http://oslomet.workid.no/wg/01> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://oslomet.workid.no/wg/01> .
 
 <http://oslomet.workid.no/wg/01/exp/spa/1020/53270061> a rdac:C10006 ;
     rdfs:label "Diario egipcio (Golding, William)" ;
@@ -4905,8 +4903,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/53270061> ;
-    rdaeo:P20231 <http://oslomet.workid.no/wg/01> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://oslomet.workid.no/wg/01> .
 
 <http://oslomet.workid.no/wg/05/exp/spa/1020/fernndezjavier> a rdac:C10006 ;
     rdfs:label "La mariposa de latón (Golding, William)" ;
@@ -4915,8 +4912,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://example.org/names/fernndezjavier> ;
-    rdaeo:P20231 <http://oslomet.workid.no/wg/05> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://oslomet.workid.no/wg/05> .
 
 <http://viaf.org/viaf/10057685> a rdac:C10004 ;
     rdfs:label "Broch, Nicolai Cleve" ;
@@ -4955,8 +4951,7 @@
     rdaed:P20316 "Brodie's notes on William Golding's Lord of the flies" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/110244899/brodiesnotesonwilliamgoldingslordoftheflies> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/110244899/brodiesnotesonwilliamgoldingslordoftheflies> .
 
 <http://viaf.org/viaf/11361452> a rdac:C10004 ;
     rdfs:label "Bosch, Andrés" ;
@@ -4991,8 +4986,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/116752343> ;
-    rdaeo:P20231 <http://viaf.org/viaf/1180145424574586830081> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/1180145424574586830081> .
 
 <http://viaf.org/viaf/1180145424574586830081/exp/ger/1020/heldwolfgang> a rdac:C10006 ;
     rdfs:label "Mit doppelter Zunge (Golding, William)" ;
@@ -5002,8 +4996,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://example.org/names/heldwolfgang> ;
-    rdaeo:P20231 <http://viaf.org/viaf/1180145424574586830081> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/1180145424574586830081> .
 
 <http://viaf.org/viaf/1180145424574586830081/exp/spa/1020> a rdac:C10006 ;
     rdfs:label "La lengua oculta (Golding, William)" ;
@@ -5012,8 +5005,7 @@
         "The double tongue" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20231 <http://viaf.org/viaf/1180145424574586830081> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/1180145424574586830081> .
 
 <http://viaf.org/viaf/119144648592107423604/exp/ger/1020/79155403> a rdac:C10006 ;
     rdfs:label "Herr der Fliegen (Golding, William)" ;
@@ -5023,8 +5015,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/79155403> ;
-    rdaeo:P20231 <http://viaf.org/viaf/119144648592107423604> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/119144648592107423604> .
 
 <http://viaf.org/viaf/119144648592107423604/exp/nob/nor/1013/10057685/74661518> a rdac:C10006 ;
     rdfs:label "Fluenes herre (Golding, William)" ;
@@ -5035,8 +5026,7 @@
         <http://id.loc.gov/vocabulary/iso639-2/nor> ;
     rdaeo:P20022 <http://viaf.org/viaf/10057685> ;
     rdaeo:P20037 <http://viaf.org/viaf/74661518> ;
-    rdaeo:P20231 <http://viaf.org/viaf/119144648592107423604> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/119144648592107423604> .
 
 <http://viaf.org/viaf/174553895/exp/nob/nor/1020/226311641> a rdac:C10006 ;
     rdfs:label "Det ulmer en ild (Golding, William)" ;
@@ -5046,8 +5036,7 @@
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob>,
         <http://id.loc.gov/vocabulary/iso639-2/nor> ;
     rdaeo:P20037 <http://viaf.org/viaf/226311641> ;
-    rdaeo:P20231 <http://viaf.org/viaf/174553895> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/174553895> .
 
 <http://viaf.org/viaf/17472763> a rdac:C10004 ;
     rdfs:label "González, Jorge" ;
@@ -5062,8 +5051,7 @@
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob>,
         <http://id.loc.gov/vocabulary/iso639-2/nor> ;
     rdaeo:P20037 <http://viaf.org/viaf/226311641> ;
-    rdaeo:P20231 <http://viaf.org/viaf/176165653> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/176165653> .
 
 <http://viaf.org/viaf/176165653/exp/spa/1020> a rdac:C10006 ;
     rdfs:label "Ritos de paso (Golding, William)" ;
@@ -5071,8 +5059,7 @@
     rdaed:P20316 "Rites of passage" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20231 <http://viaf.org/viaf/176165653> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/176165653> .
 
 <http://viaf.org/viaf/176165653/exp/spa/1020/19389226> a rdac:C10006 ;
     rdfs:label "Ritos de paso (Golding, William)" ;
@@ -5081,8 +5068,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/19389226> ;
-    rdaeo:P20231 <http://viaf.org/viaf/176165653> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/176165653> .
 
 <http://viaf.org/viaf/178994871/exp/spa/1020> a rdac:C10006 ;
     rdfs:label "La construcción de la torre (Golding, William)" ;
@@ -5090,8 +5076,7 @@
     rdaed:P20316 "The spire" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20231 <http://viaf.org/viaf/178994871> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/178994871> .
 
 <http://viaf.org/viaf/178994871/exp/spa/1020/87945378> a rdac:C10006 ;
     rdfs:label "La construcción de la torre (Golding, William)" ;
@@ -5100,8 +5085,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/87945378> ;
-    rdaeo:P20231 <http://viaf.org/viaf/178994871> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/178994871> .
 
 <http://viaf.org/viaf/18234247> a rdac:C10004 ;
     rdfs:label "Echávarri, Luis" ;
@@ -5116,8 +5100,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob>,
         <http://id.loc.gov/vocabulary/iso639-2/nor> ;
-    rdaeo:P20231 <http://viaf.org/viaf/184334172> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/184334172> .
 
 <http://viaf.org/viaf/187146251/exp/ger/1020/311338181> a rdac:C10006 ;
     rdfs:label "Die Eingepferchten (Golding, William)" ;
@@ -5127,8 +5110,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/311338181> ;
-    rdaeo:P20231 <http://viaf.org/viaf/187146251> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/187146251> .
 
 <http://viaf.org/viaf/187146251/exp/nob/nor/1020/226311641> a rdac:C10006 ;
     rdfs:label "Nærkamp (Golding, William)" ;
@@ -5138,8 +5120,7 @@
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob>,
         <http://id.loc.gov/vocabulary/iso639-2/nor> ;
     rdaeo:P20037 <http://viaf.org/viaf/226311641> ;
-    rdaeo:P20231 <http://viaf.org/viaf/187146251> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/187146251> .
 
 <http://viaf.org/viaf/188302088/exp/nob/nor/1020/300692805> a rdac:C10006 ;
     rdfs:label "Papirmennene (Golding, William)" ;
@@ -5149,8 +5130,7 @@
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob>,
         <http://id.loc.gov/vocabulary/iso639-2/nor> ;
     rdaeo:P20037 <http://viaf.org/viaf/300692805> ;
-    rdaeo:P20231 <http://viaf.org/viaf/188302088> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/188302088> .
 
 <http://viaf.org/viaf/18830799> a rdac:C10004 ;
     rdfs:label "Serrat Mulà, Carles" ;
@@ -5174,15 +5154,11 @@
     rdaxd:P00018 "http://viaf.org/viaf/198163223" .
 
 <http://viaf.org/viaf/198163223/exp/ger/1020> a rdac:C10006 ;
-    rdfs:label "Route des Flandres (Simon, Claude)",
-        "Strasse in Flandern (Simon, Claude)" ;
+    rdfs:label "Strasse in Flandern (Simon, Claude)" ;
     rdaed:P20315 "Strasse in Flandern" ;
-    rdaed:P20316 "Route des Flandres" ;
     rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger>,
-        "ger" ;
-    rdaeo:P20231 <http://viaf.org/viaf/198163223> ;
-    rdaxd:P00029 "part" .
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger>;
+    rdaeo:P20231 <http://viaf.org/viaf/198163223> .
 
 <http://viaf.org/viaf/211743501/exp/ger/1020> a rdac:C10006 ;
     rdfs:label "Das Feuer der Finsternis (Golding, William)" ;
@@ -5191,8 +5167,7 @@
         "Das Feuer der Finsternis : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20231 <http://viaf.org/viaf/211743501> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/211743501> .
 
 <http://viaf.org/viaf/211743501/exp/nob/nor/1020/60552805> a rdac:C10006 ;
     rdfs:label "Synlig mørke (Golding, William)" ;
@@ -5202,8 +5177,7 @@
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob>,
         <http://id.loc.gov/vocabulary/iso639-2/nor> ;
     rdaeo:P20037 <http://viaf.org/viaf/60552805> ;
-    rdaeo:P20231 <http://viaf.org/viaf/211743501> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/211743501> .
 
 <http://viaf.org/viaf/214944831> a rdac:C10004 ;
     rdfs:label "Self, David" ;
@@ -5226,8 +5200,7 @@
     rdaed:P20316 "Lord of the flies, William Golding" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/214944831/lordoftheflieswilliamgolding> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/214944831/lordoftheflieswilliamgolding> .
 
 <http://viaf.org/viaf/217036112/exp/ger/1020> a rdac:C10006 ;
     rdfs:label "Die Erben (Golding, William)" ;
@@ -5236,8 +5209,7 @@
         "The Inheritors" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20231 <http://viaf.org/viaf/217036112> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/217036112> .
 
 <http://viaf.org/viaf/217036112/exp/nob/nor/1020/64110679/ryumnils> a rdac:C10006 ;
     rdfs:label "Arvtakerne (Golding, William)" ;
@@ -5248,8 +5220,7 @@
         <http://id.loc.gov/vocabulary/iso639-2/nor> ;
     rdaeo:P20037 <http://viaf.org/viaf/64110679>,
         <http://www.example.org/names/ryumnils> ;
-    rdaeo:P20231 <http://viaf.org/viaf/217036112> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/217036112> .
 
 <http://viaf.org/viaf/217036112/exp/spa/1020> a rdac:C10006 ;
     rdfs:label "Los herederos (Golding, William)" ;
@@ -5257,8 +5228,7 @@
     rdaed:P20316 "Inheritors" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20231 <http://viaf.org/viaf/217036112> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/217036112> .
 
 <http://viaf.org/viaf/217036112/exp/spa/1020/18234247> a rdac:C10006 ;
     rdfs:label "Los herederos (Golding, William)" ;
@@ -5267,8 +5237,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/18234247> ;
-    rdaeo:P20231 <http://viaf.org/viaf/217036112> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/217036112> .
 
 <http://viaf.org/viaf/218116512/exp/spa/1020/47993680> a rdac:C10006 ;
     rdfs:label "Caída inexorable (Golding, William)" ;
@@ -5278,8 +5247,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/47993680> ;
-    rdaeo:P20231 <http://viaf.org/viaf/218116512> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/218116512> .
 
 <http://viaf.org/viaf/24835909> a rdac:C10004 ;
     rdfs:label "McCrum, Robert" ;
@@ -5312,8 +5280,7 @@
     rdaed:P20316 "William Golding, Herr der Fliegen, Die Koralleninsel (R. M. Ballantyne) / Analysen und Reflexionen. Interpretationen und Anmerkungen" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20231 <http://viaf.org/viaf/262356343/williamgoldingherrderfliegendiekoralleninselrmballantyne> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/262356343/williamgoldingherrderfliegendiekoralleninselrmballantyne> .
 
 <http://viaf.org/viaf/262356343/williamgoldingherrderfliegenlordoftheflies> a rdac:C10001 ;
     rdfs:label "William Golding, Herr der Fliegen (Lord of the flies) (Poppe, Reiner)" ;
@@ -5330,8 +5297,7 @@
     rdaed:P20316 "William Golding, Herr der Fliegen (Lord of the flies)" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20231 <http://viaf.org/viaf/262356343/williamgoldingherrderfliegenlordoftheflies> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/262356343/williamgoldingherrderfliegenlordoftheflies> .
 
 <http://viaf.org/viaf/265448232> a rdac:C10004 ;
     rdfs:label "Sumner, Rosemary" ;
@@ -5339,7 +5305,7 @@
     rdaxd:P00018 "http://viaf.org/viaf/265448232" .
 
 <http://viaf.org/viaf/265448232/thespirebywilliamgolding> a rdac:C10001 ;
-    rdfs:label "The spire by William Golding (Sumner, Rosemary.)" ;
+    rdfs:label "The spire by William Golding (Sumner, Rosemary)" ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
     rdawd:P10223 "The spire by William Golding" ;
     rdawo:P10061 <http://viaf.org/viaf/265448232> ;
@@ -5348,13 +5314,12 @@
     rdaxd:P00018 "http://viaf.org/viaf/265448232/thespirebywilliamgolding" .
 
 <http://viaf.org/viaf/265448232/thespirebywilliamgolding/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "The spire by William Golding (Sumner, Rosemary.)" ;
+    rdfs:label "The spire by William Golding (Sumner, Rosemary)" ;
     rdaed:P20315 "The spire by William Golding" ;
     rdaed:P20316 "The spire by William Golding" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/265448232/thespirebywilliamgolding> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/265448232/thespirebywilliamgolding> .
 
 <http://viaf.org/viaf/26792887> a rdac:C10004 ;
     rdfs:label "Bunnell, W. S." ;
@@ -5377,8 +5342,7 @@
     rdaed:P20316 "Notes on William Golding's The spire" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/26792887/notesonwilliamgoldingsthespire> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/26792887/notesonwilliamgoldingsthespire> .
 
 <http://viaf.org/viaf/268149196258474790407> a rdac:C10004 ;
     rdfs:label "Mullan, John" ;
@@ -5401,8 +5365,7 @@
     rdaed:P20316 "The Spire" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/27170695/thespire> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/27170695/thespire> .
 
 <http://viaf.org/viaf/27170695/williamgoldingtheinheritorsnotes> a rdac:C10001 ;
     rdfs:label "William Golding, The inheritors : notes (Spear, Hilda D.)" ;
@@ -5419,8 +5382,7 @@
     rdaed:P20316 "William Golding, The inheritors : notes" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/27170695/williamgoldingtheinheritorsnotes> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/27170695/williamgoldingtheinheritorsnotes> .
 
 <http://viaf.org/viaf/282585329> a rdac:C10004 ;
     rdfs:label "Keller, Rolf Heinrich" ;
@@ -5428,7 +5390,7 @@
     rdaxd:P00018 "http://viaf.org/viaf/282585329" .
 
 <http://viaf.org/viaf/282585329/thephilosophyofwilliamgolding> a rdac:C10001 ;
-    rdfs:label "The philosophy of William Golding (Keller, Rolf Heinrich.)" ;
+    rdfs:label "The philosophy of William Golding (Keller, Rolf Heinrich)" ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
     rdawd:P10223 "The philosophy of William Golding" ;
     rdawo:P10061 <http://viaf.org/viaf/282585329> ;
@@ -5436,13 +5398,12 @@
     rdaxd:P00018 "http://viaf.org/viaf/282585329/thephilosophyofwilliamgolding" .
 
 <http://viaf.org/viaf/282585329/thephilosophyofwilliamgolding/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "The philosophy of William Golding (Keller, Rolf Heinrich.)" ;
+    rdfs:label "The philosophy of William Golding (Keller, Rolf Heinrich)" ;
     rdaed:P20315 "The philosophy of William Golding : with special reference to 'Free Fall'" ;
     rdaed:P20316 "The philosophy of William Golding" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/282585329/thephilosophyofwilliamgolding> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/282585329/thephilosophyofwilliamgolding> .
 
 <http://viaf.org/viaf/300692805> a rdac:C10004 ;
     rdfs:label "Hambro, Carl" ;
@@ -5473,8 +5434,7 @@
     rdaed:P20316 "Stundenblätter Golding, \"Lord of the flies\"" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20231 <http://viaf.org/viaf/303443830/stundenblattergoldinglordoftheflies> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/303443830/stundenblattergoldinglordoftheflies> .
 
 <http://viaf.org/viaf/306134082> a rdac:C10004 ;
     rdfs:label "Machin, Roger" ;
@@ -5496,8 +5456,7 @@
     rdaed:P20316 "\"Lord of the flies\"" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20231 <http://viaf.org/viaf/306134082/lordoftheflies> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/306134082/lordoftheflies> .
 
 <http://viaf.org/viaf/307973201> a rdac:C10001 ;
     rdfs:label "The Moving Target (Golding, William)" ;
@@ -5514,8 +5473,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/303007093> ;
-    rdaeo:P20231 <http://viaf.org/viaf/309268108> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/309268108> .
 
 <http://viaf.org/viaf/310430410> a rdac:C10001 ;
     rdfs:label "Lord of the flies (Williams, Nigel)" ;
@@ -5524,7 +5482,7 @@
     rdawo:P10061 <http://viaf.org/viaf/86448713> ;
     rdawo:P10127 <http://viaf.org/viaf/119144648592107423604> ;
     rdaxd:P00018 "http://viaf.org/viaf/310430410" ;
-    rdaxd:P00029 "Play" .
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/583> .
 
 <http://viaf.org/viaf/310430410/exp/eng/1020> a rdac:C10006 ;
     rdfs:label "Lord of the flies (Williams, Nigel)" ;
@@ -5533,8 +5491,7 @@
         "William Golding's \"Lord of the flies\"" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/310430410> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/310430410> .
 
 <http://viaf.org/viaf/312341155> a rdac:C10001 ;
     rdfs:label "Deštník z Piccadilly (Seifert, Jaroslav)" ;
@@ -5543,15 +5500,12 @@
     rdaxd:P00018 "http://viaf.org/viaf/312341155" .
 
 <http://viaf.org/viaf/312341155/exp/ger/1020> a rdac:C10006 ;
-    rdfs:label "Deštník z Piccadilly (Seifert, Jaroslav)",
-        "Regenschirm vom Piccadilly (Seifert, Jaroslav)" ;
+    rdfs:label "Regenschirm vom Piccadilly (Seifert, Jaroslav)" ;
     rdaed:P20315 "Regenschirm vom Piccadilly" ;
     rdaed:P20316 "Deštník z Piccadilly" ;
     rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger>,
-        "ger" ;
-    rdaeo:P20231 <http://viaf.org/viaf/312341155> ;
-    rdaxd:P00029 "part" .
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+    rdaeo:P20231 <http://viaf.org/viaf/312341155> .
 
 <http://viaf.org/viaf/313685914> a rdac:C10001 ;
     rdfs:label "Morový sloup (Seifert, Jaroslav)" ;
@@ -5560,15 +5514,12 @@
     rdaxd:P00018 "http://viaf.org/viaf/313685914" .
 
 <http://viaf.org/viaf/313685914/exp/ger/1020> a rdac:C10006 ;
-    rdfs:label "Morový sloup (Seifert, Jaroslav)",
-        "Pestsäule (Seifert, Jaroslav)" ;
+    rdfs:label "Pestsäule (Seifert, Jaroslav)" ;
     rdaed:P20315 "Pestsäule" ;
     rdaed:P20316 "Morový sloup" ;
     rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger>,
-        "ger" ;
-    rdaeo:P20231 <http://viaf.org/viaf/313685914> ;
-    rdaxd:P00029 "part" .
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+    rdaeo:P20231 <http://viaf.org/viaf/313685914> .
 
 <http://viaf.org/viaf/31996364> a rdac:C10004 ;
     rdfs:label "Forster, E.M." ;
@@ -5581,7 +5532,7 @@
     rdaxd:P00018 "http://viaf.org/viaf/36439151" .
 
 <http://viaf.org/viaf/36439151/lordoftheflies> a rdac:C10001 ;
-    rdfs:label "Lord of the Flies - student guide (Spring, Brian.)" ;
+    rdfs:label "Lord of the Flies - student guide (Spring, Brian)" ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
     rdawd:P10223 "Lord of the Flies - student guide" ;
     rdawo:P10061 <http://viaf.org/viaf/36439151> ;
@@ -5590,13 +5541,12 @@
     rdaxd:P00018 "http://viaf.org/viaf/36439151/lordoftheflies" .
 
 <http://viaf.org/viaf/36439151/lordoftheflies/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "'Lord of the Flies' (Spring, Brian.)" ;
+    rdfs:label "'Lord of the Flies' (Spring, Brian)" ;
     rdaed:P20315 "'Lord of the Flies'" ;
     rdaed:P20316 "Lord of the Flies - student guide" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/36439151/lordoftheflies> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/36439151/lordoftheflies> .
 
 <http://viaf.org/viaf/37534075> a rdac:C10004 ;
     rdfs:label "Meitcke, W." ;
@@ -5618,8 +5568,7 @@
     rdaed:P20316 "Lektürehilfen William Golding, \"Lord of the flies\"" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20231 <http://viaf.org/viaf/37534075/lekturehilfenwilliamgoldinglordoftheflies> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/37534075/lekturehilfenwilliamgoldinglordoftheflies> .
 
 <http://viaf.org/viaf/38364518> a rdac:C10004 ;
     rdfs:label "Goligorsky, Eduardo",
@@ -5648,8 +5597,7 @@
     rdaed:P20316 "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies)" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20231 <http://viaf.org/viaf/44671175/erlauterungenzuwilliamgoldingherrderfliegenlordoftheflies> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/44671175/erlauterungenzuwilliamgoldingherrderfliegenlordoftheflies> .
 
 <http://viaf.org/viaf/47147905054079090956> a rdac:C10004 ;
     rdfs:label "Gray, David B." ;
@@ -5698,8 +5646,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/42309455> ;
-    rdaeo:P20231 <http://viaf.org/viaf/57170916/versuchubergolding> ;
-    rdaxd:P00029 "part" .
+    rdaeo:P20231 <http://viaf.org/viaf/57170916/versuchubergolding> .
 
 <http://viaf.org/viaf/581145857119122922888> a rdac:C10004 ;
     rdfs:label "Quijada, Encarna" ;
@@ -5732,23 +5679,22 @@
     rdaxd:P00018 "http://viaf.org/viaf/76363614" .
 
 <http://viaf.org/viaf/76363614/lordoftheflies> a rdac:C10001 ;
-    rdfs:label "Lord of the flies (Niven, Alastair.)" ;
+    rdfs:label "Lord of the flies (Niven, Alastair)" ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
     rdawd:P10223 "Lord of the flies" ;
     rdawo:P10061 <http://viaf.org/viaf/76363614> ;
     rdawo:P10187 <http://viaf.org/viaf/119144648592107423604> ;
     rdawo:P10319 <http://viaf.org/viaf/89500102> ;
     rdaxd:P00018 "http://viaf.org/viaf/76363614/lordoftheflies" ;
-    rdaxd:P00029 "notes" .
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/494> .
 
 <http://viaf.org/viaf/76363614/lordoftheflies/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Lord of the flies (Niven, Alastair.)" ;
+    rdfs:label "Lord of the flies (Niven, Alastair)" ;
     rdaed:P20315 "Lord of the flies : notes" ;
     rdaed:P20316 "Lord of the flies" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/76363614/lordoftheflies> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/76363614/lordoftheflies> .
 
 <http://viaf.org/viaf/79155403> a rdac:C10004 ;
     rdfs:label "Torberg, Peter" ;
@@ -5798,7 +5744,7 @@
     rdawo:P10150 <http://viaf.org/viaf/119144648592107423604> ;
     rdawo:P10319 <http://viaf.org/viaf/89500102> ;
     rdaxd:P00018 "http://viaf.org/viaf/89819722/lordoftheflieswilliamgolding" ;
-    rdaxd:P00029 "guide" .
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/494> .
 
 <http://viaf.org/viaf/89819722/lordoftheflieswilliamgolding/exp/eng/1020> a rdac:C10006 ;
     rdfs:label "Lord of the flies, William Golding (Mahoney, John)" ;
@@ -5806,8 +5752,7 @@
     rdaed:P20316 "Lord of the flies, William Golding" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/89819722/lordoftheflieswilliamgolding> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/89819722/lordoftheflieswilliamgolding> .
 
 <http://viaf.org/viaf/94686807> a rdac:C10004 ;
     rdfs:label "Wilson, Raymond" ;
@@ -5830,8 +5775,7 @@
     rdaed:P20316 "Lord of the flies by William Golding" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/94686807/lordofthefliesbywilliamgolding> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/94686807/lordofthefliesbywilliamgolding> .
 
 <http://viaf.org/viaf/97113511> a rdac:C10004 ;
     rdfs:label "King, Stephen" ;
@@ -5863,8 +5807,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaed:P20316 "William Golding, The Lord of the Flies" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20231 <http://www.example.org/baerengeljennifer/williamgoldingthelordoftheflies> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://www.example.org/baerengeljennifer/williamgoldingthelordoftheflies> .
 
 <http://www.example.org/names/jahnkehansotto> a rdac:C10004 ;
     rdfs:label "Jahnke, Hans-Otto" ;
@@ -5885,8 +5828,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaed:P20316 "William Golding, Lord of the flies" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20231 <http://www.example.org/names/jahnkehansotto/williamgoldinglordoftheflies> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://www.example.org/names/jahnkehansotto/williamgoldinglordoftheflies> .
 
 <http://www.example.org/names/kingmartin> a rdac:C10004 ;
     rdfs:label "King, Martin" ;
@@ -5894,7 +5836,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaxd:P00018 "http://www.example.org/names/kingmartin" .
 
 <http://www.example.org/names/kingmartin/studentsguidetolordoftheflies> a rdac:C10001 ;
-    rdfs:label "Students' guide to Lord of the flies (King, Martin.)" ;
+    rdfs:label "Students' guide to Lord of the flies (King, Martin)" ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
     rdawd:P10223 "Students' guide to Lord of the flies" ;
     rdawo:P10061 <http://www.example.org/names/kingmartin> ;
@@ -5903,13 +5845,12 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaxd:P00018 "http://www.example.org/names/kingmartin/studentsguidetolordoftheflies" .
 
 <http://www.example.org/names/kingmartin/studentsguidetolordoftheflies/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Students' guide to Lord of the flies (King, Martin.)" ;
+    rdfs:label "Students' guide to Lord of the flies (King, Martin)" ;
     rdaed:P20315 "Students' guide to Lord of the flies" ;
     rdaed:P20316 "Students' guide to Lord of the flies" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://www.example.org/names/kingmartin/studentsguidetolordoftheflies> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://www.example.org/names/kingmartin/studentsguidetolordoftheflies> .
 
 <http://www.example.org/names/martinstewart> a rdac:C10004 ;
     rdfs:label "Martin, Stewart" ;
@@ -5936,8 +5877,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaed:P20316 "Artículo de opinión \"The lord of the flies\"" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://www.example.org/names/peabentezpatricia/artculodeopininthelordoftheflies> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://www.example.org/names/peabentezpatricia/artculodeopininthelordoftheflies> .
 
 <http://www.example.org/names/ryumnils> a rdac:C10004 ;
     rdfs:label "Ryum, Nils" ;
@@ -5953,7 +5893,7 @@ ex:baerengeljennifer a rdac:C10004 ;
         <http://viaf.org/viaf/176165653>,
         <http://viaf.org/viaf/187146251> ;
     rdaxd:P00018 "http://www.wikidata.org/entity/Q4394863" ;
-    rdaxd:P00029 "Collection" .
+    entedit:P02 <http://oslomet.no/abi/vocab#T03> .
 
 <http://www.wikidata.org/entity/Q7740406> a rdac:C10001 ;
     rdfs:label "The Hot Gates (Golding, William)" ;
@@ -6086,8 +6026,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/18830799> ;
-    rdaeo:P20231 <http://viaf.org/viaf/119144648592107423604> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/119144648592107423604> .
 
 <http://viaf.org/viaf/168510499> a rdac:C10004 ;
     rdfs:label "Graff, Finn" ;
@@ -6102,8 +6041,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/19389226> ;
-    rdaeo:P20231 <http://viaf.org/viaf/174553895> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/174553895> .
 
 <http://viaf.org/viaf/178994871/exp/spa/1020/581145857119122922888> a rdac:C10006 ;
     rdfs:label "La construcción de la torre (Golding, William)" ;
@@ -6112,8 +6050,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/581145857119122922888> ;
-    rdaeo:P20231 <http://viaf.org/viaf/178994871> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/178994871> .
 
 <http://viaf.org/viaf/184334172/exp/spa/1020/7404678> a rdac:C10006 ;
     rdfs:label "Martín el náufrago (Golding, William)" ;
@@ -6123,8 +6060,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/7404678> ;
-    rdaeo:P20231 <http://viaf.org/viaf/184334172> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/184334172> .
 
 <http://viaf.org/viaf/187146251/exp/spa/1020/19389226> a rdac:C10006 ;
     rdfs:label "Cuerpo a cuerpo (Golding, William)" ;
@@ -6133,8 +6069,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/19389226> ;
-    rdaeo:P20231 <http://viaf.org/viaf/187146251> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/187146251> .
 
 <http://viaf.org/viaf/188302088/exp/spa/1020/19389226> a rdac:C10006 ;
     rdfs:label "Los hombres de papel (Golding, William)" ;
@@ -6143,8 +6078,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/19389226> ;
-    rdaeo:P20231 <http://viaf.org/viaf/188302088> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/188302088> .
 
 <http://viaf.org/viaf/191996024> a rdac:C10001 ;
     rdfs:label "The Coral Island (Ballantyne, Robert M.)" ;
@@ -6159,8 +6093,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/42309455> ;
-    rdaeo:P20231 <http://viaf.org/viaf/217036112> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/217036112> .
 
 <http://viaf.org/viaf/218116512/exp/ger/1020/stresauhermann> a rdac:C10006 ;
     rdfs:label "Freier Fall (Golding, William)" ;
@@ -6170,8 +6103,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://example.org/names/stresauhermann> ;
-    rdaeo:P20231 <http://viaf.org/viaf/218116512> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/218116512> .
 
 <http://viaf.org/viaf/26169769> a rdac:C10004 ;
     rdfs:label "Hook, Harry" ;
@@ -6179,15 +6111,13 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaxd:P00018 "http://viaf.org/viaf/26169769" .
 
 <http://viaf.org/viaf/262356343/erlauterungenzuwilliamgoldingherrderfliegenlordoftheflies/exp/ger/1020> a rdac:C10006 ;
-    rdfs:label "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies) (Poppe, Reiner)",
-        "Herr der Fliegen (Poppe, Reiner)" ;
+    rdfs:label "Herr der Fliegen (Poppe, Reiner)" ;
     rdaed:P20315 "Herr der Fliegen" ;
     rdaed:P20316 "Erläuterungen zu Golding, Herr der Fliegen - Lord of the Flies : Lektüre- und Interpretationshilfe",
         "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies)" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20231 <http://viaf.org/viaf/262356343/erlauterungenzuwilliamgoldingherrderfliegenlordoftheflies> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/262356343/erlauterungenzuwilliamgoldingherrderfliegenlordoftheflies> .
 
 <http://viaf.org/viaf/27170695> a rdac:C10004 ;
     rdfs:label "Spear, Hilda D." ;
@@ -6203,8 +6133,7 @@ ex:baerengeljennifer a rdac:C10004 ;
         "The Pyramid" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20231 <http://viaf.org/viaf/309268108> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/309268108> .
 
 <http://viaf.org/viaf/309268108/exp/spa/1020/11361452> a rdac:C10006 ;
     rdfs:label "La pirámide (Golding, William)" ;
@@ -6213,8 +6142,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/11361452> ;
-    rdaeo:P20231 <http://viaf.org/viaf/309268108> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/309268108> .
 
 <http://viaf.org/viaf/311338181> a rdac:C10004 ;
     rdfs:label "Bastuk, Emil" ;
@@ -6228,8 +6156,7 @@ ex:baerengeljennifer a rdac:C10004 ;
         "Lord of the flies, William Golding : Inhalt, Hintergrund, Interpretationen ; auf Deutsch, mit englischen Formulierungshilfen! ; mit Info-Klappe!" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20231 <http://viaf.org/viaf/47608695/lordoftheflieswilliamgolding> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/47608695/lordoftheflieswilliamgolding> .
 
 <http://viaf.org/viaf/53313431> a rdac:C10004 ;
     rdfs:label "Baker, J. R." ;
@@ -6259,8 +6186,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaeo:P20145 <http://viaf.org/viaf/177762289/exp/ger/1020/81823873>,
         <http://viaf.org/viaf/180585027/exp/ger/1020/81823873>,
         <http://viaf.org/viaf/308018847/exp/ger/1020/81823873> ;
-    rdaeo:P20231 <http://www.wikidata.org/entity/Q7762618> ;
-    rdaxd:P00029 "parent" .
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q7762618> .
 
 <https://www.imdb.com/name/nm0020767> a rdac:C10004 ;
     rdfs:label "Allen, Lewis M." ;
@@ -6286,15 +6212,13 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaxd:P00018 "http://oslomet.workid.no/wg/01" .
 
 <http://oslomet.workid.no/wg/01/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "An Egyptian journal (Golding, William)",
-        "Egyptian journal (Golding, William)" ;
+    rdfs:label "Egyptian journal (Golding, William)" ;
     rdaed:P20315 "Egyptian journal" ;
     rdaed:P20316 "An Egyptian Journal",
         "An Egyptian journal" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://oslomet.workid.no/wg/01> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://oslomet.workid.no/wg/01> .
 
 <http://viaf.org/viaf/14894463> a rdac:C10004 ;
     rdfs:label "Gregor, Ian" ;
@@ -6309,33 +6233,25 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/69705000> ;
-    rdaeo:P20231 <http://viaf.org/viaf/176165653> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/176165653> .
 
 <http://viaf.org/viaf/177762289/exp/ger/1020/81823873> a rdac:C10006 ;
-    rdfs:label "Der Sonderbotschafter (Golding, William)",
-        "Envoy Extraordinary (Golding, William)" ;
+    rdfs:label "Der Sonderbotschafter (Golding, William)" ;
     rdaed:P20315 "Der Sonderbotschafter" ;
     rdaed:P20316 "Envoy Extraordinary" ;
     rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger>,
-        "ger" ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/81823873> ;
-    rdaeo:P20231 <http://viaf.org/viaf/177762289> ;
-    rdaxd:P00029 "part" .
+    rdaeo:P20231 <http://viaf.org/viaf/177762289> .
 
 <http://viaf.org/viaf/178994871/exp/ger/1020> a rdac:C10006 ;
-    rdfs:label "Der Turm der Kathedrale (Golding, William)",
-        "The Spire (Golding, William)" ;
+    rdfs:label "Der Turm der Kathedrale (Golding, William)" ;
     rdaed:P20315 "Der Turm der Kathedrale" ;
     rdaed:P20316 "Der Turm der Kathedrale : Nobelpreis 1983 England",
         "The Spire" ;
     rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger>,
-        "ger" ;
-    rdaeo:P20231 <http://viaf.org/viaf/178994871> ;
-    rdaxd:P00029 "part",
-        "standalone" .
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+    rdaeo:P20231 <http://viaf.org/viaf/178994871> .
 
 <http://viaf.org/viaf/178994871/exp/ger/1020/42309455> a rdac:C10006 ;
     rdfs:label "Der Turm der Kathedrale (Golding, William)" ;
@@ -6345,18 +6261,15 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/42309455> ;
-    rdaeo:P20231 <http://viaf.org/viaf/178994871> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/178994871> .
 
 <http://viaf.org/viaf/180585027/exp/ger/1020/81823873> a rdac:C10006 ;
     rdfs:label "Clonk Clonk (Golding, William)" ;
     rdaed:P20315 "Clonk Clonk" ;
     rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger>,
-        "ger" ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/81823873> ;
-    rdaeo:P20231 <http://viaf.org/viaf/180585027> ;
-    rdaxd:P00029 "part" .
+    rdaeo:P20231 <http://viaf.org/viaf/180585027> .
 
 <http://viaf.org/viaf/188302088/exp/ger/1020/311338181> a rdac:C10006 ;
     rdfs:label "Papier-Männer (Golding, William)" ;
@@ -6366,8 +6279,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/311338181> ;
-    rdaeo:P20231 <http://viaf.org/viaf/188302088> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/188302088> .
 
 <http://viaf.org/viaf/211743501/exp/ger/1020/leipeursula> a rdac:C10006 ;
     rdfs:label "Das Feuer der Finsternis (Golding, William)" ;
@@ -6377,8 +6289,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://example.org/names/leipeursula> ;
-    rdaeo:P20231 <http://viaf.org/viaf/211743501> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/211743501> .
 
 <http://viaf.org/viaf/218116512/exp/eng/1020> a rdac:C10006 ;
     rdfs:label "Free fall (Golding, William)" ;
@@ -6386,8 +6297,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaed:P20316 "Free Fall" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/218116512> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/218116512> .
 
 <http://viaf.org/viaf/226311641> a rdac:C10004 ;
     rdfs:label "Amlie, Axel" ;
@@ -6402,16 +6312,12 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaxd:P00018 "http://viaf.org/viaf/262356343" .
 
 <http://viaf.org/viaf/308018847/exp/ger/1020/81823873> a rdac:C10006 ;
-    rdfs:label "Der Skorpion-Gott (Golding, William)",
-        "The Scorpion God (Golding, William)" ;
+    rdfs:label "Der Skorpion-Gott (Golding, William)" ;
     rdaed:P20315 "Der Skorpion-Gott" ;
-    rdaed:P20316 "The Scorpion God" ;
     rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger>,
-        "ger" ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger>;
     rdaeo:P20037 <http://viaf.org/viaf/81823873> ;
-    rdaeo:P20231 <http://viaf.org/viaf/308018847> ;
-    rdaxd:P00029 "part" .
+    rdaeo:P20231 <http://viaf.org/viaf/308018847> .
 
 <http://viaf.org/viaf/6049> a rdac:C10004 ;
     rdfs:label "Kinkead-Weekes, Mark" ;
@@ -6433,7 +6339,7 @@ ex:baerengeljennifer a rdac:C10004 ;
         <http://viaf.org/viaf/180585027>,
         <http://viaf.org/viaf/308018847> ;
     rdaxd:P00018 "http://www.wikidata.org/entity/Q7762618" ;
-    rdaxd:P00029 "Collection" .
+    entedit:P02 <http://oslomet.no/abi/vocab#T01> .
 
 <https://www.imdb.com/name/nm0111656> a rdac:C10004 ;
     rdfs:label "Brook, Peter" ;
@@ -6445,8 +6351,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdfs:label "El señor de las moscas" ;
     rdaed:P20065 <http://id.loc.gov/vocabulary/iso639-2/eng>,
         <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaed:P20315 "El señor de las moscas : Lord of the flies" ;
-    rdaed:P20316 "Lord of the flies" ;
+    rdaed:P20315 "El señor de las moscas" ;
     rdaeo:P20001 rdaco:1023 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/mul>,
         <http://id.loc.gov/vocabulary/iso639-2/spa> ;
@@ -6456,33 +6361,26 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaeo:P20231 <https://www.imdb.com/title/tt0100054> .
 
 <http://oslomet.workid.no/wg/05/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "The Brass Butterfly. A play in three acts (Golding, William)",
-        "The brass butterfly (Golding, William)",
-        "The brass butterfly, etc (Golding, William)" ;
-    rdaed:P20315 "The brass butterfly, etc" ;
-    rdaed:P20316 "The Brass Butterfly",
-        "The brass butterfly : a play in three acts" ;
+    rdfs:label "The brass butterfly (Golding, William)" ;
+    rdaed:P20315 "The brass butterfly: a play in three acts"  ;
+    rdaed:P20316 "The Brass Butterfly";
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://oslomet.workid.no/wg/05> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://oslomet.workid.no/wg/05> .
 
 <http://viaf.org/viaf/114105318/williamgoldingthemanwhowrotelordoftheflies/exp/eng/1020> a rdac:C10006 ;
     rdfs:label "William Golding (Carey, John)" ;
     rdaed:P20315 "William Golding : the man who wrote Lord of the flies" ;
-    rdaed:P20316 "William Golding : the man who wrote Lord of the flies",
-        "William Golding : the man who wrote Lord of the flies : a life" ;
+    rdaed:P20316 "William Golding : the man who wrote Lord of the flies : a life" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/114105318/williamgoldingthemanwhowrotelordoftheflies> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/114105318/williamgoldingthemanwhowrotelordoftheflies> .
 
 <http://viaf.org/viaf/1180145424574586830081> a rdac:C10001 ;
-    rdfs:label "Double tongue (Golding, William)",
-        "The Double Tongue (Golding, William)" ;
+    rdfs:label "The Double Tongue (Golding, William)" ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Double tongue",
-        "The Double Tongue" ;
+    rdawd:P10223 "The Double Tongue" ;
+    rdawd:P10086 "Double tongue" ;
     rdawo:P10061 <http://viaf.org/viaf/89500102> ;
     rdaxd:P00018 "http://viaf.org/viaf/1180145424574586830081" .
 
@@ -6492,8 +6390,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaed:P20316 "The Double Tongue" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/1180145424574586830081> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/1180145424574586830081> .
 
 <http://viaf.org/viaf/12367718> a rdac:C10004 ;
     rdfs:label "Champourcin, Ernestina de" ;
@@ -6514,7 +6411,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdawd:P10223 "Envoy Extraordinary" ;
     rdawo:P10061 <http://viaf.org/viaf/89500102> ;
     rdaxd:P00018 "http://viaf.org/viaf/177762289" ;
-    rdaxd:P00029 "Novella" .
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/157> .
 
 <http://viaf.org/viaf/180585027> a rdac:C10001 ;
     rdfs:label "Clonk Clonk (Golding, William)" ;
@@ -6522,7 +6419,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdawd:P10223 "Clonk Clonk" ;
     rdawo:P10061 <http://viaf.org/viaf/89500102> ;
     rdaxd:P00018 "http://viaf.org/viaf/180585027" ;
-    rdaxd:P00029 "Novella" .
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/157> .
 
 <http://viaf.org/viaf/184334172> a rdac:C10001 ;
     rdfs:label "Pincher Martin (Golding, William)" ;
@@ -6544,8 +6441,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaed:P20316 "The Paper Men" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/188302088> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/188302088> .
 
 <http://viaf.org/viaf/19389226> a rdac:C10004 ;
     rdfs:label "Santos Fontenla, Fernando" ;
@@ -6558,8 +6454,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaed:P20316 "Darkness Visible" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/211743501> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/211743501> .
 
 <http://viaf.org/viaf/211743501/exp/spa/1020/38364518> a rdac:C10006 ;
     rdfs:label "La oscuridad visible (Golding, William)" ;
@@ -6569,8 +6464,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/38364518> ;
-    rdaeo:P20231 <http://viaf.org/viaf/211743501> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/211743501> .
 
 <http://viaf.org/viaf/218116512> a rdac:C10001 ;
     rdfs:label "Free Fall (Golding, William)" ;
@@ -6586,18 +6480,16 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaed:P20316 "The Moving Target" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/307973201> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/307973201> .
 
 <http://viaf.org/viaf/308018847> a rdac:C10001 ;
-    rdfs:label "Scorpion god (Golding, William)",
-        "The Scorpion God (Golding, William)" ;
+    rdfs:label "The Scorpion God (Golding, William)" ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Scorpion god",
-        "The Scorpion God" ;
+    rdawd:P10223 "The Scorpion God" ;
+    rdawd:P10086 "Scorpion god" ;
     rdawo:P10061 <http://viaf.org/viaf/89500102> ;
     rdaxd:P00018 "http://viaf.org/viaf/308018847" ;
-    rdaxd:P00029 "Novella" .
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/157> .
 
 <http://viaf.org/viaf/309268108> a rdac:C10001 ;
     rdfs:label "The Pyramid (Golding, William)" ;
@@ -6612,8 +6504,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaxd:P00018 "http://viaf.org/viaf/81823873" .
 
 <http://viaf.org/viaf/184334172/exp/ger/1020/42309455> a rdac:C10006 ;
-    rdfs:label "Der Felsen des zweiten Todes (Golding, William)",
-        "Pincher Martin (Golding, William)" ;
+    rdfs:label "Der Felsen des zweiten Todes (Golding, William)" ;
     rdaed:P20315 "Der Felsen des zweiten Todes" ;
     rdaed:P20316 "Der Felsen des zweiten Todes : Roman",
         "Pincher Martin",
@@ -6622,9 +6513,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/42309455> ;
-    rdaeo:P20231 <http://viaf.org/viaf/184334172> ;
-    rdaxd:P00029 "part",
-        "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/184334172> .
 
 <http://viaf.org/viaf/187146251> a rdac:C10001 ;
     rdfs:label "Close Quarters (Golding, William)" ;
@@ -6646,31 +6535,25 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaxd:P00018 "http://viaf.org/viaf/42309455" .
 
 <http://www.wikidata.org/entity/Q7740406/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "The Hot Gates, and other occasional pieces (Golding, William)",
-        "The Hot gates (Golding, William)",
-        "The hot gates, etc (Golding, William)" ;
+    rdfs:label "The hot gates, etc (Golding, William)" ;
     rdaed:P20315 "The hot gates, etc" ;
     rdaed:P20316 "The Hot Gates",
         "The Hot gates : and other occasional pieces" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://www.wikidata.org/entity/Q7740406> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q7740406> .
 
 <http://www.wikidata.org/entity/Q7762618/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "The scorpion god (Golding, William)",
-        "The scorpion god: three short novels (Golding, William)" ;
+    rdfs:label "The scorpion god (Golding, William)" ;
     rdaed:P20071 "The scorpion god -- Clonk clonk -- Envoy extraordinary" ;
     rdaed:P20315 "The Scorpion God" ;
-    rdaed:P20316 "The Scorpion God",
-        "The scorpion god : three short novels" ;
+    rdaed:P20316 "The Scorpion God : three short novels" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20145 <http://viaf.org/viaf/177762289/exp/eng/1020>,
         <http://viaf.org/viaf/180585027/exp/eng/1020>,
         <http://viaf.org/viaf/308018847/exp/eng/1020> ;
-    rdaeo:P20231 <http://www.wikidata.org/entity/Q7762618> ;
-    rdaxd:P00029 "parent" .
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q7762618> .
 
 <http://www.wikidata.org/entity/Q7762618/exp/spa/1020/12367718> a rdac:C10006 ;
     rdfs:label "El dios escorpión (Golding, William)" ;
@@ -6686,8 +6569,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaeo:P20145 <http://viaf.org/viaf/177762289/exp/spa/1020/12367718>,
         <http://viaf.org/viaf/180585027/exp/spa/1020/12367718>,
         <http://viaf.org/viaf/308018847/exp/spa/1020/12367718> ;
-    rdaeo:P20231 <http://www.wikidata.org/entity/Q7762618> ;
-    rdaxd:P00029 "parent" .
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q7762618> .
 
 <http://viaf.org/viaf/176165653> a rdac:C10001 ;
     rdfs:label "Rites of Passage (Golding, William)" ;
@@ -6701,62 +6583,49 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaed:P20315 "Envoy Extraordinary" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/177762289> ;
-    rdaxd:P00029 "part" .
+    rdaeo:P20231 <http://viaf.org/viaf/177762289> .
 
 <http://viaf.org/viaf/177762289/exp/spa/1020/12367718> a rdac:C10006 ;
-    rdfs:label "El enviado especial (Golding, William)",
-        "Envoy Extraordinary (Golding, William)" ;
+    rdfs:label "El enviado especial (Golding, William)" ;
     rdaed:P20315 "El enviado especial" ;
     rdaed:P20316 "Envoy Extraordinary" ;
     rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa>,
-        "spa" ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/12367718> ;
-    rdaeo:P20231 <http://viaf.org/viaf/177762289> ;
-    rdaxd:P00029 "part" .
+    rdaeo:P20231 <http://viaf.org/viaf/177762289> .
 
 <http://viaf.org/viaf/180585027/exp/eng/1020> a rdac:C10006 ;
     rdfs:label "Clonk Clonk (Golding, William)" ;
     rdaed:P20315 "Clonk Clonk" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/180585027> ;
-    rdaxd:P00029 "part" .
+    rdaeo:P20231 <http://viaf.org/viaf/180585027> .
 
 <http://viaf.org/viaf/180585027/exp/spa/1020/12367718> a rdac:C10006 ;
-    rdfs:label "Clonc, clonc (Golding, William)",
-        "Clonk Clonk (Golding, William)" ;
+    rdfs:label "Clonc, clonc (Golding, William)" ;
     rdaed:P20315 "Clonc, clonc" ;
     rdaed:P20316 "Clonk Clonk" ;
     rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa>,
-        "spa" ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/12367718> ;
-    rdaeo:P20231 <http://viaf.org/viaf/180585027> ;
-    rdaxd:P00029 "part" .
+    rdaeo:P20231 <http://viaf.org/viaf/180585027> .
 
 <http://viaf.org/viaf/308018847/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Scorpion god (Golding, William)",
-        "The Scorpion God (Golding, William)" ;
+    rdfs:label "Scorpion god (Golding, William)" ;
     rdaed:P20315 "Scorpion god" ;
     rdaed:P20316 "The Scorpion God" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/308018847> ;
-    rdaxd:P00029 "part" .
+    rdaeo:P20231 <http://viaf.org/viaf/308018847> .
 
 <http://viaf.org/viaf/308018847/exp/spa/1020/12367718> a rdac:C10006 ;
-    rdfs:label "El dios Escorpión (Golding, William)",
-        "The Scorpion God (Golding, William)" ;
+    rdfs:label "El dios Escorpión (Golding, William)" ;
     rdaed:P20315 "El dios Escorpión" ;
     rdaed:P20316 "The Scorpion God" ;
     rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa>,
-        "spa" ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/12367718> ;
-    rdaeo:P20231 <http://viaf.org/viaf/308018847> ;
-    rdaxd:P00029 "part" .
+    rdaeo:P20231 <http://viaf.org/viaf/308018847> .
 
 <http://viaf.org/viaf/309268108/exp/eng/1020> a rdac:C10006 ;
     rdfs:label "The pyramid (Golding, William)" ;
@@ -6764,8 +6633,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaed:P20316 "The Pyramid" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/309268108> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/309268108> .
 
 <http://www.wikidata.org/entity/Q4394863/exp/eng/1020> a rdac:C10006 ;
     rdfs:label "To the ends of the Earth (Golding, William)" ;
@@ -6780,9 +6648,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaeo:P20145 <http://viaf.org/viaf/174553895/exp/eng/1020>,
         <http://viaf.org/viaf/176165653/exp/eng/1020>,
         <http://viaf.org/viaf/187146251/exp/eng/1020> ;
-    rdaeo:P20231 <http://www.wikidata.org/entity/Q4394863> ;
-    rdaxd:P00029 "parent",
-        "standalone" .
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q4394863> .
 
 <http://viaf.org/viaf/184334172/exp/eng/1020> a rdac:C10006 ;
     rdfs:label "Pincher Martin (Golding, William)" ;
@@ -6790,9 +6656,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaed:P20316 "Pincher Martin" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/184334172> ;
-    rdaxd:P00029 "part",
-        "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/184334172> .
 
 <http://viaf.org/viaf/217036112/exp/eng/1020> a rdac:C10006 ;
     rdfs:label "The inheritors (Golding, William)" ;
@@ -6800,8 +6664,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaed:P20316 "The Inheritors" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/217036112> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/217036112> .
 
 <http://viaf.org/viaf/119144648592107423604/exp/nob/nor/1020/74661518> a rdac:C10006 ;
     rdfs:label "Fluenes herre (Golding, William)" ;
@@ -6811,15 +6674,13 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob>,
         <http://id.loc.gov/vocabulary/iso639-2/nor> ;
     rdaeo:P20037 <http://viaf.org/viaf/74661518> ;
-    rdaeo:P20231 <http://viaf.org/viaf/119144648592107423604> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/119144648592107423604> .
 
 <http://viaf.org/viaf/217036112> a rdac:C10001 ;
-    rdfs:label "Inheritors (Golding, William)",
-        "The Inheritors (Golding, William)" ;
+    rdfs:label "The Inheritors (Golding, William)" ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Inheritors",
-        "The Inheritors" ;
+    rdawd:P10223 "The Inheritors" ;
+    rdawd:P10086 "Inheritors" ;
     rdawo:P10061 <http://viaf.org/viaf/89500102> ;
     rdaxd:P00018 "http://viaf.org/viaf/217036112" .
 
@@ -6829,9 +6690,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaed:P20316 "Fire Down Below" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/174553895> ;
-    rdaxd:P00029 "part",
-        "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/174553895> .
 
 <http://viaf.org/viaf/178994871/exp/eng/1020> a rdac:C10006 ;
     rdfs:label "The spire (Golding, William)" ;
@@ -6840,8 +6699,7 @@ ex:baerengeljennifer a rdac:C10004 ;
         "The spire : a novel" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/178994871> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/178994871> .
 
 <http://viaf.org/viaf/187146251/exp/eng/1020> a rdac:C10006 ;
     rdfs:label "Close quarters (Golding, William)" ;
@@ -6849,9 +6707,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaed:P20316 "Close Quarters" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/187146251> ;
-    rdaxd:P00029 "part",
-        "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/187146251> .
 
 <http://viaf.org/viaf/119144648592107423604/exp/ger/1020> a rdac:C10006 ;
     rdfs:label "Herr der Fliegen (Golding, William)" ;
@@ -6862,8 +6718,7 @@ ex:baerengeljennifer a rdac:C10004 ;
         "Lord of the flies : [Hauptbd.]" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20231 <http://viaf.org/viaf/119144648592107423604> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/119144648592107423604> .
 
 <http://viaf.org/viaf/178994871> a rdac:C10001 ;
     rdfs:label "The Spire (Golding, William)" ;
@@ -6880,8 +6735,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/86744222> ;
-    rdaeo:P20231 <http://viaf.org/viaf/119144648592107423604> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/119144648592107423604> .
 
 <http://viaf.org/viaf/176165653/exp/eng/1020> a rdac:C10006 ;
     rdfs:label "Rites of passage (Golding, William)" ;
@@ -6889,9 +6743,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaed:P20316 "Rites of Passage" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/176165653> ;
-    rdaxd:P00029 "part",
-        "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/176165653> .
 
 <http://viaf.org/viaf/119144648592107423604/exp/ger/1020/42309455> a rdac:C10006 ;
     rdfs:label "Herr der Fliegen (Golding, William)" ;
@@ -6903,8 +6755,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/42309455> ;
-    rdaeo:P20231 <http://viaf.org/viaf/119144648592107423604> ;
-    rdaxd:P00029 "standalone" .
+    rdaeo:P20231 <http://viaf.org/viaf/119144648592107423604> .
 
 <http://viaf.org/viaf/89500102> a rdac:C10004 ;
     rdfs:label "Golding, William" ;
@@ -6913,9 +6764,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaxd:P00018 "http://viaf.org/viaf/89500102" .
 
 <http://viaf.org/viaf/119144648592107423604/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Lord of the flies (Golding, William)",
-        "William Golding's Lord of the Flies (Golding, William)",
-        "William Golding's, Lord of the files (Golding, William)" ;
+    rdfs:label "Lord of the flies (Golding, William)" ;
     rdaed:P20315 "Lord of the Flies" ;
     rdaed:P20316 "Lord of the Flies",
         "Lord of the flies",
@@ -6927,9 +6776,7 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/119144648592107423604> ;
-    rdaxd:P00018 "http://viaf.org/viaf/119144648592107423604/exp/eng/1020" ;
-    rdaxd:P00029 "part",
-        "standalone" .
+    rdaxd:P00018 "http://viaf.org/viaf/119144648592107423604/exp/eng/1020" .
 
 <http://viaf.org/viaf/119144648592107423604> a rdac:C10001 ;
     rdfs:label "Lord of the Flies (Golding, William)" ;
