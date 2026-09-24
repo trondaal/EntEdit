@@ -464,6 +464,7 @@ const Expression: React.FC<ExpressionProps> = ({
 
               </Box>
             }
+            slotProps={{ secondary: { component: "div" } }}
           />
         </Box>
       </ListItem>
