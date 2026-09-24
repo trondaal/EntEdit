@@ -128,7 +128,7 @@ const ImportDialog: React.FC<ImportDialogProps> = ({
             {t("dialogs.import.description")}
           </Typography>
 
-          <Box>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
             <input
               ref={fileInputRef}
               type="file"
@@ -136,19 +136,28 @@ const ImportDialog: React.FC<ImportDialogProps> = ({
               onChange={handleFileChange}
               style={{ display: "none" }}
             />
+            {file && (
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                sx={{
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                {file.name} ({Math.round(file.size / 1024)} KB)
+              </Typography>
+            )}
             <Button
               variant="outlined"
               startIcon={<UploadFile />}
               onClick={() => fileInputRef.current?.click()}
               disabled={importing}
+              sx={{ ml: "auto", flexShrink: 0 }}
             >
               {t("dialogs.import.chooseFile")}
             </Button>
-            {file && (
-              <Typography variant="body2" sx={{ mt: 1 }}>
-                {file.name} ({Math.round(file.size / 1024)} KB)
-              </Typography>
-            )}
           </Box>
 
           <TextField
