@@ -181,11 +181,14 @@ docker login                          # use a Personal Access Token
 docker buildx create --use            # once, creates a multi-arch builder
 ```
 
+The version tag matches `"version"` in [app/package.json](app/package.json) — bump
+that first, so the two never drift apart, then use the same number below.
+
 **Web app image** — built from `app/`:
 
 ```bash
 docker buildx build --platform linux/amd64,linux/arm64 \
-  -t trondaal/entedit:1.0.0 -t trondaal/entedit:latest \
+  -t trondaal/entedit:1.0.7 -t trondaal/entedit:latest \
   --push ./app
 ```
 
@@ -204,15 +207,12 @@ push in one step. Multi-arch images cannot be loaded into the local Docker engin
 so they go straight to the registry via `--push`. Always publish a versioned tag
 alongside `latest`.
 
-For a quick single-platform fix (e.g. pushing `:latest` right after a bug fix,
-to be followed later by a proper versioned multi-arch release), a plain
-`docker build`/`docker push` also works, but only publishes an image for the
-machine's own architecture:
-
-```bash
-docker build -t trondaal/entedit:latest ./app
-docker push trondaal/entedit:latest
-```
+Always push both platforms, even for a one-line fix pushed straight to `latest`.
+A plain `docker build`/`docker push` only publishes an image for the machine's
+own architecture — pushing that as `:latest` silently drops the other platform
+from the tag until someone rebuilds multi-arch, breaking every user on the
+architecture that got dropped. Use `docker buildx build --platform
+linux/amd64,linux/arm64 --push` unconditionally, exactly as above.
 
 **Compose file** — published as an OCI artifact, *after* the images above:
 
