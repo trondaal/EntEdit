@@ -271,9 +271,6 @@ WHERE {
                         FILTER(BOUND(?target_work_title_raw))
                         ?work_to_work_relationship rdfs:label ?work_to_work_relationship_label .
                         FILTER(LANG(?work_to_work_relationship_label) = "${escapedLanguage}") .
-                        FILTER NOT EXISTS {
-                            ?work_to_work_relationship rdfs:subPropertyOf* <http://rdaregistry.info/Elements/w/P10336> .
-                        }
                         FILTER NOT EXISTS { ?work_to_work_relationship entedit:display false . }
                     }
                 } UNION {
@@ -287,9 +284,6 @@ WHERE {
                         ?work_to_work_relationship_inverse owl:inverseOf ?work_to_work_relationship .
                         ?work_to_work_relationship_inverse rdfs:label ?work_to_work_relationship_label .
                         FILTER(LANG(?work_to_work_relationship_label) = "${escapedLanguage}") .
-                        FILTER NOT EXISTS {
-                            ?work_to_work_relationship_inverse rdfs:subPropertyOf* <http://rdaregistry.info/Elements/w/P10336> .
-                        }
                         FILTER NOT EXISTS { ?work_to_work_relationship_inverse entedit:display false . }
                     }
                 }

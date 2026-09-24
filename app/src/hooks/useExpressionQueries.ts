@@ -174,9 +174,6 @@ export const useExpressionsByManifestation = (
                   FILTER(BOUND(?target_work_title))
                   ?work_to_work_relationship rdfs:label ?work_to_work_relationship_label .
                   FILTER(LANG(?work_to_work_relationship_label) = "${language}") .
-                  FILTER NOT EXISTS {
-                    ?work_to_work_relationship rdfs:subPropertyOf* <http://rdaregistry.info/Elements/w/P10336> .
-                  }
                   FILTER NOT EXISTS { ?work_to_work_relationship entedit:display false . }
                 }
               } UNION {
@@ -190,9 +187,6 @@ export const useExpressionsByManifestation = (
                   ?work_to_work_relationship_inverse owl:inverseOf ?work_to_work_relationship .
                   ?work_to_work_relationship_inverse rdfs:label ?work_to_work_relationship_label .
                   FILTER(LANG(?work_to_work_relationship_label) = "${language}") .
-                  FILTER NOT EXISTS {
-                    ?work_to_work_relationship_inverse rdfs:subPropertyOf* <http://rdaregistry.info/Elements/w/P10336> .
-                  }
                   FILTER NOT EXISTS { ?work_to_work_relationship_inverse entedit:display false . }
                 }
               }
