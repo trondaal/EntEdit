@@ -675,7 +675,7 @@ rdawo:P10170	entedit:status	"object property" ; rdfs:label "er avløst av verk"@
 rdawo:P10157	entedit:status	"object property" ; rdfs:label "har veiledning (verk)"@no . #	has finding aid work (Deprecated)	rdac:C10001	rdac:C10001
 rdawo:P10201	entedit:status	"object property" ; rdfs:label "er veiledning til verk"@no . #	is finding aid for work (Deprecated)	rdac:C10001	rdac:C10001
 
-rdawo:P10160	entedit:status	"object property"	; rdfs:label "har manus for spillefilm "@no .. #	has motion picture screenplay work	rdac:C10001	rdac:C10001
+rdawo:P10160	entedit:status	"object property"	; rdfs:label "har manus for spillefilm "@no . #	has motion picture screenplay work	rdac:C10001	rdac:C10001
 rdawo:P10173	entedit:status	"object property" ; rdfs:label "er manus for spillefilm"@no . #	is screenplay for motion picture work	rdac:C10001	rdac:C10001
 
 rdawo:P10162	entedit:status	"object property" ; rdfs:label "har radiomanus (verk)"@no . #	has radio script work	rdac:C10001	rdac:C10001
