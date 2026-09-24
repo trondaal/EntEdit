@@ -47,6 +47,7 @@ export const useExpressionsByManifestation = (
         PREFIX rdawo: <http://rdaregistry.info/Elements/w/object/>
         PREFIX rdamo: <http://rdaregistry.info/Elements/m/object/>
         PREFIX vocab: <http://oslomet.no/abi/vocab#>
+        PREFIX entedit: <http://oslomet.no/abi/vocab#>
 
         SELECT DISTINCT ?expression
                (SAMPLE(?expressiontitle) as ?title)
@@ -176,6 +177,7 @@ export const useExpressionsByManifestation = (
                   FILTER NOT EXISTS {
                     ?work_to_work_relationship rdfs:subPropertyOf* <http://rdaregistry.info/Elements/w/P10336> .
                   }
+                  FILTER NOT EXISTS { ?work_to_work_relationship entedit:display false . }
                 }
               } UNION {
                 OPTIONAL {
@@ -191,6 +193,7 @@ export const useExpressionsByManifestation = (
                   FILTER NOT EXISTS {
                     ?work_to_work_relationship_inverse rdfs:subPropertyOf* <http://rdaregistry.info/Elements/w/P10336> .
                   }
+                  FILTER NOT EXISTS { ?work_to_work_relationship_inverse entedit:display false . }
                 }
               }
             }
@@ -212,6 +215,7 @@ export const useExpressionsByManifestation = (
                   FILTER(BOUND(?target_expression_title))
                   ?expression_to_expression_relationship rdfs:label ?expression_to_expression_relationship_label .
                   FILTER(LANG(?expression_to_expression_relationship_label) = "${language}") .
+                  FILTER NOT EXISTS { ?expression_to_expression_relationship entedit:display false . }
                 }
               } UNION {
                 OPTIONAL {
@@ -224,6 +228,7 @@ export const useExpressionsByManifestation = (
                   ?expression_to_expression_relationship_inverse owl:inverseOf ?expression_to_expression_relationship .
                   ?expression_to_expression_relationship_inverse rdfs:label ?expression_to_expression_relationship_label .
                   FILTER(LANG(?expression_to_expression_relationship_label) = "${language}") .
+                  FILTER NOT EXISTS { ?expression_to_expression_relationship_inverse entedit:display false . }
                 }
               }
             }
