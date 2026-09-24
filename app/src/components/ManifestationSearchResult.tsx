@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
   ListItem,
-  ListItemButton,
   ListItemText,
   Typography,
   Box,
@@ -34,7 +33,6 @@ import { getCarrierTypeIcon, typeIconSx } from "../utils/contentTypeIcons";
 
 interface ManifestationSearchResultProps {
   result: ManifestationSearchResultType;
-  isSelected: boolean;
   onSelect: (uri: string) => void;
   selectedLanguage: string;
   config: SparqlEndpointConfig;
@@ -43,7 +41,6 @@ interface ManifestationSearchResultProps {
 
 const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
   result,
-  isSelected,
   onSelect,
   selectedLanguage,
   config,
@@ -96,11 +93,20 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
   }
 
   return (
-    <>
+    <Box
+      sx={{
+        border: 1,
+        borderColor: "divider",
+        borderRadius: 1,
+        mb: 1,
+        overflow: "hidden",
+        bgcolor: "background.paper",
+      }}
+    >
       <ListItem disablePadding>
-        <ListItemButton
-          selected={isSelected}
+        <Box
           onClick={() => onSelect(result.uri)}
+          sx={{ width: "100%", px: 2, py: 1 }}
         >
           <ListItemText
             primary={
@@ -492,7 +498,7 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
               </Box>
             }
           />
-        </ListItemButton>
+        </Box>
       </ListItem>
       {!isSingleExpression && (
         <Collapse in={expressionsExpanded} timeout="auto" unmountOnExit>
@@ -504,13 +510,7 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
           />
         </Collapse>
       )}
-      <Box
-        sx={{
-          borderBottom: '1px solid',
-          borderColor: 'divider',
-        }}
-      />
-    </>
+    </Box>
   );
 };
 

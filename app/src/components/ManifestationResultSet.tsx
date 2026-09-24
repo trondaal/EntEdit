@@ -17,7 +17,6 @@ interface ManifestationResultSetProps {
   searchResults: ManifestationSearchResultType[];
   searchLoading: boolean;
   searchError: Error | null;
-  selectedResult: string | null;
   onSelectResult: (uri: string) => void;
   config: SparqlEndpointConfig;
   selectedLanguage: string;
@@ -32,7 +31,6 @@ const ManifestationResultSet: React.FC<ManifestationResultSetProps> = ({
   searchResults,
   searchLoading,
   searchError,
-  selectedResult,
   onSelectResult,
   config,
   selectedLanguage,
@@ -56,7 +54,15 @@ const ManifestationResultSet: React.FC<ManifestationResultSetProps> = ({
   );
 
   return (
-    <Paper elevation={1} sx={{ height: "fit-content", minHeight: 700 }}>
+    <Paper
+      elevation={1}
+      sx={{
+        height: { xs: "auto", md: "100%" },
+        display: "flex",
+        flexDirection: "column",
+        overflow: { xs: "visible", md: "hidden" },
+      }}
+    >
       <Box sx={{ p: 2, borderBottom: 1, borderColor: "divider" }}>
         <Typography variant="h6" sx={{ display: "flex", alignItems: "center" }}>
           {t("search.searchResults")}
@@ -89,12 +95,21 @@ const ManifestationResultSet: React.FC<ManifestationResultSetProps> = ({
           {t("search.noResultsFor", { query: searchQuery })}
         </Box>
       ) : (
-        <List sx={{ maxHeight: 600, overflow: "auto" }} onScroll={handleScroll}>
+        <List
+          sx={{
+            flex: 1,
+            overflow: "auto",
+            maxHeight: { xs: 600, md: "none" },
+            bgcolor: "background.default",
+            px: 2,
+            py: 1,
+          }}
+          onScroll={handleScroll}
+        >
           {searchResults.map((result, index) => (
             <ManifestationSearchResult
               key={`${result.uri}-${index}`}
               result={result}
-              isSelected={selectedResult === result.uri}
               onSelect={onSelectResult}
               selectedLanguage={selectedLanguage}
               config={config}

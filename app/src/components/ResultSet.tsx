@@ -17,11 +17,8 @@ interface ResultSetProps {
   searchResults: ExpressionSearchResult[];
   searchLoading: boolean;
   searchError: Error | null;
-  selectedResult: string | null;
   onSelectResult: (uri: string) => void;
   config: SparqlEndpointConfig;
-  selectedManifestationUri: string | null;
-  onManifestationSelect: (uri: string) => void;
   selectedLanguage: string;
   hasNextPage: boolean;
   isFetchingNextPage: boolean;
@@ -34,11 +31,8 @@ const ResultSet: React.FC<ResultSetProps> = ({
   searchResults,
   searchLoading,
   searchError,
-  selectedResult,
   onSelectResult,
   config,
-  selectedManifestationUri,
-  onManifestationSelect,
   selectedLanguage,
   hasNextPage,
   isFetchingNextPage,
@@ -60,7 +54,15 @@ const ResultSet: React.FC<ResultSetProps> = ({
   );
 
   return (
-    <Paper elevation={1} sx={{ height: "fit-content", minHeight: 700 }}>
+    <Paper
+      elevation={1}
+      sx={{
+        height: { xs: "auto", md: "100%" },
+        display: "flex",
+        flexDirection: "column",
+        overflow: { xs: "visible", md: "hidden" },
+      }}
+    >
       <Box sx={{ p: 2, borderBottom: 1, borderColor: "divider" }}>
         <Typography variant="h6" sx={{ display: "flex", alignItems: "center" }}>
           {t("search.searchResults")}
@@ -93,16 +95,23 @@ const ResultSet: React.FC<ResultSetProps> = ({
           {t("search.noResultsFor", { query: searchQuery })}
         </Box>
       ) : (
-        <List sx={{ maxHeight: 600, overflow: "auto" }} onScroll={handleScroll}>
+        <List
+          sx={{
+            flex: 1,
+            overflow: "auto",
+            maxHeight: { xs: 600, md: "none" },
+            bgcolor: "background.default",
+            px: 2,
+            py: 1,
+          }}
+          onScroll={handleScroll}
+        >
           {searchResults.map((result, index) => (
             <Expression
               key={`${result.uri}-${index}`}
               result={result}
-              isSelected={selectedResult === result.uri}
               onSelect={onSelectResult}
               config={config}
-              selectedManifestationUri={selectedManifestationUri}
-              onManifestationSelect={onManifestationSelect}
               selectedLanguage={selectedLanguage}
               onEntitySearch={onEntitySearch}
               initialExpanded={index < 5 && result.manifestation_count != null && result.manifestation_count <= 2}

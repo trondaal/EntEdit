@@ -5,7 +5,6 @@ import {
   Typography,
   Box,
   ListItem,
-  ListItemButton,
   ListItemText,
   Chip,
   Link,
@@ -41,9 +40,15 @@ const ExpressionList: React.FC<ExpressionListProps> = ({
     error,
   } = useExpressionsByManifestation(config, manifestationUri, selectedLanguage);
 
+  const sectionSx = {
+    bgcolor: "rgba(139, 92, 42, 0.12)",
+    borderTop: 1,
+    borderColor: "divider",
+  } as const;
+
   if (isLoading) {
     return (
-      <Box sx={{ display: "flex", justifyContent: "center", p: 2, pl: 4 }}>
+      <Box sx={{ ...sectionSx, display: "flex", justifyContent: "center", p: 2, pl: 4 }}>
         <CircularProgress size={20} />
       </Box>
     );
@@ -51,7 +56,7 @@ const ExpressionList: React.FC<ExpressionListProps> = ({
 
   if (error) {
     return (
-      <Box sx={{ p: 2, pl: 4 }}>
+      <Box sx={{ ...sectionSx, p: 2, pl: 4 }}>
         <Typography variant="body2" color="error">
           {t("search.errorLoadingExpressions", { message: (error as Error).message })}
         </Typography>
@@ -61,7 +66,7 @@ const ExpressionList: React.FC<ExpressionListProps> = ({
 
   if (!expressions || expressions.length === 0) {
     return (
-      <Box sx={{ p: 2, pl: 4 }}>
+      <Box sx={{ ...sectionSx, p: 2, pl: 4 }}>
         <Typography variant="body2" color="text.secondary">
           {t("search.noExpressionsFound")}
         </Typography>
@@ -70,7 +75,7 @@ const ExpressionList: React.FC<ExpressionListProps> = ({
   }
 
   return (
-    <List dense disablePadding>
+    <List dense disablePadding sx={sectionSx}>
       {expressions.map((expression) => {
         // Determine primary title and icon
         const ContentTypeIcon = getContentTypeIcon(expression.contenttypeUri);
@@ -98,17 +103,8 @@ const ExpressionList: React.FC<ExpressionListProps> = ({
         const allCreators = [...workCreators, ...expressionCreators];
 
         return (
-          <ListItem
-            key={expression.uri}
-            disablePadding
-            sx={{
-              pl: 4,
-              bgcolor: (theme) => theme.palette.mode === 'light'
-                ? 'grey.50'
-                : 'grey.900',
-            }}
-          >
-            <ListItemButton>
+          <ListItem key={expression.uri} disablePadding sx={{ pl: 4 }}>
+            <Box sx={{ width: "100%", px: 2, py: 1 }}>
               <ListItemText
               primary={
                 <Box>
@@ -343,7 +339,7 @@ const ExpressionList: React.FC<ExpressionListProps> = ({
                 </Box>
               }
               />
-            </ListItemButton>
+            </Box>
           </ListItem>
         );
       })}

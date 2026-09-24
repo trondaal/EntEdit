@@ -31,9 +31,6 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
   const { logEvent, isRecording } = useLogging();
   const [searchInput, setSearchInput] = useState<string>("");
   const [searchMode, setSearchMode] = useState<'expression' | 'manifestation'>('expression');
-  const [selectedResult, setSelectedResult] = useState<string | null>(null);
-  const [selectedManifestation, setSelectedManifestation] = useState<string | null>(null);
-  const [selectedManifestationResult, setSelectedManifestationResult] = useState<string | null>(null);
 
   // Debounce the search query to avoid firing expensive SPARQL queries on every keystroke
   const debouncedQuery = useDebouncedValue(searchInput, 500);
@@ -82,23 +79,16 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
 
   const handleSearch = (value: string) => {
     setSearchInput(value);
-    setSelectedResult(null);
-    setSelectedManifestation(null);
   };
 
   const handleClearSearch = () => {
     setSearchInput("");
-    setSelectedResult(null);
-    setSelectedManifestation(null);
   };
 
   const handleEntitySearch = (name: string) => {
     // Wrap in quotes for Lucene phrase search; escape any embedded quotes
     const escapedName = name.replace(/"/g, '\\"');
     setSearchInput(`"${escapedName}"`);
-    setSelectedResult(null);
-    setSelectedManifestation(null);
-    setSelectedManifestationResult(null);
   };
 
   return (
@@ -107,13 +97,31 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
         sx={{
           display: "flex",
           gap: 3,
-          flexWrap: "wrap",
-          alignItems: "flex-start",
+          flexDirection: { xs: "column", md: "row" },
+          flexWrap: { xs: "wrap", md: "nowrap" },
+          height: { xs: "auto", md: "calc(100vh - 160px)" },
         }}
       >
         {/* Search Input Section */}
-        <Box sx={{ flex: "1 1 400px", minWidth: 400, alignSelf: "flex-start" }}>
-          <Paper elevation={1} sx={{ height: "fit-content", minHeight: 200 }}>
+        <Box
+          sx={{
+            flex: "1 1 400px",
+            minWidth: 400,
+            display: "flex",
+            flexDirection: "column",
+            height: { xs: "auto", md: "100%" },
+            overflow: { xs: "visible", md: "hidden" },
+          }}
+        >
+          <Paper
+            elevation={1}
+            sx={{
+              height: { xs: "auto", md: "100%" },
+              display: "flex",
+              flexDirection: "column",
+              overflow: { xs: "visible", md: "hidden" },
+            }}
+          >
             <Box sx={{ p: 2, borderBottom: 1, borderColor: "divider" }}>
               <Typography
                 variant="h6"
@@ -171,23 +179,28 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
         </Box>
 
         {/* Search Results Section */}
-        <Box sx={{ flex: "1 1 600px", minWidth: 600, alignSelf: "flex-start" }}>
+        <Box
+          sx={{
+            flex: "1 1 600px",
+            minWidth: 600,
+            display: "flex",
+            flexDirection: "column",
+            height: { xs: "auto", md: "100%" },
+            overflow: { xs: "visible", md: "hidden" },
+          }}
+        >
           {searchMode === 'expression' ? (
             <ResultSet
               searchQuery={debouncedQuery}
               searchResults={searchResults}
               searchLoading={searchLoading}
               searchError={searchError as Error | null}
-              selectedResult={selectedResult}
-              onSelectResult={(uri: string | null) => {
-                setSelectedResult(uri);
-                if (isRecording && uri) {
+              onSelectResult={(uri: string) => {
+                if (isRecording) {
                   logEvent({ type: "search_result_selected", resultUri: uri, query: debouncedQuery, mode: "expression" });
                 }
               }}
               config={config}
-              selectedManifestationUri={selectedManifestation}
-              onManifestationSelect={setSelectedManifestation}
               selectedLanguage={selectedLanguage}
               hasNextPage={searchHasNextPage}
               isFetchingNextPage={searchIsFetchingNextPage}
@@ -200,10 +213,8 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
               searchResults={manifestationSearchResults}
               searchLoading={manifestationSearchLoading}
               searchError={manifestationSearchError as Error | null}
-              selectedResult={selectedManifestationResult}
-              onSelectResult={(uri: string | null) => {
-                setSelectedManifestationResult(uri);
-                if (isRecording && uri) {
+              onSelectResult={(uri: string) => {
+                if (isRecording) {
                   logEvent({ type: "search_result_selected", resultUri: uri, query: debouncedQuery, mode: "manifestation" });
                 }
               }}

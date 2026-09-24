@@ -1,7 +1,6 @@
 import React from "react";
 import {
   ListItem,
-  ListItemButton,
   ListItemText,
   Typography,
   Box,
@@ -21,16 +20,12 @@ import { getCarrierTypeIcon, typeIconSmallSx } from "../utils/contentTypeIcons";
 
 interface ManifestationProps {
   manifestation: ManifestationType;
-  isSelected: boolean;
-  onSelect: (uri: string) => void;
   selectedLanguage: string;
   onEntitySearch?: (name: string) => void;
 }
 
 const Manifestation: React.FC<ManifestationProps> = ({
   manifestation,
-  isSelected,
-  onSelect,
   onEntitySearch,
 }) => {
   const titleArea = formatTitleArea(manifestation);
@@ -39,19 +34,8 @@ const Manifestation: React.FC<ManifestationProps> = ({
   const identifiersLine = formatIdentifiers(manifestation.identifiers);
 
   return (
-    <ListItem
-      disablePadding
-      sx={{
-        pl: 4,
-        bgcolor: (theme) => theme.palette.mode === 'light'
-          ? 'grey.50'
-          : 'grey.900',
-      }}
-    >
-      <ListItemButton
-        selected={isSelected}
-        onClick={() => onSelect(manifestation.uri)}
-      >
+    <ListItem disablePadding sx={{ pl: 4 }}>
+      <Box sx={{ width: "100%", px: 2, py: 1 }}>
         <ListItemText
           primary={
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.5 }}>
@@ -201,7 +185,7 @@ const Manifestation: React.FC<ManifestationProps> = ({
             </Box>
           }
         />
-      </ListItemButton>
+      </Box>
     </ListItem>
   );
 };

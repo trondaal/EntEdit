@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
   ListItem,
-  ListItemButton,
   ListItemText,
   Box,
   Typography,
@@ -23,11 +22,8 @@ import { getContentTypeIcon, typeIconSx } from "../utils/contentTypeIcons";
 
 interface ExpressionProps {
   result: ExpressionSearchResult;
-  isSelected: boolean;
   onSelect: (uri: string) => void;
   config: SparqlEndpointConfig;
-  selectedManifestationUri: string | null;
-  onManifestationSelect: (uri: string) => void;
   selectedLanguage: string;
   onEntitySearch: (name: string) => void;
   initialExpanded?: boolean;
@@ -35,11 +31,8 @@ interface ExpressionProps {
 
 const Expression: React.FC<ExpressionProps> = ({
   result,
-  isSelected,
   onSelect,
   config,
-  selectedManifestationUri,
-  onManifestationSelect,
   selectedLanguage,
   onEntitySearch,
   initialExpanded = false,
@@ -65,11 +58,20 @@ const Expression: React.FC<ExpressionProps> = ({
   };
 
   return (
-    <>
+    <Box
+      sx={{
+        border: 1,
+        borderColor: "divider",
+        borderRadius: 1,
+        mb: 1,
+        overflow: "hidden",
+        bgcolor: "background.paper",
+      }}
+    >
       <ListItem disablePadding>
-        <ListItemButton
-          selected={isSelected}
+        <Box
           onClick={() => onSelect(result.uri)}
+          sx={{ width: "100%", px: 2, py: 1 }}
         >
           <ListItemText
             primary={
@@ -463,25 +465,17 @@ const Expression: React.FC<ExpressionProps> = ({
               </Box>
             }
           />
-        </ListItemButton>
+        </Box>
       </ListItem>
       <Collapse in={manifestationsExpanded} timeout="auto" unmountOnExit>
         <ManifestationList
           config={config}
           expressionUri={result.uri}
-          selectedManifestationUri={selectedManifestationUri}
-          onManifestationSelect={onManifestationSelect}
           selectedLanguage={selectedLanguage}
           onEntitySearch={onEntitySearch}
         />
       </Collapse>
-      <Box
-        sx={{
-          borderBottom: '1px solid',
-          borderColor: 'divider',
-        }}
-      />
-    </>
+    </Box>
   );
 };
 

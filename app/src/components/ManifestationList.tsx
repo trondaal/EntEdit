@@ -13,8 +13,6 @@ import type { SparqlEndpointConfig } from "../types/sparql";
 interface ManifestationListProps {
   config: SparqlEndpointConfig;
   expressionUri: string;
-  selectedManifestationUri: string | null;
-  onManifestationSelect: (uri: string) => void;
   selectedLanguage: string;
   onEntitySearch?: (name: string) => void;
 }
@@ -22,8 +20,6 @@ interface ManifestationListProps {
 const ManifestationList: React.FC<ManifestationListProps> = ({
   config,
   expressionUri,
-  selectedManifestationUri,
-  onManifestationSelect,
   selectedLanguage,
   onEntitySearch,
 }) => {
@@ -34,9 +30,15 @@ const ManifestationList: React.FC<ManifestationListProps> = ({
     error,
   } = useManifestations(config, expressionUri, selectedLanguage);
 
+  const sectionSx = {
+    bgcolor: "rgba(139, 92, 42, 0.12)",
+    borderTop: 1,
+    borderColor: "divider",
+  } as const;
+
   if (isLoading) {
     return (
-      <Box sx={{ display: "flex", justifyContent: "center", p: 2, pl: 4 }}>
+      <Box sx={{ ...sectionSx, display: "flex", justifyContent: "center", p: 2, pl: 4 }}>
         <CircularProgress size={20} />
       </Box>
     );
@@ -44,7 +46,7 @@ const ManifestationList: React.FC<ManifestationListProps> = ({
 
   if (error) {
     return (
-      <Box sx={{ p: 2, pl: 4 }}>
+      <Box sx={{ ...sectionSx, p: 2, pl: 4 }}>
         <Typography variant="body2" color="error">
           {t("search.errorLoadingManifestations", { message: (error as Error).message })}
         </Typography>
@@ -54,7 +56,7 @@ const ManifestationList: React.FC<ManifestationListProps> = ({
 
   if (!manifestations || manifestations.length === 0) {
     return (
-      <Box sx={{ p: 2, pl: 4 }}>
+      <Box sx={{ ...sectionSx, p: 2, pl: 4 }}>
         <Typography variant="body2" color="text.secondary">
           {t("search.noManifestationsFound")}
         </Typography>
@@ -63,13 +65,11 @@ const ManifestationList: React.FC<ManifestationListProps> = ({
   }
 
   return (
-    <List dense disablePadding>
+    <List dense disablePadding sx={sectionSx}>
       {manifestations.map((manifestation) => (
         <Manifestation
           key={manifestation.uri}
           manifestation={manifestation}
-          isSelected={selectedManifestationUri === manifestation.uri}
-          onSelect={onManifestationSelect}
           selectedLanguage={selectedLanguage}
           onEntitySearch={onEntitySearch}
         />
