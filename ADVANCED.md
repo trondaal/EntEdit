@@ -170,6 +170,12 @@ lets users start the system without downloading anything from GitHub:
 | `trondaal/entedit-init` | Vocabulary, example data, repository config, import script | `database/` or `docker/graphdb/` changes |
 | `trondaal/entedit-compose` | The Compose file itself, as an OCI artifact | `docker-compose.yml` changes |
 
+Note that `data/` (the full author example datasets used for manual testing) is
+*not* part of `trondaal/entedit-init` — only `database/testdata/` is baked into
+the image. A fix to a query or component under `app/` only needs the web app
+image rebuilt and pushed; a change under `data/` needs no image rebuild at all
+unless it is also copied into `database/testdata/`.
+
 ```bash
 docker login                          # use a Personal Access Token
 docker buildx create --use            # once, creates a multi-arch builder
@@ -197,6 +203,16 @@ Both build for `amd64` (Intel/AMD) and `arm64` (Apple Silicon / ARM servers) and
 push in one step. Multi-arch images cannot be loaded into the local Docker engine,
 so they go straight to the registry via `--push`. Always publish a versioned tag
 alongside `latest`.
+
+For a quick single-platform fix (e.g. pushing `:latest` right after a bug fix,
+to be followed later by a proper versioned multi-arch release), a plain
+`docker build`/`docker push` also works, but only publishes an image for the
+machine's own architecture:
+
+```bash
+docker build -t trondaal/entedit:latest ./app
+docker push trondaal/entedit:latest
+```
 
 **Compose file** — published as an OCI artifact, *after* the images above:
 
