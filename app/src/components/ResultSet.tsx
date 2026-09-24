@@ -76,6 +76,8 @@ const ResultSet: React.FC<ResultSetProps> = ({
         </Typography>
       </Box>
 
+      <Box sx={{ height: 8, flexShrink: 0, bgcolor: "background.default" }} />
+
       {searchError && (
         <Alert severity="error" sx={{ m: 2 }}>
           {t("search.searchFailed")}
@@ -96,12 +98,13 @@ const ResultSet: React.FC<ResultSetProps> = ({
         </Box>
       ) : (
         <List
+          disablePadding
           sx={{
             flex: 1,
             overflow: "auto",
             maxHeight: { xs: 600, md: "none" },
             bgcolor: "background.default",
-            py: 1,
+            pb: 1,
           }}
           onScroll={handleScroll}
         >
