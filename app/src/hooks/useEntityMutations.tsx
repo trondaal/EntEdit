@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { Button } from "@mui/material";
 import { useQueryClient } from "@tanstack/react-query";
 import { useSnackbar } from "notistack";
 import { useTranslation } from "react-i18next";
@@ -10,10 +11,24 @@ import type {
 import { SparqlClient, SparqlError } from "../utils/sparqlClient";
 import {
   escapeSparqlLiteral,
+  formatLabel,
+  generateEntityUri,
   sanitizeSparqlUri,
 } from "../utils/labelUtils";
+import {
+  buildEntityUpdate,
+  buildInverseCleanup,
+  changedProperties,
+  findConflicts,
+  findRemovedRelations,
+  type RemovedRelation,
+  RDF_TYPE,
+  RDFS_LABEL,
+  type DesiredTerm,
+} from "../utils/entityUpdate";
 import { invalidateEntityCaches } from "../utils/queryInvalidation";
 import { useLogging } from "./useLogging";
+import { loadEntitySnapshot } from "./useEntityQueries";
 import type { EntityLabel, LoadedEntity } from "./useEntityQueries";
 
 interface UseEntityMutationsParams {
@@ -37,6 +52,8 @@ interface UseEntityMutationsParams {
   onSaveSuccess: (args: { isNew: boolean; savedEntityUri: string }) => void;
   /** Called on successful delete so the parent can deselect the entity. */
   onDeleteSuccess: () => void;
+  /** Called from the "Create another" action after an entity was created. */
+  onCreateAnother: () => void;
 }
 
 export interface UseEntityMutationsResult {
@@ -74,10 +91,11 @@ export function useEntityMutations({
   objectPropertyUris,
   onSaveSuccess,
   onDeleteSuccess,
+  onCreateAnother,
 }: UseEntityMutationsParams): UseEntityMutationsResult {
   const queryClient = useQueryClient();
-  const { enqueueSnackbar } = useSnackbar();
-  const { t } = useTranslation("entityEditor");
+  const { enqueueSnackbar, closeSnackbar } = useSnackbar();
+  const { t, i18n } = useTranslation("entityEditor");
   const { logEvent, isRecording } = useLogging();
 
   const [saving, setSaving] = useState(false);
@@ -112,9 +130,17 @@ export function useEntityMutations({
       const client = new SparqlClient(config);
       // Use existing URI, custom URI, or generate one
       const currentEntityUri =
-        entityUri ||
-        customEntityUri.trim() ||
-        `http://example.org/entity-${Date.now()}`;
+        entityUri || customEntityUri.trim() || generateEntityUri(classUri);
+
+      // A new entity must not reuse an identifier that is already described:
+      // INSERT DATA would silently merge the two (e.g. a Person also becoming a Work).
+      if (!entityUri && customEntityUri.trim()) {
+        const existing = await findExistingEntity(client, currentEntityUri, i18n.language);
+        if (existing) {
+          setSaveError(t("messages.uriInUse", existing));
+          return;
+        }
+      }
 
       // Collect all affected entity URIs (entities that are objects in relationships)
       const affectedEntityUris = new Set<string>();
@@ -150,166 +176,126 @@ export function useEntityMutations({
         }
       });
 
-      const sanitizedEntityUri = sanitizeSparqlUri(currentEntityUri);
-      const triples = [
-        `<${sanitizedEntityUri}> a <${sanitizeSparqlUri(classUri)}> .`,
+      // Build the terms the form wants to exist. Values that only exist
+      // through inference are shown read-only and never written back.
+      const desired: DesiredTerm[] = [
+        { property: RDF_TYPE, value: classUri, isUri: true, order: 0 },
       ];
-      const orderAnnotations: string[] = [];
 
-      // Add labels from the label manager
       const hasUserLabel = entityLabels.some((l) => l.value.trim());
-      entityLabels.forEach((label) => {
+      entityLabels.forEach((label, index) => {
         if (label.value.trim()) {
-          const escapedValue = escapeSparqlLiteral(label.value);
-          const formattedValue = label.language
-            ? `"${escapedValue}"@${label.language}`
-            : `"${escapedValue}"`;
-          const labelTriple = `<${sanitizedEntityUri}> <http://www.w3.org/2000/01/rdf-schema#label> ${formattedValue} .`;
-          triples.push(labelTriple);
+          desired.push({
+            property: RDFS_LABEL,
+            value: label.value,
+            lang: label.language || undefined,
+            order: index,
+          });
         }
       });
 
-      // Fallback: if user has not provided any label, derive a default
-      // (untagged) label from the value of the property with order 1.
+      // Fallback: without an explicit label, derive an untagged one from the
+      // value of the property with order 1.
       if (!hasUserLabel) {
         const primaryProperty = properties.find((p) => p.order === 1);
         const primaryValue = primaryProperty
           ? (entityData[primaryProperty.uri] || []).find(
-              (v) => v.value.trim() && !v.isUri,
+              (v) => v.value.trim() && !v.isUri && !v.inferred,
             )?.value.trim()
           : undefined;
         if (primaryValue) {
-          const labelTriple = `<${sanitizedEntityUri}> <http://www.w3.org/2000/01/rdf-schema#label> "${escapeSparqlLiteral(primaryValue)}" .`;
-          triples.push(labelTriple);
+          desired.push({ property: RDFS_LABEL, value: primaryValue, order: 0 });
         }
       }
 
       Object.entries(entityData).forEach(([property, values]) => {
-        const hasMultipleValues = values.filter(({ value }) => value.trim()).length > 1;
-        values.forEach(({ value, order, isUri }) => {
-          if (value.trim()) {
-            const sanitizedProp = sanitizeSparqlUri(property);
-            let objectValue: string;
-            // Use isUri from the SPARQL binding type as fallback for properties
-            // not in objectPropertyUris (e.g. untagged relationship properties)
-            if (objectPropertyUris.has(property) || isUri) {
-              objectValue = `<${sanitizeSparqlUri(value)}>`;
-            } else {
-              objectValue = `"${escapeSparqlLiteral(value)}"`;
-            }
-            triples.push(
-              `<${sanitizedEntityUri}> <${sanitizedProp}> ${objectValue} .`,
-            );
-            // Add RDF-star order annotation when there are multiple values
-            if (hasMultipleValues) {
-              orderAnnotations.push(
-                `<< <${sanitizedEntityUri}> <${sanitizedProp}> ${objectValue} >> <http://oslomet.no/abi/vocab#valueOrder> ${order} .`,
-              );
-            }
-          }
+        let order = 0;
+        values.forEach((value) => {
+          if (!value.value.trim() || value.inferred) return;
+          desired.push({
+            property,
+            value: value.value,
+            // isUri from the loaded binding also covers relationship
+            // properties the editor does not manage.
+            isUri: objectPropertyUris.has(property) || value.isUri,
+            lang: value.lang,
+            datatype: value.datatype,
+            order: order++,
+          });
         });
       });
 
-      const allTriples = [...triples, ...orderAnnotations];
-      const insertQuery = `
-        INSERT DATA {
-          ${allTriples.join("\n          ")}
-        }
-      `;
+      const managedProperties = new Set<string>([RDF_TYPE, RDFS_LABEL]);
+      properties.forEach((p) => managedProperties.add(p.uri));
+      objectPropertyUris.forEach((uri) => managedProperties.add(uri));
 
-      if (entityUri) {
-        // For existing entities, only delete properties that the editor manages.
-        // Unmanaged properties (those without the correct entedit:status or
-        // incoming-only triples from other entities) are left untouched.
-        //
-        // All delete + insert operations are combined into a single SPARQL Update
-        // request (semicolon-separated) so GraphDB processes them atomically
-        // within one transaction — preventing partial deletes on network failure.
-        const sanitizedUri = sanitizeSparqlUri(entityUri);
+      const loaded = existingEntityRef.current;
+      const snapshot = entityUri ? (loaded?.snapshot ?? []) : [];
+      const willWrite = changedProperties(snapshot, desired, managedProperties);
 
-        // Managed properties: rdf:type, rdfs:label, all data properties, all object properties
-        const managedPropertyUris = new Set<string>();
-        managedPropertyUris.add(
-          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-        );
-        managedPropertyUris.add(
-          "http://www.w3.org/2000/01/rdf-schema#label",
-        );
-        properties.forEach((p) => managedPropertyUris.add(p.uri));
-        objectPropertyUris.forEach((uri) => managedPropertyUris.add(uri));
-
-        const managedValues = [...managedPropertyUris]
-          .map((uri) => `<${sanitizeSparqlUri(uri)}>`)
-          .join(" ");
-
-        const updateOperations: string[] = [];
-
-        // 1. Delete RDF-star annotations on managed outgoing triples
-        updateOperations.push(`
-          DELETE {
-            << <${sanitizedUri}> ?p ?o >> ?annotPred ?annotVal .
-          }
-          WHERE {
-            << <${sanitizedUri}> ?p ?o >> ?annotPred ?annotVal .
-            VALUES ?p { ${managedValues} }
-          }
-        `);
-
-        // 2. Delete managed outgoing triples only
-        updateOperations.push(`
-          DELETE {
-            <${sanitizedUri}> ?p ?o .
-          }
-          WHERE {
-            <${sanitizedUri}> ?p ?o .
-            VALUES ?p { ${managedValues} }
-          }
-        `);
-
-        // 3. Handle inverse properties: find object property values that were
-        // removed by the user and delete incoming triples from those entities.
-        // This ensures that when a user removes a relationship that was stored
-        // in the inverse direction, the asserted incoming triple is also cleaned up.
-        // Read existingEntity from the ref so this logic doesn't drag the full
-        // SPARQL result through handleSave's dependency array.
-        const oldData = existingEntityRef.current?.data ?? {};
-        const removedEntityUris = new Set<string>();
-        for (const [prop, oldValues] of Object.entries(oldData)) {
-          // Only check properties where values are URIs (object properties)
-          if (!oldValues.some((v) => v.isUri)) continue;
-          const newValues = new Set(
-            (entityData[prop] || []).map((v) => v.value),
+      // Someone else may have changed the entity while it was open. Only the
+      // properties this save writes are compared, so unrelated edits by
+      // others are left in place rather than blocking the save.
+      if (entityUri && willWrite.size > 0) {
+        const current = await loadEntitySnapshot(client, entityUri);
+        const conflicts = findConflicts(snapshot, current, willWrite);
+        if (conflicts.length > 0) {
+          setSaveError(
+            t("messages.saveConflict", {
+              properties: conflicts
+                .map((uri) => propertyLabel(properties, uri))
+                .join(", "),
+            }),
           );
-          for (const ov of oldValues) {
-            if (ov.isUri && ov.value && !newValues.has(ov.value)) {
-              removedEntityUris.add(ov.value);
-            }
+          return;
+        }
+      }
+
+      // Relationship values the user removed: the statement that holds the
+      // link has to go too, whether it was asserted here or on the other
+      // entity (an inferred link seen from the other side). Removing it from
+      // either side therefore does what the cataloguer meant.
+      const loadedInferred: RemovedRelation[] = [];
+      for (const [property, values] of Object.entries(loaded?.data ?? {})) {
+        for (const value of values) {
+          if (value.inferred && value.isUri && value.value) {
+            loadedInferred.push({ property, value: value.value });
           }
         }
-
-        if (removedEntityUris.size > 0) {
-          const removedUriValues = [...removedEntityUris]
-            .map((uri) => `<${sanitizeSparqlUri(uri)}>`)
-            .join(" ");
-          updateOperations.push(`
-            DELETE {
-              ?s ?p <${sanitizedUri}> .
-            }
-            WHERE {
-              ?s ?p <${sanitizedUri}> .
-              VALUES ?s { ${removedUriValues} }
-            }
-          `);
+      }
+      const keptInferred = new Set<string>();
+      for (const [property, values] of Object.entries(entityData)) {
+        for (const value of values) {
+          if (value.inferred && value.isUri && value.value) {
+            keptInferred.add(`${property}|${value.value}`);
+          }
         }
+      }
 
-        // 4. Re-insert all current data
-        updateOperations.push(insertQuery);
+      const removedRelations = findRemovedRelations({
+        snapshot,
+        desired,
+        managedProperties,
+        loadedInferred,
+        keptInferred,
+      });
+      for (const relation of removedRelations) affectedEntityUris.add(relation.value);
 
-        // Send all operations as a single atomic request
-        await client.update(updateOperations.join(" ;\n"));
-      } else {
-        // New entity: just insert
-        await client.update(insertQuery);
+      const update = [
+        buildEntityUpdate({
+          entityUri: currentEntityUri,
+          snapshot,
+          desired,
+          managedProperties,
+          targetGraph: entityUri ? loaded?.targetGraph : undefined,
+        }),
+        buildInverseCleanup(currentEntityUri, removedRelations),
+      ]
+        .filter(Boolean)
+        .join(" ;\n");
+
+      if (update) {
+        await client.update(update);
       }
 
       // Invalidate caches using utility function
@@ -328,7 +314,19 @@ export function useEntityMutations({
         }
         enqueueSnackbar(t("messages.entityCreated"), {
           variant: "success",
-          autoHideDuration: 3000,
+          autoHideDuration: 6000,
+          action: (key) => (
+            <Button
+              color="inherit"
+              size="small"
+              onClick={() => {
+                closeSnackbar(key);
+                onCreateAnother();
+              }}
+            >
+              {t("common:buttons.createAnother", { ns: "common" })}
+            </Button>
+          ),
         });
         onSaveSuccess({ isNew: true, savedEntityUri: currentEntityUri });
       } else {
@@ -361,7 +359,10 @@ export function useEntityMutations({
     isRecording,
     logEvent,
     onSaveSuccess,
+    onCreateAnother,
+    closeSnackbar,
     formatMutationError,
+    i18n.language,
   ]);
 
   const handleDelete = useCallback(async () => {
@@ -394,30 +395,30 @@ export function useEntityMutations({
         }
       });
 
-      // Delete RDF-star annotations first, then outgoing and incoming statements
+      // One request: RDF-star annotations on both outgoing and incoming
+      // triples, then the triples themselves. Sent together so a failure
+      // cannot leave annotations pointing at statements that are gone.
       const sanitizedUri = sanitizeSparqlUri(entityUri);
-      const deleteAnnotationsQuery = `
-        DELETE WHERE {
-          << <${sanitizedUri}> ?p ?o >> ?annotPred ?annotVal .
-        }
-      `;
-      await client.update(deleteAnnotationsQuery);
-
-      const deleteQuery = `
-        DELETE {
+      const deleteQuery = [
+        `DELETE {
+          << <${sanitizedUri}> ?p ?o >> ?annotationProperty ?annotationValue .
+        } WHERE {
+          << <${sanitizedUri}> ?p ?o >> ?annotationProperty ?annotationValue .
+        }`,
+        `DELETE {
+          << ?s ?p2 <${sanitizedUri}> >> ?annotationProperty ?annotationValue .
+        } WHERE {
+          << ?s ?p2 <${sanitizedUri}> >> ?annotationProperty ?annotationValue .
+        }`,
+        `DELETE {
           <${sanitizedUri}> ?p ?o .
           ?s ?p2 <${sanitizedUri}> .
-        }
-        WHERE {
-          {
-            <${sanitizedUri}> ?p ?o .
-          }
+        } WHERE {
+          { <${sanitizedUri}> ?p ?o . }
           UNION
-          {
-            ?s ?p2 <${sanitizedUri}> .
-          }
-        }
-      `;
+          { ?s ?p2 <${sanitizedUri}> . }
+        }`,
+      ].join(" ;\n");
       await client.update(deleteQuery);
 
       invalidateEntityCaches(
@@ -469,4 +470,42 @@ export function useEntityMutations({
     clearSaveError,
     clearDeleteError,
   };
+}
+
+/**
+ * Returns the label and type labels of `uri` if it already has outgoing
+ * statements, or null if the identifier is free. Only explicit statements
+ * count, so a URI that is merely referenced by other entities is free.
+ */
+async function findExistingEntity(
+  client: SparqlClient,
+  uri: string,
+  language: string,
+): Promise<{ label: string; types: string } | null> {
+  const sanitizedUri = sanitizeSparqlUri(uri);
+  const lang = escapeSparqlLiteral(language);
+  const response = await client.queryWithoutInference(`
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    SELECT (COUNT(?p) AS ?count) (SAMPLE(?label) AS ?anyLabel)
+           (GROUP_CONCAT(DISTINCT ?typeLabel; SEPARATOR=", ") AS ?types)
+    FROM <http://www.ontotext.com/explicit>
+    WHERE {
+      <${sanitizedUri}> ?p ?o .
+      OPTIONAL { <${sanitizedUri}> rdfs:label ?label }
+      OPTIONAL {
+        <${sanitizedUri}> a ?type .
+        OPTIONAL { ?type rdfs:label ?typeLabelLang FILTER(LANGMATCHES(LANG(?typeLabelLang), "${lang}")) }
+        BIND(COALESCE(STR(?typeLabelLang), STR(?type)) AS ?typeLabel)
+      }
+    }
+  `);
+  const row = response.results.bindings[0];
+  if (!row || parseInt(row.count?.value ?? "0", 10) === 0) return null;
+  return { label: row.anyLabel?.value ?? uri, types: row.types?.value ?? "" };
+}
+
+/** Human-readable name of a property, for messages. */
+function propertyLabel(properties: RdfProperty[], uri: string): string {
+  const property = properties.find((p) => p.uri === uri);
+  return formatLabel(property?.label, uri);
 }

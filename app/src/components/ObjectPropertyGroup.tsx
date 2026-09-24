@@ -24,6 +24,7 @@ interface ObjectPropertyGroupProps {
   statusFilter: string;
   entityData: Record<string, OrderedValue[]>;
   isEditing: boolean;
+  showInferredMarks: boolean;
   classUri: string;
   entityUri?: string | null;
   selectedLanguage: string;
@@ -43,6 +44,7 @@ const ObjectPropertyGroup: React.FC<ObjectPropertyGroupProps> = ({
   statusFilter,
   entityData,
   isEditing,
+  showInferredMarks,
   classUri,
   entityUri: sourceEntityUri,
   selectedLanguage,
@@ -123,6 +125,7 @@ const ObjectPropertyGroup: React.FC<ObjectPropertyGroupProps> = ({
           alignItems: "center",
           justifyContent: "space-between",
           mb: 1.5,
+          minHeight: 40,
         }}
       >
         <Typography variant="subtitle1" sx={{ color: "text.primary" }}>{sectionTitle}</Typography>
@@ -135,6 +138,7 @@ const ObjectPropertyGroup: React.FC<ObjectPropertyGroupProps> = ({
               label={addLabel}
               onChange={(e) => setSelectedProperty(e.target.value)}
               disabled={!classUri}
+              inputProps={{ "aria-label": addLabel }}
             >
               {availableProperties.map((property) => (
                 <MenuItem key={property.uri} value={property.uri}>
@@ -169,6 +173,7 @@ const ObjectPropertyGroup: React.FC<ObjectPropertyGroupProps> = ({
           values={entityData[propertyUri]}
           rangeUri={properties.find((p) => p.uri === propertyUri)?.range}
           isEditing={isEditing && !!classUri}
+          showInferredMarks={showInferredMarks}
           selectedLanguage={selectedLanguage}
           onUpdateValue={(index, value) =>
             onUpdateValue(propertyUri, index, value)

@@ -5,7 +5,7 @@
     "defaultClassName": "Entitet"
   },
   "sections": {
-    "labels": "Etiketter",
+    "labels": "Labels",
     "textMetadata": "Tekstmetadata",
     "controlledValues": "Kontrollerte verdier",
     "relatedEntities": "Relaterte entiteter",
@@ -13,22 +13,30 @@
     "relatedAgents": "Relaterte agenter",
     "relatedWorks": "Relaterte verk",
     "relatedExpressions": "Relaterte uttrykk",
-    "relatedManifestations": "Relaterte manifestasjoner"
+    "relatedManifestations": "Relaterte manifestasjoner",
+    "identity": "Identifikasjon"
   },
   "placeholders": {
     "enterUri": "Skriv inn tilpasset URI eller la stå tomt for automatisk generering",
     "enterValue": "Skriv inn {{propertyName}}",
-    "filterEntities": "Filtrer..."
+    "filterEntities": "Filtrer...",
+    "enterOrGenerateUri": "Skriv inn en URI, eller generer en"
   },
   "tooltips": {
     "copyUri": "Kopier URI",
     "dragToReorder": "Dra for å endre rekkefølge",
     "moveUp": "Flytt opp",
-    "moveDown": "Flytt ned"
+    "moveDown": "Flytt ned",
+    "nothingToSave": "Legg til en verdi eller en label før du lagrer",
+    "noChanges": "Ingen endringer å lagre",
+    "languageOfValue": "Språket til denne verdien: {{lang}}",
+    "requiredMissing": "Fyll inn {{fields}} før du lagrer",
+    "valueLanguage": "Språk",
+    "noLanguage": "Uten språk"
   },
   "messages": {
-    "noLabel": "Ingen etikett",
-    "noLabels": "Denne entiteten har ingen etiketter. Klikk \"Rediger etiketter\" for å legge til en.",
+    "noLabel": "Ingen label",
+    "noLabels": "Denne entiteten har ingen labels. Klikk \"Rediger labels\" for å legge til en.",
     "selectClass": "Vennligst velg en klasse fra venstre panel for å opprette en ny entitet.",
     "noRangeSpecified": "Ingen rekkevidde spesifisert for denne egenskapen. Kan ikke foreslå entiteter.",
     "noEntitiesFound": "Ingen entiteter funnet av type {{typeName}}",
@@ -49,20 +57,24 @@
       "unauthorized": "Databasen krever brukernavn og passord for å ta imot endringer. Åpne Innstillinger for å oppgi legitimasjon.",
       "forbidden": "Databasen avviste endringen. Dette endepunktet er skrivebeskyttet — vanlig for en demoserver. Konfigurer et skrivbart endepunkt i Innstillinger for å lagre.",
       "server": "Databasen rapporterte en feil og utførte ikke endringen. Prøv igjen eller sjekk serverloggene."
-    }
+    },
+    "uriInUse": "Denne identifikatoren er allerede i bruk av «{{label}}» ({{types}}). Velg en annen identifikator, eller åpne den eksisterende entiteten fra listen.",
+    "saveConflict": "Noen andre har endret denne entiteten mens du redigerte den ({{properties}}). Bruk Oppdater for å hente deres versjon, og gjør endringene dine på nytt.",
+    "invalidUri": "Dette er ikke en gyldig URI",
+    "duplicateValue": "Allerede registrert for denne egenskapen — den fjernes når du lagrer"
   },
   "labelManager": {
-    "title": "Administrer etiketter",
-    "empty": "Ingen etiketter ennå — klikk Legg til for å opprette en",
+    "title": "Administrer labels",
+    "empty": "Ingen labels ennå — klikk Legg til for å opprette en",
     "placeholders": {
-      "labelValue": "Etikettverdi"
+      "labelValue": "Labelverdi"
     },
     "tooltips": {
       "delete": "Slett"
     },
     "errors": {
-      "duplicateLanguage": "En etikett med språk \"{{lang}}\" finnes allerede",
-      "duplicateNoLanguage": "En etikett uten språktag finnes allerede"
+      "duplicateLanguage": "En label med språk \"{{lang}}\" finnes allerede",
+      "duplicateNoLanguage": "En label uten språktag finnes allerede"
     }
   },
   "dialogs": {
@@ -75,13 +87,6 @@
       "title": "Forkaste endringer?",
       "message": "Du har ulagrede endringer. Avbryt vil forkaste alle endringer gjort i denne sesjonen.",
       "confirm": "Forkast endringer"
-    },
-    "saveWarning": {
-      "title": "Autogenererte verdier",
-      "messageBoth": "Denne entiteten vil bli lagret med en autogenerert URI og en autogenerert etikett. Er du sikker på at du vil fortsette?",
-      "messageUri": "Denne entiteten vil bli lagret med en autogenerert URI. Er du sikker på at du vil fortsette?",
-      "messageLabel": "Denne entiteten vil bli lagret med en autogenerert etikett. Er du sikker på at du vil fortsette?",
-      "confirm": "Lagre likevel"
     },
     "export": {
       "title": "Eksporter entiteter",

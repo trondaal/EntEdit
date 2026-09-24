@@ -11,7 +11,7 @@
     "add": "Legg til",
     "remove": "Fjern",
     "graph": "Graf",
-    "editLabels": "Rediger etiketter",
+    "editLabels": "Rediger labels",
     "editUri": "Rediger URI",
     "addUri": "Legg til URI",
     "showUri": "Vis URI",
@@ -23,7 +23,10 @@
     "exportTurtleSaveFirst": "Lagre endringer før eksportering",
     "import": "Importer",
     "back": "Tilbake",
-    "refresh": "Oppdater"
+    "refresh": "Oppdater",
+    "createAnother": "Opprett ny",
+    "editIdentity": "Identifikator og labels …",
+    "generate": "Generer"
   },
   "dialogs": {
     "refresh": {
@@ -60,7 +63,11 @@
     "addAgent": "Legg til",
     "addRelatedWork": "Legg til",
     "addRelatedExpression": "Legg til",
-    "addRelatedManifestation": "Legg til"
+    "addRelatedManifestation": "Legg til",
+    "inferred": "utledet",
+    "inferredHelp": "Utledet av databasen fra andre utsagn. Den kan ikke redigeres her og lagres ikke med entiteten.",
+    "labels": "Labels",
+    "inferredRelationshipHelp": "Utsagnet ligger på «{{entity}}», ikke her. Fjerner du det, slettes utsagnet, og koblingen forsvinner fra begge entitetene."
   },
   "navigation": {
     "classes": "Klasser",
@@ -77,7 +84,7 @@
     "manifestationSearch": "Søk etter utgivelser",
     "searchResults": "Søkeresultater",
     "searchPlaceholder": "Søk etter entiteter med fulltekstsøk…",
-    "searchHelp": "Skriv inn søkeord for å finne entiteter via GraphDBs Lucene-kobling. Søket utføres på tvers av navn og titler.",
+    "searchHelp": "Søk på tvers av navn og titler. Avslutt et ord med * for også å finne lengre ord (f.eks. countr*).",
     "publications": "Publikasjoner",
     "publicationsCount": "Publikasjoner ({{count}})",
     "contents": "Innhold",
@@ -87,7 +94,7 @@
     "enterSearchQuery": "Skriv inn et søk for å finne entiteter",
     "enterSearchQueryManifestations": "Skriv inn et søk for å finne manifestasjoner",
     "noResultsFor": "Ingen resultater funnet for «{{query}}»",
-    "searchFailed": "Søket feilet: {{message}}",
+    "searchFailed": "Søket kunne ikke gjennomføres. Prøv andre søkeord, eller sjekk tilkoblingen til databasen.",
     "errorLoadingExpressions": "Feil ved lasting av uttrykk: {{message}}",
     "noExpressionsFound": "Ingen uttrykk funnet",
     "errorLoadingManifestations": "Feil ved lasting av manifestasjoner: {{message}}",
@@ -102,8 +109,8 @@
     "entityCountFiltered": "{{shown}} av {{total}}",
     "entityBeingEdited": "Ulagrede endringer",
     "switchEntityTitle": "Ulagrede endringer",
-    "switchEntityMessage": "Den gjeldende entiteten har ulagrede endringer. Å bytte til en annen entitet vil forkaste dem.",
-    "switchEntityConfirm": "Forkast og bytt",
+    "switchEntityMessage": "Den gjeldende entiteten har ulagrede endringer. Hvis du fortsetter, blir de forkastet.",
+    "switchEntityConfirm": "Forkast og fortsett",
     "dataRefreshed": "Data oppdatert",
     "refreshFailed": "Oppdatering feilet: {{message}}"
   },
@@ -112,7 +119,7 @@
       "connection": "Databasetilkobling",
       "test": "Test tilkobling",
       "language": "Språkvalg",
-      "settings": "Andre innstillinger"
+      "settings": "Katalogiseringsstil"
     },
     "connection": {
       "title": "Konfigurer databasetilkobling",
@@ -142,34 +149,49 @@
     },
     "languageStep": {
       "title": "Velg standardspråk",
-      "description": "Velg foretrukket språk for etiketter og grensesnitttekst. Du kan endre dette senere.",
+      "description": "Velg foretrukket språk for labels og grensesnitttekst. Du kan endre dette senere.",
       "successTitle": "Konfigurasjon fullført!",
       "successDescription": "Konfigurasjonen din lagres lokalt og applikasjonen kobler til databasen din."
     },
     "settingsStep": {
-      "title": "Andre innstillinger",
-      "description": "Velg disse for å få en advarsel når du lagrer entiteter med autogenererte URI-er eller etiketter. Dette kan hjelpe deg med å lage god RDF med etablerte URI-er og beskrivende etiketter."
+      "title": "Katalogiseringsstil",
+      "description": "Velg hvordan editoren behandler RDF-identifikatorer og labels. Du kan endre dette senere i innstillingene."
     },
     "buttons": {
       "nextTest": "Neste: Test tilkobling",
       "nextLanguage": "Neste: Språk",
-      "nextSettings": "Neste: Innstillinger",
+      "nextSettings": "Neste: Katalogiseringsstil",
       "back": "Tilbake",
       "complete": "Fullfør oppsett"
-    }
+    },
+    "testResult": {
+      "noUrl": "Skriv inn en URL til et SPARQL-endepunkt",
+      "success": "Tilkoblingen fungerer!",
+      "successDetails": "Koblet til SPARQL-endepunktet. Databasen inneholder data.",
+      "empty": "Tilkoblingen fungerer, men databasen ser ut til å være tom",
+      "emptyDetails": "Endepunktet svarer, men ingen tripler ble funnet.",
+      "failed": "Tilkoblingen mislyktes",
+      "unauthorized": "Autentisering mislyktes (401 Unauthorized)",
+      "unauthorizedDetails": "Brukernavnet eller passordet er feil. Kontroller påloggingsinformasjonen og prøv igjen.",
+      "forbidden": "Ingen tilgang (403 Forbidden)",
+      "forbiddenDetails": "Kontoen din har ikke tilgang til dette endepunktet. Kontakt databaseadministratoren.",
+      "notFound": "Endepunktet ble ikke funnet (404)",
+      "notFoundDetails": "URL-en til SPARQL-endepunktet er feil, eller databasen kjører ikke. Kontroller URL-en.",
+      "network": "Nettverkstilkoblingen mislyktes",
+      "networkDetails": "Får ikke kontakt med databaseserveren. Mulige årsaker:\n• Databaseserveren kjører ikke\n• URL-en er feil\n• En CORS-regel (kryssopphav) blokkerer forespørselen\n• En brannmur eller nettverksbegrensning\n• Problem med SSL/TLS-sertifikat hvis du bruker HTTPS\n\nPrøv å åpne URL-en direkte i nettleseren for å teste tilkoblingen.",
+      "cors": "CORS-feil (kryssopphav)",
+      "corsDetails": "Databaseserveren må tillate forespørsler fra denne applikasjonen. For GraphDB legger du til disse CORS-hodene:\n• Access-Control-Allow-Origin: *\n• Access-Control-Allow-Methods: GET, POST, OPTIONS\n• Access-Control-Allow-Headers: Content-Type, Authorization"
+    },
+    "title": "Sett opp EntEdit"
   },
   "endpointConfig": {
-    "title": "SPARQL endepunkt-konfigurasjon",
+    "title": "Innstillinger",
     "endpointUrl": "SPARQL endepunkt-URL",
     "endpointUrlHelper": "Skriv inn URL-en til SPARQL-endepunktet ditt",
     "username": "Brukernavn (valgfritt)",
     "password": "Passord (valgfritt)",
-    "saveConfiguration": "Lagre konfigurasjon",
-    "reset": "Tilbakestill",
-    "reconfigureDatabase": "Konfigurer database på nytt",
-    "saveWarnings": "Lagringsvarsler",
-    "warnAutoUri": "Varsle ved lagring med autogenerert URI",
-    "warnAutoLabel": "Varsle ved lagring med autogenerert etikett"
+    "reconfigureDatabase": "Konfigurer database",
+    "connectionSection": "Databasetilkobling"
   },
   "logging": {
     "record": "Start logging",
@@ -198,5 +220,19 @@
     "orphanDescription": "Et tidligere opptak ble ikke fullført (nettleseren kan ha blitt lukket). Vil du gjenopprette det og laste ned dataene, eller forkaste det?",
     "orphanRecover": "Gjenopprett og last ned",
     "orphanDiscard": "Forkast"
+  },
+  "catalogingStyle": {
+    "title": "Katalogiseringsstil",
+    "description": "Velg hvor synlige RDF-identifikatorer og labels er under redigering.",
+    "classic": "Klassisk katalogisering",
+    "semantic": "Semantisk katalogisering",
+    "custom": "Egen kombinasjon",
+    "showColumn": "Vis i skjemaet",
+    "requireColumn": "Påkrevd før lagring",
+    "identifierRow": "Identifikator (URI)",
+    "labelsRow": "Labels",
+    "hiddenNote": "Et skjult felt er fortsatt tilgjengelig i ⋮-menyen i editoren, og en verdi genereres automatisk hvis du ikke skriver inn noe.",
+    "showInferredMarks": "Merk verdier databasen har utledet (de kan redigeres uansett)",
+    "showLanguageTags": "Vis språket til tekstverdier, og la det settes under redigering"
   }
 }

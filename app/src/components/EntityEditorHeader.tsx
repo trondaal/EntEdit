@@ -21,7 +21,6 @@ import {
   MoreVert,
   LabelOutlined,
   Code,
-  Link as LinkIcon,
   ArticleOutlined,
 } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
@@ -41,10 +40,12 @@ interface EntityEditorHeaderProps {
   onDelete: () => void;
   onNew: () => void;
   onOpenGraph: (event: React.MouseEvent) => void;
-  onEditLabels: () => void;
-  onEditUri: () => void;
   onExportTurtle: () => void;
   isDirty: boolean;
+  /** Why Save is unavailable (nothing entered / no changes), or null when it can be used. */
+  saveBlockedReason: string | null;
+  /** Set when the cataloguing style keeps identifier or labels off the form. */
+  onEditIdentity?: () => void;
 }
 
 const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
@@ -62,10 +63,10 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
   onDelete,
   onNew,
   onOpenGraph,
-  onEditLabels,
-  onEditUri,
   onExportTurtle,
   isDirty,
+  saveBlockedReason,
+  onEditIdentity,
 }) => {
   const { t } = useTranslation("entityEditor");
   const [menuAnchor, setMenuAnchor] = useState<null | HTMLElement>(null);
@@ -98,6 +99,7 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
     >
       {/* Left: label as title + label-edit icon */}
       <Box sx={{ display: "flex", alignItems: "center", gap: 0.5, minWidth: 0, flex: 1, mr: 1 }}>
+        <Tooltip title={titleText} placement="bottom-start">
         <Typography
           variant="h6"
           noWrap
@@ -111,22 +113,27 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
           <ArticleOutlined sx={{ mr: 1 }} />
           {titleText}
         </Typography>
+        </Tooltip>
       </Box>
 
       {/* Right: action buttons */}
       <Box sx={{ display: "flex", gap: 1, flexShrink: 0, alignItems: "center" }}>
         {isEditing ? (
           <>
-            <Button
-              variant="contained"
-              size="small"
-              onClick={onSave}
-              disabled={saving || uriError || !classUri}
-              startIcon={saving ? <CircularProgress size={16} /> : <Save />}
-              aria-label={t("common:buttons.save", { ns: "common" })}
-            >
-              {saving ? t("common:buttons.saving", { ns: "common" }) : t("common:buttons.save", { ns: "common" })}
-            </Button>
+            <Tooltip title={!saving && saveBlockedReason ? saveBlockedReason : ""}>
+              <span>
+                <Button
+                  variant="contained"
+                  size="small"
+                  onClick={onSave}
+                  disabled={saving || uriError || !classUri || !!saveBlockedReason}
+                  startIcon={saving ? <CircularProgress size={16} /> : <Save />}
+                  aria-label={t("common:buttons.save", { ns: "common" })}
+                >
+                  {saving ? t("common:buttons.saving", { ns: "common" }) : t("common:buttons.save", { ns: "common" })}
+                </Button>
+              </span>
+            </Tooltip>
             {entityUri && (
               <Button
                 variant="outlined"
@@ -173,26 +180,15 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
           anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
           transformOrigin={{ vertical: "top", horizontal: "right" }}
         >
-          <MenuItem
-            onClick={() => { handleMenuClose(); onEditUri(); }}
-          >
-            <ListItemIcon>
-              <LinkIcon fontSize="small" sx={{ color: uriError ? "error.main" : undefined }} />
-            </ListItemIcon>
-            <ListItemText>
-              {t(entityUri ? "common:buttons.showUri" : "common:buttons.addUri", { ns: "common" })}
-            </ListItemText>
-          </MenuItem>
-          <MenuItem
-            onClick={() => { handleMenuClose(); onEditLabels(); }}
-            disabled={!isEditing}
-          >
-            <ListItemIcon>
-              <LabelOutlined fontSize="small" />
-            </ListItemIcon>
-            <ListItemText>{t("common:buttons.editLabels", { ns: "common" })}</ListItemText>
-          </MenuItem>
-          <Divider />
+          {onEditIdentity && (
+            <MenuItem onClick={() => { handleMenuClose(); onEditIdentity(); }}>
+              <ListItemIcon>
+                <LabelOutlined fontSize="small" />
+              </ListItemIcon>
+              <ListItemText>{t("common:buttons.editIdentity", { ns: "common" })}</ListItemText>
+            </MenuItem>
+          )}
+          {onEditIdentity && <Divider />}
           <MenuItem
             onClick={() => { handleMenuClose(); onNew(); }}
             disabled={entityActionsDisabled}

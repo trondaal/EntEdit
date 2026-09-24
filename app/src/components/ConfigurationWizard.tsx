@@ -17,11 +17,14 @@ import {
   List,
   ListItem,
   ListItemText,
-  FormControlLabel,
-  Checkbox,
 } from "@mui/material";
 import { Storage, CheckCircle, Error, Language } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
+import CatalogingStyleSettings from "./CatalogingStyleSettings";
+import {
+  DEFAULT_PREFERENCES,
+  type CatalogingPreferences,
+} from "../utils/catalogingStyle";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import { SparqlClient } from "../utils/sparqlClient";
 import LanguageSelector from "./LanguageSelector";
@@ -31,7 +34,7 @@ interface ConfigurationWizardProps {
   onConfigurationComplete: (
     config: SparqlEndpointConfig,
     language: string,
-    preferences: { warnAutoUri: boolean; warnAutoLabel: boolean },
+    preferences: CatalogingPreferences,
   ) => void;
   initialConfig?: SparqlEndpointConfig;
   initialLanguage?: string;
@@ -53,8 +56,7 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
     },
   );
   const [selectedLanguage, setSelectedLanguage] = useState(initialLanguage);
-  const [warnAutoUri, setWarnAutoUri] = useState(false);
-  const [warnAutoLabel, setWarnAutoLabel] = useState(false);
+  const [preferences, setPreferences] = useState<CatalogingPreferences>(DEFAULT_PREFERENCES);
   const [testing, setTesting] = useState(false);
   const [testResult, setTestResult] = useState<{
     success: boolean;
@@ -73,7 +75,7 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
     if (!config.url.trim()) {
       setTestResult({
         success: false,
-        message: "Please enter a SPARQL endpoint URL",
+        message: t("wizard.testResult.noUrl"),
       });
       return;
     }
@@ -99,47 +101,42 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
       if (response.results.bindings.length > 0) {
         setTestResult({
           success: true,
-          message: "Connection successful!",
-          details: `Connected to SPARQL endpoint. Database contains data.`,
+          message: t("wizard.testResult.success"),
+          details: t("wizard.testResult.successDetails"),
         });
         setActiveStep(2); // Move to language selection
       } else {
         setTestResult({
           success: true,
-          message: "Connection successful, but database appears to be empty",
-          details: "The endpoint is reachable but no triples were found.",
+          message: t("wizard.testResult.empty"),
+          details: t("wizard.testResult.emptyDetails"),
         });
       }
     } catch (error) {
       const errorMessage = (error as Error).message;
-      let enhancedMessage = "Connection failed";
+      let enhancedMessage = t("wizard.testResult.failed");
       let enhancedDetails = errorMessage;
 
       // Provide specific guidance for common authentication errors
       if (errorMessage.includes("401")) {
-        enhancedMessage = "Authentication failed (401 Unauthorized)";
-        enhancedDetails =
-          "The username or password is incorrect. Please check your credentials and try again.";
+        enhancedMessage = t("wizard.testResult.unauthorized");
+        enhancedDetails = t("wizard.testResult.unauthorizedDetails");
       } else if (errorMessage.includes("403")) {
-        enhancedMessage = "Access forbidden (403 Forbidden)";
-        enhancedDetails =
-          "Your account doesn't have permission to access this endpoint. Contact your database administrator.";
+        enhancedMessage = t("wizard.testResult.forbidden");
+        enhancedDetails = t("wizard.testResult.forbiddenDetails");
       } else if (errorMessage.includes("404")) {
-        enhancedMessage = "Endpoint not found (404)";
-        enhancedDetails =
-          "The SPARQL endpoint URL is incorrect or the database is not running. Please verify the URL.";
+        enhancedMessage = t("wizard.testResult.notFound");
+        enhancedDetails = t("wizard.testResult.notFoundDetails");
       } else if (
         errorMessage.includes("Failed to fetch") ||
         errorMessage.includes("NetworkError") ||
         errorMessage.includes("Load failed")
       ) {
-        enhancedMessage = "Network connection failed";
-        enhancedDetails =
-          "Cannot reach the database server. This could be:\n• Database server is not running\n• URL is incorrect\n• CORS (Cross-Origin) policy blocking the request\n• Firewall or network restrictions\n• SSL/TLS certificate issues if using HTTPS\n\nTry accessing the URL directly in your browser to test connectivity.";
+        enhancedMessage = t("wizard.testResult.network");
+        enhancedDetails = t("wizard.testResult.networkDetails");
       } else if (errorMessage.includes("CORS")) {
-        enhancedMessage = "CORS (Cross-Origin) error";
-        enhancedDetails =
-          "The database server needs to allow requests from this application. For GraphDB, add these CORS headers:\n• Access-Control-Allow-Origin: *\n• Access-Control-Allow-Methods: GET, POST, OPTIONS\n• Access-Control-Allow-Headers: Content-Type, Authorization";
+        enhancedMessage = t("wizard.testResult.cors");
+        enhancedDetails = t("wizard.testResult.corsDetails");
       }
 
       setTestResult({
@@ -153,7 +150,7 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
   };
 
   const handleComplete = () => {
-    onConfigurationComplete(config, selectedLanguage, { warnAutoUri, warnAutoLabel });
+    onConfigurationComplete(config, selectedLanguage, preferences);
   };
 
   const renderStepContent = (step: number) => {
@@ -200,7 +197,7 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
             />
 
             <Paper
-              sx={{ p: 2, bgcolor: "info.light", color: "info.contrastText" }}
+              sx={{ p: 2, bgcolor: "info.light", color: "info.dark" }}
             >
               <Typography variant="body2">
                 <strong>{t("wizard.connection.popularEndpoints")}</strong>
@@ -329,23 +326,10 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
             </Typography>
 
             <Box sx={{ mb: 3 }}>
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    checked={warnAutoUri}
-                    onChange={(e) => setWarnAutoUri(e.target.checked)}
-                  />
-                }
-                label={t("endpointConfig.warnAutoUri")}
-              />
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    checked={warnAutoLabel}
-                    onChange={(e) => setWarnAutoLabel(e.target.checked)}
-                  />
-                }
-                label={t("endpointConfig.warnAutoLabel")}
+              <CatalogingStyleSettings
+                hideHeading
+                preferences={preferences}
+                onChange={setPreferences}
               />
             </Box>
 
@@ -353,7 +337,7 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
               sx={{
                 p: 2,
                 bgcolor: "success.light",
-                color: "success.contrastText",
+                color: "success.dark",
               }}
             >
               <Typography
@@ -447,10 +431,12 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
         },
       }}
     >
+      {/* One title for the whole flow: the stepper and each step's own
+          heading say which aspect is being configured. */}
       <DialogTitle>
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <Storage sx={{ mr: 1 }} />
-          {t("wizard.steps.connection")}
+          {t("wizard.title")}
         </Box>
       </DialogTitle>
 

@@ -32,6 +32,20 @@ vocabulary), and creates the Lucene full-text indexes. It then writes a marker
 triple, so later restarts skip the import. To wipe the data and import again,
 restart that service with `FORCE_REINIT=1`.
 
+If full-text search ever misses entities that clearly match — or returns them
+inconsistently between identical searches — the Lucene index is out of step with
+the data rather than the query being wrong. Rebuild it from the Workbench's
+SPARQL editor, without touching the data:
+
+```sparql
+PREFIX : <http://www.ontotext.com/connectors/lucene#>
+PREFIX inst: <http://www.ontotext.com/connectors/lucene/instance#>
+INSERT DATA { inst:expressionsIndex :repairConnector "" }
+```
+
+The same works for `inst:manifestationsIndex`. GraphDB logs how many entities it
+reindexed.
+
 GraphDB Workbench on port 7200 is for database administration; it is not the
 address EntEdit uses. The endpoint stays
 `http://localhost/graphdb/repositories/EntEdit`, because a browser treats port
@@ -92,6 +106,19 @@ npm test         # Vitest suite
 ```
 
 ## Self-hosting EntEdit and GraphDB
+
+### Before putting it on a shared server
+
+The Docker setup is meant for a personal computer, where reaching the GraphDB
+Workbench directly is part of the point. It has no authentication: anyone who can
+reach the machine's port 80 or 7200 can read, edit and delete the data, including
+dropping repositories from the Workbench.
+
+For a shared server, run GraphDB separately with its own security enabled and
+point EntEdit at it. [tools/create-student-repos.sh](tools/create-student-repos.sh)
+sets up one repository per group and merges the matching read/write authorities
+into the free-access list, so students need no login while the administrative
+endpoints stay protected.
 
 Two topologies work, and the choice decides what has to be configured.
 

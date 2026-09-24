@@ -110,3 +110,32 @@ export const isValidUri = (uri: string): boolean => {
     return uriPattern.test(uri);
   }
 };
+
+/**
+ * Display name for an entity in a list: its label when it has one, otherwise
+ * the tail of its URI, so an unlabelled entity reads as
+ * "ux-test" rather than "http://example.org/work/ux-test".
+ */
+export const formatEntityListLabel = (
+  label: string | undefined,
+  uri: string,
+): string => (label && label !== uri ? label : extractUriFragment(uri));
+
+/** Namespace for identifiers the editor generates itself. */
+export const GENERATED_URI_BASE = "http://example.org/entedit/";
+
+/**
+ * Builds an identifier for an entity the user did not name.
+ *
+ * A millisecond timestamp was neither unique across users nor informative;
+ * this includes the class and a UUID, e.g.
+ * `http://example.org/entedit/C10001/3f2c…`.
+ */
+export const generateEntityUri = (classUri: string): string => {
+  const classSegment = extractUriFragment(classUri) || "entity";
+  const id =
+    typeof crypto !== "undefined" && "randomUUID" in crypto
+      ? crypto.randomUUID()
+      : `${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
+  return `${GENERATED_URI_BASE}${classSegment}/${id}`;
+};

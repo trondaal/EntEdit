@@ -1,0 +1,1352 @@
+@prefix entedit: <http://oslomet.no/abi/vocab#> .
+@prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
+@prefix rdac: <http://rdaregistry.info/Elements/c/> .
+@prefix rdaco: <http://rdaregistry.info/termList/RDAContentType/> .
+@prefix rdact: <http://rdaregistry.info/termList/RDACarrierType/> .
+@prefix rdaed: <http://rdaregistry.info/Elements/e/datatype/> .
+@prefix rdaeo: <http://rdaregistry.info/Elements/e/object/> .
+@prefix rdamd: <http://rdaregistry.info/Elements/m/datatype/> .
+@prefix rdamo: <http://rdaregistry.info/Elements/m/object/> .
+@prefix rdamt: <http://rdaregistry.info/termList/RDAMediaType/> .
+@prefix rdawd: <http://rdaregistry.info/Elements/w/datatype/> .
+@prefix rdawo: <http://rdaregistry.info/Elements/w/object/> .
+@prefix rdaxd: <http://rdaregistry.info/Elements/x/datatype/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/021072547> a rdac:C10007 ;
+    rdfs:label "The innocents abroad / Mark Twain ; introduced by Paul Theroux ; illustrated by James Albon" ;
+    rdamd:P30011 "2023" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "Mark Twain ; introduced by Paul Theroux ; illustrated by James Albon" ;
+    rdamd:P30137 "Follows text of the 1869 edition with minor emendations.",
+        "In slip case.",
+        "Originally published: Hartford, Conn. : American Pub. Co., 1869." ;
+    rdamd:P30156 "The innocents abroad" ;
+    rdamd:P30176 "The Folio Society" ;
+    rdamd:P30182 "xxvii, 561 pages, 7 unnumbered pages of plates : illustrations (black and white, and colour), 1 map (colour), 26 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/315947516/exp/eng/1020> ;
+    rdamo:P30321 <http://viaf.org/viaf/31149912620506212729> ;
+    rdamo:P30328 <http://example.org/> ;
+    rdaxd:P00018 "http://example.org/021072547" .
+
+<http://example.org/1712416> a rdac:C10007 ;
+    rdfs:label "4 classic American novels / With an introd. by Willard Thorp" ;
+    rdamd:P30011 "[1969]" ;
+    rdamd:P30033 "The scarlet letter, by N. Hawthorne -- The adventures of Huckleberry Finn, by M. Twain -- The red badge of courage, by S. Crane -- Billy Budd, by H. Melville" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30106 "Signet classics, CQ451" ;
+    rdamd:P30117 "With an introd. by Willard Thorp" ;
+    rdamd:P30156 "4 classic American novels" ;
+    rdamd:P30176 "New American Library" ;
+    rdamd:P30182 "245, 283, 125, 88 p., 18 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/178806136/exp/eng/1020>,
+        <http://viaf.org/viaf/181799290/exp/eng/1020>,
+        <http://viaf.org/viaf/182657402/exp/eng/1020>,
+        <http://viaf.org/viaf/5357147270653335700002/exp/eng/1020> ;
+    rdamo:P30328 <http://viaf.org/viaf/110033000> ;
+    rdaxd:P00018 "http://example.org/1712416" .
+
+<http://example.org/isbn-0007477473> a rdac:C10007 ;
+    rdfs:label "The prince and the pauper / by Mark Twain" ;
+    rdamd:P30004 "ISBN 0007477473",
+        "ISBN 9780007477470" ;
+    rdamd:P30011 "2012" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30106 "Collins classics" ;
+    rdamd:P30117 "by Mark Twain" ;
+    rdamd:P30156 "The prince and the pauper" ;
+    rdamd:P30176 "William Collins" ;
+    rdamd:P30182 "1 online resource (272 pages)." ;
+    rdamo:P30001 rdact:1018 ;
+    rdamo:P30002 rdamt:1003 ;
+    rdamo:P30139 <http://viaf.org/viaf/235238105/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0007477473" .
+
+<http://example.org/isbn-014043920> a rdac:C10007 ;
+    rdfs:label "The gilded age / Mark Twain and Charles Dudley Warner ; edited with an introduction and notes by Louis J. Budd" ;
+    rdamd:P30004 "ISBN 014043920X" ;
+    rdamd:P30011 "2001" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30106 "Penguin classics" ;
+    rdamd:P30117 "Mark Twain and Charles Dudley Warner ; edited with an introduction and notes by Louis J. Budd" ;
+    rdamd:P30137 "Originally published: Hartford, Conn. : American Publishing, 1873." ;
+    rdamd:P30142 "a tale of to-day" ;
+    rdamd:P30156 "The gilded age" ;
+    rdamd:P30176 "Penguin" ;
+    rdamd:P30182 "xxxvi, 475 p., 20 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/236105897/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-014043920" .
+
+<http://example.org/isbn-0195090888> a rdac:C10007 ;
+    rdfs:label "ISBN0195090888 (trade set)",
+        "ISBN0195101340",
+        "ISBN0195113454 (lib. set)",
+        "ISBN0195114035 (lib. ed.)" ;
+    rdamd:P30004 "ISBN 0195090888 (trade set)",
+        "ISBN 0195101340",
+        "ISBN 0195113454 (lib. set)",
+        "ISBN 0195114035 (lib. ed.)" ;
+    rdamd:P30011 "1996" ;
+    rdamd:P30088 "New York",
+        "Oxford" ;
+    rdamd:P30106 "The Oxford Mark Twain" ;
+    rdamd:P30117 "Mark Twain & Charles Dudley Warner ; foreword by Shelley Fisher Fishkin ; introduction, Ward Just ; afterword, Gregg Camfield" ;
+    rdamd:P30137 "Facsim. of ed. published: Hartford, Conn. : American Publishing Co., 1873." ;
+    rdamd:P30156 "The gilded age" ;
+    rdamd:P30176 "Oxford University Press" ;
+    rdamd:P30182 "xlii, xvi, 574, 51p. : ill., ports., 22cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/236105897/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0195090888" .
+
+<http://example.org/isbn-0451530551> a rdac:C10007 ;
+    rdfs:label "ISBN0451530551 (pbk.)",
+        "ISBN9780451530554 (pbk.)" ;
+    rdamd:P30004 "ISBN 0451530551 (pbk.)",
+        "ISBN 9780451530554 (pbk.)" ;
+    rdamd:P30011 "2007" ;
+    rdamd:P30033 "The scarlet letter / Nathaniel Hawthorne -- Adventures of Huckleberry Finn / Mark Twain -- The red badge of courage / Stephen Crane -- Billy Budd / Herman Melville." ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30117 "with a new introduction by Sandra Newman" ;
+    rdamd:P30156 "4 classic American novels" ;
+    rdamd:P30176 "Signet Classics/New American Library" ;
+    rdamd:P30182 "xiii, 226, 291, 130, 90 p., 18 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/178806136/exp/eng/1020>,
+        <http://viaf.org/viaf/181799290/exp/eng/1020>,
+        <http://viaf.org/viaf/182657402/exp/eng/1020>,
+        <http://viaf.org/viaf/5357147270653335700002/exp/eng/1020> ;
+    rdamo:P30328 <http://viaf.org/viaf/51046953> ;
+    rdaxd:P00018 "http://example.org/isbn-0451530551" .
+
+<http://example.org/isbn-0486270696> a rdac:C10007 ;
+    rdfs:label "ISBN0486270696 (pbk)" ;
+    rdamd:P30004 "ISBN 0486270696 (pbk)" ;
+    rdamd:P30011 "c1992" ;
+    rdamd:P30033 "The notorious jumping frog of Calaveras County -- The £1,000,000 bank-note -- The man that corrupted Hadleyburg -- The mysterious stranger" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30106 "Dover thrift editions" ;
+    rdamd:P30117 "Mark Twain" ;
+    rdamd:P30156 "The mysterious stranger and other stories" ;
+    rdamd:P30176 "Dover" ;
+    rdamd:P30182 "v,121p., 21cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/310521814/exp/eng/1020>,
+        <http://viaf.org/viaf/313868151/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q2582895/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q28806254/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0486270696" .
+
+<http://example.org/isbn-0520050894> a rdac:C10007 ;
+    rdfs:label "A Connecticut Yankee in King Arthur's court / Mark Twain ; edited by Bernard L. Stein" ;
+    rdamd:P30004 "ISBN 0520050894",
+        "ISBN 0520051092" ;
+    rdamd:P30011 "c1983" ;
+    rdamd:P30088 "Berkeley" ;
+    rdamd:P30106 "The Mark Twain library" ;
+    rdamd:P30117 "Mark Twain ; edited by Bernard L. Stein" ;
+    rdamd:P30137 "\"A publication of the Mark Twain Project of the Bancroft Library\"." ;
+    rdamd:P30156 "A Connecticut Yankee in King Arthur's court" ;
+    rdamd:P30176 "Published in cooperation with the University of Iowa [by] University of California Press" ;
+    rdamd:P30182 "XVII, 479 s. : ill." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/176284998/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0520050894" .
+
+<http://example.org/isbn-0752546139> a rdac:C10007 ;
+    rdfs:label "ISBN0752546139 (pbk.)" ;
+    rdamd:P30004 "ISBN 0752546139 (pbk.)" ;
+    rdamd:P30011 "2000" ;
+    rdamd:P30033 "The adventures of Tom Sawyer -- The adventures of Huckleberry Finn." ;
+    rdamd:P30088 "Bath" ;
+    rdamd:P30156 "Great novels of Mark Twain" ;
+    rdamd:P30176 "Parragon" ;
+    rdamd:P30182 "309, 438 p. : ill., 22 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/178211495/exp/eng/1020>,
+        <http://viaf.org/viaf/178806136/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0752546139" .
+
+<http://example.org/isbn-0852295316> a rdac:C10007 ;
+    rdfs:label "ISBN0852295316 (series)" ;
+    rdamd:P30004 "ISBN 0852295316 (series)" ;
+    rdamd:P30011 "c1990" ;
+    rdamd:P30033 "Moby Dick, or, The Whale / Herman Melville -- Adventures of Huckleberry Finn / Mark Twain" ;
+    rdamd:P30088 "Chicago",
+        "London" ;
+    rdamd:P30106 "Great books of the western world" ;
+    rdamd:P30117 "Herman Melville" ;
+    rdamd:P30137 "Ill on lining papers.",
+        "Previous ed. of series: 1952." ;
+    rdamd:P30156 "Moby Dick, or, The Whale" ;
+    rdamd:P30165 "48" ;
+    rdamd:P30176 "Encyclopaedia Britannica" ;
+    rdamd:P30182 "xx, 395p. : ill., 24cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/178806136/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0852295316" .
+
+<http://example.org/isbn-0857284983> a rdac:C10007 ;
+    rdfs:label "ISBN0857284983 (hbk.)",
+        "ISBN9780857284983 (hbk.)" ;
+    rdamd:P30004 "ISBN 0857284983 (hbk.)",
+        "ISBN 9780857284983 (hbk.)" ;
+    rdamd:P30011 "2012" ;
+    rdamd:P30033 "The adventures of Tom Sawyer -- Adventures of Huckleberry Finn -- Tom Sawyer Abroad -- Tom Sawyer, Detective." ;
+    rdamd:P30088 "London" ;
+    rdamd:P30106 "Anthem essential classics" ;
+    rdamd:P30117 "by Mark Twain" ;
+    rdamd:P30142 "selected novels" ;
+    rdamd:P30156 "Mark Twain" ;
+    rdamd:P30176 "Anthem" ;
+    rdamd:P30182 "1 v., 23 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/174762947/exp/eng/1020>,
+        <http://viaf.org/viaf/178211495/exp/eng/1020>,
+        <http://viaf.org/viaf/178806136/exp/eng/1020>,
+        <http://viaf.org/viaf/310534325/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0857284983" .
+
+<http://example.org/isbn-0954840186> a rdac:C10007 ;
+    rdfs:label "ISBN0954840186 (pbk.)" ;
+    rdamd:P30004 "ISBN 0954840186 (pbk.)" ;
+    rdamd:P30011 "2006" ;
+    rdamd:P30033 "Adventures of Tom Sawyer -- Huckleberry Finn -- Tom Sawyer abroad -- Tom Sawyer, detective -- Life on the Mississippi -- Prince and the pauper -- Tragedy of Pudd'nhead Wilson -- Connecticut Yankee in King Arthur's court -- Roughing it -- Following the Equator." ;
+    rdamd:P30088 "[London]" ;
+    rdamd:P30142 "10 books in 1" ;
+    rdamd:P30156 "Mark Twain" ;
+    rdamd:P30176 "Shoes and Ships and Sealing Wax" ;
+    rdamd:P30182 "822 p., 25 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/174762947/exp/eng/1020>,
+        <http://viaf.org/viaf/176284998/exp/eng/1020>,
+        <http://viaf.org/viaf/178211495/exp/eng/1020>,
+        <http://viaf.org/viaf/178306412/exp/eng/1020>,
+        <http://viaf.org/viaf/178806136/exp/eng/1020>,
+        <http://viaf.org/viaf/179374558/exp/eng/1020>,
+        <http://viaf.org/viaf/179374907/exp/eng/1020>,
+        <http://viaf.org/viaf/186390341/exp/eng/1020>,
+        <http://viaf.org/viaf/235238105/exp/eng/1020>,
+        <http://viaf.org/viaf/310534325/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0954840186" .
+
+<http://example.org/isbn-1782275959> a rdac:C10007 ;
+    rdfs:label "ISBN1782275959 (paperback)",
+        "ISBN9781782275954 (paperback)" ;
+    rdamd:P30004 "ISBN 1782275959 (paperback)",
+        "ISBN 9781782275954 (paperback)" ;
+    rdamd:P30007 "©2019" ;
+    rdamd:P30011 "2019" ;
+    rdamd:P30033 "Introduction -- The masque of the red death / Edgar Allan Poe -- Young Goodman Brown / Nathaniel Hawthorne -- The eyes / Edith Wharton -- The mask / Robert W. Chambers -- Home / Shirley Jackson -- A ghost story / Mark Twain -- Spunk / Zora Neale Hurston -- The yellow wallpaper / Charlotte Perkins Gilman -- An itinerant house / Emma Frances Dawson." ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "selected and introduced by Laird Hunt" ;
+    rdamd:P30142 "tales of the dark" ;
+    rdamd:P30156 "American midnight" ;
+    rdamd:P30176 "Pushkin Press" ;
+    rdamd:P30182 "220 pages, 17 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/14767483/mask/exp/eng/1020>,
+        <http://viaf.org/viaf/17230986/eyes/exp/eng/1020>,
+        <http://viaf.org/viaf/177620548/exp/eng/1020>,
+        <http://viaf.org/viaf/185973459/exp/eng/1020>,
+        <http://viaf.org/viaf/270703833/itineranthouse/exp/eng/1020>,
+        <http://viaf.org/viaf/59083135/yellowwallpaper/exp/eng/1020>,
+        <http://viaf.org/viaf/62824341/spunk/exp/eng/1020>,
+        <http://viaf.org/viaf/7569159477789427990001/exp/eng/1020>,
+        <http://viaf.org/viaf/91864979/home/exp/eng/1020> ;
+    rdamo:P30267 <http://viaf.org/viaf/14907223> ;
+    rdamo:P30328 <http://viaf.org/viaf/14907223> ;
+    rdaxd:P00018 "http://example.org/isbn-1782275959" .
+
+<http://example.org/isbn-1931082103> a rdac:C10007 ;
+    rdfs:label "The gilded age and later novels / Mark Twain" ;
+    rdamd:P30004 "ISBN 1931082103" ;
+    rdamd:P30011 "c2002" ;
+    rdamd:P30033 "The gilded age ; The American claimant ; Tom Sawyer abroad ; Tom Sawyer : detective ; No. 44 : the mysterious stranger." ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30106 "The Library of America" ;
+    rdamd:P30117 "Mark Twain" ;
+    rdamd:P30156 "The gilded age and later novels" ;
+    rdamd:P30165 "130" ;
+    rdamd:P30176 "Library of America" ;
+    rdamd:P30182 "1053 s." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/174762947/exp/eng/1020>,
+        <http://viaf.org/viaf/236105897/exp/eng/1020>,
+        <http://viaf.org/viaf/310534325/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q2582895/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q7713449/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-1931082103" .
+
+<http://example.org/isbn-9780008542184> a rdac:C10007 ;
+    rdfs:label "ISBN9780008542184 (pbk.)" ;
+    rdamd:P30004 "ISBN 9780008542184 (pbk.)" ;
+    rdamd:P30011 "2022" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30106 "Collins classics" ;
+    rdamd:P30117 "Mark Twain" ;
+    rdamd:P30156 "The adventures of Huckleberry Finn" ;
+    rdamd:P30176 "William Collins" ;
+    rdamd:P30182 "1 volume, 20 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/178806136/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-9780008542184" .
+
+<http://example.org/isbn-9780191920714> a rdac:C10007 ;
+    rdfs:label "ISBN9780191920714 (ebook)" ;
+    rdamd:P30004 "ISBN 9780191920714 (ebook)" ;
+    rdamd:P30011 "2020" ;
+    rdamd:P30088 "Oxford" ;
+    rdamd:P30106 "Oxford world's classics" ;
+    rdamd:P30107 "New edition / edited with an introduction and notes by Peter Stoneley" ;
+    rdamd:P30117 "Mark Twain" ;
+    rdamd:P30137 "This edition previously issued in print: 2007." ;
+    rdamd:P30156 "The adventures of Tom Sawyer" ;
+    rdamd:P30176 "Oxford University Press" ;
+    rdamd:P30182 "1 online resource (xxxvii, 207 pages)." ;
+    rdamo:P30001 rdact:1018 ;
+    rdamo:P30002 rdamt:1003 ;
+    rdamo:P30139 <http://viaf.org/viaf/178211495/exp/eng/1020> ;
+    rdamo:P30267 <http://viaf.org/viaf/93869368> ;
+    rdamo:P30328 <http://viaf.org/viaf/93869368> ;
+    rdaxd:P00018 "http://example.org/isbn-9780191920714" .
+
+<http://example.org/isbn-9780191921957> a rdac:C10007 ;
+    rdfs:label "ISBN9780191921957 (ebook)" ;
+    rdamd:P30004 "ISBN 9780191921957 (ebook)" ;
+    rdamd:P30011 "2020" ;
+    rdamd:P30033 "The tragedy of Pudd'nhead Wilson -- The man that corrupted Hadleyburg -- Those extraordinary twins" ;
+    rdamd:P30088 "Oxford" ;
+    rdamd:P30106 "Oxford world's classics" ;
+    rdamd:P30117 "Mark Twain ; edited with an introduction and notes by R.D. Gooder" ;
+    rdamd:P30137 "Previously issued in print: 1992." ;
+    rdamd:P30142 "Those extraordinary twins ; The man that corrupted Hadleyburg" ;
+    rdamd:P30156 "Pudd'nhead Wilson" ;
+    rdamd:P30176 "Oxford University Press" ;
+    rdamd:P30182 "1 online resource (320 pages)." ;
+    rdamo:P30001 rdact:1018 ;
+    rdamo:P30002 rdamt:1003 ;
+    rdamo:P30139 <http://viaf.org/viaf/178306412/exp/eng/1020>,
+        <http://viaf.org/viaf/185283433/exp/eng/1020>,
+        <http://viaf.org/viaf/313868151/exp/eng/1020> ;
+    rdamo:P30267 <http://viaf.org/viaf/34528021> ;
+    rdamo:P30328 <http://viaf.org/viaf/34528021> ;
+    rdaxd:P00018 "http://example.org/isbn-9780191921957" .
+
+<http://example.org/isbn-9780241251744> a rdac:C10007 ;
+    rdfs:label "ISBN9780241251744 (paperback)" ;
+    rdamd:P30004 "ISBN 9780241251744 (paperback)" ;
+    rdamd:P30011 "2016" ;
+    rdamd:P30033 "The stolen white elephant -- The story of the bad little boy who didn't come to grief -- The story of the good little boy who did not prosper -- The celebrated jumping frog of Calaveras County." ;
+    rdamd:P30088 "[London]" ;
+    rdamd:P30106 "Little black classics" ;
+    rdamd:P30117 "Mark Twain" ;
+    rdamd:P30137 "Formerly CIP." ;
+    rdamd:P30156 "The stolen white elephant" ;
+    rdamd:P30165 "no. 88" ;
+    rdamd:P30176 "Penguin Books" ;
+    rdamd:P30182 "53 pages, 17 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/50566653/grief/exp/eng/1020>,
+        <http://viaf.org/viaf/50566653/prosper/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q3208053/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q7766574/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-9780241251744" .
+
+<http://example.org/isbn-9780393284164> a rdac:C10007 ;
+    rdfs:label "ISBN9780393284164 (pbk.)" ;
+    rdamd:P30004 "ISBN 9780393284164 (pbk.)" ;
+    rdamd:P30011 "2021" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30106 "Norton critical editions" ;
+    rdamd:P30107 "New edition / edited by Thomas Cooley" ;
+    rdamd:P30117 "Mark Twain" ;
+    rdamd:P30156 "The adventures of Huckleberry Finn" ;
+    rdamd:P30176 "W.W. Norton and Company" ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/178806136/exp/eng/1020> ;
+    rdamo:P30267 <http://viaf.org/viaf/109828492> ;
+    rdaxd:P00018 "http://example.org/isbn-9780393284164" .
+
+<http://example.org/isbn-9780785839903> a rdac:C10007 ;
+    rdfs:label "ISBN9780785839903 (hbk.)" ;
+    rdamd:P30004 "ISBN 9780785839903 (hbk.)" ;
+    rdamd:P30011 "2021" ;
+    rdamd:P30088 "Edison" ;
+    rdamd:P30106 "Chartwell classics" ;
+    rdamd:P30117 "Mark Twain" ;
+    rdamd:P30156 "The adventures of Huckleberry Finn" ;
+    rdamd:P30176 "Chartwell Books" ;
+    rdamd:P30182 "1 volume, 20 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/178806136/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-9780785839903" .
+
+<http://example.org/isbn-9780857284990> a rdac:C10007 ;
+    rdfs:label "ISBN9780857284990 (PDF ebook)",
+        "ISBN9780857285997 (ePub ebook)",
+        "ISBN9780857286192 (Mobipocket ebook)" ;
+    rdamd:P30004 "ISBN 9780857284990 (PDF ebook)",
+        "ISBN 9780857285997 (ePub ebook)",
+        "ISBN 9780857286192 (Mobipocket ebook)" ;
+    rdamd:P30011 "2014" ;
+    rdamd:P30033 "The adventures of Tom Sawyer -- Adventures of Huckleberry Finn -- Tom Sawyer abroad -- Tomy Sawyer, detective" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "by Mark Twain ; introduction by Stephen Railton" ;
+    rdamd:P30142 "selected novels" ;
+    rdamd:P30156 "Mark Twain" ;
+    rdamd:P30176 "Anthem Press" ;
+    rdamd:P30182 "1 online resource." ;
+    rdamo:P30001 rdact:1018 ;
+    rdamo:P30002 rdamt:1003 ;
+    rdamo:P30139 <http://viaf.org/viaf/174762947/exp/eng/1020>,
+        <http://viaf.org/viaf/178211495/exp/eng/1020>,
+        <http://viaf.org/viaf/178806136/exp/eng/1020>,
+        <http://viaf.org/viaf/310534325/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-9780857284990" .
+
+<http://example.org/isbn-9781504045643> a rdac:C10007 ;
+    rdfs:label "ISBN9781504045643 (ebook)" ;
+    rdamd:P30004 "ISBN 9781504045643 (ebook)" ;
+    rdamd:P30011 "2017" ;
+    rdamd:P30033 "Time Machine / H.G. Wells -- Worm ouroboros / E.R. Eddison -- Voyage to Arcturus / David Lindsay -- Princess of Mars / Edgar R. Burroughs -- Connecticut Yankee in King Arthur's court / Mark Twain." ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30117 "H.G. Wells, E.R. Eddison, David Lindsay, Edgar R. Burroughs, Mark Twain ; edited by Greg Bear" ;
+    rdamd:P30142 "5 classic novels of science fiction and fantasy" ;
+    rdamd:P30156 "Journeys through time & space" ;
+    rdamd:P30176 "Open Road Media" ;
+    rdamd:P30182 "1 online resource." ;
+    rdamo:P30001 rdact:1018 ;
+    rdamo:P30002 rdamt:1003 ;
+    rdamo:P30139 <http://viaf.org/viaf/176284998/exp/eng/1020>,
+        <http://viaf.org/viaf/306075793/exp/eng/1020>,
+        <http://viaf.org/viaf/309258253/exp/eng/1020>,
+        <http://viaf.org/viaf/309258431/exp/eng/1020>,
+        <http://viaf.org/viaf/8459151051841033530006/exp/eng/1020> ;
+    rdamo:P30267 <http://example.org/> ;
+    rdaxd:P00018 "http://example.org/isbn-9781504045643" .
+
+<http://example.org/isbn-9781513221182> a rdac:C10007 ;
+    rdfs:label "ISBN9781513221182 (hbk.)" ;
+    rdamd:P30004 "ISBN 9781513221182 (hbk.)" ;
+    rdamd:P30011 "2021" ;
+    rdamd:P30088 "Portland" ;
+    rdamd:P30107 "New edition" ;
+    rdamd:P30117 "Mark Twain" ;
+    rdamd:P30156 "The adventures of Tom Sawyer" ;
+    rdamd:P30176 "Mint Editions" ;
+    rdamd:P30182 "1 volume, 21 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/178211495/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-9781513221182" .
+
+<http://example.org/isbn-9781529011883> a rdac:C10007 ;
+    rdfs:label "ISBN9781529011883 (hbk.)" ;
+    rdamd:P30004 "ISBN 9781529011883 (hbk.)" ;
+    rdamd:P30011 "2020" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "Mark Twain" ;
+    rdamd:P30156 "The prince and the pauper" ;
+    rdamd:P30176 "Macmillan Collector's Library" ;
+    rdamd:P30182 "1 volume, 15 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/235238105/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-9781529011883" .
+
+<http://example.org/isbn-9781789559569> a rdac:C10007 ;
+    rdfs:label "ISBN9781789559569 (pbk.)" ;
+    rdamd:P30004 "ISBN 9781789559569 (pbk.)" ;
+    rdamd:P30011 "2021" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30106 "Legend classics" ;
+    rdamd:P30117 "Mark Twain" ;
+    rdamd:P30156 "The adventures of Tom Sawyer" ;
+    rdamd:P30176 "Legend Press" ;
+    rdamd:P30182 "1 volume, 20 cm." ;
+    rdamo:P30001 rdact:1018 ;
+    rdamo:P30002 rdamt:1003 ;
+    rdamo:P30139 <http://viaf.org/viaf/178211495/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-9781789559569" .
+
+<http://example.org/isbn-9781803380315> a rdac:C10007 ;
+    rdfs:label "ISBN9781803380315 (hbk.)" ;
+    rdamd:P30004 "ISBN 9781803380315 (hbk.)" ;
+    rdamd:P30011 "2022" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30107 "New edition / illustrated by Robert Ingpen" ;
+    rdamd:P30117 "by Mark Twain" ;
+    rdamd:P30137 "This edition originally published: Dorking: Templar, 2010." ;
+    rdamd:P30156 "The adventures of Tom Sawyer" ;
+    rdamd:P30176 "Welbeck Editions" ;
+    rdamd:P30182 "63 pages : illustrations (colour), 26 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/178211495/exp/eng/1020> ;
+    rdamo:P30321 <https://isni.org/isni/0000000121266025> ;
+    rdaxd:P00018 "http://example.org/isbn-9781803380315" .
+
+<http://example.org/isbn-9781838573898> a rdac:C10007 ;
+    rdfs:label "ISBN9781838573898 (hbk.)" ;
+    rdamd:P30004 "ISBN 9781838573898 (hbk.)" ;
+    rdamd:P30011 "2021" ;
+    rdamd:P30033 "The adventures of Huckleberry Finn -- The adventures of Tom Sawyer -- The prince and the pauper" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30106 "World classics library" ;
+    rdamd:P30156 "Mark Twain" ;
+    rdamd:P30176 "Arcturus Publishing" ;
+    rdamd:P30182 "1 volume, 24 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/178211495/exp/eng/1020>,
+        <http://viaf.org/viaf/178806136/exp/eng/1020>,
+        <http://viaf.org/viaf/235238105/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-9781838573898" .
+
+<http://viaf.org/viaf/174717427/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Treasure Island (Stevenson, Robert Louis)" ;
+    rdaed:P20315 "Treasure Island" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/174717427> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/181441476/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Wind in the willows (Grahame, Kenneth)" ;
+    rdaed:P20315 "Wind in the willows" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/181441476> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/100175928> a rdac:C10004 ;
+    rdfs:label "Crane, Stephen" ;
+    rdaad:P50339 "1871-1900" ;
+    rdaad:P50413 "Crane, Stephen" ;
+    rdaxd:P00018 "http://viaf.org/viaf/100175928" .
+
+<http://viaf.org/viaf/109828492> a rdac:C10004 ;
+    rdfs:label "Cooley, Thomas" ;
+    rdaad:P50339 "1942-" ;
+    rdaad:P50413 "Cooley, Thomas" ;
+    rdaxd:P00018 "http://viaf.org/viaf/109828492" .
+
+<http://viaf.org/viaf/110033000> a rdac:C10004 ;
+    rdfs:label "Thorp, Willard" ;
+    rdaad:P50413 "Thorp, Willard" ;
+    rdaxd:P00018 "http://viaf.org/viaf/110033000" .
+
+<http://viaf.org/viaf/14767483> a rdac:C10004 ;
+    rdfs:label "Chambers, Robert W." ;
+    rdaad:P50339 "1865-1933" ;
+    rdaad:P50413 "Chambers, Robert W." ;
+    rdaxd:P00018 "http://viaf.org/viaf/14767483" .
+
+<http://viaf.org/viaf/14767483/mask> a rdac:C10001 ;
+    rdfs:label "Mask (Chambers, Robert W.)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Mask" ;
+    rdawo:P10061 <http://viaf.org/viaf/14767483> ;
+    rdaxd:P00018 "http://viaf.org/viaf/14767483/mask" ;
+    rdaxd:P00029 "Short story" .
+
+<http://viaf.org/viaf/14767483/mask/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Mask (Chambers, Robert W.)" ;
+    rdaed:P20315 "Mask" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/14767483/mask> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/17220001> a rdac:C10004 ;
+    rdfs:label "Burroughs, Edgar Rice" ;
+    rdaad:P50339 "1875-1950" ;
+    rdaad:P50413 "Burroughs, Edgar Rice" ;
+    rdaxd:P00018 "http://viaf.org/viaf/17220001" .
+
+<http://viaf.org/viaf/17230986> a rdac:C10004 ;
+    rdfs:label "Wharton, Edith" ;
+    rdaad:P50339 "1862-1937" ;
+    rdaad:P50413 "Wharton, Edith" ;
+    rdaxd:P00018 "http://viaf.org/viaf/17230986" .
+
+<http://viaf.org/viaf/17230986/eyes> a rdac:C10001 ;
+    rdfs:label "Eyes (Wharton, Edith)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Eyes" ;
+    rdawo:P10061 <http://viaf.org/viaf/17230986> ;
+    rdaxd:P00018 "http://viaf.org/viaf/17230986/eyes" ;
+    rdaxd:P00029 "Short story" .
+
+<http://viaf.org/viaf/17230986/eyes/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Eyes (Wharton, Edith)" ;
+    rdaed:P20315 "Eyes" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/17230986/eyes> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/174717427> a rdac:C10001 ;
+    rdfs:label "Treasure Island (Stevenson, Robert Louis)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Treasure Island" ;
+    rdawo:P10061 <http://viaf.org/viaf/95207986> ;
+    rdaxd:P00018 "http://viaf.org/viaf/174717427" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/174762947> a rdac:C10001 ;
+    rdfs:label "Tom Sawyer, detective (Twain, Mark)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Tom Sawyer, detective" ;
+    rdawo:P10061 <http://viaf.org/viaf/50566653> ;
+    rdaxd:P00018 "http://viaf.org/viaf/174762947" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/176284998> a rdac:C10001 ;
+    rdfs:label "A Connecticut Yankee in King Arthur's court (Twain, Mark)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "A Connecticut Yankee in King Arthur's court" ;
+    rdawo:P10061 <http://viaf.org/viaf/50566653> ;
+    rdaxd:P00018 "http://viaf.org/viaf/176284998" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/177620548> a rdac:C10001 ;
+    rdfs:label "Masque of the red death (Poe, Edgar Allan)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Masque of the red death" ;
+    rdawo:P10061 <http://viaf.org/viaf/60351476> ;
+    rdaxd:P00018 "http://viaf.org/viaf/177620548" ;
+    rdaxd:P00029 "Short story" .
+
+<http://viaf.org/viaf/177620548/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Masque of the red death (Poe, Edgar Allan)" ;
+    rdaed:P20315 "Masque of the red death" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/177620548> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/178211495> a rdac:C10001 ;
+    rdfs:label "The adventures of Tom Sawyer (Twain, Mark)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The adventures of Tom Sawyer" ;
+    rdawo:P10061 <http://viaf.org/viaf/50566653> ;
+    rdaxd:P00018 "http://viaf.org/viaf/178211495" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/178306412> a rdac:C10001 ;
+    rdfs:label "The tragedy of Pudd'nhead Wilson (Twain, Mark)",
+        "Tragedy of Pudd'nhead Wilson (Twain, Mark)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The tragedy of Pudd'nhead Wilson",
+        "Tragedy of Pudd'nhead Wilson" ;
+    rdawo:P10061 <http://viaf.org/viaf/50566653> ;
+    rdaxd:P00018 "http://viaf.org/viaf/178306412" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/178806136> a rdac:C10001 ;
+    rdfs:label "The adventures of Huckleberry Finn (Twain, Mark)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The adventures of Huckleberry Finn" ;
+    rdawo:P10061 <http://viaf.org/viaf/50566653> ;
+    rdawo:P10319 <http://viaf.org/viaf/227145541821196601497>,
+        <http://viaf.org/viaf/40149485617893421107> ;
+    rdaxd:P00018 "http://viaf.org/viaf/178806136" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/179374558> a rdac:C10001 ;
+    rdfs:label "Life on the Mississippi (Twain, Mark)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Life on the Mississippi" ;
+    rdawo:P10061 <http://viaf.org/viaf/50566653> ;
+    rdaxd:P00018 "http://viaf.org/viaf/179374558" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/179374558/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Life on the Mississippi (Twain, Mark)" ;
+    rdaed:P20315 "Life on the Mississippi" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/179374558> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/179374907> a rdac:C10001 ;
+    rdfs:label "Roughing it (Twain, Mark)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Roughing it" ;
+    rdawo:P10061 <http://viaf.org/viaf/50566653> ;
+    rdaxd:P00018 "http://viaf.org/viaf/179374907" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/179374907/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Roughing it (Twain, Mark)" ;
+    rdaed:P20315 "Roughing it" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/179374907> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/181441476> a rdac:C10001 ;
+    rdfs:label "Wind in the willows (Grahame, Kenneth)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Wind in the willows" ;
+    rdawo:P10061 <http://viaf.org/viaf/36919188> ;
+    rdaxd:P00018 "http://viaf.org/viaf/181441476" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/181799290> a rdac:C10001 ;
+    rdfs:label "Red badge of courage (Crane, Stephen)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Red badge of courage" ;
+    rdawo:P10061 <http://viaf.org/viaf/100175928> ;
+    rdaxd:P00018 "http://viaf.org/viaf/181799290" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/182657402> a rdac:C10001 ;
+    rdfs:label "Scarlet letter (Hawthorne, Nathaniel)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Scarlet letter" ;
+    rdawo:P10061 <http://viaf.org/viaf/44435463> ;
+    rdaxd:P00018 "http://viaf.org/viaf/182657402" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/185283433> a rdac:C10001 ;
+    rdfs:label "Those extraordinary twins (Twain, Mark)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Those extraordinary twins" ;
+    rdawo:P10061 <http://viaf.org/viaf/50566653> ;
+    rdaxd:P00018 "http://viaf.org/viaf/185283433" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/185283433/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Those extraordinary twins (Twain, Mark)" ;
+    rdaed:P20315 "Those extraordinary twins" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/185283433> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/185973459> a rdac:C10001 ;
+    rdfs:label "Young Goodman Brown (Hawthorne, Nathaniel)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Young Goodman Brown" ;
+    rdawo:P10061 <http://viaf.org/viaf/44435463> ;
+    rdaxd:P00018 "http://viaf.org/viaf/185973459" ;
+    rdaxd:P00029 "Short story" .
+
+<http://viaf.org/viaf/185973459/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Young Goodman Brown (Hawthorne, Nathaniel)" ;
+    rdaed:P20315 "Young Goodman Brown" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/185973459> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/186390341> a rdac:C10001 ;
+    rdfs:label "Following the Equator (Twain, Mark)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Following the Equator" ;
+    rdawo:P10061 <http://viaf.org/viaf/50566653> ;
+    rdaxd:P00018 "http://viaf.org/viaf/186390341" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/186390341/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Following the Equator (Twain, Mark)" ;
+    rdaed:P20315 "Following the Equator" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/186390341> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/227145541821196601497> a rdac:C10004 ;
+    rdfs:label "Finn, Huckleberry" ;
+    rdaad:P50413 "Finn, Huckleberry" ;
+    rdaxd:P00018 "http://viaf.org/viaf/227145541821196601497" .
+
+<http://viaf.org/viaf/235238105> a rdac:C10001 ;
+    rdfs:label "The prince and the pauper (Twain, Mark)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The prince and the pauper" ;
+    rdawo:P10061 <http://viaf.org/viaf/50566653> ;
+    rdaxd:P00018 "http://viaf.org/viaf/235238105" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/236105897> a rdac:C10001 ;
+    rdfs:label "The gilded age (Twain, Mark)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The gilded age" ;
+    rdawo:P10061 <http://viaf.org/viaf/36956815>,
+        <http://viaf.org/viaf/50566653> ;
+    rdaxd:P00018 "http://viaf.org/viaf/236105897" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/27068555> a rdac:C10004 ;
+    rdfs:label "Melville, Herman" ;
+    rdaad:P50339 "1819-1891" ;
+    rdaad:P50413 "Melville, Herman" ;
+    rdaxd:P00018 "http://viaf.org/viaf/27068555" .
+
+<http://viaf.org/viaf/270703833> a rdac:C10004 ;
+    rdfs:label "Dawson, Emma Frances" ;
+    rdaad:P50413 "Dawson, Emma Frances" ;
+    rdaxd:P00018 "http://viaf.org/viaf/270703833" .
+
+<http://viaf.org/viaf/270703833/itineranthouse> a rdac:C10001 ;
+    rdfs:label "Itinerant house (Dawson, Emma Frances.)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Itinerant house" ;
+    rdawo:P10061 <http://viaf.org/viaf/270703833> ;
+    rdaxd:P00018 "http://viaf.org/viaf/270703833/itineranthouse" ;
+    rdaxd:P00029 "Short story" .
+
+<http://viaf.org/viaf/270703833/itineranthouse/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Itinerant house (Dawson, Emma Frances.)" ;
+    rdaed:P20315 "Itinerant house" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/270703833/itineranthouse> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/306075793> a rdac:C10001 ;
+    rdfs:label "Time machine (Wells, H. G.)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Time machine" ;
+    rdawo:P10061 <http://viaf.org/viaf/97006424> ;
+    rdaxd:P00018 "http://viaf.org/viaf/306075793" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/306075793/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Time machine (Wells, H. G.)" ;
+    rdaed:P20315 "Time machine" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/306075793> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/309258253> a rdac:C10001 ;
+    rdfs:label "Princess of Mars (Burroughs, Edgar Rice)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Princess of Mars" ;
+    rdawo:P10061 <http://viaf.org/viaf/17220001> ;
+    rdaxd:P00018 "http://viaf.org/viaf/309258253" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/309258253/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Princess of Mars (Burroughs, Edgar Rice)" ;
+    rdaed:P20315 "Princess of Mars" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/309258253> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/309258431> a rdac:C10001 ;
+    rdfs:label "Worm ouroboros (Eddison, Eric Rücker)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Worm ouroboros" ;
+    rdawo:P10061 <http://viaf.org/viaf/49205550> ;
+    rdaxd:P00018 "http://viaf.org/viaf/309258431" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/309258431/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Worm ouroboros (Eddison, Eric Rücker)" ;
+    rdaed:P20315 "Worm ouroboros" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/309258431> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/310521814> a rdac:C10001 ;
+    rdfs:label "The notorious jumping frog of Calaveras County (Twain, Mark)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The notorious jumping frog of Calaveras County" ;
+    rdawo:P10061 <http://viaf.org/viaf/50566653> ;
+    rdaxd:P00018 "http://viaf.org/viaf/310521814" ;
+    rdaxd:P00029 "Short story" .
+
+<http://viaf.org/viaf/310521814/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The notorious jumping frog of Calaveras County (Twain, Mark)" ;
+    rdaed:P20315 "The notorious jumping frog of Calaveras County" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/310521814> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/310534325> a rdac:C10001 ;
+    rdfs:label "Tom Sawyer abroad (Twain, Mark)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Tom Sawyer abroad" ;
+    rdawo:P10061 <http://viaf.org/viaf/50566653> ;
+    rdaxd:P00018 "http://viaf.org/viaf/310534325" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/31149912620506212729> a rdac:C10004 ;
+    rdfs:label "Albon, James" ;
+    rdaad:P50413 "Albon, James" ;
+    rdaxd:P00018 "http://viaf.org/viaf/31149912620506212729" .
+
+<http://viaf.org/viaf/313868151> a rdac:C10001 ;
+    rdfs:label "The man that corrupted Hadleyburg (Twain, Mark)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The man that corrupted Hadleyburg" ;
+    rdawo:P10061 <http://viaf.org/viaf/50566653> ;
+    rdaxd:P00018 "http://viaf.org/viaf/313868151" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/315947516> a rdac:C10001 ;
+    rdfs:label "The innocents abroad (Twain, Mark)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The innocents abroad" ;
+    rdawo:P10061 <http://viaf.org/viaf/50566653> ;
+    rdaxd:P00018 "http://viaf.org/viaf/315947516" .
+
+<http://viaf.org/viaf/315947516/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The innocents abroad (Twain, Mark)" ;
+    rdaed:P20315 "The innocents abroad" ;
+    rdaed:P20316 "The innocents abroad" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/315947516> ;
+    rdaxd:P00029 "standalone" .
+
+<http://viaf.org/viaf/36919188> a rdac:C10004 ;
+    rdfs:label "Grahame, Kenneth" ;
+    rdaad:P50339 "1859-1932" ;
+    rdaad:P50413 "Grahame, Kenneth" ;
+    rdaxd:P00018 "http://viaf.org/viaf/36919188" .
+
+<http://viaf.org/viaf/36956815> a rdac:C10004 ;
+    rdfs:label "Warner, Charles Dudley" ;
+    rdaad:P50339 "1829-1900" ;
+    rdaad:P50413 "Warner, Charles Dudley" ;
+    rdaxd:P00018 "http://viaf.org/viaf/36956815" .
+
+<http://viaf.org/viaf/40149485617893421107> a rdac:C10004 ;
+    rdfs:label "Tom Sawyer" ;
+    rdaad:P50413 "Tom Sawyer" ;
+    rdaxd:P00018 "http://viaf.org/viaf/40149485617893421107" .
+
+<http://viaf.org/viaf/49205550> a rdac:C10004 ;
+    rdfs:label "Eddison, Eric Rücker" ;
+    rdaad:P50339 "1882-1945" ;
+    rdaad:P50413 "Eddison, Eric Rücker" ;
+    rdaxd:P00018 "http://viaf.org/viaf/49205550" .
+
+<http://viaf.org/viaf/50566653/grief> a rdac:C10001 ;
+    rdfs:label "The story of the bad little boy who didn't come to grief (Twain, Mark)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The story of the bad little boy who didn't come to grief" ;
+    rdawo:P10061 <http://viaf.org/viaf/50566653> ;
+    rdaxd:P00018 "http://viaf.org/viaf/50566653/grief" ;
+    rdaxd:P00029 "Short story" .
+
+<http://viaf.org/viaf/50566653/grief/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The story of the bad little boy who didn't come to grief (Twain, Mark)" ;
+    rdaed:P20315 "The story of the bad little boy who didn't come to grief" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/50566653/grief> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/50566653/prosper> a rdac:C10001 ;
+    rdfs:label "The story of the good little boy who did not prosper (Twain, Mark)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The story of the good little boy who did not prosper" ;
+    rdawo:P10061 <http://viaf.org/viaf/50566653> ;
+    rdaxd:P00018 "http://viaf.org/viaf/50566653/prosper" ;
+    rdaxd:P00029 "Short story" .
+
+<http://viaf.org/viaf/50566653/prosper/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The story of the good little boy who did not prosper (Twain, Mark)" ;
+    rdaed:P20315 "The story of the good little boy who did not prosper" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/50566653/prosper> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/51046953> a rdac:C10004 ;
+    rdfs:label "Newman, Sandra" ;
+    rdaad:P50339 "1965-" ;
+    rdaad:P50413 "Newman, Sandra" ;
+    rdaxd:P00018 "http://viaf.org/viaf/51046953" .
+
+<http://viaf.org/viaf/5357147270653335700002> a rdac:C10001 ;
+    rdfs:label "Billy Budd (Melville, Herman)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Billy Budd" ;
+    rdawo:P10061 <http://viaf.org/viaf/27068555> ;
+    rdaxd:P00018 "http://viaf.org/viaf/5357147270653335700002" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/59083135> a rdac:C10004 ;
+    rdfs:label "Gilman, Charlotte Perkins" ;
+    rdaad:P50339 "1860-1935" ;
+    rdaad:P50413 "Gilman, Charlotte Perkins" ;
+    rdaxd:P00018 "http://viaf.org/viaf/59083135" .
+
+<http://viaf.org/viaf/59083135/yellowwallpaper> a rdac:C10001 ;
+    rdfs:label "Yellow wallpaper (Gilman, Charlotte Perkins)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Yellow wallpaper" ;
+    rdawo:P10061 <http://viaf.org/viaf/59083135> ;
+    rdaxd:P00018 "http://viaf.org/viaf/59083135/yellowwallpaper" ;
+    rdaxd:P00029 "Short story" .
+
+<http://viaf.org/viaf/59083135/yellowwallpaper/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Yellow wallpaper (Gilman, Charlotte Perkins)" ;
+    rdaed:P20315 "Yellow wallpaper" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/59083135/yellowwallpaper> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/60351476> a rdac:C10004 ;
+    rdfs:label "Poe, Edgar Allan" ;
+    rdaad:P50339 "1809-1849" ;
+    rdaad:P50413 "Poe, Edgar Allan" ;
+    rdaxd:P00018 "http://viaf.org/viaf/60351476" .
+
+<http://viaf.org/viaf/62824341> a rdac:C10004 ;
+    rdfs:label "Hurston, Zora Neale" ;
+    rdaad:P50413 "Hurston, Zora Neale" ;
+    rdaxd:P00018 "http://viaf.org/viaf/62824341" .
+
+<http://viaf.org/viaf/62824341/spunk> a rdac:C10001 ;
+    rdfs:label "Spunk (Hurston, Zora Neale)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Spunk" ;
+    rdawo:P10061 <http://viaf.org/viaf/62824341> ;
+    rdaxd:P00018 "http://viaf.org/viaf/62824341/spunk" ;
+    rdaxd:P00029 "Short story" .
+
+<http://viaf.org/viaf/62824341/spunk/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Spunk (Hurston, Zora Neale)" ;
+    rdaed:P20315 "Spunk" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/62824341/spunk> ;
+    rdaxd:P00018 "http://viaf.org/viaf/62824341/spunk/exp/eng/1020" ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/67278926> a rdac:C10004 ;
+    rdfs:label "Lindsay, David" ;
+    rdaad:P50339 "1876-1945" ;
+    rdaad:P50413 "Lindsay, David" ;
+    rdaxd:P00018 "http://viaf.org/viaf/67278926" .
+
+<http://viaf.org/viaf/7569159477789427990001> a rdac:C10001 ;
+    rdfs:label "Ghost story (Twain, Mark)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Ghost story" ;
+    rdawo:P10061 <http://viaf.org/viaf/50566653> ;
+    rdaxd:P00018 "http://viaf.org/viaf/7569159477789427990001" ;
+    rdaxd:P00029 "Short story" .
+
+<http://viaf.org/viaf/7569159477789427990001/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Ghost story (Twain, Mark)" ;
+    rdaed:P20315 "Ghost story" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/7569159477789427990001> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/8459151051841033530006> a rdac:C10001 ;
+    rdfs:label "Voyage to Arcturus (Lindsay, David)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Voyage to Arcturus" ;
+    rdawo:P10061 <http://viaf.org/viaf/67278926> ;
+    rdaxd:P00018 "http://viaf.org/viaf/8459151051841033530006" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/8459151051841033530006/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Voyage to Arcturus (Lindsay, David)" ;
+    rdaed:P20315 "Voyage to Arcturus" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/8459151051841033530006> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/91864979> a rdac:C10004 ;
+    rdfs:label "Jackson, Shirley" ;
+    rdaad:P50339 "1916-1965" ;
+    rdaad:P50413 "Jackson, Shirley" ;
+    rdaxd:P00018 "http://viaf.org/viaf/91864979" .
+
+<http://viaf.org/viaf/91864979/home> a rdac:C10001 ;
+    rdfs:label "Home (Jackson, Shirley)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Home" ;
+    rdawo:P10061 <http://viaf.org/viaf/91864979> ;
+    rdaxd:P00018 "http://viaf.org/viaf/91864979/home" ;
+    rdaxd:P00029 "Short story" .
+
+<http://viaf.org/viaf/91864979/home/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Home (Jackson, Shirley)" ;
+    rdaed:P20315 "Home" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/91864979/home> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/95207986> a rdac:C10004 ;
+    rdfs:label "Stevenson, Robert Louis" ;
+    rdaad:P50339 "1850-1894" ;
+    rdaad:P50413 "Stevenson, Robert Louis" ;
+    rdaxd:P00018 "http://viaf.org/viaf/95207986" .
+
+<http://viaf.org/viaf/97006424> a rdac:C10004 ;
+    rdfs:label "Wells, H. G." ;
+    rdaad:P50339 "1866-1946" ;
+    rdaad:P50413 "Wells, H. G." ;
+    rdaxd:P00018 "http://viaf.org/viaf/97006424" .
+
+<http://www.wikidata.org/entity/Q2582895> a rdac:C10001 ;
+    rdfs:label "The mysterious stranger (Twain, Mark)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The mysterious stranger" ;
+    rdawo:P10061 <http://viaf.org/viaf/50566653> ;
+    rdaxd:P00018 "http://www.wikidata.org/entity/Q2582895" ;
+    rdaxd:P00029 "Novel" .
+
+<http://www.wikidata.org/entity/Q28806254> a rdac:C10001 ;
+    rdfs:label "The £1,000,000 bank-note (Twain, Mark)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The £1,000,000 bank-note" ;
+    rdawo:P10061 <http://viaf.org/viaf/50566653> ;
+    rdaxd:P00018 "http://www.wikidata.org/entity/Q28806254" ;
+    rdaxd:P00029 "Short story" .
+
+<http://www.wikidata.org/entity/Q28806254/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The £1,000,000 bank-note (Twain, Mark)" ;
+    rdaed:P20315 "The £1,000,000 bank-note" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q28806254> ;
+    rdaxd:P00029 "part" .
+
+<http://www.wikidata.org/entity/Q3208053> a rdac:C10001 ;
+    rdfs:label "The celebrated jumping frog of Calaveras County (Twain, Mark)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The celebrated jumping frog of Calaveras County" ;
+    rdawo:P10061 <http://viaf.org/viaf/50566653> ;
+    rdaxd:P00018 "http://www.wikidata.org/entity/Q3208053" ;
+    rdaxd:P00029 "Short story" .
+
+<http://www.wikidata.org/entity/Q3208053/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The celebrated jumping frog of Calaveras County (Twain, Mark)" ;
+    rdaed:P20315 "The celebrated jumping frog of Calaveras County" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q3208053> ;
+    rdaxd:P00029 "part" .
+
+<http://www.wikidata.org/entity/Q7713449> a rdac:C10001 ;
+    rdfs:label "The American claimant (Twain, Mark)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The American claimant" ;
+    rdawo:P10061 <http://viaf.org/viaf/50566653> ;
+    rdaxd:P00018 "http://www.wikidata.org/entity/Q7713449" ;
+    rdaxd:P00029 "Novel" .
+
+<http://www.wikidata.org/entity/Q7713449/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The American claimant (Twain, Mark)" ;
+    rdaed:P20315 "The American claimant" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q7713449> ;
+    rdaxd:P00029 "part" .
+
+<http://www.wikidata.org/entity/Q7766574> a rdac:C10001 ;
+    rdfs:label "The stolen white elephant (Twain, Mark)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The stolen white elephant" ;
+    rdawo:P10061 <http://viaf.org/viaf/50566653> ;
+    rdaxd:P00018 "http://www.wikidata.org/entity/Q7766574" ;
+    rdaxd:P00029 "Short story" .
+
+<http://www.wikidata.org/entity/Q7766574/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The stolen white elephant (Twain, Mark)" ;
+    rdaed:P20315 "The stolen white elephant" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q7766574> ;
+    rdaxd:P00029 "part" .
+
+<https://isni.org/isni/0000000121266025> a rdac:C10004 ;
+    rdfs:label "Ingpen, Robert" ;
+    rdaad:P50339 "1936-" ;
+    rdaad:P50413 "Ingpen, Robert" ;
+    rdaxd:P00018 "https://isni.org/isni/0000000121266025" .
+
+<http://example.org/> a rdac:C10004 ;
+    rdfs:label "Bear, Greg",
+        "Theroux, Paul" ;
+    rdaad:P50339 "1951-" ;
+    rdaad:P50413 "Bear, Greg",
+        "Theroux, Paul" ;
+    rdaxd:P00018 "Bear, Greg",
+        "Theroux, Paul" .
+
+<http://viaf.org/viaf/14907223> a rdac:C10004 ;
+    rdfs:label "Hunt, Laird" ;
+    rdaad:P50413 "Hunt, Laird" ;
+    rdaxd:P00018 "http://viaf.org/viaf/14907223" .
+
+<http://viaf.org/viaf/178306412/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The tragedy of Pudd'nhead Wilson (Twain, Mark)",
+        "Tragedy of Pudd'nhead Wilson (Twain, Mark)" ;
+    rdaed:P20315 "Tragedy of Pudd'nhead Wilson" ;
+    rdaed:P20316 "The tragedy of Pudd'nhead Wilson" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/178306412> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/181799290/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Red badge of courage (Crane, Stephen)" ;
+    rdaed:P20315 "Red badge of courage" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/181799290> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/182657402/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Scarlet letter (Hawthorne, Nathaniel)" ;
+    rdaed:P20315 "Scarlet letter" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/182657402> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/313868151/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The man that corrupted Hadleyburg (Twain, Mark)" ;
+    rdaed:P20315 "The man that corrupted Hadleyburg" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/313868151> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/34528021> a rdac:C10004 ;
+    rdfs:label "Gooder, R. D" ;
+    rdaad:P50413 "Gooder, R. D" ;
+    rdaxd:P00018 "http://viaf.org/viaf/34528021" .
+
+<http://viaf.org/viaf/44435463> a rdac:C10004 ;
+    rdfs:label "Hawthorne, Nathaniel" ;
+    rdaad:P50339 "1804-1864" ;
+    rdaad:P50413 "Hawthorne, Nathaniel" ;
+    rdaxd:P00018 "http://viaf.org/viaf/44435463" .
+
+<http://viaf.org/viaf/5357147270653335700002/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Billy Budd (Melville, Herman)" ;
+    rdaed:P20315 "Billy Budd" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/5357147270653335700002> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/93869368> a rdac:C10004 ;
+    rdfs:label "Stoneley, Peter" ;
+    rdaad:P50413 "Stoneley, Peter" ;
+    rdaxd:P00018 "http://viaf.org/viaf/93869368" .
+
+<http://www.wikidata.org/entity/Q2582895/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The mysterious stranger (Twain, Mark)" ;
+    rdaed:P20315 "The mysterious stranger" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q2582895> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/176284998/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "A Connecticut Yankee in King Arthur's court (Twain, Mark)" ;
+    rdaed:P20315 "A Connecticut Yankee in King Arthur's court" ;
+    rdaed:P20316 "A Connecticut Yankee in King Arthur's court" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/176284998> ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
+<http://viaf.org/viaf/236105897/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The gilded age (Twain, Mark)" ;
+    rdaed:P20315 "The gilded age" ;
+    rdaed:P20316 "The gilded age" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/236105897> ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
+<http://viaf.org/viaf/174762947/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Tom Sawyer, detective (Twain, Mark)" ;
+    rdaed:P20315 "Tom Sawyer, detective" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/174762947> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/235238105/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The prince and the pauper (Twain, Mark)" ;
+    rdaed:P20315 "The prince and the pauper" ;
+    rdaed:P20316 "The prince and the pauper" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/235238105> ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
+<http://viaf.org/viaf/310534325/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Tom Sawyer abroad (Twain, Mark)" ;
+    rdaed:P20315 "Tom Sawyer abroad" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/310534325> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/178211495/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The adventures of Tom Sawyer (Twain, Mark)" ;
+    rdaed:P20315 "The adventures of Tom Sawyer" ;
+    rdaed:P20316 "The adventures of Tom Sawyer" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/178211495> ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
+<http://viaf.org/viaf/178806136/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The adventures of Huckleberry Finn (Twain, Mark)" ;
+    rdaed:P20315 "The adventures of Huckleberry Finn" ;
+    rdaed:P20316 "The adventures of Huckleberry Finn" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/178806136> ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
+<http://viaf.org/viaf/50566653> a rdac:C10004 ;
+    rdfs:label "Twain, Mark" ;
+    rdaad:P50339 "1835-1910" ;
+    rdaad:P50413 "Twain, Mark" ;
+    rdaxd:P00018 "http://viaf.org/viaf/50566653" .
+

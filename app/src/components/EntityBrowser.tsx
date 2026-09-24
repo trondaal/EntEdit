@@ -34,14 +34,14 @@ import {
 } from "../hooks/useEntityQueries";
 import { useDebouncedValue } from "../hooks/useDebouncedValue";
 import EntityEditor from "./EntityEditor";
-import { formatLabel } from "../utils/labelUtils";
+import { formatLabel, formatEntityListLabel } from "../utils/labelUtils";
 import { useLogging } from "../hooks/useLogging";
+import type { CatalogingPreferences } from "../utils/catalogingStyle";
 
 interface EntityBrowserProps {
   config: SparqlEndpointConfig;
   selectedLanguage: string;
-  warnAutoUri: boolean;
-  warnAutoLabel: boolean;
+  preferences: CatalogingPreferences;
   onEditingChange?: (isEditing: boolean) => void;
   onRegisterSave?: (handler: (() => Promise<void>) | null) => void;
   onRegisterDiscard?: (handler: (() => void) | null) => void;
@@ -52,8 +52,7 @@ const ITEM_HEIGHT = 42; // Approximate height of a single entity list item
 const EntityBrowser: React.FC<EntityBrowserProps> = ({
   config,
   selectedLanguage,
-  warnAutoUri,
-  warnAutoLabel,
+  preferences,
   onEditingChange,
   onRegisterSave,
   onRegisterDiscard,
@@ -64,9 +63,9 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
   const [selectedEntity, setSelectedEntity] = useState<string | null>(null);
   const [entityFilter, setEntityFilter] = useState<string>("");
   const [isEditorEditing, setIsEditorEditing] = useState(false);
-  // URI that the user clicked while the editor had unsaved changes
-  const [pendingEntityUri, setPendingEntityUri] = useState<string | null>(null);
-  const [switchEntityDialogOpen, setSwitchEntityDialogOpen] = useState(false);
+  // Navigation the user asked for while the editor had unsaved changes; it
+  // runs only after they confirm discarding those changes.
+  const [pendingNavigation, setPendingNavigation] = useState<(() => void) | null>(null);
   // Debounce the filter text so SPARQL queries don't fire on every keystroke
   const debouncedFilter = useDebouncedValue(entityFilter, 300);
 
@@ -157,44 +156,50 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
     [hasNextPage, isFetchingNextPage, fetchNextPage],
   );
 
-  // Memoized callbacks for handlers
-  const handleClassSelect = useCallback((classUri: string) => {
-    setSelectedClass(classUri);
-    setSelectedEntity(null);
-    if (isRecording) {
-      logEvent({ type: "class_selected", classUri });
+  // Every navigation that replaces the editor's content goes through this
+  // guard, so unsaved edits are never dropped without asking.
+  const guardNavigation = useCallback((navigate: () => void) => {
+    if (isEditorEditing) {
+      // Wrapped in a function: a bare function passed to setState is treated as an updater
+      setPendingNavigation(() => navigate);
+    } else {
+      navigate();
     }
-  }, [isRecording, logEvent]);
+  }, [isEditorEditing]);
+
+  const handleClassSelect = useCallback((classUri: string) => {
+    if (classUri === selectedClass) return;
+    guardNavigation(() => {
+      setSelectedClass(classUri);
+      setSelectedEntity(null);
+      if (isRecording) {
+        logEvent({ type: "class_selected", classUri });
+      }
+    });
+  }, [guardNavigation, selectedClass, isRecording, logEvent]);
 
   const handleEntitySelect = useCallback((entityUri: string) => {
-    if (isEditorEditing && entityUri !== selectedEntity) {
-      setPendingEntityUri(entityUri);
-      setSwitchEntityDialogOpen(true);
-    } else {
+    if (entityUri === selectedEntity) return;
+    guardNavigation(() => {
       setSelectedEntity(entityUri);
       if (isRecording && selectedClass) {
         logEvent({ type: "entity_selected", entityUri, classUri: selectedClass, source: "browser" });
       }
-    }
-  }, [isEditorEditing, selectedEntity, isRecording, selectedClass, logEvent]);
+    });
+  }, [guardNavigation, selectedEntity, isRecording, selectedClass, logEvent]);
 
   const handleEntityDeselect = useCallback(() => {
-    setSelectedEntity(null);
+    guardNavigation(() => setSelectedEntity(null));
+  }, [guardNavigation]);
+
+  const handleDiscardConfirm = useCallback(() => {
     setIsEditorEditing(false);
-  }, []);
+    pendingNavigation?.();
+    setPendingNavigation(null);
+  }, [pendingNavigation]);
 
-  const handleSwitchConfirm = useCallback(() => {
-    if (pendingEntityUri !== null) {
-      setSelectedEntity(pendingEntityUri);
-      setIsEditorEditing(false);
-    }
-    setPendingEntityUri(null);
-    setSwitchEntityDialogOpen(false);
-  }, [pendingEntityUri]);
-
-  const handleSwitchCancel = useCallback(() => {
-    setPendingEntityUri(null);
-    setSwitchEntityDialogOpen(false);
+  const handleDiscardCancel = useCallback(() => {
+    setPendingNavigation(null);
   }, []);
 
   // Build the count label for the entity panel header
@@ -232,7 +237,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
           overflow: { xs: "visible", md: "hidden" },
         }}
       >
-        <Box sx={{ display: "flex", flexDirection: "column", overflow: { xs: "visible", md: "hidden" } }}>
+        <Box sx={{ display: "flex", flexDirection: "column", minWidth: 0, overflow: { xs: "visible", md: "hidden" } }}>
           <Paper elevation={1} sx={{ height: { xs: "auto", md: "100%" }, display: "flex", flexDirection: "column" }}>
             <Box sx={{ p: 2, borderBottom: 1, borderColor: "divider", height: 64, display: "flex", alignItems: "center", gap: 1 }}>
               <Typography
@@ -284,7 +289,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
           </Paper>
         </Box>
 
-        <Box sx={{ display: "flex", flexDirection: "column", overflow: { xs: "visible", md: "hidden" } }}>
+        <Box sx={{ display: "flex", flexDirection: "column", minWidth: 0, overflow: { xs: "visible", md: "hidden" } }}>
           <Paper elevation={1} sx={{ height: { xs: "auto", md: "100%" }, display: "flex", flexDirection: "column" }}>
             <Box
               sx={{
@@ -398,7 +403,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
                             primary={
                               <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
                                 <Typography variant="body2" noWrap sx={{ flex: 1 }}>
-                                  {entity.label}
+                                  {formatEntityListLabel(entity.label, entity.uri)}
                                 </Typography>
                                 {isActiveEditing && (
                                   <Tooltip title={t("messages.entityBeingEdited")} placement="left">
@@ -435,8 +440,12 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
           </Paper>
         </Box>
 
-        <Box sx={{ display: "flex", flexDirection: "column", overflow: { xs: "visible", md: "hidden" } }}>
+        <Box sx={{ display: "flex", flexDirection: "column", minWidth: 0, overflow: { xs: "visible", md: "hidden" } }}>
           <EntityEditor
+            // A fresh editor per entity: the editor keeps unsaved edits across
+            // server refreshes, so reusing it after "Discard and continue" would
+            // show — and could save — the previous entity's form under the new URI.
+            key={`${selectedClass ?? ""}|${selectedEntity ?? ""}`}
             config={config}
             classUri={selectedClass || ""}
             className={selectedClass
@@ -448,10 +457,13 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
             propertiesLoading={propertiesLoading}
             objectPropertiesLoading={objectPropertiesLoading}
             selectedLanguage={selectedLanguage}
-            warnAutoUri={warnAutoUri}
-            warnAutoLabel={warnAutoLabel}
-            onEntitySaved={() => {
-              // Optionally refetch entities list
+            preferences={preferences}
+            onEntitySaved={(saved) => {
+              // Open what was just created instead of resetting to a blank form
+              if (saved?.isNew) {
+                setIsEditorEditing(false);
+                setSelectedEntity(saved.entityUri);
+              }
             }}
             onEntityDeselected={handleEntityDeselect}
             onEditingChange={(isEditing) => {
@@ -463,10 +475,10 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
           />
         </Box>
       </Box>
-      {/* Unsaved changes guard when switching entities */}
+      {/* Unsaved changes guard for class, entity and "New" navigation */}
       <Dialog
-        open={switchEntityDialogOpen}
-        onClose={handleSwitchCancel}
+        open={pendingNavigation !== null}
+        onClose={handleDiscardCancel}
         aria-labelledby="switch-entity-dialog-title"
       >
         <DialogTitle id="switch-entity-dialog-title">
@@ -478,10 +490,10 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleSwitchCancel}>
+          <Button onClick={handleDiscardCancel}>
             {t("buttons.cancel")}
           </Button>
-          <Button onClick={handleSwitchConfirm} color="warning" variant="contained">
+          <Button onClick={handleDiscardConfirm} color="warning" variant="contained">
             {t("messages.switchEntityConfirm")}
           </Button>
         </DialogActions>

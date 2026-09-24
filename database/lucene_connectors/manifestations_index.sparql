@@ -134,8 +134,6 @@ INSERT DATA {
     {
       "fieldName": "titles$manifestation",
       "propertyChain": [
-        "http://rdaregistry.info/Elements/m/object/P30139",
-        "http://rdaregistry.info/Elements/e/object/P20059",
         "http://rdaregistry.info/Elements/x/P00019"
       ],
       "indexed": true,
@@ -249,8 +247,6 @@ INSERT DATA {
     {
       "fieldName": "labels$manifestation",
       "propertyChain": [
-        "http://rdaregistry.info/Elements/m/object/P30139",
-        "http://rdaregistry.info/Elements/e/object/P20059",
         "http://www.w3.org/2000/01/rdf-schema#label"
       ],
       "indexed": true,

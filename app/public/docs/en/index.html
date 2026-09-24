@@ -445,7 +445,7 @@
                     <strong>Language</strong> — Choose your preferred language (currently English or Norwegian).
                 </li>
                 <li>
-                    <strong>Settings</strong> — Configure optional save warnings. You can enable warnings that remind you when you are about to save an entity with an auto-generated URI or an auto-generated label. These warnings are off by default — see <a href="#auto-generation">Auto-generation of URIs and labels</a> for details.
+                    <strong>Settings</strong> — Choose the <a href="#cataloguing-style">cataloguing style</a>: whether the identifier and labels appear on the form, and whether they must be filled in before a new entity can be saved.
                 </li>
             </ol>
             <p>
@@ -743,6 +743,16 @@
                 </li>
             </ol>
 
+            <h4>Empty and repeated values</h4>
+            <p>
+                A value row you leave blank is not saved — it disappears the next
+                time you open the entity, and an empty row on its own does not
+                enable Save. If you enter the same text, in the same language, twice
+                for one property, EntEdit marks the repeat and explains that it will
+                be dropped when you save: the database stores each fact once, so
+                there is nothing to lose by leaving both rows as they are.
+            </p>
+
             <h4>Linking entities together</h4>
             <p>
                 Relationships are added through dedicated sections in the
@@ -1004,10 +1014,68 @@
                 the actual cataloguing data.
             </p>
 
+            <h4 id="value-languages">The language of a text value</h4>
+
+            <p>
+                A text value can record which language it is in — the title
+                <em>Ingen land for gamle menn</em> is Norwegian, <em>No country for old
+                men</em> is English — and RDF stores that alongside the text itself. In
+                the semantic web cataloguing style each text field has a language
+                selector, set to <em>No language</em> until you choose one, and the
+                language is shown beside the value. In the classic style the selector and
+                the tags are hidden, and values are stored without a language unless they
+                already had one.
+            </p>
+
+            <p>
+                One case is shown either way: when a property holds values that differ in
+                language, their tags always appear, whichever style you use. Two titles
+                that look identical but carry different hidden languages would otherwise
+                invite you to delete one as a duplicate.
+            </p>
+
+            <p>
+                Language belongs on values that are natural language — titles, names,
+                notes, statements of responsibility. Dates, numbering, measurements and
+                identifiers are not language, so those fields offer no language selector
+                at all: the ontology marks them with <code>entedit:linguistic false</code>,
+                and a property without that marking is treated as linguistic.
+            </p>
+
+            <h4 id="inferred-values">Inferred values</h4>
+
+            <p>
+                Some of what you see in the editor was never typed in by anyone: the
+                database works it out. Relationships in the WEMI model come in pairs — a
+                Work <em>has expression of work</em>, and that Expression <em>has work
+                expressed</em> — and the database derives the second statement from the
+                first. That means it does not matter which way round you record a link:
+                catalogue it from the Work or from the Expression, and both entities show
+                it.
+            </p>
+
+            <p>
+                Derived values are stored only once. If you add the link on the Expression,
+                the Work has no statement of its own — it is shown the relationship because
+                the database concluded it. Removing it from the Work therefore deletes the
+                statement on the Expression, which is what you would want: the link
+                disappears from both, exactly as if you had removed it from the other side.
+            </p>
+
+            <p>
+                If you want to see which values are stored and which are concluded, turn on
+                <em>Mark values the database inferred</em> in the settings: derived values
+                then carry a small <em>inferred</em> tag and a dashed outline. It is off by
+                default, in both cataloguing styles, because the distinction is extra detail
+                unless you are working on it — and the values behave the same either way.
+            </p>
+
             <h3 id="auto-generation">5.3 Auto-generation of URIs and labels</h3>
 
             <p>
-                EntEdit is designed to let you focus on the cataloguing data. By default, both the entity URI and the label are generated automatically when you save:
+                How much of this you handle yourself depends on the
+                <a href="#cataloguing-style">cataloguing style</a> your installation is set to.
+                Whenever you leave the URI or the label empty, EntEdit fills it in for you when you save:
             </p>
 
             <table>
@@ -1017,7 +1085,7 @@
                 </tr>
                 <tr>
                     <td><strong>URI</strong></td>
-                    <td>A unique URI is generated based on a timestamp (e.g. <code>http://example.org/entity-1712345678901</code>). This is suitable for learning and experimentation. In a production setting you would typically provide a meaningful URI from your institution's namespace.</td>
+                    <td>A unique URI is generated from the class and a random identifier (e.g. <code>http://example.org/entedit/C10001/9f1c8b7e-…</code>). This is suitable for learning and experimentation. In a production setting you would typically provide a meaningful URI from your institution's namespace.</td>
                 </tr>
                 <tr>
                     <td><strong>Label</strong></td>
@@ -1030,7 +1098,58 @@
             </p>
 
             <p>
-                You can always override the auto-generated values using the <strong>⋮</strong> (more actions) menu in the entity editor. Use the URI option to enter a pre-existing identifier (e.g. a VIAF URI for an Agent), and the label option to create custom, language-tagged labels.
+                You can also enter them yourself. The <strong>Identity</strong> block at the
+                top of the entity editor holds the identifier and the labels: use the
+                identifier field for a pre-existing URI (e.g. a VIAF URI for an Agent), and
+                <strong>Edit labels</strong> for custom, language-tagged labels. Not every
+                entity has a URI worth citing — for those, <strong>Generate</strong> next
+                to the identifier field fills in one of the automatic identifiers, which
+                is useful when the cataloguing style requires an identifier. If your
+                installation hides that block, the same fields are in the
+                <strong>⋮</strong> (more actions) menu under
+                <em>Identifier and labels…</em>.
+            </p>
+
+            <h4 id="cataloguing-style">Cataloguing style</h4>
+
+            <p>
+                EntEdit supports two ways of working, chosen in the setup wizard and
+                changeable at any time under the gear icon in the header:
+            </p>
+
+            <table>
+                <tr>
+                    <th>Style</th>
+                    <th>How the editor behaves</th>
+                    <th>Suits</th>
+                </tr>
+                <tr>
+                    <td><strong>Classic cataloguing</strong></td>
+                    <td>The Identity block is hidden and the form starts with the cataloguing
+                        properties. URIs and labels are generated silently, and remain available
+                        from the <strong>⋮</strong> menu.</td>
+                    <td>Cataloguing practice where the RDF identifiers are not the point.</td>
+                </tr>
+                <tr>
+                    <td><strong>Semantic web cataloguing</strong></td>
+                    <td>Identifier and labels are shown on the form, and Save stays disabled on a
+                        new entity until you have entered both.</td>
+                    <td>Teaching where naming things with URIs and labels is part of the exercise.</td>
+                </tr>
+            </table>
+
+            <p>
+                The two settings are independent: you can show identifiers but not labels, or
+                require a label without requiring a URI. Each row in the settings has a
+                <em>Show in the form</em> and a <em>Require before saving</em> checkbox, and
+                requirements apply to new entities only.
+            </p>
+
+            <p>
+                A link can also set the style for one session, which is useful when a whole class
+                should work the same way:
+                <code>…/entedit/?style=classic</code> or <code>…/entedit/?style=semantic</code>.
+                This does not change the saved setting.
             </p>
 
             <p>
@@ -1064,12 +1183,18 @@
             </ul>
             <p>Empty rows are automatically removed when you apply.</p>
 
-            <h4>Save warnings</h4>
+            <h4>Requiring URIs and labels</h4>
             <p>
-                If you want to be reminded to enter URIs and labels manually, you can enable <strong>save warnings</strong> in the configuration wizard (step 4) or in the settings. When enabled, EntEdit will show a confirmation dialog before saving an entity with an auto-generated URI or label, giving you the chance to go back and enter them yourself.
+                If you would rather enter URIs and labels yourself than have them generated,
+                turn on <em>Require before saving</em> for either of them in the configuration
+                wizard (step 4) or in the settings. Save then stays disabled on a new entity
+                until the field has a value, and the button explains what is missing.
             </p>
             <p>
-                These warnings are useful when you want to ensure high-quality RDF data with established URIs and descriptive, language-tagged labels.
+                This is useful when you want established URIs and descriptive,
+                language-tagged labels rather than generated ones. It applies to new
+                entities, so an entity that already exists without a label can still be
+                edited.
             </p>
 
             <h3 id="what-is-turtle">5.4 Turtle format</h3>

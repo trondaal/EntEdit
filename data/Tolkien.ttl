@@ -1,0 +1,1153 @@
+@prefix entedit: <http://oslomet.no/abi/vocab#> .
+@prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
+@prefix rdac: <http://rdaregistry.info/Elements/c/> .
+@prefix rdaco: <http://rdaregistry.info/termList/RDAContentType/> .
+@prefix rdact: <http://rdaregistry.info/termList/RDACarrierType/> .
+@prefix rdaed: <http://rdaregistry.info/Elements/e/datatype/> .
+@prefix rdaeo: <http://rdaregistry.info/Elements/e/object/> .
+@prefix rdamd: <http://rdaregistry.info/Elements/m/datatype/> .
+@prefix rdamo: <http://rdaregistry.info/Elements/m/object/> .
+@prefix rdamt: <http://rdaregistry.info/termList/RDAMediaType/> .
+@prefix rdawd: <http://rdaregistry.info/Elements/w/datatype/> .
+@prefix rdawo: <http://rdaregistry.info/Elements/w/object/> .
+@prefix rdaxd: <http://rdaregistry.info/Elements/x/datatype/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/010109954> a rdac:C10007 ;
+    rdfs:label "The fellowship of the ring" ;
+    rdamd:P30007 "©1966" ;
+    rdamd:P30011 "1966" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30106 "The Lord of the rings" ;
+    rdamd:P30107 "2nd edition" ;
+    rdamd:P30142 "being the first part of The Lord of the Rings" ;
+    rdamd:P30156 "The fellowship of the ring" ;
+    rdamd:P30165 "v. 1." ;
+    rdamd:P30176 "George Allen & Unwin" ;
+    rdamd:P30182 "423 pages : maps, 23 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://www.wikidata.org/entity/Q208002/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/010109954" .
+
+<http://example.org/012525966> a rdac:C10007 ;
+    rdfs:label "The Lord of the rings / J.R.R. Tolkien ; illustrations by Ingahild Grathmer, drawn by Eric Fraser" ;
+    rdamd:P30011 "1977" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "J.R.R. Tolkien ; illustrations by Ingahild Grathmer, drawn by Eric Fraser" ;
+    rdamd:P30137 "In slip case.",
+        "Includes index.",
+        "Originally published: London : Allen and Unwin, 1954-55." ;
+    rdamd:P30156 "The Lord of the rings" ;
+    rdamd:P30176 "Folio Society" ;
+    rdamd:P30182 "3 v. (459 p.; 372 p.; 487 p.) : ill., maps (on lining papers), 24 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://www.wikidata.org/entity/Q15228/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q208002/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q332388/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q332581/exp/eng/1020> ;
+    rdamo:P30321 <http://viaf.org/viaf/35315716>,
+        <http://viaf.org/viaf/49263415> ;
+    rdaxd:P00018 "http://example.org/012525966" .
+
+<http://example.org/013161843> a rdac:C10007 ;
+    rdfs:label "The fellowship of the ring / by J. R. R. Tolkien" ;
+    rdamd:P30011 "1954" ;
+    rdamd:P30088 "Oxford" ;
+    rdamd:P30106 "The Lord of the rings" ;
+    rdamd:P30117 "by J. R. R. Tolkien" ;
+    rdamd:P30142 "being the first part of The Lord of the Rings" ;
+    rdamd:P30156 "The fellowship of the ring" ;
+    rdamd:P30165 "1" ;
+    rdamd:P30176 "George Allen & Unwin" ;
+    rdamd:P30182 "423 p., : ill., 23 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://www.wikidata.org/entity/Q208002/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/013161843" .
+
+<http://example.org/013171596> a rdac:C10007 ;
+    rdfs:label "The return of the king / by J.R.R. Tolkien" ;
+    rdamd:P30011 "1955" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30106 "The lord of the rings" ;
+    rdamd:P30117 "by J.R.R. Tolkien" ;
+    rdamd:P30137 "Map on folded sheet attached to inside cover." ;
+    rdamd:P30142 "being the third part of The lord of the rings" ;
+    rdamd:P30156 "The return of the king" ;
+    rdamd:P30165 "pt. 3" ;
+    rdamd:P30176 "George Allen & Unwin" ;
+    rdamd:P30182 "416 p. : maps, 23 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://www.wikidata.org/entity/Q332581/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/013171596" .
+
+<http://example.org/019684439> a rdac:C10007 ;
+    rdfs:label "The war of the ring / J.R.R. Tolkien ; edited by Christopher Tolkien" ;
+    rdamd:P30007 "©1990" ;
+    rdamd:P30011 "2002" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30106 "The history of Middle-earth",
+        "The history of the Lord of the rings" ;
+    rdamd:P30107 "[New] paperback edition" ;
+    rdamd:P30117 "J.R.R. Tolkien ; edited by Christopher Tolkien" ;
+    rdamd:P30137 "\"This paperback edition 2002.\" --Title page verso.",
+        "Also issued as part of a 4 volumes set in slip-case with slip-case title: The history of the Lord of the rings.",
+        "First published in Great Britain: London, Unwin Hyman, 1990. Previously published in paperback by Grafton 1992. First published in paperback by HarperCollins Publishers 1997.",
+        "ISBN is of 1992 Grafton edition.",
+        "Includes index." ;
+    rdamd:P30156 "The war of the ring" ;
+    rdamd:P30165 "8",
+        "part 3" ;
+    rdamd:P30176 "HarperCollins Publishers" ;
+    rdamd:P30182 "xi, 476 pages : illustrations, maps, 20 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://www.wikidata.org/entity/Q503325/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/019684439" .
+
+<http://example.org/022763547> a rdac:C10007 ;
+    rdfs:label "Poems and songs of middle earth / read by the author, J.R.R. Tolkien" ;
+    rdamd:P30007 "©1967" ;
+    rdamd:P30011 "[1967]" ;
+    rdamd:P30033 "The adventures of Tom Bombadil -- The mewlips -- The hoard -- Perry-the-winkle -- The man in the moon came down too soon -- The sea-bell -- A Elbereth Gilthoniel (in Elvish) -- The road goes ever on / words by J.R.R. Tolkien ; music by Donald Swann ; sung by William Elvin with the composer at the piano -- The road goes ever on -- Upon the hearth the fire is red -- In the willow-meads of Tasarinan -- In western lands -- Namarie (in Elvish) -- I sit beside the fire : refrain A Elbereth Gilthoniel -- Errantry." ;
+    rdamd:P30088 "New York, N.Y" ;
+    rdamd:P30117 "read by the author, J.R.R. Tolkien" ;
+    rdamd:P30137 "Copyright in the words George Allen and Unwin Ltd. ; copyright in the music Donald Swann.",
+        "Critical notes by W.H. Auden on container." ;
+    rdamd:P30156 "Poems and songs of middle earth" ;
+    rdamd:P30176 "Caedmon Records Inc" ;
+    rdamd:P30182 "1 audio disc : analog, 33 1/3 rpm, stereo, 12 in." ;
+    rdamo:P30001 rdact:1004 ;
+    rdamo:P30002 rdamt:1001 ;
+    rdamo:P30139 <http://viaf.org/viaf/95218067/poemsandsongs/exp/eng/1013> ;
+    rdaxd:P00018 "http://example.org/022763547" .
+
+<http://example.org/isbn-000720308> a rdac:C10007 ;
+    rdfs:label "ISBN000720308X (hbk.)",
+        "ISBN000720907X (pbk.)" ;
+    rdamd:P30004 "ISBN 000720308X (hbk.)",
+        "ISBN 000720907X (pbk.)" ;
+    rdamd:P30011 "2005" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "by Wayne G. Hammond and Christina Scull" ;
+    rdamd:P30142 "a reader's companion" ;
+    rdamd:P30156 "The Lord of the rings" ;
+    rdamd:P30176 "HarperCollins" ;
+    rdamd:P30182 "lxxxii, 894 p., 23 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/9014152502908610800009/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-000720308" .
+
+<http://example.org/isbn-0044400918> a rdac:C10007 ;
+    rdfs:label "The hobbit, or there and back again / J. R. R. Tolkien" ;
+    rdamd:P30004 "ISBN 0044400918" ;
+    rdamd:P30007 "© 1987" ;
+    rdamd:P30011 "1987" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30107 "Anniversary super de luxe edition" ;
+    rdamd:P30117 "J. R. R. Tolkien" ;
+    rdamd:P30156 "The hobbit, or there and back again" ;
+    rdamd:P30176 "Unwin Hyman Limited" ;
+    rdamd:P30182 "1 volume." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://www.wikidata.org/entity/Q74287/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0044400918" .
+
+<http://example.org/isbn-0044403054> a rdac:C10007 ;
+    rdfs:label "The Lord of the rings / J.R.R. Tolkien" ;
+    rdamd:P30004 "ISBN 0044403054" ;
+    rdamd:P30011 "1988" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "J.R.R. Tolkien" ;
+    rdamd:P30137 "Contents: Part 1. The fellowship of the ring - Part 2. The two towers - Part 3. The return of the king." ;
+    rdamd:P30156 "The Lord of the rings" ;
+    rdamd:P30176 "Unwin Hyman" ;
+    rdamd:P30182 "1193 p, 23 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://www.wikidata.org/entity/Q15228/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q208002/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q332388/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q332581/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0044403054" .
+
+<http://example.org/isbn-0044403984> a rdac:C10007 ;
+    rdfs:label "The lost road and other writings / J.R.R. Tolkien ; edited by Christopher Tolkien" ;
+    rdamd:P30004 "ISBN 0044403984" ;
+    rdamd:P30011 "1989" ;
+    rdamd:P30033 "The Fall of Numenor and The lost road -- Valinor and Middle Earth before The lord of the rings -- The etymologies" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "J.R.R. Tolkien ; edited by Christopher Tolkien" ;
+    rdamd:P30142 "language and legend before 'The Lord of the Rings'" ;
+    rdamd:P30156 "The lost road and other writings" ;
+    rdamd:P30176 "Unwin Paperbacks" ;
+    rdamd:P30182 "455 p. : maps, 20 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/95218067/thelostroad/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0044403984" .
+
+<http://example.org/isbn-0048230464> a rdac:C10007 ;
+    rdfs:label "The two towers / by J.R.R. Tolkien" ;
+    rdamd:P30004 "ISBN 0048230464" ;
+    rdamd:P30011 "1966" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30106 "The Lord of the rings" ;
+    rdamd:P30107 "2nd ed" ;
+    rdamd:P30117 "by J.R.R. Tolkien" ;
+    rdamd:P30142 "being the second part of The lord of the rings" ;
+    rdamd:P30156 "The two towers" ;
+    rdamd:P30165 "v. 2" ;
+    rdamd:P30176 "Allen & Unwin" ;
+    rdamd:P30182 "352 p. : ill., 1 map, 23 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://www.wikidata.org/entity/Q332388/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0048230464" .
+
+<http://example.org/isbn-0048230472> a rdac:C10007 ;
+    rdfs:label "The return of the king / by J.R.R. Tolkien" ;
+    rdamd:P30004 "ISBN 0048230472" ;
+    rdamd:P30011 "1966" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30106 "The Lord of the rings" ;
+    rdamd:P30107 "2nd ed" ;
+    rdamd:P30117 "by J.R.R. Tolkien" ;
+    rdamd:P30142 "being the third part of The lord of the rings" ;
+    rdamd:P30156 "The return of the king" ;
+    rdamd:P30165 "v.3" ;
+    rdamd:P30176 "Allen & Unwin" ;
+    rdamd:P30182 "440 p. : ill., facsims., table, diagrs., 23 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://www.wikidata.org/entity/Q332581/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0048230472" .
+
+<http://example.org/isbn-0048231398> a rdac:C10007 ;
+    rdfs:label "The silmarillion / J. R. R. Tolkien ; edited by Christopher Tolkien" ;
+    rdamd:P30004 "ISBN 0048231398" ;
+    rdamd:P30007 "©1977" ;
+    rdamd:P30011 "1977" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30107 "Collector's edition" ;
+    rdamd:P30117 "J. R. R. Tolkien ; edited by Christopher Tolkien" ;
+    rdamd:P30137 "First edition plate affixed on first free end paper: \"This is copy number ... of the first one thousand copies off the press of the first edition of The Silmarillion by J.R.R. Tolkien reserved for later publication in this collector's edition.\"",
+        "Includes index." ;
+    rdamd:P30156 "The silmarillion" ;
+    rdamd:P30176 "George Allen & Unwin" ;
+    rdamd:P30182 "365 pages,1 unnumbered folded leaf of plates : illustrations, genealogical tables, maps (1 folded), 23 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/183065413/exp/eng/1020/12315790> ;
+    rdaxd:P00018 "http://example.org/isbn-0048231398" .
+
+<http://example.org/isbn-0048231797> a rdac:C10007 ;
+    rdfs:label "Unfinished tales of Númenor and Middle-earth / by J. R. R. Tolkien ; edited with introduction, commentary, index and maps by Christopher Tolkien" ;
+    rdamd:P30004 "ISBN 0048231797" ;
+    rdamd:P30011 "1980" ;
+    rdamd:P30033 "Of Tuor and his coming to Gondolin -- Narn i hîn Húrin -- A description of the island of Númenor -- Aldarion and Erendis -- The line of Elros : Kings of Númenor -- The history of Galadriel and Celeborn -- The disaster of the Gladden Fields -- Cirion and Eorl and the friendship of Gondor and Rohan -- The quest of Erebor -- The hunt for the Ring -- The battles of the Fords of Isen -- The Drúedain -- The Istari -- The Palantíri." ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "by J. R. R. Tolkien ; edited with introduction, commentary, index and maps by Christopher Tolkien" ;
+    rdamd:P30156 "Unfinished tales of Númenor and Middle-earth" ;
+    rdamd:P30176 "Allen & Unwin" ;
+    rdamd:P30182 "472 p, : maps, 20 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/219968903/exp/eng/1020> ;
+    rdamo:P30321 <http://viaf.org/viaf/12315790> ;
+    rdaxd:P00018 "http://example.org/isbn-0048231797" .
+
+<http://example.org/isbn-0048232084> a rdac:C10007 ;
+    rdfs:label "Unfinished tales of Númenor and Middle-earth / by J.R.R. Tolkien ; edited with introduction, commentary, index, and maps by Christopher Tolkien" ;
+    rdamd:P30004 "ISBN 0048232084" ;
+    rdamd:P30011 "1982" ;
+    rdamd:P30033 "Of Tuor and his coming to Gondolin -- Narn i hîn Húrin -- A description of the island of Númenor -- Aldarion and Erendis -- The line of Elros : Kings of Númenor -- The history of Galadriel and Celeborn -- The disaster of the Gladden Fields -- Cirion and Eorl and the friendship of Gondor and Rohan -- The quest of Erebor -- The hunt for the Ring -- The battles of the Fords of Isen -- The Drúedain -- The Istari -- The Palantíri." ;
+    rdamd:P30088 "Boston",
+        "London" ;
+    rdamd:P30117 "by J.R.R. Tolkien ; edited with introduction, commentary, index, and maps by Christopher Tolkien" ;
+    rdamd:P30156 "Unfinished tales of Númenor and Middle-earth" ;
+    rdamd:P30176 "Unwin Paperbacks" ;
+    rdamd:P30182 "472 p. : 3 maps, 20 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/219968903/exp/eng/1020> ;
+    rdamo:P30321 <http://viaf.org/viaf/12315790> ;
+    rdaxd:P00018 "http://example.org/isbn-0048232084" .
+
+<http://example.org/isbn-0261102168> a rdac:C10007 ;
+    rdfs:label "Unfinished tales of Númenor and Middle-earth / by J.R.R. Tolkien ; edited with introduction, commentary, index and maps by Christopher Tolkien" ;
+    rdamd:P30004 "ISBN 0261102168" ;
+    rdamd:P30011 "1991" ;
+    rdamd:P30033 "Of Tuor and his coming to Gondolin -- Narn i hîn Húrin -- A description of the island of Númenor -- Aldarion and Erendis -- The line of Elros : Kings of Númenor -- The history of Galadriel and Celeborn -- The disaster of the Gladden Fields -- Cirion and Eorl and the friendship of Gondor and Rohan -- The quest of Erebor -- The hunt for the Ring -- The battles of the Fords of Isen -- The Drúedain -- The Istari -- The Palantíri." ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "by J.R.R. Tolkien ; edited with introduction, commentary, index and maps by Christopher Tolkien" ;
+    rdamd:P30137 "Originally published: London: George Allen & Unwin, 1980" ;
+    rdamd:P30156 "Unfinished tales of Númenor and Middle-earth" ;
+    rdamd:P30176 "Grafton" ;
+    rdamd:P30182 "472 p, : maps, 20 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/219968903/exp/eng/1020> ;
+    rdamo:P30321 <http://viaf.org/viaf/12315790> ;
+    rdaxd:P00018 "http://example.org/isbn-0261102168" .
+
+<http://example.org/isbn-0261102303> a rdac:C10007 ;
+    rdfs:label "The Lord of the rings / J.R.R. Tolkien ; illustrated by Alan Lee" ;
+    rdamd:P30004 "ISBN 0261102303" ;
+    rdamd:P30011 "1991" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "J.R.R. Tolkien ; illustrated by Alan Lee" ;
+    rdamd:P30156 "The Lord of the rings" ;
+    rdamd:P30176 "Harper Collins" ;
+    rdamd:P30182 "1193 p., [50] leaves of plates : ill. (some col.), geneal. tables, maps, 26 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://www.wikidata.org/entity/Q15228/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q208002/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q332388/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q332581/exp/eng/1020> ;
+    rdamo:P30321 <http://viaf.org/viaf/112458453> ;
+    rdaxd:P00018 "http://example.org/isbn-0261102303" .
+
+<http://example.org/isbn-8210044478> a rdac:C10007 ;
+    rdfs:label "Ringenes herre / av J.R.R. Tolkien ; til norsk ved Torstein Bugge Høverstad" ;
+    rdamd:P30004 "ISBN 8210044478" ;
+    rdamd:P30011 "1999" ;
+    rdamd:P30033 "Ringens brorskap -- To tårn -- Atter en konge" ;
+    rdamd:P30088 "[Oslo]" ;
+    rdamd:P30107 "5. utg" ;
+    rdamd:P30117 "av J.R.R. Tolkien ; til norsk ved Torstein Bugge Høverstad" ;
+    rdamd:P30137 "1. norske utg. Oslo : Tiden, 1973-1975 i 3 b. med tittel: Krigen om ringen" ;
+    rdamd:P30156 "Ringenes herre" ;
+    rdamd:P30176 "Tiden" ;
+    rdamd:P30182 "1095 s. : kart." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://www.wikidata.org/entity/Q15228/exp/nob/1020/65245833>,
+        <http://www.wikidata.org/entity/Q208002/exp/nob/1020/65245833>,
+        <http://www.wikidata.org/entity/Q332388/exp/nob/1020/65245833>,
+        <http://www.wikidata.org/entity/Q332581/exp/nob/1020/65245833> ;
+    rdaxd:P00018 "http://example.org/isbn-8210044478" .
+
+<http://example.org/isbn-8278441618> a rdac:C10007 ;
+    rdfs:label "Ringenes herre I / J.R.R. Tolkien ; [oversatt av Torstein Bugge Høverstad]" ;
+    rdamd:P30004 "ISBN 8278441618" ;
+    rdamd:P30011 "2003" ;
+    rdamd:P30088 "Billingstad" ;
+    rdamd:P30117 "J.R.R. Tolkien ; [oversatt av Torstein Bugge Høverstad]" ;
+    rdamd:P30137 "Lest av Anders Ribu" ;
+    rdamd:P30142 "ringens brorskap" ;
+    rdamd:P30156 "Ringenes herre I" ;
+    rdamd:P30176 "Fono forl" ;
+    rdamd:P30182 "16 plater (CD) (19 t) : digital, 12 cm, i eske." ;
+    rdamo:P30001 rdact:1004 ;
+    rdamo:P30002 rdamt:1001 ;
+    rdamo:P30139 <http://www.wikidata.org/entity/Q208002/exp/nob/1013/24701800/65245833> ;
+    rdaxd:P00018 "http://example.org/isbn-8278441618" .
+
+<http://example.org/isbn-8278441626> a rdac:C10007 ;
+    rdfs:label "Ringenes herre II / J.R.R. Tolkien ; [oversatt av Torstein Bugge Høverstad]" ;
+    rdamd:P30004 "ISBN 8278441626" ;
+    rdamd:P30011 "2003" ;
+    rdamd:P30088 "Billingstad" ;
+    rdamd:P30117 "J.R.R. Tolkien ; [oversatt av Torstein Bugge Høverstad]" ;
+    rdamd:P30137 "Lest av Anders Ribu" ;
+    rdamd:P30142 "to tårn" ;
+    rdamd:P30156 "Ringenes herre II" ;
+    rdamd:P30176 "Fono forl" ;
+    rdamd:P30182 "15 plater (CD) (17 t, 20 min) : digital, 12 cm, i eske." ;
+    rdamo:P30001 rdact:1004 ;
+    rdamo:P30002 rdamt:1001 ;
+    rdamo:P30139 <http://www.wikidata.org/entity/Q332388/exp/nob/1013/24701800/65245833> ;
+    rdaxd:P00018 "http://example.org/isbn-8278441626" .
+
+<http://example.org/isbn-8278441634> a rdac:C10007 ;
+    rdfs:label "Ringenes herre III / J.R.R. Tolkien ; [oversatt av: Torstein Bugge Høverstad]" ;
+    rdamd:P30004 "ISBN 8278441634" ;
+    rdamd:P30011 "2003" ;
+    rdamd:P30088 "Billingstad" ;
+    rdamd:P30117 "J.R.R. Tolkien ; [oversatt av: Torstein Bugge Høverstad]" ;
+    rdamd:P30137 "Fortsettelse av: To tårn",
+        "Lest av Anders Ribu" ;
+    rdamd:P30142 "atter en konge" ;
+    rdamd:P30156 "Ringenes herre III" ;
+    rdamd:P30176 "Fono forl" ;
+    rdamd:P30182 "13 plater (CD) (15 t, 45 min) : digital, 12 cm, i eske." ;
+    rdamo:P30001 rdact:1004 ;
+    rdamo:P30002 rdamt:1001 ;
+    rdamo:P30139 <http://www.wikidata.org/entity/Q332581/exp/nob/1013/24701800/65245833> ;
+    rdaxd:P00018 "http://example.org/isbn-8278441634" .
+
+<http://example.org/isbn-8278441960> a rdac:C10007 ;
+    rdfs:label "Hobbiten / J.R.R. Tolkien ; [oversatt av: Finn Åsen, Oddrun Grønnvik]" ;
+    rdamd:P30004 "ISBN 8278441960",
+        "ISBN 9788278441961" ;
+    rdamd:P30011 "2005" ;
+    rdamd:P30088 "Billingstad" ;
+    rdamd:P30117 "J.R.R. Tolkien ; [oversatt av: Finn Åsen, Oddrun Grønnvik]" ;
+    rdamd:P30137 "1. norske lydbokutg. 1995",
+        "Lest av: Knut Røe",
+        "Nytt oppl. med 13-sifret ISBN utgitt av Aller forlag" ;
+    rdamd:P30156 "Hobbiten" ;
+    rdamd:P30176 "Fono forl" ;
+    rdamd:P30182 "8 plater (CD) (10 t) : digital, 12 cm, i eske." ;
+    rdamo:P30001 rdact:1004 ;
+    rdamo:P30002 rdamt:1001 ;
+    rdamo:P30139 <http://www.wikidata.org/entity/Q74287/exp/nob/1013/1169314213724530007/224621493/aasenfinn> ;
+    rdaxd:P00018 "http://example.org/isbn-8278441960" .
+
+<http://example.org/isbn-9780007381234> a rdac:C10007 ;
+    rdfs:label "The letters of J.R.R. Tolkien / a selection edited by Humphrey Carpenter with the assistance of Christopher Tolkien" ;
+    rdamd:P30004 "ISBN 0007381239",
+        "ISBN 9780007381234" ;
+    rdamd:P30007 "©1981" ;
+    rdamd:P30011 "[2012]" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30107 "First edition" ;
+    rdamd:P30117 "a selection edited by Humphrey Carpenter with the assistance of Christopher Tolkien" ;
+    rdamd:P30137 "Academic",
+        "Originally published in print: Great Britain : George Allen & Unwin, 1981." ;
+    rdamd:P30156 "The letters of J.R.R. Tolkien" ;
+    rdamd:P30176 "HarperCollinsPublishers" ;
+    rdamd:P30182 "1 online resource." ;
+    rdamo:P30001 rdact:1018 ;
+    rdamo:P30002 rdamt:1003 ;
+    rdamo:P30139 <http://viaf.org/viaf/95218067/letters/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-9780007381234" .
+
+<http://example.org/isbn-9780007522934> a rdac:C10007 ;
+    rdfs:label "The Hobbit ; The fellowship of the ring ; The two towers ; [and] The return of the king [box set] / J.R.R. Tolkien" ;
+    rdamd:P30004 "ISBN 9780007522934" ;
+    rdamd:P30011 "2013" ;
+    rdamd:P30033 "The hobbit, or there and back again -- The fellowship of the ring -- The two towers -- The return of the king" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30107 "Collector's edition" ;
+    rdamd:P30117 "J.R.R. Tolkien" ;
+    rdamd:P30137 "In case." ;
+    rdamd:P30156 "The Hobbit ; The fellowship of the ring ; The two towers ; [and] The return of the king [box set]" ;
+    rdamd:P30176 "HarperCollinsPublishers" ;
+    rdamd:P30182 "4 volumes : illustrations, 23 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://www.wikidata.org/entity/Q15228/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q208002/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q332388/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q332581/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q74287/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-9780007522934" .
+
+<http://example.org/isbn-9780007556908> a rdac:C10007 ;
+    rdfs:label "ISBN9780007556908 (hbk.)" ;
+    rdamd:P30004 "ISBN 9780007556908 (hbk.)" ;
+    rdamd:P30007 "©2014" ;
+    rdamd:P30011 "2014" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "by Wayne G. Hammond and Christina Scull" ;
+    rdamd:P30137 "First published: 2005." ;
+    rdamd:P30142 "a reader's companion" ;
+    rdamd:P30156 "The Lord of the rings" ;
+    rdamd:P30176 "HarperCollinsPublishers" ;
+    rdamd:P30182 "lxxxii, 894 pages : illustrations (colour), 23 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/9014152502908610800009/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-9780007556908" .
+
+<http://example.org/isbn-9780007581146> a rdac:C10007 ;
+    rdfs:label "The Lord of the Rings / J.R.R. Tolkien, Wayne G. Hammond and Christina Scull" ;
+    rdamd:P30004 "ISBN 9780007581146" ;
+    rdamd:P30011 "2014" ;
+    rdamd:P30033 "The fellowship of the ring -- The two towers -- The return of the king -- Lord of the rings : a reader's companion / by Wayne G. Hammond and Christina Scull." ;
+    rdamd:P30088 "London" ;
+    rdamd:P30107 "60th anniversary edition" ;
+    rdamd:P30117 "J.R.R. Tolkien, Wayne G. Hammond and Christina Scull" ;
+    rdamd:P30137 "In case.",
+        "Includes index.",
+        "Set ISBN from plastic wrapper.",
+        "Volumes also issued separately." ;
+    rdamd:P30142 "with The Lord of the Rings : a readers companion" ;
+    rdamd:P30156 "The Lord of the Rings" ;
+    rdamd:P30176 "HarperCollinsPublishers" ;
+    rdamd:P30182 "4 volumes : illustrations (some colour), maps, 24 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/9014152502908610800009/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q15228/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q208002/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q332388/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q332581/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-9780007581146" .
+
+<http://example.org/isbn-9780008260187> a rdac:C10007 ;
+    rdfs:label "The hobbit ; The lord of the rings / J.R.R. Tolkien" ;
+    rdamd:P30004 "ISBN 9780008260187" ;
+    rdamd:P30007 "©2017" ;
+    rdamd:P30011 "2017" ;
+    rdamd:P30033 "The hobbit, or there and back again -- The fellowship of the ring -- The two towers -- The return of the king" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "J.R.R. Tolkien" ;
+    rdamd:P30137 "Issued in slip case.",
+        "Title from slip case." ;
+    rdamd:P30156 "The hobbit ; The lord of the rings" ;
+    rdamd:P30176 "HarperCollinsPublishers" ;
+    rdamd:P30182 "4 volumes : illustrations (some colour), maps, 16 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://www.wikidata.org/entity/Q15228/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q208002/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q332388/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q332581/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q74287/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-9780008260187" .
+
+<http://example.org/isbn-9780008537807> a rdac:C10007 ;
+    rdfs:label "The lord of the rings / J.R.R. Tolkien" ;
+    rdamd:P30004 "ISBN 9780008537807" ;
+    rdamd:P30007 "©1966" ;
+    rdamd:P30011 "2022" ;
+    rdamd:P30033 "The fellowship of the ring -- The two towers -- The return of the king." ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "J.R.R. Tolkien" ;
+    rdamd:P30137 "\"A new legend begins : The Rings of Power, prime video\"",
+        "First published by HarperCollinsPublishers in 1991.",
+        "First published in Great Britain by George Allen & Unwin 1954, second edition 1966.",
+        "Includes index.",
+        "Issued in slip case.",
+        "This paperback edition is based on the reset edition first published 2014, which is a revised version of the reset edition first published 2004." ;
+    rdamd:P30156 "The lord of the rings" ;
+    rdamd:P30176 "HarperCollinsPublishers" ;
+    rdamd:P30182 "3 volumes : maps, 20 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://www.wikidata.org/entity/Q15228/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q208002/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q332388/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q332581/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-9780008537807" .
+
+<http://example.org/isbn-9780008537852> a rdac:C10007 ;
+    rdfs:label "ISBN9780008537852 (ePub ebook)" ;
+    rdamd:P30004 "ISBN 9780008537852 (ePub ebook)" ;
+    rdamd:P30011 "2022" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "J.R.R. Tolkien ; illustrated by Alan Lee ; edited by Brian Sibley" ;
+    rdamd:P30137 "Academic" ;
+    rdamd:P30142 "and other tales from the Second Age of Middle-Earth" ;
+    rdamd:P30156 "The fall of Númenor" ;
+    rdamd:P30176 "HarperCollinsPublishers" ;
+    rdamd:P30182 "1 online resource : illustrations." ;
+    rdamo:P30001 rdact:1018 ;
+    rdamo:P30002 rdamt:1003 ;
+    rdamo:P30139 <http://www.wikidata.org/entity/Q112731328/exp/eng/1020> ;
+    rdamo:P30321 <https://isni.org/isni/0000000121480873> ;
+    rdamo:P30328 <https://isni.org/isni/000000008178197X> ;
+    rdaxd:P00018 "http://example.org/isbn-9780008537852" .
+
+<http://example.org/isbn-9780008560317> a rdac:C10007 ;
+    rdfs:label "ISBN9780008560317 (ePub ebook)" ;
+    rdamd:P30004 "ISBN 9780008560317 (ePub ebook)" ;
+    rdamd:P30011 "2022" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30107 "Illustrated edition" ;
+    rdamd:P30117 "J.R.R. Tolkien ; edited by Christopher Tolkien" ;
+    rdamd:P30137 "Academic" ;
+    rdamd:P30156 "The Silmarillion" ;
+    rdamd:P30176 "HarperCollinsPublishers" ;
+    rdamd:P30182 "1 online resource : illustrations (black and white, and colour)." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/183065413/exp/eng/1020/12315790> ;
+    rdaxd:P00018 "http://example.org/isbn-9780008560317" .
+
+<http://example.org/isbn-9780061927744> a rdac:C10007 ;
+    rdfs:label "Unfinished tales of Númenor and Middle-earth / by J.R.R. Tolkien ; edited by Christopher Tolkien" ;
+    rdamd:P30004 "ISBN 9780061927744" ;
+    rdamd:P30011 "2009" ;
+    rdamd:P30088 "New York",
+        "Pymble, NSW" ;
+    rdamd:P30117 "by J.R.R. Tolkien ; edited by Christopher Tolkien" ;
+    rdamd:P30137 "Academic",
+        "Includes index.",
+        "Title from eBook information screen." ;
+    rdamd:P30156 "Unfinished tales of Númenor and Middle-earth" ;
+    rdamd:P30176 "HarperCollins e-books" ;
+    rdamd:P30182 "1 online resource (624 pages)." ;
+    rdamo:P30001 rdact:1018 ;
+    rdamo:P30002 rdamt:1003 ;
+    rdamo:P30139 <http://viaf.org/viaf/219968903/exp/eng/1020> ;
+    rdamo:P30321 <http://viaf.org/viaf/12315790> ;
+    rdaxd:P00018 "http://example.org/isbn-9780061927744" .
+
+<http://example.org/isbn-9780261102668> a rdac:C10007 ;
+    rdfs:label "ISBN0261102664 (pbk.)",
+        "ISBN9780261102668 (pbk.)" ;
+    rdamd:P30004 "ISBN 0261102664 (pbk.)",
+        "ISBN 9780261102668 (pbk.)" ;
+    rdamd:P30011 "2006" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30107 "Rev ed" ;
+    rdamd:P30117 "J.R.R. Tolkien ; illustrated by David Wenzel ; adapted by Charles Dixon with Sean Deming" ;
+    rdamd:P30142 "[an illustrated edition of the fantasy classic]" ;
+    rdamd:P30156 "The hobbit , or there and back again" ;
+    rdamd:P30176 "Harper Collins" ;
+    rdamd:P30182 "133 p. : col. ill., col. map, 26 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://www.wikidata.org/entity/Q74287/exp/eng/1014/1020/102370266/85751968> ;
+    rdamo:P30321 <http://viaf.org/viaf/14887593> ;
+    rdaxd:P00018 "http://example.org/isbn-9780261102668" .
+
+<http://example.org/isbn-9788210050381> a rdac:C10007 ;
+    rdfs:label "Hobbiten, eller Ditut og attende / J.R.R. Tolkien ; omsett frå engelsk av Eilev Groven Myhren" ;
+    rdamd:P30004 "ISBN 9788210050381" ;
+    rdamd:P30011 "2008" ;
+    rdamd:P30088 "Oslo" ;
+    rdamd:P30117 "J.R.R. Tolkien ; omsett frå engelsk av Eilev Groven Myhren" ;
+    rdamd:P30137 "1. norske utg. 1972",
+        "På omslag: Nynorsk" ;
+    rdamd:P30156 "Hobbiten, eller Ditut og attende" ;
+    rdamd:P30176 "Tiden" ;
+    rdamd:P30182 "267 s." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30069 <http://viaf.org/viaf/223273427> ;
+    rdamo:P30139 <http://www.wikidata.org/entity/Q74287/exp/nno/1020/267471594> ;
+    rdaxd:P00018 "http://example.org/isbn-9788210050381" .
+
+<http://example.org/isbn-9788210051197> a rdac:C10007 ;
+    rdfs:label "Hobbiten, eller Fram og tilbake igjen / J.R.R. Tolkien ; illustrert av Alan Lee ; oversatt av Nils Ivar Agøy" ;
+    rdamd:P30004 "ISBN 9788210051197" ;
+    rdamd:P30011 "2011" ;
+    rdamd:P30088 "[Oslo]" ;
+    rdamd:P30107 "7. utg" ;
+    rdamd:P30117 "J.R.R. Tolkien ; illustrert av Alan Lee ; oversatt av Nils Ivar Agøy" ;
+    rdamd:P30137 "1. norske utg. 1972" ;
+    rdamd:P30156 "Hobbiten, eller Fram og tilbake igjen" ;
+    rdamd:P30176 "Tiden" ;
+    rdamd:P30182 "293 s. : ill." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://www.wikidata.org/entity/Q74287/exp/nob/1020/9349441> ;
+    rdamo:P30321 <http://viaf.org/viaf/112458453> ;
+    rdaxd:P00018 "http://example.org/isbn-9788210051197" .
+
+<http://viaf.org/viaf/102370266> a rdac:C10004 ;
+    rdfs:label "Dixon, Chuck" ;
+    rdaad:P50339 "1954-" ;
+    rdaad:P50413 "Dixon, Chuck" ;
+    rdaxd:P00018 "http://viaf.org/viaf/102370266" .
+
+<http://viaf.org/viaf/1169314213724530007> a rdac:C10004 ;
+    rdfs:label "Grønnvik, Oddrun" ;
+    rdaad:P50413 "Grønnvik, Oddrun" ;
+    rdaxd:P00018 "http://viaf.org/viaf/1169314213724530007" .
+
+<http://viaf.org/viaf/14887593> a rdac:C10004 ;
+    rdfs:label "Wenzel, David" ;
+    rdaad:P50339 "1950-" ;
+    rdaad:P50413 "Wenzel, David" ;
+    rdaxd:P00018 "http://viaf.org/viaf/14887593" .
+
+<http://viaf.org/viaf/183065413> a rdac:C10001 ;
+    rdfs:label "The silmarillion (Tolkien, J. R. R.)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The silmarillion" ;
+    rdawo:P10061 <http://viaf.org/viaf/95218067> ;
+    rdaxd:P00018 "http://viaf.org/viaf/183065413" .
+
+<http://viaf.org/viaf/219968903> a rdac:C10001 ;
+    rdfs:label "Unfinished tales of Númenor and Middle-earth (Tolkien, J. R. R.)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Unfinished tales of Númenor and Middle-earth" ;
+    rdawo:P10061 <http://viaf.org/viaf/95218067> ;
+    rdawo:P10393 <http://viaf.org/viaf/12315790> ;
+    rdaxd:P00018 "http://viaf.org/viaf/219968903" .
+
+<http://viaf.org/viaf/223273427> a rdac:C10004 ;
+    rdfs:label "Engelsen, Janniche" ;
+    rdaad:P50339 "1958-" ;
+    rdaad:P50413 "Engelsen, Janniche" ;
+    rdaxd:P00018 "http://viaf.org/viaf/223273427" .
+
+<http://viaf.org/viaf/224621493> a rdac:C10004 ;
+    rdfs:label "Røe, Knut" ;
+    rdaad:P50339 "1949-" ;
+    rdaad:P50413 "Røe, Knut" ;
+    rdaxd:P00018 "http://viaf.org/viaf/224621493" .
+
+<http://viaf.org/viaf/267471594> a rdac:C10004 ;
+    rdfs:label "Myhren, Eilev Groven" ;
+    rdaad:P50339 "1973-" ;
+    rdaad:P50413 "Myhren, Eilev Groven" ;
+    rdaxd:P00018 "http://viaf.org/viaf/267471594" .
+
+<http://viaf.org/viaf/35315716> a rdac:C10004 ;
+    rdfs:label "Fraser, Eric" ;
+    rdaad:P50413 "Fraser, Eric" ;
+    rdaxd:P00018 "http://viaf.org/viaf/35315716" .
+
+<http://viaf.org/viaf/41837660> a rdac:C10004 ;
+    rdfs:label "Carpenter, Humphrey" ;
+    rdaad:P50413 "Carpenter, Humphrey" ;
+    rdaxd:P00018 "http://viaf.org/viaf/41837660" .
+
+<http://viaf.org/viaf/49263415> a rdac:C10004 ;
+    rdfs:label "Grathmer, Ingahild" ;
+    rdaad:P50413 "Grathmer, Ingahild" ;
+    rdaxd:P00018 "http://viaf.org/viaf/49263415" .
+
+<http://viaf.org/viaf/54260077> a rdac:C10004 ;
+    rdfs:label "Scull, Christina" ;
+    rdaad:P50413 "Scull, Christina" ;
+    rdaxd:P00018 "http://viaf.org/viaf/54260077" .
+
+<http://viaf.org/viaf/59153962> a rdac:C10004 ;
+    rdfs:label "Hammond, Wayne G." ;
+    rdaad:P50413 "Hammond, Wayne G." ;
+    rdaxd:P00018 "http://viaf.org/viaf/59153962" .
+
+<http://viaf.org/viaf/85751968> a rdac:C10004 ;
+    rdfs:label "Deming, Sean" ;
+    rdaad:P50413 "Deming, Sean" ;
+    rdaxd:P00018 "http://viaf.org/viaf/85751968" .
+
+<http://viaf.org/viaf/9014152502908610800009> a rdac:C10001 ;
+    rdfs:label "Lord of the rings : a reader's companion (Hammond, Wayne G.)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Lord of the rings : a reader's companion" ;
+    rdawo:P10061 <http://viaf.org/viaf/54260077>,
+        <http://viaf.org/viaf/59153962> ;
+    rdawo:P10257 <http://www.wikidata.org/entity/Q15228> ;
+    rdaxd:P00018 "http://viaf.org/viaf/9014152502908610800009" ;
+    rdaxd:P00029 "Non-fiction" .
+
+<http://viaf.org/viaf/9349441> a rdac:C10004 ;
+    rdfs:label "Agøy, Nils Ivar" ;
+    rdaad:P50339 "1959-" ;
+    rdaad:P50413 "Agøy, Nils Ivar" ;
+    rdaxd:P00018 "http://viaf.org/viaf/9349441" .
+
+<http://viaf.org/viaf/95218067/letters> a rdac:C10001 ;
+    rdfs:label "The letters of J.R.R. Tolkien (Tolkien, J. R. R.)" ;
+    rdawd:P10223 "The letters of J.R.R. Tolkien" ;
+    rdawo:P10061 <http://viaf.org/viaf/95218067> ;
+    rdawo:P10393 <http://viaf.org/viaf/12315790>,
+        <http://viaf.org/viaf/41837660> ;
+    rdaxd:P00018 "http://viaf.org/viaf/95218067/letters" .
+
+<http://viaf.org/viaf/95218067/letters/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The letters of J.R.R. Tolkien (Tolkien, J. R. R.)" ;
+    rdaed:P20315 "The letters of J.R.R. Tolkien" ;
+    rdaed:P20316 "The letters of J.R.R. Tolkien" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/95218067/letters> ;
+    rdaxd:P00029 "standalone" .
+
+<http://viaf.org/viaf/95218067/poemsandsongs> a rdac:C10001 ;
+    rdfs:label "Poems and songs of middle earth (Tolkien, J. R. R.)" ;
+    rdawd:P10223 "Poems and songs of middle earth" ;
+    rdawo:P10061 <http://viaf.org/viaf/95218067> ;
+    rdaxd:P00018 "http://viaf.org/viaf/95218067/poemsandsongs" .
+
+<http://viaf.org/viaf/95218067/poemsandsongs/exp/eng/1013> a rdac:C10006 ;
+    rdfs:label "Poems and songs of middle earth (Tolkien, J. R. R.)" ;
+    rdaed:P20071 "The adventures of Tom Bombadil -- The mewlips -- The hoard -- Perry-the-winkle -- The man in the moon came down too soon -- The sea-bell -- A Elbereth Gilthoniel (in Elvish) -- The road goes ever on / words by J.R.R. Tolkien ; music by Donald Swann ; sung by William Elvin with the composer at the piano -- The road goes ever on -- Upon the hearth the fire is red -- In the willow-meads of Tasarinan -- In western lands -- Namarie (in Elvish) -- I sit beside the fire : refrain A Elbereth Gilthoniel -- Errantry." ;
+    rdaed:P20315 "Poems and songs of middle earth" ;
+    rdaed:P20316 "Poems and songs of middle earth" ;
+    rdaeo:P20001 rdaco:1013 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/95218067/poemsandsongs> ;
+    rdaxd:P00029 "standalone" .
+
+<http://viaf.org/viaf/95218067/thelostroad> a rdac:C10001 ;
+    rdfs:label "The lost road and other writings (Tolkien, J. R. R.)" ;
+    rdawd:P10223 "The lost road and other writings" ;
+    rdawo:P10061 <http://viaf.org/viaf/95218067> ;
+    rdaxd:P00018 "http://viaf.org/viaf/95218067/thelostroad" .
+
+<http://viaf.org/viaf/95218067/thelostroad/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The lost road and other writings (Tolkien, J. R. R.)" ;
+    rdaed:P20315 "The lost road and other writings" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/95218067/thelostroad> ;
+    rdaeo:P20330 <http://viaf.org/viaf/12315790> ;
+    rdaxd:P00018 "http://viaf.org/viaf/95218067/thelostroad/exp/eng/1020" .
+
+<http://www.example.com/aasenfinn> a rdac:C10004 ;
+    rdfs:label "Åsen, Finn" ;
+    rdaad:P50413 "Åsen, Finn" ;
+    rdaxd:P00018 "http://www.example.com/aasenfinn" .
+
+<http://www.wikidata.org/entity/Q112731328> a rdac:C10001 ;
+    rdfs:label "The fall of Númenor and other tales from the Second Age of Middle-Earth (Tolkien, J. R. R.)" ;
+    rdawd:P10223 "The fall of Númenor and other tales from the Second Age of Middle-Earth" ;
+    rdawo:P10061 <http://viaf.org/viaf/95218067> ;
+    rdawo:P10393 <https://isni.org/isni/000000008178197X> ;
+    rdaxd:P00018 "http://www.wikidata.org/entity/Q112731328" .
+
+<http://www.wikidata.org/entity/Q112731328/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The fall of Númenor (Tolkien, J. R. R.)" ;
+    rdaed:P20315 "The fall of Númenor : and other tales from the Second Age of Middle-Earth" ;
+    rdaed:P20316 "Short stories",
+        "The fall of Númenor and other tales from the Second Age of Middle-Earth" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q112731328> ;
+    rdaxd:P00029 "standalone" .
+
+<http://www.wikidata.org/entity/Q15228/exp/nob/1020/65245833> a rdac:C10006 ;
+    rdfs:label "Ringenes herre (Tolkien, J.R.R.)" ;
+    rdaed:P20071 "Ringens brorskap -- To tårn -- Atter en konge" ;
+    rdaed:P20315 "Ringenes herre" ;
+    rdaed:P20316 "Lord of the rings" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20037 <http://viaf.org/viaf/65245833> ;
+    rdaeo:P20141 <http://www.wikidata.org/entity/Q15228/exp/eng/1020> ;
+    rdaeo:P20145 <http://www.wikidata.org/entity/Q208002/exp/nob/1020/65245833>,
+        <http://www.wikidata.org/entity/Q332388/exp/nob/1020/65245833>,
+        <http://www.wikidata.org/entity/Q332581/exp/nob/1020/65245833> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q15228> ;
+    rdaxd:P00029 "parent" .
+
+<http://www.wikidata.org/entity/Q208002/exp/nob/1013/24701800/65245833> a rdac:C10006 ;
+    rdfs:label "Ringens brorskap (Tolkien, J.R.R.)" ;
+    rdaed:P20315 "Ringens brorskap" ;
+    rdaed:P20316 "Fellowship of the ring",
+        "Ringenes herre I : ringens brorskap" ;
+    rdaeo:P20001 rdaco:1013 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20022 <http://viaf.org/viaf/24701800> ;
+    rdaeo:P20037 <http://viaf.org/viaf/65245833> ;
+    rdaeo:P20141 <http://www.wikidata.org/entity/Q208002/exp/eng/1020> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q208002> ;
+    rdaxd:P00029 "standalone" .
+
+<http://www.wikidata.org/entity/Q332388/exp/nob/1013/24701800/65245833> a rdac:C10006 ;
+    rdfs:label "To tårn (Tolkien, J.R.R.)" ;
+    rdaed:P20315 "To tårn" ;
+    rdaed:P20316 "Ringenes herre II : to tårn",
+        "Two towers" ;
+    rdaeo:P20001 rdaco:1013 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20022 <http://viaf.org/viaf/24701800> ;
+    rdaeo:P20037 <http://viaf.org/viaf/65245833> ;
+    rdaeo:P20141 <http://www.wikidata.org/entity/Q332388/exp/eng/1020> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q332388> ;
+    rdaxd:P00029 "standalone" .
+
+<http://www.wikidata.org/entity/Q332581/exp/nob/1013/24701800/65245833> a rdac:C10006 ;
+    rdfs:label "Atter en konge (Tolkien, J.R.R.)" ;
+    rdaed:P20315 "Atter en konge" ;
+    rdaed:P20316 "Return of the king",
+        "Ringenes herre III : atter en konge" ;
+    rdaeo:P20001 rdaco:1013 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20022 <http://viaf.org/viaf/24701800> ;
+    rdaeo:P20037 <http://viaf.org/viaf/65245833> ;
+    rdaeo:P20141 <http://www.wikidata.org/entity/Q332581/exp/eng/1020> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q332581> ;
+    rdaxd:P00029 "standalone" .
+
+<http://www.wikidata.org/entity/Q503325> a rdac:C10001 ;
+    rdfs:label "The war of the ring (Tolkien, J. R. R.)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The war of the ring" ;
+    rdawo:P10061 <http://viaf.org/viaf/95218067> ;
+    rdawo:P10257 <http://www.wikidata.org/entity/Q15228> ;
+    rdawo:P10393 <http://viaf.org/viaf/12315790> ;
+    rdaxd:P00018 "http://www.wikidata.org/entity/Q503325" ;
+    rdaxd:P00029 "Novel" .
+
+<http://www.wikidata.org/entity/Q503325/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The war of the ring (Tolkien, J. R. R.)" ;
+    rdaed:P20315 "The war of the ring" ;
+    rdaed:P20316 "The war of the ring" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q503325> ;
+    rdaxd:P00029 "standalone" .
+
+<http://www.wikidata.org/entity/Q74287/exp/eng/1014/1020/102370266/85751968> a rdac:C10006 ;
+    rdfs:label "The hobbit, or there and back again (Tolkien, J. R. R.)" ;
+    rdaed:P20315 "The hobbit, or there and back again" ;
+    rdaed:P20316 "The hobbit , or there and back again : [an illustrated edition of the fantasy classic]",
+        "The hobbit, or there and back again" ;
+    rdaeo:P20001 rdaco:1014,
+        rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q74287> ;
+    rdaeo:P20330 <http://viaf.org/viaf/102370266>,
+        <http://viaf.org/viaf/85751968> ;
+    rdaxd:P00029 "standalone" .
+
+<http://www.wikidata.org/entity/Q74287/exp/nno/1020/267471594> a rdac:C10006 ;
+    rdfs:label "Hobbiten, eller Ditut og attende (Tolkien, J.R.R.)" ;
+    rdaed:P20315 "Hobbiten, eller Ditut og attende" ;
+    rdaed:P20316 "The hobbit, or there and back again" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nno> ;
+    rdaeo:P20037 <http://viaf.org/viaf/267471594> ;
+    rdaeo:P20141 <http://www.wikidata.org/entity/Q74287/exp/eng/1020> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q74287> ;
+    rdaxd:P00029 "standalone" .
+
+<http://www.wikidata.org/entity/Q74287/exp/nob/1013/1169314213724530007/224621493/aasenfinn> a rdac:C10006 ;
+    rdfs:label "Hobbiten (Tolkien, J.R.R.)" ;
+    rdaed:P20315 "Hobbiten" ;
+    rdaed:P20316 "The hobbit, or there and back again" ;
+    rdaeo:P20001 rdaco:1013 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20022 <http://viaf.org/viaf/224621493> ;
+    rdaeo:P20037 <http://viaf.org/viaf/1169314213724530007>,
+        <http://www.example.com/aasenfinn> ;
+    rdaeo:P20141 <http://www.wikidata.org/entity/Q74287/exp/eng/1020> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q74287> ;
+    rdaxd:P00029 "standalone" .
+
+<http://www.wikidata.org/entity/Q74287/exp/nob/1020/9349441> a rdac:C10006 ;
+    rdfs:label "Hobbiten, eller Fram og tilbake igjen (Tolkien, J.R.R.)" ;
+    rdaed:P20315 "Hobbiten, eller Fram og tilbake igjen" ;
+    rdaed:P20316 "The hobbit, or there and back again" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20037 <http://viaf.org/viaf/9349441> ;
+    rdaeo:P20141 <http://www.wikidata.org/entity/Q74287/exp/eng/1020> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q74287> ;
+    rdaxd:P00029 "standalone" .
+
+<https://isni.org/isni/0000000121480873> a rdac:C10004 ;
+    rdfs:label "Lee, Alan" ;
+    rdaad:P50413 "Lee, Alan" ;
+    rdaxd:P00018 "https://isni.org/isni/0000000121480873" .
+
+<http://viaf.org/viaf/112458453> a rdac:C10004 ;
+    rdfs:label "Lee, Alan" ;
+    rdaad:P50339 "1947-" ;
+    rdaad:P50413 "Lee, Alan" ;
+    rdaxd:P00018 "http://viaf.org/viaf/112458453" .
+
+<http://viaf.org/viaf/183065413/exp/eng/1020/12315790> a rdac:C10006 ;
+    rdfs:label "The silmarillion (Tolkien, J. R. R.)" ;
+    rdaed:P20315 "The silmarillion" ;
+    rdaed:P20316 "The silmarillion" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/183065413> ;
+    rdaeo:P20330 <http://viaf.org/viaf/12315790> ;
+    rdaxd:P00029 "standalone" .
+
+<http://www.wikidata.org/entity/Q208002/exp/nob/1020/65245833> a rdac:C10006 ;
+    rdfs:label "Fellowship of the ring (Tolkien, J. R. R.)",
+        "Ringens brorskap (Tolkien, J. R. R.)" ;
+    rdaed:P20315 "Ringens brorskap" ;
+    rdaed:P20316 "Fellowship of the ring" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20037 <http://viaf.org/viaf/65245833> ;
+    rdaeo:P20141 <http://www.wikidata.org/entity/Q208002/exp/eng/1020> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q208002> ;
+    rdaxd:P00029 "part" .
+
+<http://www.wikidata.org/entity/Q332388/exp/nob/1020/65245833> a rdac:C10006 ;
+    rdfs:label "To tårn (Tolkien, J. R. R.)",
+        "Two towers (Tolkien, J. R. R.)" ;
+    rdaed:P20315 "To tårn" ;
+    rdaed:P20316 "Two towers" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20037 <http://viaf.org/viaf/65245833> ;
+    rdaeo:P20141 <http://www.wikidata.org/entity/Q332388/exp/eng/1020> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q332388> ;
+    rdaxd:P00029 "part" .
+
+<http://www.wikidata.org/entity/Q332581/exp/nob/1020/65245833> a rdac:C10006 ;
+    rdfs:label "Atter en konge (Tolkien, J. R. R.)",
+        "Return of the king (Tolkien, J. R. R.)" ;
+    rdaed:P20315 "Atter en konge" ;
+    rdaed:P20316 "Return of the king" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20037 <http://viaf.org/viaf/65245833> ;
+    rdaeo:P20141 <http://www.wikidata.org/entity/Q332581/exp/eng/1020> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q332581> ;
+    rdaxd:P00029 "part" .
+
+<https://isni.org/isni/000000008178197X> a rdac:C10004 ;
+    rdfs:label "Sibley, Brian" ;
+    rdaad:P50413 "Sibley, Brian" ;
+    rdaxd:P00018 "https://isni.org/isni/000000008178197X" .
+
+<http://viaf.org/viaf/24701800> a rdac:C10004 ;
+    rdfs:label "Ribu, Anders" ;
+    rdaad:P50339 "1956-" ;
+    rdaad:P50413 "Ribu, Anders" ;
+    rdaxd:P00018 "http://viaf.org/viaf/24701800" .
+
+<http://viaf.org/viaf/9014152502908610800009/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Lord of the rings : a reader's companion (Hammond, Wayne G.)",
+        "The Lord of the rings (Hammond, Wayne G.)" ;
+    rdaed:P20315 "Lord of the rings : a reader's companion" ;
+    rdaed:P20316 "Lord of the rings : a reader's companion",
+        "The Lord of the rings : a reader's companion" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/9014152502908610800009> ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
+<http://viaf.org/viaf/219968903/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Unfinished tales of Númenor and Middle-earth (Tolkien, J. R. R.)" ;
+    rdaed:P20071 "Of Tuor and his coming to Gondolin -- Narn i hîn Húrin -- A description of the island of Númenor -- Aldarion and Erendis -- The line of Elros : Kings of Númenor -- The history of Galadriel and Celeborn -- The disaster of the Gladden Fields -- Cirion and Eorl and the friendship of Gondor and Rohan -- The quest of Erebor -- The hunt for the Ring -- The battles of the Fords of Isen -- The Drúedain -- The Istari -- The Palantíri." ;
+    rdaed:P20315 "Unfinished tales of Númenor and Middle-earth" ;
+    rdaed:P20316 "Prose works",
+        "Unfinished tales of Númenor and Middle-earth" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/219968903> ;
+    rdaxd:P00029 "standalone" .
+
+<http://www.wikidata.org/entity/Q15228> a rdac:C10001 ;
+    rdfs:label "Lord of the rings (Tolkien, J. R. R.)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Lord of the rings" ;
+    rdawo:P10061 <http://viaf.org/viaf/95218067> ;
+    rdawo:P10147 <http://www.wikidata.org/entity/Q208002>,
+        <http://www.wikidata.org/entity/Q332388>,
+        <http://www.wikidata.org/entity/Q332581> ;
+    rdaxd:P00018 "http://www.wikidata.org/entity/Q15228" ;
+    rdaxd:P00029 "Collection",
+        "Novel" .
+
+<http://www.wikidata.org/entity/Q208002> a rdac:C10001 ;
+    rdfs:label "Fellowship of the ring (Tolkien, J. R. R.)",
+        "The Fellowship of the ring (Tolkien, J. R. R.)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Fellowship of the ring",
+        "The Fellowship of the ring" ;
+    rdawo:P10061 <http://viaf.org/viaf/95218067> ;
+    rdaxd:P00018 "http://www.wikidata.org/entity/Q208002" ;
+    rdaxd:P00029 "Novel" .
+
+<http://www.wikidata.org/entity/Q332388> a rdac:C10001 ;
+    rdfs:label "Two towers (Tolkien, J. R. R.)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Two towers" ;
+    rdawo:P10061 <http://viaf.org/viaf/95218067> ;
+    rdaxd:P00018 "http://www.wikidata.org/entity/Q332388" ;
+    rdaxd:P00029 "Novel" .
+
+<http://www.wikidata.org/entity/Q332581> a rdac:C10001 ;
+    rdfs:label "Return of the king (Tolkien, J. R. R.)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Return of the king" ;
+    rdawo:P10061 <http://viaf.org/viaf/95218067> ;
+    rdaxd:P00018 "http://www.wikidata.org/entity/Q332581" ;
+    rdaxd:P00029 "Novel" .
+
+<http://www.wikidata.org/entity/Q74287> a rdac:C10001 ;
+    rdfs:label "The hobbit, or there and back again (Tolkien, J. R. R.)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The hobbit, or there and back again" ;
+    rdawo:P10061 <http://viaf.org/viaf/95218067> ;
+    rdaxd:P00018 "http://www.wikidata.org/entity/Q74287" ;
+    rdaxd:P00029 "Novel" .
+
+<http://www.wikidata.org/entity/Q74287/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The Hobbit",
+        "The hobbit, or there and back again (Tolkien, J. R. R.)" ;
+    rdaed:P20315 "The hobbit, or there and back again" ;
+    rdaed:P20316 "The hobbit, or there and back again" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q74287> ;
+    rdaxd:P00018 "http://www.wikidata.org/entity/Q74287/exp/eng/1020" ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
+<http://viaf.org/viaf/65245833> a rdac:C10004 ;
+    rdfs:label "Høverstad, Torstein Bugge" ;
+    rdaad:P50413 "Høverstad, Torstein Bugge" ;
+    rdaxd:P00018 "http://viaf.org/viaf/65245833" .
+
+<http://www.wikidata.org/entity/Q15228/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Lord of the rings (Tolkien, J. R. R.)",
+        "The lord of the rings",
+        "The lord of the rings (Tolkien, J. R. R.)" ;
+    rdaed:P20071 "The fellowship of the ring -- The two towers -- The return of the king." ;
+    rdaed:P20315 "Lord of the rings" ;
+    rdaed:P20316 "Lord of the rings",
+        "The lord of the rings" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20145 <http://www.wikidata.org/entity/Q208002/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q332388/exp/eng/1020>,
+        <http://www.wikidata.org/entity/Q332581/exp/eng/1020> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q15228> ;
+    rdaxd:P00018 "http://www.wikidata.org/entity/Q15228/exp/eng/1020" ;
+    rdaxd:P00029 "parent",
+        "part" .
+
+<http://viaf.org/viaf/12315790> a rdac:C10004 ;
+    rdfs:label "Tolkien, Christopher" ;
+    rdaad:P50413 "Tolkien, Christopher" ;
+    rdaxd:P00018 "http://viaf.org/viaf/12315790" .
+
+<http://www.wikidata.org/entity/Q332388/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The two towers",
+        "Two towers",
+        "Two towers (Tolkien, J. R. R.)" ;
+    rdaed:P20315 "Two towers" ;
+    rdaed:P20316 "The two towers : being the second part of The lord of the rings",
+        "Two towers" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q332388> ;
+    rdaxd:P00018 "http://www.wikidata.org/entity/Q332388/exp/eng/1020" ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
+<http://viaf.org/viaf/95218067> a rdac:C10004 ;
+    rdfs:label "Tolkien, J. R. R." ;
+    rdaad:P50339 "1892-1973" ;
+    rdaad:P50413 "Tolkien, J. R. R." ;
+    rdaxd:P00018 "http://viaf.org/viaf/95218067" .
+
+<http://www.wikidata.org/entity/Q208002/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Fellowship of the ring",
+        "Fellowship of the ring (Tolkien, J. R. R.)",
+        "The Fellowship of the ring (Tolkien, J. R. R.)",
+        "The fellowship of the ring" ;
+    rdaed:P20315 "Fellowship of the ring" ;
+    rdaed:P20316 "Fellowship of the ring",
+        "The Fellowship of the ring",
+        "The fellowship of the ring : being the first part of The Lord of the Rings" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q208002> ;
+    rdaxd:P00018 "http://www.wikidata.org/entity/Q208002/exp/eng/1020" ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
+<http://www.wikidata.org/entity/Q332581/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Return of the king",
+        "Return of the king (Tolkien, J. R. R.)",
+        "The return of the king",
+        "The return of the king (Tolkien, J. R. R.)" ;
+    rdaed:P20315 "Return of the king" ;
+    rdaed:P20316 "Return of the king",
+        "The return of the king : being the third part of The lord of the rings" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q332581> ;
+    rdaxd:P00018 "http://www.wikidata.org/entity/Q332581/exp/eng/1020" ;
+    rdaxd:P00029 "part",
+        "standalone" .
+

@@ -16,6 +16,7 @@ import {
 } from "@mui/material";
 import { Settings, Help, Download, Upload, Refresh } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
+import type { CatalogingPreferences } from "../utils/catalogingStyle";
 import { useSnackbar } from "notistack";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import LanguageSelector from "./LanguageSelector";
@@ -26,13 +27,15 @@ import LoggingControls from "./LoggingControls";
 
 interface AppHeaderProps {
   config: SparqlEndpointConfig;
-  onConfigChange: (config: SparqlEndpointConfig, warnAutoUri: boolean, warnAutoLabel: boolean) => void;
+  onConfigChange: (
+    config: SparqlEndpointConfig,
+    preferences: CatalogingPreferences,
+  ) => void;
   selectedLanguage: string;
   onLanguageChange: (language: string) => void;
   onResetConfiguration?: () => void;
   showLogging?: boolean;
-  warnAutoUri: boolean;
-  warnAutoLabel: boolean;
+  preferences: CatalogingPreferences;
   isDirty?: boolean;
   onRefresh?: (saveFirst: boolean) => Promise<void>;
 }
@@ -44,8 +47,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({
   onLanguageChange,
   onResetConfiguration,
   showLogging = true,
-  warnAutoUri,
-  warnAutoLabel,
+  preferences,
   isDirty = false,
   onRefresh,
 }) => {
@@ -126,18 +128,46 @@ const AppHeader: React.FC<AppHeaderProps> = ({
         <Toolbar
           sx={{
             minHeight: 64,
-            height: 64,
-            px: 2,
+            // Everything fits on one row from sm up; on a phone the controls
+            // wrap onto a second row instead of widening the page.
+            height: { xs: "auto", sm: 64 },
+            flexWrap: { xs: "wrap", sm: "nowrap" },
+            py: { xs: 1, sm: 0 },
+            px: { xs: 1, sm: 2 },
+            gap: 1,
           }}
         >
-          <Box sx={{ display: "flex", alignItems: "center", gap: 1.5, flexGrow: 1 }}>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              gap: 1.5,
+              flexGrow: 1,
+              minWidth: 0,
+            }}
+          >
             <img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="" width={28} height={28} />
-            <Typography variant="h6" component="div">
+            {/* The full title needs more room than a phone has beside the
+                controls, so only the logo is shown there. */}
+            <Typography
+              variant="h6"
+              component="div"
+              noWrap
+              sx={{ display: { xs: "none", md: "block" } }}
+            >
               {t("appTitle")}
             </Typography>
           </Box>
 
-          <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              flexWrap: { xs: "wrap", sm: "nowrap" },
+              gap: { xs: 0.5, sm: 2 },
+              minWidth: 0,
+            }}
+          >
             {/* Endpoint Configuration Chip */}
             <Chip
               label={getEndpointDisplayName(config.url)}
@@ -146,8 +176,8 @@ const AppHeader: React.FC<AppHeaderProps> = ({
               variant="outlined"
               color="primary"
               sx={{
-                minWidth: 140,
-                maxWidth: 180,
+                minWidth: { xs: 44, sm: 140 },
+                maxWidth: { xs: 96, sm: 180 },
                 backgroundColor: "rgba(255, 255, 255, 0.12)",
                 color: "rgba(255, 255, 255, 0.95)",
                 borderColor: "rgba(255, 255, 255, 0.20)",
@@ -264,19 +294,19 @@ const AppHeader: React.FC<AppHeaderProps> = ({
       >
         <EndpointConfig
           config={config}
-          onConfigChange={(newConfig, newWarnAutoUri, newWarnAutoLabel) => {
-            onConfigChange(newConfig, newWarnAutoUri, newWarnAutoLabel);
+          onConfigChange={(newConfig, newPreferences) => {
+            onConfigChange(newConfig, newPreferences);
             setConfigDialogOpen(false);
           }}
           selectedLanguage={selectedLanguage}
           onLanguageChange={onLanguageChange}
           isModal={true}
+          onCancel={() => setConfigDialogOpen(false)}
           onResetConfiguration={() => {
             setConfigDialogOpen(false);
             onResetConfiguration?.();
           }}
-          warnAutoUri={warnAutoUri}
-          warnAutoLabel={warnAutoLabel}
+          preferences={preferences}
         />
       </Dialog>
 

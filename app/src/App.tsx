@@ -21,6 +21,11 @@ import {
   getDefaultConfiguration,
   type AppConfiguration
 } from "./utils/configManager";
+import {
+  applyStyleOverride,
+  DEFAULT_PREFERENCES,
+  type CatalogingPreferences,
+} from "./utils/catalogingStyle";
 
 const DEMO_ENDPOINT_URL = "http://dijon.idi.ntnu.no:8080/repositories/EntEdit";
 
@@ -122,7 +127,9 @@ const theme = createTheme({
       contrastText: "#FFFFFF",
     },
     secondary: {
-      main: "#C2713A",
+      // Darkened from #C2713A so white text on a filled control reaches
+      // the WCAG 4.5:1 minimum (was 3.67:1).
+      main: "#A85F2C",
       light: "#E09060",
       dark: "#8E4F24",
       contrastText: "#FFFFFF",
@@ -137,27 +144,31 @@ const theme = createTheme({
       disabled: "rgba(45, 30, 15, 0.45)",
     },
     divider: "rgba(139, 92, 42, 0.12)",
+    // `main` carries white text on filled buttons, so each one meets 4.5:1
+    // against #FFFFFF; the dark tints stay for text on the light backgrounds.
     info: {
-      main: "#5B7FA4",
+      main: "#4E6F92",
       light: "#E8F0F7",
       dark: "#3D5A7A",
-      contrastText: "#1A3A5C",
+      contrastText: "#FFFFFF",
     },
     success: {
-      main: "#5A8A5C",
+      main: "#4A7A4C",
       light: "#E6F2E6",
       dark: "#3D6B3F",
-      contrastText: "#1A3D1C",
+      contrastText: "#FFFFFF",
     },
     warning: {
-      main: "#C2713A",
+      main: "#A55A28",
       light: "#FFF3E0",
       dark: "#8E4F24",
+      contrastText: "#FFFFFF",
     },
     error: {
       main: "#C0392B",
       light: "#FDECEA",
       dark: "#8B2820",
+      contrastText: "#FFFFFF",
     },
     grey: {
       50: "#FAF8F5",
@@ -234,6 +245,16 @@ function AppInner() {
     invalidateAllEntityData(queryClient);
   }, []);
 
+  // Ask the browser to confirm reload/close while the editor has unsaved edits
+  useEffect(() => {
+    if (!isEditorDirty) return;
+    const handler = (event: BeforeUnloadEvent) => {
+      event.preventDefault();
+    };
+    window.addEventListener("beforeunload", handler);
+    return () => window.removeEventListener("beforeunload", handler);
+  }, [isEditorDirty]);
+
   const urlParams = useMemo(() => new URLSearchParams(window.location.search), []);
   const showSearchTab = useMemo(() => !urlParams.has("nosearch"), [urlParams]);
   const showLogging = useMemo(() => !urlParams.has("nologging"), [urlParams]);
@@ -261,8 +282,10 @@ function AppInner() {
         endpoint: { url: DEMO_ENDPOINT_URL, username: "", password: "" },
         language: langParam ?? savedConfig?.language ?? "en",
         isConfigured: true,
-        warnAutoUri: savedConfig?.warnAutoUri ?? false,
-        warnAutoLabel: savedConfig?.warnAutoLabel ?? false,
+        preferences: applyStyleOverride(
+          savedConfig?.preferences ?? DEFAULT_PREFERENCES,
+          window.location.search,
+        ),
       });
       setShowWizard(false);
       setLoading(false);
@@ -271,12 +294,19 @@ function AppInner() {
 
     const savedConfig = loadConfiguration();
 
+    // ?style=classic|semantic overrides the stored preferences for this
+    // session, so a teacher can hand out one link for a whole class.
+    const withStyle = (loaded: AppConfiguration): AppConfiguration => ({
+      ...loaded,
+      language: langParam ?? loaded.language,
+      preferences: applyStyleOverride(loaded.preferences, window.location.search),
+    });
+
     if (savedConfig && savedConfig.isConfigured) {
-      setAppConfig(langParam ? { ...savedConfig, language: langParam } : savedConfig);
+      setAppConfig(withStyle(savedConfig));
       setShowWizard(false);
     } else {
-      const defaultConfig = getDefaultConfiguration();
-      setAppConfig(langParam ? { ...defaultConfig, language: langParam } : defaultConfig);
+      setAppConfig(withStyle(getDefaultConfiguration()));
       setShowWizard(true);
     }
 
@@ -287,7 +317,7 @@ function AppInner() {
   const handleConfigurationComplete = (
     config: SparqlEndpointConfig,
     language: string,
-    preferences: { warnAutoUri: boolean; warnAutoLabel: boolean },
+    preferences: CatalogingPreferences,
   ) => {
     // Save to localStorage
     saveConfiguration(config, language, preferences);
@@ -297,25 +327,21 @@ function AppInner() {
       endpoint: config,
       language,
       isConfigured: true,
-      warnAutoUri: preferences.warnAutoUri,
-      warnAutoLabel: preferences.warnAutoLabel,
+      preferences,
     };
 
     setAppConfig(newAppConfig);
     setShowWizard(false);
   };
 
-  const handleConfigChange = (newConfig: SparqlEndpointConfig, warnAutoUri: boolean, warnAutoLabel: boolean) => {
+  const handleConfigChange = (
+    newConfig: SparqlEndpointConfig,
+    preferences: CatalogingPreferences,
+  ) => {
     if (appConfig) {
-      const updatedConfig = {
-        ...appConfig,
-        endpoint: newConfig,
-        warnAutoUri,
-        warnAutoLabel,
-      };
-      setAppConfig(updatedConfig);
+      setAppConfig({ ...appConfig, endpoint: newConfig, preferences });
       if (!isDemoMode) {
-        saveConfiguration(newConfig, appConfig.language, { warnAutoUri, warnAutoLabel });
+        saveConfiguration(newConfig, appConfig.language, preferences);
       }
     }
   };
@@ -402,8 +428,7 @@ function AppInner() {
                 onLanguageChange={handleLanguageChange}
                 onResetConfiguration={handleResetConfiguration}
                 showLogging={showLogging}
-                warnAutoUri={appConfig.warnAutoUri}
-                warnAutoLabel={appConfig.warnAutoLabel}
+                preferences={appConfig.preferences}
                 isDirty={isEditorDirty}
                 onRefresh={handleRefresh}
               />
@@ -437,19 +462,20 @@ function AppInner() {
                   </Tabs>
                 </Box>
 
-                <Box sx={{ py: 3, flexGrow: 1 }}>
+                <Box component="main" sx={{ py: 3, flexGrow: 1 }}>
                   <Suspense fallback={<Box sx={{ display: "flex", justifyContent: "center", pt: 8 }}><CircularProgress /></Box>}>
-                    {activeTab === 0 && (
+                    {/* Kept mounted while hidden so switching to Search doesn't
+                        discard unsaved edits or the selected class/entity. */}
+                    <Box hidden={activeTab !== 0}>
                       <EntityBrowser
                         config={appConfig.endpoint}
                         selectedLanguage={appConfig.language}
-                        warnAutoUri={appConfig.warnAutoUri}
-                        warnAutoLabel={appConfig.warnAutoLabel}
+                        preferences={appConfig.preferences}
                         onEditingChange={setIsEditorDirty}
                         onRegisterSave={registerEditorSave}
                         onRegisterDiscard={registerEditorDiscard}
                       />
-                    )}
+                    </Box>
                     {activeTab === 1 && showSearchTab && (
                       <SearchInterface
                         config={appConfig.endpoint}

@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useCallback, useMemo } from "react";
 import {
   Box,
   Typography,
@@ -8,16 +8,24 @@ import {
   MenuItem,
   FormControl,
   InputLabel,
+  Chip,
+  Tooltip,
 } from "@mui/material";
 import { Delete } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import type { RdfProperty, OrderedValue } from "../types/sparql";
 import OrderableValueList from "./OrderableValueList";
+import { languageName, languagesInUse, VALUE_LANGUAGES } from "../utils/languages";
+import { duplicateValueIndexes } from "../utils/entityUpdate";
 
 interface DataPropertiesSectionProps {
   entityData: Record<string, OrderedValue[]>;
+  /** Show each value's language, and offer a selector while editing. */
+  showLanguageTags: boolean;
+  onUpdateValueLanguage: (property: string, index: number, language: string) => void;
   properties: RdfProperty[];
   isEditing: boolean;
+  showInferredMarks: boolean;
   classUri: string;
   selectedProperty: string;
   onPropertySelect: (propertyUri: string) => void;
@@ -29,8 +37,11 @@ interface DataPropertiesSectionProps {
 
 const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
   entityData,
+  showLanguageTags,
+  onUpdateValueLanguage,
   properties,
   isEditing,
+  showInferredMarks,
   classUri,
   selectedProperty,
   onPropertySelect,
@@ -39,7 +50,45 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
   onReorderValues,
   getPropertyLabel,
 }) => {
-  const { t } = useTranslation("entityEditor");
+  const { t, i18n } = useTranslation("entityEditor");
+
+  // Language belongs on names, titles and notes — not on dates, numbering or
+  // measurements, which the profile marks with entedit:linguistic false.
+  const isLinguistic = useCallback(
+    (propertyUri: string) =>
+      properties.find((p) => p.uri === propertyUri)?.linguistic !== false,
+    [properties],
+  );
+
+  // Same text and same language is the same triple: the repeat would be lost
+  // on save, so it is marked here and dropped when the save goes through.
+  const duplicates = useMemo(() => {
+    const map: Record<string, Set<number>> = {};
+    for (const [property, values] of Object.entries(entityData)) {
+      map[property] = duplicateValueIndexes(values);
+    }
+    return map;
+  }, [entityData]);
+
+  // A property whose values differ in language always shows the tags, even
+  // when the setting is off: without them the values look like duplicates.
+  const ambiguousProperties = useMemo(() => {
+    const ambiguous = new Set<string>();
+    for (const [property, values] of Object.entries(entityData)) {
+      if (languagesInUse(values).size > 1) ambiguous.add(property);
+    }
+    return ambiguous;
+  }, [entityData]);
+  // Focus the field the user just added, instead of leaving focus on the
+  // "Add" dropdown, which cost an extra tab on every value.
+  const focusRef = React.useRef<HTMLInputElement | null>(null);
+  const [focusTarget, setFocusTarget] = React.useState<string | null>(null);
+  React.useEffect(() => {
+    if (focusTarget && focusRef.current) {
+      focusRef.current.focus();
+      setFocusTarget(null);
+    }
+  }, [focusTarget]);
 
   // Get available properties (excluding rdfs:label)
   const availableProperties = useMemo(
@@ -80,6 +129,9 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
               alignItems: "center",
               justifyContent: "space-between",
               mb: 1.5,
+              // Reserve the height of the "Add" control, which only appears in
+              // edit mode, so section headings do not shift when editing starts
+              minHeight: 40,
             }}
           >
             <Typography variant="subtitle1" sx={{ color: "text.primary" }}>
@@ -92,8 +144,12 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
                 <Select
                   value={selectedProperty}
                   label={t("common:labels.addTextValue", { ns: "common" })}
-                  onChange={(e) => onPropertySelect(e.target.value)}
+                  onChange={(e) => {
+                    onPropertySelect(e.target.value);
+                    setFocusTarget(e.target.value);
+                  }}
                   disabled={!classUri}
+                  inputProps={{ "aria-label": t("common:labels.addTextValue", { ns: "common" }) }}
                 >
                   {availableProperties.map((property) => (
                     <MenuItem key={property.uri} value={property.uri}>
@@ -132,11 +188,25 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
               >
                 <TextField
                   fullWidth
+                  error={duplicates[propertyUri]?.has(index) ?? false}
+                  helperText={
+                    duplicates[propertyUri]?.has(index)
+                      ? t("messages.duplicateValue")
+                      : undefined
+                  }
+                  inputRef={
+                    focusTarget === propertyUri &&
+                    index === entityData[propertyUri].length - 1
+                      ? focusRef
+                      : undefined
+                  }
                   value={entityData[propertyUri][index].value}
                   onChange={(e) =>
                     onUpdateValue(propertyUri, index, e.target.value)
                   }
-                  disabled={!isEditing || !classUri}
+                  disabled={
+                    !isEditing || !classUri || !!entityData[propertyUri][index].inferred
+                  }
                   size="small"
                   placeholder={t("placeholders.enterValue", { propertyName: getPropertyLabel(propertyUri) })}
                   sx={{
@@ -147,7 +217,80 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
                     },
                   }}
                 />
-                {isEditing && (
+                {isEditing &&
+                ((showLanguageTags && isLinguistic(propertyUri)) ||
+                  ambiguousProperties.has(propertyUri)) ? (
+                  <FormControl size="small" sx={{ width: 76, flexShrink: 0 }}>
+                    <Tooltip
+                      title={
+                        entityData[propertyUri][index].lang
+                          ? languageName(
+                              entityData[propertyUri][index].lang,
+                              i18n.language,
+                            )
+                          : t("tooltips.noLanguage")
+                      }
+                    >
+                    <Select
+                      value={entityData[propertyUri][index].lang ?? ""}
+                      onChange={(e) =>
+                        onUpdateValueLanguage(propertyUri, index, e.target.value)
+                      }
+                      displayEmpty
+                      disabled={
+                        !classUri || !!entityData[propertyUri][index].inferred
+                      }
+                      inputProps={{ "aria-label": t("tooltips.valueLanguage") }}
+                      // Closed: just the code, so the field stays narrow. Open:
+                      // the full name, since a code alone is hard to pick from.
+                      renderValue={(value) =>
+                        value ? (value as string).toUpperCase() : "—"
+                      }
+                      sx={{ "& .MuiSelect-select": { py: 0.75, fontSize: "0.8rem" } }}
+                    >
+                      {/* A dash rather than words: the same "unset" marker
+                          the label editor uses. */}
+                      <MenuItem value="" aria-label={t("tooltips.noLanguage")}>
+                        <em>—</em>
+                      </MenuItem>
+                      {VALUE_LANGUAGES.map((code) => (
+                        <MenuItem key={code} value={code} sx={{ fontSize: "0.85rem" }}>
+                          {languageName(code, i18n.language)}
+                        </MenuItem>
+                      ))}
+                    </Select>
+                    </Tooltip>
+                  </FormControl>
+                ) : (
+                  entityData[propertyUri][index].lang &&
+                  ((showLanguageTags && isLinguistic(propertyUri)) ||
+                    ambiguousProperties.has(propertyUri)) && (
+                    <Tooltip
+                      title={languageName(
+                        entityData[propertyUri][index].lang,
+                        i18n.language,
+                      )}
+                    >
+                      <Chip
+                        label={entityData[propertyUri][index].lang}
+                        size="small"
+                        variant="outlined"
+                        sx={{ height: 20, fontSize: "0.65rem", textTransform: "uppercase" }}
+                      />
+                    </Tooltip>
+                  )
+                )}
+                {entityData[propertyUri][index].inferred && showInferredMarks && (
+                  <Tooltip title={t("common:labels.inferredHelp", { ns: "common" })}>
+                    <Chip
+                      label={t("common:labels.inferred", { ns: "common" })}
+                      size="small"
+                      variant="outlined"
+                      sx={{ height: 20, fontSize: "0.65rem" }}
+                    />
+                  </Tooltip>
+                )}
+                {isEditing && !entityData[propertyUri][index].inferred && (
                   <IconButton
                     size="small"
                     onClick={() => onRemoveValue(propertyUri, index)}

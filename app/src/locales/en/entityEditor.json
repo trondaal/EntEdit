@@ -13,18 +13,26 @@
     "relatedAgents": "Related Agents",
     "relatedWorks": "Related Works",
     "relatedExpressions": "Related Expressions",
-    "relatedManifestations": "Related Manifestations"
+    "relatedManifestations": "Related Manifestations",
+    "identity": "Identity"
   },
   "placeholders": {
     "enterUri": "Enter custom URI or leave empty for auto-generation",
     "enterValue": "Enter {{propertyName}}",
-    "filterEntities": "Filter..."
+    "filterEntities": "Filter...",
+    "enterOrGenerateUri": "Enter a URI, or generate one"
   },
   "tooltips": {
     "copyUri": "Copy URI",
     "dragToReorder": "Drag to reorder",
     "moveUp": "Move up",
-    "moveDown": "Move down"
+    "moveDown": "Move down",
+    "nothingToSave": "Add a value or a label before saving",
+    "noChanges": "No changes to save",
+    "languageOfValue": "Language of this value: {{lang}}",
+    "requiredMissing": "Enter {{fields}} before saving",
+    "valueLanguage": "Language",
+    "noLanguage": "No language"
   },
   "messages": {
     "noLabel": "No label",
@@ -49,7 +57,11 @@
       "unauthorized": "The database requires a username and password to accept changes. Open Settings to provide credentials.",
       "forbidden": "The database refused the change. This endpoint is read-only — typical for a demo server. Configure a writable endpoint in Settings to save.",
       "server": "The database reported an error and did not apply the change. Please try again or check the server logs."
-    }
+    },
+    "uriInUse": "This identifier is already used by \"{{label}}\" ({{types}}). Choose another identifier, or open the existing entity from the list.",
+    "saveConflict": "Someone else changed this entity while you were editing it ({{properties}}). Use Refresh to load their version, then apply your changes again.",
+    "invalidUri": "That is not a valid URI",
+    "duplicateValue": "Already recorded for this property — it will be dropped when you save"
   },
   "labelManager": {
     "title": "Manage Labels",
@@ -75,13 +87,6 @@
       "title": "Discard changes?",
       "message": "You have unsaved changes. Cancelling will discard all changes made in this session.",
       "confirm": "Discard changes"
-    },
-    "saveWarning": {
-      "title": "Auto-generated values",
-      "messageBoth": "This entity will be saved with an auto-generated URI and an auto-generated label. Are you sure you want to continue?",
-      "messageUri": "This entity will be saved with an auto-generated URI. Are you sure you want to continue?",
-      "messageLabel": "This entity will be saved with an auto-generated label. Are you sure you want to continue?",
-      "confirm": "Save anyway"
     },
     "export": {
       "title": "Export Entities",

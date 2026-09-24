@@ -1,0 +1,2206 @@
+@prefix entedit: <http://oslomet.no/abi/vocab#> .
+@prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
+@prefix rdac: <http://rdaregistry.info/Elements/c/> .
+@prefix rdaco: <http://rdaregistry.info/termList/RDAContentType/> .
+@prefix rdact: <http://rdaregistry.info/termList/RDACarrierType/> .
+@prefix rdaed: <http://rdaregistry.info/Elements/e/datatype/> .
+@prefix rdaeo: <http://rdaregistry.info/Elements/e/object/> .
+@prefix rdamd: <http://rdaregistry.info/Elements/m/datatype/> .
+@prefix rdamo: <http://rdaregistry.info/Elements/m/object/> .
+@prefix rdamt: <http://rdaregistry.info/termList/RDAMediaType/> .
+@prefix rdawd: <http://rdaregistry.info/Elements/w/datatype/> .
+@prefix rdawo: <http://rdaregistry.info/Elements/w/object/> .
+@prefix rdaxd: <http://rdaregistry.info/Elements/x/datatype/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/004210640> a rdac:C10007 ;
+    rdfs:label "Murder on the Orient Express. Theme. <Piano solo.>" ;
+    rdamd:P30011 "[1974]" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30156 "Murder on the Orient Express. Theme. <Piano solo.>" ;
+    rdamd:P30176 "EMI Film & Theatre Music" ;
+    rdamd:P30182 "3p., 4.̊." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/9356154076013911860000/exp/1010> ;
+    rdaxd:P00018 "http://example.org/004210640" .
+
+<http://example.org/019181043> a rdac:C10007 ;
+    rdfs:label "Murder On The Orient Express (Theme) / [Rodney Bennett, Richard]" ;
+    rdamd:P30007 "©1974" ;
+    rdamd:P30011 "[2018?]" ;
+    rdamd:P30088 "[London]" ;
+    rdamd:P30107 "Piano Solo" ;
+    rdamd:P30117 "[Rodney Bennett, Richard]" ;
+    rdamd:P30156 "Murder On The Orient Express (Theme)" ;
+    rdamd:P30176 "[Faber Music]" ;
+    rdamd:P30182 "1 online resource (1 score (2 pages))." ;
+    rdamo:P30001 rdact:1018 ;
+    rdamo:P30002 rdamt:1003 ;
+    rdamo:P30139 <http://viaf.org/viaf/9356154076013911860000/exp/1010> ;
+    rdaxd:P00018 "http://example.org/019181043" .
+
+<http://example.org/999920609674902201> a rdac:C10007 ;
+    rdfs:label "Murder on the Orient Express / regi Kenneth Branagh" ;
+    rdamd:P30011 "2017" ;
+    rdamd:P30088 "Oslo" ;
+    rdamd:P30117 "regi Kenneth Branagh" ;
+    rdamd:P30137 "Ekstramateriale",
+        "Medietilsynet : 185296" ;
+    rdamd:P30156 "Murder on the Orient Express" ;
+    rdamd:P30176 "Thwentieth Century Fox Home Entertainment" ;
+    rdamd:P30182 "1 plate (DVD) (1 t 49 min) : lyd, kol." ;
+    rdamo:P30001 rdact:1060 ;
+    rdamo:P30002 rdamt:1008 ;
+    rdamo:P30139 <https://www.imdb.com/title/tt3402236/exp/1023> ;
+    rdaxd:P00018 "http://example.org/999920609674902201" .
+
+<http://example.org/999921241891502201> a rdac:C10007 ;
+    rdfs:label "Murder on the Orient Express / directed by Sidney Lumet" ;
+    rdamd:P30011 "2013" ;
+    rdamd:P30117 "directed by Sidney Lumet" ;
+    rdamd:P30137 "Basert på en roman av Agatha Christie",
+        "Kodet for region A, B & C",
+        "Medietilsynet: 123213",
+        "Produksjon: Storbritannia / USA, 1974" ;
+    rdamd:P30156 "Murder on the Orient Express" ;
+    rdamd:P30176 "Universal Sony Pictures Home Entertainment Nordic" ;
+    rdamd:P30182 "1 plate (Blu-ray) (2 t 9 min) : lyd, kol." ;
+    rdamo:P30001 rdact:1060 ;
+    rdamo:P30002 rdamt:1008 ;
+    rdamo:P30139 <https://www.imdb.com/title/tt0071877/exp/1023> ;
+    rdaxd:P00018 "http://example.org/999921241891502201" .
+
+<http://example.org/IAN-5050582555363> a rdac:C10007 ;
+    rdfs:label "Murder on the orient express" ;
+    rdamd:P30004 "IAN 5050582555363" ;
+    rdamd:P30008 "[2008]" ;
+    rdamd:P30137 "Aldersgrense: 15 år",
+        "Medietilsynet: 123213",
+        "Produksjonsår: 1974",
+        "Regissør: Sidney Lumet",
+        "Rolleliste: Albert Finney, Lauren Bacall, Martin Balsam med flere",
+        "Undertekster på blant annet norsk" ;
+    rdamd:P30156 "Murder on the orient express" ;
+    rdamd:P30173 "Universal Pictures Nordic" ;
+    rdamd:P30182 "1 plate (DVD) (122 minutter)." ;
+    rdamo:P30001 rdact:1060 ;
+    rdamo:P30002 rdamt:1008 ;
+    rdamo:P30139 <https://www.imdb.com/title/tt0071877/exp/1023> ;
+    rdaxd:P00018 "http://example.org/IAN-5050582555363" .
+
+<http://example.org/IAN-7041881220425> a rdac:C10007 ;
+    rdfs:label "Corrientes / Per Einar Watle Trio" ;
+    rdamd:P30004 "IAN 7041881220425" ;
+    rdamd:P30007 "℗ 2010" ;
+    rdamd:P30011 "2010-01-25" ;
+    rdamd:P30033 "Swing for Simon -- Corrientes -- Lingo -- El Patio de Montserrat -- Bei Dir War Es Immer So Schön -- Here's That Rainy Day -- Yours is My Heart Alone -- Reine De Musette -- Melodie Concorde -- Murder On the Orient Express -- Dans monîle -- Choti" ;
+    rdamd:P30085 "[Oslo]" ;
+    rdamd:P30088 "[Norge]" ;
+    rdamd:P30108 "[Oslo] : Phonofile" ;
+    rdamd:P30117 "Per Einar Watle Trio" ;
+    rdamd:P30137 "CSSE Records: CSSE04" ;
+    rdamd:P30156 "Corrientes" ;
+    rdamd:P30173 "Phonofile" ;
+    rdamd:P30176 "CSSE Records" ;
+    rdamd:P30182 "1 online (nettilkoblet) ressurs." ;
+    rdamo:P30001 rdact:1018 ;
+    rdamo:P30002 rdamt:1003 ;
+    rdamo:P30139 <http://viaf.org/viaf/9356154076013911860000/exp/und/1011> ;
+    rdaxd:P00018 "http://example.org/IAN-7041881220425" .
+
+<http://example.org/isbn-000231469> a rdac:C10007 ;
+    rdfs:label "A Miss Marple quartet / Agatha Christie" ;
+    rdamd:P30004 "ISBN 000231469x" ;
+    rdamd:P30011 "1985" ;
+    rdamd:P30033 "The body in the library -- The moving finger -- A murder is announced -- A pocket full of rye" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30156 "A Miss Marple quartet" ;
+    rdamd:P30176 "Collins" ;
+    rdamd:P30182 "664p, 23cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/181004220/exp/eng/1020>,
+        <http://viaf.org/viaf/184645888/exp/eng/1020>,
+        <http://viaf.org/viaf/310912134/exp/eng/1020>,
+        <http://viaf.org/viaf/780165573946837800003/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-000231469" .
+
+<http://example.org/isbn-0002444909> a rdac:C10007 ;
+    rdfs:label "A Miss Marple quintet / Agatha Christie" ;
+    rdamd:P30004 "ISBN 0002444909" ;
+    rdamd:P30011 "1978" ;
+    rdamd:P30033 "The murder at the vicarage - A murder is announced - A pocket full of rye - The mirror crack'd from side to side - At Bertram's Hotel" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30106 "Collins collector's choice" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30156 "A Miss Marple quintet" ;
+    rdamd:P30176 "Collins" ;
+    rdamd:P30182 "901p, 23cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/181004220/exp/eng/1020>,
+        <http://viaf.org/viaf/1846151051771433530005/exp/eng/1020>,
+        <http://viaf.org/viaf/308553963/exp/eng/1020>,
+        <http://viaf.org/viaf/7037151474835800490008/exp/eng/1020>,
+        <http://viaf.org/viaf/780165573946837800003/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0002444909" .
+
+<http://example.org/isbn-0002446855> a rdac:C10007 ;
+    rdfs:label "The best of Poirot / by Agatha Christie" ;
+    rdamd:P30004 "ISBN 0002446855" ;
+    rdamd:P30011 "1980" ;
+    rdamd:P30033 "Murder on the Orient Express - Cards on the table - Hercule Poirot's Christmas - Five little pigs - The labours of Hercules." ;
+    rdamd:P30088 "London" ;
+    rdamd:P30106 "Collins' collectors' choice" ;
+    rdamd:P30117 "by Agatha Christie" ;
+    rdamd:P30156 "The best of Poirot" ;
+    rdamd:P30176 "Collins" ;
+    rdamd:P30182 "862p., 23cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/174408071/exp/eng/1020>,
+        <http://viaf.org/viaf/310911986/exp/eng/1020>,
+        <http://viaf.org/viaf/312349122/exp/eng/1020>,
+        <http://viaf.org/viaf/316741387/exp/eng/1020>,
+        <http://viaf.org/viaf/638145424602986831437/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0002446855" .
+
+<http://example.org/isbn-0006165338> a rdac:C10007 ;
+    rdfs:label "Sleeping murder / Agatha Christie" ;
+    rdamd:P30004 "ISBN 0006165338" ;
+    rdamd:P30011 "1977, c1976" ;
+    rdamd:P30088 "[London]" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30137 "Originally published: London : Collins, 1976" ;
+    rdamd:P30142 "Miss Marple's last case" ;
+    rdamd:P30156 "Sleeping murder" ;
+    rdamd:P30176 "Collins" ;
+    rdamd:P30182 "192p, 18cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/740147270586435700009/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0006165338" .
+
+<http://example.org/isbn-000649630> a rdac:C10007 ;
+    rdfs:label "ISBN000649630X (pbk)" ;
+    rdamd:P30004 "ISBN 000649630X (pbk)" ;
+    rdamd:P30011 "1995" ;
+    rdamd:P30014 "Vol.1" ;
+    rdamd:P30033 "The mysterious affair at Styles -- The secret adversary -- Murder on the links" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30134 "1920s",
+        "The mysterious affair at Styles, The secret adversary, Murder on the links" ;
+    rdamd:P30137 "Cover title: 1920s Agatha Christie." ;
+    rdamd:P30156 "Agatha Christie omnibus" ;
+    rdamd:P30176 "HarperCollins" ;
+    rdamd:P30182 "649p., 20cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/176364162/exp/eng/1020>,
+        <http://viaf.org/viaf/228691003/exp/eng/1020>,
+        <http://viaf.org/viaf/5243165573959737800001/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-000649630" .
+
+<http://example.org/isbn-0006496563> a rdac:C10007 ;
+    rdfs:label "ISBN0006496563 (pbk)" ;
+    rdamd:P30004 "ISBN 0006496563 (pbk)" ;
+    rdamd:P30011 "1995" ;
+    rdamd:P30014 "Vol.2" ;
+    rdamd:P30033 "The man in the brown suit -- Poirot investigates -- The secret of chimneys" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30134 "1920s",
+        "The man in the brown suit, Poirot investigates, The secret of chimneys" ;
+    rdamd:P30137 "Cover title: 1920s Agatha Christie." ;
+    rdamd:P30156 "Agatha Christie omnibus" ;
+    rdamd:P30176 "HarperCollins" ;
+    rdamd:P30182 "680p., 20cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/309260721/exp/eng/1020>,
+        <http://viaf.org/viaf/312333230/exp/eng/1020>,
+        <http://viaf.org/viaf/9180154501927439210001/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0006496563" .
+
+<http://example.org/isbn-0006499562> a rdac:C10007 ;
+    rdfs:label "Agatha Christie's Miss Marple / Anne Hart" ;
+    rdamd:P30004 "ISBN 0006499562" ;
+    rdamd:P30011 "1997, c1985" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "Anne Hart" ;
+    rdamd:P30137 "Originally published: U.S.A. : Dodd, Mead & Co., 1985." ;
+    rdamd:P30142 "the life and times of Miss Jane Marple" ;
+    rdamd:P30156 "Agatha Christie's Miss Marple" ;
+    rdamd:P30176 "HarperCollins" ;
+    rdamd:P30182 "ix,150p, 18cm.",
+        "x,176p : ill, 18cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/1097151656348508400001/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0006499562" .
+
+<http://example.org/isbn-0006499597> a rdac:C10007 ;
+    rdfs:label "Miss Marple omnibus / Agatha Christie" ;
+    rdamd:P30004 "ISBN 0006499597",
+        "ISBN 0006499600",
+        "ISBN 0006499619" ;
+    rdamd:P30011 "1997" ;
+    rdamd:P30033 "The body in the library -- The moving finger -- A murder is announced -- 4.50 from Paddington -- A Caribbean mystery -- A pocket full of Rye -- The mirror cracked from side to side -- They do it with mirrors -- Nemesis -- Sleeping murder -- At Bertram's hotel -- The murder at the vicarage" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30156 "Miss Marple omnibus" ;
+    rdamd:P30176 "HarperCollins" ;
+    rdamd:P30182 "717,654,694p, 20cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/176021540/exp/eng/1020>,
+        <http://viaf.org/viaf/177374432/exp/eng/1020>,
+        <http://viaf.org/viaf/181004220/exp/eng/1020>,
+        <http://viaf.org/viaf/182019214/exp/eng/1020>,
+        <http://viaf.org/viaf/1846151051771433530005/exp/eng/1020>,
+        <http://viaf.org/viaf/184645888/exp/eng/1020>,
+        <http://viaf.org/viaf/186075806/exp/eng/1020>,
+        <http://viaf.org/viaf/308553963/exp/eng/1020>,
+        <http://viaf.org/viaf/310912134/exp/eng/1020>,
+        <http://viaf.org/viaf/7037151474835800490008/exp/eng/1020>,
+        <http://viaf.org/viaf/740147270586435700009/exp/eng/1020>,
+        <http://viaf.org/viaf/780165573946837800003/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0006499597" .
+
+<http://example.org/isbn-0007119321> a rdac:C10007 ;
+    rdfs:label "ISBN0007119321 (pbk)" ;
+    rdamd:P30004 "ISBN 0007119321 (pbk)" ;
+    rdamd:P30011 "2001" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30106 "Agatha Christie signature collection" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30137 "Originally published, London: Collins, 1937." ;
+    rdamd:P30156 "Death on the Nile" ;
+    rdamd:P30165 "no.18" ;
+    rdamd:P30176 "HarperCollins" ;
+    rdamd:P30182 "416p., 18cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/309258229/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0007119321" .
+
+<http://example.org/isbn-000711933> a rdac:C10007 ;
+    rdfs:label "ISBN000711933X (pbk)" ;
+    rdamd:P30004 "ISBN 000711933X (pbk)" ;
+    rdamd:P30011 "2001" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30106 "The Agatha Christie collection" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30137 "Originally published, London: Collins, 1935." ;
+    rdamd:P30156 "Death in the clouds" ;
+    rdamd:P30165 "No.12" ;
+    rdamd:P30176 "HarperCollins" ;
+    rdamd:P30182 "333p. : plan, 18cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/73145424522186831318/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-000711933" .
+
+<http://example.org/isbn-0007119356> a rdac:C10007 ;
+    rdfs:label "ISBN0007119356 (pbk.)" ;
+    rdamd:P30004 "ISBN 0007119356 (pbk.)" ;
+    rdamd:P30011 "2001" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30106 "The Agatha Christie collection : Poirot" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30156 "Appointment with death" ;
+    rdamd:P30165 "19" ;
+    rdamd:P30176 "HarperCollins" ;
+    rdamd:P30182 "303 p., 18 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/310912914/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0007119356" .
+
+<http://example.org/isbn-0007120729> a rdac:C10007 ;
+    rdfs:label "ISBN0007120729 (pbk.)" ;
+    rdamd:P30004 "ISBN 0007120729 (pbk.)" ;
+    rdamd:P30011 "2001" ;
+    rdamd:P30033 "Murder in Mesopotamia -- Death on the Nile -- Appointment with death" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30156 "Poirot in the Orient" ;
+    rdamd:P30176 "HarperCollins" ;
+    rdamd:P30182 "578 p. : ill., 20 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/12155103895976200651/exp/eng/1020>,
+        <http://viaf.org/viaf/309258229/exp/eng/1020>,
+        <http://viaf.org/viaf/310912914/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0007120729" .
+
+<http://example.org/isbn-0007128673> a rdac:C10007 ;
+    rdfs:label "ISBN0007128673 (pbk)" ;
+    rdamd:P30004 "ISBN 0007128673 (pbk)" ;
+    rdamd:P30011 "2001" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30137 "Originally published: London: Collins, 1945." ;
+    rdamd:P30156 "Death comes as the end" ;
+    rdamd:P30176 "HarperCollins" ;
+    rdamd:P30182 "334p., 18cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/8172154501923039210006/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0007128673" .
+
+<http://example.org/isbn-0007171137> a rdac:C10007 ;
+    rdfs:label "ISBN0007171137 (pbk.)" ;
+    rdamd:P30004 "ISBN 0007171137 (pbk.)" ;
+    rdamd:P30011 "c2003" ;
+    rdamd:P30033 "Murder on the links -- The mystery of the blue train -- Death in the clouds" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30142 "the French collection : The murder on the links, The mystery of the blue train, Death in the clouds" ;
+    rdamd:P30156 "Poirot" ;
+    rdamd:P30176 "HarperCollins" ;
+    rdamd:P30182 "552 p., 20 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/1009145424587286830098/exp/eng/1020>,
+        <http://viaf.org/viaf/5243165573959737800001/exp/eng/1020>,
+        <http://viaf.org/viaf/73145424522186831318/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0007171137" .
+
+<http://example.org/isbn-000720826> a rdac:C10007 ;
+    rdfs:label "Murders to die for / Agatha Christie" ;
+    rdamd:P30004 "ISBN 000720826X" ;
+    rdamd:P30011 "2005" ;
+    rdamd:P30033 "The murder of Roger Ackroyd -- The murder at the vicarage -- The murder on the links -- Murder is easy -- Murder in Mesopotamia -- Sleeping murder -- Murder on the Orient Express." ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30137 "Formerly CIP." ;
+    rdamd:P30156 "Murders to die for" ;
+    rdamd:P30176 "HarperCollins" ;
+    rdamd:P30182 "viii, 1160 p., 25 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/12155103895976200651/exp/eng/1020>,
+        <http://viaf.org/viaf/1846151051771433530005/exp/eng/1020>,
+        <http://viaf.org/viaf/217048217/exp/eng/1020>,
+        <http://viaf.org/viaf/309261613/exp/eng/1020>,
+        <http://viaf.org/viaf/316741387/exp/eng/1020>,
+        <http://viaf.org/viaf/5243165573959737800001/exp/eng/1020>,
+        <http://viaf.org/viaf/740147270586435700009/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-000720826" .
+
+<http://example.org/isbn-0007208626> a rdac:C10007 ;
+    rdfs:label "ISBN0007208626 (pbk.)",
+        "ISBN9780007208623 (pbk.)" ;
+    rdamd:P30004 "ISBN 0007208626 (pbk.)",
+        "ISBN 9780007208623 (pbk.)" ;
+    rdamd:P30011 "2006" ;
+    rdamd:P30033 "The secret adversary - The man in the brown suit - The secret of Chimneys - The seven dials mystery." ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30137 "Formerly CIP." ;
+    rdamd:P30156 "1920s omnibus" ;
+    rdamd:P30176 "HarperCollins" ;
+    rdamd:P30182 "841 p., 20 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/176364162/exp/eng/1020>,
+        <http://viaf.org/viaf/309260721/exp/eng/1020>,
+        <http://viaf.org/viaf/312333230/exp/eng/1020>,
+        <http://viaf.org/viaf/312335060/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0007208626" .
+
+<http://example.org/isbn-0007208634> a rdac:C10007 ;
+    rdfs:label "ISBN0007208634 (pbk.)" ;
+    rdamd:P30004 "ISBN 0007208634 (pbk.)" ;
+    rdamd:P30011 "2006" ;
+    rdamd:P30033 "The Sittaford mystery -- Why didn't they ask Evans? -- And then there were none -- Murder is easy." ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30137 "Formerly CIP." ;
+    rdamd:P30156 "1930s omnibus" ;
+    rdamd:P30176 "HarperCollins" ;
+    rdamd:P30182 "743 p., 20 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/180572444/exp/eng/1020>,
+        <http://viaf.org/viaf/309261613/exp/eng/1020>,
+        <http://viaf.org/viaf/310915681/exp/eng/1020>,
+        <http://viaf.org/viaf/313145424580486831117/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0007208634" .
+
+<http://example.org/isbn-0007246587> a rdac:C10007 ;
+    rdfs:label "Murder on the Orient Express / adapted by François Rivière ; illustrated by Solidor" ;
+    rdamd:P30004 "ISBN 0007246587",
+        "ISBN 9780007246588" ;
+    rdamd:P30011 "2007" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30107 "Comic bk. ed" ;
+    rdamd:P30117 "adapted by François Rivière ; illustrated by Solidor" ;
+    rdamd:P30137 "Formerly CIP.",
+        "Translated from the French." ;
+    rdamd:P30156 "Murder on the Orient Express" ;
+    rdamd:P30176 "HarperCollins" ;
+    rdamd:P30182 "44 p. : chiefly col. ill., 30 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/34462302/orient/exp/eng/1014/1020> ;
+    rdamo:P30321 <https://isni.org/isni/0000000368604401> ;
+    rdaxd:P00018 "http://example.org/isbn-0007246587" .
+
+<http://example.org/isbn-0007422458> a rdac:C10007 ;
+    rdfs:label "The mirror crack'd from side to side / Agatha Christie" ;
+    rdamd:P30004 "ISBN 0007422458",
+        "ISBN 9780007422456" ;
+    rdamd:P30011 "2010" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30106 "Miss Marple" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30156 "The mirror crack'd from side to side" ;
+    rdamd:P30176 "HarperCollins" ;
+    rdamd:P30182 "1 online resource (288 pages)." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/308553963/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0007422458" .
+
+<http://example.org/isbn-0007422571> a rdac:C10007 ;
+    rdfs:label "Murder on the Orient Express / Agatha Christie" ;
+    rdamd:P30004 "ISBN 0007422571",
+        "ISBN 9780007422579" ;
+    rdamd:P30011 "2010" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30156 "Murder on the Orient Express" ;
+    rdamd:P30176 "HarperCollins" ;
+    rdamd:P30182 "1 online resource (288 pages)." ;
+    rdamo:P30001 rdact:1018 ;
+    rdamo:P30002 rdamt:1003 ;
+    rdamo:P30139 <http://viaf.org/viaf/316741387/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0007422571" .
+
+<http://example.org/isbn-0330238914> a rdac:C10007 ;
+    rdfs:label "4:50 from Paddington / Agatha Christie" ;
+    rdamd:P30004 "ISBN 0330238914" ;
+    rdamd:P30011 "1974" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30106 "A Miss Marple story" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30137 "Originally published: London : Collins, 1957" ;
+    rdamd:P30156 "4:50 from Paddington" ;
+    rdamd:P30176 "Pan Books" ;
+    rdamd:P30182 "220p, 18cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/176021540/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0330238914" .
+
+<http://example.org/isbn-0333426541> a rdac:C10007 ;
+    rdfs:label "The life and times of Miss Jane Marple / by Anne Hart" ;
+    rdamd:P30004 "ISBN 0333426541" ;
+    rdamd:P30011 "1986, c1985" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "by Anne Hart" ;
+    rdamd:P30137 "Originally published: New York : Dodd, Mead, 1985" ;
+    rdamd:P30156 "The life and times of Miss Jane Marple" ;
+    rdamd:P30176 "Macmillan" ;
+    rdamd:P30182 "161p, 23cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/1097151656348508400001/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0333426541" .
+
+<http://example.org/isbn-0415017947> a rdac:C10007 ;
+    rdfs:label "Reflecting on Miss Marple / Marion Shaw and Sabine Vanacker" ;
+    rdamd:P30004 "ISBN 0415017947" ;
+    rdamd:P30011 "1991" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "Marion Shaw and Sabine Vanacker" ;
+    rdamd:P30156 "Reflecting on Miss Marple" ;
+    rdamd:P30176 "Routledge" ;
+    rdamd:P30182 "[128]p, 20cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/1868153954866905680001/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0415017947" .
+
+<http://example.org/isbn-0708901093> a rdac:C10007 ;
+    rdfs:label "Sleeping murder / Agatha Christie" ;
+    rdamd:P30004 "ISBN 0708901093" ;
+    rdamd:P30011 "1978" ;
+    rdamd:P30088 "Leicester" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30137 "First published: London : Collins, 1976." ;
+    rdamd:P30142 "Miss Marple's last case" ;
+    rdamd:P30156 "Sleeping murder" ;
+    rdamd:P30176 "Ulverscroft" ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/740147270586435700009/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0708901093" .
+
+<http://example.org/isbn-0708901875> a rdac:C10007 ;
+    rdfs:label "The hound of death, and other stories / Agatha Christie" ;
+    rdamd:P30004 "ISBN 0708901875" ;
+    rdamd:P30011 "[1978]" ;
+    rdamd:P30033 "The Hound of Death -- The Red Signal -- The Fourth Man -- The Gypsy -- The Lamp -- Wireless -- The Witness for the Prosecution -- The Mystery of the Blue Jar -- The Strange Case of Sir Arthur Carmichael -- The Call of Wings -- The Last Séance -- SOS" ;
+    rdamd:P30088 "Leicester" ;
+    rdamd:P30106 "Ulverscroft large print series. [mystery]" ;
+    rdamd:P30107 "Large print ed" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30137 "This collection originally published: London : Odhams Press, 1933." ;
+    rdamd:P30156 "The hound of death, and other stories" ;
+    rdamd:P30176 "Ulverscroft" ;
+    rdamd:P30182 "[5],375p., 23cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/8905164661901103390006/02/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/03/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/04/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/05/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/06/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/07/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/08/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/09/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/10/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/11/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/12/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/exp/eng/1020>,
+        <http://viaf.org/viaf/890516466190110339000601/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0708901875" .
+
+<http://example.org/isbn-0708904769> a rdac:C10007 ;
+    rdfs:label "The murder at the vicarage / Agatha Christie" ;
+    rdamd:P30004 "ISBN 0708904769" ;
+    rdamd:P30011 "1980" ;
+    rdamd:P30088 "Leicester" ;
+    rdamd:P30106 "Ulverscroft large print series. mystery" ;
+    rdamd:P30107 "Large print ed" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30137 "Originally published : London: Collins, 1930." ;
+    rdamd:P30156 "The murder at the vicarage" ;
+    rdamd:P30176 "Ulverscroft" ;
+    rdamd:P30182 "[6],397p., 23cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/1846151051771433530005/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0708904769" .
+
+<http://example.org/isbn-0747409048> a rdac:C10007 ;
+    rdfs:label "The life and times of Miss Jane Marple / by Anne Hart" ;
+    rdamd:P30004 "ISBN 0747409048" ;
+    rdamd:P30011 "1990,c1985" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "by Anne Hart" ;
+    rdamd:P30137 "Originally published: New York : Dodd, Mead, 1985" ;
+    rdamd:P30156 "The life and times of Miss Jane Marple" ;
+    rdamd:P30176 "Sphere" ;
+    rdamd:P30182 "x,176p : ill, 18cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/1097151656348508400001/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0747409048" .
+
+<http://example.org/isbn-0907486398> a rdac:C10007 ;
+    rdfs:label "The murder at the vicarage ; The mirror crack'd from side to side / Agatha Christie" ;
+    rdamd:P30004 "ISBN 0907486398" ;
+    rdamd:P30011 "1983" ;
+    rdamd:P30033 "Murder at the vicarage -- Mirror crack'd from side to side" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30137 "The mirror crack'd from side to side originally published: London : Collins, 1962." ;
+    rdamd:P30142 "a Miss Marple duo" ;
+    rdamd:P30156 "The murder at the vicarage ; The mirror crack'd from side to side" ;
+    rdamd:P30176 "Chancellor" ;
+    rdamd:P30182 "380 p., 23 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/1846151051771433530005/exp/eng/1020>,
+        <http://viaf.org/viaf/308553963/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-0907486398" .
+
+<http://example.org/isbn-1444802593> a rdac:C10007 ;
+    rdfs:label "ISBN1444802593 (pbk.)",
+        "ISBN9781444802597 (pbk.)" ;
+    rdamd:P30004 "ISBN 1444802593 (pbk.)",
+        "ISBN 9781444802597 (pbk.)" ;
+    rdamd:P30011 "2010" ;
+    rdamd:P30088 "Leicester" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30137 "Formerly CIP.",
+        "Originally published: London: Collins, 1938." ;
+    rdamd:P30156 "Appointment with death" ;
+    rdamd:P30176 "Ulverscroft" ;
+    rdamd:P30182 "1 v. (large print), 23 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/310912914/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-1444802593" .
+
+<http://example.org/isbn-9780007527489> a rdac:C10007 ;
+    rdfs:label "ISBN9780007527489 (pbk.)" ;
+    rdamd:P30004 "ISBN 9780007527489 (pbk.)" ;
+    rdamd:P30011 "2013" ;
+    rdamd:P30033 "ABC murders -- Five little pigs -- Hercule Poirot's Christmas -- Murder of Roger Ackroyd -- Murder on the Orient Express -- Mysterious affair at Styles" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "by Agatha Christie" ;
+    rdamd:P30137 "Formerly CIP.",
+        "In slip case." ;
+    rdamd:P30142 "boxed set" ;
+    rdamd:P30156 "Hercule Poirot" ;
+    rdamd:P30176 "Harper" ;
+    rdamd:P30182 "6 volumes, 1904 pages, 20 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/174408071/exp/eng/1020>,
+        <http://viaf.org/viaf/217048217/exp/eng/1020>,
+        <http://viaf.org/viaf/228691003/exp/eng/1020>,
+        <http://viaf.org/viaf/308552019/exp/eng/1020>,
+        <http://viaf.org/viaf/312349122/exp/eng/1020>,
+        <http://viaf.org/viaf/316741387/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-9780007527489" .
+
+<http://example.org/isbn-9780007527502> a rdac:C10007 ;
+    rdfs:label "ISBN9780007527502 (pbk.)" ;
+    rdamd:P30004 "ISBN 9780007527502 (pbk.)" ;
+    rdamd:P30011 "2013" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30106 "Poirot" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30137 "Formerly CIP.",
+        "Originally published: London: Collins, 1934." ;
+    rdamd:P30156 "Murder on the Orient Express" ;
+    rdamd:P30176 "Harper" ;
+    rdamd:P30182 "274 pages, 20 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/316741387/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-9780007527502" .
+
+<http://example.org/isbn-9780007560004> a rdac:C10007 ;
+    rdfs:label "ISBN9780007560004 (ePub ebook)" ;
+    rdamd:P30004 "ISBN 9780007560004 (ePub ebook)" ;
+    rdamd:P30011 "2014" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30142 "an Agatha Christie short story" ;
+    rdamd:P30156 "The hound of death" ;
+    rdamd:P30176 "HarperCollinsPublishers" ;
+    rdamd:P30182 "1 online resource." ;
+    rdamo:P30001 rdact:1018 ;
+    rdamo:P30002 rdamt:1003 ;
+    rdamo:P30139 <http://viaf.org/viaf/890516466190110339000601/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-9780007560004" .
+
+<http://example.org/isbn-9780008129538> a rdac:C10007 ;
+    rdfs:label "ISBN9780008129538 (paperback)" ;
+    rdamd:P30004 "ISBN 9780008129538 (paperback)" ;
+    rdamd:P30011 "2015" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30137 "\"Agatha Christie 125th anniversary 1890-2015\"--Cover.",
+        "Formerly CIP.",
+        "Originally published: Great Britain : Collins, 1935." ;
+    rdamd:P30156 "Death in the clouds" ;
+    rdamd:P30176 "Harper" ;
+    rdamd:P30182 "264 pages : 1 illustration (black and white), 20 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/73145424522186831318/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-9780008129538" .
+
+<http://example.org/isbn-9780008158613> a rdac:C10007 ;
+    rdfs:label "ISBN9780008158613 (pbk.)" ;
+    rdamd:P30004 "ISBN 9780008158613 (pbk.)" ;
+    rdamd:P30011 "2015" ;
+    rdamd:P30033 "And then there were none -- Murder on the Orient Express -- The murder of Roger Ackroyd." ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30137 "Boxed.",
+        "Formerly CIP." ;
+    rdamd:P30156 "The world's favourite" ;
+    rdamd:P30176 "HarperCollinsPublishers" ;
+    rdamd:P30182 "3 volumes, 20 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/217048217/exp/eng/1020>,
+        <http://viaf.org/viaf/313145424580486831117/exp/eng/1020>,
+        <http://viaf.org/viaf/316741387/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-9780008158613" .
+
+<http://example.org/isbn-9780008196325> a rdac:C10007 ;
+    rdfs:label "Death comes as the end / Agatha Christie" ;
+    rdamd:P30004 "ISBN 9780008196325" ;
+    rdamd:P30011 "2017" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30137 "Author's name in the form of a signature at head of title.",
+        "Formerly CIP.",
+        "Originally published: London: Collins, The Crime Club, 1944." ;
+    rdamd:P30156 "Death comes as the end" ;
+    rdamd:P30176 "Harper" ;
+    rdamd:P30182 "262 pages, 20 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/8172154501923039210006/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-9780008196325" .
+
+<http://example.org/isbn-9780008196516> a rdac:C10007 ;
+    rdfs:label "ISBN9780008196516 (pbk.)" ;
+    rdamd:P30004 "ISBN 9780008196516 (pbk.)" ;
+    rdamd:P30011 "2016" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30106 "Miss Marple" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30137 "Formerly CIP.",
+        "Originally published: London: Collins, 1930." ;
+    rdamd:P30156 "The murder at the vicarage" ;
+    rdamd:P30176 "HarperCollinsPublishers" ;
+    rdamd:P30182 "1 volume, 20 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/1846151051771433530005/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-9780008196516" .
+
+<http://example.org/isbn-9780008255398> a rdac:C10007 ;
+    rdfs:label "ISBN9780008255398 (pbk.)" ;
+    rdamd:P30004 "ISBN 9780008255398 (pbk.)" ;
+    rdamd:P30011 "2019" ;
+    rdamd:P30033 "The Hound of Death -- The Red Signal -- The Fourth Man -- The Gypsy -- The Lamp -- Wireless -- The Witness for the Prosecution -- The Mystery of the Blue Jar -- The Strange Case of Sir Arthur Carmichael -- The Call of Wings -- The Last Séance -- SOS" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30156 "The hound of death" ;
+    rdamd:P30176 "HarperCollinsPublishers" ;
+    rdamd:P30182 "1 volume, 18 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/8905164661901103390006/02/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/03/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/04/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/05/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/06/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/07/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/08/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/09/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/10/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/11/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/12/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/exp/eng/1020>,
+        <http://viaf.org/viaf/890516466190110339000601/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-9780008255398" .
+
+<http://example.org/isbn-9780008255459> a rdac:C10007 ;
+    rdfs:label "ISBN9780008255459 (pbk.)" ;
+    rdamd:P30004 "ISBN 9780008255459 (pbk.)" ;
+    rdamd:P30011 "2019" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30106 "Poirot" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30156 "Murder on the Orient Express" ;
+    rdamd:P30176 "HarperCollinsPublishers" ;
+    rdamd:P30182 "1 volume, 18 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/316741387/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-9780008255459" .
+
+<http://example.org/isbn-9780008280956> a rdac:C10007 ;
+    rdfs:label "ISBN9780008280956 (pbk.)" ;
+    rdamd:P30004 "ISBN 9780008280956 (pbk.)" ;
+    rdamd:P30011 "2017" ;
+    rdamd:P30033 "Death on the Nile -- Evil under the sun -- Appointment with death -- Murder in Mesopotamia -- The hollow -- Cat among the pigeons." ;
+    rdamd:P30088 "London" ;
+    rdamd:P30106 "Poirot" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30137 "Boxed." ;
+    rdamd:P30142 "six classic cases for the world's greatest detective" ;
+    rdamd:P30156 "Hercule poirot at large" ;
+    rdamd:P30176 "HarperCollinsPublishers" ;
+    rdamd:P30182 "1 volume, 20 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/12155103895976200651/exp/eng/1020>,
+        <http://viaf.org/viaf/174999513/exp/eng/1020>,
+        <http://viaf.org/viaf/184807703/exp/eng/1020>,
+        <http://viaf.org/viaf/186192338/exp/eng/1020>,
+        <http://viaf.org/viaf/309258229/exp/eng/1020>,
+        <http://viaf.org/viaf/310912914/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-9780008280956" .
+
+<http://example.org/isbn-9780008483623> a rdac:C10007 ;
+    rdfs:label "ISBN9780008483623 (pbk.)" ;
+    rdamd:P30004 "ISBN 9780008483623 (pbk.)" ;
+    rdamd:P30011 "2022" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30106 "Poirot" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30156 "Death on the Nile" ;
+    rdamd:P30176 "HarperCollinsPublishers" ;
+    rdamd:P30182 "1 volume, 20 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/309258229/exp/eng/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-9780008483623" .
+
+<http://example.org/isbn-9780063160354> a rdac:C10007 ;
+    rdfs:label "ISBN978-0063160354" ;
+    rdamd:P30004 "ISBN 978-0063160354" ;
+    rdamd:P30011 "2023" ;
+    rdamd:P30088 "[New York]" ;
+    rdamd:P30107 "First edition" ;
+    rdamd:P30117 "adapted and illustrated by Bob Al-Greene" ;
+    rdamd:P30142 "The Graphic Novel" ;
+    rdamd:P30156 "Murder on the Orient Express" ;
+    rdamd:P30176 "William Morrow Paperbacks" ;
+    rdamd:P30182 "288 pages : chiefly col. ill., 6 x 0.65 x 9 inches." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/algreen/orient/exp/eng/1014/1020> ;
+    rdaxd:P00018 "http://example.org/isbn-9780063160354" .
+
+<http://example.org/isbn-9781645178149> a rdac:C10007 ;
+    rdfs:label "Classic tales of mystery / editor: Traci Douglas" ;
+    rdamd:P30004 "ISBN 9781645178149" ;
+    rdamd:P30011 "[2021]" ;
+    rdamd:P30033 "The murder on the links / Agatha Christie -- Whose body? / Dorothy L. Sayers -- The thirty-nine steps / John Buchan -- The Antarctic mystery / Jules Verne -- Room 13 / Edgar Wallace." ;
+    rdamd:P30088 "San Diego, CA" ;
+    rdamd:P30106 "Word cloud classics" ;
+    rdamd:P30117 "editor: Traci Douglas" ;
+    rdamd:P30137 "\"These works have been published in their original form to preserve the authors' intent and style.\" -- Title page verso.",
+        "Formerly CIP.",
+        "Includes one novel translated from the French." ;
+    rdamd:P30156 "Classic tales of mystery" ;
+    rdamd:P30176 "Canterbury Classics" ;
+    rdamd:P30182 "xvi, 765 pages : illustrations (black and white), 24 cm." ;
+    rdamo:P30001 rdact:1049 ;
+    rdamo:P30002 rdamt:1007 ;
+    rdamo:P30139 <http://viaf.org/viaf/174556225/exp/eng/1020>,
+        <http://viaf.org/viaf/185057844/exp/eng/1020>,
+        <http://viaf.org/viaf/205790185/exp/eng/1020>,
+        <http://viaf.org/viaf/298756107/exp/eng/1020>,
+        <http://viaf.org/viaf/5243165573959737800001/exp/eng/1020> ;
+    rdamo:P30329 <http://viaf.org/viaf/299042726> ;
+    rdaxd:P00018 "http://example.org/isbn-9781645178149" .
+
+<http://viaf.org/viaf/1009145424587286830098> a rdac:C10001 ;
+    rdfs:label "Mystery of the blue train (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Mystery of the blue train" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/22943082> ;
+    rdaxd:P00018 "http://viaf.org/viaf/1009145424587286830098" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/1009145424587286830098/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Mystery of the blue train (Christie, Agatha)" ;
+    rdaed:P20315 "Mystery of the blue train" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/1009145424587286830098> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/1097151656348508400001> a rdac:C10001 ;
+    rdfs:label "Agatha Christie's Miss Marple : the life and times of Miss Jane Marple (Hart, Anne)" ;
+    rdawd:P10223 "Agatha Christie's Miss Marple : the life and times of Miss Jane Marple" ;
+    rdawo:P10061 <http://viaf.org/viaf/79360006> ;
+    rdawo:P10319 <http://viaf.org/viaf/20152329368502672984>,
+        <https://isni.org/isni/0000000121022127> ;
+    rdaxd:P00018 "http://viaf.org/viaf/1097151656348508400001" .
+
+<http://viaf.org/viaf/12155103895976200651> a rdac:C10001 ;
+    rdfs:label "Murder in Mesopotamia (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Murder in Mesopotamia" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/22943082> ;
+    rdaxd:P00018 "http://viaf.org/viaf/12155103895976200651" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/15449889> a rdac:C10004 ;
+    rdfs:label "Vanacker, Sabine" ;
+    rdaad:P50413 "Vanacker, Sabine" ;
+    rdaxd:P00018 "http://viaf.org/viaf/15449889" .
+
+<http://viaf.org/viaf/174408071> a rdac:C10001 ;
+    rdfs:label "Hercule Poirot's Christmas (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Hercule Poirot's Christmas" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/22943082> ;
+    rdaxd:P00018 "http://viaf.org/viaf/174408071" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/174556225> a rdac:C10001 ;
+    rdfs:label "Room 13 (Wallace, Edgar)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Room 13" ;
+    rdawo:P10061 <http://viaf.org/viaf/56617609> ;
+    rdaxd:P00018 "http://viaf.org/viaf/174556225" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/174556225/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Room 13 (Wallace, Edgar)" ;
+    rdaed:P20315 "Room 13" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/174556225> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/174999513> a rdac:C10001 ;
+    rdfs:label "Cat among the pigeons (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Cat among the pigeons" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/22943082> ;
+    rdaxd:P00018 "http://viaf.org/viaf/174999513" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/174999513/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Cat among the pigeons (Christie, Agatha)" ;
+    rdaed:P20315 "Cat among the pigeons" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/174999513> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/176021540> a rdac:C10001 ;
+    rdfs:label "4:50 from Paddington (Christie, Agatha)" ;
+    rdawd:P10223 "4:50 from Paddington" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/20152329368502672984> ;
+    rdaxd:P00018 "http://viaf.org/viaf/176021540" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/176364162> a rdac:C10001 ;
+    rdfs:label "Secret adversary (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Secret adversary" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdaxd:P00018 "http://viaf.org/viaf/176364162" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/177374432> a rdac:C10001 ;
+    rdfs:label "Nemesis (Christie, Agatha)" ;
+    rdawd:P10223 "Nemesis" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/20152329368502672984> ;
+    rdaxd:P00018 "http://viaf.org/viaf/177374432" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/177374432/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Nemesis (Christie, Agatha)" ;
+    rdaed:P20315 "Nemesis" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/177374432> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/180572444> a rdac:C10001 ;
+    rdfs:label "Why didn't they ask Evans? (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Why didn't they ask Evans?" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdaxd:P00018 "http://viaf.org/viaf/180572444" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/180572444/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Why didn't they ask Evans? (Christie, Agatha)" ;
+    rdaed:P20315 "Why didn't they ask Evans?" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/180572444> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/181004220> a rdac:C10001 ;
+    rdfs:label "A murder is announced (Christie, Agatha)" ;
+    rdawd:P10223 "A murder is announced" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/20152329368502672984> ;
+    rdaxd:P00018 "http://viaf.org/viaf/181004220" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/182019214> a rdac:C10001 ;
+    rdfs:label "A Caribbean mystery (Christie, Agatha)" ;
+    rdawd:P10223 "A Caribbean mystery" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/20152329368502672984> ;
+    rdaxd:P00018 "http://viaf.org/viaf/182019214" .
+
+<http://viaf.org/viaf/182019214/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "A Caribbean mystery (Christie, Agatha)" ;
+    rdaed:P20315 "A Caribbean mystery" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/182019214> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/1846151051771433530005> a rdac:C10001 ;
+    rdfs:label "The murder at the vicarage (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The murder at the vicarage" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/20152329368502672984> ;
+    rdaxd:P00018 "http://viaf.org/viaf/1846151051771433530005" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/184645888> a rdac:C10001 ;
+    rdfs:label "The body in the library (Christie, Agatha)" ;
+    rdawd:P10223 "The body in the library" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/20152329368502672984> ;
+    rdaxd:P00018 "http://viaf.org/viaf/184645888" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/184807703> a rdac:C10001 ;
+    rdfs:label "Evil under the sun (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Evil under the sun" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/22943082> ;
+    rdaxd:P00018 "http://viaf.org/viaf/184807703" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/184807703/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Evil under the sun (Christie, Agatha)" ;
+    rdaed:P20315 "Evil under the sun" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/184807703> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/185057844> a rdac:C10001 ;
+    rdfs:label "Thirty-nine steps (Buchan, John)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Thirty-nine steps" ;
+    rdawo:P10061 <http://viaf.org/viaf/66464527> ;
+    rdaxd:P00018 "http://viaf.org/viaf/185057844" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/185057844/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Thirty-nine steps (Buchan, John)" ;
+    rdaed:P20315 "Thirty-nine steps" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/185057844> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/186075806> a rdac:C10001 ;
+    rdfs:label "They do it with mirrors (Christie, Agatha)" ;
+    rdawd:P10223 "They do it with mirrors" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/20152329368502672984> ;
+    rdaxd:P00018 "http://viaf.org/viaf/186075806" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/186075806/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "They do it with mirrors (Christie, Agatha)" ;
+    rdaed:P20315 "They do it with mirrors" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/186075806> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/186192338> a rdac:C10001 ;
+    rdfs:label "Hollow (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Hollow" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/22943082> ;
+    rdaxd:P00018 "http://viaf.org/viaf/186192338" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/186192338/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Hollow (Christie, Agatha)" ;
+    rdaed:P20315 "Hollow" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/186192338> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/1868153954866905680001> a rdac:C10001 ;
+    rdfs:label "Reflecting on Miss Marple (Shaw, Marion)" ;
+    rdawd:P10223 "Reflecting on Miss Marple" ;
+    rdawo:P10061 <http://viaf.org/viaf/15449889>,
+        <http://viaf.org/viaf/4976740> ;
+    rdawo:P10319 <http://viaf.org/viaf/20152329368502672984>,
+        <https://isni.org/isni/0000000121022127> ;
+    rdaxd:P00018 "http://viaf.org/viaf/1868153954866905680001" .
+
+<http://viaf.org/viaf/1868153954866905680001/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Reflecting on Miss Marple (Shaw, Marion)" ;
+    rdaed:P20315 "Reflecting on Miss Marple" ;
+    rdaed:P20316 "Reflecting on Miss Marple" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/1868153954866905680001> ;
+    rdaxd:P00029 "standalone" .
+
+<http://viaf.org/viaf/205790185> a rdac:C10001 ;
+    rdfs:label "Whose body? (Sayers, Dorothy L.)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Whose body?" ;
+    rdawo:P10061 <http://viaf.org/viaf/29540426> ;
+    rdaxd:P00018 "http://viaf.org/viaf/205790185" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/205790185/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Whose body? (Sayers, Dorothy L.)" ;
+    rdaed:P20315 "Whose body?" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/205790185> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/217048217> a rdac:C10001 ;
+    rdfs:label "Murder of Roger Ackroyd (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Murder of Roger Ackroyd" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/22943082> ;
+    rdaxd:P00018 "http://viaf.org/viaf/217048217" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/228691003> a rdac:C10001 ;
+    rdfs:label "Mysterious affair at Styles (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Mysterious affair at Styles" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/22943082> ;
+    rdaxd:P00018 "http://viaf.org/viaf/228691003" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/29540426> a rdac:C10004 ;
+    rdfs:label "Sayers, Dorothy L." ;
+    rdaad:P50413 "Sayers, Dorothy L." ;
+    rdaxd:P00018 "http://viaf.org/viaf/29540426" .
+
+<http://viaf.org/viaf/298756107> a rdac:C10001 ;
+    rdfs:label "Sphinx des glaces (Verne, Jules)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Sphinx des glaces" ;
+    rdawo:P10061 <http://viaf.org/viaf/76323989> ;
+    rdaxd:P00018 "http://viaf.org/viaf/298756107" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/298756107/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Sphinx des glaces (Verne, Jules)",
+        "The Antarctic mystery (Verne, Jules)" ;
+    rdaed:P20315 "The Antarctic mystery" ;
+    rdaed:P20316 "Sphinx des glaces" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng>,
+        "english." ;
+    rdaeo:P20231 <http://viaf.org/viaf/298756107> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/299042726> a rdac:C10004 ;
+    rdfs:label "Douglas, Traci L" ;
+    rdaad:P50339 "1968-" ;
+    rdaad:P50413 "Douglas, Traci L" ;
+    rdaxd:P00018 "http://viaf.org/viaf/299042726" .
+
+<http://viaf.org/viaf/308552019> a rdac:C10001 ;
+    rdfs:label "ABC murders (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "ABC murders" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/22943082> ;
+    rdaxd:P00018 "http://viaf.org/viaf/308552019" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/308552019/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "ABC murders (Christie, Agatha)" ;
+    rdaed:P20315 "ABC murders" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/308552019> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/308553963> a rdac:C10001 ;
+    rdfs:label "Mirror crack'd from side to side (Christie, Agatha)",
+        "The mirror crack'd from side to side (Christie, Agatha)" ;
+    rdawd:P10223 "Mirror crack'd from side to side",
+        "The mirror crack'd from side to side" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/20152329368502672984> ;
+    rdaxd:P00018 "http://viaf.org/viaf/308553963" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/309258229> a rdac:C10001 ;
+    rdfs:label "Death on the Nile (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Death on the Nile" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/22943082> ;
+    rdaxd:P00018 "http://viaf.org/viaf/309258229" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/309260721> a rdac:C10001 ;
+    rdfs:label "Secret of Chimneys (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Secret of Chimneys" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/22943082> ;
+    rdaxd:P00018 "http://viaf.org/viaf/309260721" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/309261613> a rdac:C10001 ;
+    rdfs:label "Murder is easy (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Murder is easy" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdaxd:P00018 "http://viaf.org/viaf/309261613" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/310911986> a rdac:C10001 ;
+    rdfs:label "Cards on the table (Christie, Agatha)" ;
+    rdawd:P10223 "Cards on the table" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/22943082> ;
+    rdaxd:P00018 "http://viaf.org/viaf/310911986" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/310911986/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Cards on the table (Christie, Agatha)" ;
+    rdaed:P20315 "Cards on the table" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/310911986> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/310912134> a rdac:C10001 ;
+    rdfs:label "The moving finger (Christie, Agatha)" ;
+    rdawd:P10223 "The moving finger" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/20152329368502672984> ;
+    rdaxd:P00018 "http://viaf.org/viaf/310912134" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/310912914> a rdac:C10001 ;
+    rdfs:label "Appointment with death (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Appointment with death" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/22943082> ;
+    rdaxd:P00018 "http://viaf.org/viaf/310912914" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/310915681> a rdac:C10001 ;
+    rdfs:label "Sittaford mystery (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Sittaford mystery" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdaxd:P00018 "http://viaf.org/viaf/310915681" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/310915681/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Sittaford mystery (Christie, Agatha)" ;
+    rdaed:P20315 "Sittaford mystery" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/310915681> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/312333230> a rdac:C10001 ;
+    rdfs:label "Man in the brown suit (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Man in the brown suit" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/22943082> ;
+    rdaxd:P00018 "http://viaf.org/viaf/312333230" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/312335060> a rdac:C10001 ;
+    rdfs:label "Seven dials mystery (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Seven dials mystery" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdaxd:P00018 "http://viaf.org/viaf/312335060" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/312335060/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Seven dials mystery (Christie, Agatha)" ;
+    rdaed:P20315 "Seven dials mystery" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/312335060> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/312349122> a rdac:C10001 ;
+    rdfs:label "Five little pigs (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Five little pigs" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/22943082> ;
+    rdaxd:P00018 "http://viaf.org/viaf/312349122" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/313145424580486831117> a rdac:C10001 ;
+    rdfs:label "And then there were none (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "And then there were none" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdaxd:P00018 "http://viaf.org/viaf/313145424580486831117" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/34462302> a rdac:C10004 ;
+    rdfs:label "Rivière, François" ;
+    rdaad:P50339 "1949-" ;
+    rdaad:P50413 "Rivière, François" ;
+    rdaxd:P00018 "http://viaf.org/viaf/34462302" .
+
+<http://viaf.org/viaf/34462302/orient> a rdac:C10001 ;
+    rdfs:label "Crime de l'Orient-Express (Rivière, François)" ;
+    rdawd:P10223 "Crime de l'Orient-Express" ;
+    rdawo:P10058 <http://viaf.org/viaf/34462302>,
+        <https://isni.org/isni/0000000368604401> ;
+    rdawo:P10252 <http://viaf.org/viaf/316741387> ;
+    rdawo:P10319 <http://viaf.org/viaf/22943082> ;
+    rdaxd:P00018 "http://viaf.org/viaf/34462302/orient" ;
+    rdaxd:P00029 "Graphic Novel" .
+
+<http://viaf.org/viaf/34462302/orient/exp/eng/1014/1020> a rdac:C10006 ;
+    rdfs:label "Murder on the Orient Express (Rivière, François)" ;
+    rdaed:P20315 "Murder on the Orient Express" ;
+    rdaed:P20316 "Crime de l'Orient-Express" ;
+    rdaeo:P20001 rdaco:1014,
+        rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/34462302/orient> ;
+    rdaxd:P00029 "standalone" .
+
+<http://viaf.org/viaf/4976740> a rdac:C10004 ;
+    rdfs:label "Shaw, Marion" ;
+    rdaad:P50413 "Shaw, Marion" ;
+    rdaxd:P00018 "http://viaf.org/viaf/4976740" .
+
+<http://viaf.org/viaf/5243165573959737800001> a rdac:C10001 ;
+    rdfs:label "Murder on the links (Christie, Agatha)",
+        "The murder on the links (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Murder on the links",
+        "The murder on the links" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/22943082> ;
+    rdaxd:P00018 "http://viaf.org/viaf/5243165573959737800001" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/56617609> a rdac:C10004 ;
+    rdfs:label "Wallace, Edgar" ;
+    rdaad:P50339 "1875-1932" ;
+    rdaad:P50413 "Wallace, Edgar" ;
+    rdaxd:P00018 "http://viaf.org/viaf/56617609" .
+
+<http://viaf.org/viaf/61731028> a rdac:C10004 ;
+    rdfs:label "Bennett, Richard Rodney" ;
+    rdaad:P50413 "Bennett, Richard Rodney" ;
+    rdaxd:P00018 "http://viaf.org/viaf/61731028" .
+
+<http://viaf.org/viaf/638145424602986831437> a rdac:C10001 ;
+    rdfs:label "The labours of Hercules (Christie, Agatha)" ;
+    rdawd:P10223 "The labours of Hercules" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/22943082> ;
+    rdaxd:P00018 "http://viaf.org/viaf/638145424602986831437" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/638145424602986831437/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The labours of Hercules (Christie, Agatha)" ;
+    rdaed:P20315 "The labours of Hercules" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/638145424602986831437> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/66464527> a rdac:C10004 ;
+    rdfs:label "Buchan, John" ;
+    rdaad:P50339 "1875-1940" ;
+    rdaad:P50413 "Buchan, John" ;
+    rdaxd:P00018 "http://viaf.org/viaf/66464527" .
+
+<http://viaf.org/viaf/7037151474835800490008> a rdac:C10001 ;
+    rdfs:label "At Bertram's Hotel (Christie, Agatha)" ;
+    rdawd:P10223 "At Bertram's Hotel" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/20152329368502672984> ;
+    rdaxd:P00018 "http://viaf.org/viaf/7037151474835800490008" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/73145424522186831318> a rdac:C10001 ;
+    rdfs:label "Death in the clouds (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Death in the clouds" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/22943082> ;
+    rdaxd:P00018 "http://viaf.org/viaf/73145424522186831318" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/740147270586435700009> a rdac:C10001 ;
+    rdfs:label "Sleeping murder (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Sleeping murder" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/20152329368502672984> ;
+    rdaxd:P00018 "http://viaf.org/viaf/740147270586435700009" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/76323989> a rdac:C10004 ;
+    rdfs:label "Verne, Jules" ;
+    rdaad:P50339 "1828-1905" ;
+    rdaad:P50413 "Verne, Jules" ;
+    rdaxd:P00018 "http://viaf.org/viaf/76323989" .
+
+<http://viaf.org/viaf/780165573946837800003> a rdac:C10001 ;
+    rdfs:label "A pocket full of rye (Christie, Agatha)" ;
+    rdawd:P10223 "A pocket full of rye" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/20152329368502672984> ;
+    rdaxd:P00018 "http://viaf.org/viaf/780165573946837800003" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/79360006> a rdac:C10004 ;
+    rdfs:label "Hart, Anne" ;
+    rdaad:P50413 "Hart, Anne" ;
+    rdaxd:P00018 "http://viaf.org/viaf/79360006" .
+
+<http://viaf.org/viaf/8172154501923039210006> a rdac:C10001 ;
+    rdfs:label "Death comes as the end (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Death comes as the end" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdaxd:P00018 "http://viaf.org/viaf/8172154501923039210006" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/8905164661901103390006> a rdac:C10001 ;
+    rdfs:label "The hound of death, and other stories (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The hound of death, and other stories" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10147 <http://viaf.org/viaf/8905164661901103390006/02>,
+        <http://viaf.org/viaf/8905164661901103390006/03>,
+        <http://viaf.org/viaf/8905164661901103390006/04>,
+        <http://viaf.org/viaf/8905164661901103390006/05>,
+        <http://viaf.org/viaf/8905164661901103390006/06>,
+        <http://viaf.org/viaf/8905164661901103390006/07>,
+        <http://viaf.org/viaf/8905164661901103390006/08>,
+        <http://viaf.org/viaf/8905164661901103390006/09>,
+        <http://viaf.org/viaf/8905164661901103390006/10>,
+        <http://viaf.org/viaf/8905164661901103390006/11>,
+        <http://viaf.org/viaf/8905164661901103390006/12>,
+        <http://viaf.org/viaf/890516466190110339000601> ;
+    rdaxd:P00018 "http://viaf.org/viaf/8905164661901103390006" ;
+    rdaxd:P00029 "Collection" .
+
+<http://viaf.org/viaf/9180154501927439210001> a rdac:C10001 ;
+    rdfs:label "Poirot investigates (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Poirot investigates" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/22943082> ;
+    rdaxd:P00018 "http://viaf.org/viaf/9180154501927439210001" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/9180154501927439210001/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Poirot investigates (Christie, Agatha)" ;
+    rdaed:P20315 "Poirot investigates" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/9180154501927439210001> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/9356154076013911860000/exp/und/1011> a rdac:C10006 ;
+    rdfs:label "Murder on the Orient Express (Bennett, Richard Rodney.)" ;
+    rdaed:P20315 "Murder on the Orient Express" ;
+    rdaeo:P20001 rdaco:1011 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/und> ;
+    rdaeo:P20039 <https://isni.org/isni/0000000361211867>,
+        <https://isni.org/isni/0000000361531262>,
+        <https://isni.org/isni/0000000365729866>,
+        <https://isni.org/isni/0000000365729866/trio> ;
+    rdaeo:P20231 <http://viaf.org/viaf/9356154076013911860000> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/algreen/orient> a rdac:C10001 ;
+    rdfs:label "Murder on the Orient Express: The Graphic Novel (Al-Greene, Bob)" ;
+    rdawd:P10223 "Murder on the Orient Express: The Graphic Novel" ;
+    rdawo:P10058 <http://viaf.org/viaf/algreen> ;
+    rdawo:P10252 <http://viaf.org/viaf/316741387> ;
+    rdawo:P10437 <http://viaf.org/viaf/algreen> ;
+    rdaxd:P00018 "http://viaf.org/viaf/algreen/orient" ;
+    rdaxd:P00029 "Graphic Novel" .
+
+<http://viaf.org/viaf/algreen/orient/exp/eng/1014/1020> a rdac:C10006 ;
+    rdfs:label "Murder on the Orient Express (Al-Greene, Bob)" ;
+    rdaed:P20315 "Murder on the Orient Express : The Graphic Novel" ;
+    rdaed:P20316 "Murder on the Orient Express: The Graphic Novel" ;
+    rdaeo:P20001 rdaco:1014,
+        rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/algreen/orient> ;
+    rdaxd:P00029 "standalone" .
+
+<https://isni.org/isni/0000000361211867> a rdac:C10004 ;
+    rdfs:label "Aasen, Ketil" ;
+    rdaad:P50339 "1974-" ;
+    rdaad:P50413 "Aasen, Ketil" ;
+    rdaxd:P00018 "https://isni.org/isni/0000000361211867" .
+
+<https://isni.org/isni/0000000361531262> a rdac:C10004 ;
+    rdfs:label "Larssen, Christian" ;
+    rdaad:P50339 "1975-" ;
+    rdaad:P50413 "Larssen, Christian" ;
+    rdaxd:P00018 "https://isni.org/isni/0000000361531262" .
+
+<https://isni.org/isni/0000000365729866> a rdac:C10004 ;
+    rdfs:label "Watle, Per Einar" ;
+    rdaad:P50339 "1971-" ;
+    rdaad:P50413 "Watle, Per Einar" ;
+    rdaxd:P00018 "https://isni.org/isni/0000000365729866" .
+
+<https://isni.org/isni/0000000365729866/trio> a rdac:C10004 ;
+    rdfs:label "Per Einar Watle Trio" ;
+    rdaad:P50413 "Per Einar Watle Trio" ;
+    rdaxd:P00018 "https://isni.org/isni/0000000365729866/trio" .
+
+<https://www.imdb.com/name/nm0000002> a rdac:C10004 ;
+    rdfs:label "Bacall, Lauren" ;
+    rdaad:P50339 "1924-2014" ;
+    rdaad:P50413 "Bacall, Lauren" ;
+    rdaxd:P00018 "https://www.imdb.com/name/nm0000002" .
+
+<https://www.imdb.com/name/nm0000006> a rdac:C10004 ;
+    rdfs:label "Bergman, Ingrid" ;
+    rdaad:P50339 "1915-1982" ;
+    rdaad:P50413 "Bergman, Ingrid" ;
+    rdaxd:P00018 "https://www.imdb.com/name/nm0000006" .
+
+<https://www.imdb.com/name/nm0000125> a rdac:C10004 ;
+    rdfs:label "Connery, Sean" ;
+    rdaad:P50339 "1930-2020" ;
+    rdaad:P50413 "Connery, Sean" ;
+    rdaxd:P00018 "https://www.imdb.com/name/nm0000125" .
+
+<https://www.imdb.com/name/nm0000136> a rdac:C10004 ;
+    rdfs:label "Depp, Johnny" ;
+    rdaad:P50339 "1963-" ;
+    rdaad:P50413 "Depp, Johnny" ;
+    rdaxd:P00018 "https://www.imdb.com/name/nm0000136" .
+
+<https://www.imdb.com/name/nm0000302> a rdac:C10004 ;
+    rdfs:label "Bisset, Jacqueline" ;
+    rdaad:P50413 "Bisset, Jacqueline" ;
+    rdaxd:P00018 "https://www.imdb.com/name/nm0000302" .
+
+<https://www.imdb.com/name/nm0000353> a rdac:C10004 ;
+    rdfs:label "Dafoe, Willem" ;
+    rdaad:P50339 "1955-" ;
+    rdaad:P50413 "Dafoe, Willem" ;
+    rdaxd:P00018 "https://www.imdb.com/name/nm0000353" .
+
+<https://www.imdb.com/name/nm0000842> a rdac:C10004 ;
+    rdfs:label "Balsam, Martin" ;
+    rdaad:P50339 "1919-1996" ;
+    rdaad:P50413 "Balsam, Martin" ;
+    rdaxd:P00018 "https://www.imdb.com/name/nm0000842" .
+
+<https://www.imdb.com/name/nm0001132> a rdac:C10004 ;
+    rdfs:label "Dench, Judi" ;
+    rdaad:P50339 "1934-" ;
+    rdaad:P50413 "Dench, Judi" ;
+    rdaxd:P00018 "https://www.imdb.com/name/nm0001132" .
+
+<https://www.imdb.com/name/nm0001215> a rdac:C10004 ;
+    rdfs:label "Finney, Albert" ;
+    rdaad:P50339 "1936-" ;
+    rdaad:P50413 "Finney, Albert" ;
+    rdaxd:P00018 "https://www.imdb.com/name/nm0001215" .
+
+<https://www.imdb.com/name/nm0001486> a rdac:C10004 ;
+    rdfs:label "Lumet, Sidney" ;
+    rdaad:P50339 "1924-2011" ;
+    rdaad:P50413 "Lumet, Sidney" ;
+    rdaxd:P00018 "https://www.imdb.com/name/nm0001486" .
+
+<https://www.imdb.com/name/nm0004851> a rdac:C10004 ;
+    rdfs:label "Cruz, Penélope" ;
+    rdaad:P50339 "1974-" ;
+    rdaad:P50413 "Cruz, Penélope" ;
+    rdaxd:P00018 "https://www.imdb.com/name/nm0004851" .
+
+<https://www.imdb.com/name/nm0144045> a rdac:C10004 ;
+    rdfs:label "Cassel, Jean Pierre" ;
+    rdaad:P50413 "Cassel, Jean Pierre" ;
+    rdaxd:P00018 "https://www.imdb.com/name/nm0144045" .
+
+<https://www.imdb.com/name/nm5290643> a rdac:C10004 ;
+    rdfs:label "Bateman, Tom" ;
+    rdaad:P50339 "1989-" ;
+    rdaad:P50413 "Bateman, Tom" ;
+    rdaxd:P00018 "https://www.imdb.com/name/nm5290643" .
+
+<https://www.imdb.com/title/tt0071877> a rdac:C10001 ;
+    rdfs:label "Murder on the Orient Express" ;
+    rdawd:P10223 "Murder on the Orient Express" ;
+    rdawo:P10013 <https://www.imdb.com/name/nm0001486> ;
+    rdawo:P10129 <http://viaf.org/viaf/316741387> ;
+    rdawo:P10319 <http://viaf.org/viaf/22943082> ;
+    rdaxd:P00018 "https://www.imdb.com/title/tt0071877" ;
+    rdaxd:P00029 "Movie" .
+
+<https://www.imdb.com/title/tt3402236/exp/1023> a rdac:C10006 ;
+    rdfs:label "Murder on the Orient Express" ;
+    rdaed:P20065 <http://id.loc.gov/vocabulary/iso639-2/dan>,
+        <http://id.loc.gov/vocabulary/iso639-2/eng>,
+        <http://id.loc.gov/vocabulary/iso639-2/fin>,
+        <http://id.loc.gov/vocabulary/iso639-2/nob>,
+        <http://id.loc.gov/vocabulary/iso639-2/swe> ;
+    rdaed:P20315 "Murder on the Orient Express" ;
+    rdaed:P20316 "Murder on the Orient Express" ;
+    rdaeo:P20001 rdaco:1023 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20012 <https://isni.org/isni/0000000114794233>,
+        <https://www.imdb.com/name/nm0000136>,
+        <https://www.imdb.com/name/nm0000353>,
+        <https://www.imdb.com/name/nm0001132>,
+        <https://www.imdb.com/name/nm0004851>,
+        <https://www.imdb.com/name/nm5290643> ;
+    rdaeo:P20231 <https://www.imdb.com/title/tt3402236> .
+
+<http://viaf.org/viaf/174408071/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Hercule Poirot's Christmas (Christie, Agatha)" ;
+    rdaed:P20315 "Hercule Poirot's Christmas" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/174408071> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/176021540/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "4:50 from Paddington (Christie, Agatha)" ;
+    rdaed:P20315 "4:50 from Paddington" ;
+    rdaed:P20316 "4:50 from Paddington" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/176021540> ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
+<http://viaf.org/viaf/176364162/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Secret adversary (Christie, Agatha)" ;
+    rdaed:P20315 "Secret adversary" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/176364162> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/184645888/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The body in the library (Christie, Agatha)" ;
+    rdaed:P20315 "The body in the library" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/184645888> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/228691003/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Mysterious affair at Styles (Christie, Agatha)" ;
+    rdaed:P20315 "Mysterious affair at Styles" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/228691003> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/309260721/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Secret of Chimneys (Christie, Agatha)" ;
+    rdaed:P20315 "Secret of Chimneys" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/309260721> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/309261613/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Murder is easy (Christie, Agatha)" ;
+    rdaed:P20315 "Murder is easy" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/309261613> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/310912134/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The moving finger (Christie, Agatha)" ;
+    rdaed:P20315 "The moving finger" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/310912134> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/312333230/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Man in the brown suit (Christie, Agatha)" ;
+    rdaed:P20315 "Man in the brown suit" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/312333230> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/312349122/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Five little pigs (Christie, Agatha)" ;
+    rdaed:P20315 "Five little pigs" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/312349122> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/313145424580486831117/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "And then there were none (Christie, Agatha)" ;
+    rdaed:P20315 "And then there were none" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/313145424580486831117> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/7037151474835800490008/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "At Bertram's Hotel (Christie, Agatha)" ;
+    rdaed:P20315 "At Bertram's Hotel" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/7037151474835800490008> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/8172154501923039210006/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Death comes as the end (Christie, Agatha)" ;
+    rdaed:P20315 "Death comes as the end" ;
+    rdaed:P20316 "Death comes as the end" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/8172154501923039210006> ;
+    rdaxd:P00029 "standalone" .
+
+<http://viaf.org/viaf/8905164661901103390006/02> a rdac:C10001 ;
+    rdfs:label "The Red Signal (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The Red Signal" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdaxd:P00018 "http://viaf.org/viaf/8905164661901103390006/02" ;
+    rdaxd:P00029 "Short story" .
+
+<http://viaf.org/viaf/8905164661901103390006/03> a rdac:C10001 ;
+    rdfs:label "The Fourth Man (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The Fourth Man" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdaxd:P00018 "http://viaf.org/viaf/8905164661901103390006/03" ;
+    rdaxd:P00029 "Short story" .
+
+<http://viaf.org/viaf/8905164661901103390006/04> a rdac:C10001 ;
+    rdfs:label "The Gypsy (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The Gypsy" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdaxd:P00018 "http://viaf.org/viaf/8905164661901103390006/04" ;
+    rdaxd:P00029 "Short story" .
+
+<http://viaf.org/viaf/8905164661901103390006/05> a rdac:C10001 ;
+    rdfs:label "The Lamp (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The Lamp" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdaxd:P00018 "http://viaf.org/viaf/8905164661901103390006/05" ;
+    rdaxd:P00029 "Short story" .
+
+<http://viaf.org/viaf/8905164661901103390006/06> a rdac:C10001 ;
+    rdfs:label "Wireless (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Wireless" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdaxd:P00018 "http://viaf.org/viaf/8905164661901103390006/06" ;
+    rdaxd:P00029 "Short story" .
+
+<http://viaf.org/viaf/8905164661901103390006/07> a rdac:C10001 ;
+    rdfs:label "The Witness for the Prosecution (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The Witness for the Prosecution" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdaxd:P00018 "http://viaf.org/viaf/8905164661901103390006/07" ;
+    rdaxd:P00029 "Short story" .
+
+<http://viaf.org/viaf/8905164661901103390006/08> a rdac:C10001 ;
+    rdfs:label "The Mystery of the Blue Jar (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The Mystery of the Blue Jar" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdaxd:P00018 "http://viaf.org/viaf/8905164661901103390006/08" ;
+    rdaxd:P00029 "Short story" .
+
+<http://viaf.org/viaf/8905164661901103390006/09> a rdac:C10001 ;
+    rdfs:label "The Strange Case of Sir Arthur Carmichael (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The Strange Case of Sir Arthur Carmichael" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdaxd:P00018 "http://viaf.org/viaf/8905164661901103390006/09" ;
+    rdaxd:P00029 "Short story" .
+
+<http://viaf.org/viaf/8905164661901103390006/10> a rdac:C10001 ;
+    rdfs:label "The Call of Wings (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The Call of Wings" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdaxd:P00018 "http://viaf.org/viaf/8905164661901103390006/10" ;
+    rdaxd:P00029 "Short story" .
+
+<http://viaf.org/viaf/8905164661901103390006/11> a rdac:C10001 ;
+    rdfs:label "The Last Séance (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The Last Séance" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdaxd:P00018 "http://viaf.org/viaf/8905164661901103390006/11" ;
+    rdaxd:P00029 "Short story" .
+
+<http://viaf.org/viaf/8905164661901103390006/12> a rdac:C10001 ;
+    rdfs:label "SOS (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "SOS" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdaxd:P00018 "http://viaf.org/viaf/8905164661901103390006/12" ;
+    rdaxd:P00029 "Short story" .
+
+<http://viaf.org/viaf/8905164661901103390006/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The hound of death, and other stories (Christie, Agatha)" ;
+    rdaed:P20071 "The Hound of Death -- The Red Signal -- The Fourth Man -- The Gypsy -- The Lamp -- Wireless -- The Witness for the Prosecution -- The Mystery of the Blue Jar -- The Strange Case of Sir Arthur Carmichael -- The Call of Wings -- The Last Séance -- SOS" ;
+    rdaed:P20315 "The hound of death, and other stories" ;
+    rdaed:P20316 "The hound of death",
+        "The hound of death, and other stories" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20145 <http://viaf.org/viaf/8905164661901103390006/02/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/03/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/04/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/05/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/06/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/07/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/08/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/09/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/10/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/11/exp/eng/1020>,
+        <http://viaf.org/viaf/8905164661901103390006/12/exp/eng/1020>,
+        <http://viaf.org/viaf/890516466190110339000601/exp/eng/1020> ;
+    rdaeo:P20231 <http://viaf.org/viaf/8905164661901103390006> ;
+    rdaxd:P00029 "parent" .
+
+<http://viaf.org/viaf/890516466190110339000601> a rdac:C10001 ;
+    rdfs:label "The Hound of Death (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "The Hound of Death" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdaxd:P00018 "http://viaf.org/viaf/890516466190110339000601" ;
+    rdaxd:P00029 "Short story" .
+
+<http://viaf.org/viaf/9356154076013911860000> a rdac:C10001 ;
+    rdfs:label "Murder on the Orient Express (Bennett, Richard Rodney.)" ;
+    rdawd:P10223 "Murder on the Orient Express" ;
+    rdawo:P10053 <http://viaf.org/viaf/61731028> ;
+    rdawo:P10238 <https://www.imdb.com/title/tt3402236> ;
+    rdaxd:P00018 "http://viaf.org/viaf/9356154076013911860000" ;
+    rdaxd:P00029 "Music" .
+
+<http://viaf.org/viaf/9356154076013911860000/exp/1010> a rdac:C10006 ;
+    rdfs:label "Murder On The Orient Express (Theme) (Bennett, Richard Rodney.)",
+        "Murder on the Orient Express. Theme. <Piano solo.> (Bennett, Richard Rodney.)" ;
+    rdaed:P20315 "Murder On The Orient Express (Theme)" ;
+    rdaed:P20316 "Murder on the Orient Express",
+        "Murder on the Orient Express. Theme. <Piano solo.>" ;
+    rdaeo:P20001 rdaco:1010 ;
+    rdaeo:P20231 <http://viaf.org/viaf/9356154076013911860000> ;
+    rdaxd:P00029 "standalone" .
+
+<http://viaf.org/viaf/algreen> a rdac:C10004 ;
+    rdfs:label "Al-Greene, Bob" ;
+    rdaad:P50413 "Al-Greene, Bob" ;
+    rdaxd:P00018 "http://viaf.org/viaf/algreen" .
+
+<https://isni.org/isni/0000000114794233> a rdac:C10004 ;
+    rdfs:label "Branagh, Kenneth" ;
+    rdaad:P50339 "1960-" ;
+    rdaad:P50413 "Branagh, Kenneth" ;
+    rdaxd:P00018 "https://isni.org/isni/0000000114794233" .
+
+<https://isni.org/isni/0000000368604401> a rdac:C10004 ;
+    rdfs:label "Solidor" ;
+    rdaad:P50339 "1963-" ;
+    rdaad:P50413 "Solidor" ;
+    rdaxd:P00018 "https://isni.org/isni/0000000368604401" .
+
+<https://www.imdb.com/title/tt0071877/exp/1023> a rdac:C10006 ;
+    rdfs:label "Murder on the orient express" ;
+    rdaed:P20065 <http://id.loc.gov/vocabulary/iso639-2/dan>,
+        <http://id.loc.gov/vocabulary/iso639-2/fin>,
+        <http://id.loc.gov/vocabulary/iso639-2/nob>,
+        <http://id.loc.gov/vocabulary/iso639-2/swe> ;
+    rdaed:P20315 "Murder on the orient express" ;
+    rdaed:P20316 "Murder on the Orient Express" ;
+    rdaeo:P20001 rdaco:1023 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20012 <https://www.imdb.com/name/nm0000002>,
+        <https://www.imdb.com/name/nm0000006>,
+        <https://www.imdb.com/name/nm0000125>,
+        <https://www.imdb.com/name/nm0000302>,
+        <https://www.imdb.com/name/nm0000842>,
+        <https://www.imdb.com/name/nm0001215>,
+        <https://www.imdb.com/name/nm0144045> ;
+    rdaeo:P20231 <https://www.imdb.com/title/tt0071877> .
+
+<https://www.imdb.com/title/tt3402236> a rdac:C10001 ;
+    rdfs:label "Murder on the Orient Express" ;
+    rdawd:P10223 "Murder on the Orient Express" ;
+    rdawo:P10013 <https://isni.org/isni/0000000114794233> ;
+    rdawo:P10129 <http://viaf.org/viaf/316741387> ;
+    rdaxd:P00018 "https://www.imdb.com/title/tt3402236" ;
+    rdaxd:P00029 "Movie" .
+
+<http://viaf.org/viaf/1097151656348508400001/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Agatha Christie's Miss Marple (Hart, Anne)",
+        "The life and times of Miss Jane Marple (Hart, Anne)" ;
+    rdaed:P20315 "The life and times of Miss Jane Marple" ;
+    rdaed:P20316 "Agatha Christie's Miss Marple : the life and times of Miss Jane Marple" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/1097151656348508400001> ;
+    rdaxd:P00029 "standalone" .
+
+<http://viaf.org/viaf/12155103895976200651/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Murder in Mesopotamia (Christie, Agatha)" ;
+    rdaed:P20315 "Murder in Mesopotamia" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/12155103895976200651> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/181004220/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "A murder is announced (Christie, Agatha)" ;
+    rdaed:P20315 "A murder is announced" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/181004220> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/217048217/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Murder of Roger Ackroyd (Christie, Agatha)" ;
+    rdaed:P20315 "Murder of Roger Ackroyd" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/217048217> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/73145424522186831318/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Death in the clouds (Christie, Agatha)" ;
+    rdaed:P20315 "Death in the clouds" ;
+    rdaed:P20316 "Death in the clouds" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/73145424522186831318> ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
+<http://viaf.org/viaf/780165573946837800003/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "A pocket full of rye (Christie, Agatha)" ;
+    rdaed:P20315 "A pocket full of rye" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/780165573946837800003> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/8905164661901103390006/02/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The Red Signal (Christie, Agatha)" ;
+    rdaed:P20315 "The Red Signal" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/8905164661901103390006/02> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/8905164661901103390006/03/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The Fourth Man (Christie, Agatha)" ;
+    rdaed:P20315 "The Fourth Man" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/8905164661901103390006/03> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/8905164661901103390006/04/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The Gypsy (Christie, Agatha)" ;
+    rdaed:P20315 "The Gypsy" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/8905164661901103390006/04> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/8905164661901103390006/05/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The Lamp (Christie, Agatha)" ;
+    rdaed:P20315 "The Lamp" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/8905164661901103390006/05> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/8905164661901103390006/06/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Wireless (Christie, Agatha)" ;
+    rdaed:P20315 "Wireless" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/8905164661901103390006/06> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/8905164661901103390006/07/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The Witness for the Prosecution (Christie, Agatha)" ;
+    rdaed:P20315 "The Witness for the Prosecution" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/8905164661901103390006/07> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/8905164661901103390006/08/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The Mystery of the Blue Jar (Christie, Agatha)" ;
+    rdaed:P20315 "The Mystery of the Blue Jar" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/8905164661901103390006/08> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/8905164661901103390006/09/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The Strange Case of Sir Arthur Carmichael (Christie, Agatha)" ;
+    rdaed:P20315 "The Strange Case of Sir Arthur Carmichael" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/8905164661901103390006/09> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/8905164661901103390006/10/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The Call of Wings (Christie, Agatha)" ;
+    rdaed:P20315 "The Call of Wings" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/8905164661901103390006/10> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/8905164661901103390006/11/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The Last Séance (Christie, Agatha)" ;
+    rdaed:P20315 "The Last Séance" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/8905164661901103390006/11> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/8905164661901103390006/12/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "SOS (Christie, Agatha)" ;
+    rdaed:P20315 "SOS" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/8905164661901103390006/12> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/308553963/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Mirror crack'd from side to side (Christie, Agatha)",
+        "The mirror crack'd from side to side (Christie, Agatha)" ;
+    rdaed:P20315 "Mirror crack'd from side to side" ;
+    rdaed:P20316 "The mirror crack'd from side to side" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/308553963> ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
+<http://viaf.org/viaf/309258229/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Death on the Nile (Christie, Agatha)" ;
+    rdaed:P20315 "Death on the Nile" ;
+    rdaed:P20316 "Death on the Nile" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/309258229> ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
+<http://viaf.org/viaf/310912914/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Appointment with death (Christie, Agatha)" ;
+    rdaed:P20315 "Appointment with death" ;
+    rdaed:P20316 "Appointment with death" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/310912914> ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
+<http://viaf.org/viaf/5243165573959737800001/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Murder on the links (Christie, Agatha)",
+        "The murder on the links (Christie, Agatha)" ;
+    rdaed:P20315 "Murder on the links" ;
+    rdaed:P20316 "The murder on the links" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/5243165573959737800001> ;
+    rdaxd:P00029 "part" .
+
+<http://viaf.org/viaf/740147270586435700009/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Sleeping murder (Christie, Agatha)" ;
+    rdaed:P20315 "Sleeping murder" ;
+    rdaed:P20316 "Sleeping murder",
+        "Sleeping murder : Miss Marple's last case" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/740147270586435700009> ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
+<http://viaf.org/viaf/890516466190110339000601/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The Hound of Death (Christie, Agatha)" ;
+    rdaed:P20315 "The Hound of Death" ;
+    rdaed:P20316 "The Hound of Death",
+        "The hound of death : an Agatha Christie short story" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/890516466190110339000601> ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
+<http://viaf.org/viaf/316741387> a rdac:C10001 ;
+    rdfs:label "Murder on the Orient Express (Christie, Agatha)" ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    rdawd:P10223 "Murder on the Orient Express" ;
+    rdawo:P10061 <https://isni.org/isni/0000000121022127> ;
+    rdawo:P10319 <http://viaf.org/viaf/22943082> ;
+    rdaxd:P00018 "http://viaf.org/viaf/316741387" ;
+    rdaxd:P00029 "Novel" .
+
+<http://viaf.org/viaf/1846151051771433530005/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "The murder at the vicarage (Christie, Agatha)" ;
+    rdaed:P20315 "The murder at the vicarage" ;
+    rdaed:P20316 "The murder at the vicarage" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/1846151051771433530005> ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
+<http://viaf.org/viaf/316741387/exp/eng/1020> a rdac:C10006 ;
+    rdfs:label "Murder on the Orient Express (Christie, Agatha)" ;
+    rdaed:P20315 "Murder on the Orient Express" ;
+    rdaed:P20316 "Murder on the Orient Express" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/316741387> ;
+    rdaxd:P00029 "part",
+        "standalone" .
+
+<http://viaf.org/viaf/20152329368502672984> a rdac:C10004 ;
+    rdfs:label "Marple, Jane" ;
+    rdaad:P50413 "Marple, Jane" ;
+    rdaad:P50415 "Miss Marple" ;
+    rdaxd:P00018 "http://viaf.org/viaf/20152329368502672984" .
+
+<http://viaf.org/viaf/22943082> a rdac:C10004 ;
+    rdfs:label "Poirot, Hercule" ;
+    rdaad:P50413 "Poirot, Hercule" ;
+    rdaxd:P00018 "http://viaf.org/viaf/22943082" .
+
+<https://isni.org/isni/0000000121022127> a rdac:C10004 ;
+    rdfs:label "Christie, Agatha" ;
+    rdaad:P50339 "1890-1976" ;
+    rdaad:P50413 "Christie, Agatha" ;
+    rdaxd:P00018 "https://isni.org/isni/0000000121022127" .
+

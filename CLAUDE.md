@@ -117,6 +117,11 @@ EntEdit/
 
 ### Utilities (app/src/utils/)
 
+- `entityUpdate.ts` - pure SPARQL Update builder for entity save (diff-based), inverse
+  cleanup and concurrent-edit detection; unit-tested in `entityUpdate.test.ts`
+- `rdfTerms.ts` - RDF term model shared by load and save (IRI / literal with language
+  tag or datatype), SPARQL serialization and term identity for diffing
+- `luceneQuery.ts` - escapes free-text search input for the Lucene connector
 - `turtleSerializer.ts` - Turtle serialization with configurable namespace prefix registry (`KNOWN_PREFIXES` map);
   predicates, datatypes, and `rdf:type` object (class) URIs are prefix-compacted; subject and other
   object URIs (entity references) stay as full `<uri>`
@@ -148,29 +153,60 @@ EntEdit/
 
 ### Entity Save/Delete Strategy
 
-The entity load query runs WITH inference (`infer: true`), so it returns both
-asserted triples and inferred inverse properties. This has critical implications:
+`useEntityQuery` loads an entity twice: the **explicit snapshot**
+(`loadEntitySnapshot`, inference OFF) carrying full RDF terms (language tag,
+datatype), the named graph of each triple and its `entedit:valueOrder`, and the
+**inferred view** (inference ON). Values present only in the inferred view are
+marked `OrderedValue.inferred`, shown read-only with an "inferred" chip, and are
+never written back — otherwise every save would materialize inferred supertypes
+and inverse relationships as asserted triples.
 
-**Save (targeted delete + re-insert):**
-1. Only delete outgoing triples for **managed** properties (rdf:type, rdfs:label,
-   data properties from `properties`, object properties from `objectPropertyUris`)
-2. Diff old vs new `entityData` to find removed object property URI values
-3. For each removed URI value, delete incoming triples from that entity
-   (`<removedEntity> ?p <thisEntity>`) to clean up asserted inverse triples
-4. Re-insert all current data from `entityData`
+**Save (diff, never rewrite):** `buildEntityUpdate` (`utils/entityUpdate.ts`) is
+a pure function that diffs the snapshot against what the form holds and emits a
+single `;`-joined update:
+1. `DELETE DATA` for managed triples that disappeared, **each in the graph it was
+   loaded from** (a `DELETE` without `GRAPH` spans all graphs, while
+   `INSERT DATA` writes to the default graph — that mismatch used to move
+   entities out of their named graph)
+2. `INSERT DATA` for new triples, into the entity's graph (`targetGraph`, the
+   graph of its `rdf:type`)
+3. RDF-star `entedit:valueOrder` annotations rewritten only for properties whose
+   values or order actually changed; data that was never ordered by the editor
+   is left unannotated
+4. `buildInverseCleanup` removes inverse triples (`owl:inverseOf` in either
+   direction) for relationship values the user removed, plus their annotations
 
-**Why targeted delete:** A blanket `DELETE { <e> ?p ?o . ?s ?p2 <e> . }` destroys
-incoming triples from other entities and properties not managed by the editor
-(those without `entedit:status`). These can't be restored because they may never
-appear in `entityData` (incoming-only) or get serialized as literals instead of URIs.
+Unchanged triples produce no operations at all, so language tags, datatypes,
+named graphs and unmanaged properties survive untouched, and a save that
+changes one property cannot clobber another.
 
-**Entity delete (full blanket):** Deletes ALL outgoing + incoming triples and
-RDF-star annotations to avoid dangling references.
+**Removing an inferred relationship:** inferred values are read-only for
+*editing* but can be *removed*. Cataloguers link A→B or B→A inconsistently, so a
+relationship must be removable from whichever side is open. `findRemovedRelations`
+collects both the explicit links the diff dropped and the inferred ones the user
+deleted from the form; `buildInverseCleanup` then deletes the statement that
+entails the link — which for an inferred one lives on the *other* entity. Nothing
+is materialized: the inferred value is still never written back. Inferred
+*literals* (from superproperty inference) stay read-only, since no single
+reciprocal statement corresponds to them.
 
-**URI type tracking:** `OrderedValue.isUri` is captured from the SPARQL binding
-type during load. During save, `objectPropertyUris.has(prop) || isUri` determines
-whether to serialize as `<uri>` or `"literal"`. This prevents unmanaged relationship
-properties from being corrupted into string literals.
+**Conflict detection:** before writing, the properties the save will touch
+(`changedProperties`) are compared with a freshly loaded snapshot
+(`findConflicts`). If someone else changed one of them, the save is refused and
+the user is asked to refresh. Only the properties being written are compared, so
+unrelated concurrent edits don't block a save.
+
+**New entities:** a custom URI is checked with a `COUNT` query first — inserting
+into a URI that already has statements would silently merge the two entities.
+Save is disabled until the form holds a value or a label.
+
+**Entity delete (full blanket):** one request deleting RDF-star annotations on
+outgoing *and* incoming triples, then all outgoing + incoming statements.
+
+**URI type tracking:** `OrderedValue.isUri` comes from the SPARQL binding type
+during load. On save, `objectPropertyUris.has(prop) || isUri` decides whether a
+value is serialized as `<uri>` or a literal, so unmanaged relationship
+properties are not turned into strings.
 
 ### SPARQL Syntax Gotchas (GraphDB)
 
@@ -183,6 +219,12 @@ properties from being corrupted into string literals.
 - RDF-star `<< s p o >>` OPTIONAL clauses may interact unpredictably with inference;
   consider separate queries if results are affected
 - `SparqlClient.query()` = inference ON; `SparqlClient.queryWithoutInference()` = inference OFF
+- `DELETE`/`DELETE WHERE` without `GRAPH` removes matching triples from **every**
+  graph, but `INSERT DATA` without `GRAPH` writes to the default graph; use
+  `DELETE DATA`/`INSERT DATA` with an explicit `GRAPH` to keep data in place
+- The Lucene connector rejects bare query syntax (`(`, `"`, `:`, `AND`), so user
+  input goes through `toLuceneQuery` (`utils/luceneQuery.ts`) before it is
+  placed in `lucene:query`
 - Schema property queries (`useRdfProperties`, `useRdfObjectProperties`, relationship hooks)
   run with inference and no JS-side deduplication — stale/duplicate annotation triples
   (e.g., multiple `entedit:order` values) cause duplicate properties in the editor UI;
@@ -195,6 +237,24 @@ properties from being corrupted into string literals.
 - `LabelManager` dialog uses `hideBackdrop`, `disableEnforceFocus`, `disableAutoFocus`,
   `disableRestoreFocus` to allow interaction with content behind it (non-modal)
 - Drag-and-drop reordering via @dnd-kit only shows controls when editing with 2+ values
+- The form must not show edits that were not stored: empty rows and repeats of
+  a value already recorded (same text and language — the same triple) are
+  marked while editing and dropped once a save succeeds
+  (`pruneEmptyValues`, `pruneDuplicateValues`, `duplicateValueIndexes`), and an
+  empty row alone does not enable Save
+- Controls must not move between view and edit mode: the identifier is the same
+  `TextField` in both states (read-only, with lock and copy adornments, once
+  saved) and uses the same monospace type in both, and the identity rows and
+  section headers reserve the height of the controls that only appear while
+  editing (`minHeight: 40`)
+- Not every entity has a URI worth citing, so a semantic-web style that
+  requires one cannot rely on the user typing one in: `EntityIdentitySection`
+  shows a **Generate** button next to the identifier field for new entities
+  while editing (`requireIdentifier`/`onGenerateUri` props), filling in the
+  same `generateEntityUri(classUri)` identifier a blank field would get on
+  save. The placeholder changes to "Enter a URI, or generate one" when
+  `requireIdentifier` is set, since the plain "leave empty to auto-generate"
+  text stops being true.
 
 ### Localization
 
@@ -278,10 +338,46 @@ need no login (`--access read|write|none`). Run `--help` for all options.
 
 ### Configuration
 
-- Persisted to localStorage (`entEdit.config`, `entEdit.language`)
+- Persisted to localStorage (`entEdit.config`, `entEdit.language`,
+  `entEdit.preferences`); credentials live in sessionStorage
 - `ConfigurationWizard` shown on first run or when unconfigured
 - URL parameter `?nosearch` hides the search tab
-- Default endpoint: `http://localhost:7200/repositories/EntEdit`
+- Default endpoint is derived from the app's own origin
+  (`<origin>/graphdb/repositories/EntEdit`), not a hard-coded host
+
+**Cataloguing style** (`utils/catalogingStyle.ts`) decides how prominent RDF
+identity is in the editor, supporting both classic cataloguing and semantic-web
+cataloguing from one build:
+
+- Five style preferences: `showIdentifier`, `showLabels`, `requireIdentifier`,
+  `requireLabel` and `showLanguageTags`. The presets `CLASSIC_PREFERENCES` (all off) and
+  `SEMANTIC_PREFERENCES` (all on) are offered as one-click choices in the wizard
+  and the settings dialog (`CatalogingStyleSettings`); any other combination is
+  reported as "custom". New installations default to semantic.
+- `showLanguageTags` shows the language of a text value and offers a selector
+  (`VALUE_LANGUAGES` in `utils/languages.ts`, unset shown as an em dash) while
+  editing, but only for properties whose values are natural language. The
+  profile marks the exceptions with `entedit:linguistic false` (dates,
+  numbering, dimensions, identifiers); a property without the annotation counts
+  as linguistic, so existing vocabularies keep working. Even when it is off, a property whose values differ in language
+  shows their tags anyway (`languagesInUse`), because values that differ only
+  by an invisible tag look like duplicates and invite a cataloguer to delete
+  one.
+- `showInferredMarks` is a sixth preference that belongs to **no** style: off in
+  both presets, excluded from `styleOf`'s comparison so toggling it does not
+  read as "custom", and carried across by `applyPreset` so choosing a style
+  never changes it. It controls only the "inferred" chip and dashed outline;
+  inferred values behave identically either way, removal included.
+- Hidden fields are not lost: `EntityEditor` offers an "Identifier and labels…"
+  dialog from the ⋮ menu whenever either is hidden, and a missing identifier or
+  label is generated on save as before.
+- `require*` blocks saving a **new** entity until the field is filled in
+  (surfaced through `saveBlockedReason`, the same mechanism that prevents empty
+  entities). It replaced the older save-warning dialog and the
+  `warnAutoUri`/`warnAutoLabel` preferences, which are still read from
+  localStorage and migrated.
+- `?style=classic` / `?style=semantic` overrides the stored preferences for one
+  session, so a class can be given a single link (`applyStyleOverride`).
 
 ### Ontology Assumptions
 
@@ -289,6 +385,8 @@ The application expects:
 - `entedit:status` predicate to mark active classes/properties
 - `entedit:order` predicate for property display ordering
 - `entedit:valueOrder` predicate (via RDF-star) for multi-value ordering within a property
+- `entedit:linguistic false` on data properties whose values are not natural
+  language, which suppresses the language selector for them
 - Standard RDFS vocabulary (rdfs:label, rdfs:domain, rdfs:range)
 - RDA vocabulary for bibliographic entities (Work, Expression, Manifestation, Item)
 - Properties must have correct `entedit:status` to appear in the editor UI;

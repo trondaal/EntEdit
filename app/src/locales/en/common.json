@@ -23,7 +23,10 @@
     "exportTurtleSaveFirst": "Save changes before exporting",
     "import": "Import",
     "back": "Back",
-    "refresh": "Refresh"
+    "refresh": "Refresh",
+    "createAnother": "Create another",
+    "editIdentity": "Identifier and labels…",
+    "generate": "Generate"
   },
   "dialogs": {
     "refresh": {
@@ -60,7 +63,11 @@
     "addAgent": "Add",
     "addRelatedWork": "Add",
     "addRelatedExpression": "Add",
-    "addRelatedManifestation": "Add"
+    "addRelatedManifestation": "Add",
+    "inferred": "inferred",
+    "inferredHelp": "Inferred by the database from other statements. It cannot be edited here and is not saved with the entity.",
+    "labels": "Labels",
+    "inferredRelationshipHelp": "Stated on “{{entity}}”, not here. Removing it deletes that statement, so the link disappears from both entities."
   },
   "navigation": {
     "classes": "Classes",
@@ -77,7 +84,7 @@
     "manifestationSearch": "Search for publications",
     "searchResults": "Search Results",
     "searchPlaceholder": "Search entities using full-text search…",
-    "searchHelp": "Enter search terms to find entities using GraphDB's Lucene connector. Search will be performed across names and titles.",
+    "searchHelp": "Search across names and titles. End a word with * to also match longer words (e.g. countr*).",
     "publications": "Publications",
     "publicationsCount": "Publications ({{count}})",
     "contents": "Contents",
@@ -87,7 +94,7 @@
     "enterSearchQuery": "Enter a search query to find entities",
     "enterSearchQueryManifestations": "Enter a search query to find manifestations",
     "noResultsFor": "No results found for \"{{query}}\"",
-    "searchFailed": "Search failed: {{message}}",
+    "searchFailed": "The search could not be completed. Try other search words, or check the connection to the database.",
     "errorLoadingExpressions": "Error loading expressions: {{message}}",
     "noExpressionsFound": "No expressions found",
     "errorLoadingManifestations": "Error loading manifestations: {{message}}",
@@ -102,8 +109,8 @@
     "entityCountFiltered": "{{shown}} of {{total}}",
     "entityBeingEdited": "Unsaved changes",
     "switchEntityTitle": "Unsaved changes",
-    "switchEntityMessage": "The current entity has unsaved changes. Switching to another entity will discard them.",
-    "switchEntityConfirm": "Discard and switch",
+    "switchEntityMessage": "The current entity has unsaved changes. If you continue, they will be discarded.",
+    "switchEntityConfirm": "Discard and continue",
     "dataRefreshed": "Data refreshed",
     "refreshFailed": "Refresh failed: {{message}}"
   },
@@ -112,7 +119,7 @@
       "connection": "Database Connection",
       "test": "Test Connection",
       "language": "Language Selection",
-      "settings": "Other Settings"
+      "settings": "Cataloguing style"
     },
     "connection": {
       "title": "Configure Database Connection",
@@ -147,29 +154,44 @@
       "successDescription": "Your configuration will be saved locally and the application will connect to your database."
     },
     "settingsStep": {
-      "title": "Other Settings",
-      "description": "Select these to get a warning when saving entities with auto-generated URIs or labels. This can help you create good quality RDF with established URIs and descriptive labels."
+      "title": "Cataloguing style",
+      "description": "Choose how the editor treats RDF identifiers and labels. You can change this later in Settings."
     },
     "buttons": {
       "nextTest": "Next: Test Connection",
       "nextLanguage": "Next: Language",
-      "nextSettings": "Next: Settings",
+      "nextSettings": "Next: Cataloguing style",
       "back": "Back",
       "complete": "Complete Setup"
-    }
+    },
+    "testResult": {
+      "noUrl": "Enter a SPARQL endpoint URL",
+      "success": "Connection successful!",
+      "successDetails": "Connected to the SPARQL endpoint. The database contains data.",
+      "empty": "Connection successful, but the database appears to be empty",
+      "emptyDetails": "The endpoint is reachable but no triples were found.",
+      "failed": "Connection failed",
+      "unauthorized": "Authentication failed (401 Unauthorized)",
+      "unauthorizedDetails": "The username or password is incorrect. Please check your credentials and try again.",
+      "forbidden": "Access forbidden (403 Forbidden)",
+      "forbiddenDetails": "Your account doesn't have permission to access this endpoint. Contact your database administrator.",
+      "notFound": "Endpoint not found (404)",
+      "notFoundDetails": "The SPARQL endpoint URL is incorrect or the database is not running. Please verify the URL.",
+      "network": "Network connection failed",
+      "networkDetails": "Cannot reach the database server. This could be:\n• The database server is not running\n• The URL is incorrect\n• A CORS (cross-origin) policy is blocking the request\n• A firewall or network restriction\n• An SSL/TLS certificate problem if using HTTPS\n\nTry opening the URL directly in your browser to test connectivity.",
+      "cors": "CORS (cross-origin) error",
+      "corsDetails": "The database server needs to allow requests from this application. For GraphDB, add these CORS headers:\n• Access-Control-Allow-Origin: *\n• Access-Control-Allow-Methods: GET, POST, OPTIONS\n• Access-Control-Allow-Headers: Content-Type, Authorization"
+    },
+    "title": "Set up EntEdit"
   },
   "endpointConfig": {
-    "title": "SPARQL Endpoint Configuration",
+    "title": "Settings",
     "endpointUrl": "SPARQL Endpoint URL",
     "endpointUrlHelper": "Enter the URL of your SPARQL endpoint",
     "username": "Username (optional)",
     "password": "Password (optional)",
-    "saveConfiguration": "Save Configuration",
-    "reset": "Reset",
-    "reconfigureDatabase": "Reconfigure Database",
-    "saveWarnings": "Save warnings",
-    "warnAutoUri": "Warn when saving with auto-generated URI",
-    "warnAutoLabel": "Warn when saving with auto-generated label"
+    "reconfigureDatabase": "Configure database",
+    "connectionSection": "Database connection"
   },
   "logging": {
     "record": "Start logging",
@@ -198,5 +220,19 @@
     "orphanDescription": "A previous recording session was not completed (the browser may have been closed). Would you like to recover it and download the data, or discard it?",
     "orphanRecover": "Recover & Download",
     "orphanDiscard": "Discard"
+  },
+  "catalogingStyle": {
+    "title": "Cataloguing style",
+    "description": "Choose how visible RDF identifiers and labels are while editing.",
+    "classic": "Classic cataloguing",
+    "semantic": "Semantic web cataloguing",
+    "custom": "Custom combination",
+    "showColumn": "Show in the form",
+    "requireColumn": "Require before saving",
+    "identifierRow": "Identifier (URI)",
+    "labelsRow": "Labels",
+    "hiddenNote": "When a field is hidden it stays available in the editor's ⋮ menu, and a value is generated automatically if you don't enter one.",
+    "showInferredMarks": "Mark values the database inferred (they can be edited either way)",
+    "showLanguageTags": "Show the language of text values, and let it be set while editing"
   }
 }

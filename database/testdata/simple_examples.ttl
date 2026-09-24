@@ -32,3 +32,56 @@
     entedit:P01 vtp:V1000 ;
     entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
     rdawo:P10061 <http://viaf.org/viaf/29558386> .
+
+<http://example.org/ofstadknut>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/ofstadknut" ;
+    rdaad:P50413 "Ofstad, Knut" ;
+    rdfs:label "Ofstad, Knut" .
+
+<http://viaf.org/viaf/214012164/exp/eng/1020>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://viaf.org/viaf/214012164/exp/eng/1020" ;
+    rdaed:P20315 "No country for old men" ;
+    rdfs:label "No country for old men (McCarthy, Cormac)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/214012164> .
+
+<http://viaf.org/viaf/214012164/exp/nob/1020/ofstadknut>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://viaf.org/viaf/214012164/exp/nob/1020/ofstadknut" ;
+    rdaed:P20315 "Ikke et land for gamle menn" ;
+    rdfs:label "Ikke et land for gamle menn (McCarthy, Cormac)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20037 <http://example.org/ofstadknut> ;
+    rdaeo:P20231 <http://viaf.org/viaf/214012164> .
+
+<http://example.org/nocountryforoldmen/2005/knopf>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/nocountryforoldmen/2005/knopf" ;
+    rdfs:label "No country for old men (Knopf, 2005)" ;
+    rdamd:P30156 "No country for old men" ;
+    rdamd:P30176 "Alfred A. Knopf" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "2005" ;
+    rdamd:P30182 "309 p." ;
+    rdamd:P30004 "ISBN 0375406778" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/214012164/exp/eng/1020> .
+
+<http://example.org/ikkeetlandforgamlemenn/2006/gyldendal>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/ikkeetlandforgamlemenn/2006/gyldendal" ;
+    rdfs:label "Ikke et land for gamle menn (Gyldendal, 2006)" ;
+    rdamd:P30156 "Ikke et land for gamle menn" ;
+    rdamd:P30117 "Cormac McCarthy ; oversatt av Knut Ofstad" ;
+    rdamd:P30176 "Gyldendal" ;
+    rdamd:P30088 "Oslo" ;
+    rdamd:P30011 "2006" ;
+    rdamd:P30182 "230 s." ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://viaf.org/viaf/214012164/exp/nob/1020/ofstadknut> .

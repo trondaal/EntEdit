@@ -2,6 +2,7 @@ import { useInfiniteQuery } from "@tanstack/react-query";
 import { SparqlClient } from "../utils/sparqlClient";
 import { escapeSparqlLiteral, sanitizeSparqlUri } from "../utils/labelUtils";
 import { SPARQL_SEP } from "../utils/textFormatters";
+import { toLuceneQuery } from "../utils/luceneQuery";
 import type { SparqlEndpointConfig } from "../types/sparql";
 
 /** Number of search results fetched per page */
@@ -75,7 +76,7 @@ export const useSearchExpressions = (
       }
 
       const client = new SparqlClient(config);
-      const escapedQuery = escapeSparqlLiteral(query);
+      const escapedQuery = escapeSparqlLiteral(toLuceneQuery(query));
       const escapedLanguage = escapeSparqlLiteral(language);
 
       // Phase 1: Lightweight Lucene search — just URIs, scores, and work links
@@ -379,7 +380,7 @@ export const useSearchManifestations = (
       }
 
       const client = new SparqlClient(config);
-      const escapedQuery = escapeSparqlLiteral(query);
+      const escapedQuery = escapeSparqlLiteral(toLuceneQuery(query));
       const escapedLanguage = escapeSparqlLiteral(language);
 
       // Phase 1: Lightweight Lucene search — just URIs and scores

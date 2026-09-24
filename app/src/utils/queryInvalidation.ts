@@ -78,6 +78,11 @@ export const invalidateEntityCaches = (
     });
   });
 
+  // Full-text search results can contain the entity's titles and its
+  // related agents, so they go stale on any save.
+  queryClient.invalidateQueries({ queryKey: ["searchExpressions", endpointUrl] });
+  queryClient.invalidateQueries({ queryKey: ["searchManifestations", endpointUrl] });
+
   // If a specific entity URI is provided, invalidate its cache
   if (entityUri) {
     queryClient.invalidateQueries({
