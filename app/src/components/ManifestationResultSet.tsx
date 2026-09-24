@@ -101,7 +101,6 @@ const ManifestationResultSet: React.FC<ManifestationResultSetProps> = ({
             overflow: "auto",
             maxHeight: { xs: 600, md: "none" },
             bgcolor: "background.default",
-            px: 2,
             py: 1,
           }}
           onScroll={handleScroll}
