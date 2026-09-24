@@ -11,6 +11,12 @@ Run from the `app/` directory:
 - `npm run lint` - Run ESLint
 - `npm run preview` - Preview production build
 
+No local GraphDB? Mock `window.fetch` in the browser to test UI with fake SPARQL
+JSON responses — match on the *first* `SELECT` keyword's clause only, not the
+whole query text, since nested subqueries (e.g. for creators/relationships)
+can share the same `SELECT DISTINCT ?var` shape as the outer query and cause
+false-positive matches.
+
 ## Architecture Overview
 
 EntEdit is a React-based RDF/SPARQL entity editor for browsing and editing semantic web data, with particular support for bibliographic entities using IFLA-LRM/RDA vocabulary (Work, Expression, Manifestation, Item relationships).
@@ -18,7 +24,7 @@ EntEdit is a React-based RDF/SPARQL entity editor for browsing and editing seman
 ### Tech Stack
 
 - **Frontend**: React 19 + TypeScript + Vite with SWC
-- **UI Framework**: Material-UI v7 (Emotion CSS-in-JS)
+- **UI Framework**: Material-UI v9 (Emotion CSS-in-JS) — package.json pins `^9.0.0`
 - **State Management**: TanStack Query for server state caching
 - **Virtual Scrolling**: @tanstack/react-virtual for large lists
 - **Notifications**: notistack for snackbar messages
@@ -232,6 +238,10 @@ properties are not turned into strings.
 
 ### UI Patterns
 
+- `ListItemText`'s `secondary` prop renders as `<p>` by default; if secondary
+  content nests `Box`/`Typography`/`Chip` (as in `Expression.tsx`'s creators/
+  relationships/chips), that's invalid HTML and causes hydration-mismatch
+  console errors — pass `slotProps={{ secondary: { component: "div" } }}`
 - Features depending on saved database state (e.g., Turtle export) must be disabled when
   `isDirty` — pass `isDirty` to header and disable with tooltip explaining "save first"
 - `LabelManager` dialog uses `hideBackdrop`, `disableEnforceFocus`, `disableAutoFocus`,
