@@ -249,75 +249,91 @@ WHERE {
     }
 
     # Work to work relationships
-    # Uses rdfs:label for target work title (chosen language → no language tag)
+    # Uses rdfs:label for target work title (chosen language → no language tag).
+    # Title is aggregated per (relationship, target) via SAMPLE before concatenating
+    # across targets — a target with more than one untagged rdfs:label (stale/duplicate
+    # data) would otherwise list the same target twice with different label text.
     OPTIONAL {
-        SELECT DISTINCT ?work ?work_to_work_relationship_label
-        (GROUP_CONCAT(DISTINCT CONCAT(?target_work_title, "${SPARQL_SEP.URI}", STR(?target_work)) ; SEPARATOR="${SPARQL_SEP.NAME}") as ?target_work_title)
+        SELECT ?work ?work_to_work_relationship_label
+        (GROUP_CONCAT(DISTINCT CONCAT(?target_work_title, "${SPARQL_SEP.URI}", ?target_work_uri) ; SEPARATOR="${SPARQL_SEP.NAME}") as ?target_work_title)
         WHERE {
-            {
-                OPTIONAL {
-                    ?work ?work_to_work_relationship ?target_work .
-                    ?target_work a <http://rdaregistry.info/Elements/c/C10001> .
-                    OPTIONAL { ?target_work rdfs:label ?tw_label_lang . FILTER(LANG(?tw_label_lang) = "${escapedLanguage}") }
-                    OPTIONAL { ?target_work rdfs:label ?tw_label_none . FILTER(LANG(?tw_label_none) = "") }
-                    BIND(COALESCE(?tw_label_lang, ?tw_label_none) AS ?target_work_title)
-                    FILTER(BOUND(?target_work_title))
-                    ?work_to_work_relationship rdfs:label ?work_to_work_relationship_label .
-                    FILTER(LANG(?work_to_work_relationship_label) = "${escapedLanguage}") .
-                    FILTER NOT EXISTS {
-                        ?work_to_work_relationship rdfs:subPropertyOf* <http://rdaregistry.info/Elements/w/P10336> .
+            SELECT DISTINCT ?work ?work_to_work_relationship_label ?target_work
+                (SAMPLE(?target_work_title_raw) as ?target_work_title) (STR(?target_work) as ?target_work_uri)
+            WHERE {
+                {
+                    OPTIONAL {
+                        ?work ?work_to_work_relationship ?target_work .
+                        ?target_work a <http://rdaregistry.info/Elements/c/C10001> .
+                        OPTIONAL { ?target_work rdfs:label ?tw_label_lang . FILTER(LANG(?tw_label_lang) = "${escapedLanguage}") }
+                        OPTIONAL { ?target_work rdfs:label ?tw_label_none . FILTER(LANG(?tw_label_none) = "") }
+                        BIND(COALESCE(?tw_label_lang, ?tw_label_none) AS ?target_work_title_raw)
+                        FILTER(BOUND(?target_work_title_raw))
+                        ?work_to_work_relationship rdfs:label ?work_to_work_relationship_label .
+                        FILTER(LANG(?work_to_work_relationship_label) = "${escapedLanguage}") .
+                        FILTER NOT EXISTS {
+                            ?work_to_work_relationship rdfs:subPropertyOf* <http://rdaregistry.info/Elements/w/P10336> .
+                        }
                     }
-                }
-            } UNION {
-                OPTIONAL {
-                    ?target_work ?work_to_work_relationship ?work .
-                    ?target_work a <http://rdaregistry.info/Elements/c/C10001> .
-                    OPTIONAL { ?target_work rdfs:label ?tw_label_lang2 . FILTER(LANG(?tw_label_lang2) = "${escapedLanguage}") }
-                    OPTIONAL { ?target_work rdfs:label ?tw_label_none2 . FILTER(LANG(?tw_label_none2) = "") }
-                    BIND(COALESCE(?tw_label_lang2, ?tw_label_none2) AS ?target_work_title)
-                    FILTER(BOUND(?target_work_title))
-                    ?work_to_work_relationship_inverse owl:inverseOf ?work_to_work_relationship .
-                    ?work_to_work_relationship_inverse rdfs:label ?work_to_work_relationship_label .
-                    FILTER(LANG(?work_to_work_relationship_label) = "${escapedLanguage}") .
-                    FILTER NOT EXISTS {
-                        ?work_to_work_relationship_inverse rdfs:subPropertyOf* <http://rdaregistry.info/Elements/w/P10336> .
+                } UNION {
+                    OPTIONAL {
+                        ?target_work ?work_to_work_relationship ?work .
+                        ?target_work a <http://rdaregistry.info/Elements/c/C10001> .
+                        OPTIONAL { ?target_work rdfs:label ?tw_label_lang2 . FILTER(LANG(?tw_label_lang2) = "${escapedLanguage}") }
+                        OPTIONAL { ?target_work rdfs:label ?tw_label_none2 . FILTER(LANG(?tw_label_none2) = "") }
+                        BIND(COALESCE(?tw_label_lang2, ?tw_label_none2) AS ?target_work_title_raw)
+                        FILTER(BOUND(?target_work_title_raw))
+                        ?work_to_work_relationship_inverse owl:inverseOf ?work_to_work_relationship .
+                        ?work_to_work_relationship_inverse rdfs:label ?work_to_work_relationship_label .
+                        FILTER(LANG(?work_to_work_relationship_label) = "${escapedLanguage}") .
+                        FILTER NOT EXISTS {
+                            ?work_to_work_relationship_inverse rdfs:subPropertyOf* <http://rdaregistry.info/Elements/w/P10336> .
+                        }
                     }
                 }
             }
+            GROUP BY ?work ?work_to_work_relationship_label ?target_work
         }
         GROUP BY ?work ?work_to_work_relationship_label
     }
 
     # Expression to expression relationships
-    # Uses rdfs:label for target expression title (chosen language → no language tag)
+    # Uses rdfs:label for target expression title (chosen language → no language tag).
+    # Title is aggregated per (relationship, target) via SAMPLE before concatenating
+    # across targets — a target with more than one untagged rdfs:label (stale/duplicate
+    # data) would otherwise list the same target twice with different label text.
     OPTIONAL {
-        SELECT DISTINCT ?expression ?expression_to_expression_relationship_label
-        (GROUP_CONCAT(DISTINCT CONCAT(?target_expression_title, "${SPARQL_SEP.URI}", STR(?target_expression)) ; SEPARATOR="${SPARQL_SEP.NAME}") as ?target_expression_title)
+        SELECT ?expression ?expression_to_expression_relationship_label
+        (GROUP_CONCAT(DISTINCT CONCAT(?target_expression_title, "${SPARQL_SEP.URI}", ?target_expression_uri) ; SEPARATOR="${SPARQL_SEP.NAME}") as ?target_expression_title)
         WHERE {
-            {
-                OPTIONAL {
-                    ?expression ?expression_to_expression_relationship ?target_expression .
-                    ?target_expression a <http://rdaregistry.info/Elements/c/C10006> .
-                    OPTIONAL { ?target_expression rdfs:label ?te_label_lang . FILTER(LANG(?te_label_lang) = "${escapedLanguage}") }
-                    OPTIONAL { ?target_expression rdfs:label ?te_label_none . FILTER(LANG(?te_label_none) = "") }
-                    BIND(COALESCE(?te_label_lang, ?te_label_none) AS ?target_expression_title)
-                    FILTER(BOUND(?target_expression_title))
-                    ?expression_to_expression_relationship rdfs:label ?expression_to_expression_relationship_label .
-                    FILTER(LANG(?expression_to_expression_relationship_label) = "${escapedLanguage}") .
-                }
-            } UNION {
-                OPTIONAL {
-                    ?target_expression ?expression_to_expression_relationship ?expression .
-                    ?target_expression a <http://rdaregistry.info/Elements/c/C10006> .
-                    OPTIONAL { ?target_expression rdfs:label ?te_label_lang2 . FILTER(LANG(?te_label_lang2) = "${escapedLanguage}") }
-                    OPTIONAL { ?target_expression rdfs:label ?te_label_none2 . FILTER(LANG(?te_label_none2) = "") }
-                    BIND(COALESCE(?te_label_lang2, ?te_label_none2) AS ?target_expression_title)
-                    FILTER(BOUND(?target_expression_title))
-                    ?expression_to_expression_relationship_inverse owl:inverseOf ?expression_to_expression_relationship .
-                    ?expression_to_expression_relationship_inverse rdfs:label ?expression_to_expression_relationship_label .
-                    FILTER(LANG(?expression_to_expression_relationship_label) = "${escapedLanguage}") .
+            SELECT DISTINCT ?expression ?expression_to_expression_relationship_label ?target_expression
+                (SAMPLE(?target_expression_title_raw) as ?target_expression_title) (STR(?target_expression) as ?target_expression_uri)
+            WHERE {
+                {
+                    OPTIONAL {
+                        ?expression ?expression_to_expression_relationship ?target_expression .
+                        ?target_expression a <http://rdaregistry.info/Elements/c/C10006> .
+                        OPTIONAL { ?target_expression rdfs:label ?te_label_lang . FILTER(LANG(?te_label_lang) = "${escapedLanguage}") }
+                        OPTIONAL { ?target_expression rdfs:label ?te_label_none . FILTER(LANG(?te_label_none) = "") }
+                        BIND(COALESCE(?te_label_lang, ?te_label_none) AS ?target_expression_title_raw)
+                        FILTER(BOUND(?target_expression_title_raw))
+                        ?expression_to_expression_relationship rdfs:label ?expression_to_expression_relationship_label .
+                        FILTER(LANG(?expression_to_expression_relationship_label) = "${escapedLanguage}") .
+                    }
+                } UNION {
+                    OPTIONAL {
+                        ?target_expression ?expression_to_expression_relationship ?expression .
+                        ?target_expression a <http://rdaregistry.info/Elements/c/C10006> .
+                        OPTIONAL { ?target_expression rdfs:label ?te_label_lang2 . FILTER(LANG(?te_label_lang2) = "${escapedLanguage}") }
+                        OPTIONAL { ?target_expression rdfs:label ?te_label_none2 . FILTER(LANG(?te_label_none2) = "") }
+                        BIND(COALESCE(?te_label_lang2, ?te_label_none2) AS ?target_expression_title_raw)
+                        FILTER(BOUND(?target_expression_title_raw))
+                        ?expression_to_expression_relationship_inverse owl:inverseOf ?expression_to_expression_relationship .
+                        ?expression_to_expression_relationship_inverse rdfs:label ?expression_to_expression_relationship_label .
+                        FILTER(LANG(?expression_to_expression_relationship_label) = "${escapedLanguage}") .
+                    }
                 }
             }
+            GROUP BY ?expression ?expression_to_expression_relationship_label ?target_expression
         }
         GROUP BY ?expression ?expression_to_expression_relationship_label
     }
