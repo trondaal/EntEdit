@@ -196,8 +196,8 @@ rdaid:P40001 entedit:status "data property" ; entedit:order 1 ; rdfs:label "iden
 rdaid:P40028 entedit:status "data property" ; entedit:order 2 ; rdfs:label "note"@no . #"note"@en .
 
 #Basic WEMI types
-rdawo:P10078	entedit:status	"core wemi property" ; entedit:order 1 ; rdfs:label "har uttrykk av verk"@no . #	has expression of work	rdac:C10001	rdac:C10006
-rdaeo:P20231	entedit:status	"core wemi property" ; entedit:order 2 ; rdfs:label "er uttrykk av verk"@no . #	has work expressed	rdac:C10006	rdac:C10001
+rdawo:P10078	entedit:status	"core wemi property" ; entedit:order 1 ; rdfs:label "har uttrykk"@no . #	has expression of work	rdac:C10001	rdac:C10006
+rdaeo:P20231	entedit:status	"core wemi property" ; entedit:order 2 ; rdfs:label "er uttrykk av"@no . #	has work expressed	rdac:C10006	rdac:C10001
 
 rdamo:P30139	entedit:status	"core wemi property" ; entedit:order 3 ; rdfs:label "har uttrykk"@no . #	has expression manifested	rdac:C10007	rdac:C10006
 rdaeo:P20059	entedit:status	"core wemi property" ; entedit:order 4 ; rdfs:label "har manifestasjon"@no . #	has manifestation of expression	rdac:C10006	rdac:C10007
@@ -206,9 +206,9 @@ rdamo:P30103  entedit:status	"core wemi property" ; entedit:order 5 ; rdfs:label
 rdaio:P40049  entedit:status	"core wemi property" ; entedit:order 6 ; rdfs:label "er eksemplar av"@no . #"has manifestation exemplified" [@en; no @no]
 
 #Subject properties in use
-rdawo:P10319	entedit:status	"object property" ; rdfs:label "har emne (agent)"@no . #   "har emne agent"@no .
-rdaao:P50366	entedit:status	"object property" ; rdfs:label "er emne for"@no . #	is subject agent of	rdac:C10002	rdac:C10001
-rdawo:P10257	entedit:status	"object property" ; rdfs:label "har emne (verk)"@no . #   "har emne (verk)"@no .
+rdawo:P10319	entedit:status	"object property" ; rdfs:label "har emne"@no . #   "har emne agent"@no .
+rdaao:P50366	entedit:status	"object property" ; entedit:display false ; rdfs:label "er emne for"@no . #	is subject agent of	rdac:C10002	rdac:C10001
+rdawo:P10257	entedit:status	"object property" ; rdfs:label "har emne"@no . #   "har emne (verk)"@no .
 rdawo:P10264	entedit:status	"object property" ; entedit:display false ; rdfs:label "er emne for"@no . #   "er emneverk for"@no .
 
 #Agent-work object properties in use
@@ -530,115 +530,115 @@ rdaao:P50483	entedit:status	"object property" ; rdfs:label "er tale-bidragsyter"
 rdamo:P30331	entedit:status	"object property" ; rdfs:label "har tale-bidragsyter"@no . #	has contributor agent of speech	rdac:C10007	rdac:C10002
 
 #Work-to-work object properties in use
-rdawo:P10016	entedit:status	"object property" ; rdfs:label "er dramatisert som verk"@no . #	is dramatized as work	rdac:C10001	rdac:C10001
-rdawo:P10127	entedit:status	"object property" ; rdfs:label "er dramatisering av verk"@no . #	is dramatization of work	rdac:C10001	rdac:C10001
+rdawo:P10016	entedit:status	"object property" ; rdfs:label "har dramatisering"@no . #	is dramatized as work	rdac:C10001	rdac:C10001
+rdawo:P10127	entedit:status	"object property" ; rdfs:label "er dramatisering av"@no . #	is dramatization of work	rdac:C10001	rdac:C10001
 
-rdawo:P10019	entedit:status	"object property" ; rdfs:label "er del av verk"@no . #	is part of work	rdac:C10001	rdac:C10001
-rdawo:P10147	entedit:status	"object property" ; rdfs:label "har del av verk"@no . #	has part work	rdac:C10001	rdac:C10001
+rdawo:P10019	entedit:status	"object property" ; rdfs:label "er del av"@no . #	is part of work	rdac:C10001	rdac:C10001
+rdawo:P10147	entedit:status	"object property" ; rdfs:label "har del"@no . #	has part work	rdac:C10001	rdac:C10001
 
-rdawo:P10020	entedit:status	"object property" ; rdfs:label "har etterfølger (verk)"@no . #	has sequel work	rdac:C10001	rdac:C10001
-rdawo:P10122	entedit:status	"object property" ; rdfs:label "har forløper (verk)"@no . #	has prequel work	rdac:C10001	rdac:C10001
+rdawo:P10020	entedit:status	"object property" ; rdfs:label "har etterfølger"@no . #	has sequel work	rdac:C10001	rdac:C10001
+rdawo:P10122	entedit:status	"object property" ; rdfs:label "har forløper"@no . #	has prequel work	rdac:C10001	rdac:C10001
 
-rdawo:P10023	entedit:status	"object property" ; rdfs:label "er bearbeidet til verseform som verk"@no . #	is adapted in verse as work	rdac:C10001	rdac:C10001
-rdawo:P10128	entedit:status	"object property" ; rdfs:label "er bearbeidelse av verk til verseform"@no . #	is verse adaptation of work	rdac:C10001	rdac:C10001
+rdawo:P10023	entedit:status	"object property" ; rdfs:label "er bearbeidet til verseform"@no . #	is adapted in verse as work	rdac:C10001	rdac:C10001
+rdawo:P10128	entedit:status	"object property" ; rdfs:label "er bearbeidelse til verseform"@no . #	is verse adaptation of work	rdac:C10001	rdac:C10001
 
-rdawo:P10025	entedit:status	"object property" ; rdfs:label "er bearbeidet som spillefilm (verk)"@no . #	is adapted as motion picture work	rdac:C10001	rdac:C10001
-rdawo:P10129	entedit:status	"object property" ; rdfs:label "er bearbeidelse av verk til spillefilm"@no . #	is motion picture adaptation of work	rdac:C10001	rdac:C10001
+rdawo:P10025	entedit:status	"object property" ; rdfs:label "er bearbeidet som spillefilm"@no . #	is adapted as motion picture work	rdac:C10001	rdac:C10001
+rdawo:P10129	entedit:status	"object property" ; rdfs:label "er bearbeidelse til spillefilm"@no . #	is motion picture adaptation of work	rdac:C10001	rdac:C10001
 
-rdawo:P10026	entedit:status	"object property" ; rdfs:label "har kadens (verk)"@no . #	has cadenza work	rdac:C10001	rdac:C10001
-rdawo:P10029	entedit:status	"object property" ; rdfs:label "er kadens komponert for verk"@no . #	is cadenza composed for work	rdac:C10001	rdac:C10001
+rdawo:P10026	entedit:status	"object property" ; rdfs:label "har kadens"@no . #	has cadenza work	rdac:C10001	rdac:C10001
+rdawo:P10029	entedit:status	"object property" ; rdfs:label "er kadens komponert for"@no . #	is cadenza composed for work	rdac:C10001	rdac:C10001
 
-rdawo:P10030	entedit:status	"object property" ; rdfs:label "er libretto for verk"@no . #	is libretto for work	rdac:C10001	rdac:C10001
-rdawo:P10165	entedit:status	"object property" ; rdfs:label "har libretto (verk)"@no . #	has libretto work	rdac:C10001	rdac:C10001
+rdawo:P10030	entedit:status	"object property" ; rdfs:label "er libretto for"@no . #	is libretto for work	rdac:C10001	rdac:C10001
+rdawo:P10165	entedit:status	"object property" ; rdfs:label "har libretto"@no . #	has libretto work	rdac:C10001	rdac:C10001
 
-rdawo:P10031	entedit:status	"object property" ; rdfs:label "har bakgrunnsmusikk (verk)"@no . #	has incidental music work	rdac:C10001	rdac:C10001
-rdawo:P10106	entedit:status	"object property" ; rdfs:label "er bakgrunnsmusikk for verk"@no . #	is incidental music for work	rdac:C10001	rdac:C10001
+rdawo:P10031	entedit:status	"object property" ; rdfs:label "har bakgrunnsmusikk"@no . #	has incidental music work	rdac:C10001	rdac:C10001
+rdawo:P10106	entedit:status	"object property" ; rdfs:label "er bakgrunnsmusikk for"@no . #	is incidental music for work	rdac:C10001	rdac:C10001
 
-rdawo:P10032	entedit:status	"object property" ; rdfs:label "er nyinnspilt som verk"@no . #	is remade as work	rdac:C10001	rdac:C10001
-rdawo:P10185	entedit:status	"object property" ; rdfs:label "er nyinnspilling av verk"@no . #	is remake of work	rdac:C10001	rdac:C10001
+rdawo:P10032	entedit:status	"object property" ; rdfs:label "har nyinnspilling"@no . #	is remade as work	rdac:C10001	rdac:C10001
+rdawo:P10185	entedit:status	"object property" ; rdfs:label "er nyinnspilling av"@no . #	is remake of work	rdac:C10001	rdac:C10001
 
-rdawo:P10033	entedit:status	"object property" ; rdfs:label "er satt til musikk som verk"@no . #	is set to music as work	rdac:C10001	rdac:C10001
-rdawo:P10161	entedit:status	"object property" ; rdfs:label "er musikksetting av verk"@no . #	is musical setting of work	rdac:C10001	rdac:C10001
+rdawo:P10033	entedit:status	"object property" ; rdfs:label "har musikksetting"@no . #	is set to music as work	rdac:C10001	rdac:C10001
+rdawo:P10161	entedit:status	"object property" ; rdfs:label "er musikksetting av"@no . #	is musical setting of work	rdac:C10001	rdac:C10001
 
-rdawo:P10034	entedit:status	"object property" ; rdfs:label "er bearbeidet som roman (verk)"@no . #	is adapted as novel work	rdac:C10001	rdac:C10001
-rdawo:P10130	entedit:status	"object property" ; rdfs:label "er bearbeidelse av verk til roman"@no . #	is novelization of work	rdac:C10001	rdac:C10001
+rdawo:P10034	entedit:status	"object property" ; rdfs:label "er bearbeidet som roman"@no . #	is adapted as novel work	rdac:C10001	rdac:C10001
+rdawo:P10130	entedit:status	"object property" ; rdfs:label "er bearbeidelse til roman"@no . #	is novelization of work	rdac:C10001	rdac:C10001
 
-rdawo:P10076	entedit:status	"object property" ; rdfs:label "er bearbeidet som radioprogram (verk)"@no . #	is adapted as radio program work	rdac:C10001	rdac:C10001
-rdawo:P10131	entedit:status	"object property" ; rdfs:label "er bearbeidelse av verk for radio"@no . #	is radio adaptation of work	rdac:C10001	rdac:C10001
+rdawo:P10076	entedit:status	"object property" ; rdfs:label "er bearbeidet som radioprogram"@no . #	is adapted as radio program work	rdac:C10001	rdac:C10001
+rdawo:P10131	entedit:status	"object property" ; rdfs:label "er bearbeidelse for radio"@no . #	is radio adaptation of work	rdac:C10001	rdac:C10001
 
-rdawo:P10085	entedit:status	"object property" ; rdfs:label "er bearbeidet som fjernsynsprogram (verk)"@no . #	is adapted as television program work	rdac:C10001	rdac:C10001
-rdawo:P10132	entedit:status	"object property" ; rdfs:label "er bearbeidelse av verk for fjernsyn"@no . #	is television adaptation of work	rdac:C10001	rdac:C10001
+rdawo:P10085	entedit:status	"object property" ; rdfs:label "er bearbeidet som fjernsynsprogram"@no . #	is adapted as television program work	rdac:C10001	rdac:C10001
+rdawo:P10132	entedit:status	"object property" ; rdfs:label "er bearbeidelse for fjernsyn"@no . #	is television adaptation of work	rdac:C10001	rdac:C10001
 
-rdawo:P10087	entedit:status	"object property" ; rdfs:label "er bearbeidet som video (verk)"@no . #	is adapted as video work	rdac:C10001	rdac:C10001
-rdawo:P10138	entedit:status	"object property" ; rdfs:label "er bearbeidelse av verk for video"@no . #	is video adaptation of work	rdac:C10001	rdac:C10001
+rdawo:P10087	entedit:status	"object property" ; rdfs:label "er bearbeidet som video"@no . #	is adapted as video work	rdac:C10001	rdac:C10001
+rdawo:P10138	entedit:status	"object property" ; rdfs:label "er bearbeidelse for video"@no . #	is video adaptation of work	rdac:C10001	rdac:C10001
 
-rdawo:P10089	entedit:status	"object property" ; rdfs:label "har sammendrag av verk"@no . #	is abstracted in work	rdac:C10001	rdac:C10001
-rdawo:P10193	entedit:status	"object property" ; rdfs:label "er abstrakt for verk"@no . #	is abstracts for work	rdac:C10001	rdac:C10001
+rdawo:P10089	entedit:status	"object property" ; rdfs:label "har sammendrag av"@no . #	is abstracted in work	rdac:C10001	rdac:C10001
+rdawo:P10193	entedit:status	"object property" ; rdfs:label "er abstrakt for"@no . #	is abstracts for work	rdac:C10001	rdac:C10001
 
-rdawo:P10091	entedit:status	"object property" ; rdfs:label "er bearbeidet som koreografisk verk"@no . #	is adapted as choreography work	rdac:C10001	rdac:C10001
-rdawo:P10183	entedit:status	"object property" ; rdfs:label "er koreografisk bearbeidelse av verk"@no . #	is choreographic adaptation of work	rdac:C10001	rdac:C10001
+rdawo:P10091	entedit:status	"object property" ; rdfs:label "er bearbeidet som koreografi"@no . #	is adapted as choreography work	rdac:C10001	rdac:C10001
+rdawo:P10183	entedit:status	"object property" ; rdfs:label "er koreografisk bearbeidelse av"@no . #	is choreographic adaptation of work	rdac:C10001	rdac:C10001
 
-rdawo:P10093	entedit:status	"object property" ; rdfs:label "har illustrasjoner (verk)"@no . #	has illustrations work	rdac:C10001	rdac:C10001
-rdawo:P10152	entedit:status	"object property" ; rdfs:label "er illustrasjoner for verk"@no . #	is illustrations for work	rdac:C10001	rdac:C10001
+rdawo:P10093	entedit:status	"object property" ; rdfs:label "har illustrasjoner"@no . #	has illustrations work	rdac:C10001	rdac:C10001
+rdawo:P10152	entedit:status	"object property" ; rdfs:label "er illustrasjoner for"@no . #	is illustrations for work	rdac:C10001	rdac:C10001
 
-rdawo:P10094	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for spillefilm (verk)"@no . #	is adapted as motion picture screenplay work	rdac:C10001	rdac:C10001
-rdawo:P10134	entedit:status	"object property" ; rdfs:label "er manus for spillefilm basert på verk"@no . #	is motion picture screenplay based on work	rdac:C10001	rdac:C10001
+rdawo:P10094	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for spillefilm"@no . #	is adapted as motion picture screenplay work	rdac:C10001	rdac:C10001
+rdawo:P10134	entedit:status	"object property" ; rdfs:label "er manus for spillefilm basert på"@no . #	is motion picture screenplay based on work	rdac:C10001	rdac:C10001
 
-rdawo:P10095	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for skuespill (verk)"@no . #	is adapted as screenplay work	rdac:C10001	rdac:C10001
-rdawo:P10133	entedit:status	"object property" ; rdfs:label "er manus basert på verk"@no . #	is screenplay based on work	rdac:C10001	rdac:C10001
+rdawo:P10095	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for skuespill"@no . #	is adapted as screenplay work	rdac:C10001	rdac:C10001
+rdawo:P10133	entedit:status	"object property" ; rdfs:label "er manus basert på"@no . #	is screenplay based on work	rdac:C10001	rdac:C10001
 
-rdawo:P10096	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for fjernsyn (verk)"@no . #	is adapted as television screenplay work	rdac:C10001	rdac:C10001
-rdawo:P10135	entedit:status	"object property" ; rdfs:label "er fjernsynsmanus basert på verk"@no . #	is television screenplay based on work	rdac:C10001	rdac:C10001
+rdawo:P10096	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for fjernsyn"@no . #	is adapted as television screenplay work	rdac:C10001	rdac:C10001
+rdawo:P10135	entedit:status	"object property" ; rdfs:label "er fjernsynsmanus basert på"@no . #	is television screenplay based on work	rdac:C10001	rdac:C10001
 
-rdawo:P10097	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for video (verk)"@no . #	is adapted as video screenplay work	rdac:C10001	rdac:C10001
-rdawo:P10136	entedit:status	"object property" ; rdfs:label "er videomanus basert på verk"@no . #	is video screenplay based on work	rdac:C10001	rdac:C10001
+rdawo:P10097	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for video"@no . #	is adapted as video screenplay work	rdac:C10001	rdac:C10001
+rdawo:P10136	entedit:status	"object property" ; rdfs:label "er videomanus basert på"@no . #	is video screenplay based on work	rdac:C10001	rdac:C10001
 
-rdawo:P10098	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for radio (verk)"@no . #	is adapted as radio script work	rdac:C10001	rdac:C10001
-rdawo:P10137	entedit:status	"object property" ; rdfs:label "er radiomanus basert på verk"@no . #	is radio script based on work	rdac:C10001	rdac:C10001
+rdawo:P10098	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for radio"@no . #	is adapted as radio script work	rdac:C10001	rdac:C10001
+rdawo:P10137	entedit:status	"object property" ; rdfs:label "er radiomanus basert på"@no . #	is radio script based on work	rdac:C10001	rdac:C10001
 
 #This property is the inverse of itself
-rdawo:P10103	entedit:status	"object property" ; rdfs:label "er komplementert av verk"@no . #	is complemented by work	rdac:C10001	rdac:C10001
+rdawo:P10103	entedit:status	"object property" ; rdfs:label "er komplementert av"@no . #	is complemented by work	rdac:C10001	rdac:C10001
 
-rdawo:P10105	entedit:status	"object property" ; rdfs:label "er manus for verk"@no . #	is screenplay for work	rdac:C10001	rdac:C10001
-rdawo:P10159	entedit:status	"object property" ; rdfs:label "har manus (verk)"@no . #	has screenplay work	rdac:C10001	rdac:C10001
+rdawo:P10105	entedit:status	"object property" ; rdfs:label "er manus for"@no . #	is screenplay for work	rdac:C10001	rdac:C10001
+rdawo:P10159	entedit:status	"object property" ; rdfs:label "har manus"@no . #	has screenplay work	rdac:C10001	rdac:C10001
 
-rdawo:P10107	entedit:status	"object property" ; rdfs:label "er abstrahert som verk"@no . #	has abstract	rdac:C10001	rdac:C10001
-rdawo:P10126	entedit:status	"object property" ; rdfs:label "er abstrakt av verk"@no . #	is abstract of	rdac:C10001	rdac:C10001
+rdawo:P10107	entedit:status	"object property" ; rdfs:label "har sammendrag"@no . #	has abstract	rdac:C10001	rdac:C10001
+rdawo:P10126	entedit:status	"object property" ; rdfs:label "er sammendrag av"@no . #	is abstract of	rdac:C10001	rdac:C10001
 
-rdawo:P10108	entedit:status	"object property" ; rdfs:label "er utvidet av verk"@no . #	is augmented by work	rdac:C10001	rdac:C10001
-rdawo:P10192	entedit:status	"object property" ; rdfs:label "er utvidelse av verk"@no . #	is augmentation of work	rdac:C10001	rdac:C10001
+rdawo:P10108	entedit:status	"object property" ; rdfs:label "har utvidelse"@no . #	is augmented by work	rdac:C10001	rdac:C10001
+rdawo:P10192	entedit:status	"object property" ; rdfs:label "er utvidelse av"@no . #	is augmentation of work	rdac:C10001	rdac:C10001
 
-rdawo:P10109	entedit:status	"object property" ; rdfs:label "er sammendrag som verk"@no . #	has summary	rdac:C10001	rdac:C10001
-rdawo:P10179	entedit:status	"object property" ; rdfs:label "er sammendrag av verk"@no . #	is summary of	rdac:C10001	rdac:C10001
+rdawo:P10109	entedit:status	"object property" ; rdfs:label "har sammendrag"@no . #	has summary	rdac:C10001	rdac:C10001
+rdawo:P10179	entedit:status	"object property" ; rdfs:label "er sammendrag av"@no . #	is summary of	rdac:C10001	rdac:C10001
 
-rdawo:P10112	entedit:status	"object property" ; rdfs:label "har tilleggsverk"@no . #	has addenda work	rdac:C10001	rdac:C10001
-rdawo:P10177	entedit:status	"object property" ; rdfs:label "er tillegg til verk"@no . #	is addenda to work	rdac:C10001	rdac:C10001
+rdawo:P10112	entedit:status	"object property" ; rdfs:label "har tillegg"@no . #	has addenda work	rdac:C10001	rdac:C10001
+rdawo:P10177	entedit:status	"object property" ; rdfs:label "er tillegg til"@no . #	is addenda to work	rdac:C10001	rdac:C10001
 
 rdawo:P10150	entedit:status	"object property" ; rdfs:label "er veiledning til"@no . #	is guide to work	rdac:C10001	rdac:C10001
 rdawo:P10124	entedit:status	"object property" ; entedit:display false ; rdfs:label "har veiledning "@no . #	has guide work	rdac:C10001	rdac:C10001
 
-rdawo:P10114	entedit:status	"object property" ; rdfs:label "er anmeldt i "@no . #	is work reviewed by	rdac:C10001	rdac:C10001
+rdawo:P10114	entedit:status	"object property" ; rdfs:label "har anmeldelse"@no . #	is work reviewed by	rdac:C10001	rdac:C10001
 rdawo:P10178	entedit:status	"object property" ; rdfs:label "er anmeldelse av"@no . #	is review of work	rdac:C10001	rdac:C10001
 
 rdawo:P10155	entedit:status	"object property" ; rdfs:label "er bearbeidet som"@no . #	is adapted as work	rdac:C10001	rdac:C10001
 rdawo:P10142	entedit:status	"object property" ; rdfs:label "er bearbeidelse av"@no . #	is adaptation of work	rdac:C10001	rdac:C10001
 
-rdawo:P10115	entedit:status	"object property" ; rdfs:label "er kritisert i "@no . #	is work critiqued by	rdac:C10001	rdac:C10001
+rdawo:P10115	entedit:status	"object property" ; rdfs:label "har kritikk"@no . #	is work critiqued by	rdac:C10001	rdac:C10001
 rdawo:P10182	entedit:status	"object property" ; rdfs:label "er kritikk av"@no . #	is critique of work	rdac:C10001	rdac:C10001
 
-rdawo:P10116	entedit:status	"object property" ; rdfs:label "er kommentert i"@no . #	is work commentary in	rdac:C10001	rdac:C10001
+rdawo:P10116	entedit:status	"object property" ; entedit:display false ; rdfs:label "har kommentar"@no . #	is work commentary in	rdac:C10001	rdac:C10001
 rdawo:P10187	entedit:status	"object property" ; rdfs:label "er kommentar til"@no . #	is commentary on work	rdac:C10001	rdac:C10001
 
-rdawo:P10117	entedit:status	"object property" ; rdfs:label "er imitert som"@no . #	is imitated as work	rdac:C10001	rdac:C10001
+rdawo:P10117	entedit:status	"object property" ; entedit:display false ; rdfs:label "har imitasjon"@no . #	is imitated as work	rdac:C10001	rdac:C10001
 rdawo:P10196	entedit:status	"object property" ; rdfs:label "er imitasjon av"@no . #	is imitation of work	rdac:C10001	rdac:C10001
 
-rdawo:P10119	entedit:status	"object property" ; rdfs:label "er utvidet som"@no . #	is expanded as work	rdac:C10001	rdac:C10001
+rdawo:P10119	entedit:status	"object property" ; rdfs:label "har utvidet versjon"@no . #	is expanded as work	rdac:C10001	rdac:C10001
 rdawo:P10184	entedit:status	"object property" ; rdfs:label "er utvidet versjon av"@no . #	is expanded version of work	rdac:C10001	rdac:C10001
 
 rdawo:P10145	entedit:status	"object property" ; rdfs:label "er innlemmet i"@no . #	is absorbed by work	rdac:C10001	rdac:C10001
 rdawo:P10224  entedit:status	"object property" ; rdfs:label "er innlemmelse av"@no . #is absorption of work
 
-rdawo:P10121	entedit:status	"object property" ; rdfs:label "er analysert i "@no . #	is work analysed in	rdac:C10001	rdac:C10001
+rdawo:P10121	entedit:status	"object property" ; entedit:display false ; rdfs:label "har analyse"@no . #	is work analysed in	rdac:C10001	rdac:C10001
 rdawo:P10140	entedit:status	"object property" ; rdfs:label "er analyse av"@no . #	is analysis of work	rdac:C10001	rdac:C10001
 
 rdawo:P10123	entedit:status	"object property" ; rdfs:label "har bilag"@no . #	has appendix work	rdac:C10001	rdac:C10001
@@ -646,192 +646,189 @@ rdawo:P10151	entedit:status	"object property" ; rdfs:label "er bilag til"@no . #
 
 rdawo:P10146	entedit:status	"object property" ; rdfs:label "er delvis innlemmet i"@no . #	is absorbed in part by work	rdac:C10001	rdac:C10001
 
-rdawo:P10188	entedit:status	"object property" ; rdfs:label "er indeks for"@no . #	is index to work (Deprecated)	rdac:C10001	rdac:C10001
-rdawo:P10158	entedit:status	"object property" ; rdfs:label "har indeks"@no . #	has index work (Deprecated)	rdac:C10001	rdac:C10001
+#rdawo:P10188	entedit:status	"object property" ; rdfs:label "er indeks for"@no . #	is index to work (Deprecated)	rdac:C10001	rdac:C10001
+#rdawo:P10158	entedit:status	"object property" ; rdfs:label "har indeks"@no . #	has index work (Deprecated)	rdac:C10001	rdac:C10001
 
 rdawo:P10125	entedit:status	"object property" ; rdfs:label "er forkortelse av"@no . #	is abridgement of work	rdac:C10001	rdac:C10001
-rdawo:P10167	entedit:status	"object property" ; rdfs:label "er forkortet som"@no . #	is abridged as work	rdac:C10001	rdac:C10001
+rdawo:P10167	entedit:status	"object property" ; rdfs:label "har forkortelse"@no . #	is abridged as work	rdac:C10001	rdac:C10001
 
-rdawo:P10139	entedit:status	"object property" ; rdfs:label "er resymé av verk"@no . #	is digest of work	rdac:C10001	rdac:C10001
+rdawo:P10139	entedit:status	"object property" ; rdfs:label "er resymé av"@no . #	is digest of work	rdac:C10001	rdac:C10001
 rdawo:P10171	entedit:status	"object property" ; rdfs:label "har resymé"@no . #	is digested as work	rdac:C10001	rdac:C10001
 
-rdawo:P10190	entedit:status	"object property" ; rdfs:label "er basert på verk"@no . #	has source work	rdac:C10001	rdac:C10001
-rdawo:P10148	entedit:status	"object property" ; rdfs:label "har avledet verk"@no . #	has derivative work	rdac:C10001	rdac:C10001
+rdawo:P10190	entedit:status	"object property" ; rdfs:label "er basert på"@no . #	has source work	rdac:C10001	rdac:C10001
+rdawo:P10148	entedit:status	"object property" ; rdfs:label "har avledning"@no . #	has derivative work	rdac:C10001	rdac:C10001
 
-rdawo:P10191	entedit:status	"object property" ; rdfs:label "er fortsatt i verk"@no . #	is continued by work	rdac:C10001	rdac:C10001
+rdawo:P10191	entedit:status	"object property" ; rdfs:label "har fortsettelse"@no . #	is continued by work	rdac:C10001	rdac:C10001
 
-rdawo:P10144	entedit:status	"object property" ; rdfs:label "er parodiert som verk"@no . #	is parodied as work	rdac:C10001	rdac:C10001
-rdawo:P10197	entedit:status	"object property" ; rdfs:label "er parodi på verk"@no . #	is parody of work	rdac:C10001	rdac:C10001
+rdawo:P10144	entedit:status	"object property" ; rdfs:label "har parodi"@no . #	is parodied as work	rdac:C10001	rdac:C10001
+rdawo:P10197	entedit:status	"object property" ; rdfs:label "er parodi av"@no . #	is parody of work	rdac:C10001	rdac:C10001
 
-rdawo:P10154	entedit:status	"object property" ; rdfs:label "er supplement til verk"@no . #	is supplement to work	rdac:C10001	rdac:C10001
-rdawo:P10172	entedit:status	"object property" ; rdfs:label "har supplement (verk)"@no . #	has supplement work	rdac:C10001	rdac:C10001
+rdawo:P10154	entedit:status	"object property" ; rdfs:label "er supplement til"@no . #	is supplement to work	rdac:C10001	rdac:C10001
+rdawo:P10172	entedit:status	"object property" ; rdfs:label "har supplement"@no . #	has supplement work	rdac:C10001	rdac:C10001
 
-rdawo:P10186	entedit:status	"object property" ; rdfs:label "er omskriving av verk"@no . #	is paraphrase of work	rdac:C10001	rdac:C10001
-rdawo:P10166	entedit:status	"object property" ; rdfs:label "er omskrevet som verk"@no . #	is paraphrased as work	rdac:C10001	rdac:C10001
+rdawo:P10186	entedit:status	"object property" ; rdfs:label "er omskriving av"@no . #	is paraphrase of work	rdac:C10001	rdac:C10001
+rdawo:P10166	entedit:status	"object property" ; rdfs:label "har omskriving"@no . #	is paraphrased as work	rdac:C10001	rdac:C10001
 
-rdawo:P10156	entedit:status	"object property" ; rdfs:label "etterfølger verk"@no . #	is preceded by work	rdac:C10001	rdac:C10001
-rdawo:P10170	entedit:status	"object property" ; rdfs:label "er avløst av verk"@no . #	is succeeded by work	rdac:C10001	rdac:C10001
+rdawo:P10156	entedit:status	"object property" ; rdfs:label "etterfølger"@no . #	is preceded by work	rdac:C10001	rdac:C10001
+rdawo:P10170	entedit:status	"object property" ; rdfs:label "er avløst av"@no . #	is succeeded by work	rdac:C10001	rdac:C10001
 
-rdawo:P10157	entedit:status	"object property" ; rdfs:label "har veiledning (verk)"@no . #	has finding aid work (Deprecated)	rdac:C10001	rdac:C10001
-rdawo:P10201	entedit:status	"object property" ; rdfs:label "er veiledning til verk"@no . #	is finding aid for work (Deprecated)	rdac:C10001	rdac:C10001
-
-rdawo:P10160	entedit:status	"object property"	; rdfs:label "har manus for spillefilm "@no . #	has motion picture screenplay work	rdac:C10001	rdac:C10001
+rdawo:P10160	entedit:status	"object property"	; rdfs:label "har spillefilmmanus"@no . #	has motion picture screenplay work	rdac:C10001	rdac:C10001
 rdawo:P10173	entedit:status	"object property" ; rdfs:label "er manus for spillefilm"@no . #	is screenplay for motion picture work	rdac:C10001	rdac:C10001
 
-rdawo:P10162	entedit:status	"object property" ; rdfs:label "har radiomanus (verk)"@no . #	has radio script work	rdac:C10001	rdac:C10001
-rdawo:P10176	entedit:status	"object property" ; rdfs:label "er manus for radioprogram (verk)"@no . #	is script for radio program work	rdac:C10001	rdac:C10001
+rdawo:P10162	entedit:status	"object property" ; rdfs:label "har radiomanus"@no . #	has radio script work	rdac:C10001	rdac:C10001
+rdawo:P10176	entedit:status	"object property" ; rdfs:label "er manus for radioprogram"@no . #	is script for radio program work	rdac:C10001	rdac:C10001
 
-rdawo:P10163	entedit:status	"object property" ; rdfs:label "har fjernsynsmanus (verk)"@no . #	has television screenplay work	rdac:C10001	rdac:C10001
-rdawo:P10174	entedit:status	"object property" ; rdfs:label "er manus for fjernsynsprogram (verk)"@no . #	is screenplay for television program work	rdac:C10001	rdac:C10001
+rdawo:P10163	entedit:status	"object property" ; rdfs:label "har fjernsynsmanus"@no . #	has television screenplay work	rdac:C10001	rdac:C10001
+rdawo:P10174	entedit:status	"object property" ; rdfs:label "er manus for fjernsynsprogram"@no . #	is screenplay for television program work	rdac:C10001	rdac:C10001
 
 rdawo:P10164	entedit:status	"object property" ; rdfs:label "har videomanus"@no . #	has video screenplay work	rdac:C10001	rdac:C10001
 rdawo:P10175  entedit:status	"object property" ; rdfs:label "er videomanus for"@no . #	is video screenplay for work	rdac:C10001	rdac:C10001
 
-rdawo:P10290	entedit:status	"object property" ; rdfs:label "inspirert av"@no . #	is inspired by	rdac:C10001	rdac:C10001
-rdawo:P10291	entedit:status	"object property" ; rdfs:label "inspirasjon for"@no . #	is inspiration for	rdac:C10001	rdac:C10001
+rdawo:P10290	entedit:status	"object property" ; rdfs:label "har som inspirasjon"@no . #	is inspired by	rdac:C10001	rdac:C10001
+rdawo:P10291	entedit:status	"object property" ; rdfs:label "er inspirasjon for"@no . #	is inspiration for	rdac:C10001	rdac:C10001
 
 rdawo:P10336	entedit:status	"object property" ; rdfs:label "har transformasjon"@no . #	has transformation	rdac:C10001	rdac:C10001
-rdawo:P10337	entedit:status	"object property" ; rdfs:label "transformasjon av"@no . #	is transformation of	rdac:C10001	rdac:C10001
+rdawo:P10337	entedit:status	"object property" ; rdfs:label "er transformasjon av"@no . #	is transformation of	rdac:C10001	rdac:C10001
 
-rdawo:P10369	entedit:status	"object property" ; rdfs:label "sangtekst for"@no . #	is lyrics for work	rdac:C10001	rdac:C10001
+rdawo:P10369	entedit:status	"object property" ; rdfs:label "er sangtekst for"@no . #	is lyrics for work	rdac:C10001	rdac:C10001
 rdawo:P10370	entedit:status	"object property" ; rdfs:label "har sangtekst"@no . #	has lyrics work	rdac:C10001	rdac:C10001
 
 #Work-to-expression object properties in use
 rdawo:P10280	entedit:status	"object property" ; rdfs:label "er anmeldelse av uttrykk"@no . #	is review of expression	rdac:C10001	rdac:C10006
-rdaeo:P20274	entedit:status	"object property" ; rdfs:label "er uttrykk anmeldt i"@no . #	is expression reviewed by	rdac:C10006	rdac:C10001
+rdaeo:P20274	entedit:status	"object property" ; rdfs:label "er anmeldt i"@no . #	is expression reviewed by	rdac:C10006	rdac:C10001
 
 rdawo:P10281	entedit:status	"object property" ; rdfs:label "er kritikk av uttrykk"@no . #	is critique of expression	rdac:C10001	rdac:C10006
-rdaeo:P20272	entedit:status	"object property" ; rdfs:label "er uttrykk kritisert i"@no . #	is expression critiqued by	rdac:C10006	rdac:C10001
+rdaeo:P20272	entedit:status	"object property" ; rdfs:label "er kritisert i"@no . #	is expression critiqued by	rdac:C10006	rdac:C10001
 
 rdawo:P10282	entedit:status	"object property" ; rdfs:label "er kommentar til uttrykk"@no . #	is commentary on expression	rdac:C10001	rdac:C10006
-rdaeo:P20271	entedit:status	"object property" ; rdfs:label "er uttrykk kommentert i"@no . #	is expression commentary in	rdac:C10006	rdac:C10001
+rdaeo:P20271	entedit:status	"object property" ; rdfs:label "er kommentert i"@no . #	is expression commentary in	rdac:C10006	rdac:C10001
 
 #Expression-to-expression object properties in use
-rdaeo:P20009	entedit:status	"object property" ; rdfs:label "er bearbeidet som spillefilm (uttrykk)"@no . #	is adapted as motion picture expression	rdac:C10006	rdac:C10006
-rdaeo:P20125	entedit:status	"object property" ; rdfs:label "er bearbeidelse av uttrykk til spillefilm"@no . #	is motion picture adaptation of expression	rdac:C10006	rdac:C10006
+rdaeo:P20009	entedit:status	"object property" ; rdfs:label "er bearbeidet som spillefilm"@no . #	is adapted as motion picture expression	rdac:C10006	rdac:C10006
+rdaeo:P20125	entedit:status	"object property" ; rdfs:label "er bearbeidelse til spillefilm"@no . #	is motion picture adaptation of expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20060	entedit:status	"object property" ; rdfs:label "er bearbeidet som radioprogram (uttrykk)"@no . #	is adapted as radio program expression	rdac:C10006	rdac:C10006
-rdaeo:P20127	entedit:status	"object property" ; rdfs:label "er bearbeidelse av uttrykk til radio"@no . #	is radio adaptation of expression	rdac:C10006	rdac:C10006
+rdaeo:P20060	entedit:status	"object property" ; rdfs:label "er bearbeidet som radioprogram"@no . #	is adapted as radio program expression	rdac:C10006	rdac:C10006
+rdaeo:P20127	entedit:status	"object property" ; rdfs:label "er bearbeidelse til radio"@no . #	is radio adaptation of expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20066	entedit:status	"object property" ; rdfs:label "er bearbeidet som fjernsynsprogram (uttrykk)"@no . #	is adapted as television program expression	rdac:C10006	rdac:C10006
-rdaeo:P20128	entedit:status	"object property" ; rdfs:label "er bearbeidelse av uttrykk til fjernsyn"@no . #	is television adaptation of expression	rdac:C10006	rdac:C10006
+rdaeo:P20066	entedit:status	"object property" ; rdfs:label "er bearbeidet som fjernsynsprogram"@no . #	is adapted as television program expression	rdac:C10006	rdac:C10006
+rdaeo:P20128	entedit:status	"object property" ; rdfs:label "er bearbeidelse til fjernsyn"@no . #	is television adaptation of expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20067	entedit:status	"object property" ; rdfs:label "er bearbeidet som video (uttrykk)"@no . #	is adapted as video expression	rdac:C10006	rdac:C10006
-rdaeo:P20134	entedit:status	"object property" ; rdfs:label "er bearbeidelse av uttrykk til video"@no . #	is video adaptation of expression	rdac:C10006	rdac:C10006
+rdaeo:P20067	entedit:status	"object property" ; rdfs:label "er bearbeidet som video"@no . #	is adapted as video expression	rdac:C10006	rdac:C10006
+rdaeo:P20134	entedit:status	"object property" ; rdfs:label "er bearbeidelse til video"@no . #	is video adaptation of expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20073	entedit:status	"object property" ; rdfs:label "er dramatisert som uttrykk"@no . #	is dramatized as expression	rdac:C10006	rdac:C10006
-rdaeo:P20123	entedit:status	"object property" ; rdfs:label "er dramatisering av uttrykk"@no . #	is dramatization of expression	rdac:C10006	rdac:C10006
+rdaeo:P20073	entedit:status	"object property" ; rdfs:label "er dramatisert som"@no . #	is dramatized as expression	rdac:C10006	rdac:C10006
+rdaeo:P20123	entedit:status	"object property" ; rdfs:label "er dramatisering av"@no . #	is dramatization of expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20074	entedit:status	"object property" ; rdfs:label "er del av uttrykk"@no . #	is part of expression	rdac:C10006	rdac:C10006
-rdaeo:P20145	entedit:status	"object property" ; rdfs:label "har del av uttrykk"@no . #	has part expression	rdac:C10006	rdac:C10006
+rdaeo:P20074	entedit:status	"object property" ; rdfs:label "er del av"@no . #	is part of expression	rdac:C10006	rdac:C10006
+rdaeo:P20145	entedit:status	"object property" ; rdfs:label "har del"@no . #	has part expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20075	entedit:status	"object property" ; rdfs:label "er delvis erstattet av uttrykk"@no . #	is replaced in part by expression	rdac:C10006	rdac:C10006
-rdaeo:P20198	entedit:status	"object property" ; rdfs:label "er delvis erstatning av uttrykk"@no . #	is replacement in part of expression	rdac:C10006	rdac:C10006
+rdaeo:P20075	entedit:status	"object property" ; rdfs:label "er delvis erstattet av"@no . #	is replaced in part by expression	rdac:C10006	rdac:C10006
+rdaeo:P20198	entedit:status	"object property" ; rdfs:label "er delvis erstatning av"@no . #	is replacement in part of expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20076	entedit:status	"object property" ; rdfs:label "er erstattet av uttrykk"@no . #	is replaced by expression	rdac:C10006	rdac:C10006
-rdaeo:P20199	entedit:status	"object property" ; rdfs:label "er erstatning av uttrykk"@no . #	is replacement of expression	rdac:C10006	rdac:C10006
+rdaeo:P20076	entedit:status	"object property" ; rdfs:label "er erstattet av"@no . #	is replaced by expression	rdac:C10006	rdac:C10006
+rdaeo:P20199	entedit:status	"object property" ; rdfs:label "er erstatning av"@no . #	is replacement of expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20077	entedit:status	"object property" ; rdfs:label "er bearbeidet til verseform som uttrykk"@no . #	is adapted in verse as expression	rdac:C10006	rdac:C10006
-rdaeo:P20124	entedit:status	"object property" ; rdfs:label "er bearbeidelse av uttrykk til verseform"@no . #	is verse adaptation of expression	rdac:C10006	rdac:C10006
+rdaeo:P20077	entedit:status	"object property" ; rdfs:label "er bearbeidet til verseform som"@no . #	is adapted in verse as expression	rdac:C10006	rdac:C10006
+rdaeo:P20124	entedit:status	"object property" ; rdfs:label "er bearbeidelse til verseform"@no . #	is verse adaptation of expression	rdac:C10006	rdac:C10006
 
 rdaeo:P20078	entedit:status	"object property" ; rdfs:label "er dubbet versjon av"@no . #	is dubbed version of	rdac:C10006	rdac:C10006
 rdaeo:P20079	entedit:status	"object property" ; rdfs:label "har dubbet versjon"@no . #	has dubbed version	rdac:C10006	rdac:C10006
 
-rdaeo:P20080	entedit:status	"object property" ; rdfs:label "har kadens (uttrykk)"@no . #	has cadenza expression	rdac:C10006	rdac:C10006
-rdaeo:P20083	entedit:status	"object property" ; rdfs:label "er kadens komponert for uttrykk"@no . #	is cadenza composed for expression	rdac:C10006	rdac:C10006
+rdaeo:P20080	entedit:status	"object property" ; rdfs:label "har kadens"@no . #	has cadenza expression	rdac:C10006	rdac:C10006
+rdaeo:P20083	entedit:status	"object property" ; rdfs:label "er kadens komponert for"@no . #	is cadenza composed for expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20081	entedit:status	"object property" ; rdfs:label "er variasjoner basert på uttrykk"@no . #	is variations based on expression	rdac:C10006	rdac:C10006
-rdaeo:P20082	entedit:status	"object property" ; rdfs:label "er modifisert gjennom variasjoner som uttrykk"@no . #	is modified by variation as expression	rdac:C10006	rdac:C10006
+rdaeo:P20081	entedit:status	"object property" ; rdfs:label "er variasjoner basert på"@no . #	is variations based on expression	rdac:C10006	rdac:C10006
+rdaeo:P20082	entedit:status	"object property" ; rdfs:label "er modifisert gjennom variasjoner som"@no . #	is modified by variation as expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20084	entedit:status	"object property" ; rdfs:label "er libretto for uttrykk"@no . #	is libretto for expression	rdac:C10006	rdac:C10006
-rdaeo:P20163	entedit:status	"object property" ; rdfs:label "har libretto (uttrykk)"@no . #	has libretto expression	rdac:C10006	rdac:C10006
+rdaeo:P20084	entedit:status	"object property" ; rdfs:label "er libretto for"@no . #	is libretto for expression	rdac:C10006	rdac:C10006
+rdaeo:P20163	entedit:status	"object property" ; rdfs:label "har libretto"@no . #	has libretto expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20085	entedit:status	"object property" ; rdfs:label "har bakgrunnsmusikk (uttrykk)"@no . #	has incidental music expression	rdac:C10006	rdac:C10006
-rdaeo:P20103	entedit:status	"object property" ; rdfs:label "er bakgrunnsmusikk for uttrykk"@no . #	is incidental music for expression	rdac:C10006	rdac:C10006
+rdaeo:P20085	entedit:status	"object property" ; rdfs:label "har bakgrunnsmusikk"@no . #	has incidental music expression	rdac:C10006	rdac:C10006
+rdaeo:P20103	entedit:status	"object property" ; rdfs:label "er bakgrunnsmusikk for"@no . #	is incidental music for expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20086	entedit:status	"object property" ; rdfs:label "er nyinnspilt som uttrykk"@no . #	is remade as expression	rdac:C10006	rdac:C10006
-rdaeo:P20185	entedit:status	"object property" ; rdfs:label "er nyinnspilling av uttrykk"@no . #	is remake of expression	rdac:C10006	rdac:C10006
+rdaeo:P20086	entedit:status	"object property" ; rdfs:label "har nyinnspilling"@no . #	is remade as expression	rdac:C10006	rdac:C10006
+rdaeo:P20185	entedit:status	"object property" ; rdfs:label "er nyinnspilling av"@no . #	is remake of expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20087	entedit:status	"object property" ; rdfs:label "er satt til musikk som uttrykk"@no . #	is set to music as expression	rdac:C10006	rdac:C10006
-rdaeo:P20159	entedit:status	"object property" ; rdfs:label "er musikksetting av uttrykk"@no . #	is musical setting of expression	rdac:C10006	rdac:C10006
+rdaeo:P20087	entedit:status	"object property" ; rdfs:label "har musikk"@no . #	is set to music as expression	rdac:C10006	rdac:C10006
+rdaeo:P20159	entedit:status	"object property" ; rdfs:label "er musikk for"@no . #	is musical setting of expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20088	entedit:status	"object property" ; rdfs:label "er bearbeidet som roman (uttrykk)"@no . #	is adapted as novel expression	rdac:C10006	rdac:C10006
-rdaeo:P20126	entedit:status	"object property" ; rdfs:label "er roman basert på uttrykk"@no . #	is novelization of expression	rdac:C10006	rdac:C10006
+rdaeo:P20088	entedit:status	"object property" ; rdfs:label "er bearbeidet som roman"@no . #	is adapted as novel expression	rdac:C10006	rdac:C10006
+rdaeo:P20126	entedit:status	"object property" ; rdfs:label "er roman basert på"@no . #	is novelization of expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20089	entedit:status	"object property" ; rdfs:label "er bilag til uttrykk"@no . #	is appendix to expression	rdac:C10006	rdac:C10006
-rdaeo:P20118	entedit:status	"object property" ; rdfs:label "har bilag (uttrykk)"@no . #	has appendix expression	rdac:C10006	rdac:C10006
+rdaeo:P20089	entedit:status	"object property" ; rdfs:label "er bilag til"@no . #	is appendix to expression	rdac:C10006	rdac:C10006
+rdaeo:P20118	entedit:status	"object property" ; rdfs:label "har bilag"@no . #	has appendix expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20090	entedit:status	"object property" ; rdfs:label "er sammendrag i uttrykk"@no . #	is abstracted in expression	rdac:C10006	rdac:C10006
-rdaeo:P20193	entedit:status	"object property" ; rdfs:label "er sammendrag for uttrykk"@no . #	is abstracts for expression	rdac:C10006	rdac:C10006
+rdaeo:P20090	entedit:status	"object property" ; rdfs:label "har sammendrag"@no . #	is abstracted in expression	rdac:C10006	rdac:C10006
+rdaeo:P20193	entedit:status	"object property" ; rdfs:label "er sammendrag for"@no . #	is abstracts for expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20092	entedit:status	"object property" ; rdfs:label "er bearbeidet som koreografi (uttrykk)"@no . #	is adapted as choreography expression	rdac:C10006	rdac:C10006
-rdaeo:P20183	entedit:status	"object property" ; rdfs:label "er koreografisk bearbeidelse av uttrykk"@no . #	is choreographic adaptation of expression	rdac:C10006	rdac:C10006
+rdaeo:P20092	entedit:status	"object property" ; rdfs:label "er bearbeidet som koreografi"@no . #	is adapted as choreography expression	rdac:C10006	rdac:C10006
+rdaeo:P20183	entedit:status	"object property" ; rdfs:label "er koreografisk bearbeidelse av"@no . #	is choreographic adaptation of expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20093	entedit:status	"object property" ; rdfs:label "har errata (uttrykk)"@no . #	has errata expression	rdac:C10006	rdac:C10006
-rdaeo:P20146	entedit:status	"object property" ; rdfs:label "er errata til uttrykk"@no . #	is errata to expression	rdac:C10006	rdac:C10006
+rdaeo:P20093	entedit:status	"object property" ; rdfs:label "har errata"@no . #	has errata expression	rdac:C10006	rdac:C10006
+rdaeo:P20146	entedit:status	"object property" ; rdfs:label "er errata til"@no . #	is errata to expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20094	entedit:status	"object property" ; rdfs:label "har illustrasjoner (uttrykk)"@no . #	has illustrations expression	rdac:C10006	rdac:C10006
-rdaeo:P20148	entedit:status	"object property" ; rdfs:label "er illustrasjoner for uttrykk"@no . #	is illustrations for expression	rdac:C10006	rdac:C10006
+rdaeo:P20094	entedit:status	"object property" ; rdfs:label "har illustrasjoner"@no . #	has illustrations expression	rdac:C10006	rdac:C10006
+rdaeo:P20148	entedit:status	"object property" ; rdfs:label "er illustrasjoner for"@no . #	is illustrations for expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20095	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for spillefilm (uttrykk)"@no . #	is adapted as motion picture screenplay expression	rdac:C10006	rdac:C10006
-rdaeo:P20130	entedit:status	"object property" ; rdfs:label "er manus for spillefilm basert på uttrykk"@no . #	is motion picture screenplay based on expression	rdac:C10006	rdac:C10006
+rdaeo:P20095	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for spillefilm"@no . #	is adapted as motion picture screenplay expression	rdac:C10006	rdac:C10006
+rdaeo:P20130	entedit:status	"object property" ; rdfs:label "er manus for spillefilm basert på"@no . #	is motion picture screenplay based on expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20096	entedit:status	"object property" ; rdfs:label "er bearbeidet som filmmanus (uttrykk)"@no . #	is adapted as screenplay expression	rdac:C10006	rdac:C10006
-rdaeo:P20129	entedit:status	"object property" ; rdfs:label "er filmmanus basert på uttrykk"@no . #	is screenplay based on expression	rdac:C10006	rdac:C10006
+rdaeo:P20096	entedit:status	"object property" ; rdfs:label "er bearbeidet som filmmanus"@no . #	is adapted as screenplay expression	rdac:C10006	rdac:C10006
+rdaeo:P20129	entedit:status	"object property" ; rdfs:label "er filmmanus basert på"@no . #	is screenplay based on expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20097	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for fjernsyn (uttrykk)"@no . #	is adapted as television screenplay expression	rdac:C10006	rdac:C10006
-rdaeo:P20131	entedit:status	"object property" ; rdfs:label "er fjernsynsmanus basert på uttrykk"@no . #	is television screenplay based on expression	rdac:C10006	rdac:C10006
+rdaeo:P20097	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for fjernsyn"@no . #	is adapted as television screenplay expression	rdac:C10006	rdac:C10006
+rdaeo:P20131	entedit:status	"object property" ; rdfs:label "er fjernsynsmanus basert på"@no . #	is television screenplay based on expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20098	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for video (uttrykk)"@no . #	is adapted as video screenplay expression	rdac:C10006	rdac:C10006
-rdaeo:P20132	entedit:status	"object property" ; rdfs:label "er videomanus basert på uttrykk"@no . #	is video screenplay based on expression	rdac:C10006	rdac:C10006
+rdaeo:P20098	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for video"@no . #	is adapted as video screenplay expression	rdac:C10006	rdac:C10006
+rdaeo:P20132	entedit:status	"object property" ; rdfs:label "er videomanus basert på"@no . #	is video screenplay based on expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20099	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for radio (uttrykk)"@no . #	is adapted as radio script expression	rdac:C10006	rdac:C10006
-rdaeo:P20133	entedit:status	"object property" ; rdfs:label "er radiomanus basert på uttrykk"@no . #	is radio script based on expression	rdac:C10006	rdac:C10006
+rdaeo:P20099	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for radio"@no . #	is adapted as radio script expression	rdac:C10006	rdac:C10006
+rdaeo:P20133	entedit:status	"object property" ; rdfs:label "er radiomanus basert på"@no . #	is radio script based on expression	rdac:C10006	rdac:C10006
 
 #Inverse of itself
-rdaeo:P20100	entedit:status	"object property" ; rdfs:label "er utfylt av uttrykk"@no . #	is complemented by expression	rdac:C10006	rdac:C10006
+rdaeo:P20100	entedit:status	"object property" ; rdfs:label "er utfylt av"@no . #	is complemented by expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20101	entedit:status	"object property" ; rdfs:label "fortsettes delvis i uttrykk"@no . #	is separated into expression	rdac:C10006	rdac:C10006
-rdaeo:P20168	entedit:status	"object property" ; rdfs:label "er utskilt fra uttrykk"@no . #	is separated from expression	rdac:C10006	rdac:C10006
+rdaeo:P20101	entedit:status	"object property" ; rdfs:label "fortsettes delvis i"@no . #	is separated into expression	rdac:C10006	rdac:C10006
+rdaeo:P20168	entedit:status	"object property" ; rdfs:label "er utskilt fra"@no . #	is separated from expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20102	entedit:status	"object property" ; rdfs:label "er filmmanus for uttrykk"@no . #	is screenplay for expression	rdac:C10006	rdac:C10006
-rdaeo:P20157	entedit:status	"object property" ; rdfs:label "har filmmanus (uttrykk)"@no . #	has screenplay expression	rdac:C10006	rdac:C10006
+rdaeo:P20102	entedit:status	"object property" ; rdfs:label "er filmmanus for"@no . #	is screenplay for expression	rdac:C10006	rdac:C10006
+rdaeo:P20157	entedit:status	"object property" ; rdfs:label "har filmmanus"@no . #	has screenplay expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20105	entedit:status	"object property" ; rdfs:label "er utvidet av uttrykk"@no . #	is augmented by expression	rdac:C10006	rdac:C10006
-rdaeo:P20192	entedit:status	"object property" ; rdfs:label "er utvidelse av uttrykk"@no . #	is augmentation of expression	rdac:C10006	rdac:C10006
+rdaeo:P20105	entedit:status	"object property" ; rdfs:label "er utvidet av"@no . #	is augmented by expression	rdac:C10006	rdac:C10006
+rdaeo:P20192	entedit:status	"object property" ; rdfs:label "er utvidelse av"@no . #	is augmentation of expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20108	entedit:status	"object property" ; rdfs:label "har konkordans (uttrykk)"@no . #	has concordance expression	rdac:C10006	rdac:C10006
-rdaeo:P20181	entedit:status	"object property" ; rdfs:label "er konkordans for uttrykk"@no . #	is concordance to expression	rdac:C10006	rdac:C10006
+rdaeo:P20108	entedit:status	"object property" ; rdfs:label "har konkordans"@no . #	has concordance expression	rdac:C10006	rdac:C10006
+rdaeo:P20181	entedit:status	"object property" ; rdfs:label "er konkordans for"@no . #	is concordance to expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20109	entedit:status	"object property" ; rdfs:label "har tillegg (uttrykk)"@no . #	has addenda expression	rdac:C10006	rdac:C10006
-rdaeo:P20177	entedit:status	"object property" ; rdfs:label "er tillegg til uttrykk"@no . #	is addenda to expression	rdac:C10006	rdac:C10006
+rdaeo:P20109	entedit:status	"object property" ; rdfs:label "har tillegg"@no . #	has addenda expression	rdac:C10006	rdac:C10006
+rdaeo:P20177	entedit:status	"object property" ; rdfs:label "er tillegg til"@no . #	is addenda to expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20110	entedit:status	"object property" ; rdfs:label "er bearbeidet som libretto (uttrykk)"@no . #	is adapted as libretto expression	rdac:C10006	rdac:C10006
-rdaeo:P20190	entedit:status	"object property" ; rdfs:label "er libretto basert på uttrykk"@no . #	is libretto based on expression	rdac:C10006	rdac:C10006
+rdaeo:P20110	entedit:status	"object property" ; rdfs:label "er bearbeidet som libretto"@no . #	is adapted as libretto expression	rdac:C10006	rdac:C10006
+rdaeo:P20190	entedit:status	"object property" ; rdfs:label "er libretto basert på"@no . #	is libretto based on expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20114	entedit:status	"object property" ; rdfs:label "er imitert som uttrykk"@no . #	is imitated as expression	rdac:C10006	rdac:C10006
-rdaeo:P20195	entedit:status	"object property" ; rdfs:label "er imitasjon av uttrykk"@no . #	is imitation of expression	rdac:C10006	rdac:C10006
+rdaeo:P20114	entedit:status	"object property" ; rdfs:label "er imitert som"@no . #	is imitated as expression	rdac:C10006	rdac:C10006
+rdaeo:P20195	entedit:status	"object property" ; rdfs:label "er imitasjon av"@no . #	is imitation of expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20115	entedit:status	"object property" ; rdfs:label "er utvidet som uttrykk"@no . #	is expanded as expression	rdac:C10006	rdac:C10006
-rdaeo:P20184	entedit:status	"object property" ; rdfs:label "er utvidet versjon av uttrykk"@no . #	is expanded version of expression	rdac:C10006	rdac:C10006
+rdaeo:P20115	entedit:status	"object property" ; rdfs:label "er utvidet som"@no . #	is expanded as expression	rdac:C10006	rdac:C10006
+rdaeo:P20184	entedit:status	"object property" ; rdfs:label "er utvidet versjon av"@no . #	is expanded version of expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20119	entedit:status	"object property" ; rdfs:label "er fritt oversatt som uttrykk"@no . #	is freely translated as expression	rdac:C10006	rdac:C10006
-rdaeo:P20140	entedit:status	"object property" ; rdfs:label "er fri oversettelse av uttrykk"@no . #	is free translation of expression	rdac:C10006	rdac:C10006
+rdaeo:P20119	entedit:status	"object property" ; rdfs:label "er fritt oversatt som"@no . #	is freely translated as expression	rdac:C10006	rdac:C10006
+rdaeo:P20140	entedit:status	"object property" ; rdfs:label "er fri oversettelse av"@no . #	is free translation of expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20120	entedit:status	"object property" ; entedit:display false ; rdfs:label "har studieveiledning (uttrykk)"@no . #	has guide expression	rdac:C10006	rdac:C10006
-rdaeo:P20147	entedit:status	"object property" ; rdfs:label "er studieveiledning til uttrykk"@no . #	is guide to expression	rdac:C10006	rdac:C10006
+rdaeo:P20120	entedit:status	"object property" ; entedit:display false ; rdfs:label "har studieveiledning"@no . #	has guide expression	rdac:C10006	rdac:C10006
+rdaeo:P20147	entedit:status	"object property" ; rdfs:label "er studieveiledning til"@no . #	is guide to expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20121	entedit:status	"object property" ; rdfs:label "er forkortelse av uttrykk"@no . #	is abridgement of expression	rdac:C10006	rdac:C10006
-rdaeo:P20166	entedit:status	"object property" ; rdfs:label "er forkortet som uttrykk"@no . #	is abridged as expression	rdac:C10006	rdac:C10006
+rdaeo:P20121	entedit:status	"object property" ; rdfs:label "er forkortelse av"@no . #	is abridgement of expression	rdac:C10006	rdac:C10006
+rdaeo:P20166	entedit:status	"object property" ; rdfs:label "er forkortet som"@no . #	is abridged as expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20135	entedit:status	"object property" ; rdfs:label "er resymé av uttrykk"@no . #	is digest of expression	rdac:C10006	rdac:C10006
-rdaeo:P20170	entedit:status	"object property" ; rdfs:label "er sammenfattet til uttrykk"@no . #	is digested as expression	rdac:C10006	rdac:C10006
+rdaeo:P20135	entedit:status	"object property" ; rdfs:label "er resymé av"@no . #	is digest of expression	rdac:C10006	rdac:C10006
+rdaeo:P20170	entedit:status	"object property" ; rdfs:label "er sammenfattet til"@no . #	is digested as expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20137	entedit:status	"object property" ; rdfs:label "er innlemmelse av uttrykk"@no . #	is absorption of expression	rdac:C10006	rdac:C10006
-rdaeo:P20143	entedit:status	"object property" ; rdfs:label "er innlemmet i uttrykk"@no . #	is absorbed by expression	rdac:C10006	rdac:C10006
+rdaeo:P20137	entedit:status	"object property" ; rdfs:label "er innlemmelse av"@no . #	is absorption of expression	rdac:C10006	rdac:C10006
+rdaeo:P20143	entedit:status	"object property" ; rdfs:label "er innlemmet i"@no . #	is absorbed by expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20138	entedit:status	"object property" ; rdfs:label "er delvis innlemmelse av uttrykk"@no . #	is absorption in part of expression	rdac:C10006	rdac:C10006
-rdaeo:P20144	entedit:status	"object property" ; rdfs:label "er delvis innlemmet i uttrykk"@no . #	is absorbed in part by expression	rdac:C10006	rdac:C10006
+rdaeo:P20138	entedit:status	"object property" ; rdfs:label "er delvis innlemmelse av"@no . #	is absorption in part of expression	rdac:C10006	rdac:C10006
+rdaeo:P20144	entedit:status	"object property" ; rdfs:label "er delvis innlemmet i"@no . #	is absorbed in part by expression	rdac:C10006	rdac:C10006
 
 rdaeo:P20139	entedit:status	"object property" ; rdfs:label "er arrangement av"@no . #	is arrangement of	rdac:C10006	rdac:C10006
 rdaeo:P20165	entedit:status	"object property" ; rdfs:label "er arrangert som"@no . #	is arranged as	rdac:C10006	rdac:C10006
@@ -839,124 +836,124 @@ rdaeo:P20165	entedit:status	"object property" ; rdfs:label "er arrangert som"@no
 rdaeo:P20141	entedit:status	"object property" ; rdfs:label "er oversettelse av"@no . #	is translation of	rdac:C10006	rdac:C10006
 rdaeo:P20171	entedit:status	"object property" ; rdfs:label "er oversatt som"@no . #	is translated as	rdac:C10006	rdac:C10006
 
-rdaeo:P20142	entedit:status	"object property" ; rdfs:label "er parodiert som uttrykk"@no . #	is parodied as expression	rdac:C10006	rdac:C10006
-rdaeo:P20196	entedit:status	"object property" ; rdfs:label "er parodi på uttrykk"@no . #	is parody of expression	rdac:C10006	rdac:C10006
+rdaeo:P20142	entedit:status	"object property" ; rdfs:label "er parodiert som"@no . #	is parodied as expression	rdac:C10006	rdac:C10006
+rdaeo:P20196	entedit:status	"object property" ; rdfs:label "er parodi på"@no . #	is parody of expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20149	entedit:status	"object property" ; rdfs:label "er fortsettelse av uttrykk"@no . #	is continuation of expression	rdac:C10006	rdac:C10006
-rdaeo:P20191	entedit:status	"object property" ; rdfs:label "er fortsatt i uttrykk"@no . #	is continued by expression	rdac:C10006	rdac:C10006
+rdaeo:P20149	entedit:status	"object property" ; rdfs:label "er fortsettelse av"@no . #	is continuation of expression	rdac:C10006	rdac:C10006
+rdaeo:P20191	entedit:status	"object property" ; rdfs:label "er fortsatt i"@no . #	is continued by expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20151	entedit:status	"object property" ; rdfs:label "er supplement til uttrykk"@no . #	is supplement to expression	rdac:C10006	rdac:C10006
-rdaeo:P20172	entedit:status	"object property" ; rdfs:label "har supplement (uttrykk)"@no . #	has supplement expression	rdac:C10006	rdac:C10006
+rdaeo:P20151	entedit:status	"object property" ; rdfs:label "er supplement til"@no . #	is supplement to expression	rdac:C10006	rdac:C10006
+rdaeo:P20172	entedit:status	"object property" ; rdfs:label "har supplement"@no . #	has supplement expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20152	entedit:status	"object property" ; rdfs:label "er bearbeidelse av uttrykk"@no . #	is adaptation of expression	rdac:C10006	rdac:C10006
-rdaeo:P20153	entedit:status	"object property" ; rdfs:label "er bearbeidet som uttrykk"@no . #	is adapted as expression	rdac:C10006	rdac:C10006
+rdaeo:P20152	entedit:status	"object property" ; rdfs:label "er bearbeidelse av"@no . #	is adaptation of expression	rdac:C10006	rdac:C10006
+rdaeo:P20153	entedit:status	"object property" ; rdfs:label "er bearbeidet som"@no . #	is adapted as expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20154	entedit:status	"object property" ; rdfs:label "er etterfulgt av uttrykk"@no . #	is preceded by expression	rdac:C10006	rdac:C10006
-rdaeo:P20169	entedit:status	"object property" ; rdfs:label "er avløst av uttrykk"@no . #	is succeeded by expression	rdac:C10006	rdac:C10006
+rdaeo:P20154	entedit:status	"object property" ; rdfs:label "er etterfulgt av"@no . #	is preceded by expression	rdac:C10006	rdac:C10006
+rdaeo:P20169	entedit:status	"object property" ; rdfs:label "er avløst av"@no . #	is succeeded by expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20158	entedit:status	"object property" ; rdfs:label "har manus for spillefilm (uttrykk)"@no . #	has motion picture screenplay expression	rdac:C10006	rdac:C10006
-rdaeo:P20173	entedit:status	"object property" ; rdfs:label "er manus for spillefilm (uttrykk)"@no . #	is screenplay for motion picture expression	rdac:C10006	rdac:C10006
+rdaeo:P20158	entedit:status	"object property" ; rdfs:label "har manus for spillefilm"@no . #	has motion picture screenplay expression	rdac:C10006	rdac:C10006
+rdaeo:P20173	entedit:status	"object property" ; rdfs:label "er manus for spillefilm"@no . #	is screenplay for motion picture expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20160	entedit:status	"object property" ; rdfs:label "har radiomanus (uttrykk)"@no . #	has radio script expression	rdac:C10006	rdac:C10006
-rdaeo:P20176	entedit:status	"object property" ; rdfs:label "er manus for radioprogram (uttrykk)"@no . #	is script for radio program expression	rdac:C10006	rdac:C10006
+rdaeo:P20160	entedit:status	"object property" ; rdfs:label "har radiomanus"@no . #	has radio script expression	rdac:C10006	rdac:C10006
+rdaeo:P20176	entedit:status	"object property" ; rdfs:label "er manus for radioprogram"@no . #	is script for radio program expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20161	entedit:status	"object property" ; rdfs:label "har fjernsynsmanus (uttrykk)"@no . #	has television screenplay expression	rdac:C10006	rdac:C10006
-rdaeo:P20174	entedit:status	"object property" ; rdfs:label "er manus for fjernsynsprogram (uttrykk)"@no . #	is screenplay for television program expression	rdac:C10006	rdac:C10006
+rdaeo:P20161	entedit:status	"object property" ; rdfs:label "har fjernsynsmanus"@no . #	has television screenplay expression	rdac:C10006	rdac:C10006
+rdaeo:P20174	entedit:status	"object property" ; rdfs:label "er manus for fjernsynsprogram"@no . #	is screenplay for television program expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20162	entedit:status	"object property" ; rdfs:label "har videomanus (uttrykk)"@no . #	has video screenplay expression	rdac:C10006	rdac:C10006
-rdaeo:P20175	entedit:status	"object property" ; rdfs:label "er manus for video (uttrykk)"@no . #	is screenplay for video expression	rdac:C10006	rdac:C10006
+rdaeo:P20162	entedit:status	"object property" ; rdfs:label "har videomanus"@no . #	has video screenplay expression	rdac:C10006	rdac:C10006
+rdaeo:P20175	entedit:status	"object property" ; rdfs:label "er manus for video"@no . #	is screenplay for video expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20164	entedit:status	"object property" ; rdfs:label "er omskrevet til uttrykk"@no . #	is paraphrased as expression	rdac:C10006	rdac:C10006
-rdaeo:P20186	entedit:status	"object property" ; rdfs:label "er omskriving av uttrykk"@no . #	is paraphrase of expression	rdac:C10006	rdac:C10006
+rdaeo:P20164	entedit:status	"object property" ; rdfs:label "er omskrevet til"@no . #	is paraphrased as expression	rdac:C10006	rdac:C10006
+rdaeo:P20186	entedit:status	"object property" ; rdfs:label "er omskriving av"@no . #	is paraphrase of expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20167	entedit:status	"object property" ; rdfs:label "er skilt fra uttrykk"@no . #	is split from expression	rdac:C10006	rdac:C10006
-rdaeo:P20200	entedit:status	"object property" ; rdfs:label "er delt opp i uttrykk"@no . #	is split into expression	rdac:C10006	rdac:C10006
+rdaeo:P20167	entedit:status	"object property" ; rdfs:label "er skilt fra"@no . #	is split from expression	rdac:C10006	rdac:C10006
+rdaeo:P20200	entedit:status	"object property" ; rdfs:label "er delt opp i"@no . #	is split into expression	rdac:C10006	rdac:C10006
 
 rdaeo:P20189	entedit:status	"object property" ; rdfs:label "er revisjon av"@no . #	is revision of	rdac:C10006	rdac:C10006
 rdaeo:P20211	entedit:status	"object property" ; rdfs:label "er revidert som"@no . #	is revised as	rdac:C10006	rdac:C10006
 
-rdaeo:P20201	entedit:status	"object property" ; rdfs:label "er sammenslåing av uttrykk"@no . #	is merger of expression	rdac:C10006	rdac:C10006
-rdaeo:P20212	entedit:status	"object property" ; rdfs:label "er slått sammen til uttrykk"@no . #	is merged to form expression	rdac:C10006	rdac:C10006
+rdaeo:P20201	entedit:status	"object property" ; rdfs:label "er sammenslåing av"@no . #	is merger of expression	rdac:C10006	rdac:C10006
+rdaeo:P20212	entedit:status	"object property" ; rdfs:label "er slått sammen til"@no . #	is merged to form expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20203	entedit:status	"object property" ; rdfs:label "har avledet uttrykk"@no . #	has expression of derivative work	rdac:C10006	rdac:C10006
-rdaeo:P20204	entedit:status	"object property" ; rdfs:label "er basert på uttrykk"@no . #	has expression of source work	rdac:C10006	rdac:C10006
+rdaeo:P20203	entedit:status	"object property" ; rdfs:label "har avledning"@no . #	has expression of derivative work	rdac:C10006	rdac:C10006
+rdaeo:P20204	entedit:status	"object property" ; rdfs:label "er basert på"@no . #	has expression of source work	rdac:C10006	rdac:C10006
 
-rdaeo:P20239	entedit:status	"object property" ; rdfs:label "er bearbeidelse av uttrykk til musikal"@no . #	is musical theatre adaptation of expression	rdac:C10006	rdac:C10006
-rdaeo:P20241	entedit:status	"object property" ; rdfs:label "er bearbeidet som musikal (uttrykk)"@no . #	is adapted as musical theatre expression	rdac:C10006	rdac:C10006
+rdaeo:P20239	entedit:status	"object property" ; rdfs:label "er bearbeidelse til musikal"@no . #	is musical theatre adaptation of expression	rdac:C10006	rdac:C10006
+rdaeo:P20241	entedit:status	"object property" ; rdfs:label "er bearbeidet som musikal"@no . #	is adapted as musical theatre expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20240	entedit:status	"object property" ; rdfs:label "er bearbeidelse av uttrykk til opera"@no . #	is opera adaptation of expression	rdac:C10006	rdac:C10006
-rdaeo:P20242	entedit:status	"object property" ; rdfs:label "er bearbeidet som opera (uttrykk)"@no . #	is adapted as opera expression	rdac:C10006	rdac:C10006
+rdaeo:P20240	entedit:status	"object property" ; rdfs:label "er bearbeidelse til opera"@no . #	is opera adaptation of expression	rdac:C10006	rdac:C10006
+rdaeo:P20242	entedit:status	"object property" ; rdfs:label "er bearbeidet som opera"@no . #	is adapted as opera expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20243	entedit:status	"object property" ; rdfs:label "har musikk (uttrykk)"@no . #	has music expression	rdac:C10006	rdac:C10006
-rdaeo:P20244	entedit:status	"object property" ; rdfs:label "er musikk for uttrykk"@no . #	is music for expression	rdac:C10006	rdac:C10006
+rdaeo:P20243	entedit:status	"object property" ; rdfs:label "har musikk"@no . #	has music expression	rdac:C10006	rdac:C10006
+rdaeo:P20244	entedit:status	"object property" ; rdfs:label "er musikk for"@no . #	is music for expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20245	entedit:status	"object property" ; rdfs:label "har videomusikk (uttrykk)"@no . #	has video music expression	rdac:C10006	rdac:C10006
-rdaeo:P20246	entedit:status	"object property" ; rdfs:label "er musikk for video (uttrykk)"@no . #	is music for video expression	rdac:C10006	rdac:C10006
+rdaeo:P20245	entedit:status	"object property" ; rdfs:label "har videomusikk"@no . #	has video music expression	rdac:C10006	rdac:C10006
+rdaeo:P20246	entedit:status	"object property" ; rdfs:label "er musikk for video"@no . #	is music for video expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20247	entedit:status	"object property" ; rdfs:label "har fjernsynsmusikk (uttrykk)"@no . #	has television program music expression	rdac:C10006	rdac:C10006
-rdaeo:P20248	entedit:status	"object property" ; rdfs:label "er musikk for fjernsynsprogram (uttrykk)"@no . #	is music for television program expression	rdac:C10006	rdac:C10006
+rdaeo:P20247	entedit:status	"object property" ; rdfs:label "har fjernsynsmusikk"@no . #	has television program music expression	rdac:C10006	rdac:C10006
+rdaeo:P20248	entedit:status	"object property" ; rdfs:label "er musikk for fjernsynsprogram"@no . #	is music for television program expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20249	entedit:status	"object property" ; rdfs:label "har radiomusikk (uttrykk)"@no . #	has radio program music expression	rdac:C10006	rdac:C10006
-rdaeo:P20250	entedit:status	"object property" ; rdfs:label "er musikk for radioprogram (uttrykk)"@no . #	is music for radio program expression	rdac:C10006	rdac:C10006
+rdaeo:P20249	entedit:status	"object property" ; rdfs:label "har radiomusikk"@no . #	has radio program music expression	rdac:C10006	rdac:C10006
+rdaeo:P20250	entedit:status	"object property" ; rdfs:label "er musikk for radioprogram"@no . #	is music for radio program expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20251	entedit:status	"object property" ; rdfs:label "har filmmusikk for spillefilm (uttrykk)"@no . #	has motion picture music expression	rdac:C10006	rdac:C10006
-rdaeo:P20252	entedit:status	"object property" ; rdfs:label "er musikk for spillefilm (uttrykk)"@no . #	is music for motion picture expression	rdac:C10006	rdac:C10006
+rdaeo:P20251	entedit:status	"object property" ; rdfs:label "har filmmusikk for spillefilm"@no . #	has motion picture music expression	rdac:C10006	rdac:C10006
+rdaeo:P20252	entedit:status	"object property" ; rdfs:label "er musikk for spillefilm"@no . #	is music for motion picture expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20253	entedit:status	"object property" ; rdfs:label "har koreografi (uttrykk)"@no . #	has choreography expression	rdac:C10006	rdac:C10006
-rdaeo:P20254	entedit:status	"object property" ; rdfs:label "er koreografi for uttrykk"@no . #	is choreography for expression	rdac:C10006	rdac:C10006
+rdaeo:P20253	entedit:status	"object property" ; rdfs:label "har koreografi"@no . #	has choreography expression	rdac:C10006	rdac:C10006
+rdaeo:P20254	entedit:status	"object property" ; rdfs:label "er koreografi for"@no . #	is choreography for expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20255	entedit:status	"object property" ; rdfs:label "er bearbeidet som tegneserieroman (uttrykk)"@no . #	is adapted as graphic novel expression	rdac:C10006	rdac:C10006
-rdaeo:P20256	entedit:status	"object property" ; rdfs:label "er tegneserieroman basert på (uttrykk)"@no . #	is graphic novelization of expression	rdac:C10006	rdac:C10006
+rdaeo:P20255	entedit:status	"object property" ; rdfs:label "er bearbeidet som tegneserieroman"@no . #	is adapted as graphic novel expression	rdac:C10006	rdac:C10006
+rdaeo:P20256	entedit:status	"object property" ; rdfs:label "er tegneserieroman basert på"@no . #	is graphic novelization of expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20281	entedit:status	"object property" ; rdfs:label "er bearbeidelse av uttrykk til oratorium"@no . #	is oratorio adaptation of expression	rdac:C10006	rdac:C10006
-rdaeo:P20282	entedit:status	"object property" ; rdfs:label "er bearbeidet som oratorium (uttrykk)"@no . #	is adapted as oratorio expression	rdac:C10006	rdac:C10006
+rdaeo:P20281	entedit:status	"object property" ; rdfs:label "er bearbeidelse til oratorium"@no . #	is oratorio adaptation of expression	rdac:C10006	rdac:C10006
+rdaeo:P20282	entedit:status	"object property" ; rdfs:label "er bearbeidet som oratorium"@no . #	is adapted as oratorio expression	rdac:C10006	rdac:C10006
 
 rdaeo:P20334	entedit:status	"object property" ; rdfs:label "har forløper"@no . #	has prequel expression	rdac:C10006	rdac:C10006
 rdaeo:P20335	entedit:status	"object property" ; rdfs:label "har etterfølger"@no . #	has sequel expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20574	entedit:status	"object property"	 ; rdfs:label "er basert på uttrykk"@no . #	has source expression	rdac:C10006	rdac:C10006
-rdaeo:P20575	entedit:status	"object property"	 ; rdfs:label "har avledet uttrykk"@no . #	has derivative expression	rdac:C10006	rdac:C10006
+rdaeo:P20574	entedit:status	"object property"	 ; rdfs:label "er basert på"@no . #	has source expression	rdac:C10006	rdac:C10006
+rdaeo:P20575	entedit:status	"object property"	 ; rdfs:label "har avledning"@no . #	has derivative expression	rdac:C10006	rdac:C10006
 
-rdamo:P30016	entedit:status	"object property" ; rdfs:label "har elektronisk reproduksjon av manifestasjon"@no . #	has electronic reproduction of manifestation	rdac:C10007	rdac:C10007
-rdamo:P30136	entedit:status	"object property" ; rdfs:label "har elektronisk reproduksjon av manifestasjon av"@no . #	is electronic reproduction of manifestation of	rdac:C10007	rdac:C10007
+rdamo:P30016	entedit:status	"object property" ; rdfs:label "har elektronisk reproduksjon av"@no . #	has electronic reproduction of manifestation	rdac:C10007	rdac:C10007
+rdamo:P30136	entedit:status	"object property" ; rdfs:label "har elektronisk reproduksjon av"@no . #	is electronic reproduction of manifestation of	rdac:C10007	rdac:C10007
 
 rdamo:P30019	entedit:status	"object property" ; rdfs:label "har faksimile som del av"@no . #	is facsimile part of	rdac:C10007	rdac:C10007
 rdamo:P30046	entedit:status	"object property" ; rdfs:label "har faksimile som del"@no . #	has facsimile part	rdac:C10007	rdac:C10007
 
-rdamo:P30020	entedit:status	"object property" ; rdfs:label "har del av manifestasjon"@no . #	is part of manifestation	rdac:C10007	rdac:C10007
-rdamo:P30033	entedit:status	"object property" ; rdfs:label "har del av manifestasjon"@no . #	has part manifestation	rdac:C10007	rdac:C10007
+rdamo:P30020	entedit:status	"object property" ; rdfs:label "er del av"@no . #	is part of manifestation	rdac:C10007	rdac:C10007
+rdamo:P30033	entedit:status	"object property" ; rdfs:label "har del"@no . #	has part manifestation	rdac:C10007	rdac:C10007
 
-rdamo:P30021	entedit:status	"object property" ; rdfs:label "har bevaringskopi av manifestasjon"@no . #	has preservation facsimile of manifestation	rdac:C10007	rdac:C10007
-rdamo:P30045	entedit:status	"object property" ; rdfs:label "er bevaringskopi av manifestasjon av"@no . #	is preservation facsimile of manifestation of	rdac:C10007	rdac:C10007
+rdamo:P30021	entedit:status	"object property" ; rdfs:label "har bevaringskopi av"@no . #	has preservation facsimile of manifestation	rdac:C10007	rdac:C10007
+rdamo:P30045	entedit:status	"object property" ; rdfs:label "er bevaringskopi av"@no . #	is preservation facsimile of manifestation of	rdac:C10007	rdac:C10007
 
 rdamo:P30022	entedit:status	"object property" ; rdfs:label "har innlegg"@no . #	has insert	rdac:C10007	rdac:C10007
 rdamo:P30025	entedit:status	"object property" ; rdfs:label "er lagt inn i"@no . #	is inserted in	rdac:C10007	rdac:C10007
 
-rdamo:P30024	entedit:status	"object property" ; rdfs:label "har ekvivalent manifestasjon"@no . #	has equivalent manifestation	rdac:C10007	rdac:C10007
+rdamo:P30024	entedit:status	"object property" ; rdfs:label "har ekvivalent"@no . #	has equivalent manifestation	rdac:C10007	rdac:C10007
 
 rdamo:P30026	entedit:status	"object property" ; rdfs:label "er også utgitt som"@no . #	is also issued as	rdac:C10007	rdac:C10007
 
-rdamo:P30027	entedit:status	"object property" ; rdfs:label "er ledsaget av manifestasjon"@no . #	is accompanied by manifestation	rdac:C10007	rdac:C10007
+rdamo:P30027	entedit:status	"object property" ; rdfs:label "er ledsaget av"@no . #	is accompanied by manifestation	rdac:C10007	rdac:C10007
 
 #rdamo:P30028	entedit:status	"object property" ; rdfs:label "har speilside"@no . #	has mirror site	rdac:C10007	rdac:C10007
 
-rdamo:P30029	entedit:status	"object property" ; rdfs:label "har digital overføring av manifestasjon"@no . #	has digital transfer of manifestation	rdac:C10007	rdac:C10007
-rdamo:P30040	entedit:status	"object property" ; rdfs:label "er digital overføring av manifestasjon av"@no . #	is digital transfer of manifestation of	rdac:C10007	rdac:C10007
+rdamo:P30029	entedit:status	"object property" ; rdfs:label "har digital overføring av"@no . #	has digital transfer of manifestation	rdac:C10007	rdac:C10007
+rdamo:P30040	entedit:status	"object property" ; rdfs:label "er digital overføring av"@no . #	is digital transfer of manifestation of	rdac:C10007	rdac:C10007
 
-rdamo:P30031	entedit:status	"object property" ; rdfs:label "har faksimile av manifestasjon"@no . #	has facsimile of manifestation	rdac:C10007	rdac:C10007
-rdamo:P30047	entedit:status	"object property" ; rdfs:label "er faksimile av manifestasjon av"@no . #	is facsimile of manifestation of	rdac:C10007	rdac:C10007
+rdamo:P30031	entedit:status	"object property" ; rdfs:label "har faksimile av"@no . #	has facsimile of manifestation	rdac:C10007	rdac:C10007
+rdamo:P30047	entedit:status	"object property" ; rdfs:label "er faksimile av"@no . #	is facsimile of manifestation of	rdac:C10007	rdac:C10007
 
 rdamo:P30035	entedit:status	"object property" ; rdfs:label "er utgitt sammen med"@no . #	is on carrier unit with	rdac:C10007	rdac:C10007
 
-rdamo:P30036	entedit:status	"object property" ; rdfs:label "er på plate med manifestasjon"@no . #	is on disc with manifestation	rdac:C10007	rdac:C10007
+rdamo:P30036	entedit:status	"object property" ; rdfs:label "er på plate med"@no . #	is on disc with manifestation	rdac:C10007	rdac:C10007
 
-rdamo:P30037	entedit:status	"object property" ; rdfs:label "er på film med manifestasjon"@no . #	is filmed with manifestation	rdac:C10007	rdac:C10007
+rdamo:P30037	entedit:status	"object property" ; rdfs:label "er på film med"@no . #	is filmed with manifestation	rdac:C10007	rdac:C10007
 
-rdamo:P30038	entedit:status	"object property" ; rdfs:label "er opptrykt som manifestasjon"@no . #	is reprinted as manifestation	rdac:C10007	rdac:C10007
-rdamo:P30093	entedit:status	"object property" ; rdfs:label "er opptrykk av manifestasjon av"@no . #	is reprint of manifestation of	rdac:C10007	rdac:C10007
+rdamo:P30038	entedit:status	"object property" ; rdfs:label "er opptrykt som"@no . #	is reprinted as manifestation	rdac:C10007	rdac:C10007
+rdamo:P30093	entedit:status	"object property" ; rdfs:label "er opptrykk av"@no . #	is reprint of manifestation of	rdac:C10007	rdac:C10007
 
-rdamo:P30039	entedit:status	"object property" ; rdfs:label "er reprodusert som manifestasjon"@no . #	is reproduced as manifestation	rdac:C10007	rdac:C10007
-rdamo:P30043	entedit:status	"object property" ; rdfs:label "er reproduksjon av manifestasjon av"@no . #	is reproduction of manifestation of	rdac:C10007	rdac:C10007
+rdamo:P30039	entedit:status	"object property" ; rdfs:label "er reprodusert som"@no . #	is reproduced as manifestation	rdac:C10007	rdac:C10007
+rdamo:P30043	entedit:status	"object property" ; rdfs:label "er reproduksjon av"@no . #	is reproduction of manifestation of	rdac:C10007	rdac:C10007
 
 
 #Item object properties
