@@ -17422,8 +17422,8 @@
     rdaeo:P20231 <http://viaf.org/viaf/194765531> .
 
 <http://viaf.org/viaf/194765531/exp/ger/1020/162089799/59960174/kiyhermann> a rdac:C10006 ;
-    rdfs:label "Pan, aus Leutnant Thomas Glahns Papieren / Knut Hamsun ; translated by Hermann Kiy, Julius Sandmeier and S. Angermann. – German"@en,
-        "Pan, aus Leutnant Thomas Glahns Papieren / Knut Hamsun ; oversatt av Hermann Kiy, Julius Sandmeier og S. Angermann. – Tysk"@no ;
+    rdfs:label "Pan, aus Leutnant Thomas Glahns Papieren / Knut Hamsun ; translated by Hermann Kiy, Julius Sandmeier and Sophie Angermann. – German"@en,
+        "Pan, aus Leutnant Thomas Glahns Papieren / Knut Hamsun ; oversatt av Hermann Kiy, Julius Sandmeier og Sophie Angermann. – Tysk"@no ;
     rdaed:P20315 "Pan, aus Leutnant Thomas Glahns Papieren" ;
     rdaed:P20316 "Pan" ;
     rdaeo:P20001 rdaco:1020 ;
@@ -17744,8 +17744,8 @@
     rdaeo:P20231 <http://viaf.org/viaf/309525997> .
 
 <http://viaf.org/viaf/309525997/exp/ger/1020/162089799/59960174> a rdac:C10006 ;
-    rdfs:label "Unter Herbststernen / Knut Hamsun ; translated by Julius Sandmeier and S. Angermann. – German"@en,
-        "Unter Herbststernen / Knut Hamsun ; oversatt av Julius Sandmeier og S. Angermann. – Tysk"@no ;
+    rdfs:label "Unter Herbststernen / Knut Hamsun ; translated by Julius Sandmeier and Sophie Angermann. – German"@en,
+        "Unter Herbststernen / Knut Hamsun ; oversatt av Julius Sandmeier og Sophie Angermann. – Tysk"@no ;
     rdaed:P20315 "Unter Herbststernen" ;
     rdaed:P20316 "Under høststjærnen" ;
     rdaeo:P20001 rdaco:1020 ;
@@ -18394,8 +18394,8 @@
     rdaeo:P20231 <http://viaf.org/viaf/59083692/vagabondsdager> .
 
 <http://viaf.org/viaf/59083692/vagabondsdager/exp/ger/1020/162089799/59960174/kiyhermann> a rdac:C10006 ;
-    rdfs:label "Vagabonds dager / Knut Hamsun ; translated by Hermann Kiy, Julius Sandmeier and S. Angermann. – German"@en,
-        "Vagabonds dager / Knut Hamsun ; oversatt av Hermann Kiy, Julius Sandmeier og S. Angermann. – Tysk"@no ;
+    rdfs:label "Vagabonds dager / Knut Hamsun ; translated by Hermann Kiy, Julius Sandmeier and Sophie Angermann. – German"@en,
+        "Vagabonds dager / Knut Hamsun ; oversatt av Hermann Kiy, Julius Sandmeier og Sophie Angermann. – Tysk"@no ;
     rdaed:P20315 "Vagabonds dager" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
@@ -19150,11 +19150,11 @@
     rdaad:P50413 "Mann, Mathilde" ;
     rdaxd:P00018 "http://viaf.org/viaf/72158557" .
 
-<http://example.org/mcfarlanejameswalter> a rdac:C10004 ;
-    rdfs:label "McFarlane, James" ;
-    rdaad:P50413 "McFarlane, James",
-        "McFarlane, James Walter" ;
-    rdaxd:P00018 "http://example.org/mcfarlanejameswalter" .
+<http://viaf.org/viaf/27078590> a rdac:C10004 ;
+    rdfs:label "McFarlane, James Walter" ;
+    rdaad:P50413 "McFarlane, James Walter" ;
+    rdaad:P50415 "McFarlane, James" ;
+    rdaxd:P00018 "http://viaf.org/viaf/27078590" .
 
 <http://viaf.org/viaf/222438819> a rdac:C10004 ;
     rdfs:label "Petithuguenin, Jean" ;
@@ -19209,8 +19209,8 @@
     rdaeo:P20231 <http://viaf.org/viaf/1000145424544686831283> .
 
 <http://viaf.org/viaf/1000145424544686831283/exp/ger/1020/162089799/59960174> a rdac:C10006 ;
-    rdfs:label "Der Ring schließt sich / Knut Hamsun ; translated by Julius Sandmeier and S. Angermann. – German"@en,
-        "Der Ring schließt sich / Knut Hamsun ; oversatt av Julius Sandmeier og S. Angermann. – Tysk"@no ;
+    rdfs:label "Der Ring schließt sich / Knut Hamsun ; translated by Julius Sandmeier and Sophie Angermann. – German"@en,
+        "Der Ring schließt sich / Knut Hamsun ; oversatt av Julius Sandmeier og Sophie Angermann. – Tysk"@no ;
     rdaed:P20315 "Der Ring schließt sich" ;
     rdaed:P20316 "Der Ring schliesst sich",
         "Der Ring schließt sich : Roman",
@@ -19392,8 +19392,8 @@
     rdaeo:P20231 <http://viaf.org/viaf/191146462599827770953> .
 
 <http://viaf.org/viaf/194765531/exp/ger/1020/162089799> a rdac:C10006 ;
-    rdfs:label "Pan, aus Leutnant Thomas Glahns Papieren / Knut Hamsun ; translated by S. Angermann. – German"@en,
-        "Pan, aus Leutnant Thomas Glahns Papieren / Knut Hamsun ; oversatt av S. Angermann. – Tysk"@no ;
+    rdfs:label "Pan, aus Leutnant Thomas Glahns Papieren / Knut Hamsun ; translated by Sophie Angermann. – German"@en,
+        "Pan, aus Leutnant Thomas Glahns Papieren / Knut Hamsun ; oversatt av Sophie Angermann. – Tysk"@no ;
     rdaed:P20315 "Pan, aus Leutnant Thomas Glahns Papieren" ;
     rdaed:P20316 "Pan" ;
     rdaeo:P20001 rdaco:1020 ;
@@ -19472,8 +19472,8 @@
     rdaeo:P20231 <http://viaf.org/viaf/220443771> .
 
 <http://viaf.org/viaf/220443771/exp/ger/1013/162089799/59960174/werneroskar> a rdac:C10006 ;
-    rdfs:label "Hunger / Knut Hamsun ; translated by Julius Sandmeier and S. Angermann ; read by Oskar Werner. – Spoken word, German"@en,
-        "Hunger / Knut Hamsun ; oversatt av Julius Sandmeier og S. Angermann ; lest av Oskar Werner. – Tale, tysk"@no ;
+    rdfs:label "Hunger / Knut Hamsun ; translated by Julius Sandmeier and Sophie Angermann ; read by Oskar Werner. – Spoken word, German"@en,
+        "Hunger / Knut Hamsun ; oversatt av Julius Sandmeier og Sophie Angermann ; lest av Oskar Werner. – Tale, tysk"@no ;
     rdaed:P20315 "Hunger" ;
     rdaed:P20316 "Sult" ;
     rdaeo:P20001 rdaco:1013 ;
@@ -19504,8 +19504,8 @@
     rdaeo:P20231 <http://viaf.org/viaf/220443771> .
 
 <http://viaf.org/viaf/220443771/exp/spa/1020/86862248/86862314> a rdac:C10006 ;
-    rdfs:label "Hambre / Knut Hamsun ; translated by Ascunión Lorenzo and Kirsti Baggethun. – Spanish"@en,
-        "Hambre / Knut Hamsun ; oversatt av Ascunión Lorenzo og Kirsti Baggethun. – Spansk"@no ;
+    rdfs:label "Hambre / Knut Hamsun ; translated by Asunción Lorenzo and Kirsti Baggethun. – Spanish"@en,
+        "Hambre / Knut Hamsun ; oversatt av Asunción Lorenzo og Kirsti Baggethun. – Spansk"@no ;
     rdaed:P20315 "Hambre" ;
     rdaed:P20316 "Sult" ;
     rdaeo:P20001 rdaco:1020 ;
@@ -19538,8 +19538,8 @@
     rdaeo:P20231 <http://viaf.org/viaf/294124367> .
 
 <http://viaf.org/viaf/294124367/exp/spa/1020/86862248/86862314> a rdac:C10006 ;
-    rdfs:label "La bendición de la tierra / Knut Hamsun ; translated by Ascunión Lorenzo and Kirsti Baggethun. – Spanish"@en,
-        "La bendición de la tierra / Knut Hamsun ; oversatt av Ascunión Lorenzo og Kirsti Baggethun. – Spansk"@no ;
+    rdfs:label "La bendición de la tierra / Knut Hamsun ; translated by Asunción Lorenzo and Kirsti Baggethun. – Spanish"@en,
+        "La bendición de la tierra / Knut Hamsun ; oversatt av Asunción Lorenzo og Kirsti Baggethun. – Spansk"@no ;
     rdaed:P20315 "La bendición de la tierra" ;
     rdaed:P20316 "Markens grøde" ;
     rdaeo:P20001 rdaco:1020 ;
@@ -19731,8 +19731,8 @@
     rdaeo:P20231 <http://viaf.org/viaf/395147270538135700001> .
 
 <http://viaf.org/viaf/395147270538135700001/exp/spa/1020/86862248/86862314> a rdac:C10006 ;
-    rdfs:label "Victoria / Knut Hamsun ; translated by Ascunión Lorenzo and Kirsti Baggethun. – Spanish"@en,
-        "Victoria / Knut Hamsun ; oversatt av Ascunión Lorenzo og Kirsti Baggethun. – Spansk"@no ;
+    rdfs:label "Victoria / Knut Hamsun ; translated by Asunción Lorenzo and Kirsti Baggethun. – Spanish"@en,
+        "Victoria / Knut Hamsun ; oversatt av Asunción Lorenzo og Kirsti Baggethun. – Spansk"@no ;
     rdaed:P20315 "Victoria" ;
     rdaed:P20316 "Victoria" ;
     rdaeo:P20001 rdaco:1020 ;
@@ -20203,13 +20203,13 @@
     rdaeo:P20231 <http://viaf.org/viaf/143144898528950290965> .
 
 <http://viaf.org/viaf/180078068/exp/eng/1020/mcfarlanejameswalter> a rdac:C10006 ;
-    rdfs:label "Wayfarers / Knut Hamsun ; translated by James McFarlane. – English"@en,
-        "Wayfarers / Knut Hamsun ; oversatt av James McFarlane. – Engelsk"@no ;
+    rdfs:label "Wayfarers / Knut Hamsun ; translated by James Walter McFarlane. – English"@en,
+        "Wayfarers / Knut Hamsun ; oversatt av James Walter McFarlane. – Engelsk"@no ;
     rdaed:P20315 "Wayfarers" ;
     rdaed:P20316 "Landstrykere" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20037 <http://example.org/mcfarlanejameswalter> ;
+    rdaeo:P20037 <http://viaf.org/viaf/27078590> ;
     rdaeo:P20231 <http://viaf.org/viaf/180078068> .
 
 <http://viaf.org/viaf/180078068/exp/spa/1020/molinscorrealuis> a rdac:C10006 ;
@@ -20246,8 +20246,8 @@
     rdaeo:P20231 <http://viaf.org/viaf/194765531> .
 
 <http://viaf.org/viaf/194765531/exp/spa/1020/86862248/86862314> a rdac:C10006 ;
-    rdfs:label "Pan / Knut Hamsun ; translated by Ascunión Lorenzo and Kirsti Baggethun. – Spanish"@en,
-        "Pan / Knut Hamsun ; oversatt av Ascunión Lorenzo og Kirsti Baggethun. – Spansk"@no ;
+    rdfs:label "Pan / Knut Hamsun ; translated by Asunción Lorenzo and Kirsti Baggethun. – Spanish"@en,
+        "Pan / Knut Hamsun ; oversatt av Asunción Lorenzo og Kirsti Baggethun. – Spansk"@no ;
     rdaed:P20315 "Pan" ;
     rdaed:P20316 "Pan",
         "Pan : de los papeles del teniente Thomas Glahn" ;
@@ -20475,8 +20475,8 @@
     rdaeo:P20231 <http://viaf.org/viaf/5470149068540465730001> .
 
 <http://viaf.org/viaf/5470149068540465730001/exp/ger/1020/162089799/59960174> a rdac:C10006 ;
-    rdfs:label "Gedämpftes Saitenspiel / Knut Hamsun ; translated by Julius Sandmeier and S. Angermann. – German"@en,
-        "Gedämpftes Saitenspiel / Knut Hamsun ; oversatt av Julius Sandmeier og S. Angermann. – Tysk"@no ;
+    rdfs:label "Gedämpftes Saitenspiel / Knut Hamsun ; translated by Julius Sandmeier and Sophie Angermann. – German"@en,
+        "Gedämpftes Saitenspiel / Knut Hamsun ; oversatt av Julius Sandmeier og Sophie Angermann. – Tysk"@no ;
     rdaed:P20315 "Gedämpftes Saitenspiel" ;
     rdaed:P20316 "En Vandrer spiller med sordin",
         "Gedämpftes Saitenspiel : Roman" ;
@@ -20939,9 +20939,9 @@
     rdaeo:P20231 <http://viaf.org/viaf/5518152200833114400003> .
 
 <http://viaf.org/viaf/86862248> a rdac:C10004 ;
-    rdfs:label "Lorenzo, Ascunión" ;
-    rdaad:P50413 "Lorenzo, Ascunión",
-        "Lorenzo, Asunción" ;
+    rdfs:label "Lorenzo, Asunción" ;
+    rdaad:P50413 "Lorenzo, Asunción" ;
+    rdaad:P50415 "Lorenzo, Ascunión" ;
     rdaxd:P00018 "http://viaf.org/viaf/86862248" .
 
 <http://workid.oslomet.no/kh/03/exp/nob/1020> a rdac:C10006 ;
@@ -21109,8 +21109,8 @@
     rdaeo:P20231 <http://viaf.org/viaf/309525999> .
 
 <http://viaf.org/viaf/310234238/exp/ger/1020/162089799/59960174> a rdac:C10006 ;
-    rdfs:label "Benoni / Knut Hamsun ; translated by Julius Sandmeier and S. Angermann. – German"@en,
-        "Benoni / Knut Hamsun ; oversatt av Julius Sandmeier og S. Angermann. – Tysk"@no ;
+    rdfs:label "Benoni / Knut Hamsun ; translated by Julius Sandmeier and Sophie Angermann. – German"@en,
+        "Benoni / Knut Hamsun ; oversatt av Julius Sandmeier og Sophie Angermann. – Tysk"@no ;
     rdaed:P20315 "Benoni" ;
     rdaed:P20316 "Benoni",
         "Benoni : Roman",
@@ -21293,8 +21293,8 @@
     rdaeo:P20231 <http://viaf.org/viaf/143144898528950290965> .
 
 <http://viaf.org/viaf/1650145424683186830143/exp/ger/1020/162089799/59960174> a rdac:C10006 ;
-    rdfs:label "Rosa / Knut Hamsun ; translated by Julius Sandmeier and S. Angermann. – German"@en,
-        "Rosa / Knut Hamsun ; oversatt av Julius Sandmeier og S. Angermann. – Tysk"@no ;
+    rdfs:label "Rosa / Knut Hamsun ; translated by Julius Sandmeier and Sophie Angermann. – German"@en,
+        "Rosa / Knut Hamsun ; oversatt av Julius Sandmeier og Sophie Angermann. – Tysk"@no ;
     rdaed:P20315 "Rosa" ;
     rdaed:P20316 "Rosa",
         "Rosa : Roman" ;
@@ -21604,13 +21604,13 @@
     rdaeo:P20231 <http://viaf.org/viaf/188303684> .
 
 <http://viaf.org/viaf/194765531/exp/eng/1020/mcfarlanejameswalter> a rdac:C10006 ;
-    rdfs:label "Pan : from Lieutenant Thomas Glahn's papers / Knut Hamsun ; translated by James McFarlane. – English"@en,
-        "Pan : from Lieutenant Thomas Glahn's papers / Knut Hamsun ; oversatt av James McFarlane. – Engelsk"@no ;
+    rdfs:label "Pan : from Lieutenant Thomas Glahn's papers / Knut Hamsun ; translated by James Walter McFarlane. – English"@en,
+        "Pan : from Lieutenant Thomas Glahn's papers / Knut Hamsun ; oversatt av James Walter McFarlane. – Engelsk"@no ;
     rdaed:P20315 "Pan : from Lieutenant Thomas Glahn's papers" ;
     rdaed:P20316 "Pan" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20037 <http://example.org/mcfarlanejameswalter> ;
+    rdaeo:P20037 <http://viaf.org/viaf/27078590> ;
     rdaeo:P20231 <http://viaf.org/viaf/194765531> .
 
 <http://viaf.org/viaf/220443771/exp/ger/1020> a rdac:C10006 ;
@@ -21748,8 +21748,8 @@
     entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> .
 
 <http://viaf.org/viaf/191146462599827770953/exp/ger/1020/162089799/59960174> a rdac:C10006 ;
-    rdfs:label "Nach Jahr und Tag / Knut Hamsun ; translated by Julius Sandmeier and S. Angermann. – German"@en,
-        "Nach Jahr und Tag / Knut Hamsun ; oversatt av Julius Sandmeier og S. Angermann. – Tysk"@no ;
+    rdfs:label "Nach Jahr und Tag / Knut Hamsun ; translated by Julius Sandmeier and Sophie Angermann. – German"@en,
+        "Nach Jahr und Tag / Knut Hamsun ; oversatt av Julius Sandmeier og Sophie Angermann. – Tysk"@no ;
     rdaed:P20315 "Nach Jahr und Tag" ;
     rdaed:P20316 "Men livet lever",
         "Nach Jahr und Tag : Roman" ;
@@ -21838,8 +21838,8 @@
     rdaeo:P20231 <http://viaf.org/viaf/1650145424683186830143> .
 
 <http://viaf.org/viaf/180078068/exp/ger/1020/162089799/59960174> a rdac:C10006 ;
-    rdfs:label "Landstreicher / Knut Hamsun ; translated by Julius Sandmeier and S. Angermann. – German"@en,
-        "Landstreicher / Knut Hamsun ; oversatt av Julius Sandmeier og S. Angermann. – Tysk"@no ;
+    rdfs:label "Landstreicher / Knut Hamsun ; translated by Julius Sandmeier and Sophie Angermann. – German"@en,
+        "Landstreicher / Knut Hamsun ; oversatt av Julius Sandmeier og Sophie Angermann. – Tysk"@no ;
     rdaed:P20315 "Landstreicher" ;
     rdaed:P20316 "Landstreicher : Roman",
         "Landstrykere" ;
@@ -22039,8 +22039,8 @@
     rdaeo:P20231 <http://viaf.org/viaf/180078068> .
 
 <http://viaf.org/viaf/194765531/exp/ger/1020/162089799/59960174> a rdac:C10006 ;
-    rdfs:label "Pan, aus Leutnant Thomas Glahns Papieren / Knut Hamsun ; translated by Julius Sandmeier and S. Angermann. – German"@en,
-        "Pan, aus Leutnant Thomas Glahns Papieren / Knut Hamsun ; oversatt av Julius Sandmeier og S. Angermann. – Tysk"@no ;
+    rdfs:label "Pan, aus Leutnant Thomas Glahns Papieren / Knut Hamsun ; translated by Julius Sandmeier and Sophie Angermann. – German"@en,
+        "Pan, aus Leutnant Thomas Glahns Papieren / Knut Hamsun ; oversatt av Julius Sandmeier og Sophie Angermann. – Tysk"@no ;
     rdaed:P20315 "Pan, aus Leutnant Thomas Glahns Papieren" ;
     rdaed:P20316 "Pan",
         "Pan : Roman",
@@ -22078,10 +22078,10 @@
     rdaxd:P00018 "http://viaf.org/viaf/107756506" .
 
 <http://viaf.org/viaf/162089799> a rdac:C10004 ;
-    rdfs:label "Angermann, S. (1892-1973)" ;
+    rdfs:label "Angermann, Sophie (1892-1973)" ;
     rdaad:P50339 "1892-1973" ;
-    rdaad:P50413 "Angermann, S.",
-        "Angermann, Sophie" ;
+    rdaad:P50413 "Angermann, Sophie" ;
+    rdaad:P50415 "Angermann, S." ;
     rdaxd:P00018 "http://viaf.org/viaf/162089799" .
 
 <http://viaf.org/viaf/206863699> a rdac:C10001 ;
@@ -22115,8 +22115,8 @@
     rdaeo:P20231 <http://viaf.org/viaf/30145424502786830193> .
 
 <http://viaf.org/viaf/395147270538135700001/exp/ger/1020/162089799/59960174> a rdac:C10006 ;
-    rdfs:label "Victoria / Knut Hamsun ; translated by Julius Sandmeier and S. Angermann. – German"@en,
-        "Victoria / Knut Hamsun ; oversatt av Julius Sandmeier og S. Angermann. – Tysk"@no ;
+    rdfs:label "Victoria / Knut Hamsun ; translated by Julius Sandmeier and Sophie Angermann. – German"@en,
+        "Victoria / Knut Hamsun ; oversatt av Julius Sandmeier og Sophie Angermann. – Tysk"@no ;
     rdaed:P20315 "Victoria" ;
     rdaed:P20316 "Victoria",
         "Victoria : Die Geschichte e. Liebe",
@@ -22129,8 +22129,8 @@
     rdaeo:P20231 <http://viaf.org/viaf/395147270538135700001> .
 
 <http://viaf.org/viaf/220443771/exp/ger/1020/162089799/59960174> a rdac:C10006 ;
-    rdfs:label "Hunger / Knut Hamsun ; translated by Julius Sandmeier and S. Angermann. – German"@en,
-        "Hunger / Knut Hamsun ; oversatt av Julius Sandmeier og S. Angermann. – Tysk"@no ;
+    rdfs:label "Hunger / Knut Hamsun ; translated by Julius Sandmeier and Sophie Angermann. – German"@en,
+        "Hunger / Knut Hamsun ; oversatt av Julius Sandmeier og Sophie Angermann. – Tysk"@no ;
     rdaed:P20315 "Hunger" ;
     rdaed:P20316 "Hunger : Roman",
         "Hunger : Roman ; [aus dem Norwegischen]",
@@ -22142,8 +22142,8 @@
     rdaeo:P20231 <http://viaf.org/viaf/220443771> .
 
 <http://viaf.org/viaf/3267149068489065730001/exp/ger/1020/162089799/59960174> a rdac:C10006 ;
-    rdfs:label "August Weltumsegler / Knut Hamsun ; translated by Julius Sandmeier and S. Angermann. – German"@en,
-        "August Weltumsegler / Knut Hamsun ; oversatt av Julius Sandmeier og S. Angermann. – Tysk"@no ;
+    rdfs:label "August Weltumsegler / Knut Hamsun ; translated by Julius Sandmeier and Sophie Angermann. – German"@en,
+        "August Weltumsegler / Knut Hamsun ; oversatt av Julius Sandmeier og Sophie Angermann. – Tysk"@no ;
     rdaed:P20315 "August Weltumsegler" ;
     rdaed:P20316 "August",
         "August Weltumsegler : Roman" ;
@@ -22205,8 +22205,8 @@
     rdaeo:P20231 <http://viaf.org/viaf/220443771> .
 
 <http://viaf.org/viaf/294124367/exp/ger/1020/162089799/59960174> a rdac:C10006 ;
-    rdfs:label "Segen der Erde / Knut Hamsun ; translated by Julius Sandmeier and S. Angermann. – German"@en,
-        "Segen der Erde / Knut Hamsun ; oversatt av Julius Sandmeier og S. Angermann. – Tysk"@no ;
+    rdfs:label "Segen der Erde / Knut Hamsun ; translated by Julius Sandmeier and Sophie Angermann. – German"@en,
+        "Segen der Erde / Knut Hamsun ; oversatt av Julius Sandmeier og Sophie Angermann. – Tysk"@no ;
     rdaed:P20315 "Segen der Erde" ;
     rdaed:P20316 "Markens grøde",
         "Segen der Erde : Roman" ;

@@ -5608,8 +5608,8 @@
 
 <http://viaf.org/viaf/38364518> a rdac:C10004 ;
     rdfs:label "Goligorsky, Eduardo" ;
-    rdaad:P50413 "Goligorsky, Eduardo",
-        "Golygorsky, Eduardo" ;
+    rdaad:P50413 "Goligorsky, Eduardo" ;
+    rdaad:P50415 "Golygorsky, Eduardo" ;
     rdaxd:P00018 "http://viaf.org/viaf/38364518" .
 
 <http://viaf.org/viaf/44671175> a rdac:C10004 ;
