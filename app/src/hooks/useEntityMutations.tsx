@@ -17,6 +17,7 @@ import {
 } from "../utils/labelUtils";
 import {
   buildEntityUpdate,
+  normalizeNewLiterals,
   buildInverseCleanup,
   changedProperties,
   findConflicts,
@@ -178,14 +179,14 @@ export function useEntityMutations({
 
       // Build the terms the form wants to exist. Values that only exist
       // through inference are shown read-only and never written back.
-      const desired: DesiredTerm[] = [
+      const formTerms: DesiredTerm[] = [
         { property: RDF_TYPE, value: classUri, isUri: true, order: 0 },
       ];
 
       const hasUserLabel = entityLabels.some((l) => l.value.trim());
       entityLabels.forEach((label, index) => {
         if (label.value.trim()) {
-          desired.push({
+          formTerms.push({
             property: RDFS_LABEL,
             value: label.value,
             lang: label.language || undefined,
@@ -204,7 +205,7 @@ export function useEntityMutations({
             )?.value.trim()
           : undefined;
         if (primaryValue) {
-          desired.push({ property: RDFS_LABEL, value: primaryValue, order: 0 });
+          formTerms.push({ property: RDFS_LABEL, value: primaryValue, order: 0 });
         }
       }
 
@@ -212,7 +213,7 @@ export function useEntityMutations({
         let order = 0;
         values.forEach((value) => {
           if (!value.value.trim() || value.inferred) return;
-          desired.push({
+          formTerms.push({
             property,
             value: value.value,
             // isUri from the loaded binding also covers relationship
@@ -231,6 +232,7 @@ export function useEntityMutations({
 
       const loaded = existingEntityRef.current;
       const snapshot = entityUri ? (loaded?.snapshot ?? []) : [];
+      const desired = normalizeNewLiterals(snapshot, formTerms);
       const willWrite = changedProperties(snapshot, desired, managedProperties);
 
       // Someone else may have changed the entity while it was open. Only the

@@ -11,6 +11,7 @@ import {
   pruneEmptyValues,
   duplicateValueIndexes,
   pruneDuplicateValues,
+  normalizeNewLiterals,
 } from "./entityUpdate";
 
 const WORK = "http://viaf.org/viaf/214012164";
@@ -20,6 +21,10 @@ const CLASS_WORK = "http://rdaregistry.info/Elements/c/C10001";
 const EXAMPLES = "http://oslomet.no/abi/examples";
 
 const managed = new Set([RDF_TYPE, RDFS_LABEL, TITLE, AUTHOR]);
+
+/** "München" with a precomposed ü, and with u followed by a combining diaeresis. */
+const MUNCHEN_NFC = "M\u00fcnchen";
+const MUNCHEN_NFD = "Mu\u0308nchen";
 
 /** The Work as loaded from the example data: everything in the examples graph. */
 const storedWork: StoredTerm[] = [
@@ -357,6 +362,49 @@ describe("duplicateValueIndexes", () => {
     expect(
       duplicateValueIndexes([{ value: "A" }, { value: " A " }, { value: "" }, { value: "" }]),
     ).toEqual(new Set([1]));
+  });
+
+  it("treats composed and decomposed forms of the same text as a duplicate", () => {
+    expect(
+      duplicateValueIndexes([{ value: MUNCHEN_NFC }, { value: MUNCHEN_NFD }]),
+    ).toEqual(new Set([1]));
+  });
+});
+
+describe("normalizeNewLiterals", () => {
+  const PLACE = "http://rdaregistry.info/Elements/m/datatype/P30088";
+
+  it("puts a new or changed literal in NFC", () => {
+    const [term] = normalizeNewLiterals([], [{ property: PLACE, value: MUNCHEN_NFD, order: 0 }]);
+    expect(term.value).toBe(MUNCHEN_NFC);
+  });
+
+  it("leaves a value stored exactly as the form holds it untouched", () => {
+    const stored: StoredTerm[] = [{ property: PLACE, value: MUNCHEN_NFD, graph: EXAMPLES }];
+    const desired: DesiredTerm[] = [{ property: PLACE, value: MUNCHEN_NFD, order: 0 }];
+    expect(normalizeNewLiterals(stored, desired)).toEqual(desired);
+    expect(
+      buildEntityUpdate({
+        entityUri: WORK,
+        snapshot: stored,
+        desired: normalizeNewLiterals(stored, desired),
+        managedProperties: new Set([PLACE]),
+      }),
+    ).toBe("");
+  });
+
+  it("does not touch IRIs", () => {
+    const iri = "http://example.org/m" + "\u0075\u0308";
+    const desired: DesiredTerm[] = [{ property: AUTHOR, value: iri, isUri: true, order: 0 }];
+    expect(normalizeNewLiterals([], desired)[0].value).toBe(iri);
+  });
+
+  it("keeps language tag and datatype", () => {
+    const [term] = normalizeNewLiterals(
+      [],
+      [{ property: TITLE, value: MUNCHEN_NFD, lang: "de", order: 2 }],
+    );
+    expect(term).toEqual({ property: TITLE, value: MUNCHEN_NFC, lang: "de", order: 2 });
   });
 });
 

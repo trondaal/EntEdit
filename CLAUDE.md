@@ -186,6 +186,12 @@ Unchanged triples produce no operations at all, so language tags, datatypes,
 named graphs and unmanaged properties survive untouched, and a save that
 changes one property cannot clobber another.
 
+**Unicode:** literals the form adds or changes are saved in NFC
+(`normalizeNewLiterals`), since decomposed text (e + combining accent, typical
+of pasted PDF text) is missed by search, SPARQL equality and the duplicate
+check, which also compares in NFC. Values stored exactly as loaded are not
+normalized, so a save never rewrites text nobody edited.
+
 **Removing an inferred relationship:** inferred values are read-only for
 *editing* but can be *removed*. Cataloguers link A→B or B→A inconsistently, so a
 relationship must be removable from whichever side is open. `findRemovedRelations`
