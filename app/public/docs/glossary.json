@@ -118,6 +118,54 @@
     "has actor": {
       "no": "har skuespiller",
       "ui": true
+    },
+    "has author of introduction": {
+      "no": "har forfatter av innledning",
+      "ui": true
+    },
+    "is author of introduction in": {
+      "no": "er forfatter av innledning i",
+      "ui": true
+    },
+    "has illustrator": {
+      "no": "har illustratør",
+      "ui": true
+    },
+    "is illustrator in": {
+      "no": "er illustratør i",
+      "ui": true
+    },
+    "has author of foreword": {
+      "no": "har forfatter av forord",
+      "ui": true
+    },
+    "is author of foreword in": {
+      "no": "er forfatter av forord i",
+      "ui": true
+    },
+    "has author of afterword": {
+      "no": "har forfatter av etterord",
+      "ui": true
+    },
+    "is author of afterword in": {
+      "no": "er forfatter av etterord i",
+      "ui": true
+    },
+    "has annotator": {
+      "no": "har kommentator",
+      "ui": true
+    },
+    "is annotator in": {
+      "no": "er kommentator i",
+      "ui": true
+    },
+    "has photographer": {
+      "no": "har fotograf",
+      "ui": true
+    },
+    "is photographer in": {
+      "no": "er fotograf i",
+      "ui": true
     }
   },
   "work_relationships": {

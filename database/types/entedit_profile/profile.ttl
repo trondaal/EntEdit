@@ -88,6 +88,124 @@ entedit:P02
   rdfs:range entedit:Genretype ;
   rdfs:label "Sjanger eller form"@no, "Genre or form"@en.
 
+# Specific contributor roles for manifestations. RDA offers only the generic
+# "has contributor agent of text / still image"; these sub-properties name the
+# role, and inference still yields the generic RDA relationship. Each has an
+# inverse, so the relationship shows from the agent's side as well.
+
+entedit:P03
+  a rdf:Property ;
+  entedit:status "object property" ;
+  rdfs:subPropertyOf rdamo:P30328 ;
+  owl:inverseOf entedit:P04 ;
+  rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+  rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+  rdfs:label "har forfatter av innledning"@no, "has author of introduction"@en.
+
+entedit:P04
+  a rdf:Property ;
+  entedit:status "object property" ;
+  rdfs:subPropertyOf rdaao:P50475 ;
+  owl:inverseOf entedit:P03 ;
+  rdfs:domain <http://rdaregistry.info/Elements/c/C10002> ;
+  rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+  rdfs:label "er forfatter av innledning i"@no, "is author of introduction in"@en.
+
+entedit:P05
+  a rdf:Property ;
+  entedit:status "object property" ;
+  rdfs:subPropertyOf rdamo:P30321 ;
+  owl:inverseOf entedit:P06 ;
+  rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+  rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+  rdfs:label "har illustratør"@no, "has illustrator"@en.
+
+entedit:P06
+  a rdf:Property ;
+  entedit:status "object property" ;
+  rdfs:subPropertyOf rdaao:P50469 ;
+  owl:inverseOf entedit:P05 ;
+  rdfs:domain <http://rdaregistry.info/Elements/c/C10002> ;
+  rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+  rdfs:label "er illustratør i"@no, "is illustrator in"@en.
+
+# Forewords, afterwords, and notes or commentary (including bibliographies and
+# chronologies): further roles under "has contributor agent of text".
+
+entedit:P07
+  a rdf:Property ;
+  entedit:status "object property" ;
+  rdfs:subPropertyOf rdamo:P30328 ;
+  owl:inverseOf entedit:P08 ;
+  rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+  rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+  rdfs:label "har forfatter av forord"@no, "has author of foreword"@en.
+
+entedit:P08
+  a rdf:Property ;
+  entedit:status "object property" ;
+  rdfs:subPropertyOf rdaao:P50475 ;
+  owl:inverseOf entedit:P07 ;
+  rdfs:domain <http://rdaregistry.info/Elements/c/C10002> ;
+  rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+  rdfs:label "er forfatter av forord i"@no, "is author of foreword in"@en.
+
+entedit:P09
+  a rdf:Property ;
+  entedit:status "object property" ;
+  rdfs:subPropertyOf rdamo:P30328 ;
+  owl:inverseOf entedit:P10 ;
+  rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+  rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+  rdfs:label "har forfatter av etterord"@no, "has author of afterword"@en.
+
+entedit:P10
+  a rdf:Property ;
+  entedit:status "object property" ;
+  rdfs:subPropertyOf rdaao:P50475 ;
+  owl:inverseOf entedit:P09 ;
+  rdfs:domain <http://rdaregistry.info/Elements/c/C10002> ;
+  rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+  rdfs:label "er forfatter av etterord i"@no, "is author of afterword in"@en.
+
+entedit:P11
+  a rdf:Property ;
+  entedit:status "object property" ;
+  rdfs:subPropertyOf rdamo:P30328 ;
+  owl:inverseOf entedit:P12 ;
+  rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+  rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+  rdfs:label "har kommentator"@no, "has annotator"@en.
+
+entedit:P12
+  a rdf:Property ;
+  entedit:status "object property" ;
+  rdfs:subPropertyOf rdaao:P50475 ;
+  owl:inverseOf entedit:P11 ;
+  rdfs:domain <http://rdaregistry.info/Elements/c/C10002> ;
+  rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+  rdfs:label "er kommentator i"@no, "is annotator in"@en.
+
+# Photographs: a further role under "has contributor agent of still image".
+
+entedit:P13
+  a rdf:Property ;
+  entedit:status "object property" ;
+  rdfs:subPropertyOf rdamo:P30321 ;
+  owl:inverseOf entedit:P14 ;
+  rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+  rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+  rdfs:label "har fotograf"@no, "has photographer"@en.
+
+entedit:P14
+  a rdf:Property ;
+  entedit:status "object property" ;
+  rdfs:subPropertyOf rdaao:P50469 ;
+  owl:inverseOf entedit:P13 ;
+  rdfs:domain <http://rdaregistry.info/Elements/c/C10002> ;
+  rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+  rdfs:label "er fotograf i"@no, "is photographer in"@en.
+
 #All classes with status "class" are displayed in the entity browsers class display
 #rdac:C10002 entedit:order 1 ; entedit:status "class" .  # "Agent"@en .
 rdac:C10004 entedit:order 2 ; entedit:status "class" .  # "Person"@en .
