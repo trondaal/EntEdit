@@ -2384,8 +2384,7 @@
     entedit:P02 <https://id.nb.no/vocabulary/ntsf/298> ;
     rdawd:P10223 "The stonemason" ;
     rdawo:P10061 <http://viaf.org/viaf/29558386> ;
-    rdaxd:P00018 "http://viaf.org/viaf/8419162723677961290005" ;
-    entedit:P02 <https://id.nb.no/vocabulary/ntsf/583> .
+    rdaxd:P00018 "http://viaf.org/viaf/8419162723677961290005" .
 
 <http://viaf.org/viaf/92910249/seriousnoticing/01> a rdac:C10001 ;
     rdfs:label "Fun stuff: homage to Keith Moon / James Wood"@en,

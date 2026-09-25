@@ -5509,7 +5509,7 @@
     rdawo:P10061 <http://viaf.org/viaf/86448713> ;
     rdawo:P10127 <http://viaf.org/viaf/119144648592107423604> ;
     rdaxd:P00018 "http://viaf.org/viaf/310430410" ;
-    entedit:P02 <https://id.nb.no/vocabulary/ntsf/583> .
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/298> .
 
 <http://viaf.org/viaf/310430410/exp/eng/1020> a rdac:C10006 ;
     rdfs:label "Lord of the flies / Nigel Williams. – English"@en,

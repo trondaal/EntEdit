@@ -2327,7 +2327,7 @@
     rdamd:P30182 "vi, 151 p. : ill., 24 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
-    rdamo:P30328 <http://viaf.org/viaf/12305881> ;
+    entedit:P03 <http://viaf.org/viaf/12305881> ;
     rdamo:P30139 <http://viaf.org/viaf/175761003/adaptation/exp/eng/1020> ;
     rdaxd:P00018 "isbn-0809067935",
         "isbn-0809080451",

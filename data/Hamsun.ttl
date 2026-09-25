@@ -16512,7 +16512,7 @@
     rdawo:P10061 <http://example.org/barraultjeanlouis> ;
     rdawo:P10127 <http://viaf.org/viaf/220443771> ;
     rdaxd:P00018 "http://example.org/barraultjeanlouis/lafaim" ;
-    entedit:P02 <https://id.nb.no/vocabulary/ntsf/583> .
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/298> .
 
 <http://example.org/barraultjeanlouis/lafaim/exp/fre/1020> a rdac:C10006 ;
     rdfs:label "La faim : action dramatique / Jean-Louis Barrault. – French"@en,
@@ -16788,7 +16788,7 @@
         <http://example.org/pickledimage> ;
     rdawo:P10127 <http://viaf.org/viaf/220443771> ;
     rdaxd:P00018 "http://example.org/hungerplay" ;
-    entedit:P02 <https://id.nb.no/vocabulary/ntsf/583> .
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/298> .
 
 <http://example.org/hungerplay/exp/eng/1020> a rdac:C10006 ;
     rdfs:label "Hunger : a starving young man, a delusionary existence, the darker side of a modern metropolis : presented by TinkerTing, designed and directed by Pickled Image, co-produced with Figurteateret i Nordland. – English"@en,
@@ -20035,7 +20035,7 @@
     rdawd:P10223 "Dronning Tamara" ;
     rdawo:P10061 <http://viaf.org/viaf/59083692> ;
     rdaxd:P00018 "http://www.wikidata.org/entity/Q11966095" ;
-    entedit:P02 <https://id.nb.no/vocabulary/ntsf/583> .
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/298> .
 
 <http://www.wikidata.org/entity/Q12003637/exp/ger/1020/kiyhermann> a rdac:C10006 ;
     rdfs:label "Kämpfende Kräfte / Knut Hamsun ; translated by Hermann Kiy. – German"@en,
@@ -20055,7 +20055,7 @@
     rdawd:P10223 "Munken vendt" ;
     rdawo:P10061 <http://viaf.org/viaf/59083692> ;
     rdaxd:P00018 "http://www.wikidata.org/entity/Q15062323" ;
-    entedit:P02 <https://id.nb.no/vocabulary/ntsf/583> .
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/298> .
 
 <http://www.wikidata.org/entity/Q15062328/exp/ger/1020/brausewetterernst> a rdac:C10006 ;
     rdfs:label "Die Königin von Saba und andere Novellen / Knut Hamsun ; translated by Ernst Brausewetter. – German"@en,
@@ -20399,7 +20399,7 @@
     rdawd:P10223 "Ved rigets port" ;
     rdawo:P10061 <http://viaf.org/viaf/59083692> ;
     rdaxd:P00018 "http://viaf.org/viaf/316992494" ;
-    entedit:P02 <https://id.nb.no/vocabulary/ntsf/583> .
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/298> .
 
 <http://viaf.org/viaf/395147270538135700001/exp/eng/1020> a rdac:C10006 ;
     rdfs:label "Victoria / Knut Hamsun. – English"@en,
@@ -20749,7 +20749,7 @@
     rdawd:P10223 "Aftenrøde" ;
     rdawo:P10061 <http://viaf.org/viaf/59083692> ;
     rdaxd:P00018 "http://www.wikidata.org/entity/Q15062327" ;
-    entedit:P02 <https://id.nb.no/vocabulary/ntsf/583> .
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/298> .
 
 <http://viaf.org/viaf/6145971343732331107> a rdac:C10004 ;
     rdfs:label "Carlsen, Henning" ;
@@ -21123,7 +21123,7 @@
     rdawd:P10223 "Livet ivold" ;
     rdawo:P10061 <http://viaf.org/viaf/59083692> ;
     rdaxd:P00018 "http://viaf.org/viaf/312486496" ;
-    entedit:P02 <https://id.nb.no/vocabulary/ntsf/583> .
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/298> .
 
 <http://viaf.org/viaf/312501980> a rdac:C10001 ;
     rdfs:label "Livsfragmenter / Knut Hamsun"@en,
@@ -21174,7 +21174,7 @@
     rdawo:P10061 <http://viaf.org/viaf/59083692> ;
     rdaxd:P00018 "http://viaf.org/viaf/191146462599827770953",
         "http://viaf.org/viaf/7398163939428301160007" ;
-    entedit:P02 <https://id.nb.no/vocabulary/ntsf/583> .
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/298> .
 
 <http://viaf.org/viaf/811145857935523020027> a rdac:C10001 ;
     rdfs:label "Fra det moderne Amerikas aandsliv / Knut Hamsun"@en,
