@@ -2332,7 +2332,7 @@
     rdfs:label "The counselor / Cormac McCarthy"@en,
         "The counselor / Cormac McCarthy"@no ;
     entedit:P01 vtp:V1000 ;
-    entedit:P02 <https://id.nb.no/vocabulary/ntsf/298> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/96> ;
     rdawd:P10223 "The counselor" ;
     rdawo:P10061 <http://viaf.org/viaf/29558386> ;
     rdaxd:P00018 "http://viaf.org/viaf/29558386/counselor" ;
@@ -2342,7 +2342,7 @@
     rdfs:label "The gardener's son / Cormac McCarthy"@en,
         "The gardener's son / Cormac McCarthy"@no ;
     entedit:P01 vtp:V1000 ;
-    entedit:P02 <https://id.nb.no/vocabulary/ntsf/298> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/96> ;
     rdawd:P10223 "The gardener's son" ;
     rdawo:P10061 <http://viaf.org/viaf/29558386> ;
     rdaxd:P00018 "http://viaf.org/viaf/29558386/gardenersson" ;
@@ -2370,7 +2370,7 @@
     rdfs:label "The road / Joe Penhall"@en,
         "The road / Joe Penhall"@no ;
     entedit:P01 vtp:V1000 ;
-    entedit:P02 <https://id.nb.no/vocabulary/ntsf/298> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/96> ;
     rdawd:P10223 "The road" ;
     rdawo:P10061 <http://viaf.org/viaf/5191807> ;
     rdawo:P10134 <http://viaf.org/viaf/220031159> ;
@@ -2381,7 +2381,7 @@
     rdfs:label "The stonemason / Cormac McCarthy"@en,
         "The stonemason / Cormac McCarthy"@no ;
     entedit:P01 vtp:V1000 ;
-    entedit:P02 <https://id.nb.no/vocabulary/ntsf/67> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/298> ;
     rdawd:P10223 "The stonemason" ;
     rdawo:P10061 <http://viaf.org/viaf/29558386> ;
     rdaxd:P00018 "http://viaf.org/viaf/8419162723677961290005" ;

@@ -6137,6 +6137,7 @@
     rdfs:label "A graveyard for lunatics / Ray Bradbury"@en,
         "A graveyard for lunatics / Ray Bradbury"@no ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
     rdawd:P10223 "A graveyard for lunatics" ;
     rdawo:P10061 <http://viaf.org/viaf/12305881> ;
     rdaxd:P00018 "http://viaf.org/viaf/1142162985500686300007" .
@@ -6172,6 +6173,7 @@
     rdfs:label "A medicine for melancholy / Ray Bradbury"@en,
         "A medicine for melancholy / Ray Bradbury"@no ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
+    entedit:P02 entedit:T01 ;
     rdawd:P10223 "A medicine for melancholy" ;
     rdawo:P10061 <http://viaf.org/viaf/12305881> ;
     rdaxd:P00018 "http://viaf.org/viaf/209899296" .
@@ -6687,7 +6689,7 @@
     rdfs:label "A device out of time / Ray Bradbury"@en,
         "A device out of time / Ray Bradbury"@no ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    entedit:P02 entedit:T02 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/298> ;
     rdawd:P10223 "A device out of time" ;
     rdawo:P10061 <http://viaf.org/viaf/12305881> ;
     rdaxd:P00018 "http://viaf.org/viaf/12305881/adeviceoutoftime" .
