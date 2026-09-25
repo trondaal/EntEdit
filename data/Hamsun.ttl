@@ -530,8 +530,8 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/220443771/exp/ger/1020> ;
-    rdamo:P30321 <http://example.org/jenssenolavchristopher> ;
-    rdamo:P30328 <http://example.org/morkgeir> .
+    rdamo:P30321 <http://viaf.org/viaf/15044837> ;
+    rdamo:P30328 <http://viaf.org/viaf/60486454> .
 
 <http://example.org/1130677796> a rdac:C10007 ;
     rdfs:label "Landstreicher / Knut Hamsun. – Deutscher Buchklub, [zwischen 1950 und 1960?]" ;
@@ -575,7 +575,7 @@
     rdamd:P30182 "278 Seiten, 19 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
-    rdamo:P30069 <http://example.org/heinethomastheodor> ;
+    rdamo:P30069 <http://viaf.org/viaf/12526089> ;
     rdamo:P30139 <http://viaf.org/viaf/5518152200833114400003/exp/ger/1020/borchmarievon> .
 
 <http://example.org/1149976802> a rdac:C10007 ;
@@ -591,7 +591,7 @@
     rdamd:P30182 "253 Seiten, 19 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
-    rdamo:P30069 <http://example.org/heinethomastheodor> ;
+    rdamo:P30069 <http://viaf.org/viaf/12526089> ;
     rdamo:P30139 <http://viaf.org/viaf/4225152200827914400006/exp/ger/1020/brausewetterernst>,
         <http://viaf.org/viaf/59083692/damenfrativoli/exp/ger/1020/brausewetterernst>,
         <http://viaf.org/viaf/59083692/hemmeligv/exp/ger/1020/brausewetterernst>,
@@ -1320,7 +1320,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/206863699/exp/ger/1020/59960174> ;
-    rdamo:P30328 <http://example.org/schaperedzard> .
+    rdamo:P30328 <http://viaf.org/viaf/111522015> .
 
 <http://example.org/451794672> a rdac:C10007 ;
     rdfs:label "Mysterien / Knut Hamsun. – List, 1961" ;
@@ -2391,7 +2391,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/395147270538135700001/exp/ger/1020> ;
-    rdamo:P30328 <http://example.org/mannmathilde> .
+    rdamo:P30328 <http://viaf.org/viaf/72158557> .
 
 <http://example.org/573639302> a rdac:C10007 ;
     rdfs:label "Victoria / Knut Hamsun. – 16.-18. Tsd. – Langen, 1923" ;
@@ -3044,7 +3044,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/395147270538135700001/exp/nob/1020> ;
-    rdamo:P30321 <http://example.org/stenstadvoldhkon> .
+    rdamo:P30321 <http://viaf.org/viaf/17332658> .
 
 <http://example.org/990201111504702201> a rdac:C10007 ;
     rdfs:label "Segen der Erde / Knut Hamsun. – Deutsche Buch-Gemeinschaft, c1918" ;
@@ -4433,7 +4433,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/207944253/exp/nob/1020> ;
-    rdamo:P30328 <http://example.org/bullfrancis> .
+    rdamo:P30328 <http://viaf.org/viaf/29574001> .
 
 <http://example.org/997521295384702201> a rdac:C10007 ;
     rdfs:label "Victoria / Knut Hamsun. – Gyldendal, 1964" ;
@@ -4500,7 +4500,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/3267149068489065730001/exp/ger/1020/162089799/59960174> ;
-    rdamo:P30328 <http://example.org/bienhorst> .
+    rdamo:P30328 <http://viaf.org/viaf/49272803> .
 
 <http://example.org/998020654654702201> a rdac:C10007 ;
     rdfs:label "Pan / Knut Hamsun. – Reclam, 1979" ;
@@ -4513,7 +4513,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/194765531/exp/ger/1020/162089799/59960174> ;
-    rdamo:P30321 <http://example.org/naumannhermann> .
+    rdamo:P30321 <http://viaf.org/viaf/35251769> .
 
 <http://example.org/998441651404702201> a rdac:C10007 ;
     rdfs:label "Redakteur Lynge / Knut Hamsun. – Albert Langen, 1898" ;
@@ -4622,7 +4622,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/395147270538135700001/exp/nob/1020> ;
-    rdamo:P30321 <http://example.org/stenstadvoldhkon> .
+    rdamo:P30321 <http://viaf.org/viaf/17332658> .
 
 <http://example.org/999000992914702201> a rdac:C10007 ;
     rdfs:label "Sult / Knut Hamsun. – Gyldendal, 1953" ;
@@ -4886,7 +4886,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/395147270538135700001/exp/nob/1020> ;
-    rdamo:P30321 <http://example.org/stenstadvoldhkon> .
+    rdamo:P30321 <http://viaf.org/viaf/17332658> .
 
 <http://example.org/999309806464702201> a rdac:C10007 ;
     rdfs:label "Victoria / Knut Hamsun. – Bertelsmann, [1988]" ;
@@ -5255,7 +5255,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/395147270538135700001/exp/nob/1020> ;
-    rdamo:P30321 <http://example.org/stenstadvoldhkon> .
+    rdamo:P30321 <http://viaf.org/viaf/17332658> .
 
 <http://example.org/999513065374702201> a rdac:C10007 ;
     rdfs:label "Munken Vendt / Knut Hamsun. – Gyldendal, 1902" ;
@@ -5293,7 +5293,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/310234238/exp/nob/1020> ;
-    rdamo:P30321 <http://example.org/krohgper> .
+    rdamo:P30321 <http://viaf.org/viaf/12575438> .
 
 <http://example.org/999515235974702201> a rdac:C10007 ;
     rdfs:label "Bjørger / af Knud Pedersen Hamsund. – [K. Hamsund], 1878" ;
@@ -5448,7 +5448,7 @@
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/59083692/etspkelse/exp/nob/1020>,
         <http://www.wikidata.org/entity/Q15062320/exp/nob/1020> ;
-    rdamo:P30267 <http://example.org/werkmsterbarbro> .
+    rdamo:P30267 <http://viaf.org/viaf/116273371> .
 
 <http://example.org/999610820464702201> a rdac:C10007 ;
     rdfs:label "Pan / Knut Hamsun. – Gyldendal, c1954" ;
@@ -5545,7 +5545,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/206863699/exp/ger/1020/weibelsiegfried> ;
-    rdamo:P30321 <http://example.org/naumannhermann> .
+    rdamo:P30321 <http://viaf.org/viaf/35251769> .
 
 <http://example.org/999714862044702201> a rdac:C10007 ;
     rdfs:label "Samlede Verker. – 4. Utg. – Gyldendal, 1934" ;
@@ -5932,7 +5932,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/220443771/exp/eng/1020/egertongeorge> ;
-    rdamo:P30328 <http://example.org/bjrkmanedwin> .
+    rdamo:P30328 <http://viaf.org/viaf/85971157> .
 
 <http://example.org/999906669134702201> a rdac:C10007 ;
     rdfs:label "Mothwise / by Knut Hamsun. – Gyldendal, [1922]" ;
@@ -6144,9 +6144,9 @@
     rdamd:P30182 "287 S. : Ill., 39 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
-    rdamo:P30069 <http://example.org/schillerwalter> ;
+    rdamo:P30069 <http://viaf.org/viaf/28233757> ;
     rdamo:P30139 <http://viaf.org/viaf/206863699/exp/ger/1020/weibelsiegfried> ;
-    rdamo:P30321 <http://example.org/naumannhermann> ;
+    rdamo:P30321 <http://viaf.org/viaf/35251769> ;
     rdaxd:P00018 "NN-023542" .
 
 <http://example.org/NN-032873> a rdac:C10007 ;
@@ -6213,7 +6213,7 @@
     rdamd:P30182 "186 S., 20 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
-    rdamo:P30069 <http://example.org/heinethomastheodor> ;
+    rdamo:P30069 <http://viaf.org/viaf/12526089> ;
     rdamo:P30139 <http://viaf.org/viaf/220443771/exp/ger/1020/59960174> ;
     rdaxd:P00018 "NN-113543" .
 
@@ -6631,7 +6631,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/220443771/exp/spa/1020/86820581> ;
-    rdamo:P30328 <http://example.org/sainzderoblesfedericocarlos> .
+    rdamo:P30328 <http://viaf.org/viaf/4969036> .
 
 <http://example.org/bimo0000977151> a rdac:C10007 ;
     rdfs:label "Hambre / por Knut Hamsun... [Versión de José Viana]. – G.P., 1962" ;
@@ -6664,7 +6664,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/220443771/exp/spa/1020/86820581> ;
-    rdamo:P30328 <http://example.org/sainzderoblesfedericocarlos> .
+    rdamo:P30328 <http://viaf.org/viaf/4969036> .
 
 <http://example.org/bimo0000977153> a rdac:C10007 ;
     rdfs:label "Hambre / [Traducción de José Viana]. – 5ª ed. – Aguilar, [1967]" ;
@@ -6907,7 +6907,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/194765531/exp/spa/1020/76448961> ;
-    rdamo:P30328 <http://example.org/sainzderoblesfedericocarlos> .
+    rdamo:P30328 <http://viaf.org/viaf/4969036> .
 
 <http://example.org/bimo0000977186> a rdac:C10007 ;
     rdfs:label "Pan / traducción de A. Hernández Catá. – [4ª ed.]. – Aguilar, 1962" ;
@@ -6925,7 +6925,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/194765531/exp/spa/1020/76448961> ;
-    rdamo:P30328 <http://example.org/sainzderoblesfedericocarlos> .
+    rdamo:P30328 <http://viaf.org/viaf/4969036> .
 
 <http://example.org/bimo0000977187> a rdac:C10007 ;
     rdfs:label "Pan / [traducción... de A. Hernández Catá]. – Vergara, 1962" ;
@@ -6956,7 +6956,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/194765531/exp/spa/1020/76448961> ;
-    rdamo:P30328 <http://example.org/sainzderoblesfedericocarlos> .
+    rdamo:P30328 <http://viaf.org/viaf/4969036> .
 
 <http://example.org/bimo0000977189> a rdac:C10007 ;
     rdfs:label "Pan / [traducción de A. Hernández Catá]. – Plaza & Janés, [1965]" ;
@@ -8355,7 +8355,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/220443771/exp/eng/1020/111655332> ;
-    rdamo:P30328 <http://example.org/austerpaul> ;
+    rdamo:P30328 <http://viaf.org/viaf/110344312> ;
     rdaxd:P00018 "isbn-1841958190",
         "isbn-9781841958194" .
 
@@ -9231,7 +9231,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/206863699/exp/ger/1020/weibelsiegfried> ;
-    rdamo:P30328 <http://example.org/baumgartnerwalter> ;
+    rdamo:P30328 <http://viaf.org/viaf/20838120> ;
     rdaxd:P00018 "isbn-3423111577111" .
 
 <http://example.org/isbn-342311228> a rdac:C10007 ;
@@ -9529,7 +9529,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/206863699/exp/ger/1020/weibelsiegfried> ;
-    rdamo:P30328 <http://example.org/baumgartnerwalter> ;
+    rdamo:P30328 <http://viaf.org/viaf/20838120> ;
     rdaxd:P00018 "isbn-3471793011" .
 
 <http://example.org/isbn-3471793070> a rdac:C10007 ;
@@ -9667,7 +9667,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/194765531/exp/ger/1020/162089799/59960174> ;
-    rdamo:P30321 <http://example.org/naumannhermann> ;
+    rdamo:P30321 <http://viaf.org/viaf/35251769> ;
     rdaxd:P00018 "isbn-3784417930" .
 
 <http://example.org/isbn-3784418694> a rdac:C10007 ;
@@ -9921,7 +9921,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/395147270538135700001/exp/nob/1020> ;
-    rdamo:P30321 <http://example.org/stenstadvoldhkon> ;
+    rdamo:P30321 <http://viaf.org/viaf/17332658> ;
     rdaxd:P00018 "isbn-8205034435" .
 
 <http://example.org/isbn-8205040257-12> a rdac:C10007 ;
@@ -9954,7 +9954,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/220443771/exp/nob/1020> ;
-    rdamo:P30328 <http://example.org/eggeneinar> ;
+    rdamo:P30328 <http://viaf.org/viaf/60410151> ;
     rdaxd:P00018 "isbn-8205048975" .
 
 <http://example.org/isbn-8205057427> a rdac:C10007 ;
@@ -10074,7 +10074,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/294124367/exp/nob/1020> ;
-    rdamo:P30321 <http://example.org/rudborghild> ;
+    rdamo:P30321 <http://viaf.org/viaf/77586076> ;
     rdaxd:P00018 "isbn-8205131023",
         "isbn-8205132615" .
 
@@ -10182,7 +10182,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/220443771/exp/nob/1020> ;
-    rdamo:P30328 <http://example.org/rottemystein> ;
+    rdamo:P30328 <http://viaf.org/viaf/54190339> ;
     rdaxd:P00018 "isbn-8205185557",
         "isbn-9788205185555" .
 
@@ -10218,7 +10218,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/395147270538135700001/exp/nob/1020> ;
-    rdamo:P30321 <http://example.org/stenstadvoldhkon> ;
+    rdamo:P30321 <http://viaf.org/viaf/17332658> ;
     rdaxd:P00018 "isbn-8205190011" .
 
 <http://example.org/isbn-8205200106> a rdac:C10007 ;
@@ -10433,7 +10433,7 @@
     rdamo:P30139 <http://viaf.org/viaf/1650145424683186830143/exp/nob/1020>,
         <http://viaf.org/viaf/310234238/exp/nob/1020> ;
     rdamo:P30321 <http://viaf.org/viaf/14863655> ;
-    rdamo:P30328 <http://example.org/knutsennilsmagne> ;
+    rdamo:P30328 <http://viaf.org/viaf/17198272> ;
     rdaxd:P00018 "isbn-8205225346" .
 
 <http://example.org/isbn-8205241619> a rdac:C10007 ;
@@ -10523,7 +10523,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/395147270538135700001/exp/nob/1020> ;
-    rdamo:P30321 <http://example.org/stenstadvoldhkon> ;
+    rdamo:P30321 <http://viaf.org/viaf/17332658> ;
     rdaxd:P00018 "isbn-8205248958" .
 
 <http://example.org/isbn-8205253331-1> a rdac:C10007 ;
@@ -10855,7 +10855,7 @@
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/206863699/exp/nob/1020>,
         <http://viaf.org/viaf/395147270538135700001/exp/nob/1020> ;
-    rdamo:P30321 <http://example.org/stenstadvoldhkon> ;
+    rdamo:P30321 <http://viaf.org/viaf/17332658> ;
     rdaxd:P00018 "isbn-8205253749" .
 
 <http://example.org/isbn-8205257094> a rdac:C10007 ;
@@ -10905,10 +10905,10 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/309525999/exp/nob/1020> ;
-    rdamo:P30321 <http://example.org/frlandolepetter>,
-        <http://example.org/rudborgbjrn> ;
-    rdamo:P30328 <http://example.org/frlandolepetter>,
-        <http://example.org/rudborgbjrn> ;
+    rdamo:P30321 <http://viaf.org/viaf/78424451>,
+        <http://viaf.org/viaf/61190633> ;
+    rdamo:P30328 <http://viaf.org/viaf/78424451>,
+        <http://viaf.org/viaf/61190633> ;
     rdaxd:P00018 "isbn-8205273324" .
 
 <http://example.org/isbn-8205275408-1> a rdac:C10007 ;
@@ -11945,7 +11945,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/395147270538135700001/exp/nob/1020> ;
-    rdamo:P30321 <http://example.org/johannessenjens> ;
+    rdamo:P30321 <http://viaf.org/viaf/61643759> ;
     rdaxd:P00018 "isbn-8252506747" .
 
 <http://example.org/isbn-8252512372> a rdac:C10007 ;
@@ -12014,7 +12014,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/220443771/exp/nob/1020> ;
-    rdamo:P30321 <http://example.org/jenssenolavchristopher> ;
+    rdamo:P30321 <http://viaf.org/viaf/15044837> ;
     rdaxd:P00018 "isbn-8252519385" .
 
 <http://example.org/isbn-8252521177> a rdac:C10007 ;
@@ -12060,7 +12060,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/206863699/exp/nob/1020> ;
-    rdamo:P30321 <http://example.org/blekenhkon> ;
+    rdamo:P30321 <http://viaf.org/viaf/56703858> ;
     rdaxd:P00018 "isbn-8252521541" .
 
 <http://example.org/isbn-8252525644> a rdac:C10007 ;
@@ -12249,7 +12249,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/395147270538135700001/exp/nob/1020> ;
-    rdamo:P30321 <http://example.org/stenstadvoldhkon> ;
+    rdamo:P30321 <http://viaf.org/viaf/17332658> ;
     rdaxd:P00018 "isbn-8277900341" .
 
 <http://example.org/isbn-8290303424> a rdac:C10007 ;
@@ -12284,7 +12284,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/183478381/exp/nob/1020> ;
-    rdamo:P30328 <http://example.org/arntzeneven> ;
+    rdamo:P30328 <http://viaf.org/viaf/71607279> ;
     rdaxd:P00018 "isbn-8291002185" .
 
 <http://example.org/isbn-840101038> a rdac:C10007 ;
@@ -12886,8 +12886,8 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/220443771/exp/eng/1020/blyrobert> ;
-    rdamo:P30328 <http://example.org/austerpaul>,
-        <http://example.org/blyrobert> ;
+    rdamo:P30328 <http://viaf.org/viaf/110344312>,
+        <http://viaf.org/viaf/79847862> ;
     rdaxd:P00018 "isbn-0374531102",
         "isbn-9780374531102" .
 
@@ -12971,7 +12971,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/220443771/exp/eng/1020/111655332> ;
-    rdamo:P30328 <http://example.org/austerpaul> ;
+    rdamo:P30328 <http://viaf.org/viaf/110344312> ;
     rdaxd:P00018 "isbn-0857861794",
         "isbn-9780857861795" .
 
@@ -13105,7 +13105,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/194765531/exp/eng/1020/7014928> ;
-    rdamo:P30328 <http://example.org/bjrkmanedwin> ;
+    rdamo:P30328 <http://viaf.org/viaf/85971157> ;
     rdaxd:P00018 "isbn-1420930702",
         "isbn-9781420930702" .
 
@@ -13245,7 +13245,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/194765531/exp/eng/1020/7014928> ;
-    rdamo:P30328 <http://example.org/bjrkmanedwin> ;
+    rdamo:P30328 <http://viaf.org/viaf/85971157> ;
     rdaxd:P00018 "isbn-9781605972824" .
 
 <http://example.org/isbn-9781612428192> a rdac:C10007 ;
@@ -13275,7 +13275,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/220443771/exp/eng/1020/111655332> ;
-    rdamo:P30328 <http://example.org/austerpaul>,
+    rdamo:P30328 <http://viaf.org/viaf/110344312>,
         <http://example.org/nesbjo> ;
     rdaxd:P00018 "isbn-978178117124" .
 
@@ -13327,7 +13327,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/220443771/exp/eng/1020/111655332> ;
-    rdamo:P30328 <http://example.org/austerpaul> ;
+    rdamo:P30328 <http://viaf.org/viaf/110344312> ;
     rdaxd:P00018 "isbn-9781921145544" .
 
 <http://example.org/isbn-9781934169674> a rdac:C10007 ;
@@ -13359,7 +13359,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/220443771/exp/fre/1020/66602903> ;
-    rdamo:P30328 <http://example.org/gideandr>,
+    rdamo:P30328 <http://viaf.org/viaf/96973963>,
         <http://viaf.org/viaf/66602903> ;
     rdaxd:P00018 "isbn-9782130632481" .
 
@@ -13778,7 +13778,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/206863699/exp/ger/1020/weibelsiegfried> ;
-    rdamo:P30328 <http://example.org/baumgartnerwalter> ;
+    rdamo:P30328 <http://viaf.org/viaf/20838120> ;
     rdaxd:P00018 "isbn-3423111577111",
         "isbn-9783423111577111" .
 
@@ -14344,7 +14344,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/206863699/exp/ger/1020/weibelsiegfried> ;
-    rdamo:P30328 <http://example.org/baumgartnerwalter> ;
+    rdamo:P30328 <http://viaf.org/viaf/20838120> ;
     rdaxd:P00018 "isbn-3471793011",
         "isbn-9783471793015" .
 
@@ -14402,7 +14402,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/294124367/exp/ger/1020/brunsalken> ;
-    rdamo:P30328 <http://example.org/deteringheinrich> ;
+    rdamo:P30328 <http://viaf.org/viaf/85127277> ;
     rdaxd:P00018 "isbn-3471794042",
         "isbn-9783471794043" .
 
@@ -14421,7 +14421,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/30145424502786830193/exp/ger/1020/brunsalken> ;
-    rdamo:P30328 <http://example.org/deteringheinrich> ;
+    rdamo:P30328 <http://viaf.org/viaf/85127277> ;
     rdaxd:P00018 "isbn-3471794662",
         "isbn-9783471794661" .
 
@@ -14483,7 +14483,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/220443771/exp/ger/1020/weibelsiegfried> ;
-    rdamo:P30328 <http://example.org/kehlmanndaniel> ;
+    rdamo:P30328 <http://viaf.org/viaf/97952282> ;
     rdaxd:P00018 "IAN-9783546004497",
         "isbn-9783546004497" .
 
@@ -14565,7 +14565,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/206863699/exp/ger/1020/weibelsiegfried> ;
-    rdamo:P30328 <http://example.org/baumgartnerwalter> ;
+    rdamo:P30328 <http://viaf.org/viaf/20838120> ;
     rdaxd:P00018 "IAN-9783548608846",
         "isbn-9783548608846" .
 
@@ -14633,7 +14633,7 @@
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/194765531/exp/ger/1020/162089799/59960174> ;
     rdamo:P30267 <http://example.org/stoblingruth> ;
-    rdamo:P30321 <http://example.org/naumannhermann> ;
+    rdamo:P30321 <http://viaf.org/viaf/35251769> ;
     rdaxd:P00018 "isbn-3784417930",
         "isbn-9783784417936" .
 
@@ -14901,7 +14901,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/294124367/exp/nob/1020> ;
-    rdamo:P30267 <http://example.org/eggeneinar> ;
+    rdamo:P30267 <http://viaf.org/viaf/60410151> ;
     rdaxd:P00018 "isbn-8205004692",
         "isbn-9788205004696" .
 
@@ -16187,7 +16187,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/206863699/exp/nob/1020> ;
-    rdamo:P30321 <http://example.org/blekenhkon> ;
+    rdamo:P30321 <http://viaf.org/viaf/56703858> ;
     rdaxd:P00018 "isbn-9788252571103" .
 
 <http://example.org/isbn-9788252571974> a rdac:C10007 ;
@@ -16255,8 +16255,8 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://workid.oslomet.no/kh/09/exp/nob/1020> ;
-    rdamo:P30328 <http://example.org/kristiansenhansivar>,
-        <http://example.org/nordmojorun> ;
+    rdamo:P30328 <http://viaf.org/viaf/12097928>,
+        <http://viaf.org/viaf/100738993> ;
     rdaxd:P00018 "isbn-9788292735282" .
 
 <http://example.org/isbn-9788292735381> a rdac:C10007 ;
@@ -16272,8 +16272,8 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://workid.oslomet.no/kh/03/exp/nob/1020> ;
-    rdamo:P30328 <http://example.org/hauganjrgen>,
-        <http://example.org/kristiansenhansivar> ;
+    rdamo:P30328 <http://viaf.org/viaf/41947193>,
+        <http://viaf.org/viaf/12097928> ;
     rdaxd:P00018 "isbn-9788292735381" .
 
 <http://example.org/isbn-9788292735886> a rdac:C10007 ;
@@ -16290,8 +16290,8 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://workid.oslomet.no/kh/03/exp/nob/1020> ;
-    rdamo:P30328 <http://example.org/hauganjrgen>,
-        <http://example.org/kristiansenhansivar> ;
+    rdamo:P30328 <http://viaf.org/viaf/41947193>,
+        <http://viaf.org/viaf/12097928> ;
     rdaxd:P00018 "isbn-9788292735886" .
 
 <http://example.org/isbn-9788402420299> a rdac:C10007 ;
@@ -16481,16 +16481,16 @@
     rdaad:P50413 "Alcoba, Daniel" ;
     rdaxd:P00018 "http://example.org/alcobadaniel" .
 
-<http://example.org/andersoncarll> a rdac:C10004 ;
+<http://viaf.org/viaf/41824573> a rdac:C10004 ;
     rdfs:label "Anderson, Carl L." ;
     rdaad:P50413 "Anderson, Carl L." ;
-    rdaxd:P00018 "http://example.org/andersoncarll" .
+    rdaxd:P00018 "http://viaf.org/viaf/41824573" .
 
-<http://example.org/arntzeneven> a rdac:C10004 ;
+<http://viaf.org/viaf/71607279> a rdac:C10004 ;
     rdfs:label "Arntzen, Even (1962-)" ;
     rdaad:P50339 "1962-" ;
     rdaad:P50413 "Arntzen, Even" ;
-    rdaxd:P00018 "http://example.org/arntzeneven" .
+    rdaxd:P00018 "http://viaf.org/viaf/71607279" .
 
 <http://example.org/atweldeveygaricardo> a rdac:C10004 ;
     rdfs:label "Atwel de Veyga, Ricardo" ;
@@ -16531,31 +16531,31 @@
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20231 <http://example.org/barraultjeanlouis/lafaim> .
 
-<http://example.org/bienhorst> a rdac:C10004 ;
+<http://viaf.org/viaf/49272803> a rdac:C10004 ;
     rdfs:label "Bien, Horst" ;
     rdaad:P50413 "Bien, Horst" ;
-    rdaxd:P00018 "http://example.org/bienhorst" .
+    rdaxd:P00018 "http://viaf.org/viaf/49272803" .
 
 <http://example.org/blancafortmanuelr> a rdac:C10004 ;
     rdfs:label "Blancafort, Manuel R." ;
     rdaad:P50413 "Blancafort, Manuel R." ;
     rdaxd:P00018 "http://example.org/blancafortmanuelr" .
 
-<http://example.org/bothmergerry> a rdac:C10004 ;
+<http://viaf.org/viaf/63603917> a rdac:C10004 ;
     rdfs:label "Bothmer, Gerry" ;
     rdaad:P50413 "Bothmer, Gerry" ;
-    rdaxd:P00018 "http://example.org/bothmergerry" .
+    rdaxd:P00018 "http://viaf.org/viaf/63603917" .
 
-<http://example.org/bruckedgarpedro> a rdac:C10004 ;
+<http://viaf.org/viaf/67043930> a rdac:C10004 ;
     rdfs:label "Bruck, Edgar Pedro" ;
     rdaad:P50413 "Bruck, Edgar Pedro" ;
-    rdaxd:P00018 "http://example.org/bruckedgarpedro" .
+    rdaxd:P00018 "http://viaf.org/viaf/67043930" .
 
-<http://example.org/bullfrancis> a rdac:C10004 ;
+<http://viaf.org/viaf/29574001> a rdac:C10004 ;
     rdfs:label "Bull, Francis (1887-1974)" ;
     rdaad:P50339 "1887-1974" ;
     rdaad:P50413 "Bull, Francis" ;
-    rdaxd:P00018 "http://example.org/bullfrancis" .
+    rdaxd:P00018 "http://viaf.org/viaf/29574001" .
 
 <http://example.org/buninivan/vospominanija> a rdac:C10001 ;
     rdfs:label "Vospominanija"@en,
@@ -16573,21 +16573,21 @@
     rdaeo:P20037 <http://personid.no/10165> ;
     rdaeo:P20231 <http://example.org/buninivan/vospominanija> .
 
-<http://example.org/camprubdejimnezzenobia> a rdac:C10004 ;
+<http://viaf.org/viaf/36980651> a rdac:C10004 ;
     rdfs:label "Camprubí de Jiménez, Zenobia (1887-1956)" ;
     rdaad:P50339 "1887-1956" ;
     rdaad:P50413 "Camprubí de Jiménez, Zenobia" ;
-    rdaxd:P00018 "http://example.org/camprubdejimnezzenobia" .
+    rdaxd:P00018 "http://viaf.org/viaf/36980651" .
 
-<http://example.org/chaterarthurg> a rdac:C10004 ;
+<http://viaf.org/viaf/75478520> a rdac:C10004 ;
     rdfs:label "Chater, Arthur G." ;
     rdaad:P50413 "Chater, Arthur G." ;
-    rdaxd:P00018 "http://example.org/chaterarthurg" .
+    rdaxd:P00018 "http://viaf.org/viaf/75478520" .
 
-<http://example.org/claramundabesjosmara> a rdac:C10004 ;
+<http://viaf.org/viaf/37933667> a rdac:C10004 ;
     rdfs:label "Claramunda Bes, José María" ;
     rdaad:P50413 "Claramunda Bes, José María" ;
-    rdaxd:P00018 "http://example.org/claramundabesjosmara" .
+    rdaxd:P00018 "http://viaf.org/viaf/37933667" .
 
 <http://example.org/costamontserrat> a rdac:C10004 ;
     rdfs:label "Costa, Montserrat" ;
@@ -16617,7 +16617,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20012 <http://example.org/dietlrobert>,
-        <http://example.org/hoffmannpaul> ;
+        <http://viaf.org/viaf/204149196444174791249> ;
     rdaeo:P20231 <http://example.org/cubehellmutvon/mysterien> .
 
 <http://example.org/dietlrobert> a rdac:C10004 ;
@@ -16625,31 +16625,31 @@
     rdaad:P50413 "Dietl, Robert" ;
     rdaxd:P00018 "http://example.org/dietlrobert" .
 
-<http://example.org/dumlinghans> a rdac:C10004 ;
+<http://viaf.org/viaf/64747070> a rdac:C10004 ;
     rdfs:label "Däumling, Hans" ;
     rdaad:P50413 "Däumling, Hans" ;
-    rdaxd:P00018 "http://example.org/dumlinghans" .
+    rdaxd:P00018 "http://viaf.org/viaf/64747070" .
 
 <http://example.org/ecclesrichard> a rdac:C10004 ;
     rdfs:label "Eccles, Richard" ;
     rdaad:P50413 "Eccles, Richard" ;
     rdaxd:P00018 "http://example.org/ecclesrichard" .
 
-<http://example.org/egertongeorge> a rdac:C10004 ;
+<http://viaf.org/viaf/35262867> a rdac:C10004 ;
     rdfs:label "Egerton, George" ;
     rdaad:P50413 "Egerton, George" ;
-    rdaxd:P00018 "http://example.org/egertongeorge" .
+    rdaxd:P00018 "http://viaf.org/viaf/35262867" .
 
 <http://example.org/engelsenjanniche> a rdac:C10004 ;
     rdfs:label "Engelsen, Janniche" ;
     rdaad:P50413 "Engelsen, Janniche" ;
     rdaxd:P00018 "http://example.org/engelsenjanniche" .
 
-<http://example.org/engelstadcarlfredrik> a rdac:C10004 ;
+<http://viaf.org/viaf/115055022> a rdac:C10004 ;
     rdfs:label "Engelstad, Carl Fredrik (1915-1996)" ;
     rdaad:P50339 "1915-1996" ;
     rdaad:P50413 "Engelstad, Carl Fredrik" ;
-    rdaxd:P00018 "http://example.org/engelstadcarlfredrik" .
+    rdaxd:P00018 "http://viaf.org/viaf/115055022" .
 
 <http://example.org/engelstadcarlfredrik/segelfoss> a rdac:C10001 ;
     rdfs:label "Segelfoss / Carl Fredrik Engelstad"@en,
@@ -16657,7 +16657,7 @@
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
     entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
     rdawd:P10223 "Segelfoss" ;
-    rdawo:P10061 <http://example.org/engelstadcarlfredrik> ;
+    rdawo:P10061 <http://viaf.org/viaf/115055022> ;
     rdawo:P10142 <http://viaf.org/viaf/8450149068552765730000> ;
     rdaxd:P00018 "http://example.org/engelstadcarlfredrik/segelfoss" .
 
@@ -16670,43 +16670,43 @@
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://example.org/engelstadcarlfredrik/segelfoss> .
 
-<http://example.org/ferrervidaljorge> a rdac:C10004 ;
+<http://viaf.org/viaf/117128782> a rdac:C10004 ;
     rdfs:label "Ferrer-Vidal, Jorge (1926-2001)" ;
     rdaad:P50339 "1926-2001" ;
     rdaad:P50413 "Ferrer-Vidal, Jorge" ;
-    rdaxd:P00018 "http://example.org/ferrervidaljorge" .
+    rdaxd:P00018 "http://viaf.org/viaf/117128782" .
 
 <http://example.org/figurteateretinordland> a rdac:C10004 ;
     rdfs:label "Figurteateret i Nordland" ;
     rdaad:P50413 "Figurteateret i Nordland" ;
     rdaxd:P00018 "http://example.org/figurteateretinordland" .
 
-<http://example.org/flobergbjrn> a rdac:C10004 ;
+<http://viaf.org/viaf/85819609> a rdac:C10004 ;
     rdfs:label "Floberg, Bjørn (1947-)" ;
     rdaad:P50339 "1947-" ;
     rdaad:P50413 "Floberg, Bjørn" ;
-    rdaxd:P00018 "http://example.org/flobergbjrn" .
+    rdaxd:P00018 "http://viaf.org/viaf/85819609" .
 
-<http://example.org/friedrichsenuwe> a rdac:C10004 ;
+<http://viaf.org/viaf/35339440> a rdac:C10004 ;
     rdfs:label "Friedrichsen, Uwe (1934-2016)" ;
     rdaad:P50339 "1934-2016" ;
     rdaad:P50413 "Friedrichsen, Uwe" ;
-    rdaxd:P00018 "http://example.org/friedrichsenuwe" .
+    rdaxd:P00018 "http://viaf.org/viaf/35339440" .
 
-<http://example.org/garcabadellregino> a rdac:C10004 ;
+<http://viaf.org/viaf/215149196287474790942> a rdac:C10004 ;
     rdfs:label "García Badell, Regino" ;
     rdaad:P50413 "García Badell, Regino" ;
-    rdaxd:P00018 "http://example.org/garcabadellregino" .
+    rdaxd:P00018 "http://viaf.org/viaf/215149196287474790942" .
 
-<http://example.org/gaytiffteugene> a rdac:C10004 ;
+<http://viaf.org/viaf/13844665> a rdac:C10004 ;
     rdfs:label "Gay-Tifft, Eugene" ;
     rdaad:P50413 "Gay-Tifft, Eugene" ;
-    rdaxd:P00018 "http://example.org/gaytiffteugene" .
+    rdaxd:P00018 "http://viaf.org/viaf/13844665" .
 
-<http://example.org/geddestom> a rdac:C10004 ;
+<http://viaf.org/viaf/64172097> a rdac:C10004 ;
     rdfs:label "Geddes, Tom" ;
     rdaad:P50413 "Geddes, Tom" ;
-    rdaxd:P00018 "http://example.org/geddestom" .
+    rdaxd:P00018 "http://viaf.org/viaf/64172097" .
 
 <http://example.org/goebelheinrich> a rdac:C10004 ;
     rdfs:label "Goebel, Heinrich" ;
@@ -16718,11 +16718,11 @@
     rdaad:P50413 "Gossé, G." ;
     rdaxd:P00018 "http://example.org/gossg" .
 
-<http://example.org/gossl> a rdac:C10004 ;
+<http://viaf.org/viaf/86550258> a rdac:C10004 ;
     rdfs:label "Gossé, L. (1916-2001)" ;
     rdaad:P50339 "1916-2001" ;
     rdaad:P50413 "Gossé, L." ;
-    rdaxd:P00018 "http://example.org/gossl" .
+    rdaxd:P00018 "http://viaf.org/viaf/86550258" .
 
 <http://example.org/grblsofie> a rdac:C10004 ;
     rdfs:label "Gråbøl, Sofie (1968-)" ;
@@ -16736,33 +16736,33 @@
     rdaad:P50413 "Grieg, Harald" ;
     rdaxd:P00018 "http://example.org/griegharald" .
 
-<http://example.org/grouixpierre> a rdac:C10004 ;
+<http://viaf.org/viaf/44442808> a rdac:C10004 ;
     rdfs:label "Grouix, Pierre" ;
     rdaad:P50413 "Grouix, Pierre" ;
-    rdaxd:P00018 "http://example.org/grouixpierre" .
+    rdaxd:P00018 "http://viaf.org/viaf/44442808" .
 
-<http://example.org/grunauwernervon> a rdac:C10004 ;
+<http://viaf.org/viaf/49404449> a rdac:C10004 ;
     rdfs:label "Grünau, Werner von (1910-1974)" ;
     rdaad:P50339 "1910-1974" ;
     rdaad:P50413 "Grünau, Werner von" ;
-    rdaxd:P00018 "http://example.org/grunauwernervon" .
+    rdaxd:P00018 "http://viaf.org/viaf/49404449" .
 
 <http://example.org/gullvaghakon> a rdac:C10004 ;
     rdfs:label "Gullvåg, Håkon" ;
     rdaad:P50413 "Gullvåg, Håkon" ;
     rdaxd:P00018 "http://example.org/gullvaghakon" .
 
-<http://example.org/gustavsonerik> a rdac:C10004 ;
+<http://viaf.org/viaf/308698494> a rdac:C10004 ;
     rdfs:label "Gustavson, Erik (1955-)" ;
     rdaad:P50339 "1955-" ;
     rdaad:P50413 "Gustavson, Erik" ;
-    rdaxd:P00018 "http://example.org/gustavsonerik" .
+    rdaxd:P00018 "http://viaf.org/viaf/308698494" .
 
-<http://example.org/halvorsenleif> a rdac:C10004 ;
+<http://viaf.org/viaf/227529625> a rdac:C10004 ;
     rdfs:label "Halvorsen, Leif (1887-1959)" ;
     rdaad:P50339 "1887-1959" ;
     rdaad:P50413 "Halvorsen, Leif" ;
-    rdaxd:P00018 "http://example.org/halvorsenleif" .
+    rdaxd:P00018 "http://viaf.org/viaf/227529625" .
 
 <http://example.org/hauerrutger> a rdac:C10004 ;
     rdfs:label "Hauer, Rutger (1944-)" ;
@@ -16770,21 +16770,21 @@
     rdaad:P50413 "Hauer, Rutger" ;
     rdaxd:P00018 "http://example.org/hauerrutger" .
 
-<http://example.org/havrevoldolafr> a rdac:C10004 ;
+<http://viaf.org/viaf/111148995811759751127> a rdac:C10004 ;
     rdfs:label "Havrevold, Olafr" ;
     rdaad:P50413 "Havrevold, Olafr" ;
-    rdaxd:P00018 "http://example.org/havrevoldolafr" .
+    rdaxd:P00018 "http://viaf.org/viaf/111148995811759751127" .
 
-<http://example.org/hennieaksel> a rdac:C10004 ;
+<http://viaf.org/viaf/121856556> a rdac:C10004 ;
     rdfs:label "Hennie, Aksel (1975-)" ;
     rdaad:P50339 "1975-" ;
     rdaad:P50413 "Hennie, Aksel" ;
-    rdaxd:P00018 "http://example.org/hennieaksel" .
+    rdaxd:P00018 "http://viaf.org/viaf/121856556" .
 
-<http://example.org/hoffmannpaul> a rdac:C10004 ;
+<http://viaf.org/viaf/204149196444174791249> a rdac:C10004 ;
     rdfs:label "Hoffmann, Paul" ;
     rdaad:P50413 "Hoffmann, Paul" ;
-    rdaxd:P00018 "http://example.org/hoffmannpaul" .
+    rdaxd:P00018 "http://viaf.org/viaf/204149196444174791249" .
 
 <http://example.org/hungerplay> a rdac:C10001 ;
     rdfs:label "Hunger"@en,
@@ -16806,21 +16806,21 @@
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://example.org/hungerplay> .
 
-<http://example.org/hyllestedcarlchristian> a rdac:C10004 ;
+<http://viaf.org/viaf/83145970108832251045> a rdac:C10004 ;
     rdfs:label "Hyllested, Carl Christian" ;
     rdaad:P50413 "Hyllested, Carl Christian" ;
-    rdaxd:P00018 "http://example.org/hyllestedcarlchristian" .
+    rdaxd:P00018 "http://viaf.org/viaf/83145970108832251045" .
 
 <http://example.org/iglesiasisabel> a rdac:C10004 ;
     rdfs:label "Iglesias, Isabel" ;
     rdaad:P50413 "Iglesias, Isabel" ;
     rdaxd:P00018 "http://example.org/iglesiasisabel" .
 
-<http://example.org/ihleelisabeth> a rdac:C10004 ;
+<http://viaf.org/viaf/37685433> a rdac:C10004 ;
     rdfs:label "Ihle, Elisabeth (1893-)" ;
     rdaad:P50339 "1893-" ;
     rdaad:P50413 "Ihle, Elisabeth" ;
-    rdaxd:P00018 "http://example.org/ihleelisabeth" .
+    rdaxd:P00018 "http://viaf.org/viaf/37685433" .
 
 <http://example.org/ipb> a rdac:C10004 ;
     rdfs:label "I. P. B." ;
@@ -16832,17 +16832,17 @@
     rdaad:P50413 "Jervel. Maria Lana" ;
     rdaxd:P00018 "http://example.org/jervelmarialana" .
 
-<http://example.org/johannessenjens> a rdac:C10004 ;
+<http://viaf.org/viaf/61643759> a rdac:C10004 ;
     rdfs:label "Johannessen, Jens (1934-)" ;
     rdaad:P50339 "1934-" ;
     rdaad:P50413 "Johannessen, Jens" ;
-    rdaxd:P00018 "http://example.org/johannessenjens" .
+    rdaxd:P00018 "http://viaf.org/viaf/61643759" .
 
-<http://example.org/jordalhelge> a rdac:C10004 ;
+<http://viaf.org/viaf/102357918> a rdac:C10004 ;
     rdfs:label "Jordal, Helge (1946-)" ;
     rdaad:P50339 "1946-" ;
     rdaad:P50413 "Jordal, Helge" ;
-    rdaxd:P00018 "http://example.org/jordalhelge" .
+    rdaxd:P00018 "http://viaf.org/viaf/102357918" .
 
 <http://example.org/keelaldo> a rdac:C10004 ;
     rdfs:label "Keel, Aldo (1948-)" ;
@@ -16855,41 +16855,37 @@
     rdaad:P50413 "Keel, Ingeborg" ;
     rdaxd:P00018 "http://example.org/keelingeborg" .
 
-<http://example.org/kehlmanndaniel> a rdac:C10004 ;
+<http://viaf.org/viaf/97952282> a rdac:C10004 ;
     rdfs:label "Kehlmann, Daniel (1975-)" ;
     rdaad:P50339 "1975-" ;
     rdaad:P50413 "Kehlmann, Daniel" ;
-    rdaxd:P00018 "http://example.org/kehlmanndaniel" .
+    rdaxd:P00018 "http://viaf.org/viaf/97952282" .
 
-<http://example.org/knutsennilsm> a rdac:C10004 ;
-    rdfs:label "Knutsen, Nils M. (1943-)" ;
+<http://viaf.org/viaf/17198272> a rdac:C10004 ;
+    rdfs:label "Knutsen, Nils Magne (1943-)" ;
     rdaad:P50339 "1943-" ;
-    rdaad:P50413 "Knutsen, Nils M." ;
-    rdaxd:P00018 "http://example.org/knutsennilsm" .
+    rdaad:P50413 "Knutsen, Nils Magne" ;
+    rdaad:P50415 "Knutsen, Nils M." ;
+    rdaxd:P00018 "http://viaf.org/viaf/17198272" .
 
 <http://example.org/knutsennilsm/maktavmaktenstudieavhamsunsbenoniogrosa> a rdac:C10001 ;
-    rdfs:label "Makt-avmakt : en studie av Hamsuns Benoni og Rosa / Nils M. Knutsen"@en,
-        "Makt-avmakt : en studie av Hamsuns Benoni og Rosa / Nils M. Knutsen"@no ;
+    rdfs:label "Makt-avmakt : en studie av Hamsuns Benoni og Rosa / Nils Magne Knutsen"@en,
+        "Makt-avmakt : en studie av Hamsuns Benoni og Rosa / Nils Magne Knutsen"@no ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
     rdawd:P10223 "Makt-avmakt : en studie av Hamsuns Benoni og Rosa" ;
-    rdawo:P10061 <http://example.org/knutsennilsm> ;
+    rdawo:P10061 <http://viaf.org/viaf/17198272> ;
     rdawo:P10257 <http://viaf.org/viaf/1650145424683186830143>,
         <http://viaf.org/viaf/310234238> ;
     rdaxd:P00018 "http://example.org/knutsennilsm/maktavmaktenstudieavhamsunsbenoniogrosa" .
 
 <http://example.org/knutsennilsm/maktavmaktenstudieavhamsunsbenoniogrosa/exp/nob/1020> a rdac:C10006 ;
-    rdfs:label "Makt-avmakt : en studie av Hamsuns Benoni og Rosa / Nils M. Knutsen. – Norwegian Bokmål"@en,
-        "Makt-avmakt : en studie av Hamsuns Benoni og Rosa / Nils M. Knutsen. – Bokmål"@no ;
+    rdfs:label "Makt-avmakt : en studie av Hamsuns Benoni og Rosa / Nils Magne Knutsen. – Norwegian Bokmål"@en,
+        "Makt-avmakt : en studie av Hamsuns Benoni og Rosa / Nils Magne Knutsen. – Bokmål"@no ;
     rdaed:P20315 "Makt-avmakt : en studie av Hamsuns Benoni og Rosa" ;
     rdaed:P20316 "Makt-avmakt : en studie av Hamsuns Benoni og Rosa" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://example.org/knutsennilsm/maktavmaktenstudieavhamsunsbenoniogrosa> .
-
-<http://example.org/knutsennilsmagne> a rdac:C10004 ;
-    rdfs:label "Knutsen, Nils Magne" ;
-    rdaad:P50413 "Knutsen, Nils Magne" ;
-    rdaxd:P00018 "http://example.org/knutsennilsmagne" .
 
 <http://example.org/kolsrudlasse> a rdac:C10004 ;
     rdfs:label "Kolsrud, Lasse (1959-)" ;
@@ -16897,35 +16893,35 @@
     rdaad:P50413 "Kolsrud, Lasse" ;
     rdaxd:P00018 "http://example.org/kolsrudlasse" .
 
-<http://example.org/kosterkahugo> a rdac:C10004 ;
+<http://viaf.org/viaf/12166684> a rdac:C10004 ;
     rdfs:label "Kosterka, Hugo (1867-1956)" ;
     rdaad:P50339 "1867-1956" ;
     rdaad:P50413 "Kosterka, Hugo" ;
-    rdaxd:P00018 "http://example.org/kosterkahugo" .
+    rdaxd:P00018 "http://viaf.org/viaf/12166684" .
 
-<http://example.org/kristelsylvia> a rdac:C10004 ;
+<http://viaf.org/viaf/5126085> a rdac:C10004 ;
     rdfs:label "Kristel, Sylvia (1952-2012)" ;
     rdaad:P50339 "1952-2012" ;
     rdaad:P50413 "Kristel, Sylvia" ;
-    rdaxd:P00018 "http://example.org/kristelsylvia" .
+    rdaxd:P00018 "http://viaf.org/viaf/5126085" .
 
-<http://example.org/krohgper> a rdac:C10004 ;
+<http://viaf.org/viaf/12575438> a rdac:C10004 ;
     rdfs:label "Krohg, Per (1889-1965)" ;
     rdaad:P50339 "1889-1965" ;
     rdaad:P50413 "Krohg, Per" ;
-    rdaxd:P00018 "http://example.org/krohgper" .
+    rdaxd:P00018 "http://viaf.org/viaf/12575438" .
 
-<http://example.org/kullejarl> a rdac:C10004 ;
+<http://viaf.org/viaf/161659179> a rdac:C10004 ;
     rdfs:label "Kulle, Jarl (1927-)" ;
     rdaad:P50339 "1927-" ;
     rdaad:P50413 "Kulle, Jarl" ;
-    rdaxd:P00018 "http://example.org/kullejarl" .
+    rdaxd:P00018 "http://viaf.org/viaf/161659179" .
 
-<http://example.org/lagercrantzmarika> a rdac:C10004 ;
+<http://viaf.org/viaf/87599799> a rdac:C10004 ;
     rdfs:label "Lagercrantz, Marika (1954)" ;
     rdaad:P50339 "1954" ;
     rdaad:P50413 "Lagercrantz, Marika" ;
-    rdaxd:P00018 "http://example.org/lagercrantzmarika" .
+    rdaxd:P00018 "http://viaf.org/viaf/87599799" .
 
 <http://example.org/lanajorvellmara> a rdac:C10004 ;
     rdfs:label "Lana Jorvell, María" ;
@@ -16937,22 +16933,22 @@
     rdaad:P50413 "Lana, María" ;
     rdaxd:P00018 "http://example.org/lanamara" .
 
-<http://example.org/lindblomgunnel> a rdac:C10004 ;
+<http://viaf.org/viaf/7363914> a rdac:C10004 ;
     rdfs:label "Lindblom, Gunnel" ;
     rdaad:P50413 "Lindblom, Gunnel" ;
-    rdaxd:P00018 "http://example.org/lindblomgunnel" .
+    rdaxd:P00018 "http://viaf.org/viaf/7363914" .
 
-<http://example.org/lindgrenhans> a rdac:C10004 ;
+<http://viaf.org/viaf/220056680> a rdac:C10004 ;
     rdfs:label "Lindgren, Hans (1947-2013)" ;
     rdaad:P50339 "1947-2013" ;
     rdaad:P50413 "Lindgren, Hans" ;
-    rdaxd:P00018 "http://example.org/lindgrenhans" .
+    rdaxd:P00018 "http://viaf.org/viaf/220056680" .
 
-<http://example.org/luacesjuangde> a rdac:C10004 ;
+<http://viaf.org/viaf/35472769> a rdac:C10004 ;
     rdfs:label "Luaces, Juan G. de (1906-1963)" ;
     rdaad:P50339 "1906-1963" ;
     rdaad:P50413 "Luaces, Juan G. de" ;
-    rdaxd:P00018 "http://example.org/luacesjuangde" .
+    rdaxd:P00018 "http://viaf.org/viaf/35472769" .
 
 <http://example.org/maagereva> a rdac:C10004 ;
     rdfs:label "Maagerö, Eva" ;
@@ -16976,43 +16972,43 @@
     rdaad:P50413 "Müller, Robby" ;
     rdaxd:P00018 "http://example.org/mllerrobby" .
 
-<http://example.org/moanhenny> a rdac:C10004 ;
+<http://viaf.org/viaf/229609977> a rdac:C10004 ;
     rdfs:label "Moan, Henny" ;
     rdaad:P50413 "Moan, Henny" ;
-    rdaxd:P00018 "http://example.org/moanhenny" .
+    rdaxd:P00018 "http://viaf.org/viaf/229609977" .
 
-<http://example.org/morburgercarl> a rdac:C10004 ;
+<http://viaf.org/viaf/62566877> a rdac:C10004 ;
     rdfs:label "Morburger, Carl" ;
     rdaad:P50413 "Morburger, Carl" ;
-    rdaxd:P00018 "http://example.org/morburgercarl" .
+    rdaxd:P00018 "http://viaf.org/viaf/62566877" .
 
-<http://example.org/morgensternchristian> a rdac:C10004 ;
+<http://viaf.org/viaf/68933209> a rdac:C10004 ;
     rdfs:label "Morgenstern, Christian (1871-1914)" ;
     rdaad:P50339 "1871-1914" ;
     rdaad:P50413 "Morgenstern, Christian" ;
-    rdaxd:P00018 "http://example.org/morgensternchristian" .
+    rdaxd:P00018 "http://viaf.org/viaf/68933209" .
 
-<http://example.org/morgridgebarbaragordon> a rdac:C10004 ;
+<http://viaf.org/viaf/19274528> a rdac:C10004 ;
     rdfs:label "Morgridge, Barbara Gordon" ;
     rdaad:P50413 "Morgridge, Barbara Gordon" ;
-    rdaxd:P00018 "http://example.org/morgridgebarbaragordon" .
+    rdaxd:P00018 "http://viaf.org/viaf/19274528" .
 
-<http://example.org/morkgeir> a rdac:C10004 ;
+<http://viaf.org/viaf/60486454> a rdac:C10004 ;
     rdfs:label "Mork, Geir" ;
     rdaad:P50413 "Mork, Geir" ;
-    rdaxd:P00018 "http://example.org/morkgeir" .
+    rdaxd:P00018 "http://viaf.org/viaf/60486454" .
 
-<http://example.org/munchtrondpeterstams> a rdac:C10004 ;
+<http://viaf.org/viaf/102357902> a rdac:C10004 ;
     rdfs:label "Munch, Trond Peter Stamsø (1960-)" ;
     rdaad:P50339 "1960-" ;
     rdaad:P50413 "Munch, Trond Peter Stamsø" ;
-    rdaxd:P00018 "http://example.org/munchtrondpeterstams" .
+    rdaxd:P00018 "http://viaf.org/viaf/102357902" .
 
-<http://example.org/nadalalfonso> a rdac:C10004 ;
+<http://viaf.org/viaf/13227846> a rdac:C10004 ;
     rdfs:label "Nadal, Alfonso (1886-1943)" ;
     rdaad:P50339 "1886-1943" ;
     rdaad:P50413 "Nadal, Alfonso" ;
-    rdaxd:P00018 "http://example.org/nadalalfonso" .
+    rdaxd:P00018 "http://viaf.org/viaf/13227846" .
 
 <http://example.org/nesbjo> a rdac:C10004 ;
     rdfs:label "Nesbø, Jo (1960-)" ;
@@ -17020,17 +17016,17 @@
     rdaad:P50413 "Nesbø, Jo" ;
     rdaxd:P00018 "http://example.org/nesbjo" .
 
-<http://example.org/nordmojorun> a rdac:C10004 ;
+<http://viaf.org/viaf/100738993> a rdac:C10004 ;
     rdfs:label "Nordmo, Jorun (1949-)" ;
     rdaad:P50339 "1949-" ;
     rdaad:P50413 "Nordmo, Jorun" ;
-    rdaxd:P00018 "http://example.org/nordmojorun" .
+    rdaxd:P00018 "http://viaf.org/viaf/100738993" .
 
-<http://example.org/oscarssonper> a rdac:C10004 ;
+<http://viaf.org/viaf/42039585> a rdac:C10004 ;
     rdfs:label "Oscarsson, Per (1927-)" ;
     rdaad:P50339 "1927-" ;
     rdaad:P50413 "Oscarsson, Per" ;
-    rdaxd:P00018 "http://example.org/oscarssonper" .
+    rdaxd:P00018 "http://viaf.org/viaf/42039585" .
 
 <http://example.org/paytuvdesierracarlos> a rdac:C10004 ;
     rdfs:label "Paytuví de Sierra, Carlos" ;
@@ -17042,73 +17038,73 @@
     rdaad:P50413 "Pickled Image" ;
     rdaxd:P00018 "http://example.org/pickledimage" .
 
-<http://example.org/riberaantonio> a rdac:C10004 ;
+<http://viaf.org/viaf/94703160> a rdac:C10004 ;
     rdfs:label "Ribera, Antonio (1920-2001)" ;
     rdaad:P50339 "1920-2001" ;
     rdaad:P50413 "Ribera, Antonio" ;
-    rdaxd:P00018 "http://example.org/riberaantonio" .
+    rdaxd:P00018 "http://viaf.org/viaf/94703160" .
 
-<http://example.org/richardsonmarie> a rdac:C10004 ;
+<http://viaf.org/viaf/208832402> a rdac:C10004 ;
     rdfs:label "Richardson, Marie (1959-)" ;
     rdaad:P50339 "1959-" ;
     rdaad:P50413 "Richardson, Marie" ;
-    rdaxd:P00018 "http://example.org/richardsonmarie" .
+    rdaxd:P00018 "http://viaf.org/viaf/208832402" .
 
-<http://example.org/rooyenlaurensvan> a rdac:C10004 ;
+<http://viaf.org/viaf/79648850> a rdac:C10004 ;
     rdfs:label "Rooyen, Laurens van" ;
     rdaad:P50413 "Rooyen, Laurens van" ;
-    rdaxd:P00018 "http://example.org/rooyenlaurensvan" .
+    rdaxd:P00018 "http://viaf.org/viaf/79648850" .
 
-<http://example.org/rottemystein> a rdac:C10004 ;
+<http://viaf.org/viaf/54190339> a rdac:C10004 ;
     rdfs:label "Rottem, Øystein (1946-2004)" ;
     rdaad:P50339 "1946-2004" ;
     rdaad:P50413 "Rottem, Øystein" ;
-    rdaxd:P00018 "http://example.org/rottemystein" .
+    rdaxd:P00018 "http://viaf.org/viaf/54190339" .
 
-<http://example.org/rudborghild> a rdac:C10004 ;
+<http://viaf.org/viaf/77586076> a rdac:C10004 ;
     rdfs:label "Rud, Borghild (1910-1999)" ;
     rdaad:P50339 "1910-1999" ;
     rdaad:P50413 "Rud, Borghild" ;
-    rdaxd:P00018 "http://example.org/rudborghild" .
+    rdaxd:P00018 "http://viaf.org/viaf/77586076" .
 
-<http://example.org/rydlandamund> a rdac:C10004 ;
+<http://viaf.org/viaf/102357788> a rdac:C10004 ;
     rdfs:label "Rydland, Amund (1888-1967)" ;
     rdaad:P50339 "1888-1967" ;
     rdaad:P50413 "Rydland, Amund" ;
-    rdaxd:P00018 "http://example.org/rydlandamund" .
+    rdaxd:P00018 "http://viaf.org/viaf/102357788" .
 
 <http://example.org/sandveim> a rdac:C10004 ;
     rdfs:label "Sandvei, M." ;
     rdaad:P50413 "Sandvei, M." ;
     rdaxd:P00018 "http://example.org/sandveim" .
 
-<http://example.org/schaperedzard> a rdac:C10004 ;
+<http://viaf.org/viaf/111522015> a rdac:C10004 ;
     rdfs:label "Schaper, Edzard (1908-1984)" ;
     rdaad:P50339 "1908-1984" ;
     rdaad:P50413 "Schaper, Edzard" ;
-    rdaxd:P00018 "http://example.org/schaperedzard" .
+    rdaxd:P00018 "http://viaf.org/viaf/111522015" .
 
-<http://example.org/schillerwalter> a rdac:C10004 ;
+<http://viaf.org/viaf/28233757> a rdac:C10004 ;
     rdfs:label "Schiller, Walter (1920-2008)" ;
     rdaad:P50339 "1920-2008" ;
     rdaad:P50413 "Schiller, Walter" ;
-    rdaxd:P00018 "http://example.org/schillerwalter" .
+    rdaxd:P00018 "http://viaf.org/viaf/28233757" .
 
 <http://example.org/scholzvctor> a rdac:C10004 ;
     rdfs:label "Scholz, Víctor" ;
     rdaad:P50413 "Scholz, Víctor" ;
     rdaxd:P00018 "http://example.org/scholzvctor" .
 
-<http://example.org/schwenzenper> a rdac:C10004 ;
+<http://viaf.org/viaf/40155438> a rdac:C10004 ;
     rdfs:label "Schwenzen, Per" ;
     rdaad:P50413 "Schwenzen, Per" ;
-    rdaxd:P00018 "http://example.org/schwenzenper" .
+    rdaxd:P00018 "http://viaf.org/viaf/40155438" .
 
-<http://example.org/seebergpeter> a rdac:C10004 ;
+<http://viaf.org/viaf/227149106054968491031> a rdac:C10004 ;
     rdfs:label "Seeberg, Peter (1925-1999)" ;
     rdaad:P50339 "1925-1999" ;
     rdaad:P50413 "Seeberg, Peter" ;
-    rdaxd:P00018 "http://example.org/seebergpeter" .
+    rdaxd:P00018 "http://viaf.org/viaf/227149106054968491031" .
 
 <http://example.org/seeklausvon> a rdac:C10004 ;
     rdfs:label "See, Klaus von" ;
@@ -17136,11 +17132,11 @@
     rdaeo:P20037 <http://example.org/baldizfrancisco> ;
     rdaeo:P20231 <http://example.org/steinbeckjohn/thevigilante> .
 
-<http://example.org/stormoenkjell> a rdac:C10004 ;
+<http://viaf.org/viaf/229586296> a rdac:C10004 ;
     rdfs:label "Stormoen, Kjell (1921-2010)" ;
     rdaad:P50339 "1921-2010" ;
     rdaad:P50413 "Stormoen, Kjell" ;
-    rdaxd:P00018 "http://example.org/stormoenkjell" .
+    rdaxd:P00018 "http://viaf.org/viaf/229586296" .
 
 <http://example.org/sundquistbjrn> a rdac:C10004 ;
     rdfs:label "Sundquist, Bjørn (1948-)" ;
@@ -17148,10 +17144,10 @@
     rdaad:P50413 "Sundquist, Bjørn" ;
     rdaxd:P00018 "http://example.org/sundquistbjrn" .
 
-<http://example.org/thalbitzerkaren> a rdac:C10004 ;
+<http://viaf.org/viaf/102357800> a rdac:C10004 ;
     rdfs:label "Thalbitzer, Karen" ;
     rdaad:P50413 "Thalbitzer, Karen" ;
-    rdaxd:P00018 "http://example.org/thalbitzerkaren" .
+    rdaxd:P00018 "http://viaf.org/viaf/102357800" .
 
 <http://example.org/tushinghamrita> a rdac:C10004 ;
     rdfs:label "Tushingham, Rita (1942-)" ;
@@ -17174,26 +17170,26 @@
     rdaad:P50413 "Vives, Francisco" ;
     rdaxd:P00018 "http://example.org/vivesfrancisco" .
 
-<http://example.org/werkmsterbarbro> a rdac:C10004 ;
+<http://viaf.org/viaf/116273371> a rdac:C10004 ;
     rdfs:label "Werkmäster, Barbro" ;
     rdaad:P50413 "Werkmäster, Barbro" ;
-    rdaxd:P00018 "http://example.org/werkmsterbarbro" .
+    rdaxd:P00018 "http://viaf.org/viaf/116273371" .
 
-<http://example.org/werneroskar> a rdac:C10004 ;
+<http://viaf.org/viaf/51881056> a rdac:C10004 ;
     rdfs:label "Werner, Oskar" ;
     rdaad:P50413 "Werner, Oskar" ;
-    rdaxd:P00018 "http://example.org/werneroskar" .
+    rdaxd:P00018 "http://viaf.org/viaf/51881056" .
 
-<http://example.org/wettergreenragna> a rdac:C10004 ;
+<http://viaf.org/viaf/102357837> a rdac:C10004 ;
     rdfs:label "Wettergreen, Ragna (1864-1958)" ;
     rdaad:P50339 "1864-1958" ;
     rdaad:P50413 "Wettergreen, Ragna" ;
-    rdaxd:P00018 "http://example.org/wettergreenragna" .
+    rdaxd:P00018 "http://viaf.org/viaf/102357837" .
 
-<http://example.org/wikingpaula> a rdac:C10004 ;
+<http://viaf.org/viaf/71145971353932331279> a rdac:C10004 ;
     rdfs:label "Wiking, Paula" ;
     rdaad:P50413 "Wiking, Paula" ;
-    rdaxd:P00018 "http://example.org/wikingpaula" .
+    rdaxd:P00018 "http://viaf.org/viaf/71145971353932331279" .
 
 <http://viaf.org/viaf/1000145424544686831283/exp/eng/1020/92839136> a rdac:C10006 ;
     rdfs:label "The Ring is Closed / Knut Hamsun ; translated by Robert Ferguson. – English"@en,
@@ -17207,14 +17203,14 @@
     rdaeo:P20231 <http://viaf.org/viaf/1000145424544686831283> .
 
 <http://viaf.org/viaf/1000145424544686831283/exp/fre/1020/boyerregis> a rdac:C10006 ;
-    rdfs:label "Le cercle s'est refermé / Knut Hamsun ; translated by Régis Boyer. – French"@en,
-        "Le cercle s'est refermé / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
+    rdfs:label "Le cercle s'est refermé / Knut Hamsun ; translated by Régis Boyer. – French"@en,
+        "Le cercle s'est refermé / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "Le cercle s'est refermé" ;
     rdaed:P20316 "Le cercle s'est refermé : roman",
         "Ringen sluttet" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/boyerregis> ;
+    rdaeo:P20037 <http://viaf.org/viaf/66602903> ;
     rdaeo:P20231 <http://viaf.org/viaf/1000145424544686831283> .
 
 <http://viaf.org/viaf/143144898528950290965/exp/eng/1020> a rdac:C10006 ;
@@ -17282,7 +17278,7 @@
     rdaed:P20316 "Den gaadefulde" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/grouixpierre> ;
+    rdaeo:P20037 <http://viaf.org/viaf/44442808> ;
     rdaeo:P20231 <http://viaf.org/viaf/183478381> .
 
 <http://viaf.org/viaf/185380595/exp/eng/1020> a rdac:C10006 ;
@@ -17314,7 +17310,7 @@
         "Look back on happiness" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20037 <http://example.org/wikingpaula> ;
+    rdaeo:P20037 <http://viaf.org/viaf/71145971353932331279> ;
     rdaeo:P20231 <http://viaf.org/viaf/185380595> .
 
 <http://viaf.org/viaf/185380595/exp/ger/1020> a rdac:C10006 ;
@@ -17335,7 +17331,7 @@
         "Die letzte Freude : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/hoyerniels> ;
+    rdaeo:P20037 <http://viaf.org/viaf/3237667> ;
     rdaeo:P20231 <http://viaf.org/viaf/185380595> .
 
 <http://viaf.org/viaf/185380595/exp/spa/1020> a rdac:C10006 ;
@@ -17358,14 +17354,14 @@
     rdaeo:P20231 <http://viaf.org/viaf/188303684> .
 
 <http://viaf.org/viaf/188303684/exp/spa/1020/molinscorrealuis> a rdac:C10006 ;
-    rdfs:label "El capítulo final / Knut Hamsun ; translated by Luis Molins Correa. – Spanish"@en,
-        "El capítulo final / Knut Hamsun ; oversatt av Luis Molins Correa. – Spansk"@no ;
+    rdfs:label "El capítulo final / Knut Hamsun ; translated by Luis Molins. – Spanish"@en,
+        "El capítulo final / Knut Hamsun ; oversatt av Luis Molins. – Spansk"@no ;
     rdaed:P20315 "El capítulo final" ;
     rdaed:P20316 "El capítulo final : novela",
         "Siste kapitel" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20037 <http://example.org/molinscorrealuis> ;
+    rdaeo:P20037 <http://viaf.org/viaf/3146331927818692445> ;
     rdaeo:P20231 <http://viaf.org/viaf/188303684> .
 
 <http://viaf.org/viaf/193686577/exp/nob/1020> a rdac:C10006 ;
@@ -17409,18 +17405,18 @@
         "Pan : d'apres les papiers du lieutenant Thomas Glahn" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/sautreaugeorges>,
+    rdaeo:P20037 <http://viaf.org/viaf/14776516>,
         <http://viaf.org/viaf/66602903> ;
     rdaeo:P20231 <http://viaf.org/viaf/194765531> .
 
 <http://viaf.org/viaf/194765531/exp/fre/1020/boyerregis> a rdac:C10006 ;
-    rdfs:label "Pan : d'après les papiers du lieutenant Thomas Glahn / Knut Hamsun ; translated by Régis Boyer. – French"@en,
-        "Pan : d'après les papiers du lieutenant Thomas Glahn / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
+    rdfs:label "Pan : d'après les papiers du lieutenant Thomas Glahn / Knut Hamsun ; translated by Régis Boyer. – French"@en,
+        "Pan : d'après les papiers du lieutenant Thomas Glahn / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "Pan : d'après les papiers du lieutenant Thomas Glahn" ;
     rdaed:P20316 "Pan" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/boyerregis> ;
+    rdaeo:P20037 <http://viaf.org/viaf/66602903> ;
     rdaeo:P20231 <http://viaf.org/viaf/194765531> .
 
 <http://viaf.org/viaf/194765531/exp/fre/1020/sautreaugeorges> a rdac:C10006 ;
@@ -17430,7 +17426,7 @@
     rdaed:P20316 "Pan" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/sautreaugeorges> ;
+    rdaeo:P20037 <http://viaf.org/viaf/14776516> ;
     rdaeo:P20231 <http://viaf.org/viaf/194765531> .
 
 <http://viaf.org/viaf/194765531/exp/ger/1020/162089799/59960174/kiyhermann> a rdac:C10006 ;
@@ -17440,7 +17436,7 @@
     rdaed:P20316 "Pan" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/kiyhermann>,
+    rdaeo:P20037 <http://viaf.org/viaf/64751952>,
         <http://viaf.org/viaf/162089799>,
         <http://viaf.org/viaf/59960174> ;
     rdaeo:P20231 <http://viaf.org/viaf/194765531> .
@@ -17492,19 +17488,19 @@
     rdaed:P20316 "Mysterier" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/galtieringunn>,
-        <http://example.org/guilhonalainpierre> ;
+    rdaeo:P20037 <http://viaf.org/viaf/277228294>,
+        <http://viaf.org/viaf/49226566> ;
     rdaeo:P20231 <http://viaf.org/viaf/206863699> .
 
 <http://viaf.org/viaf/206863699/exp/fre/1020/guilhonalainpierre/guilhoningunn> a rdac:C10006 ;
-    rdfs:label "Mystères / Knut Hamsun ; translated by Alain-Pierre Guilhon and Ingunn Guilhon. – French"@en,
-        "Mystères / Knut Hamsun ; oversatt av Alain-Pierre Guilhon og Ingunn Guilhon. – Fransk"@no ;
+    rdfs:label "Mystères / Knut Hamsun ; translated by Alain-Pierre Guilhon and Ingunn Galtier. – French"@en,
+        "Mystères / Knut Hamsun ; oversatt av Alain-Pierre Guilhon og Ingunn Galtier. – Fransk"@no ;
     rdaed:P20315 "Mystères" ;
     rdaed:P20316 "Mysterier" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/guilhonalainpierre>,
-        <http://example.org/guilhoningunn> ;
+    rdaeo:P20037 <http://viaf.org/viaf/49226566>,
+        <http://viaf.org/viaf/277228294> ;
     rdaeo:P20231 <http://viaf.org/viaf/206863699> .
 
 <http://viaf.org/viaf/206863699/exp/nob/1013> a rdac:C10006 ;
@@ -17523,7 +17519,7 @@
     rdaed:P20316 "Mysterier" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20022 <http://example.org/johnsonnils> ;
+    rdaeo:P20022 <http://viaf.org/viaf/228279275> ;
     rdaeo:P20231 <http://viaf.org/viaf/206863699> .
 
 <http://viaf.org/viaf/206863699/exp/spa/1020/86862314/garcabadellregino> a rdac:C10006 ;
@@ -17533,7 +17529,7 @@
     rdaed:P20316 "Mysterier" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20037 <http://example.org/garcabadellregino>,
+    rdaeo:P20037 <http://viaf.org/viaf/215149196287474790942>,
         <http://viaf.org/viaf/86862314> ;
     rdaeo:P20231 <http://viaf.org/viaf/206863699> .
 
@@ -17544,7 +17540,7 @@
     rdaed:P20316 "Segelfoss by" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20022 <http://example.org/johnsonnils> ;
+    rdaeo:P20022 <http://viaf.org/viaf/228279275> ;
     rdaeo:P20231 <http://viaf.org/viaf/207944253> .
 
 <http://viaf.org/viaf/207944253/exp/spa/1020/vivesfrans> a rdac:C10006 ;
@@ -17554,7 +17550,7 @@
     rdaed:P20316 "Segelfoss by" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20037 <http://example.org/vivesfrans> ;
+    rdaeo:P20037 <http://viaf.org/viaf/12177408753003190925> ;
     rdaeo:P20231 <http://viaf.org/viaf/207944253> .
 
 <http://viaf.org/viaf/217145857943523021156/exp/ger/1020/dumlinghans> a rdac:C10006 ;
@@ -17564,7 +17560,7 @@
     rdaed:P20316 "Brev til Marie" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/dumlinghans> ;
+    rdaeo:P20037 <http://viaf.org/viaf/64747070> ;
     rdaeo:P20231 <http://viaf.org/viaf/217145857943523021156> .
 
 <http://viaf.org/viaf/217145857943523021156/exp/nob/1020> a rdac:C10006 ;
@@ -17593,7 +17589,7 @@
     rdaed:P20316 "Sult" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20037 <http://example.org/hoyerniels> ;
+    rdaeo:P20037 <http://viaf.org/viaf/3237667> ;
     rdaeo:P20231 <http://viaf.org/viaf/220443771> .
 
 <http://viaf.org/viaf/220443771/exp/fre/1020> a rdac:C10006 ;
@@ -17606,14 +17602,14 @@
     rdaeo:P20231 <http://viaf.org/viaf/220443771> .
 
 <http://viaf.org/viaf/220443771/exp/fre/1020/boyerregis> a rdac:C10006 ;
-    rdfs:label "La Faim / Knut Hamsun ; translated by Régis Boyer. – French"@en,
-        "La Faim / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
+    rdfs:label "La Faim / Knut Hamsun ; translated by Régis Boyer. – French"@en,
+        "La Faim / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "La Faim" ;
     rdaed:P20316 "Faim",
         "Sult" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/boyerregis> ;
+    rdaeo:P20037 <http://viaf.org/viaf/66602903> ;
     rdaeo:P20231 <http://viaf.org/viaf/220443771> .
 
 <http://viaf.org/viaf/220443771/exp/fre/1020/gideandr> a rdac:C10006 ;
@@ -17624,7 +17620,7 @@
         "Sult" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/gideandr> ;
+    rdaeo:P20037 <http://viaf.org/viaf/96973963> ;
     rdaeo:P20231 <http://viaf.org/viaf/220443771> .
 
 <http://viaf.org/viaf/220443771/exp/ger/1013/59960174/friedrichsenuwe> a rdac:C10006 ;
@@ -17634,7 +17630,7 @@
     rdaed:P20316 "Sult" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20022 <http://example.org/friedrichsenuwe> ;
+    rdaeo:P20022 <http://viaf.org/viaf/35339440> ;
     rdaeo:P20037 <http://viaf.org/viaf/59960174> ;
     rdaeo:P20231 <http://viaf.org/viaf/220443771> .
 
@@ -17646,7 +17642,7 @@
         "Sult" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/borchmarievon> ;
+    rdaeo:P20037 <http://viaf.org/viaf/39365507> ;
     rdaeo:P20231 <http://viaf.org/viaf/220443771> .
 
 <http://viaf.org/viaf/220443771/exp/ger/1020/hoyerniels> a rdac:C10006 ;
@@ -17656,7 +17652,7 @@
     rdaed:P20316 "Sult" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/hoyerniels> ;
+    rdaeo:P20037 <http://viaf.org/viaf/3237667> ;
     rdaeo:P20231 <http://viaf.org/viaf/220443771> .
 
 <http://viaf.org/viaf/24608356> a rdac:C10004 ;
@@ -17701,7 +17697,7 @@
         "Segen der Erde : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/brunsalken> ;
+    rdaeo:P20037 <http://viaf.org/viaf/14783676> ;
     rdaeo:P20231 <http://viaf.org/viaf/294124367> .
 
 <http://viaf.org/viaf/30145424502786830193/exp/eng/1020/111655332> a rdac:C10006 ;
@@ -17723,7 +17719,7 @@
         "Paa gjengrodde stier" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20037 <http://example.org/andersoncarll> ;
+    rdaeo:P20037 <http://viaf.org/viaf/41824573> ;
     rdaeo:P20231 <http://viaf.org/viaf/30145424502786830193> .
 
 <http://viaf.org/viaf/30145424502786830193/exp/nob/1013/stormoenkjell> a rdac:C10006 ;
@@ -17733,7 +17729,7 @@
     rdaed:P20316 "Paa gjengrodde stier" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20022 <http://example.org/stormoenkjell> ;
+    rdaeo:P20022 <http://viaf.org/viaf/229586296> ;
     rdaeo:P20231 <http://viaf.org/viaf/30145424502786830193> .
 
 <http://viaf.org/viaf/309525997/exp/eng/1020/7014928> a rdac:C10006 ;
@@ -17812,7 +17808,7 @@
     rdaed:P20316 "Benoni" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20037 <http://example.org/chaterarthurg> ;
+    rdaeo:P20037 <http://viaf.org/viaf/75478520> ;
     rdaeo:P20231 <http://viaf.org/viaf/310234238> .
 
 <http://viaf.org/viaf/310234238/exp/fre/1020/sautreaugeorges> a rdac:C10006 ;
@@ -17822,7 +17818,7 @@
     rdaed:P20316 "Benoni" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/sautreaugeorges> ;
+    rdaeo:P20037 <http://viaf.org/viaf/14776516> ;
     rdaeo:P20231 <http://viaf.org/viaf/310234238> .
 
 <http://viaf.org/viaf/310234238/exp/ger/1020> a rdac:C10006 ;
@@ -17852,7 +17848,7 @@
         "Benoni : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/mannmathilde> ;
+    rdaeo:P20037 <http://viaf.org/viaf/72158557> ;
     rdaeo:P20231 <http://viaf.org/viaf/310234238> .
 
 <http://viaf.org/viaf/312486496/exp/eng/1020> a rdac:C10006 ;
@@ -17873,7 +17869,7 @@
         "Vom Teufel geholt : Schauspiel in 4 Akten" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/grunauwernervon> ;
+    rdaeo:P20037 <http://viaf.org/viaf/49404449> ;
     rdaeo:P20231 <http://viaf.org/viaf/312486496> .
 
 <http://viaf.org/viaf/312486496/exp/ger/1020/morburgercarl> a rdac:C10006 ;
@@ -17884,7 +17880,7 @@
         "Vom Teufel geholt : Schauspiel in 4 Akten" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/morburgercarl> ;
+    rdaeo:P20037 <http://viaf.org/viaf/62566877> ;
     rdaeo:P20231 <http://viaf.org/viaf/312486496> .
 
 <http://viaf.org/viaf/312501980/exp/eng/1020> a rdac:C10006 ;
@@ -17912,7 +17908,7 @@
     rdaed:P20316 "Livsfragmenter" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/imbeckgert> ;
+    rdaeo:P20037 <http://viaf.org/viaf/5620149108472868780007> ;
     rdaeo:P20231 <http://viaf.org/viaf/312501980> .
 
 <http://viaf.org/viaf/312526705/exp/fre/1020/66602903> a rdac:C10006 ;
@@ -17932,7 +17928,7 @@
     rdaed:P20316 "Konerne ved vandposten" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20022 <http://example.org/johnsonnils> ;
+    rdaeo:P20022 <http://viaf.org/viaf/228279275> ;
     rdaeo:P20231 <http://viaf.org/viaf/312526705> .
 
 <http://viaf.org/viaf/316368447/exp/ger/1020> a rdac:C10006 ;
@@ -17952,7 +17948,7 @@
         "Det vilde kor" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/hiltbrunnerhermann> ;
+    rdaeo:P20037 <http://viaf.org/viaf/62343206> ;
     rdaeo:P20231 <http://viaf.org/viaf/316368447> .
 
 <http://viaf.org/viaf/316992494/exp/fre/1020/atcatherined/melandkarin> a rdac:C10006 ;
@@ -17962,8 +17958,8 @@
     rdaed:P20316 "Ved rigets port" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/atcatherined>,
-        <http://example.org/melandkarin> ;
+    rdaeo:P20037 <http://viaf.org/viaf/200905047>,
+        <http://viaf.org/viaf/220062642> ;
     rdaeo:P20231 <http://viaf.org/viaf/316992494> .
 
 <http://viaf.org/viaf/316992494/exp/ger/1020> a rdac:C10006 ;
@@ -18008,7 +18004,7 @@
     rdaed:P20315 "The Reivers" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20037 <http://example.org/ferrervidaljorge> ;
+    rdaeo:P20037 <http://viaf.org/viaf/117128782> ;
     rdaeo:P20231 <http://viaf.org/viaf/39376770/thereivers> .
 
 <http://viaf.org/viaf/39380311/freeair> a rdac:C10001 ;
@@ -18053,7 +18049,7 @@
         "Victoria : a love story" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20037 <http://example.org/stallybrassoliver> ;
+    rdaeo:P20037 <http://viaf.org/viaf/68969509> ;
     rdaeo:P20231 <http://viaf.org/viaf/395147270538135700001> .
 
 <http://viaf.org/viaf/395147270538135700001/exp/fre/1020> a rdac:C10006 ;
@@ -18066,13 +18062,13 @@
     rdaeo:P20231 <http://viaf.org/viaf/395147270538135700001> .
 
 <http://viaf.org/viaf/395147270538135700001/exp/fre/1020/66602903/guilhoningunn> a rdac:C10006 ;
-    rdfs:label "Victoria : histoire d'un amour / Knut Hamsun ; translated by Ingunn Guilhon and Régis Boyer. – French"@en,
-        "Victoria : histoire d'un amour / Knut Hamsun ; oversatt av Ingunn Guilhon og Régis Boyer. – Fransk"@no ;
+    rdfs:label "Victoria : histoire d'un amour / Knut Hamsun ; translated by Ingunn Galtier and Régis Boyer. – French"@en,
+        "Victoria : histoire d'un amour / Knut Hamsun ; oversatt av Ingunn Galtier og Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "Victoria : histoire d'un amour" ;
     rdaed:P20316 "Victoria" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/guilhoningunn>,
+    rdaeo:P20037 <http://viaf.org/viaf/277228294>,
         <http://viaf.org/viaf/66602903> ;
     rdaeo:P20231 <http://viaf.org/viaf/395147270538135700001> .
 
@@ -18083,18 +18079,18 @@
     rdaed:P20316 "Victoria" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/galtieringunn>,
-        <http://example.org/guilhonalainpierre> ;
+    rdaeo:P20037 <http://viaf.org/viaf/277228294>,
+        <http://viaf.org/viaf/49226566> ;
     rdaeo:P20231 <http://viaf.org/viaf/395147270538135700001> .
 
 <http://viaf.org/viaf/395147270538135700001/exp/fre/1020/guilhoningunn> a rdac:C10006 ;
-    rdfs:label "Victoria / Knut Hamsun ; translated by Ingunn Guilhon. – French"@en,
-        "Victoria / Knut Hamsun ; oversatt av Ingunn Guilhon. – Fransk"@no ;
+    rdfs:label "Victoria / Knut Hamsun ; translated by Ingunn Galtier. – French"@en,
+        "Victoria / Knut Hamsun ; oversatt av Ingunn Galtier. – Fransk"@no ;
     rdaed:P20315 "Victoria" ;
     rdaed:P20316 "Victoria" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/guilhoningunn> ;
+    rdaeo:P20037 <http://viaf.org/viaf/277228294> ;
     rdaeo:P20231 <http://viaf.org/viaf/395147270538135700001> .
 
 <http://viaf.org/viaf/395147270538135700001/exp/ger/1013> a rdac:C10006 ;
@@ -18113,7 +18109,7 @@
     rdaed:P20315 "Victoria" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/kosterkahugo> ;
+    rdaeo:P20037 <http://viaf.org/viaf/12166684> ;
     rdaeo:P20231 <http://viaf.org/viaf/395147270538135700001> .
 
 <http://viaf.org/viaf/395147270538135700001/exp/spa/1020/curielberta/jervelmarialana> a rdac:C10006 ;
@@ -18358,8 +18354,8 @@
     rdaed:P20315 "Nabobyen" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/knustjutta>,
-        <http://example.org/knusttheodor> ;
+    rdaeo:P20037 <http://viaf.org/viaf/300450283>,
+        <http://viaf.org/viaf/260694987> ;
     rdaeo:P20231 <http://viaf.org/viaf/59083692/nabobyen> .
 
 <http://viaf.org/viaf/59083692/ondedager> a rdac:C10001 ;
@@ -18411,7 +18407,7 @@
     rdaed:P20315 "Vagabonds dager" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/kiyhermann>,
+    rdaeo:P20037 <http://viaf.org/viaf/64751952>,
         <http://viaf.org/viaf/162089799>,
         <http://viaf.org/viaf/59960174> ;
     rdaeo:P20231 <http://viaf.org/viaf/59083692/vagabondsdager> .
@@ -18452,8 +18448,8 @@
     rdaed:P20316 "Livets spil" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/atcatherined>,
-        <http://example.org/melandkarin> ;
+    rdaeo:P20037 <http://viaf.org/viaf/200905047>,
+        <http://viaf.org/viaf/220062642> ;
     rdaeo:P20231 <http://viaf.org/viaf/7398163939428301160007> .
 
 <http://viaf.org/viaf/7398163939428301160007/exp/ger/1020> a rdac:C10006 ;
@@ -18474,7 +18470,7 @@
         "Spiel des Lebens : Schauspiel in 4 Aufz" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/morgensternchristian>,
+    rdaeo:P20037 <http://viaf.org/viaf/68933209>,
         <http://viaf.org/viaf/59960174> ;
     rdaeo:P20231 <http://viaf.org/viaf/7398163939428301160007> .
 
@@ -18506,7 +18502,7 @@
     rdaed:P20315 "Puck of Pook's Hill" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20037 <http://example.org/luacesjuangde> ;
+    rdaeo:P20037 <http://viaf.org/viaf/35472769> ;
     rdaeo:P20231 <http://viaf.org/viaf/7524679/puckofpookshill> .
 
 <http://viaf.org/viaf/7524679/stalkyco> a rdac:C10001 ;
@@ -18530,7 +18526,7 @@
         "The cultural life of modern America" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20037 <http://example.org/morgridgebarbaragordon> ;
+    rdaeo:P20037 <http://viaf.org/viaf/19274528> ;
     rdaeo:P20231 <http://viaf.org/viaf/811145857935523020027> .
 
 <http://viaf.org/viaf/811145857935523020027/exp/fre/1020> a rdac:C10006 ;
@@ -18561,18 +18557,18 @@
         "Fra det moderne Amerikas aandsliv" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/knustjutta> ;
+    rdaeo:P20037 <http://viaf.org/viaf/300450283> ;
     rdaeo:P20231 <http://viaf.org/viaf/811145857935523020027> .
 
 <http://viaf.org/viaf/8450149068552765730000/exp/fre/1020/boyerregis> a rdac:C10006 ;
-    rdfs:label "Enfants de l'époque / Knut Hamsun ; translated by Régis Boyer. – French"@en,
-        "Enfants de l'époque / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
+    rdfs:label "Enfants de l'époque / Knut Hamsun ; translated by Régis Boyer. – French"@en,
+        "Enfants de l'époque / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "Enfants de l'époque" ;
     rdaed:P20316 "Børn av tiden",
         "Enfants de leur temps : roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/boyerregis> ;
+    rdaeo:P20037 <http://viaf.org/viaf/66602903> ;
     rdaeo:P20231 <http://viaf.org/viaf/8450149068552765730000> .
 
 <http://viaf.org/viaf/8450149068552765730000/exp/ger/1020> a rdac:C10006 ;
@@ -18591,7 +18587,7 @@
     rdaed:P20316 "Børn av tiden" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/harthernernst>,
+    rdaeo:P20037 <http://viaf.org/viaf/3277778>,
         <http://viaf.org/viaf/117364598> ;
     rdaeo:P20231 <http://viaf.org/viaf/8450149068552765730000> .
 
@@ -18614,7 +18610,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://example.org/gossg>,
-        <http://example.org/gossl> ;
+        <http://viaf.org/viaf/86550258> ;
     rdaeo:P20231 <http://viaf.org/viaf/91868694/eastwindwestwind> .
 
 <http://viaf.org/viaf/91868694/farandnear> a rdac:C10001 ;
@@ -18630,7 +18626,7 @@
     rdaed:P20315 "Far and near" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20037 <http://example.org/claramundabesjosmara> ;
+    rdaeo:P20037 <http://viaf.org/viaf/37933667> ;
     rdaeo:P20231 <http://viaf.org/viaf/91868694/farandnear> .
 
 <http://viaf.org/viaf/91868694/fightingangel> a rdac:C10001 ;
@@ -18691,7 +18687,7 @@
     rdaed:P20315 "La Fin de la nuit" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20037 <http://example.org/gutirrezfernando> ;
+    rdaeo:P20037 <http://viaf.org/viaf/90728232> ;
     rdaeo:P20231 <http://viaf.org/viaf/9850407/lafindelanuit> .
 
 <http://viaf.org/viaf/9850407/lenuddevipres> a rdac:C10001 ;
@@ -18707,7 +18703,7 @@
     rdaed:P20315 "Le Nœud de vipères" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20037 <http://example.org/gutirrezfernando> ;
+    rdaeo:P20037 <http://viaf.org/viaf/90728232> ;
     rdaeo:P20231 <http://viaf.org/viaf/9850407/lenuddevipres> .
 
 <http://viaf.org/viaf/9850407/thrsedesqueyroux> a rdac:C10001 ;
@@ -18733,7 +18729,7 @@
     rdaed:P20316 "Sværmere" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/sautreaugeorges> ;
+    rdaeo:P20037 <http://viaf.org/viaf/14776516> ;
     rdaeo:P20231 <http://viaf.org/viaf/995145424555286830372> .
 
 <http://viaf.org/viaf/995145424555286830372/exp/ger/1020/knustjutta> a rdac:C10006 ;
@@ -18743,7 +18739,7 @@
     rdaed:P20316 "Sværmere" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/knustjutta> ;
+    rdaeo:P20037 <http://viaf.org/viaf/300450283> ;
     rdaeo:P20231 <http://viaf.org/viaf/995145424555286830372> .
 
 <http://viaf.org/viaf/995145424555286830372/exp/ger/1020/knustjutta/knusttheodor> a rdac:C10006 ;
@@ -18754,8 +18750,8 @@
         "Sværmere" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/knustjutta>,
-        <http://example.org/knusttheodor> ;
+    rdaeo:P20037 <http://viaf.org/viaf/300450283>,
+        <http://viaf.org/viaf/260694987> ;
     rdaeo:P20231 <http://viaf.org/viaf/995145424555286830372> .
 
 <http://viaf.org/viaf/995145424555286830372/exp/spa/1020/costamontserrat/prezbancesjosramn> a rdac:C10006 ;
@@ -18766,7 +18762,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://example.org/costamontserrat>,
-        <http://example.org/prezbancesjosramn> ;
+        <http://viaf.org/viaf/98992194> ;
     rdaeo:P20231 <http://viaf.org/viaf/995145424555286830372> .
 
 <http://viaf.org/viaf/995145424555286830372/exp/spa/1020/prezbancesjosramn> a rdac:C10006 ;
@@ -18776,7 +18772,7 @@
     rdaed:P20316 "Sværmere" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20037 <http://example.org/prezbancesjosramn> ;
+    rdaeo:P20037 <http://viaf.org/viaf/98992194> ;
     rdaeo:P20231 <http://viaf.org/viaf/995145424555286830372> .
 
 <http://workid.oslomet.no/kh/02/exp/ger/1020/imbeckgert/maagereva> a rdac:C10006 ;
@@ -18786,7 +18782,7 @@
     rdaed:P20316 "Bjørger" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/imbeckgert>,
+    rdaeo:P20037 <http://viaf.org/viaf/5620149108472868780007>,
         <http://example.org/maagereva> ;
     rdaeo:P20231 <http://workid.oslomet.no/kh/02> .
 
@@ -18828,12 +18824,12 @@
     rdaeo:P20231 <http://www.wikidata.org/entity/Q12003637> .
 
 <http://www.wikidata.org/entity/Q12003637/exp/fre/1020/boyerregis> a rdac:C10006 ;
-    rdfs:label "Stridende liv / Knut Hamsun ; translated by Régis Boyer. – French"@en,
-        "Stridende liv / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
+    rdfs:label "Stridende liv / Knut Hamsun ; translated by Régis Boyer. – French"@en,
+        "Stridende liv / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "Stridende liv" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/boyerregis> ;
+    rdaeo:P20037 <http://viaf.org/viaf/66602903> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q12003637> .
 
 <http://www.wikidata.org/entity/Q12003637/exp/spa/1020/lanamara> a rdac:C10006 ;
@@ -18854,12 +18850,12 @@
     rdaeo:P20231 <http://www.wikidata.org/entity/Q15062320> .
 
 <http://www.wikidata.org/entity/Q15062320/exp/fre/1020/boyerregis> a rdac:C10006 ;
-    rdfs:label "Kratskog / Knut Hamsun ; translated by Régis Boyer. – French"@en,
-        "Kratskog / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
+    rdfs:label "Kratskog / Knut Hamsun ; translated by Régis Boyer. – French"@en,
+        "Kratskog / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "Kratskog" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/boyerregis> ;
+    rdaeo:P20037 <http://viaf.org/viaf/66602903> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q15062320> .
 
 <http://www.wikidata.org/entity/Q15062327/exp/fre/1020/atcatherined/melandkarin> a rdac:C10006 ;
@@ -18869,8 +18865,8 @@
     rdaed:P20316 "Aftenrøde" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/atcatherined>,
-        <http://example.org/melandkarin> ;
+    rdaeo:P20037 <http://viaf.org/viaf/200905047>,
+        <http://viaf.org/viaf/220062642> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q15062327> .
 
 <http://www.wikidata.org/entity/Q15062327/exp/ger/1020> a rdac:C10006 ;
@@ -18892,12 +18888,12 @@
     rdaeo:P20231 <http://www.wikidata.org/entity/Q15062328> .
 
 <http://www.wikidata.org/entity/Q15062328/exp/fre/1020/boyerregis> a rdac:C10006 ;
-    rdfs:label "Siesta / Knut Hamsun ; translated by Régis Boyer. – French"@en,
-        "Siesta / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
+    rdfs:label "Siesta / Knut Hamsun ; translated by Régis Boyer. – French"@en,
+        "Siesta / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "Siesta" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/boyerregis> ;
+    rdaeo:P20037 <http://viaf.org/viaf/66602903> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q15062328> .
 
 <https://isni.org/isni/0000000361689449> a rdac:C10004 ;
@@ -18930,9 +18926,9 @@
         "Markens grøde / Gunnar Sommerfeldt. – Filmverk"@no ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1002> ;
     rdawd:P10223 "Markens grøde" ;
-    rdawo:P10053 <http://example.org/halvorsenleif> ;
-    rdawo:P10061 <http://example.org/sommerfeldtgunnar> ;
-    rdawo:P10066 <http://example.org/sommerfeldtgunnar> ;
+    rdawo:P10053 <http://viaf.org/viaf/227529625> ;
+    rdawo:P10061 <http://viaf.org/viaf/102357742> ;
+    rdawo:P10066 <http://viaf.org/viaf/102357742> ;
     rdawo:P10134 <http://viaf.org/viaf/294124367> ;
     rdaxd:P00018 "https://www.imdb.com/title/tt0011440/" .
 
@@ -18944,9 +18940,9 @@
     rdaed:P20316 "Markens grøde" ;
     rdaeo:P20001 rdaco:1023 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/mul> ;
-    rdaeo:P20012 <http://example.org/rydlandamund>,
-        <http://example.org/thalbitzerkaren>,
-        <http://example.org/wettergreenragna> ;
+    rdaeo:P20012 <http://viaf.org/viaf/102357788>,
+        <http://viaf.org/viaf/102357800>,
+        <http://viaf.org/viaf/102357837> ;
     rdaeo:P20231 <https://www.imdb.com/title/tt0011440> .
 
 <https://www.imdb.com/title/tt0061042> a rdac:C10001 ;
@@ -18954,9 +18950,9 @@
         "Sult / Henning Carlsen og Peter Seeberg. – Filmverk"@no ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1002> ;
     rdawd:P10223 "Sult" ;
-    rdawo:P10061 <http://example.org/carlsenhenning>,
-        <http://example.org/seebergpeter> ;
-    rdawo:P10066 <http://example.org/carlsenhenning> ;
+    rdawo:P10061 <http://viaf.org/viaf/6145971343732331107>,
+        <http://viaf.org/viaf/227149106054968491031> ;
+    rdawo:P10066 <http://viaf.org/viaf/6145971343732331107> ;
     rdawo:P10134 <http://viaf.org/viaf/220443771> ;
     rdaxd:P00018 "https://www.imdb.com/title/tt0061042/" .
 
@@ -18970,8 +18966,8 @@
     rdaed:P20316 "Sult" ;
     rdaeo:P20001 rdaco:1023 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/mul> ;
-    rdaeo:P20012 <http://example.org/lindblomgunnel>,
-        <http://example.org/oscarssonper> ;
+    rdaeo:P20012 <http://viaf.org/viaf/7363914>,
+        <http://viaf.org/viaf/42039585> ;
     rdaeo:P20231 <https://www.imdb.com/title/tt0061042> .
 
 <https://www.imdb.com/title/tt0077965> a rdac:C10001 ;
@@ -18979,11 +18975,11 @@
         "Mysteries / regi Paul de Lussanet"@no ;
     rdawd:P10223 "Mysteries" ;
     rdawd:P10330 "En la isla de Man, una serie de sucesos, entre ellos el suicidio de un joven estudiante, cambia por completo la vida de sus habitantes" ;
-    rdawo:P10053 <http://example.org/rooyenlaurensvan> ;
-    rdawo:P10066 <http://example.org/lussanetpaulde> ;
+    rdawo:P10053 <http://viaf.org/viaf/79648850> ;
+    rdawo:P10066 <http://viaf.org/viaf/36926998> ;
     rdawo:P10068 <http://example.org/mllerrobby> ;
     rdawo:P10134 <http://viaf.org/viaf/206863699> ;
-    rdawo:P10203 <http://example.org/lussanetpaulde> ;
+    rdawo:P10203 <http://viaf.org/viaf/36926998> ;
     rdaxd:P00018 "https://www.imdb.com/title/tt0077965/" .
 
 <https://www.imdb.com/title/tt0077965/exp/1023> a rdac:C10006 ;
@@ -18995,7 +18991,7 @@
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng>,
         <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20012 <http://example.org/hauerrutger>,
-        <http://example.org/kristelsylvia>,
+        <http://viaf.org/viaf/5126085>,
         <http://example.org/tushinghamrita> ;
     rdaeo:P20231 <https://www.imdb.com/title/tt0077965> .
 
@@ -19004,11 +19000,11 @@
         "Landstrykere / regi Ola Solum. – Filmverk"@no ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1002> ;
     rdawd:P10223 "Landstrykere" ;
-    rdawo:P10066 <http://example.org/solumola> ;
+    rdawo:P10066 <http://viaf.org/viaf/95338031> ;
     rdawo:P10134 <http://viaf.org/viaf/180078068> ;
-    rdawo:P10203 <http://example.org/christensenlarssaabye>,
-        <http://example.org/lindgrenhans>,
-        <http://example.org/solumola> ;
+    rdawo:P10203 <http://viaf.org/viaf/9979418>,
+        <http://viaf.org/viaf/220056680>,
+        <http://viaf.org/viaf/95338031> ;
     rdaxd:P00018 "https://www.imdb.com/title/tt0097709/" .
 
 <https://www.imdb.com/title/tt0097709/exp/1023> a rdac:C10006 ;
@@ -19019,9 +19015,9 @@
     rdaed:P20316 "Landstrykere" ;
     rdaeo:P20001 rdaco:1023 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/mul> ;
-    rdaeo:P20012 <http://example.org/jordalhelge>,
-        <http://example.org/lagercrantzmarika>,
-        <http://example.org/munchtrondpeterstams> ;
+    rdaeo:P20012 <http://viaf.org/viaf/102357918>,
+        <http://viaf.org/viaf/87599799>,
+        <http://viaf.org/viaf/102357902> ;
     rdaeo:P20231 <https://www.imdb.com/title/tt0097709> .
 
 <https://www.imdb.com/title/tt0108309> a rdac:C10001 ;
@@ -19029,9 +19025,9 @@
         "Telegrafisten / regi Erik Gustavson. – Filmverk"@no ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1002> ;
     rdawd:P10223 "Telegrafisten" ;
-    rdawo:P10066 <http://example.org/gustavsonerik> ;
+    rdawo:P10066 <http://viaf.org/viaf/308698494> ;
     rdawo:P10134 <http://viaf.org/viaf/995145424555286830372> ;
-    rdawo:P10203 <http://example.org/christensenlarssaabye> ;
+    rdawo:P10203 <http://viaf.org/viaf/9979418> ;
     rdaxd:P00018 "https://www.imdb.com/title/tt0108309/" .
 
 <https://www.imdb.com/title/tt0114081> a rdac:C10001 ;
@@ -19039,8 +19035,8 @@
         "Pan / Henning Carlsen. – Filmverk"@no ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1002> ;
     rdawd:P10223 "Pan" ;
-    rdawo:P10061 <http://example.org/carlsenhenning> ;
-    rdawo:P10066 <http://example.org/carlsenhenning> ;
+    rdawo:P10061 <http://viaf.org/viaf/6145971343732331107> ;
+    rdawo:P10066 <http://viaf.org/viaf/6145971343732331107> ;
     rdawo:P10134 <http://viaf.org/viaf/194765531> ;
     rdaxd:P00018 "https://www.imdb.com/title/tt0114081/" .
 
@@ -19057,49 +19053,51 @@
         <http://example.org/sundquistbjrn> ;
     rdaeo:P20231 <https://www.imdb.com/title/tt0114081> .
 
-<http://example.org/blekenhkon> a rdac:C10004 ;
+<http://viaf.org/viaf/56703858> a rdac:C10004 ;
     rdfs:label "Bleken, Håkon (1929-)" ;
     rdaad:P50339 "1929-" ;
     rdaad:P50413 "Bleken, Håkon" ;
-    rdaxd:P00018 "http://example.org/blekenhkon" .
+    rdaxd:P00018 "http://viaf.org/viaf/56703858" .
 
-<http://example.org/blyrobert> a rdac:C10004 ;
+<http://viaf.org/viaf/79847862> a rdac:C10004 ;
     rdfs:label "Bly, Robert (1926-)" ;
     rdaad:P50339 "1926-" ;
     rdaad:P50413 "Bly, Robert" ;
-    rdaxd:P00018 "http://example.org/blyrobert" .
+    rdaxd:P00018 "http://viaf.org/viaf/79847862" .
 
-<http://example.org/christensenlarssaabye> a rdac:C10004 ;
+<http://viaf.org/viaf/9979418> a rdac:C10004 ;
     rdfs:label "Christensen, Lars Saabye (1953-)" ;
     rdaad:P50339 "1953-" ;
     rdaad:P50413 "Christensen, Lars Saabye" ;
-    rdaxd:P00018 "http://example.org/christensenlarssaabye" .
+    rdaxd:P00018 "http://viaf.org/viaf/9979418" .
 
-<http://example.org/deteringheinrich> a rdac:C10004 ;
-    rdfs:label "Detering, Heinrich" ;
+<http://viaf.org/viaf/85127277> a rdac:C10004 ;
+    rdfs:label "Detering, Heinrich (1959-)" ;
+    rdaad:P50339 "1959-" ;
     rdaad:P50413 "Detering, Heinrich" ;
-    rdaxd:P00018 "http://example.org/deteringheinrich" .
+    rdaxd:P00018 "http://viaf.org/viaf/85127277" .
 
-<http://example.org/eggeneinar> a rdac:C10004 ;
+<http://viaf.org/viaf/60410151> a rdac:C10004 ;
     rdfs:label "Eggen, Einar (1929-)" ;
     rdaad:P50339 "1929-" ;
     rdaad:P50413 "Eggen, Einar" ;
-    rdaxd:P00018 "http://example.org/eggeneinar" .
+    rdaxd:P00018 "http://viaf.org/viaf/60410151" .
 
 <http://example.org/ferrorafaela> a rdac:C10004 ;
     rdfs:label "Ferro, Rafaela" ;
     rdaad:P50413 "Ferro, Rafaela" ;
     rdaxd:P00018 "http://example.org/ferrorafaela" .
 
-<http://example.org/frlandolepetter> a rdac:C10004 ;
+<http://viaf.org/viaf/78424451> a rdac:C10004 ;
     rdfs:label "Førland, Ole Petter" ;
     rdaad:P50413 "Førland, Ole Petter" ;
-    rdaxd:P00018 "http://example.org/frlandolepetter" .
+    rdaxd:P00018 "http://viaf.org/viaf/78424451" .
 
-<http://example.org/galtieringunn> a rdac:C10004 ;
+<http://viaf.org/viaf/277228294> a rdac:C10004 ;
     rdfs:label "Galtier, Ingunn" ;
     rdaad:P50413 "Galtier, Ingunn" ;
-    rdaxd:P00018 "http://example.org/galtieringunn" .
+    rdaad:P50415 "Guilhon, Ingunn" ;
+    rdaxd:P00018 "http://viaf.org/viaf/277228294" .
 
 <http://example.org/garbarekjan> a rdac:C10004 ;
     rdfs:label "Garbarek, Jan (1947-)" ;
@@ -19107,58 +19105,58 @@
     rdaad:P50413 "Garbarek, Jan" ;
     rdaxd:P00018 "http://example.org/garbarekjan" .
 
-<http://example.org/gideandr> a rdac:C10004 ;
+<http://viaf.org/viaf/96973963> a rdac:C10004 ;
     rdfs:label "Gide, André (1869-1951)" ;
     rdaad:P50339 "1869-1951" ;
     rdaad:P50413 "Gide, André" ;
-    rdaxd:P00018 "http://example.org/gideandr" .
+    rdaxd:P00018 "http://viaf.org/viaf/96973963" .
 
-<http://example.org/gutirrezfernando> a rdac:C10004 ;
+<http://viaf.org/viaf/90728232> a rdac:C10004 ;
     rdfs:label "Gutiérrez, Fernando (1911-1984)" ;
     rdaad:P50339 "1911-1984" ;
     rdaad:P50413 "Gutiérrez, Fernando" ;
-    rdaxd:P00018 "http://example.org/gutirrezfernando" .
+    rdaxd:P00018 "http://viaf.org/viaf/90728232" .
 
-<http://example.org/harthernernst> a rdac:C10004 ;
+<http://viaf.org/viaf/3277778> a rdac:C10004 ;
     rdfs:label "Harthern, Ernst (1884-1969)" ;
     rdaad:P50339 "1884-1969" ;
     rdaad:P50413 "Harthern, Ernst" ;
-    rdaxd:P00018 "http://example.org/harthernernst" .
+    rdaxd:P00018 "http://viaf.org/viaf/3277778" .
 
-<http://example.org/hauganjrgen> a rdac:C10004 ;
+<http://viaf.org/viaf/41947193> a rdac:C10004 ;
     rdfs:label "Haugan, Jørgen (1941-)" ;
     rdaad:P50339 "1941-" ;
     rdaad:P50413 "Haugan, Jørgen" ;
-    rdaxd:P00018 "http://example.org/hauganjrgen" .
+    rdaxd:P00018 "http://viaf.org/viaf/41947193" .
 
-<http://example.org/hiltbrunnerhermann> a rdac:C10004 ;
+<http://viaf.org/viaf/62343206> a rdac:C10004 ;
     rdfs:label "Hiltbrunner, Hermann (1893-1961)" ;
     rdaad:P50339 "1893-1961" ;
     rdaad:P50413 "Hiltbrunner, Hermann" ;
-    rdaxd:P00018 "http://example.org/hiltbrunnerhermann" .
+    rdaxd:P00018 "http://viaf.org/viaf/62343206" .
 
-<http://example.org/jenssenolavchristopher> a rdac:C10004 ;
+<http://viaf.org/viaf/15044837> a rdac:C10004 ;
     rdfs:label "Jenssen, Olav Christopher (1954-)" ;
     rdaad:P50339 "1954-" ;
     rdaad:P50413 "Jenssen, Olav Christopher" ;
-    rdaxd:P00018 "http://example.org/jenssenolavchristopher" .
+    rdaxd:P00018 "http://viaf.org/viaf/15044837" .
 
-<http://example.org/knusttheodor> a rdac:C10004 ;
+<http://viaf.org/viaf/260694987> a rdac:C10004 ;
     rdfs:label "Knust, Theodor (1908-)" ;
     rdaad:P50339 "1908-" ;
     rdaad:P50413 "Knust, Theodor" ;
-    rdaxd:P00018 "http://example.org/knusttheodor" .
+    rdaxd:P00018 "http://viaf.org/viaf/260694987" .
 
-<http://example.org/lussanetpaulde> a rdac:C10004 ;
+<http://viaf.org/viaf/36926998> a rdac:C10004 ;
     rdfs:label "Lussanet, Paul de" ;
     rdaad:P50413 "Lussanet, Paul de" ;
-    rdaxd:P00018 "http://example.org/lussanetpaulde" .
+    rdaxd:P00018 "http://viaf.org/viaf/36926998" .
 
-<http://example.org/mannmathilde> a rdac:C10004 ;
+<http://viaf.org/viaf/72158557> a rdac:C10004 ;
     rdfs:label "Mann, Mathilde (1859-1925)" ;
     rdaad:P50339 "1859-1925" ;
     rdaad:P50413 "Mann, Mathilde" ;
-    rdaxd:P00018 "http://example.org/mannmathilde" .
+    rdaxd:P00018 "http://viaf.org/viaf/72158557" .
 
 <http://example.org/mcfarlanejameswalter> a rdac:C10004 ;
     rdfs:label "McFarlane, James" ;
@@ -19166,48 +19164,48 @@
         "McFarlane, James Walter" ;
     rdaxd:P00018 "http://example.org/mcfarlanejameswalter" .
 
-<http://example.org/petithuguenin> a rdac:C10004 ;
+<http://viaf.org/viaf/222438819> a rdac:C10004 ;
     rdfs:label "Petithuguenin, Jean" ;
     rdaad:P50413 "Petithuguenin, Jean" ;
-    rdaxd:P00018 "http://example.org/petithuguenin" .
+    rdaxd:P00018 "http://viaf.org/viaf/222438819" .
 
-<http://example.org/rudborgbjrn> a rdac:C10004 ;
+<http://viaf.org/viaf/61190633> a rdac:C10004 ;
     rdfs:label "Rudborg, Bjørn (1964-)" ;
     rdaad:P50339 "1964-" ;
     rdaad:P50413 "Rudborg, Bjørn" ;
-    rdaxd:P00018 "http://example.org/rudborgbjrn" .
+    rdaxd:P00018 "http://viaf.org/viaf/61190633" .
 
-<http://example.org/solumola> a rdac:C10004 ;
+<http://viaf.org/viaf/95338031> a rdac:C10004 ;
     rdfs:label "Solum, Ola (1943-1996)" ;
     rdaad:P50339 "1943-1996" ;
     rdaad:P50413 "Solum, Ola" ;
-    rdaxd:P00018 "http://example.org/solumola" .
+    rdaxd:P00018 "http://viaf.org/viaf/95338031" .
 
-<http://example.org/sommerfeldtgunnar> a rdac:C10004 ;
+<http://viaf.org/viaf/102357742> a rdac:C10004 ;
     rdfs:label "Sommerfeldt, Gunnar (1890-1947)" ;
     rdaad:P50339 "1890-1947" ;
     rdaad:P50413 "Sommerfeldt, Gunnar" ;
-    rdaxd:P00018 "http://example.org/sommerfeldtgunnar" .
+    rdaxd:P00018 "http://viaf.org/viaf/102357742" .
 
 <http://example.org/stoblingruth> a rdac:C10004 ;
     rdfs:label "Stöbling, Ruth" ;
     rdaad:P50413 "Stöbling, Ruth" ;
     rdaxd:P00018 "http://example.org/stoblingruth" .
 
-<http://example.org/strmdahlwenche> a rdac:C10004 ;
+<http://viaf.org/viaf/556149296182580670003> a rdac:C10004 ;
     rdfs:label "Strømdahl, Wenche" ;
     rdaad:P50413 "Strømdahl, Wenche" ;
-    rdaxd:P00018 "http://example.org/strmdahlwenche" .
+    rdaxd:P00018 "http://viaf.org/viaf/556149296182580670003" .
 
-<http://example.org/vivesfrans> a rdac:C10004 ;
+<http://viaf.org/viaf/12177408753003190925> a rdac:C10004 ;
     rdfs:label "Vives, Frans" ;
     rdaad:P50413 "Vives, Frans" ;
-    rdaxd:P00018 "http://example.org/vivesfrans" .
+    rdaxd:P00018 "http://viaf.org/viaf/12177408753003190925" .
 
-<http://example.org/weibelsiegfried> a rdac:C10004 ;
+<http://viaf.org/viaf/193314178> a rdac:C10004 ;
     rdfs:label "Weibel, Siegfried" ;
     rdaad:P50413 "Weibel, Siegfried" ;
-    rdaxd:P00018 "http://example.org/weibelsiegfried" .
+    rdaxd:P00018 "http://viaf.org/viaf/193314178" .
 
 <http://viaf.org/viaf/1000145424544686831283/exp/ger/1020> a rdac:C10006 ;
     rdfs:label "Der Ring schließt sich / Knut Hamsun. – German"@en,
@@ -19239,7 +19237,7 @@
         "Shallow soil" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20037 <http://example.org/hyllestedcarlchristian> ;
+    rdaeo:P20037 <http://viaf.org/viaf/83145970108832251045> ;
     rdaeo:P20231 <http://viaf.org/viaf/143144898528950290965> .
 
 <http://viaf.org/viaf/143144898528950290965/exp/spa/1020> a rdac:C10006 ;
@@ -19264,13 +19262,13 @@
     rdaeo:P20231 <http://viaf.org/viaf/1650145424683186830143> .
 
 <http://viaf.org/viaf/1650145424683186830143/exp/fre/1020/boyerregis> a rdac:C10006 ;
-    rdfs:label "Rosa / Knut Hamsun ; translated by Régis Boyer. – French"@en,
-        "Rosa / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
+    rdfs:label "Rosa / Knut Hamsun ; translated by Régis Boyer. – French"@en,
+        "Rosa / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "Rosa" ;
     rdaed:P20316 "Rosa" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/boyerregis> ;
+    rdaeo:P20037 <http://viaf.org/viaf/66602903> ;
     rdaeo:P20231 <http://viaf.org/viaf/1650145424683186830143> .
 
 <http://viaf.org/viaf/1650145424683186830143/exp/nob/1013/johnsonnils> a rdac:C10006 ;
@@ -19280,7 +19278,7 @@
     rdaed:P20316 "Rosa" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20022 <http://example.org/johnsonnils> ;
+    rdaeo:P20022 <http://viaf.org/viaf/228279275> ;
     rdaeo:P20231 <http://viaf.org/viaf/1650145424683186830143> .
 
 <http://viaf.org/viaf/1650145424683186830143/exp/spa/1020/ferrorafaela> a rdac:C10006 ;
@@ -19306,7 +19304,7 @@
     rdaed:P20316 "Landstrykere" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/petithuguenin> ;
+    rdaeo:P20037 <http://viaf.org/viaf/222438819> ;
     rdaeo:P20231 <http://viaf.org/viaf/180078068> .
 
 <http://viaf.org/viaf/180078068/exp/nob/1013/olsenarnethomas> a rdac:C10006 ;
@@ -19316,7 +19314,7 @@
     rdaed:P20316 "Landstrykere" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20022 <http://example.org/olsenarnethomas> ;
+    rdaeo:P20022 <http://viaf.org/viaf/37022260> ;
     rdaeo:P20231 <http://viaf.org/viaf/180078068> .
 
 <http://viaf.org/viaf/183478381> a rdac:C10001 ;
@@ -19329,14 +19327,14 @@
     entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> .
 
 <http://viaf.org/viaf/185380595/exp/fre/1020/boyerregis> a rdac:C10006 ;
-    rdfs:label "La Dernière Joie / Knut Hamsun ; translated by Régis Boyer. – French"@en,
-        "La Dernière Joie / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
+    rdfs:label "La Dernière Joie / Knut Hamsun ; translated by Régis Boyer. – French"@en,
+        "La Dernière Joie / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "La Dernière Joie" ;
     rdaed:P20316 "Den siste glæde",
         "La dernière joie" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/boyerregis> ;
+    rdaeo:P20037 <http://viaf.org/viaf/66602903> ;
     rdaeo:P20231 <http://viaf.org/viaf/185380595> .
 
 <http://viaf.org/viaf/185380595/exp/nob/1013/olsenarnethomas> a rdac:C10006 ;
@@ -19346,7 +19344,7 @@
     rdaed:P20316 "Den siste glæde" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20022 <http://example.org/olsenarnethomas> ;
+    rdaeo:P20022 <http://viaf.org/viaf/37022260> ;
     rdaeo:P20231 <http://viaf.org/viaf/185380595> .
 
 <http://viaf.org/viaf/188303684/exp/eng/1020> a rdac:C10006 ;
@@ -19367,7 +19365,7 @@
         "Siste kapitel" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/hiltbrunnerhermann> ;
+    rdaeo:P20037 <http://viaf.org/viaf/62343206> ;
     rdaeo:P20231 <http://viaf.org/viaf/188303684> .
 
 <http://viaf.org/viaf/191146462599827770953/exp/eng/1020/gaytiffteugene> a rdac:C10006 ;
@@ -19378,17 +19376,17 @@
         "The road leads on" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20037 <http://example.org/gaytiffteugene> ;
+    rdaeo:P20037 <http://viaf.org/viaf/13844665> ;
     rdaeo:P20231 <http://viaf.org/viaf/191146462599827770953> .
 
 <http://viaf.org/viaf/191146462599827770953/exp/fre/1020/boyerregis> a rdac:C10006 ;
-    rdfs:label "Mais la vie continue : roman / Knut Hamsun ; translated by Régis Boyer. – French"@en,
-        "Mais la vie continue : roman / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
+    rdfs:label "Mais la vie continue : roman / Knut Hamsun ; translated by Régis Boyer. – French"@en,
+        "Mais la vie continue : roman / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "Mais la vie continue : roman" ;
     rdaed:P20316 "Men livet lever" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/boyerregis> ;
+    rdaeo:P20037 <http://viaf.org/viaf/66602903> ;
     rdaeo:P20231 <http://viaf.org/viaf/191146462599827770953> .
 
 <http://viaf.org/viaf/191146462599827770953/exp/nob/1013/olsenarnethomas> a rdac:C10006 ;
@@ -19398,7 +19396,7 @@
     rdaed:P20316 "Men livet lever" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20022 <http://example.org/olsenarnethomas> ;
+    rdaeo:P20022 <http://viaf.org/viaf/37022260> ;
     rdaeo:P20231 <http://viaf.org/viaf/191146462599827770953> .
 
 <http://viaf.org/viaf/194765531/exp/ger/1020/162089799> a rdac:C10006 ;
@@ -19419,7 +19417,7 @@
         "Pan : aus Leutnant Thomas Glahns Papieren" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/borchmarievon> ;
+    rdaeo:P20037 <http://viaf.org/viaf/39365507> ;
     rdaeo:P20231 <http://viaf.org/viaf/194765531> .
 
 <http://viaf.org/viaf/194765531/exp/nob/1013/johnsonnils> a rdac:C10006 ;
@@ -19430,7 +19428,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20020 <http://example.org/garbarekjan> ;
-    rdaeo:P20022 <http://example.org/johnsonnils> ;
+    rdaeo:P20022 <http://viaf.org/viaf/228279275> ;
     rdaeo:P20231 <http://viaf.org/viaf/194765531> .
 
 <http://viaf.org/viaf/206863699/exp/eng/1020> a rdac:C10006 ;
@@ -19452,13 +19450,13 @@
     rdaeo:P20231 <http://viaf.org/viaf/206863699> .
 
 <http://viaf.org/viaf/207944253/exp/fre/1020/boyerregis> a rdac:C10006 ;
-    rdfs:label "La ville de Segelfoss : roman / Knut Hamsun ; translated by Régis Boyer. – French"@en,
-        "La ville de Segelfoss : roman / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
+    rdfs:label "La ville de Segelfoss : roman / Knut Hamsun ; translated by Régis Boyer. – French"@en,
+        "La ville de Segelfoss : roman / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "La ville de Segelfoss : roman" ;
     rdaed:P20316 "Segelfoss by" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/boyerregis> ;
+    rdaeo:P20037 <http://viaf.org/viaf/66602903> ;
     rdaeo:P20231 <http://viaf.org/viaf/207944253> .
 
 <http://viaf.org/viaf/217145857943523021156> a rdac:C10001 ;
@@ -19488,7 +19486,7 @@
     rdaed:P20316 "Sult" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20022 <http://example.org/werneroskar> ;
+    rdaeo:P20022 <http://viaf.org/viaf/51881056> ;
     rdaeo:P20037 <http://viaf.org/viaf/162089799>,
         <http://viaf.org/viaf/59960174> ;
     rdaeo:P20231 <http://viaf.org/viaf/220443771> .
@@ -19500,7 +19498,7 @@
     rdaed:P20316 "Sult" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20022 <http://example.org/havrevoldolafr> ;
+    rdaeo:P20022 <http://viaf.org/viaf/111148995811759751127> ;
     rdaeo:P20231 <http://viaf.org/viaf/220443771> .
 
 <http://viaf.org/viaf/220443771/exp/nob/1013/hennieaksel> a rdac:C10006 ;
@@ -19510,7 +19508,7 @@
     rdaed:P20316 "Sult" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20022 <http://example.org/hennieaksel> ;
+    rdaeo:P20022 <http://viaf.org/viaf/121856556> ;
     rdaeo:P20231 <http://viaf.org/viaf/220443771> .
 
 <http://viaf.org/viaf/220443771/exp/spa/1020/86862248/86862314> a rdac:C10006 ;
@@ -19567,7 +19565,7 @@
         "Werkausgabe in Einzelbänden : [...] : Auf überwachsenen Pfaden : Roman / aus dem Norweg. von Alken Bruns. Mit einem Nachw. von Heinrich Detering" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/brunsalken> ;
+    rdaeo:P20037 <http://viaf.org/viaf/14783676> ;
     rdaeo:P20231 <http://viaf.org/viaf/30145424502786830193> .
 
 <http://viaf.org/viaf/30145424502786830193/exp/nob/1013/olsenarnethomas> a rdac:C10006 ;
@@ -19577,7 +19575,7 @@
     rdaed:P20316 "Paa gjengrodde stier" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20022 <http://example.org/olsenarnethomas> ;
+    rdaeo:P20022 <http://viaf.org/viaf/37022260> ;
     rdaeo:P20231 <http://viaf.org/viaf/30145424502786830193> .
 
 <http://viaf.org/viaf/309525997/exp/eng/1020> a rdac:C10006 ;
@@ -19597,19 +19595,19 @@
     rdaed:P20316 "Under høststjærnen" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20037 <http://example.org/stallybrassgunnvor>,
-        <http://example.org/stallybrassoliver> ;
+    rdaeo:P20037 <http://viaf.org/viaf/16857531>,
+        <http://viaf.org/viaf/68969509> ;
     rdaeo:P20231 <http://viaf.org/viaf/309525997> .
 
 <http://viaf.org/viaf/309525997/exp/fre/1020/boyerregis> a rdac:C10006 ;
-    rdfs:label "Sous l'étoile d'automne / Knut Hamsun ; translated by Régis Boyer. – French"@en,
-        "Sous l'étoile d'automne / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
+    rdfs:label "Sous l'étoile d'automne / Knut Hamsun ; translated by Régis Boyer. – French"@en,
+        "Sous l'étoile d'automne / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "Sous l'étoile d'automne" ;
     rdaed:P20316 "Sous l'étoile d'automne",
         "Under høststjærnen" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/boyerregis> ;
+    rdaeo:P20037 <http://viaf.org/viaf/66602903> ;
     rdaeo:P20231 <http://viaf.org/viaf/309525997> .
 
 <http://viaf.org/viaf/309525997/exp/nob/1013/olsenarnethomas> a rdac:C10006 ;
@@ -19619,17 +19617,17 @@
     rdaed:P20316 "Under høststjærnen" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20022 <http://example.org/olsenarnethomas> ;
+    rdaeo:P20022 <http://viaf.org/viaf/37022260> ;
     rdaeo:P20231 <http://viaf.org/viaf/309525997> .
 
 <http://viaf.org/viaf/310234238/exp/fre/1020/boyerregis> a rdac:C10006 ;
-    rdfs:label "Benoni / Knut Hamsun ; translated by Régis Boyer. – French"@en,
-        "Benoni / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
+    rdfs:label "Benoni / Knut Hamsun ; translated by Régis Boyer. – French"@en,
+        "Benoni / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "Benoni" ;
     rdaed:P20316 "Benoni" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/boyerregis> ;
+    rdaeo:P20037 <http://viaf.org/viaf/66602903> ;
     rdaeo:P20231 <http://viaf.org/viaf/310234238> .
 
 <http://viaf.org/viaf/310234238/exp/nob/1013/strmdahlwenche> a rdac:C10006 ;
@@ -19639,8 +19637,8 @@
     rdaed:P20316 "Benoni" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20022 <http://example.org/strmdahlwenche> ;
-    rdaeo:P20037 <http://example.org/strmdahlwenche> ;
+    rdaeo:P20022 <http://viaf.org/viaf/556149296182580670003> ;
+    rdaeo:P20037 <http://viaf.org/viaf/556149296182580670003> ;
     rdaeo:P20231 <http://viaf.org/viaf/310234238> .
 
 <http://viaf.org/viaf/312526705/exp/eng/1020/stallybrassgunnvor/stallybrassoliver> a rdac:C10006 ;
@@ -19651,8 +19649,8 @@
         "The women at the pump" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20037 <http://example.org/stallybrassgunnvor>,
-        <http://example.org/stallybrassoliver> ;
+    rdaeo:P20037 <http://viaf.org/viaf/16857531>,
+        <http://viaf.org/viaf/68969509> ;
     rdaeo:P20231 <http://viaf.org/viaf/312526705> .
 
 <http://viaf.org/viaf/312526705/exp/ger/1020> a rdac:C10006 ;
@@ -19695,7 +19693,7 @@
     rdaed:P20316 "Det vilde kor" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20022 <http://example.org/olsenarnethomas> ;
+    rdaeo:P20022 <http://viaf.org/viaf/37022260> ;
     rdaeo:P20231 <http://viaf.org/viaf/316368447> .
 
 <http://viaf.org/viaf/3267149068489065730001/exp/fre/1020> a rdac:C10006 ;
@@ -19715,7 +19713,7 @@
     rdaed:P20316 "August" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20022 <http://example.org/olsenarnethomas> ;
+    rdaeo:P20022 <http://viaf.org/viaf/37022260> ;
     rdaeo:P20231 <http://viaf.org/viaf/3267149068489065730001> .
 
 <http://viaf.org/viaf/395147270538135700001/exp/ger/1020/brunsalken> a rdac:C10006 ;
@@ -19726,7 +19724,7 @@
         "Victoria : eine Liebesgeschichte" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/brunsalken> ;
+    rdaeo:P20037 <http://viaf.org/viaf/14783676> ;
     rdaeo:P20231 <http://viaf.org/viaf/395147270538135700001> .
 
 <http://viaf.org/viaf/395147270538135700001/exp/nob/1013/johnsonnils> a rdac:C10006 ;
@@ -19737,7 +19735,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20020 <http://example.org/garbarekjan> ;
-    rdaeo:P20022 <http://example.org/johnsonnils> ;
+    rdaeo:P20022 <http://viaf.org/viaf/228279275> ;
     rdaeo:P20231 <http://viaf.org/viaf/395147270538135700001> .
 
 <http://viaf.org/viaf/395147270538135700001/exp/spa/1020/86862248/86862314> a rdac:C10006 ;
@@ -19752,13 +19750,13 @@
     rdaeo:P20231 <http://viaf.org/viaf/395147270538135700001> .
 
 <http://viaf.org/viaf/5470149068540465730001/exp/fre/1020/boyerregis> a rdac:C10006 ;
-    rdfs:label "Un vagabond joue en sourdine / Knut Hamsun ; translated by Régis Boyer. – French"@en,
-        "Un vagabond joue en sourdine / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
+    rdfs:label "Un vagabond joue en sourdine / Knut Hamsun ; translated by Régis Boyer. – French"@en,
+        "Un vagabond joue en sourdine / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "Un vagabond joue en sourdine" ;
     rdaed:P20316 "En Vandrer spiller med sordin" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/boyerregis> ;
+    rdaeo:P20037 <http://viaf.org/viaf/66602903> ;
     rdaeo:P20231 <http://viaf.org/viaf/5470149068540465730001> .
 
 <http://viaf.org/viaf/5470149068540465730001/exp/nob/1013/olsenarnethomas> a rdac:C10006 ;
@@ -19768,7 +19766,7 @@
     rdaed:P20316 "En Vandrer spiller med sordin" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20022 <http://example.org/olsenarnethomas> ;
+    rdaeo:P20022 <http://viaf.org/viaf/37022260> ;
     rdaeo:P20231 <http://viaf.org/viaf/5470149068540465730001> .
 
 <http://viaf.org/viaf/59083692/aleksanderogleonarda/exp/nob/1020> a rdac:C10006 ;
@@ -19982,7 +19980,7 @@
     rdaed:P20316 "Børn av tiden" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/harthernernst>,
+    rdaeo:P20037 <http://viaf.org/viaf/3277778>,
         <http://viaf.org/viaf/117364598>,
         <http://viaf.org/viaf/59960174> ;
     rdaeo:P20231 <http://viaf.org/viaf/8450149068552765730000> .
@@ -19994,7 +19992,7 @@
     rdaed:P20316 "Børn av tiden" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20022 <http://example.org/johnsonnils> ;
+    rdaeo:P20022 <http://viaf.org/viaf/228279275> ;
     rdaeo:P20231 <http://viaf.org/viaf/8450149068552765730000> .
 
 <http://viaf.org/viaf/995145424555286830372/exp/eng/1020/7014928> a rdac:C10006 ;
@@ -20015,7 +20013,7 @@
     rdaed:P20316 "Sværmere" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20037 <http://example.org/geddestom> ;
+    rdaeo:P20037 <http://viaf.org/viaf/64172097> ;
     rdaeo:P20231 <http://viaf.org/viaf/995145424555286830372> .
 
 <http://viaf.org/viaf/995145424555286830372/exp/nob/1013/moanhenny> a rdac:C10006 ;
@@ -20025,7 +20023,7 @@
     rdaed:P20316 "Sværmere" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20022 <http://example.org/moanhenny> ;
+    rdaeo:P20022 <http://viaf.org/viaf/229609977> ;
     rdaeo:P20231 <http://viaf.org/viaf/995145424555286830372> .
 
 <http://workid.oslomet.no/kh/09/exp/nob/1020> a rdac:C10006 ;
@@ -20054,7 +20052,7 @@
         "Stridende liv" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/kiyhermann> ;
+    rdaeo:P20037 <http://viaf.org/viaf/64751952> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q12003637> .
 
 <http://www.wikidata.org/entity/Q15062323> a rdac:C10001 ;
@@ -20074,7 +20072,7 @@
         "Siesta" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/brausewetterernst> ;
+    rdaeo:P20037 <http://viaf.org/viaf/59875388> ;
     rdaeo:P20145 <http://viaf.org/viaf/4225152200827914400006/exp/ger/1020/brausewetterernst>,
         <http://viaf.org/viaf/59083692/damenfrativoli/exp/ger/1020/brausewetterernst>,
         <http://viaf.org/viaf/59083692/hemmeligv/exp/ger/1020/brausewetterernst>,
@@ -20098,47 +20096,42 @@
         "Telegrafisten : drømmeren, oppfinneren, svermeren" ;
     rdaeo:P20001 rdaco:1023 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/mul> ;
-    rdaeo:P20012 <http://example.org/flobergbjrn>,
-        <http://example.org/kullejarl>,
-        <http://example.org/richardsonmarie> ;
+    rdaeo:P20012 <http://viaf.org/viaf/85819609>,
+        <http://viaf.org/viaf/161659179>,
+        <http://viaf.org/viaf/208832402> ;
     rdaeo:P20231 <https://www.imdb.com/title/tt0108309> .
 
-<http://example.org/atcatherined> a rdac:C10004 ;
+<http://viaf.org/viaf/200905047> a rdac:C10004 ;
     rdfs:label "At, Catherine d'" ;
     rdaad:P50413 "At, Catherine d'" ;
-    rdaxd:P00018 "http://example.org/atcatherined" .
+    rdaxd:P00018 "http://viaf.org/viaf/200905047" .
 
-<http://example.org/bjrkmanedwin> a rdac:C10004 ;
+<http://viaf.org/viaf/85971157> a rdac:C10004 ;
     rdfs:label "Björkman, Edwin" ;
     rdaad:P50413 "Björkman, Edwin" ;
-    rdaxd:P00018 "http://example.org/bjrkmanedwin" .
+    rdaxd:P00018 "http://viaf.org/viaf/85971157" .
 
-<http://example.org/borchmarievon> a rdac:C10004 ;
+<http://viaf.org/viaf/39365507> a rdac:C10004 ;
     rdfs:label "Borch, Marie von (1853-1895)" ;
     rdaad:P50339 "1853-1895" ;
     rdaad:P50413 "Borch, Marie von" ;
-    rdaxd:P00018 "http://example.org/borchmarievon" .
+    rdaxd:P00018 "http://viaf.org/viaf/39365507" .
 
-<http://example.org/brunsalken> a rdac:C10004 ;
+<http://viaf.org/viaf/14783676> a rdac:C10004 ;
     rdfs:label "Bruns, Alken (1944-)" ;
     rdaad:P50339 "1944-" ;
     rdaad:P50413 "Bruns, Alken" ;
-    rdaxd:P00018 "http://example.org/brunsalken" .
+    rdaxd:P00018 "http://viaf.org/viaf/14783676" .
 
 <http://example.org/curielberta> a rdac:C10004 ;
     rdfs:label "Curiel, Berta" ;
     rdaad:P50413 "Curiel, Berta" ;
     rdaxd:P00018 "http://example.org/curielberta" .
 
-<http://example.org/guilhonalainpierre> a rdac:C10004 ;
+<http://viaf.org/viaf/49226566> a rdac:C10004 ;
     rdfs:label "Guilhon, Alain-Pierre" ;
     rdaad:P50413 "Guilhon, Alain-Pierre" ;
-    rdaxd:P00018 "http://example.org/guilhonalainpierre" .
-
-<http://example.org/guilhoningunn> a rdac:C10004 ;
-    rdfs:label "Guilhon, Ingunn" ;
-    rdaad:P50413 "Guilhon, Ingunn" ;
-    rdaxd:P00018 "http://example.org/guilhoningunn" .
+    rdaxd:P00018 "http://viaf.org/viaf/49226566" .
 
 <http://example.org/gullvghkon> a rdac:C10004 ;
     rdfs:label "Gullvåg, Håkon (1959-)" ;
@@ -20146,58 +20139,54 @@
     rdaad:P50413 "Gullvåg, Håkon" ;
     rdaxd:P00018 "http://example.org/gullvghkon" .
 
-<http://example.org/heinethomastheodor> a rdac:C10004 ;
+<http://viaf.org/viaf/12526089> a rdac:C10004 ;
     rdfs:label "Heine, Thomas Theodor (1867-1948)" ;
     rdaad:P50339 "1867-1948" ;
     rdaad:P50413 "Heine, Thomas Theodor" ;
-    rdaxd:P00018 "http://example.org/heinethomastheodor" .
+    rdaxd:P00018 "http://viaf.org/viaf/12526089" .
 
-<http://example.org/imbeckgert> a rdac:C10004 ;
+<http://viaf.org/viaf/5620149108472868780007> a rdac:C10004 ;
     rdfs:label "Imbeck, Gert" ;
     rdaad:P50413 "Imbeck, Gert" ;
-    rdaxd:P00018 "http://example.org/imbeckgert" .
+    rdaxd:P00018 "http://viaf.org/viaf/5620149108472868780007" .
 
-<http://example.org/kiyhermann> a rdac:C10004 ;
+<http://viaf.org/viaf/64751952> a rdac:C10004 ;
     rdfs:label "Kiy, Hermann" ;
     rdaad:P50413 "Kiy, Hermann" ;
-    rdaxd:P00018 "http://example.org/kiyhermann" .
+    rdaxd:P00018 "http://viaf.org/viaf/64751952" .
 
-<http://example.org/kristiansenhansivar> a rdac:C10004 ;
+<http://viaf.org/viaf/12097928> a rdac:C10004 ;
     rdfs:label "Kristiansen, Hans-Ivar (1947-)" ;
     rdaad:P50339 "1947-" ;
     rdaad:P50413 "Kristiansen, Hans-Ivar" ;
-    rdaxd:P00018 "http://example.org/kristiansenhansivar" .
+    rdaxd:P00018 "http://viaf.org/viaf/12097928" .
 
-<http://example.org/melandkarin> a rdac:C10004 ;
+<http://viaf.org/viaf/220062642> a rdac:C10004 ;
     rdfs:label "Meland, Karin" ;
     rdaad:P50413 "Meland, Karin" ;
-    rdaxd:P00018 "http://example.org/melandkarin" .
+    rdaxd:P00018 "http://viaf.org/viaf/220062642" .
 
 <http://example.org/millerhenry> a rdac:C10004 ;
     rdfs:label "Miller, Henry" ;
     rdaad:P50413 "Miller, Henry" ;
     rdaxd:P00018 "http://example.org/millerhenry" .
 
-<http://example.org/molinscorrealuis> a rdac:C10004 ;
-    rdfs:label "Molins Correa, Luis" ;
-    rdaad:P50413 "Molins Correa, Luis" ;
-    rdaxd:P00018 "http://example.org/molinscorrealuis" .
-
-<http://example.org/molinsluis> a rdac:C10004 ;
+<http://viaf.org/viaf/3146331927818692445> a rdac:C10004 ;
     rdfs:label "Molins, Luis" ;
     rdaad:P50413 "Molins, Luis" ;
-    rdaxd:P00018 "http://example.org/molinsluis" .
+    rdaad:P50415 "Molins Correa, Luis" ;
+    rdaxd:P00018 "http://viaf.org/viaf/3146331927818692445" .
 
-<http://example.org/prezbancesjosramn> a rdac:C10004 ;
+<http://viaf.org/viaf/98992194> a rdac:C10004 ;
     rdfs:label "Pérez Bances, José Ramón (1880-1933)" ;
     rdaad:P50339 "1880-1933" ;
     rdaad:P50413 "Pérez Bances, José Ramón" ;
-    rdaxd:P00018 "http://example.org/prezbancesjosramn" .
+    rdaxd:P00018 "http://viaf.org/viaf/98992194" .
 
-<http://example.org/stallybrassgunnvor> a rdac:C10004 ;
+<http://viaf.org/viaf/16857531> a rdac:C10004 ;
     rdfs:label "Stallybrass, Gunnvor" ;
     rdaad:P50413 "Stallybrass, Gunnvor" ;
-    rdaxd:P00018 "http://example.org/stallybrassgunnvor" .
+    rdaxd:P00018 "http://viaf.org/viaf/16857531" .
 
 <http://viaf.org/viaf/143144898528950290965/exp/ger/1020> a rdac:C10006 ;
     rdfs:label "Neue Erde / Knut Hamsun. – German"@en,
@@ -20232,24 +20221,24 @@
     rdaeo:P20231 <http://viaf.org/viaf/180078068> .
 
 <http://viaf.org/viaf/180078068/exp/spa/1020/molinscorrealuis> a rdac:C10006 ;
-    rdfs:label "Vagabundos / Knut Hamsun ; translated by Luis Molins Correa. – Spanish"@en,
-        "Vagabundos / Knut Hamsun ; oversatt av Luis Molins Correa. – Spansk"@no ;
+    rdfs:label "Vagabundos / Knut Hamsun ; translated by Luis Molins. – Spanish"@en,
+        "Vagabundos / Knut Hamsun ; oversatt av Luis Molins. – Spansk"@no ;
     rdaed:P20315 "Vagabundos" ;
     rdaed:P20316 "Argonautas de cristal",
         "Landstrykere" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20037 <http://example.org/molinscorrealuis> ;
+    rdaeo:P20037 <http://viaf.org/viaf/3146331927818692445> ;
     rdaeo:P20231 <http://viaf.org/viaf/180078068> .
 
 <http://viaf.org/viaf/185380595/exp/spa/1020/molinscorrealuis> a rdac:C10006 ;
-    rdfs:label "La última alegría / Knut Hamsun ; translated by Luis Molins Correa. – Spanish"@en,
-        "La última alegría / Knut Hamsun ; oversatt av Luis Molins Correa. – Spansk"@no ;
+    rdfs:label "La última alegría / Knut Hamsun ; translated by Luis Molins. – Spanish"@en,
+        "La última alegría / Knut Hamsun ; oversatt av Luis Molins. – Spansk"@no ;
     rdaed:P20315 "La última alegría" ;
     rdaed:P20316 "Den siste glæde" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20037 <http://example.org/molinscorrealuis> ;
+    rdaeo:P20037 <http://viaf.org/viaf/3146331927818692445> ;
     rdaeo:P20231 <http://viaf.org/viaf/185380595> .
 
 <http://viaf.org/viaf/194765531/exp/fre/1020> a rdac:C10006 ;
@@ -20315,7 +20304,7 @@
     rdaed:P20315 "Gitanjali" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20037 <http://example.org/camprubdejimnezzenobia> ;
+    rdaeo:P20037 <http://viaf.org/viaf/36980651> ;
     rdaeo:P20231 <http://viaf.org/viaf/24608356/gitanjali> .
 
 <http://viaf.org/viaf/294124367/exp/eng/1020> a rdac:C10006 ;
@@ -20338,7 +20327,7 @@
         "Markens grøde" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/petithuguenin> ;
+    rdaeo:P20037 <http://viaf.org/viaf/222438819> ;
     rdaeo:P20231 <http://viaf.org/viaf/294124367> .
 
 <http://viaf.org/viaf/309525997/exp/ger/1020> a rdac:C10006 ;
@@ -20451,7 +20440,7 @@
     rdaed:P20316 "Dronningen af Saba" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/brausewetterernst> ;
+    rdaeo:P20037 <http://viaf.org/viaf/59875388> ;
     rdaeo:P20231 <http://viaf.org/viaf/4225152200827914400006> .
 
 <http://viaf.org/viaf/49458459> a rdac:C10004 ;
@@ -20466,7 +20455,7 @@
     rdaed:P20315 "Tristan" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20037 <http://example.org/bruckedgarpedro> ;
+    rdaeo:P20037 <http://viaf.org/viaf/67043930> ;
     rdaeo:P20231 <http://viaf.org/viaf/54151065/tristan> .
 
 <http://viaf.org/viaf/5470149068540465730001/exp/eng/1020/stallybrassgunnvor/stallybrassoliver> a rdac:C10006 ;
@@ -20477,8 +20466,8 @@
         "En Vandrer spiller med sordin" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20037 <http://example.org/stallybrassgunnvor>,
-        <http://example.org/stallybrassoliver> ;
+    rdaeo:P20037 <http://viaf.org/viaf/16857531>,
+        <http://viaf.org/viaf/68969509> ;
     rdaeo:P20231 <http://viaf.org/viaf/5470149068540465730001> .
 
 <http://viaf.org/viaf/5470149068540465730001/exp/ger/1020> a rdac:C10006 ;
@@ -20513,7 +20502,7 @@
         "Redaktør Lynge" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/borchmarievon> ;
+    rdaeo:P20037 <http://viaf.org/viaf/39365507> ;
     rdaeo:P20231 <http://viaf.org/viaf/5518152200833114400003> .
 
 <http://viaf.org/viaf/59083692/damenfrativoli/exp/ger/1020/brausewetterernst> a rdac:C10006 ;
@@ -20523,7 +20512,7 @@
     rdaed:P20316 "Damen fra tivoli" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/brausewetterernst> ;
+    rdaeo:P20037 <http://viaf.org/viaf/59875388> ;
     rdaeo:P20231 <http://viaf.org/viaf/59083692/damenfrativoli> .
 
 <http://viaf.org/viaf/59083692/hemmeligv/exp/ger/1020/brausewetterernst> a rdac:C10006 ;
@@ -20533,7 +20522,7 @@
     rdaed:P20316 "Hemmelig vé" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/brausewetterernst> ;
+    rdaeo:P20037 <http://viaf.org/viaf/59875388> ;
     rdaeo:P20231 <http://viaf.org/viaf/59083692/hemmeligv> .
 
 <http://viaf.org/viaf/59083692/jontro/exp/ger/1020/brausewetterernst> a rdac:C10006 ;
@@ -20543,7 +20532,7 @@
     rdaed:P20316 "Jon Tro" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/brausewetterernst> ;
+    rdaeo:P20037 <http://viaf.org/viaf/59875388> ;
     rdaeo:P20231 <http://viaf.org/viaf/59083692/jontro> .
 
 <http://viaf.org/viaf/59083692/julegilde/exp/ger/1020/brausewetterernst> a rdac:C10006 ;
@@ -20553,7 +20542,7 @@
     rdaed:P20316 "Julegilde" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/brausewetterernst> ;
+    rdaeo:P20037 <http://viaf.org/viaf/59875388> ;
     rdaeo:P20231 <http://viaf.org/viaf/59083692/julegilde> .
 
 <http://viaf.org/viaf/59083692/juliaasen/exp/ger/1020/brausewetterernst> a rdac:C10006 ;
@@ -20563,7 +20552,7 @@
     rdaed:P20316 "Jul i aasen" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/brausewetterernst> ;
+    rdaeo:P20037 <http://viaf.org/viaf/59875388> ;
     rdaeo:P20231 <http://viaf.org/viaf/59083692/juliaasen> .
 
 <http://viaf.org/viaf/59083692/lidtparis> a rdac:C10001 ;
@@ -20583,7 +20572,7 @@
     rdaed:P20316 "Lidt Paris" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/brausewetterernst> ;
+    rdaeo:P20037 <http://viaf.org/viaf/59875388> ;
     rdaeo:P20231 <http://viaf.org/viaf/59083692/lidtparis> .
 
 <http://viaf.org/viaf/59083692/medskydshest/exp/ger/1020/brausewetterernst> a rdac:C10006 ;
@@ -20593,7 +20582,7 @@
     rdaed:P20316 "Med skydshest" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/brausewetterernst> ;
+    rdaeo:P20037 <http://viaf.org/viaf/59875388> ;
     rdaeo:P20231 <http://viaf.org/viaf/59083692/medskydshest> .
 
 <http://viaf.org/viaf/59083692/paabankene/exp/ger/1020/brausewetterernst> a rdac:C10006 ;
@@ -20603,7 +20592,7 @@
     rdaed:P20316 "Paa bankene" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/brausewetterernst> ;
+    rdaeo:P20037 <http://viaf.org/viaf/59875388> ;
     rdaeo:P20231 <http://viaf.org/viaf/59083692/paabankene> .
 
 <http://viaf.org/viaf/59083692/paagaden/exp/ger/1020/brausewetterernst> a rdac:C10006 ;
@@ -20613,7 +20602,7 @@
     rdaed:P20316 "Paa gaden" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/brausewetterernst> ;
+    rdaeo:P20037 <http://viaf.org/viaf/59875388> ;
     rdaeo:P20231 <http://viaf.org/viaf/59083692/paagaden> .
 
 <http://viaf.org/viaf/59083692/rejersenafsydstjrnen/exp/ger/1020/brausewetterernst> a rdac:C10006 ;
@@ -20623,7 +20612,7 @@
     rdaed:P20316 "Rejersen af \"Sydstjærnen\"" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/brausewetterernst> ;
+    rdaeo:P20037 <http://viaf.org/viaf/59875388> ;
     rdaeo:P20231 <http://viaf.org/viaf/59083692/rejersenafsydstjrnen> .
 
 <http://viaf.org/viaf/59083692/ringen/exp/ger/1020/brausewetterernst> a rdac:C10006 ;
@@ -20633,7 +20622,7 @@
     rdaed:P20316 "Ringen" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/brausewetterernst> ;
+    rdaeo:P20037 <http://viaf.org/viaf/59875388> ;
     rdaeo:P20231 <http://viaf.org/viaf/59083692/ringen> .
 
 <http://viaf.org/viaf/59083692/vandrertriologi> a rdac:C10001 ;
@@ -20672,7 +20661,7 @@
     rdaed:P20315 "Stalky & Co" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20037 <http://example.org/riberaantonio> ;
+    rdaeo:P20037 <http://viaf.org/viaf/94703160> ;
     rdaeo:P20231 <http://viaf.org/viaf/7524679/stalkyco> .
 
 <http://viaf.org/viaf/8450149068552765730000/exp/ger/1020/hoyerniels> a rdac:C10006 ;
@@ -20683,7 +20672,7 @@
         "Kinder ihrer Zeit : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/hoyerniels> ;
+    rdaeo:P20037 <http://viaf.org/viaf/3237667> ;
     rdaeo:P20231 <http://viaf.org/viaf/8450149068552765730000> .
 
 <http://viaf.org/viaf/91868694/themother/exp/spa/1020/paytuvdesierracarlos> a rdac:C10006 ;
@@ -20754,7 +20743,7 @@
     rdaed:P20316 "Bjørger" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/imbeckgert> ;
+    rdaeo:P20037 <http://viaf.org/viaf/5620149108472868780007> ;
     rdaeo:P20231 <http://workid.oslomet.no/kh/02> .
 
 <http://www.wikidata.org/entity/Q15062320/exp/ger/1020> a rdac:C10006 ;
@@ -20775,26 +20764,26 @@
     rdaxd:P00018 "http://www.wikidata.org/entity/Q15062327" ;
     entedit:P02 <https://id.nb.no/vocabulary/ntsf/583> .
 
-<http://example.org/carlsenhenning> a rdac:C10004 ;
+<http://viaf.org/viaf/6145971343732331107> a rdac:C10004 ;
     rdfs:label "Carlsen, Henning" ;
     rdaad:P50413 "Carlsen, Henning" ;
-    rdaxd:P00018 "http://example.org/carlsenhenning" .
+    rdaxd:P00018 "http://viaf.org/viaf/6145971343732331107" .
 
-<http://example.org/hoyerniels> a rdac:C10004 ;
+<http://viaf.org/viaf/3237667> a rdac:C10004 ;
     rdfs:label "Hoyer, Niels (1820-1889)" ;
     rdaad:P50339 "1820-1889" ;
     rdaad:P50413 "Hoyer, Niels" ;
-    rdaxd:P00018 "http://example.org/hoyerniels" .
+    rdaxd:P00018 "http://viaf.org/viaf/3237667" .
 
-<http://example.org/knustjutta> a rdac:C10004 ;
+<http://viaf.org/viaf/300450283> a rdac:C10004 ;
     rdfs:label "Knust, Jutta" ;
     rdaad:P50413 "Knust, Jutta" ;
-    rdaxd:P00018 "http://example.org/knustjutta" .
+    rdaxd:P00018 "http://viaf.org/viaf/300450283" .
 
-<http://example.org/stallybrassoliver> a rdac:C10004 ;
+<http://viaf.org/viaf/68969509> a rdac:C10004 ;
     rdfs:label "Stallybrass, Oliver" ;
     rdaad:P50413 "Stallybrass, Oliver" ;
-    rdaxd:P00018 "http://example.org/stallybrassoliver" .
+    rdaxd:P00018 "http://viaf.org/viaf/68969509" .
 
 <http://viaf.org/viaf/143144898528950290965/exp/spa/1020/prezbancesjosramn> a rdac:C10006 ;
     rdfs:label "Tierra nueva / Knut Hamsun ; translated by José Ramón Pérez Bances. – Spanish"@en,
@@ -20803,7 +20792,7 @@
     rdaed:P20316 "Ny jord" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20037 <http://example.org/prezbancesjosramn> ;
+    rdaeo:P20037 <http://viaf.org/viaf/98992194> ;
     rdaeo:P20231 <http://viaf.org/viaf/143144898528950290965> .
 
 <http://viaf.org/viaf/180078068/exp/ger/1020> a rdac:C10006 ;
@@ -20836,7 +20825,7 @@
     rdaed:P20316 "Mysterier" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20037 <http://example.org/bothmergerry> ;
+    rdaeo:P20037 <http://viaf.org/viaf/63603917> ;
     rdaeo:P20231 <http://viaf.org/viaf/206863699> .
 
 <http://viaf.org/viaf/220443771/exp/fre/1020/sautreaugeorges> a rdac:C10006 ;
@@ -20847,7 +20836,7 @@
         "Sult" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20037 <http://example.org/sautreaugeorges> ;
+    rdaeo:P20037 <http://viaf.org/viaf/14776516> ;
     rdaeo:P20231 <http://viaf.org/viaf/220443771> .
 
 <http://viaf.org/viaf/294124367/exp/nob/1013> a rdac:C10006 ;
@@ -20995,36 +20984,36 @@
         "Munken vendt" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/schwenzenper> ;
+    rdaeo:P20037 <http://viaf.org/viaf/40155438> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q15062323> .
 
-<http://example.org/austerpaul> a rdac:C10004 ;
+<http://viaf.org/viaf/110344312> a rdac:C10004 ;
     rdfs:label "Auster, Paul (1947-)" ;
     rdaad:P50339 "1947-" ;
     rdaad:P50413 "Auster, Paul" ;
-    rdaxd:P00018 "http://example.org/austerpaul" .
+    rdaxd:P00018 "http://viaf.org/viaf/110344312" .
 
-<http://example.org/baumgartnerwalter> a rdac:C10004 ;
+<http://viaf.org/viaf/20838120> a rdac:C10004 ;
     rdfs:label "Baumgartner, Walter" ;
     rdaad:P50413 "Baumgartner, Walter" ;
-    rdaxd:P00018 "http://example.org/baumgartnerwalter" .
+    rdaxd:P00018 "http://viaf.org/viaf/20838120" .
 
-<http://example.org/naumannhermann> a rdac:C10004 ;
+<http://viaf.org/viaf/35251769> a rdac:C10004 ;
     rdfs:label "Naumann, Hermann (1930-)" ;
     rdaad:P50339 "1930-" ;
     rdaad:P50413 "Naumann, Hermann" ;
-    rdaxd:P00018 "http://example.org/naumannhermann" .
+    rdaxd:P00018 "http://viaf.org/viaf/35251769" .
 
-<http://example.org/sainzderoblesfedericocarlos> a rdac:C10004 ;
+<http://viaf.org/viaf/4969036> a rdac:C10004 ;
     rdfs:label "Sainz de Robles, Federico Carlos (1898-1982)" ;
     rdaad:P50339 "1898-1982" ;
     rdaad:P50413 "Sainz de Robles, Federico Carlos" ;
-    rdaxd:P00018 "http://example.org/sainzderoblesfedericocarlos" .
+    rdaxd:P00018 "http://viaf.org/viaf/4969036" .
 
-<http://example.org/sautreaugeorges> a rdac:C10004 ;
+<http://viaf.org/viaf/14776516> a rdac:C10004 ;
     rdfs:label "Sautreau, Georges" ;
     rdaad:P50413 "Sautreau, Georges" ;
-    rdaxd:P00018 "http://example.org/sautreaugeorges" .
+    rdaxd:P00018 "http://viaf.org/viaf/14776516" .
 
 <http://viaf.org/viaf/1000145424544686831283> a rdac:C10001 ;
     rdfs:label "Ringen sluttet / Knut Hamsun"@en,
@@ -21083,7 +21072,7 @@
     rdaed:P20316 "Mysterier" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20037 <http://example.org/nadalalfonso> ;
+    rdaeo:P20037 <http://viaf.org/viaf/13227846> ;
     rdaeo:P20231 <http://viaf.org/viaf/206863699> .
 
 <http://viaf.org/viaf/220443771/exp/eng/1020/blyrobert> a rdac:C10006 ;
@@ -21093,7 +21082,7 @@
     rdaed:P20316 "Sult" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20037 <http://example.org/blyrobert> ;
+    rdaeo:P20037 <http://viaf.org/viaf/79847862> ;
     rdaeo:P20231 <http://viaf.org/viaf/220443771> .
 
 <http://viaf.org/viaf/220443771/exp/ger/1020/59960174> a rdac:C10006 ;
@@ -21409,11 +21398,11 @@
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q15062327> .
 
-<http://example.org/johnsonnils> a rdac:C10004 ;
+<http://viaf.org/viaf/228279275> a rdac:C10004 ;
     rdfs:label "Johnson, Nils (1956-)" ;
     rdaad:P50339 "1956-" ;
     rdaad:P50413 "Johnson, Nils" ;
-    rdaxd:P00018 "http://example.org/johnsonnils" .
+    rdaxd:P00018 "http://viaf.org/viaf/228279275" .
 
 <http://personid.no/10165> a rdac:C10004 ;
     rdfs:label "F. C." ;
@@ -21475,7 +21464,7 @@
         "Werkausgabe in Einzelbänden : [...] : Mysterien : Roman / aus dem Norweg. von Siegfried Weibel. Mit einem Nachw. von Walter Baumgartner" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/weibelsiegfried> ;
+    rdaeo:P20037 <http://viaf.org/viaf/193314178> ;
     rdaeo:P20231 <http://viaf.org/viaf/206863699> .
 
 <http://viaf.org/viaf/207944253> a rdac:C10001 ;
@@ -21509,7 +21498,7 @@
         "Werkausgabe in Einzelbänden : [...] : Hunger : Roman / aus dem Norweg. von Siegfried Weibel. Mit einem Nachw. von Heiko Uecker" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/weibelsiegfried> ;
+    rdaeo:P20037 <http://viaf.org/viaf/193314178> ;
     rdaeo:P20231 <http://viaf.org/viaf/220443771> .
 
 <http://viaf.org/viaf/294124367/exp/ger/1020/117364598> a rdac:C10006 ;
@@ -21533,7 +21522,7 @@
         "Paa gjengrodde stier" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/ihleelisabeth> ;
+    rdaeo:P20037 <http://viaf.org/viaf/37685433> ;
     rdaeo:P20231 <http://viaf.org/viaf/30145424502786830193> .
 
 <http://viaf.org/viaf/309525997/exp/nob/1020> a rdac:C10006 ;
@@ -21573,7 +21562,7 @@
     rdaed:P20316 "Livets spil" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20037 <http://example.org/vivesfrans> ;
+    rdaeo:P20037 <http://viaf.org/viaf/12177408753003190925> ;
     rdaeo:P20231 <http://viaf.org/viaf/7398163939428301160007> .
 
 <http://www.wikidata.org/entity/Q12003637/exp/nob/1020> a rdac:C10006 ;
@@ -21593,11 +21582,11 @@
         <http://viaf.org/viaf/59083692/underhalvmaanen/exp/nob/1020>,
         <http://viaf.org/viaf/59083692/vagabondsdage/exp/nob/1020> .
 
-<http://example.org/olsenarnethomas> a rdac:C10004 ;
+<http://viaf.org/viaf/37022260> a rdac:C10004 ;
     rdfs:label "Olsen, Arne Thomas (1909-2000)" ;
     rdaad:P50339 "1909-2000" ;
     rdaad:P50413 "Olsen, Arne Thomas" ;
-    rdaxd:P00018 "http://example.org/olsenarnethomas" .
+    rdaxd:P00018 "http://viaf.org/viaf/37022260" .
 
 <http://viaf.org/viaf/185380595/exp/spa/1020/10165/65684351/molinsluis> a rdac:C10006 ;
     rdfs:label "La última alegría / Knut Hamsun ; translated by F. C., Luis Molins and Pedro Camacho. – Spanish"@en,
@@ -21606,7 +21595,7 @@
     rdaed:P20316 "Den siste glæde" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20037 <http://example.org/molinsluis>,
+    rdaeo:P20037 <http://viaf.org/viaf/3146331927818692445>,
         <http://personid.no/10165>,
         <http://viaf.org/viaf/65684351> ;
     rdaeo:P20231 <http://viaf.org/viaf/185380595> .
@@ -21660,7 +21649,7 @@
     rdaed:P20316 "Under høststjærnen" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20037 <http://example.org/molinsluis>,
+    rdaeo:P20037 <http://viaf.org/viaf/3146331927818692445>,
         <http://personid.no/10165>,
         <http://viaf.org/viaf/65684351> ;
     rdaeo:P20231 <http://viaf.org/viaf/309525997> .
@@ -21681,7 +21670,7 @@
     rdaed:P20316 "En Vandrer spiller med Sordin" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20037 <http://example.org/molinsluis>,
+    rdaeo:P20037 <http://viaf.org/viaf/3146331927818692445>,
         <http://personid.no/10165>,
         <http://viaf.org/viaf/65684351> ;
     rdaeo:P20231 <http://viaf.org/viaf/5470149068540465730001> .
@@ -21696,10 +21685,10 @@
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/8450149068552765730000> .
 
-<http://example.org/stenstadvoldhkon> a rdac:C10004 ;
+<http://viaf.org/viaf/17332658> a rdac:C10004 ;
     rdfs:label "Stenstadvold, Håkon" ;
     rdaad:P50413 "Stenstadvold, Håkon" ;
-    rdaxd:P00018 "http://example.org/stenstadvoldhkon" .
+    rdaxd:P00018 "http://viaf.org/viaf/17332658" .
 
 <http://viaf.org/viaf/14863655> a rdac:C10004 ;
     rdfs:label "Harr, Karl Erik (1940-)" ;
@@ -21944,7 +21933,7 @@
         "Sult" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20037 <http://example.org/egertongeorge> ;
+    rdaeo:P20037 <http://viaf.org/viaf/35262867> ;
     rdaeo:P20231 <http://viaf.org/viaf/220443771> .
 
 <http://viaf.org/viaf/3267149068489065730001/exp/nob/1020> a rdac:C10006 ;
@@ -21981,10 +21970,10 @@
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/995145424555286830372> .
 
-<http://example.org/brausewetterernst> a rdac:C10004 ;
+<http://viaf.org/viaf/59875388> a rdac:C10004 ;
     rdfs:label "Brausewetter, Ernst" ;
     rdaad:P50413 "Brausewetter, Ernst" ;
-    rdaxd:P00018 "http://example.org/brausewetterernst" .
+    rdaxd:P00018 "http://viaf.org/viaf/59875388" .
 
 <http://viaf.org/viaf/294124367/exp/ger/1020> a rdac:C10006 ;
     rdfs:label "Segen der Erde / Knut Hamsun. – German"@en,
@@ -22019,11 +22008,6 @@
     rdawo:P10061 <http://viaf.org/viaf/59083692> ;
     rdaxd:P00018 "http://viaf.org/viaf/310234238" ;
     entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> .
-
-<http://example.org/boyerregis> a rdac:C10004 ;
-    rdfs:label "Boyer, Régis" ;
-    rdaad:P50413 "Boyer, Régis" ;
-    rdaxd:P00018 "http://example.org/boyerregis" .
 
 <http://viaf.org/viaf/395147270538135700001/exp/ger/1020> a rdac:C10006 ;
     rdfs:label "Victoria / Knut Hamsun. – German"@en,

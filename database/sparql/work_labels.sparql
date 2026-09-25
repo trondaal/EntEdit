@@ -5,7 +5,8 @@
 #
 # - Title: the work's preferred title (P10223)
 # - Creator: the first of author, film director, director, composer, artist or
-#   compiler that has a value; names are shown in natural order ("Hamsun, Knut"
+#   compiler that has a value; names are the preferred name of agent (P50413),
+#   not the label, which carries dates, shown in natural order ("Hamsun, Knut"
 #   becomes "Knut Hamsun"), at most three, then "[et al.]" / "[mfl.]"
 # - Category of work (entedit:P01): shown unless it is Language-based work
 #   (V1000); the name is the category's rdfs:label in the label's language, or
@@ -20,6 +21,7 @@
 
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdac: <http://rdaregistry.info/Elements/c/>
+PREFIX rdaad: <http://rdaregistry.info/Elements/a/datatype/>
 PREFIX rdawd: <http://rdaregistry.info/Elements/w/datatype/>
 PREFIX rdawo: <http://rdaregistry.info/Elements/w/object/>
 PREFIX entedit: <http://oslomet.no/abi/vocab#>
@@ -70,13 +72,14 @@ WHERE {
         SELECT DISTINCT ?w ?cprio ?name
         WHERE {
           {
-            SELECT ?w ?cprio ?a (MIN(STR(?l)) AS ?raw)
+            SELECT ?w ?cprio ?a (COALESCE(MIN(STR(?pn)), MIN(STR(?l))) AS ?raw)
             WHERE {
               VALUES (?cp ?cprio) {
                 (rdawo:P10061 1) (rdawo:P10013 2) (rdawo:P10066 3)
                 (rdawo:P10053 4) (rdawo:P10058 5) (rdawo:P10055 6)
               }
               ?w a rdac:C10001 ; ?cp ?a .
+              OPTIONAL { ?a rdaad:P50413 ?pn . }
               OPTIONAL { ?a rdfs:label ?l . }
             }
             GROUP BY ?w ?cprio ?a

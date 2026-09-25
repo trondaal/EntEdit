@@ -5,8 +5,9 @@
 #
 # - Title: the expression's preferred title (P20315)
 # - Creator: from the work, the first of author, film director, director,
-#   composer, artist or compiler that has a value; names are shown in natural
-#   order ("Hamsun, Knut" becomes "Knut Hamsun")
+#   composer, artist or compiler that has a value; names are the preferred
+#   name of agent (P50413), not the label, which carries dates, shown in
+#   natural order ("Hamsun, Knut" becomes "Knut Hamsun")
 # - Contributors: editors, translators, narrators, performers (including
 #   instrumentalists) and actors of the expression, each with a role phrase;
 #   people who are creators of the work are not repeated. At most three names
@@ -29,6 +30,7 @@
 
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdac: <http://rdaregistry.info/Elements/c/>
+PREFIX rdaad: <http://rdaregistry.info/Elements/a/datatype/>
 PREFIX rdaed: <http://rdaregistry.info/Elements/e/datatype/>
 PREFIX rdaeo: <http://rdaregistry.info/Elements/e/object/>
 PREFIX rdawo: <http://rdaregistry.info/Elements/w/object/>
@@ -81,7 +83,7 @@ WHERE {
         SELECT DISTINCT ?e ?cprio ?name
         WHERE {
           {
-            SELECT ?e ?cprio ?a (MIN(STR(?l)) AS ?raw)
+            SELECT ?e ?cprio ?a (COALESCE(MIN(STR(?pn)), MIN(STR(?l))) AS ?raw)
             WHERE {
               VALUES (?cp ?cprio) {
                 (rdawo:P10061 1) (rdawo:P10013 2) (rdawo:P10066 3)
@@ -89,6 +91,7 @@ WHERE {
               }
               ?e a rdac:C10006 ; rdaeo:P20231 ?w .
               ?w ?cp ?a .
+              OPTIONAL { ?a rdaad:P50413 ?pn . }
               OPTIONAL { ?a rdfs:label ?l . }
             }
             GROUP BY ?e ?cprio ?a
@@ -116,7 +119,7 @@ WHERE {
                 SELECT DISTINCT ?e ?ord ?max ?name
                 WHERE {
                   {
-                    SELECT ?e ?ord ?max ?a (MIN(STR(?l)) AS ?raw)
+                    SELECT ?e ?ord ?max ?a (COALESCE(MIN(STR(?pn)), MIN(STR(?l))) AS ?raw)
                     WHERE {
                       VALUES (?p ?ord ?max) {
                         (rdaeo:P20330 1 3)    # editor
@@ -133,6 +136,7 @@ WHERE {
                         ?e rdaeo:P20231 ?w .
                         ?w ?cp ?a .
                       }
+                      OPTIONAL { ?a rdaad:P50413 ?pn . }
                       OPTIONAL { ?a rdfs:label ?l . }
                     }
                     GROUP BY ?e ?ord ?max ?a

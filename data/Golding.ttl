@@ -426,7 +426,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/119144648592107423604/exp/ger/1020> ;
-    rdamo:P30328 <http://example.org/names/richterirmgard> ;
+    rdamo:P30328 <http://viaf.org/viaf/54617606> ;
     rdaxd:P00018 "http://example.org/451602706" .
 
 <http://example.org/451602714> a rdac:C10007 ;
@@ -463,8 +463,8 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/119144648592107423604/exp/ger/1020> ;
-    rdamo:P30267 <http://example.org/names/richterirmgard> ;
-    rdamo:P30328 <http://example.org/names/richterirmgard> ;
+    rdamo:P30267 <http://viaf.org/viaf/54617606> ;
+    rdamo:P30328 <http://viaf.org/viaf/54617606> ;
     rdaxd:P00018 "http://example.org/456781048" .
 
 <http://example.org/456781056> a rdac:C10007 ;
@@ -4855,11 +4855,11 @@
     rdaad:P50413 "Leipe, Ursula" ;
     rdaxd:P00018 "http://example.org/names/leipeursula" .
 
-<http://example.org/names/stresauhermann> a rdac:C10004 ;
+<http://viaf.org/viaf/52489729> a rdac:C10004 ;
     rdfs:label "Stresau, Hermann (1894-1964)" ;
     rdaad:P50339 "1894-1964" ;
     rdaad:P50413 "Stresau, Hermann" ;
-    rdaxd:P00018 "http://example.org/names/stresauhermann" .
+    rdaxd:P00018 "http://viaf.org/viaf/52489729" .
 
 <http://oslomet.workid.no/wg/01/exp/ger/1020/47321622> a rdac:C10006 ;
     rdfs:label "Ein ägyptisches Tagebuch / William Golding ; translated by Renate Orth-Guttmann. – German"@en,
@@ -5785,7 +5785,7 @@
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
     rdawd:P10223 "Lord of the flies, William Golding" ;
     rdawo:P10061 <http://viaf.org/viaf/89819722>,
-        <http://www.example.org/names/martinstewart> ;
+        <http://viaf.org/viaf/11825304> ;
     rdawo:P10150 <http://viaf.org/viaf/119144648592107423604> ;
     rdawo:P10319 <http://viaf.org/viaf/89500102> ;
     rdaxd:P00018 "http://viaf.org/viaf/89819722/lordoftheflieswilliamgolding" ;
@@ -5835,17 +5835,17 @@
     rdaad:P50413 "Weber, Sam" ;
     rdaxd:P00018 "http://viaf.org/viaf/webersam" .
 
-ex:baerengeljennifer a rdac:C10004 ;
+<http://viaf.org/viaf/4417169181067169050009> a rdac:C10004 ;
     rdfs:label "Baer-Engel, Jennifer" ;
     rdaad:P50413 "Baer-Engel, Jennifer" ;
-    rdaxd:P00018 "http://www.example.org/baerengeljennifer" .
+    rdaxd:P00018 "http://viaf.org/viaf/4417169181067169050009" .
 
 <http://www.example.org/baerengeljennifer/williamgoldingthelordoftheflies> a rdac:C10001 ;
     rdfs:label "William Golding, The Lord of the Flies / Jennifer Baer-Engel"@en,
         "William Golding, The Lord of the Flies / Jennifer Baer-Engel"@no ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
     rdawd:P10223 "William Golding, The Lord of the Flies" ;
-    rdawo:P10061 ex:baerengeljennifer ;
+    rdawo:P10061 <http://viaf.org/viaf/4417169181067169050009> ;
     rdawo:P10187 <http://viaf.org/viaf/119144648592107423604> ;
     rdawo:P10257 <http://viaf.org/viaf/119144648592107423604> ;
     rdaxd:P00018 "http://www.example.org/baerengeljennifer/williamgoldingthelordoftheflies" .
@@ -5906,11 +5906,11 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://www.example.org/names/kingmartin/studentsguidetolordoftheflies> .
 
-<http://www.example.org/names/martinstewart> a rdac:C10004 ;
+<http://viaf.org/viaf/11825304> a rdac:C10004 ;
     rdfs:label "Martin, Stewart (1948-)" ;
     rdaad:P50339 "1948-" ;
     rdaad:P50413 "Martin, Stewart" ;
-    rdaxd:P00018 "http://www.example.org/names/martinstewart" .
+    rdaxd:P00018 "http://viaf.org/viaf/11825304" .
 
 <http://www.example.org/names/peabentezpatricia> a rdac:C10004 ;
     rdfs:label "Peña Benítez, Patricia" ;
@@ -6173,7 +6173,7 @@ ex:baerengeljennifer a rdac:C10004 ;
         "Freier Fall : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/names/stresauhermann> ;
+    rdaeo:P20037 <http://viaf.org/viaf/52489729> ;
     rdaeo:P20231 <http://viaf.org/viaf/218116512> .
 
 <http://viaf.org/viaf/26169769> a rdac:C10004 ;
@@ -6275,10 +6275,10 @@ ex:baerengeljennifer a rdac:C10004 ;
     rdaad:P50413 "Milloy, Ross" ;
     rdaxd:P00018 "https://www.imdb.com/name/nm0589869" .
 
-<http://example.org/names/richterirmgard> a rdac:C10004 ;
+<http://viaf.org/viaf/54617606> a rdac:C10004 ;
     rdfs:label "Richter, Irmgard" ;
     rdaad:P50413 "Richter, Irmgard" ;
-    rdaxd:P00018 "http://example.org/names/richterirmgard" .
+    rdaxd:P00018 "http://viaf.org/viaf/54617606" .
 
 <http://oslomet.workid.no/wg/01> a rdac:C10001 ;
     rdfs:label "An Egyptian Journal / William Golding"@en,
