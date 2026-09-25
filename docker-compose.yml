@@ -5,7 +5,8 @@ services:
     # machine, e.g. ENTEDIT_PORT=8080 docker compose ... up -d. The app needs
     # no other setting: its endpoint and the Workbench link follow its origin.
     ports:
-      - "${GRAPHDB_PORT:-7200}:7200"
+      - target: 7200
+        published: "${GRAPHDB_PORT:-7200}"
     volumes:
       - graphdb-data:/opt/graphdb/data
     healthcheck:
@@ -44,7 +45,8 @@ services:
     # `docker compose up` pulls the published image by default.
     build: ./app
     ports:
-      - "${ENTEDIT_PORT:-80}:80"
+      - target: 80
+        published: "${ENTEDIT_PORT:-80}"
     depends_on:
       graphdb:
         condition: service_healthy
