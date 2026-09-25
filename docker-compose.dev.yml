@@ -6,8 +6,19 @@
 #
 # Combine with FORCE_REINIT=1 to wipe and re-import an existing repository.
 
+# It also holds the `build` sections, so `docker compose -f docker-compose.yml
+# -f docker-compose.dev.yml build web` builds from source. They are kept out of
+# docker-compose.yml because `docker compose publish` would push those local,
+# single-platform images over the multi-arch ones on Docker Hub.
+
 services:
+  web:
+    build: ./app
+
   graphdb-init:
+    build:
+      context: .
+      dockerfile: docker/init/Dockerfile
     volumes:
       - ./database/types:/import-data/types:ro
       - ./database/testdata:/import-data/testdata:ro

@@ -317,6 +317,11 @@ baked in, built from `docker/init/Dockerfile` with the project root as context),
 and `trondaal/entedit-compose` (the Compose file as an OCI artifact, via
 `docker compose publish`).
 
+`docker compose publish` pushes the local image of every service that has a
+`build` section, which overwrote the multi-arch `latest` images with
+single-platform builds once. Keep `build` out of `docker-compose.yml` (it lives
+in `docker-compose.dev.yml`) and publish from `docker-compose.yml` alone.
+
 `app/nginx.conf` must keep two things: the `sub_filter` that rewrites the
 Workbench's `<base href="/">` to `/graphdb/` (its relative assets 404 otherwise,
 giving an unstyled page), and the separate `/graphdb/repositories/` location that

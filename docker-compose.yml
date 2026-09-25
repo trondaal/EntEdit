@@ -1,3 +1,8 @@
+# No `build` sections here: `docker compose publish` pushes the local image of
+# every service that has one, which replaced the multi-arch `latest` images with
+# single-platform builds. Builds live in docker-compose.dev.yml; release images
+# are built with `docker buildx` (see ADVANCED.md).
+
 services:
   graphdb:
     image: ontotext/graphdb:10.8.12
@@ -19,13 +24,9 @@ services:
   graphdb-init:
     # Data, repository config and import script are baked into this image, so
     # nothing is mounted from the source tree — `docker compose up` works from
-    # Docker Hub alone. `build` lets maintainers rebuild it after changing
-    # anything under database/ or docker/graphdb/; to iterate without
+    # Docker Hub alone. To iterate on database/ or docker/graphdb/ without
     # rebuilding, add -f docker-compose.dev.yml to mount the local files.
     image: trondaal/entedit-init:latest
-    build:
-      context: .
-      dockerfile: docker/init/Dockerfile
     environment:
       - GRAPHDB_URL=http://graphdb:7200
       - GRAPHDB_REPO=EntEdit
@@ -41,9 +42,6 @@ services:
 
   web:
     image: trondaal/entedit:latest
-    # `build` lets `docker compose build` produce the publishable image locally;
-    # `docker compose up` pulls the published image by default.
-    build: ./app
     ports:
       - target: 80
         published: "${ENTEDIT_PORT:-80}"

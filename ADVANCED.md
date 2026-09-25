@@ -77,10 +77,11 @@ and `docker/graphdb/` files instead of the copies baked into
 docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d
 ```
 
-To build the web image from source rather than pulling it:
+To build the web image from source rather than pulling it (the `build`
+sections live in the development override too):
 
 ```bash
-docker compose build web
+docker compose -f docker-compose.yml -f docker-compose.dev.yml build web
 ```
 
 ## Development
@@ -228,6 +229,12 @@ docker compose publish trondaal/entedit-compose:latest
 Publishing requires the Compose file to be free of bind mounts, which is why
 `graphdb-init` takes its data from the init image rather than from mounted
 folders; the mounts live in `docker-compose.dev.yml`, which is not published.
+
+`publish` also pushes the local image of every service that has a `build`
+section, with no option to skip it. That is why `docker-compose.yml` has none
+(they are in `docker-compose.dev.yml` as well): a local build is
+single-platform, and pushing it as `latest` drops the other architecture.
+Publish from `docker-compose.yml` alone, never with the dev override.
 
 Users who already have an installation keep their existing data: `graphdb-init`
 finds its marker triple and skips the import, so a new vocabulary reaches them
