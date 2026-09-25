@@ -837,6 +837,7 @@
 
 <http://example.org/365918970> a rdac:C10007 ;
     rdfs:label "Años de perro / Günter Grass. – Mortiz, 1966" ;
+    rdamo:P30083 <http://example.org/joaquinmortiz> ;
     rdamd:P30011 "1966" ;
     rdamd:P30088 "México" ;
     rdamd:P30106 "Novelistas contemporáneos" ;
@@ -955,6 +956,7 @@
 
 <http://example.org/365919055> a rdac:C10007 ;
     rdfs:label "El gato y el ratón / Günter Grass. – Mortiz, 1964" ;
+    rdamo:P30083 <http://example.org/joaquinmortiz> ;
     rdamd:P30011 "1964" ;
     rdamd:P30088 "México" ;
     rdamd:P30106 "Serie del volador" ;
@@ -2493,6 +2495,7 @@
 
 <http://example.org/577731246> a rdac:C10007 ;
     rdfs:label "El tambor de hojalata / Günter Grass. – Mortiz, 1963" ;
+    rdamo:P30083 <http://example.org/joaquinmortiz> ;
     rdamd:P30011 "1963" ;
     rdamd:P30088 "México" ;
     rdamd:P30106 "Novelistas sontemporáneos" ;
@@ -4250,6 +4253,7 @@
 
 <http://example.org/bimo0000942791> a rdac:C10007 ;
     rdfs:label "El gato y el ratón / [Traducción de Carlos Gerhard]. – [2ª ed.]. – Joaquín Mortiz, [1969]" ;
+    rdamo:P30083 <http://example.org/joaquinmortiz> ;
     rdamd:P30011 "[1969]" ;
     rdamd:P30088 "México" ;
     rdamd:P30106 "Serie del Volador" ;
@@ -4260,7 +4264,7 @@
     rdamd:P30182 "183 p., 18 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
-    rdamo:P30139 <http://viaf.org/viaf/174963765/exp/spa/1020/30910939/moritzjoaqun> .
+    rdamo:P30139 <http://viaf.org/viaf/174963765/exp/spa/1020/30910939> .
 
 <http://example.org/bimo0001619906> a rdac:C10007 ;
     rdfs:label "Mi siglo / Günter Grass. – ONCE, CPB, [1999]" ;
@@ -4285,7 +4289,7 @@
     rdamd:P30182 "224 p., 21 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
-    rdamo:P30139 <http://viaf.org/viaf/174963765/exp/spa/1020/30910939/moritzjoaqun> .
+    rdamo:P30139 <http://viaf.org/viaf/174963765/exp/spa/1020/30910939> .
 
 <http://example.org/bivi0000014327> a rdac:C10007 ;
     rdfs:label "El tambor de hojalata / mise en scène, Volker Schlöndorff. – Filmax Home Video, D.L. 2001" ;
@@ -6740,7 +6744,7 @@
         "655 p., 18 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
-    rdamo:P30139 <http://viaf.org/viaf/179378125/exp/spa/1020/30910939/moritzjoaqun> ;
+    rdamo:P30139 <http://viaf.org/viaf/179378125/exp/spa/1020/30910939> ;
     rdaxd:P00018 "isbn-842042773" .
 
 <http://example.org/isbn-8420428388> a rdac:C10007 ;
@@ -6956,7 +6960,7 @@
     rdamd:P30182 "240 p., 18 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
-    rdamo:P30139 <http://viaf.org/viaf/174963765/exp/spa/1020/mortizjoaqun> ;
+    rdamo:P30139 <http://viaf.org/viaf/174963765/exp/spa/1020/30910939> ;
     rdaxd:P00018 "isbn-8422619156" .
 
 <http://example.org/isbn-8422623323> a rdac:C10007 ;
@@ -7124,7 +7128,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/179378125/exp/spa/1020>,
-        <http://viaf.org/viaf/179378125/exp/spa/1020/mortizjoaqun> ;
+        <http://viaf.org/viaf/179378125/exp/spa/1020/30910939> ;
     rdaxd:P00018 "isbn-8447300218" .
 
 <http://example.org/isbn-8447300617> a rdac:C10007 ;
@@ -7299,7 +7303,7 @@
         "791 p., 19 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
-    rdamo:P30139 <http://viaf.org/viaf/179378125/exp/spa/1020/30910939/moritzjoaqun> ;
+    rdamo:P30139 <http://viaf.org/viaf/179378125/exp/spa/1020/30910939> ;
     rdaxd:P00018 "isbn-8466309187" .
 
 <http://example.org/isbn-8466312935> a rdac:C10007 ;
@@ -7532,7 +7536,7 @@
         "596 p., 19 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
-    rdamo:P30139 <http://viaf.org/viaf/179378125/exp/spa/1020/30910939/moritzjoaqun> ;
+    rdamo:P30139 <http://viaf.org/viaf/179378125/exp/spa/1020/30910939> ;
     rdaxd:P00018 "isbn-8495501368" .
 
 <http://example.org/isbn-8496118088> a rdac:C10007 ;
@@ -19324,16 +19328,6 @@
     rdaeo:P20037 <http://viaf.org/viaf/306142298> ;
     rdaeo:P20231 <http://viaf.org/viaf/174963765> .
 
-<http://viaf.org/viaf/174963765/exp/spa/1020/mortizjoaqun> a rdac:C10006 ;
-    rdfs:label "El gato y el ratón / Günter Grass ; translated by Joaquín Mortiz. – Spanish"@en,
-        "El gato y el ratón / Günter Grass ; oversatt av Joaquín Mortiz. – Spansk"@no ;
-    rdaed:P20315 "El gato y el ratón" ;
-    rdaed:P20316 "Katz und maus" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20037 <http://example.org/mortizjoaqun> ;
-    rdaeo:P20231 <http://viaf.org/viaf/174963765> .
-
 <http://viaf.org/viaf/174963765/exp/swe/1020> a rdac:C10006 ;
     rdfs:label "Katt och r°atta / Günter Grass. – Swedish"@en,
         "Katt och r°atta / Günter Grass. – Svensk"@no ;
@@ -19488,16 +19482,6 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/por> ;
     rdaeo:P20037 <http://example.org/alveslucio> ;
-    rdaeo:P20231 <http://viaf.org/viaf/179378125> .
-
-<http://viaf.org/viaf/179378125/exp/spa/1020/mortizjoaqun> a rdac:C10006 ;
-    rdfs:label "El tambor de hojalata / Günter Grass ; translated by Joaquín Mortiz. – Spanish"@en,
-        "El tambor de hojalata / Günter Grass ; oversatt av Joaquín Mortiz. – Spansk"@no ;
-    rdaed:P20315 "El tambor de hojalata" ;
-    rdaed:P20316 "Die Blechtrommel" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20037 <http://example.org/mortizjoaqun> ;
     rdaeo:P20231 <http://viaf.org/viaf/179378125> .
 
 <http://viaf.org/viaf/179378125/exp/swe/1020> a rdac:C10006 ;
@@ -21217,15 +21201,11 @@
     rdaad:P50413 "Mitchell, Breon" ;
     rdaxd:P00018 "http://viaf.org/viaf/93016600" .
 
-<http://example.org/moritzjoaqun> a rdac:C10004 ;
-    rdfs:label "Moritz, Joaquín" ;
-    rdaad:P50413 "Moritz, Joaquín" ;
-    rdaxd:P00018 "http://example.org/moritzjoaqun" .
-
-<http://example.org/mortizjoaqun> a rdac:C10004 ;
-    rdfs:label "Mortiz, Joaquín" ;
-    rdaad:P50413 "Mortiz, Joaquín" ;
-    rdaxd:P00018 "http://example.org/mortizjoaqun" .
+<http://example.org/joaquinmortiz> a rdac:C10005 ;
+    rdfs:label "Joaquín Mortiz" ;
+    rdaad:P50413 "Joaquín Mortiz" ;
+    rdaad:P50415 "Editorial Joaquín Mortiz" ;
+    rdaxd:P00018 "http://example.org/joaquinmortiz" .
 
 <http://viaf.org/viaf/54152001> a rdac:C10004 ;
     rdfs:label "Nedreaas, Torborg (1906-1987)" ;
@@ -21446,17 +21426,6 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20037 <http://viaf.org/viaf/273901479> ;
-    rdaeo:P20231 <http://viaf.org/viaf/174963765> .
-
-<http://viaf.org/viaf/174963765/exp/spa/1020/30910939/moritzjoaqun> a rdac:C10006 ;
-    rdfs:label "El gato y el ratón / Günter Grass ; translated by Carlos Gerhard and Joaquín Moritz. – Spanish"@en,
-        "El gato y el ratón / Günter Grass ; oversatt av Carlos Gerhard og Joaquín Moritz. – Spansk"@no ;
-    rdaed:P20315 "El gato y el ratón" ;
-    rdaed:P20316 "Katz und maus" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20037 <http://example.org/moritzjoaqun>,
-        <http://viaf.org/viaf/30910939> ;
     rdaeo:P20231 <http://viaf.org/viaf/174963765> .
 
 <http://viaf.org/viaf/179378125/exp/hun/1020> a rdac:C10006 ;
@@ -22030,17 +21999,6 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ita> ;
     rdaeo:P20037 <http://viaf.org/viaf/22169127> ;
-    rdaeo:P20231 <http://viaf.org/viaf/179378125> .
-
-<http://viaf.org/viaf/179378125/exp/spa/1020/30910939/moritzjoaqun> a rdac:C10006 ;
-    rdfs:label "El tambor de hojalata / Günter Grass ; translated by Carlos Gerhard and Joaquín Moritz. – Spanish"@en,
-        "El tambor de hojalata / Günter Grass ; oversatt av Carlos Gerhard og Joaquín Moritz. – Spansk"@no ;
-    rdaed:P20315 "El tambor de hojalata" ;
-    rdaed:P20316 "Die Blechtrommel" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20037 <http://example.org/moritzjoaqun>,
-        <http://viaf.org/viaf/30910939> ;
     rdaeo:P20231 <http://viaf.org/viaf/179378125> .
 
 <http://viaf.org/viaf/179378125/exp/swe/1020/holmbergnils> a rdac:C10006 ;
