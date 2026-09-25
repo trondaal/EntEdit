@@ -141,31 +141,36 @@ const EntityIdentitySection: React.FC<EntityIdentitySectionProps> = ({
       )}
 
       {showLabels && (
-      <Box sx={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 1, minHeight: 40 }}>
-        <Typography variant="body2" color="text.secondary" sx={{ minWidth: 110 }}>
+      <Box sx={{ display: "flex", flexWrap: "wrap", alignItems: "flex-start", gap: 1, minHeight: 40 }}>
+        <Typography variant="body2" color="text.secondary" sx={{ minWidth: 110, pt: 0.5 }}>
           {t("common:labels.labels", { ns: "common" })}
         </Typography>
-        {labelsWithValue.length > 0 ? (
-          labelsWithValue.map((label) => (
-            <Chip
-              key={label.id}
-              size="small"
-              label={
-                label.language ? `${label.value} (${label.language.toUpperCase()})` : label.value
-              }
-              variant="outlined"
-            />
-          ))
-        ) : (
-          <Typography variant="body2" color="text.disabled" sx={{ fontStyle: "italic" }}>
-            {t("messages.noLabel")}
-          </Typography>
-        )}
-        {isEditing && (
-          <Button size="small" startIcon={<Edit />} onClick={onEditLabels}>
-            {t("common:buttons.editLabels", { ns: "common" })}
-          </Button>
-        )}
+        {/* Own wrapping context so a second line of chips stays indented under
+            the first (and under the identifier field above) instead of
+            resetting to the row's left edge, under the caption. */}
+        <Box sx={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 1, flex: "1 1 200px" }}>
+          {labelsWithValue.length > 0 ? (
+            labelsWithValue.map((label) => (
+              <Chip
+                key={label.id}
+                size="small"
+                label={
+                  label.language ? `${label.value} (${label.language.toUpperCase()})` : label.value
+                }
+                variant="outlined"
+              />
+            ))
+          ) : (
+            <Typography variant="body2" color="text.disabled" sx={{ fontStyle: "italic" }}>
+              {t("messages.noLabel")}
+            </Typography>
+          )}
+          {isEditing && (
+            <Button size="small" startIcon={<Edit />} onClick={onEditLabels}>
+              {t("common:buttons.editLabels", { ns: "common" })}
+            </Button>
+          )}
+        </Box>
       </Box>
       )}
     </Box>
