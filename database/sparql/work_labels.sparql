@@ -1,0 +1,167 @@
+# Generate labels for all Works (C10001), one in English and one in
+# Norwegian, with the punctuation used for expression labels:
+#
+#   Preferred title / creator. – Category of work
+#
+# - Title: the work's preferred title (P10223)
+# - Creator: the first of author, film director, director, composer, artist or
+#   compiler that has a value; names are shown in natural order ("Hamsun, Knut"
+#   becomes "Knut Hamsun"), at most three, then "[et al.]" / "[mfl.]"
+# - Category of work (entedit:P01): shown unless it is Language-based work
+#   (V1000); the name is the category's rdfs:label in the label's language, or
+#   the code when there is none
+#
+# Replaces any existing rdfs:label values (and their entedit:valueOrder
+# annotations) on works that have a title. New labels are written to the graph
+# holding the work's rdf:type, or to the default graph.
+#
+# Lists are joined with GROUP_CONCAT over ordered subqueries; GraphDB keeps
+# that order, which gives a stable order of names and categories.
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdac: <http://rdaregistry.info/Elements/c/>
+PREFIX rdawd: <http://rdaregistry.info/Elements/w/datatype/>
+PREFIX rdawo: <http://rdaregistry.info/Elements/w/object/>
+PREFIX entedit: <http://oslomet.no/abi/vocab#>
+PREFIX vtp: <https://schema.nb.no/Bibliographic/Values/>
+
+# 1. Remove existing labels
+DELETE {
+  ?w rdfs:label ?old .
+  << ?w rdfs:label ?old >> ?ap ?ao .
+}
+WHERE {
+  ?w a rdac:C10001 ;
+     rdawd:P10223 ?anyTitle ;
+     rdfs:label ?old .
+  OPTIONAL { << ?w rdfs:label ?old >> ?ap ?ao . }
+};
+
+# 2. Build the new labels in a staging graph. USING onto:explicit reads only
+#    asserted triples: with inference, subproperties would leak in (a
+#    screenwriter is also an author)
+INSERT {
+  GRAPH <http://oslomet.no/abi/staging/labels> { ?w rdfs:label ?labelEn , ?labelNo . }
+}
+USING <http://www.ontotext.com/explicit>
+WHERE {
+  {
+    SELECT ?w (MIN(STR(?t)) AS ?title)
+    WHERE { ?w a rdac:C10001 ; rdawd:P10223 ?t . }
+    GROUP BY ?w
+  }
+
+  # --- Creator: the agents for the first creator property that has any
+  OPTIONAL {
+    SELECT ?w (MIN(?prio) AS ?cprio)
+    WHERE {
+      VALUES (?cp ?prio) {
+        (rdawo:P10061 1) (rdawo:P10013 2) (rdawo:P10066 3)
+        (rdawo:P10053 4) (rdawo:P10058 5) (rdawo:P10055 6)
+      }
+      ?w a rdac:C10001 ; ?cp ?a .
+    }
+    GROUP BY ?w
+  }
+  OPTIONAL {
+    SELECT ?w ?cprio (GROUP_CONCAT(?name; separator="|") AS ?creators) (COUNT(?name) AS ?creatorCount)
+    WHERE {
+      {
+        SELECT DISTINCT ?w ?cprio ?name
+        WHERE {
+          {
+            SELECT ?w ?cprio ?a (MIN(STR(?l)) AS ?raw)
+            WHERE {
+              VALUES (?cp ?cprio) {
+                (rdawo:P10061 1) (rdawo:P10013 2) (rdawo:P10066 3)
+                (rdawo:P10053 4) (rdawo:P10058 5) (rdawo:P10055 6)
+              }
+              ?w a rdac:C10001 ; ?cp ?a .
+              OPTIONAL { ?a rdfs:label ?l . }
+            }
+            GROUP BY ?w ?cprio ?a
+          }
+          BIND(REPLACE(COALESCE(?raw, STR(?a)), "^([^,]+), ([^,]+)$", "$2 $1") AS ?name)
+        }
+        ORDER BY ?w ?cprio ?name
+      }
+    }
+    GROUP BY ?w ?cprio
+  }
+
+  # --- Category of work, unless language-based
+  OPTIONAL {
+    SELECT ?w (GROUP_CONCAT(?cEn; separator=", ") AS ?categoriesEn)
+              (GROUP_CONCAT(?cNo; separator=", ") AS ?categoriesNo)
+    WHERE {
+      {
+        SELECT ?w ?cEn ?cNo
+        WHERE {
+          {
+            SELECT ?w ?cat (MIN(?le) AS ?en) (MIN(?ln) AS ?no)
+            WHERE {
+              ?w a rdac:C10001 ; entedit:P01 ?cat .
+              FILTER(?cat != vtp:V1000)
+              OPTIONAL { ?cat rdfs:label ?l1 . FILTER(LANG(?l1) = "en") BIND(STR(?l1) AS ?le) }
+              OPTIONAL { ?cat rdfs:label ?l2 . FILTER(LANG(?l2) = "no") BIND(STR(?l2) AS ?ln) }
+            }
+            GROUP BY ?w ?cat
+          }
+          BIND(REPLACE(STR(?cat), "^.*/", "") AS ?code)
+          BIND(COALESCE(?en, ?code) AS ?en1)
+          BIND(COALESCE(?no, ?code) AS ?no1)
+          BIND(CONCAT(LCASE(SUBSTR(?en1, 1, 1)), SUBSTR(?en1, 2)) AS ?cEn)
+          BIND(CONCAT(LCASE(SUBSTR(?no1, 1, 1)), SUBSTR(?no1, 2)) AS ?cNo)
+        }
+        ORDER BY ?w STR(?cat)
+      }
+    }
+    GROUP BY ?w
+  }
+
+  # --- Assemble
+  BIND(IF(BOUND(?creators) && ?creatorCount > 3,
+          REPLACE(?creators, "^((?:[^|]*\\|){2}[^|]*)\\|.*$", "$1"), ?creators) AS ?creators3)
+  BIND(IF(!BOUND(?creators), "",
+       CONCAT(" / ", IF(?cprio IN (2, 3), "directed by ", IF(?cprio = 6, "compiled by ", "")),
+              IF(?creatorCount > 3, CONCAT(REPLACE(?creators3, "\\|", ", "), " [et al.]"),
+                 REPLACE(REPLACE(?creators, "\\|([^|]*)$", " and $1"), "\\|", ", ")))) AS ?creatorEn)
+  BIND(IF(!BOUND(?creators), "",
+       CONCAT(" / ", IF(?cprio IN (2, 3), "regi ", IF(?cprio = 6, "utarbeidet av ", "")),
+              IF(?creatorCount > 3, CONCAT(REPLACE(?creators3, "\\|", ", "), " [mfl.]"),
+                 REPLACE(REPLACE(?creators, "\\|([^|]*)$", " og $1"), "\\|", ", ")))) AS ?creatorNo)
+  BIND(CONCAT(?title, ?creatorEn) AS ?area1En)
+  BIND(CONCAT(?title, ?creatorNo) AS ?area1No)
+
+  BIND(COALESCE(?categoriesEn, "") AS ?catsEn)
+  BIND(COALESCE(?categoriesNo, "") AS ?catsNo)
+  BIND(STRLANG(IF(?catsEn = "", ?area1En,
+       CONCAT(?area1En, IF(REGEX(?area1En, "[.?!]$"), " – ", ". – "),
+              UCASE(SUBSTR(?catsEn, 1, 1)), SUBSTR(?catsEn, 2))), "en") AS ?labelEn)
+  BIND(STRLANG(IF(?catsNo = "", ?area1No,
+       CONCAT(?area1No, IF(REGEX(?area1No, "[.?!]$"), " – ", ". – "),
+              UCASE(SUBSTR(?catsNo, 1, 1)), SUBSTR(?catsNo, 2))), "no") AS ?labelNo)
+};
+
+# 3. Move labels into the named graph that holds the work's type
+DELETE {
+  GRAPH <http://oslomet.no/abi/staging/labels> { ?w rdfs:label ?label . }
+}
+INSERT {
+  GRAPH ?g { ?w rdfs:label ?label . }
+}
+WHERE {
+  GRAPH <http://oslomet.no/abi/staging/labels> { ?w rdfs:label ?label . }
+  GRAPH ?g { ?w a rdac:C10001 . }
+  FILTER(?g != <http://oslomet.no/abi/staging/labels>)
+};
+
+# 4. The rest are typed in the default graph
+INSERT {
+  ?w rdfs:label ?label .
+}
+WHERE {
+  GRAPH <http://oslomet.no/abi/staging/labels> { ?w rdfs:label ?label . }
+};
+
+DROP SILENT GRAPH <http://oslomet.no/abi/staging/labels>

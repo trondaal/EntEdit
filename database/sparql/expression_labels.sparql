@@ -1,0 +1,301 @@
+# Generate labels for all Expressions (C10006), one in English and one in
+# Norwegian, using ISBD-like punctuation:
+#
+#   Title / creator ; role contributors. – Kind of expression, language
+#
+# - Title: the expression's preferred title (P20315)
+# - Creator: from the work, the first of author, film director, director,
+#   composer, artist or compiler that has a value; names are shown in natural
+#   order ("Hamsun, Knut" becomes "Knut Hamsun")
+# - Contributors: editors, translators, narrators, performers (including
+#   instrumentalists) and actors of the expression, each with a role phrase;
+#   people who are creators of the work are not repeated. At most three names
+#   per role (two actors), then "[et al.]" / "[mfl.]"
+# - Kind of expression: the content types, only when the expression is not
+#   plain text, text first
+# - Language: all languages, leaving out zxx (no linguistic content), und
+#   (undetermined), nor when nob or nno is given, and mul when specific
+#   languages are given
+# - Role phrases, content types and languages are in the label's language, so
+#   the two labels differ; content type and language names come from their
+#   rdfs:label in the vocabulary, or the code when there is none
+#
+# Replaces any existing rdfs:label values (and their entedit:valueOrder
+# annotations) on expressions that have a title. New labels are written to the
+# graph holding the expression's rdf:type, or to the default graph.
+#
+# Lists are joined with GROUP_CONCAT over ordered subqueries; GraphDB keeps
+# that order, which gives a stable order of names, roles and languages.
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdac: <http://rdaregistry.info/Elements/c/>
+PREFIX rdaed: <http://rdaregistry.info/Elements/e/datatype/>
+PREFIX rdaeo: <http://rdaregistry.info/Elements/e/object/>
+PREFIX rdawo: <http://rdaregistry.info/Elements/w/object/>
+PREFIX rdaco: <http://rdaregistry.info/termList/RDAContentType/>
+PREFIX iso: <http://id.loc.gov/vocabulary/iso639-2/>
+
+# 1. Remove existing labels
+DELETE {
+  ?e rdfs:label ?old .
+  << ?e rdfs:label ?old >> ?ap ?ao .
+}
+WHERE {
+  ?e a rdac:C10006 ;
+     rdaed:P20315 ?anyTitle ;
+     rdfs:label ?old .
+  OPTIONAL { << ?e rdfs:label ?old >> ?ap ?ao . }
+};
+
+# 2. Build the new labels in a staging graph. USING onto:explicit reads only
+#    asserted triples: with inference, subproperties would leak in (narrator
+#    and actor are performers, screenwriter is an author)
+INSERT {
+  GRAPH <http://oslomet.no/abi/staging/labels> { ?e rdfs:label ?labelEn , ?labelNo . }
+}
+USING <http://www.ontotext.com/explicit>
+WHERE {
+  {
+    SELECT ?e (MIN(STR(?t)) AS ?title)
+    WHERE { ?e a rdac:C10006 ; rdaed:P20315 ?t . }
+    GROUP BY ?e
+  }
+
+  # --- Creator: the work's agents for the first creator property that has any
+  OPTIONAL {
+    SELECT ?e (MIN(?prio) AS ?cprio)
+    WHERE {
+      VALUES (?cp ?prio) {
+        (rdawo:P10061 1) (rdawo:P10013 2) (rdawo:P10066 3)
+        (rdawo:P10053 4) (rdawo:P10058 5) (rdawo:P10055 6)
+      }
+      ?e a rdac:C10006 ; rdaeo:P20231 ?w .
+      ?w ?cp ?a .
+    }
+    GROUP BY ?e
+  }
+  OPTIONAL {
+    SELECT ?e ?cprio (GROUP_CONCAT(?name; separator="|") AS ?creators) (COUNT(?name) AS ?creatorCount)
+    WHERE {
+      {
+        SELECT DISTINCT ?e ?cprio ?name
+        WHERE {
+          {
+            SELECT ?e ?cprio ?a (MIN(STR(?l)) AS ?raw)
+            WHERE {
+              VALUES (?cp ?cprio) {
+                (rdawo:P10061 1) (rdawo:P10013 2) (rdawo:P10066 3)
+                (rdawo:P10053 4) (rdawo:P10058 5) (rdawo:P10055 6)
+              }
+              ?e a rdac:C10006 ; rdaeo:P20231 ?w .
+              ?w ?cp ?a .
+              OPTIONAL { ?a rdfs:label ?l . }
+            }
+            GROUP BY ?e ?cprio ?a
+          }
+          BIND(REPLACE(COALESCE(?raw, STR(?a)), "^([^,]+), ([^,]+)$", "$2 $1") AS ?name)
+        }
+        ORDER BY ?e ?cprio ?name
+      }
+    }
+    GROUP BY ?e ?cprio
+  }
+
+  # --- Contributors: one "role names" statement per role, joined with " ; "
+  OPTIONAL {
+    SELECT ?e (GROUP_CONCAT(?stmtEn; separator=" ; ") AS ?contribEn)
+              (GROUP_CONCAT(?stmtNo; separator=" ; ") AS ?contribNo)
+    WHERE {
+      {
+        SELECT ?e ?ord ?stmtEn ?stmtNo
+        WHERE {
+          {
+            SELECT ?e ?ord ?max (GROUP_CONCAT(?name; separator="|") AS ?list) (COUNT(?name) AS ?n)
+            WHERE {
+              {
+                SELECT DISTINCT ?e ?ord ?max ?name
+                WHERE {
+                  {
+                    SELECT ?e ?ord ?max ?a (MIN(STR(?l)) AS ?raw)
+                    WHERE {
+                      VALUES (?p ?ord ?max) {
+                        (rdaeo:P20330 1 3)    # editor
+                        (rdaeo:P20037 2 3)    # translator
+                        (rdaeo:P20022 3 3)    # narrator
+                        (rdaeo:P20039 4 3)    # performer
+                        (rdaeo:P20020 4 3)    # instrumentalist
+                        (rdaeo:P20012 5 2)    # actor
+                      }
+                      ?e a rdac:C10006 ; ?p ?a .
+                      FILTER NOT EXISTS {
+                        VALUES ?cp { rdawo:P10061 rdawo:P10013 rdawo:P10066
+                                     rdawo:P10053 rdawo:P10058 rdawo:P10055 }
+                        ?e rdaeo:P20231 ?w .
+                        ?w ?cp ?a .
+                      }
+                      OPTIONAL { ?a rdfs:label ?l . }
+                    }
+                    GROUP BY ?e ?ord ?max ?a
+                  }
+                  BIND(REPLACE(COALESCE(?raw, STR(?a)), "^([^,]+), ([^,]+)$", "$2 $1") AS ?name)
+                }
+                ORDER BY ?e ?ord ?name
+              }
+            }
+            GROUP BY ?e ?ord ?max
+          }
+          # Keep the first ?max names; otherwise "A, B and C"
+          BIND(?n > ?max AS ?cut)
+          BIND(IF(?cut,
+                  REPLACE(REPLACE(?list, CONCAT("^((?:[^|]*\\|){", STR(?max - 1), "}[^|]*)\\|.*$"), "$1"), "\\|", ", "),
+                  "") AS ?shortList)
+          BIND(IF(?cut, CONCAT(?shortList, " [et al.]"),
+                  REPLACE(REPLACE(?list, "\\|([^|]*)$", " and $1"), "\\|", ", ")) AS ?namesEn)
+          BIND(IF(?cut, CONCAT(?shortList, " [mfl.]"),
+                  REPLACE(REPLACE(?list, "\\|([^|]*)$", " og $1"), "\\|", ", ")) AS ?namesNo)
+          BIND(CONCAT(IF(?ord = 1, "edited by ", IF(?ord = 2, "translated by ",
+                      IF(?ord = 3, "read by ", IF(?ord = 4, "performed by ", "with ")))), ?namesEn) AS ?stmtEn)
+          BIND(CONCAT(IF(?ord = 1, "redigert av ", IF(?ord = 2, "oversatt av ",
+                      IF(?ord = 3, "lest av ", IF(?ord = 4, "framført av ", "med ")))), ?namesNo) AS ?stmtNo)
+        }
+        ORDER BY ?e ?ord
+      }
+    }
+    GROUP BY ?e
+  }
+
+  # --- Kind of expression: content types unless the expression is plain text
+  OPTIONAL {
+    SELECT ?e (GROUP_CONCAT(?kEn; separator=", ") AS ?kindsEn)
+              (GROUP_CONCAT(?kNo; separator=", ") AS ?kindsNo)
+    WHERE {
+      {
+        SELECT ?e ?ct ?kEn ?kNo
+        WHERE {
+          {
+            SELECT ?e ?ct (MIN(?le) AS ?en) (MIN(?ln) AS ?no)
+            WHERE {
+              ?e a rdac:C10006 ; rdaeo:P20001 ?ct .
+              FILTER EXISTS { ?e rdaeo:P20001 ?other . FILTER(?other != rdaco:1020) }
+              OPTIONAL { ?ct rdfs:label ?l1 . FILTER(LANG(?l1) = "en") BIND(STR(?l1) AS ?le) }
+              OPTIONAL { ?ct rdfs:label ?l2 . FILTER(LANG(?l2) = "no") BIND(STR(?l2) AS ?ln) }
+            }
+            GROUP BY ?e ?ct
+          }
+          BIND(REPLACE(STR(?ct), "^.*/", "") AS ?code)
+          BIND(COALESCE(?en, ?code) AS ?en1)
+          BIND(COALESCE(?no, ?code) AS ?no1)
+          BIND(CONCAT(LCASE(SUBSTR(?en1, 1, 1)), SUBSTR(?en1, 2)) AS ?kEn)
+          BIND(CONCAT(LCASE(SUBSTR(?no1, 1, 1)), SUBSTR(?no1, 2)) AS ?kNo)
+          BIND(IF(?ct = rdaco:1020, 0, 1) AS ?textFirst)
+        }
+        ORDER BY ?e ?textFirst STR(?ct)
+      }
+    }
+    GROUP BY ?e
+  }
+
+  # --- Languages, each list sorted by name in its own language
+  OPTIONAL {
+    SELECT ?e (GROUP_CONCAT(?langEn; separator=", ") AS ?languagesEn)
+    WHERE {
+      {
+        SELECT ?e ?langEn
+        WHERE {
+          {
+            SELECT ?e ?lang (MIN(?le) AS ?en)
+            WHERE {
+              ?e a rdac:C10006 ; rdaeo:P20006 ?lang .
+              FILTER(?lang NOT IN (iso:zxx, iso:und))
+              FILTER(?lang != iso:nor || NOT EXISTS { ?e rdaeo:P20006 ?nb . FILTER(?nb IN (iso:nob, iso:nno)) })
+              FILTER(?lang != iso:mul || NOT EXISTS { ?e rdaeo:P20006 ?x . FILTER(?x NOT IN (iso:mul, iso:zxx, iso:und)) })
+              OPTIONAL { ?lang rdfs:label ?l1 . FILTER(LANG(?l1) = "en") BIND(STR(?l1) AS ?le) }
+            }
+            GROUP BY ?e ?lang
+          }
+          BIND(COALESCE(?en, REPLACE(STR(?lang), "^.*/", "")) AS ?langEn)
+        }
+        ORDER BY ?e ?langEn
+      }
+    }
+    GROUP BY ?e
+  }
+  OPTIONAL {
+    SELECT ?e (GROUP_CONCAT(?langNo; separator=", ") AS ?languagesNo)
+    WHERE {
+      {
+        SELECT ?e ?langNo
+        WHERE {
+          {
+            SELECT ?e ?lang (MIN(?ln) AS ?no)
+            WHERE {
+              ?e a rdac:C10006 ; rdaeo:P20006 ?lang .
+              FILTER(?lang NOT IN (iso:zxx, iso:und))
+              FILTER(?lang != iso:nor || NOT EXISTS { ?e rdaeo:P20006 ?nb . FILTER(?nb IN (iso:nob, iso:nno)) })
+              FILTER(?lang != iso:mul || NOT EXISTS { ?e rdaeo:P20006 ?x . FILTER(?x NOT IN (iso:mul, iso:zxx, iso:und)) })
+              OPTIONAL { ?lang rdfs:label ?l2 . FILTER(LANG(?l2) = "no") BIND(STR(?l2) AS ?ln) }
+            }
+            GROUP BY ?e ?lang
+          }
+          BIND(COALESCE(?no, REPLACE(STR(?lang), "^.*/", "")) AS ?name)
+          # Norwegian language names are not capitalized in running text
+          BIND(CONCAT(LCASE(SUBSTR(?name, 1, 1)), SUBSTR(?name, 2)) AS ?langNo)
+        }
+        ORDER BY ?e ?name
+      }
+    }
+    GROUP BY ?e
+  }
+
+  # --- Assemble
+  BIND(IF(BOUND(?creators) && ?creatorCount > 3,
+          REPLACE(?creators, "^((?:[^|]*\\|){2}[^|]*)\\|.*$", "$1"), ?creators) AS ?creators3)
+  BIND(IF(!BOUND(?creators), "",
+       CONCAT(IF(?cprio IN (2, 3), "directed by ", IF(?cprio = 6, "compiled by ", "")),
+              IF(?creatorCount > 3, CONCAT(REPLACE(?creators3, "\\|", ", "), " [et al.]"),
+                 REPLACE(REPLACE(?creators, "\\|([^|]*)$", " and $1"), "\\|", ", ")))) AS ?creatorEn)
+  BIND(IF(!BOUND(?creators), "",
+       CONCAT(IF(?cprio IN (2, 3), "regi ", IF(?cprio = 6, "utarbeidet av ", "")),
+              IF(?creatorCount > 3, CONCAT(REPLACE(?creators3, "\\|", ", "), " [mfl.]"),
+                 REPLACE(REPLACE(?creators, "\\|([^|]*)$", " og $1"), "\\|", ", ")))) AS ?creatorNo)
+
+  BIND(CONCAT(?creatorEn, IF(?creatorEn != "" && COALESCE(?contribEn, "") != "", " ; ", ""), COALESCE(?contribEn, "")) AS ?respEn)
+  BIND(CONCAT(?creatorNo, IF(?creatorNo != "" && COALESCE(?contribNo, "") != "", " ; ", ""), COALESCE(?contribNo, "")) AS ?respNo)
+  BIND(CONCAT(?title, IF(?respEn != "", CONCAT(" / ", ?respEn), "")) AS ?area1En)
+  BIND(CONCAT(?title, IF(?respNo != "", CONCAT(" / ", ?respNo), "")) AS ?area1No)
+
+  BIND(CONCAT(COALESCE(?kindsEn, ""), IF(COALESCE(?kindsEn, "") != "" && COALESCE(?languagesEn, "") != "", ", ", ""),
+              COALESCE(?languagesEn, "")) AS ?kindEn)
+  BIND(CONCAT(COALESCE(?kindsNo, ""), IF(COALESCE(?kindsNo, "") != "" && COALESCE(?languagesNo, "") != "", ", ", ""),
+              COALESCE(?languagesNo, "")) AS ?kindNo)
+
+  BIND(STRLANG(IF(?kindEn = "", ?area1En,
+       CONCAT(?area1En, IF(REGEX(?area1En, "[.?!]$"), " – ", ". – "),
+              UCASE(SUBSTR(?kindEn, 1, 1)), SUBSTR(?kindEn, 2))), "en") AS ?labelEn)
+  BIND(STRLANG(IF(?kindNo = "", ?area1No,
+       CONCAT(?area1No, IF(REGEX(?area1No, "[.?!]$"), " – ", ". – "),
+              UCASE(SUBSTR(?kindNo, 1, 1)), SUBSTR(?kindNo, 2))), "no") AS ?labelNo)
+};
+
+# 3. Move labels into the named graph that holds the expression's type
+DELETE {
+  GRAPH <http://oslomet.no/abi/staging/labels> { ?e rdfs:label ?label . }
+}
+INSERT {
+  GRAPH ?g { ?e rdfs:label ?label . }
+}
+WHERE {
+  GRAPH <http://oslomet.no/abi/staging/labels> { ?e rdfs:label ?label . }
+  GRAPH ?g { ?e a rdac:C10006 . }
+  FILTER(?g != <http://oslomet.no/abi/staging/labels>)
+};
+
+# 4. The rest are typed in the default graph
+INSERT {
+  ?e rdfs:label ?label .
+}
+WHERE {
+  GRAPH <http://oslomet.no/abi/staging/labels> { ?e rdfs:label ?label . }
+};
+
+DROP SILENT GRAPH <http://oslomet.no/abi/staging/labels>

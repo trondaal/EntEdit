@@ -1,0 +1,81 @@
+# Generate labels for all Agents (Agent, Person, Corporate Body, Family):
+#
+#   Preferred name (dates)
+#
+# - Name: the preferred name of agent (P50413), as recorded
+# - Dates: the related timespan (P50339) in parentheses, when there is one
+# - Each field uses one value (the lowest in code point order) when there are
+#   several, so an agent gets exactly one label
+# - The label is an untagged literal: a name is the same in every language
+#
+# Replaces any existing rdfs:label values (and their entedit:valueOrder
+# annotations) on agents that have a name; agents without one are left alone.
+# New labels are written to the graph holding the agent's rdf:type, or to the
+# default graph.
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdac: <http://rdaregistry.info/Elements/c/>
+PREFIX rdaad: <http://rdaregistry.info/Elements/a/datatype/>
+
+# 1. Remove existing labels
+DELETE {
+  ?a rdfs:label ?old .
+  << ?a rdfs:label ?old >> ?ap ?ao .
+}
+WHERE {
+  VALUES ?class { rdac:C10002 rdac:C10004 rdac:C10005 rdac:C10008 }
+  ?a a ?class ;
+     rdaad:P50413 ?anyName ;
+     rdfs:label ?old .
+  OPTIONAL { << ?a rdfs:label ?old >> ?ap ?ao . }
+};
+
+# 2. Build the new labels in a staging graph. USING onto:explicit reads only
+#    asserted triples, so values inferred through subproperties stay out
+INSERT {
+  GRAPH <http://oslomet.no/abi/staging/labels> { ?a rdfs:label ?label . }
+}
+USING <http://www.ontotext.com/explicit>
+WHERE {
+  {
+    SELECT ?a (MIN(?n) AS ?name) (MIN(?d) AS ?date)
+    WHERE {
+      VALUES ?class { rdac:C10002 rdac:C10004 rdac:C10005 rdac:C10008 }
+      ?a a ?class ;
+         rdaad:P50413 ?n0 .
+      BIND(REPLACE(STR(?n0), "^\\s+|\\s+$", "") AS ?n)
+      FILTER(?n != "")
+      OPTIONAL {
+        ?a rdaad:P50339 ?d0 .
+        BIND(REPLACE(STR(?d0), "^\\s+|\\s+$", "") AS ?d)
+        FILTER(?d != "")
+      }
+    }
+    GROUP BY ?a
+  }
+  BIND(IF(BOUND(?date), CONCAT(?name, " (", ?date, ")"), ?name) AS ?label)
+};
+
+# 3. Move labels into the named graph that holds the agent's type
+DELETE {
+  GRAPH <http://oslomet.no/abi/staging/labels> { ?a rdfs:label ?label . }
+}
+INSERT {
+  GRAPH ?g { ?a rdfs:label ?label . }
+}
+WHERE {
+  VALUES ?class { rdac:C10002 rdac:C10004 rdac:C10005 rdac:C10008 }
+  GRAPH <http://oslomet.no/abi/staging/labels> { ?a rdfs:label ?label . }
+  GRAPH ?g { ?a a ?class . }
+  FILTER(?g != <http://oslomet.no/abi/staging/labels>)
+};
+
+# 4. The rest are typed in the default graph
+INSERT {
+  ?a rdfs:label ?label .
+}
+WHERE {
+  GRAPH <http://oslomet.no/abi/staging/labels> { ?a rdfs:label ?label . }
+};
+
+DROP SILENT GRAPH <http://oslomet.no/abi/staging/labels>

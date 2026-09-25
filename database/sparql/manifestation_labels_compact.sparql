@@ -1,0 +1,123 @@
+# Generate compact labels for all Manifestations (C10007), short enough for
+# the entity listing. A reduced form of ISBD areas 1, 2 and 4:
+#
+#   Title / first statement of responsibility. – Edition. – Publisher, Date
+#
+# - Other title information and place of publication are left out
+# - Only the first statement of responsibility is kept: the text is cut at the
+#   first " ; ", ". " or " = " that follows a word (so "Günter Grass. Overs. av
+#   Trygve Greiff" becomes "Günter Grass", while "J. R. R. Tolkien" is kept)
+# - Each field uses one value (the lowest in code point order) when there are
+#   several, so a manifestation gets exactly one label
+# - Unbalanced brackets ("1964]") and trailing punctuation are cleaned up, and
+#   the ". – " separator becomes " – " after a field that already ends in . ? !
+# - The label is an untagged literal: it is transcribed from the resource, so
+#   it is in the resource's own language, not English or Norwegian
+#
+# Replaces any existing rdfs:label values (and their entedit:valueOrder
+# annotations) on manifestations that have a title; manifestations without a
+# title are left alone. New labels are written to the graph holding the
+# manifestation's rdf:type, or to the default graph when that is where it is.
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdac: <http://rdaregistry.info/Elements/c/>
+PREFIX rdamd: <http://rdaregistry.info/Elements/m/datatype/>
+
+# 1. Remove existing labels
+DELETE {
+  ?m rdfs:label ?old .
+  << ?m rdfs:label ?old >> ?ap ?ao .
+}
+WHERE {
+  ?m a rdac:C10007 ;
+     rdamd:P30156 ?anyTitle ;
+     rdfs:label ?old .
+  OPTIONAL { << ?m rdfs:label ?old >> ?ap ?ao . }
+};
+
+# 2. Build the new labels in a staging graph. USING onto:explicit reads only
+#    asserted triples, so values inferred through subproperties stay out
+INSERT {
+  GRAPH <http://oslomet.no/abi/staging/labels> { ?m rdfs:label ?label . }
+}
+USING <http://www.ontotext.com/explicit>
+WHERE {
+  {
+    SELECT ?m
+           (MIN(STR(?t)) AS ?title0)
+           (MIN(STR(?r)) AS ?resp0)
+           (MIN(STR(?e)) AS ?ed0)
+           (MIN(STR(?p)) AS ?pub0)
+           (MIN(STR(?d)) AS ?date0)
+    WHERE {
+      ?m a rdac:C10007 ;
+         rdamd:P30156 ?t .                      # title proper
+      OPTIONAL { ?m rdamd:P30117 ?r . }         # statement of responsibility
+      OPTIONAL { ?m rdamd:P30107 ?e . }         # edition statement
+      OPTIONAL { ?m rdamd:P30176 ?p . }         # publisher's name
+      OPTIONAL { ?m rdamd:P30011 ?d . }         # date of publication
+    }
+    GROUP BY ?m
+  }
+
+  # Keep only the first statement of responsibility
+  BIND(REPLACE(?resp0, "^(.*?[\\p{Ll}\\])]{2})(?:\\. | ; | = ).*$", "$1", "s") AS ?resp1)
+
+  # Drop an unmatched "[" or "]", then surrounding space and trailing punctuation
+  BIND(IF(CONTAINS(?title0, "]") && !CONTAINS(?title0, "["), REPLACE(?title0, "\\]", ""),
+       IF(CONTAINS(?title0, "[") && !CONTAINS(?title0, "]"), REPLACE(?title0, "\\[", ""), ?title0)) AS ?title2)
+  BIND(IF(CONTAINS(?resp1, "]") && !CONTAINS(?resp1, "["), REPLACE(?resp1, "\\]", ""),
+       IF(CONTAINS(?resp1, "[") && !CONTAINS(?resp1, "]"), REPLACE(?resp1, "\\[", ""), ?resp1)) AS ?resp2)
+  BIND(IF(CONTAINS(?ed0, "]") && !CONTAINS(?ed0, "["), REPLACE(?ed0, "\\]", ""),
+       IF(CONTAINS(?ed0, "[") && !CONTAINS(?ed0, "]"), REPLACE(?ed0, "\\[", ""), ?ed0)) AS ?ed2)
+  BIND(IF(CONTAINS(?pub0, "]") && !CONTAINS(?pub0, "["), REPLACE(?pub0, "\\]", ""),
+       IF(CONTAINS(?pub0, "[") && !CONTAINS(?pub0, "]"), REPLACE(?pub0, "\\[", ""), ?pub0)) AS ?pub2)
+  BIND(IF(CONTAINS(?date0, "]") && !CONTAINS(?date0, "["), REPLACE(?date0, "\\]", ""),
+       IF(CONTAINS(?date0, "[") && !CONTAINS(?date0, "]"), REPLACE(?date0, "\\[", ""), ?date0)) AS ?date2)
+
+  BIND(REPLACE(REPLACE(?title2, "^\\s+", ""), "[\\s,;:/=]+$", "") AS ?title)
+  BIND(COALESCE(REPLACE(REPLACE(?resp2, "^\\s+", ""), "[\\s,;:/=]+$", ""), "") AS ?resp)
+  BIND(COALESCE(REPLACE(REPLACE(?ed2, "^\\s+", ""), "[\\s,;:/=]+$", ""), "") AS ?ed)
+  BIND(COALESCE(REPLACE(REPLACE(?pub2, "^\\s+", ""), "[\\s,;:/=]+$", ""), "") AS ?pub)
+  BIND(COALESCE(REPLACE(REPLACE(?date2, "^\\s+", ""), "[\\s,;:/=]+$", ""), "") AS ?date)
+
+  FILTER(?title != "")
+
+  # Title / responsibility
+  BIND(CONCAT(?title, IF(?resp != "", CONCAT(" / ", ?resp), "")) AS ?area1)
+
+  # Publisher, Date
+  BIND(IF(?pub != "" && ?date != "", CONCAT(?pub, ", ", ?date),
+       CONCAT(?pub, ?date)) AS ?area4)
+
+  # Join areas with ". – ", or " – " when the previous area ends in . ? !
+  BIND(IF(?ed != "",
+       CONCAT(?area1, IF(REGEX(?area1, "[.?!]$"), " – ", ". – "), ?ed),
+       ?area1) AS ?area12)
+  BIND(IF(?area4 != "",
+       CONCAT(?area12, IF(REGEX(?area12, "[.?!]$"), " – ", ". – "), ?area4),
+       ?area12) AS ?label)
+};
+
+# 3. Move labels into the named graph that holds the manifestation's type
+DELETE {
+  GRAPH <http://oslomet.no/abi/staging/labels> { ?m rdfs:label ?label . }
+}
+INSERT {
+  GRAPH ?g { ?m rdfs:label ?label . }
+}
+WHERE {
+  GRAPH <http://oslomet.no/abi/staging/labels> { ?m rdfs:label ?label . }
+  GRAPH ?g { ?m a rdac:C10007 . }
+  FILTER(?g != <http://oslomet.no/abi/staging/labels>)
+};
+
+# 4. The rest are typed in the default graph
+INSERT {
+  ?m rdfs:label ?label .
+}
+WHERE {
+  GRAPH <http://oslomet.no/abi/staging/labels> { ?m rdfs:label ?label . }
+};
+
+DROP SILENT GRAPH <http://oslomet.no/abi/staging/labels>

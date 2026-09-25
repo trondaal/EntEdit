@@ -343,6 +343,8 @@
 <http://id.loc.gov/vocabulary/iso639-2/grb>	<http://www.w3.org/2000/01/rdf-schema#label>	"Grebo"@no	 .
 <http://id.loc.gov/vocabulary/iso639-2/grc>	<http://www.w3.org/2000/01/rdf-schema#label>	"Ancient Greek"@en	 .
 <http://id.loc.gov/vocabulary/iso639-2/grc>	<http://www.w3.org/2000/01/rdf-schema#label>	"Gammelgresk"@no	 .
+<http://id.loc.gov/vocabulary/iso639-2/gre>	<http://www.w3.org/2000/01/rdf-schema#label>	"Greek"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/gre>	<http://www.w3.org/2000/01/rdf-schema#label>	"Gresk"@no	 .
 <http://id.loc.gov/vocabulary/iso639-2/grn>	<http://www.w3.org/2000/01/rdf-schema#label>	"Guarani"@en	 .
 <http://id.loc.gov/vocabulary/iso639-2/grn>	<http://www.w3.org/2000/01/rdf-schema#label>	"Guarani"@no	 .
 <http://id.loc.gov/vocabulary/iso639-2/gsw>	<http://www.w3.org/2000/01/rdf-schema#label>	"Swiss German | Alemannic | Alsatian"@en	 .
@@ -784,6 +786,8 @@
 <http://id.loc.gov/vocabulary/iso639-2/sit>	<http://www.w3.org/2000/01/rdf-schema#label>	"Sino-tibetanske språk"@no	 .
 <http://id.loc.gov/vocabulary/iso639-2/sla>	<http://www.w3.org/2000/01/rdf-schema#label>	"Slavic languages"@en	 .
 <http://id.loc.gov/vocabulary/iso639-2/sla>	<http://www.w3.org/2000/01/rdf-schema#label>	"Slaviske språk"@no	 .
+<http://id.loc.gov/vocabulary/iso639-2/slo>	<http://www.w3.org/2000/01/rdf-schema#label>	"Slovak"@en	 .
+<http://id.loc.gov/vocabulary/iso639-2/slo>	<http://www.w3.org/2000/01/rdf-schema#label>	"Slovakisk"@no	 .
 <http://id.loc.gov/vocabulary/iso639-2/slk>	<http://www.w3.org/2000/01/rdf-schema#label>	"Slovak"@en	 .
 <http://id.loc.gov/vocabulary/iso639-2/slk>	<http://www.w3.org/2000/01/rdf-schema#label>	"Slovakisk"@no	 .
 <http://id.loc.gov/vocabulary/iso639-2/slv>	<http://www.w3.org/2000/01/rdf-schema#label>	"Slovenian"@en	 .
