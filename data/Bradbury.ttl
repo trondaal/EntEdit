@@ -2327,6 +2327,7 @@
     rdamd:P30182 "vi, 151 p. : ill., 24 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
+    rdamo:P30328 <http://viaf.org/viaf/12305881> ;
     rdamo:P30139 <http://viaf.org/viaf/175761003/adaptation/exp/eng/1020> ;
     rdaxd:P00018 "isbn-0809067935",
         "isbn-0809080451",
@@ -5494,18 +5495,22 @@
     rdaeo:P20231 <http://viaf.org/viaf/174579606> .
 
 <http://viaf.org/viaf/175761003/adaptation> a rdac:C10001 ;
-    rdfs:label "The martian chronicles"@en,
-        "The martian chronicles"@no ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "The martian chronicles" ;
+    rdfs:label "Ray Bradbury's The martian chronicles / Dennis Calero. – Picture work"@en,
+        "Ray Bradbury's The martian chronicles / Dennis Calero. – Bildeverk"@no ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1003> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/302> ;
+    rdawd:P10223 "Ray Bradbury's The martian chronicles" ;
+    rdawo:P10058 <http://example.org/calerodennis> ;
+    rdawo:P10252 <http://viaf.org/viaf/175761003> ;
     rdaxd:P00018 "http://viaf.org/viaf/175761003/adaptation" .
 
 <http://viaf.org/viaf/175761003/adaptation/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Ray Bradbury's The martian chronicles : the authorized adaptation. – English"@en,
-        "Ray Bradbury's The martian chronicles : the authorized adaptation. – Engelsk"@no ;
+    rdfs:label "Ray Bradbury's The martian chronicles : the authorized adaptation / Dennis Calero. – Text, still image, English"@en,
+        "Ray Bradbury's The martian chronicles : the authorized adaptation / Dennis Calero. – Tekst, stillbilde, engelsk"@no ;
     rdaed:P20315 "Ray Bradbury's The martian chronicles : the authorized adaptation" ;
     rdaed:P20316 "The martian chronicles" ;
-    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20001 rdaco:1014,
+        rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/175761003/adaptation> .
 
@@ -7054,6 +7059,11 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdaxd:P00018 "isbn-9788434885882" .
+
+<http://example.org/calerodennis> a rdac:C10004 ;
+    rdfs:label "Calero, Dennis" ;
+    rdaad:P50413 "Calero, Dennis" ;
+    rdaxd:P00018 "http://example.org/calerodennis" .
 
 # ------------------------------------------------------------------
 # Manifestations not linked to any expression (270)
