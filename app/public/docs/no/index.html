@@ -412,6 +412,7 @@
                     </li>
                     <li><a href="#exercises">Praktiske oppgaver</a></li>
                     <li><a href="#key-concepts">Referanse for nøkkelbegreper</a></li>
+                    <li><a href="#databases">Opprette og konfigurere databaser</a></li>
                 </ol>
             </nav>
 
@@ -2470,6 +2471,41 @@
                 grensesnitttilfeller. Det viktige er å være konsistent og å
                 tenke nøye på hvilket aspekt av ressursen du beskriver
                 på hvert nivå.
+            </div>
+
+            <!-- 11. DATABASER -->
+            <h2 id="databases">11. Opprette og konfigurere databaser</h2>
+
+            <p>
+                Alt du katalogiserer i EntEdit, lagres i et
+                <em>datalager</em> (repository) i GraphDB — med
+                standardinstallasjonen datalageret <code>EntEdit</code>. Én
+                GraphDB kan romme flere datalagre, og EntEdit kan byttes
+                mellom dem: du kan for eksempel utforske en av
+                eksempelsamlingene for Hamsun, Grass eller Golding i et eget
+                datalager, mens ditt eget arbeid ligger urørt i
+                <code>EntEdit</code>.
+            </p>
+
+            <p>
+                <a href="setup.html">Oppsettguiden for database</a> forklarer,
+                fra det grunnleggende til det mer avanserte:
+            </p>
+
+            <ul>
+                <li><a href="setup.html#installing">Installere og kjøre EntEdit</a> — starte, stoppe og oppdatere Docker-installasjonen</li>
+                <li><a href="setup.html#own-data">Bruke egne data</a> — importere RDF-filer</li>
+                <li><a href="setup.html#vocabulary">Vokabularet og ontologien</a> — hva EntEdit trenger i hvert datalager</li>
+                <li><a href="setup.html#additional-repositories">Flere datalagre</a> — opprette et datalager, laste inn en eksempelsamling, bytte EntEdit til det, og slå på brukere og sikkerhet</li>
+                <li><a href="setup.html#hosting">Drifte GraphDB selv</a> — bruke EntEdit med en GraphDB på din egen server</li>
+                <li><a href="setup.html#troubleshooting">Feilsøking</a> — porter som er i bruk, tilkoblingsproblemer, tomme menyer eller søkeresultater</li>
+            </ul>
+
+            <div class="info-box tip">
+                <strong>Tips:</strong> Knappen øverst i EntEdit viser navnet
+                på datalageret som er i bruk. Klikk på den for å endre
+                SPARQL-endepunktet, og dermed datalageret, som EntEdit
+                arbeider mot.
             </div>
         </div>
     </body>

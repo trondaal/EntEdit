@@ -174,31 +174,69 @@
     .container { padding: 1.25rem 1rem 3rem; }
     h2 { font-size: 1.35rem; }
   }
+
+  .toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem 1.75rem;
+    margin-bottom: 1rem;
+  }
+  .toc h2 {
+    font-size: 1rem;
+    margin: 0 0 0.5rem;
+    padding: 0;
+    border: none;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .toc ol { padding-left: 1.25rem; }
+  .toc li { margin-bottom: 0.25rem; }
+  .toc a { color: var(--primary); text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
 
 <div class="page-header">
   <h1>Database Setup Guide</h1>
-  <p>How to set up your own EntEdit database with GraphDB</p>
+  <p>How to install EntEdit and set up its GraphDB database</p>
   <a href="index.html" class="back-link">← Back to Cataloguing Guide</a>
 </div>
 
 <div class="container">
 
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#installing">Installing and running EntEdit</a></li>
+    <li><a href="#what-gets-initialized">What the installation contains</a></li>
+    <li><a href="#own-data">Using your own data</a></li>
+    <li><a href="#vocabulary">The vocabulary and ontology</a></li>
+    <li><a href="#additional-repositories">Additional repositories</a></li>
+    <li><a href="#hosting">Hosting GraphDB yourself</a></li>
+    <li><a href="#development">Development setup</a></li>
+    <li><a href="#troubleshooting">Troubleshooting</a></li>
+  </ol>
+</nav>
+
 
 <!-- 1. OVERVIEW -->
-<h2>1. Overview</h2>
+<h2 id="overview">1. Overview</h2>
 
 <p>
-  EntEdit uses a SPARQL-compatible graph database to store and query RDF data. The recommended database is <strong>Ontotext GraphDB</strong>, which is included in the Docker Compose setup. This guide walks through setting up the database from scratch using Docker, and explains how to load your own data.
+  EntEdit uses a SPARQL-compatible graph database to store and query RDF data. The recommended database is <strong>Ontotext GraphDB</strong>, which is included in the Docker installation. This guide starts with installing and running EntEdit on your own machine, and moves on to your own data, additional databases and hosting — from the basics to the more advanced.
 </p>
 
 <p>If you just want to try EntEdit, you can skip this guide — a read-only online demo with sample bibliographic data is available at <a href="http://entedit.org/?demo">entedit.org/?demo</a>, no installation required.</p>
 
 
-<!-- 2. PREREQUISITES -->
-<h2>2. Prerequisites</h2>
+<!-- 2. INSTALLING -->
+<h2 id="installing">2. Installing and running EntEdit</h2>
+
+<h3>Prerequisites</h3>
 
 <ul>
   <li><strong>Docker</strong> and <strong>Docker Compose</strong> — installed and running on your machine.</li>
@@ -210,11 +248,9 @@
   <strong>Tip:</strong> Docker Desktop (available for Windows, macOS, and Linux) includes both Docker and Docker Compose.
 </div>
 
+<h3>Starting EntEdit</h3>
 
-<!-- 3. STARTING WITH DOCKER -->
-<h2>3. Starting the Docker environment</h2>
-
-<p>Start the whole system with a single command, run from any folder:</p>
+<p>Start the whole system with a single command that you run in a terminal:</p>
 
 <pre><code>docker compose -f oci://docker.io/trondaal/entedit-compose:latest up -d</code></pre>
 
@@ -225,7 +261,6 @@
 <div class="info-box">
   <strong>Note:</strong> Compose lists the variables the project uses and asks <em>"Do you want to proceed with these variables? [Y/n]"</em> — press Enter. Add <code>-y</code> to the command to skip the prompt, which is what you want when scripting the installation.
 </div>
-
 
 <p>This starts three services:</p>
 
@@ -253,7 +288,7 @@
 </table>
 
 <p>
-  When using the Docker setup, configure EntEdit with the endpoint URL <code>http://localhost/graphdb/repositories/EntEdit</code>.
+  Open <code>http://localhost/entedit/</code> and configure EntEdit with the endpoint URL <code>http://localhost/graphdb/repositories/EntEdit</code>.
 </p>
 
 <div class="info-box">
@@ -261,24 +296,12 @@
 </div>
 
 <p>
-  The first start automatically pulls the pre-built images from Docker Hub — the web application from <a href="https://hub.docker.com/r/trondaal/entedit"><code>trondaal/entedit</code></a> and the vocabulary, sample data and repository definition from <a href="https://hub.docker.com/r/trondaal/entedit-init"><code>trondaal/entedit-init</code></a> — so no local build or Node.js installation is needed.
+  The first start automatically pulls the pre-built images from Docker Hub — the web application from <a href="https://hub.docker.com/r/trondaal/entedit"><code>trondaal/entedit</code></a> and the vocabulary, sample data and repository definition from <a href="https://hub.docker.com/r/trondaal/entedit-init"><code>trondaal/entedit-init</code></a> — so no local build or Node.js installation is needed. GraphDB data is persisted in a Docker volume and survives restarts.
 </p>
 
-<p>
-  GraphDB data is persisted in a Docker volume and survives restarts.
-</p>
-
-<h3>Port 80 or 7200 already in use?</h3>
-
-<p>
-  If another program on your machine — a web server, IIS, another GraphDB — already uses port 80 or 7200, <code>up</code> fails with <em>"port is already allocated"</em> or <em>"address already in use"</em>. Choose other ports with the variables <code>ENTEDIT_PORT</code> (the web application, default 80) and <code>GRAPHDB_PORT</code> (GraphDB Workbench, default 7200):
-</p>
-
-<pre><code>ENTEDIT_PORT=8080 docker compose -f oci://docker.io/trondaal/entedit-compose:latest up -d</code></pre>
-
-<p>
-  In PowerShell, run <code>$env:ENTEDIT_PORT=8080</code> first and then the command without the variable; in Command Prompt, use <code>set ENTEDIT_PORT=8080</code>. The application is then at <code>http://localhost:8080/entedit/</code> and its endpoint is <code>http://localhost:8080/graphdb/repositories/EntEdit</code> — the port is the only thing that changes. Set the variable every time you run <code>up</code>, otherwise the application moves back to port 80.
-</p>
+<div class="info-box warning">
+  <strong>Does <code>up</code> fail with "port is already allocated"?</strong> Another program already uses port 80 or 7200. See <a href="#ports-in-use">Port 80 or 7200 already in use</a> under Troubleshooting.
+</div>
 
 <h3>Stopping, updating and other commands</h3>
 
@@ -300,35 +323,8 @@
 docker compose up -d</code></pre>
 
 
-<h3>Why not <code>localhost:7200</code>?</h3>
-
-<p>
-  GraphDB Workbench lives at <code>http://localhost:7200</code> and is where you administer the database, but it is not the address EntEdit should use as its endpoint. A browser treats port 7200 as a different site — a different <em>origin</em> — from EntEdit itself, and blocks the requests with a CORS error. The address <code>http://localhost/graphdb/...</code> goes through nginx, which forwards the request to GraphDB server-side, so the problem never arises.
-</p>
-
-
-<h3>Hosting GraphDB on your own server</h3>
-
-<p>
-  If you run EntEdit and GraphDB yourself, there are two working arrangements, and the choice decides what you have to configure.
-</p>
-
-<p>
-  <strong>GraphDB proxied under the same origin as the app</strong> — for example the app at <code>https://example.org/entedit/</code> and the database at <code>https://example.org/graphdb/repositories/EntEdit</code> — is the better option: no CORS, no port number in the endpoint, and it keeps working when you add HTTPS. Two details need care:
-</p>
-
-<ul>
-  <li>The Workbench serves <code>&lt;base href="/"&gt;</code>, so when it is reached under a sub-path its assets resolve against the site root and fail to load, leaving an unstyled page. Either set <code>graphdb.external-url</code> (plus <code>graphdb.vhosts</code> if GraphDB is reachable at several addresses) on the GraphDB server, or rewrite the tag in the proxy — <code>Substitute</code> in Apache, <code>sub_filter</code> in nginx.</li>
-  <li>Keep the SPARQL path out of that filter. Rewriting the response means disabling upstream compression, which you do not want for query results: match <code>/graphdb/repositories/</code> in its own rule and proxy it untouched.</li>
-</ul>
-
-<p>
-  <strong>GraphDB on its own host or port</strong> needs no proxy configuration at all, as long as CORS is enabled on the GraphDB server. The Workbench then sits at the root of its own origin and the graph visualization works as-is. The only difference is that each user has to choose their repository once in the Workbench, because EntEdit can pre-select it only when both are served from the same origin.
-</p>
-
-
-<!-- 4. WHAT GETS INITIALIZED -->
-<h2>4. What gets initialized</h2>
+<!-- 3. WHAT GETS INITIALIZED -->
+<h2 id="what-gets-initialized">3. What the installation contains</h2>
 
 <p>The initialization service performs three phases:</p>
 
@@ -344,80 +340,31 @@ docker compose up -d</code></pre>
 </ol>
 
 
-<!-- 5. REPOSITORY STRUCTURE -->
-<h2>5. Repository structure</h2>
+<!-- 4. USING YOUR OWN DATA -->
+<h2 id="own-data">4. Using your own data</h2>
 
-<p>The relevant directories in the EntEdit repository:</p>
+<p>
+  The simplest way to load your own RDF data is from EntEdit itself: click the <strong>Import</strong> button in the application header, choose a <code>.ttl</code>, <code>.nt</code>, or <code>.rdf</code> file, and click <strong>Import</strong>. Imported triples are appended to the repository; existing data is not replaced.
+</p>
 
-<div class="file-tree">
-EntEdit/<br>
-├── app/                <span style="color: var(--text-secondary);">← Web application (incl. nginx + proxy config)</span><br>
-├── database/<br>
-│   ├── types/          <span style="color: var(--text-secondary);">← Vocabulary files (loaded into GraphDB)</span><br>
-│   ├── testdata/       <span style="color: var(--text-secondary);">← Sample RDF entities (examples graph)</span><br>
-│   └── lucene_connectors/  <span style="color: var(--text-secondary);">← Lucene full-text index definitions</span><br>
-├── docker/<br>
-│   └── graphdb/        <span style="color: var(--text-secondary);">← Repository config + init script</span><br>
-└── docker-compose.yml
-</div>
-
-
-<!-- 6. USING YOUR OWN DATA -->
-<h2>6. Using your own data</h2>
-
-<h3>Adding data before first launch</h3>
-
-<p>The sample data is baked into the initialisation image, so files added to <code>database/testdata/</code> are only picked up when you run from a checkout of the repository <em>and</em> mount that folder into the initialisation service:</p>
-
-<pre><code>docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d</code></pre>
-
-<p>Place your RDF files in <code>database/testdata/</code> before the first start. Supported formats:</p>
-
-<ul>
-  <li><code>.ttl</code> — Turtle</li>
-  <li><code>.rdf</code> — RDF/XML</li>
-  <li><code>.nt</code> — N-Triples</li>
-</ul>
-
-<h3>Importing data into an existing database</h3>
-
-<p>If the database is already running, you can import data through the GraphDB Workbench:</p>
+<p>You can also import through GraphDB Workbench:</p>
 
 <ol class="steps">
-  <li>Open <code>http://localhost:7200</code> in your browser.</li>
-  <li>Go to <strong>Import → RDF</strong> in the left sidebar.</li>
-  <li>Upload your RDF files and import them into the <code>EntEdit</code> repository.</li>
+  <li>Open <code>http://localhost:7200</code> in your browser and select the <code>EntEdit</code> repository in the repository menu at the top right.</li>
+  <li>Go to <strong>Import</strong> and click <strong>Upload RDF files</strong> — or <strong>Get RDF data from a URL</strong> for a file on the web.</li>
+  <li>Import the files. The search indexes pick up new data automatically.</li>
 </ol>
 
-<p>You can also import RDF files directly from the EntEdit application: click the <strong>Import</strong> button in the application header, choose a <code>.ttl</code>, <code>.nt</code>, or <code>.rdf</code> file, and click <strong>Import</strong>. Imported triples are appended to the repository; existing data is not replaced.</p>
-
-<div class="info-box warning">
-  <strong>Important:</strong> After importing new data, you may need to recreate the Lucene full-text search indexes for the new entities to appear in search results. The connector definitions are in <code>database/lucene_connectors/</code>.
-</div>
-
-
-<!-- 7. SETTING UP YOUR OWN DATABASE -->
-<h2>7. Setting up your own database from scratch</h2>
-
 <p>
-  If you want to use EntEdit with your own GraphDB instance (outside the Docker setup), you need to load the vocabulary files and set up the full-text search connectors. This section covers the minimum steps required.
+  The data should use the RDA vocabulary described in <a href="#vocabulary">section 5</a>; the files in <code>database/testdata/</code> show the expected structure. To keep your own work apart from other data, put it in a repository of its own — see <a href="#additional-repositories">Additional repositories</a>.
 </p>
 
-<h3>Step 1: Create a repository</h3>
+
+<!-- 5. VOCABULARY AND ONTOLOGY -->
+<h2 id="vocabulary">5. The vocabulary and ontology</h2>
 
 <p>
-  In the GraphDB Workbench (<code>http://localhost:7200</code>), go to <strong>Setup → Repositories → Create new repository</strong>. Use the following settings:
-</p>
-<ul>
-  <li><strong>Repository ID:</strong> <code>EntEdit</code> (or any name you prefer)</li>
-  <li><strong>Ruleset:</strong> <code>RDFS-Plus (Optimized)</code></li>
-</ul>
-<p>All other settings can be left at their defaults.</p>
-
-<h3>Step 2: Import the vocabulary files</h3>
-
-<p>
-  EntEdit requires the vocabulary files under <code>database/types/</code> to be loaded into the database. These define the classes, properties, controlled values, and display configuration that the application relies on. The directory contains three subdirectories:
+  EntEdit takes its classes, properties, controlled values and display configuration from the vocabulary files in <a href="https://github.com/trondaal/EntEdit/tree/main/database/types"><code>database/types/</code></a>. Every repository EntEdit works with needs all three folders:
 </p>
 
 <table>
@@ -439,38 +386,11 @@ EntEdit/<br>
   </tr>
 </table>
 
-<p>Import all files from these directories via <strong>Import → RDF</strong> in the GraphDB Workbench, or use the GraphDB REST API.</p>
-
 <div class="info-box warning">
   <strong>Important:</strong> All three directories must be imported. Without the EntEdit profile, no classes or properties will appear in the application. Without the RDA vocabulary, labels will be missing. Without the term_vocabularies, controlled value dropdowns will be empty.
 </div>
 
-<h3>Step 3: Set up the Lucene connectors</h3>
-
-<p>
-  The Search tab in EntEdit relies on GraphDB's Lucene connector for full-text search. You need to execute the connector definition queries to create the search indexes. These are SPARQL UPDATE statements found in:
-</p>
-
-<ul>
-  <li><code>database/lucene_connectors/expressions_index.sparql</code> — Creates the full-text index for Expression search</li>
-  <li><code>database/lucene_connectors/manifestations_index.sparql</code> — Creates the full-text index for Manifestation search</li>
-</ul>
-
-<p>Execute these in the GraphDB Workbench under <strong>SPARQL → SPARQL Update</strong>, or via the SPARQL endpoint. After execution, the connectors will automatically index existing data and keep the index updated as new data is added.</p>
-
-<div class="info-box tip">
-  <strong>Tip:</strong> If you skip this step, the Entity Browser will still work — you can browse and edit entities normally. Only the Search tab requires the Lucene connectors.
-</div>
-
-<h3>Step 4: Import your bibliographic data</h3>
-
-<p>
-  With the vocabulary in place, you can now import your own bibliographic data (Works, Expressions, Manifestations, Agents) via GraphDB's import tools. The data should use the RDA vocabulary URIs defined in the vocabulary files. See the sample files in <code>database/testdata/</code> for examples of the expected RDF structure.
-</p>
-
-
-<!-- 8. ONTOLOGY REQUIREMENTS -->
-<h2>8. Ontology requirements</h2>
+<h3>Ontology requirements</h3>
 
 <p>
   EntEdit expects certain conventions in the ontology to determine which classes and properties to display and how to order them:
@@ -508,12 +428,105 @@ EntEdit/<br>
 </table>
 
 <p>
-  The vocabulary files in <code>database/types/</code> provide a working example of how these predicates are used with the RDA ontology. If you are building your own ontology, use these files as a reference.
+  The vocabulary files provide a working example of how these predicates are used with the RDA ontology. If you are building your own ontology, use them as a reference.
 </p>
 
 
-<!-- 9. DEVELOPMENT SETUP -->
-<h2>9. Development setup</h2>
+<!-- 6. ADDITIONAL REPOSITORIES -->
+<h2 id="additional-repositories">6. Additional repositories</h2>
+
+<p>
+  One GraphDB can hold several repositories, each with its own data. With the Docker installation you can add a repository next to <code>EntEdit</code> — for example to explore one of the example collections — and switch EntEdit between them. Your work in <code>EntEdit</code> is not affected. Everything you need is on GitHub:
+</p>
+
+<table>
+  <tr>
+    <th>What</th>
+    <th>Where on GitHub</th>
+  </tr>
+  <tr>
+    <td>Vocabulary (required)</td>
+    <td><a href="https://github.com/trondaal/EntEdit/tree/main/database/types"><code>database/types/</code></a> — three folders: <code>entedit_profile</code>, <code>rda_vocabulary</code>, <code>term_vocabularies</code></td>
+  </tr>
+  <tr>
+    <td>Search indexes</td>
+    <td><a href="https://github.com/trondaal/EntEdit/tree/main/database/lucene_connectors"><code>database/lucene_connectors/</code></a> — two SPARQL updates</td>
+  </tr>
+  <tr>
+    <td>Example collections</td>
+    <td><a href="https://github.com/trondaal/EntEdit/tree/main/data"><code>data/</code></a> — Ballard, Christie, Golding, Grass, Hamsun, McCarthy, Tolkien and Twain, one Turtle file each</td>
+  </tr>
+</table>
+
+<h3>Creating a repository</h3>
+
+<ol class="steps">
+  <li>Open GraphDB Workbench at <code>http://localhost:7200</code> (or the port you set with <code>GRAPHDB_PORT</code>).</li>
+  <li>Go to <strong>Setup → Repositories → Create new repository → GraphDB Repository</strong>. Give it an ID, for example <code>Hamsun</code>, choose the ruleset <strong>RDFS-Plus (Optimized)</strong>, tick <strong>Disable owl:sameAs</strong>, and click <strong>Create</strong>.</li>
+  <li>Select the new repository in the repository menu at the top right of the Workbench. Imports and queries always go to the selected repository.</li>
+  <li><strong>Vocabulary:</strong> download the project from GitHub (<strong>Code → Download ZIP</strong>) and unpack it. In <strong>Import</strong>, click <strong>Upload RDF files</strong>, select all the files in one of the three folders under <code>database/types/</code>, and import them. Repeat for the other two folders.</li>
+  <li><strong>Collection:</strong> in <strong>Import</strong>, click <strong>Get RDF data from a URL</strong> and paste the file's raw address, for example <code>https://raw.githubusercontent.com/trondaal/EntEdit/main/data/Hamsun.ttl</code>. Several collections can go into the same repository.</li>
+  <li><strong>Search indexes:</strong> open each file in <code>database/lucene_connectors/</code> on GitHub, paste its contents into <strong>SPARQL</strong> in the Workbench and run it. The indexes cover data imported before and after.</li>
+</ol>
+
+<h3>Switching EntEdit to another repository</h3>
+
+<p>
+  The button at the top of EntEdit shows the name of the repository in use. Click it, change the end of the <strong>SPARQL Endpoint URL</strong> to the new repository ID — <code>http://localhost/graphdb/repositories/Hamsun</code> — and click <strong>Save</strong>. Switch back the same way with <code>…/repositories/EntEdit</code>. The graph visualization follows the repository EntEdit is using.
+</p>
+
+<h3>Users and security</h3>
+
+<p>
+  In the Docker installation GraphDB security is off: anyone who can reach the machine's port 80 or 7200 can read, change and delete the data. You can switch it on in the Workbench under <strong>Setup → Users and Access</strong> by toggling <strong>Security</strong>, then log in as <code>admin</code> (default password <code>root</code> — change it straight away). There you can add users and give each one read or write access per repository.
+</p>
+
+<p>
+  EntEdit then needs access too. Either enable <strong>Free access</strong> and give it read and write rights to the repositories EntEdit should use, or enter a username and password under <strong>Username</strong> and <strong>Password</strong> in EntEdit's settings — they are kept only for the browser session.
+</p>
+
+<p>
+  Users who are logged in to the Workbench can also configure the graph visualization, for example which relationships and label languages it shows; their settings are used whenever EntEdit opens the graph.
+</p>
+
+
+<!-- 7. HOSTING GRAPHDB YOURSELF -->
+<h2 id="hosting">7. Hosting GraphDB yourself</h2>
+
+<p>
+  Instead of the Docker installation, EntEdit can use a GraphDB you run yourself — a standalone installation, or a server shared by a class or an organisation. The repository is set up exactly as in <a href="#additional-repositories">section 6</a>: create it with the RDFS-Plus (Optimized) ruleset, import the vocabulary and your data, and run the search index updates, using the Workbench at your server's address. For many repositories at once, for example one per student group, see <a href="https://github.com/trondaal/EntEdit/blob/main/ADVANCED.md#provisioning-many-repositories">Provisioning many repositories</a> in ADVANCED.md.
+</p>
+
+<div class="info-box tip">
+  <strong>Tip:</strong> If you skip the search indexes, the Entity Browser still works — you can browse and edit entities normally. Only the Search tab requires the Lucene connectors.
+</div>
+
+<h3>Connecting EntEdit to the server</h3>
+
+<p>
+  There are two working arrangements, and the choice decides what you have to configure.
+</p>
+
+<p>
+  <strong>GraphDB proxied under the same origin as the app</strong> — for example the app at <code>https://example.org/entedit/</code> and the database at <code>https://example.org/graphdb/repositories/EntEdit</code> — is the better option: no CORS, no port number in the endpoint, and it keeps working when you add HTTPS. Two details need care:
+</p>
+
+<ul>
+  <li>The Workbench serves <code>&lt;base href="/"&gt;</code>, so when it is reached under a sub-path its assets resolve against the site root and fail to load, leaving an unstyled page. Either set <code>graphdb.external-url</code> (plus <code>graphdb.vhosts</code> if GraphDB is reachable at several addresses) on the GraphDB server, or rewrite the tag in the proxy — <code>Substitute</code> in Apache, <code>sub_filter</code> in nginx.</li>
+  <li>Keep the SPARQL path out of that filter. Rewriting the response means disabling upstream compression, which you do not want for query results: match <code>/graphdb/repositories/</code> in its own rule and proxy it untouched.</li>
+</ul>
+
+<p>
+  <strong>GraphDB on its own host or port</strong> needs no proxy configuration at all, as long as CORS is enabled on the GraphDB server. The Workbench then sits at the root of its own origin and the graph visualization works as-is. The only difference is that each user has to choose their repository once in the Workbench, because EntEdit can pre-select it only when both are served from the same origin.
+</p>
+
+<p>
+  On a shared server, switch GraphDB security on and give each user or group access to its own repositories, as described under <a href="#additional-repositories">Users and security</a>.
+</p>
+
+
+<!-- 8. DEVELOPMENT SETUP -->
+<h2 id="development">8. Development setup</h2>
 
 <p>For local development of the EntEdit web application (without Docker for the frontend):</p>
 
@@ -536,6 +549,63 @@ npm run dev</code></pre>
 <div class="info-box tip">
   <strong>Tip:</strong> If you are only developing the frontend, you can start just the GraphDB service with <code>docker compose up graphdb graphdb-init -d</code> and run the web app locally with <code>npm run dev</code>.
 </div>
+
+<h3>Project structure</h3>
+
+<p>The relevant directories in the EntEdit repository:</p>
+
+<div class="file-tree">
+EntEdit/<br>
+├── app/                <span style="color: var(--text-secondary);">← Web application (incl. nginx + proxy config)</span><br>
+├── data/               <span style="color: var(--text-secondary);">← Example collections (not part of the installation)</span><br>
+├── database/<br>
+│   ├── types/          <span style="color: var(--text-secondary);">← Vocabulary files (loaded into GraphDB)</span><br>
+│   ├── testdata/       <span style="color: var(--text-secondary);">← Sample RDF entities (examples graph)</span><br>
+│   └── lucene_connectors/  <span style="color: var(--text-secondary);">← Lucene full-text index definitions</span><br>
+├── docker/<br>
+│   └── graphdb/        <span style="color: var(--text-secondary);">← Repository config + init script</span><br>
+└── docker-compose.yml
+</div>
+
+
+<!-- 9. TROUBLESHOOTING -->
+<h2 id="troubleshooting">9. Troubleshooting</h2>
+
+<h3 id="ports-in-use">Port 80 or 7200 already in use</h3>
+
+<p>
+  If another program on your machine — a web server, IIS, another GraphDB — already uses port 80 or 7200, <code>up</code> fails with <em>"port is already allocated"</em> or <em>"address already in use"</em>. Choose other ports with the variables <code>ENTEDIT_PORT</code> (the web application, default 80) and <code>GRAPHDB_PORT</code> (GraphDB Workbench, default 7200):
+</p>
+
+<pre><code>ENTEDIT_PORT=8080 docker compose -f oci://docker.io/trondaal/entedit-compose:latest up -d</code></pre>
+
+<p>
+  In PowerShell, run <code>$env:ENTEDIT_PORT=8080</code> first and then the command without the variable; in Command Prompt, use <code>set ENTEDIT_PORT=8080</code>. The application is then at <code>http://localhost:8080/entedit/</code> and its endpoint is <code>http://localhost:8080/graphdb/repositories/EntEdit</code> — the port is the only thing that changes. Set the variable every time you run <code>up</code>, otherwise the application moves back to port 80.
+</p>
+
+<h3>EntEdit cannot connect to <code>localhost:7200</code></h3>
+
+<p>
+  GraphDB Workbench lives at <code>http://localhost:7200</code> and is where you administer the database, but it is not the address EntEdit should use as its endpoint. A browser treats port 7200 as a different site — a different <em>origin</em> — from EntEdit itself, and blocks the requests with a CORS error. The address <code>http://localhost/graphdb/...</code> goes through nginx, which forwards the request to GraphDB server-side, so the problem never arises.
+</p>
+
+<h3>No classes or properties appear</h3>
+
+<p>
+  The repository lacks the vocabulary, or part of it. Import all three folders of <code>database/types/</code> into it, as described in <a href="#vocabulary">section 5</a>.
+</p>
+
+<h3>The Search tab finds nothing</h3>
+
+<p>
+  The repository has no search indexes. Run the two updates in <code>database/lucene_connectors/</code> in the Workbench's <strong>SPARQL</strong> view with the repository selected; they index the data that is already there.
+</p>
+
+<h3>The Workbench shows another repository's data</h3>
+
+<p>
+  The Workbench works on the repository selected in its menu at the top right, independently of EntEdit. Select the right one there before importing or querying.
+</p>
 
 
 </div>

@@ -174,31 +174,69 @@
     .container { padding: 1.25rem 1rem 3rem; }
     h2 { font-size: 1.35rem; }
   }
+
+  .toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem 1.75rem;
+    margin-bottom: 1rem;
+  }
+  .toc h2 {
+    font-size: 1rem;
+    margin: 0 0 0.5rem;
+    padding: 0;
+    border: none;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .toc ol { padding-left: 1.25rem; }
+  .toc li { margin-bottom: 0.25rem; }
+  .toc a { color: var(--primary); text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
 
 <div class="page-header">
   <h1>Oppsettguide for database</h1>
-  <p>Slik setter du opp din egen EntEdit-database med GraphDB</p>
+  <p>Slik installerer du EntEdit og setter opp GraphDB-databasen</p>
   <a href="index.html" class="back-link">&larr; Tilbake til katalogiseringsveiledningen</a>
 </div>
 
 <div class="container">
 
+<nav class="toc">
+  <h2>Innhold</h2>
+  <ol>
+    <li><a href="#overview">Oversikt</a></li>
+    <li><a href="#installing">Installere og kjøre EntEdit</a></li>
+    <li><a href="#what-gets-initialized">Hva installasjonen inneholder</a></li>
+    <li><a href="#own-data">Bruke egne data</a></li>
+    <li><a href="#vocabulary">Vokabularet og ontologien</a></li>
+    <li><a href="#additional-repositories">Flere datalagre</a></li>
+    <li><a href="#hosting">Drifte GraphDB selv</a></li>
+    <li><a href="#development">Utviklingsoppsett</a></li>
+    <li><a href="#troubleshooting">Feilsøking</a></li>
+  </ol>
+</nav>
+
 
 <!-- 1. OVERVIEW -->
-<h2>1. Oversikt</h2>
+<h2 id="overview">1. Oversikt</h2>
 
 <p>
-  EntEdit bruker en SPARQL-kompatibel grafdatabase for lagring og spørring av RDF-data. Den anbefalte databasen er <strong>Ontotext GraphDB</strong>, som er inkludert i Docker Compose-oppsettet. Denne guiden forklarer hvordan du setter opp databasen fra bunnen av med Docker, og hvordan du laster inn egne data.
+  EntEdit bruker en SPARQL-kompatibel grafdatabase for lagring og spørring av RDF-data. Den anbefalte databasen er <strong>Ontotext GraphDB</strong>, som er inkludert i Docker-installasjonen. Guiden begynner med å installere og kjøre EntEdit på din egen maskin, og går deretter videre til egne data, flere databaser og drift — fra det grunnleggende til det mer avanserte.
 </p>
 
 <p>Hvis du bare vil prøve EntEdit, kan du hoppe over denne guiden — en skrivebeskyttet nettdemo med bibliografiske eksempeldata er tilgjengelig på <a href="http://entedit.org/?demo">entedit.org/?demo</a>, ingen installasjon nødvendig.</p>
 
 
-<!-- 2. PREREQUISITES -->
-<h2>2. Forutsetninger</h2>
+<!-- 2. INSTALLING -->
+<h2 id="installing">2. Installere og kjøre EntEdit</h2>
+
+<h3>Forutsetninger</h3>
 
 <ul>
   <li><strong>Docker</strong> og <strong>Docker Compose</strong> — installert og kjørende på maskinen din.</li>
@@ -210,11 +248,9 @@
   <strong>Tips:</strong> Docker Desktop (tilgjengelig for Windows, macOS og Linux) inkluderer både Docker og Docker Compose.
 </div>
 
+<h3>Starte EntEdit</h3>
 
-<!-- 3. STARTING WITH DOCKER -->
-<h2>3. Starte Docker-miljøet</h2>
-
-<p>Start hele systemet med én kommando, kjørt fra hvilken som helst katalog:</p>
+<p>Start hele systemet med én kommando som du kjører i et terminalvindu:</p>
 
 <pre><code>docker compose -f oci://docker.io/trondaal/entedit-compose:latest up -d</code></pre>
 
@@ -225,7 +261,6 @@
 <div class="info-box">
   <strong>Merk:</strong> Compose viser variablene prosjektet bruker og spør <em>«Do you want to proceed with these variables? [Y/n]»</em> — trykk Enter. Legg til <code>-y</code> i kommandoen for å hoppe over spørsmålet, noe du vil ha når installasjonen skal skriptes.
 </div>
-
 
 <p>Dette starter tre tjenester:</p>
 
@@ -253,7 +288,7 @@
 </table>
 
 <p>
-  Når du bruker Docker-oppsettet, konfigurer EntEdit med endepunkt-URL-en <code>http://localhost/graphdb/repositories/EntEdit</code>.
+  Åpne <code>http://localhost/entedit/</code> og konfigurer EntEdit med endepunkt-URL-en <code>http://localhost/graphdb/repositories/EntEdit</code>.
 </p>
 
 <div class="info-box">
@@ -261,24 +296,12 @@
 </div>
 
 <p>
-  Første oppstart henter automatisk de ferdigbygde imagene fra Docker Hub — webapplikasjonen fra <a href="https://hub.docker.com/r/trondaal/entedit"><code>trondaal/entedit</code></a>, og vokabularet, eksempeldataene og repositorydefinisjonen fra <a href="https://hub.docker.com/r/trondaal/entedit-init"><code>trondaal/entedit-init</code></a> — så ingen lokal bygging eller Node.js-installasjon er nødvendig.
+  Første oppstart henter automatisk de ferdigbygde imagene fra Docker Hub — webapplikasjonen fra <a href="https://hub.docker.com/r/trondaal/entedit"><code>trondaal/entedit</code></a>, og vokabularet, eksempeldataene og repositorydefinisjonen fra <a href="https://hub.docker.com/r/trondaal/entedit-init"><code>trondaal/entedit-init</code></a> — så ingen lokal bygging eller Node.js-installasjon er nødvendig. GraphDB-data lagres i et Docker-volum og overlever omstarter.
 </p>
 
-<p>
-  GraphDB-data lagres i et Docker-volum og overlever omstarter.
-</p>
-
-<h3>Er port 80 eller 7200 allerede i bruk?</h3>
-
-<p>
-  Hvis et annet program på maskinen din — en webserver, IIS, en annen GraphDB — allerede bruker port 80 eller 7200, feiler <code>up</code> med <em>«port is already allocated»</em> eller <em>«address already in use»</em>. Velg andre porter med variablene <code>ENTEDIT_PORT</code> (webapplikasjonen, standard 80) og <code>GRAPHDB_PORT</code> (GraphDB Workbench, standard 7200):
-</p>
-
-<pre><code>ENTEDIT_PORT=8080 docker compose -f oci://docker.io/trondaal/entedit-compose:latest up -d</code></pre>
-
-<p>
-  I PowerShell kjører du først <code>$env:ENTEDIT_PORT=8080</code> og deretter kommandoen uten variabelen; i Ledetekst (Command Prompt) bruker du <code>set ENTEDIT_PORT=8080</code>. Applikasjonen ligger da på <code>http://localhost:8080/entedit/</code>, og endepunktet er <code>http://localhost:8080/graphdb/repositories/EntEdit</code> — det er bare porten som endres. Sett variabelen hver gang du kjører <code>up</code>, ellers flytter applikasjonen tilbake til port 80.
-</p>
+<div class="info-box warning">
+  <strong>Feiler <code>up</code> med «port is already allocated»?</strong> Et annet program bruker allerede port 80 eller 7200. Se <a href="#ports-in-use">Port 80 eller 7200 er allerede i bruk</a> under Feilsøking.
+</div>
 
 <h3>Stoppe, oppdatere og andre kommandoer</h3>
 
@@ -300,35 +323,8 @@
 docker compose up -d</code></pre>
 
 
-<h3>Hvorfor ikke <code>localhost:7200</code>?</h3>
-
-<p>
-  GraphDB Workbench ligger på <code>http://localhost:7200</code>, og det er der du administrerer databasen, men det er ikke adressen EntEdit skal bruke som endepunkt. Nettleseren regner port 7200 som et annet nettsted — en annen <em>opprinnelse</em> — enn EntEdit selv, og blokkerer forespørslene med en CORS-feil. Adressen <code>http://localhost/graphdb/...</code> går via nginx, som videresender forespørselen til GraphDB på serversiden, og da oppstår ikke problemet.
-</p>
-
-
-<h3>Drifte GraphDB på egen server</h3>
-
-<p>
-  Kjører du EntEdit og GraphDB selv, finnes det to oppsett som fungerer, og valget avgjør hva du må konfigurere.
-</p>
-
-<p>
-  <strong>GraphDB bak samme opprinnelse som applikasjonen</strong> — for eksempel applikasjonen på <code>https://example.org/entedit/</code> og databasen på <code>https://example.org/graphdb/repositories/EntEdit</code> — er det beste valget: ingen CORS, ingen portnummer i endepunktet, og det fortsetter å virke når du tar i bruk HTTPS. To detaljer krever oppmerksomhet:
-</p>
-
-<ul>
-  <li>Workbench leverer <code>&lt;base href="/"&gt;</code>, så når den nås under en sti-prefiks, slår filene den trenger opp mot roten av nettstedet og lastes ikke — resultatet er en side uten utforming. Enten setter du <code>graphdb.external-url</code> (og <code>graphdb.vhosts</code> hvis GraphDB kan nås på flere adresser) på GraphDB-serveren, eller du skriver om taggen i mellomtjeneren — <code>Substitute</code> i Apache, <code>sub_filter</code> i nginx.</li>
-  <li>Hold SPARQL-stien utenfor en slik omskriving. Omskriving krever at komprimering slås av mot bakenforliggende tjener, og det vil du ikke ha for spørreresultater: la <code>/graphdb/repositories/</code> få sin egen regel som sendes videre urørt.</li>
-</ul>
-
-<p>
-  <strong>GraphDB på egen maskin eller port</strong> trenger ingen konfigurasjon av mellomtjener i det hele tatt, så lenge CORS er slått på i GraphDB. Workbench ligger da i roten av sin egen opprinnelse, og grafvisningen virker som den skal. Den eneste forskjellen er at hver bruker må velge repositoryet sitt én gang i Workbench, siden EntEdit bare kan forhåndsvelge det når begge serveres fra samme opprinnelse.
-</p>
-
-
-<!-- 4. WHAT GETS INITIALIZED -->
-<h2>4. Hva som initialiseres</h2>
+<!-- 3. WHAT GETS INITIALIZED -->
+<h2 id="what-gets-initialized">3. Hva installasjonen inneholder</h2>
 
 <p>Initialiseringstjenesten utfører tre faser:</p>
 
@@ -344,80 +340,31 @@ docker compose up -d</code></pre>
 </ol>
 
 
-<!-- 5. REPOSITORY STRUCTURE -->
-<h2>5. Katalogstruktur</h2>
+<!-- 4. USING YOUR OWN DATA -->
+<h2 id="own-data">4. Bruke egne data</h2>
 
-<p>De relevante katalogene i EntEdit-prosjektet:</p>
+<p>
+  Den enkleste måten å laste inn egne RDF-data på, er fra EntEdit selv: klikk <strong>Importer</strong>-knappen i applikasjons-headeren, velg en <code>.ttl</code>-, <code>.nt</code>- eller <code>.rdf</code>-fil, og klikk <strong>Importer</strong>. Importerte tripler legges til i datalageret; eksisterende data erstattes ikke.
+</p>
 
-<div class="file-tree">
-EntEdit/<br>
-├── app/                <span style="color: var(--text-secondary);">← Webapplikasjon (inkl. nginx- og proxy-konfigurasjon)</span><br>
-├── database/<br>
-│   ├── types/          <span style="color: var(--text-secondary);">← Vokabularfiler (lastes inn i GraphDB)</span><br>
-│   ├── testdata/       <span style="color: var(--text-secondary);">← Eksempel-RDF-entiteter (eksempelgraf)</span><br>
-│   └── lucene_connectors/  <span style="color: var(--text-secondary);">← Lucene-fulltekstindeksdefinisjoner</span><br>
-├── docker/<br>
-│   └── graphdb/        <span style="color: var(--text-secondary);">← Datalagerkonfigurasjon + init-skript</span><br>
-└── docker-compose.yml
-</div>
-
-
-<!-- 6. USING YOUR OWN DATA -->
-<h2>6. Bruke egne data</h2>
-
-<h3>Legge til data før første oppstart</h3>
-
-<p>Eksempeldataene er bygget inn i initialiseringsimaget, så filer du legger i <code>database/testdata/</code> blir bare tatt med hvis du kjører fra en klone av prosjektet <em>og</em> monterer katalogen inn i initialiseringstjenesten:</p>
-
-<pre><code>docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d</code></pre>
-
-<p>Legg RDF-filene dine i <code>database/testdata/</code> før første oppstart. Støttede formater:</p>
-
-<ul>
-  <li><code>.ttl</code> — Turtle</li>
-  <li><code>.rdf</code> — RDF/XML</li>
-  <li><code>.nt</code> — N-Triples</li>
-</ul>
-
-<h3>Importere data til en eksisterende database</h3>
-
-<p>Hvis databasen allerede kjører, kan du importere data gjennom GraphDB Workbench:</p>
+<p>Du kan også importere gjennom GraphDB Workbench:</p>
 
 <ol class="steps">
-  <li>Åpne <code>http://localhost:7200</code> i nettleseren din.</li>
-  <li>Gå til <strong>Import → RDF</strong> i sidemenyen til venstre.</li>
-  <li>Last opp RDF-filene dine og importer dem til <code>EntEdit</code>-datalageret.</li>
+  <li>Åpne <code>http://localhost:7200</code> i nettleseren og velg <code>EntEdit</code>-datalageret i datalagermenyen øverst til høyre.</li>
+  <li>Gå til <strong>Import</strong> og klikk <strong>Upload RDF files</strong> — eller <strong>Get RDF data from a URL</strong> for en fil på nettet.</li>
+  <li>Importer filene. Søkeindeksene fanger opp nye data automatisk.</li>
 </ol>
 
-<p>Du kan også importere RDF-filer direkte fra EntEdit-applikasjonen: klikk <strong>Importer</strong>-knappen i applikasjons-headeren, velg en <code>.ttl</code>-, <code>.nt</code>- eller <code>.rdf</code>-fil, og klikk <strong>Importer</strong>. Importerte tripler legges til i datalageret; eksisterende data erstattes ikke.</p>
-
-<div class="info-box warning">
-  <strong>Viktig:</strong> Etter import av nye data kan det være nødvendig å gjenskape Lucene-fulltekstsøkeindeksene for at de nye entitetene skal dukke opp i søkeresultatene. Koblingsdefinisjonene finnes i <code>database/lucene_connectors/</code>.
-</div>
-
-
-<!-- 7. SETTING UP YOUR OWN DATABASE -->
-<h2>7. Sette opp en egen database fra bunnen av</h2>
-
 <p>
-  Hvis du vil bruke EntEdit med din egen GraphDB-instans (utenfor Docker-oppsettet), må du laste inn vokabularfilene og sette opp fulltekstsøkekoblingene. Denne seksjonen dekker de nødvendige minimumsstegene.
+  Dataene bør bruke RDA-vokabularet som er beskrevet i <a href="#vocabulary">seksjon 5</a>; filene i <code>database/testdata/</code> viser forventet struktur. Vil du holde ditt eget arbeid adskilt fra andre data, legger du det i et eget datalager — se <a href="#additional-repositories">Flere datalagre</a>.
 </p>
 
-<h3>Steg 1: Opprett et datalager (repository)</h3>
+
+<!-- 5. VOCABULARY AND ONTOLOGY -->
+<h2 id="vocabulary">5. Vokabularet og ontologien</h2>
 
 <p>
-  I GraphDB Workbench (<code>http://localhost:7200</code>), gå til <strong>Setup → Repositories → Create new repository</strong>. Bruk følgende innstillinger:
-</p>
-<ul>
-  <li><strong>Repository ID:</strong> <code>EntEdit</code> (eller et annet navn du foretrekker)</li>
-  <li><strong>Ruleset:</strong> <code>RDFS-Plus (Optimized)</code></li>
-</ul>
-<p>Alle andre innstillinger kan stå på standardverdiene.</p>
-
-<h3>Steg 2: Importer vokabularfilene</h3>
-
-<p>
-  EntEdit krever at vokabularfilene under <code>database/types/</code> er lastet inn i databasen. Disse definerer klassene, egenskapene, kontrollerte verdier og visningskonfigurasjonen som applikasjonen er avhengig av. Katalogen inneholder tre undermapper:
+  EntEdit henter klassene, egenskapene, de kontrollerte verdiene og visningskonfigurasjonen fra vokabularfilene i <a href="https://github.com/trondaal/EntEdit/tree/main/database/types"><code>database/types/</code></a>. Hvert datalager EntEdit arbeider mot, trenger alle tre mappene:
 </p>
 
 <table>
@@ -439,38 +386,11 @@ EntEdit/<br>
   </tr>
 </table>
 
-<p>Importer alle filer fra disse katalogene via <strong>Import → RDF</strong> i GraphDB Workbench, eller bruk GraphDB REST API.</p>
-
 <div class="info-box warning">
   <strong>Viktig:</strong> Alle tre katalogene må importeres. Uten EntEdit-profilen vil ingen klasser eller egenskaper vises i applikasjonen. Uten RDA-vokabularet vil labels mangle. Uten termvokabularene vil nedtrekkslistene for kontrollerte verdier være tomme.
 </div>
 
-<h3>Steg 3: Sett opp Lucene-koblingene</h3>
-
-<p>
-  Søk-fanen i EntEdit er avhengig av GraphDBs Lucene-kobling for fulltekstsøk. Du må kjøre koblingsdefinisjonsspørringene for å opprette søkeindeksene. Dette er SPARQL UPDATE-setninger som finnes i:
-</p>
-
-<ul>
-  <li><code>database/lucene_connectors/expressions_index.sparql</code> — Oppretter fulltekstindeksen for uttrykkssøk</li>
-  <li><code>database/lucene_connectors/manifestations_index.sparql</code> — Oppretter fulltekstindeksen for manifestasjonssøk</li>
-</ul>
-
-<p>Kjør disse i GraphDB Workbench under <strong>SPARQL → SPARQL Update</strong>, eller via SPARQL-endepunktet. Etter kjøring vil koblingene automatisk indeksere eksisterende data og holde indeksen oppdatert når nye data legges til.</p>
-
-<div class="info-box tip">
-  <strong>Tips:</strong> Hvis du hopper over dette steget, vil entitetleseren fortsatt fungere — du kan bla gjennom og redigere entiteter som normalt. Bare Søk-fanen krever Lucene-koblingene.
-</div>
-
-<h3>Steg 4: Importer bibliografiske data</h3>
-
-<p>
-  Med vokabularet på plass kan du nå importere dine egne bibliografiske data (verk, uttrykk, manifestasjoner, agenter) via GraphDBs importverktøy. Dataene bør bruke RDA-vokabularets URI-er som er definert i vokabularfilene. Se eksempelfilene i <code>database/testdata/</code> for eksempler på forventet RDF-struktur.
-</p>
-
-
-<!-- 8. ONTOLOGY REQUIREMENTS -->
-<h2>8. Ontologikrav</h2>
+<h3>Ontologikrav</h3>
 
 <p>
   EntEdit forventer visse konvensjoner i ontologien for å bestemme hvilke klasser og egenskaper som skal vises, og hvordan de skal sorteres:
@@ -508,12 +428,105 @@ EntEdit/<br>
 </table>
 
 <p>
-  Vokabularfilene i <code>database/types/</code> gir et fungerende eksempel på hvordan disse predikatene brukes med RDA-ontologien. Hvis du bygger din egen ontologi, kan du bruke disse filene som referanse.
+  Vokabularfilene gir et fungerende eksempel på hvordan disse predikatene brukes med RDA-ontologien. Hvis du bygger din egen ontologi, kan du bruke dem som referanse.
 </p>
 
 
-<!-- 9. DEVELOPMENT SETUP -->
-<h2>9. Utviklingsoppsett</h2>
+<!-- 6. ADDITIONAL REPOSITORIES -->
+<h2 id="additional-repositories">6. Flere datalagre</h2>
+
+<p>
+  Én GraphDB kan romme flere datalagre (repositories), hvert med sine egne data. Med Docker-installasjonen kan du legge til et datalager ved siden av <code>EntEdit</code> — for eksempel for å utforske en av eksempelsamlingene — og bytte EntEdit mellom dem. Arbeidet ditt i <code>EntEdit</code> berøres ikke. Alt du trenger, ligger på GitHub:
+</p>
+
+<table>
+  <tr>
+    <th>Hva</th>
+    <th>Hvor på GitHub</th>
+  </tr>
+  <tr>
+    <td>Vokabular (påkrevd)</td>
+    <td><a href="https://github.com/trondaal/EntEdit/tree/main/database/types"><code>database/types/</code></a> — tre mapper: <code>entedit_profile</code>, <code>rda_vocabulary</code>, <code>term_vocabularies</code></td>
+  </tr>
+  <tr>
+    <td>Søkeindekser</td>
+    <td><a href="https://github.com/trondaal/EntEdit/tree/main/database/lucene_connectors"><code>database/lucene_connectors/</code></a> — to SPARQL-oppdateringer</td>
+  </tr>
+  <tr>
+    <td>Eksempelsamlinger</td>
+    <td><a href="https://github.com/trondaal/EntEdit/tree/main/data"><code>data/</code></a> — Ballard, Christie, Golding, Grass, Hamsun, McCarthy, Tolkien og Twain, én Turtle-fil hver</td>
+  </tr>
+</table>
+
+<h3>Opprette et datalager</h3>
+
+<ol class="steps">
+  <li>Åpne GraphDB Workbench på <code>http://localhost:7200</code> (eller porten du har satt med <code>GRAPHDB_PORT</code>).</li>
+  <li>Gå til <strong>Setup → Repositories → Create new repository → GraphDB Repository</strong>. Gi det en ID, for eksempel <code>Hamsun</code>, velg regelsettet <strong>RDFS-Plus (Optimized)</strong>, kryss av for <strong>Disable owl:sameAs</strong>, og klikk <strong>Create</strong>.</li>
+  <li>Velg det nye datalageret i datalagermenyen øverst til høyre i Workbench. Import og spørringer går alltid til det valgte datalageret.</li>
+  <li><strong>Vokabular:</strong> last ned prosjektet fra GitHub (<strong>Code → Download ZIP</strong>) og pakk det ut. Under <strong>Import</strong> klikker du <strong>Upload RDF files</strong>, velger alle filene i én av de tre mappene under <code>database/types/</code> og importerer dem. Gjenta for de to andre mappene.</li>
+  <li><strong>Samling:</strong> under <strong>Import</strong> klikker du <strong>Get RDF data from a URL</strong> og limer inn filens råadresse, for eksempel <code>https://raw.githubusercontent.com/trondaal/EntEdit/main/data/Hamsun.ttl</code>. Flere samlinger kan ligge i samme datalager.</li>
+  <li><strong>Søkeindekser:</strong> åpne hver fil i <code>database/lucene_connectors/</code> på GitHub, lim innholdet inn under <strong>SPARQL</strong> i Workbench og kjør det. Indeksene dekker data som importeres både før og etter.</li>
+</ol>
+
+<h3>Bytte EntEdit til et annet datalager</h3>
+
+<p>
+  Knappen øverst i EntEdit viser navnet på datalageret som er i bruk. Klikk på den, endre slutten av <strong>SPARQL endepunkt-URL</strong> til ID-en for det nye datalageret — <code>http://localhost/graphdb/repositories/Hamsun</code> — og klikk <strong>Lagre</strong>. Bytt tilbake på samme måte med <code>…/repositories/EntEdit</code>. Grafvisningen følger datalageret EntEdit bruker.
+</p>
+
+<h3>Brukere og sikkerhet</h3>
+
+<p>
+  I Docker-installasjonen er sikkerheten i GraphDB slått av: alle som når maskinens port 80 eller 7200, kan lese, endre og slette dataene. Du kan slå den på i Workbench under <strong>Setup → Users and Access</strong> ved å skru på <strong>Security</strong>, og deretter logge inn som <code>admin</code> (standardpassord <code>root</code> — bytt det med en gang). Der kan du legge til brukere og gi hver av dem lese- eller skrivetilgang per datalager.
+</p>
+
+<p>
+  EntEdit trenger da også tilgang. Enten slår du på <strong>Free access</strong> og gir lese- og skriverettigheter til datalagrene EntEdit skal bruke, eller du fyller inn brukernavn og passord under <strong>Brukernavn</strong> og <strong>Passord</strong> i innstillingene i EntEdit — de tas bare vare på så lenge nettleserøkten varer.
+</p>
+
+<p>
+  Brukere som er logget inn i Workbench, kan også sette opp grafvisningen, for eksempel hvilke relasjoner og hvilke språk for labels den viser; innstillingene deres brukes hver gang EntEdit åpner grafen.
+</p>
+
+
+<!-- 7. HOSTING GRAPHDB YOURSELF -->
+<h2 id="hosting">7. Drifte GraphDB selv</h2>
+
+<p>
+  I stedet for Docker-installasjonen kan EntEdit bruke en GraphDB du kjører selv — en frittstående installasjon, eller en server som deles av en klasse eller en organisasjon. Datalageret settes opp akkurat som i <a href="#additional-repositories">seksjon 6</a>: opprett det med regelsettet RDFS-Plus (Optimized), importer vokabularet og dataene dine, og kjør oppdateringene for søkeindeksene, med Workbench på serverens adresse. Skal du opprette mange datalagre på én gang, for eksempel ett per studentgruppe, se <a href="https://github.com/trondaal/EntEdit/blob/main/ADVANCED.md#provisioning-many-repositories">Provisioning many repositories</a> i ADVANCED.md.
+</p>
+
+<div class="info-box tip">
+  <strong>Tips:</strong> Hvis du hopper over søkeindeksene, vil entitetleseren fortsatt fungere — du kan bla gjennom og redigere entiteter som normalt. Bare Søk-fanen krever Lucene-koblingene.
+</div>
+
+<h3>Koble EntEdit til serveren</h3>
+
+<p>
+  Det finnes to oppsett som fungerer, og valget avgjør hva du må konfigurere.
+</p>
+
+<p>
+  <strong>GraphDB bak samme opprinnelse som applikasjonen</strong> — for eksempel applikasjonen på <code>https://example.org/entedit/</code> og databasen på <code>https://example.org/graphdb/repositories/EntEdit</code> — er det beste valget: ingen CORS, ingen portnummer i endepunktet, og det fortsetter å virke når du tar i bruk HTTPS. To detaljer krever oppmerksomhet:
+</p>
+
+<ul>
+  <li>Workbench leverer <code>&lt;base href="/"&gt;</code>, så når den nås under en sti-prefiks, slår filene den trenger opp mot roten av nettstedet og lastes ikke — resultatet er en side uten utforming. Enten setter du <code>graphdb.external-url</code> (og <code>graphdb.vhosts</code> hvis GraphDB kan nås på flere adresser) på GraphDB-serveren, eller du skriver om taggen i mellomtjeneren — <code>Substitute</code> i Apache, <code>sub_filter</code> i nginx.</li>
+  <li>Hold SPARQL-stien utenfor en slik omskriving. Omskriving krever at komprimering slås av mot bakenforliggende tjener, og det vil du ikke ha for spørreresultater: la <code>/graphdb/repositories/</code> få sin egen regel som sendes videre urørt.</li>
+</ul>
+
+<p>
+  <strong>GraphDB på egen maskin eller port</strong> trenger ingen konfigurasjon av mellomtjener i det hele tatt, så lenge CORS er slått på i GraphDB. Workbench ligger da i roten av sin egen opprinnelse, og grafvisningen virker som den skal. Den eneste forskjellen er at hver bruker må velge datalageret sitt én gang i Workbench, siden EntEdit bare kan forhåndsvelge det når begge serveres fra samme opprinnelse.
+</p>
+
+<p>
+  På en delt server bør du slå på sikkerheten i GraphDB og gi hver bruker eller gruppe tilgang til sine egne datalagre, som beskrevet under <a href="#additional-repositories">Brukere og sikkerhet</a>.
+</p>
+
+
+<!-- 8. DEVELOPMENT SETUP -->
+<h2 id="development">8. Utviklingsoppsett</h2>
 
 <p>For lokal utvikling av EntEdit-webapplikasjonen (uten Docker for frontenden):</p>
 
@@ -536,6 +549,63 @@ npm run dev</code></pre>
 <div class="info-box tip">
   <strong>Tips:</strong> Hvis du bare utvikler frontenden, kan du starte kun GraphDB-tjenesten med <code>docker compose up graphdb graphdb-init -d</code> og kjøre webapplikasjonen lokalt med <code>npm run dev</code>.
 </div>
+
+<h3>Prosjektstruktur</h3>
+
+<p>De relevante katalogene i EntEdit-prosjektet:</p>
+
+<div class="file-tree">
+EntEdit/<br>
+├── app/                <span style="color: var(--text-secondary);">← Webapplikasjon (inkl. nginx- og proxy-konfigurasjon)</span><br>
+├── data/               <span style="color: var(--text-secondary);">← Eksempelsamlinger (ikke del av installasjonen)</span><br>
+├── database/<br>
+│   ├── types/          <span style="color: var(--text-secondary);">← Vokabularfiler (lastes inn i GraphDB)</span><br>
+│   ├── testdata/       <span style="color: var(--text-secondary);">← Eksempel-RDF-entiteter (eksempelgraf)</span><br>
+│   └── lucene_connectors/  <span style="color: var(--text-secondary);">← Lucene-fulltekstindeksdefinisjoner</span><br>
+├── docker/<br>
+│   └── graphdb/        <span style="color: var(--text-secondary);">← Datalagerkonfigurasjon + init-skript</span><br>
+└── docker-compose.yml
+</div>
+
+
+<!-- 9. TROUBLESHOOTING -->
+<h2 id="troubleshooting">9. Feilsøking</h2>
+
+<h3 id="ports-in-use">Port 80 eller 7200 er allerede i bruk</h3>
+
+<p>
+  Hvis et annet program på maskinen din — en webserver, IIS, en annen GraphDB — allerede bruker port 80 eller 7200, feiler <code>up</code> med <em>«port is already allocated»</em> eller <em>«address already in use»</em>. Velg andre porter med variablene <code>ENTEDIT_PORT</code> (webapplikasjonen, standard 80) og <code>GRAPHDB_PORT</code> (GraphDB Workbench, standard 7200):
+</p>
+
+<pre><code>ENTEDIT_PORT=8080 docker compose -f oci://docker.io/trondaal/entedit-compose:latest up -d</code></pre>
+
+<p>
+  I PowerShell kjører du først <code>$env:ENTEDIT_PORT=8080</code> og deretter kommandoen uten variabelen; i Ledetekst (Command Prompt) bruker du <code>set ENTEDIT_PORT=8080</code>. Applikasjonen ligger da på <code>http://localhost:8080/entedit/</code>, og endepunktet er <code>http://localhost:8080/graphdb/repositories/EntEdit</code> — det er bare porten som endres. Sett variabelen hver gang du kjører <code>up</code>, ellers flytter applikasjonen tilbake til port 80.
+</p>
+
+<h3>EntEdit får ikke kontakt med <code>localhost:7200</code></h3>
+
+<p>
+  GraphDB Workbench ligger på <code>http://localhost:7200</code>, og det er der du administrerer databasen, men det er ikke adressen EntEdit skal bruke som endepunkt. Nettleseren regner port 7200 som et annet nettsted — en annen <em>opprinnelse</em> — enn EntEdit selv, og blokkerer forespørslene med en CORS-feil. Adressen <code>http://localhost/graphdb/...</code> går via nginx, som videresender forespørselen til GraphDB på serversiden, og da oppstår ikke problemet.
+</p>
+
+<h3>Ingen klasser eller egenskaper vises</h3>
+
+<p>
+  Datalageret mangler vokabularet, eller deler av det. Importer alle tre mappene i <code>database/types/</code>, som beskrevet i <a href="#vocabulary">seksjon 5</a>.
+</p>
+
+<h3>Søk-fanen finner ingenting</h3>
+
+<p>
+  Datalageret har ingen søkeindekser. Kjør de to oppdateringene i <code>database/lucene_connectors/</code> under <strong>SPARQL</strong> i Workbench med datalageret valgt; de indekserer dataene som allerede ligger der.
+</p>
+
+<h3>Workbench viser data fra et annet datalager</h3>
+
+<p>
+  Workbench arbeider mot datalageret som er valgt i menyen øverst til høyre, uavhengig av EntEdit. Velg riktig datalager der før du importerer eller kjører spørringer.
+</p>
 
 
 </div>

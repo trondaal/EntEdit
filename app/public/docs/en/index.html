@@ -412,6 +412,7 @@
                     </li>
                     <li><a href="#exercises">Practice exercises</a></li>
                     <li><a href="#key-concepts">Key concepts reference</a></li>
+                    <li><a href="#databases">Creating and configuring databases</a></li>
                 </ol>
             </nav>
 
@@ -2480,6 +2481,40 @@
                 borderline cases. The important thing is to be consistent and to
                 think carefully about what aspect of the resource you are
                 describing at each level.
+            </div>
+
+            <!-- 11. DATABASES -->
+            <h2 id="databases">11. Creating and configuring databases</h2>
+
+            <p>
+                Everything you catalogue in EntEdit is stored in a GraphDB
+                <em>repository</em> — with the standard installation, the
+                repository <code>EntEdit</code>. One GraphDB can hold several
+                repositories, and EntEdit can be switched between them: you
+                can, for example, explore one of the example collections by
+                Hamsun, Grass or Golding in a repository of its own, while
+                your own work stays untouched in <code>EntEdit</code>.
+            </p>
+
+            <p>
+                The <a href="setup.html">Database Setup Guide</a> explains,
+                from the basics to the more advanced:
+            </p>
+
+            <ul>
+                <li><a href="setup.html#installing">Installing and running EntEdit</a> — starting, stopping and updating the Docker installation</li>
+                <li><a href="setup.html#own-data">Using your own data</a> — importing RDF files</li>
+                <li><a href="setup.html#vocabulary">The vocabulary and ontology</a> — what EntEdit needs in every repository</li>
+                <li><a href="setup.html#additional-repositories">Additional repositories</a> — creating a repository, loading an example collection, switching EntEdit to it, and switching on users and security</li>
+                <li><a href="setup.html#hosting">Hosting GraphDB yourself</a> — using EntEdit with a GraphDB on your own server</li>
+                <li><a href="setup.html#troubleshooting">Troubleshooting</a> — ports in use, connection problems, empty menus or search results</li>
+            </ul>
+
+            <div class="info-box tip">
+                <strong>Tip:</strong> The button at the top of EntEdit shows
+                the name of the repository in use. Click it to change the
+                SPARQL endpoint, and so the repository, that EntEdit works
+                with.
             </div>
         </div>
     </body>

@@ -89,6 +89,12 @@ docker compose -f oci://docker.io/trondaal/entedit-compose:latest logs -f  # ins
 
 Your data lives in a Docker volume and survives stops, restarts and updates.
 
+**More repositories.** To explore the example collections in `data/`, or to keep
+separate projects apart, add repositories next to `EntEdit` and switch the app
+between them — see
+[*Additional repositories*](http://entedit.org/docs/en/setup.html#additional-repositories)
+in the Database Setup Guide.
+
 > If your version of Docker Compose does not understand `oci://`, download the
 > single Compose file into a folder of its own and run the commands there without
 > the `-f oci://...` part:
@@ -108,7 +114,7 @@ use. Check what you have with `node --version`.
 the vocabulary files from `database/types/`, and create the Lucene full-text
 indexes by running the SPARQL queries in `database/lucene_connectors/`. The
 **[Database Setup Guide](http://entedit.org/docs/en/setup.html)** walks through
-each step under *Setting up your own database from scratch*.
+each step under *Additional repositories* and *Hosting GraphDB yourself*.
 
 **3. Build and run the app:**
 
@@ -152,8 +158,9 @@ which is handy for handing a class a single link.
 
 - **[Cataloguing Guide](http://entedit.org/docs/en/index.html)** — the WEMI model,
   worked examples and exercises
-- **[Database Setup Guide](http://entedit.org/docs/en/setup.html)** — loading your
-  own data, setting up a database from scratch, ontology requirements
+- **[Database Setup Guide](http://entedit.org/docs/en/setup.html)** — installing
+  and running EntEdit, your own data, the vocabulary, additional repositories and
+  the example collections, hosting GraphDB yourself, troubleshooting
 
 Both are also served by your own installation, under `/entedit/docs/`, and are
 available in Norwegian.
