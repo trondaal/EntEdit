@@ -5825,7 +5825,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/6036159477877227990007/exp/ger/1020> ;
-    rdamo:P30267 <http://example.org/margullgfritze> ;
+    rdamo:P30267 <http://viaf.org/viaf/32908404> ;
     rdaxd:P00018 "isbn-3865210511" .
 
 <http://example.org/isbn-3865210554> a rdac:C10007 ;
@@ -12663,7 +12663,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/6036159477877227990007/exp/ger/1014/1020> ;
-    rdamo:P30267 <http://example.org/margullgfritze> ;
+    rdamo:P30267 <http://viaf.org/viaf/32908404> ;
     rdaxd:P00018 "IAN-9783865210517",
         "NN-023520",
         "isbn-3865210511",
@@ -14715,7 +14715,7 @@
     rdamo:P30001 rdact:1018 ;
     rdamo:P30002 rdamt:1003 ;
     rdamo:P30139 <http://viaf.org/viaf/205890609/exp/ger/1020> ;
-    rdamo:P30267 <http://example.org/mayeriswandyclaudia> ;
+    rdamo:P30267 <http://viaf.org/viaf/2528907> ;
     rdaxd:P00018 "IAN-9783958290846",
         "NN-101120150718230",
         "isbn-9783958290846" .
@@ -16020,17 +16020,17 @@
     rdaad:P50413 "Błaut, Sławomir" ;
     rdaxd:P00018 "http://viaf.org/viaf/101753901" .
 
-<http://example.org/beltzbettina> a rdac:C10004 ;
+<http://viaf.org/viaf/305043342> a rdac:C10004 ;
     rdfs:label "Beltz, Bettina" ;
     rdaad:P50413 "Beltz, Bettina" ;
-    rdaxd:P00018 "http://example.org/beltzbettina" .
+    rdaxd:P00018 "http://viaf.org/viaf/305043342" .
 
 <http://example.org/beltzbettina/fortsetzungfolgt> a rdac:C10001 ;
     rdfs:label "«Fortsetzung folgt...» / Bettina Beltz"@en,
         "«Fortsetzung folgt...» / Bettina Beltz"@no ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
     rdawd:P10223 "«Fortsetzung folgt...»" ;
-    rdawo:P10061 <http://example.org/beltzbettina> ;
+    rdawo:P10061 <http://viaf.org/viaf/305043342> ;
     rdawo:P10257 <http://example.org/irvingjohn/asonofthecircus>,
         <http://example.org/rushdiesalman/midnightschildren>,
         <http://example.org/sternelaurence/thelifeandopinionsoftristramshandy>,
@@ -16243,11 +16243,11 @@
     rdaad:P50413 "Cai, Hongjun" ;
     rdaxd:P00018 "http://viaf.org/viaf/162876300" .
 
-<http://example.org/carrirejeanclaude> a rdac:C10004 ;
+<http://viaf.org/viaf/36915864> a rdac:C10004 ;
     rdfs:label "Carrière, Jean-Claude (1931-)" ;
     rdaad:P50339 "1931-" ;
     rdaad:P50413 "Carrière, Jean-Claude" ;
-    rdaxd:P00018 "http://example.org/carrirejeanclaude" .
+    rdaxd:P00018 "http://viaf.org/viaf/36915864" .
 
 <http://example.org/castrolidiade> a rdac:C10004 ;
     rdfs:label "Castro, Lidia de" ;
@@ -16602,16 +16602,12 @@
     rdaad:P50413 "Fraenkel, Charlotte Elisabeth" ;
     rdaxd:P00018 "http://viaf.org/viaf/998632" .
 
-<http://example.org/freijlars> a rdac:C10004 ;
-    rdfs:label "Freij, Lars" ;
-    rdaad:P50413 "Freij, Lars" ;
-    rdaxd:P00018 "http://example.org/freijlars" .
-
-<http://example.org/freijlarsw> a rdac:C10004 ;
+<http://viaf.org/viaf/30061688> a rdac:C10004 ;
     rdfs:label "Freij, Lars W. (1937-)" ;
     rdaad:P50339 "1937-" ;
     rdaad:P50413 "Freij, Lars W." ;
-    rdaxd:P00018 "http://example.org/freijlarsw" .
+    rdaad:P50415 "Freij, Lars" ;
+    rdaxd:P00018 "http://viaf.org/viaf/30061688" .
 
 <http://example.org/friesfritzrudolf/dienonnenvonbratislava> a rdac:C10001 ;
     rdfs:label "Die Nonnen von Bratislava"@en,
@@ -17535,17 +17531,17 @@
     rdaad:P50413 "Lorenzen, Claus" ;
     rdaxd:P00018 "http://example.org/lorenzenclaus" .
 
-<http://example.org/loroublerichard> a rdac:C10004 ;
+<http://viaf.org/viaf/42784737> a rdac:C10004 ;
     rdfs:label "Lorou, Blé Richard" ;
     rdaad:P50413 "Lorou, Blé Richard" ;
-    rdaxd:P00018 "http://example.org/loroublerichard" .
+    rdaxd:P00018 "http://viaf.org/viaf/42784737" .
 
 <http://example.org/loroublerichard/erinnerungentstehtaufneueweise> a rdac:C10001 ;
     rdfs:label "\"Erinnerung entsteht auf neue Weise\" / Blé Richard Lorou"@en,
         "\"Erinnerung entsteht auf neue Weise\" / Blé Richard Lorou"@no ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
     rdawd:P10223 "\"Erinnerung entsteht auf neue Weise\"" ;
-    rdawo:P10061 <http://example.org/loroublerichard> ;
+    rdawo:P10061 <http://viaf.org/viaf/42784737> ;
     rdawo:P10257 <http://example.org/burmeisterbrigitte/unterdemnamennorma>,
         <http://example.org/loesterich/nikolaikirche>,
         <http://www.wikidata.org/entity/Q1254354> ;
@@ -17584,22 +17580,22 @@
     rdaad:P50413 "Maria" ;
     rdaxd:P00018 "http://example.org/maria" .
 
-<http://example.org/mayeriswandyclaudia> a rdac:C10004 ;
+<http://viaf.org/viaf/2528907> a rdac:C10004 ;
     rdfs:label "Mayer-Iswandy, Claudia" ;
     rdaad:P50413 "Mayer-Iswandy, Claudia" ;
-    rdaxd:P00018 "http://example.org/mayeriswandyclaudia" .
+    rdaxd:P00018 "http://viaf.org/viaf/2528907" .
 
-<http://example.org/mazurekalice> a rdac:C10004 ;
+<http://viaf.org/viaf/184580214> a rdac:C10004 ;
     rdfs:label "Mazurek, Alice" ;
     rdaad:P50413 "Mazurek, Alice" ;
-    rdaxd:P00018 "http://example.org/mazurekalice" .
+    rdaxd:P00018 "http://viaf.org/viaf/184580214" .
 
 <http://example.org/mazurekalice/dieerinnerungliebtdasversteckspielderkinder> a rdac:C10001 ;
     rdfs:label "\"Die Erinnerung liebt das Versteckspiel der Kinder\" / Alice Mazurek"@en,
         "\"Die Erinnerung liebt das Versteckspiel der Kinder\" / Alice Mazurek"@no ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
     rdawd:P10223 "\"Die Erinnerung liebt das Versteckspiel der Kinder\"" ;
-    rdawo:P10061 <http://example.org/mazurekalice> ;
+    rdawo:P10061 <http://viaf.org/viaf/184580214> ;
     rdawo:P10257 <http://www.wikidata.org/entity/Q814761> ;
     rdaxd:P00018 "http://example.org/mazurekalice/dieerinnerungliebtdasversteckspielderkinder" .
 
@@ -17662,18 +17658,18 @@
     rdawd:P10223 "Leben und Abenteuer der Trobadora Beatriz nach Zeugnissen ihrer Spielfrau Laura" ;
     rdaxd:P00018 "http://example.org/morgnerirmtraud/lebenundabenteuerdertrobadorabeatriznachzeugnissenihrerspielfraulaura" .
 
-<http://example.org/mosersabine> a rdac:C10004 ;
+<http://viaf.org/viaf/7571019> a rdac:C10004 ;
     rdfs:label "Moser, Sabine (19XX-)" ;
     rdaad:P50339 "19XX-" ;
     rdaad:P50413 "Moser, Sabine" ;
-    rdaxd:P00018 "http://example.org/mosersabine" .
+    rdaxd:P00018 "http://viaf.org/viaf/7571019" .
 
 <http://example.org/mosersabine/diesesvolkunterdemeszuleidengalt> a rdac:C10001 ;
     rdfs:label "\"Dieses Volk, unter dem es zu leiden galt\" / Sabine Moser"@en,
         "\"Dieses Volk, unter dem es zu leiden galt\" / Sabine Moser"@no ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
     rdawd:P10223 "\"Dieses Volk, unter dem es zu leiden galt\"" ;
-    rdawo:P10061 <http://example.org/mosersabine> ;
+    rdawo:P10061 <http://viaf.org/viaf/7571019> ;
     rdawo:P10257 <http://viaf.org/viaf/185469169>,
         <http://viaf.org/viaf/198560112>,
         <http://viaf.org/viaf/214003685>,
@@ -18060,10 +18056,11 @@
     rdawo:P10257 <http://viaf.org/viaf/179378125> ;
     rdaxd:P00018 "http://example.org/rahnerthomas/dieblechtrommelguntergrass" .
 
-<http://example.org/ralphmanheim> a rdac:C10004 ;
-    rdfs:label "Manheim, Ralph" ;
+<http://viaf.org/viaf/9864901> a rdac:C10004 ;
+    rdfs:label "Manheim, Ralph (1907-1992)" ;
+    rdaad:P50339 "1907-1992" ;
     rdaad:P50413 "Manheim, Ralph" ;
-    rdaxd:P00018 "http://example.org/ralphmanheim" .
+    rdaxd:P00018 "http://viaf.org/viaf/9864901" .
 
 <http://viaf.org/viaf/46897170> a rdac:C10004 ;
     rdfs:label "Rilke, Rainer Maria (1875-1926)" ;
@@ -18395,18 +18392,18 @@
     rdaad:P50413 "Schulze, Ingo" ;
     rdaxd:P00018 "http://example.org/schulzeingo" .
 
-<http://example.org/schwartzekohlerhannelore> a rdac:C10004 ;
+<http://viaf.org/viaf/90879057> a rdac:C10004 ;
     rdfs:label "Schwartze-Köhler, Hannelore (1933-)" ;
     rdaad:P50339 "1933-" ;
     rdaad:P50413 "Schwartze-Köhler, Hannelore" ;
-    rdaxd:P00018 "http://example.org/schwartzekohlerhannelore" .
+    rdaxd:P00018 "http://viaf.org/viaf/90879057" .
 
 <http://example.org/schwartzekohlerhannelore/dieblechtrommelvonguntergrassbedeutungerzahltechnikundzeitgeschichte> a rdac:C10001 ;
     rdfs:label "\"Die Blechtrommel\" von Günter Grass: Bedeutung, Erzähltechnik und Zeitgeschichte / Hannelore Schwartze-Köhler"@en,
         "\"Die Blechtrommel\" von Günter Grass: Bedeutung, Erzähltechnik und Zeitgeschichte / Hannelore Schwartze-Köhler"@no ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
     rdawd:P10223 "\"Die Blechtrommel\" von Günter Grass: Bedeutung, Erzähltechnik und Zeitgeschichte" ;
-    rdawo:P10061 <http://example.org/schwartzekohlerhannelore> ;
+    rdawo:P10061 <http://viaf.org/viaf/90879057> ;
     rdawo:P10257 <http://viaf.org/viaf/179378125> ;
     rdaxd:P00018 "http://example.org/schwartzekohlerhannelore/dieblechtrommelvonguntergrassbedeutungerzahltechnikundzeitgeschichte" .
 
@@ -18425,11 +18422,11 @@
     rdaad:P50413 "Sebald, W. G." ;
     rdaxd:P00018 "http://viaf.org/viaf/7399859" .
 
-<http://example.org/seccilia> a rdac:C10004 ;
+<http://viaf.org/viaf/22169127> a rdac:C10004 ;
     rdfs:label "Secci, Lia (1933-)" ;
     rdaad:P50339 "1933-" ;
     rdaad:P50413 "Secci, Lia" ;
-    rdaxd:P00018 "http://example.org/seccilia" .
+    rdaxd:P00018 "http://viaf.org/viaf/22169127" .
 
 <http://viaf.org/viaf/50038679> a rdac:C10004 ;
     rdfs:label "Sekal, Zbyněk (1923-1998)" ;
@@ -18518,11 +18515,11 @@
     rdawo:P10257 <http://viaf.org/viaf/174963765> ;
     rdaxd:P00018 "http://example.org/spreckelsenwolfgang/guntergrasskatzundmaus" .
 
-<http://example.org/spycherpeter> a rdac:C10004 ;
+<http://viaf.org/viaf/110934176> a rdac:C10004 ;
     rdfs:label "Spycher, Peter (1921-)" ;
     rdaad:P50339 "1921-" ;
     rdaad:P50413 "Spycher, Peter" ;
-    rdaxd:P00018 "http://example.org/spycherpeter" .
+    rdaxd:P00018 "http://viaf.org/viaf/110934176" .
 
 <http://viaf.org/viaf/30326559> a rdac:C10004 ;
     rdfs:label "Stamać, Truda (1942-)" ;
@@ -19084,7 +19081,7 @@
         "Über das Selbstverständliche. Reden – Aufsätze – Offene Briefe – Kommentare" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20037 <http://example.org/ralphmanheim> ;
+    rdaeo:P20037 <http://viaf.org/viaf/9864901> ;
     rdaeo:P20231 <http://viaf.org/viaf/1656145424679886830470> .
 
 <http://viaf.org/viaf/1656145424679886830470/exp/fre/1020/amslerjean/coustinelucde> a rdac:C10006 ;
@@ -19633,13 +19630,13 @@
     rdaeo:P20231 <http://viaf.org/viaf/185469169> .
 
 <http://viaf.org/viaf/185469169/exp/swe/1020/freijlars> a rdac:C10006 ;
-    rdfs:label "Hundår : Roman / Günter Grass ; translated by Lars Freij. – Swedish"@en,
-        "Hundår : Roman / Günter Grass ; oversatt av Lars Freij. – Svensk"@no ;
+    rdfs:label "Hundår : Roman / Günter Grass ; translated by Lars W. Freij. – Swedish"@en,
+        "Hundår : Roman / Günter Grass ; oversatt av Lars W. Freij. – Svensk"@no ;
     rdaed:P20315 "Hundår : Roman" ;
     rdaed:P20316 "Hundejahre" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/swe> ;
-    rdaeo:P20037 <http://example.org/freijlars> ;
+    rdaeo:P20037 <http://viaf.org/viaf/30061688> ;
     rdaeo:P20231 <http://viaf.org/viaf/185469169> .
 
 <http://viaf.org/viaf/185469169/exp/swe/1020/freijlarsw> a rdac:C10006 ;
@@ -19649,7 +19646,7 @@
     rdaed:P20316 "Hundejahre" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/swe> ;
-    rdaeo:P20037 <http://example.org/freijlarsw> ;
+    rdaeo:P20037 <http://viaf.org/viaf/30061688> ;
     rdaeo:P20231 <http://viaf.org/viaf/185469169> .
 
 <http://viaf.org/viaf/189370814/exp/dan/1020/berthelsenleifg> a rdac:C10006 ;
@@ -21054,10 +21051,10 @@
     rdaeo:P20001 rdaco:1023 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger>,
         <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20012 <http://example.org/adorfmario>,
+    rdaeo:P20012 <http://viaf.org/viaf/84954675>,
         <http://example.org/aznavourcharles>,
         <http://viaf.org/viaf/49431755>,
-        <http://example.org/winklerangela> ;
+        <http://viaf.org/viaf/79197653> ;
     rdaeo:P20231 <https://www.imdb.com/title/tt0078875> .
 
 <https://www.imdb.com/title/tt0420289> a rdac:C10001 ;
@@ -21084,11 +21081,11 @@
         <http://id.loc.gov/vocabulary/iso639-2/mul> ;
     rdaeo:P20231 <https://www.imdb.com/title/tt0420289> .
 
-<http://example.org/adorfmario> a rdac:C10004 ;
+<http://viaf.org/viaf/84954675> a rdac:C10004 ;
     rdfs:label "Adorf, Mario (1930-)" ;
     rdaad:P50339 "1930-" ;
     rdaad:P50413 "Adorf, Mario" ;
-    rdaxd:P00018 "http://example.org/adorfmario" .
+    rdaxd:P00018 "http://viaf.org/viaf/84954675" .
 
 <http://example.org/arkerdieter/nichtsistvorbeialleskommtwieder/exp/ger/1020> a rdac:C10006 ;
     rdfs:label "Nichts ist vorbei, alles kommt wieder : Untersuchungen zu Günter Grass' ''Blechtrommel'' / Dieter Arker. – German"@en,
@@ -21199,11 +21196,12 @@
     rdaad:P50413 "Lohner, Edgar" ;
     rdaxd:P00018 "http://viaf.org/viaf/261487257" .
 
-<http://example.org/margullgfritze> a rdac:C10004 ;
-    rdfs:label "Margull, G. Fritze (1945-)" ;
+<http://viaf.org/viaf/32908404> a rdac:C10004 ;
+    rdfs:label "Margull, Fritze (1945-)" ;
     rdaad:P50339 "1945-" ;
-    rdaad:P50413 "Margull, G. Fritze" ;
-    rdaxd:P00018 "http://example.org/margullgfritze" .
+    rdaad:P50413 "Margull, Fritze" ;
+    rdaad:P50415 "Margull, G. Fritze" ;
+    rdaxd:P00018 "http://viaf.org/viaf/32908404" .
 
 <http://example.org/mazurekalice/dieerinnerungliebtdasversteckspielderkinder/exp/ger/1020> a rdac:C10006 ;
     rdfs:label "\"Die Erinnerung liebt das Versteckspiel der Kinder\" : Der Erinnerungsprozess in Günter Grass' \"Beim Häuten der Zwiebel\" / Alice Mazurek. – German"@en,
@@ -21325,11 +21323,11 @@
     rdawd:P10223 "Bruchstücke" ;
     rdaxd:P00018 "http://example.org/wilkomirskibinjamin/bruchstucke" .
 
-<http://example.org/winklerangela> a rdac:C10004 ;
+<http://viaf.org/viaf/79197653> a rdac:C10004 ;
     rdfs:label "Winkler, Angela (1944-)" ;
     rdaad:P50339 "1944-" ;
     rdaad:P50413 "Winkler, Angela" ;
-    rdaxd:P00018 "http://example.org/winklerangela" .
+    rdaxd:P00018 "http://viaf.org/viaf/79197653" .
 
 <http://example.org/wittenburgsiegfried> a rdac:C10004 ;
     rdfs:label "Wittenburg, Siegfried" ;
@@ -21727,7 +21725,7 @@
         "Die bösen Köche / Günter Grass og Peter Spycher"@no ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
     rdawd:P10223 "Die bösen Köche" ;
-    rdawo:P10061 <http://example.org/spycherpeter>,
+    rdawo:P10061 <http://viaf.org/viaf/110934176>,
         <http://viaf.org/viaf/102319859> ;
     rdaxd:P00018 "http://viaf.org/viaf/474145858185123022532" .
 
@@ -21853,7 +21851,7 @@
     rdawo:P10066 <http://viaf.org/viaf/84161106> ;
     rdawo:P10068 <http://viaf.org/viaf/85930082> ;
     rdawo:P10129 <http://viaf.org/viaf/179378125> ;
-    rdawo:P10203 <http://example.org/carrirejeanclaude>,
+    rdawo:P10203 <http://viaf.org/viaf/36915864>,
         <http://viaf.org/viaf/84161106>,
         <http://viaf.org/viaf/42048389> ;
     rdaxd:P00018 "https://www.imdb.com/title/tt0078875/" .
@@ -21877,12 +21875,6 @@
         "Weiter leben"@no ;
     rdawd:P10223 "Weiter leben" ;
     rdaxd:P00018 "http://example.org/klugerruth/weiterleben" .
-
-<http://viaf.org/viaf/32908404> a rdac:C10004 ;
-    rdfs:label "Margull, Fritze (1945-)" ;
-    rdaad:P50339 "1945-" ;
-    rdaad:P50413 "Margull, Fritze" ;
-    rdaxd:P00018 "http://viaf.org/viaf/32908404" .
 
 <http://example.org/mollerclaas> a rdac:C10004 ;
     rdfs:label "Möller, Claas" ;
@@ -22037,7 +22029,7 @@
         "Il tamburo di latta : Romanzo" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ita> ;
-    rdaeo:P20037 <http://example.org/seccilia> ;
+    rdaeo:P20037 <http://viaf.org/viaf/22169127> ;
     rdaeo:P20231 <http://viaf.org/viaf/179378125> .
 
 <http://viaf.org/viaf/179378125/exp/spa/1020/30910939/moritzjoaqun> a rdac:C10006 ;
@@ -22242,9 +22234,9 @@
     rdaeo:P20001 rdaco:1023 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/mul>,
         <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20012 <http://example.org/adorfmario>,
+    rdaeo:P20012 <http://viaf.org/viaf/84954675>,
         <http://viaf.org/viaf/49431755>,
-        <http://example.org/winklerangela> ;
+        <http://viaf.org/viaf/79197653> ;
     rdaeo:P20231 <https://www.imdb.com/title/tt0078875> .
 
 <http://viaf.org/viaf/91339874> a rdac:C10004 ;
@@ -22913,12 +22905,6 @@
     rdawd:P10086 "Kopfgeburten" ;
     rdawo:P10061 <http://viaf.org/viaf/102319859> ;
     rdaxd:P00018 "http://viaf.org/viaf/210967285" .
-
-<http://viaf.org/viaf/9864901> a rdac:C10004 ;
-    rdfs:label "Manheim, Ralph (1907-1992)" ;
-    rdaad:P50339 "1907-1992" ;
-    rdaad:P50413 "Manheim, Ralph" ;
-    rdaxd:P00018 "http://viaf.org/viaf/9864901" .
 
 <http://www.wikidata.org/entity/Q765047/exp/ger/1020> a rdac:C10006 ;
     rdfs:label "Die Rättin / Günter Grass. – German"@en,

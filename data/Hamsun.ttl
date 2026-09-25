@@ -5024,7 +5024,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/183478381/exp/nob/1020> ;
-    rdamo:P30328 <http://example.org/griegharald> .
+    rdamo:P30328 <http://viaf.org/viaf/12487683> .
 
 <http://example.org/999416956974702201> a rdac:C10007 ;
     rdfs:label "Børn av tiden / Knut Hamsun. – Gyldendal, 1931" ;
@@ -5093,7 +5093,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/194765531/exp/nob/1020> ;
-    rdamo:P30321 <http://example.org/gullvghkon> .
+    rdamo:P30321 <http://viaf.org/viaf/18287912> .
 
 <http://example.org/999425689074702201> a rdac:C10007 ;
     rdfs:label "Segelfoss By. – Gyldendalske Boghandel, Nordisk Forl, 1915" ;
@@ -9030,7 +9030,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/194765531/exp/fre/1020/boyerregis> ;
-    rdamo:P30321 <http://example.org/gullvghkon> ;
+    rdamo:P30321 <http://viaf.org/viaf/18287912> ;
     rdaxd:P00018 "isbn-2702123805" .
 
 <http://example.org/isbn-2702123937> a rdac:C10007 ;
@@ -12078,7 +12078,7 @@
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30069 <http://example.org/engelsenjanniche> ;
     rdamo:P30139 <http://viaf.org/viaf/194765531/exp/ger/1020> ;
-    rdamo:P30321 <http://example.org/gullvaghakon> ;
+    rdamo:P30321 <http://viaf.org/viaf/18287912> ;
     rdaxd:P00018 "NN-010478",
         "isbn-8252525644" .
 
@@ -16162,7 +16162,7 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/194765531/exp/nob/1020> ;
-    rdamo:P30321 <http://example.org/gullvghkon> ;
+    rdamo:P30321 <http://viaf.org/viaf/18287912> ;
     rdaxd:P00018 "isbn-9788252566208" .
 
 <http://example.org/isbn-9788252571103> a rdac:C10007 ;
@@ -16581,10 +16581,10 @@
     rdaad:P50413 "Claramunda Bes, José María" ;
     rdaxd:P00018 "http://viaf.org/viaf/37933667" .
 
-<http://example.org/costamontserrat> a rdac:C10004 ;
+<http://viaf.org/viaf/86764049> a rdac:C10004 ;
     rdfs:label "Costa, Montserrat" ;
     rdaad:P50413 "Costa, Montserrat" ;
-    rdaxd:P00018 "http://example.org/costamontserrat" .
+    rdaxd:P00018 "http://viaf.org/viaf/86764049" .
 
 <http://example.org/cubehellmutvon> a rdac:C10004 ;
     rdfs:label "Cube, Hellmut von" ;
@@ -16700,10 +16700,10 @@
     rdaad:P50413 "Geddes, Tom" ;
     rdaxd:P00018 "http://viaf.org/viaf/64172097" .
 
-<http://example.org/goebelheinrich> a rdac:C10004 ;
+<http://viaf.org/viaf/67349916> a rdac:C10004 ;
     rdfs:label "Goebel, Heinrich" ;
     rdaad:P50413 "Goebel, Heinrich" ;
-    rdaxd:P00018 "http://example.org/goebelheinrich" .
+    rdaxd:P00018 "http://viaf.org/viaf/67349916" .
 
 <http://example.org/gossg> a rdac:C10004 ;
     rdfs:label "Gossé, G." ;
@@ -16716,17 +16716,17 @@
     rdaad:P50413 "Gossé, L." ;
     rdaxd:P00018 "http://viaf.org/viaf/86550258" .
 
-<http://example.org/grblsofie> a rdac:C10004 ;
+<http://viaf.org/viaf/12515725> a rdac:C10004 ;
     rdfs:label "Gråbøl, Sofie (1968-)" ;
     rdaad:P50339 "1968-" ;
     rdaad:P50413 "Gråbøl, Sofie" ;
-    rdaxd:P00018 "http://example.org/grblsofie" .
+    rdaxd:P00018 "http://viaf.org/viaf/12515725" .
 
-<http://example.org/griegharald> a rdac:C10004 ;
-    rdfs:label "Grieg, Harald (1895-1972)" ;
-    rdaad:P50339 "1895-1972" ;
+<http://viaf.org/viaf/12487683> a rdac:C10004 ;
+    rdfs:label "Grieg, Harald (1894-1972)" ;
+    rdaad:P50339 "1894-1972" ;
     rdaad:P50413 "Grieg, Harald" ;
-    rdaxd:P00018 "http://example.org/griegharald" .
+    rdaxd:P00018 "http://viaf.org/viaf/12487683" .
 
 <http://viaf.org/viaf/44442808> a rdac:C10004 ;
     rdfs:label "Grouix, Pierre" ;
@@ -16739,10 +16739,11 @@
     rdaad:P50413 "Grünau, Werner von" ;
     rdaxd:P00018 "http://viaf.org/viaf/49404449" .
 
-<http://example.org/gullvaghakon> a rdac:C10004 ;
-    rdfs:label "Gullvåg, Håkon" ;
+<http://viaf.org/viaf/18287912> a rdac:C10004 ;
+    rdfs:label "Gullvåg, Håkon (1959-)" ;
+    rdaad:P50339 "1959-" ;
     rdaad:P50413 "Gullvåg, Håkon" ;
-    rdaxd:P00018 "http://example.org/gullvaghakon" .
+    rdaxd:P00018 "http://viaf.org/viaf/18287912" .
 
 <http://viaf.org/viaf/308698494> a rdac:C10004 ;
     rdfs:label "Gustavson, Erik (1955-)" ;
@@ -16836,16 +16837,16 @@
     rdaad:P50413 "Jordal, Helge" ;
     rdaxd:P00018 "http://viaf.org/viaf/102357918" .
 
-<http://example.org/keelaldo> a rdac:C10004 ;
+<http://viaf.org/viaf/91374385> a rdac:C10004 ;
     rdfs:label "Keel, Aldo (1948-)" ;
     rdaad:P50339 "1948-" ;
     rdaad:P50413 "Keel, Aldo" ;
-    rdaxd:P00018 "http://example.org/keelaldo" .
+    rdaxd:P00018 "http://viaf.org/viaf/91374385" .
 
-<http://example.org/keelingeborg> a rdac:C10004 ;
+<http://viaf.org/viaf/20788154> a rdac:C10004 ;
     rdfs:label "Keel, Ingeborg" ;
     rdaad:P50413 "Keel, Ingeborg" ;
-    rdaxd:P00018 "http://example.org/keelingeborg" .
+    rdaxd:P00018 "http://viaf.org/viaf/20788154" .
 
 <http://viaf.org/viaf/97952282> a rdac:C10004 ;
     rdfs:label "Kehlmann, Daniel (1975-)" ;
@@ -17130,11 +17131,11 @@
     rdaad:P50413 "Stormoen, Kjell" ;
     rdaxd:P00018 "http://viaf.org/viaf/229586296" .
 
-<http://example.org/sundquistbjrn> a rdac:C10004 ;
+<http://viaf.org/viaf/3767688> a rdac:C10004 ;
     rdfs:label "Sundquist, Bjørn (1948-)" ;
     rdaad:P50339 "1948-" ;
     rdaad:P50413 "Sundquist, Bjørn" ;
-    rdaxd:P00018 "http://example.org/sundquistbjrn" .
+    rdaxd:P00018 "http://viaf.org/viaf/3767688" .
 
 <http://viaf.org/viaf/102357800> a rdac:C10004 ;
     rdfs:label "Thalbitzer, Karen" ;
@@ -17441,8 +17442,8 @@
         "Pan : aus Leutnant Thomas Glahns Papieren ; Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/keelaldo>,
-        <http://example.org/keelingeborg> ;
+    rdaeo:P20037 <http://viaf.org/viaf/91374385>,
+        <http://viaf.org/viaf/20788154> ;
     rdaeo:P20231 <http://viaf.org/viaf/194765531> .
 
 <http://viaf.org/viaf/194765531/exp/nno/1020> a rdac:C10006 ;
@@ -18753,7 +18754,7 @@
     rdaed:P20316 "Sværmere" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20037 <http://example.org/costamontserrat>,
+    rdaeo:P20037 <http://viaf.org/viaf/86764049>,
         <http://viaf.org/viaf/98992194> ;
     rdaeo:P20231 <http://viaf.org/viaf/995145424555286830372> .
 
@@ -19040,9 +19041,9 @@
     rdaed:P20316 "Pan" ;
     rdaeo:P20001 rdaco:1023 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/mul> ;
-    rdaeo:P20012 <http://example.org/grblsofie>,
+    rdaeo:P20012 <http://viaf.org/viaf/12515725>,
         <http://example.org/kolsrudlasse>,
-        <http://example.org/sundquistbjrn> ;
+        <http://viaf.org/viaf/3767688> ;
     rdaeo:P20231 <https://www.imdb.com/title/tt0114081> .
 
 <http://viaf.org/viaf/56703858> a rdac:C10004 ;
@@ -19091,11 +19092,11 @@
     rdaad:P50415 "Guilhon, Ingunn" ;
     rdaxd:P00018 "http://viaf.org/viaf/277228294" .
 
-<http://example.org/garbarekjan> a rdac:C10004 ;
+<http://viaf.org/viaf/115557508> a rdac:C10004 ;
     rdfs:label "Garbarek, Jan (1947-)" ;
     rdaad:P50339 "1947-" ;
     rdaad:P50413 "Garbarek, Jan" ;
-    rdaxd:P00018 "http://example.org/garbarekjan" .
+    rdaxd:P00018 "http://viaf.org/viaf/115557508" .
 
 <http://viaf.org/viaf/96973963> a rdac:C10004 ;
     rdfs:label "Gide, André (1869-1951)" ;
@@ -19419,7 +19420,7 @@
     rdaed:P20316 "Pan" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20020 <http://example.org/garbarekjan> ;
+    rdaeo:P20020 <http://viaf.org/viaf/115557508> ;
     rdaeo:P20022 <http://viaf.org/viaf/228279275> ;
     rdaeo:P20231 <http://viaf.org/viaf/194765531> .
 
@@ -19675,7 +19676,7 @@
         "Det vilde kor" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20037 <http://example.org/goebelheinrich> ;
+    rdaeo:P20037 <http://viaf.org/viaf/67349916> ;
     rdaeo:P20231 <http://viaf.org/viaf/316368447> .
 
 <http://viaf.org/viaf/316368447/exp/nob/1013/olsenarnethomas> a rdac:C10006 ;
@@ -19726,7 +19727,7 @@
     rdaed:P20316 "Victoria" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20020 <http://example.org/garbarekjan> ;
+    rdaeo:P20020 <http://viaf.org/viaf/115557508> ;
     rdaeo:P20022 <http://viaf.org/viaf/228279275> ;
     rdaeo:P20231 <http://viaf.org/viaf/395147270538135700001> .
 
@@ -20124,12 +20125,6 @@
     rdfs:label "Guilhon, Alain-Pierre" ;
     rdaad:P50413 "Guilhon, Alain-Pierre" ;
     rdaxd:P00018 "http://viaf.org/viaf/49226566" .
-
-<http://example.org/gullvghkon> a rdac:C10004 ;
-    rdfs:label "Gullvåg, Håkon (1959-)" ;
-    rdaad:P50339 "1959-" ;
-    rdaad:P50413 "Gullvåg, Håkon" ;
-    rdaxd:P00018 "http://example.org/gullvghkon" .
 
 <http://viaf.org/viaf/12526089> a rdac:C10004 ;
     rdfs:label "Heine, Thomas Theodor (1867-1948)" ;
