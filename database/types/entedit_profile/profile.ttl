@@ -562,6 +562,8 @@ rdawo:P10161	entedit:status	"object property" ; rdfs:label "er musikksetting av"
 
 rdawo:P10034	entedit:status	"object property" ; rdfs:label "er bearbeidet som roman"@no . #	is adapted as novel work	rdac:C10001	rdac:C10001
 rdawo:P10130	entedit:status	"object property" ; rdfs:label "er bearbeidelse til roman"@no . #	is novelization of work	rdac:C10001	rdac:C10001
+rdawo:P10251	entedit:status	"object property" ; rdfs:label "er bearbeidet som tegneserieroman"@no . #	is adapted as graphic novel work	rdac:C10001	rdac:C10001
+rdawo:P10252	entedit:status	"object property" ; rdfs:label "er bearbeidelse til tegneserieroman"@no . #	is graphic novelization of work	rdac:C10001	rdac:C10001
 
 rdawo:P10076	entedit:status	"object property" ; rdfs:label "er bearbeidet som radioprogram"@no . #	is adapted as radio program work	rdac:C10001	rdac:C10001
 rdawo:P10131	entedit:status	"object property" ; rdfs:label "er bearbeidelse for radio"@no . #	is radio adaptation of work	rdac:C10001	rdac:C10001
