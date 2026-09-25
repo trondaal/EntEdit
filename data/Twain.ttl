@@ -874,8 +874,8 @@
     rdaeo:P20231 <http://viaf.org/viaf/309258253> .
 
 <http://viaf.org/viaf/309258431> a rdac:C10001 ;
-    rdfs:label "Worm ouroboros / Eric Rücker Eddison"@en,
-        "Worm ouroboros / Eric Rücker Eddison"@no ;
+    rdfs:label "Worm ouroboros / Eric Rücker Eddison"@en,
+        "Worm ouroboros / Eric Rücker Eddison"@no ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
     rdawd:P10223 "Worm ouroboros" ;
     rdawo:P10061 <http://viaf.org/viaf/49205550> ;
@@ -883,8 +883,8 @@
     entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> .
 
 <http://viaf.org/viaf/309258431/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Worm ouroboros / Eric Rücker Eddison. – English"@en,
-        "Worm ouroboros / Eric Rücker Eddison. – Engelsk"@no ;
+    rdfs:label "Worm ouroboros / Eric Rücker Eddison. – English"@en,
+        "Worm ouroboros / Eric Rücker Eddison. – Engelsk"@no ;
     rdaed:P20315 "Worm ouroboros" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
@@ -965,9 +965,9 @@
     rdaxd:P00018 "http://viaf.org/viaf/40149485617893421107" .
 
 <http://viaf.org/viaf/49205550> a rdac:C10004 ;
-    rdfs:label "Eddison, Eric Rücker (1882-1945)" ;
+    rdfs:label "Eddison, Eric Rücker (1882-1945)" ;
     rdaad:P50339 "1882-1945" ;
-    rdaad:P50413 "Eddison, Eric Rücker" ;
+    rdaad:P50413 "Eddison, Eric Rücker" ;
     rdaxd:P00018 "http://viaf.org/viaf/49205550" .
 
 <http://viaf.org/viaf/50566653/grief> a rdac:C10001 ;

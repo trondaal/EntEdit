@@ -1397,14 +1397,14 @@
     entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> .
 
 <http://viaf.org/viaf/34462302> a rdac:C10004 ;
-    rdfs:label "Rivière, François (1949-)" ;
+    rdfs:label "Rivière, François (1949-)" ;
     rdaad:P50339 "1949-" ;
-    rdaad:P50413 "Rivière, François" ;
+    rdaad:P50413 "Rivière, François" ;
     rdaxd:P00018 "http://viaf.org/viaf/34462302" .
 
 <http://viaf.org/viaf/34462302/orient> a rdac:C10001 ;
-    rdfs:label "Crime de l'Orient-Express / François Rivière and Solidor"@en,
-        "Crime de l'Orient-Express / François Rivière og Solidor"@no ;
+    rdfs:label "Crime de l'Orient-Express / François Rivière and Solidor"@en,
+        "Crime de l'Orient-Express / François Rivière og Solidor"@no ;
     rdawd:P10223 "Crime de l'Orient-Express" ;
     rdawo:P10058 <http://viaf.org/viaf/34462302>,
         <https://isni.org/isni/0000000368604401> ;
@@ -1414,8 +1414,8 @@
     entedit:P02 <https://id.nb.no/vocabulary/ntsf/302> .
 
 <http://viaf.org/viaf/34462302/orient/exp/eng/1014/1020> a rdac:C10006 ;
-    rdfs:label "Murder on the Orient Express / François Rivière and Solidor. – Text, still image, English"@en,
-        "Murder on the Orient Express / François Rivière og Solidor. – Tekst, stillbilde, engelsk"@no ;
+    rdfs:label "Murder on the Orient Express / François Rivière and Solidor. – Text, still image, English"@en,
+        "Murder on the Orient Express / François Rivière og Solidor. – Tekst, stillbilde, engelsk"@no ;
     rdaed:P20315 "Murder on the Orient Express" ;
     rdaed:P20316 "Crime de l'Orient-Express" ;
     rdaeo:P20001 rdaco:1014,

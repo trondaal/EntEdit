@@ -41,9 +41,9 @@
 <http://example.org/010630661> a rdac:C10007 ;
     rdfs:label "Segen der Erde / Knut Hamsun. – 6. bis 10. Tausend. – Langen, c1918" ;
     rdamd:P30011 "c1918" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "6. bis 10. Tausend" ;
-    rdamd:P30117 "Knut Hamsun ; einzige berechtigte Übersetzung aus dem Norwegischen von Pauline Klaiber" ;
+    rdamd:P30117 "Knut Hamsun ; einzige berechtigte Übersetzung aus dem Norwegischen von Pauline Klaiber" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Segen der Erde" ;
     rdamd:P30176 "Langen" ;
@@ -55,9 +55,9 @@
 <http://example.org/010630680> a rdac:C10007 ;
     rdfs:label "Pan / von Knut Hamsun. – 22. bis 24. Tausend. – Langen, 1924" ;
     rdamd:P30011 "1924" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "22. bis 24. Tausend" ;
-    rdamd:P30117 "von Knut Hamsun ; in neuer berechtigter Übertragung von J. Sandmaier" ;
+    rdamd:P30117 "von Knut Hamsun ; in neuer berechtigter Übertragung von J. Sandmaier" ;
     rdamd:P30142 "aus Leutnant Thomas Glahns Papieren" ;
     rdamd:P30156 "Pan" ;
     rdamd:P30176 "Langen" ;
@@ -70,7 +70,7 @@
     rdfs:label "Gesammelte Werke in zehn Bänden. – Langen, c1917" ;
     rdamd:P30011 "c1917" ;
     rdamd:P30014 "Bd.1" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30134 "Hunger" ;
     rdamd:P30142 "Roman ; Mysterien : Roman" ;
     rdamd:P30156 "Gesammelte Werke in zehn Bänden" ;
@@ -86,7 +86,7 @@
     rdamd:P30011 "[192-?]" ;
     rdamd:P30088 "Berlin" ;
     rdamd:P30107 "49. bis 57. Aufl" ;
-    rdamd:P30117 "von Knut Hamsun ; [berechtigte Übertragung von Maria von Borch]" ;
+    rdamd:P30117 "von Knut Hamsun ; [berechtigte Übertragung von Maria von Borch]" ;
     rdamd:P30142 "aus Leutnant Thomas Glahns Papieren" ;
     rdamd:P30156 "Pan" ;
     rdamd:P30176 "Fischer" ;
@@ -110,7 +110,7 @@
 <http://example.org/011513495> a rdac:C10007 ;
     rdfs:label "August Weltumsegler / (by) K. Hamsun. – [s.n.], 1930" ;
     rdamd:P30011 "1930" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30117 "(by) K. Hamsun ; (Ubersetzung von J. Sandmeier und S. Angermann) 31 bis 40 Tausend" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "August Weltumsegler" ;
@@ -188,10 +188,10 @@
     rdamo:P30139 <http://viaf.org/viaf/220443771/exp/eng/1020/hoyerniels> .
 
 <http://example.org/011513504> a rdac:C10007 ;
-    rdfs:label "Hunger / Übsetzung von I. Sandmeier. – Langen, 1925" ;
+    rdfs:label "Hunger / Übsetzung von I. Sandmeier. – Langen, 1925" ;
     rdamd:P30011 "1925" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30117 "Übsetzung von I. Sandmeier" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30117 "Übsetzung von I. Sandmeier" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Hunger" ;
     rdamd:P30176 "Langen" ;
@@ -237,7 +237,7 @@
 <http://example.org/011513512> a rdac:C10007 ;
     rdfs:label "Mysterien / Einzige berechtigte Uberfetzung aus dem Norwegischen von Maria von Borch. – Langen, [1894]" ;
     rdamd:P30011 "[1894]" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30117 "Einzige berechtigte Uberfetzung aus dem Norwegischen von Maria von Borch" ;
     rdamd:P30142 "roman" ;
     rdamd:P30156 "Mysterien" ;
@@ -414,15 +414,15 @@
     rdamo:P30139 <http://viaf.org/viaf/220443771/exp/eng/1020/egertongeorge> .
 
 <http://example.org/1023795175> a rdac:C10007 ;
-    rdfs:label "Nach Jahr und Tag / Knut Hamsun. – [Verl. Dt. Volksbücher], [1955?]" ;
+    rdfs:label "Nach Jahr und Tag / Knut Hamsun. – [Verl. Dt. Volksbücher], [1955?]" ;
     rdamd:P30011 "[1955?]" ;
     rdamd:P30088 "[Stuttgart]" ;
     rdamd:P30106 "Bibliothek der Unterhaltung und des Wissens" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus dem Norweg. von J. Sandmeier u. S. Angermann]" ;
-    rdamd:P30137 "Lizenzausg. des List-Verl., München" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus dem Norweg. von J. Sandmeier u. S. Angermann]" ;
+    rdamd:P30137 "Lizenzausg. des List-Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Nach Jahr und Tag" ;
-    rdamd:P30176 "[Verl. Dt. Volksbücher]" ;
+    rdamd:P30176 "[Verl. Dt. Volksbücher]" ;
     rdamd:P30182 "397 S., 22 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -431,9 +431,9 @@
 <http://example.org/1024791904> a rdac:C10007 ;
     rdfs:label "Victoria / Knut Hamsun. – 46.-55. Tsd. – Langen, 1933" ;
     rdamd:P30011 "1933" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "46.-55. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Neue berecht. Übers. von J. Sandmeier]" ;
+    rdamd:P30117 "Knut Hamsun. [Neue berecht. Übers. von J. Sandmeier]" ;
     rdamd:P30137 "In Fraktur" ;
     rdamd:P30142 "die Geschichte einer Liebe" ;
     rdamd:P30156 "Victoria" ;
@@ -450,7 +450,7 @@
         "Salzburg",
         "Stuttgart" ;
     rdamd:P30117 "Knut Hamsun. [Dt. von J. Sandmeier und S. Angermann]" ;
-    rdamd:P30137 "Lizenzausg. des List-Verl., München" ;
+    rdamd:P30137 "Lizenzausg. des List-Verl., München" ;
     rdamd:P30142 "die Geschichte einer Liebe" ;
     rdamd:P30156 "Victoria" ;
     rdamd:P30176 "Fackelverl" ;
@@ -476,43 +476,43 @@
     rdamo:P30139 <http://viaf.org/viaf/194765531/exp/ger/1020> .
 
 <http://example.org/104571061X> a rdac:C10007 ;
-    rdfs:label "Victoria / Knut Hamsun. – 91. bis 95. Tsd. – Langen-Müller, [1935]" ;
+    rdfs:label "Victoria / Knut Hamsun. – 91. bis 95. Tsd. – Langen-Müller, [1935]" ;
     rdamd:P30011 "[1935]" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "91. bis 95. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Neue berechtigte Übers. von J. Sandmeier]" ;
+    rdamd:P30117 "Knut Hamsun. [Neue berechtigte Übers. von J. Sandmeier]" ;
     rdamd:P30137 "In Fraktur" ;
     rdamd:P30142 "die Geschichte einer Liebe" ;
     rdamd:P30156 "Victoria" ;
-    rdamd:P30176 "Langen-Müller" ;
+    rdamd:P30176 "Langen-Müller" ;
     rdamd:P30182 "190 S., 19 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/395147270538135700001/exp/ger/1020/59960174> .
 
 <http://example.org/1071580833> a rdac:C10007 ;
-    rdfs:label "Nach Jahr und Tag / Knut Hamsun. – Stuttgarter Hausbücherei, [ca. 1958]" ;
+    rdfs:label "Nach Jahr und Tag / Knut Hamsun. – Stuttgarter Hausbücherei, [ca. 1958]" ;
     rdamd:P30011 "[ca. 1958]" ;
     rdamd:P30088 "[Stuttgart]" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus dem Norweg. von J. Sandmeier und S. Angermann]" ;
-    rdamd:P30137 "Lizenz des List-Verl., München" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus dem Norweg. von J. Sandmeier und S. Angermann]" ;
+    rdamd:P30137 "Lizenz des List-Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Nach Jahr und Tag" ;
-    rdamd:P30176 "Stuttgarter Hausbücherei" ;
+    rdamd:P30176 "Stuttgarter Hausbücherei" ;
     rdamd:P30182 "397 S., 21 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/191146462599827770953/exp/ger/1020/162089799/59960174> .
 
 <http://example.org/1071581015> a rdac:C10007 ;
-    rdfs:label "Landstreicher / Knut Hamsun. – Stuttgarter Hausbücherei, [ca. 1958]" ;
+    rdfs:label "Landstreicher / Knut Hamsun. – Stuttgarter Hausbücherei, [ca. 1958]" ;
     rdamd:P30011 "[ca. 1958]" ;
     rdamd:P30088 "[Stuttgart]" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus dem Norweg. von J. Sandmeier und S. Angermann]" ;
-    rdamd:P30137 "Lizenz des List-Verl., München" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus dem Norweg. von J. Sandmeier und S. Angermann]" ;
+    rdamd:P30137 "Lizenz des List-Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Landstreicher" ;
-    rdamd:P30176 "Stuttgarter Hausbücherei" ;
+    rdamd:P30176 "Stuttgarter Hausbücherei" ;
     rdamd:P30182 "430 S., 21 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -537,7 +537,7 @@
     rdfs:label "Landstreicher / Knut Hamsun. – Deutscher Buchklub, [zwischen 1950 und 1960?]" ;
     rdamd:P30011 "[zwischen 1950 und 1960?]" ;
     rdamd:P30088 "Bochum-Linden" ;
-    rdamd:P30117 "Knut Hamsun ; berechtigte Übersetzung von J. Sandmeier und S. Angermann" ;
+    rdamd:P30117 "Knut Hamsun ; berechtigte Übersetzung von J. Sandmeier und S. Angermann" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Landstreicher" ;
     rdamd:P30176 "Deutscher Buchklub" ;
@@ -547,13 +547,13 @@
     rdamo:P30139 <http://viaf.org/viaf/180078068/exp/ger/1020/162089799/59960174> .
 
 <http://example.org/1138299537> a rdac:C10007 ;
-    rdfs:label "Segen der Erde / Knut Hamsun. – Sonderausgabe für den Fackelbuchklub Olten, Stuttgart, Salzburg. – Fackelverlag, [1971]" ;
+    rdfs:label "Segen der Erde / Knut Hamsun. – Sonderausgabe für den Fackelbuchklub Olten, Stuttgart, Salzburg. – Fackelverlag, [1971]" ;
     rdamd:P30011 "[1971]" ;
     rdamd:P30088 "Olten",
         "Salzburg",
         "Stuttgart" ;
-    rdamd:P30107 "Sonderausgabe für den Fackelbuchklub Olten, Stuttgart, Salzburg" ;
-    rdamd:P30117 "Knut Hamsun ; Berechtigte Übersetzung von J. Sandmeier und S. Angermann" ;
+    rdamd:P30107 "Sonderausgabe für den Fackelbuchklub Olten, Stuttgart, Salzburg" ;
+    rdamd:P30117 "Knut Hamsun ; Berechtigte Übersetzung von J. Sandmeier und S. Angermann" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Segen der Erde" ;
     rdamd:P30176 "Fackelverlag" ;
@@ -566,9 +566,9 @@
     rdfs:label "Redakteur Lynge / Knut Hamsun. – Verlag von Albert Langen, 1898" ;
     rdamd:P30011 "1898" ;
     rdamd:P30088 "Leipzig",
-        "München",
+        "München",
         "Paris" ;
-    rdamd:P30117 "Knut Hamsun ; autorisierte Übersetzung aus dem Norwegischen von Maria von Borch" ;
+    rdamd:P30117 "Knut Hamsun ; autorisierte Übersetzung aus dem Norwegischen von Maria von Borch" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Redakteur Lynge" ;
     rdamd:P30176 "Verlag von Albert Langen" ;
@@ -579,14 +579,14 @@
     rdamo:P30139 <http://viaf.org/viaf/5518152200833114400003/exp/ger/1020/borchmarievon> .
 
 <http://example.org/1149976802> a rdac:C10007 ;
-    rdfs:label "Die Königin von Saba und andere Novellen / Knut Hamsun. – Zweite Auflage. – Verlag von Albert Langen, 1899" ;
+    rdfs:label "Die Königin von Saba und andere Novellen / Knut Hamsun. – Zweite Auflage. – Verlag von Albert Langen, 1899" ;
     rdamd:P30011 "1899" ;
     rdamd:P30088 "Leipzig",
-        "München",
+        "München",
         "Paris" ;
     rdamd:P30107 "Zweite Auflage" ;
-    rdamd:P30117 "Knut Hamsun ; einzig autorisierte Übersetzung aus dem Norwegischen von Ernst Brausewetter" ;
-    rdamd:P30156 "Die Königin von Saba und andere Novellen" ;
+    rdamd:P30117 "Knut Hamsun ; einzig autorisierte Übersetzung aus dem Norwegischen von Ernst Brausewetter" ;
+    rdamd:P30156 "Die Königin von Saba und andere Novellen" ;
     rdamd:P30176 "Verlag von Albert Langen" ;
     rdamd:P30182 "253 Seiten, 19 cm." ;
     rdamo:P30001 rdact:1049 ;
@@ -626,8 +626,8 @@
 <http://example.org/361452918> a rdac:C10007 ;
     rdfs:label "Kinder ihrer Zeit / Knut Hamsun. – Langen, 1914" ;
     rdamd:P30011 "1914" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30117 "Knut Hamsun. Übers. aus d. Norweg. von Niels Hoyer" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30117 "Knut Hamsun. Übers. aus d. Norweg. von Niels Hoyer" ;
     rdamd:P30137 "In Fraktur" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Kinder ihrer Zeit" ;
@@ -640,8 +640,8 @@
 <http://example.org/361452926> a rdac:C10007 ;
     rdfs:label "Die letzte Freude / Knut Hamsun. – Langen, 1914" ;
     rdamd:P30011 "1914" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30117 "Knut Hamsun. Einzig berecht. Übers. aus d. Norweg. von Niels Hoyer" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30117 "Knut Hamsun. Einzig berecht. Übers. aus d. Norweg. von Niels Hoyer" ;
     rdamd:P30137 "In Fraktur" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Die letzte Freude" ;
@@ -655,7 +655,7 @@
     rdfs:label "Segen der Erde / Knut Hamsun. – Der Reichskommissar f. d. besetzten norweg. Gebiete, 1944" ;
     rdamd:P30011 "1944" ;
     rdamd:P30088 "Oslo" ;
-    rdamd:P30106 "Weihnachtsgabe des Reichskommissars für die besetzten norwegischen Gebiete an den Truppen im Norden" ;
+    rdamd:P30106 "Weihnachtsgabe des Reichskommissars für die besetzten norwegischen Gebiete an den Truppen im Norden" ;
     rdamd:P30117 "Knut Hamsun" ;
     rdamd:P30156 "Segen der Erde" ;
     rdamd:P30165 "1944, 2" ;
@@ -668,8 +668,8 @@
 <http://example.org/361452942> a rdac:C10007 ;
     rdfs:label "Vom Teufel geholt / Knut Hamsun. – Langen, [1911]" ;
     rdamd:P30011 "[1911]" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30117 "Knut Hamsun. Autor. Übers. nach d. norweg. Ms. v. Carl Morburger" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30117 "Knut Hamsun. Autor. Übers. nach d. norweg. Ms. v. Carl Morburger" ;
     rdamd:P30137 "Micro card. Louisville, Ky: FCM 1964/8423. 8423a. b. 3 Kt." ;
     rdamd:P30142 "Schauspiel in 4 Akten" ;
     rdamd:P30156 "Vom Teufel geholt" ;
@@ -682,8 +682,8 @@
 <http://example.org/361452969> a rdac:C10007 ;
     rdfs:label "Die Stadt Segelfoß / von Knut Hamsun. – Langen, 1916" ;
     rdamd:P30011 "1916" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30117 "von Knut Hamsun ; Einzige berecht. Übers aus d. Norweg. von Pauline Klaiber" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30117 "von Knut Hamsun ; Einzige berecht. Übers aus d. Norweg. von Pauline Klaiber" ;
     rdamd:P30137 "In Fraktur" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Die Stadt Segelfoß" ;
@@ -694,17 +694,17 @@
     rdamo:P30139 <http://viaf.org/viaf/207944253/exp/ger/1020/117364598> .
 
 <http://example.org/363817913> a rdac:C10007 ;
-    rdfs:label "Die Weiber am Brunnen / Knut Hamsun. – \"Bücher für alle\" Palladium Verl, [1954]" ;
+    rdfs:label "Die Weiber am Brunnen / Knut Hamsun. – \"Bücher für alle\" Palladium Verl, [1954]" ;
     rdamd:P30011 "[1954]" ;
     rdamd:P30088 "Heidelberg",
         "Marbach a. N." ;
-    rdamd:P30106 "Bücher für alle" ;
-    rdamd:P30117 "Knut Hamsun. [Einzige berecht. Übers. aus d. Norweg. v. Pauline Klaiber-Gottschau]" ;
-    rdamd:P30137 "Lizenzausg. d. Paul List Verl., München" ;
+    rdamd:P30106 "Bücher für alle" ;
+    rdamd:P30117 "Knut Hamsun. [Einzige berecht. Übers. aus d. Norweg. v. Pauline Klaiber-Gottschau]" ;
+    rdamd:P30137 "Lizenzausg. d. Paul List Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Die Weiber am Brunnen" ;
     rdamd:P30165 "Jg. 4, Bd. 12" ;
-    rdamd:P30176 "\"Bücher für alle\" Palladium Verl" ;
+    rdamd:P30176 "\"Bücher für alle\" Palladium Verl" ;
     rdamd:P30182 "373 S., 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -731,7 +731,7 @@
     rdamd:P30088 "Innsbruck" ;
     rdamd:P30106 "Gesammelte Werke / Hamsun" ;
     rdamd:P30107 "331.-334. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. v. J. Sandmeier ; S. Angermann]" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. v. J. Sandmeier ; S. Angermann]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Segen der Erde" ;
     rdamd:P30176 "List" ;
@@ -744,7 +744,7 @@
     rdfs:label "Gesammelte Werke in 10 Bdn / Knut Hamsun. – A. Langen, 1917" ;
     rdamd:P30011 "1917" ;
     rdamd:P30014 "1" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30117 "Knut Hamsun" ;
     rdamd:P30134 "Hunger : Mysterien" ;
     rdamd:P30137 "In Fraktur" ;
@@ -760,7 +760,7 @@
     rdfs:label "Gesammelte Werke in 12 Bänden / Knut Hamsun. – A. Langen, 1921" ;
     rdamd:P30011 "1921" ;
     rdamd:P30014 "Bd. 1" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30117 "Knut Hamsun" ;
     rdamd:P30134 "Hunger : Roman [u. a.]" ;
     rdamd:P30137 "In Fraktur" ;
@@ -775,7 +775,7 @@
     rdfs:label "Gesammelte Werke in 12 Bänden / Knut Hamsun. – A. Langen, [1923]" ;
     rdamd:P30011 "[1923]" ;
     rdamd:P30014 "Bd. 2" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30117 "Knut Hamsun" ;
     rdamd:P30134 "Redakteur Lynge : Roman [u. a.]" ;
     rdamd:P30137 "In Fraktur" ;
@@ -790,7 +790,7 @@
     rdfs:label "Gesammelte Werke in 12 Bänden / Knut Hamsun. – A. Langen, 1923" ;
     rdamd:P30011 "1923" ;
     rdamd:P30014 "Bd. 3" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30117 "Knut Hamsun" ;
     rdamd:P30134 "Pan : Roman [u. a.]" ;
     rdamd:P30137 "In Fraktur" ;
@@ -805,7 +805,7 @@
     rdfs:label "Gesammelte Werke in 12 Bänden / Knut Hamsun. – A. Langen, [1923]" ;
     rdamd:P30011 "[1923]" ;
     rdamd:P30014 "Bd. 4" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30117 "Knut Hamsun" ;
     rdamd:P30134 "Benoni : Roman [u. a.]" ;
     rdamd:P30137 "In Fraktur" ;
@@ -820,7 +820,7 @@
     rdfs:label "Gesammelte Werke in 12 Bänden / Knut Hamsun. – A. Langen, [1923]" ;
     rdamd:P30011 "[1923]" ;
     rdamd:P30014 "Bd. 5" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30117 "Knut Hamsun" ;
     rdamd:P30134 "Unter Herbststernen : Roman [u. a.]" ;
     rdamd:P30137 "In Fraktur" ;
@@ -835,7 +835,7 @@
     rdfs:label "Gesammelte Werke in 12 Bänden / Knut Hamsun. – A. Langen, [1924]" ;
     rdamd:P30011 "[1924]" ;
     rdamd:P30014 "Bd. 6" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30117 "Knut Hamsun" ;
     rdamd:P30134 "Im Märchenland : Heisebilder [u. a.]" ;
     rdamd:P30137 "In Fraktur" ;
@@ -851,7 +851,7 @@
     rdfs:label "Gesammelte Werke in 12 Bänden / Knut Hamsun. – A. Langen, [1924]" ;
     rdamd:P30011 "[1924]" ;
     rdamd:P30014 "Bd. 7" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30117 "Knut Hamsun" ;
     rdamd:P30134 "Die Stadt Segelfoss : Roman" ;
     rdamd:P30137 "In Fraktur" ;
@@ -866,7 +866,7 @@
     rdfs:label "Gesammelte Werke in 12 Bänden / Knut Hamsun. – A. Langen, 1924" ;
     rdamd:P30011 "1924" ;
     rdamd:P30014 "Bd. 8" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30117 "Knut Hamsun" ;
     rdamd:P30134 "Segen der Erde : Roman" ;
     rdamd:P30137 "In Fraktur" ;
@@ -881,7 +881,7 @@
     rdfs:label "Gesammelte Werke in 12 Bänden / Knut Hamsun. – A. Langen, 1925" ;
     rdamd:P30011 "1925" ;
     rdamd:P30014 "Bd. 9" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30117 "Knut Hamsun" ;
     rdamd:P30134 "Die Weiber am Brunnen : Roman" ;
     rdamd:P30137 "In Fraktur" ;
@@ -897,7 +897,7 @@
     rdamd:P30011 "1924" ;
     rdamd:P30014 "Tl 1" ;
     rdamd:P30088 "Leipzig" ;
-    rdamd:P30117 "Knut Hamsun. [Die Übertr. ins Deutsche bes. Erwin Magnus]" ;
+    rdamd:P30117 "Knut Hamsun. [Die Übertr. ins Deutsche bes. Erwin Magnus]" ;
     rdamd:P30156 "Das letzte Kapitel" ;
     rdamd:P30176 "Grethlein & Co" ;
     rdamd:P30182 "310 S." ;
@@ -910,7 +910,7 @@
     rdamd:P30011 "1924" ;
     rdamd:P30014 "Tl 2" ;
     rdamd:P30088 "Leipzig" ;
-    rdamd:P30117 "Knut Hamsun. [Die Übertr. ins Deutsche bes. Erwin Magnus]" ;
+    rdamd:P30117 "Knut Hamsun. [Die Übertr. ins Deutsche bes. Erwin Magnus]" ;
     rdamd:P30156 "Das letzte Kapitel" ;
     rdamd:P30176 "Grethlein & Co" ;
     rdamd:P30182 "324 S." ;
@@ -922,7 +922,7 @@
     rdfs:label "Gottes Erde / Knut Hamsun. – [2. Aufl.]. – Matthiesen, [1963]" ;
     rdamd:P30011 "[1963]" ;
     rdamd:P30088 "Hamburg",
-        "Lübeck" ;
+        "Lübeck" ;
     rdamd:P30106 "Die Leserunde" ;
     rdamd:P30107 "[2. Aufl.]" ;
     rdamd:P30117 "Knut Hamsun" ;
@@ -940,8 +940,8 @@
     rdamd:P30011 "1950" ;
     rdamd:P30088 "Berlin",
         "Hamburg" ;
-    rdamd:P30117 "Knut Hamsun. [Berechtigte Übers. von J. Sandmeier u. S. Angermann]" ;
-    rdamd:P30137 "Copyright 1950 by Paul List Verlag, München u. Freiburg i. Br." ;
+    rdamd:P30117 "Knut Hamsun. [Berechtigte Übers. von J. Sandmeier u. S. Angermann]" ;
+    rdamd:P30137 "Copyright 1950 by Paul List Verlag, München u. Freiburg i. Br." ;
     rdamd:P30156 "August Weltumsegler" ;
     rdamd:P30176 "Deutsche Buchgemeinschaft" ;
     rdamd:P30182 "403 S., 8." ;
@@ -954,10 +954,10 @@
     rdamd:P30011 "1950" ;
     rdamd:P30088 "Freiburg i. Br",
         "Leipzig",
-        "München" ;
+        "München" ;
     rdamd:P30106 "Gesammelte Werke / Knut Hamsun" ;
     rdamd:P30107 "61. - 66. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übertr. von J. Sandmeier u. S. Angermann]" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übertr. von J. Sandmeier u. S. Angermann]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "August Weltumsegler" ;
     rdamd:P30176 "List" ;
@@ -967,44 +967,44 @@
     rdamo:P30139 <http://viaf.org/viaf/3267149068489065730001/exp/ger/1020/162089799/59960174> .
 
 <http://example.org/451794265> a rdac:C10007 ;
-    rdfs:label "August Weltumsegler / Knut Hamsun. – Büchergilde Gutenberg, 1956" ;
+    rdfs:label "August Weltumsegler / Knut Hamsun. – Büchergilde Gutenberg, 1956" ;
     rdamd:P30011 "1956" ;
-    rdamd:P30088 "Zürich" ;
-    rdamd:P30117 "Knut Hamsun. Berecht. Übers. von J. Sandmeier u. S. Angermann" ;
-    rdamd:P30137 "Lizenz d. Paul List Verl., München" ;
+    rdamd:P30088 "Zürich" ;
+    rdamd:P30117 "Knut Hamsun. Berecht. Übers. von J. Sandmeier u. S. Angermann" ;
+    rdamd:P30137 "Lizenz d. Paul List Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "August Weltumsegler" ;
-    rdamd:P30176 "Büchergilde Gutenberg" ;
+    rdamd:P30176 "Büchergilde Gutenberg" ;
     rdamd:P30182 "324 S., 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/3267149068489065730001/exp/ger/1020/162089799/59960174> .
 
 <http://example.org/451794273> a rdac:C10007 ;
-    rdfs:label "August Weltumsegler / Knut Hamsun. – Büchergilde Gutenberg, 1957" ;
+    rdfs:label "August Weltumsegler / Knut Hamsun. – Büchergilde Gutenberg, 1957" ;
     rdamd:P30011 "1957" ;
     rdamd:P30088 "Frankfurt a.M." ;
-    rdamd:P30117 "Knut Hamsun. Berecht. Übers. von J. Sandmeier u. S. Angermann" ;
-    rdamd:P30137 "Lizenz d. List Verl., München" ;
+    rdamd:P30117 "Knut Hamsun. Berecht. Übers. von J. Sandmeier u. S. Angermann" ;
+    rdamd:P30137 "Lizenz d. List Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "August Weltumsegler" ;
-    rdamd:P30176 "Büchergilde Gutenberg" ;
+    rdamd:P30176 "Büchergilde Gutenberg" ;
     rdamd:P30182 "424 S., 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/3267149068489065730001/exp/ger/1020/162089799/59960174> .
 
 <http://example.org/451794281> a rdac:C10007 ;
-    rdfs:label "August Weltumsegler / Knut Hamsun. – Dt. Bücherbund, 1957" ;
+    rdfs:label "August Weltumsegler / Knut Hamsun. – Dt. Bücherbund, 1957" ;
     rdamd:P30011 "1957" ;
-    rdamd:P30088 "[Düsseldorf]",
+    rdamd:P30088 "[Düsseldorf]",
         "[Stuttgart]" ;
-    rdamd:P30117 "Knut Hamsun. Berecht. Übers. aus d. Norweg. von J. Sandmeier u. S. Angermann" ;
-    rdamd:P30137 "Lizenz d. List Verl., München" ;
+    rdamd:P30117 "Knut Hamsun. Berecht. Übers. aus d. Norweg. von J. Sandmeier u. S. Angermann" ;
+    rdamd:P30137 "Lizenz d. List Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "August Weltumsegler" ;
-    rdamd:P30176 "Dt. Bücherbund",
-        "Stuttgarter Hausbücherei" ;
+    rdamd:P30176 "Dt. Bücherbund",
+        "Stuttgarter Hausbücherei" ;
     rdamd:P30182 "424 S., 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -1013,9 +1013,9 @@
 <http://example.org/451794303> a rdac:C10007 ;
     rdfs:label "August Weltumsegler / Knut Hamsun. – Bertelsmann Lesering, 1960" ;
     rdamd:P30011 "1960" ;
-    rdamd:P30088 "[Gütersloh]" ;
-    rdamd:P30117 "Knut Hamsun. [Übers. von J. Sandmeier u. S. Angermann]" ;
-    rdamd:P30137 "Lizenz d. List Verl., München" ;
+    rdamd:P30088 "[Gütersloh]" ;
+    rdamd:P30117 "Knut Hamsun. [Übers. von J. Sandmeier u. S. Angermann]" ;
+    rdamd:P30137 "Lizenz d. List Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "August Weltumsegler" ;
     rdamd:P30176 "Bertelsmann Lesering" ;
@@ -1027,10 +1027,10 @@
 <http://example.org/451794311> a rdac:C10007 ;
     rdfs:label "Die Liebe ist hart / Knut Hamsun. – 61. - 90. Tsd. – List, 1952" ;
     rdamd:P30011 "1952" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30106 "List-Bücher" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30106 "List-Bücher" ;
     rdamd:P30107 "61. - 90. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. Übers.: J. Sandmeier u. S. Angermann" ;
+    rdamd:P30117 "Knut Hamsun. Übers.: J. Sandmeier u. S. Angermann" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Die Liebe ist hart" ;
     rdamd:P30165 "1" ;
@@ -1041,13 +1041,13 @@
     rdamo:P30139 <http://viaf.org/viaf/310234238/exp/ger/1020/162089799/59960174> .
 
 <http://example.org/451794354> a rdac:C10007 ;
-    rdfs:label "Kinder ihrer Zeit. – 41. - 45. Tsd. – Langen, G. Müller, 1950" ;
+    rdfs:label "Kinder ihrer Zeit. – 41. - 45. Tsd. – Langen, G. Müller, 1950" ;
     rdamd:P30011 "1950" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "41. - 45. Tsd" ;
     rdamd:P30137 "Einheitssacht. des beigef. Werkes: Segelfoss by <dt.>" ;
     rdamd:P30156 "Kinder ihrer Zeit" ;
-    rdamd:P30176 "Langen, G. Müller" ;
+    rdamd:P30176 "Langen, G. Müller" ;
     rdamd:P30182 "583 S., 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -1058,7 +1058,7 @@
     rdamd:P30011 "1950" ;
     rdamd:P30088 "Salzburg" ;
     rdamd:P30107 "36. - 40. Tsd" ;
-    rdamd:P30137 "Einheitssacht. des beigef. Werkes: Segelfoss by <dt.>. - Copyright 1933 by Albert Langen/Georg Müller Verl., München. Lizenzausg. f. Österreich" ;
+    rdamd:P30137 "Einheitssacht. des beigef. Werkes: Segelfoss by <dt.>. - Copyright 1933 by Albert Langen/Georg Müller Verl., München. Lizenzausg. f. Österreich" ;
     rdamd:P30156 "Kinder ihrer Zeit" ;
     rdamd:P30176 "Akad. Gemeinschaftsverl" ;
     rdamd:P30182 "583 S., 8." ;
@@ -1071,8 +1071,8 @@
     rdamd:P30011 "1951" ;
     rdamd:P30088 "Berlin",
         "Darmstadt" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus d. Norweg. von Pauline Klaiber-Gottschau]" ;
-    rdamd:P30137 "Copyright 1951 by Paul List Verl., München" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus d. Norweg. von Pauline Klaiber-Gottschau]" ;
+    rdamd:P30137 "Copyright 1951 by Paul List Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Segen der Erde" ;
     rdamd:P30176 "Dt. Buch-Gemeinschaft" ;
@@ -1084,9 +1084,9 @@
 <http://example.org/451794451> a rdac:C10007 ;
     rdfs:label "Segen der Erde / Knut Hamsun. – 326. - 330. Tsd. – List, 1951" ;
     rdamd:P30011 "1951" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "326. - 330. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. Übers.: J. Sandmeier u. S. Angermann" ;
+    rdamd:P30117 "Knut Hamsun. Übers.: J. Sandmeier u. S. Angermann" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Segen der Erde" ;
     rdamd:P30176 "List" ;
@@ -1098,9 +1098,9 @@
 <http://example.org/451794478> a rdac:C10007 ;
     rdfs:label "Segen der Erde / Knut Hamsun. – List, [1959]" ;
     rdamd:P30011 "[1959]" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30106 "List-Bücher" ;
-    rdamd:P30117 "Knut Hamsun. Berecht. Übers. aus d. Norweg. von J. Sandmeier u. S. Angermann" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30106 "List-Bücher" ;
+    rdamd:P30117 "Knut Hamsun. Berecht. Übers. aus d. Norweg. von J. Sandmeier u. S. Angermann" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Segen der Erde" ;
     rdamd:P30165 "125/126" ;
@@ -1113,7 +1113,7 @@
 <http://example.org/451794516> a rdac:C10007 ;
     rdfs:label "Das letzte Kapitel / Knut Hamsun. – 44. - 47. Tsd. – List, 1955" ;
     rdamd:P30011 "1955" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "#lek#!451793951!Gesammelte Werke in Einzelbänden / Knut Hamsun" ;
     rdamd:P30107 "44. - 47. Tsd" ;
     rdamd:P30117 "Knut Hamsun. Aus d. Norweg. von Erwin Magnus" ;
@@ -1131,7 +1131,7 @@
     rdamd:P30088 "Berlin",
         "Darmstadt" ;
     rdamd:P30117 "Knut Hamsun. Aus d. Norweg von Erwin Magnus" ;
-    rdamd:P30137 "Lizenz d. List Verl., München" ;
+    rdamd:P30137 "Lizenz d. List Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Das letzte Kapitel" ;
     rdamd:P30176 "Dt. Buch-Gemeinschaft" ;
@@ -1141,16 +1141,16 @@
     rdamo:P30139 <http://viaf.org/viaf/188303684/exp/ger/1020/17979510> .
 
 <http://example.org/451794532> a rdac:C10007 ;
-    rdfs:label "Das letzte Kapitel / Hamsun. – Fischer Bücherei, 1961" ;
+    rdfs:label "Das letzte Kapitel / Hamsun. – Fischer Bücherei, 1961" ;
     rdamd:P30011 "1961" ;
     rdamd:P30088 "Frankfurt a.M.",
         "Hamburg" ;
     rdamd:P30106 "Exempla classica" ;
-    rdamd:P30117 "Hamsun. [Aus d. Norweg. übertr. von Erwin Magnus. Mit e. Nachw. von Wolfgang Lange]" ;
-    rdamd:P30137 "Lizenz d. List Verl., München" ;
+    rdamd:P30117 "Hamsun. [Aus d. Norweg. übertr. von Erwin Magnus. Mit e. Nachw. von Wolfgang Lange]" ;
+    rdamd:P30137 "Lizenz d. List Verl., München" ;
     rdamd:P30156 "Das letzte Kapitel" ;
     rdamd:P30165 "40" ;
-    rdamd:P30176 "Fischer Bücherei" ;
+    rdamd:P30176 "Fischer Bücherei" ;
     rdamd:P30182 "365 S., kl. 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -1159,9 +1159,9 @@
 <http://example.org/451794540> a rdac:C10007 ;
     rdfs:label "Das letzte Kapitel / Knut Hamsun. – Bertelsmann Lesering, 1962" ;
     rdamd:P30011 "1962" ;
-    rdamd:P30088 "[Gütersloh]" ;
+    rdamd:P30088 "[Gütersloh]" ;
     rdamd:P30117 "Knut Hamsun. [Aus d. Norweg. von Erwin Magnus]" ;
-    rdamd:P30137 "Lizenz d. List Verl., München" ;
+    rdamd:P30137 "Lizenz d. List Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Das letzte Kapitel" ;
     rdamd:P30176 "Bertelsmann Lesering" ;
@@ -1171,18 +1171,18 @@
     rdamo:P30139 <http://viaf.org/viaf/188303684/exp/ger/1020/17979510> .
 
 <http://example.org/451794559> a rdac:C10007 ;
-    rdfs:label "Die Weiber am Brunnen / Knut Hamsun. – Ungekürzte Ausg. – Fischer Bücherei, 1958" ;
+    rdfs:label "Die Weiber am Brunnen / Knut Hamsun. – Ungekürzte Ausg. – Fischer Bücherei, 1958" ;
     rdamd:P30011 "1958" ;
     rdamd:P30088 "Frankfurt a.M.",
         "Hamburg" ;
-    rdamd:P30106 "Fischer Bücherei" ;
-    rdamd:P30107 "Ungekürzte Ausg" ;
-    rdamd:P30117 "Knut Hamsun. Mit e. Nachw. von Thomas Mann. Berecht. Übers. von Pauline Klaiber-Gottschau" ;
-    rdamd:P30137 "Lizenz d. List Verl., München" ;
+    rdamd:P30106 "Fischer Bücherei" ;
+    rdamd:P30107 "Ungekürzte Ausg" ;
+    rdamd:P30117 "Knut Hamsun. Mit e. Nachw. von Thomas Mann. Berecht. Übers. von Pauline Klaiber-Gottschau" ;
+    rdamd:P30137 "Lizenz d. List Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Die Weiber am Brunnen" ;
     rdamd:P30165 "Bd. 262" ;
-    rdamd:P30176 "Fischer Bücherei" ;
+    rdamd:P30176 "Fischer Bücherei" ;
     rdamd:P30182 "339 S., kl. 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -1194,9 +1194,9 @@
     rdamd:P30011 "1949" ;
     rdamd:P30088 "Freiburg i. Br",
         "Leipzig",
-        "München" ;
+        "München" ;
     rdamd:P30107 "78. - 87. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Ber. Übers. von J. Sandmeier u. S. Angermann]" ;
+    rdamd:P30117 "Knut Hamsun. [Ber. Übers. von J. Sandmeier u. S. Angermann]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Landstreicher" ;
     rdamd:P30176 "List" ;
@@ -1206,14 +1206,14 @@
     rdamo:P30139 <http://viaf.org/viaf/180078068/exp/ger/1020/162089799/59960174> .
 
 <http://example.org/451794575> a rdac:C10007 ;
-    rdfs:label "Landstreicher / Knut Hamsun. – Büchergilde Gutenberg, 1956" ;
+    rdfs:label "Landstreicher / Knut Hamsun. – Büchergilde Gutenberg, 1956" ;
     rdamd:P30011 "1956" ;
-    rdamd:P30088 "Zürich" ;
-    rdamd:P30117 "Knut Hamsun. Berecht. Übers. von J. Sandmeier u. S. Angermann" ;
-    rdamd:P30137 "Lizenz d. Paul List Verl., München" ;
+    rdamd:P30088 "Zürich" ;
+    rdamd:P30117 "Knut Hamsun. Berecht. Übers. von J. Sandmeier u. S. Angermann" ;
+    rdamd:P30137 "Lizenz d. Paul List Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Landstreicher" ;
-    rdamd:P30176 "Büchergilde Gutenberg" ;
+    rdamd:P30176 "Büchergilde Gutenberg" ;
     rdamd:P30182 "411 S., 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -1222,9 +1222,9 @@
 <http://example.org/451794583> a rdac:C10007 ;
     rdfs:label "Landstreicher / Knut Hamsun. – Bertelsmann-Lesering, 1960" ;
     rdamd:P30011 "1960" ;
-    rdamd:P30088 "Gütersloh" ;
-    rdamd:P30117 "Knut Hamsun. [Übers. von J. Sandmeier u. S. Angermann]" ;
-    rdamd:P30137 "Lizenz d. List Verl., München" ;
+    rdamd:P30088 "Gütersloh" ;
+    rdamd:P30117 "Knut Hamsun. [Übers. von J. Sandmeier u. S. Angermann]" ;
+    rdamd:P30137 "Lizenz d. List Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Landstreicher" ;
     rdamd:P30176 "Bertelsmann-Lesering" ;
@@ -1237,10 +1237,10 @@
     rdfs:label "Vom Teufel geholt / Knut Hamsun. – Desch, 1955" ;
     rdamd:P30011 "1955" ;
     rdamd:P30088 "Basel",
-        "München",
+        "München",
         "Wien" ;
     rdamd:P30106 "Welt der Theaters" ;
-    rdamd:P30117 "Knut Hamsun. Aus d. Norweg. übertr. von Werner von Grünau. Mit Zeichn. von Emil Orlik" ;
+    rdamd:P30117 "Knut Hamsun. Aus d. Norweg. übertr. von Werner von Grünau. Mit Zeichn. von Emil Orlik" ;
     rdamd:P30142 "Schauspiel in 4 Akten" ;
     rdamd:P30156 "Vom Teufel geholt" ;
     rdamd:P30176 "Desch" ;
@@ -1252,10 +1252,10 @@
 <http://example.org/451794613> a rdac:C10007 ;
     rdfs:label "Nach Jahr und Tag / Knut Hamsun. – 46. - 50. Tsd. – List, 1952" ;
     rdamd:P30011 "1952" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "Gesammelte Werke / Knut Hamsun" ;
     rdamd:P30107 "46. - 50. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. Übers.: J. Sandmeier u. S. Angermann" ;
+    rdamd:P30117 "Knut Hamsun. Übers.: J. Sandmeier u. S. Angermann" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Nach Jahr und Tag" ;
     rdamd:P30176 "List" ;
@@ -1267,9 +1267,9 @@
 <http://example.org/451794621> a rdac:C10007 ;
     rdfs:label "Nach Jahr und Tag / Knut Hamsun. – Bertelsmann Lesering, 1962" ;
     rdamd:P30011 "1962" ;
-    rdamd:P30088 "[Gütersloh]" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus d. Norweg. von J. Sandmeier u. S. Angermann]" ;
-    rdamd:P30137 "Lizenz d. List Verl., München" ;
+    rdamd:P30088 "[Gütersloh]" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus d. Norweg. von J. Sandmeier u. S. Angermann]" ;
+    rdamd:P30137 "Lizenz d. List Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Nach Jahr und Tag" ;
     rdamd:P30176 "Bertelsmann Lesering" ;
@@ -1298,8 +1298,8 @@
     rdamd:P30011 "1951" ;
     rdamd:P30088 "Berlin",
         "Darmstadt" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus d. Norweg. von J. Sandmeier]" ;
-    rdamd:P30137 "Alle Rechte Paul List Verlag, München" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus d. Norweg. von J. Sandmeier]" ;
+    rdamd:P30137 "Alle Rechte Paul List Verlag, München" ;
     rdamd:P30156 "Mysterien" ;
     rdamd:P30176 "Dt. Buch-Gemeinschaft" ;
     rdamd:P30182 "320 S., 8." ;
@@ -1310,9 +1310,9 @@
 <http://example.org/451794664> a rdac:C10007 ;
     rdfs:label "Mysterien / Knut Hamsun. – Manesse Verl, 1958" ;
     rdamd:P30011 "1958" ;
-    rdamd:P30088 "Zürich" ;
+    rdamd:P30088 "Zürich" ;
     rdamd:P30106 "Manesse Bibliothek der Weltliteratur" ;
-    rdamd:P30117 "Knut Hamsun. Übers. von J. Sandmeier. Nachw. von Edzard Schaper" ;
+    rdamd:P30117 "Knut Hamsun. Übers. von J. Sandmeier. Nachw. von Edzard Schaper" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Mysterien" ;
     rdamd:P30176 "Manesse Verl" ;
@@ -1325,9 +1325,9 @@
 <http://example.org/451794672> a rdac:C10007 ;
     rdfs:label "Mysterien / Knut Hamsun. – List, 1961" ;
     rdamd:P30011 "1961" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30106 "Bücher der Neunzehn" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. von J. Sandmeier]" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30106 "Bücher der Neunzehn" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. von J. Sandmeier]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Mysterien" ;
     rdamd:P30165 "85" ;
@@ -1342,9 +1342,9 @@
     rdamd:P30011 "1949" ;
     rdamd:P30088 "Freiburg",
         "Leipzig",
-        "München" ;
+        "München" ;
     rdamd:P30107 "76. - 85. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übertr. von J. Sandmeier u. S. Angermann]" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übertr. von J. Sandmeier u. S. Angermann]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Pan" ;
     rdamd:P30176 "List" ;
@@ -1358,8 +1358,8 @@
     rdamd:P30011 "1955" ;
     rdamd:P30088 "Berlin",
         "Darmstadt" ;
-    rdamd:P30117 "Knut Hamsun. Berecht Übertr. von J. Sandmeier u. S. Angermann" ;
-    rdamd:P30137 "Lizenz d. Albert Langen - Georg Müller Verl., München" ;
+    rdamd:P30117 "Knut Hamsun. Berecht Übertr. von J. Sandmeier u. S. Angermann" ;
+    rdamd:P30137 "Lizenz d. Albert Langen - Georg Müller Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Pan" ;
     rdamd:P30176 "Dt. Buch-Gemeinschaft" ;
@@ -1369,13 +1369,13 @@
     rdamo:P30139 <http://viaf.org/viaf/194765531/exp/ger/1020/162089799/59960174> .
 
 <http://example.org/451794710> a rdac:C10007 ;
-    rdfs:label "Pan / Knut Hamsun. – Langen/Müller, 1956" ;
+    rdfs:label "Pan / Knut Hamsun. – Langen/Müller, 1956" ;
     rdamd:P30011 "1956" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30117 "Knut Hamsun. Berecht. Übertr. aus d. Norweg. von J. Sandmeier u. S. Angermann" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30117 "Knut Hamsun. Berecht. Übertr. aus d. Norweg. von J. Sandmeier u. S. Angermann" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Pan" ;
-    rdamd:P30176 "Langen/Müller" ;
+    rdamd:P30176 "Langen/Müller" ;
     rdamd:P30182 "182 S., 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -1384,10 +1384,10 @@
 <http://example.org/451794729> a rdac:C10007 ;
     rdfs:label "Pan / Knut Hamsun. – List, 1957" ;
     rdamd:P30011 "1957" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30106 "List-Bücher" ;
-    rdamd:P30117 "Knut Hamsun. Berechtigte Übertr. von J. Sandmeier u. S. Angermann" ;
-    rdamd:P30137 "Lizenz des Albert Langen-Georg Müller Verl., München" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30106 "List-Bücher" ;
+    rdamd:P30117 "Knut Hamsun. Berechtigte Übertr. von J. Sandmeier u. S. Angermann" ;
+    rdamd:P30137 "Lizenz des Albert Langen-Georg Müller Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Pan" ;
     rdamd:P30165 "100" ;
@@ -1400,8 +1400,8 @@
 <http://example.org/451794737> a rdac:C10007 ;
     rdfs:label "Rosa / Knut Hamsun. – List, 1954" ;
     rdamd:P30011 "1954" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30106 "List-Bücher" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30106 "List-Bücher" ;
     rdamd:P30117 "Knut Hamsun. Aus d. Norweg. von J. Sandmeier u. S. Angermann" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Rosa" ;
@@ -1413,13 +1413,13 @@
     rdamo:P30139 <http://viaf.org/viaf/1650145424683186830143/exp/ger/1020/162089799/59960174> .
 
 <http://example.org/451794745> a rdac:C10007 ;
-    rdfs:label "Die Stadt Segelfoss / Knut Hamsun. – Ungekürzte Ausg., [1. - 40. Tsd.]. – Rowohlt, 1959" ;
+    rdfs:label "Die Stadt Segelfoss / Knut Hamsun. – Ungekürzte Ausg., [1. - 40. Tsd.]. – Rowohlt, 1959" ;
     rdamd:P30011 "1959" ;
     rdamd:P30088 "Hamburg" ;
     rdamd:P30106 "rororo Taschenbuch" ;
-    rdamd:P30107 "Ungekürzte Ausg., [1. - 40. Tsd.]" ;
+    rdamd:P30107 "Ungekürzte Ausg., [1. - 40. Tsd.]" ;
     rdamd:P30117 "Knut Hamsun. Aus d. Norweg. Dt. von Pauline Klaiber-Gottschau" ;
-    rdamd:P30137 "Lizenz d. Langen-Müller Verl., München" ;
+    rdamd:P30137 "Lizenz d. Langen-Müller Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Die Stadt Segelfoss" ;
     rdamd:P30165 "Ausg. 317" ;
@@ -1430,13 +1430,13 @@
     rdamo:P30139 <http://viaf.org/viaf/207944253/exp/ger/1020/117364598> .
 
 <http://example.org/451794753> a rdac:C10007 ;
-    rdfs:label "Die Stadt Segelfoss / Knut Hamsun. – Ungekürzte Ausg. [2. Aufl.], 41. - 45. Tsd. – Rowohlt, 1961" ;
+    rdfs:label "Die Stadt Segelfoss / Knut Hamsun. – Ungekürzte Ausg. [2. Aufl.], 41. - 45. Tsd. – Rowohlt, 1961" ;
     rdamd:P30011 "1961" ;
     rdamd:P30088 "Reinbek b. Hamburg" ;
     rdamd:P30106 "rororo-Taschenbuch" ;
-    rdamd:P30107 "Ungekürzte Ausg. [2. Aufl.], 41. - 45. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Übertr. aus d. Norweg. ins Dt. von Pauline Klaiber-Gottschau]" ;
-    rdamd:P30137 "Lizenz d. List-Verl., München" ;
+    rdamd:P30107 "Ungekürzte Ausg. [2. Aufl.], 41. - 45. Tsd" ;
+    rdamd:P30117 "Knut Hamsun. [Übertr. aus d. Norweg. ins Dt. von Pauline Klaiber-Gottschau]" ;
+    rdamd:P30137 "Lizenz d. List-Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Die Stadt Segelfoss" ;
     rdamd:P30165 "Ausg. 317" ;
@@ -1447,14 +1447,14 @@
     rdamo:P30139 <http://viaf.org/viaf/207944253/exp/ger/1020/117364598> .
 
 <http://example.org/451794761> a rdac:C10007 ;
-    rdfs:label "Auf überwachsenen Pfaden / Knut Hamsun. – List, 1950" ;
+    rdfs:label "Auf überwachsenen Pfaden / Knut Hamsun. – List, 1950" ;
     rdamd:P30011 "1950" ;
     rdamd:P30088 "Freiburg i. Br",
         "Leipzig",
-        "München" ;
-    rdamd:P30117 "Knut Hamsun. [Übers. von Elisabeth Ihle]" ;
+        "München" ;
+    rdamd:P30117 "Knut Hamsun. [Übers. von Elisabeth Ihle]" ;
     rdamd:P30142 "Ein Tagebuch" ;
-    rdamd:P30156 "Auf überwachsenen Pfaden" ;
+    rdamd:P30156 "Auf überwachsenen Pfaden" ;
     rdamd:P30176 "List" ;
     rdamd:P30182 "212 S., 8." ;
     rdamo:P30001 rdact:1049 ;
@@ -1462,13 +1462,13 @@
     rdamo:P30139 <http://viaf.org/viaf/30145424502786830193/exp/ger/1020/ihleelisabeth> .
 
 <http://example.org/451794788> a rdac:C10007 ;
-    rdfs:label "Auf überwachsenen Pfaden / Knut Hamsun. – List, 1959" ;
+    rdfs:label "Auf überwachsenen Pfaden / Knut Hamsun. – List, 1959" ;
     rdamd:P30011 "1959" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30106 "List-Bücher" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30106 "List-Bücher" ;
     rdamd:P30117 "Knut Hamsun. Aus d. Norweg. von Elisabeth Ihle" ;
     rdamd:P30142 "Ein Tagebuch" ;
-    rdamd:P30156 "Auf überwachsenen Pfaden" ;
+    rdamd:P30156 "Auf überwachsenen Pfaden" ;
     rdamd:P30165 "123" ;
     rdamd:P30176 "List" ;
     rdamd:P30182 "143 S., kl. 8." ;
@@ -1479,10 +1479,10 @@
 <http://example.org/451794796> a rdac:C10007 ;
     rdfs:label "Hunger / Knut Hamsun. – 84. - 88. Tsd. – List, 1953" ;
     rdamd:P30011 "1953" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "Gesammelte Werke / Knut Hamsun" ;
     rdamd:P30107 "84. - 88. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. Berecht. Übers. von J. Sandmeier u. S. Angermann" ;
+    rdamd:P30117 "Knut Hamsun. Berecht. Übers. von J. Sandmeier u. S. Angermann" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Hunger" ;
     rdamd:P30176 "List" ;
@@ -1496,8 +1496,8 @@
     rdamd:P30011 "1957" ;
     rdamd:P30088 "Berlin",
         "Darmstadt" ;
-    rdamd:P30117 "Knut Hamsun. Berechtigte Übers. aus d. Norwegischen von J. Sandmeier u. S. Angermann" ;
-    rdamd:P30137 "Lizenz d. P. List Verl., München" ;
+    rdamd:P30117 "Knut Hamsun. Berechtigte Übers. aus d. Norwegischen von J. Sandmeier u. S. Angermann" ;
+    rdamd:P30137 "Lizenz d. P. List Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Hunger" ;
     rdamd:P30176 "Dt. Buch-Gemeinschaft" ;
@@ -1507,13 +1507,13 @@
     rdamo:P30139 <http://viaf.org/viaf/220443771/exp/ger/1020/162089799/59960174> .
 
 <http://example.org/451794826> a rdac:C10007 ;
-    rdfs:label "Hunger / Knut Hamsun. – Ungekürzte Ausg., [1. - 40. Tsd.]. – Rowohlt, 1959" ;
+    rdfs:label "Hunger / Knut Hamsun. – Ungekürzte Ausg., [1. - 40. Tsd.]. – Rowohlt, 1959" ;
     rdamd:P30011 "1959" ;
     rdamd:P30088 "Hamburg" ;
     rdamd:P30106 "rororo Taschenbuch" ;
-    rdamd:P30107 "Ungekürzte Ausg., [1. - 40. Tsd.]" ;
+    rdamd:P30107 "Ungekürzte Ausg., [1. - 40. Tsd.]" ;
     rdamd:P30117 "Knut Hamsun. Aus d. Norweg. Dt. von J. Sandmeier u. S. Angermann" ;
-    rdamd:P30137 "Lizenz d. List Verl., München" ;
+    rdamd:P30137 "Lizenz d. List Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Hunger" ;
     rdamd:P30165 "Ausg. 315" ;
@@ -1524,13 +1524,13 @@
     rdamo:P30139 <http://viaf.org/viaf/220443771/exp/ger/1020/162089799/59960174> .
 
 <http://example.org/451794834> a rdac:C10007 ;
-    rdfs:label "Hunger / Knut Hamsun. – Ungekürzte Ausg. [3. Aufl.], 51. - 55. Tsd. – Rowohlt, 1961" ;
+    rdfs:label "Hunger / Knut Hamsun. – Ungekürzte Ausg. [3. Aufl.], 51. - 55. Tsd. – Rowohlt, 1961" ;
     rdamd:P30011 "1961" ;
     rdamd:P30088 "Reinbek b. Hamburg" ;
     rdamd:P30106 "rororo Taschenbuch" ;
-    rdamd:P30107 "Ungekürzte Ausg. [3. Aufl.], 51. - 55. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Aus d. Norweg. übertr. ins Dt. von J. Sandmeier u. S. Angermann]" ;
-    rdamd:P30137 "Lizenz d. List Verl., München" ;
+    rdamd:P30107 "Ungekürzte Ausg. [3. Aufl.], 51. - 55. Tsd" ;
+    rdamd:P30117 "Knut Hamsun. [Aus d. Norweg. übertr. ins Dt. von J. Sandmeier u. S. Angermann]" ;
+    rdamd:P30137 "Lizenz d. List Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Hunger" ;
     rdamd:P30165 "Ausg. 315" ;
@@ -1541,13 +1541,13 @@
     rdamo:P30139 <http://viaf.org/viaf/220443771/exp/ger/1020/162089799/59960174> .
 
 <http://example.org/451794842> a rdac:C10007 ;
-    rdfs:label "Hunger / Knut Hamsun. – Ungekürzte Ausg. [4. Aufl.], 56. - 63. Tsd. – Rowohlt, 1962" ;
+    rdfs:label "Hunger / Knut Hamsun. – Ungekürzte Ausg. [4. Aufl.], 56. - 63. Tsd. – Rowohlt, 1962" ;
     rdamd:P30011 "1962" ;
     rdamd:P30088 "Reinbek b. Hamburg" ;
     rdamd:P30106 "rororo Taschenbuch" ;
-    rdamd:P30107 "Ungekürzte Ausg. [4. Aufl.], 56. - 63. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Übertr. aus d. Norweg. ins Dt. von J. Sandmeier u. S. Angermann]" ;
-    rdamd:P30137 "Lizenz d. List Verl., München" ;
+    rdamd:P30107 "Ungekürzte Ausg. [4. Aufl.], 56. - 63. Tsd" ;
+    rdamd:P30117 "Knut Hamsun. [Übertr. aus d. Norweg. ins Dt. von J. Sandmeier u. S. Angermann]" ;
+    rdamd:P30137 "Lizenz d. List Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Hunger" ;
     rdamd:P30165 "Ausg. 315" ;
@@ -1558,13 +1558,13 @@
     rdamo:P30139 <http://viaf.org/viaf/220443771/exp/ger/1020/162089799/59960174> .
 
 <http://example.org/451794850> a rdac:C10007 ;
-    rdfs:label "Hunger / Knut Hamsun. – Ungekürzte Ausg. [5. Aufl.], 64. - 68. Tsd. – Rowohlt, 1964" ;
+    rdfs:label "Hunger / Knut Hamsun. – Ungekürzte Ausg. [5. Aufl.], 64. - 68. Tsd. – Rowohlt, 1964" ;
     rdamd:P30011 "1964" ;
     rdamd:P30088 "Reinbek b. Hamburg" ;
     rdamd:P30106 "rororo Taschenbuch" ;
-    rdamd:P30107 "Ungekürzte Ausg. [5. Aufl.], 64. - 68. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Aus d. Norweg. ins Dt. übertr. von J. Sandmeier u. S. Angermann]" ;
-    rdamd:P30137 "Lizenz d. List Verl., München" ;
+    rdamd:P30107 "Ungekürzte Ausg. [5. Aufl.], 64. - 68. Tsd" ;
+    rdamd:P30117 "Knut Hamsun. [Aus d. Norweg. ins Dt. übertr. von J. Sandmeier u. S. Angermann]" ;
+    rdamd:P30137 "Lizenz d. List Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Hunger" ;
     rdamd:P30165 "Ausg. 315" ;
@@ -1580,8 +1580,8 @@
     rdamd:P30088 "[Frankfurt a.M.]" ;
     rdamd:P30106 "Bibliothek Suhrkamp" ;
     rdamd:P30107 "1. - 6. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht., rev. Übers. von J. Sandmeier u. S. Angermann]" ;
-    rdamd:P30137 "Lizenz d. List Verl., München" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht., rev. Übers. von J. Sandmeier u. S. Angermann]" ;
+    rdamd:P30137 "Lizenz d. List Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Hunger" ;
     rdamd:P30165 "Bd. 143" ;
@@ -1595,9 +1595,9 @@
     rdfs:label "Schwärmer / Knut Hamsun. – Sauerländer, 1953" ;
     rdamd:P30011 "1953" ;
     rdamd:P30088 "Aarau" ;
-    rdamd:P30106 "Juventus-Bücherei : Reihe 1" ;
-    rdamd:P30117 "Knut Hamsun. [Übers. von J. Sandmeier]" ;
-    rdamd:P30137 "Lizenz d. List Verl., München" ;
+    rdamd:P30106 "Juventus-Bücherei : Reihe 1" ;
+    rdamd:P30117 "Knut Hamsun. [Übers. von J. Sandmeier]" ;
+    rdamd:P30137 "Lizenz d. List Verl., München" ;
     rdamd:P30156 "Schwärmer" ;
     rdamd:P30165 "Bd. 35" ;
     rdamd:P30176 "Sauerländer" ;
@@ -1607,13 +1607,13 @@
     rdamo:P30139 <http://viaf.org/viaf/995145424555286830372/exp/ger/1020/59960174> .
 
 <http://example.org/451794885> a rdac:C10007 ;
-    rdfs:label "Schwärmer / Knut Hamsun. – Langen/Müller, 1956" ;
+    rdfs:label "Schwärmer / Knut Hamsun. – Langen/Müller, 1956" ;
     rdamd:P30011 "1956" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30117 "Knut Hamsun. Berecht. Übers. aus d. Norweg. von Jutta u. Theodor Knust" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30117 "Knut Hamsun. Berecht. Übers. aus d. Norweg. von Jutta u. Theodor Knust" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Schwärmer" ;
-    rdamd:P30176 "Langen/Müller" ;
+    rdamd:P30176 "Langen/Müller" ;
     rdamd:P30182 "140 S., 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -1622,9 +1622,9 @@
 <http://example.org/451794893> a rdac:C10007 ;
     rdfs:label "Gedämpftes Saitenspiel / Knut Hamsun. – Bertelsmann, 1951" ;
     rdamd:P30011 "1951" ;
-    rdamd:P30088 "Gütersloh" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übertr. von J. Sandmeier]" ;
-    rdamd:P30137 "Mit Genehmigung d. Paul List Verl., München-Leipzig-Freiburg/Brsg." ;
+    rdamd:P30088 "Gütersloh" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übertr. von J. Sandmeier]" ;
+    rdamd:P30137 "Mit Genehmigung d. Paul List Verl., München-Leipzig-Freiburg/Brsg." ;
     rdamd:P30142 "Erzählung e. Wanderers" ;
     rdamd:P30156 "Gedämpftes Saitenspiel" ;
     rdamd:P30176 "Bertelsmann" ;
@@ -1634,13 +1634,13 @@
     rdamo:P30139 <http://viaf.org/viaf/5470149068540465730001/exp/ger/1020/59960174> .
 
 <http://example.org/451794907> a rdac:C10007 ;
-    rdfs:label "Gedämpftes Saitenspiel / Knut Hamsun. – Ungekürzte Ausg., [1. - 40. Tsd.]. – Rowohlt, 1959" ;
+    rdfs:label "Gedämpftes Saitenspiel / Knut Hamsun. – Ungekürzte Ausg., [1. - 40. Tsd.]. – Rowohlt, 1959" ;
     rdamd:P30011 "1959" ;
     rdamd:P30088 "Hamburg" ;
     rdamd:P30106 "rororo Taschenbuch" ;
-    rdamd:P30107 "Ungekürzte Ausg., [1. - 40. Tsd.]" ;
+    rdamd:P30107 "Ungekürzte Ausg., [1. - 40. Tsd.]" ;
     rdamd:P30117 "Knut Hamsun. Aus d. Norweg. Dt. von J. Sandmeier u. S. Angermann" ;
-    rdamd:P30137 "Lizenz d. List Verl., München" ;
+    rdamd:P30137 "Lizenz d. List Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Gedämpftes Saitenspiel" ;
     rdamd:P30165 "Ausg. 316" ;
@@ -1651,13 +1651,13 @@
     rdamo:P30139 <http://viaf.org/viaf/5470149068540465730001/exp/ger/1020/162089799/59960174> .
 
 <http://example.org/451794915> a rdac:C10007 ;
-    rdfs:label "Gedämpftes Saitenspiel / Knut Hamsun. – Ungekürzte Ausg. [2. Aufl.], 41. - 45. Tsd. – Rowohlt, 1961" ;
+    rdfs:label "Gedämpftes Saitenspiel / Knut Hamsun. – Ungekürzte Ausg. [2. Aufl.], 41. - 45. Tsd. – Rowohlt, 1961" ;
     rdamd:P30011 "1961" ;
     rdamd:P30088 "Reinbek bei Hamburg" ;
     rdamd:P30106 "rororo Taschenbuch" ;
-    rdamd:P30107 "Ungekürzte Ausg. [2. Aufl.], 41. - 45. Tsd" ;
+    rdamd:P30107 "Ungekürzte Ausg. [2. Aufl.], 41. - 45. Tsd" ;
     rdamd:P30117 "Knut Hamsun. [Aus d. Norweg. von J. Sandmeier u. S. Angermann]" ;
-    rdamd:P30137 "Lizenz d. List Verl., München" ;
+    rdamd:P30137 "Lizenz d. List Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Gedämpftes Saitenspiel" ;
     rdamd:P30165 "Ausg. 316" ;
@@ -1668,13 +1668,13 @@
     rdamo:P30139 <http://viaf.org/viaf/5470149068540465730001/exp/ger/1020/162089799/59960174> .
 
 <http://example.org/451794923> a rdac:C10007 ;
-    rdfs:label "Gedämpftes Saitenspiel / Knut Hamsun. – Ungekürzte Ausg. [3. Aufl.], 46. - 50. Tsd. – Rowohlt, 1962" ;
+    rdfs:label "Gedämpftes Saitenspiel / Knut Hamsun. – Ungekürzte Ausg. [3. Aufl.], 46. - 50. Tsd. – Rowohlt, 1962" ;
     rdamd:P30011 "1962" ;
     rdamd:P30088 "Reinbek b. Hamburg" ;
     rdamd:P30106 "rororo Taschenbuch" ;
-    rdamd:P30107 "Ungekürzte Ausg. [3. Aufl.], 46. - 50. Tsd" ;
+    rdamd:P30107 "Ungekürzte Ausg. [3. Aufl.], 46. - 50. Tsd" ;
     rdamd:P30117 "Knut Hamsun. [Aus d. Norweg. Dt. von J. Sandmeier u. S. Angermann]" ;
-    rdamd:P30137 "Lizenz d. List Verl., München" ;
+    rdamd:P30137 "Lizenz d. List Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Gedämpftes Saitenspiel" ;
     rdamd:P30165 "Ausg. 316" ;
@@ -1688,9 +1688,9 @@
     rdfs:label "Victoria / Knut Hamsun. – 406. - 415. Tsd. – List, 1948" ;
     rdamd:P30011 "1948" ;
     rdamd:P30088 "Leipzig",
-        "München" ;
+        "München" ;
     rdamd:P30107 "406. - 415. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Neue berecht. Übers. von J. Sandmeier]" ;
+    rdamd:P30117 "Knut Hamsun. [Neue berecht. Übers. von J. Sandmeier]" ;
     rdamd:P30142 "Die Geschichte einer Liebe" ;
     rdamd:P30156 "Victoria" ;
     rdamd:P30176 "List" ;
@@ -1704,8 +1704,8 @@
     rdamd:P30011 "1954" ;
     rdamd:P30088 "Berlin",
         "Darmstadt" ;
-    rdamd:P30117 "Knut Hamsun. Berechtigte Übers. von J. Sandmeier u. S. Angermann" ;
-    rdamd:P30137 "Lizenz d. List Verl., München" ;
+    rdamd:P30117 "Knut Hamsun. Berechtigte Übers. von J. Sandmeier u. S. Angermann" ;
+    rdamd:P30137 "Lizenz d. List Verl., München" ;
     rdamd:P30142 "Die Geschichte einer Liebe" ;
     rdamd:P30156 "Victoria" ;
     rdamd:P30176 "Dt. Buch-Gemeinschaft" ;
@@ -1717,10 +1717,10 @@
 <http://example.org/451794966> a rdac:C10007 ;
     rdfs:label "Victoria / Knut Hamsun. – 471. - 500. Tsd. – List, 1952" ;
     rdamd:P30011 "1952" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30106 "List-Bücher" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30106 "List-Bücher" ;
     rdamd:P30107 "471. - 500. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. Berecht. Übers. von J. Sandmeier u. S. Angermann" ;
+    rdamd:P30117 "Knut Hamsun. Berecht. Übers. von J. Sandmeier u. S. Angermann" ;
     rdamd:P30142 "Die Geschichte e. Liebe" ;
     rdamd:P30156 "Victoria" ;
     rdamd:P30165 "9" ;
@@ -1733,10 +1733,10 @@
 <http://example.org/451794974> a rdac:C10007 ;
     rdfs:label "Victoria / Knut Hamsun. – Bertelsmann Lesering, [1963]" ;
     rdamd:P30011 "[1963]" ;
-    rdamd:P30088 "[Gütersloh]" ;
+    rdamd:P30088 "[Gütersloh]" ;
     rdamd:P30106 "Kleine Lesering-Bibliothek" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. von J. Sandmeier u. S. Angermann]" ;
-    rdamd:P30137 "Lizenz d. List Verl., München" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. von J. Sandmeier u. S. Angermann]" ;
+    rdamd:P30137 "Lizenz d. List Verl., München" ;
     rdamd:P30142 "Die Geschichte e. Liebe" ;
     rdamd:P30156 "Victoria" ;
     rdamd:P30176 "Bertelsmann Lesering" ;
@@ -1746,13 +1746,13 @@
     rdamo:P30139 <http://viaf.org/viaf/395147270538135700001/exp/ger/1020/162089799/59960174> .
 
 <http://example.org/456876820> a rdac:C10007 ;
-    rdfs:label "Pan. – Langen/Müller, 1969" ;
+    rdfs:label "Pan. – Langen/Müller, 1969" ;
     rdamd:P30011 "1969" ;
-    rdamd:P30088 "München",
+    rdamd:P30088 "München",
         "Wien" ;
     rdamd:P30137 "Enth. ausserdem: Die Nachbarstadt" ;
     rdamd:P30156 "Pan" ;
-    rdamd:P30176 "Langen/Müller" ;
+    rdamd:P30176 "Langen/Müller" ;
     rdamd:P30182 "288 S., 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -1763,8 +1763,8 @@
     rdamd:P30011 "[1966]" ;
     rdamd:P30088 "Wien" ;
     rdamd:P30106 "Grosse Erzähler der Weltliteratur" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus d. Norweg. von J. Sandmeier u. S. Angermann. Mit e. Nachw. von Walter Zeleny]" ;
-    rdamd:P30137 "Lizenz d. List Verl., München" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus d. Norweg. von J. Sandmeier u. S. Angermann. Mit e. Nachw. von Walter Zeleny]" ;
+    rdamd:P30137 "Lizenz d. List Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Segen der Erde" ;
     rdamd:P30176 "Buchgemeinschaft Donauland" ;
@@ -1776,9 +1776,9 @@
 <http://example.org/456876863> a rdac:C10007 ;
     rdfs:label "Segen der Erde / Knut Hamsun. – List, 1968" ;
     rdamd:P30011 "1968" ;
-    rdamd:P30088 "[München]" ;
+    rdamd:P30088 "[München]" ;
     rdamd:P30106 "Epikon" ;
-    rdamd:P30117 "Knut Hamsun. [Ins Dt. übertr. von J. Sandmeier u. S. Angermann.] Nachw. von Max Tau" ;
+    rdamd:P30117 "Knut Hamsun. [Ins Dt. übertr. von J. Sandmeier u. S. Angermann.] Nachw. von Max Tau" ;
     rdamd:P30156 "Segen der Erde" ;
     rdamd:P30176 "List" ;
     rdamd:P30182 "412 S., kl. 8." ;
@@ -1789,10 +1789,10 @@
 <http://example.org/456876871> a rdac:C10007 ;
     rdfs:label "Segen der Erde / Knut Hamsun. – Coron-Verl, [1968]" ;
     rdamd:P30011 "[1968]" ;
-    rdamd:P30088 "Zürich" ;
-    rdamd:P30106 "Nobelpreis für Literatur" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus d. Norweg. von J. Sandmeier u. S. Angermann. Übers. d. Begleittexte: Inge Thoens. Ill.: Christine Ackermann]" ;
-    rdamd:P30137 "Mit Bibliographie K. Hamsun (S. 381 - 397). - In Zusammenarbeit mit Les Editions Rombaldi, Paris. - Lizenz d. List-Verl., München" ;
+    rdamd:P30088 "Zürich" ;
+    rdamd:P30106 "Nobelpreis für Literatur" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus d. Norweg. von J. Sandmeier u. S. Angermann. Übers. d. Begleittexte: Inge Thoens. Ill.: Christine Ackermann]" ;
+    rdamd:P30137 "Mit Bibliographie K. Hamsun (S. 381 - 397). - In Zusammenarbeit mit Les Editions Rombaldi, Paris. - Lizenz d. List-Verl., München" ;
     rdamd:P30156 "Segen der Erde" ;
     rdamd:P30165 "Nr. 20 = 1920" ;
     rdamd:P30176 "Coron-Verl" ;
@@ -1807,8 +1807,8 @@
     rdamd:P30088 "[Frankfurt a.M.]" ;
     rdamd:P30106 "Bibliothek Suhrkamp" ;
     rdamd:P30107 "7. - 9. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Aus d. Norweg. Berecht., rev. Übers. von J. Sandmeier u. S. Angermann]" ;
-    rdamd:P30137 "Lizenz d. List Verl., München" ;
+    rdamd:P30117 "Knut Hamsun. [Aus d. Norweg. Berecht., rev. Übers. von J. Sandmeier u. S. Angermann]" ;
+    rdamd:P30137 "Lizenz d. List Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Hunger" ;
     rdamd:P30165 "Bd. 143" ;
@@ -1819,26 +1819,26 @@
     rdamo:P30139 <http://viaf.org/viaf/220443771/exp/ger/1020/162089799/59960174> .
 
 <http://example.org/573638853> a rdac:C10007 ;
-    rdfs:label "Pan. – Dt. Hausbücherei, 1944" ;
+    rdfs:label "Pan. – Dt. Hausbücherei, 1944" ;
     rdamd:P30011 "1944" ;
     rdamd:P30088 "Hamburg" ;
-    rdamd:P30106 "Deutsche Hausbücherei" ;
+    rdamd:P30106 "Deutsche Hausbücherei" ;
     rdamd:P30156 "Pan" ;
     rdamd:P30165 "Bd. 638" ;
-    rdamd:P30176 "Dt. Hausbücherei" ;
+    rdamd:P30176 "Dt. Hausbücherei" ;
     rdamd:P30182 "343 S., 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/194765531/exp/ger/1020/59960174> .
 
 <http://example.org/573638861> a rdac:C10007 ;
-    rdfs:label "Abendröte / Knut Hamsun. – Bühnen-Ms. – Langen, [um 1928]" ;
+    rdfs:label "Abendröte / Knut Hamsun. – Bühnen-Ms. – Langen, [um 1928]" ;
     rdamd:P30011 "[um 1928]" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30107 "Bühnen-Ms" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30107 "Bühnen-Ms" ;
     rdamd:P30117 "Knut Hamsun" ;
     rdamd:P30142 "Schauspiel in 3 Aufz" ;
-    rdamd:P30156 "Abendröte" ;
+    rdamd:P30156 "Abendröte" ;
     rdamd:P30176 "Langen" ;
     rdamd:P30182 "128 S., 8." ;
     rdamo:P30001 rdact:1049 ;
@@ -1846,42 +1846,42 @@
     rdamo:P30139 <http://www.wikidata.org/entity/Q15062327/exp/ger/1020> .
 
 <http://example.org/57363887X> a rdac:C10007 ;
-    rdfs:label "August Weltumsegler / Knut Hamsun. – 46.-55. Tsd. – Albert Langen/Georg Müller, 1942" ;
+    rdfs:label "August Weltumsegler / Knut Hamsun. – 46.-55. Tsd. – Albert Langen/Georg Müller, 1942" ;
     rdamd:P30011 "1942" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "46.-55. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus d. Norweg. v. J. Sandmeier ; S. Angermann]" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus d. Norweg. v. J. Sandmeier ; S. Angermann]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "August Weltumsegler" ;
-    rdamd:P30176 "Albert Langen/Georg Müller" ;
+    rdamd:P30176 "Albert Langen/Georg Müller" ;
     rdamd:P30182 "390 S., 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/3267149068489065730001/exp/ger/1020/162089799/59960174> .
 
 <http://example.org/573638888> a rdac:C10007 ;
-    rdfs:label "August Weltumsegler / Knut Hamsun. – [61.-70. Tsd. d. Gesamtaufl.]. – Albert Langen/Georg Müller, 1944" ;
+    rdfs:label "August Weltumsegler / Knut Hamsun. – [61.-70. Tsd. d. Gesamtaufl.]. – Albert Langen/Georg Müller, 1944" ;
     rdamd:P30011 "1944" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "[61.-70. Tsd. d. Gesamtaufl.]" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus d. Norw. v. J. Sandmeier ; S. Angermann]" ;
-    rdamd:P30137 "Wehrmachtausgabe, für das Sortiment nicht erhältlich" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus d. Norw. v. J. Sandmeier ; S. Angermann]" ;
+    rdamd:P30137 "Wehrmachtausgabe, für das Sortiment nicht erhältlich" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "August Weltumsegler" ;
-    rdamd:P30176 "Albert Langen/Georg Müller" ;
+    rdamd:P30176 "Albert Langen/Georg Müller" ;
     rdamd:P30182 "326 S., 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/3267149068489065730001/exp/ger/1020/162089799/59960174> .
 
 <http://example.org/573638896> a rdac:C10007 ;
-    rdfs:label "Kinder ihrer Zeit. – 36.-40. Tsd. – Langen, Müller, 1950" ;
+    rdfs:label "Kinder ihrer Zeit. – 36.-40. Tsd. – Langen, Müller, 1950" ;
     rdamd:P30011 "1950" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "Die Segelfoss-Romane" ;
     rdamd:P30107 "36.-40. Tsd" ;
     rdamd:P30156 "Kinder ihrer Zeit" ;
-    rdamd:P30176 "Langen, Müller" ;
+    rdamd:P30176 "Langen, Müller" ;
     rdamd:P30182 "583 S., 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -1890,8 +1890,8 @@
 <http://example.org/573638926> a rdac:C10007 ;
     rdfs:label "Segen der Erde / Von Knut Hamsun. – Langen, 1918" ;
     rdamd:P30011 "1918" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30117 "Von Knut Hamsun. Einz. berecht. Übers. aus d. Norweg. von Pauline Klaiber" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30117 "Von Knut Hamsun. Einz. berecht. Übers. aus d. Norweg. von Pauline Klaiber" ;
     rdamd:P30137 "In Fraktur" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Segen der Erde" ;
@@ -1905,7 +1905,7 @@
     rdfs:label "Segen der Erde / Knut Hamsun. – Deutsche Buch-Gemeinschaft, [1930]" ;
     rdamd:P30011 "[1930]" ;
     rdamd:P30088 "Berlin" ;
-    rdamd:P30117 "Knut Hamsun. Berecht. Übers. von Pauline Klaiber-Gottschau. Rev. von J. Sandmeier" ;
+    rdamd:P30117 "Knut Hamsun. Berecht. Übers. von Pauline Klaiber-Gottschau. Rev. von J. Sandmeier" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Segen der Erde" ;
     rdamd:P30176 "Deutsche Buch-Gemeinschaft" ;
@@ -1915,58 +1915,58 @@
     rdamo:P30139 <http://viaf.org/viaf/294124367/exp/ger/1020/117364598/59960174> .
 
 <http://example.org/573638942> a rdac:C10007 ;
-    rdfs:label "Segen der Erde / Knut Hamsun. – 156.-160. Tsd. – Albert Langen/Georg Müller, [1940]" ;
+    rdfs:label "Segen der Erde / Knut Hamsun. – 156.-160. Tsd. – Albert Langen/Georg Müller, [1940]" ;
     rdamd:P30011 "[1940]" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "156.-160. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus d. Norweg. v. Pauline Klaiber-Gottschau]" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus d. Norweg. v. Pauline Klaiber-Gottschau]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Segen der Erde" ;
-    rdamd:P30176 "Albert Langen/Georg Müller" ;
+    rdamd:P30176 "Albert Langen/Georg Müller" ;
     rdamd:P30182 "386 S., 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/294124367/exp/ger/1020/117364598> .
 
 <http://example.org/573638950> a rdac:C10007 ;
-    rdfs:label "Segen der Erde / Knut Hamsun. – 206.-215. Tsd. – Albert Langen/Georg Müller, 1942" ;
+    rdfs:label "Segen der Erde / Knut Hamsun. – 206.-215. Tsd. – Albert Langen/Georg Müller, 1942" ;
     rdamd:P30011 "1942" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "206.-215. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus d. Norweg. v. Pauline Klaiber-Gottschau]" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus d. Norweg. v. Pauline Klaiber-Gottschau]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Segen der Erde" ;
-    rdamd:P30176 "Albert Langen/Georg Müller" ;
+    rdamd:P30176 "Albert Langen/Georg Müller" ;
     rdamd:P30182 "368 S., 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/294124367/exp/ger/1020/117364598> .
 
 <http://example.org/573638969> a rdac:C10007 ;
-    rdfs:label "Segen der Erde / Knut Hamsun. – 216.-220. Tsd. – Albert Langen/Georg Müller, 1943" ;
+    rdfs:label "Segen der Erde / Knut Hamsun. – 216.-220. Tsd. – Albert Langen/Georg Müller, 1943" ;
     rdamd:P30011 "1943" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "216.-220. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus d. Norweg. v. Pauline Klaiber-Gottschau]" ;
-    rdamd:P30137 "Wehrmachtausgabe, für das Sortiment nicht erhältlich" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus d. Norweg. v. Pauline Klaiber-Gottschau]" ;
+    rdamd:P30137 "Wehrmachtausgabe, für das Sortiment nicht erhältlich" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Segen der Erde" ;
-    rdamd:P30176 "Albert Langen/Georg Müller" ;
+    rdamd:P30176 "Albert Langen/Georg Müller" ;
     rdamd:P30182 "487 S., 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/294124367/exp/ger/1020/117364598> .
 
 <http://example.org/573638977> a rdac:C10007 ;
-    rdfs:label "Segen der Erde / Knut Hamsun. – [hs.: 241.-245. Tsd.]. – Albert Langen/Georg Müller, [1944]" ;
+    rdfs:label "Segen der Erde / Knut Hamsun. – [hs.: 241.-245. Tsd.]. – Albert Langen/Georg Müller, [1944]" ;
     rdamd:P30011 "[1944]" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "[hs.: 241.-245. Tsd.]" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus d. Norweg. v. Pauline Klaiber-Gottschau]" ;
-    rdamd:P30137 "Wehrmachtsausgabe, für das Sortiment nicht erhältlich" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus d. Norweg. v. Pauline Klaiber-Gottschau]" ;
+    rdamd:P30137 "Wehrmachtsausgabe, für das Sortiment nicht erhältlich" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Segen der Erde" ;
-    rdamd:P30176 "Albert Langen/Georg Müller" ;
+    rdamd:P30176 "Albert Langen/Georg Müller" ;
     rdamd:P30182 "386 S., 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -1976,8 +1976,8 @@
     rdfs:label "Segen der Erde / Knut Hamsun. – Deutsche Buchgemeinschaft, [1952]" ;
     rdamd:P30011 "[1952]" ;
     rdamd:P30088 "Wien" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. v. J. Sandmeier ; S. Angermann]" ;
-    rdamd:P30137 "Lizenzausg. d. Verl. List, München" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. v. J. Sandmeier ; S. Angermann]" ;
+    rdamd:P30137 "Lizenzausg. d. Verl. List, München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Segen der Erde" ;
     rdamd:P30176 "Deutsche Buchgemeinschaft" ;
@@ -1989,10 +1989,10 @@
 <http://example.org/573638993> a rdac:C10007 ;
     rdfs:label "Segen der Erde / Knut Hamsun. – Schweizer Druck- u. Verlagshaus, [1952]" ;
     rdamd:P30011 "[1952]" ;
-    rdamd:P30088 "Zürich" ;
+    rdamd:P30088 "Zürich" ;
     rdamd:P30106 "Gesammelte Werke / Hamsun" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. v. J. Sandmeier ; S. Angermann]" ;
-    rdamd:P30137 "Lizenzausg. f. d. Neue Schweizer Bibliothek d. Verl. List. München" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. v. J. Sandmeier ; S. Angermann]" ;
+    rdamd:P30137 "Lizenzausg. f. d. Neue Schweizer Bibliothek d. Verl. List. München" ;
     rdamd:P30156 "Segen der Erde" ;
     rdamd:P30176 "Schweizer Druck- u. Verlagshaus" ;
     rdamd:P30182 "302 S., 8." ;
@@ -2003,8 +2003,8 @@
 <http://example.org/573639000> a rdac:C10007 ;
     rdfs:label "Segen der Erde / Knut Hamsun. – Buchclub Ex Libris, [1961]" ;
     rdamd:P30011 "[1961]" ;
-    rdamd:P30088 "Zürich" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. v. J. Sandmeier ; S. Angermann]" ;
+    rdamd:P30088 "Zürich" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. v. J. Sandmeier ; S. Angermann]" ;
     rdamd:P30137 "Lizenzausg." ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Segen der Erde" ;
@@ -2017,9 +2017,9 @@
 <http://example.org/573639019> a rdac:C10007 ;
     rdfs:label "Unter Herbststernen / Knut Hamsun. – 4.-6. Tsd. – Langen, 1923" ;
     rdamd:P30011 "1923" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "4.-6. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. In neuer berecht. Übertr. v. J. Sandmeier" ;
+    rdamd:P30117 "Knut Hamsun. In neuer berecht. Übertr. v. J. Sandmeier" ;
     rdamd:P30142 "Erzählg e. Wanderers" ;
     rdamd:P30156 "Unter Herbststernen" ;
     rdamd:P30176 "Langen" ;
@@ -2034,7 +2034,7 @@
     rdamd:P30088 "Berlin" ;
     rdamd:P30106 "[Knaurs Standard-Bände]" ;
     rdamd:P30107 "Vollst. Ausg" ;
-    rdamd:P30117 "Knut Hamsun. [Aus d. Norweg. übertr. u. neu durchges. von Erwin Magnus]" ;
+    rdamd:P30117 "Knut Hamsun. [Aus d. Norweg. übertr. u. neu durchges. von Erwin Magnus]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Das letzte Kapitel" ;
     rdamd:P30176 "Th. Knaur Nachf" ;
@@ -2044,41 +2044,41 @@
     rdamo:P30139 <http://viaf.org/viaf/188303684/exp/ger/1020/17979510> .
 
 <http://example.org/573639035> a rdac:C10007 ;
-    rdfs:label "Das letzte Kapitel / Knut Hamsun. – Volksverband d. Bücherfreunde, Wegweiser Verl. G.m.b.H., [1929]" ;
+    rdfs:label "Das letzte Kapitel / Knut Hamsun. – Volksverband d. Bücherfreunde, Wegweiser Verl. G.m.b.H., [1929]" ;
     rdamd:P30011 "[1929]" ;
     rdamd:P30088 "Berlin" ;
-    rdamd:P30106 "Auswahlreihe des Volksverbandes der Bücherfreunde" ;
-    rdamd:P30117 "Knut Hamsun. Einzig berecht., neu durchges. Übertr. aus d. Norweg. von Erwin Magnus" ;
+    rdamd:P30106 "Auswahlreihe des Volksverbandes der Bücherfreunde" ;
+    rdamd:P30117 "Knut Hamsun. Einzig berecht., neu durchges. Übertr. aus d. Norweg. von Erwin Magnus" ;
     rdamd:P30156 "Das letzte Kapitel" ;
-    rdamd:P30176 "Volksverband d. Bücherfreunde, Wegweiser Verl. G.m.b.H." ;
+    rdamd:P30176 "Volksverband d. Bücherfreunde, Wegweiser Verl. G.m.b.H." ;
     rdamd:P30182 "493 S., 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/188303684/exp/ger/1020/17979510> .
 
 <http://example.org/573639043> a rdac:C10007 ;
-    rdfs:label "Das letzte Kapitel / Knut Hamsun. – 23. Tsd. – Albert Langen/Georg Müller, [1941]" ;
+    rdfs:label "Das letzte Kapitel / Knut Hamsun. – 23. Tsd. – Albert Langen/Georg Müller, [1941]" ;
     rdamd:P30011 "[1941]" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "23. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. Berecht. Übers. aus d. Norweg. v. Hermann Hiltbrunner" ;
+    rdamd:P30117 "Knut Hamsun. Berecht. Übers. aus d. Norweg. v. Hermann Hiltbrunner" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Das letzte Kapitel" ;
-    rdamd:P30176 "Albert Langen/Georg Müller" ;
+    rdamd:P30176 "Albert Langen/Georg Müller" ;
     rdamd:P30182 "412 S., 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/188303684/exp/ger/1020/hiltbrunnerhermann> .
 
 <http://example.org/573639051> a rdac:C10007 ;
-    rdfs:label "Das letzte Kapitel / Knut Hamsun. – 24.-33. Tsd. – Albert Langen/Georg Müller, 1943" ;
+    rdfs:label "Das letzte Kapitel / Knut Hamsun. – 24.-33. Tsd. – Albert Langen/Georg Müller, 1943" ;
     rdamd:P30011 "1943" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "24.-33. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus d. Norweg. v. Hermann Hiltbrunner]" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus d. Norweg. v. Hermann Hiltbrunner]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Das letzte Kapitel" ;
-    rdamd:P30176 "Albert Langen/Georg Müller" ;
+    rdamd:P30176 "Albert Langen/Georg Müller" ;
     rdamd:P30182 "411 S., 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -2098,28 +2098,28 @@
     rdamo:P30139 <http://viaf.org/viaf/312526705/exp/ger/1020> .
 
 <http://example.org/573639078> a rdac:C10007 ;
-    rdfs:label "Landstreicher / Knut Hamsun. – 83.-87. Tsd. – Albert Langen/Georg Müller, 1943" ;
+    rdfs:label "Landstreicher / Knut Hamsun. – 83.-87. Tsd. – Albert Langen/Georg Müller, 1943" ;
     rdamd:P30011 "1943" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "83.-87. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Übers. von J. Sandmeier ; S. Angermann]" ;
+    rdamd:P30117 "Knut Hamsun. [Übers. von J. Sandmeier ; S. Angermann]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Landstreicher" ;
-    rdamd:P30176 "Albert Langen/Georg Müller" ;
+    rdamd:P30176 "Albert Langen/Georg Müller" ;
     rdamd:P30182 "493 S., 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/180078068/exp/ger/1020/162089799/59960174> .
 
 <http://example.org/573639094> a rdac:C10007 ;
-    rdfs:label "Nach Jahr und Tag / Knut Hamsun. – 1.-20. Tsd. – Albert Langen/Georg Müller, 1934 Ausg. 1933" ;
+    rdfs:label "Nach Jahr und Tag / Knut Hamsun. – 1.-20. Tsd. – Albert Langen/Georg Müller, 1934 Ausg. 1933" ;
     rdamd:P30011 "1934 Ausg. 1933" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "1.-20. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. Berecht. Übers. aus d. Norwegischen von J. Sandmeier ; S. Angermann" ;
+    rdamd:P30117 "Knut Hamsun. Berecht. Übers. aus d. Norwegischen von J. Sandmeier ; S. Angermann" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Nach Jahr und Tag" ;
-    rdamd:P30176 "Albert Langen/Georg Müller" ;
+    rdamd:P30176 "Albert Langen/Georg Müller" ;
     rdamd:P30182 "488 S., 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -2128,7 +2128,7 @@
 <http://example.org/573639108> a rdac:C10007 ;
     rdfs:label "Mysterien / Knut Hamsun. – 19.-21. Tsd. – Langen, 1929" ;
     rdamd:P30011 "1929" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "19.-21. Tsd" ;
     rdamd:P30117 "Knut Hamsun" ;
     rdamd:P30142 "Roman" ;
@@ -2140,67 +2140,67 @@
     rdamo:P30139 <http://viaf.org/viaf/206863699/exp/ger/1020> .
 
 <http://example.org/573639116> a rdac:C10007 ;
-    rdfs:label "Mysterien / Knut Hamsun. – 22.-31. Tsd. – Albert Langen/Georg Müller, [1939]" ;
+    rdfs:label "Mysterien / Knut Hamsun. – 22.-31. Tsd. – Albert Langen/Georg Müller, [1939]" ;
     rdamd:P30011 "[1939]" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "22.-31. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Neue berecht. Übers. v. J. Sandmeier]" ;
+    rdamd:P30117 "Knut Hamsun. [Neue berecht. Übers. v. J. Sandmeier]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Mysterien" ;
-    rdamd:P30176 "Albert Langen/Georg Müller" ;
+    rdamd:P30176 "Albert Langen/Georg Müller" ;
     rdamd:P30182 "319 S., 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/206863699/exp/ger/1020/59960174> .
 
 <http://example.org/573639124> a rdac:C10007 ;
-    rdfs:label "Pan / Knut Hamsun. – 31.-40. Tsd. – Langen [/G. Müller], 1932" ;
+    rdfs:label "Pan / Knut Hamsun. – 31.-40. Tsd. – Langen [/G. Müller], 1932" ;
     rdamd:P30011 "1932" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "31.-40. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Neue berecht. Übers. von J. Sandmeier]" ;
+    rdamd:P30117 "Knut Hamsun. [Neue berecht. Übers. von J. Sandmeier]" ;
     rdamd:P30142 "Aus Leutnant Thomas Glahns Papieren" ;
     rdamd:P30156 "Pan" ;
-    rdamd:P30176 "Langen [/G. Müller]" ;
+    rdamd:P30176 "Langen [/G. Müller]" ;
     rdamd:P30182 "222 S., kl. 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/194765531/exp/ger/1020/59960174> .
 
 <http://example.org/573639132> a rdac:C10007 ;
-    rdfs:label "Pan / Knut Hamsun. – 16.-100. Tsd. – Albert Langen/Georg Müller, 1942" ;
+    rdfs:label "Pan / Knut Hamsun. – 16.-100. Tsd. – Albert Langen/Georg Müller, 1942" ;
     rdamd:P30011 "1942" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "16.-100. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Neue berecht. Übers. v. J. Sandmeier]" ;
+    rdamd:P30117 "Knut Hamsun. [Neue berecht. Übers. v. J. Sandmeier]" ;
     rdamd:P30142 "Aus Leutnant Thomas Glahns Papieren" ;
     rdamd:P30156 "Pan" ;
-    rdamd:P30176 "Albert Langen/Georg Müller" ;
+    rdamd:P30176 "Albert Langen/Georg Müller" ;
     rdamd:P30182 "222 S., kl. 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/194765531/exp/ger/1020/59960174> .
 
 <http://example.org/573639140> a rdac:C10007 ;
-    rdfs:label "Pan / Knut Hamsun. – 141.-148 [überschr.:] 158. Tsd. – Albert Langen/Georg Müller, [1944]" ;
+    rdfs:label "Pan / Knut Hamsun. – 141.-148 [überschr.:] 158. Tsd. – Albert Langen/Georg Müller, [1944]" ;
     rdamd:P30011 "[1944]" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30107 "141.-148 [überschr.:] 158. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Neue berecht. Übers. v. J. Sandmeier]" ;
-    rdamd:P30137 "Wehrmachtausgabe, für das Sortiment nicht erhältlich" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30107 "141.-148 [überschr.:] 158. Tsd" ;
+    rdamd:P30117 "Knut Hamsun. [Neue berecht. Übers. v. J. Sandmeier]" ;
+    rdamd:P30137 "Wehrmachtausgabe, für das Sortiment nicht erhältlich" ;
     rdamd:P30142 "Aus Leutnant Thomas Glahns Papieren" ;
     rdamd:P30156 "Pan" ;
-    rdamd:P30176 "Albert Langen/Georg Müller" ;
+    rdamd:P30176 "Albert Langen/Georg Müller" ;
     rdamd:P30182 "175 S., kl. 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/194765531/exp/ger/1020/59960174> .
 
 <http://example.org/573639159> a rdac:C10007 ;
-    rdfs:label "An des Reiches Pforten / Knut Hamsun. – Bühnen-Ms. – Langen, [um 1928]" ;
+    rdfs:label "An des Reiches Pforten / Knut Hamsun. – Bühnen-Ms. – Langen, [um 1928]" ;
     rdamd:P30011 "[um 1928]" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30107 "Bühnen-Ms" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30107 "Bühnen-Ms" ;
     rdamd:P30117 "Knut Hamsun" ;
     rdamd:P30142 "Schauspiel in 4 Aufz. u. 1 Vorspiel" ;
     rdamd:P30156 "An des Reiches Pforten" ;
@@ -2211,25 +2211,25 @@
     rdamo:P30139 <http://viaf.org/viaf/316992494/exp/ger/1020> .
 
 <http://example.org/573639167> a rdac:C10007 ;
-    rdfs:label "Der Ring schließt sich / Knut Hamsun. – 1.-20. Tsd. – Albert Langen/Georg Müller, 1936" ;
+    rdfs:label "Der Ring schließt sich / Knut Hamsun. – 1.-20. Tsd. – Albert Langen/Georg Müller, 1936" ;
     rdamd:P30011 "1936" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "1.-20. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus d. Norweg. v. J. Sandmeier ; S. Angermann]" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus d. Norweg. v. J. Sandmeier ; S. Angermann]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Der Ring schließt sich" ;
-    rdamd:P30176 "Albert Langen/Georg Müller" ;
+    rdamd:P30176 "Albert Langen/Georg Müller" ;
     rdamd:P30182 "354 S., 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/1000145424544686831283/exp/ger/1020/162089799/59960174> .
 
 <http://example.org/573639175> a rdac:C10007 ;
-    rdfs:label "Spiel des Lebens / Knut Hamsun. – Bühnen-Ms. – Langen, [um 1928]" ;
+    rdfs:label "Spiel des Lebens / Knut Hamsun. – Bühnen-Ms. – Langen, [um 1928]" ;
     rdamd:P30011 "[um 1928]" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30107 "Bühnen-Ms" ;
-    rdamd:P30117 "Knut Hamsun. [Autor. Übers. aus. d. Norw. von Christian Morgenstern. Revidiert von J. Sandmeier]" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30107 "Bühnen-Ms" ;
+    rdamd:P30117 "Knut Hamsun. [Autor. Übers. aus. d. Norw. von Christian Morgenstern. Revidiert von J. Sandmeier]" ;
     rdamd:P30142 "Schauspiel in 4 Aufz" ;
     rdamd:P30156 "Spiel des Lebens" ;
     rdamd:P30176 "Langen" ;
@@ -2239,12 +2239,12 @@
     rdamo:P30139 <http://viaf.org/viaf/7398163939428301160007/exp/ger/1020/59960174/morgensternchristian> .
 
 <http://example.org/573639183> a rdac:C10007 ;
-    rdfs:label "Auf überwachsenen Pfaden / Knut Hamsun. – Ex Libris-Verl, 1950" ;
+    rdfs:label "Auf überwachsenen Pfaden / Knut Hamsun. – Ex Libris-Verl, 1950" ;
     rdamd:P30011 "1950" ;
-    rdamd:P30088 "Zürich",
+    rdamd:P30088 "Zürich",
         "[Stuttgart]" ;
-    rdamd:P30117 "Knut Hamsun. [Übers.: Elisabeth Ihle]" ;
-    rdamd:P30156 "Auf überwachsenen Pfaden" ;
+    rdamd:P30117 "Knut Hamsun. [Übers.: Elisabeth Ihle]" ;
+    rdamd:P30156 "Auf überwachsenen Pfaden" ;
     rdamd:P30176 "Ex Libris-Verl",
         "[Brockhaus]" ;
     rdamd:P30182 "212 S., 8." ;
@@ -2255,9 +2255,9 @@
 <http://example.org/573639191> a rdac:C10007 ;
     rdfs:label "Hunger / Knut Hamsun. – 13.-15. Tsd. – Langen, 1921" ;
     rdamd:P30011 "1921" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "13.-15. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. Einzige berecht. Übers. aus d. Norweg. v. Maria von Borch" ;
+    rdamd:P30117 "Knut Hamsun. Einzige berecht. Übers. aus d. Norweg. v. Maria von Borch" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Hunger" ;
     rdamd:P30176 "Langen" ;
@@ -2280,14 +2280,14 @@
     rdamo:P30139 <http://viaf.org/viaf/220443771/exp/ger/1020/hoyerniels> .
 
 <http://example.org/573639213> a rdac:C10007 ;
-    rdfs:label "Hunger / Knut Hamsun. – 54.-58. Tsd. – Albert Langen/Georg Müller, [1940]" ;
+    rdfs:label "Hunger / Knut Hamsun. – 54.-58. Tsd. – Albert Langen/Georg Müller, [1940]" ;
     rdamd:P30011 "[1940]" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "54.-58. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Neue berecht. Übers. v. J. Sandmeier]" ;
+    rdamd:P30117 "Knut Hamsun. [Neue berecht. Übers. v. J. Sandmeier]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Hunger" ;
-    rdamd:P30176 "Albert Langen/Georg Müller" ;
+    rdamd:P30176 "Albert Langen/Georg Müller" ;
     rdamd:P30182 "186 S., 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -2298,8 +2298,8 @@
     rdamd:P30011 "1953" ;
     rdamd:P30088 "Berlin",
         "Darmstadt" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. v. J. Sandmeier ; S. Angermann]" ;
-    rdamd:P30137 "Lizenzausg. d. Verl. List, München" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. v. J. Sandmeier ; S. Angermann]" ;
+    rdamd:P30137 "Lizenzausg. d. Verl. List, München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Hunger" ;
     rdamd:P30176 "Deutsche Buch-Gemeinschaft" ;
@@ -2311,7 +2311,7 @@
 <http://example.org/57363923X> a rdac:C10007 ;
     rdfs:label "Schwärmer / Knut Hamsun. – 4.-7. Tsd. – A. Langen, 1923" ;
     rdamd:P30011 "1923" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "4.-7. Tsd" ;
     rdamd:P30117 "Knut Hamsun. In neuer berecht. Uebers. v. J. Sandmaier" ;
     rdamd:P30142 "Roman" ;
@@ -2325,9 +2325,9 @@
 <http://example.org/573639256> a rdac:C10007 ;
     rdfs:label "Gedämpftes Saitenspiel / Knut Hamsun. – 6.-8. Tsd. – A. Langen, 1929" ;
     rdamd:P30011 "1929" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "6.-8. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Übers. v. J. Sandmeier]" ;
+    rdamd:P30117 "Knut Hamsun. [Übers. v. J. Sandmeier]" ;
     rdamd:P30142 "Erzählg e. Wanderers" ;
     rdamd:P30156 "Gedämpftes Saitenspiel" ;
     rdamd:P30176 "A. Langen" ;
@@ -2337,10 +2337,10 @@
     rdamo:P30139 <http://viaf.org/viaf/5470149068540465730001/exp/ger/1020/59960174> .
 
 <http://example.org/573639264> a rdac:C10007 ;
-    rdfs:label "Munken Vendt / Knut Hamsun. – Bühnen-Ms. – Langen, [1928]" ;
+    rdfs:label "Munken Vendt / Knut Hamsun. – Bühnen-Ms. – Langen, [1928]" ;
     rdamd:P30011 "[1928]" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30107 "Bühnen-Ms" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30107 "Bühnen-Ms" ;
     rdamd:P30117 "Knut Hamsun" ;
     rdamd:P30142 "8 Akte" ;
     rdamd:P30156 "Munken Vendt" ;
@@ -2351,28 +2351,28 @@
     rdamo:P30139 <http://www.wikidata.org/entity/Q15062323/exp/ger/1020/schwenzenper> .
 
 <http://example.org/573639272> a rdac:C10007 ;
-    rdfs:label "Munken Vendt / Knut Hamsun. – [Unverkäufl.] Bühnen-Ms. – Theaterverl. Albert Langen/Georg Müller, [1934]" ;
+    rdfs:label "Munken Vendt / Knut Hamsun. – [Unverkäufl.] Bühnen-Ms. – Theaterverl. Albert Langen/Georg Müller, [1934]" ;
     rdamd:P30011 "[1934]" ;
     rdamd:P30088 "Berlin" ;
-    rdamd:P30107 "[Unverkäufl.] Bühnen-Ms" ;
-    rdamd:P30117 "Knut Hamsun. Aus d. Norweg. übers. u. f. d. Bühne bearb. von Per Schwenzen" ;
+    rdamd:P30107 "[Unverkäufl.] Bühnen-Ms" ;
+    rdamd:P30117 "Knut Hamsun. Aus d. Norweg. übers. u. f. d. Bühne bearb. von Per Schwenzen" ;
     rdamd:P30142 "Eine nord. Romanze in 10 Bildern" ;
     rdamd:P30156 "Munken Vendt" ;
-    rdamd:P30176 "Theaterverl. Albert Langen/Georg Müller" ;
+    rdamd:P30176 "Theaterverl. Albert Langen/Georg Müller" ;
     rdamd:P30182 "138 S., 8 [Maschinenschr. autogr.]." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://www.wikidata.org/entity/Q15062323/exp/ger/1020/schwenzenper> .
 
 <http://example.org/573639280> a rdac:C10007 ;
-    rdfs:label "Munken Vendt / Knut Hamsun. – [3. Aufl.]. – Theaterverl. Albert Langen/Georg Müller, [1944]" ;
+    rdfs:label "Munken Vendt / Knut Hamsun. – [3. Aufl.]. – Theaterverl. Albert Langen/Georg Müller, [1944]" ;
     rdamd:P30011 "[1944]" ;
     rdamd:P30088 "Berlin" ;
     rdamd:P30107 "[3. Aufl.]" ;
-    rdamd:P30117 "Knut Hamsun. Aus d. Norw. übers. u. f. d. Bühne bearb. v. Per Schwenzen" ;
+    rdamd:P30117 "Knut Hamsun. Aus d. Norw. übers. u. f. d. Bühne bearb. v. Per Schwenzen" ;
     rdamd:P30142 "Eine nord. Romanze in 10 Bildern" ;
     rdamd:P30156 "Munken Vendt" ;
-    rdamd:P30176 "Theaterverl. Albert Langen/Georg Müller" ;
+    rdamd:P30176 "Theaterverl. Albert Langen/Georg Müller" ;
     rdamd:P30182 "107 S., 8 [Maschinenschr. autogr.]." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -2381,9 +2381,9 @@
 <http://example.org/573639299> a rdac:C10007 ;
     rdfs:label "Victoria / Knut Hamsun. – 13.-15. Tsd. – A. Langen, 1921" ;
     rdamd:P30011 "1921" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "13.-15. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. Einzig berecht. Übers. aus dem Norweg. von Mathilde Mann" ;
+    rdamd:P30117 "Knut Hamsun. Einzig berecht. Übers. aus dem Norweg. von Mathilde Mann" ;
     rdamd:P30142 "Die Geschichte e. Liebe" ;
     rdamd:P30156 "Victoria" ;
     rdamd:P30176 "A. Langen" ;
@@ -2396,9 +2396,9 @@
 <http://example.org/573639302> a rdac:C10007 ;
     rdfs:label "Victoria / Knut Hamsun. – 16.-18. Tsd. – Langen, 1923" ;
     rdamd:P30011 "1923" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "16.-18. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. In neuer berecht. Übers. v. J. Sandmaier" ;
+    rdamd:P30117 "Knut Hamsun. In neuer berecht. Übers. v. J. Sandmaier" ;
     rdamd:P30142 "Die Geschichte e. Liebe" ;
     rdamd:P30156 "Victoria" ;
     rdamd:P30176 "Langen" ;
@@ -2410,9 +2410,9 @@
 <http://example.org/573639310> a rdac:C10007 ;
     rdfs:label "Victoria / Knut Hamsun. – 36.-45. Tsd. – Langen, 1932 [Ausg. 1931]" ;
     rdamd:P30011 "1932 [Ausg. 1931]" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "36.-45. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Neue berecht. Übers. von J. Sandmeier]" ;
+    rdamd:P30117 "Knut Hamsun. [Neue berecht. Übers. von J. Sandmeier]" ;
     rdamd:P30142 "Die Geschichte e. Liebe" ;
     rdamd:P30156 "Victoria" ;
     rdamd:P30176 "Langen" ;
@@ -2422,55 +2422,55 @@
     rdamo:P30139 <http://viaf.org/viaf/395147270538135700001/exp/ger/1020/59960174> .
 
 <http://example.org/573639329> a rdac:C10007 ;
-    rdfs:label "Victoria und Schwärmer / Knut Hamsun. – Büchergilde Gutenberg, 1936" ;
+    rdfs:label "Victoria und Schwärmer / Knut Hamsun. – Büchergilde Gutenberg, 1936" ;
     rdamd:P30011 "1936" ;
     rdamd:P30088 "[Berlin]" ;
     rdamd:P30117 "Knut Hamsun" ;
     rdamd:P30156 "Victoria und Schwärmer" ;
-    rdamd:P30176 "Büchergilde Gutenberg" ;
+    rdamd:P30176 "Büchergilde Gutenberg" ;
     rdamd:P30182 "294 S. : mit Abb., 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/395147270538135700001/exp/ger/1020> .
 
 <http://example.org/573639337> a rdac:C10007 ;
-    rdfs:label "Victoria / Knut Hamsun. – 171.-175. Tsd. – Albert Langen/Georg Müller, [1939]" ;
+    rdfs:label "Victoria / Knut Hamsun. – 171.-175. Tsd. – Albert Langen/Georg Müller, [1939]" ;
     rdamd:P30011 "[1939]" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "171.-175. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Neue berecht. Übers. v. J. Sandmeier]" ;
+    rdamd:P30117 "Knut Hamsun. [Neue berecht. Übers. v. J. Sandmeier]" ;
     rdamd:P30142 "Die Geschichte e. Liebe" ;
     rdamd:P30156 "Victoria" ;
-    rdamd:P30176 "Albert Langen/Georg Müller" ;
+    rdamd:P30176 "Albert Langen/Georg Müller" ;
     rdamd:P30182 "190 S., kl. 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/395147270538135700001/exp/ger/1020/59960174> .
 
 <http://example.org/573639345> a rdac:C10007 ;
-    rdfs:label "Victoria / Knut Hamsun. – 291.-300. Tsd. Einmalige Sonderausg. d. Zentrale d. Frontbuchhandlgn Paris. – Albert Langen/Georg Müller, [1942]" ;
+    rdfs:label "Victoria / Knut Hamsun. – 291.-300. Tsd. Einmalige Sonderausg. d. Zentrale d. Frontbuchhandlgn Paris. – Albert Langen/Georg Müller, [1942]" ;
     rdamd:P30011 "[1942]" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "291.-300. Tsd. Einmalige Sonderausg. d. Zentrale d. Frontbuchhandlgn Paris" ;
-    rdamd:P30117 "Knut Hamsun. [Neue berecht. Übers. v. J. Sandmeier]" ;
+    rdamd:P30117 "Knut Hamsun. [Neue berecht. Übers. v. J. Sandmeier]" ;
     rdamd:P30142 "Die Geschichte e. Liebe" ;
     rdamd:P30156 "Victoria" ;
-    rdamd:P30176 "Albert Langen/Georg Müller" ;
+    rdamd:P30176 "Albert Langen/Georg Müller" ;
     rdamd:P30182 "190 S., kl. 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/395147270538135700001/exp/ger/1020/59960174> .
 
 <http://example.org/573639353> a rdac:C10007 ;
-    rdfs:label "Victoria / Knut Hamsun. – 361.-382. Tsd. – Albert Langen/Georg Müller, [1944]" ;
+    rdfs:label "Victoria / Knut Hamsun. – 361.-382. Tsd. – Albert Langen/Georg Müller, [1944]" ;
     rdamd:P30011 "[1944]" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "361.-382. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Neue berecht. Übers. v. J. Sandmeier]" ;
-    rdamd:P30137 "Wehrmachtausgabe, für das Sortiment nicht erhältlich" ;
+    rdamd:P30117 "Knut Hamsun. [Neue berecht. Übers. v. J. Sandmeier]" ;
+    rdamd:P30137 "Wehrmachtausgabe, für das Sortiment nicht erhältlich" ;
     rdamd:P30142 "Die Geschichte e. Liebe" ;
     rdamd:P30156 "Victoria" ;
-    rdamd:P30176 "Albert Langen/Georg Müller" ;
+    rdamd:P30176 "Albert Langen/Georg Müller" ;
     rdamd:P30182 "147 S., kl. 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -2480,7 +2480,7 @@
     rdfs:label "Victoria / Knut Hamsun. – P. List, 1948" ;
     rdamd:P30011 "1948" ;
     rdamd:P30088 "Innsbruck" ;
-    rdamd:P30117 "Knut Hamsun. [Neue berecht. Übers. v. J. Sandmeier]" ;
+    rdamd:P30117 "Knut Hamsun. [Neue berecht. Übers. v. J. Sandmeier]" ;
     rdamd:P30142 "Die Geschichte e. Liebe" ;
     rdamd:P30156 "Victoria" ;
     rdamd:P30176 "P. List" ;
@@ -2494,8 +2494,8 @@
     rdamd:P30011 "1943" ;
     rdamd:P30088 "V Praze" ;
     rdamd:P30107 "2 vyd" ;
-    rdamd:P30117 "Knut Hamsun. [Z nor. přel. Hugo Kosterka. Frontispice a 3 obr. v textu od Toyen]" ;
-    rdamd:P30142 "Historie lásky" ;
+    rdamd:P30117 "Knut Hamsun. [Z nor. přel. Hugo Kosterka. Frontispice a 3 obr. v textu od Toyen]" ;
+    rdamd:P30142 "Historie lásky" ;
     rdamd:P30156 "Viktorie" ;
     rdamd:P30176 "Hynek" ;
     rdamd:P30182 "118 S., gr. 8." ;
@@ -2506,9 +2506,9 @@
 <http://example.org/575470224> a rdac:C10007 ;
     rdfs:label "August Weltumsegler / Knut Hamsun. – 1.-30. Tsd. – A. Langen, 1930" ;
     rdamd:P30011 "1930" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "1.-30. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. von J. Sandmeier ; S. Angermann]" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. von J. Sandmeier ; S. Angermann]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "August Weltumsegler" ;
     rdamd:P30176 "A. Langen" ;
@@ -2520,7 +2520,7 @@
 <http://example.org/575470232> a rdac:C10007 ;
     rdfs:label "Benoni / Knut Hamsun. – 4. u. 5. Tsd. – A. Langen, 1921" ;
     rdamd:P30011 "1921" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "4. u. 5. Tsd" ;
     rdamd:P30117 "Knut Hamsun. Deutsch von Mathilde Mann" ;
     rdamd:P30137 "In Fraktur" ;
@@ -2535,7 +2535,7 @@
 <http://example.org/575470240> a rdac:C10007 ;
     rdfs:label "Kinder ihrer Zeit / Knut Hamsun. – 12.-14. Tsd. – Langen, 1921" ;
     rdamd:P30011 "1921" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "12.-14. Tsd" ;
     rdamd:P30117 "Knut Hamsun. Aus d. Norweg. von Niels Hoyer" ;
     rdamd:P30142 "Roman" ;
@@ -2549,9 +2549,9 @@
 <http://example.org/575470259> a rdac:C10007 ;
     rdfs:label "Segen der Erde / Knut Hamsun. – 26.-28. Tsd. – A. Langen, 1925" ;
     rdamd:P30011 "1925" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "26.-28. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Übers. von Pauline Klaiber-Gottschau. Rev. u. hrsg. von J. Sandmeier]" ;
+    rdamd:P30117 "Knut Hamsun. [Übers. von Pauline Klaiber-Gottschau. Rev. u. hrsg. von J. Sandmeier]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Segen der Erde" ;
     rdamd:P30176 "A. Langen" ;
@@ -2563,9 +2563,9 @@
 <http://example.org/575470275> a rdac:C10007 ;
     rdfs:label "Unter Herbststernen / Knut Hamsun. – 1.-25. Tsd. – Kurt Wolff, 1922" ;
     rdamd:P30011 "1922" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "1.-25. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übertr. aus d. Norweg. von J. Sandmeier]" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übertr. aus d. Norweg. von J. Sandmeier]" ;
     rdamd:P30137 "In Fraktur" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Unter Herbststernen" ;
@@ -2582,7 +2582,7 @@
         "[Leipzig]" ;
     rdamd:P30106 "[Der neue Roman]" ;
     rdamd:P30107 "26.-30. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übertr. aus d. Norweg. von J. Sandmeier]" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übertr. aus d. Norweg. von J. Sandmeier]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Unter Herbststernen" ;
     rdamd:P30176 "Transmare Verlag",
@@ -2595,9 +2595,9 @@
 <http://example.org/575470291> a rdac:C10007 ;
     rdfs:label "Neue Erde / Knut Hamsun. – 12.-14. Tsd. – A. Langen, 1929" ;
     rdamd:P30011 "1929" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "12.-14. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übertr. von J. Sandmeier]" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übertr. von J. Sandmeier]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Neue Erde" ;
     rdamd:P30176 "A. Langen" ;
@@ -2609,9 +2609,9 @@
 <http://example.org/575470305> a rdac:C10007 ;
     rdfs:label "Die Weiber am Brunnen / Knut Hamsun. – 6.-10. Tsd. – A. Langen, 1921" ;
     rdamd:P30011 "1921" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "6.-10. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. Einzige berecht. Übers. aus d. Norweg. von Pauline Klaiber-Gottschau" ;
+    rdamd:P30117 "Knut Hamsun. Einzige berecht. Übers. aus d. Norweg. von Pauline Klaiber-Gottschau" ;
     rdamd:P30137 "In Fraktur" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Die Weiber am Brunnen" ;
@@ -2626,7 +2626,7 @@
     rdamd:P30011 "1929" ;
     rdamd:P30088 "Wien" ;
     rdamd:P30107 "3.-5. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Autoris. Übertr. von Heinrich Goebel]" ;
+    rdamd:P30117 "Knut Hamsun. [Autoris. Übertr. von Heinrich Goebel]" ;
     rdamd:P30142 "[Gedichte]" ;
     rdamd:P30156 "Der wilde Chor" ;
     rdamd:P30176 "Phaidon-Verlag" ;
@@ -2638,9 +2638,9 @@
 <http://example.org/57547033X> a rdac:C10007 ;
     rdfs:label "Landstreicher / Knut Hamsun. – 1.-20. Tsd. – A. Langen, 1928 [Ausg. 1927]" ;
     rdamd:P30011 "1928 [Ausg. 1927]" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "1.-20. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übertr. von J. Sandmeier ; S. Angermann]" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übertr. von J. Sandmeier ; S. Angermann]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Landstreicher" ;
     rdamd:P30176 "A. Langen" ;
@@ -2654,7 +2654,7 @@
     rdamd:P30011 "1924" ;
     rdamd:P30088 "Berlin" ;
     rdamd:P30107 "37.-40. Aufl" ;
-    rdamd:P30117 "Knut Hamsun. [Autor. Übers. aus d. Norweg. von Maria von Borch]" ;
+    rdamd:P30117 "Knut Hamsun. [Autor. Übers. aus d. Norweg. von Maria von Borch]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Redakteur Lynge" ;
     rdamd:P30176 "S. Fischer, Verl" ;
@@ -2668,7 +2668,7 @@
     rdamd:P30011 "[1921]" ;
     rdamd:P30088 "Berlin" ;
     rdamd:P30107 "49.-57. Aufl" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übertr. von Maria von Borch]" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übertr. von Maria von Borch]" ;
     rdamd:P30137 "In Fraktur" ;
     rdamd:P30142 "Aus Leutnant Thomas Glahns Papieren" ;
     rdamd:P30156 "Pan" ;
@@ -2681,9 +2681,9 @@
 <http://example.org/575470372> a rdac:C10007 ;
     rdfs:label "Pan / Knut Hamsun. – 19.-21. Tsd. – A. Langen, 1922" ;
     rdamd:P30011 "1922" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "19.-21. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. In neuer berechtigter Übertr. von J. Sandmeier" ;
+    rdamd:P30117 "Knut Hamsun. In neuer berechtigter Übertr. von J. Sandmeier" ;
     rdamd:P30142 "Aus Leutnant Thomas Glahns Papieren" ;
     rdamd:P30156 "Pan" ;
     rdamd:P30176 "A. Langen" ;
@@ -2695,9 +2695,9 @@
 <http://example.org/575470380> a rdac:C10007 ;
     rdfs:label "Hunger / Knut Hamsun. – 19.-21. Tsd. – A. Langen, 1923" ;
     rdamd:P30011 "1923" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "19.-21. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. In neuer berecht. Übers. von J. Sandmeier" ;
+    rdamd:P30117 "Knut Hamsun. In neuer berecht. Übers. von J. Sandmeier" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Hunger" ;
     rdamd:P30176 "A. Langen" ;
@@ -2709,8 +2709,8 @@
 <http://example.org/575470399> a rdac:C10007 ;
     rdfs:label "Gedämpftes Saitenspiel / Knut Hamsun. – Kurt Wolff, [1922]" ;
     rdamd:P30011 "[1922]" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übertr. aus d. Norweg. von J. Sandmeier]" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übertr. aus d. Norweg. von J. Sandmeier]" ;
     rdamd:P30137 "In Fraktur" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Gedämpftes Saitenspiel" ;
@@ -2727,7 +2727,7 @@
         "[Leipzig]" ;
     rdamd:P30106 "[Der neue Roman]" ;
     rdamd:P30107 "26.-30. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übertr. aus d. Norweg. von J. Sandmeier]" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übertr. aus d. Norweg. von J. Sandmeier]" ;
     rdamd:P30156 "Gedämpftes Saitenspiel" ;
     rdamd:P30176 "Transmare Verlag",
         "[Carl Fr. Fleischer]" ;
@@ -2740,8 +2740,8 @@
     rdfs:label "Redakteur Lynge / Knut Hamsun. – S. Fischer, [1911]" ;
     rdamd:P30011 "[1911]" ;
     rdamd:P30088 "Berlin" ;
-    rdamd:P30106 "Fischers Bibliothek zeitgenössischer Romane" ;
-    rdamd:P30117 "Knut Hamsun. [Autor. Übers. aus d. Norweg. v. Maria von Borch]" ;
+    rdamd:P30106 "Fischers Bibliothek zeitgenössischer Romane" ;
+    rdamd:P30117 "Knut Hamsun. [Autor. Übers. aus d. Norweg. v. Maria von Borch]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Redakteur Lynge" ;
     rdamd:P30165 "3,6" ;
@@ -2752,13 +2752,13 @@
     rdamo:P30139 <http://viaf.org/viaf/5518152200833114400003/exp/ger/1020/borchmarievon> .
 
 <http://example.org/750930756> a rdac:C10007 ;
-    rdfs:label "Victoria und andere Romane / Knut Hamsun. – Dt. Bücherbund, [1971]" ;
+    rdfs:label "Victoria und andere Romane / Knut Hamsun. – Dt. Bücherbund, [1971]" ;
     rdamd:P30011 "[1971]" ;
-    rdamd:P30088 "Hamburg, Stuttgart, München" ;
-    rdamd:P30117 "Knut Hamsun. [Übers. von J. Sandmeier u. a.]" ;
-    rdamd:P30137 "Lizenz d. List-Verl., München." ;
+    rdamd:P30088 "Hamburg, Stuttgart, München" ;
+    rdamd:P30117 "Knut Hamsun. [Übers. von J. Sandmeier u. a.]" ;
+    rdamd:P30137 "Lizenz d. List-Verl., München." ;
     rdamd:P30156 "Victoria und andere Romane" ;
-    rdamd:P30176 "Dt. Bücherbund" ;
+    rdamd:P30176 "Dt. Bücherbund" ;
     rdamd:P30182 "637 S., 21 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -2768,10 +2768,10 @@
     rdfs:label "Hunger. – Bertelsmann, [1975]" ;
     rdamd:P30011 "[1975]" ;
     rdamd:P30088 "Berlin, Darmstadt, Wien",
-        "Gütersloh",
+        "Gütersloh",
         "Stuttgart",
         "Wien" ;
-    rdamd:P30137 "Lizenz d. List-Verl., München." ;
+    rdamd:P30137 "Lizenz d. List-Verl., München." ;
     rdamd:P30156 "Hunger" ;
     rdamd:P30176 "Bertelsmann",
         "Buchgemeinschaft Donauland",
@@ -2786,10 +2786,10 @@
     rdfs:label "Victoria. – Bertelsmann, [1975]" ;
     rdamd:P30011 "[1975]" ;
     rdamd:P30088 "Berlin, Darmstadt, Wien",
-        "Gütersloh",
+        "Gütersloh",
         "Stuttgart",
         "Wien" ;
-    rdamd:P30137 "Lizenz d. List-Verl., München." ;
+    rdamd:P30137 "Lizenz d. List-Verl., München." ;
     rdamd:P30156 "Victoria" ;
     rdamd:P30176 "Bertelsmann",
         "Buchgemeinschaft Donauland",
@@ -2801,15 +2801,15 @@
     rdamo:P30139 <http://viaf.org/viaf/395147270538135700001/exp/ger/1020> .
 
 <http://example.org/770234623> a rdac:C10007 ;
-    rdfs:label "August Weltumsegler / Knut Hamsun. – 1. Aufl. – Rütten und Loening, 1976" ;
+    rdfs:label "August Weltumsegler / Knut Hamsun. – 1. Aufl. – Rütten und Loening, 1976" ;
     rdamd:P30011 "1976" ;
     rdamd:P30088 "Berlin" ;
     rdamd:P30107 "1. Aufl" ;
-    rdamd:P30117 "Knut Hamsun. [Aus d. Norweg. übers. von J. Sandmeier u. S. Angermann]" ;
-    rdamd:P30137 "Lizenz d. List-Verl., München. - Ausg. für d. DDR." ;
+    rdamd:P30117 "Knut Hamsun. [Aus d. Norweg. übers. von J. Sandmeier u. S. Angermann]" ;
+    rdamd:P30137 "Lizenz d. List-Verl., München. - Ausg. für d. DDR." ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "August Weltumsegler" ;
-    rdamd:P30176 "Rütten und Loening" ;
+    rdamd:P30176 "Rütten und Loening" ;
     rdamd:P30182 "494 S., 20 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -2818,10 +2818,10 @@
 <http://example.org/780202872> a rdac:C10007 ;
     rdfs:label "Segen der Erde / Knut Hamsun. – 276. - 300. Tsd. – List, 1945" ;
     rdamd:P30011 "1945" ;
-    rdamd:P30088 "[München" ;
+    rdamd:P30088 "[München" ;
     rdamd:P30107 "276. - 300. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus d. Norweg. von Pauline Klaiber-Gottschau]" ;
-    rdamd:P30137 "In Fraktur. - Lizenz d. Langen-Müller-Verl., München. - Verl. auf d. Haupttitels.: Langen-Müller, München." ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. aus d. Norweg. von Pauline Klaiber-Gottschau]" ;
+    rdamd:P30137 "In Fraktur. - Lizenz d. Langen-Müller-Verl., München. - Verl. auf d. Haupttitels.: Langen-Müller, München." ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Segen der Erde" ;
     rdamd:P30176 "List]" ;
@@ -2836,8 +2836,8 @@
     rdamd:P30088 "Leipzig" ;
     rdamd:P30106 "Reclams Universal-Bibliothek" ;
     rdamd:P30107 "1. Aufl" ;
-    rdamd:P30117 "Knut Hamsun. [Aus d. Norweg. übers. von J. Sandmeier u. S. Angermann. Mit e. Nachw. von Horst Bien]" ;
-    rdamd:P30137 "Lizenzausg. d. List-Verl., München. - Ausg. für d. DDR u.d. sozialist. Länder." ;
+    rdamd:P30117 "Knut Hamsun. [Aus d. Norweg. übers. von J. Sandmeier u. S. Angermann. Mit e. Nachw. von Horst Bien]" ;
+    rdamd:P30137 "Lizenzausg. d. List-Verl., München. - Ausg. für d. DDR u.d. sozialist. Länder." ;
     rdamd:P30156 "Hunger" ;
     rdamd:P30165 "Bd. 763 : Belletristik" ;
     rdamd:P30176 "Reclam" ;
@@ -2847,30 +2847,30 @@
     rdamo:P30139 <http://viaf.org/viaf/220443771/exp/ger/1020/162089799/59960174> .
 
 <http://example.org/800145577> a rdac:C10007 ;
-    rdfs:label "Segen der Erde / Knut Hamsun. – 1. Aufl. – Rütten und Loening, 1979" ;
+    rdfs:label "Segen der Erde / Knut Hamsun. – 1. Aufl. – Rütten und Loening, 1979" ;
     rdamd:P30011 "1979" ;
     rdamd:P30088 "Berlin" ;
     rdamd:P30107 "1. Aufl" ;
-    rdamd:P30117 "Knut Hamsun. [Aus d. Norweg. übers. von J. Sandmeier u. S. Angermann. Mit e. Nachw. von Horst Bien]" ;
-    rdamd:P30137 "Ausg. für d. sozialist. Länder." ;
+    rdamd:P30117 "Knut Hamsun. [Aus d. Norweg. übers. von J. Sandmeier u. S. Angermann. Mit e. Nachw. von Horst Bien]" ;
+    rdamd:P30137 "Ausg. für d. sozialist. Länder." ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Segen der Erde" ;
-    rdamd:P30176 "Rütten und Loening" ;
+    rdamd:P30176 "Rütten und Loening" ;
     rdamd:P30182 "424 S., 20 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30139 <http://viaf.org/viaf/294124367/exp/ger/1020/162089799/59960174> .
 
 <http://example.org/800563328> a rdac:C10007 ;
-    rdfs:label "August Weltumsegler / Knut Hamsun. – 2. Aufl. – Rütten und Loening, 1980" ;
+    rdfs:label "August Weltumsegler / Knut Hamsun. – 2. Aufl. – Rütten und Loening, 1980" ;
     rdamd:P30011 "1980" ;
     rdamd:P30088 "Berlin" ;
     rdamd:P30107 "2. Aufl" ;
-    rdamd:P30117 "Knut Hamsun. [Aus d. Norweg. übers. von J. Sandmeier u. S. Angermann. Mit e. Nachw. von Horst Bien]" ;
-    rdamd:P30137 "Ausg. für d. Dt. Demokrat. Republik." ;
+    rdamd:P30117 "Knut Hamsun. [Aus d. Norweg. übers. von J. Sandmeier u. S. Angermann. Mit e. Nachw. von Horst Bien]" ;
+    rdamd:P30137 "Ausg. für d. Dt. Demokrat. Republik." ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "August Weltumsegler" ;
-    rdamd:P30176 "Rütten und Loening" ;
+    rdamd:P30176 "Rütten und Loening" ;
     rdamd:P30182 "494 S., 20 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -2880,12 +2880,12 @@
     rdfs:label "Victoria / Knut Hamsun. – Bertelsmann, [1979]" ;
     rdamd:P30011 "[1979]" ;
     rdamd:P30088 "Berlin, Darmstadt, Wien",
-        "Gütersloh",
+        "Gütersloh",
         "Stuttgart",
         "Wien",
         "Zug/Schweiz" ;
-    rdamd:P30117 "Knut Hamsun. Ill. von Christine Ackermann. [Berechtigte Übers. von J. Sandmeier u. S. Angermann]" ;
-    rdamd:P30137 "Lizenzausg. d. List-Verl., München." ;
+    rdamd:P30117 "Knut Hamsun. Ill. von Christine Ackermann. [Berechtigte Übers. von J. Sandmeier u. S. Angermann]" ;
+    rdamd:P30137 "Lizenzausg. d. List-Verl., München." ;
     rdamd:P30142 "d. Geschichte e. Liebe" ;
     rdamd:P30156 "Victoria" ;
     rdamd:P30176 "Bertelsmann",
@@ -2902,7 +2902,7 @@
     rdfs:label "Victoria / Knut Hamsun. – Schumm, [1981]" ;
     rdamd:P30011 "[1981]" ;
     rdamd:P30088 "Murrhardt" ;
-    rdamd:P30106 "Schumm sprechende Bücher" ;
+    rdamd:P30106 "Schumm sprechende Bücher" ;
     rdamd:P30117 "Knut Hamsun" ;
     rdamd:P30142 "d. Geschichte e. Liebe" ;
     rdamd:P30156 "Victoria" ;
@@ -2914,7 +2914,7 @@
 <http://example.org/840746989> a rdac:C10007 ;
     rdfs:label "Pan. – Limes-Verlag, 1984" ;
     rdamd:P30011 "1984" ;
-    rdamd:P30088 "München",
+    rdamd:P30088 "München",
         "Wiesbaden" ;
     rdamd:P30137 "Einheitssacht. d. beigef. Werkes: Vagabonds dager <dt.>" ;
     rdamd:P30156 "Pan" ;
@@ -2925,16 +2925,16 @@
     rdamo:P30139 <http://viaf.org/viaf/194765531/exp/ger/1020> .
 
 <http://example.org/880114916> a rdac:C10007 ;
-    rdfs:label "Segen der Erde / Knut Hamsun. – Dt. Bücherbund, [1987]" ;
+    rdfs:label "Segen der Erde / Knut Hamsun. – Dt. Bücherbund, [1987]" ;
     rdamd:P30011 "[1987]" ;
-    rdamd:P30088 "München",
+    rdamd:P30088 "München",
         "Stuttgart" ;
     rdamd:P30106 "Edition Weltliteratur" ;
-    rdamd:P30117 "Knut Hamsun. [Rev. Übers. aus d. Norweg. von J. Sandmeier u. S. Angermann]" ;
-    rdamd:P30137 "Lizenzausg. d. Verl. Winkler, München" ;
+    rdamd:P30117 "Knut Hamsun. [Rev. Übers. aus d. Norweg. von J. Sandmeier u. S. Angermann]" ;
+    rdamd:P30137 "Lizenzausg. d. Verl. Winkler, München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Segen der Erde" ;
-    rdamd:P30176 "Dt. Bücherbund" ;
+    rdamd:P30176 "Dt. Bücherbund" ;
     rdamd:P30182 "383 S. : 1 Ill., 22 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -2945,13 +2945,13 @@
     rdamd:P30011 "[1988]" ;
     rdamd:P30088 "Berlin",
         "Darmstadt",
-        "Gütersloh",
+        "Gütersloh",
         "Kornwestheim",
         "Wien",
         "Zug/Schweiz" ;
     rdamd:P30106 "Liebesgeschichten der Weltliteratur" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. von J. Sandmeier u. S. Angermann]" ;
-    rdamd:P30137 "Lizenzausg. d. List-Verl., München" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. von J. Sandmeier u. S. Angermann]" ;
+    rdamd:P30137 "Lizenzausg. d. List-Verl., München" ;
     rdamd:P30142 "d. Geschichte e. Liebe" ;
     rdamd:P30156 "Victoria" ;
     rdamd:P30176 "Bertelsmann-Club",
@@ -2967,13 +2967,13 @@
 <http://example.org/901038679> a rdac:C10007 ;
     rdfs:label "Segen der Erde / Knut Hamsun. – Bertelsmann-Club, [1990]" ;
     rdamd:P30011 "[1990]" ;
-    rdamd:P30088 "Gütersloh",
+    rdamd:P30088 "Gütersloh",
         "Kornwestheim",
         "Wien",
         "Zug/Schweiz" ;
     rdamd:P30106 "Jahrhundert-Edition" ;
-    rdamd:P30117 "Knut Hamsun. [Ins Dt. übertr. von J. Sandmeier und S. Angermann]" ;
-    rdamd:P30137 "Lizenzausg. d. List-Verl., München" ;
+    rdamd:P30117 "Knut Hamsun. [Ins Dt. übertr. von J. Sandmeier und S. Angermann]" ;
+    rdamd:P30137 "Lizenzausg. d. List-Verl., München" ;
     rdamd:P30156 "Segen der Erde" ;
     rdamd:P30176 "Bertelsmann-Club",
         "Buch- u. Schallplattenfreunde",
@@ -2988,9 +2988,9 @@
 <http://example.org/930735609> a rdac:C10007 ;
     rdfs:label "Segen der Erde / Knut Hamsun. – Bertelsmann-Lesering, 1957" ;
     rdamd:P30011 "1957" ;
-    rdamd:P30088 "[München]" ;
-    rdamd:P30117 "Knut Hamsun. [Berechtigte Übers. von J. Sandmeier und S. Angermann]" ;
-    rdamd:P30137 "Lizenz des List-Verl., München" ;
+    rdamd:P30088 "[München]" ;
+    rdamd:P30117 "Knut Hamsun. [Berechtigte Übers. von J. Sandmeier und S. Angermann]" ;
+    rdamd:P30137 "Lizenz des List-Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Segen der Erde" ;
     rdamd:P30176 "Bertelsmann-Lesering" ;
@@ -4819,9 +4819,9 @@
     rdamd:P30011 "1951" ;
     rdamd:P30088 "Salzburg",
         "Stuttgart",
-        "Zürich" ;
+        "Zürich" ;
     rdamd:P30107 "Sonderausg" ;
-    rdamd:P30117 "Knut Hamsun. [Berechtigte Übers. von J. Sandmeier und S. Angermann]" ;
+    rdamd:P30117 "Knut Hamsun. [Berechtigte Übers. von J. Sandmeier und S. Angermann]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Segen der Erde" ;
     rdamd:P30176 "Europ. Buchklub" ;
@@ -6155,7 +6155,7 @@
         "NN sw057264" ;
     rdamd:P30011 "1926" ;
     rdamd:P30088 "Berlin" ;
-    rdamd:P30117 "Knut Hamsun. [Autor. Übertr. von Heinrich Goebel]" ;
+    rdamd:P30117 "Knut Hamsun. [Autor. Übertr. von Heinrich Goebel]" ;
     rdamd:P30156 "Der wilde Chor" ;
     rdamd:P30176 "J. M. Spaeth" ;
     rdamd:P30182 "123 S., 8." ;
@@ -6169,9 +6169,9 @@
     rdfs:label "Pan / Knut Hamsun. – [C. H. Becksche Verlh.] O. Beck, 1924" ;
     rdamd:P30004 "NN sw045807" ;
     rdamd:P30011 "1924" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "Buch der Rupprechtpresse" ;
-    rdamd:P30117 "Knut Hamsun. [Übertr. von J. Sandmeier]" ;
+    rdamd:P30117 "Knut Hamsun. [Übertr. von J. Sandmeier]" ;
     rdamd:P30142 "Aus Leutnant Thomas Glahns Papieren" ;
     rdamd:P30156 "Pan" ;
     rdamd:P30165 "28" ;
@@ -6188,8 +6188,8 @@
     rdamd:P30011 "1979" ;
     rdamd:P30088 "Leipzig" ;
     rdamd:P30107 "1. Aufl" ;
-    rdamd:P30117 "Knut Hamsun. Mit 10 Radierungen von Hermann Naumann. [Übers. von J. Sandmeier u. S. Angermann. Bearb. von Ruth Stöbling]" ;
-    rdamd:P30137 "Lizenzausg. d. Verl. Langen-Müller, München. - Ausg. für d. DDR u.d. sozialist. Länder. - Als Vorzugsausg. erscheinen 225 von Nr. 1 - Nr. 200 u. Nr. I - XXV (Künstler- u. Verlegerex.) numerierte Ex. Diesen ist je e. signierte u. numerierte Orig.-Radierung von Hermann Naumann beigegeben." ;
+    rdamd:P30117 "Knut Hamsun. Mit 10 Radierungen von Hermann Naumann. [Übers. von J. Sandmeier u. S. Angermann. Bearb. von Ruth Stöbling]" ;
+    rdamd:P30137 "Lizenzausg. d. Verl. Langen-Müller, München. - Ausg. für d. DDR u.d. sozialist. Länder. - Als Vorzugsausg. erscheinen 225 von Nr. 1 - Nr. 200 u. Nr. I - XXV (Künstler- u. Verlegerex.) numerierte Ex. Diesen ist je e. signierte u. numerierte Orig.-Radierung von Hermann Naumann beigegeben." ;
     rdamd:P30142 "[aus d. Norweg.]" ;
     rdamd:P30156 "Pan" ;
     rdamd:P30176 "Reclam" ;
@@ -6204,9 +6204,9 @@
     rdfs:label "Hunger / Knut Hamsun. – 45.-48. Tsd. – Langen, [1937]" ;
     rdamd:P30004 "NN sw113543" ;
     rdamd:P30011 "[1937]" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "45.-48. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Neue berecht. Übers.von J. Sandmeier]" ;
+    rdamd:P30117 "Knut Hamsun. [Neue berecht. Übers.von J. Sandmeier]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Hunger" ;
     rdamd:P30176 "Langen" ;
@@ -8790,17 +8790,15 @@
     rdaxd:P00018 "isbn-2266018892" .
 
 <http://example.org/isbn-2702102441> a rdac:C10007 ;
-    rdfs:label "Sous l'étoile d'automne / Knut Hamsun. – Calmann-Lévy, 1978" ;
+    rdfs:label "Sous l'étoile d'automne / Knut Hamsun. – Calmann-Lévy, 1978" ;
     rdamd:P30004 "ISBN 2702102441" ;
     rdamd:P30011 "1978" ;
     rdamd:P30088 "Paris" ;
     rdamd:P30106 "Traduit de-" ;
-    rdamd:P30117 "Knut Hamsun ; traduit du norvégien par Régis Boyer",
+    rdamd:P30117 "Knut Hamsun ; traduit du norvégien par Régis Boyer",
         "Knut Hamsun ; traduit du norvégien par R/egis Boyer" ;
-    rdamd:P30156 "Sous l'étoile d'automne",
-        "Sous l'étoile d'automne" ;
-    rdamd:P30176 "Calmann-Lévy",
-        "Calmann-Lévy" ;
+    rdamd:P30156 "Sous l'étoile d'automne" ;
+    rdamd:P30176 "Calmann-Lévy" ;
     rdamd:P30182 "214 s.",
         "214p., 21cm." ;
     rdamo:P30001 rdact:1049 ;
@@ -8900,18 +8898,16 @@
     rdaxd:P00018 "isbn-2702112161" .
 
 <http://example.org/isbn-270211301> a rdac:C10007 ;
-    rdfs:label "La ville de Segelfoss / Knut Hamsun. – Calmann-Lévy, 1984" ;
+    rdfs:label "La ville de Segelfoss / Knut Hamsun. – Calmann-Lévy, 1984" ;
     rdamd:P30004 "ISBN 270211301X" ;
     rdamd:P30011 "1984" ;
     rdamd:P30088 "[Paris]" ;
     rdamd:P30106 "\"Traduit de”" ;
-    rdamd:P30117 "Knut Hamsun ; traduit du norvégien par Régis Boyer",
-        "Knut Hamsun ; traduit du norvégien par Régis Boyer" ;
+    rdamd:P30117 "Knut Hamsun ; traduit du norvégien par Régis Boyer" ;
     rdamd:P30137 "Originalutgaven: Kristiania ; København : Gyldendalske Boghandel, 1915" ;
     rdamd:P30142 "roman" ;
     rdamd:P30156 "La ville de Segelfoss" ;
-    rdamd:P30176 "Calmann-Lévy",
-        "Calmann-Lévy" ;
+    rdamd:P30176 "Calmann-Lévy" ;
     rdamd:P30182 "306 s., 24 cm.",
         "306p." ;
     rdamo:P30001 rdact:1049 ;
@@ -12064,15 +12060,15 @@
     rdaxd:P00018 "isbn-8252521541" .
 
 <http://example.org/isbn-8252525644> a rdac:C10007 ;
-    rdfs:label "Pan / Knut Hamsun. – Hundreårsutg., 2. oppl. – Den Norske Bokklubben, 1995" ;
+    rdfs:label "Pan / Knut Hamsun. – Hundreårsutg., 2. oppl. – Den Norske Bokklubben, 1995" ;
     rdamd:P30004 "ISBN 8252525644",
         "NN sw010478" ;
     rdamd:P30011 "1995" ;
     rdamd:P30087 "Oslo; Gjøvik" ;
     rdamd:P30088 "[Oslo]" ;
-    rdamd:P30107 "Hundreårsutg., 2. oppl" ;
+    rdamd:P30107 "Hundreårsutg., 2. oppl" ;
     rdamd:P30109 "Oslo; Gjøvik : Norbok" ;
-    rdamd:P30117 "Knut Hamsun. Ill. med en billedserie av Håkon Gullvåg" ;
+    rdamd:P30117 "Knut Hamsun. Ill. med en billedserie av Håkon Gullvåg" ;
     rdamd:P30142 "av løjtnant Thomas Glahns papirer" ;
     rdamd:P30156 "Pan" ;
     rdamd:P30175 "Norbok" ;
@@ -13451,8 +13447,8 @@
     rdamd:P30088 "Leipzig" ;
     rdamd:P30106 "Reclams Universal-Bibliothek" ;
     rdamd:P30107 "2. Aufl" ;
-    rdamd:P30117 "Knut Hamsun. [Übers. von J. Sandmeier u. S. Angermann]" ;
-    rdamd:P30137 "Lizenzausg. d. List-Verl., München. - Ausg. für d. DDR u.d. anderen sozialist. Länder" ;
+    rdamd:P30117 "Knut Hamsun. [Übers. von J. Sandmeier u. S. Angermann]" ;
+    rdamd:P30137 "Lizenzausg. d. List-Verl., München. - Ausg. für d. DDR u.d. anderen sozialist. Länder" ;
     rdamd:P30142 "Roman ; [aus dem Norwegischen]" ;
     rdamd:P30156 "Hunger" ;
     rdamd:P30165 "Bd. 763 : Belletristik" ;
@@ -13465,14 +13461,14 @@
         "isbn-9783379004824" .
 
 <http://example.org/isbn-9783423008105> a rdac:C10007 ;
-    rdfs:label "Pan. – Ungekürzte Ausg. – Deutscher Taschenbuch-Verlag, 1972" ;
+    rdfs:label "Pan. – Ungekürzte Ausg. – Deutscher Taschenbuch-Verlag, 1972" ;
     rdamd:P30004 "ISBN 3423008105",
         "ISBN 9783423008105" ;
     rdamd:P30011 "1972" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
-    rdamd:P30107 "Ungekürzte Ausg" ;
-    rdamd:P30137 "Lizenz d. Langen-Müller-Verl., München, Wien." ;
+    rdamd:P30107 "Ungekürzte Ausg" ;
+    rdamd:P30137 "Lizenz d. Langen-Müller-Verl., München, Wien." ;
     rdamd:P30156 "Pan" ;
     rdamd:P30165 "810" ;
     rdamd:P30176 "Deutscher Taschenbuch-Verlag" ;
@@ -13484,23 +13480,23 @@
         "isbn-9783423008105" .
 
 <http://example.org/isbn-9783423013611> a rdac:C10007 ;
-    rdfs:label "Segen der Erde / Knut Hamsun. – Ungekürzte Ausg. – Deutscher Taschenbuch-Verlag, 1978" ;
+    rdfs:label "Segen der Erde / Knut Hamsun. – Ungekürzte Ausg. – Deutscher Taschenbuch-Verlag, 1978" ;
     rdamd:P30004 "ISBN 3423013613",
         "ISBN 9783423013611" ;
     rdamd:P30011 "1978",
         "1980",
         "1984" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
-    rdamd:P30107 "Ungekürzte Ausg",
-        "Ungekürzte Ausg., 2. Aufl., 13. - 18. Tsd",
-        "Ungekürzte Ausg., 3. Aufl., 19. - 22. Tsd",
-        "Ungekürzte Ausg., 4. Aufl., 23. - 28. Tsd" ;
+    rdamd:P30107 "Ungekürzte Ausg",
+        "Ungekürzte Ausg., 2. Aufl., 13. - 18. Tsd",
+        "Ungekürzte Ausg., 3. Aufl., 19. - 22. Tsd",
+        "Ungekürzte Ausg., 4. Aufl., 23. - 28. Tsd" ;
     rdamd:P30117 "Knut Hamsun. Dt. von J. Sandmeier u. S. Angermann" ;
-    rdamd:P30137 "Lizenz d. List-Verl., München" ;
+    rdamd:P30137 "Lizenz d. List-Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Segen der Erde" ;
-    rdamd:P30165 "1361 : List-Taschenbücher",
+    rdamd:P30165 "1361 : List-Taschenbücher",
         "1361 : dtv-List" ;
     rdamd:P30176 "Deutscher Taschenbuch-Verlag" ;
     rdamd:P30182 "340 S., 18 cm." ;
@@ -13511,13 +13507,13 @@
         "isbn-9783423013611" .
 
 <http://example.org/isbn-9783423016339> a rdac:C10007 ;
-    rdfs:label "Benoni / Knut Hamsun. – Ungekürzte Ausg. – Deutscher Taschenbuch-Verlag, 1981" ;
+    rdfs:label "Benoni / Knut Hamsun. – Ungekürzte Ausg. – Deutscher Taschenbuch-Verlag, 1981" ;
     rdamd:P30004 "ISBN 3423016337",
         "ISBN 9783423016339" ;
     rdamd:P30011 "1981" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
-    rdamd:P30107 "Ungekürzte Ausg" ;
+    rdamd:P30107 "Ungekürzte Ausg" ;
     rdamd:P30117 "Knut Hamsun. Dt. von J. Sandmeier u. S. Angermann" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Benoni" ;
@@ -13531,13 +13527,13 @@
         "isbn-9783423016339" .
 
 <http://example.org/isbn-9783423016346> a rdac:C10007 ;
-    rdfs:label "Rosa / Knut Hamsun. – Ungekürzte Ausg. – Deutscher Taschenbuch-Verlag, 1981" ;
+    rdfs:label "Rosa / Knut Hamsun. – Ungekürzte Ausg. – Deutscher Taschenbuch-Verlag, 1981" ;
     rdamd:P30004 "ISBN 3423016345",
         "ISBN 9783423016346" ;
     rdamd:P30011 "1981" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
-    rdamd:P30107 "Ungekürzte Ausg" ;
+    rdamd:P30107 "Ungekürzte Ausg" ;
     rdamd:P30117 "Knut Hamsun. Dt. von J. Sandmeier u. S. Angermann" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Rosa" ;
@@ -13551,21 +13547,21 @@
         "isbn-9783423016346" .
 
 <http://example.org/isbn-9783423017367> a rdac:C10007 ;
-    rdfs:label "Hunger / Knut Hamsun. – Ungekürzte Ausg. – Deutscher Taschenbuch-Verlag, 1982" ;
+    rdfs:label "Hunger / Knut Hamsun. – Ungekürzte Ausg. – Deutscher Taschenbuch-Verlag, 1982" ;
     rdamd:P30004 "ISBN 3423017368",
         "ISBN 9783423017367" ;
     rdamd:P30011 "1982",
         "1984",
         "1987" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
-    rdamd:P30107 "Ungekürzte Ausg",
-        "Ungekürzte Ausg., 2. Aufl., 11. - 16. Tsd",
-        "Ungekürzte Ausg., 3. Aufl., 17. - 22. Tsd",
-        "Ungekürzte Ausg., 4. Aufl., 23. - 28. Tsd" ;
+    rdamd:P30107 "Ungekürzte Ausg",
+        "Ungekürzte Ausg., 2. Aufl., 11. - 16. Tsd",
+        "Ungekürzte Ausg., 3. Aufl., 17. - 22. Tsd",
+        "Ungekürzte Ausg., 4. Aufl., 23. - 28. Tsd" ;
     rdamd:P30117 "Knut Hamsun. Dt. von J. Sandmeier u. S. Angermann" ;
-    rdamd:P30137 "Lizenz d. List-Verl., München",
-        "Lizenz d. Verl. List, München" ;
+    rdamd:P30137 "Lizenz d. List-Verl., München",
+        "Lizenz d. Verl. List, München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Hunger" ;
     rdamd:P30165 "1736 : dtv List" ;
@@ -13579,15 +13575,15 @@
         "isbn-9783423017367" .
 
 <http://example.org/isbn-9783423100632> a rdac:C10007 ;
-    rdfs:label "Victoria / Knut Hamsun. – Ungekürzte Ausg. – Deutscher Taschenbuch-Verlag, 1983" ;
+    rdfs:label "Victoria / Knut Hamsun. – Ungekürzte Ausg. – Deutscher Taschenbuch-Verlag, 1983" ;
     rdamd:P30004 "ISBN 342310063X",
         "ISBN 9783423100632" ;
     rdamd:P30011 "1983" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
-    rdamd:P30107 "Ungekürzte Ausg" ;
+    rdamd:P30107 "Ungekürzte Ausg" ;
     rdamd:P30117 "Knut Hamsun. Dt. von J. Sandmeier u. S. Angermann" ;
-    rdamd:P30137 "Lizenzausg. d. List-Verl., München" ;
+    rdamd:P30137 "Lizenzausg. d. List-Verl., München" ;
     rdamd:P30142 "d. Geschichte e. Liebe" ;
     rdamd:P30156 "Victoria" ;
     rdamd:P30165 "10063 : dtv-List" ;
@@ -13600,13 +13596,13 @@
         "isbn-9783423100632" .
 
 <http://example.org/isbn-9783423102766> a rdac:C10007 ;
-    rdfs:label "Mysterien / Knut Hamsun. – Ungekürzte Ausg. – Deutscher Taschenbuch-Verlag, 1984" ;
+    rdfs:label "Mysterien / Knut Hamsun. – Ungekürzte Ausg. – Deutscher Taschenbuch-Verlag, 1984" ;
     rdamd:P30004 "ISBN 3423102764",
         "ISBN 9783423102766" ;
     rdamd:P30011 "1984" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
-    rdamd:P30107 "Ungekürzte Ausg" ;
+    rdamd:P30107 "Ungekürzte Ausg" ;
     rdamd:P30117 "Knut Hamsun. Dt. von J. Sandmeier. Mit e. Nachw. von Henry Miller" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Mysterien" ;
@@ -13620,7 +13616,7 @@
         "isbn-9783423102766" .
 
 <http://example.org/isbn-9783423110556> a rdac:C10007 ;
-    rdfs:label "Segen der Erde / Knut Hamsun. – Ungekürzte Ausg., 6. Aufl. – Dt. Taschenbuch-Verl, 1990" ;
+    rdfs:label "Segen der Erde / Knut Hamsun. – Ungekürzte Ausg., 6. Aufl. – Dt. Taschenbuch-Verl, 1990" ;
     rdamd:P30004 "ISBN 3423110554",
         "ISBN 9783423110556" ;
     rdamd:P30011 "1990",
@@ -13628,17 +13624,17 @@
         "1993",
         "1996",
         "[1989]" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
-    rdamd:P30107 "Ungekürzte Ausg., 6. Aufl",
-        "Ungekürzte Ausg., 7. Aufl",
-        "Ungekürzte Ausg., 8. Aufl",
-        "Ungekürzte Ausg., 9. Aufl",
+    rdamd:P30107 "Ungekürzte Ausg., 6. Aufl",
+        "Ungekürzte Ausg., 7. Aufl",
+        "Ungekürzte Ausg., 8. Aufl",
+        "Ungekürzte Ausg., 9. Aufl",
         "[5. Aufl.]" ;
     rdamd:P30117 "Knut Hamsun. Dt. von J. Sandmeier u. S. Angermann",
         "Knut Hamsun. Dt. von J. Sandmeier und S. Angermann" ;
-    rdamd:P30137 "Lizenz des List-Verl., München",
-        "Lizenzausg. d. List-Verl., München" ;
+    rdamd:P30137 "Lizenz des List-Verl., München",
+        "Lizenzausg. d. List-Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Segen der Erde" ;
     rdamd:P30165 "11055" ;
@@ -13651,15 +13647,15 @@
         "isbn-9783423110556" .
 
 <http://example.org/isbn-9783423110952> a rdac:C10007 ;
-    rdfs:label "Pan / [von S. Angermann u. J. Sandmeier ins Dt. übertr.]. – Ungekürzte Ausg., [2. Aufl.]. – Dt. Taschenbuch-Verl, [1989]" ;
+    rdfs:label "Pan / [von S. Angermann u. J. Sandmeier ins Dt. übertr.]. – Ungekürzte Ausg., [2. Aufl.]. – Dt. Taschenbuch-Verl, [1989]" ;
     rdamd:P30004 "ISBN 3423110953",
         "ISBN 9783423110952" ;
     rdamd:P30011 "[1989]" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
-    rdamd:P30107 "Ungekürzte Ausg., [2. Aufl.]" ;
-    rdamd:P30117 "[von S. Angermann u. J. Sandmeier ins Dt. übertr.]" ;
-    rdamd:P30137 "Einheitssacht. d. beigef. Werkes: Svaermere <dt.>. - Lizenz d. Langen-Müller-Verl., München, Wien" ;
+    rdamd:P30107 "Ungekürzte Ausg., [2. Aufl.]" ;
+    rdamd:P30117 "[von S. Angermann u. J. Sandmeier ins Dt. übertr.]" ;
+    rdamd:P30137 "Einheitssacht. d. beigef. Werkes: Svaermere <dt.>. - Lizenz d. Langen-Müller-Verl., München, Wien" ;
     rdamd:P30156 "Pan" ;
     rdamd:P30165 "11095" ;
     rdamd:P30176 "Dt. Taschenbuch-Verl" ;
@@ -13671,21 +13667,21 @@
         "isbn-9783423110952" .
 
 <http://example.org/isbn-9783423111072> a rdac:C10007 ;
-    rdfs:label "Victoria / Knut Hamsun. – Ungekürzte Ausg., 5. Aufl. – Dt. Taschenbuch-Verl, 1991" ;
+    rdfs:label "Victoria / Knut Hamsun. – Ungekürzte Ausg., 5. Aufl. – Dt. Taschenbuch-Verl, 1991" ;
     rdamd:P30004 "ISBN 3423111070",
         "ISBN 9783423111072" ;
     rdamd:P30011 "1991",
         "[1989]",
         "[1990]" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
-    rdamd:P30107 "Ungekürzte Ausg., 5. Aufl",
-        "Ungekürzte Ausg., [3. Aufl.]",
-        "Ungekürzte Ausg., [4. Aufl.]" ;
+    rdamd:P30107 "Ungekürzte Ausg., 5. Aufl",
+        "Ungekürzte Ausg., [3. Aufl.]",
+        "Ungekürzte Ausg., [4. Aufl.]" ;
     rdamd:P30117 "Knut Hamsun. Dt. von J. Sandmeier u. S. Angermann",
         "Knut Hamsun. Dt. von J. Sandmeier und S. Angermann" ;
-    rdamd:P30137 "Lizenz d. List-Verl., München",
-        "Lizenz des List-Verl., München" ;
+    rdamd:P30137 "Lizenz d. List-Verl., München",
+        "Lizenz des List-Verl., München" ;
     rdamd:P30142 "die Geschichte einer Liebe" ;
     rdamd:P30156 "Victoria" ;
     rdamd:P30165 "11107" ;
@@ -13698,14 +13694,14 @@
         "isbn-9783423111072" .
 
 <http://example.org/isbn-9783423111225> a rdac:C10007 ;
-    rdfs:label "Unter Herbststernen. – Ungekürzte Ausg., 1. Aufl. – Dt. Taschenbuch-Verl, 1989" ;
+    rdfs:label "Unter Herbststernen. – Ungekürzte Ausg., 1. Aufl. – Dt. Taschenbuch-Verl, 1989" ;
     rdamd:P30004 "ISBN 3423111224",
         "ISBN 9783423111225" ;
     rdamd:P30011 "1989" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
-    rdamd:P30107 "Ungekürzte Ausg., 1. Aufl" ;
-    rdamd:P30137 "Einheitssacht. d. 1. beigefügten Werkes: En vrander spiller med sordin <dt.>" ;
+    rdamd:P30107 "Ungekürzte Ausg., 1. Aufl" ;
+    rdamd:P30137 "Einheitssacht. d. 1. beigefügten Werkes: En vrander spiller med sordin <dt.>" ;
     rdamd:P30156 "Unter Herbststernen" ;
     rdamd:P30165 "11122" ;
     rdamd:P30176 "Dt. Taschenbuch-Verl" ;
@@ -13717,15 +13713,15 @@
         "isbn-9783423111225" .
 
 <http://example.org/isbn-9783423111577> a rdac:C10007 ;
-    rdfs:label "Mysterien / Knut Hamsun. – Ungekürzte Ausg., 3. Aufl. – Dt. Taschenbuch-Verl, 1990" ;
+    rdfs:label "Mysterien / Knut Hamsun. – Ungekürzte Ausg., 3. Aufl. – Dt. Taschenbuch-Verl, 1990" ;
     rdamd:P30004 "ISBN 3423111577",
         "ISBN 9783423111577" ;
     rdamd:P30011 "1990" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
-    rdamd:P30107 "Ungekürzte Ausg., 3. Aufl" ;
+    rdamd:P30107 "Ungekürzte Ausg., 3. Aufl" ;
     rdamd:P30117 "Knut Hamsun. Dt. von J. Sandmeier. Mit einem Nachw. von Henry Miller" ;
-    rdamd:P30137 "Lizenz des List-Verl., München" ;
+    rdamd:P30137 "Lizenz des List-Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Mysterien" ;
     rdamd:P30165 "11157" ;
@@ -13739,15 +13735,15 @@
         "isbn-9783423111577" .
 
 <http://example.org/isbn-9783423111577000> a rdac:C10007 ;
-    rdfs:label "Mysterien / Knut Hamsun. – Ungekürzte Ausg., 2. Aufl. – Dt. Taschenbuch-Verl, 1989" ;
+    rdfs:label "Mysterien / Knut Hamsun. – Ungekürzte Ausg., 2. Aufl. – Dt. Taschenbuch-Verl, 1989" ;
     rdamd:P30004 "ISBN 3423111577000",
         "ISBN 9783423111577000" ;
     rdamd:P30011 "1989" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
-    rdamd:P30107 "Ungekürzte Ausg., 2. Aufl" ;
+    rdamd:P30107 "Ungekürzte Ausg., 2. Aufl" ;
     rdamd:P30117 "Knut Hamsun. Dt. von J. Sandmeier. Mit e. Nachw. von Henry Miller" ;
-    rdamd:P30137 "Lizenz d. List-Verl., München" ;
+    rdamd:P30137 "Lizenz d. List-Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Mysterien" ;
     rdamd:P30165 "11157" ;
@@ -13765,11 +13761,11 @@
     rdamd:P30004 "ISBN 3423111577111",
         "ISBN 9783423111577111" ;
     rdamd:P30011 "1996" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
     rdamd:P30107 "Vollst. Ausg" ;
     rdamd:P30117 "Knut Hamsun. Aus dem Norweg. von Siegfried Weibel. Mit einem Nachw. von Walter Baumgartner" ;
-    rdamd:P30137 "Lizenz des List-Verl., München" ;
+    rdamd:P30137 "Lizenz des List-Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Mysterien" ;
     rdamd:P30165 "11157" ;
@@ -13783,16 +13779,16 @@
         "isbn-9783423111577111" .
 
 <http://example.org/isbn-9783423111775> a rdac:C10007 ;
-    rdfs:label "Auf überwachsenen Pfaden / Knut Hamsun. – Ungekürzte Ausg., 1. Aufl. – Dt. Taschenbuch-Verl, 1990" ;
+    rdfs:label "Auf überwachsenen Pfaden / Knut Hamsun. – Ungekürzte Ausg., 1. Aufl. – Dt. Taschenbuch-Verl, 1990" ;
     rdamd:P30004 "ISBN 3423111771",
         "ISBN 9783423111775" ;
     rdamd:P30011 "1990" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
-    rdamd:P30107 "Ungekürzte Ausg., 1. Aufl" ;
+    rdamd:P30107 "Ungekürzte Ausg., 1. Aufl" ;
     rdamd:P30117 "Knut Hamsun. Dt. von Elisabeth Ihle" ;
-    rdamd:P30137 "Lizenz d. List-Verl., München. - Aus d. Norweg. übers." ;
-    rdamd:P30156 "Auf überwachsenen Pfaden" ;
+    rdamd:P30137 "Lizenz d. List-Verl., München. - Aus d. Norweg. übers." ;
+    rdamd:P30156 "Auf überwachsenen Pfaden" ;
     rdamd:P30165 "11177" ;
     rdamd:P30176 "Dt. Taschenbuch-Verl" ;
     rdamd:P30182 "126 S., 18 cm." ;
@@ -13803,15 +13799,15 @@
         "isbn-9783423111775" .
 
 <http://example.org/isbn-9783423112215> a rdac:C10007 ;
-    rdfs:label "Benoni / Knut Hamsun. – Ungekürzte Ausg., 2. Aufl. – Dt. Taschenbuch-Verl, 1990" ;
+    rdfs:label "Benoni / Knut Hamsun. – Ungekürzte Ausg., 2. Aufl. – Dt. Taschenbuch-Verl, 1990" ;
     rdamd:P30004 "ISBN 3423112212",
         "ISBN 9783423112215" ;
     rdamd:P30011 "1990" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
-    rdamd:P30107 "Ungekürzte Ausg., 2. Aufl" ;
+    rdamd:P30107 "Ungekürzte Ausg., 2. Aufl" ;
     rdamd:P30117 "Knut Hamsun. Dt. von J. Sandmeier u. S. Angermann" ;
-    rdamd:P30137 "Lizenz d. List-Verl., München. - 1. Aufl. als: dtv ; 1633" ;
+    rdamd:P30137 "Lizenz d. List-Verl., München. - 1. Aufl. als: dtv ; 1633" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Benoni" ;
     rdamd:P30165 "11221" ;
@@ -13824,15 +13820,15 @@
         "isbn-9783423112215" .
 
 <http://example.org/isbn-9783423112284> a rdac:C10007 ;
-    rdfs:label "Rosa / Knut Hamsun. – Ungekürzte Ausg. – Dt. Taschenbuch-Verl, 1990" ;
+    rdfs:label "Rosa / Knut Hamsun. – Ungekürzte Ausg. – Dt. Taschenbuch-Verl, 1990" ;
     rdamd:P30004 "ISBN 342311228X",
         "ISBN 9783423112284" ;
     rdamd:P30011 "1990" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
-    rdamd:P30107 "Ungekürzte Ausg" ;
+    rdamd:P30107 "Ungekürzte Ausg" ;
     rdamd:P30117 "Knut Hamsun. Dt. von J. Sandmeier u. S. Angermann" ;
-    rdamd:P30137 "Lizenz d. List-Verl., München" ;
+    rdamd:P30137 "Lizenz d. List-Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Rosa" ;
     rdamd:P30165 "11228" ;
@@ -13845,18 +13841,18 @@
         "isbn-9783423112284" .
 
 <http://example.org/isbn-9783423112482> a rdac:C10007 ;
-    rdfs:label "Landstreicher / Knut Hamsun. – Ungekürzte Ausg. – Dt. Taschenbuch-Verl, 1990" ;
+    rdfs:label "Landstreicher / Knut Hamsun. – Ungekürzte Ausg. – Dt. Taschenbuch-Verl, 1990" ;
     rdamd:P30004 "ISBN 3423112484",
         "ISBN 9783423112482" ;
     rdamd:P30011 "1990",
         "1995" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
-    rdamd:P30107 "Ungekürzte Ausg",
-        "Ungekürzte Ausg., 2. Aufl" ;
+    rdamd:P30107 "Ungekürzte Ausg",
+        "Ungekürzte Ausg., 2. Aufl" ;
     rdamd:P30117 "Knut Hamsun. Dt. von J. Sandmeier und S. Angermann" ;
-    rdamd:P30137 "Lizenz d. List-Verl., München",
-        "Lizenz des List-Verl., München" ;
+    rdamd:P30137 "Lizenz d. List-Verl., München",
+        "Lizenz des List-Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Landstreicher" ;
     rdamd:P30165 "11248" ;
@@ -13869,15 +13865,15 @@
         "isbn-9783423112482" .
 
 <http://example.org/isbn-9783423113205> a rdac:C10007 ;
-    rdfs:label "August Weltumsegler / Knut Hamsun. – Ungekürzte Ausg. – Dt. Taschenbuch-Verl, 1990" ;
+    rdfs:label "August Weltumsegler / Knut Hamsun. – Ungekürzte Ausg. – Dt. Taschenbuch-Verl, 1990" ;
     rdamd:P30004 "ISBN 3423113200",
         "ISBN 9783423113205" ;
     rdamd:P30011 "1990" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
-    rdamd:P30107 "Ungekürzte Ausg" ;
+    rdamd:P30107 "Ungekürzte Ausg" ;
     rdamd:P30117 "Knut Hamsun. Dt. von J. Sandmeier und S. Angermann" ;
-    rdamd:P30137 "Lizenz d. List-Verl., München" ;
+    rdamd:P30137 "Lizenz d. List-Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "August Weltumsegler" ;
     rdamd:P30165 "11320" ;
@@ -13890,17 +13886,17 @@
         "isbn-9783423113205" .
 
 <http://example.org/isbn-9783423113984> a rdac:C10007 ;
-    rdfs:label "Hunger / Knut Hamsun. – Ungekürzte Ausg., 5. Aufl. – Dt. Taschenbuch-Verl, 1991" ;
+    rdfs:label "Hunger / Knut Hamsun. – Ungekürzte Ausg., 5. Aufl. – Dt. Taschenbuch-Verl, 1991" ;
     rdamd:P30004 "ISBN 3423113987",
         "ISBN 9783423113984" ;
     rdamd:P30011 "1991",
         "1993" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
-    rdamd:P30107 "Ungekürzte Ausg., 5. Aufl",
-        "Ungekürzte Ausg., 6. Aufl" ;
+    rdamd:P30107 "Ungekürzte Ausg., 5. Aufl",
+        "Ungekürzte Ausg., 6. Aufl" ;
     rdamd:P30117 "Knut Hamsun. Dt. von J. Sandmeier und S. Angermann" ;
-    rdamd:P30137 "Lizenz des List-Verl., München" ;
+    rdamd:P30137 "Lizenz des List-Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Hunger" ;
     rdamd:P30165 "11398" ;
@@ -13913,15 +13909,15 @@
         "isbn-9783423113984" .
 
 <http://example.org/isbn-9783423114332> a rdac:C10007 ;
-    rdfs:label "Nach Jahr und Tag / Knut Hamsun. – Ungekürzte Ausg. – Dt. Taschenbuch-Verl, 1991" ;
+    rdfs:label "Nach Jahr und Tag / Knut Hamsun. – Ungekürzte Ausg. – Dt. Taschenbuch-Verl, 1991" ;
     rdamd:P30004 "ISBN 3423114339",
         "ISBN 9783423114332" ;
     rdamd:P30011 "1991" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
-    rdamd:P30107 "Ungekürzte Ausg" ;
+    rdamd:P30107 "Ungekürzte Ausg" ;
     rdamd:P30117 "Knut Hamsun. Dt. von J. Sandmeier und S. Angermann" ;
-    rdamd:P30137 "Lizenz des List-Verl., München" ;
+    rdamd:P30137 "Lizenz des List-Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Nach Jahr und Tag" ;
     rdamd:P30165 "11433" ;
@@ -13938,11 +13934,11 @@
     rdamd:P30004 "ISBN 3423121572",
         "ISBN 9783423121576" ;
     rdamd:P30011 "1996" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
     rdamd:P30107 "Vollst. Ausg" ;
     rdamd:P30117 "Knut Hamsun. Aus dem Norweg. von S. Angermann und J. Sandmeier" ;
-    rdamd:P30137 "Lizenz des Langen-Müller-Verl., München" ;
+    rdamd:P30137 "Lizenz des Langen-Müller-Verl., München" ;
     rdamd:P30142 "aus Lieutenant Thomas Glahns Papieren ; Roman" ;
     rdamd:P30156 "Pan" ;
     rdamd:P30165 "12157" ;
@@ -13959,10 +13955,10 @@
     rdamd:P30004 "ISBN 3423122277",
         "ISBN 9783423122276" ;
     rdamd:P30011 "1996" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
     rdamd:P30107 "Vollst. Ausg" ;
-    rdamd:P30137 "Lizenz des Langen-Müller-Verl, München" ;
+    rdamd:P30137 "Lizenz des Langen-Müller-Verl, München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Schwärmer" ;
     rdamd:P30165 "12227" ;
@@ -13979,11 +13975,11 @@
     rdamd:P30004 "ISBN 3423123478",
         "ISBN 9783423123471" ;
     rdamd:P30011 "1997" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
     rdamd:P30107 "Vollst. Ausg., 3. Aufl" ;
     rdamd:P30117 "Knut Hamsun. Aus dem Norweg. von J. Sandmeier u. S. Angermann" ;
-    rdamd:P30137 "Lizenz des List-Verl., München. - Früher als: dtv ; 11228" ;
+    rdamd:P30137 "Lizenz des List-Verl., München. - Früher als: dtv ; 11228" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Rosa" ;
     rdamd:P30165 "12347" ;
@@ -14000,11 +13996,11 @@
     rdamd:P30004 "ISBN 3423124601",
         "ISBN 9783423124607" ;
     rdamd:P30011 "1998" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
     rdamd:P30107 "Vollst. Ausg" ;
-    rdamd:P30117 "Knut Hamsun. Aus dem Norweg. von Gert Imbeck. Durchges. von Eva Maagerö. Mit einem Nachw. von Herbert Reinoß" ;
-    rdamd:P30137 "Lizenz des List-Verl., München" ;
+    rdamd:P30117 "Knut Hamsun. Aus dem Norweg. von Gert Imbeck. Durchges. von Eva Maagerö. Mit einem Nachw. von Herbert Reinoß" ;
+    rdamd:P30137 "Lizenz des List-Verl., München" ;
     rdamd:P30142 "Erzählung" ;
     rdamd:P30156 "Bjørger" ;
     rdamd:P30165 "12460" ;
@@ -14017,15 +14013,15 @@
         "isbn-9783423124607" .
 
 <http://example.org/isbn-9783423126397> a rdac:C10007 ;
-    rdfs:label "Victoria / Knut Hamsun. – Ungekürzte Ausg., 7. Aufl. – Dt. Taschenbuch-Verl, 1999" ;
+    rdfs:label "Victoria / Knut Hamsun. – Ungekürzte Ausg., 7. Aufl. – Dt. Taschenbuch-Verl, 1999" ;
     rdamd:P30004 "ISBN 3423126396",
         "ISBN 9783423126397" ;
     rdamd:P30011 "1999" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
-    rdamd:P30107 "Ungekürzte Ausg., 7. Aufl" ;
+    rdamd:P30107 "Ungekürzte Ausg., 7. Aufl" ;
     rdamd:P30117 "Knut Hamsun. Dt. von J. Sandmeier und S. Angermann" ;
-    rdamd:P30137 "Lizenz des List-Verl., München" ;
+    rdamd:P30137 "Lizenz des List-Verl., München" ;
     rdamd:P30142 "die Geschichte einer Liebe" ;
     rdamd:P30156 "Victoria" ;
     rdamd:P30165 "12639" ;
@@ -14042,11 +14038,11 @@
     rdamd:P30004 "ISBN 3423127090",
         "ISBN 9783423127097" ;
     rdamd:P30011 "1999" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
     rdamd:P30107 "Vollst. Ausg., 2. Aufl" ;
     rdamd:P30117 "Knut Hamsun. Aus dem Norweg. von S. Angermann und J. Sandmeier" ;
-    rdamd:P30137 "Lizenz des Langen-Müller-Verl., München. - Früher als: dtv; 12157" ;
+    rdamd:P30137 "Lizenz des Langen-Müller-Verl., München. - Früher als: dtv; 12157" ;
     rdamd:P30142 "aus Lieutenant Thomas Glahns Papieren ; Roman" ;
     rdamd:P30156 "Pan" ;
     rdamd:P30165 "12709" ;
@@ -14063,11 +14059,11 @@
     rdamd:P30004 "ISBN 3423127864",
         "ISBN 9783423127868" ;
     rdamd:P30011 "2000" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
     rdamd:P30107 "Vollst. Ausg., 3. Aufl" ;
     rdamd:P30117 "Knut Hamsun. Aus dem Norweg. von S. Angermann und J. Sandmeier" ;
-    rdamd:P30137 "Lizenz des List-Verl., München. - 2. Aufl. als: dtv ; 11221" ;
+    rdamd:P30137 "Lizenz des List-Verl., München. - 2. Aufl. als: dtv ; 11221" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Benoni" ;
     rdamd:P30165 "12786" ;
@@ -14080,16 +14076,16 @@
         "isbn-9783423127868" .
 
 <http://example.org/isbn-9783423129428> a rdac:C10007 ;
-    rdfs:label "Auf überwachsenen Pfaden / Knut Hamsun. – Vollst. Ausg., 2. Aufl. – Dt. Taschenbuch-Verl, 2002" ;
+    rdfs:label "Auf überwachsenen Pfaden / Knut Hamsun. – Vollst. Ausg., 2. Aufl. – Dt. Taschenbuch-Verl, 2002" ;
     rdamd:P30004 "ISBN 3423129425",
         "ISBN 9783423129428" ;
     rdamd:P30011 "2002" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
     rdamd:P30107 "Vollst. Ausg., 2. Aufl" ;
     rdamd:P30117 "Knut Hamsun. Aus dem Norweg. von Elisabeth Ihle" ;
-    rdamd:P30137 "Lizenz des List-Verl., München" ;
-    rdamd:P30156 "Auf überwachsenen Pfaden" ;
+    rdamd:P30137 "Lizenz des List-Verl., München" ;
+    rdamd:P30156 "Auf überwachsenen Pfaden" ;
     rdamd:P30165 "12942" ;
     rdamd:P30176 "Dt. Taschenbuch-Verl" ;
     rdamd:P30182 "126 S., 20 cm." ;
@@ -14100,14 +14096,13 @@
         "isbn-9783423129428" .
 
 <http://example.org/isbn-9783423252997> a rdac:C10007 ;
-    rdfs:label "Hunger / Knut Hamsun. – Ungekürzte Ausg. – Deutscher Taschenbuch Verlag, 2009" ;
+    rdfs:label "Hunger / Knut Hamsun. – Ungekürzte Ausg. – Deutscher Taschenbuch Verlag, 2009" ;
     rdamd:P30004 "IAN 9783423252997",
         "ISBN 9783423252997" ;
     rdamd:P30011 "2009" ;
-    rdamd:P30088 "München",
-        "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
-    rdamd:P30107 "Ungekürzte Ausg" ;
+    rdamd:P30107 "Ungekürzte Ausg" ;
     rdamd:P30117 "Knut Hamsun ; aus dem Norwegischen von J. Sandmeier und S. Angermann",
         "Knut Hamsun. Aus dem Norweg. von J. Sandmeier und S. Angermann" ;
     rdamd:P30137 "Auch als: dtv ; 1736 und: dtv ; 11398" ;
@@ -14130,10 +14125,10 @@
     rdamd:P30004 "ISBN 3462018302",
         "ISBN 9783462018301" ;
     rdamd:P30011 "1987" ;
-    rdamd:P30088 "Köln" ;
+    rdamd:P30088 "Köln" ;
     rdamd:P30106 "KiWi" ;
     rdamd:P30117 "Knut Hamsun. Aus d. Norweg. von J. Sandmeier" ;
-    rdamd:P30137 "Lizenz d. List-Verl., München" ;
+    rdamd:P30137 "Lizenz d. List-Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Neue Erde" ;
     rdamd:P30165 "127" ;
@@ -14150,9 +14145,9 @@
     rdamd:P30004 "ISBN 3471777180",
         "ISBN 9783471777183" ;
     rdamd:P30011 "1971" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "590. - 594. Tsd" ;
-    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. von J. Sandmeier und S. Angermann]" ;
+    rdamd:P30117 "Knut Hamsun. [Berecht. Übers. von J. Sandmeier und S. Angermann]" ;
     rdamd:P30142 "die Geschichte einer Liebe" ;
     rdamd:P30156 "Victoria" ;
     rdamd:P30176 "List" ;
@@ -14164,15 +14159,15 @@
         "isbn-9783471777183" .
 
 <http://example.org/isbn-9783471777626> a rdac:C10007 ;
-    rdfs:label "Kinder ihrer Zeit / Knut Hamsun. – Ungekürzte Ausg. – Dt. Taschenbuch-Verl, 1991" ;
+    rdfs:label "Kinder ihrer Zeit / Knut Hamsun. – Ungekürzte Ausg. – Dt. Taschenbuch-Verl, 1991" ;
     rdamd:P30004 "ISBN 3471777628",
         "ISBN 9783471777626" ;
     rdamd:P30011 "1991" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
-    rdamd:P30107 "Ungekürzte Ausg" ;
+    rdamd:P30107 "Ungekürzte Ausg" ;
     rdamd:P30117 "Knut Hamsun. Dt. von Niels Hoyer" ;
-    rdamd:P30137 "Lizenz des List-Verl., München" ;
+    rdamd:P30137 "Lizenz des List-Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Kinder ihrer Zeit" ;
     rdamd:P30165 "11479" ;
@@ -14190,8 +14185,8 @@
         "ISBN 9783471777657" ;
     rdamd:P30011 "1974" ;
     rdamd:P30014 "1" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30117 "Knut Hamsun. [Übers. von J. Sandmeier u. a.]" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30117 "Knut Hamsun. [Übers. von J. Sandmeier u. a.]" ;
     rdamd:P30134 "Hunger" ;
     rdamd:P30156 "Romane" ;
     rdamd:P30176 "List" ;
@@ -14208,8 +14203,8 @@
         "ISBN 9783471777671" ;
     rdamd:P30011 "1974" ;
     rdamd:P30014 "2" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30117 "Knut Hamsun. [Übers. von J. Sandmeier u. a.]" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30117 "Knut Hamsun. [Übers. von J. Sandmeier u. a.]" ;
     rdamd:P30134 "Victoria" ;
     rdamd:P30156 "Romane" ;
     rdamd:P30176 "List" ;
@@ -14230,12 +14225,12 @@
         "ISBN 9783471778425 (List)" ;
     rdamd:P30011 "1979",
         "1985" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
     rdamd:P30107 "600. Tsd",
-        "Ungekürzte Ausg., 2. Aufl., 13. - 16. Tsd" ;
+        "Ungekürzte Ausg., 2. Aufl., 13. - 16. Tsd" ;
     rdamd:P30117 "Knut Hamsun. Dt. von J. Sandmeier u. S. Angermann",
-        "Knut Hamsun. [Berecht. Übers. von J. Sandmeier u. S. Angermann]" ;
+        "Knut Hamsun. [Berecht. Übers. von J. Sandmeier u. S. Angermann]" ;
     rdamd:P30142 "d. Geschichte e. Liebe" ;
     rdamd:P30156 "Victoria" ;
     rdamd:P30165 "10063 : dtv-List" ;
@@ -14256,11 +14251,11 @@
     rdamd:P30004 "ISBN 3471778543",
         "ISBN 9783471778548" ;
     rdamd:P30011 "1981" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30106 "Die schönsten Romane / Knut Hamsun" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30106 "Die schönsten Romane / Knut Hamsun" ;
     rdamd:P30117 "Knut Hamsun. [Aus d. Norweg. von Erwin Magnus]",
         "Knut Hamsun. [Aus d. Norweg. von J. Sandmeier u. S. Angermann]",
-        "Knut Hamsun. [Rev. Übers. aus d. Norweg. von J. Sandmeier u. S. Angermann]" ;
+        "Knut Hamsun. [Rev. Übers. aus d. Norweg. von J. Sandmeier u. S. Angermann]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Das letzte Kapitel",
         "Hunger",
@@ -14282,8 +14277,8 @@
     rdamd:P30004 "ISBN 3471778586",
         "ISBN 9783471778586" ;
     rdamd:P30011 "1984" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30117 "Knut Hamsun. [Aus d. Norweg. von Gert Imbeck, durchges. von Eva Maagerö]" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30117 "Knut Hamsun. [Aus d. Norweg. von Gert Imbeck, durchges. von Eva Maagerö]" ;
     rdamd:P30142 "Erzählung" ;
     rdamd:P30156 "Bjørger" ;
     rdamd:P30176 "List" ;
@@ -14299,9 +14294,9 @@
     rdamd:P30004 "ISBN 3471778691",
         "ISBN 9783471778692" ;
     rdamd:P30011 "1986" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "Neuaufl" ;
-    rdamd:P30117 "Knut Hamsun. [Ins Dt. übertr. von J. Sandmeier u. S. Angermann]" ;
+    rdamd:P30117 "Knut Hamsun. [Ins Dt. übertr. von J. Sandmeier u. S. Angermann]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Segen der Erde" ;
     rdamd:P30176 "List" ;
@@ -14317,7 +14312,7 @@
     rdamd:P30004 "ISBN 3471778780",
         "ISBN 9783471778784" ;
     rdamd:P30011 "1989" ;
-    rdamd:P30088 "[München]" ;
+    rdamd:P30088 "[München]" ;
     rdamd:P30117 "Knut Hamsun. Hrsg. u. kommentiert von Lars Frode Larsen. Aus d. Norweg. von Gert Imbeck u. Lothar Schneider" ;
     rdamd:P30142 "Erzählungen" ;
     rdamd:P30156 "Ein Lebensfragment" ;
@@ -14335,7 +14330,7 @@
         "ISBN 9783471793015" ;
     rdamd:P30011 "[1994 ?]" ;
     rdamd:P30014 "[...]" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30117 "[Knut Hamsun]" ;
     rdamd:P30134 "Mysterien : Roman / aus dem Norweg. von Siegfried Weibel. Mit einem Nachw. von Walter Baumgartner" ;
     rdamd:P30156 "Werkausgabe in Einzelbänden" ;
@@ -14354,7 +14349,7 @@
         "ISBN 9783471793077" ;
     rdamd:P30011 "1997" ;
     rdamd:P30014 "[...]" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30117 "[Knut Hamsun]" ;
     rdamd:P30134 "Hunger : Roman / aus dem Norweg. von Siegfried Weibel. Mit einem Nachw. von Heiko Uecker" ;
     rdamd:P30156 "Werkausgabe in Einzelbänden" ;
@@ -14372,7 +14367,7 @@
         "ISBN 9783471793084" ;
     rdamd:P30011 "1995" ;
     rdamd:P30014 "[...]" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30117 "[Knut Hamsun]" ;
     rdamd:P30134 "Victoria : eine Liebesgeschichte / aus dem Norweg. von Alken Bruns. Mit einem Vorw. von Joseph von Westphalen" ;
     rdamd:P30156 "Werkausgabe in Einzelbänden" ;
@@ -14389,10 +14384,9 @@
     rdamd:P30004 "ISBN 3471794042",
         "ISBN 9783471794043" ;
     rdamd:P30011 "1999" ;
-    rdamd:P30088 "München",
-        "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30117 "Knut Hamsun ; aus dem Norwegischen von Alken Bruns ; mit einem Nachwort von Heinrich Detering",
-        "Knut Hamsun. Aus dem Norweg. von Alken Bruns. Mit einem Nachw. von Heinrich Detering. [Die Übers. wurde durchges. von Walter Baumgartner]" ;
+        "Knut Hamsun. Aus dem Norweg. von Alken Bruns. Mit einem Nachw. von Heinrich Detering. [Die Übers. wurde durchges. von Walter Baumgartner]" ;
     rdamd:P30137 "1. tyske utg.: Berlin, 1918" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Segen der Erde" ;
@@ -14412,9 +14406,9 @@
         "ISBN 9783471794661" ;
     rdamd:P30011 "2002" ;
     rdamd:P30014 "[...]" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30117 "[Knut Hamsun]" ;
-    rdamd:P30134 "Auf überwachsenen Pfaden : Roman / aus dem Norweg. von Alken Bruns. Mit einem Nachw. von Heinrich Detering" ;
+    rdamd:P30134 "Auf überwachsenen Pfaden : Roman / aus dem Norweg. von Alken Bruns. Mit einem Nachw. von Heinrich Detering" ;
     rdamd:P30156 "Werkausgabe in Einzelbänden" ;
     rdamd:P30176 "List" ;
     rdamd:P30182 "182 S." ;
@@ -14435,7 +14429,7 @@
         "rororo" ;
     rdamd:P30107 "Einmalige Sonderausg. zum 100. Geburtstag von Ernst Rowohlt am 23. Juni 1987" ;
     rdamd:P30117 "Knut Hamsun" ;
-    rdamd:P30137 "Lizenz d. List-Verl., München, Leipzig" ;
+    rdamd:P30137 "Lizenz d. List-Verl., München, Leipzig" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Mysterien" ;
     rdamd:P30176 "Rowohlt" ;
@@ -14454,8 +14448,8 @@
     rdamd:P30088 "[Frankfurt (Main)]" ;
     rdamd:P30106 "Bibliothek Suhrkamp" ;
     rdamd:P30107 "1. Aufl" ;
-    rdamd:P30117 "Knut Hamsun. Mit e. Nachw. von Henry Miller. [Aus d. Norweg. übertr. von J. Sandmeier. Das Nachw. aus d. Amerikan. von Ursula Michels-Wenz]" ;
-    rdamd:P30137 "Lizenz d. List-Verl., München." ;
+    rdamd:P30117 "Knut Hamsun. Mit e. Nachw. von Henry Miller. [Aus d. Norweg. übertr. von J. Sandmeier. Das Nachw. aus d. Amerikan. von Ursula Michels-Wenz]" ;
+    rdamd:P30137 "Lizenz d. List-Verl., München." ;
     rdamd:P30156 "Mysterien" ;
     rdamd:P30165 "Bd. 348" ;
     rdamd:P30176 "Suhrkamp" ;
@@ -14488,12 +14482,12 @@
         "isbn-9783546004497" .
 
 <http://example.org/isbn-9783548291093> a rdac:C10007 ;
-    rdfs:label "Hunger / Knut Hamsun. – Ungekürzte Neuausgebe im Ullstein Taschenbuch, 1. Auflage. – Ullstein, 2017" ;
+    rdfs:label "Hunger / Knut Hamsun. – Ungekürzte Neuausgebe im Ullstein Taschenbuch, 1. Auflage. – Ullstein, 2017" ;
     rdamd:P30004 "ISBN 9783548291093" ;
     rdamd:P30011 "2017" ;
     rdamd:P30088 "Berlin" ;
     rdamd:P30106 "Ullstein Taschenbuch" ;
-    rdamd:P30107 "Ungekürzte Neuausgebe im Ullstein Taschenbuch, 1. Auflage" ;
+    rdamd:P30107 "Ungekürzte Neuausgebe im Ullstein Taschenbuch, 1. Auflage" ;
     rdamd:P30117 "Knut Hamsun ; aus dem Norwegischen von Siegfried Weibel" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Hunger" ;
@@ -14507,15 +14501,15 @@
     rdaxd:P00018 "isbn-9783548291093" .
 
 <http://example.org/isbn-9783548400259> a rdac:C10007 ;
-    rdfs:label "Pan / [Übers.: J. Sandmeier u. S. Angermann]. – Ullstein, 1987" ;
+    rdfs:label "Pan / [Übers.: J. Sandmeier u. S. Angermann]. – Ullstein, 1987" ;
     rdamd:P30004 "ISBN 3548400256",
         "ISBN 9783548400259" ;
     rdamd:P30011 "1987" ;
     rdamd:P30088 "Berlin",
         "Frankfurt/M" ;
     rdamd:P30106 "Ullstein" ;
-    rdamd:P30117 "[Übers.: J. Sandmeier u. S. Angermann]" ;
-    rdamd:P30137 "Lizenz d. Langen-Müller-Verl., München. - Einheitssacht. d. beigef. Werkes: Nabobyen <dt.>" ;
+    rdamd:P30117 "[Übers.: J. Sandmeier u. S. Angermann]" ;
+    rdamd:P30137 "Lizenz d. Langen-Müller-Verl., München. - Einheitssacht. d. beigef. Werkes: Nabobyen <dt.>" ;
     rdamd:P30156 "Pan" ;
     rdamd:P30165 "Nr. 40025 : Ullstein-Grossdruck" ;
     rdamd:P30176 "Ullstein" ;
@@ -14527,15 +14521,15 @@
         "isbn-9783548400259" .
 
 <http://example.org/isbn-9783548400709> a rdac:C10007 ;
-    rdfs:label "Schwärmer / [Übers.: Jutta u. Theodor Knust]. – Ullstein, 1989" ;
+    rdfs:label "Schwärmer / [Übers.: Jutta u. Theodor Knust]. – Ullstein, 1989" ;
     rdamd:P30004 "ISBN 3548400701",
         "ISBN 9783548400709" ;
     rdamd:P30011 "1989" ;
     rdamd:P30088 "Berlin",
         "Frankfurt/M" ;
     rdamd:P30106 "Ullstein" ;
-    rdamd:P30117 "[Übers.: Jutta u. Theodor Knust]" ;
-    rdamd:P30137 "Einheitssacht. d. beigef. Werkes: Vagabonds dager <dt.>. - Lizenz d. Langen-Müller-Verl., München" ;
+    rdamd:P30117 "[Übers.: Jutta u. Theodor Knust]" ;
+    rdamd:P30137 "Einheitssacht. d. beigef. Werkes: Vagabonds dager <dt.>. - Lizenz d. Langen-Müller-Verl., München" ;
     rdamd:P30156 "Schwärmer" ;
     rdamd:P30165 "Nr. 40070 : Ullstein-Grossdruck" ;
     rdamd:P30176 "Ullstein" ;
@@ -14570,13 +14564,13 @@
         "isbn-9783548608846" .
 
 <http://example.org/isbn-9783548609744> a rdac:C10007 ;
-    rdfs:label "Hunger / Knut Hamsun. – Ungekürzte Ausg., 1. Aufl. – List, 2010" ;
+    rdfs:label "Hunger / Knut Hamsun. – Ungekürzte Ausg. – List, 2010" ;
     rdamd:P30004 "IAN 9783548609744",
         "ISBN 9783548609744" ;
     rdamd:P30011 "2010" ;
     rdamd:P30088 "Berlin" ;
     rdamd:P30106 "List-Taschenbuch" ;
-    rdamd:P30107 "Ungekürzte Ausg., 1. Aufl",
+    rdamd:P30107 "Ungekürzte Ausg., 1. Aufl",
         "Ungekürzte Ausg" ;
     rdamd:P30117 "Knut Hamsun ; aus dem Norwegischen von Siegfried Weibel",
         "Knut Hamsun. Aus dem Norweg. von Siegfried Weibel" ;
@@ -14599,10 +14593,9 @@
         "ISBN 9783717521709",
         "ISBN 9783717521716" ;
     rdamd:P30011 "2009" ;
-    rdamd:P30088 "Zürich",
-        "Zürich" ;
+    rdamd:P30088 "Zürich" ;
     rdamd:P30106 "Manesse-Bibliothek der Weltliteratur" ;
-    rdamd:P30117 "Knut Hamsun. Aus dem Norweg. übers. von Ingeborg und Aldo Keel",
+    rdamd:P30117 "Knut Hamsun. Aus dem Norweg. übers. von Ingeborg und Aldo Keel",
         "aus dem Norwegischen übersetzt von Ingeborg und Aldo Keel ; Nachwort von Aldo Keel" ;
     rdamd:P30142 "aus Leutnant Thomas Glahns Papieren ; Roman" ;
     rdamd:P30156 "Pan" ;
@@ -14618,16 +14611,16 @@
         "isbn-9783717521716" .
 
 <http://example.org/isbn-9783784417936> a rdac:C10007 ;
-    rdfs:label "Pan / Knut Hamsun. – 1. Aufl. – Langen-Müller, 1979" ;
+    rdfs:label "Pan / Knut Hamsun. – 1. Aufl. – Langen-Müller, 1979" ;
     rdamd:P30004 "ISBN 3784417930",
         "ISBN 9783784417936" ;
     rdamd:P30011 "1979" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30107 "1. Aufl" ;
-    rdamd:P30117 "Knut Hamsun. Mit 10 Radierungen von Hermann Naumann. [Übers. von J. Sandmeier u. S. Angermann. Bearb. von Ruth Stöbling]" ;
+    rdamd:P30117 "Knut Hamsun. Mit 10 Radierungen von Hermann Naumann. [Übers. von J. Sandmeier u. S. Angermann. Bearb. von Ruth Stöbling]" ;
     rdamd:P30142 "[aus d. Norweg.]" ;
     rdamd:P30156 "Pan" ;
-    rdamd:P30176 "Langen-Müller" ;
+    rdamd:P30176 "Langen-Müller" ;
     rdamd:P30182 "140 S. : 10 Ill., 28 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -14638,16 +14631,16 @@
         "isbn-9783784417936" .
 
 <http://example.org/isbn-9783784418698> a rdac:C10007 ;
-    rdfs:label "Amerika / Knut Hamsun. – Langen Müller, 1981" ;
+    rdfs:label "Amerika / Knut Hamsun. – Langen Müller, 1981" ;
     rdamd:P30004 "ISBN 3784418694",
         "ISBN 9783784418698" ;
     rdamd:P30011 "1981" ;
-    rdamd:P30088 "München",
+    rdamd:P30088 "München",
         "Wien" ;
     rdamd:P30117 "Knut Hamsun. Hrsg. von Tore Hamsun. [Aus d. Norweg. von Jutta u. Theodor Knust]" ;
     rdamd:P30142 "krit. Schriften" ;
     rdamd:P30156 "Amerika" ;
-    rdamd:P30176 "Langen Müller" ;
+    rdamd:P30176 "Langen Müller" ;
     rdamd:P30182 "243 S., 21 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -14657,16 +14650,16 @@
         "isbn-9783784418698" .
 
 <http://example.org/isbn-9783784429090> a rdac:C10007 ;
-    rdfs:label "Pan / Knut Hamsun. – Langen Müller, 2003" ;
+    rdfs:label "Pan / Knut Hamsun. – Langen Müller, 2003" ;
     rdamd:P30004 "IAN 9783784429090",
         "ISBN 3784429092",
         "ISBN 9783784429090" ;
     rdamd:P30011 "2003" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30117 "Knut Hamsun. [Übertr. aus dem Norweg. von J. Sandmeier und S. Angermann]" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30117 "Knut Hamsun. [Übertr. aus dem Norweg. von J. Sandmeier und S. Angermann]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Pan" ;
-    rdamd:P30176 "Langen Müller" ;
+    rdamd:P30176 "Langen Müller" ;
     rdamd:P30182 "173 S., 21 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -14714,18 +14707,18 @@
         "isbn-9783843707954" .
 
 <http://example.org/isbn-9783844907889> a rdac:C10007 ;
-    rdfs:label "Hunger / Knut Hamsun. – gekürzte Ausgabe. – Hörbuch Hamburg, 2012" ;
+    rdfs:label "Hunger / Knut Hamsun. – gekürzte Ausgabe. – Hörbuch Hamburg, 2012" ;
     rdamd:P30004 "IAN 9783844907889",
         "ISBN 3844907882",
         "ISBN 9783844907889",
         "NN urn:nbn:de:101:1-201605084647" ;
     rdamd:P30011 "2012" ;
     rdamd:P30088 "Hamburg" ;
-    rdamd:P30107 "gekürzte Ausgabe" ;
+    rdamd:P30107 "gekürzte Ausgabe" ;
     rdamd:P30117 "Knut Hamsun" ;
     rdamd:P30137 "Lizenzpflichtig" ;
     rdamd:P30156 "Hunger" ;
-    rdamd:P30176 "Hörbuch Hamburg" ;
+    rdamd:P30176 "Hörbuch Hamburg" ;
     rdamd:P30182 "156 Min. : 32 Tracks.",
         "Online-Ressource 156 Min. : 32 Tracks." ;
     rdamo:P30001 rdact:1018 ;
@@ -14737,7 +14730,7 @@
         "isbn-9783844907889" .
 
 <http://example.org/isbn-9783862318650> a rdac:C10007 ;
-    rdfs:label "Hunger / Knut Hamsun. – Ungekürzte Lesung. – Audio Verlag, [2016]" ;
+    rdfs:label "Hunger / Knut Hamsun. – Ungekürzte Lesung. – Audio Verlag, [2016]" ;
     rdamd:P30004 "IAN 9783862318650",
         "ISBN 3862318656",
         "ISBN 9783862318650" ;
@@ -14746,9 +14739,8 @@
     rdamd:P30088 "Berlin" ;
     rdamd:P30106 "Grosse Werke, grosse Stimmen",
         "Große Werke - große Stimmen" ;
-    rdamd:P30107 "Ungekürzte Lesung",
-        "Ungekürzte Lesung" ;
-    rdamd:P30117 "Knut Hamsun ; mit Uwe Friedrichsen ; aus dem Norwegischen übertragen von Julius Sandmeier",
+    rdamd:P30107 "Ungekürzte Lesung" ;
+    rdamd:P30117 "Knut Hamsun ; mit Uwe Friedrichsen ; aus dem Norwegischen übertragen von Julius Sandmeier",
         "Knut Hamsun ; ungekürtzte Lesung mit Uwe Friedrichsen ; aus dem Norwegischen übertragen von Julius Sandmeier" ;
     rdamd:P30156 "Hunger" ;
     rdamd:P30176 "Audio Verlag",
@@ -14778,16 +14770,16 @@
     rdaxd:P00018 "isbn-9783899036466" .
 
 <http://example.org/isbn-9783939856177> a rdac:C10007 ;
-    rdfs:label "Vagabondage / Knut Hamsun. – 1. Aufl. – König, 2008" ;
+    rdfs:label "Vagabondage / Knut Hamsun. – 1. Aufl. – König, 2008" ;
     rdamd:P30004 "IAN 9783939856177",
         "ISBN 9783939856177" ;
     rdamd:P30011 "2008" ;
     rdamd:P30014 "Bd. 1" ;
-    rdamd:P30088 "Greiz/Thüringen" ;
+    rdamd:P30088 "Greiz/Thüringen" ;
     rdamd:P30107 "1. Aufl" ;
     rdamd:P30117 "Knut Hamsun" ;
     rdamd:P30156 "Vagabondage" ;
-    rdamd:P30176 "König" ;
+    rdamd:P30176 "König" ;
     rdamd:P30182 "208 S., 200 gr." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -14796,16 +14788,16 @@
         "isbn-9783939856177" .
 
 <http://example.org/isbn-9783939856184> a rdac:C10007 ;
-    rdfs:label "Vagabondage / Knut Hamsun. – 1. Aufl. – König, 2008" ;
+    rdfs:label "Vagabondage / Knut Hamsun. – 1. Aufl. – König, 2008" ;
     rdamd:P30004 "IAN 9783939856184",
         "ISBN 9783939856184" ;
     rdamd:P30011 "2008" ;
     rdamd:P30014 "Bd. 2" ;
-    rdamd:P30088 "Greiz/Thüringen" ;
+    rdamd:P30088 "Greiz/Thüringen" ;
     rdamd:P30107 "1. Aufl" ;
     rdamd:P30117 "Knut Hamsun" ;
     rdamd:P30156 "Vagabondage" ;
-    rdamd:P30176 "König" ;
+    rdamd:P30176 "König" ;
     rdamd:P30182 "207 S., 200 gr." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -16742,14 +16734,14 @@
     rdaxd:P00018 "http://viaf.org/viaf/44442808" .
 
 <http://viaf.org/viaf/49404449> a rdac:C10004 ;
-    rdfs:label "Grünau, Werner von (1910-1974)" ;
+    rdfs:label "Grünau, Werner von (1910-1974)" ;
     rdaad:P50339 "1910-1974" ;
-    rdaad:P50413 "Grünau, Werner von" ;
+    rdaad:P50413 "Grünau, Werner von" ;
     rdaxd:P00018 "http://viaf.org/viaf/49404449" .
 
 <http://example.org/gullvaghakon> a rdac:C10004 ;
-    rdfs:label "Gullvåg, Håkon" ;
-    rdaad:P50413 "Gullvåg, Håkon" ;
+    rdfs:label "Gullvåg, Håkon" ;
+    rdaad:P50413 "Gullvåg, Håkon" ;
     rdaxd:P00018 "http://example.org/gullvaghakon" .
 
 <http://viaf.org/viaf/308698494> a rdac:C10004 ;
@@ -17862,8 +17854,8 @@
     rdaeo:P20231 <http://viaf.org/viaf/312486496> .
 
 <http://viaf.org/viaf/312486496/exp/ger/1020/grunauwernervon> a rdac:C10006 ;
-    rdfs:label "Vom Teufel geholt / Knut Hamsun ; translated by Werner von Grünau. – German"@en,
-        "Vom Teufel geholt / Knut Hamsun ; oversatt av Werner von Grünau. – Tysk"@no ;
+    rdfs:label "Vom Teufel geholt / Knut Hamsun ; translated by Werner von Grünau. – German"@en,
+        "Vom Teufel geholt / Knut Hamsun ; oversatt av Werner von Grünau. – Tysk"@no ;
     rdaed:P20315 "Vom Teufel geholt" ;
     rdaed:P20316 "Livet ivold",
         "Vom Teufel geholt : Schauspiel in 4 Akten" ;
@@ -18561,9 +18553,9 @@
     rdaeo:P20231 <http://viaf.org/viaf/811145857935523020027> .
 
 <http://viaf.org/viaf/8450149068552765730000/exp/fre/1020/boyerregis> a rdac:C10006 ;
-    rdfs:label "Enfants de l'époque / Knut Hamsun ; translated by Régis Boyer. – French"@en,
-        "Enfants de l'époque / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
-    rdaed:P20315 "Enfants de l'époque" ;
+    rdfs:label "Enfants de l'époque / Knut Hamsun ; translated by Régis Boyer. – French"@en,
+        "Enfants de l'époque / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
+    rdaed:P20315 "Enfants de l'époque" ;
     rdaed:P20316 "Børn av tiden",
         "Enfants de leur temps : roman" ;
     rdaeo:P20001 rdaco:1020 ;
@@ -18873,7 +18865,7 @@
     rdfs:label "Abendröte / Knut Hamsun. – German"@en,
         "Abendröte / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "Abendröte" ;
-    rdaed:P20316 "Abendröte : Schauspiel in 3 Aufz",
+    rdaed:P20316 "Abendröte : Schauspiel in 3 Aufz",
         "Aftenrøde" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
@@ -19188,8 +19180,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/102357742" .
 
 <http://example.org/stoblingruth> a rdac:C10004 ;
-    rdfs:label "Stöbling, Ruth" ;
-    rdaad:P50413 "Stöbling, Ruth" ;
+    rdfs:label "Stöbling, Ruth" ;
+    rdaad:P50413 "Stöbling, Ruth" ;
     rdaxd:P00018 "http://example.org/stoblingruth" .
 
 <http://viaf.org/viaf/556149296182580670003> a rdac:C10004 ;
@@ -19562,7 +19554,7 @@
     rdaed:P20315 "Auf überwachsenen Pfaden" ;
     rdaed:P20316 "Auf überwachsenen Pfaden : Roman",
         "Paa gjengrodde stier",
-        "Werkausgabe in Einzelbänden : [...] : Auf überwachsenen Pfaden : Roman / aus dem Norweg. von Alken Bruns. Mit einem Nachw. von Heinrich Detering" ;
+        "Werkausgabe in Einzelbänden : [...] : Auf überwachsenen Pfaden : Roman / aus dem Norweg. von Alken Bruns. Mit einem Nachw. von Heinrich Detering" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/14783676> ;
@@ -19603,7 +19595,7 @@
     rdfs:label "Sous l'étoile d'automne / Knut Hamsun ; translated by Régis Boyer. – French"@en,
         "Sous l'étoile d'automne / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "Sous l'étoile d'automne" ;
-    rdaed:P20316 "Sous l'étoile d'automne",
+    rdaed:P20316 "Sous l'étoile d'automne",
         "Under høststjærnen" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
@@ -20068,7 +20060,7 @@
     rdfs:label "Die Königin von Saba und andere Novellen / Knut Hamsun ; translated by Ernst Brausewetter. – German"@en,
         "Die Königin von Saba und andere Novellen / Knut Hamsun ; oversatt av Ernst Brausewetter. – Tysk"@no ;
     rdaed:P20315 "Die Königin von Saba und andere Novellen" ;
-    rdaed:P20316 "Die Königin von Saba und andere Novellen",
+    rdaed:P20316 "Die Königin von Saba und andere Novellen",
         "Siesta" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
@@ -20434,9 +20426,9 @@
     entedit:P02 <http://oslomet.no/abi/vocab#T02> .
 
 <http://viaf.org/viaf/4225152200827914400006/exp/ger/1020/brausewetterernst> a rdac:C10006 ;
-    rdfs:label "Die Königin von Saba / Knut Hamsun ; translated by Ernst Brausewetter. – German"@en,
-        "Die Königin von Saba / Knut Hamsun ; oversatt av Ernst Brausewetter. – Tysk"@no ;
-    rdaed:P20315 "Die Königin von Saba" ;
+    rdfs:label "Die Königin von Saba / Knut Hamsun ; translated by Ernst Brausewetter. – German"@en,
+        "Die Königin von Saba / Knut Hamsun ; oversatt av Ernst Brausewetter. – Tysk"@no ;
+    rdaed:P20315 "Die Königin von Saba" ;
     rdaed:P20316 "Dronningen af Saba" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
@@ -20546,9 +20538,9 @@
     rdaeo:P20231 <http://viaf.org/viaf/59083692/julegilde> .
 
 <http://viaf.org/viaf/59083692/juliaasen/exp/ger/1020/brausewetterernst> a rdac:C10006 ;
-    rdfs:label "Weihnachten in der Berghütte / Knut Hamsun ; translated by Ernst Brausewetter. – German"@en,
-        "Weihnachten in der Berghütte / Knut Hamsun ; oversatt av Ernst Brausewetter. – Tysk"@no ;
-    rdaed:P20315 "Weihnachten in der Berghütte" ;
+    rdfs:label "Weihnachten in der Berghütte / Knut Hamsun ; translated by Ernst Brausewetter. – German"@en,
+        "Weihnachten in der Berghütte / Knut Hamsun ; oversatt av Ernst Brausewetter. – Tysk"@no ;
+    rdaed:P20315 "Weihnachten in der Berghütte" ;
     rdaed:P20316 "Jul i aasen" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
@@ -21258,7 +21250,7 @@
         "Siesta / Knut Hamsun"@no ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
     rdawd:P10223 "Siesta" ;
-    rdawd:P10330 "Die Königin von Saba - - Der Ring - - Die Dame von Tivoli - - Geheimes Weh - - Auf der Strasse - - Johannes Treu - - Mein Skydspferd - - Weihnachtsschmaus - - Weihnachten in der Berghütte - - Schiffer Rejersen vom \"Südstern\" - - Auf den Bänken bei New-foundland - - Pariser Skizzen." ;
+    rdawd:P10330 "Die Königin von Saba - - Der Ring - - Die Dame von Tivoli - - Geheimes Weh - - Auf der Strasse - - Johannes Treu - - Mein Skydspferd - - Weihnachtsschmaus - - Weihnachten in der Berghütte - - Schiffer Rejersen vom \"Südstern\" - - Auf den Bänken bei New-foundland - - Pariser Skizzen." ;
     rdawo:P10061 <http://viaf.org/viaf/59083692> ;
     rdawo:P10147 <http://viaf.org/viaf/4225152200827914400006>,
         <http://viaf.org/viaf/59083692/damenfrativoli>,
@@ -21516,8 +21508,8 @@
     rdfs:label "Auf überwachsenen Pfaden / Knut Hamsun ; translated by Elisabeth Ihle. – German"@en,
         "Auf überwachsenen Pfaden / Knut Hamsun ; oversatt av Elisabeth Ihle. – Tysk"@no ;
     rdaed:P20315 "Auf überwachsenen Pfaden" ;
-    rdaed:P20316 "Auf überwachsenen Pfaden",
-        "Auf überwachsenen Pfaden : Ein Tagebuch",
+    rdaed:P20316 "Auf überwachsenen Pfaden",
+        "Auf überwachsenen Pfaden : Ein Tagebuch",
         "Auf überwachsenen Pfaden : ein Tagebuch",
         "Paa gjengrodde stier" ;
     rdaeo:P20001 rdaco:1020 ;

@@ -277,7 +277,7 @@
     rdfs:label "Der Turm der Kathedrale / William Golding. – Coron, [1994?]" ;
     rdamd:P30011 "[1994?]" ;
     rdamd:P30088 "[Lachen am Zürichsee]" ;
-    rdamd:P30106 "Nobelpreis für Literatur" ;
+    rdamd:P30106 "Nobelpreis für Literatur" ;
     rdamd:P30117 "William Golding. Der Regenschirm vom Piccadilly ; und, Die Pestsäule : Nobelpreis 1984 Tschechoslowakei / Jaroslav Seifert. Die Strasse in Flandern : Nobelpreis 1985 Frankreich / Claude Simon" ;
     rdamd:P30137 "\"Diese Ausgabe ist eine auf den Kreis der Nobelpreisfreunde beschränkte Auflage.\"",
         "Der Turm der Kathedrale / William Golding -- Regenschirm vom Piccadilly / Jaroslav Seifert -- Strasse in Flandern / Claude Simon" ;
@@ -330,14 +330,14 @@
     rdaxd:P00018 "http://example.org/016967207" .
 
 <http://example.org/209321717> a rdac:C10007 ;
-    rdfs:label "Herr der Fliegen / William Golding. – [Deutscher Bücherbund], [1984]" ;
+    rdfs:label "Herr der Fliegen / William Golding. – [Deutscher Bücherbund], [1984]" ;
     rdamd:P30011 "[1984]" ;
     rdamd:P30088 "[Stuttgart]" ;
-    rdamd:P30117 "William Golding. [Übertr. von Hermann Stiehl]" ;
-    rdamd:P30137 "Übernommen vom Verl. S. Fischer, Frankfurt am Main" ;
+    rdamd:P30117 "William Golding. [Übertr. von Hermann Stiehl]" ;
+    rdamd:P30137 "Übernommen vom Verl. S. Fischer, Frankfurt am Main" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Herr der Fliegen" ;
-    rdamd:P30176 "[Deutscher Bücherbund]" ;
+    rdamd:P30176 "[Deutscher Bücherbund]" ;
     rdamd:P30182 "266 S., 20 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -349,7 +349,7 @@
     rdamd:P30011 "1963" ;
     rdamd:P30088 "Frankfurt a.M." ;
     rdamd:P30106 "Fischer doppelpunkt" ;
-    rdamd:P30117 "William Golding. [Aus d. Engl. übertr. von Hermann Stresau]" ;
+    rdamd:P30117 "William Golding. [Aus d. Engl. übertr. von Hermann Stresau]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Freier Fall" ;
     rdamd:P30165 "2" ;
@@ -383,7 +383,7 @@
     rdamd:P30088 "Berlin",
         "Frankfurt a.M." ;
     rdamd:P30107 "[1. - 5. Tsd.]" ;
-    rdamd:P30117 "William Golding. Übertr. von Hermann Stiehl" ;
+    rdamd:P30117 "William Golding. Übertr. von Hermann Stiehl" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Herr der Fliegen" ;
     rdamd:P30176 "S. Fischer" ;
@@ -394,17 +394,17 @@
     rdaxd:P00018 "http://example.org/451602684" .
 
 <http://example.org/451602692> a rdac:C10007 ;
-    rdfs:label "Herr der Fliegen / William Golding. – Ungekürzte Ausg. – Fischer Bücherei, 1963" ;
+    rdfs:label "Herr der Fliegen / William Golding. – Ungekürzte Ausg. – Fischer Bücherei, 1963" ;
     rdamd:P30011 "1963" ;
     rdamd:P30088 "Frankfurt a.M.",
         "Hamburg" ;
-    rdamd:P30106 "Fischer Bücherei" ;
-    rdamd:P30107 "Ungekürzte Ausg" ;
-    rdamd:P30117 "William Golding. [Aus d. Engl. übertr. von Hermann Stiehl]" ;
+    rdamd:P30106 "Fischer Bücherei" ;
+    rdamd:P30107 "Ungekürzte Ausg" ;
+    rdamd:P30117 "William Golding. [Aus d. Engl. übertr. von Hermann Stiehl]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Herr der Fliegen" ;
     rdamd:P30165 "522" ;
-    rdamd:P30176 "Fischer Bücherei" ;
+    rdamd:P30176 "Fischer Bücherei" ;
     rdamd:P30182 "163 S., kl. 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -419,7 +419,7 @@
         "Frankfurt a.M." ;
     rdamd:P30106 "Diesterwegs neusprachliche Bibliothek : Englische Abteilung" ;
     rdamd:P30117 "William Golding. Ed. and ann. by Irmgard Richter" ;
-    rdamd:P30137 "[Gekürzte Ausg.]" ;
+    rdamd:P30137 "[Gekürzte Ausg.]" ;
     rdamd:P30156 "Lord of the flies" ;
     rdamd:P30176 "Diesterweg" ;
     rdamd:P30182 "119 S., kl. 8." ;
@@ -430,16 +430,16 @@
     rdaxd:P00018 "http://example.org/451602706" .
 
 <http://example.org/451602714> a rdac:C10007 ;
-    rdfs:label "Der Felsen des zweiten Todes / William Golding. – Fischer Bücherei, 1960" ;
+    rdfs:label "Der Felsen des zweiten Todes / William Golding. – Fischer Bücherei, 1960" ;
     rdamd:P30011 "1960" ;
     rdamd:P30088 "Frankfurt a.M.",
         "Hamburg" ;
-    rdamd:P30106 "Fischer Bücherei" ;
-    rdamd:P30117 "William Golding. [Aus d. Engl. übertr. von Hermann Stiehl]" ;
+    rdamd:P30106 "Fischer Bücherei" ;
+    rdamd:P30117 "William Golding. [Aus d. Engl. übertr. von Hermann Stiehl]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Der Felsen des zweiten Todes" ;
     rdamd:P30165 "333" ;
-    rdamd:P30176 "Fischer Bücherei" ;
+    rdamd:P30176 "Fischer Bücherei" ;
     rdamd:P30182 "174 S., 8." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -452,11 +452,11 @@
     rdamd:P30088 "Berlin",
         "Bonn",
         "Frankfurt a.M.",
-        "München" ;
+        "München" ;
     rdamd:P30106 "Diesterwegs Neusprachliche Bibliothek : Englische Abteilung" ;
     rdamd:P30107 "2. Aufl" ;
     rdamd:P30117 "William Golding. Ed. and ann. by Irmgard Richter" ;
-    rdamd:P30137 "Gekürzte Ausg." ;
+    rdamd:P30137 "Gekürzte Ausg." ;
     rdamd:P30156 "Lord of the flies" ;
     rdamd:P30176 "Diesterweg" ;
     rdamd:P30182 "119 S., kl. 8." ;
@@ -471,7 +471,7 @@
     rdfs:label "Der Turm der Kathedrale / William Golding. – S. Fischer, 1966" ;
     rdamd:P30011 "1966" ;
     rdamd:P30088 "Frankfurt a.M." ;
-    rdamd:P30117 "William Golding. Aus d. Engl. übers. von Hermann Stiehl" ;
+    rdamd:P30117 "William Golding. Aus d. Engl. übers. von Hermann Stiehl" ;
     rdamd:P30156 "Der Turm der Kathedrale" ;
     rdamd:P30176 "S. Fischer" ;
     rdamd:P30182 "246 S., 8." ;
@@ -521,7 +521,7 @@
     rdamd:P30011 "1970" ;
     rdamd:P30088 "Berlin",
         "Frankfurt a. M.",
-        "München" ;
+        "München" ;
     rdamd:P30106 "Diesterwegs neusprachliche Bibliothek : Englische Abteilung" ;
     rdamd:P30107 "5. Aufl" ;
     rdamd:P30117 "William Golding. Ed. and annotated by Irmgard Richter" ;
@@ -540,7 +540,7 @@
     rdamd:P30088 "Leipzig" ;
     rdamd:P30106 "Reclams Universal-Bibliothek" ;
     rdamd:P30107 "1. Aufl" ;
-    rdamd:P30117 "William Golding. [Übers. von Hermann Stiehl. Mit e. Essay von Bernhard Scheller \"Versuch der Annäherung an Golding\"]" ;
+    rdamd:P30117 "William Golding. [Übers. von Hermann Stiehl. Mit e. Essay von Bernhard Scheller \"Versuch der Annäherung an Golding\"]" ;
     rdamd:P30142 "Roman ; [aus d. Engl.]" ;
     rdamd:P30156 "Pincher Martin" ;
     rdamd:P30165 "Bd. 850 : Belletristik" ;
@@ -557,8 +557,8 @@
     rdamd:P30088 "Leipzig" ;
     rdamd:P30106 "Reclams Universal-Bibliothek" ;
     rdamd:P30107 "2. Aufl" ;
-    rdamd:P30117 "William Golding. [Übers. von Hermann Stiehl. Mit e. Essay von Bernhard Scheller \"Versuch über Golding\"]" ;
-    rdamd:P30137 "Lizenzausg. d. Fischer-Bücherei, Frankfurt (Main). - Ausg. für d. DDR u.d. sozialist. Länder" ;
+    rdamd:P30117 "William Golding. [Übers. von Hermann Stiehl. Mit e. Essay von Bernhard Scheller \"Versuch über Golding\"]" ;
+    rdamd:P30137 "Lizenzausg. d. Fischer-Bücherei, Frankfurt (Main). - Ausg. für d. DDR u.d. sozialist. Länder" ;
     rdamd:P30142 "Roman ; [aus d. Engl.]" ;
     rdamd:P30156 "Pincher Martin" ;
     rdamd:P30165 "Bd. 850 : Belletristik" ;
@@ -571,14 +571,14 @@
     rdaxd:P00018 "http://example.org/841067430" .
 
 <http://example.org/850274044> a rdac:C10007 ;
-    rdfs:label "Äquatortaufe / William Golding. – 1. Aufl. – Verlag Volk u. Welt, 1984" ;
+    rdfs:label "Äquatortaufe / William Golding. – 1. Aufl. – Verlag Volk u. Welt, 1984" ;
     rdamd:P30011 "1984" ;
     rdamd:P30088 "Berlin" ;
     rdamd:P30107 "1. Aufl" ;
-    rdamd:P30117 "William Golding. Aus d. Engl. von Herbert Schlüter" ;
-    rdamd:P30137 "Lizenzausg. d. Bertelsmann-Verl., München" ;
+    rdamd:P30117 "William Golding. Aus d. Engl. von Herbert Schlüter" ;
+    rdamd:P30137 "Lizenzausg. d. Bertelsmann-Verl., München" ;
     rdamd:P30142 "Roman" ;
-    rdamd:P30156 "Äquatortaufe" ;
+    rdamd:P30156 "Äquatortaufe" ;
     rdamd:P30176 "Verlag Volk u. Welt" ;
     rdamd:P30182 "275 S., 20 cm." ;
     rdamo:P30001 rdact:1049 ;
@@ -592,7 +592,7 @@
     rdamd:P30088 "Berlin" ;
     rdamd:P30107 "1. Aufl" ;
     rdamd:P30117 "William Golding. Aus d. Engl. von Hermann Stiehl" ;
-    rdamd:P30137 "Lizenzausg. d. S.-Fischer-Verl., Frankfurt am Main. - Ausg. für d. DDR" ;
+    rdamd:P30137 "Lizenzausg. d. S.-Fischer-Verl., Frankfurt am Main. - Ausg. für d. DDR" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Herr der Fliegen" ;
     rdamd:P30176 "Verlag Volk u. Welt" ;
@@ -603,14 +603,14 @@
     rdaxd:P00018 "http://example.org/860105520" .
 
 <http://example.org/861066677> a rdac:C10007 ;
-    rdfs:label "Papier-Männer / William Golding. – 1. Aufl. – Verlag Volk u. Welt, 1986" ;
+    rdfs:label "Papier-Männer / William Golding. – 1. Aufl. – Verlag Volk u. Welt, 1986" ;
     rdamd:P30011 "1986" ;
     rdamd:P30088 "Berlin" ;
     rdamd:P30107 "1. Aufl" ;
     rdamd:P30117 "William Golding. Aus d. Engl. von Emil Bastuk" ;
-    rdamd:P30137 "Lizenzausg. d. Bertelsmann-Verl., München. - Ausg. für d. Dt. Demokrat. Republik" ;
+    rdamd:P30137 "Lizenzausg. d. Bertelsmann-Verl., München. - Ausg. für d. Dt. Demokrat. Republik" ;
     rdamd:P30142 "Roman" ;
-    rdamd:P30156 "Papier-Männer" ;
+    rdamd:P30156 "Papier-Männer" ;
     rdamd:P30176 "Verlag Volk u. Welt" ;
     rdamd:P30182 "223 S., 20 cm." ;
     rdamo:P30001 rdact:1049 ;
@@ -623,12 +623,12 @@
     rdamd:P30011 "[1984]" ;
     rdamd:P30088 "Berlin",
         "Darmstadt",
-        "Gütersloh",
+        "Gütersloh",
         "Stuttgart",
         "Wien",
         "Zug/Schweiz" ;
     rdamd:P30117 "William Golding. [Aus d. Engl. von Ursula Leipe]" ;
-    rdamd:P30137 "Lizenzausg. d. Bertelsmann-Verl., München" ;
+    rdamd:P30137 "Lizenzausg. d. Bertelsmann-Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Das Feuer der Finsternis" ;
     rdamd:P30176 "Bertelsmann-Club",
@@ -658,17 +658,17 @@
     rdaxd:P00018 "http://example.org/881479748" .
 
 <http://example.org/890053375> a rdac:C10007 ;
-    rdfs:label "Herr der Fliegen / William Golding. – Mitgliederexklusivausg. – [Dt. Bücherbund], [1981]" ;
+    rdfs:label "Herr der Fliegen / William Golding. – Mitgliederexklusivausg. – [Dt. Bücherbund], [1981]" ;
     rdamd:P30011 "[1981]" ;
     rdamd:P30088 "Hamburg",
-        "München]",
+        "München]",
         "[Stuttgart" ;
     rdamd:P30107 "Mitgliederexklusivausg" ;
-    rdamd:P30117 "William Golding. [Übertr. von Hermann Stiehl]" ;
-    rdamd:P30137 "Lizenz d. S. Fischer-Verl., Frankfurt am Main. - Aus d. Engl. übers." ;
+    rdamd:P30117 "William Golding. [Übertr. von Hermann Stiehl]" ;
+    rdamd:P30137 "Lizenz d. S. Fischer-Verl., Frankfurt am Main. - Aus d. Engl. übers." ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Herr der Fliegen" ;
-    rdamd:P30176 "[Dt. Bücherbund]" ;
+    rdamd:P30176 "[Dt. Bücherbund]" ;
     rdamd:P30182 "266 S., 20 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -676,15 +676,15 @@
     rdaxd:P00018 "http://example.org/890053375" .
 
 <http://example.org/900643382> a rdac:C10007 ;
-    rdfs:label "Herr der Fliegen / William Golding. – Dt. Bücherbund, [1990]" ;
+    rdfs:label "Herr der Fliegen / William Golding. – Dt. Bücherbund, [1990]" ;
     rdamd:P30011 "[1990]" ;
-    rdamd:P30088 "München",
+    rdamd:P30088 "München",
         "Stuttgart" ;
     rdamd:P30117 "William Golding. Aus d. Engl. von Hermann Stiehl" ;
     rdamd:P30137 "Lizenzausg. d. S.-Fischer-Verl., Frankfurt am Main" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Herr der Fliegen" ;
-    rdamd:P30176 "Dt. Bücherbund" ;
+    rdamd:P30176 "Dt. Bücherbund" ;
     rdamd:P30182 "267 S., 20 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -694,8 +694,8 @@
 <http://example.org/910000743> a rdac:C10007 ;
     rdfs:label "Der Turm der Kathedrale / William Golding. – Coron-Verl, [1983]" ;
     rdamd:P30011 "[1983]" ;
-    rdamd:P30088 "Zürich" ;
-    rdamd:P30106 "Nobelpreis für Literatur" ;
+    rdamd:P30088 "Zürich" ;
+    rdamd:P30106 "Nobelpreis für Literatur" ;
     rdamd:P30117 "William Golding. [Bibliogr.: Werner Martin]" ;
     rdamd:P30137 "Lizenz des S.-Fischer-Verl., Frankfurt am Main. - Bibliogr. S. [309]. - Enth. ausserdem u.a.: Kleine Geschichte der Zuerkennung des Nobelpreises an William Golding / von E. Michael Salzer" ;
     rdamd:P30142 "Nobelpreis 1983 England" ;
@@ -713,7 +713,7 @@
     rdamd:P30011 "(1987)" ;
     rdamd:P30014 "Pbd. 1" ;
     rdamd:P30088 "[Marburg]" ;
-    rdamd:P30117 "William Golding. [Aus dem Engl. übertr. von Hermann Stiehl]" ;
+    rdamd:P30117 "William Golding. [Aus dem Engl. übertr. von Hermann Stiehl]" ;
     rdamd:P30156 "Herr der Fliegen" ;
     rdamd:P30176 "Dt. Blindenstudienanst" ;
     rdamd:P30182 "158 S." ;
@@ -727,7 +727,7 @@
     rdamd:P30011 "(1987)" ;
     rdamd:P30014 "Pbd. 2" ;
     rdamd:P30088 "[Marburg]" ;
-    rdamd:P30117 "William Golding. [Aus dem Engl. übertr. von Hermann Stiehl]" ;
+    rdamd:P30117 "William Golding. [Aus dem Engl. übertr. von Hermann Stiehl]" ;
     rdamd:P30156 "Herr der Fliegen" ;
     rdamd:P30176 "Dt. Blindenstudienanst" ;
     rdamd:P30182 "176 S." ;
@@ -739,8 +739,8 @@
 <http://example.org/961860596> a rdac:C10007 ;
     rdfs:label "Der Turm der Kathedrale / William Golding. – Coron-Verl, [1992]" ;
     rdamd:P30011 "[1992]" ;
-    rdamd:P30088 "Lachen am Zürichsee" ;
-    rdamd:P30106 "Nobelpreis für Literatur" ;
+    rdamd:P30088 "Lachen am Zürichsee" ;
+    rdamd:P30106 "Nobelpreis für Literatur" ;
     rdamd:P30117 "William Golding. [Bibliogr.: Werner Martin]" ;
     rdamd:P30142 "Nobelpreis 1983 England" ;
     rdamd:P30156 "Der Turm der Kathedrale" ;
@@ -1831,7 +1831,7 @@
     rdamd:P30004 "ISBN 343601883X" ;
     rdamd:P30011 "1976" ;
     rdamd:P30088 "Frankfurt am Main" ;
-    rdamd:P30117 "von William Golding ; [aus dem Englischen übertragen von Hermann Stiehl]" ;
+    rdamd:P30117 "von William Golding ; [aus dem Englischen übertragen von Hermann Stiehl]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Herr der Fliegen" ;
     rdamd:P30176 "Fischer Taschenbuch Verlag" ;
@@ -1849,7 +1849,7 @@
     rdamd:P30088 "Frankfurt am Main",
         "Leipzig" ;
     rdamd:P30107 "1. Aufl" ;
-    rdamd:P30117 "William Golding. Aus dem Engl. übertr. von Wolfgang Held" ;
+    rdamd:P30117 "William Golding. Aus dem Engl. übertr. von Wolfgang Held" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Mit doppelter Zunge" ;
     rdamd:P30176 "Insel-Verl" ;
@@ -2457,18 +2457,16 @@
     rdaxd:P00018 "http://example.org/isbn-8435004201" .
 
 <http://example.org/isbn-8435008355> a rdac:C10007 ;
-    rdfs:label "El señor de las moscas / William Golding. – 1. ed. – Edhasa, 1993" ;
+    rdfs:label "El señor de las moscas / William Golding. – 1. ed. – Edhasa, 1993" ;
     rdamd:P30004 "ISBN 8435008355",
         "ISBN 9788435008358" ;
     rdamd:P30011 "1993" ;
     rdamd:P30088 "Barcelona" ;
-    rdamd:P30106 "Narrativas contemporáneas" ;
+    rdamd:P30106 "Narrativas contemporáneas" ;
     rdamd:P30107 "1. ed" ;
-    rdamd:P30117 "William Golding ; [traducción, Carmen Vergara]",
-        "William Golding ; [traducción, Carmen Vergara]" ;
+    rdamd:P30117 "William Golding ; [traducción, Carmen Vergara]" ;
     rdamd:P30137 "Translation of: Lord of the flies." ;
-    rdamd:P30156 "El señor de las moscas",
-        "El señor de las moscas" ;
+    rdamd:P30156 "El señor de las moscas" ;
     rdamd:P30165 "135" ;
     rdamd:P30176 "Edhasa" ;
     rdamd:P30182 "278 pages, 21 cm." ;
@@ -3348,8 +3346,8 @@
     rdamd:P30011 "1983" ;
     rdamd:P30088 "Frankfurt am Main" ;
     rdamd:P30107 "[1. - 8. Tsd.]" ;
-    rdamd:P30117 "William Golding. [Übertr. von Hermann Stiehl]" ;
-    rdamd:P30137 "Aus d. Engl. übers." ;
+    rdamd:P30117 "William Golding. [Übertr. von Hermann Stiehl]" ;
+    rdamd:P30137 "Aus d. Engl. übers." ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Herr der Fliegen" ;
     rdamd:P30176 "S. Fischer" ;
@@ -3366,7 +3364,7 @@
     rdamd:P30011 "1983" ;
     rdamd:P30088 "Frankfurt am Main" ;
     rdamd:P30107 "[1. - 6. Tsd.]" ;
-    rdamd:P30117 "William Golding. Aus d. Engl. übers. von Hermann Stiehl" ;
+    rdamd:P30117 "William Golding. Aus d. Engl. übers. von Hermann Stiehl" ;
     rdamd:P30156 "Der Turm der Kathedrale" ;
     rdamd:P30176 "S. Fischer" ;
     rdamd:P30182 "246 S., 20 cm." ;
@@ -3397,7 +3395,7 @@
     rdamd:P30004 "ISBN 3125738059",
         "ISBN 9783125738058" ;
     rdamd:P30011 "2001" ;
-    rdamd:P30088 "Düsseldorf",
+    rdamd:P30088 "Düsseldorf",
         "Leipzig",
         "Stuttgart" ;
     rdamd:P30107 "1. Aufl., [1. Dr.]" ;
@@ -3460,7 +3458,7 @@
     rdaxd:P00018 "http://example.org/isbn-9783125798557" .
 
 <http://example.org/isbn-9783129222225> a rdac:C10007 ;
-    rdfs:label "Lektürehilfen William Golding, \"Lord of the flies\" / Verf. – 4. Aufl. – Klett-Verl. für Wissen und Bildung, 1993" ;
+    rdfs:label "Lektürehilfen William Golding, \"Lord of the flies\" / Verf. – 4. Aufl. – Klett-Verl. für Wissen und Bildung, 1993" ;
     rdamd:P30004 "ISBN 3129222227",
         "ISBN 9783129222225" ;
     rdamd:P30011 "1993",
@@ -3468,13 +3466,13 @@
     rdamd:P30088 "Dresden",
         "Stuttgart" ;
     rdamd:P30106 "Barron's book notes",
-        "Klett-Lektürehilfen : Reihe: Lektürehilfen Englisch",
-        "Reihe: Lektürehilfen Englisch" ;
+        "Klett-Lektürehilfen : Reihe: Lektürehilfen Englisch",
+        "Reihe: Lektürehilfen Englisch" ;
     rdamd:P30107 "4. Aufl",
         "5. Aufl" ;
     rdamd:P30117 "[Verf. dieses Bd.: W. Meitcke]" ;
-    rdamd:P30156 "Lektürehilfen William Golding, \"Lord of the flies\"" ;
-    rdamd:P30176 "Klett-Verl. für Wissen und Bildung" ;
+    rdamd:P30156 "Lektürehilfen William Golding, \"Lord of the flies\"" ;
+    rdamd:P30176 "Klett-Verl. für Wissen und Bildung" ;
     rdamd:P30182 "99 S., 20 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -3482,7 +3480,7 @@
     rdaxd:P00018 "http://example.org/isbn-9783129222225" .
 
 <http://example.org/isbn-9783129251621> a rdac:C10007 ;
-    rdfs:label "Stundenblätter Golding, \"Lord of the flies\" / Gerd Kaiser. – 1. Aufl. – Klett, 1985" ;
+    rdfs:label "Stundenblätter Golding, \"Lord of the flies\" / Gerd Kaiser. – 1. Aufl. – Klett, 1985" ;
     rdamd:P30004 "ISBN 3129251626",
         "ISBN 9783129251621" ;
     rdamd:P30011 "1985",
@@ -3492,15 +3490,15 @@
     rdamd:P30088 "Dresden",
         "Stuttgart" ;
     rdamd:P30106 "Klett-Schulpraxis",
-        "Reihe: Stundenblätter Englisch" ;
+        "Reihe: Stundenblätter Englisch" ;
     rdamd:P30107 "1. Aufl",
         "2. Aufl",
         "3. Aufl",
         "4. Aufl" ;
     rdamd:P30117 "Gerd Kaiser" ;
-    rdamd:P30156 "Stundenblätter Golding, \"Lord of the flies\"" ;
+    rdamd:P30156 "Stundenblätter Golding, \"Lord of the flies\"" ;
     rdamd:P30176 "Klett",
-        "Klett-Verl. für Wissen und Bildung" ;
+        "Klett-Verl. für Wissen und Bildung" ;
     rdamd:P30182 "144 S., 23 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -3537,7 +3535,7 @@
     rdamd:P30088 "Stuttgart" ;
     rdamd:P30106 "Reclams Universal-Bibliothek" ;
     rdamd:P30117 "William Golding. Hrsg. von Friederike Poziemski" ;
-    rdamd:P30137 "Ausg. für die Bundesrepublik Deutschland, Österreich und die Schweiz" ;
+    rdamd:P30137 "Ausg. für die Bundesrepublik Deutschland, Österreich und die Schweiz" ;
     rdamd:P30156 "Lord of the flies" ;
     rdamd:P30165 "Nr. 19776 : Fremdsprachentexte" ;
     rdamd:P30176 "Reclam" ;
@@ -3555,7 +3553,7 @@
     rdamd:P30088 "[Ismaning]" ;
     rdamd:P30107 "Educational ed" ;
     rdamd:P30117 "by William Golding. With an introd. and notes by Ian Gregor and Mark Kinkead-Weekes" ;
-    rdamd:P30137 "Vom Verl. Faber and Farber, London, übernommene Ausg." ;
+    rdamd:P30137 "Vom Verl. Faber and Farber, London, übernommene Ausg." ;
     rdamd:P30142 "a novel" ;
     rdamd:P30156 "Lord of the flies" ;
     rdamd:P30176 "Hueber" ;
@@ -3576,7 +3574,7 @@
     rdamd:P30106 "Ex libris Volk und Welt" ;
     rdamd:P30107 "2. Aufl" ;
     rdamd:P30117 "William Golding. Aus d. Engl. von Hermann Stiehl" ;
-    rdamd:P30137 "Lizenzausg. d. S.-Fischer-Verl., Frankfurt am Main. - Ausg. für d. Dt. Demokrat. Republik" ;
+    rdamd:P30137 "Lizenzausg. d. S.-Fischer-Verl., Frankfurt am Main. - Ausg. für d. Dt. Demokrat. Republik" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Herr der Fliegen" ;
     rdamd:P30176 "Verlag Volk u. Welt" ;
@@ -3587,15 +3585,15 @@
     rdaxd:P00018 "http://example.org/isbn-9783353001108" .
 
 <http://example.org/isbn-9783379008501> a rdac:C10007 ;
-    rdfs:label "Pincher Martin / William Golding. – 3., veränd. Aufl. – Reclam, 1993" ;
+    rdfs:label "Pincher Martin / William Golding. – 3., veränd. Aufl. – Reclam, 1993" ;
     rdamd:P30004 "ISBN 3379008508",
         "ISBN 9783379008501",
         "NN sw076004" ;
     rdamd:P30011 "1993" ;
     rdamd:P30088 "Leipzig" ;
     rdamd:P30106 "Reclams Universal-Bibliothek" ;
-    rdamd:P30107 "3., veränd. Aufl" ;
-    rdamd:P30117 "William Golding. [Aus dem Engl. Übers. von Hermann Stiehl]" ;
+    rdamd:P30107 "3., veränd. Aufl" ;
+    rdamd:P30117 "William Golding. [Aus dem Engl. Übers. von Hermann Stiehl]" ;
     rdamd:P30137 "Lizenz des Verl. S. Fischer, Frankfurt am Main" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Pincher Martin" ;
@@ -3612,8 +3610,8 @@
     rdamd:P30004 "ISBN 3402028433",
         "ISBN 9783402028438" ;
     rdamd:P30011 "1993" ;
-    rdamd:P30088 "Münster" ;
-    rdamd:P30106 "Aschendorffs Vokabularien zu fremdsprachigen Taschenbüchern" ;
+    rdamd:P30088 "Münster" ;
+    rdamd:P30106 "Aschendorffs Vokabularien zu fremdsprachigen Taschenbüchern" ;
     rdamd:P30107 "16./17., verb. Aufl., 31. - 34. Tsd" ;
     rdamd:P30117 "erl. von Hans-Otto Jahnke" ;
     rdamd:P30156 "William Golding, Lord of the flies" ;
@@ -3625,15 +3623,15 @@
     rdaxd:P00018 "http://example.org/isbn-9783402028438" .
 
 <http://example.org/isbn-9783423101530> a rdac:C10007 ;
-    rdfs:label "Das Feuer der Finsternis / William Golding. – Ungekürzte Ausg. – Deutscher Taschenbuch-Verlag, 1983" ;
+    rdfs:label "Das Feuer der Finsternis / William Golding. – Ungekürzte Ausg. – Deutscher Taschenbuch-Verlag, 1983" ;
     rdamd:P30004 "ISBN 3423101539",
         "ISBN 9783423101530" ;
     rdamd:P30011 "1983" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "dtv" ;
-    rdamd:P30107 "Ungekürzte Ausg" ;
+    rdamd:P30107 "Ungekürzte Ausg" ;
     rdamd:P30117 "William Golding. Dt. von Ursula Leipe" ;
-    rdamd:P30137 "Aus d. Engl. übers. - Lizenzausg. d. Bertelsmann-Verl., Edition Steinhausen, München" ;
+    rdamd:P30137 "Aus d. Engl. übers. - Lizenzausg. d. Bertelsmann-Verl., Edition Steinhausen, München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Das Feuer der Finsternis" ;
     rdamd:P30165 "10153" ;
@@ -3656,8 +3654,8 @@
     rdamd:P30088 "Berlin",
         "Frankfurt a. M.",
         "Frankfurt am Main",
-        "Frankfurt am Main, Berlin, München",
-        "München" ;
+        "Frankfurt am Main, Berlin, München",
+        "München" ;
     rdamd:P30106 "Diesterwegs neusprachliche Bibliothek",
         "Diesterwegs neusprachliche Bibliothek : Engl. Abt",
         "Diesterwegs neusprachliche Bibliothek : Englische Abteilung" ;
@@ -3716,18 +3714,18 @@
     rdaxd:P00018 "http://example.org/isbn-9783425098463" .
 
 <http://example.org/isbn-9783436018832> a rdac:C10007 ;
-    rdfs:label "Herr der Fliegen / William Golding. – Ungekürzte Ausg. – Fischer-Taschenbuch-Verlag, 1974" ;
+    rdfs:label "Herr der Fliegen / William Golding. – Ungekürzte Ausg. – Fischer-Taschenbuch-Verlag, 1974" ;
     rdamd:P30004 "ISBN 343601883X",
         "ISBN 9783436018832" ;
     rdamd:P30011 "1974",
         "1975",
         "1976" ;
     rdamd:P30088 "Frankfurt (am Main)" ;
-    rdamd:P30106 "Fischer-Taschenbücher" ;
-    rdamd:P30107 "Ungekürzte Ausg",
-        "Ungekürzte Ausg., 33. - 42. Tsd",
-        "Ungekürzte Ausg., 58. - 72. Tsd" ;
-    rdamd:P30117 "William Golding. [Aus d. Engl. übertr. von Hermann Stiehl]" ;
+    rdamd:P30106 "Fischer-Taschenbücher" ;
+    rdamd:P30107 "Ungekürzte Ausg",
+        "Ungekürzte Ausg., 33. - 42. Tsd",
+        "Ungekürzte Ausg., 58. - 72. Tsd" ;
+    rdamd:P30117 "William Golding. [Aus d. Engl. übertr. von Hermann Stiehl]" ;
     rdamd:P30137 "Lizenz d. S. Fischer-Verl., Frankfurt a. M.",
         "Lizenz d. S. Fischer-Verl., Frankfurt am Main." ;
     rdamd:P30142 "Roman" ;
@@ -3745,10 +3743,10 @@
     rdamd:P30004 "ISBN 3442033152",
         "ISBN 9783442033157" ;
     rdamd:P30011 "[1973]" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "Die gelben Goldmann" ;
     rdamd:P30117 "William Golding" ;
-    rdamd:P30137 "Lizenz d. Claasen-Verl., Hamburg u. Düsseldorf." ;
+    rdamd:P30137 "Lizenz d. Claasen-Verl., Hamburg u. Düsseldorf." ;
     rdamd:P30142 "ein Entwicklungsroman" ;
     rdamd:P30156 "Oliver" ;
     rdamd:P30165 "Bd. 3315" ;
@@ -3765,11 +3763,11 @@
         "ISBN 9783442066940" ;
     rdamd:P30011 "1983" ;
     rdamd:P30033 "Der Skorpion-Gott -- Clonk Clonk -- Der Sonderbotschafter" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "[Ein Goldmann-Taschenbuch]" ;
     rdamd:P30107 "1. Aufl., 1. - 15. Tsd" ;
     rdamd:P30117 "William Golding. Dt. von Ulla H. de Herrera" ;
-    rdamd:P30137 "Lizenz d. Claassen-Verl., Düsseldorf. - Enth. 3 Romane" ;
+    rdamd:P30137 "Lizenz d. Claassen-Verl., Düsseldorf. - Enth. 3 Romane" ;
     rdamd:P30142 "Romane" ;
     rdamd:P30156 "Der Sonderbotschafter" ;
     rdamd:P30165 "6694" ;
@@ -3788,11 +3786,11 @@
     rdamd:P30004 "ISBN 3442066956",
         "ISBN 9783442066957" ;
     rdamd:P30011 "1983" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "Goldmann" ;
     rdamd:P30107 "Genehmigte Taschenbuchausg., 2. Aufl., 11. - 25. Tsd" ;
-    rdamd:P30117 "William Golding. Dt. von Jürgen Abel" ;
-    rdamd:P30137 "Lizenz d. Claasen-Verl., Düsseldorf" ;
+    rdamd:P30117 "William Golding. Dt. von Jürgen Abel" ;
+    rdamd:P30137 "Lizenz d. Claasen-Verl., Düsseldorf" ;
     rdamd:P30142 "e. Entwicklungsroman" ;
     rdamd:P30156 "Oliver" ;
     rdamd:P30165 "6695" ;
@@ -3804,17 +3802,17 @@
     rdaxd:P00018 "http://example.org/isbn-9783442066957" .
 
 <http://example.org/isbn-9783442068326> a rdac:C10007 ;
-    rdfs:label "Äquatortaufe / William Golding. – Ungekürzte Ausg., 1. Aufl. – Goldmann, [1985]" ;
+    rdfs:label "Äquatortaufe / William Golding. – Ungekürzte Ausg., 1. Aufl. – Goldmann, [1985]" ;
     rdamd:P30004 "ISBN 3442068320",
         "ISBN 9783442068326" ;
     rdamd:P30011 "[1985]" ;
-    rdamd:P30088 "[München]" ;
+    rdamd:P30088 "[München]" ;
     rdamd:P30106 "Goldmann" ;
-    rdamd:P30107 "Ungekürzte Ausg., 1. Aufl" ;
-    rdamd:P30117 "William Golding. [Aus d. Engl. von Herbert Schlüter]" ;
-    rdamd:P30137 "Lizenz d. Bertelsmann-Verl., München" ;
+    rdamd:P30107 "Ungekürzte Ausg., 1. Aufl" ;
+    rdamd:P30117 "William Golding. [Aus d. Engl. von Herbert Schlüter]" ;
+    rdamd:P30137 "Lizenz d. Bertelsmann-Verl., München" ;
     rdamd:P30142 "Roman" ;
-    rdamd:P30156 "Äquatortaufe" ;
+    rdamd:P30156 "Äquatortaufe" ;
     rdamd:P30165 "6832" ;
     rdamd:P30176 "Goldmann" ;
     rdamd:P30182 "287 S., 18 cm." ;
@@ -3824,16 +3822,16 @@
     rdaxd:P00018 "http://example.org/isbn-9783442068326" .
 
 <http://example.org/isbn-9783442068975> a rdac:C10007 ;
-    rdfs:label "Papier-Männer / William Golding. – Ungekürzte Ausg., 1. Aufl. – Goldmann, [1985]" ;
+    rdfs:label "Papier-Männer / William Golding. – Ungekürzte Ausg., 1. Aufl. – Goldmann, [1985]" ;
     rdamd:P30004 "ISBN 3442068975",
         "ISBN 9783442068975" ;
     rdamd:P30011 "[1985]" ;
-    rdamd:P30088 "[München]" ;
+    rdamd:P30088 "[München]" ;
     rdamd:P30106 "Goldmann" ;
-    rdamd:P30107 "Ungekürzte Ausg., 1. Aufl" ;
+    rdamd:P30107 "Ungekürzte Ausg., 1. Aufl" ;
     rdamd:P30117 "William Golding. [Aus d. Engl. von Emil Bastuk]" ;
     rdamd:P30142 "Roman" ;
-    rdamd:P30156 "Papier-Männer" ;
+    rdamd:P30156 "Papier-Männer" ;
     rdamd:P30165 "6897" ;
     rdamd:P30176 "Goldmann" ;
     rdamd:P30182 "223 S., 18 cm." ;
@@ -3843,15 +3841,15 @@
     rdaxd:P00018 "http://example.org/isbn-9783442068975" .
 
 <http://example.org/isbn-9783442092550> a rdac:C10007 ;
-    rdfs:label "Das Feuer der Finsternis / William Golding. – Ungekürzte Ausg., 1. Aufl. – Goldmann, 1989" ;
+    rdfs:label "Das Feuer der Finsternis / William Golding. – Ungekürzte Ausg., 1. Aufl. – Goldmann, 1989" ;
     rdamd:P30004 "ISBN 3442092558",
         "ISBN 9783442092550" ;
     rdamd:P30011 "1989" ;
-    rdamd:P30088 "[München]" ;
+    rdamd:P30088 "[München]" ;
     rdamd:P30106 "Goldmann" ;
-    rdamd:P30107 "Ungekürzte Ausg., 1. Aufl" ;
+    rdamd:P30107 "Ungekürzte Ausg., 1. Aufl" ;
     rdamd:P30117 "William Golding" ;
-    rdamd:P30137 "Lizenz d. Bertelsmann-Verl., München" ;
+    rdamd:P30137 "Lizenz d. Bertelsmann-Verl., München" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Das Feuer der Finsternis" ;
     rdamd:P30165 "9255" ;
@@ -3870,7 +3868,7 @@
     rdamd:P30088 "Frankfurt am Main",
         "Leipzig" ;
     rdamd:P30107 "1. Aufl" ;
-    rdamd:P30117 "William Golding. Aus dem Engl. übertr. von Wolfgang Held" ;
+    rdamd:P30117 "William Golding. Aus dem Engl. übertr. von Wolfgang Held" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Mit doppelter Zunge" ;
     rdamd:P30176 "Insel-Verl" ;
@@ -3881,14 +3879,14 @@
     rdaxd:P00018 "http://example.org/isbn-9783458168898" .
 
 <http://example.org/isbn-9783471776483> a rdac:C10007 ;
-    rdfs:label "Ein ägyptisches Tagebuch / William Golding. – List, 1987" ;
+    rdfs:label "Ein ägyptisches Tagebuch / William Golding. – List, 1987" ;
     rdamd:P30004 "ISBN 3471776486",
         "ISBN 9783471776483" ;
     rdamd:P30011 "1987" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30106 "Reisen um glücklich zu sein" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30106 "Reisen um glücklich zu sein" ;
     rdamd:P30117 "William Golding. Aus d. Engl. von Renate Orth-Guttmann" ;
-    rdamd:P30156 "Ein ägyptisches Tagebuch" ;
+    rdamd:P30156 "Ein ägyptisches Tagebuch" ;
     rdamd:P30176 "List" ;
     rdamd:P30182 "281 S., 21 cm." ;
     rdamo:P30001 rdact:1049 ;
@@ -3897,7 +3895,7 @@
     rdaxd:P00018 "http://example.org/isbn-9783471776483" .
 
 <http://example.org/isbn-9783506412171> a rdac:C10007 ;
-    rdfs:label "Lord of the flies / William Golding. – 1. Dr. – Schöningh, 2001" ;
+    rdfs:label "Lord of the flies / William Golding. – 1. Dr. – Schöningh, 2001" ;
     rdamd:P30004 "ISBN 3506412175",
         "ISBN 9783506412171" ;
     rdamd:P30011 "2001" ;
@@ -3906,7 +3904,7 @@
     rdamd:P30107 "1. Dr" ;
     rdamd:P30117 "William Golding" ;
     rdamd:P30156 "Lord of the flies" ;
-    rdamd:P30176 "Schöningh" ;
+    rdamd:P30176 "Schöningh" ;
     rdamd:P30182 "96 S., 30 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -3918,7 +3916,7 @@
     rdamd:P30004 "IAN 9783526523734",
         "ISBN 9783526523734" ;
     rdamd:P30011 "2008" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30106 "Penguin Literary Classics" ;
     rdamd:P30117 "William Golding" ;
     rdamd:P30156 "Lord of the Flies" ;
@@ -3934,10 +3932,10 @@
     rdamd:P30004 "ISBN 3546432940",
         "ISBN 9783546432948" ;
     rdamd:P30011 "1972" ;
-    rdamd:P30088 "Hamburg, Düsseldorf" ;
+    rdamd:P30088 "Hamburg, Düsseldorf" ;
     rdamd:P30117 "William Golding" ;
     rdamd:P30137 "Musikbezogen" ;
-    rdamd:P30142 "Roman. [Berecht. Übers. aus d. Engl.]" ;
+    rdamd:P30142 "Roman. [Berecht. Übers. aus d. Engl.]" ;
     rdamd:P30156 "Oliver" ;
     rdamd:P30176 "Claassen" ;
     rdamd:P30182 "286 S., 20 cm." ;
@@ -3952,10 +3950,10 @@
         "ISBN 9783546432955" ;
     rdamd:P30011 "1974" ;
     rdamd:P30033 "Der Skorpion-Gott -- Clonk Clonk -- Der Sonderbotschafter" ;
-    rdamd:P30088 "Düsseldorf" ;
+    rdamd:P30088 "Düsseldorf" ;
     rdamd:P30107 "1. Aufl" ;
     rdamd:P30117 "William Golding. Dt. von Ulla H. de Herrera" ;
-    rdamd:P30137 "Enthält 3 Romane." ;
+    rdamd:P30137 "Enthält 3 Romane." ;
     rdamd:P30156 "Der Sonderbotschafter" ;
     rdamd:P30176 "Claassen" ;
     rdamd:P30182 "258 S., 22 cm." ;
@@ -3968,14 +3966,14 @@
     rdaxd:P00018 "http://example.org/isbn-9783546432955" .
 
 <http://example.org/isbn-9783570004531> a rdac:C10007 ;
-    rdfs:label "Äquatortaufe / William Golding. – Bertelsmann, 1983" ;
+    rdfs:label "Äquatortaufe / William Golding. – Bertelsmann, 1983" ;
     rdamd:P30004 "ISBN 3570004538",
         "ISBN 9783570004531" ;
     rdamd:P30011 "1983" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30117 "William Golding. [Aus d. Engl. von Herbert Schlüter]" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30117 "William Golding. [Aus d. Engl. von Herbert Schlüter]" ;
     rdamd:P30142 "Roman" ;
-    rdamd:P30156 "Äquatortaufe" ;
+    rdamd:P30156 "Äquatortaufe" ;
     rdamd:P30176 "Bertelsmann" ;
     rdamd:P30182 "287 S., 21 cm." ;
     rdamo:P30001 rdact:1049 ;
@@ -3984,14 +3982,14 @@
     rdaxd:P00018 "http://example.org/isbn-9783570004531" .
 
 <http://example.org/isbn-9783570017470> a rdac:C10007 ;
-    rdfs:label "Papier-Männer / William Golding. – Bertelsmann, 1984" ;
+    rdfs:label "Papier-Männer / William Golding. – Bertelsmann, 1984" ;
     rdamd:P30004 "ISBN 3570017478",
         "ISBN 9783570017470" ;
     rdamd:P30011 "1984" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30117 "William Golding. [Aus d. Engl. von Emil Bastuk]" ;
     rdamd:P30142 "Roman" ;
-    rdamd:P30156 "Papier-Männer" ;
+    rdamd:P30156 "Papier-Männer" ;
     rdamd:P30176 "Bertelsmann" ;
     rdamd:P30182 "223 S., 22 cm." ;
     rdamo:P30001 rdact:1049 ;
@@ -4005,8 +4003,8 @@
         "ISBN 3580634348",
         "ISBN 9783580634346" ;
     rdamd:P30011 "2003" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30106 "Mentor-Lektüre-Durchblick" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30106 "Mentor-Lektüre-Durchblick" ;
     rdamd:P30117 "Astrid Stannat" ;
     rdamd:P30142 "Inhalt, Hintergrund, Interpretation ; auf Deutsch - mit englischen Formulierungshilfen!" ;
     rdamd:P30156 "Lord of the flies, William Golding" ;
@@ -4024,8 +4022,8 @@
         "ISBN 3580654349",
         "ISBN 9783580654344" ;
     rdamd:P30011 "2006" ;
-    rdamd:P30088 "München" ;
-    rdamd:P30106 "Mentor-Lektüre-Durchblick" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30106 "Mentor-Lektüre-Durchblick" ;
     rdamd:P30117 "Astrid Stannat" ;
     rdamd:P30142 "Inhalt, Hintergrund, Interpretationen ; auf Deutsch, mit englischen Formulierungshilfen! ; mit Info-Klappe!" ;
     rdamd:P30156 "Lord of the flies, William Golding" ;
@@ -4043,7 +4041,7 @@
         "ISBN 9783596115365" ;
     rdamd:P30011 "1993" ;
     rdamd:P30088 "Frankfurt am Main" ;
-    rdamd:P30106 "[Fischer-Taschenbücher]" ;
+    rdamd:P30106 "[Fischer-Taschenbücher]" ;
     rdamd:P30107 "Einmalige Sonderausg" ;
     rdamd:P30117 "William Golding. Aus dem Engl. von Hermann Stiehl" ;
     rdamd:P30137 "Lizenz des S.-Fischer-Verl., Frankfurt am Main" ;
@@ -4081,38 +4079,38 @@
         "1994" ;
     rdamd:P30088 "Frankfurt am Main" ;
     rdamd:P30106 "Fischer",
-        "Fischer-Taschenbücher" ;
+        "Fischer-Taschenbücher" ;
     rdamd:P30107 "303. - 402. Tsd",
         "968. - 1017. Tsd",
-        "Ungekürzte Ausg., 1018. - 1047. Tsd",
-        "Ungekürzte Ausg., 118. - 137. Tsd",
-        "Ungekürzte Ausg., 138. - 157. Tsd",
-        "Ungekürzte Ausg., 178. - 202. Tsd",
-        "Ungekürzte Ausg., 203 - 232. Tsd",
-        "Ungekürzte Ausg., 233. - 272. Tsd",
-        "Ungekürzte Ausg., 273. - 302. Tsd",
-        "Ungekürzte Ausg., 403. - 452. Tsd",
-        "Ungekürzte Ausg., 453. - 492. Tsd",
-        "Ungekürzte Ausg., 493. - 522. Tsd",
-        "Ungekürzte Ausg., 523. - 542. Tsd",
-        "Ungekürzte Ausg., 543. - 562. Tsd",
-        "Ungekürzte Ausg., 563. - 582. Tsd",
-        "Ungekürzte Ausg., 583. - 592. Tsd",
-        "Ungekürzte Ausg., 593. - 612. Tsd",
-        "Ungekürzte Ausg., 613. - 632. Tsd",
-        "Ungekürzte Ausg., 633. - 652. Tsd",
-        "Ungekürzte Ausg., 653. - 672. Tsd",
-        "Ungekürzte Ausg., 673. - 702. Tsd",
-        "Ungekürzte Ausg., 703. - 722. Tsd",
-        "Ungekürzte Ausg., 723. - 742. Tsd",
-        "Ungekürzte Ausg., 743. - 762. Tsd",
-        "Ungekürzte Ausg., 763. - 792. Tsd",
-        "Ungekürzte Ausg., 793. - 822. Tsd",
-        "Ungekürzte Ausg., 823. - 852. Tsd",
-        "Ungekürzte Ausg., 883. - 932. Tsd",
-        "Ungekürzte Ausg., 93. - 117. Tsd" ;
-    rdamd:P30117 "William Golding. [Aus d. Engl. übertr. von Hermann Stiehl]",
-        "William Golding. [Aus dem Engl. übertr. von Hermann Stiehl]" ;
+        "Ungekürzte Ausg., 1018. - 1047. Tsd",
+        "Ungekürzte Ausg., 118. - 137. Tsd",
+        "Ungekürzte Ausg., 138. - 157. Tsd",
+        "Ungekürzte Ausg., 178. - 202. Tsd",
+        "Ungekürzte Ausg., 203 - 232. Tsd",
+        "Ungekürzte Ausg., 233. - 272. Tsd",
+        "Ungekürzte Ausg., 273. - 302. Tsd",
+        "Ungekürzte Ausg., 403. - 452. Tsd",
+        "Ungekürzte Ausg., 453. - 492. Tsd",
+        "Ungekürzte Ausg., 493. - 522. Tsd",
+        "Ungekürzte Ausg., 523. - 542. Tsd",
+        "Ungekürzte Ausg., 543. - 562. Tsd",
+        "Ungekürzte Ausg., 563. - 582. Tsd",
+        "Ungekürzte Ausg., 583. - 592. Tsd",
+        "Ungekürzte Ausg., 593. - 612. Tsd",
+        "Ungekürzte Ausg., 613. - 632. Tsd",
+        "Ungekürzte Ausg., 633. - 652. Tsd",
+        "Ungekürzte Ausg., 653. - 672. Tsd",
+        "Ungekürzte Ausg., 673. - 702. Tsd",
+        "Ungekürzte Ausg., 703. - 722. Tsd",
+        "Ungekürzte Ausg., 723. - 742. Tsd",
+        "Ungekürzte Ausg., 743. - 762. Tsd",
+        "Ungekürzte Ausg., 763. - 792. Tsd",
+        "Ungekürzte Ausg., 793. - 822. Tsd",
+        "Ungekürzte Ausg., 823. - 852. Tsd",
+        "Ungekürzte Ausg., 883. - 932. Tsd",
+        "Ungekürzte Ausg., 93. - 117. Tsd" ;
+    rdamd:P30117 "William Golding. [Aus d. Engl. übertr. von Hermann Stiehl]",
+        "William Golding. [Aus dem Engl. übertr. von Hermann Stiehl]" ;
     rdamd:P30137 "Lizenz d. S. Fischer-Verl., Frankfurt a.M.",
         "Lizenz d. S.-Fischer-Verl., Frankfurt am Main",
         "Lizenz des S.-Fischer-Verl., Frankfurt a.M.",
@@ -4136,11 +4134,11 @@
     rdamd:P30011 "1981",
         "1983" ;
     rdamd:P30088 "Frankfurt am Main" ;
-    rdamd:P30106 "Fischer-Taschenbücher" ;
+    rdamd:P30106 "Fischer-Taschenbücher" ;
     rdamd:P30107 "Dt. Erstausg., 41. - 55. Tsd",
         "Dt. Erstausg., 56. - 85. Tsd" ;
     rdamd:P30117 "William Golding. Dt. von Hermann Stiehl" ;
-    rdamd:P30137 "Aus d. Engl. übers." ;
+    rdamd:P30137 "Aus d. Engl. übers." ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Der Felsen des zweiten Todes" ;
     rdamd:P30165 "5043" ;
@@ -4157,8 +4155,8 @@
         "ISBN 9783596250455" ;
     rdamd:P30011 "1983" ;
     rdamd:P30088 "Frankfurt am Main" ;
-    rdamd:P30106 "Fischer-Taschenbücher" ;
-    rdamd:P30117 "William Golding. Aus d. Engl. übertr. von Hermann Stiehl" ;
+    rdamd:P30106 "Fischer-Taschenbücher" ;
+    rdamd:P30117 "William Golding. Aus d. Engl. übertr. von Hermann Stiehl" ;
     rdamd:P30137 "Lizenz d. S.-Fischer-Verl., Frankfurt am Main" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Der Turm der Kathedrale" ;
@@ -4176,8 +4174,8 @@
         "ISBN 9783596250462" ;
     rdamd:P30011 "1983" ;
     rdamd:P30088 "Frankfurt am Main" ;
-    rdamd:P30106 "Fischer-Taschenbücher" ;
-    rdamd:P30117 "William Golding. Aus d. Engl. übertr. von Hermann Stresau" ;
+    rdamd:P30106 "Fischer-Taschenbücher" ;
+    rdamd:P30117 "William Golding. Aus d. Engl. übertr. von Hermann Stresau" ;
     rdamd:P30137 "Lizenz d. Fischer-Verl., Frankfurt am Main" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Freier Fall" ;
@@ -4195,8 +4193,8 @@
         "ISBN 9783596258253" ;
     rdamd:P30011 "1983" ;
     rdamd:P30088 "Frankfurt am Main" ;
-    rdamd:P30106 "Fischer-Taschenbücher" ;
-    rdamd:P30117 "William Golding. Aus d. Engl. übertr. von Hermann Stiehl" ;
+    rdamd:P30106 "Fischer-Taschenbücher" ;
+    rdamd:P30117 "William Golding. Aus d. Engl. übertr. von Hermann Stiehl" ;
     rdamd:P30137 "Lizenz d. S.-Fischer-Verl., Berlin u. Frankfurt am Main" ;
     rdamd:P30142 "[Roman]" ;
     rdamd:P30156 "Die Erben" ;
@@ -4283,9 +4281,9 @@
     rdaxd:P00018 "http://example.org/isbn-9783596906673" .
 
 <http://example.org/isbn-9783763237173> a rdac:C10007 ;
-    rdfs:label "Herr der Fliegen / William Golding. – Büchergilde Gutenberg, [1990]" ;
-    rdamd:P30004 "ISBN 3763237178 (nur für Mitglieder)",
-        "ISBN 9783763237173 (nur für Mitglieder)" ;
+    rdfs:label "Herr der Fliegen / William Golding. – Büchergilde Gutenberg, [1990]" ;
+    rdamd:P30004 "ISBN 3763237178 (nur für Mitglieder)",
+        "ISBN 9783763237173 (nur für Mitglieder)" ;
     rdamd:P30011 "[1990]" ;
     rdamd:P30088 "Frankfurt am Main",
         "Wien" ;
@@ -4293,7 +4291,7 @@
     rdamd:P30137 "Lizenzausg. d. S.-Fischer-Verl., Frankfurt am Main" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Herr der Fliegen" ;
-    rdamd:P30176 "Büchergilde Gutenberg" ;
+    rdamd:P30176 "Büchergilde Gutenberg" ;
     rdamd:P30182 "267 S., 20 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
@@ -4301,16 +4299,16 @@
     rdaxd:P00018 "http://example.org/isbn-9783763237173" .
 
 <http://example.org/isbn-9783804404205> a rdac:C10007 ;
-    rdfs:label "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies) / von Edgar Neis. – 8., überarb. Aufl. – Bange, 1997" ;
+    rdfs:label "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies) / von Edgar Neis. – 8., überarb. Aufl. – Bange, 1997" ;
     rdamd:P30004 "ISBN 3804404200",
         "ISBN 9783804404205" ;
     rdamd:P30011 "1997" ;
     rdamd:P30088 "Hollfeld" ;
-    rdamd:P30106 "Königs Erläuterungen und Materialien" ;
-    rdamd:P30107 "8., überarb. Aufl" ;
+    rdamd:P30106 "Königs Erläuterungen und Materialien" ;
+    rdamd:P30107 "8., überarb. Aufl" ;
     rdamd:P30117 "von Edgar Neis. [Hrsg. von Klaus Bahners ...]" ;
     rdamd:P30137 "Literaturverz. S. 82 - 85" ;
-    rdamd:P30156 "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies)" ;
+    rdamd:P30156 "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies)" ;
     rdamd:P30165 "Bd. 332" ;
     rdamd:P30176 "Bange" ;
     rdamd:P30182 "85 S., 16 cm." ;
@@ -4320,19 +4318,19 @@
     rdaxd:P00018 "http://example.org/isbn-9783804404205" .
 
 <http://example.org/isbn-9783804417106> a rdac:C10007 ;
-    rdfs:label "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies) / von Reiner Poppe. – 1. Aufl. – Bange, 2003" ;
+    rdfs:label "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies) / von Reiner Poppe. – 1. Aufl. – Bange, 2003" ;
     rdamd:P30004 "ISBN 3804417108",
         "ISBN 9783804417106" ;
     rdamd:P30011 "2003",
         "2008" ;
     rdamd:P30088 "Hollfeld" ;
-    rdamd:P30106 "Königs Erläuterungen und Materialien" ;
+    rdamd:P30106 "Königs Erläuterungen und Materialien" ;
     rdamd:P30107 "1. Aufl",
         "3. Aufl" ;
     rdamd:P30117 "von Reiner Poppe" ;
     rdamd:P30137 "Literatur- und URL-Verz. S. 89 - 95",
         "Literaturverz. und Filmogr. S. 89 - 95" ;
-    rdamd:P30156 "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies)" ;
+    rdamd:P30156 "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies)" ;
     rdamd:P30165 "Bd. 332" ;
     rdamd:P30176 "Bange" ;
     rdamd:P30182 "95 S. : graph. Darst., 16 cm." ;
@@ -4342,18 +4340,18 @@
     rdaxd:P00018 "http://example.org/isbn-9783804417106" .
 
 <http://example.org/isbn-9783804457102> a rdac:C10007 ;
-    rdfs:label "Erläuterungen zu Golding, Herr der Fliegen - Lord of the Flies / William Golding. – 4. Aufl. – Bange, C, 2011" ;
+    rdfs:label "Erläuterungen zu Golding, Herr der Fliegen - Lord of the Flies / William Golding. – 4. Aufl. – Bange, C, 2011" ;
     rdamd:P30004 "IAN 9783804457102",
         "ISBN 9783804457102",
         "NN urn:nbn:de:101:1-201205071681" ;
     rdamd:P30011 "2011" ;
     rdamd:P30088 "Hollfeld" ;
-    rdamd:P30106 "Königs Erläuterungen und Materialien" ;
+    rdamd:P30106 "Königs Erläuterungen und Materialien" ;
     rdamd:P30107 "4. Aufl" ;
     rdamd:P30117 "William Golding" ;
     rdamd:P30137 "Lizenzpflichtig" ;
-    rdamd:P30142 "Lektüre- und Interpretationshilfe" ;
-    rdamd:P30156 "Erläuterungen zu Golding, Herr der Fliegen - Lord of the Flies" ;
+    rdamd:P30142 "Lektüre- und Interpretationshilfe" ;
+    rdamd:P30156 "Erläuterungen zu Golding, Herr der Fliegen - Lord of the Flies" ;
     rdamd:P30165 "332" ;
     rdamd:P30176 "Bange, C" ;
     rdamd:P30182 "Online-Ressource." ;
@@ -4368,7 +4366,7 @@
         "ISBN 9783813572087" ;
     rdamd:P30011 "1988" ;
     rdamd:P30088 "Hamburg",
-        "München" ;
+        "München" ;
     rdamd:P30107 "1. Aufl" ;
     rdamd:P30117 "William Golding. Dt. von Emil Bastuk" ;
     rdamd:P30142 "Roman" ;
@@ -4385,7 +4383,7 @@
     rdamd:P30004 "ISBN 3820502106",
         "ISBN 9783820502107" ;
     rdamd:P30011 "1980" ;
-    rdamd:P30088 "München" ;
+    rdamd:P30088 "München" ;
     rdamd:P30117 "William Golding. [Aus d. Engl. von Ursula Leipe]" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Das Feuer der Finsternis" ;
@@ -4401,7 +4399,7 @@
     rdamd:P30004 "ISBN 3860726676",
         "ISBN 9783860726679" ;
     rdamd:P30011 "2001" ;
-    rdamd:P30088 "Mülheim an der Ruhr" ;
+    rdamd:P30088 "Mülheim an der Ruhr" ;
     rdamd:P30117 "[Autor: Roger Machin ; Louise Machin]" ;
     rdamd:P30142 "[Literatur-Kartei Englisch \"Lord of the flies\" ; Literatur-Kartei zum Roman von William Golding]" ;
     rdamd:P30156 "\"Lord of the flies\"" ;
@@ -4418,7 +4416,7 @@
         "ISBN 9783883451381" ;
     rdamd:P30011 "1984" ;
     rdamd:P30088 "Sankt Augustin" ;
-    rdamd:P30106 "Reihe Leichter lesen, Bücher in Großdruck" ;
+    rdamd:P30106 "Reihe Leichter lesen, Bücher in Großdruck" ;
     rdamd:P30117 "William Golding" ;
     rdamd:P30156 "Herr der Fliegen" ;
     rdamd:P30165 "Bd. 198" ;
@@ -4440,7 +4438,7 @@
     rdamd:P30088 "Boston",
         "Hamburg",
         "London" ;
-    rdamd:P30106 "Klassiker des Gebrauchs an Schule und Universität" ;
+    rdamd:P30106 "Klassiker des Gebrauchs an Schule und Universität" ;
     rdamd:P30107 "10. Aufl",
         "18. Aufl",
         "6. Aufl" ;
@@ -4466,7 +4464,7 @@
     rdamd:P30088 "Boston",
         "Hamburg",
         "London" ;
-    rdamd:P30106 "Petersen-Taschenbücher" ;
+    rdamd:P30106 "Petersen-Taschenbücher" ;
     rdamd:P30117 "by William Golding" ;
     rdamd:P30142 "a novel" ;
     rdamd:P30156 "Lord of the flies" ;
@@ -4499,16 +4497,16 @@
     rdaxd:P00018 "http://example.org/isbn-9783888051357" .
 
 <http://example.org/isbn-9783888055058> a rdac:C10007 ;
-    rdfs:label "William Golding, Herr der Fliegen (Lord of the flies) / Reiner Poppe. – Vom Autor für die neue Reihe eingerichtet. – Beyer, 1996" ;
+    rdfs:label "William Golding, Herr der Fliegen (Lord of the flies) / Reiner Poppe. – Vom Autor für die neue Reihe eingerichtet. – Beyer, 1996" ;
     rdamd:P30004 "ISBN 3888055059",
         "ISBN 9783888055058" ;
     rdamd:P30011 "1996" ;
     rdamd:P30088 "Hollfeld" ;
     rdamd:P30106 "Blickpunkt" ;
-    rdamd:P30107 "Vom Autor für die neue Reihe eingerichtet" ;
+    rdamd:P30107 "Vom Autor für die neue Reihe eingerichtet" ;
     rdamd:P30117 "Reiner Poppe" ;
     rdamd:P30137 "Literaturverz. S. 70 - 72" ;
-    rdamd:P30142 "Kommentare, Diskussionsaspekte und Anregungen für produktionsorientiertes Lesen" ;
+    rdamd:P30142 "Kommentare, Diskussionsaspekte und Anregungen für produktionsorientiertes Lesen" ;
     rdamd:P30156 "William Golding, Herr der Fliegen (Lord of the flies)" ;
     rdamd:P30165 "505" ;
     rdamd:P30176 "Beyer" ;
@@ -4527,7 +4525,7 @@
     rdamd:P30088 "Erkrath" ;
     rdamd:P30107 "1. Aufl" ;
     rdamd:P30117 "William Golding" ;
-    rdamd:P30142 "Paläo-Fiction Roman (Nr. 3)" ;
+    rdamd:P30142 "Paläo-Fiction Roman (Nr. 3)" ;
     rdamd:P30156 "Die Erben" ;
     rdamd:P30176 "Fantasy Productions" ;
     rdamo:P30001 rdact:1049 ;
@@ -4751,15 +4749,15 @@
     rdaxd:P00018 "http://example.org/isbn-9788437626703" .
 
 <http://example.org/isbn-9788481302066> a rdac:C10007 ;
-    rdfs:label "El señor de las moscas / William Golding. – Unidad Editorial, c1999" ;
+    rdfs:label "El señor de las moscas / William Golding. – Unidad Editorial, c1999" ;
     rdamd:P30004 "ISBN 8481302066",
         "ISBN 9788481302066" ;
     rdamd:P30011 "c1999" ;
     rdamd:P30088 "Madrid" ;
     rdamd:P30106 "Biblioteca El mundo",
         "Millenium. Las 100 joyas del" ;
-    rdamd:P30117 "William Golding ; traducción de Carles Serrat Mulà ; prólogo de Josan Hatero" ;
-    rdamd:P30156 "El señor de las moscas" ;
+    rdamd:P30117 "William Golding ; traducción de Carles Serrat Mulà ; prólogo de Josan Hatero" ;
+    rdamd:P30156 "El señor de las moscas" ;
     rdamd:P30165 "89" ;
     rdamd:P30176 "Unidad Editorial" ;
     rdamd:P30182 "198 pages, 21 cm." ;
@@ -4866,7 +4864,7 @@
         "Ein ägyptisches Tagebuch / William Golding ; oversatt av Renate Orth-Guttmann. – Tysk"@no ;
     rdaed:P20315 "Ein ägyptisches Tagebuch" ;
     rdaed:P20316 "An Egyptian journal",
-        "Ein ägyptisches Tagebuch" ;
+        "Ein ägyptisches Tagebuch" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/47321622> ;
@@ -5129,8 +5127,8 @@
     rdaeo:P20231 <http://viaf.org/viaf/188302088> .
 
 <http://viaf.org/viaf/18830799> a rdac:C10004 ;
-    rdfs:label "Serrat Mulà, Carles" ;
-    rdaad:P50413 "Serrat Mulà, Carles" ;
+    rdfs:label "Serrat Mulà, Carles" ;
+    rdaad:P50413 "Serrat Mulà, Carles" ;
     rdaxd:P00018 "http://viaf.org/viaf/18830799" .
 
 <http://viaf.org/viaf/19698456> a rdac:C10004 ;
@@ -5208,7 +5206,7 @@
     rdfs:label "Die Erben / William Golding. – German"@en,
         "Die Erben / William Golding. – Tysk"@no ;
     rdaed:P20315 "Die Erben" ;
-    rdaed:P20316 "Die Erben : Paläo-Fiction Roman (Nr. 3)",
+    rdaed:P20316 "Die Erben : Paläo-Fiction Roman (Nr. 3)",
         "The Inheritors" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
@@ -5262,10 +5260,10 @@
     rdaxd:P00018 "http://viaf.org/viaf/24835909" .
 
 <http://viaf.org/viaf/262356343/erlauterungenzuwilliamgoldingherrderfliegenlordoftheflies> a rdac:C10001 ;
-    rdfs:label "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies) / Reiner Poppe"@en,
-        "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies) / Reiner Poppe"@no ;
+    rdfs:label "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies) / Reiner Poppe"@en,
+        "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies) / Reiner Poppe"@no ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies)" ;
+    rdawd:P10223 "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies)" ;
     rdawo:P10061 <http://viaf.org/viaf/262356343> ;
     rdawo:P10150 <http://viaf.org/viaf/119144648592107423604> ;
     rdawo:P10257 <http://viaf.org/viaf/119144648592107423604> ;
@@ -5303,9 +5301,9 @@
     rdaxd:P00018 "http://viaf.org/viaf/262356343/williamgoldingherrderfliegenlordoftheflies" .
 
 <http://viaf.org/viaf/262356343/williamgoldingherrderfliegenlordoftheflies/exp/ger/1020> a rdac:C10006 ;
-    rdfs:label "William Golding, Herr der Fliegen (Lord of the flies) : Kommentare, Diskussionsaspekte und Anregungen für produktionsorientiertes Lesen / Reiner Poppe. – German"@en,
-        "William Golding, Herr der Fliegen (Lord of the flies) : Kommentare, Diskussionsaspekte und Anregungen für produktionsorientiertes Lesen / Reiner Poppe. – Tysk"@no ;
-    rdaed:P20315 "William Golding, Herr der Fliegen (Lord of the flies) : Kommentare, Diskussionsaspekte und Anregungen für produktionsorientiertes Lesen" ;
+    rdfs:label "William Golding, Herr der Fliegen (Lord of the flies) : Kommentare, Diskussionsaspekte und Anregungen für produktionsorientiertes Lesen / Reiner Poppe. – German"@en,
+        "William Golding, Herr der Fliegen (Lord of the flies) : Kommentare, Diskussionsaspekte und Anregungen für produktionsorientiertes Lesen / Reiner Poppe. – Tysk"@no ;
+    rdaed:P20315 "William Golding, Herr der Fliegen (Lord of the flies) : Kommentare, Diskussionsaspekte und Anregungen für produktionsorientiertes Lesen" ;
     rdaed:P20316 "William Golding, Herr der Fliegen (Lord of the flies)" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
@@ -5443,19 +5441,19 @@
     rdaxd:P00018 "http://viaf.org/viaf/303443830" .
 
 <http://viaf.org/viaf/303443830/stundenblattergoldinglordoftheflies> a rdac:C10001 ;
-    rdfs:label "Stundenblätter Golding, \"Lord of the flies\" / Gerd Kaiser"@en,
-        "Stundenblätter Golding, \"Lord of the flies\" / Gerd Kaiser"@no ;
+    rdfs:label "Stundenblätter Golding, \"Lord of the flies\" / Gerd Kaiser"@en,
+        "Stundenblätter Golding, \"Lord of the flies\" / Gerd Kaiser"@no ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Stundenblätter Golding, \"Lord of the flies\"" ;
+    rdawd:P10223 "Stundenblätter Golding, \"Lord of the flies\"" ;
     rdawo:P10061 <http://viaf.org/viaf/303443830> ;
     rdawo:P10257 <http://viaf.org/viaf/119144648592107423604> ;
     rdaxd:P00018 "http://viaf.org/viaf/303443830/stundenblattergoldinglordoftheflies" .
 
 <http://viaf.org/viaf/303443830/stundenblattergoldinglordoftheflies/exp/ger/1020> a rdac:C10006 ;
-    rdfs:label "Stundenblätter Golding, \"Lord of the flies\" / Gerd Kaiser. – German"@en,
-        "Stundenblätter Golding, \"Lord of the flies\" / Gerd Kaiser. – Tysk"@no ;
-    rdaed:P20315 "Stundenblätter Golding, \"Lord of the flies\"" ;
-    rdaed:P20316 "Stundenblätter Golding, \"Lord of the flies\"" ;
+    rdfs:label "Stundenblätter Golding, \"Lord of the flies\" / Gerd Kaiser. – German"@en,
+        "Stundenblätter Golding, \"Lord of the flies\" / Gerd Kaiser. – Tysk"@no ;
+    rdaed:P20315 "Stundenblätter Golding, \"Lord of the flies\"" ;
+    rdaed:P20316 "Stundenblätter Golding, \"Lord of the flies\"" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20231 <http://viaf.org/viaf/303443830/stundenblattergoldinglordoftheflies> .
@@ -5590,20 +5588,20 @@
     rdaxd:P00018 "http://viaf.org/viaf/37534075" .
 
 <http://viaf.org/viaf/37534075/lekturehilfenwilliamgoldinglordoftheflies> a rdac:C10001 ;
-    rdfs:label "Lektürehilfen William Golding, \"Lord of the flies\" / W. Meitcke"@en,
-        "Lektürehilfen William Golding, \"Lord of the flies\" / W. Meitcke"@no ;
+    rdfs:label "Lektürehilfen William Golding, \"Lord of the flies\" / W. Meitcke"@en,
+        "Lektürehilfen William Golding, \"Lord of the flies\" / W. Meitcke"@no ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Lektürehilfen William Golding, \"Lord of the flies\"" ;
+    rdawd:P10223 "Lektürehilfen William Golding, \"Lord of the flies\"" ;
     rdawo:P10061 <http://viaf.org/viaf/37534075> ;
     rdawo:P10187 <http://viaf.org/viaf/119144648592107423604> ;
     rdawo:P10257 <http://viaf.org/viaf/119144648592107423604> ;
     rdaxd:P00018 "http://viaf.org/viaf/37534075/lekturehilfenwilliamgoldinglordoftheflies" .
 
 <http://viaf.org/viaf/37534075/lekturehilfenwilliamgoldinglordoftheflies/exp/ger/1020> a rdac:C10006 ;
-    rdfs:label "Lektürehilfen William Golding, \"Lord of the flies\" / W. Meitcke. – German"@en,
-        "Lektürehilfen William Golding, \"Lord of the flies\" / W. Meitcke. – Tysk"@no ;
-    rdaed:P20315 "Lektürehilfen William Golding, \"Lord of the flies\"" ;
-    rdaed:P20316 "Lektürehilfen William Golding, \"Lord of the flies\"" ;
+    rdfs:label "Lektürehilfen William Golding, \"Lord of the flies\" / W. Meitcke. – German"@en,
+        "Lektürehilfen William Golding, \"Lord of the flies\" / W. Meitcke. – Tysk"@no ;
+    rdaed:P20315 "Lektürehilfen William Golding, \"Lord of the flies\"" ;
+    rdaed:P20316 "Lektürehilfen William Golding, \"Lord of the flies\"" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20231 <http://viaf.org/viaf/37534075/lekturehilfenwilliamgoldinglordoftheflies> .
@@ -5620,20 +5618,20 @@
     rdaxd:P00018 "http://viaf.org/viaf/44671175" .
 
 <http://viaf.org/viaf/44671175/erlauterungenzuwilliamgoldingherrderfliegenlordoftheflies> a rdac:C10001 ;
-    rdfs:label "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies) / Edgar Neis"@en,
-        "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies) / Edgar Neis"@no ;
+    rdfs:label "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies) / Edgar Neis"@en,
+        "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies) / Edgar Neis"@no ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies)" ;
+    rdawd:P10223 "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies)" ;
     rdawo:P10061 <http://viaf.org/viaf/44671175> ;
     rdawo:P10150 <http://viaf.org/viaf/119144648592107423604> ;
     rdawo:P10257 <http://viaf.org/viaf/119144648592107423604> ;
     rdaxd:P00018 "http://viaf.org/viaf/44671175/erlauterungenzuwilliamgoldingherrderfliegenlordoftheflies" .
 
 <http://viaf.org/viaf/44671175/erlauterungenzuwilliamgoldingherrderfliegenlordoftheflies/exp/ger/1020> a rdac:C10006 ;
-    rdfs:label "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies) / Edgar Neis. – German"@en,
-        "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies) / Edgar Neis. – Tysk"@no ;
-    rdaed:P20315 "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies)" ;
-    rdaed:P20316 "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies)" ;
+    rdfs:label "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies) / Edgar Neis. – German"@en,
+        "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies) / Edgar Neis. – Tysk"@no ;
+    rdaed:P20315 "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies)" ;
+    rdaed:P20316 "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies)" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20231 <http://viaf.org/viaf/44671175/erlauterungenzuwilliamgoldingherrderfliegenlordoftheflies> .
@@ -5675,16 +5673,16 @@
     rdaxd:P00018 "http://viaf.org/viaf/53270061" .
 
 <http://viaf.org/viaf/57170916/versuchubergolding> a rdac:C10001 ;
-    rdfs:label "Versuch über Golding"@en,
-        "Versuch über Golding"@no ;
+    rdfs:label "Versuch über Golding"@en,
+        "Versuch über Golding"@no ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Versuch über Golding" ;
+    rdawd:P10223 "Versuch über Golding" ;
     rdaxd:P00018 "http://viaf.org/viaf/57170916/versuchubergolding" .
 
 <http://viaf.org/viaf/57170916/versuchubergolding/exp/ger/1020/42309455> a rdac:C10006 ;
-    rdfs:label "Versuch über Golding / translated by Hermann Stiehl. – German"@en,
-        "Versuch über Golding / oversatt av Hermann Stiehl. – Tysk"@no ;
-    rdaed:P20315 "Versuch über Golding" ;
+    rdfs:label "Versuch über Golding / translated by Hermann Stiehl. – German"@en,
+        "Versuch über Golding / oversatt av Hermann Stiehl. – Tysk"@no ;
+    rdaed:P20315 "Versuch über Golding" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/42309455> ;
@@ -5706,8 +5704,8 @@
     rdaxd:P00018 "http://viaf.org/viaf/64110679" .
 
 <http://viaf.org/viaf/69705000> a rdac:C10004 ;
-    rdfs:label "Schlüter, Herbert" ;
-    rdaad:P50413 "Schlüter, Herbert" ;
+    rdfs:label "Schlüter, Herbert" ;
+    rdaad:P50413 "Schlüter, Herbert" ;
     rdaxd:P00018 "http://viaf.org/viaf/69705000" .
 
 <http://viaf.org/viaf/7549507> a rdac:C10004 ;
@@ -6081,10 +6079,10 @@
     rdaxd:P00018 "http://viaf.org/viaf/109587997" .
 
 <http://viaf.org/viaf/119144648592107423604/exp/spa/1020/18830799> a rdac:C10006 ;
-    rdfs:label "El señor de las moscas / William Golding ; translated by Carles Serrat Mulà. – Spanish"@en,
-        "El señor de las moscas / William Golding ; oversatt av Carles Serrat Mulà. – Spansk"@no ;
+    rdfs:label "El señor de las moscas / William Golding ; translated by Carles Serrat Mulà. – Spanish"@en,
+        "El señor de las moscas / William Golding ; oversatt av Carles Serrat Mulà. – Spansk"@no ;
     rdaed:P20315 "El señor de las moscas" ;
-    rdaed:P20316 "El señor de las moscas",
+    rdaed:P20316 "El señor de las moscas",
         "Lord of the flies" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
@@ -6185,8 +6183,8 @@
     rdfs:label "Herr der Fliegen / Reiner Poppe. – German"@en,
         "Herr der Fliegen / Reiner Poppe. – Tysk"@no ;
     rdaed:P20315 "Herr der Fliegen" ;
-    rdaed:P20316 "Erläuterungen zu Golding, Herr der Fliegen - Lord of the Flies : Lektüre- und Interpretationshilfe",
-        "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies)" ;
+    rdaed:P20316 "Erläuterungen zu Golding, Herr der Fliegen - Lord of the Flies : Lektüre- und Interpretationshilfe",
+        "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies)" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20231 <http://viaf.org/viaf/262356343/erlauterungenzuwilliamgoldingherrderfliegenlordoftheflies> .
@@ -6201,7 +6199,7 @@
     rdfs:label "Oliver / William Golding. – German"@en,
         "Oliver / William Golding. – Tysk"@no ;
     rdaed:P20315 "Oliver" ;
-    rdaed:P20316 "Oliver : Roman. [Berecht. Übers. aus d. Engl.]",
+    rdaed:P20316 "Oliver : Roman. [Berecht. Übers. aus d. Engl.]",
         "Oliver : ein Entwicklungsroman",
         "The Pyramid" ;
     rdaeo:P20001 rdaco:1020 ;
@@ -6304,10 +6302,10 @@
     rdaxd:P00018 "http://viaf.org/viaf/14894463" .
 
 <http://viaf.org/viaf/176165653/exp/ger/1020/69705000> a rdac:C10006 ;
-    rdfs:label "Äquatortaufe / William Golding ; translated by Herbert Schlüter. – German"@en,
-        "Äquatortaufe / William Golding ; oversatt av Herbert Schlüter. – Tysk"@no ;
+    rdfs:label "Äquatortaufe / William Golding ; translated by Herbert Schlüter. – German"@en,
+        "Äquatortaufe / William Golding ; oversatt av Herbert Schlüter. – Tysk"@no ;
     rdaed:P20315 "Äquatortaufe" ;
-    rdaed:P20316 "Äquatortaufe : Roman",
+    rdaed:P20316 "Äquatortaufe : Roman",
         "Rites of passage" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
@@ -6358,7 +6356,7 @@
     rdfs:label "Papier-Männer / William Golding ; translated by Emil Bastuk. – German"@en,
         "Papier-Männer / William Golding ; oversatt av Emil Bastuk. – Tysk"@no ;
     rdaed:P20315 "Papier-Männer" ;
-    rdaed:P20316 "Papier-Männer : Roman",
+    rdaed:P20316 "Papier-Männer : Roman",
         "The paper men" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
@@ -6860,7 +6858,7 @@
     rdfs:label "El señor de las moscas / William Golding ; translated by Carmen Vergara. – Spanish"@en,
         "El señor de las moscas / William Golding ; oversatt av Carmen Vergara. – Spansk"@no ;
     rdaed:P20315 "El señor de las moscas" ;
-    rdaed:P20316 "El señor de las moscas",
+    rdaed:P20316 "El señor de las moscas",
         "Lord of the flies" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;

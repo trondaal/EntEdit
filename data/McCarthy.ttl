@@ -865,7 +865,7 @@
         "ISBN 9780374261160" ;
     rdamd:P30007 "©2019" ;
     rdamd:P30011 "2020" ;
-    rdamd:P30033 "Fun stuff: homage to Keith Moon -- What Chekhov meant by life -- Serious noticing -- Saul Bellow's comic style -- Anna Karenina and characterization -- Joseph Roth's empire of signs -- Paul Auster's shallowness -- Hysterical realism -- Bohumil Hrabal's comic world -- George Orwell's very English revolution -- Jane Austen's heroic consciousness -- Cormac McCarthy's the road -- Reality examined to the point of madness': László Krasznahorkai -- Wounder and wounded -- On not going home -- Other side of silence: rereading W. G. Sebald -- Becoming them -- Don Quixote's old and new testaments -- Dostoevsky's god -- Helen Garner's savage honesty -- All and the if: God and metaphor in Melville -- Elena Ferrante -- Virginia Woolf's Mysticism -- Job existed: Primo Levi -- Marilynne Robinson -- Ismail Kadare -- Jenny Erpenbeck -- Packing my father-in-law's library." ;
+    rdamd:P30033 "Fun stuff: homage to Keith Moon -- What Chekhov meant by life -- Serious noticing -- Saul Bellow's comic style -- Anna Karenina and characterization -- Joseph Roth's empire of signs -- Paul Auster's shallowness -- Hysterical realism -- Bohumil Hrabal's comic world -- George Orwell's very English revolution -- Jane Austen's heroic consciousness -- Cormac McCarthy's the road -- Reality examined to the point of madness': László Krasznahorkai -- Wounder and wounded -- On not going home -- Other side of silence: rereading W. G. Sebald -- Becoming them -- Don Quixote's old and new testaments -- Dostoevsky's god -- Helen Garner's savage honesty -- All and the if: God and metaphor in Melville -- Elena Ferrante -- Virginia Woolf's Mysticism -- Job existed: Primo Levi -- Marilynne Robinson -- Ismail Kadare -- Jenny Erpenbeck -- Packing my father-in-law's library." ;
     rdamd:P30088 "New York" ;
     rdamd:P30107 "First American edition" ;
     rdamd:P30117 "James Wood" ;
@@ -2593,18 +2593,18 @@
     rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/12> .
 
 <http://viaf.org/viaf/92910249/seriousnoticing/13> a rdac:C10001 ;
-    rdfs:label "Reality examined to the point of madness': László Krasznahorkai / James Wood"@en,
-        "Reality examined to the point of madness': László Krasznahorkai / James Wood"@no ;
+    rdfs:label "Reality examined to the point of madness': László Krasznahorkai / James Wood"@en,
+        "Reality examined to the point of madness': László Krasznahorkai / James Wood"@no ;
 
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "Reality examined to the point of madness': László Krasznahorkai" ;
+    rdawd:P10223 "Reality examined to the point of madness': László Krasznahorkai" ;
     rdawo:P10061 <http://viaf.org/viaf/92910249> ;
     rdaxd:P00018 "http://viaf.org/viaf/92910249/seriousnoticing/13" .
 
 <http://viaf.org/viaf/92910249/seriousnoticing/13/exp/eng/1020> a rdac:C10006 ;
-    rdfs:label "Reality examined to the point of madness': László Krasznahorkai / James Wood. – English"@en,
-        "Reality examined to the point of madness': László Krasznahorkai / James Wood. – Engelsk"@no ;
-    rdaed:P20315 "Reality examined to the point of madness': László Krasznahorkai" ;
+    rdfs:label "Reality examined to the point of madness': László Krasznahorkai / James Wood. – English"@en,
+        "Reality examined to the point of madness': László Krasznahorkai / James Wood. – Engelsk"@no ;
+    rdaed:P20315 "Reality examined to the point of madness': László Krasznahorkai" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/13> .
