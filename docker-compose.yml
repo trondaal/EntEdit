@@ -1,8 +1,11 @@
 services:
   graphdb:
     image: ontotext/graphdb:10.8.12
+    # Host ports can be changed when 80 or 7200 is already taken on the
+    # machine, e.g. ENTEDIT_PORT=8080 docker compose ... up -d. The app needs
+    # no other setting: its endpoint and the Workbench link follow its origin.
     ports:
-      - "7200:7200"
+      - "${GRAPHDB_PORT:-7200}:7200"
     volumes:
       - graphdb-data:/opt/graphdb/data
     healthcheck:
@@ -41,7 +44,7 @@ services:
     # `docker compose up` pulls the published image by default.
     build: ./app
     ports:
-      - "80:80"
+      - "${ENTEDIT_PORT:-80}:80"
     depends_on:
       graphdb:
         condition: service_healthy

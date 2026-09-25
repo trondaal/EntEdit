@@ -63,6 +63,20 @@ That's the whole installation. The first start creates the `EntEdit` repository,
 loads the RDA vocabulary and a small set of example entities, and builds the
 full-text search indexes — a minute or two, once.
 
+> **Port 80 already in use?** If another program on your machine (a web server,
+> IIS, …) already uses port 80, `up` fails with *"port is already allocated"* or
+> *"address already in use"*. Choose another port with `ENTEDIT_PORT`:
+>
+> ```bash
+> ENTEDIT_PORT=8080 docker compose -f oci://docker.io/trondaal/entedit-compose:latest up -d
+> ```
+>
+> In PowerShell, run `$env:ENTEDIT_PORT=8080` first; in Command Prompt,
+> `set ENTEDIT_PORT=8080`. Then open **http://localhost:8080/entedit/** and use
+> `http://localhost:8080/graphdb/repositories/EntEdit` as the endpoint. Set the
+> variable every time you run `up`, or the app moves back to port 80. GraphDB's
+> port 7200 can be moved the same way with `GRAPHDB_PORT`.
+
 **Stopping, updating, and looking at logs.** The Compose file itself lives on
 Docker Hub rather than on your disk, so later commands need the same
 `-f oci://...` reference:

@@ -268,6 +268,18 @@
   GraphDB-data lagres i et Docker-volum og overlever omstarter.
 </p>
 
+<h3>Er port 80 eller 7200 allerede i bruk?</h3>
+
+<p>
+  Hvis et annet program på maskinen din — en webserver, IIS, en annen GraphDB — allerede bruker port 80 eller 7200, feiler <code>up</code> med <em>«port is already allocated»</em> eller <em>«address already in use»</em>. Velg andre porter med variablene <code>ENTEDIT_PORT</code> (webapplikasjonen, standard 80) og <code>GRAPHDB_PORT</code> (GraphDB Workbench, standard 7200):
+</p>
+
+<pre><code>ENTEDIT_PORT=8080 docker compose -f oci://docker.io/trondaal/entedit-compose:latest up -d</code></pre>
+
+<p>
+  I PowerShell kjører du først <code>$env:ENTEDIT_PORT=8080</code> og deretter kommandoen uten variabelen; i Ledetekst (Command Prompt) bruker du <code>set ENTEDIT_PORT=8080</code>. Applikasjonen ligger da på <code>http://localhost:8080/entedit/</code>, og endepunktet er <code>http://localhost:8080/graphdb/repositories/EntEdit</code> — det er bare porten som endres. Sett variabelen hver gang du kjører <code>up</code>, ellers flytter applikasjonen tilbake til port 80.
+</p>
+
 <h3>Stoppe, oppdatere og andre kommandoer</h3>
 
 <p>

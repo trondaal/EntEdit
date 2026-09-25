@@ -25,6 +25,11 @@ The Docker installation starts three services:
 | GraphDB | http://localhost:7200 | The database, with its Workbench for administration |
 | `graphdb-init` | — | Runs once, then exits |
 
+The host ports are set by `ENTEDIT_PORT` (default 80) and `GRAPHDB_PORT`
+(default 7200), for machines where either is already taken. Nothing else needs
+changing: the app derives its default endpoint and the Workbench link from its
+own origin.
+
 `graphdb-init` creates the `EntEdit` repository with RDFS-Plus reasoning, imports
 the vocabulary and the example entities (the examples go into the named graph
 `http://oslomet.no/abi/examples`, so they can be managed independently of the
