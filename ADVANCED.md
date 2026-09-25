@@ -194,7 +194,7 @@ that first, so the two never drift apart, then use the same number below.
 
 ```bash
 docker buildx build --platform linux/amd64,linux/arm64 \
-  -t trondaal/entedit:1.0.8 -t trondaal/entedit:latest \
+  -t trondaal/entedit:1.0.9 -t trondaal/entedit:latest \
   --push ./app
 ```
 
