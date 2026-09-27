@@ -648,19 +648,19 @@ rdaao:P50483	entedit:status	"object property" ; rdfs:label "er tale-bidragsyter"
 rdamo:P30331	entedit:status	"object property" ; rdfs:label "har tale-bidragsyter"@no . #	has contributor agent of speech	rdac:C10007	rdac:C10002
 
 #Work-to-work object properties in use
-rdawo:P10016	entedit:status	"object property" ; rdfs:label "har dramatisering"@no . #	is dramatized as work	rdac:C10001	rdac:C10001
+rdawo:P10016	entedit:status	"object property" ;  entedit:display false ; rdfs:label "har dramatisering"@no . #	is dramatized as work	rdac:C10001	rdac:C10001
 rdawo:P10127	entedit:status	"object property" ; rdfs:label "er dramatisering av"@no . #	is dramatization of work	rdac:C10001	rdac:C10001
 
 rdawo:P10019	entedit:status	"object property" ; rdfs:label "er del av"@no . #	is part of work	rdac:C10001	rdac:C10001
 rdawo:P10147	entedit:status	"object property" ; rdfs:label "har del"@no . #	has part work	rdac:C10001	rdac:C10001
 
-rdawo:P10020	entedit:status	"object property" ; rdfs:label "har etterfølger"@no . #	has sequel work	rdac:C10001	rdac:C10001
+rdawo:P10020	entedit:status	"object property" ;  entedit:display false ; rdfs:label "har etterfølger"@no . #	has sequel work	rdac:C10001	rdac:C10001
 rdawo:P10122	entedit:status	"object property" ; rdfs:label "har forløper"@no . #	has prequel work	rdac:C10001	rdac:C10001
 
-rdawo:P10023	entedit:status	"object property" ; rdfs:label "er bearbeidet til verseform"@no . #	is adapted in verse as work	rdac:C10001	rdac:C10001
+rdawo:P10023	entedit:status	"object property" ;  entedit:display false ; rdfs:label "har bearbeidelse til verseform"@no . #	is adapted in verse as work	rdac:C10001	rdac:C10001
 rdawo:P10128	entedit:status	"object property" ; rdfs:label "er bearbeidelse til verseform"@no . #	is verse adaptation of work	rdac:C10001	rdac:C10001
 
-rdawo:P10025	entedit:status	"object property" ; rdfs:label "er bearbeidet som spillefilm"@no . #	is adapted as motion picture work	rdac:C10001	rdac:C10001
+rdawo:P10025	entedit:status	"object property" ;  entedit:display false ; rdfs:label "har bearbeidelse til spillefilm"@no . #	is adapted as motion picture work	rdac:C10001	rdac:C10001
 rdawo:P10129	entedit:status	"object property" ; rdfs:label "er bearbeidelse til spillefilm"@no . #	is motion picture adaptation of work	rdac:C10001	rdac:C10001
 
 rdawo:P10026	entedit:status	"object property" ; rdfs:label "har kadens"@no . #	has cadenza work	rdac:C10001	rdac:C10001
@@ -678,42 +678,43 @@ rdawo:P10185	entedit:status	"object property" ; rdfs:label "er nyinnspilling av"
 rdawo:P10033	entedit:status	"object property" ; rdfs:label "har musikksetting"@no . #	is set to music as work	rdac:C10001	rdac:C10001
 rdawo:P10161	entedit:status	"object property" ; rdfs:label "er musikksetting av"@no . #	is musical setting of work	rdac:C10001	rdac:C10001
 
-rdawo:P10034	entedit:status	"object property" ; rdfs:label "er bearbeidet som roman"@no . #	is adapted as novel work	rdac:C10001	rdac:C10001
+rdawo:P10034	entedit:status	"object property" ;  entedit:display false ; rdfs:label "er bearbeidet som roman"@no . #	is adapted as novel work	rdac:C10001	rdac:C10001
 rdawo:P10130	entedit:status	"object property" ; rdfs:label "er bearbeidelse til roman"@no . #	is novelization of work	rdac:C10001	rdac:C10001
-rdawo:P10251	entedit:status	"object property" ; rdfs:label "er bearbeidet som tegneserieroman"@no . #	is adapted as graphic novel work	rdac:C10001	rdac:C10001
+
+rdawo:P10251	entedit:status	"object property" ;  entedit:display false ; rdfs:label "er bearbeidet som tegneserieroman"@no . #	is adapted as graphic novel work	rdac:C10001	rdac:C10001
 rdawo:P10252	entedit:status	"object property" ; rdfs:label "er bearbeidelse til tegneserieroman"@no . #	is graphic novelization of work	rdac:C10001	rdac:C10001
 
-rdawo:P10076	entedit:status	"object property" ; rdfs:label "er bearbeidet som radioprogram"@no . #	is adapted as radio program work	rdac:C10001	rdac:C10001
+rdawo:P10076	entedit:status	"object property" ;  entedit:display false ; rdfs:label "er bearbeidet som radioprogram"@no . #	is adapted as radio program work	rdac:C10001	rdac:C10001
 rdawo:P10131	entedit:status	"object property" ; rdfs:label "er bearbeidelse for radio"@no . #	is radio adaptation of work	rdac:C10001	rdac:C10001
 
-rdawo:P10085	entedit:status	"object property" ; rdfs:label "er bearbeidet som fjernsynsprogram"@no . #	is adapted as television program work	rdac:C10001	rdac:C10001
+rdawo:P10085	entedit:status	"object property" ;  entedit:display false ; rdfs:label "er bearbeidet som fjernsynsprogram"@no . #	is adapted as television program work	rdac:C10001	rdac:C10001
 rdawo:P10132	entedit:status	"object property" ; rdfs:label "er bearbeidelse for fjernsyn"@no . #	is television adaptation of work	rdac:C10001	rdac:C10001
 
-rdawo:P10087	entedit:status	"object property" ; rdfs:label "er bearbeidet som video"@no . #	is adapted as video work	rdac:C10001	rdac:C10001
+rdawo:P10087	entedit:status	"object property" ;  entedit:display false ; rdfs:label "er bearbeidet som video"@no . #	is adapted as video work	rdac:C10001	rdac:C10001
 rdawo:P10138	entedit:status	"object property" ; rdfs:label "er bearbeidelse for video"@no . #	is video adaptation of work	rdac:C10001	rdac:C10001
 
 rdawo:P10089	entedit:status	"object property" ; rdfs:label "har sammendrag av"@no . #	is abstracted in work	rdac:C10001	rdac:C10001
-rdawo:P10193	entedit:status	"object property" ; rdfs:label "er abstrakt for"@no . #	is abstracts for work	rdac:C10001	rdac:C10001
+rdawo:P10193	entedit:status	"object property" ; rdfs:label "er sammendrag av"@no . #	is abstracts for work	rdac:C10001	rdac:C10001
 
-rdawo:P10091	entedit:status	"object property" ; rdfs:label "er bearbeidet som koreografi"@no . #	is adapted as choreography work	rdac:C10001	rdac:C10001
+rdawo:P10091	entedit:status	"object property" ;  entedit:display false ; rdfs:label "er bearbeidet som koreografi"@no . #	is adapted as choreography work	rdac:C10001	rdac:C10001
 rdawo:P10183	entedit:status	"object property" ; rdfs:label "er koreografisk bearbeidelse av"@no . #	is choreographic adaptation of work	rdac:C10001	rdac:C10001
 
-rdawo:P10093	entedit:status	"object property" ; rdfs:label "har illustrasjoner"@no . #	has illustrations work	rdac:C10001	rdac:C10001
+rdawo:P10093	entedit:status	"object property" ;  entedit:display false ; rdfs:label "har illustrasjoner"@no . #	has illustrations work	rdac:C10001	rdac:C10001
 rdawo:P10152	entedit:status	"object property" ; rdfs:label "er illustrasjoner for"@no . #	is illustrations for work	rdac:C10001	rdac:C10001
 
-rdawo:P10094	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for spillefilm"@no . #	is adapted as motion picture screenplay work	rdac:C10001	rdac:C10001
+rdawo:P10094	entedit:status	"object property" ;  entedit:display false ; rdfs:label "er bearbeidet som manus for spillefilm"@no . #	is adapted as motion picture screenplay work	rdac:C10001	rdac:C10001
 rdawo:P10134	entedit:status	"object property" ; rdfs:label "er manus for spillefilm basert på"@no . #	is motion picture screenplay based on work	rdac:C10001	rdac:C10001
 
-rdawo:P10095	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for skuespill"@no . #	is adapted as screenplay work	rdac:C10001	rdac:C10001
+rdawo:P10095	entedit:status	"object property" ;  entedit:display false ; rdfs:label "er bearbeidet som manus for skuespill"@no . #	is adapted as screenplay work	rdac:C10001	rdac:C10001
 rdawo:P10133	entedit:status	"object property" ; rdfs:label "er manus basert på"@no . #	is screenplay based on work	rdac:C10001	rdac:C10001
 
-rdawo:P10096	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for fjernsyn"@no . #	is adapted as television screenplay work	rdac:C10001	rdac:C10001
+rdawo:P10096	entedit:status	"object property" ;  entedit:display false ; rdfs:label "er bearbeidet som manus for fjernsyn"@no . #	is adapted as television screenplay work	rdac:C10001	rdac:C10001
 rdawo:P10135	entedit:status	"object property" ; rdfs:label "er fjernsynsmanus basert på"@no . #	is television screenplay based on work	rdac:C10001	rdac:C10001
 
-rdawo:P10097	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for video"@no . #	is adapted as video screenplay work	rdac:C10001	rdac:C10001
+rdawo:P10097	entedit:status	"object property" ;  entedit:display false ; rdfs:label "er bearbeidet som manus for video"@no . #	is adapted as video screenplay work	rdac:C10001	rdac:C10001
 rdawo:P10136	entedit:status	"object property" ; rdfs:label "er videomanus basert på"@no . #	is video screenplay based on work	rdac:C10001	rdac:C10001
 
-rdawo:P10098	entedit:status	"object property" ; rdfs:label "er bearbeidet som manus for radio"@no . #	is adapted as radio script work	rdac:C10001	rdac:C10001
+rdawo:P10098	entedit:status	"object property" ;  entedit:display false ; rdfs:label "er bearbeidet som manus for radio"@no . #	is adapted as radio script work	rdac:C10001	rdac:C10001
 rdawo:P10137	entedit:status	"object property" ; rdfs:label "er radiomanus basert på"@no . #	is radio script based on work	rdac:C10001	rdac:C10001
 
 #This property is the inverse of itself
@@ -954,7 +955,7 @@ rdaeo:P20139	entedit:status	"object property" ; rdfs:label "er arrangement av"@n
 rdaeo:P20165	entedit:status	"object property" ; rdfs:label "er arrangert som"@no . #	is arranged as	rdac:C10006	rdac:C10006
 
 rdaeo:P20141	entedit:status	"object property" ; rdfs:label "er oversettelse av"@no . #	is translation of	rdac:C10006	rdac:C10006
-rdaeo:P20171	entedit:status	"object property" ; rdfs:label "er oversatt som"@no . #	is translated as	rdac:C10006	rdac:C10006
+rdaeo:P20171	entedit:status	"object property" ; entedit:display false ; rdfs:label "er oversatt som"@no . #	is translated as	rdac:C10006	rdac:C10006
 
 rdaeo:P20142	entedit:status	"object property" ; rdfs:label "er parodiert som"@no . #	is parodied as expression	rdac:C10006	rdac:C10006
 rdaeo:P20196	entedit:status	"object property" ; rdfs:label "er parodi på"@no . #	is parody of expression	rdac:C10006	rdac:C10006
