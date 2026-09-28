@@ -255,6 +255,24 @@ entedit:P14
   rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
   rdfs:label "er fotograf i"@no, "is photographer in"@en.
 
+entedit:P15
+  a rdf:Property ;
+  entedit:status "object property" ;
+  rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50428> ;
+  owl:inverseOf entedit:P16 ;
+  rdfs:domain <http://rdaregistry.info/Elements/c/C10004> ;
+  rdfs:range <http://rdaregistry.info/Elements/c/C10004> ;
+  rdfs:label "har alternativ identitet"@no, "has alternate identity"@en.
+
+entedit:P16
+  a rdf:Property ;
+  entedit:status "object property" ;
+  rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50429> ;
+  owl:inverseOf entedit:P15 ;
+  rdfs:domain <http://rdaregistry.info/Elements/c/C10004> ;
+  rdfs:range <http://rdaregistry.info/Elements/c/C10004> ;
+  rdfs:label "har virkelig identitet"@no, "has real identity"@en.
+
 #All classes with status "class" are displayed in the entity browsers class display
 #rdac:C10002 entedit:order 1 ; entedit:status "class" .  # "Agent"@en .
 rdac:C10004 entedit:order 2 ; entedit:status "class" .  # "Person"@en .
@@ -665,6 +683,10 @@ rdamo:P30082	entedit:status	"object property" ; rdfs:label "har tilvirker"@no . 
 
 rdaao:P50203	entedit:status	"object property" ; rdfs:label "er utgiver"@no . #	is publisher agent of	rdac:C10002	rdac:C10007
 rdamo:P30083	entedit:status	"object property" ; rdfs:label "har utgiver"@no . #	has publisher agent	rdac:C10007	rdac:C10002
+
+#Using Corporate Body for publishers
+rdaao:P50809	entedit:status	"object property" ; rdfs:label "er utgiver (korporasjon)"@no . #	is publisher corporate body of	rdac:C10005	rdac:C10007
+rdamo:P30420	entedit:status	"object property" ; rdfs:label "har utgiver (korporasjon)"@no . #	has publisher corporate body	rdac:C10007	rdac:C10005
 
 rdaao:P50242	entedit:status	"object property" ; rdfs:label "er papirprodusent"@no . #	is papermaker agent of	rdac:C10002	rdac:C10007
 rdamo:P30215	entedit:status	"object property" ; rdfs:label "har papirprodusent"@no . #	has papermaker agent	rdac:C10007	rdac:C10002
