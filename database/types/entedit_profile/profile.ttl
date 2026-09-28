@@ -47,6 +47,32 @@ entedit:display
     rdfs:range xsd:boolean ;
     rdfs:label "is displayed (boolean)" .
 
+# entedit:valueOrder records the position of one value among the values of a
+# property, as the cataloguer arranged them in the editor. It annotates the
+# statement itself, so the order belongs to that triple. The annotations are
+# written and read with SPARQL-star; as data they look like this in Turtle-star
+# (the RDF-star Community Group extension of Turtle that GraphDB 10 supports):
+#   << <work> rdaeo:P20315 "B" >> entedit:valueOrder 0 .
+#   << <work> rdaeo:P20315 "A" >> entedit:valueOrder 1 .
+# This is not standard Turtle 1.1: other parsers reject it, and GraphDB exports
+# it as plain Turtle only as opaque urn:rdf4j:triple: IRIs (use the Turtle-star
+# format, .ttls, to keep it). RDF 1.2 writes a triple term as <<( s p o )>> and
+# gives << s p o >> a different meaning (a reifier), so a move to an RDF 1.2
+# store would need these annotations converted.
+# Positions start at 0. The editor writes them only for properties with more
+# than one value, and rewrites a property's annotations whenever a save changes
+# its values or their order; properties never ordered in the editor (e.g.
+# imported data) stay unannotated and keep their load order. The order is seen
+# from the subject: a relationship stated on the other entity (shown through
+# owl:inverseOf) is ordered there. Distinct from entedit:order, which orders
+# the properties themselves.
+entedit:valueOrder
+    a owl:DatatypeProperty ;
+    rdfs:range xsd:integer ;
+    rdfs:label "has value order (integer)" ;
+    rdfs:comment "Position (from 0) of the value of an annotated statement among the values of the same property for the same subject, as arranged in the editor. Used as an RDF-star annotation, in Turtle-star/SPARQL-star syntax: << s p o >> entedit:valueOrder n."@en ,
+        "Plassering (fra 0) for verdien i et annotert utsagn blant verdiene til samme egenskap for samme subjekt, slik de er ordnet i redigeringsverktøyet. Brukes som RDF-star-annotasjon, i Turtle-star/SPARQL-star-syntaks: << s p o >> entedit:valueOrder n."@no .
+
 #Adding some classes for the vocabularies used to facilitate filtering by range
 entedit:Contenttype
   a owl:Class ;
