@@ -17,6 +17,12 @@
        graphdb:entity-index-size "10000000" ;
        graphdb:enablePredicateList "true" ;
        graphdb:in-memory-literal-properties "true" ;
-       graphdb:enable-literal-index "true"
+       graphdb:enable-literal-index "true" ;
+       # A query the browser cancels (e.g. a search overtaken by more typing)
+       # keeps running in GraphDB; on a small heap a runaway one can starve
+       # everything else. Stop queries after 60 s, and report it as an error:
+       # by default a timed-out query silently returns the partial result.
+       graphdb:query-timeout "60" ;
+       graphdb:throw-QueryEvaluationException-on-timeout "true"
      ]
    ] .

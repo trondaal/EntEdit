@@ -27,6 +27,10 @@ services:
     # Docker Hub alone. To iterate on database/ or docker/graphdb/ without
     # rebuilding, add -f docker-compose.dev.yml to mount the local files.
     image: trondaal/entedit-init:latest
+    # `:latest` is only pulled when missing by default, so a reinstall on a
+    # machine that ran EntEdit before kept the old vocabulary. `daily` checks
+    # Docker Hub at most once a day and, unlike `always`, still starts offline.
+    pull_policy: daily
     environment:
       - GRAPHDB_URL=http://graphdb:7200
       - GRAPHDB_REPO=EntEdit
@@ -42,6 +46,7 @@ services:
 
   web:
     image: trondaal/entedit:latest
+    pull_policy: daily
     ports:
       - target: 80
         published: "${ENTEDIT_PORT:-80}"
