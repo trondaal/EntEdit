@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   buildEntityUpdate,
+  changedProperties,
   buildInverseCleanup,
   findConflicts,
   RDF_TYPE,
@@ -167,6 +168,84 @@ describe("buildEntityUpdate", () => {
     expect(update).not.toContain(RDFS_LABEL);
     // Reordering moves no triples, only annotations
     expect(update).not.toContain("DELETE DATA");
+  });
+
+  it("puts order annotations in the graph of the triple they annotate", () => {
+    const update = buildEntityUpdate({
+      entityUri: WORK,
+      snapshot: [
+        { property: TITLE, value: "A", order: 0, graph: EXAMPLES },
+        { property: TITLE, value: "B", order: 1, graph: EXAMPLES },
+      ],
+      desired: [
+        { property: TITLE, value: "B", order: 0 },
+        { property: TITLE, value: "A", order: 1 },
+        { property: TITLE, value: "C", order: 2 },
+      ],
+      managedProperties: managed,
+      targetGraph: "http://example.org/entity-graph",
+    });
+    const annotation = (value: string, order: number) =>
+      `<< <${WORK}> <${TITLE}> "${value}" >> <http://oslomet.no/abi/vocab#valueOrder> ${order} .`;
+    // Stored triples keep their annotations beside them in the examples graph
+    expect(update).toContain(`GRAPH <${EXAMPLES}> { ${annotation("B", 0)}\n    ${annotation("A", 1)} }`);
+    // The new triple and its annotation both go to the entity's graph
+    expect(update).toContain(`GRAPH <http://example.org/entity-graph> { <${WORK}> <${TITLE}> "C" . }`);
+    expect(update).toContain(`GRAPH <http://example.org/entity-graph> { ${annotation("C", 2)} }`);
+  });
+
+  it("keeps annotations of default-graph triples in the default graph", () => {
+    const update = buildEntityUpdate({
+      entityUri: WORK,
+      snapshot: [
+        { property: TITLE, value: "A", order: 0 },
+        { property: TITLE, value: "B", order: 1 },
+      ],
+      desired: [
+        { property: TITLE, value: "B", order: 0 },
+        { property: TITLE, value: "A", order: 1 },
+      ],
+      managedProperties: managed,
+      targetGraph: EXAMPLES,
+    });
+    expect(update).not.toContain("GRAPH");
+  });
+
+  it("saves the first reordering of values that were never ordered", () => {
+    // Imported data: no annotations; the editor shows the values in load order
+    const snapshot: StoredTerm[] = [
+      { property: TITLE, value: "Story", graph: EXAMPLES },
+      { property: TITLE, value: "Preface", graph: EXAMPLES },
+    ];
+    const update = buildEntityUpdate({
+      entityUri: WORK,
+      snapshot,
+      desired: [
+        { property: TITLE, value: "Preface", order: 0 },
+        { property: TITLE, value: "Story", order: 1 },
+      ],
+      managedProperties: managed,
+      targetGraph: EXAMPLES,
+    });
+    expect(update).toContain(`<< <${WORK}> <${TITLE}> "Preface" >> <http://oslomet.no/abi/vocab#valueOrder> 0 .`);
+    expect(update).toContain(`<< <${WORK}> <${TITLE}> "Story" >> <http://oslomet.no/abi/vocab#valueOrder> 1 .`);
+    expect(update).not.toContain("DELETE DATA");
+  });
+
+  it("leaves never-ordered values unannotated while they keep their load order", () => {
+    const update = buildEntityUpdate({
+      entityUri: WORK,
+      snapshot: [
+        { property: TITLE, value: "Story" },
+        { property: TITLE, value: "Preface" },
+      ],
+      desired: [
+        { property: TITLE, value: "Story", order: 0 },
+        { property: TITLE, value: "Preface", order: 1 },
+      ],
+      managedProperties: managed,
+    });
+    expect(update).toBe("");
   });
 
   it("drops the order annotation when a property falls back to one value", () => {
@@ -419,5 +498,20 @@ describe("pruneDuplicateValues", () => {
       [TITLE]: [{ value: "A" }, { value: "B" }],
       [AUTHOR]: [{ value: "x", isUri: true }],
     });
+  });
+});
+
+describe("changedProperties", () => {
+  it("counts a reordering, so the conflict check covers it", () => {
+    const snapshot: StoredTerm[] = [
+      { property: TITLE, value: "Story" },
+      { property: TITLE, value: "Preface" },
+    ];
+    const reordered = [
+      { property: TITLE, value: "Preface", order: 0 },
+      { property: TITLE, value: "Story", order: 1 },
+    ];
+    expect(changedProperties(snapshot, reordered, managed)).toEqual(new Set([TITLE]));
+    expect(changedProperties(snapshot, [...reordered].reverse().map((t, i) => ({ ...t, order: i })), managed)).toEqual(new Set());
   });
 });

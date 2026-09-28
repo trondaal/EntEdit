@@ -191,8 +191,9 @@ single `;`-joined update:
 2. `INSERT DATA` for new triples, into the entity's graph (`targetGraph`, the
    graph of its `rdf:type`)
 3. RDF-star `entedit:valueOrder` annotations rewritten only for properties whose
-   values or order actually changed; data that was never ordered by the editor
-   is left unannotated
+   values or order actually changed, each in the graph of the triple it
+   annotates; data that was never ordered by the editor stays unannotated
+   until a value is moved from its load position (`reorderedProperties`)
 4. `buildInverseCleanup` removes inverse triples (`owl:inverseOf` in either
    direction) for relationship values the user removed, plus their annotations
 
@@ -248,9 +249,12 @@ wherever values are listed:
   (xsd:integer, positions from 0).
 - **Written** only by the editor's save (`buildEntityUpdate`, step 3 above): for
   properties with more than one value, rewritten when a save changes that
-  property. Imported or never-reordered data has no annotations — every reader
-  needs a fallback order. The annotations are currently inserted into the
-  default graph even when the triple lives in a named graph.
+  property's values or order. For a property without annotations, "changed
+  order" means a value moved from its load position — comparing with the
+  (missing) stored annotation instead made a first reordering save nothing. Imported or never-reordered data has no annotations — every reader
+  needs a fallback order. Each annotation is inserted into the graph of the
+  triple it annotates (where the stored triple lives, or the entity's graph for
+  a new one); removing them searches every graph.
 - **Perspective:** the order belongs to the subject's own statement. A link
   stated from the other side (an incoming triple, shown through `owl:inverseOf`)
   has no order on this side; e.g. a manifestation's contents are ordered only
