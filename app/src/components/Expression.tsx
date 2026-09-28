@@ -26,7 +26,6 @@ interface ExpressionProps {
   config: SparqlEndpointConfig;
   selectedLanguage: string;
   onEntitySearch: (name: string) => void;
-  initialExpanded?: boolean;
 }
 
 const Expression: React.FC<ExpressionProps> = ({
@@ -35,11 +34,10 @@ const Expression: React.FC<ExpressionProps> = ({
   config,
   selectedLanguage,
   onEntitySearch,
-  initialExpanded = false,
 }) => {
   const { t } = useTranslation();
   const { enqueueSnackbar } = useSnackbar();
-  const [manifestationsExpanded, setManifestationsExpanded] = useState(initialExpanded);
+  const [manifestationsExpanded, setManifestationsExpanded] = useState(false);
   const graphUrl = getGraphVisualizationUrl(config.url, result.uri);
 
   // Determine the primary display title
@@ -387,6 +385,23 @@ const Expression: React.FC<ExpressionProps> = ({
                   gap: 0.75,
                   mt: 0.25,
                 }}>
+                  <Chip
+                    label={result.manifestation_count != null ? t('search.publicationsCount', { count: result.manifestation_count }) : t('search.publications')}
+                    size="small"
+                    variant="outlined"
+                    color="primary"
+                    onClick={handleToggleManifestations}
+                    icon={manifestationsExpanded ? <ExpandLess /> : <ExpandMore />}
+                    sx={{
+                      mr: 1,
+                      cursor: 'pointer',
+                      height: 20,
+                      fontSize: '0.6875rem',
+                      fontWeight: 500,
+                      '& .MuiChip-label': { overflow: 'visible' },
+                      '& .MuiChip-icon': { fontSize: '1rem' },
+                    }}
+                  />
                   {splitSemicolonValues(result.language).map((lang, index) => (
                     <Chip
                       key={`lang-${index}`}
@@ -443,23 +458,6 @@ const Expression: React.FC<ExpressionProps> = ({
                       }}
                     />
                   ))}
-                  <Chip
-                    label={result.manifestation_count != null ? t('search.publicationsCount', { count: result.manifestation_count }) : t('search.publications')}
-                    size="small"
-                    variant="outlined"
-                    onClick={handleToggleManifestations}
-                    icon={manifestationsExpanded ? <ExpandLess /> : <ExpandMore />}
-                    sx={{
-                      ml: 2,
-                      cursor: 'pointer',
-                      height: 20,
-                      fontSize: '0.6875rem',
-                      fontWeight: 500,
-                      borderColor: 'divider',
-                      '& .MuiChip-label': { overflow: 'visible' },
-                      '& .MuiChip-icon': { fontSize: '1rem' },
-                    }}
-                  />
                 </Box>
 
               </Box>

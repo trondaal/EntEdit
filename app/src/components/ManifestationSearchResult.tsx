@@ -13,6 +13,7 @@ import {
 import { ExpandMore, ExpandLess, AccountTree, ContentCopy } from "@mui/icons-material";
 import { useSnackbar } from "notistack";
 import { useTranslation } from "react-i18next";
+import CollapsibleNote from "./CollapsibleNote";
 import type { ManifestationSearchResult as ManifestationSearchResultType } from "../hooks/useSearchQueries";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import { getGraphVisualizationUrl, openGraphVisualization } from "../utils/graphUtils";
@@ -185,18 +186,8 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                   </Typography>
                 )}
 
-                {/* Line 3: Notes (all on one line) */}
-                {notesLine && (
-                  <Typography
-                    variant="caption"
-                    color="text.secondary"
-                    sx={{
-                      lineHeight: 1.4,
-                    }}
-                  >
-                    {notesLine}
-                  </Typography>
-                )}
+                {/* Line 3: Notes, collapsed to two lines when long */}
+                {notesLine && <CollapsibleNote text={notesLine} />}
 
                 {/* Line 4: Identifiers (all on one line) */}
                 {identifiersLine && (
@@ -461,6 +452,25 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                   gap: 0.75,
                   mt: 0.5,
                 }}>
+                  {!isSingleExpression && (
+                    <Chip
+                      label={result.expression_count != null ? t('search.contentsCount', { count: result.expression_count }) : t('search.contents')}
+                      size="small"
+                      variant="outlined"
+                      color="primary"
+                      onClick={handleToggleExpressions}
+                      icon={expressionsExpanded ? <ExpandLess /> : <ExpandMore />}
+                      sx={{
+                        mr: 1,
+                        cursor: 'pointer',
+                        height: 20,
+                        fontSize: '0.6875rem',
+                        fontWeight: 500,
+                        '& .MuiChip-label': { overflow: 'visible' },
+                        '& .MuiChip-icon': { fontSize: '1rem' },
+                      }}
+                    />
+                  )}
                   {allChips.map((chip, index) => (
                     <Chip
                       key={`chip-${index}`}
@@ -475,25 +485,6 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                       }}
                     />
                   ))}
-                  {!isSingleExpression && (
-                    <Chip
-                      label={result.expression_count != null ? t('search.contentsCount', { count: result.expression_count }) : t('search.contents')}
-                      size="small"
-                      variant="outlined"
-                      onClick={handleToggleExpressions}
-                      icon={expressionsExpanded ? <ExpandLess /> : <ExpandMore />}
-                      sx={{
-                        ml: 2,
-                        cursor: 'pointer',
-                        height: 20,
-                        fontSize: '0.6875rem',
-                        fontWeight: 500,
-                        borderColor: 'divider',
-                        '& .MuiChip-label': { overflow: 'visible' },
-                        '& .MuiChip-icon': { fontSize: '1rem' },
-                      }}
-                    />
-                  )}
                 </Box>
               </Box>
             }

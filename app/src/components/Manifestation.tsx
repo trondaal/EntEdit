@@ -16,6 +16,7 @@ import {
   formatNotes,
   formatIdentifiers,
 } from "../utils/textFormatters";
+import CollapsibleNote from "./CollapsibleNote";
 import { getCarrierTypeIcon, typeIconSmallSx } from "../utils/contentTypeIcons";
 
 interface ManifestationProps {
@@ -120,18 +121,8 @@ const Manifestation: React.FC<ManifestationProps> = ({
                 </Typography>
               )}
 
-              {/* Line 3: Notes (all on one line) */}
-              {notesLine && (
-                <Typography
-                  variant="caption"
-                  color="text.secondary"
-                  sx={{
-                    lineHeight: 1.4,
-                  }}
-                >
-                  {notesLine}
-                </Typography>
-              )}
+              {/* Line 3: Notes, collapsed to two lines when long */}
+              {notesLine && <CollapsibleNote text={notesLine} />}
 
               {/* Line 4: Identifiers (all on one line) */}
               {identifiersLine && (
