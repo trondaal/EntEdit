@@ -14,6 +14,8 @@ import type { SparqlEndpointConfig } from "../types/sparql";
 
 interface ManifestationResultSetProps {
   searchQuery: string;
+  /** Category filters are applied; results are shown without search text too */
+  filtered: boolean;
   /** Hits for the whole search, across all pages */
   totalCount: number;
   /** No exact hits: the results match similar spellings */
@@ -32,6 +34,7 @@ interface ManifestationResultSetProps {
 
 const ManifestationResultSet: React.FC<ManifestationResultSetProps> = ({
   searchQuery,
+  filtered,
   searchResults,
   totalCount,
   fuzzy,
@@ -72,7 +75,7 @@ const ManifestationResultSet: React.FC<ManifestationResultSetProps> = ({
       <Box sx={{ p: 2, borderBottom: 1, borderColor: "divider" }}>
         <Typography variant="h6" sx={{ display: "flex", alignItems: "center" }}>
           {t("search.searchResults")}
-          {searchResults.length > 0 && searchQuery && (
+          {searchResults.length > 0 && (searchQuery || filtered) && (
             <Typography variant="body2" color="text.secondary" sx={{ ml: 2 }}>
               ({t("search.foundCount", { count: totalCount })})
             </Typography>
@@ -88,7 +91,7 @@ const ManifestationResultSet: React.FC<ManifestationResultSetProps> = ({
         </Alert>
       )}
 
-      {!searchQuery ? (
+      {!searchQuery && !filtered ? (
         <Box sx={{ p: 3, textAlign: "center", color: "text.secondary" }}>
           {t("search.enterSearchQueryManifestations")}
         </Box>
@@ -98,7 +101,11 @@ const ManifestationResultSet: React.FC<ManifestationResultSetProps> = ({
         </Box>
       ) : searchResults.length === 0 ? (
         <Box sx={{ p: 3, textAlign: "center", color: "text.secondary" }}>
-          {t("search.noResultsFor", { query: searchQuery })}
+          {!searchQuery
+            ? t("search.noResultsForFilters")
+            : filtered
+              ? t("search.noResultsForWithFilters", { query: searchQuery })
+              : t("search.noResultsFor", { query: searchQuery })}
         </Box>
       ) : (
         <>

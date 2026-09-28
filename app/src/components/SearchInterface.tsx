@@ -18,7 +18,14 @@ import {
   useSearchFacets,
   useSearchManifestations,
 } from "../hooks/useSearchQueries";
-import { hasFilters, toggleFilter, type FilterField, type SearchFilters as Filters } from "../utils/searchFilters";
+import {
+  INDEX_FILTER_FIELDS,
+  hasFilters,
+  toggleFilter,
+  type FilterField,
+  type SearchFilters as Filters,
+  type SearchIndex,
+} from "../utils/searchFilters";
 import SearchFilters from "./SearchFilters";
 import { useDebouncedValue } from "../hooks/useDebouncedValue";
 import ResultSet from "./ResultSet";
@@ -38,8 +45,14 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
   const { logEvent, isRecording } = useLogging();
   const [searchInput, setSearchInput] = useState<string>("");
   const [searchMode, setSearchMode] = useState<'expression' | 'manifestation'>('expression');
-  // Category filters apply to the content search only
-  const [filters, setFilters] = useState<Filters>({});
+  // Each search tab keeps its own category filters
+  const [filtersByMode, setFiltersByMode] = useState<Record<'expression' | 'manifestation', Filters>>({
+    expression: {},
+    manifestation: {},
+  });
+  const filters = filtersByMode[searchMode];
+  const setFilters = (update: (current: Filters) => Filters) =>
+    setFiltersByMode((all) => ({ ...all, [searchMode]: update(all[searchMode]) }));
 
   // Debounce the search query to avoid firing expensive SPARQL queries on every keystroke
   const debouncedQuery = useDebouncedValue(searchInput, 500);
@@ -48,6 +61,8 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
   const expressionQuery = searchMode === 'expression' ? debouncedQuery : '';
   const manifestationQuery = searchMode === 'manifestation' ? debouncedQuery : '';
   const expressionFilters = searchMode === 'expression' ? filters : {};
+  const manifestationFilters = searchMode === 'manifestation' ? filters : {};
+  const searchIndex: SearchIndex = searchMode === 'expression' ? 'expressionsIndex' : 'manifestationsIndex';
 
   const {
     data: searchData,
@@ -60,11 +75,10 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
 
   // Counts for the current search; with neither text nor filters, for the
   // whole collection. The collection's values also decide which labels to load.
-  const isContentSearch = searchMode === 'expression';
   const { data: facets, isPlaceholderData: facetsUpdating } = useSearchFacets(
-    config, expressionQuery, expressionFilters, isContentSearch,
+    config, searchIndex, debouncedQuery, filters,
   );
-  const { data: collectionFacets } = useSearchFacets(config, "", {}, isContentSearch);
+  const { data: collectionFacets } = useSearchFacets(config, searchIndex, "", {});
   const facetIris = useMemo(
     () => [...Object.values(collectionFacets ?? {}), ...Object.values(facets ?? {})]
       .flat()
@@ -72,7 +86,7 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
     [collectionFacets, facets],
   );
   const { data: facetLabels } = useFacetLabels(config, facetIris, selectedLanguage);
-  const filtered = isContentSearch && hasFilters(filters);
+  const filtered = hasFilters(filters);
 
   const {
     data: manifestationSearchData,
@@ -81,7 +95,7 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
     hasNextPage: manifestationHasNextPage,
     isFetchingNextPage: manifestationIsFetchingNextPage,
     fetchNextPage: manifestationFetchNextPage,
-  } = useSearchManifestations(config, manifestationQuery, selectedLanguage);
+  } = useSearchManifestations(config, manifestationQuery, selectedLanguage, manifestationFilters);
 
   // Flatten infinite query pages into flat arrays
   const searchResults = useMemo(
@@ -115,14 +129,14 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
     const selected = !(filters[field] ?? []).includes(value);
     setFilters((current) => toggleFilter(current, field, value));
     if (isRecording) {
-      logEvent({ type: "search_filter_changed", field, value, selected, query: debouncedQuery });
+      logEvent({ type: "search_filter_changed", field, value, selected, query: debouncedQuery, mode: searchMode });
     }
   };
 
   const handleClearFilters = () => {
-    setFilters({});
+    setFilters(() => ({}));
     if (isRecording) {
-      logEvent({ type: "search_filters_cleared", query: debouncedQuery });
+      logEvent({ type: "search_filters_cleared", query: debouncedQuery, mode: searchMode });
     }
   };
 
@@ -215,9 +229,10 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
               <Typography variant="body2" color="text.secondary">
                 {t("search.searchHelp")}
               </Typography>
-              {isContentSearch && facets && (
+              {facets && (
                 <Box sx={{ mt: 3 }}>
                   <SearchFilters
+                    fields={INDEX_FILTER_FIELDS[searchIndex]}
                     facets={facets}
                     labels={facetLabels ?? new Map()}
                     filters={filters}
@@ -266,6 +281,7 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
           ) : (
             <ManifestationResultSet
               searchQuery={debouncedQuery}
+              filtered={filtered}
               searchResults={manifestationSearchResults}
               totalCount={manifestationSearchData?.pages[0]?.total ?? 0}
               fuzzy={manifestationSearchData?.pages[0]?.fuzzy ?? false}

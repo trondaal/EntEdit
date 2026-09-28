@@ -81,17 +81,19 @@ export interface SearchPerformedEvent extends BaseEvent {
 
 export interface SearchFilterChangedEvent extends BaseEvent {
   type: "search_filter_changed";
-  /** Index field: language, contentType, workType or genre */
+  /** Index field: mediaType, carrierType, language, contentType, workType or genre */
   field: string;
   /** Category IRI */
   value: string;
   selected: boolean;
   query: string;
+  mode: "expression" | "manifestation";
 }
 
 export interface SearchFiltersClearedEvent extends BaseEvent {
   type: "search_filters_cleared";
   query: string;
+  mode: "expression" | "manifestation";
 }
 
 export interface SearchResultSelectedEvent extends BaseEvent {

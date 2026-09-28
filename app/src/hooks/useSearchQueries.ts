@@ -4,7 +4,7 @@ import { escapeSparqlLiteral, sanitizeSparqlUri } from "../utils/labelUtils";
 import { hasFuzzyTerms, toLuceneQuery } from "../utils/luceneQuery";
 import { createLanguageFallbackFragment, getFallbackLanguage } from "../utils/sparqlFragments";
 import {
-  FILTER_FIELDS,
+  INDEX_FILTER_FIELDS,
   combineQuery,
   hasFilters,
   normalizeFilters,
@@ -13,6 +13,7 @@ import {
   type Facets,
   type FilterField,
   type SearchFilters,
+  type SearchIndex,
 } from "../utils/searchFilters";
 import {
   buildExpressionDetailQuery,
@@ -245,8 +246,8 @@ export const useSearchExpressions = (
 };
 
 /**
- * Values of the filter fields, with hit counts, over everything a content
- * search finds — or over the whole collection when it has neither text nor
+ * Values of the filter fields, with hit counts, over everything a search
+ * finds — or over the whole collection when it has neither text nor
  * filters. Only values that occur are returned.
  *
  * A field with a selection is counted without its own filter (one extra,
@@ -255,20 +256,21 @@ export const useSearchExpressions = (
  */
 export const useSearchFacets = (
   config: SparqlEndpointConfig,
+  index: SearchIndex,
   query: string,
   filters: SearchFilters = {},
   enabled = true,
 ) => {
   const normalized = normalizeFilters(filters);
   return useQuery({
-    queryKey: ["searchFacets", config.url, query, normalized],
+    queryKey: ["searchFacets", config.url, index, query, normalized],
     queryFn: async ({ signal }): Promise<Facets> => {
       const client = new SparqlClient(config);
-      const index = "expressionsIndex";
+      const fields = INDEX_FILTER_FIELDS[index];
       const textQuery = await textQueryFor(client, index, query, signal);
-      const active = FILTER_FIELDS.filter((field) => normalized[field]?.length);
+      const active = fields.filter((field) => normalized[field]?.length);
       const [facets, ...own] = await Promise.all([
-        facetCounts(client, index, combineQuery(textQuery, toFilterClauses(normalized)), FILTER_FIELDS, signal),
+        facetCounts(client, index, combineQuery(textQuery, toFilterClauses(normalized)), fields, signal),
         ...active.map((field) =>
           facetCounts(client, index, combineQuery(textQuery, toFilterClauses(normalized, field)), [field], signal),
         ),
@@ -327,15 +329,17 @@ export const useSearchManifestations = (
   config: SparqlEndpointConfig,
   query: string,
   language: string,
+  filters: SearchFilters = {},
 ) => {
+  const normalized = normalizeFilters(filters);
   return useInfiniteQuery({
-    queryKey: ["searchManifestations", config.url, query, language],
+    queryKey: ["searchManifestations", config.url, query, language, normalized],
     queryFn: async ({ pageParam, signal }): Promise<SearchPage<ManifestationSearchResult>> => {
-      if (!query || query.trim().length === 0) {
+      if (!hasCriteria(query, normalized)) {
         return EMPTY;
       }
       const client = new SparqlClient(config);
-      const { uris, total, fuzzy } = await findHits(client, "manifestationsIndex", query, {}, pageParam, signal);
+      const { uris, total, fuzzy } = await findHits(client, "manifestationsIndex", query, normalized, pageParam, signal);
       if (uris.length === 0) return { results: [], total, fuzzy };
 
       const details = await client.query(
@@ -347,7 +351,7 @@ export const useSearchManifestations = (
     },
     initialPageParam: FIRST_PAGE,
     getNextPageParam: nextPage,
-    enabled: Boolean(query && query.trim().length > 0),
+    enabled: hasCriteria(query, normalized),
     staleTime: 5 * 60 * 1000, // 5 minutes
   });
 };

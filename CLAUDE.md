@@ -95,8 +95,9 @@ EntEdit/
 - `LabelManager`, `LanguageSelector` - Label and language UI
 - `ObjectPropertyGroup`, `ObjectPropertyValue` - Object property rendering
 - `ResultSet` - Generic search result display
-- `SearchFilters` - Checkbox filters with hit counts for the content search
-  (language, content type, category of work, genre or form)
+- `SearchFilters` - Checkbox filters with hit counts for both searches (language,
+  content type, category of work, genre or form; publications add media and
+  carrier type); each search tab keeps its own selection
 - `CollapsibleNote` - Manifestation note cut to two lines, "show the whole note"
   link included; the cut is measured (CSS line-clamp cannot fit the link)
 
@@ -134,8 +135,9 @@ EntEdit/
 - `luceneQuery.ts` - escapes free-text search input for the Lucene connector
 - `wemiQueries.ts` - expression/manifestation detail queries shared by the search
   pages and the expandable lists under a result, built around a *scope* pattern
-- `searchFilters.ts` - content-search category filters as Lucene clauses (OR within
-  a field, AND across) and parsing of `lucene:facets` counts; unit-tested
+- `searchFilters.ts` - search category filters as Lucene clauses (OR within a
+  field, AND across), the fields each index offers (`INDEX_FILTER_FIELDS`) and
+  parsing of `lucene:facets` counts; unit-tested
 - `turtleSerializer.ts` - Turtle serialization with configurable namespace prefix registry (`KNOWN_PREFIXES` map);
   predicates, datatypes, and `rdf:type` object (class) URIs are prefix-compacted; subject and other
   object URIs (entity references) stay as full `<uri>`
@@ -267,8 +269,10 @@ properties are not turned into strings.
   before it: all `titles$…` fields are one Lucene field `titles`, so query
   `titles:word`, never `titles$work:word`. Use it to reach one field by several
   property chains (e.g. `workType$direct` and `workType$inverse`)
-- Content-search filters use unanalyzed IRI fields in `expressionsIndex`
-  (`language`, `contentType`, `workType`, `genre`); counts come from
+- Search filters use unanalyzed IRI fields in `expressionsIndex` (`language`,
+  `contentType`, `workType`, `genre`) and `manifestationsIndex` (the same plus
+  `mediaType`, `carrierType`, reached through the embodied expressions and their
+  works — a manifestation counts once per value any of them has); counts come from
   `lucene:facetFields`/`lucene:facets` and filters are Lucene clauses, so both
   stay in the index (3–55 ms on 89k expressions; the same counts in SPARQL took
   up to 4 s and grow with the hits). A field with a selection is counted in its

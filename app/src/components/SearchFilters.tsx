@@ -12,7 +12,6 @@ import {
 import { useTranslation } from "react-i18next";
 import { capitalizeFirstLetter } from "../utils/textFormatters";
 import {
-  FILTER_FIELDS,
   hasFilters,
   type FacetValue,
   type Facets,
@@ -24,6 +23,8 @@ import {
 const SHOWN_VALUES = 6;
 
 interface SearchFiltersProps {
+  /** Fields offered, in display order */
+  fields: readonly FilterField[];
   /** Values and hit counts of the current result set */
   facets: Facets;
   /** Category labels by IRI */
@@ -39,12 +40,13 @@ interface SearchFiltersProps {
 const localName = (iri: string): string => iri.replace(/[/#]$/, "").split(/[/#]/).pop() ?? iri;
 
 /**
- * Checkbox filters for the content search: one group per category, each
+ * Checkbox filters for a search: one group per category, each
  * value with the number of hits it has in the current result set. Only
  * values that occur are listed; a checked value stays visible (with 0 when
  * other filters exclude it) so it can be unchecked again.
  */
 const SearchFilters: React.FC<SearchFiltersProps> = ({
+  fields,
   facets,
   labels,
   filters,
@@ -56,7 +58,7 @@ const SearchFilters: React.FC<SearchFiltersProps> = ({
   const [showAll, setShowAll] = useState<Partial<Record<FilterField, boolean>>>({});
   const locale = i18n.language === "no" ? "nb-NO" : "en";
 
-  const groups = FILTER_FIELDS.map((field) => {
+  const groups = fields.map((field) => {
     const values: FacetValue[] = [...(facets[field] ?? [])];
     for (const value of filters[field] ?? []) {
       if (!values.some((v) => v.value === value)) values.push({ value, count: 0 });

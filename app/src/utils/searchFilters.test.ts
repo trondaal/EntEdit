@@ -71,4 +71,11 @@ describe("parseFacets", () => {
       parseFacets([row("language", FRE, 3), row("language", GER, 9), row("titles", "x", 1)]),
     ).toEqual({ language: [{ value: GER, count: 9 }, { value: FRE, count: 3 }] });
   });
+
+  it("keeps the manifestation-level fields", () => {
+    expect(parseFacets([row("mediaType", "m", 2), row("carrierType", "c", 1)])).toEqual({
+      mediaType: [{ value: "m", count: 2 }],
+      carrierType: [{ value: "c", count: 1 }],
+    });
+  });
 });
