@@ -49,29 +49,52 @@ entedit:display
 
 # entedit:valueOrder records the position of one value among the values of a
 # property, as the cataloguer arranged them in the editor. It annotates the
-# statement itself, so the order belongs to that triple. The annotations are
-# written and read with SPARQL-star; as data they look like this in Turtle-star
-# (the RDF-star Community Group extension of Turtle that GraphDB 10 supports):
-#   << <work> rdaeo:P20315 "B" >> entedit:valueOrder 0 .
-#   << <work> rdaeo:P20315 "A" >> entedit:valueOrder 1 .
-# This is not standard Turtle 1.1: other parsers reject it, and GraphDB exports
-# it as plain Turtle only as opaque urn:rdf4j:triple: IRIs (use the Turtle-star
-# format, .ttls, to keep it). RDF 1.2 writes a triple term as <<( s p o )>> and
-# gives << s p o >> a different meaning (a reifier), so a move to an RDF 1.2
+# statement itself, so the order belongs to that triple. Example: the contents
+# of a collection, with the preface first.
+#
+# In the database (RDF-star, written and read with SPARQL-star):
+#   << <http://entedit.org/manifestation/221397> rdamo:P30139
+#      <http://entedit.org/expression/709593> >> entedit:valueOrder 0 .
+#   << <http://entedit.org/manifestation/221397> rdamo:P30139
+#      <http://entedit.org/expression/37684> >> entedit:valueOrder 1 .
+#
+# EntEdit export with "Include value order (Turtle-star)" (.ttls): each value
+# is followed by its annotation, in the syntax Turtle-star and Turtle 1.2 share:
+#   <http://entedit.org/manifestation/221397>
+#       rdamo:P30139
+#           <http://entedit.org/expression/709593> {| entedit:valueOrder 0 |} ,
+#           <http://entedit.org/expression/37684> {| entedit:valueOrder 1 |} ,
+#           ...
+# EntEdit export without the option (.ttl): the values are written in the same
+# order, but plain Turtle has no way to record it, so it is lost on import.
+#
+# GraphDB's own export (Workbench: Explore -> Graphs overview -> Export
+# repository, format Turtle* or TriG*) writes one statement per annotation:
+#   <<<http://entedit.org/manifestation/221397> rdamo:P30139
+#     <http://entedit.org/expression/709593>>> entedit:valueOrder 0 .
+# Exported as plain Turtle, GraphDB replaces the quoted triple with an opaque
+# <urn:rdf4j:triple:...> IRI that no other tool can read back.
+#
+# Import: EntEdit's import dialog and GraphDB read both Turtle-star forms above
+# (.ttls, and also .ttl, which GraphDB parses leniently); the triple is asserted
+# and its annotation restored. Standard Turtle 1.1 parsers reject both forms.
+# RDF 1.2 reads << s p o >> as a reifier of the triple rather than the triple
+# itself and writes a triple term as <<( s p o )>>, so a move to an RDF 1.2
 # store would need these annotations converted.
-# Positions start at 0. The editor writes them only for properties with more
-# than one value, and rewrites a property's annotations whenever a save changes
-# its values or their order; properties never ordered in the editor (e.g.
-# imported data) stay unannotated and keep their load order. The order is seen
-# from the subject: a relationship stated on the other entity (shown through
-# owl:inverseOf) is ordered there. Distinct from entedit:order, which orders
-# the properties themselves.
+#
+# Positions start at 0. The editor writes them for properties with more than
+# one value, when a save changes their values or order: a property that was
+# never ordered (e.g. imported data) stays unannotated until a value is moved.
+# Each annotation is stored in the named graph of the triple it annotates. The
+# order is seen from the subject: a link stated only on the other entity (shown
+# through owl:inverseOf) is ordered there. Distinct from entedit:order, which
+# orders the properties themselves.
 entedit:valueOrder
     a owl:DatatypeProperty ;
     rdfs:range xsd:integer ;
     rdfs:label "has value order (integer)" ;
-    rdfs:comment "Position (from 0) of the value of an annotated statement among the values of the same property for the same subject, as arranged in the editor. Used as an RDF-star annotation, in Turtle-star/SPARQL-star syntax: << s p o >> entedit:valueOrder n."@en ,
-        "Plassering (fra 0) for verdien i et annotert utsagn blant verdiene til samme egenskap for samme subjekt, slik de er ordnet i redigeringsverktøyet. Brukes som RDF-star-annotasjon, i Turtle-star/SPARQL-star-syntaks: << s p o >> entedit:valueOrder n."@no .
+    rdfs:comment "Position (from 0) of the value of an annotated statement among the values of the same property for the same subject, as arranged in the editor. Used as an RDF-star annotation: stored and queried as << s p o >> entedit:valueOrder n, and written by the EntEdit export (Turtle-star, .ttls) after the value as s p o {| entedit:valueOrder n |}."@en ,
+        "Plassering (fra 0) for verdien i et annotert utsagn blant verdiene til samme egenskap for samme subjekt, slik de er ordnet i redigeringsverktøyet. Brukes som RDF-star-annotasjon: lagres og spørres som << s p o >> entedit:valueOrder n, og skrives av EntEdit-eksporten (Turtle-star, .ttls) etter verdien som s p o {| entedit:valueOrder n |}."@no .
 
 #Adding some classes for the vocabularies used to facilitate filtering by range
 entedit:Contenttype
