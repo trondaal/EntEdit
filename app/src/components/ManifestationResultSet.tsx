@@ -14,6 +14,10 @@ import type { SparqlEndpointConfig } from "../types/sparql";
 
 interface ManifestationResultSetProps {
   searchQuery: string;
+  /** Hits for the whole search, across all pages */
+  totalCount: number;
+  /** No exact hits: the results match similar spellings */
+  fuzzy: boolean;
   searchResults: ManifestationSearchResultType[];
   searchLoading: boolean;
   searchError: Error | null;
@@ -29,6 +33,8 @@ interface ManifestationResultSetProps {
 const ManifestationResultSet: React.FC<ManifestationResultSetProps> = ({
   searchQuery,
   searchResults,
+  totalCount,
+  fuzzy,
   searchLoading,
   searchError,
   onSelectResult,
@@ -68,9 +74,7 @@ const ManifestationResultSet: React.FC<ManifestationResultSetProps> = ({
           {t("search.searchResults")}
           {searchResults.length > 0 && searchQuery && (
             <Typography variant="body2" color="text.secondary" sx={{ ml: 2 }}>
-              ({hasNextPage
-                ? t("search.foundCountMore", { count: searchResults.length })
-                : t("search.foundCount", { count: searchResults.length })})
+              ({t("search.foundCount", { count: totalCount })})
             </Typography>
           )}
         </Typography>
@@ -97,6 +101,12 @@ const ManifestationResultSet: React.FC<ManifestationResultSetProps> = ({
           {t("search.noResultsFor", { query: searchQuery })}
         </Box>
       ) : (
+        <>
+        {fuzzy && (
+          <Alert severity="info" sx={{ mx: 2, mb: 1 }}>
+            {t("search.similarSpellings", { query: searchQuery })}
+          </Alert>
+        )}
         <List
           disablePadding
           sx={{
@@ -126,6 +136,7 @@ const ManifestationResultSet: React.FC<ManifestationResultSetProps> = ({
             </Box>
           )}
         </List>
+        </>
       )}
     </Paper>
   );

@@ -95,6 +95,8 @@ EntEdit/
 - `LabelManager`, `LanguageSelector` - Label and language UI
 - `ObjectPropertyGroup`, `ObjectPropertyValue` - Object property rendering
 - `ResultSet` - Generic search result display
+- `CollapsibleNote` - Manifestation note cut to two lines, "show the whole note"
+  link included; the cut is measured (CSS line-clamp cannot fit the link)
 
 **Configuration:**
 - `ConfigurationWizard` - First-run setup dialog
@@ -128,6 +130,8 @@ EntEdit/
 - `rdfTerms.ts` - RDF term model shared by load and save (IRI / literal with language
   tag or datatype), SPARQL serialization and term identity for diffing
 - `luceneQuery.ts` - escapes free-text search input for the Lucene connector
+- `wemiQueries.ts` - expression/manifestation detail queries shared by the search
+  pages and the expandable lists under a result, built around a *scope* pattern
 - `turtleSerializer.ts` - Turtle serialization with configurable namespace prefix registry (`KNOWN_PREFIXES` map);
   predicates, datatypes, and `rdf:type` object (class) URIs are prefix-compacted; subject and other
   object URIs (entity references) stay as full `<uri>`
@@ -234,6 +238,27 @@ properties are not turned into strings.
 - `DELETE`/`DELETE WHERE` without `GRAPH` removes matching triples from **every**
   graph, but `INSERT DATA` without `GRAPH` writes to the default graph; use
   `DELETE DATA`/`INSERT DATA` with an explicit `GRAPH` to keep data in place
+- A grouped subquery (`OPTIONAL { SELECT … GROUP BY }`) is evaluated on its own
+  before the join, so it must bind its entities itself — repeat the outer
+  `VALUES`/scope inside it, or it runs over the whole repository (this made
+  every search page cost ~4.5 s on 650k triples, whatever the search term)
+- A variable bound only in an `OPTIONAL` is unbound in rows where it did not
+  match, and a later pattern on it then matches *everything* (an expression
+  without a work joined with every work title). Nesting the dependent patterns
+  inside that `OPTIONAL` is correct but slow: GraphDB evaluates the nested group
+  for the whole repository first (~1 s at 90k expressions, and heap for the
+  join). Instead give each block its own link and variable, and group
+  subqueries by the scoped entity (see the work blocks in
+  `buildExpressionDetailQuery`)
+- Test query changes against a large repository (millions of statements):
+  both mistakes above were invisible at 100k–600k triples
+- Page Lucene hits with `lucene:limit`/`lucene:offset` (already best first),
+  not SPARQL `ORDER BY`/`LIMIT`, which sorts every hit of a broad term first
+- A query cancelled by the browser keeps running in GraphDB; long-running ones
+  show up under `/rest/monitor/repository/<repo>/query/active`. The repository
+  config caps queries at 60 s (`graphdb:query-timeout`) and must keep
+  `throw-QueryEvaluationException-on-timeout "true"`: without it a timed-out
+  query silently returns a partial result instead of an error
 - The Lucene connector rejects bare query syntax (`(`, `"`, `:`, `AND`), so user
   input goes through `toLuceneQuery` (`utils/luceneQuery.ts`) before it is
   placed in `lucene:query`

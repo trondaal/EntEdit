@@ -59,12 +59,12 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
 
   // Flatten infinite query pages into flat arrays
   const searchResults = useMemo(
-    () => searchData?.pages.flat() ?? [],
+    () => searchData?.pages.flatMap((page) => page.results) ?? [],
     [searchData],
   );
 
   const manifestationSearchResults = useMemo(
-    () => manifestationSearchData?.pages.flat() ?? [],
+    () => manifestationSearchData?.pages.flatMap((page) => page.results) ?? [],
     [manifestationSearchData],
   );
 
@@ -193,6 +193,8 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
             <ResultSet
               searchQuery={debouncedQuery}
               searchResults={searchResults}
+              totalCount={searchData?.pages[0]?.total ?? 0}
+              fuzzy={searchData?.pages[0]?.fuzzy ?? false}
               searchLoading={searchLoading}
               searchError={searchError as Error | null}
               onSelectResult={(uri: string) => {
@@ -211,6 +213,8 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
             <ManifestationResultSet
               searchQuery={debouncedQuery}
               searchResults={manifestationSearchResults}
+              totalCount={manifestationSearchData?.pages[0]?.total ?? 0}
+              fuzzy={manifestationSearchData?.pages[0]?.fuzzy ?? false}
               searchLoading={manifestationSearchLoading}
               searchError={manifestationSearchError as Error | null}
               onSelectResult={(uri: string) => {
