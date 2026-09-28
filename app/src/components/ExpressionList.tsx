@@ -24,6 +24,8 @@ interface ExpressionListProps {
   config: SparqlEndpointConfig;
   manifestationUri: string;
   selectedLanguage: string;
+  /** Expression shown as part of the publication entry itself (a collection) */
+  excludeUri?: string;
   onEntitySearch?: (name: string) => void;
 }
 
@@ -31,14 +33,18 @@ const ExpressionList: React.FC<ExpressionListProps> = ({
   config,
   manifestationUri,
   selectedLanguage,
+  excludeUri,
   onEntitySearch,
 }) => {
   const { t } = useTranslation();
   const {
-    data: expressions,
+    data: allExpressions,
     isLoading,
     error,
   } = useExpressionsByManifestation(config, manifestationUri, selectedLanguage);
+  const expressions = excludeUri
+    ? allExpressions?.filter((expression) => expression.uri !== excludeUri)
+    : allExpressions;
 
   const sectionSx = {
     bgcolor: "rgba(139, 92, 42, 0.12)",

@@ -17,7 +17,7 @@ import CollapsibleNote from "./CollapsibleNote";
 import type { ManifestationSearchResult as ManifestationSearchResultType } from "../hooks/useSearchQueries";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import { getGraphVisualizationUrl, openGraphVisualization } from "../utils/graphUtils";
-import { useExpressionsByManifestation } from "../hooks/useExpressionQueries";
+import { useExpressionDetail, useExpressionsByManifestation } from "../hooks/useExpressionQueries";
 import ExpressionList from "./ExpressionList";
 import {
   capitalizeFirstLetter,
@@ -52,11 +52,21 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
   const [expressionsExpanded, setExpressionsExpanded] = useState(false);
   const graphUrl = getGraphVisualizationUrl(config.url, result.uri);
 
-  // Auto-fetch expression data when there is exactly one expression
+  // The publication entry shows one expression and its work together with the
+  // manifestation: its only expression, or else the one collection among its
+  // contents (a work whose genre is marked entedit:collection). The other
+  // expressions are listed as contents.
   const isSingleExpression = result.expression_count === 1;
+  const collectionUri =
+    !isSingleExpression && result.collectionCount === 1 ? result.collectionExpression : undefined;
   const autoFetchUri = isSingleExpression ? result.uri : null;
   const { data: expressions } = useExpressionsByManifestation(config, autoFetchUri, selectedLanguage);
-  const singleExpression = expressions?.[0];
+  const { data: collectionExpression } = useExpressionDetail(config, collectionUri, selectedLanguage);
+  const singleExpression = isSingleExpression ? expressions?.[0] : collectionExpression ?? undefined;
+  const contentsCount =
+    result.expression_count != null
+      ? result.expression_count - (collectionUri ? 1 : 0)
+      : undefined;
 
   const handleToggleExpressions = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -454,7 +464,7 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                 }}>
                   {!isSingleExpression && (
                     <Chip
-                      label={result.expression_count != null ? t('search.contentsCount', { count: result.expression_count }) : t('search.contents')}
+                      label={contentsCount != null ? t('search.contentsCount', { count: contentsCount }) : t('search.contents')}
                       size="small"
                       variant="outlined"
                       color="primary"
@@ -497,6 +507,7 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
             config={config}
             manifestationUri={result.uri}
             selectedLanguage={selectedLanguage}
+            excludeUri={collectionUri}
             onEntitySearch={onEntitySearch}
           />
         </Collapse>

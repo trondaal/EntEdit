@@ -502,6 +502,15 @@ The application expects:
 - `entedit:valueOrder` predicate (via RDF-star) for multi-value ordering within a property
 - `entedit:linguistic false` on data properties whose values are not natural
   language, which suppresses the language selector for them
+- `entedit:collection true` on genre/form values (`entedit:P02` targets, marked in
+  `labels.genretypes.ttl`: `entedit:T01` short story collections, `ntsf:15`
+  anthologies). In the publication search, a manifestation with exactly one
+  expression whose work has such a genre is shown as that collection: the
+  expression and work are merged into the entry (like a single-expression
+  manifestation) and left out of its Contents (`collectionSubquery` in
+  `wemiQueries.ts`, `ManifestationSearchResult`). Two or more collections are
+  not merged. The collection work is not linked to its parts, so the genre is
+  the only signal
 - Standard RDFS vocabulary (rdfs:label, rdfs:domain, rdfs:range)
 - RDA vocabulary for bibliographic entities (Work, Expression, Manifestation, Item)
 - Properties must have correct `entedit:status` to appear in the editor UI;

@@ -4,6 +4,7 @@ import type { SparqlEndpointConfig } from "../types/sparql";
 import {
   buildExpressionDetailQuery,
   expressionOrderInManifestation,
+  expressionScope,
   expressionsOfManifestation,
   toExpressionDetail,
 } from "../utils/wemiQueries";
@@ -62,6 +63,31 @@ export const useExpressionsByManifestation = (
       );
     },
     enabled: Boolean(manifestationUri),
+    staleTime: 5 * 60 * 1000, // 5 minutes
+  });
+};
+
+/** Details of one expression, e.g. the collection a publication is presented as. */
+export const useExpressionDetail = (
+  config: SparqlEndpointConfig,
+  expressionUri: string | null | undefined,
+  language: string,
+) => {
+  return useQuery({
+    queryKey: ["expressionDetail", config.url, expressionUri, language],
+    queryFn: async ({ signal }): Promise<Expression | null> => {
+      if (!expressionUri) return null;
+      const client = new SparqlClient(config);
+      const response = await client.query(
+        buildExpressionDetailQuery(expressionScope([expressionUri]), language),
+        { signal },
+      );
+      const detail = response.results.bindings.map(toExpressionDetail)[0];
+      if (!detail) return null;
+      const { expression_title, ...rest } = detail;
+      return { ...rest, title: expression_title };
+    },
+    enabled: Boolean(expressionUri),
     staleTime: 5 * 60 * 1000, // 5 minutes
   });
 };

@@ -6,6 +6,7 @@
 entedit:T01
     a skos:Concept ;
     a entedit:Genretype;
+    entedit:collection true ;
     skos:prefLabel "Short story collection"@en, "Novellesamling"@nb, "Novellesamling"@nn ;
     rdfs:label "Novellesamling"@no, "Short story collection"@en.
 
@@ -584,6 +585,7 @@ entedit:T03
 
 <https://id.nb.no/vocabulary/ntsf/15>
 		a entedit:Genretype;
+		entedit:collection true ;
 		entedit:order 1;
 		rdfs:label "Antologier"@no, "Anthologies"@en.
 

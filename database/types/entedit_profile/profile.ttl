@@ -96,6 +96,21 @@ entedit:valueOrder
     rdfs:comment "Position (from 0) of the value of an annotated statement among the values of the same property for the same subject, as arranged in the editor. Used as an RDF-star annotation: stored and queried as << s p o >> entedit:valueOrder n, and written by the EntEdit export (Turtle-star, .ttls) after the value as s p o {| entedit:valueOrder n |}."@en ,
         "Plassering (fra 0) for verdien i et annotert utsagn blant verdiene til samme egenskap for samme subjekt, slik de er ordnet i redigeringsverktøyet. Brukes som RDF-star-annotasjon: lagres og spørres som << s p o >> entedit:valueOrder n, og skrives av EntEdit-eksporten (Turtle-star, .ttls) etter verdien som s p o {| entedit:valueOrder n |}."@no .
 
+# entedit:collection true marks a genre or form (a value of entedit:P02) whose
+# works gather other works: a short story collection, an anthology. A
+# manifestation that embodies exactly one expression of such a work, besides its
+# other contents, is presented as that collection in the publication search: the
+# collection's work and expression are merged into the publication entry, and
+# the remaining expressions (the stories, a preface) are listed as its contents.
+# The values themselves are marked in labels.genretypes.ttl. Values without the
+# annotation are not collections.
+entedit:collection
+    a owl:DatatypeProperty ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "is collection (boolean)" ;
+    rdfs:comment "Marks a genre or form (value of entedit:P02) whose works gather other works, such as short story collections and anthologies. A publication embodying one expression of such a work among its contents is presented as that collection."@en ,
+        "Markerer en sjanger eller form (verdi av entedit:P02) der verkene samler andre verk, som novellesamlinger og antologier. En utgivelse som inneholder ett uttrykk av et slikt verk blant innholdet, vises som denne samlingen."@no .
+
 #Adding some classes for the vocabularies used to facilitate filtering by range
 entedit:Contenttype
   a owl:Class ;
