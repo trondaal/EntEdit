@@ -270,6 +270,11 @@ entedit:P14
   rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
   rdfs:label "er fotograf i"@no, "is photographer in"@en.
 
+# Pseudonyms between persons. RDA's "has alternate/real identity of person"
+# (rdaao:P50428/P50429) point to a nomen; these sub-properties of the
+# unconstrained elements link two persons, as ISFDB records pseudonyms as
+# separate authors.
+
 entedit:P15
   a rdf:Property ;
   entedit:status "object property" ;
@@ -657,6 +662,9 @@ rdaao:P50450	entedit:status	"object property" ; rdfs:label "er redaktør for"@no
 rdaeo:P20330	entedit:status	"object property" ; rdfs:label "har redaktør av tekst"@no . #	has editor agent	rdac:C10006	rdac:C10002
 
 #Agent-to-manifestation object properties in use
+rdaao:P50494	entedit:status	"object property" ; rdfs:label "er skaper av manifestasjon"@no . #	is creator person of manifestation of	rdac:C10004	rdac:C10007
+rdamo:P30363	entedit:status	"object property" ; rdfs:label "har skaper av manifestasjon"@no . #	has creator person of manifestation	rdac:C10007	rdac:C10004
+
 rdaao:P50168	entedit:status	"object property" ; rdfs:label "er kringkaster"@no . #	is broadcaster agent of	rdac:C10002	rdac:C10007
 rdamo:P30067	entedit:status	"object property" ; rdfs:label "har kringkaster"@no . #	has broadcaster agent	rdac:C10007	rdac:C10002
 
