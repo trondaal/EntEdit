@@ -292,11 +292,11 @@
       "ui": true
     },
     "Category of work": {
-      "no": "Kategori av verk",
+      "no": "Verkskategori",
       "ui": true
     },
-    "Genre and form": {
-      "no": "Sjanger og form",
+    "Genre or form": {
+      "no": "Sjanger eller form",
       "ui": true
     }
   },
