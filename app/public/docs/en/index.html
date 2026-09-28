@@ -1263,7 +1263,7 @@
                 From the entity editor, open the <strong>⋮</strong> (more actions) menu and choose <strong>Turtle RDF</strong>. This exports the currently selected entity with all its properties and relationships. A dialog opens showing the formatted Turtle text, with two options:
             </p>
             <ul>
-                <li><strong>Download .ttl</strong> — saves the entity as a Turtle file.</li>
+                <li><strong>Download .ttl</strong> — saves the entity as a Turtle file (<code>.ttls</code> with the value-order option, see below).</li>
                 <li><strong>Copy to Clipboard</strong> — copies the Turtle text so you can paste it elsewhere.</li>
             </ul>
             <p>
@@ -1273,6 +1273,20 @@
             <h4>Bulk export</h4>
             <p>
                 The <strong>Download</strong> button in the application header lets you export multiple entity types at once. A dialog shows all available classes with entity counts. Select the classes you want to include (or use "Select All") and click Export. The result is a single Turtle file containing all entities of the selected types.
+            </p>
+
+            <h4>Value order</h4>
+            <p>
+                Both exports write the values of a property in the order set
+                in the editor. Plain Turtle cannot record that order, so it
+                is lost when the file is loaded elsewhere. Check
+                <strong>Include value order (Turtle-star)</strong> to keep it:
+                each ordered value is then followed by an annotation such as
+                <code>{| entedit:valueOrder 0 |}</code>, and the file is
+                downloaded as <code>.ttls</code>. GraphDB, and tools that read
+                Turtle 1.2, understand these annotations, so the order survives
+                an import back into EntEdit; standard Turtle tools reject the
+                file. Leave the option off for files meant for other tools.
             </p>
 
             <div class="info-box tip">
@@ -1285,7 +1299,8 @@
                 The <strong>Import</strong> button (upward arrow) in the
                 application header loads an RDF file directly into the
                 database. Supported formats are Turtle (<code>.ttl</code>),
-                N-Triples (<code>.nt</code>), and RDF/XML
+                Turtle-star (<code>.ttls</code>, e.g. an export with value
+                order), N-Triples (<code>.nt</code>), and RDF/XML
                 (<code>.rdf</code>).
             </p>
             <p>

@@ -568,7 +568,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   const handleEditLabels = useCallback(() => setLabelManagerOpen(true), []);
 
   // Turtle export
-  const { turtle, isLoading: turtleLoading, error: turtleError, refetch: fetchTurtle } = useTurtleExportQuery(config, entityUri);
+  const { bindings: turtleBindings, isLoading: turtleLoading, error: turtleError, refetch: fetchTurtle } = useTurtleExportQuery(config, entityUri);
   const handleExportTurtle = useCallback(() => {
     setTurtleDialogOpen(true);
     void fetchTurtle();
@@ -818,7 +818,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       <TurtleExportDialog
         open={turtleDialogOpen}
         onClose={() => setTurtleDialogOpen(false)}
-        turtle={turtle}
+        bindings={turtleBindings}
         isLoading={turtleLoading}
         error={turtleError}
         entityUri={entityUri}

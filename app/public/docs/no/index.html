@@ -1254,7 +1254,7 @@
                 Fra entitetsredigeringen, åpne <strong>⋮</strong> (flere handlinger) menyen og velg <strong>Turtle RDF</strong>. Dette eksporterer gjeldende entitets data med alle egenskaper og relasjoner. En dialog åpnes som viser formatert Turtle-tekst, med to alternativer:
             </p>
             <ul>
-                <li><strong>Last ned .ttl</strong> — lagrer entiteten som en Turtle-fil.</li>
+                <li><strong>Last ned .ttl</strong> — lagrer entiteten som en Turtle-fil (<code>.ttls</code> med valget for verdirekkefølge, se nedenfor).</li>
                 <li><strong>Kopier til utklippstavle</strong> — kopierer Turtle-teksten slik at du kan lime den inn andre steder.</li>
             </ul>
             <p>
@@ -1264,6 +1264,22 @@
             <h4>Eksport av alle entiteter</h4>
             <p>
                 <strong>Last ned</strong> knappen i applikasjons-headeren lar deg eksportere flere entitetstyper på en gang. En dialog viser alle tilgjengelige klasser med antall entiteter. Velg klassene du vil inkludere (eller bruk «Velg alle») og klikk Eksporter. Resultatet er en enkelt Turtle-fil som inneholder alle entiteter av de valgte typene.
+            </p>
+
+            <h4>Verdirekkefølge</h4>
+            <p>
+                Begge eksportene skriver verdiene til en egenskap i den
+                rekkefølgen de har fått i redigeringsverktøyet. Vanlig Turtle
+                kan ikke lagre rekkefølgen, så den går tapt når filen lastes
+                inn andre steder. Kryss av for <strong>Ta med
+                verdirekkefølge (Turtle-star)</strong> for å beholde den: hver
+                ordnet verdi får da en annotasjon som
+                <code>{| entedit:valueOrder 0 |}</code>, og filen lastes ned
+                som <code>.ttls</code>. GraphDB og verktøy som leser Turtle
+                1.2, forstår disse annotasjonene, så rekkefølgen blir med når
+                filen importeres tilbake i EntEdit; vanlige Turtle-verktøy
+                avviser filen. La valget være av for filer som skal brukes i
+                andre verktøy.
             </p>
 
             <div class="info-box tip">
@@ -1276,7 +1292,8 @@
                 <strong>Importer</strong>-knappen (pil opp) i
                 applikasjons-headeren laster en RDF-fil direkte inn i
                 databasen. Støttede formater er Turtle (<code>.ttl</code>),
-                N-Triples (<code>.nt</code>) og RDF/XML
+                Turtle-star (<code>.ttls</code>, f.eks. en eksport med
+                verdirekkefølge), N-Triples (<code>.nt</code>) og RDF/XML
                 (<code>.rdf</code>).
             </p>
             <p>

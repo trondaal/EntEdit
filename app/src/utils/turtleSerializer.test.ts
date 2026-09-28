@@ -99,3 +99,43 @@ describe("serializeGraphToTurtle", () => {
     expect(ttl).toContain("ns0:prop");
   });
 });
+
+describe("value order", () => {
+  const TITLE = "http://rdaregistry.info/Elements/w/datatype/P10223";
+  const bindings = [
+    { predicate: uri(TITLE), object: lit("Alpha"), order: 1 },
+    { predicate: uri(TITLE), object: lit("Beta"), order: 0 },
+    { predicate: uri(TITLE), object: lit("Gamma") },
+  ];
+
+  it("writes values in their stored order, unordered ones last", () => {
+    const ttl = serializeToTurtle("http://example.org/w1", bindings);
+    expect(ttl.indexOf('"Beta"')).toBeLessThan(ttl.indexOf('"Alpha"'));
+    expect(ttl.indexOf('"Alpha"')).toBeLessThan(ttl.indexOf('"Gamma"'));
+  });
+
+  it("leaves annotations out unless asked for", () => {
+    const ttl = serializeToTurtle("http://example.org/w1", bindings);
+    expect(ttl).not.toContain("{|");
+    expect(ttl).not.toContain("valueOrder");
+  });
+
+  it("writes annotations in the syntax Turtle-star and Turtle 1.2 share", () => {
+    const ttl = serializeToTurtle("http://example.org/w1", bindings, { valueOrder: true });
+    expect(ttl).toContain('"Beta" {| entedit:valueOrder 0 |} ,');
+    expect(ttl).toContain('"Alpha" {| entedit:valueOrder 1 |} ,');
+    expect(ttl).toContain('"Gamma" .');
+    expect(ttl).toContain("@prefix entedit: <http://oslomet.no/abi/vocab#> .");
+    expect(ttl.startsWith("# Value order is written as RDF-star annotations")).toBe(true);
+  });
+
+  it("adds no header when nothing is annotated", () => {
+    const ttl = serializeToTurtle(
+      "http://example.org/w1",
+      [{ predicate: uri(TITLE), object: lit("Alpha") }],
+      { valueOrder: true },
+    );
+    expect(ttl.startsWith("@prefix")).toBe(true);
+    expect(ttl).not.toContain("entedit:");
+  });
+});

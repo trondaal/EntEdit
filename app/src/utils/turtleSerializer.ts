@@ -124,7 +124,44 @@ function compactUri(
 const RDF_TYPE = "http://www.w3.org/1999/02/22-rdf-syntax-ns#type";
 const RDFS_LABEL = "http://www.w3.org/2000/01/rdf-schema#label";
 
-type PredObjBinding = { predicate: SparqlBinding; object: SparqlBinding };
+const VALUE_ORDER = "http://oslomet.no/abi/vocab#valueOrder";
+
+/** One statement about a subject, with its `entedit:valueOrder` if annotated. */
+export type PredObjBinding = { predicate: SparqlBinding; object: SparqlBinding; order?: number };
+
+export interface TurtleOptions {
+  /**
+   * Write `entedit:valueOrder` annotations in the annotation syntax
+   * `s p o {| entedit:valueOrder n |}`, which both Turtle-star (GraphDB) and
+   * Turtle 1.2 read; standard Turtle 1.1 parsers reject it.
+   */
+  valueOrder?: boolean;
+}
+
+/** File extension for a Turtle export, with or without value-order annotations. */
+export const turtleExtension = (valueOrder: boolean): string => (valueOrder ? ".ttls" : ".ttl");
+
+/** MIME type for a Turtle export, with or without value-order annotations. */
+export const turtleMimeType = (valueOrder: boolean): string =>
+  valueOrder ? "application/x-turtlestar;charset=utf-8" : "text/turtle;charset=utf-8";
+
+/** Header written above a document that carries value-order annotations. */
+const VALUE_ORDER_HEADER = [
+  "# Value order is written as RDF-star annotations: s p o {| entedit:valueOrder n |}.",
+  "# Readable by Turtle-star (e.g. GraphDB, where it annotates the triple) and",
+  "# Turtle 1.2 (where it annotates a reifier of the triple), not by Turtle 1.1.",
+];
+
+/** Values in their stored order; values without an order keep their place after them. */
+const byValueOrder = (bindings: PredObjBinding[]): PredObjBinding[] =>
+  bindings
+    .map((binding, index) => ({ binding, index }))
+    .sort((a, b) => {
+      const ao = a.binding.order ?? Number.POSITIVE_INFINITY;
+      const bo = b.binding.order ?? Number.POSITIVE_INFINITY;
+      return ao - bo || a.index - b.index;
+    })
+    .map(({ binding }) => binding);
 
 /**
  * Builds a fresh prefix registry. Returns the namespace→prefix map (used for
@@ -182,14 +219,17 @@ function registerBindingNamespaces(
 function buildSubjectBlock(
   bindings: PredObjBinding[],
   usedNamespaces: Map<string, string>,
+  options: TurtleOptions,
 ): string[] {
-  // Group bindings by predicate
-  const grouped = new Map<string, SparqlBinding[]>();
+  // Group bindings by predicate, each group in its stored value order
+  const grouped = new Map<string, PredObjBinding[]>();
   for (const b of bindings) {
     const pred = b.predicate.value;
     if (!grouped.has(pred)) grouped.set(pred, []);
-    grouped.get(pred)!.push(b.object);
+    grouped.get(pred)!.push(b);
   }
+  for (const [pred, values] of grouped) grouped.set(pred, byValueOrder(values));
+  const valueOrder = compactUri(VALUE_ORDER, usedNamespaces);
 
   // Sort predicates: rdf:type first, rdfs:label second, then alphabetically by compact name
   const predicateOrder = [...grouped.keys()].sort((a, b) => {
@@ -208,9 +248,12 @@ function buildSubjectBlock(
     const objects = grouped.get(pred)!;
     const predCompact =
       pred === RDF_TYPE ? "a" : compactUri(pred, usedNamespaces);
-    const objectStrings = objects.map((obj) =>
-      serializeObject(obj, usedNamespaces, pred === RDF_TYPE),
-    );
+    const objectStrings = objects.map((b) => {
+      const obj = serializeObject(b.object, usedNamespaces, pred === RDF_TYPE);
+      return options.valueOrder && b.order !== undefined
+        ? `${obj} {| ${valueOrder} ${b.order} |}`
+        : obj;
+    });
 
     const separator = i < predicateOrder.length - 1 ? " ;" : " .";
 
@@ -244,10 +287,11 @@ function buildPrefixLines(prefixToNamespace: Map<string, string>): string[] {
 export function serializeToTurtle(
   subjectUri: string,
   bindings: PredObjBinding[],
+  options: TurtleOptions = {},
 ): string {
   const subjectMap = new Map<string, PredObjBinding[]>();
   subjectMap.set(subjectUri, bindings);
-  return serializeGraphToTurtle(subjectMap);
+  return serializeGraphToTurtle(subjectMap, options);
 }
 
 /**
@@ -257,6 +301,7 @@ export function serializeToTurtle(
  */
 export function serializeGraphToTurtle(
   subjectBindings: Map<string, PredObjBinding[]>,
+  options: TurtleOptions = {},
 ): string {
   const { usedNamespaces, prefixToNamespace, register } = createPrefixRegistry();
 
@@ -264,10 +309,17 @@ export function serializeGraphToTurtle(
   for (const bindings of subjectBindings.values()) {
     registerBindingNamespaces(bindings, register);
   }
+  const annotated =
+    options.valueOrder === true &&
+    [...subjectBindings.values()].some((bindings) => bindings.some((b) => b.order !== undefined));
+  if (annotated) register(VALUE_ORDER);
 
   const prefixLines = buildPrefixLines(prefixToNamespace);
 
   const parts: string[] = [];
+  if (annotated) {
+    parts.push(...VALUE_ORDER_HEADER, "");
+  }
   if (prefixLines.length > 0) {
     parts.push(prefixLines.join("\n"));
     parts.push("");
@@ -278,7 +330,7 @@ export function serializeGraphToTurtle(
     if (!first) parts.push("");
     first = false;
     parts.push(`<${subjectUri}>`);
-    parts.push(...buildSubjectBlock(bindings, usedNamespaces));
+    parts.push(...buildSubjectBlock(bindings, usedNamespaces, options));
   }
 
   return parts.join("\n") + "\n";

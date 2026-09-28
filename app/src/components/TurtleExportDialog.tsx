@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import {
   Dialog,
   DialogTitle,
@@ -14,24 +14,32 @@ import { Close, ContentCopy, Download } from "@mui/icons-material";
 import { useSnackbar } from "notistack";
 import { useTranslation } from "react-i18next";
 import { extractUriFragment } from "../utils/labelUtils";
+import {
+  serializeToTurtle,
+  turtleExtension,
+  turtleMimeType,
+  type PredObjBinding,
+} from "../utils/turtleSerializer";
+import ValueOrderOption from "./ValueOrderOption";
 
 interface TurtleExportDialogProps {
   open: boolean;
   onClose: () => void;
-  turtle: string | null;
+  /** The entity's statements, serialized here so the value-order option needs no refetch */
+  bindings: PredObjBinding[] | null;
   isLoading: boolean;
   error: Error | null;
   entityUri: string | null;
   /** Optional override for the dialog title; defaults to single-entity title. */
   title?: string;
-  /** Optional override for the downloaded filename stem (without `.ttl`). */
+  /** Optional override for the downloaded filename stem (without extension). */
   filenameStem?: string;
 }
 
 const TurtleExportDialog: React.FC<TurtleExportDialogProps> = ({
   open,
   onClose,
-  turtle,
+  bindings,
   isLoading,
   error,
   entityUri,
@@ -40,6 +48,11 @@ const TurtleExportDialog: React.FC<TurtleExportDialogProps> = ({
 }) => {
   const { t } = useTranslation(["entityEditor", "common"]);
   const { enqueueSnackbar } = useSnackbar();
+  const [valueOrder, setValueOrder] = useState(false);
+  const turtle = useMemo(
+    () => (bindings && entityUri ? serializeToTurtle(entityUri, bindings, { valueOrder }) : null),
+    [bindings, entityUri, valueOrder],
+  );
 
   const handleCopy = useCallback(() => {
     if (!turtle) return;
@@ -56,15 +69,15 @@ const TurtleExportDialog: React.FC<TurtleExportDialogProps> = ({
     if (!stem && entityUri) {
       stem = sanitize(extractUriFragment(entityUri));
     }
-    const filename = `${stem || "entity"}.ttl`;
-    const blob = new Blob([turtle], { type: "text/turtle;charset=utf-8" });
+    const filename = `${stem || "entity"}${turtleExtension(valueOrder)}`;
+    const blob = new Blob([turtle], { type: turtleMimeType(valueOrder) });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
     a.download = filename;
     a.click();
     URL.revokeObjectURL(url);
-  }, [turtle, entityUri, filenameStem]);
+  }, [turtle, entityUri, filenameStem, valueOrder]);
 
   return (
     <Dialog
@@ -98,6 +111,10 @@ const TurtleExportDialog: React.FC<TurtleExportDialogProps> = ({
         )}
 
         {!isLoading && !error && turtle && (
+          <ValueOrderOption checked={valueOrder} onChange={setValueOrder} />
+        )}
+
+        {!isLoading && !error && turtle && (
           <Box
             component="pre"
             sx={{
@@ -123,7 +140,7 @@ const TurtleExportDialog: React.FC<TurtleExportDialogProps> = ({
           startIcon={<Download />}
           disabled={!turtle || isLoading}
         >
-          {t("entityEditor:dialogs.turtleExport.downloadButton")}
+          {t("entityEditor:dialogs.turtleExport.downloadButton", { extension: turtleExtension(valueOrder) })}
         </Button>
         <Button
           onClick={handleCopy}

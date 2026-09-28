@@ -1,12 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
 import { SparqlClient } from "../utils/sparqlClient";
-import { serializeGraphToTurtle } from "../utils/turtleSerializer";
+import type { PredObjBinding } from "../utils/turtleSerializer";
 import { sanitizeSparqlUri } from "../utils/labelUtils";
-import type { SparqlBinding, SparqlEndpointConfig } from "../types/sparql";
+import type { SparqlEndpointConfig } from "../types/sparql";
 
 /**
- * On-demand hook that fetches all triples for entities of the given classes
- * and serializes them as a single formatted Turtle document.
+ * On-demand hook that fetches all triples for entities of the given classes,
+ * with the value order of their own statements, grouped by subject for
+ * serializing as one Turtle document (`serializeGraphToTurtle`).
  *
  * When `classUris` is empty, exports every entity whose type is an active
  * class in the ontology.  When specific class URIs are provided, only
@@ -20,8 +21,8 @@ export function useAllEntitiesTurtleExportQuery(
 ) {
   const classKey = classUris.length > 0 ? [...classUris].sort().join(",") : "all";
 
-  const { data: turtle = null, isLoading, isFetching, error, refetch } = useQuery<
-    string | null,
+  const { data: graph = null, isLoading, isFetching, error, refetch } = useQuery<
+    Map<string, PredObjBinding[]> | null,
     Error
   >({
     queryKey: ["turtle-export-classes", config.url, classKey],
@@ -40,7 +41,7 @@ export function useAllEntitiesTurtleExportQuery(
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX entedit: <http://oslomet.no/abi/vocab#>
 
-        SELECT ?subject ?predicate ?object
+        SELECT ?subject ?predicate ?object ?order
         FROM <http://www.ontotext.com/explicit>
         WHERE {
           ?subject a ?class .
@@ -52,6 +53,8 @@ export function useAllEntitiesTurtleExportQuery(
               ?moreSpecific rdfs:subClassOf+ ?object .
               FILTER(?moreSpecific != ?object && ?predicate = rdf:type)
             }
+            # Value order set in the editor (RDF-star annotation)
+            OPTIONAL { << ?subject ?predicate ?object >> entedit:valueOrder ?order . }
           }
           UNION
           {
@@ -66,10 +69,7 @@ export function useAllEntitiesTurtleExportQuery(
 
       const response = await client.queryWithoutInference(query);
 
-      const subjectMap = new Map<
-        string,
-        Array<{ predicate: SparqlBinding; object: SparqlBinding }>
-      >();
+      const subjectMap = new Map<string, PredObjBinding[]>();
       for (const b of response.results.bindings) {
         const subjectUri = b.subject?.value;
         if (!subjectUri) continue;
@@ -78,14 +78,18 @@ export function useAllEntitiesTurtleExportQuery(
           list = [];
           subjectMap.set(subjectUri, list);
         }
-        list.push({ predicate: b.predicate, object: b.object });
+        list.push({
+          predicate: b.predicate,
+          object: b.object,
+          order: b.order ? parseInt(b.order.value, 10) : undefined,
+        });
       }
 
-      return serializeGraphToTurtle(subjectMap);
+      return subjectMap;
     },
     enabled: false,
     staleTime: 0,
   });
 
-  return { turtle, isLoading: isLoading || isFetching, error, refetch };
+  return { graph, isLoading: isLoading || isFetching, error, refetch };
 }

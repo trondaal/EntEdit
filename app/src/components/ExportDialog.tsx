@@ -23,6 +23,8 @@ import { SparqlClient } from "../utils/sparqlClient";
 import { formatLabel, extractUriFragment } from "../utils/labelUtils";
 import { useRdfClasses } from "../hooks/useSchemaQueries";
 import { useAllEntitiesTurtleExportQuery } from "../hooks/useAllEntitiesTurtleExportQuery";
+import { serializeGraphToTurtle, turtleExtension, turtleMimeType } from "../utils/turtleSerializer";
+import ValueOrderOption from "./ValueOrderOption";
 
 const LARGE_EXPORT_THRESHOLD = 1000;
 
@@ -97,11 +99,16 @@ const ExportDialog: React.FC<ExportDialogProps> = ({
   const allSelected = classes ? selectedClasses.size === classes.length : false;
 
   const {
-    turtle,
+    graph,
     isLoading: turtleLoading,
     error: turtleError,
     refetch: fetchTurtle,
   } = useAllEntitiesTurtleExportQuery(config, classUrisArray);
+  const [valueOrder, setValueOrder] = useState(false);
+  const turtle = useMemo(
+    () => (graph ? serializeGraphToTurtle(graph, { valueOrder }) : null),
+    [graph, valueOrder],
+  );
 
   const totalSelectedCount = useMemo(() => {
     if (!classCounts) return 0;
@@ -160,15 +167,15 @@ const ExportDialog: React.FC<ExportDialogProps> = ({
     const stem = allSelected
       ? "all-entities"
       : classUrisArray.map((u) => extractUriFragment(u)).join("-");
-    const filename = `${stem}.ttl`;
-    const blob = new Blob([turtle], { type: "text/turtle;charset=utf-8" });
+    const filename = `${stem}${turtleExtension(valueOrder)}`;
+    const blob = new Blob([turtle], { type: turtleMimeType(valueOrder) });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
     a.download = filename;
     a.click();
     URL.revokeObjectURL(url);
-  }, [turtle, allSelected, classUrisArray]);
+  }, [turtle, allSelected, classUrisArray, valueOrder]);
 
   const handleClose = useCallback(() => {
     setShowResult(false);
@@ -289,6 +296,10 @@ const ExportDialog: React.FC<ExportDialogProps> = ({
             )}
 
             {!turtleLoading && !turtleError && turtle && (
+              <ValueOrderOption checked={valueOrder} onChange={setValueOrder} />
+            )}
+
+            {!turtleLoading && !turtleError && turtle && (
               <Box
                 component="pre"
                 sx={{
@@ -316,7 +327,7 @@ const ExportDialog: React.FC<ExportDialogProps> = ({
               startIcon={<Download />}
               disabled={!turtle || turtleLoading}
             >
-              {t("entityEditor:dialogs.turtleExport.downloadButton")}
+              {t("entityEditor:dialogs.turtleExport.downloadButton", { extension: turtleExtension(valueOrder) })}
             </Button>
             <Button
               onClick={handleCopy}

@@ -1,12 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
 import { SparqlClient } from "../utils/sparqlClient";
-import { serializeToTurtle } from "../utils/turtleSerializer";
+import type { PredObjBinding } from "../utils/turtleSerializer";
 import { sanitizeSparqlUri } from "../utils/labelUtils";
 import type { SparqlEndpointConfig } from "../types/sparql";
 
 /**
- * On-demand hook that fetches all triples for an entity and serializes
- * them as formatted Turtle.
+ * On-demand hook that fetches all triples for an entity, with the value
+ * order of its own statements, for serializing as Turtle (`serializeToTurtle`).
  *
  * Queries WITHOUT inference to avoid duplicates from property subtype
  * hierarchies. Incoming triples (where this entity is the object) are
@@ -18,7 +18,7 @@ export function useTurtleExportQuery(
   config: SparqlEndpointConfig,
   entityUri: string | null,
 ) {
-  const { data: turtle = null, isLoading, error, refetch } = useQuery<string | null, Error>({
+  const { data: bindings = null, isLoading, error, refetch } = useQuery<PredObjBinding[] | null, Error>({
     queryKey: ["turtle-export", config.url, entityUri],
     queryFn: async () => {
       if (!entityUri) return null;
@@ -29,8 +29,9 @@ export function useTurtleExportQuery(
         PREFIX owl: <http://www.w3.org/2002/07/owl#>
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX entedit: <http://oslomet.no/abi/vocab#>
 
-        SELECT ?predicate ?object
+        SELECT ?predicate ?object ?order
         FROM <http://www.ontotext.com/explicit>
         WHERE {
           {
@@ -43,6 +44,8 @@ export function useTurtleExportQuery(
               ?moreSpecific rdfs:subClassOf+ ?object .
               FILTER(?moreSpecific != ?object && ?predicate = rdf:type)
             }
+            # Value order set in the editor (RDF-star annotation)
+            OPTIONAL { << <${sanitizedUri}> ?predicate ?object >> entedit:valueOrder ?order . }
           }
           UNION
           {
@@ -58,16 +61,15 @@ export function useTurtleExportQuery(
       `;
 
       const response = await client.queryWithoutInference(query);
-      const bindings = response.results.bindings.map((b) => ({
+      return response.results.bindings.map((b) => ({
         predicate: b.predicate,
         object: b.object,
+        order: b.order ? parseInt(b.order.value, 10) : undefined,
       }));
-
-      return serializeToTurtle(entityUri, bindings);
     },
     enabled: false,
     staleTime: 0,
   });
 
-  return { turtle, isLoading, error, refetch };
+  return { bindings, isLoading, error, refetch };
 }

@@ -22,11 +22,13 @@ import { invalidateAllEntityData } from "../utils/queryInvalidation";
 
 const DEFAULT_GRAPH_URI = "http://oslomet.no/abi/examples";
 
-const ACCEPTED_EXTENSIONS = [".ttl", ".nt", ".rdf"] as const;
+const ACCEPTED_EXTENSIONS = [".ttl", ".ttls", ".nt", ".rdf"] as const;
 
 const contentTypeFor = (filename: string): string | null => {
   const lower = filename.toLowerCase();
   if (lower.endsWith(".ttl")) return "text/turtle";
+  // Turtle-star, e.g. an export with value order (entedit:valueOrder annotations)
+  if (lower.endsWith(".ttls")) return "application/x-turtlestar";
   if (lower.endsWith(".nt")) return "application/n-triples";
   if (lower.endsWith(".rdf")) return "application/rdf+xml";
   return null;

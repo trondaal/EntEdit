@@ -37,7 +37,7 @@
     },
     "import": {
       "title": "Importer RDF-data",
-      "description": "Velg en Turtle- (.ttl), N-Triples- (.nt) eller RDF/XML-fil (.rdf) for å laste inn i databasen. Importerte tripler legges til; eksisterende data erstattes ikke.",
+      "description": "Velg en Turtle- (.ttl), Turtle-star- (.ttls), N-Triples- (.nt) eller RDF/XML-fil (.rdf) for å laste inn i databasen. Importerte tripler legges til; eksisterende data erstattes ikke.",
       "chooseFile": "Velg fil…",
       "graphUriLabel": "URI for navngitt graf (valgfritt)",
       "graphUriHelper": "La stå tom for å importere til standardgrafen.",
@@ -45,7 +45,7 @@
       "importing": "Importerer…",
       "success": "Importerte {{filename}}",
       "errors": {
-        "unknownFormat": "Ukjent filendelse. Bruk .ttl, .nt eller .rdf."
+        "unknownFormat": "Ukjent filendelse. Bruk .ttl, .ttls, .nt eller .rdf."
       }
     }
   },
