@@ -169,6 +169,7 @@ EntEdit/
 - Language-aware queries with COALESCE fallback (selected → untagged → fallback)
 - GraphDB Lucene connector for full-text search (`lucene:query`)
 - RDF-star annotations for value ordering: `<< <s> <p> <o> >> entedit:valueOrder N`
+  (see "Value order" below)
 
 ### Entity Save/Delete Strategy
 
@@ -232,6 +233,45 @@ outgoing *and* incoming triples, then all outgoing + incoming statements.
 during load. On save, `objectPropertyUris.has(prop) || isUri` decides whether a
 value is serialized as `<uri>` or a literal, so unmanaged relationship
 properties are not turned into strings.
+
+### Value order (RDF-star)
+
+The order a cataloguer gives the values of a property is stored on each
+statement with RDF-star — the only ordering the data has, and the one to use
+wherever values are listed:
+
+```sparql
+<< <manifestation> rdamo:P30139 <expression> >> entedit:valueOrder 0 .
+```
+
+- **Definition:** `entedit:valueOrder` in `database/types/entedit_profile/profile.ttl`
+  (xsd:integer, positions from 0).
+- **Written** only by the editor's save (`buildEntityUpdate`, step 3 above): for
+  properties with more than one value, rewritten when a save changes that
+  property. Imported or never-reordered data has no annotations — every reader
+  needs a fallback order. The annotations are currently inserted into the
+  default graph even when the triple lives in a named graph.
+- **Perspective:** the order belongs to the subject's own statement. A link
+  stated from the other side (an incoming triple, shown through `owl:inverseOf`)
+  has no order on this side; e.g. a manifestation's contents are ordered only
+  through `m rdamo:P30139 e`, not `e rdaeo:P20059 m`.
+- **Reading:** an `OPTIONAL { << <s> <p> ?o >> entedit:valueOrder ?n }` next to the
+  statement (fine with `FROM <…/explicit>`; take `MIN` when grouping), then sort
+  in the app with `sortByValueOrder` (`utils/valueOrder.ts`: ordered values first,
+  the rest by a fallback). Do not rely on SPARQL for the order of a list built
+  with `GROUP_CONCAT` — it has none.
+- **Used by:** the editor (`EXPLICIT_QUERY` in `useEntityQueries.ts`), the Turtle
+  exports (value order, and `{| entedit:valueOrder n |}` with the Turtle-star
+  option), and the publication search's contents list
+  (`expressionOrderInManifestation` in `wemiQueries.ts`, fallback by title).
+- **Not yet used** for creators and relationships in search results, which are
+  built as `GROUP_CONCAT` strings: to order them, return each value's order with
+  it (a sort key inside the concatenated entry, or separate rows) and sort in
+  the parser.
+- **Syntax:** the `<< >>` notation is SPARQL-star/Turtle-star (RDF-star Community
+  Group), which GraphDB 10–11 supports. Standard Turtle 1.1 cannot express it, and
+  RDF 1.2 writes a triple term as `<<( s p o )>>` and reads `<< s p o >>` as a
+  reifier, so a move to an RDF 1.2 store would need the annotations converted.
 
 ### SPARQL Syntax Gotchas (GraphDB)
 

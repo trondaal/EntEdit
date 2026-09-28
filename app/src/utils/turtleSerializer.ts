@@ -1,4 +1,5 @@
 import type { SparqlBinding } from "../types/sparql";
+import { sortByValueOrder } from "./valueOrder";
 
 /**
  * Well-known namespace prefixes.
@@ -152,16 +153,6 @@ const VALUE_ORDER_HEADER = [
   "# Turtle 1.2 (where it annotates a reifier of the triple), not by Turtle 1.1.",
 ];
 
-/** Values in their stored order; values without an order keep their place after them. */
-const byValueOrder = (bindings: PredObjBinding[]): PredObjBinding[] =>
-  bindings
-    .map((binding, index) => ({ binding, index }))
-    .sort((a, b) => {
-      const ao = a.binding.order ?? Number.POSITIVE_INFINITY;
-      const bo = b.binding.order ?? Number.POSITIVE_INFINITY;
-      return ao - bo || a.index - b.index;
-    })
-    .map(({ binding }) => binding);
 
 /**
  * Builds a fresh prefix registry. Returns the namespace→prefix map (used for
@@ -228,7 +219,7 @@ function buildSubjectBlock(
     if (!grouped.has(pred)) grouped.set(pred, []);
     grouped.get(pred)!.push(b);
   }
-  for (const [pred, values] of grouped) grouped.set(pred, byValueOrder(values));
+  for (const [pred, values] of grouped) grouped.set(pred, sortByValueOrder(values, (b) => b.order));
   const valueOrder = compactUri(VALUE_ORDER, usedNamespaces);
 
   // Sort predicates: rdf:type first, rdfs:label second, then alphabetically by compact name

@@ -34,6 +34,14 @@ export const expressionsOfManifestation = (manifestationUri: string): string => 
   return `{ ${m} rdamo:P30139 ?expression } UNION { ?expression rdaeo:P20059 ${m} }`;
 };
 
+/**
+ * Order of the expressions within a manifestation (its contents), as set in
+ * the editor: the `entedit:valueOrder` annotation on the manifestation's own
+ * statement. A link stated only from the expression (rdaeo:P20059) has none.
+ */
+export const expressionOrderInManifestation = (manifestationUri: string): string =>
+  `OPTIONAL { << <${sanitizeSparqlUri(manifestationUri)}> rdamo:P30139 ?expression >> entedit:valueOrder ?value_order }`;
+
 /** Scope binding `?manifestation` to the manifestations of an expression. */
 export const manifestationsOfExpression = (expressionUri: string): string => {
   const e = `<${sanitizeSparqlUri(expressionUri)}>`;
@@ -150,7 +158,15 @@ const conceptLabel = (
         FILTER(LANG(?${label}) = "${lang}")
     }`;
 
-export const buildExpressionDetailQuery = (scope: string, language: string): string => {
+/**
+ * `orderPattern` may bind `?value_order` for each expression (see
+ * `expressionOrderInManifestation`); it is returned as `valueOrder`.
+ */
+export const buildExpressionDetailQuery = (
+  scope: string,
+  language: string,
+  orderPattern = "",
+): string => {
   const lang = escapeSparqlLiteral(language);
   return `${PREFIXES}
 SELECT ?expression
@@ -166,9 +182,11 @@ SELECT ?expression
     (GROUP_CONCAT(DISTINCT CONCAT(?work_relationship_label, "${SPARQL_SEP.LABEL}", ?work_relationship_targets) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?work_to_work_relationships)
     (GROUP_CONCAT(DISTINCT CONCAT(?expression_relationship_label, "${SPARQL_SEP.LABEL}", ?expression_relationship_targets) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?expression_to_expression_relationships)
     (COUNT(DISTINCT ?manifestation) as ?manifestation_count)
+    (MIN(?value_order) as ?valueOrder)
 FROM <http://www.ontotext.com/explicit>
 WHERE {
     ${scope}
+    ${orderPattern}
 
     # Every work block links to the work itself, under a variable of its own,
     # and the work subqueries group by ?expression. A shared ?work fails both
@@ -209,6 +227,8 @@ export interface ExpressionDetail {
   work_to_work_relationships?: string;
   expression_to_expression_relationships?: string;
   manifestation_count?: number;
+  /** Position among the contents it was loaded for, if recorded */
+  valueOrder?: number;
 }
 
 export const toExpressionDetail = (b: SparqlResult): ExpressionDetail => ({
@@ -228,6 +248,7 @@ export const toExpressionDetail = (b: SparqlResult): ExpressionDetail => ({
   manifestation_count: b.manifestation_count
     ? parseInt(b.manifestation_count.value, 10)
     : undefined,
+  valueOrder: b.valueOrder ? parseInt(b.valueOrder.value, 10) : undefined,
 });
 
 /** Media or carrier type: label in the chosen language, else English. */

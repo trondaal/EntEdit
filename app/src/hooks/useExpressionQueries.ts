@@ -3,9 +3,11 @@ import { SparqlClient } from "../utils/sparqlClient";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import {
   buildExpressionDetailQuery,
+  expressionOrderInManifestation,
   expressionsOfManifestation,
   toExpressionDetail,
 } from "../utils/wemiQueries";
+import { sortByValueOrder } from "../utils/valueOrder";
 
 export interface Expression {
   uri: string;
@@ -41,12 +43,23 @@ export const useExpressionsByManifestation = (
 
       const client = new SparqlClient(config);
       const response = await client.query(
-        buildExpressionDetailQuery(expressionsOfManifestation(manifestationUri), language),
+        buildExpressionDetailQuery(
+          expressionsOfManifestation(manifestationUri),
+          language,
+          expressionOrderInManifestation(manifestationUri),
+        ),
         { signal },
       );
-      return response.results.bindings
+      const expressions = response.results.bindings
         .map(toExpressionDetail)
         .map(({ expression_title, ...rest }) => ({ ...rest, title: expression_title }));
+      // Contents in the order recorded in the editor; unordered ones by title
+      return sortByValueOrder(
+        expressions,
+        (e) => e.valueOrder,
+        (a, b) =>
+          (a.title ?? a.work_title ?? a.uri).localeCompare(b.title ?? b.work_title ?? b.uri),
+      );
     },
     enabled: Boolean(manifestationUri),
     staleTime: 5 * 60 * 1000, // 5 minutes
