@@ -6,6 +6,12 @@ WHERE { inst:expressionsIndex :connectorStatus ?status }
 ;
 PREFIX :<http://www.ontotext.com/connectors/lucene#>
 PREFIX inst:<http://www.ontotext.com/connectors/lucene/instance#>
+# language, contentType, workType and genre hold category IRIs, not
+# analyzed, for the search filters and their counts (lucene:facetFields).
+# Work type and genre follow entedit:P01/P02 rather than their common
+# superproperty rdaw:P10004, which would mix the two in one list. A field
+# name with $ merges into the part before it: workType$direct and
+# workType$inverse are one field, reached from either side of the link.
 INSERT DATA {
 	inst:expressionsIndex :createConnector '''
 {
@@ -403,6 +409,82 @@ INSERT DATA {
       "indexed": true,
       "stored": true,
       "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "language",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/e/object/P20006"
+      ],
+      "indexed": true,
+      "stored": false,
+      "analyzed": false,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "contentType",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/e/object/P20001"
+      ],
+      "indexed": true,
+      "stored": false,
+      "analyzed": false,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "workType$direct",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/e/object/P20231",
+        "http://oslomet.no/abi/vocab#P01"
+      ],
+      "indexed": true,
+      "stored": false,
+      "analyzed": false,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "workType$inverse",
+      "propertyChain": [
+        "^http://rdaregistry.info/Elements/w/object/P10078",
+        "http://oslomet.no/abi/vocab#P01"
+      ],
+      "indexed": true,
+      "stored": false,
+      "analyzed": false,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "genre$direct",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/e/object/P20231",
+        "http://oslomet.no/abi/vocab#P02"
+      ],
+      "indexed": true,
+      "stored": false,
+      "analyzed": false,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "genre$inverse",
+      "propertyChain": [
+        "^http://rdaregistry.info/Elements/w/object/P10078",
+        "http://oslomet.no/abi/vocab#P02"
+      ],
+      "indexed": true,
+      "stored": false,
+      "analyzed": false,
       "multivalued": true,
       "ignoreInvalidValues": false,
       "facet": true

@@ -95,6 +95,8 @@ EntEdit/
 - `LabelManager`, `LanguageSelector` - Label and language UI
 - `ObjectPropertyGroup`, `ObjectPropertyValue` - Object property rendering
 - `ResultSet` - Generic search result display
+- `SearchFilters` - Checkbox filters with hit counts for the content search
+  (language, content type, category of work, genre or form)
 - `CollapsibleNote` - Manifestation note cut to two lines, "show the whole note"
   link included; the cut is measured (CSS line-clamp cannot fit the link)
 
@@ -132,6 +134,8 @@ EntEdit/
 - `luceneQuery.ts` - escapes free-text search input for the Lucene connector
 - `wemiQueries.ts` - expression/manifestation detail queries shared by the search
   pages and the expandable lists under a result, built around a *scope* pattern
+- `searchFilters.ts` - content-search category filters as Lucene clauses (OR within
+  a field, AND across) and parsing of `lucene:facets` counts; unit-tested
 - `turtleSerializer.ts` - Turtle serialization with configurable namespace prefix registry (`KNOWN_PREFIXES` map);
   predicates, datatypes, and `rdf:type` object (class) URIs are prefix-compacted; subject and other
   object URIs (entity references) stay as full `<uri>`
@@ -259,6 +263,20 @@ properties are not turned into strings.
   config caps queries at 60 s (`graphdb:query-timeout`) and must keep
   `throw-QueryEvaluationException-on-timeout "true"`: without it a timed-out
   query silently returns a partial result instead of an error
+- In a connector definition, a field name with `$` is merged into the part
+  before it: all `titles$…` fields are one Lucene field `titles`, so query
+  `titles:word`, never `titles$work:word`. Use it to reach one field by several
+  property chains (e.g. `workType$direct` and `workType$inverse`)
+- Content-search filters use unanalyzed IRI fields in `expressionsIndex`
+  (`language`, `contentType`, `workType`, `genre`); counts come from
+  `lucene:facetFields`/`lucene:facets` and filters are Lucene clauses, so both
+  stay in the index (3–55 ms on 89k expressions; the same counts in SPARQL took
+  up to 4 s and grow with the hits). A field with a selection is counted in its
+  own query without its own filter. Work type and genre follow `entedit:P01`/
+  `P02`, not their superproperty `P10004`, which would mix the two
+- With inference, `skos:altLabel` and `skos:prefLabel` count as `rdfs:label`;
+  read display labels from explicit statements (`FROM <…/explicit>`) or an
+  alternative label can win (`useFacetLabels`)
 - The Lucene connector rejects bare query syntax (`(`, `"`, `:`, `AND`), so user
   input goes through `toLuceneQuery` (`utils/luceneQuery.ts`) before it is
   placed in `lucene:query`

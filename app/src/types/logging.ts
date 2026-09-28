@@ -79,6 +79,21 @@ export interface SearchPerformedEvent extends BaseEvent {
   mode: "expression" | "manifestation";
 }
 
+export interface SearchFilterChangedEvent extends BaseEvent {
+  type: "search_filter_changed";
+  /** Index field: language, contentType, workType or genre */
+  field: string;
+  /** Category IRI */
+  value: string;
+  selected: boolean;
+  query: string;
+}
+
+export interface SearchFiltersClearedEvent extends BaseEvent {
+  type: "search_filters_cleared";
+  query: string;
+}
+
 export interface SearchResultSelectedEvent extends BaseEvent {
   type: "search_result_selected";
   resultUri: string;
@@ -101,6 +116,8 @@ export type LogEvent =
   | RelationshipAddedEvent
   | RelationshipRemovedEvent
   | SearchPerformedEvent
+  | SearchFilterChangedEvent
+  | SearchFiltersClearedEvent
   | SearchResultSelectedEvent
   | TabSwitchedEvent;
 

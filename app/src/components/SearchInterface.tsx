@@ -12,7 +12,14 @@ import {
 import { Search, Clear } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import type { SparqlEndpointConfig } from "../types/sparql";
-import { useSearchExpressions, useSearchManifestations } from "../hooks/useSearchQueries";
+import {
+  useFacetLabels,
+  useSearchExpressions,
+  useSearchFacets,
+  useSearchManifestations,
+} from "../hooks/useSearchQueries";
+import { hasFilters, toggleFilter, type FilterField, type SearchFilters as Filters } from "../utils/searchFilters";
+import SearchFilters from "./SearchFilters";
 import { useDebouncedValue } from "../hooks/useDebouncedValue";
 import ResultSet from "./ResultSet";
 import ManifestationResultSet from "./ManifestationResultSet";
@@ -31,6 +38,8 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
   const { logEvent, isRecording } = useLogging();
   const [searchInput, setSearchInput] = useState<string>("");
   const [searchMode, setSearchMode] = useState<'expression' | 'manifestation'>('expression');
+  // Category filters apply to the content search only
+  const [filters, setFilters] = useState<Filters>({});
 
   // Debounce the search query to avoid firing expensive SPARQL queries on every keystroke
   const debouncedQuery = useDebouncedValue(searchInput, 500);
@@ -38,6 +47,7 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
   // Only fire the query for the active search tab to avoid unnecessary SPARQL queries
   const expressionQuery = searchMode === 'expression' ? debouncedQuery : '';
   const manifestationQuery = searchMode === 'manifestation' ? debouncedQuery : '';
+  const expressionFilters = searchMode === 'expression' ? filters : {};
 
   const {
     data: searchData,
@@ -46,7 +56,23 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
     hasNextPage: searchHasNextPage,
     isFetchingNextPage: searchIsFetchingNextPage,
     fetchNextPage: searchFetchNextPage,
-  } = useSearchExpressions(config, expressionQuery, selectedLanguage);
+  } = useSearchExpressions(config, expressionQuery, selectedLanguage, expressionFilters);
+
+  // Counts for the current search; with neither text nor filters, for the
+  // whole collection. The collection's values also decide which labels to load.
+  const isContentSearch = searchMode === 'expression';
+  const { data: facets, isPlaceholderData: facetsUpdating } = useSearchFacets(
+    config, expressionQuery, expressionFilters, isContentSearch,
+  );
+  const { data: collectionFacets } = useSearchFacets(config, "", {}, isContentSearch);
+  const facetIris = useMemo(
+    () => [...Object.values(collectionFacets ?? {}), ...Object.values(facets ?? {})]
+      .flat()
+      .map((v) => v.value),
+    [collectionFacets, facets],
+  );
+  const { data: facetLabels } = useFacetLabels(config, facetIris, selectedLanguage);
+  const filtered = isContentSearch && hasFilters(filters);
 
   const {
     data: manifestationSearchData,
@@ -83,6 +109,21 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
 
   const handleClearSearch = () => {
     setSearchInput("");
+  };
+
+  const handleToggleFilter = (field: FilterField, value: string) => {
+    const selected = !(filters[field] ?? []).includes(value);
+    setFilters((current) => toggleFilter(current, field, value));
+    if (isRecording) {
+      logEvent({ type: "search_filter_changed", field, value, selected, query: debouncedQuery });
+    }
+  };
+
+  const handleClearFilters = () => {
+    setFilters({});
+    if (isRecording) {
+      logEvent({ type: "search_filters_cleared", query: debouncedQuery });
+    }
   };
 
   const handleEntitySearch = (name: string) => {
@@ -170,10 +211,22 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
               />
             </Box>
 
-            <Box sx={{ p: 2 }}>
+            <Box sx={{ p: 2, flex: 1, overflowY: { xs: "visible", md: "auto" } }}>
               <Typography variant="body2" color="text.secondary">
                 {t("search.searchHelp")}
               </Typography>
+              {isContentSearch && facets && (
+                <Box sx={{ mt: 3 }}>
+                  <SearchFilters
+                    facets={facets}
+                    labels={facetLabels ?? new Map()}
+                    filters={filters}
+                    onToggle={handleToggleFilter}
+                    onClear={handleClearFilters}
+                    updating={facetsUpdating}
+                  />
+                </Box>
+              )}
             </Box>
           </Paper>
         </Box>
@@ -192,6 +245,7 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
           {searchMode === 'expression' ? (
             <ResultSet
               searchQuery={debouncedQuery}
+              filtered={filtered}
               searchResults={searchResults}
               totalCount={searchData?.pages[0]?.total ?? 0}
               fuzzy={searchData?.pages[0]?.fuzzy ?? false}
