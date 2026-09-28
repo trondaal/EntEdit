@@ -1,7 +1,27 @@
+# Genre and form values offered for entedit:P02.
+#
+# The file has two parts:
+#   1. Extensions: genre/form concepts defined by EntEdit in the entedit
+#      namespace, for categories the NTSF vocabulary (Norsk tesaurus for sjanger
+#      og form) does not have. Each is a full definition: a skos:Concept and an
+#      entedit:Genretype, with its own labels.
+#   2. Redefinitions: existing NTSF concepts (https://id.nb.no/vocabulary/ntsf/…,
+#      defined in term_vocabularies/ntsf.ttl) that are only given a Norwegian
+#      rdfs:label ("no", since NTSF has "nb" and "nn"), an English label, and the
+#      class entedit:Genretype so they can be offered in the editor.
+#
+# In both parts, entedit:collection true marks genres whose works gather other
+# works (see the profile).
+
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix entedit: <http://oslomet.no/abi/vocab#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+# ---------------------------------------------------------------------------
+# 1. Extensions to NTSF (entedit namespace)
+# ---------------------------------------------------------------------------
+
 
 entedit:T01
     a skos:Concept ;
@@ -22,6 +42,20 @@ entedit:T03
   skos:prefLabel "Novel sequences"@en, "Roman sykluser"@nb, "Roman sykluser"@nn ;
   rdfs:label "Roman sykluser"@no, "Novel sequences"@en.
 
+# Omnibus: several works, usually novels (or novels and collections), published
+# together in one volume.
+entedit:T04
+  a skos:Concept ;
+  a entedit:Genretype ;
+  entedit:collection true ;
+  skos:prefLabel "Omnibus editions"@en, "Samlebind"@nb, "Samlebind"@nn ;
+  skos:definition "A volume that gathers several previously separate works, usually novels, by one or more authors."@en ,
+      "Et bind som samler flere verk som tidligere er utgitt hver for seg, vanligvis romaner, av én eller flere forfattere."@nb ;
+  rdfs:label "Samlebind"@no, "Omnibus editions"@en .
+
+  # ---------------------------------------------------------------------------
+  # 2. Redefinitions of existing NTSF concepts (labels and entedit:Genretype only)
+  # ---------------------------------------------------------------------------
 
 <https://id.nb.no/vocabulary/ntsf/1130>
 		a entedit:Genretype;
