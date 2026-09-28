@@ -40,6 +40,19 @@ function classifyStatus(status: number): SparqlErrorCode {
   return "server";
 }
 
+/**
+ * Whether a failed query hit one of GraphDB's resource limits rather than
+ * being wrong: the per-query memory limit, the free-heap check for GROUP BY
+ * and DISTINCT, or the repository's query timeout. Such a query may succeed
+ * on a smaller selection, or through GraphDB's own tools.
+ */
+export function isResourceLimitError(error: unknown): boolean {
+  if (!(error instanceof Error)) return false;
+  return /Memory limit .* reached|Insufficient free Heap Memory|Query evaluation took too long/i.test(
+    error.message,
+  );
+}
+
 export class SparqlClient {
   private config: SparqlEndpointConfig;
 

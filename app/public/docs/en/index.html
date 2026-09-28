@@ -1274,6 +1274,16 @@
             <p>
                 The <strong>Download</strong> button in the application header lets you export multiple entity types at once. A dialog shows all available classes with entity counts. Select the classes you want to include (or use "Select All") and click Export. The result is a single Turtle file containing all entities of the selected types.
             </p>
+            <p>
+                The export is assembled by the database in one query, so very
+                large selections (tens of thousands of entities with all their
+                relationships) can exceed its memory or time limit. EntEdit then
+                says so and offers <strong>Open GraphDB export</strong>, which
+                opens the GraphDB Workbench's <em>Explore → Graphs overview</em>
+                page. Its <strong>Export repository</strong> button exports the
+                whole repository; choose Turtle*, or TriG* to also keep named
+                graphs, to keep the value order.
+            </p>
 
             <h4>Value order</h4>
             <p>

@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, afterEach } from "vitest";
-import { SparqlClient, SparqlError } from "./sparqlClient";
+import { SparqlClient, SparqlError, isResourceLimitError } from "./sparqlClient";
 
 const config = { url: "http://localhost:7200/repositories/EntEdit" };
 
@@ -128,5 +128,20 @@ describe("SparqlClient.update", () => {
     const err = await new SparqlClient(config).update("INSERT DATA {}").catch((e) => e);
     expect(err).toBeInstanceOf(SparqlError);
     expect(err.code).toBe("forbidden");
+  });
+});
+
+describe("isResourceLimitError", () => {
+  it("recognises GraphDB's memory, heap and timeout limits", () => {
+    const failed = (text: string) => new SparqlError("server", `SPARQL query failed: 500 . ${text}`, 500);
+    expect(isResourceLimitError(failed("Query evaluation error: Memory limit 262144000 for sparql query reached"))).toBe(true);
+    expect(isResourceLimitError(failed("Insufficient free Heap Memory 249Mb for group by and distinct"))).toBe(true);
+    expect(isResourceLimitError(failed("Query interrupted: Query evaluation took too long"))).toBe(true);
+  });
+
+  it("leaves other failures alone", () => {
+    expect(isResourceLimitError(new SparqlError("server", "SPARQL query failed: 400 . MALFORMED QUERY", 400))).toBe(false);
+    expect(isResourceLimitError(new SparqlError("network", "SPARQL query network error"))).toBe(false);
+    expect(isResourceLimitError("Memory limit reached")).toBe(false);
   });
 });

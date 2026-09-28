@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { getGraphVisualizationUrl, getWorkbenchRepositoryId } from "./graphUtils";
+import { getGraphVisualizationUrl, getWorkbenchRepositoryId, getWorkbenchUrl } from "./graphUtils";
 
 const ENTITY = "http://viaf.org/viaf/29558386";
 const ENCODED = encodeURIComponent(ENTITY);
@@ -82,5 +82,16 @@ describe("getWorkbenchRepositoryId", () => {
 
   it("returns null for an unparseable endpoint", () => {
     expect(getWorkbenchRepositoryId("not a url")).toBeNull();
+  });
+});
+
+describe("getWorkbenchUrl", () => {
+  it("points at a Workbench page next to the repository endpoint", () => {
+    expect(getWorkbenchUrl("http://localhost/graphdb/repositories/EntEdit", "graphs")).toBe(
+      "http://localhost/graphdb/graphs",
+    );
+    expect(getWorkbenchUrl("http://localhost:7200/repositories/EntEdit", "graphs")).toBe(
+      "http://localhost:7200/graphs",
+    );
   });
 });

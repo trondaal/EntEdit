@@ -92,29 +92,22 @@
       "title": "Export Entities",
       "description": "Select the entity types you want to export as a Turtle RDF file.",
       "selectAll": "Select all",
-      "largeWarning": "You are about to export {{count}} entities. The result may be large and take some time to generate.",
+      "largeWarning": "You are about to export {{count}} entities. The result may be large and take some time to generate. Very large exports can exceed what the database handles in one query; GraphDB's own export can export the whole repository instead.",
+      "tooLarge": "The export is too large for the database to put together in one query: it ran out of memory or time.",
+      "useWorkbench": "Export fewer entity types at a time, or use GraphDB's own export: in the GraphDB Workbench, open Explore → Graphs overview and choose Export repository. Choose Turtle* (or TriG*, which also keeps named graphs) to keep the value order.",
+      "openWorkbench": "Open GraphDB export",
       "exportAnyway": "Export anyway",
       "exportButton": "Export ({{count}})"
     },
     "turtleExport": {
       "title": "Export as Turtle",
-      "classTitle": "Export all {{className}} as Turtle",
       "copyButton": "Copy to Clipboard",
       "downloadButton": "Download {{extension}}",
       "valueOrderOption": "Include value order (Turtle-star)",
       "valueOrderHelp": "Adds the order of values set in the editor as RDF-star annotations. GraphDB and Turtle 1.2 read them; standard Turtle tools do not.",
       "copied": "Turtle copied to clipboard",
       "copyFailed": "Failed to copy to clipboard",
-      "errorMessage": "Failed to fetch entity data: {{message}}",
-      "exportAllMenu": "Export all as Turtle",
-      "exportAllMenuWithCount": "Export all {{count}} as Turtle",
-      "exportAllEntities": "Export all entity types as Turtle",
-      "allEntitiesTitle": "Export all entities as Turtle",
-      "largeExportConfirmTitle": "Export {{count}} entities?",
-      "largeExportConfirmMessage": "This will fetch and serialize all triples for {{count}} entities of type {{className}}. The result may be large. Continue?",
-      "allLargeExportConfirmTitle": "Export {{count}} entities?",
-      "allLargeExportConfirmMessage": "This will fetch and serialize all triples for {{count}} entities across all types. The result may be large. Continue?",
-      "largeExportConfirm": "Export"
+      "errorMessage": "Failed to fetch entity data: {{message}}"
     }
   }
 }

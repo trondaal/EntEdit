@@ -14,12 +14,13 @@ import {
   IconButton,
   Divider,
 } from "@mui/material";
-import { Close, ContentCopy, Download } from "@mui/icons-material";
+import { Close, ContentCopy, Download, OpenInNew } from "@mui/icons-material";
 import { useSnackbar } from "notistack";
 import { useTranslation } from "react-i18next";
 import { useQuery } from "@tanstack/react-query";
 import type { SparqlEndpointConfig } from "../types/sparql";
-import { SparqlClient } from "../utils/sparqlClient";
+import { SparqlClient, isResourceLimitError } from "../utils/sparqlClient";
+import { openWorkbenchExport } from "../utils/graphUtils";
 import { formatLabel, extractUriFragment } from "../utils/labelUtils";
 import { useRdfClasses } from "../hooks/useSchemaQueries";
 import { useAllEntitiesTurtleExportQuery } from "../hooks/useAllEntitiesTurtleExportQuery";
@@ -55,7 +56,7 @@ const ExportDialog: React.FC<ExportDialogProps> = ({
   const [showLargeWarning, setShowLargeWarning] = useState(false);
 
   // Fetch entity counts per class
-  const { data: classCounts } = useQuery({
+  const { data: classCounts, isPending: countsPending, isError: countsFailed } = useQuery({
     queryKey: ["class-counts", config.url, selectedLanguage],
     queryFn: async () => {
       const client = new SparqlClient(config);
@@ -209,7 +210,15 @@ const ExportDialog: React.FC<ExportDialogProps> = ({
         <>
           <DialogContent dividers>
             {showLargeWarning && (
-              <Alert severity="warning" sx={{ mb: 2 }}>
+              <Alert
+                severity="warning"
+                sx={{ mb: 2 }}
+                action={
+                  <Button color="inherit" size="small" endIcon={<OpenInNew />} onClick={() => openWorkbenchExport(config.url)}>
+                    {t("entityEditor:dialogs.export.openWorkbench")}
+                  </Button>
+                }
+              >
                 {t("entityEditor:dialogs.export.largeWarning", { count: totalSelectedCount })}
               </Alert>
             )}
@@ -273,7 +282,9 @@ const ExportDialog: React.FC<ExportDialogProps> = ({
                 variant="contained"
                 startIcon={<Download />}
                 onClick={handleExport}
-                disabled={selectedClasses.size === 0}
+                // Wait for the counts: without them the large-export warning
+                // is skipped (the selection counts as 0 entities)
+                disabled={selectedClasses.size === 0 || (countsPending && !countsFailed)}
               >
                 {t("entityEditor:dialogs.export.exportButton", { count: totalSelectedCount })}
               </Button>
@@ -289,7 +300,26 @@ const ExportDialog: React.FC<ExportDialogProps> = ({
               </Box>
             )}
 
-            {turtleError && (
+            {turtleError && isResourceLimitError(turtleError) && (
+              <Alert severity="warning">
+                <Typography variant="body2" sx={{ mb: 1 }}>
+                  {t("entityEditor:dialogs.export.tooLarge")}
+                </Typography>
+                <Typography variant="body2" sx={{ mb: 1.5 }}>
+                  {t("entityEditor:dialogs.export.useWorkbench")}
+                </Typography>
+                <Button
+                  variant="outlined"
+                  size="small"
+                  endIcon={<OpenInNew />}
+                  onClick={() => openWorkbenchExport(config.url)}
+                >
+                  {t("entityEditor:dialogs.export.openWorkbench")}
+                </Button>
+              </Alert>
+            )}
+
+            {turtleError && !isResourceLimitError(turtleError) && (
               <Alert severity="error">
                 {t("entityEditor:dialogs.turtleExport.errorMessage", { message: turtleError.message })}
               </Alert>

@@ -92,29 +92,22 @@
       "title": "Eksporter entiteter",
       "description": "Velg entitetstypene du vil eksportere som en Turtle RDF-fil.",
       "selectAll": "Velg alle",
-      "largeWarning": "Du er i ferd med å eksportere {{count}} entiteter. Resultatet kan bli stort og ta litt tid å generere.",
+      "largeWarning": "Du er i ferd med å eksportere {{count}} entiteter. Resultatet kan bli stort og ta litt tid å generere. Svært store eksporter kan bli mer enn databasen klarer i én spørring; GraphDBs egen eksport kan i stedet eksportere hele datalageret.",
+      "tooLarge": "Eksporten er for stor til at databasen klarer å sette den sammen i én spørring: den gikk tom for minne eller tid.",
+      "useWorkbench": "Eksporter færre entitetstyper om gangen, eller bruk GraphDBs egen eksport: åpne Explore → Graphs overview i GraphDB Workbench og velg Export repository. Velg Turtle* (eller TriG*, som også tar vare på navngitte grafer) for å beholde verdirekkefølgen.",
+      "openWorkbench": "Åpne GraphDB-eksport",
       "exportAnyway": "Eksporter likevel",
       "exportButton": "Eksporter ({{count}})"
     },
     "turtleExport": {
       "title": "Eksporter som Turtle",
-      "classTitle": "Eksporter alle {{className}} som Turtle",
       "copyButton": "Kopier til utklippstavle",
       "downloadButton": "Last ned {{extension}}",
       "valueOrderOption": "Ta med verdirekkefølge (Turtle-star)",
       "valueOrderHelp": "Legger til rekkefølgen verdiene har fått i redigeringsverktøyet, som RDF-star-annotasjoner. GraphDB og Turtle 1.2 leser dem; vanlige Turtle-verktøy gjør det ikke.",
       "copied": "Turtle kopiert til utklippstavlen",
       "copyFailed": "Kunne ikke kopiere til utklippstavlen",
-      "errorMessage": "Feil ved henting av entitetsdata: {{message}}",
-      "exportAllMenu": "Eksporter alle som Turtle",
-      "exportAllMenuWithCount": "Eksporter alle {{count}} som Turtle",
-      "exportAllEntities": "Eksporter alle entitetstyper som Turtle",
-      "allEntitiesTitle": "Eksporter alle entiteter som Turtle",
-      "largeExportConfirmTitle": "Eksporter {{count}} entiteter?",
-      "largeExportConfirmMessage": "Dette vil hente og serialisere alle tripler for {{count}} entiteter av type {{className}}. Resultatet kan bli stort. Fortsette?",
-      "allLargeExportConfirmTitle": "Eksporter {{count}} entiteter?",
-      "allLargeExportConfirmMessage": "Dette vil hente og serialisere alle tripler for {{count}} entiteter på tvers av alle typer. Resultatet kan bli stort. Fortsette?",
-      "largeExportConfirm": "Eksporter"
+      "errorMessage": "Feil ved henting av entitetsdata: {{message}}"
     }
   }
 }

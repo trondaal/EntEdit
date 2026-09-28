@@ -1,12 +1,8 @@
 /**
- * Generates a GraphDB Workbench visualization URL for an entity.
- * Derives the base URL from the SPARQL endpoint URL and appends
- * the graphs-visualizations path with the entity URI as a query parameter.
+ * URL of a GraphDB Workbench page (e.g. "graphs" for Graphs overview),
+ * derived from the SPARQL endpoint URL.
  */
-export function getGraphVisualizationUrl(
-  endpointUrl: string,
-  entityUri: string
-): string | null {
+export function getWorkbenchUrl(endpointUrl: string, page: string): string | null {
   try {
     const url = new URL(endpointUrl);
     // The Workbench lives at the GraphDB root, which is the endpoint URL with the
@@ -17,12 +13,19 @@ export function getGraphVisualizationUrl(
     const basePath = url.pathname
       .replace(/\/repositories\/[^/]+\/?$/, "")
       .replace(/\/$/, "");
-    const encodedUri = encodeURIComponent(entityUri);
-    return `${url.origin}${basePath}/graphs-visualizations?uri=${encodedUri}`;
+    return `${url.origin}${basePath}/${page}`;
   } catch (error) {
-    console.error("Failed to generate graph URL:", error);
+    console.error("Failed to generate Workbench URL:", error);
     return null;
   }
+}
+
+/** GraphDB Workbench visualization URL for an entity. */
+export function getGraphVisualizationUrl(
+  endpointUrl: string,
+  entityUri: string
+): string | null {
+  return getWorkbenchUrl(endpointUrl, `graphs-visualizations?uri=${encodeURIComponent(entityUri)}`);
 }
 
 /**
@@ -64,6 +67,17 @@ export function prepareWorkbenchRepository(endpointUrl: string): void {
     // Storage can be unavailable (private browsing, blocked site data). The link
     // still opens; the user just picks the repository in the Workbench.
   }
+}
+
+/**
+ * Seeds the Workbench repository, then opens Graphs overview in a new tab,
+ * where "Export repository" exports everything (Turtle*, TriG* keep RDF-star).
+ */
+export function openWorkbenchExport(endpointUrl: string): void {
+  const url = getWorkbenchUrl(endpointUrl, "graphs");
+  if (!url) return;
+  prepareWorkbenchRepository(endpointUrl);
+  window.open(url, "_blank", "noopener,noreferrer");
 }
 
 /** Seeds the Workbench repository, then opens the visualization in a new tab. */
