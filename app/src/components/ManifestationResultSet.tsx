@@ -8,6 +8,7 @@ import {
   Alert,
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import type { EntitySearchHandler } from "../utils/searchLink";
 import ManifestationSearchResult from "./ManifestationSearchResult";
 import type { ManifestationSearchResult as ManifestationSearchResultType } from "../hooks/useSearchQueries";
 import type { SparqlEndpointConfig } from "../types/sparql";
@@ -29,7 +30,7 @@ interface ManifestationResultSetProps {
   hasNextPage: boolean;
   isFetchingNextPage: boolean;
   onFetchNextPage: () => void;
-  onEntitySearch: (name: string) => void;
+  onEntitySearch: EntitySearchHandler;
 }
 
 const ManifestationResultSet: React.FC<ManifestationResultSetProps> = ({

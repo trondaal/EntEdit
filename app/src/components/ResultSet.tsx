@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useMemo } from "react";
 import {
   Paper,
   Box,
@@ -8,6 +8,7 @@ import {
   Alert,
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import type { EntitySearchHandler } from "../utils/searchLink";
 import Expression from "./Expression";
 import type { ExpressionSearchResult } from "../hooks/useSearchQueries";
 import type { SparqlEndpointConfig } from "../types/sparql";
@@ -20,6 +21,9 @@ interface ResultSetProps {
   totalCount: number;
   /** No exact hits: the results match similar spellings */
   fuzzy: boolean;
+  /** Entry of a followed link (the expression, or a work's expressions), shown first */
+  linked?: ExpressionSearchResult[];
+  linkedLoading?: boolean;
   searchResults: ExpressionSearchResult[];
   searchLoading: boolean;
   searchError: Error | null;
@@ -29,12 +33,14 @@ interface ResultSetProps {
   hasNextPage: boolean;
   isFetchingNextPage: boolean;
   onFetchNextPage: () => void;
-  onEntitySearch: (name: string) => void;
+  onEntitySearch: EntitySearchHandler;
 }
 
 const ResultSet: React.FC<ResultSetProps> = ({
   searchQuery,
   filtered,
+  linked = [],
+  linkedLoading = false,
   searchResults,
   totalCount,
   fuzzy,
@@ -49,6 +55,22 @@ const ResultSet: React.FC<ResultSetProps> = ({
   onEntitySearch,
 }) => {
   const { t } = useTranslation();
+  // The text search finds the linked entry too; list it once, first
+  const otherResults = useMemo(() => {
+    const linkedUris = new Set(linked.map((entry) => entry.uri));
+    return searchResults.filter((result) => !linkedUris.has(result.uri));
+  }, [linked, searchResults]);
+  const hasAnything = linked.length > 0 || otherResults.length > 0;
+  const sectionHeading = (text: string) => (
+    <Typography
+      variant="overline"
+      component="h3"
+      color="text.secondary"
+      sx={{ display: "block", px: 2, pt: 1, lineHeight: 2 }}
+    >
+      {text}
+    </Typography>
+  );
 
   // Fetch next page when user scrolls near the bottom
   const handleScroll = useCallback(
@@ -95,11 +117,11 @@ const ResultSet: React.FC<ResultSetProps> = ({
         <Box sx={{ p: 3, textAlign: "center", color: "text.secondary" }}>
           {t("search.enterSearchQuery")}
         </Box>
-      ) : searchError ? null : searchLoading ? (
+      ) : searchError ? null : searchLoading || linkedLoading ? (
         <Box sx={{ display: "flex", justifyContent: "center", p: 3 }}>
           <CircularProgress />
         </Box>
-      ) : searchResults.length === 0 ? (
+      ) : !hasAnything ? (
         <Box sx={{ p: 3, textAlign: "center", color: "text.secondary" }}>
           {!searchQuery
             ? t("search.noResultsForFilters")
@@ -125,7 +147,19 @@ const ResultSet: React.FC<ResultSetProps> = ({
           }}
           onScroll={handleScroll}
         >
-          {searchResults.map((result, index) => (
+          {linked.length > 0 && sectionHeading(t("search.followedLink"))}
+          {linked.map((result) => (
+            <Expression
+              key={`linked-${result.uri}`}
+              result={result}
+              onSelect={onSelectResult}
+              config={config}
+              selectedLanguage={selectedLanguage}
+              onEntitySearch={onEntitySearch}
+            />
+          ))}
+          {linked.length > 0 && otherResults.length > 0 && sectionHeading(t("search.otherResults"))}
+          {otherResults.map((result, index) => (
             <Expression
               key={`${result.uri}-${index}`}
               result={result}

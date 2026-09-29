@@ -10,6 +10,7 @@ import {
   Link,
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import type { EntitySearchHandler } from "../utils/searchLink";
 import { useExpressionsByManifestation } from "../hooks/useExpressionQueries";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import {
@@ -26,7 +27,7 @@ interface ExpressionListProps {
   selectedLanguage: string;
   /** Expression shown as part of the publication entry itself (a collection) */
   excludeUri?: string;
-  onEntitySearch?: (name: string) => void;
+  onEntitySearch?: EntitySearchHandler;
 }
 
 const ExpressionList: React.FC<ExpressionListProps> = ({
@@ -165,7 +166,7 @@ const ExpressionList: React.FC<ExpressionListProps> = ({
                                     variant="body2"
                                     onClick={(e: React.MouseEvent) => {
                                       e.stopPropagation();
-                                      onEntitySearch(entry.name);
+                                      onEntitySearch(entry.name, { uri: entry.uri, kind: "agent" });
                                     }}
                                     sx={{
                                       textDecoration: 'none',
@@ -229,7 +230,7 @@ const ExpressionList: React.FC<ExpressionListProps> = ({
                                         variant="body2"
                                         onClick={(e: React.MouseEvent) => {
                                           e.stopPropagation();
-                                          onEntitySearch(entry.title);
+                                          onEntitySearch(entry.title, { uri: entry.uri, kind: "work" });
                                         }}
                                         sx={{
                                           textDecoration: 'none',
@@ -290,7 +291,7 @@ const ExpressionList: React.FC<ExpressionListProps> = ({
                                         variant="body2"
                                         onClick={(e: React.MouseEvent) => {
                                           e.stopPropagation();
-                                          onEntitySearch(entry.title);
+                                          onEntitySearch(entry.title, { uri: entry.uri, kind: "expression" });
                                         }}
                                         sx={{
                                           textDecoration: 'none',

@@ -14,6 +14,7 @@ import { useTranslation } from "react-i18next";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import {
   useFacetLabels,
+  useLinkedExpressions,
   useSearchExpressions,
   useSearchFacets,
   useSearchManifestations,
@@ -27,6 +28,7 @@ import {
   type SearchIndex,
 } from "../utils/searchFilters";
 import SearchFilters from "./SearchFilters";
+import { toNameQuery, type EntitySearchHandler, type LinkTarget } from "../utils/searchLink";
 import { useDebouncedValue } from "../hooks/useDebouncedValue";
 import ResultSet from "./ResultSet";
 import ManifestationResultSet from "./ManifestationResultSet";
@@ -53,12 +55,18 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
   const filters = filtersByMode[searchMode];
   const setFilters = (update: (current: Filters) => Filters) =>
     setFiltersByMode((all) => ({ ...all, [searchMode]: update(all[searchMode]) }));
+  // A link followed in the content search, until the search text is edited
+  const [linkTarget, setLinkTarget] = useState<LinkTarget | null>(null);
 
   // Debounce the search query to avoid firing expensive SPARQL queries on every keystroke
   const debouncedQuery = useDebouncedValue(searchInput, 500);
 
-  // Only fire the query for the active search tab to avoid unnecessary SPARQL queries
-  const expressionQuery = searchMode === 'expression' ? debouncedQuery : '';
+  // Only fire the query for the active search tab to avoid unnecessary SPARQL queries.
+  // A followed link searches for its label at once, without the typing delay;
+  // an agent's name is searched as a phrase in the names field only.
+  const contentLink = searchMode === 'expression' ? linkTarget : null;
+  const expressionQuery = searchMode === 'expression' ? (contentLink?.label ?? debouncedQuery) : '';
+  const agentQuery = contentLink?.kind === 'agent' ? toNameQuery(contentLink.label) : undefined;
   const manifestationQuery = searchMode === 'manifestation' ? debouncedQuery : '';
   const expressionFilters = searchMode === 'expression' ? filters : {};
   const manifestationFilters = searchMode === 'manifestation' ? filters : {};
@@ -71,12 +79,15 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
     hasNextPage: searchHasNextPage,
     isFetchingNextPage: searchIsFetchingNextPage,
     fetchNextPage: searchFetchNextPage,
-  } = useSearchExpressions(config, expressionQuery, selectedLanguage, expressionFilters);
+  } = useSearchExpressions(config, expressionQuery, selectedLanguage, expressionFilters, agentQuery);
+  const { data: linkedExpressions, isLoading: linkedLoading } = useLinkedExpressions(
+    config, contentLink, selectedLanguage,
+  );
 
   // Counts for the current search; with neither text nor filters, for the
   // whole collection. The collection's values also decide which labels to load.
   const { data: facets, isPlaceholderData: facetsUpdating } = useSearchFacets(
-    config, searchIndex, debouncedQuery, filters,
+    config, searchIndex, searchMode === 'expression' ? expressionQuery : debouncedQuery, filters, true, agentQuery,
   );
   const { data: collectionFacets } = useSearchFacets(config, searchIndex, "", {});
   const facetIris = useMemo(
@@ -119,10 +130,12 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
 
   const handleSearch = (value: string) => {
     setSearchInput(value);
+    setLinkTarget(null);
   };
 
   const handleClearSearch = () => {
     setSearchInput("");
+    setLinkTarget(null);
   };
 
   const handleToggleFilter = (field: FilterField, value: string) => {
@@ -140,10 +153,18 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
     }
   };
 
-  // A clicked name or title is searched for as typed: every word required,
-  // which finds the entity it labels (quotes would be searched as characters)
-  const handleEntitySearch = (name: string) => {
-    setSearchInput(name);
+  // A clicked name or title goes into the search field. In the content search
+  // the entry it points to is also looked up by URI and shown first, since the
+  // label's words alone rank related entries (that repeat them) as high.
+  const handleEntitySearch: EntitySearchHandler = (label, target) => {
+    setSearchInput(label);
+    setLinkTarget(searchMode === 'expression' && target ? { label, ...target } : null);
+    if (isRecording) {
+      logEvent({ type: "search_link_followed", label, uri: target?.uri, kind: target?.kind, mode: searchMode });
+    }
+    // A followed link starts a new search: filters chosen for the previous
+    // one (a language, a genre) would otherwise hide the entity it points to
+    if (hasFilters(filters)) handleClearFilters();
   };
 
   return (
@@ -259,8 +280,10 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
         >
           {searchMode === 'expression' ? (
             <ResultSet
-              searchQuery={debouncedQuery}
+              searchQuery={expressionQuery}
               filtered={filtered}
+              linked={contentLink ? (linkedExpressions ?? []) : []}
+              linkedLoading={Boolean(contentLink) && linkedLoading}
               searchResults={searchResults}
               totalCount={searchData?.pages[0]?.total ?? 0}
               fuzzy={searchData?.pages[0]?.fuzzy ?? false}

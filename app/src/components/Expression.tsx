@@ -13,6 +13,7 @@ import {
 import { ExpandMore, ExpandLess, AccountTree, ContentCopy } from "@mui/icons-material";
 import { useSnackbar } from "notistack";
 import { useTranslation } from "react-i18next";
+import type { EntitySearchHandler } from "../utils/searchLink";
 import type { ExpressionSearchResult } from "../hooks/useSearchQueries";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import { getGraphVisualizationUrl, openGraphVisualization } from "../utils/graphUtils";
@@ -25,7 +26,7 @@ interface ExpressionProps {
   onSelect: (uri: string) => void;
   config: SparqlEndpointConfig;
   selectedLanguage: string;
-  onEntitySearch: (name: string) => void;
+  onEntitySearch: EntitySearchHandler;
 }
 
 const Expression: React.FC<ExpressionProps> = ({
@@ -182,7 +183,7 @@ const Expression: React.FC<ExpressionProps> = ({
                                     variant="body2"
                                     onClick={(e: React.MouseEvent) => {
                                       e.stopPropagation();
-                                      onEntitySearch(entry.name);
+                                      onEntitySearch(entry.name, { uri: entry.uri, kind: "agent" });
                                     }}
                                     sx={{
                                       textDecoration: 'none',
@@ -234,7 +235,7 @@ const Expression: React.FC<ExpressionProps> = ({
                                     variant="body2"
                                     onClick={(e: React.MouseEvent) => {
                                       e.stopPropagation();
-                                      onEntitySearch(entry.name);
+                                      onEntitySearch(entry.name, { uri: entry.uri, kind: "agent" });
                                     }}
                                     sx={{
                                       textDecoration: 'none',
@@ -296,7 +297,7 @@ const Expression: React.FC<ExpressionProps> = ({
                                     variant="body2"
                                     onClick={(e: React.MouseEvent) => {
                                       e.stopPropagation();
-                                      onEntitySearch(entry.title);
+                                      onEntitySearch(entry.title, { uri: entry.uri, kind: "work" });
                                     }}
                                     sx={{
                                       textDecoration: 'none',
@@ -353,7 +354,7 @@ const Expression: React.FC<ExpressionProps> = ({
                                     variant="body2"
                                     onClick={(e: React.MouseEvent) => {
                                       e.stopPropagation();
-                                      onEntitySearch(entry.title);
+                                      onEntitySearch(entry.title, { uri: entry.uri, kind: "expression" });
                                     }}
                                     sx={{
                                       textDecoration: 'none',

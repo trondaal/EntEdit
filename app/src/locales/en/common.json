@@ -108,6 +108,8 @@
       "showFewer": "Show fewer"
     },
     "similarSpellings": "No exact matches for \"{{query}}\". Showing results with similar spellings.",
+    "followedLink": "Followed link",
+    "otherResults": "Other results",
     "showWholeNote": "show the whole note",
     "showLessOfNote": "show less",
     "searchFailed": "The search could not be completed. Try other search words, or check the connection to the database.",

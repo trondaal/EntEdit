@@ -13,6 +13,7 @@ import {
 import { ExpandMore, ExpandLess, AccountTree, ContentCopy } from "@mui/icons-material";
 import { useSnackbar } from "notistack";
 import { useTranslation } from "react-i18next";
+import type { EntitySearchHandler } from "../utils/searchLink";
 import CollapsibleNote from "./CollapsibleNote";
 import type { ManifestationSearchResult as ManifestationSearchResultType } from "../hooks/useSearchQueries";
 import type { SparqlEndpointConfig } from "../types/sparql";
@@ -37,7 +38,7 @@ interface ManifestationSearchResultProps {
   onSelect: (uri: string) => void;
   selectedLanguage: string;
   config: SparqlEndpointConfig;
-  onEntitySearch: (name: string) => void;
+  onEntitySearch: EntitySearchHandler;
 }
 
 const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
@@ -235,7 +236,7 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                                 variant="body2"
                                 onClick={(e: React.MouseEvent) => {
                                   e.stopPropagation();
-                                  onEntitySearch(entry.name);
+                                  onEntitySearch(entry.name, { uri: entry.uri, kind: "agent" });
                                 }}
                                 sx={{
                                   textDecoration: 'none',
@@ -274,7 +275,7 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                                 variant="body2"
                                 onClick={(e: React.MouseEvent) => {
                                   e.stopPropagation();
-                                  onEntitySearch(entry.name);
+                                  onEntitySearch(entry.name, { uri: entry.uri, kind: "agent" });
                                 }}
                                 sx={{
                                   textDecoration: 'none',
@@ -313,7 +314,7 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                                 variant="body2"
                                 onClick={(e: React.MouseEvent) => {
                                   e.stopPropagation();
-                                  onEntitySearch(entry.name);
+                                  onEntitySearch(entry.name, { uri: entry.uri, kind: "agent" });
                                 }}
                                 sx={{
                                   textDecoration: 'none',
@@ -373,7 +374,7 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                                     variant="body2"
                                     onClick={(e: React.MouseEvent) => {
                                       e.stopPropagation();
-                                      onEntitySearch(entry.title);
+                                      onEntitySearch(entry.title, { uri: entry.uri, kind: "work" });
                                     }}
                                     sx={{
                                       textDecoration: 'none',
@@ -430,7 +431,7 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                                     variant="body2"
                                     onClick={(e: React.MouseEvent) => {
                                       e.stopPropagation();
-                                      onEntitySearch(entry.title);
+                                      onEntitySearch(entry.title, { uri: entry.uri, kind: "expression" });
                                     }}
                                     sx={{
                                       textDecoration: 'none',

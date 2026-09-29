@@ -90,6 +90,15 @@ export interface SearchFilterChangedEvent extends BaseEvent {
   mode: "expression" | "manifestation";
 }
 
+export interface SearchLinkFollowedEvent extends BaseEvent {
+  type: "search_link_followed";
+  /** Name or title that was clicked, now the search text */
+  label: string;
+  uri?: string;
+  kind?: "expression" | "work" | "agent";
+  mode: "expression" | "manifestation";
+}
+
 export interface SearchFiltersClearedEvent extends BaseEvent {
   type: "search_filters_cleared";
   query: string;
@@ -120,6 +129,7 @@ export type LogEvent =
   | SearchPerformedEvent
   | SearchFilterChangedEvent
   | SearchFiltersClearedEvent
+  | SearchLinkFollowedEvent
   | SearchResultSelectedEvent
   | TabSwitchedEvent;
 

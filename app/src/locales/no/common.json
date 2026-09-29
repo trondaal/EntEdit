@@ -108,6 +108,8 @@
       "showFewer": "Vis færre"
     },
     "similarSpellings": "Ingen eksakte treff på «{{query}}». Viser treff med lignende stavemåte.",
+    "followedLink": "Fulgt lenke",
+    "otherResults": "Andre treff",
     "showWholeNote": "vis hele noten",
     "showLessOfNote": "vis mindre",
     "searchFailed": "Søket kunne ikke gjennomføres. Prøv andre søkeord, eller sjekk tilkoblingen til databasen.",

@@ -42,6 +42,20 @@ export const expressionsOfManifestation = (manifestationUri: string): string => 
 export const expressionOrderInManifestation = (manifestationUri: string): string =>
   `OPTIONAL { << <${sanitizeSparqlUri(manifestationUri)}> rdamo:P30139 ?expression >> entedit:valueOrder ?value_order }`;
 
+/** Scope binding `?expression` to the expressions of a work. */
+export const expressionsOfWork = (workUri: string): string => {
+  const w = `<${sanitizeSparqlUri(workUri)}>`;
+  return `{ ?expression rdaeo:P20231 ${w} } UNION { ${w} rdawo:P10078 ?expression }`;
+};
+
+/**
+ * Order of a work's expressions as set in the editor: the annotation on the
+ * work's own statement (rdawo:P10078). A link stated only from the expression
+ * (rdaeo:P20231, the usual case) has none.
+ */
+export const expressionOrderInWork = (workUri: string): string =>
+  `OPTIONAL { << <${sanitizeSparqlUri(workUri)}> rdawo:P10078 ?expression >> entedit:valueOrder ?value_order }`;
+
 /** Scope binding `?manifestation` to the manifestations of an expression. */
 export const manifestationsOfExpression = (expressionUri: string): string => {
   const e = `<${sanitizeSparqlUri(expressionUri)}>`;

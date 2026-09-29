@@ -18,7 +18,9 @@ import {
 import {
   buildExpressionDetailQuery,
   buildManifestationDetailQuery,
+  expressionOrderInWork,
   expressionScope,
+  expressionsOfWork,
   manifestationScope,
   toExpressionDetail,
   toManifestationDetail,
@@ -26,6 +28,8 @@ import {
   type ManifestationDetail,
 } from "../utils/wemiQueries";
 import type { SparqlEndpointConfig } from "../types/sparql";
+import type { LinkTarget } from "../utils/searchLink";
+import { sortByValueOrder } from "../utils/valueOrder";
 
 /** Number of search results fetched per page */
 export const SEARCH_PAGE_SIZE = 20;
@@ -126,7 +130,8 @@ WHERE {
  * Hits for one page. The first page falls back to similar spellings when
  * the search text has no exact hits; later pages keep the mode of the
  * first. Only the text decides: a text that matches but is filtered down to
- * nothing gets no hits, not a looser spelling.
+ * nothing gets no hits, not a looser spelling. A ready-made `luceneText`
+ * (e.g. an agent's name as a phrase, `toNameQuery`) is used as it is.
  */
 const findHits = async (
   client: SparqlClient,
@@ -135,8 +140,12 @@ const findHits = async (
   filters: SearchFilters,
   { offset, fuzzy }: SearchPageParam,
   signal: AbortSignal,
+  luceneText?: string,
 ): Promise<Hits & { fuzzy: boolean }> => {
   const filterClauses = toFilterClauses(filters);
+  if (luceneText) {
+    return { ...(await searchPage(client, index, combineQuery(luceneText, filterClauses), offset, signal)), fuzzy: false };
+  }
   const run = (similar: boolean) =>
     searchPage(client, index, combineQuery(toLuceneQuery(text, { fuzzy: similar }), filterClauses), offset, signal);
   const hits = await run(fuzzy);
@@ -155,7 +164,9 @@ const textQueryFor = async (
   index: string,
   text: string,
   signal: AbortSignal,
+  luceneText?: string,
 ): Promise<string> => {
+  if (luceneText) return luceneText;
   const exact = toLuceneQuery(text);
   if (!hasFuzzyTerms(text)) return exact;
   return (await countHits(client, index, exact, signal)) > 0
@@ -218,16 +229,18 @@ export const useSearchExpressions = (
   query: string,
   language: string,
   filters: SearchFilters = {},
+  /** Ready-made Lucene query used instead of `query` (see `findHits`) */
+  luceneText?: string,
 ) => {
   const normalized = normalizeFilters(filters);
   return useInfiniteQuery({
-    queryKey: ["searchExpressions", config.url, query, language, normalized],
+    queryKey: ["searchExpressions", config.url, query, language, normalized, luceneText],
     queryFn: async ({ pageParam, signal }): Promise<SearchPage<ExpressionSearchResult>> => {
       if (!hasCriteria(query, normalized)) {
         return EMPTY;
       }
       const client = new SparqlClient(config);
-      const { uris, scores, total, fuzzy } = await findHits(client, "expressionsIndex", query, normalized, pageParam, signal);
+      const { uris, scores, total, fuzzy } = await findHits(client, "expressionsIndex", query, normalized, pageParam, signal, luceneText);
       if (uris.length === 0) return { results: [], total, fuzzy };
 
       const details = await client.query(
@@ -260,14 +273,16 @@ export const useSearchFacets = (
   query: string,
   filters: SearchFilters = {},
   enabled = true,
+  /** Ready-made Lucene query used instead of `query` (see `findHits`) */
+  luceneText?: string,
 ) => {
   const normalized = normalizeFilters(filters);
   return useQuery({
-    queryKey: ["searchFacets", config.url, index, query, normalized],
+    queryKey: ["searchFacets", config.url, index, query, normalized, luceneText],
     queryFn: async ({ signal }): Promise<Facets> => {
       const client = new SparqlClient(config);
       const fields = INDEX_FILTER_FIELDS[index];
-      const textQuery = await textQueryFor(client, index, query, signal);
+      const textQuery = await textQueryFor(client, index, query, signal, luceneText);
       const active = fields.filter((field) => normalized[field]?.length);
       const [facets, ...own] = await Promise.all([
         facetCounts(client, index, combineQuery(textQuery, toFilterClauses(normalized)), fields, signal),
@@ -352,6 +367,39 @@ export const useSearchManifestations = (
     initialPageParam: FIRST_PAGE,
     getNextPageParam: nextPage,
     enabled: hasCriteria(query, normalized),
+    staleTime: 5 * 60 * 1000, // 5 minutes
+  });
+};
+
+/**
+ * The entry a followed link points to, shown first in the content search: the
+ * linked expression, or the expressions of a linked work (in their recorded
+ * order, else by title). Agent links have no entry of their own.
+ */
+export const useLinkedExpressions = (
+  config: SparqlEndpointConfig,
+  target: LinkTarget | null,
+  language: string,
+) => {
+  const uri = target?.uri;
+  const kind = target?.kind;
+  return useQuery({
+    queryKey: ["linkedExpressions", config.url, kind, uri, language],
+    queryFn: async ({ signal }): Promise<ExpressionSearchResult[]> => {
+      if (!uri || (kind !== "expression" && kind !== "work")) return [];
+      const client = new SparqlClient(config);
+      const query =
+        kind === "expression"
+          ? buildExpressionDetailQuery(expressionScope([uri]), language)
+          : buildExpressionDetailQuery(expressionsOfWork(uri), language, expressionOrderInWork(uri));
+      const response = await client.query(query, { signal });
+      return sortByValueOrder(
+        response.results.bindings.map(toExpressionDetail),
+        (e) => e.valueOrder,
+        (a, b) => (a.expression_title ?? a.uri).localeCompare(b.expression_title ?? b.uri),
+      );
+    },
+    enabled: Boolean(uri) && (kind === "expression" || kind === "work"),
     staleTime: 5 * 60 * 1000, // 5 minutes
   });
 };

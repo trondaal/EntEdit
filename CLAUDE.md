@@ -138,6 +138,13 @@ EntEdit/
   boosted phrase on names/titles/labels so the entity labelled with the whole text
   (e.g. a clicked relationship target) ranks first. Clicked names and titles are
   searched as plain text (`handleEntitySearch`), not wrapped in quotes
+- `searchLink.ts` - a followed result link (`LinkTarget`: label, URI, kind). In the
+  content search the target is looked up by URI (`useLinkedExpressions`: the
+  expression, or a work's expressions) and shown first under "Followed link",
+  the label's text search below it without the target; an agent link searches
+  the name as a phrase in the names field (`toNameQuery`). Following a link
+  clears the filters; typing ends the link mode. The publication search still
+  searches the label as text
 - `wemiQueries.ts` - expression/manifestation detail queries shared by the search
   pages and the expandable lists under a result, built around a *scope* pattern
 - `searchFilters.ts` - search category filters as Lucene clauses (OR within a
