@@ -140,10 +140,10 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
     }
   };
 
+  // A clicked name or title is searched for as typed: every word required,
+  // which finds the entity it labels (quotes would be searched as characters)
   const handleEntitySearch = (name: string) => {
-    // Wrap in quotes for Lucene phrase search; escape any embedded quotes
-    const escapedName = name.replace(/"/g, '\\"');
-    setSearchInput(`"${escapedName}"`);
+    setSearchInput(name);
   };
 
   return (

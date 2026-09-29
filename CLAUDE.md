@@ -132,7 +132,12 @@ EntEdit/
   cleanup and concurrent-edit detection; unit-tested in `entityUpdate.test.ts`
 - `rdfTerms.ts` - RDF term model shared by load and save (IRI / literal with language
   tag or datatype), SPARQL serialization and term identity for diffing
-- `luceneQuery.ts` - escapes free-text search input for the Lucene connector
+- `luceneQuery.ts` - turns free-text search input into a Lucene query: every word
+  required (`+word`), punctuation-only words ("/", "–") left out — required, they
+  matched nothing and emptied the result — and, for two or more words, an optional
+  boosted phrase on names/titles/labels so the entity labelled with the whole text
+  (e.g. a clicked relationship target) ranks first. Clicked names and titles are
+  searched as plain text (`handleEntitySearch`), not wrapped in quotes
 - `wemiQueries.ts` - expression/manifestation detail queries shared by the search
   pages and the expandable lists under a result, built around a *scope* pattern
 - `searchFilters.ts` - search category filters as Lucene clauses (OR within a

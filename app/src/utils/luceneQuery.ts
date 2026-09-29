@@ -17,6 +17,10 @@
  * the category fields hold type labels in ~30 languages, so e.g. `sands~1`
  * matches French "sans médiation" on nearly every entity.
  *
+ * Words without a letter or digit ("/", "–" in a label such as "Title / Author.
+ * – English") are left out: required, they matched nothing — the unanalyzed
+ * filter fields keep "/" as a value no entity has — and emptied the result.
+ *
  * The result still has to go through `escapeSparqlLiteral` before it is
  * placed inside a SPARQL string literal.
  */
@@ -41,11 +45,15 @@ export interface LuceneQueryOptions {
   fuzzy?: boolean;
 }
 
-export const toLuceneQuery = (input: string, { fuzzy = false }: LuceneQueryOptions = {}): string =>
-  input
+/** Extra weight for an entity whose name, title or label holds the whole search as a phrase. */
+const PHRASE_BOOST = 10;
+
+export const toLuceneQuery = (input: string, { fuzzy = false }: LuceneQueryOptions = {}): string => {
+  const words = input
     .trim()
     .split(/\s+/)
-    .filter(Boolean)
+    .filter((word) => /[\p{L}\p{N}]/u.test(word));
+  const required = words
     .map((word) => {
       // Lower-case bare operators so they are searched as words
       if (LUCENE_OPERATORS.has(word)) return `+${word.toLowerCase()}`;
@@ -58,6 +66,14 @@ export const toLuceneQuery = (input: string, { fuzzy = false }: LuceneQueryOptio
       return `+(${FUZZY_FIELDS.map((field) => `${field}:${escaped}~${edits}`).join(" ")})`;
     })
     .join(" ");
+  if (words.length < 2) return required;
+  // Optional: every word is still required, but the entity labelled with the
+  // whole text (a clicked relationship target, a full title) ranks first,
+  // rather than the entities that merely mention it. Inside quotes only " and
+  // \ are special.
+  const phrase = `"${words.join(" ").replace(/[\\"]/g, (c) => `\\${c}`)}"`;
+  return `${required} (${FUZZY_FIELDS.map((field) => `${field}:${phrase}`).join(" ")})^${PHRASE_BOOST}`;
+};
 
 /** Whether the fuzzy query differs from the exact one, i.e. a fallback can find more. */
 export const hasFuzzyTerms = (input: string): boolean =>
