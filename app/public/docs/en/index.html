@@ -1296,14 +1296,15 @@
             <p>
                 Both exports write the values of a property in the order set
                 in the editor. Plain Turtle cannot record that order, so it
-                is lost when the file is loaded elsewhere. Check
-                <strong>Include value order (Turtle-star)</strong> to keep it:
+                is lost when the file is loaded elsewhere. The
+                <strong>Include value order (Turtle-star)</strong> option,
+                on by default, keeps it:
                 each ordered value is then followed by an annotation such as
                 <code>{| entedit:valueOrder 0 |}</code>, and the file is
                 downloaded as <code>.ttls</code>. GraphDB, and tools that read
                 Turtle 1.2, understand these annotations, so the order survives
                 an import back into EntEdit; standard Turtle tools reject the
-                file. Leave the option off for files meant for other tools.
+                file. Untick the option for files meant for other tools.
             </p>
 
             <div class="info-box tip">

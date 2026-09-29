@@ -52,7 +52,7 @@ const TurtleExportDialog: React.FC<TurtleExportDialogProps> = ({
 }) => {
   const { t } = useTranslation(["entityEditor", "common"]);
   const { enqueueSnackbar } = useSnackbar();
-  const [valueOrder, setValueOrder] = useState(false);
+  const [valueOrder, setValueOrder] = useState(true);
   const turtle = useMemo(
     () => (bindings && entityUri ? serializeToTurtle(entityUri, bindings, { valueOrder }) : null),
     [bindings, entityUri, valueOrder],

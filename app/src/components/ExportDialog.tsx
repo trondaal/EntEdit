@@ -105,7 +105,7 @@ const ExportDialog: React.FC<ExportDialogProps> = ({
     error: turtleError,
     refetch: fetchTurtle,
   } = useAllEntitiesTurtleExportQuery(config, classUrisArray);
-  const [valueOrder, setValueOrder] = useState(false);
+  const [valueOrder, setValueOrder] = useState(true);
   const turtle = useMemo(
     () => (graph ? serializeGraphToTurtle(graph, { valueOrder }) : null),
     [graph, valueOrder],

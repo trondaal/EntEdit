@@ -141,7 +141,8 @@ EntEdit/
 - `turtleSerializer.ts` - Turtle serialization with configurable namespace prefix registry (`KNOWN_PREFIXES` map);
   predicates, datatypes, and `rdf:type` object (class) URIs are prefix-compacted; subject and other
   object URIs (entity references) stay as full `<uri>`. Values are written in their `entedit:valueOrder`;
-  with `{ valueOrder: true }` (the export dialogs' Turtle-star checkbox, off by default) each
+  with `{ valueOrder: true }` (the export dialogs' Turtle-star checkbox, on by default so a
+  migration export keeps the ordering; untick it for plain Turtle) each
   ordered value gets `{| entedit:valueOrder n |}`, the annotation syntax Turtle-star (GraphDB)
   and Turtle 1.2 share, downloaded as `.ttls`; the import dialog accepts `.ttls`
 - `sparqlClient.ts` - SparqlClient class with query/update methods and auth support
