@@ -20,7 +20,7 @@ Setup and deployment are covered in [README.md](README.md) and
 ## 1. Overview
 
 EntEdit stores bibliographic data as RDF using the **RDA Registry** element sets
-(WEMI classes and their properties) and generic controlled vocabularies (RDA term
+(the OWL version, implementing IFLA-LRM: WEMI classes and their properties) and generic controlled vocabularies (RDA term
 lists, ISO 639-2, the Norwegian National Library's work types and NTSF). It does
 not define a data model of its own. What it adds is a thin layer that
 **tells the editor which of the many RDA properties to show, in what order and
@@ -75,7 +75,16 @@ Entities created in the editor without a chosen URI get
 
 ### 2.1 Why the RDA Registry
 
-Two properties of the registry's RDF are what the design needs:
+The main reason is that the RDA Registry is the de facto standard element set for
+bibliographic information, and it implements the IFLA Library Reference Model
+(LRM): Work, Expression, Manifestation and Item, with their agent and
+relationship elements. Using it means EntEdit data is expressed in the vocabulary
+other library systems and RDA-based tooling already use, and no bibliographic
+model has to be invented.
+
+EntEdit uses **a subset of the registry**: the OWL version of the element sets,
+which the registry publishes with richer semantics than its plain RDFS
+version. Two features of it are what the design needs:
 
 1. **Inverse properties.** Almost every RDA relationship is published together
    with its inverse (`owl:inverseOf`), for instance `rdawo:P10078` *has
@@ -92,12 +101,15 @@ Two properties of the registry's RDF are what the design needs:
    connectors and the result lists use those generic properties to reach agents
    and names without listing every role.
 
-RDA's per-entity element sets are mostly *unconstrained* into `u/` and `x/`; the
-LRM-constrained sets (`w/`, `e/`, `m/`, `i/`, `a/`) are what the editor uses.
+The registry also publishes *unconstrained* elements (`u/`, and `x/` for RDA
+Entity) whose semantics are independent of LRM. The editor works with the
+LRM-constrained sets (`w/`, `e/`, `m/`, `i/`, `a/`); `x/` is used for what is
+common to all entities (identifier, name, related agent).
 
 ### 2.2 Loaded files
 
-`database/types/rda_vocabulary/` holds the registry's N-Triples dumps, one set per
+`database/types/rda_vocabulary/` holds the OWL version of the registry as
+N-Triples dumps, one set per
 entity: `c` (classes), `w e m i a p t n` (Work, Expression, Manifestation, Item,
 Agent, Place, Timespan, Nomen), and, for each, the combined file
 (`w.nt`), the `object` and the `datatype` variants. `x` (Entity), `u`
