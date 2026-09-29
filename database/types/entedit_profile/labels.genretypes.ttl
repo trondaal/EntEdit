@@ -39,6 +39,7 @@ entedit:T02
 entedit:T03
   a skos:Concept ;
   a entedit:Genretype;
+  entedit:collection true ;
   skos:prefLabel "Novel sequences"@en, "Roman sykluser"@nb, "Roman sykluser"@nn ;
   rdfs:label "Roman sykluser"@no, "Novel sequences"@en.
 
@@ -52,6 +53,26 @@ entedit:T04
   skos:definition "A volume that gathers several previously separate works, usually novels, by one or more authors."@en ,
       "Et bind som samler flere verk som tidligere er utgitt hver for seg, vanligvis romaner, av én eller flere forfattere."@nb ;
   rdfs:label "Samlebind"@no, "Omnibus editions"@en .
+
+# Cover art: images made for the cover or dust jacket of a publication, treated
+# as works of their own. Used for ISFDB COVERART titles by isfdb2lrm (--art).
+entedit:T05
+  a skos:Concept ;
+  a entedit:Genretype ;
+  skos:prefLabel "Cover art"@en, "Omslagsillustrasjoner"@nb, "Omslagsillustrasjonar"@nn ;
+  skos:definition "Images made for the cover or dust jacket of a publication, such as paintings, drawings or photographs."@en ,
+      "Bilder laget for omslaget eller smussomslaget til en utgivelse, som malerier, tegninger eller fotografier."@nb ;
+  rdfs:label "Omslagsillustrasjoner"@no, "Cover art"@en .
+
+# Illustrations: images that accompany the text inside a publication, treated as
+# works of their own. Used for ISFDB INTERIORART titles by isfdb2lrm (--art).
+entedit:T06
+  a skos:Concept ;
+  a entedit:Genretype ;
+  skos:prefLabel "Illustrations"@en, "Illustrasjoner"@nb, "Illustrasjonar"@nn ;
+  skos:definition "Images that accompany the text inside a publication, such as drawings, paintings, maps or photographs."@en ,
+      "Bilder som følger teksten inne i en utgivelse, som tegninger, malerier, kart eller fotografier."@nb ;
+  rdfs:label "Illustrasjoner"@no, "Illustrations"@en .
 
   # ---------------------------------------------------------------------------
   # 2. Redefinitions of existing NTSF concepts (labels and entedit:Genretype only)
