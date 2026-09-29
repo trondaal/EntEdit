@@ -273,7 +273,7 @@ EntEdit/
 │   ├── Dockerfile
 │   └── package.json
 ├── database/              # RDF data and GraphDB configuration
-│   ├── types/             # Vocabulary files loaded on first startup
+│   ├── types/             # Vocabulary files loaded on first startup (see VOCABULARY.md)
 │   ├── testdata/          # Example entities loaded on first startup
 │   └── lucene_connectors/ # Lucene full-text index definitions
 ├── docker/                # Docker deployment configuration

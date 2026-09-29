@@ -169,7 +169,9 @@ available in Norwegian.
 
 Building the images, running a development server, hosting EntEdit and GraphDB on
 your own server, and provisioning repositories in bulk are covered separately in
-**[ADVANCED.md](ADVANCED.md)**.
+**[ADVANCED.md](ADVANCED.md)**. The vocabularies EntEdit builds on (RDA Registry,
+National Library of Norway work types and NTSF, ISO 639-2), the terms it adds and
+the conventions in the data are described in **[VOCABULARY.md](VOCABULARY.md)**.
 
 ## Licence
 
