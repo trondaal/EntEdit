@@ -36,3 +36,5 @@ docker.access.token
 
 .claude-*
 .claude/
+
+backups/
