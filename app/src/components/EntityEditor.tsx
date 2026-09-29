@@ -822,6 +822,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         isLoading={turtleLoading}
         error={turtleError}
         entityUri={entityUri}
+        config={config}
       />
 
       {/* Discard Changes Confirmation Dialog */}

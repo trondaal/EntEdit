@@ -13,13 +13,14 @@ import {
 import { Close, ContentCopy, Download } from "@mui/icons-material";
 import { useSnackbar } from "notistack";
 import { useTranslation } from "react-i18next";
-import { extractUriFragment } from "../utils/labelUtils";
+import { extractUriFragment, repositoryFilenamePrefix } from "../utils/labelUtils";
 import {
   serializeToTurtle,
   turtleExtension,
   turtleMimeType,
   type PredObjBinding,
 } from "../utils/turtleSerializer";
+import type { SparqlEndpointConfig } from "../types/sparql";
 import ValueOrderOption from "./ValueOrderOption";
 
 interface TurtleExportDialogProps {
@@ -30,6 +31,8 @@ interface TurtleExportDialogProps {
   isLoading: boolean;
   error: Error | null;
   entityUri: string | null;
+  /** Used to prefix the downloaded filename with the repository name. */
+  config: SparqlEndpointConfig;
   /** Optional override for the dialog title; defaults to single-entity title. */
   title?: string;
   /** Optional override for the downloaded filename stem (without extension). */
@@ -43,6 +46,7 @@ const TurtleExportDialog: React.FC<TurtleExportDialogProps> = ({
   isLoading,
   error,
   entityUri,
+  config,
   title,
   filenameStem,
 }) => {
@@ -69,7 +73,7 @@ const TurtleExportDialog: React.FC<TurtleExportDialogProps> = ({
     if (!stem && entityUri) {
       stem = sanitize(extractUriFragment(entityUri));
     }
-    const filename = `${stem || "entity"}${turtleExtension(valueOrder)}`;
+    const filename = `${repositoryFilenamePrefix(config.url)}${stem || "entity"}${turtleExtension(valueOrder)}`;
     const blob = new Blob([turtle], { type: turtleMimeType(valueOrder) });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -77,7 +81,7 @@ const TurtleExportDialog: React.FC<TurtleExportDialogProps> = ({
     a.download = filename;
     a.click();
     URL.revokeObjectURL(url);
-  }, [turtle, entityUri, filenameStem, valueOrder]);
+  }, [turtle, entityUri, filenameStem, valueOrder, config.url]);
 
   return (
     <Dialog

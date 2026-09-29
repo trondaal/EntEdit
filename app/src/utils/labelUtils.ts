@@ -34,6 +34,17 @@ export const extractUriFragment = (uri: string): string => {
 };
 
 /**
+ * Filename-safe repository name prefix from a SPARQL endpoint URL, e.g.
+ * "VBINF6000-H26-G03-" from ".../repositories/VBINF6000-H26-G03" — so
+ * downloaded Turtle exports don't look interchangeable across repositories.
+ * Empty string (no prefix) when the URL has no discernible repository id.
+ */
+export const repositoryFilenamePrefix = (endpointUrl: string): string => {
+  const id = extractUriFragment(endpointUrl.replace(/\/+$/, ""));
+  return id ? `${id.replace(/[/\\:*?"<>|]/g, "_")}-` : "";
+};
+
+/**
  * Gets the best label from a list of labels based on language preference
  * @param labels - Array of labels with language tags
  * @param selectedLanguage - Preferred language code

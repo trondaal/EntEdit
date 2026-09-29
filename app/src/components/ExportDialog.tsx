@@ -21,7 +21,7 @@ import { useQuery } from "@tanstack/react-query";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import { SparqlClient, isResourceLimitError } from "../utils/sparqlClient";
 import { openWorkbenchExport } from "../utils/graphUtils";
-import { formatLabel, extractUriFragment } from "../utils/labelUtils";
+import { formatLabel, extractUriFragment, repositoryFilenamePrefix } from "../utils/labelUtils";
 import { useRdfClasses } from "../hooks/useSchemaQueries";
 import { useAllEntitiesTurtleExportQuery } from "../hooks/useAllEntitiesTurtleExportQuery";
 import { serializeGraphToTurtle, turtleExtension, turtleMimeType } from "../utils/turtleSerializer";
@@ -168,7 +168,7 @@ const ExportDialog: React.FC<ExportDialogProps> = ({
     const stem = allSelected
       ? "all-entities"
       : classUrisArray.map((u) => extractUriFragment(u)).join("-");
-    const filename = `${stem}${turtleExtension(valueOrder)}`;
+    const filename = `${repositoryFilenamePrefix(config.url)}${stem}${turtleExtension(valueOrder)}`;
     const blob = new Blob([turtle], { type: turtleMimeType(valueOrder) });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -176,7 +176,7 @@ const ExportDialog: React.FC<ExportDialogProps> = ({
     a.download = filename;
     a.click();
     URL.revokeObjectURL(url);
-  }, [turtle, allSelected, classUrisArray, valueOrder]);
+  }, [turtle, allSelected, classUrisArray, valueOrder, config.url]);
 
   const handleClose = useCallback(() => {
     setShowResult(false);
