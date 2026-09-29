@@ -124,7 +124,7 @@ anything in the RDA Registry or the other source vocabularies. The profile only
 the registry lacks (mainly Norwegian), and the few domains and ranges it leaves
 open.
 
-### 2.3 What the profile fills in
+### 2.3 What the profile adds
 
 - **Norwegian labels (the bulk of it).** The registry has no Norwegian labels
   for its properties (the loaded files have English, and Finnish for a few). The profile adds
@@ -134,18 +134,26 @@ open.
   av"), not translated word for word from RDA's formulation. The same applies to
   the value vocabularies (section 3): only a missing `no` label, or an English
   label where one is lacking, is added.
-- **Missing domains.** `rdaeo:P20006` (language of expression), `rdaeo:P20001`
-  (content type), `rdamo:P30002` (media type) and `rdamo:P30001` (carrier type)
-  have no `rdfs:domain` in the registry, so the profile declares it.
-- **Ad hoc ranges for controlled values.** RDA leaves the range of these
-  properties open (or a generic SKOS concept). The profile sets `rdfs:range` to an
-  EntEdit class (`entedit:Language`, `entedit:Contenttype`, `entedit:Mediatype`,
-  `entedit:Carriertype`, section 4.2) so the editor can list the permitted values.
-- **Datatype vs. object variants.** RDA publishes many elements twice, as a
-  literal (`…/datatype/`) and as a link to a nomen or value (`…/object/`). EntEdit
-  uses the datatype variant for names, titles, dates and notes (a plain string
-  is enough for cataloguing) and the object variant for relationships and
-  controlled values.
+- **Narrower ranges for controlled values.** The registry already gives these
+  properties the correct domain (`rdaeo:P20006` language of expression,
+  `rdaeo:P20001` content type, `rdamo:P30002` media type, `rdamo:P30001` carrier
+  type), but its range is the very general `skos:Concept`. That says nothing about
+  *which* concepts are allowed, so the editor could not offer a value list. The
+  profile adds a narrower `rdfs:range`, an EntEdit class (`entedit:Language`,
+  `entedit:Contenttype`, `entedit:Mediatype`, `entedit:Carriertype`, section 4.3)
+  whose members are the permitted values. The profile repeats the domain on these
+  four properties (marked "missing in RDA" in its comments); that is redundant
+  and harmless.
+- **Attributes vs. relationships.** RDA defines many elements both as a
+  datatype property (a literal, `…/datatype/`) and as an object property (a link
+  to a nomen or other entity, `…/object/`). EntEdit chooses, per element, which
+  form to enable. Elements it treats as *attributes* (names, titles, dates, notes,
+  identifiers) use the datatype variant: a plain string is enough for
+  cataloguing, and the editor shows a text field. Elements it treats as
+  *relationships* (agents, related works, controlled values) use the object
+  variant, linked to another entity. Which variant is enabled is what the
+  profile's `entedit:status` says (section 5.1); the other variant stays in the
+  vocabulary, unused by the editor.
 
 ## 3. Controlled value vocabularies
 
