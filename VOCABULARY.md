@@ -106,15 +106,22 @@ complete the set. The files carry `owl:versionInfo v5.2.2` as published by the
 registry. To update, replace the files and reload; property URIs the profile
 mentions must still exist.
 
-Registry statements are used **unchanged**. The profile only *annotates* the
-registry's properties (section 5) and adds what is missing.
+Registry statements are used **unchanged**. EntEdit never redefines or overrides
+anything in the RDA Registry or the other source vocabularies. The profile only
+*adds*: configuration annotations on the registry's properties (section 5), labels
+the registry lacks (mainly Norwegian), and the few domains and ranges it leaves
+open.
 
 ### 2.3 What the profile fills in
 
-- **Norwegian labels.** The registry has English (and other) labels. The profile
-  adds `rdfs:label "…"@no` for every property it enables, so English falls back to
-  the registry label. Labels are chosen for cataloguers ("har forfatter", "er
-  forfatter av"), not copied from RDA's formulation.
+- **Norwegian labels (the bulk of it).** The registry has no Norwegian labels
+  for its properties (the loaded files have English, and Finnish for a few). The profile adds
+  `rdfs:label "…"@no` for every property it enables. Nothing is replaced or
+  overridden: the registry's own labels stay as they are, and English falls back to
+  them. The added labels are worded for cataloguers ("har forfatter", "er forfatter
+  av"), not translated word for word from RDA's formulation. The same applies to
+  the value vocabularies (section 3): only a missing `no` label, or an English
+  label where one is lacking, is added.
 - **Missing domains.** `rdaeo:P20006` (language of expression), `rdaeo:P20001`
   (content type), `rdamo:P30002` (media type) and `rdamo:P30001` (carrier type)
   have no `rdfs:domain` in the registry, so the profile declares it.
