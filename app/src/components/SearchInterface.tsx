@@ -15,6 +15,7 @@ import type { SparqlEndpointConfig } from "../types/sparql";
 import {
   useFacetLabels,
   useLinkedExpressions,
+  useLinkedManifestations,
   useSearchExpressions,
   useSearchFacets,
   useSearchManifestations,
@@ -55,8 +56,8 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
   const filters = filtersByMode[searchMode];
   const setFilters = (update: (current: Filters) => Filters) =>
     setFiltersByMode((all) => ({ ...all, [searchMode]: update(all[searchMode]) }));
-  // A link followed in the content search, until the search text is edited
-  const [linkTarget, setLinkTarget] = useState<LinkTarget | null>(null);
+  // A link followed in a search tab, until the search text is edited
+  const [linkTarget, setLinkTarget] = useState<(LinkTarget & { mode: 'expression' | 'manifestation' }) | null>(null);
 
   // Debounce the search query to avoid firing expensive SPARQL queries on every keystroke
   const debouncedQuery = useDebouncedValue(searchInput, 500);
@@ -64,10 +65,12 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
   // Only fire the query for the active search tab to avoid unnecessary SPARQL queries.
   // A followed link searches for its label at once, without the typing delay;
   // an agent's name is searched as a phrase in the names field only.
-  const contentLink = searchMode === 'expression' ? linkTarget : null;
+  const activeLink = linkTarget?.mode === searchMode ? linkTarget : null;
+  const contentLink = searchMode === 'expression' ? activeLink : null;
+  const publicationLink = searchMode === 'manifestation' ? activeLink : null;
+  const agentQuery = activeLink?.kind === 'agent' ? toNameQuery(activeLink.label) : undefined;
   const expressionQuery = searchMode === 'expression' ? (contentLink?.label ?? debouncedQuery) : '';
-  const agentQuery = contentLink?.kind === 'agent' ? toNameQuery(contentLink.label) : undefined;
-  const manifestationQuery = searchMode === 'manifestation' ? debouncedQuery : '';
+  const manifestationQuery = searchMode === 'manifestation' ? (publicationLink?.label ?? debouncedQuery) : '';
   const expressionFilters = searchMode === 'expression' ? filters : {};
   const manifestationFilters = searchMode === 'manifestation' ? filters : {};
   const searchIndex: SearchIndex = searchMode === 'expression' ? 'expressionsIndex' : 'manifestationsIndex';
@@ -79,7 +82,10 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
     hasNextPage: searchHasNextPage,
     isFetchingNextPage: searchIsFetchingNextPage,
     fetchNextPage: searchFetchNextPage,
-  } = useSearchExpressions(config, expressionQuery, selectedLanguage, expressionFilters, agentQuery);
+  } = useSearchExpressions(
+    config, expressionQuery, selectedLanguage, expressionFilters,
+    contentLink ? agentQuery : undefined,
+  );
   const { data: linkedExpressions, isLoading: linkedLoading } = useLinkedExpressions(
     config, contentLink, selectedLanguage,
   );
@@ -87,7 +93,7 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
   // Counts for the current search; with neither text nor filters, for the
   // whole collection. The collection's values also decide which labels to load.
   const { data: facets, isPlaceholderData: facetsUpdating } = useSearchFacets(
-    config, searchIndex, searchMode === 'expression' ? expressionQuery : debouncedQuery, filters, true, agentQuery,
+    config, searchIndex, searchMode === 'expression' ? expressionQuery : manifestationQuery, filters, true, agentQuery,
   );
   const { data: collectionFacets } = useSearchFacets(config, searchIndex, "", {});
   const facetIris = useMemo(
@@ -106,7 +112,13 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
     hasNextPage: manifestationHasNextPage,
     isFetchingNextPage: manifestationIsFetchingNextPage,
     fetchNextPage: manifestationFetchNextPage,
-  } = useSearchManifestations(config, manifestationQuery, selectedLanguage, manifestationFilters);
+  } = useSearchManifestations(
+    config, manifestationQuery, selectedLanguage, manifestationFilters,
+    publicationLink ? agentQuery : undefined,
+  );
+  const { data: linkedManifestations, isLoading: linkedManifestationsLoading } = useLinkedManifestations(
+    config, publicationLink, selectedLanguage,
+  );
 
   // Flatten infinite query pages into flat arrays
   const searchResults = useMemo(
@@ -158,7 +170,7 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
   // label's words alone rank related entries (that repeat them) as high.
   const handleEntitySearch: EntitySearchHandler = (label, target) => {
     setSearchInput(label);
-    setLinkTarget(searchMode === 'expression' && target ? { label, ...target } : null);
+    setLinkTarget(target ? { label, ...target, mode: searchMode } : null);
     if (isRecording) {
       logEvent({ type: "search_link_followed", label, uri: target?.uri, kind: target?.kind, mode: searchMode });
     }
@@ -303,8 +315,10 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
             />
           ) : (
             <ManifestationResultSet
-              searchQuery={debouncedQuery}
+              searchQuery={manifestationQuery}
               filtered={filtered}
+              linked={publicationLink ? (linkedManifestations ?? []) : []}
+              linkedLoading={Boolean(publicationLink) && linkedManifestationsLoading}
               searchResults={manifestationSearchResults}
               totalCount={manifestationSearchData?.pages[0]?.total ?? 0}
               fuzzy={manifestationSearchData?.pages[0]?.fuzzy ?? false}

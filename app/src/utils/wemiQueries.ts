@@ -56,6 +56,17 @@ export const expressionsOfWork = (workUri: string): string => {
 export const expressionOrderInWork = (workUri: string): string =>
   `OPTIONAL { << <${sanitizeSparqlUri(workUri)}> rdawo:P10078 ?expression >> entedit:valueOrder ?value_order }`;
 
+/**
+ * Scope binding `?manifestation` to the manifestations of a work: those that
+ * embody any of its expressions. The expressions get a variable of their own,
+ * since the manifestation query uses `?expression` for counting the contents.
+ */
+export const manifestationsOfWork = (workUri: string): string => {
+  const w = `<${sanitizeSparqlUri(workUri)}>`;
+  return `{ ?work_expression rdaeo:P20231 ${w} } UNION { ${w} rdawo:P10078 ?work_expression }
+    { ?work_expression rdaeo:P20059 ?manifestation } UNION { ?manifestation rdamo:P30139 ?work_expression }`;
+};
+
 /** Scope binding `?manifestation` to the manifestations of an expression. */
 export const manifestationsOfExpression = (expressionUri: string): string => {
   const e = `<${sanitizeSparqlUri(expressionUri)}>`;
