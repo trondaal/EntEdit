@@ -596,8 +596,8 @@
     rdamd:P30182 "133 p. : col. ill., col. map, 26 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
+    entedit:P05 <http://viaf.org/viaf/14887593> ;
     rdamo:P30139 <http://www.wikidata.org/entity/Q74287/exp/eng/1014/1020/102370266/85751968> ;
-    rdamo:P30321 <http://viaf.org/viaf/14887593> ;
     rdaxd:P00018 "http://example.org/isbn-9780261102668" .
 
 <http://example.org/isbn-9788210050381> a rdac:C10007 ;
@@ -882,17 +882,27 @@
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q503325> .
 
+<http://www.wikidata.org/entity/Q74287/adaptation> a rdac:C10001 ;
+    rdfs:label "The hobbit : an illustrated edition of the fantasy classic / Chuck Dixon and Sean Deming. – Picture work"@en,
+        "The hobbit : an illustrated edition of the fantasy classic / Chuck Dixon og Sean Deming. – Bildeverk"@no ;
+    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1003> ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/302> ;
+    rdawd:P10223 "The hobbit : an illustrated edition of the fantasy classic" ;
+    rdawo:P10058 <http://viaf.org/viaf/14887593> ;
+    rdawo:P10061 <http://viaf.org/viaf/102370266>,
+        <http://viaf.org/viaf/85751968> ;
+    rdawo:P10252 <http://www.wikidata.org/entity/Q74287> ;
+    rdaxd:P00018 "http://www.wikidata.org/entity/Q74287/adaptation" .
+
 <http://www.wikidata.org/entity/Q74287/exp/eng/1014/1020/102370266/85751968> a rdac:C10006 ;
-    rdfs:label "The hobbit, or there and back again / J. R. R. Tolkien ; edited by Chuck Dixon and Sean Deming. – Text, still image, English"@en,
-        "The hobbit, or there and back again / J. R. R. Tolkien ; redigert av Chuck Dixon og Sean Deming. – Tekst, stillbilde, engelsk"@no ;
-    rdaed:P20315 "The hobbit, or there and back again" ;
-    rdaed:P20316 "The hobbit , or there and back again : [an illustrated edition of the fantasy classic]" ;
+    rdfs:label "The hobbit : an illustrated edition of the fantasy classic / Chuck Dixon and Sean Deming. – Text, still image, English"@en,
+        "The hobbit : an illustrated edition of the fantasy classic / Chuck Dixon og Sean Deming. – Tekst, stillbilde, engelsk"@no ;
+    rdaed:P20315 "The hobbit : an illustrated edition of the fantasy classic" ;
+    rdaed:P20316 "The hobbit, or there and back again" ;
     rdaeo:P20001 rdaco:1014,
         rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://www.wikidata.org/entity/Q74287> ;
-    rdaeo:P20330 <http://viaf.org/viaf/102370266>,
-        <http://viaf.org/viaf/85751968> .
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q74287/adaptation> .
 
 <http://www.wikidata.org/entity/Q74287/exp/nno/1020/267471594> a rdac:C10006 ;
     rdfs:label "Hobbiten, eller Ditut og attende / J. R. R. Tolkien ; translated by Eilev Groven Myhren. – Norwegian Nynorsk"@en,
