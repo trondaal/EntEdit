@@ -2279,6 +2279,7 @@
     rdaeo:P20145 <http://viaf.org/viaf/214001528/exp/nob/1020/225596267>,
         <http://viaf.org/viaf/309357400/exp/nob/1020/225596267>,
         <http://viaf.org/viaf/3417153653286155900001/exp/nob/1020/225596267> ;
+    rdaeo:P20141 <http://viaf.org/viaf/175871715/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/175871715> .
 
 <http://viaf.org/viaf/188298726> a rdac:C10001 ;
@@ -2297,6 +2298,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20037 <http://viaf.org/viaf/225596267> ;
+    rdaeo:P20141 <http://viaf.org/viaf/191907343/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/191907343> .
 
 <http://viaf.org/viaf/214001528/exp/eng/1013/0000000114380049> a rdac:C10006 ;
@@ -3101,6 +3103,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20037 <http://viaf.org/viaf/225596267> ;
+    rdaeo:P20141 <http://viaf.org/viaf/470166838899836200007/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/470166838899836200007> .
 
 <http://viaf.org/viaf/470166838899836200007/stellamaris> a rdac:C10001 ;
@@ -3131,6 +3134,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20037 <http://viaf.org/viaf/225596267> ;
+    rdaeo:P20141 <http://viaf.org/viaf/470166838899836200007/stellamaris/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/470166838899836200007/stellamaris> .
 
 <http://viaf.org/viaf/5191807> a rdac:C10004 ;
@@ -3210,6 +3214,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20037 <http://viaf.org/viaf/225596267> ;
+    rdaeo:P20141 <http://viaf.org/viaf/191524645/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/191524645> .
 
 <http://viaf.org/viaf/214012164> a rdac:C10001 ;
@@ -3316,6 +3321,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20037 <http://viaf.org/viaf/266451311> ;
+    rdaeo:P20141 <http://viaf.org/viaf/188670330/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/188670330> .
 
 <http://viaf.org/viaf/214012164/exp/eng/1020> a rdac:C10006 ;
@@ -3333,6 +3339,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20037 <http://viaf.org/viaf/225596267> ;
+    rdaeo:P20141 <http://viaf.org/viaf/214012164/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/214012164> .
 
 <http://viaf.org/viaf/220031159/exp/nob/1020/225596267> a rdac:C10006 ;
@@ -3342,6 +3349,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20037 <http://viaf.org/viaf/225596267> ;
+    rdaeo:P20141 <http://viaf.org/viaf/220031159/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/220031159> .
 
 <http://viaf.org/viaf/309357400> a rdac:C10001 ;
@@ -3362,6 +3370,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20037 <http://viaf.org/viaf/225596267> ;
+    rdaeo:P20141 <http://viaf.org/viaf/309357400/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/309357400> .
 
 <http://viaf.org/viaf/3417153653286155900001/exp/nob/1020/225596267> a rdac:C10006 ;
@@ -3371,6 +3380,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20037 <http://viaf.org/viaf/225596267> ;
+    rdaeo:P20141 <http://viaf.org/viaf/3417153653286155900001/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/3417153653286155900001> .
 
 <http://viaf.org/viaf/5191807/theroad/exp/eng/1020> a rdac:C10006 ;
@@ -3432,6 +3442,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20037 <http://viaf.org/viaf/225596267> ;
+    rdaeo:P20141 <http://viaf.org/viaf/214001528/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/214001528> .
 
 <http://viaf.org/viaf/215254416/exp/eng/1020> a rdac:C10006 ;
