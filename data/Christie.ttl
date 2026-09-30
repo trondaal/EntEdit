@@ -190,7 +190,7 @@
     rdamd:P30014 "Vol.1" ;
     rdamd:P30033 "The mysterious affair at Styles -- The secret adversary -- Murder on the links" ;
     rdamd:P30088 "London" ;
-    rdamd:P30134 "1920s",
+    rdamd:P30142 "1920s",
         "The mysterious affair at Styles, The secret adversary, Murder on the links" ;
     rdamd:P30137 "Cover title: 1920s Agatha Christie." ;
     rdamd:P30156 "Agatha Christie omnibus" ;
@@ -210,7 +210,7 @@
     rdamd:P30014 "Vol.2" ;
     rdamd:P30033 "The man in the brown suit -- Poirot investigates -- The secret of chimneys" ;
     rdamd:P30088 "London" ;
-    rdamd:P30134 "1920s",
+    rdamd:P30142 "1920s",
         "The man in the brown suit, Poirot investigates, The secret of chimneys" ;
     rdamd:P30137 "Cover title: 1920s Agatha Christie." ;
     rdamd:P30156 "Agatha Christie omnibus" ;

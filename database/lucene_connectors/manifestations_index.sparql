@@ -17,6 +17,10 @@ PREFIX inst:<http://www.ontotext.com/connectors/lucene/instance#>
 # for following a link from a search result: the search is limited to the
 # publications containing the linked expression or any expression of the
 # linked work, and the label's words only rank the hits.
+# titles$otherTitle adds other title information (subtitles, a volume's list
+# of titles), which is not a subproperty of x:P00019. It is left out of the
+# expressions index on purpose: there it would reach every expression the
+# manifestation embodies, so a volume's other titles would match all its parts.
 INSERT DATA {
 	inst:manifestationsIndex :createConnector '''
 {
@@ -146,6 +150,18 @@ INSERT DATA {
       "fieldName": "titles$manifestation",
       "propertyChain": [
         "http://rdaregistry.info/Elements/x/P00019"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "titles$otherTitle",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/m/datatype/P30142"
       ],
       "indexed": true,
       "stored": true,

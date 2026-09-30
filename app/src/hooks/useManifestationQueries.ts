@@ -11,6 +11,7 @@ export interface Manifestation {
   uri: string;
   // Line 1: Title area
   title?: string;                    // rdamd:P30156
+  numbering?: string;                // rdamd:P30014
   other?: string;                    // rdamd:P30142
   responsibilityStatement?: string;  // rdamd:P30117
   // Line 2: Publication area

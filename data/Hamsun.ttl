@@ -71,7 +71,7 @@
     rdamd:P30011 "c1917" ;
     rdamd:P30014 "Bd.1" ;
     rdamd:P30088 "München" ;
-    rdamd:P30134 "Hunger" ;
+    rdamd:P30142 "Hunger" ;
     rdamd:P30142 "Roman ; Mysterien : Roman" ;
     rdamd:P30156 "Gesammelte Werke in zehn Bänden" ;
     rdamd:P30176 "Langen" ;
@@ -612,7 +612,7 @@
     rdamd:P30014 "2" ;
     rdamd:P30088 "Stuttgart" ;
     rdamd:P30117 "Knut Hamsun" ;
-    rdamd:P30134 "Victoria. Die Stadt Segelfoss. Das letzte Kapitel. Der Ring schließt sich" ;
+    rdamd:P30142 "Victoria. Die Stadt Segelfoss. Das letzte Kapitel. Der Ring schließt sich" ;
     rdamd:P30156 "Romane" ;
     rdamd:P30176 "Europäische Bildungsgemeinschaft" ;
     rdamd:P30182 "1102 S." ;
@@ -746,7 +746,7 @@
     rdamd:P30014 "1" ;
     rdamd:P30088 "München" ;
     rdamd:P30117 "Knut Hamsun" ;
-    rdamd:P30134 "Hunger : Mysterien" ;
+    rdamd:P30142 "Hunger : Mysterien" ;
     rdamd:P30137 "In Fraktur" ;
     rdamd:P30156 "Gesammelte Werke in 10 Bdn" ;
     rdamd:P30176 "A. Langen" ;
@@ -762,7 +762,7 @@
     rdamd:P30014 "Bd. 1" ;
     rdamd:P30088 "München" ;
     rdamd:P30117 "Knut Hamsun" ;
-    rdamd:P30134 "Hunger : Roman [u. a.]" ;
+    rdamd:P30142 "Hunger : Roman [u. a.]" ;
     rdamd:P30137 "In Fraktur" ;
     rdamd:P30156 "Gesammelte Werke in 12 Bänden" ;
     rdamd:P30176 "A. Langen" ;
@@ -777,7 +777,7 @@
     rdamd:P30014 "Bd. 2" ;
     rdamd:P30088 "München" ;
     rdamd:P30117 "Knut Hamsun" ;
-    rdamd:P30134 "Redakteur Lynge : Roman [u. a.]" ;
+    rdamd:P30142 "Redakteur Lynge : Roman [u. a.]" ;
     rdamd:P30137 "In Fraktur" ;
     rdamd:P30156 "Gesammelte Werke in 12 Bänden" ;
     rdamd:P30176 "A. Langen" ;
@@ -792,7 +792,7 @@
     rdamd:P30014 "Bd. 3" ;
     rdamd:P30088 "München" ;
     rdamd:P30117 "Knut Hamsun" ;
-    rdamd:P30134 "Pan : Roman [u. a.]" ;
+    rdamd:P30142 "Pan : Roman [u. a.]" ;
     rdamd:P30137 "In Fraktur" ;
     rdamd:P30156 "Gesammelte Werke in 12 Bänden" ;
     rdamd:P30176 "A. Langen" ;
@@ -807,7 +807,7 @@
     rdamd:P30014 "Bd. 4" ;
     rdamd:P30088 "München" ;
     rdamd:P30117 "Knut Hamsun" ;
-    rdamd:P30134 "Benoni : Roman [u. a.]" ;
+    rdamd:P30142 "Benoni : Roman [u. a.]" ;
     rdamd:P30137 "In Fraktur" ;
     rdamd:P30156 "Gesammelte Werke in 12 Bänden" ;
     rdamd:P30176 "A. Langen" ;
@@ -822,7 +822,7 @@
     rdamd:P30014 "Bd. 5" ;
     rdamd:P30088 "München" ;
     rdamd:P30117 "Knut Hamsun" ;
-    rdamd:P30134 "Unter Herbststernen : Roman [u. a.]" ;
+    rdamd:P30142 "Unter Herbststernen : Roman [u. a.]" ;
     rdamd:P30137 "In Fraktur" ;
     rdamd:P30156 "Gesammelte Werke in 12 Bänden" ;
     rdamd:P30176 "A. Langen" ;
@@ -837,7 +837,7 @@
     rdamd:P30014 "Bd. 6" ;
     rdamd:P30088 "München" ;
     rdamd:P30117 "Knut Hamsun" ;
-    rdamd:P30134 "Im Märchenland : Heisebilder [u. a.]" ;
+    rdamd:P30142 "Im Märchenland : Heisebilder [u. a.]" ;
     rdamd:P30137 "In Fraktur" ;
     rdamd:P30156 "Gesammelte Werke in 12 Bänden" ;
     rdamd:P30176 "A. Langen" ;
@@ -853,7 +853,7 @@
     rdamd:P30014 "Bd. 7" ;
     rdamd:P30088 "München" ;
     rdamd:P30117 "Knut Hamsun" ;
-    rdamd:P30134 "Die Stadt Segelfoss : Roman" ;
+    rdamd:P30142 "Die Stadt Segelfoss : Roman" ;
     rdamd:P30137 "In Fraktur" ;
     rdamd:P30156 "Gesammelte Werke in 12 Bänden" ;
     rdamd:P30176 "A. Langen" ;
@@ -868,7 +868,7 @@
     rdamd:P30014 "Bd. 8" ;
     rdamd:P30088 "München" ;
     rdamd:P30117 "Knut Hamsun" ;
-    rdamd:P30134 "Segen der Erde : Roman" ;
+    rdamd:P30142 "Segen der Erde : Roman" ;
     rdamd:P30137 "In Fraktur" ;
     rdamd:P30156 "Gesammelte Werke in 12 Bänden" ;
     rdamd:P30176 "A. Langen" ;
@@ -883,7 +883,7 @@
     rdamd:P30014 "Bd. 9" ;
     rdamd:P30088 "München" ;
     rdamd:P30117 "Knut Hamsun" ;
-    rdamd:P30134 "Die Weiber am Brunnen : Roman" ;
+    rdamd:P30142 "Die Weiber am Brunnen : Roman" ;
     rdamd:P30137 "In Fraktur" ;
     rdamd:P30156 "Gesammelte Werke in 12 Bänden" ;
     rdamd:P30176 "A. Langen" ;
@@ -3244,7 +3244,7 @@
     rdamd:P30011 "1966" ;
     rdamd:P30014 "D. 10" ;
     rdamd:P30088 "Hasselt" ;
-    rdamd:P30134 "Victoria ; In sprookjesland ; Hoe het groeide" ;
+    rdamd:P30142 "Victoria ; In sprookjesland ; Hoe het groeide" ;
     rdamd:P30156 "Verzameld proza" ;
     rdamd:P30176 "Heideland" ;
     rdamd:P30182 "533 s." ;
@@ -4099,7 +4099,7 @@
     rdamd:P30011 "1924" ;
     rdamd:P30014 "Bd. 1" ;
     rdamd:P30088 "Leipzig" ;
-    rdamd:P30134 "Erster Teil" ;
+    rdamd:P30142 "Erster Teil" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Das letzte Kapitel" ;
     rdamd:P30176 "Grethlein" ;
@@ -4113,7 +4113,7 @@
     rdamd:P30011 "1924" ;
     rdamd:P30014 "B. 2" ;
     rdamd:P30088 "Leipzig" ;
-    rdamd:P30134 "Zweiter Teil" ;
+    rdamd:P30142 "Zweiter Teil" ;
     rdamd:P30142 "Roman" ;
     rdamd:P30156 "Das letzte Kapitel" ;
     rdamd:P30176 "Grethlein" ;
@@ -4572,7 +4572,7 @@
     rdamd:P30011 "[1987]" ;
     rdamd:P30014 "1" ;
     rdamd:P30088 "[Oslo]" ;
-    rdamd:P30134 "Akt I og II" ;
+    rdamd:P30142 "Akt I og II" ;
     rdamd:P30156 "Livet ivold" ;
     rdamd:P30176 "Nationaltheatret" ;
     rdamd:P30182 "98 bl." ;
@@ -4585,7 +4585,7 @@
     rdamd:P30011 "[1987]" ;
     rdamd:P30014 "2" ;
     rdamd:P30088 "[Oslo]" ;
-    rdamd:P30134 "Akt III og IV" ;
+    rdamd:P30142 "Akt III og IV" ;
     rdamd:P30156 "Livet ivold" ;
     rdamd:P30176 "Nationaltheatret" ;
     rdamd:P30182 "S. 99-208." ;
@@ -4910,7 +4910,7 @@
     rdamd:P30014 "1" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "4. Utg" ;
-    rdamd:P30134 "Sult ; Pan ; Victoria" ;
+    rdamd:P30142 "Sult ; Pan ; Victoria" ;
     rdamd:P30156 "Samlede Verker" ;
     rdamd:P30176 "Gyldendal" ;
     rdamd:P30182 "393 s." ;
@@ -4927,7 +4927,7 @@
     rdamd:P30033 "Mysterier -- Sværmere" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "4. Utg" ;
-    rdamd:P30134 "Mysterier ; Sværmere" ;
+    rdamd:P30142 "Mysterier ; Sværmere" ;
     rdamd:P30156 "Samlede Verker" ;
     rdamd:P30176 "Gyldendal" ;
     rdamd:P30182 "387 s." ;
@@ -4968,7 +4968,7 @@
     rdamd:P30014 "4" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "4. Utg" ;
-    rdamd:P30134 "Redaktør Lynge ; I Æventyrland ; Det vilde Kor" ;
+    rdamd:P30142 "Redaktør Lynge ; I Æventyrland ; Det vilde Kor" ;
     rdamd:P30156 "Samlede Verker" ;
     rdamd:P30176 "Gyldendal" ;
     rdamd:P30182 "419 s." ;
@@ -5470,7 +5470,7 @@
     rdamd:P30014 "11" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "4. Utg" ;
-    rdamd:P30134 "Markens Grøde" ;
+    rdamd:P30142 "Markens Grøde" ;
     rdamd:P30156 "Samlede Verker" ;
     rdamd:P30176 "Gyldendal" ;
     rdamd:P30182 "338 s." ;
@@ -5553,7 +5553,7 @@
     rdamd:P30014 "3" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "4. Utg" ;
-    rdamd:P30134 "Ny Jord ; Kratskog" ;
+    rdamd:P30142 "Ny Jord ; Kratskog" ;
     rdamd:P30156 "Samlede Verker" ;
     rdamd:P30176 "Gyldendal" ;
     rdamd:P30182 "401 s." ;
@@ -5568,7 +5568,7 @@
     rdamd:P30014 "9" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "4. Utg" ;
-    rdamd:P30134 "Den siste Glæde ; Børn av Tiden" ;
+    rdamd:P30142 "Den siste Glæde ; Børn av Tiden" ;
     rdamd:P30156 "Samlede Verker" ;
     rdamd:P30176 "Gyldendal" ;
     rdamd:P30182 "424 s." ;
@@ -5583,7 +5583,7 @@
     rdamd:P30014 "8" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "4. Utg" ;
-    rdamd:P30134 "Stridende Liv ; Under Høststjernen ; En Vandrer spiller med Sordin" ;
+    rdamd:P30142 "Stridende Liv ; Under Høststjernen ; En Vandrer spiller med Sordin" ;
     rdamd:P30156 "Samlede Verker" ;
     rdamd:P30176 "Gyldendal" ;
     rdamd:P30182 "432 s." ;
@@ -5599,7 +5599,7 @@
     rdamd:P30014 "12" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "4. Utg" ;
-    rdamd:P30134 "Konerne ved Vandposten" ;
+    rdamd:P30142 "Konerne ved Vandposten" ;
     rdamd:P30156 "Samlede Verker" ;
     rdamd:P30176 "Gyldendal" ;
     rdamd:P30182 "382 s." ;
@@ -5613,7 +5613,7 @@
     rdamd:P30014 "14" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "4. Utg" ;
-    rdamd:P30134 "Landstrykere" ;
+    rdamd:P30142 "Landstrykere" ;
     rdamd:P30156 "Samlede Verker" ;
     rdamd:P30176 "Gyldendal" ;
     rdamd:P30182 "436 s." ;
@@ -5627,7 +5627,7 @@
     rdamd:P30014 "15" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "4. Utg" ;
-    rdamd:P30134 "August" ;
+    rdamd:P30142 "August" ;
     rdamd:P30156 "Samlede Verker" ;
     rdamd:P30176 "Gyldendal" ;
     rdamd:P30182 "339 s." ;
@@ -5641,7 +5641,7 @@
     rdamd:P30014 "5" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "4. Utg" ;
-    rdamd:P30134 "Benoni ; Rosa" ;
+    rdamd:P30142 "Benoni ; Rosa" ;
     rdamd:P30156 "Samlede Verker" ;
     rdamd:P30176 "Gyldendal" ;
     rdamd:P30182 "385 s." ;
@@ -5656,7 +5656,7 @@
     rdamd:P30014 "6" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "4. Utg" ;
-    rdamd:P30134 "Ved Rikets Port ; Livets Spil ; Aftenrøde ; Livet i Vold" ;
+    rdamd:P30142 "Ved Rikets Port ; Livets Spil ; Aftenrøde ; Livet i Vold" ;
     rdamd:P30156 "Samlede Verker" ;
     rdamd:P30176 "Gyldendal" ;
     rdamd:P30182 "452 s." ;
@@ -5673,7 +5673,7 @@
     rdamd:P30033 "Dronning Tamara -- Munken Vendt -- Siesta" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "4. Utg" ;
-    rdamd:P30134 "Dronning Tamara ; Munken Vendt ; Siesta" ;
+    rdamd:P30142 "Dronning Tamara ; Munken Vendt ; Siesta" ;
     rdamd:P30156 "Samlede Verker" ;
     rdamd:P30176 "Gyldendal" ;
     rdamd:P30182 "498 s." ;
@@ -5688,7 +5688,7 @@
     rdamd:P30014 "10" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "4. Utg" ;
-    rdamd:P30134 "Segelfoss By" ;
+    rdamd:P30142 "Segelfoss By" ;
     rdamd:P30156 "Samlede Verker" ;
     rdamd:P30176 "Gyldendal" ;
     rdamd:P30182 "338 s." ;
@@ -5702,7 +5702,7 @@
     rdamd:P30014 "13" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "4. Utg" ;
-    rdamd:P30134 "Siste Kapitel" ;
+    rdamd:P30142 "Siste Kapitel" ;
     rdamd:P30156 "Samlede Verker" ;
     rdamd:P30176 "Gyldendal" ;
     rdamd:P30182 "387 s." ;
@@ -5716,7 +5716,7 @@
     rdamd:P30014 "16" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "4. Utg" ;
-    rdamd:P30134 "Men Livet lever" ;
+    rdamd:P30142 "Men Livet lever" ;
     rdamd:P30156 "Samlede Verker" ;
     rdamd:P30176 "Gyldendal" ;
     rdamd:P30182 "412 s." ;
@@ -5730,7 +5730,7 @@
     rdamd:P30014 "17" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "4. Utg" ;
-    rdamd:P30134 "Ringen sluttet" ;
+    rdamd:P30142 "Ringen sluttet" ;
     rdamd:P30156 "Samlede Verker" ;
     rdamd:P30176 "Gyldendal" ;
     rdamd:P30182 "235 s." ;
@@ -5745,7 +5745,7 @@
     rdamd:P30033 "Sult -- Mysterier" ;
     rdamd:P30088 "Kristiania" ;
     rdamd:P30107 "Folkeudg" ;
-    rdamd:P30134 "Sult ; Mysterier" ;
+    rdamd:P30142 "Sult ; Mysterier" ;
     rdamd:P30156 "Samlede Romaner og Fortællinger" ;
     rdamd:P30176 "Gyldendal" ;
     rdamd:P30182 "176, 312 s." ;
@@ -5761,7 +5761,7 @@
     rdamd:P30033 "Redaktør Lynge -- Ny jord" ;
     rdamd:P30088 "Kristiania" ;
     rdamd:P30107 "Folkeudg" ;
-    rdamd:P30134 "Redaktør Lynge ; Ny Jord" ;
+    rdamd:P30142 "Redaktør Lynge ; Ny Jord" ;
     rdamd:P30156 "Samlede Romaner og Fortællinger" ;
     rdamd:P30176 "Gyldendal" ;
     rdamo:P30001 rdact:1049 ;
@@ -5776,7 +5776,7 @@
     rdamd:P30033 "Pan -- Victoria -- Sværmrere -- Under Høststjærnen" ;
     rdamd:P30088 "Kristiania" ;
     rdamd:P30107 "Folkeudg" ;
-    rdamd:P30134 "Pan ; Victoria ; Sværmrere ; Under Høststjærnen" ;
+    rdamd:P30142 "Pan ; Victoria ; Sværmrere ; Under Høststjærnen" ;
     rdamd:P30156 "Samlede Romaner og Fortællinger" ;
     rdamd:P30176 "Gyldendal" ;
     rdamo:P30001 rdact:1049 ;
@@ -5793,7 +5793,7 @@
     rdamd:P30033 "Siesta -- Kratskog" ;
     rdamd:P30088 "Kristiania" ;
     rdamd:P30107 "Folkeudg" ;
-    rdamd:P30134 "Siesta ; Kratskog" ;
+    rdamd:P30142 "Siesta ; Kratskog" ;
     rdamd:P30137 "Også utgitt med tilleggstittelblad: Fortællinger og Skildringer, første Bind" ;
     rdamd:P30156 "Samlede Romaner og Fortællinger" ;
     rdamd:P30176 "Gyldendal" ;
@@ -5810,7 +5810,7 @@
     rdamd:P30033 "Stridende Liv -- I Æventyrland" ;
     rdamd:P30088 "Kristiania" ;
     rdamd:P30107 "Folkeudg" ;
-    rdamd:P30134 "Stridende Liv ; I Æventyrland" ;
+    rdamd:P30142 "Stridende Liv ; I Æventyrland" ;
     rdamd:P30137 "Også utgitt med tilleggstittelblad: Fortællinger og Skildringer, andet Bind" ;
     rdamd:P30156 "Samlede Romaner og Fortællinger" ;
     rdamd:P30176 "Gyldendal" ;
@@ -9878,7 +9878,7 @@
     rdamd:P30014 "12" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "6. utg" ;
-    rdamd:P30134 "Men livet lever" ;
+    rdamd:P30142 "Men livet lever" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
     rdamd:P30182 "315 s." ;
@@ -10481,7 +10481,7 @@
     rdamd:P30033 "Sult -- Mysterier" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "9. utg" ;
-    rdamd:P30134 "Sult ; Mysterier" ;
+    rdamd:P30142 "Sult ; Mysterier" ;
     rdamd:P30137 "1. utg. København : Philipsen, henholdsvis 1890 og 1892" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -10499,7 +10499,7 @@
     rdamd:P30014 "B. 10" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "9. utg" ;
-    rdamd:P30134 "Landstrykere" ;
+    rdamd:P30142 "Landstrykere" ;
     rdamd:P30137 "1. utg. 1927" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -10516,7 +10516,7 @@
     rdamd:P30014 "B. 11" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "9. utg" ;
-    rdamd:P30134 "August" ;
+    rdamd:P30142 "August" ;
     rdamd:P30137 "1. utg. 1930" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -10533,7 +10533,7 @@
     rdamd:P30014 "B. 12" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "9. utg" ;
-    rdamd:P30134 "Men livet lever" ;
+    rdamd:P30142 "Men livet lever" ;
     rdamd:P30137 "1. utg. 1933" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -10550,7 +10550,7 @@
     rdamd:P30014 "B. 13" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "9. utg" ;
-    rdamd:P30134 "Ringen sluttet" ;
+    rdamd:P30142 "Ringen sluttet" ;
     rdamd:P30137 "1. utg. 1936" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -10568,7 +10568,7 @@
     rdamd:P30033 "Ved rikets port -- Livets spil -- Aftenrøde -- Munken Vendt" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "9. utg" ;
-    rdamd:P30134 "Ved rikets port ; Livets spil ; Aftenrøde ; Munken Vendt" ;
+    rdamd:P30142 "Ved rikets port ; Livets spil ; Aftenrøde ; Munken Vendt" ;
     rdamd:P30137 "1. utg. København, henholdsvis Philipsen, 1885, Det Nordiske Forl., 1896 og Gyldendalske Boghandel 1898 og 1902. Ved rikets port opprinnelig utgitt med tittel: Ved Rigets Port" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -10589,7 +10589,7 @@
     rdamd:P30033 "Dronning Tamara -- Livet ivold -- Det vilde kor -- På gjengrodde stier" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "9. utg" ;
-    rdamd:P30134 "Dronning Tamara ; Livet ivold ; Det vilde kor ; På gjengrodde stier" ;
+    rdamd:P30142 "Dronning Tamara ; Livet ivold ; Det vilde kor ; På gjengrodde stier" ;
     rdamd:P30137 "1. utg. København ; Kristiania : Gyldendalske Boghandel, henholdsvis 1903, 1910, 1904 og Oslo : Gyldendal, 1949. På gjengrodde stier opprinnelig utgitt med tittel: Paa gjengrodde stier" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -10609,7 +10609,7 @@
     rdamd:P30014 "B. 2" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "9. utg" ;
-    rdamd:P30134 "Redaktør Lynge ; Ny jord ; Pan" ;
+    rdamd:P30142 "Redaktør Lynge ; Ny jord ; Pan" ;
     rdamd:P30137 "1. utg. København : Philipsen, henholdsvis 1893, 1893 og 1894" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -10628,7 +10628,7 @@
     rdamd:P30014 "B. 3" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "9. utg" ;
-    rdamd:P30134 "Siesta ; Victoria ; I æventyrland" ;
+    rdamd:P30142 "Siesta ; Victoria ; I æventyrland" ;
     rdamd:P30137 "1. utg. henholdsvis København : Gyldendalske Boghandel, 1897, Christiania : Cammermeyer, 1898 og København : Gyldendalske Boghandel, 1903" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -10647,7 +10647,7 @@
     rdamd:P30033 "Kratskog -- Sværmere -- Stridende liv -- Under høststjærnen" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "9. utg" ;
-    rdamd:P30134 "Kratskog ; Sværmere ; Stridende liv ; Under høststjærnen" ;
+    rdamd:P30142 "Kratskog ; Sværmere ; Stridende liv ; Under høststjærnen" ;
     rdamd:P30137 "1. utg. København ; Kristiania : Gyldendalske Boghandel, henholdsvis 1903, 1904, 1905 og 1906" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -10668,7 +10668,7 @@
     rdamd:P30033 "Benoni -- Rosa -- En vandrer spiller med sordin" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "9. utg" ;
-    rdamd:P30134 "Benoni ; Rosa ; En vandrer spiller med sordin" ;
+    rdamd:P30142 "Benoni ; Rosa ; En vandrer spiller med sordin" ;
     rdamd:P30137 "1. utg. Kristiania ; København : Gyldendalske Boghandel, henholdsvis 1908, 1908 og 1909" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -10687,7 +10687,7 @@
     rdamd:P30014 "B. 6" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "9. utg" ;
-    rdamd:P30134 "Børn av tiden ; Segelfoss by" ;
+    rdamd:P30142 "Børn av tiden ; Segelfoss by" ;
     rdamd:P30137 "1. utg. Kristiania ; København : Gyldendalske Boghandel, henholdsvis 1913 og 1915" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -10705,7 +10705,7 @@
     rdamd:P30014 "B. 7" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "9. utg" ;
-    rdamd:P30134 "Den Siste glæde ; Markens grøde" ;
+    rdamd:P30142 "Den Siste glæde ; Markens grøde" ;
     rdamd:P30137 "1. utg. Kristiania ; København : Gyldendalske Boghandel, henholdsvis 1912 med tittel: Den sidste glæde og 1917" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -10723,7 +10723,7 @@
     rdamd:P30014 "B. 8" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "9. utg" ;
-    rdamd:P30134 "Konerne ved vandposten" ;
+    rdamd:P30142 "Konerne ved vandposten" ;
     rdamd:P30137 "1. utg. Kristiania ; København : Gyldendalske Boghandel, 1920" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -10740,7 +10740,7 @@
     rdamd:P30014 "B. 9" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "9. utg" ;
-    rdamd:P30134 "Siste kapitel" ;
+    rdamd:P30142 "Siste kapitel" ;
     rdamd:P30137 "1. utg. Kristiania : Gyldendalske Boghandel, 1923" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -10865,7 +10865,7 @@
     rdamd:P30014 "B. 1" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "10. utg" ;
-    rdamd:P30134 "Sult ; Mysterier" ;
+    rdamd:P30142 "Sult ; Mysterier" ;
     rdamd:P30137 "1. utg. København : Philipsen, henholdsvis 1890 og 1892" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -10883,7 +10883,7 @@
     rdamd:P30014 "B. 10" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "10. utg" ;
-    rdamd:P30134 "Landstrykere" ;
+    rdamd:P30142 "Landstrykere" ;
     rdamd:P30137 "1. utg. 1930" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -10900,7 +10900,7 @@
     rdamd:P30014 "B. 11" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "10. utg" ;
-    rdamd:P30134 "August" ;
+    rdamd:P30142 "August" ;
     rdamd:P30137 "1. utg. 1930" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -10917,7 +10917,7 @@
     rdamd:P30014 "B. 12" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "10. utg" ;
-    rdamd:P30134 "Men livet lever" ;
+    rdamd:P30142 "Men livet lever" ;
     rdamd:P30137 "1. utg. 1933" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -10934,7 +10934,7 @@
     rdamd:P30014 "B. 13" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "10. utg" ;
-    rdamd:P30134 "Ringen sluttet" ;
+    rdamd:P30142 "Ringen sluttet" ;
     rdamd:P30137 "1. utg. 1936" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -10952,7 +10952,7 @@
     rdamd:P30033 "Ved rikets port -- Livets spil -- Aftenrøde -- Munken Vendt" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "10. utg" ;
-    rdamd:P30134 "Ved rikets port ; Livets spil ; Aftenrøde ; Munken Vendt" ;
+    rdamd:P30142 "Ved rikets port ; Livets spil ; Aftenrøde ; Munken Vendt" ;
     rdamd:P30137 "1. utg. København, henholdsvis Philipsen, 1885, Det Nordiske Forl., 1896 og Gyldendalske Boghandel 1898 og 1902. Ved rikets port opprinnelig utgitt med tittel: Ved Rigets Port" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -10973,7 +10973,7 @@
     rdamd:P30033 "Dronning Tamara -- Livet ivold -- Det vilde kor -- På gjengrodde stier" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "10. utg" ;
-    rdamd:P30134 "Dronning Tamara ; Livet ivold ; Det vilde kor ; På gjengrodde stier" ;
+    rdamd:P30142 "Dronning Tamara ; Livet ivold ; Det vilde kor ; På gjengrodde stier" ;
     rdamd:P30137 "1. utg. København ; Kristiania : Gyldendalske Boghandel, henholdsvis 1903, 1910, 1904 og Oslo : Gyldendal, 1949. På gjengrodde stier opprinnelig utgitt med tittel: Paa gjengrodde stier" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -10993,7 +10993,7 @@
     rdamd:P30014 "B. 2" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "10. utg" ;
-    rdamd:P30134 "Redaktør Lynge ; Ny jord ; Pan" ;
+    rdamd:P30142 "Redaktør Lynge ; Ny jord ; Pan" ;
     rdamd:P30137 "1. utg. København : Philipsen, henholdsvis 1893, 1893 og 1894" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -11013,7 +11013,7 @@
     rdamd:P30033 "Siesta -- Victoria -- I æventyrland" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "10. utg" ;
-    rdamd:P30134 "Siesta ; Victoria ; I æventyrland" ;
+    rdamd:P30142 "Siesta ; Victoria ; I æventyrland" ;
     rdamd:P30137 "1. utg. henholdsvis København : Gyldendalske Boghandel, 1897, Christiania : Cammermeyer, 1898 og København : Gyldendalske Boghandel, 1903" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -11032,7 +11032,7 @@
     rdamd:P30014 "B. 4" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "10. utg" ;
-    rdamd:P30134 "Kratskog ; Sværmere ; Stridende liv ; Under høststjærnen" ;
+    rdamd:P30142 "Kratskog ; Sværmere ; Stridende liv ; Under høststjærnen" ;
     rdamd:P30137 "1. utg. København ; Kristiania : Gyldendalske Boghandel, henholdsvis 1903, 1904, 1905 og 1906" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -11052,7 +11052,7 @@
     rdamd:P30014 "B. 5" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "10. utg" ;
-    rdamd:P30134 "Benoni ; Rosa ; En vandrer spiller med sordin" ;
+    rdamd:P30142 "Benoni ; Rosa ; En vandrer spiller med sordin" ;
     rdamd:P30137 "1. utg. Kristiania ; København : Gyldendalske Boghandel, henholdsvis 1908, 1908 og 1909" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -11072,7 +11072,7 @@
     rdamd:P30033 "Børn av tiden -- Segelfoss by" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "10. utg" ;
-    rdamd:P30134 "Børn av tiden ; Segelfoss by" ;
+    rdamd:P30142 "Børn av tiden ; Segelfoss by" ;
     rdamd:P30137 "1. utg. Kristiania ; København : Gyldendalske Boghandel, henholdsvis 1913 og 1915" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -11091,7 +11091,7 @@
     rdamd:P30033 "Den siste glæde ; Markens grøde" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "10. utg" ;
-    rdamd:P30134 "Den siste glæde ; Markens grøde" ;
+    rdamd:P30142 "Den siste glæde ; Markens grøde" ;
     rdamd:P30137 "1. utg. Kristiania ; København : Gyldendalske Boghandel, henholdsvis 1912 med tittel: Den sidste glæde og 1917" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -11109,7 +11109,7 @@
     rdamd:P30014 "B. 8" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "10. utg" ;
-    rdamd:P30134 "Konerne ved vandposten" ;
+    rdamd:P30142 "Konerne ved vandposten" ;
     rdamd:P30137 "1. utg. Kristiania ; København : Gyldendalske Boghandel, 1920" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -11126,7 +11126,7 @@
     rdamd:P30014 "B. 9" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "10. utg" ;
-    rdamd:P30134 "Siste kapitel" ;
+    rdamd:P30142 "Siste kapitel" ;
     rdamd:P30137 "1. utg. Kristiania : Gyldendalske Boghandel, 1923" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -14140,7 +14140,7 @@
     rdamd:P30014 "1" ;
     rdamd:P30088 "München" ;
     rdamd:P30117 "Knut Hamsun. [Übers. von J. Sandmeier u. a.]" ;
-    rdamd:P30134 "Hunger" ;
+    rdamd:P30142 "Hunger" ;
     rdamd:P30156 "Romane" ;
     rdamd:P30176 "List" ;
     rdamd:P30182 "758 S." ;
@@ -14158,7 +14158,7 @@
     rdamd:P30014 "2" ;
     rdamd:P30088 "München" ;
     rdamd:P30117 "Knut Hamsun. [Übers. von J. Sandmeier u. a.]" ;
-    rdamd:P30134 "Victoria" ;
+    rdamd:P30142 "Victoria" ;
     rdamd:P30156 "Romane" ;
     rdamd:P30176 "List" ;
     rdamd:P30182 "1102 S." ;
@@ -14288,7 +14288,7 @@
     rdamd:P30014 "[...]" ;
     rdamd:P30088 "München" ;
     rdamd:P30117 "[Knut Hamsun]" ;
-    rdamd:P30134 "Mysterien : Roman / aus dem Norweg. von Siegfried Weibel. Mit einem Nachw. von Walter Baumgartner" ;
+    rdamd:P30142 "Mysterien : Roman / aus dem Norweg. von Siegfried Weibel. Mit einem Nachw. von Walter Baumgartner" ;
     rdamd:P30156 "Werkausgabe in Einzelbänden" ;
     rdamd:P30176 "List" ;
     rdamd:P30182 "358 S." ;
@@ -14307,7 +14307,7 @@
     rdamd:P30014 "[...]" ;
     rdamd:P30088 "München" ;
     rdamd:P30117 "[Knut Hamsun]" ;
-    rdamd:P30134 "Hunger : Roman / aus dem Norweg. von Siegfried Weibel. Mit einem Nachw. von Heiko Uecker" ;
+    rdamd:P30142 "Hunger : Roman / aus dem Norweg. von Siegfried Weibel. Mit einem Nachw. von Heiko Uecker" ;
     rdamd:P30156 "Werkausgabe in Einzelbänden" ;
     rdamd:P30176 "List" ;
     rdamd:P30182 "222 S." ;
@@ -14325,7 +14325,7 @@
     rdamd:P30014 "[...]" ;
     rdamd:P30088 "München" ;
     rdamd:P30117 "[Knut Hamsun]" ;
-    rdamd:P30134 "Victoria : eine Liebesgeschichte / aus dem Norweg. von Alken Bruns. Mit einem Vorw. von Joseph von Westphalen" ;
+    rdamd:P30142 "Victoria : eine Liebesgeschichte / aus dem Norweg. von Alken Bruns. Mit einem Vorw. von Joseph von Westphalen" ;
     rdamd:P30156 "Werkausgabe in Einzelbänden" ;
     rdamd:P30176 "List" ;
     rdamd:P30182 "125 S." ;
@@ -14364,7 +14364,7 @@
     rdamd:P30014 "[...]" ;
     rdamd:P30088 "München" ;
     rdamd:P30117 "[Knut Hamsun]" ;
-    rdamd:P30134 "Auf überwachsenen Pfaden : Roman / aus dem Norweg. von Alken Bruns. Mit einem Nachw. von Heinrich Detering" ;
+    rdamd:P30142 "Auf überwachsenen Pfaden : Roman / aus dem Norweg. von Alken Bruns. Mit einem Nachw. von Heinrich Detering" ;
     rdamd:P30156 "Werkausgabe in Einzelbänden" ;
     rdamd:P30176 "List" ;
     rdamd:P30182 "182 S." ;
@@ -14889,7 +14889,7 @@
     rdamd:P30014 "B. 2" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "Ny utg" ;
-    rdamd:P30134 "Mysterier" ;
+    rdamd:P30142 "Mysterier" ;
     rdamd:P30137 "1. utg. København : Philipsen, 1892" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -14908,7 +14908,7 @@
     rdamd:P30033 "Redaltør Lynge -- Ny jord" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "Ny utg" ;
-    rdamd:P30134 "Redaktør Lynge ; Ny jord" ;
+    rdamd:P30142 "Redaktør Lynge ; Ny jord" ;
     rdamd:P30137 "1. utg. København : Philipsen, 1893" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -14927,7 +14927,7 @@
     rdamd:P30014 "B. 5" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "Ny utg" ;
-    rdamd:P30134 "Svermere ; Under høststjernen" ;
+    rdamd:P30142 "Svermere ; Under høststjernen" ;
     rdamd:P30137 "1. utg. København ; Kristiania : Gyldendalske Boghandel, henholdsvisvis 1904 med tittel Sværmere og 1906 med tittel Under høststjærnen" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -14946,7 +14946,7 @@
     rdamd:P30014 "B. 17" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "Ny utg" ;
-    rdamd:P30134 "Siesta ; Krattskog ; Stridende liv" ;
+    rdamd:P30142 "Siesta ; Krattskog ; Stridende liv" ;
     rdamd:P30137 "1. utg. København : Gyldendalske Boghandel, henholdsvis 1897, 1903 med tittel Kratskog og 1905" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -14967,7 +14967,7 @@
     rdamd:P30033 "Ved rikets port -- Livets spill -- Aftenrøde" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "Ny utg" ;
-    rdamd:P30134 "Ved rikets port ; Livets spill ; Aftenrøde" ;
+    rdamd:P30142 "Ved rikets port ; Livets spill ; Aftenrøde" ;
     rdamd:P30137 "1. utg.: København, henholdsvis Philipsens Forl., 1885, Det Nordiske Forl., 1896 og Gyldendalske Boghandel 1898. Ved rikets port opprinnelig utgitt med tittel: Ved rigets port" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -14988,7 +14988,7 @@
     rdamd:P30033 "En vandrer spiller med sordin -- Den siste glede" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "Ny utg" ;
-    rdamd:P30134 "En vandrer spiller med sordin ; Den siste glede" ;
+    rdamd:P30142 "En vandrer spiller med sordin ; Den siste glede" ;
     rdamd:P30137 "1. utg. Kristiania ; København : Gyldendalske Boghandel, henholdsvis 1909 og 1912 med tittel: Den sidste glæde" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -15007,7 +15007,7 @@
     rdamd:P30014 "B. 8" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "Ny utg" ;
-    rdamd:P30134 "Barn av tiden" ;
+    rdamd:P30142 "Barn av tiden" ;
     rdamd:P30137 "1. utg. Kristiania ; København : Gyldendalske Boghandel, 1913 med tittel: Børn av tiden" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -15025,7 +15025,7 @@
     rdamd:P30014 "B. 6" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "Ny utg" ;
-    rdamd:P30134 "Benoni ; Rosa" ;
+    rdamd:P30142 "Benoni ; Rosa" ;
     rdamd:P30137 "1. utg. Kristiania ; København : Gyldendalske Boghandel, 1908" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -15045,7 +15045,7 @@
     rdamd:P30033 "Den gåtefulle -- Bjørger -- Livsfragmenter" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "Ny utg" ;
-    rdamd:P30134 "Den gåtefulle ; Bjørger ; Livsfragmenter" ;
+    rdamd:P30142 "Den gåtefulle ; Bjørger ; Livsfragmenter" ;
     rdamd:P30137 "1. utg. av Den gåtefulle: Tromsø : G. Kjeldseths Bogtr., 1877 med tittel Den gaadefulde; Bjørger: Bodø : K. Hamsund, 1878 Livsfragmenter: Tidligere publisert i aviser og tidsskrifter" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -15082,7 +15082,7 @@
     rdamd:P30033 "Dronning Tamara -- Livet ivold" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "Ny utg" ;
-    rdamd:P30134 "Dronning Tamara ; Livet ivold" ;
+    rdamd:P30142 "Dronning Tamara ; Livet ivold" ;
     rdamd:P30137 "1. utg. København ; Kristiania : Gyldendalske Boghandel, henholdsvis 1903 og 1910" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -15101,7 +15101,7 @@
     rdamd:P30014 "B. 23" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "Ny utg" ;
-    rdamd:P30134 "I eventyrland ; På gjengrodde stier" ;
+    rdamd:P30142 "I eventyrland ; På gjengrodde stier" ;
     rdamd:P30137 "1. utg. henholdsvis 1903 med tittel: I Æventyrland og 1949 med tittel: Paa gjengrodde stier" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -15121,7 +15121,7 @@
     rdamd:P30033 "Fra det moderne Amerikas åndsliv -- Lars Oftedal" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "Ny utg" ;
-    rdamd:P30134 "Fra det moderne Amerikas åndsliv ; Lars Oftedal" ;
+    rdamd:P30142 "Fra det moderne Amerikas åndsliv ; Lars Oftedal" ;
     rdamd:P30137 "1. utg. henholdsvis: København : Philipsen, 1889 med tittel Fra det moderne Amerikas Aandsliv og Bergen : Litleré, 1889" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -15141,7 +15141,7 @@
     rdamd:P30033 "Pan -- Viktoria" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "Ny utg" ;
-    rdamd:P30134 "Pan ; Victoria" ;
+    rdamd:P30142 "Pan ; Victoria" ;
     rdamd:P30137 "1. utg. henholdsvis København : Philipsen, 1894 og Christiania : Cammermeyer, 1898" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -15160,7 +15160,7 @@
     rdamd:P30014 "B. 11" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "Ny utg" ;
-    rdamd:P30134 "Konene ved vannposten" ;
+    rdamd:P30142 "Konene ved vannposten" ;
     rdamd:P30137 "1. utg. Kristiania ; København : Gyldendalske Boghandel, 1920 med tittel: Konerne ved vandposten" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -15178,7 +15178,7 @@
     rdamd:P30014 "B. 12" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "Ny utg" ;
-    rdamd:P30134 "Siste kapittel" ;
+    rdamd:P30142 "Siste kapittel" ;
     rdamd:P30137 "1. utg. Kristiania : Gyldendalske Boghandel, 1923 med tittel: Siste kapitel" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;
@@ -15197,7 +15197,7 @@
     rdamd:P30033 "Det vilde kor -- En fløjte lød i mit blod" ;
     rdamd:P30088 "[Oslo]" ;
     rdamd:P30107 "Ny utg" ;
-    rdamd:P30134 "Det vilde kor ; En fløjte lød i mit blod" ;
+    rdamd:P30142 "Det vilde kor ; En fløjte lød i mit blod" ;
     rdamd:P30137 "1. utg. henholdsvis København ; Kristiania : Gyldendalske Boghandel, 1904 og Oslo : Gyldendal, 2003" ;
     rdamd:P30156 "Samlede verker" ;
     rdamd:P30176 "Gyldendal" ;

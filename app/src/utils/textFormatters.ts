@@ -144,6 +144,7 @@ export const parseRelationships = (relationshipString: string | undefined): Rela
 
 export interface ManifestationLike {
   title?: string;
+  numbering?: string;
   other?: string;
   responsibilityStatement?: string;
   edition?: string;
@@ -160,12 +161,18 @@ export interface ManifestationLike {
 }
 
 /**
- * Formats the title area line: "Title proper : Other title information / Statement of responsibility"
+ * Formats the title area line: "Title proper: Numbering : Other title
+ * information / Statement of responsibility". The numbering of a volume in a
+ * set follows the common title as Norwegian libraries show it
+ * ("Samlede verker: B. 18 : Den gåtefulle ; Bjørger").
  */
 export const formatTitleArea = (m: ManifestationLike): string => {
   if (!m.title) return m.uri;
 
   let formatted = m.title;
+  if (m.numbering) {
+    formatted += `: ${m.numbering}`;
+  }
   if (m.other) {
     formatted += ` : ${m.other}`;
   }

@@ -1524,7 +1524,7 @@
     rdamd:P30011 "1993" ;
     rdamd:P30014 "1" ;
     rdamd:P30088 "Oslo" ;
-    rdamd:P30134 "Alle de vakre hestene" ;
+    rdamd:P30142 "Alle de vakre hestene" ;
     rdamd:P30156 "Grensetrilogien" ;
     rdamd:P30176 "Gyldendal" ;
     rdamd:P30182 "285 s." ;
@@ -1556,7 +1556,7 @@
     rdamd:P30011 "1995" ;
     rdamd:P30014 "2" ;
     rdamd:P30088 "Oslo" ;
-    rdamd:P30134 "Over grensen" ;
+    rdamd:P30142 "Over grensen" ;
     rdamd:P30156 "Grensetrilogien" ;
     rdamd:P30176 "Gyldendal" ;
     rdamd:P30182 "396 s." ;
@@ -1572,7 +1572,7 @@
     rdamd:P30014 "B. 1" ;
     rdamd:P30088 "Oslo" ;
     rdamd:P30107 "2. utg" ;
-    rdamd:P30134 "Alle de vakre hestene" ;
+    rdamd:P30142 "Alle de vakre hestene" ;
     rdamd:P30137 "1. norske utg. 1993" ;
     rdamd:P30156 "Grensetrilogien" ;
     rdamd:P30176 "Gyldendal" ;
@@ -1588,7 +1588,7 @@
     rdamd:P30011 "1999" ;
     rdamd:P30014 "B. 3" ;
     rdamd:P30088 "Oslo" ;
-    rdamd:P30134 "Byene på høysletten" ;
+    rdamd:P30142 "Byene på høysletten" ;
     rdamd:P30156 "Grensetrilogien" ;
     rdamd:P30176 "Gyldendal" ;
     rdamd:P30182 "266 s." ;

@@ -7861,7 +7861,7 @@
     rdfs:label "Barnas beste. – Cappelen, 1985" ;
     rdamd:P30011 "1985" ;
     rdamd:P30088 "[Oslo]" ;
-    rdamd:P30134 "Det flyvende teppe" ;
+    rdamd:P30142 "Det flyvende teppe" ;
     rdamd:P30156 "Barnas beste" ;
     rdamd:P30176 "Cappelen" ;
     rdamd:P30182 "161 s." ;

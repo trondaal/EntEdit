@@ -269,6 +269,7 @@ const typeWithFallback = (property: string, name: string, lang: string): string 
 /** Single-valued manifestation statements, one OPTIONAL each. */
 const MANIFESTATION_FIELDS: [string, string][] = [
   ["title", "rdamd:P30156"], // title proper
+  ["numbering", "rdamd:P30014"], // numbering within sequence (volume of a set)
   ["other", "rdamd:P30142"], // other title information
   ["responsibilityStatement", "rdamd:P30117"],
   ["edition", "rdamd:P30107"],
@@ -340,6 +341,7 @@ GROUP BY ?manifestation
 export interface ManifestationDetail {
   uri: string;
   title?: string;
+  numbering?: string;
   other?: string;
   responsibilityStatement?: string;
   edition?: string;
@@ -367,6 +369,7 @@ export interface ManifestationDetail {
 export const toManifestationDetail = (b: SparqlResult): ManifestationDetail => ({
   uri: b.manifestation.value,
   title: b.title?.value,
+  numbering: b.numbering?.value,
   other: b.other?.value,
   responsibilityStatement: b.responsibilityStatement?.value,
   edition: b.edition?.value,

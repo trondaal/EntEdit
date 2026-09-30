@@ -1341,7 +1341,7 @@
     rdamd:P30088 "Berlin",
         "Neuwied" ;
     rdamd:P30117 "Günter Grass" ;
-    rdamd:P30134 "Es steht zur Wahl" ;
+    rdamd:P30142 "Es steht zur Wahl" ;
     rdamd:P30156 "Dich singe ich, Demokratie" ;
     rdamd:P30176 "Luchterhand" ;
     rdamd:P30182 "11 S." ;
@@ -1356,7 +1356,7 @@
     rdamd:P30088 "Berlin",
         "Neuwied" ;
     rdamd:P30117 "Günter Grass" ;
-    rdamd:P30134 "Es steht zur Wahl" ;
+    rdamd:P30142 "Es steht zur Wahl" ;
     rdamd:P30156 "Dich singe ich, Demokratie" ;
     rdamd:P30176 "Luchterhand" ;
     rdamd:P30182 "16 S." ;
@@ -1371,7 +1371,7 @@
     rdamd:P30088 "Berlin",
         "Neuwied" ;
     rdamd:P30117 "Günter Grass" ;
-    rdamd:P30134 "Ich klage an!" ;
+    rdamd:P30142 "Ich klage an!" ;
     rdamd:P30156 "Dich singe ich, Demokratie" ;
     rdamd:P30176 "Luchterhand" ;
     rdamd:P30182 "13 S." ;
@@ -1386,7 +1386,7 @@
     rdamd:P30088 "Berlin",
         "Neuwied" ;
     rdamd:P30117 "Günter Grass" ;
-    rdamd:P30134 "Des Kaisers neue Kleider" ;
+    rdamd:P30142 "Des Kaisers neue Kleider" ;
     rdamd:P30156 "Dich singe ich, Demokratie" ;
     rdamd:P30176 "Luchterhand" ;
     rdamd:P30182 "14 S." ;
@@ -1401,7 +1401,7 @@
     rdamd:P30088 "Berlin",
         "Neuwied" ;
     rdamd:P30117 "Günter Grass" ;
-    rdamd:P30134 "Loblied auf Willy" ;
+    rdamd:P30142 "Loblied auf Willy" ;
     rdamd:P30156 "Dich singe ich, Demokratie" ;
     rdamd:P30176 "Luchterhand" ;
     rdamd:P30182 "12 S." ;
@@ -1416,7 +1416,7 @@
     rdamd:P30088 "Berlin",
         "Neuwied" ;
     rdamd:P30117 "Günter Grass" ;
-    rdamd:P30134 "Was ist des Deutschen Vaterland" ;
+    rdamd:P30142 "Was ist des Deutschen Vaterland" ;
     rdamd:P30156 "Dich singe ich, Demokratie" ;
     rdamd:P30176 "Luchterhand" ;
     rdamd:P30182 "12 S." ;
@@ -3434,7 +3434,7 @@
     rdamd:P30014 "2" ;
     rdamd:P30088 "[Marburg]" ;
     rdamd:P30117 "Günther Grass" ;
-    rdamd:P30134 "Katz und Maus" ;
+    rdamd:P30142 "Katz und Maus" ;
     rdamd:P30156 "Danziger Trilogie" ;
     rdamd:P30176 "Dt. Blindenstudienanst" ;
     rdamd:P30182 "185 S." ;
@@ -13111,7 +13111,7 @@
     rdamd:P30107 "1. Aufl",
         "[Jubiläumsausg.]" ;
     rdamd:P30117 "Günter Grass" ;
-    rdamd:P30134 "Trommelwirbel : fünfzig Jahre \"Die Blechtrommel\" / hrsg. von Uwe Neumann" ;
+    rdamd:P30142 "Trommelwirbel : fünfzig Jahre \"Die Blechtrommel\" / hrsg. von Uwe Neumann" ;
     rdamd:P30156 "Die Blechtrommel" ;
     rdamd:P30176 "Steidl" ;
     rdamd:P30182 "128 S., 21 cm.",
@@ -13293,7 +13293,7 @@
     rdamd:P30088 "Göttingen" ;
     rdamd:P30107 "1. Aufl" ;
     rdamd:P30117 "Günter Grass. Mit Ill. des Autors" ;
-    rdamd:P30134 "Frühschichten",
+    rdamd:P30142 "Frühschichten",
         "Liebesbriefe",
         "Materniaden" ;
     rdamd:P30156 "Hundejahre" ;
