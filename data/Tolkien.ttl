@@ -748,7 +748,6 @@
     rdfs:label "The letters of J.R.R. Tolkien / J. R. R. Tolkien. – English"@en,
         "The letters of J.R.R. Tolkien / J. R. R. Tolkien. – Engelsk"@no ;
     rdaed:P20315 "The letters of J.R.R. Tolkien" ;
-    rdaed:P20316 "The letters of J.R.R. Tolkien" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/95218067/letters> .
@@ -767,7 +766,6 @@
         "Poems and songs of middle earth / J. R. R. Tolkien. – Tale, engelsk"@no ;
     rdaed:P20071 "The adventures of Tom Bombadil -- The mewlips -- The hoard -- Perry-the-winkle -- The man in the moon came down too soon -- The sea-bell -- A Elbereth Gilthoniel (in Elvish) -- The road goes ever on / words by J.R.R. Tolkien ; music by Donald Swann ; sung by William Elvin with the composer at the piano -- The road goes ever on -- Upon the hearth the fire is red -- In the willow-meads of Tasarinan -- In western lands -- Namarie (in Elvish) -- I sit beside the fire : refrain A Elbereth Gilthoniel -- Errantry." ;
     rdaed:P20315 "Poems and songs of middle earth" ;
-    rdaed:P20316 "Poems and songs of middle earth" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/95218067/poemsandsongs> .
@@ -810,8 +808,7 @@
     rdfs:label "The fall of Númenor : and other tales from the Second Age of Middle-Earth / J. R. R. Tolkien. – English"@en,
         "The fall of Númenor : and other tales from the Second Age of Middle-Earth / J. R. R. Tolkien. – Engelsk"@no ;
     rdaed:P20315 "The fall of Númenor : and other tales from the Second Age of Middle-Earth" ;
-    rdaed:P20316 "Short stories",
-        "The fall of Númenor and other tales from the Second Age of Middle-Earth" ;
+    rdaed:P20316 "Short stories" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q112731328> .
@@ -821,7 +818,6 @@
         "Ringenes herre / J. R. R. Tolkien ; oversatt av Torstein Bugge Høverstad. – Bokmål"@no ;
     rdaed:P20071 "Ringens brorskap -- To tårn -- Atter en konge" ;
     rdaed:P20315 "Ringenes herre" ;
-    rdaed:P20316 "Lord of the rings" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20037 <http://viaf.org/viaf/65245833> ;
@@ -835,8 +831,7 @@
     rdfs:label "Ringens brorskap / J. R. R. Tolkien ; translated by Torstein Bugge Høverstad ; read by Anders Ribu. – Spoken word, Norwegian Bokmål"@en,
         "Ringens brorskap / J. R. R. Tolkien ; oversatt av Torstein Bugge Høverstad ; lest av Anders Ribu. – Tale, bokmål"@no ;
     rdaed:P20315 "Ringens brorskap" ;
-    rdaed:P20316 "Fellowship of the ring",
-        "Ringenes herre I : ringens brorskap" ;
+    rdaed:P20316 "Ringenes herre I : ringens brorskap" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/24701800> ;
@@ -848,8 +843,7 @@
     rdfs:label "To tårn / J. R. R. Tolkien ; translated by Torstein Bugge Høverstad ; read by Anders Ribu. – Spoken word, Norwegian Bokmål"@en,
         "To tårn / J. R. R. Tolkien ; oversatt av Torstein Bugge Høverstad ; lest av Anders Ribu. – Tale, bokmål"@no ;
     rdaed:P20315 "To tårn" ;
-    rdaed:P20316 "Ringenes herre II : to tårn",
-        "Two towers" ;
+    rdaed:P20316 "Ringenes herre II : to tårn" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/24701800> ;
@@ -861,8 +855,7 @@
     rdfs:label "Atter en konge / J. R. R. Tolkien ; translated by Torstein Bugge Høverstad ; read by Anders Ribu. – Spoken word, Norwegian Bokmål"@en,
         "Atter en konge / J. R. R. Tolkien ; oversatt av Torstein Bugge Høverstad ; lest av Anders Ribu. – Tale, bokmål"@no ;
     rdaed:P20315 "Atter en konge" ;
-    rdaed:P20316 "Return of the king",
-        "Ringenes herre III : atter en konge" ;
+    rdaed:P20316 "Ringenes herre III : atter en konge" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/24701800> ;
@@ -885,7 +878,6 @@
     rdfs:label "The war of the ring / J. R. R. Tolkien. – English"@en,
         "The war of the ring / J. R. R. Tolkien. – Engelsk"@no ;
     rdaed:P20315 "The war of the ring" ;
-    rdaed:P20316 "The war of the ring" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q503325> .
@@ -894,8 +886,7 @@
     rdfs:label "The hobbit, or there and back again / J. R. R. Tolkien ; edited by Chuck Dixon and Sean Deming. – Text, still image, English"@en,
         "The hobbit, or there and back again / J. R. R. Tolkien ; redigert av Chuck Dixon og Sean Deming. – Tekst, stillbilde, engelsk"@no ;
     rdaed:P20315 "The hobbit, or there and back again" ;
-    rdaed:P20316 "The hobbit , or there and back again : [an illustrated edition of the fantasy classic]",
-        "The hobbit, or there and back again" ;
+    rdaed:P20316 "The hobbit , or there and back again : [an illustrated edition of the fantasy classic]" ;
     rdaeo:P20001 rdaco:1014,
         rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
@@ -907,7 +898,6 @@
     rdfs:label "Hobbiten, eller Ditut og attende / J. R. R. Tolkien ; translated by Eilev Groven Myhren. – Norwegian Nynorsk"@en,
         "Hobbiten, eller Ditut og attende / J. R. R. Tolkien ; oversatt av Eilev Groven Myhren. – Nynorsk"@no ;
     rdaed:P20315 "Hobbiten, eller Ditut og attende" ;
-    rdaed:P20316 "The hobbit, or there and back again" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nno> ;
     rdaeo:P20037 <http://viaf.org/viaf/267471594> ;
@@ -918,7 +908,6 @@
     rdfs:label "Hobbiten / J. R. R. Tolkien ; translated by Finn Åsen and Oddrun Grønnvik ; read by Knut Røe. – Spoken word, Norwegian Bokmål"@en,
         "Hobbiten / J. R. R. Tolkien ; oversatt av Finn Åsen og Oddrun Grønnvik ; lest av Knut Røe. – Tale, bokmål"@no ;
     rdaed:P20315 "Hobbiten" ;
-    rdaed:P20316 "The hobbit, or there and back again" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/224621493> ;
@@ -931,7 +920,6 @@
     rdfs:label "Hobbiten, eller Fram og tilbake igjen / J. R. R. Tolkien ; translated by Nils Ivar Agøy. – Norwegian Bokmål"@en,
         "Hobbiten, eller Fram og tilbake igjen / J. R. R. Tolkien ; oversatt av Nils Ivar Agøy. – Bokmål"@no ;
     rdaed:P20315 "Hobbiten, eller Fram og tilbake igjen" ;
-    rdaed:P20316 "The hobbit, or there and back again" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20037 <http://viaf.org/viaf/9349441> ;
@@ -953,7 +941,6 @@
     rdfs:label "The silmarillion / J. R. R. Tolkien ; edited by Christopher Tolkien. – English"@en,
         "The silmarillion / J. R. R. Tolkien ; redigert av Christopher Tolkien. – Engelsk"@no ;
     rdaed:P20315 "The silmarillion" ;
-    rdaed:P20316 "The silmarillion" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/183065413> ;
@@ -963,7 +950,6 @@
     rdfs:label "Ringens brorskap / J. R. R. Tolkien ; translated by Torstein Bugge Høverstad. – Norwegian Bokmål"@en,
         "Ringens brorskap / J. R. R. Tolkien ; oversatt av Torstein Bugge Høverstad. – Bokmål"@no ;
     rdaed:P20315 "Ringens brorskap" ;
-    rdaed:P20316 "Fellowship of the ring" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20037 <http://viaf.org/viaf/65245833> ;
@@ -974,7 +960,6 @@
     rdfs:label "To tårn / J. R. R. Tolkien ; translated by Torstein Bugge Høverstad. – Norwegian Bokmål"@en,
         "To tårn / J. R. R. Tolkien ; oversatt av Torstein Bugge Høverstad. – Bokmål"@no ;
     rdaed:P20315 "To tårn" ;
-    rdaed:P20316 "Two towers" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20037 <http://viaf.org/viaf/65245833> ;
@@ -985,7 +970,6 @@
     rdfs:label "Atter en konge / J. R. R. Tolkien ; translated by Torstein Bugge Høverstad. – Norwegian Bokmål"@en,
         "Atter en konge / J. R. R. Tolkien ; oversatt av Torstein Bugge Høverstad. – Bokmål"@no ;
     rdaed:P20315 "Atter en konge" ;
-    rdaed:P20316 "Return of the king" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20037 <http://viaf.org/viaf/65245833> ;
@@ -1007,8 +991,7 @@
     rdfs:label "Lord of the rings : a reader's companion / Christina Scull and Wayne G. Hammond. – English"@en,
         "Lord of the rings : a reader's companion / Christina Scull og Wayne G. Hammond. – Engelsk"@no ;
     rdaed:P20315 "Lord of the rings : a reader's companion" ;
-    rdaed:P20316 "Lord of the rings : a reader's companion",
-        "The Lord of the rings : a reader's companion" ;
+    rdaed:P20316 "The Lord of the rings : a reader's companion" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/9014152502908610800009> .
@@ -1018,8 +1001,7 @@
         "Unfinished tales of Númenor and Middle-earth / J. R. R. Tolkien. – Engelsk"@no ;
     rdaed:P20071 "Of Tuor and his coming to Gondolin -- Narn i hîn Húrin -- A description of the island of Númenor -- Aldarion and Erendis -- The line of Elros : Kings of Númenor -- The history of Galadriel and Celeborn -- The disaster of the Gladden Fields -- Cirion and Eorl and the friendship of Gondor and Rohan -- The quest of Erebor -- The hunt for the Ring -- The battles of the Fords of Isen -- The Drúedain -- The Istari -- The Palantíri." ;
     rdaed:P20315 "Unfinished tales of Númenor and Middle-earth" ;
-    rdaed:P20316 "Prose works",
-        "Unfinished tales of Númenor and Middle-earth" ;
+    rdaed:P20316 "Prose works" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/219968903> .
@@ -1077,7 +1059,6 @@
     rdfs:label "The hobbit, or there and back again / J. R. R. Tolkien. – English"@en,
         "The hobbit, or there and back again / J. R. R. Tolkien. – Engelsk"@no ;
     rdaed:P20315 "The hobbit, or there and back again" ;
-    rdaed:P20316 "The hobbit, or there and back again" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q74287> ;
@@ -1093,8 +1074,7 @@
         "Lord of the rings / J. R. R. Tolkien. – Engelsk"@no ;
     rdaed:P20071 "The fellowship of the ring -- The two towers -- The return of the king." ;
     rdaed:P20315 "Lord of the rings" ;
-    rdaed:P20316 "Lord of the rings",
-        "The lord of the rings" ;
+    rdaed:P20316 "The lord of the rings" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20145 <http://www.wikidata.org/entity/Q208002/exp/eng/1020>,
@@ -1112,8 +1092,7 @@
     rdfs:label "Two towers / J. R. R. Tolkien. – English"@en,
         "Two towers / J. R. R. Tolkien. – Engelsk"@no ;
     rdaed:P20315 "Two towers" ;
-    rdaed:P20316 "The two towers : being the second part of The lord of the rings",
-        "Two towers" ;
+    rdaed:P20316 "The two towers : being the second part of The lord of the rings" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q332388> ;
@@ -1129,9 +1108,7 @@
     rdfs:label "Fellowship of the ring / J. R. R. Tolkien. – English"@en,
         "Fellowship of the ring / J. R. R. Tolkien. – Engelsk"@no ;
     rdaed:P20315 "Fellowship of the ring" ;
-    rdaed:P20316 "Fellowship of the ring",
-        "The Fellowship of the ring",
-        "The fellowship of the ring : being the first part of The Lord of the Rings" ;
+    rdaed:P20316 "The fellowship of the ring : being the first part of The Lord of the Rings" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q208002> ;
@@ -1141,8 +1118,7 @@
     rdfs:label "Return of the king / J. R. R. Tolkien. – English"@en,
         "Return of the king / J. R. R. Tolkien. – Engelsk"@no ;
     rdaed:P20315 "Return of the king" ;
-    rdaed:P20316 "Return of the king",
-        "The return of the king : being the third part of The lord of the rings" ;
+    rdaed:P20316 "The return of the king : being the third part of The lord of the rings" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q332581> ;

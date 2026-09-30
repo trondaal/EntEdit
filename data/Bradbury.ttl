@@ -5364,7 +5364,6 @@
     rdfs:label "Un cementiri de llunàtics : una altra història de dues ciutats / Ray Bradbury. – Catalan"@en,
         "Un cementiri de llunàtics : una altra història de dues ciutats / Ray Bradbury. – Katalansk"@no ;
     rdaed:P20315 "Un cementiri de llunàtics : una altra història de dues ciutats" ;
-    rdaed:P20316 "A graveyard for lunatics" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/cat> ;
     rdaeo:P20231 <http://viaf.org/viaf/1142162985500686300007> .
@@ -5399,7 +5398,6 @@
         "Something wicked this way comes / Ray Bradbury. – Engelsk"@no ;
     rdaed:P20071 "Something wicked this way comes / Ray Bradbury - History, context and criticism / edited by Jonathan R. Eller." ;
     rdaed:P20315 "Something wicked this way comes" ;
-    rdaed:P20316 "Something wicked this way comes" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/1239151052019833530008/augmented> .
@@ -5416,7 +5414,6 @@
     rdfs:label "Something wicked this way comes : a play in two acts / Ray Bradbury. – English"@en,
         "Something wicked this way comes : a play in two acts / Ray Bradbury. – Engelsk"@no ;
     rdaed:P20315 "Something wicked this way comes : a play in two acts" ;
-    rdaed:P20316 "Something wicked this way comes" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/1239151052019833530008/play> .
@@ -5425,7 +5422,6 @@
     rdfs:label "Zen en l'art d'escriure / Ray Bradbury. – Catalan"@en,
         "Zen en l'art d'escriure / Ray Bradbury. – Katalansk"@no ;
     rdaed:P20315 "Zen en l'art d'escriure" ;
-    rdaed:P20316 "Zen in the art of writing" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/cat> ;
     rdaeo:P20231 <http://viaf.org/viaf/1356145424675986830487> .
@@ -5434,7 +5430,6 @@
     rdfs:label "Zen in the art of writing / Ray Bradbury. – English"@en,
         "Zen in the art of writing / Ray Bradbury. – Engelsk"@no ;
     rdaed:P20315 "Zen in the art of writing" ;
-    rdaed:P20316 "Zen in the art of writing" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/1356145424675986830487> .
@@ -5443,7 +5438,6 @@
     rdfs:label "The golden apples of the sun : [short stories] / Ray Bradbury"@en,
         "The golden apples of the sun : [short stories] / Ray Bradbury"@no ;
     rdaed:P20315 "The golden apples of the sun : [short stories]" ;
-    rdaed:P20316 "The golden apples of the sun" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/und> ;
     rdaeo:P20231 <http://viaf.org/viaf/1404145424624286831356> .
@@ -5461,7 +5455,6 @@
     rdfs:label "Encendre la nit / Ray Bradbury. – Catalan"@en,
         "Encendre la nit / Ray Bradbury. – Katalansk"@no ;
     rdaed:P20315 "Encendre la nit" ;
-    rdaed:P20316 "Switch on the night" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/cat> ;
     rdaeo:P20231 <http://viaf.org/viaf/174579606> .
@@ -5470,7 +5463,6 @@
     rdfs:label "Encendre la nit / Ray Bradbury. – Catalan, English"@en,
         "Encendre la nit / Ray Bradbury. – Engelsk, katalansk"@no ;
     rdaed:P20315 "Encendre la nit" ;
-    rdaed:P20316 "Switch on the night" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/cat>,
         <http://id.loc.gov/vocabulary/iso639-2/eng> ;
@@ -5480,7 +5472,6 @@
     rdfs:label "Gutten som var redd for mørket / Ray Bradbury. – Norwegian Bokmål"@en,
         "Gutten som var redd for mørket / Ray Bradbury. – Bokmål"@no ;
     rdaed:P20315 "Gutten som var redd for mørket" ;
-    rdaed:P20316 "Switch on the night" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/174579606> .
@@ -5489,7 +5480,6 @@
     rdfs:label "Encender la noche / Ray Bradbury. – Spanish"@en,
         "Encender la noche / Ray Bradbury. – Spansk"@no ;
     rdaed:P20315 "Encender la noche" ;
-    rdaed:P20316 "Switch on the night" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20231 <http://viaf.org/viaf/174579606> .
@@ -5518,7 +5508,6 @@
     rdfs:label "The Martian chronicles : [Sound recording] / Ray Bradbury. – Spoken word, English"@en,
         "The Martian chronicles : [Sound recording] / Ray Bradbury. – Tale, engelsk"@no ;
     rdaed:P20315 "The Martian chronicles : [Sound recording]" ;
-    rdaed:P20316 "The martian chronicles" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/175761003> .
@@ -5527,7 +5516,6 @@
     rdfs:label "Gesänge des Computers : Erzählungen / Ray Bradbury. – German"@en,
         "Gesänge des Computers : Erzählungen / Ray Bradbury. – Tysk"@no ;
     rdaed:P20315 "Gesänge des Computers : Erzählungen" ;
-    rdaed:P20316 "I sing the body electric!" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20231 <http://viaf.org/viaf/183843031> .
@@ -5536,7 +5524,6 @@
     rdfs:label "Den kalla vinden och den varma / Ray Bradbury. – Swedish"@en,
         "Den kalla vinden och den varma / Ray Bradbury. – Svensk"@no ;
     rdaed:P20315 "Den kalla vinden och den varma" ;
-    rdaed:P20316 "I sing the body electric!" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/swe> ;
     rdaeo:P20231 <http://viaf.org/viaf/183843031> .
@@ -5553,7 +5540,6 @@
     rdfs:label "Fahrenheit 451 : Roman / Ray Bradbury. – German"@en,
         "Fahrenheit 451 : Roman / Ray Bradbury. – Tysk"@no ;
     rdaed:P20315 "Fahrenheit 451 : Roman" ;
-    rdaed:P20316 "Fahrenheit 451" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20231 <http://viaf.org/viaf/185473935> .
@@ -5562,7 +5548,6 @@
     rdfs:label "Fahrenheit 451 / Ray Bradbury. – Italian"@en,
         "Fahrenheit 451 / Ray Bradbury. – Italiensk"@no ;
     rdaed:P20315 "Fahrenheit 451" ;
-    rdaed:P20316 "Fahrenheit 451" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ita> ;
     rdaeo:P20231 <http://viaf.org/viaf/185473935> .
@@ -5571,7 +5556,6 @@
     rdfs:label "Fahrenheit 451 / Ray Bradbury. – Portuguese"@en,
         "Fahrenheit 451 / Ray Bradbury. – Portugisisk"@no ;
     rdaed:P20315 "Fahrenheit 451" ;
-    rdaed:P20316 "Fahrenheit 451" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/por> ;
     rdaeo:P20231 <http://viaf.org/viaf/185473935> .
@@ -5580,7 +5564,6 @@
     rdfs:label "Fahrenheit 451 / Ray Bradbury. – Slovenian"@en,
         "Fahrenheit 451 / Ray Bradbury. – Slovensk"@no ;
     rdaed:P20315 "Fahrenheit 451" ;
-    rdaed:P20316 "Fahrenheit 451" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/slv> ;
     rdaeo:P20231 <http://viaf.org/viaf/185473935> .
@@ -5607,7 +5590,6 @@
     rdfs:label "L'home il·lustrat / Ray Bradbury. – Catalan"@en,
         "L'home il·lustrat / Ray Bradbury. – Katalansk"@no ;
     rdaed:P20315 "L'home il·lustrat" ;
-    rdaed:P20316 "The illustrated man" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/cat> ;
     rdaeo:P20231 <http://viaf.org/viaf/2146095153500370503> .
@@ -5617,7 +5599,6 @@
         "The illustrated man / Ray Bradbury. – Tale, engelsk"@no ;
     rdaed:P20071 "The veldt -- Marionettes, inc." ;
     rdaed:P20315 "The illustrated man" ;
-    rdaed:P20316 "The illustrated man" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/2146095153500370503> .
@@ -5626,7 +5607,6 @@
     rdfs:label "El hombre ilustrado / Ray Bradbury ; translated by Francisco Abelenda. – English, Spanish"@en,
         "El hombre ilustrado / Ray Bradbury ; oversatt av Francisco Abelenda. – Engelsk, spansk"@no ;
     rdaed:P20315 "El hombre ilustrado" ;
-    rdaed:P20316 "The illustrated man" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng>,
         <http://id.loc.gov/vocabulary/iso639-2/spa> ;
@@ -5637,7 +5617,6 @@
     rdfs:label "Der illustrierte Mann : Erzählungen / Ray Bradbury. – German"@en,
         "Der illustrierte Mann : Erzählungen / Ray Bradbury. – Tysk"@no ;
     rdaed:P20315 "Der illustrierte Mann : Erzählungen" ;
-    rdaed:P20316 "The illustrated man" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20231 <http://viaf.org/viaf/2146095153500370503> .
@@ -5646,7 +5625,6 @@
     rdfs:label "Den illustrerte mannen / Ray Bradbury. – Norwegian Bokmål"@en,
         "Den illustrerte mannen / Ray Bradbury. – Bokmål"@no ;
     rdaed:P20315 "Den illustrerte mannen" ;
-    rdaed:P20316 "The illustrated man" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/2146095153500370503> .
@@ -5655,7 +5633,6 @@
     rdfs:label "El hombre ilustrado / Ray Bradbury. – Spanish"@en,
         "El hombre ilustrado / Ray Bradbury. – Spansk"@no ;
     rdaed:P20315 "El hombre ilustrado" ;
-    rdaed:P20316 "The illustrated man" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20231 <http://viaf.org/viaf/2146095153500370503> .
@@ -5664,7 +5641,6 @@
     rdfs:label "Den illustrerade mannen / Ray Bradbury. – Swedish"@en,
         "Den illustrerade mannen / Ray Bradbury. – Svensk"@no ;
     rdaed:P20315 "Den illustrerade mannen" ;
-    rdaed:P20316 "The illustrated man" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/swe> ;
     rdaeo:P20231 <http://viaf.org/viaf/2146095153500370503> .
@@ -5673,7 +5649,6 @@
     rdfs:label "Le pays d'octobre : roman / Ray Bradbury. – French"@en,
         "Le pays d'octobre : roman / Ray Bradbury. – Fransk"@no ;
     rdaed:P20315 "Le pays d'octobre : roman" ;
-    rdaed:P20316 "The October country" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20231 <http://viaf.org/viaf/2945164782078108600004> .
@@ -5682,7 +5657,6 @@
     rdfs:label "Døden er en ensom sak / Ray Bradbury. – Norwegian Bokmål"@en,
         "Døden er en ensom sak / Ray Bradbury. – Bokmål"@no ;
     rdaed:P20315 "Døden er en ensom sak" ;
-    rdaed:P20316 "Death is a lonely business" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/307984830> .
@@ -5691,7 +5665,6 @@
     rdfs:label "La muerte es un asunto solitario / Ray Bradbury. – Spanish"@en,
         "La muerte es un asunto solitario / Ray Bradbury. – Spansk"@no ;
     rdaed:P20315 "La muerte es un asunto solitario" ;
-    rdaed:P20316 "Death is a lonely business" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20231 <http://viaf.org/viaf/307984830> .
@@ -5700,7 +5673,6 @@
     rdfs:label "Cuentos espaciales / Ray Bradbury. – Spanish"@en,
         "Cuentos espaciales / Ray Bradbury. – Spansk"@no ;
     rdaed:P20315 "Cuentos espaciales" ;
-    rdaed:P20316 "S is for Space" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20231 <http://viaf.org/viaf/308001247> .
@@ -5709,7 +5681,6 @@
     rdfs:label "Siempre nos quedará París / Ray Bradbury. – Spanish"@en,
         "Siempre nos quedará París / Ray Bradbury. – Spansk"@no ;
     rdaed:P20315 "Siempre nos quedará París" ;
-    rdaed:P20316 "We'll always have Paris" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20231 <http://viaf.org/viaf/308077573> .
@@ -5718,7 +5689,6 @@
     rdfs:label "We'll always have Paris : stories / Ray Bradbury. – English"@en,
         "We'll always have Paris : stories / Ray Bradbury. – Engelsk"@no ;
     rdaed:P20315 "We'll always have Paris : stories" ;
-    rdaed:P20316 "We'll always have Paris" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/308077573> .
@@ -5727,7 +5697,6 @@
     rdfs:label "El vino del estío / Ray Bradbury ; translated by Francisco Abelenda. – English, Spanish"@en,
         "El vino del estío / Ray Bradbury ; oversatt av Francisco Abelenda. – Engelsk, spansk"@no ;
     rdaed:P20315 "El vino del estío" ;
-    rdaed:P20316 "Dandelion wine" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng>,
         <http://id.loc.gov/vocabulary/iso639-2/spa> ;
@@ -5746,7 +5715,6 @@
     rdfs:label "Dandelion wine / Ray Bradbury. – English"@en,
         "Dandelion wine / Ray Bradbury. – Engelsk"@no ;
     rdaed:P20315 "Dandelion wine" ;
-    rdaed:P20316 "Dandelion wine" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/309258185/play> .
@@ -5763,7 +5731,6 @@
     rdfs:label "Ahmed and the oblivion machines : a fable / Ray Bradbury. – English"@en,
         "Ahmed and the oblivion machines : a fable / Ray Bradbury. – Engelsk"@no ;
     rdaed:P20315 "Ahmed and the oblivion machines : a fable" ;
-    rdaed:P20316 "Ahmed and the oblivion machines" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/4143155226755084490000> .
@@ -5772,7 +5739,6 @@
     rdfs:label "Ahmed e le Macchine dell'Oblio / Ray Bradbury. – Italian"@en,
         "Ahmed e le Macchine dell'Oblio / Ray Bradbury. – Italiensk"@no ;
     rdaed:P20315 "Ahmed e le Macchine dell'Oblio" ;
-    rdaed:P20316 "Ahmed and the oblivion machines" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ita> ;
     rdaeo:P20231 <http://viaf.org/viaf/4143155226755084490000> .
@@ -5781,7 +5747,6 @@
     rdfs:label "Ahmed y las máquinas del olvido : una fábula / Ray Bradbury. – Spanish"@en,
         "Ahmed y las máquinas del olvido : una fábula / Ray Bradbury. – Spansk"@no ;
     rdaed:P20315 "Ahmed y las máquinas del olvido : una fábula" ;
-    rdaed:P20316 "Ahmed and the oblivion machines" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20231 <http://viaf.org/viaf/4143155226755084490000> .
@@ -5790,7 +5755,6 @@
     rdfs:label "Long after midnight / Ray Bradbury. – Spoken word, English"@en,
         "Long after midnight / Ray Bradbury. – Tale, engelsk"@no ;
     rdaed:P20315 "Long after midnight" ;
-    rdaed:P20316 "Long after midnight" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/4273164842509813040000> .
@@ -5800,7 +5764,6 @@
         "Now and forever / Ray Bradbury. – Engelsk"@no ;
     rdaed:P20071 "Somewhere a band is playing -- Leviathan '99" ;
     rdaed:P20315 "Now and forever" ;
-    rdaed:P20316 "Now and forever" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20145 <http://viaf.org/viaf/1066162985524886300002/exp/eng/1020>,
@@ -5843,7 +5806,6 @@
     rdfs:label "The April witch / Ray Bradbury. – English"@en,
         "The April witch / Ray Bradbury. – Engelsk"@no ;
     rdaed:P20315 "The April witch" ;
-    rdaed:P20316 "April's witch" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <https://www.isfdb.org/cgi-bin/title.cgi?58366> .
@@ -5884,7 +5846,6 @@
     rdfs:label "Tåkeluren / Ray Bradbury. – Norwegian Bokmål, Norwegian Nynorsk"@en,
         "Tåkeluren / Ray Bradbury. – Bokmål, nynorsk"@no ;
     rdaed:P20315 "Tåkeluren" ;
-    rdaed:P20316 "The Foghorn" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/mul>,
         <http://id.loc.gov/vocabulary/iso639-2/nno>,
@@ -5927,7 +5888,6 @@
     rdfs:label "When elephants last in the dooryard bloomed : celebrations for almost any day in the year / Ray Bradbury. – English"@en,
         "When elephants last in the dooryard bloomed : celebrations for almost any day in the year / Ray Bradbury. – Engelsk"@no ;
     rdaed:P20315 "When elephants last in the dooryard bloomed : celebrations for almost any day in the year" ;
-    rdaed:P20316 "When elephants last in the dooryard bloomed : celebrations for almost any day in the year" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/12305881/elephants> .
@@ -5936,7 +5896,6 @@
     rdfs:label "Where robot mice and robot men run round in robot towns : new poems, both light and dark / Ray Bradbury. – English"@en,
         "Where robot mice and robot men run round in robot towns : new poems, both light and dark / Ray Bradbury. – Engelsk"@no ;
     rdaed:P20315 "Where robot mice and robot men run round in robot towns : new poems, both light and dark" ;
-    rdaed:P20316 "Where robot mice and robot men run round in robot towns : new poems, both light and dark" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/12305881/robotmice> .
@@ -5953,8 +5912,7 @@
     rdfs:label "Les daurades pomes del sol / Ray Bradbury. – Catalan"@en,
         "Les daurades pomes del sol / Ray Bradbury. – Katalansk"@no ;
     rdaed:P20315 "Les daurades pomes del sol" ;
-    rdaed:P20316 "Les pomes daurades del sol",
-        "The golden apples of the sun" ;
+    rdaed:P20316 "Les pomes daurades del sol" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/cat> ;
     rdaeo:P20231 <http://viaf.org/viaf/1404145424624286831356> .
@@ -5979,7 +5937,6 @@
     rdfs:label "Crónicas marcianas / Ray Bradbury ; translated by Francisco Abelenda. – English, Spanish"@en,
         "Crónicas marcianas / Ray Bradbury ; oversatt av Francisco Abelenda. – Engelsk, spansk"@no ;
     rdaed:P20315 "Crónicas marcianas" ;
-    rdaed:P20316 "The martian chronicles" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng>,
         <http://id.loc.gov/vocabulary/iso639-2/spa> ;
@@ -5990,8 +5947,7 @@
     rdfs:label "Kom hjem! Kom hjem! / Ray Bradbury. – Norwegian Bokmål"@en,
         "Kom hjem! Kom hjem! / Ray Bradbury. – Bokmål"@no ;
     rdaed:P20315 "Kom hjem! Kom hjem!" ;
-    rdaed:P20316 "Krøniker fra Mars",
-        "The martian chronicles" ;
+    rdaed:P20316 "Krøniker fra Mars" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/175761003> .
@@ -6016,7 +5972,6 @@
     rdfs:label "Fahrenheit 451 / Ray Bradbury. – Basque"@en,
         "Fahrenheit 451 / Ray Bradbury. – Baskisk"@no ;
     rdaed:P20315 "Fahrenheit 451" ;
-    rdaed:P20316 "Fahrenheit 451" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/baq> ;
     rdaeo:P20231 <http://viaf.org/viaf/185473935> .
@@ -6025,8 +5980,7 @@
     rdfs:label "Fahrenheit 451 : nouvelle / Ray Bradbury. – French"@en,
         "Fahrenheit 451 : nouvelle / Ray Bradbury. – Fransk"@no ;
     rdaed:P20315 "Fahrenheit 451 : nouvelle" ;
-    rdaed:P20316 "Fahrenheit 451",
-        "Fahrenheit 451 : nouvelles" ;
+    rdaed:P20316 "Fahrenheit 451 : nouvelles" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20231 <http://viaf.org/viaf/185473935> .
@@ -6035,7 +5989,6 @@
     rdfs:label "Fahrenheit 451 / Ray Bradbury. – Galician"@en,
         "Fahrenheit 451 / Ray Bradbury. – Galisisk"@no ;
     rdaed:P20315 "Fahrenheit 451" ;
-    rdaed:P20316 "Fahrenheit 451" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/glg> ;
     rdaeo:P20231 <http://viaf.org/viaf/185473935> .
@@ -6044,7 +5997,6 @@
     rdfs:label "A medicine for melancholy / Ray Bradbury. – English"@en,
         "A medicine for melancholy / Ray Bradbury. – Engelsk"@no ;
     rdaed:P20315 "A medicine for melancholy" ;
-    rdaed:P20316 "A medicine for melancholy" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/209899296> .
@@ -6053,7 +6005,6 @@
     rdfs:label "Remedio para melancólicos / Ray Bradbury. – Spanish"@en,
         "Remedio para melancólicos / Ray Bradbury. – Spansk"@no ;
     rdaed:P20315 "Remedio para melancólicos" ;
-    rdaed:P20316 "A medicine for melancholy" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20231 <http://viaf.org/viaf/209899296> .
@@ -6062,7 +6013,6 @@
     rdfs:label "Remedio para melancólicos / Ray Bradbury ; translated by Francisco Abelenda. – Spanish"@en,
         "Remedio para melancólicos / Ray Bradbury ; oversatt av Francisco Abelenda. – Spansk"@no ;
     rdaed:P20315 "Remedio para melancólicos" ;
-    rdaed:P20316 "A medicine for melancholy" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/76117483> ;
@@ -6108,7 +6058,6 @@
     rdfs:label "Ahora y siempre / Ray Bradbury. – Spanish"@en,
         "Ahora y siempre / Ray Bradbury. – Spansk"@no ;
     rdaed:P20315 "Ahora y siempre" ;
-    rdaed:P20316 "Now and forever" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20231 <http://viaf.org/viaf/5196155286593787180009> .
@@ -6146,8 +6095,6 @@
     rdfs:label "Cementerio para lunáticos / Ray Bradbury. – Spanish"@en,
         "Cementerio para lunáticos / Ray Bradbury. – Spansk"@no ;
     rdaed:P20315 "Cementerio para lunáticos" ;
-    rdaed:P20316 "A graveyard for lunatics",
-        "Cementerio para lunáticos : otra historia de dos ciudades" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20231 <http://viaf.org/viaf/1142162985500686300007> .
@@ -6164,7 +6111,6 @@
     rdfs:label "Fahrenheit 451 / Ray Bradbury. – Norwegian Bokmål"@en,
         "Fahrenheit 451 / Ray Bradbury. – Bokmål"@no ;
     rdaed:P20315 "Fahrenheit 451" ;
-    rdaed:P20316 "Fahrenheit 451" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/185473935> .
@@ -6198,7 +6144,6 @@
     rdfs:label "S is for Space / Ray Bradbury. – English"@en,
         "S is for Space / Ray Bradbury. – Engelsk"@no ;
     rdaed:P20315 "S is for Space" ;
-    rdaed:P20316 "S is for Space" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/308001247> .
@@ -6217,7 +6162,6 @@
     rdfs:label "Siempre nos quedará París / Ray Bradbury. – Spanish"@en,
         "Siempre nos quedará París / Ray Bradbury. – Spansk"@no ;
     rdaed:P20315 "Siempre nos quedará París" ;
-    rdaed:P20316 "We'll always have Paris" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20231 <http://viaf.org/viaf/308077573> .
@@ -6234,7 +6178,6 @@
     rdfs:label "R is for rocket / Ray Bradbury. – English"@en,
         "R is for rocket / Ray Bradbury. – Engelsk"@no ;
     rdaed:P20315 "R is for rocket" ;
-    rdaed:P20316 "R is for rocket" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/309287148> .
@@ -6260,7 +6203,6 @@
     rdfs:label "Long after midnight / Ray Bradbury. – English"@en,
         "Long after midnight / Ray Bradbury. – Engelsk"@no ;
     rdaed:P20315 "Long after midnight" ;
-    rdaed:P20316 "Long after midnight" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/4273164842509813040000> .
@@ -6269,7 +6211,6 @@
     rdfs:label "Mucho después de medianoche / Ray Bradbury. – Spanish"@en,
         "Mucho después de medianoche / Ray Bradbury. – Spansk"@no ;
     rdaed:P20315 "Mucho después de medianoche" ;
-    rdaed:P20316 "Long after midnight" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20231 <http://viaf.org/viaf/4273164842509813040000> .
@@ -6279,7 +6220,6 @@
         "The small assassin / Ray Bradbury. – Engelsk"@no ;
     rdaed:P20071 "The small assassin.--The next in line.--The lake.--The crowd.--Jack-in-the-box.--The man upstairs.--The cistern.--The tombstone.--The smiling people.--The handler.--Let's play \"poison.\"--The night.--The dead man." ;
     rdaed:P20315 "The small assassin" ;
-    rdaed:P20316 "The small assassin" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <https://en.wikipedia.org/wiki/The_Small_Assassin> .
@@ -6305,7 +6245,6 @@
     rdfs:label "A graveyard for lunatics : another tale of two cities / Ray Bradbury. – English"@en,
         "A graveyard for lunatics : another tale of two cities / Ray Bradbury. – Engelsk"@no ;
     rdaed:P20315 "A graveyard for lunatics : another tale of two cities" ;
-    rdaed:P20316 "A graveyard for lunatics" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/1142162985500686300007> .
@@ -6314,7 +6253,6 @@
     rdfs:label "Zen en el arte de escribir / Ray Bradbury. – Spanish"@en,
         "Zen en el arte de escribir / Ray Bradbury. – Spansk"@no ;
     rdaed:P20315 "Zen en el arte de escribir" ;
-    rdaed:P20316 "Zen in the art of writing" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20231 <http://viaf.org/viaf/1356145424675986830487> .
@@ -6331,7 +6269,6 @@
     rdfs:label "Switch on the night / Ray Bradbury. – English"@en,
         "Switch on the night / Ray Bradbury. – Engelsk"@no ;
     rdaed:P20315 "Switch on the night" ;
-    rdaed:P20316 "Switch on the night" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/174579606> .
@@ -6341,8 +6278,7 @@
         "Crónicas marcianas / Ray Bradbury. – Spansk"@no ;
     rdaed:P20315 "Crónicas marcianas" ;
     rdaed:P20316 "Crónicas marcianas (Edición mexicana)",
-        "Otras crónicas marcianas",
-        "The martian chronicles" ;
+        "Otras crónicas marcianas" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20231 <http://viaf.org/viaf/175761003> .
@@ -6359,7 +6295,6 @@
     rdfs:label "Fantasmas de lo nuevo / Ray Bradbury. – Spanish"@en,
         "Fantasmas de lo nuevo / Ray Bradbury. – Spansk"@no ;
     rdaed:P20315 "Fantasmas de lo nuevo" ;
-    rdaed:P20316 "I sing the body electric!" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20231 <http://viaf.org/viaf/183843031> .
@@ -6368,7 +6303,6 @@
     rdfs:label "El país de octubre / Ray Bradbury ; translated by Francisco Abelenda. – Spanish"@en,
         "El país de octubre / Ray Bradbury ; oversatt av Francisco Abelenda. – Spansk"@no ;
     rdaed:P20315 "El país de octubre" ;
-    rdaed:P20316 "The October country" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/76117483> ;
@@ -6378,7 +6312,6 @@
     rdfs:label "El árbol de las brujas / Ray Bradbury. – Spanish"@en,
         "El árbol de las brujas / Ray Bradbury. – Spansk"@no ;
     rdaed:P20315 "El árbol de las brujas" ;
-    rdaed:P20316 "The halloween tree" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20231 <http://viaf.org/viaf/309288199> .
@@ -6387,8 +6320,6 @@
     rdfs:label "The machineries of joy / Ray Bradbury. – English"@en,
         "The machineries of joy / Ray Bradbury. – Engelsk"@no ;
     rdaed:P20315 "The machineries of joy" ;
-    rdaed:P20316 "The machineries of joy",
-        "The machineries of joy : short stories" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/309316425> .
@@ -6397,7 +6328,6 @@
     rdfs:label "Las maquinarias de la alegría / Ray Bradbury. – Spanish"@en,
         "Las maquinarias de la alegría / Ray Bradbury. – Spansk"@no ;
     rdaed:P20315 "Las maquinarias de la alegría" ;
-    rdaed:P20316 "The machineries of joy" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20231 <http://viaf.org/viaf/309316425> .
@@ -6406,7 +6336,6 @@
     rdfs:label "La feria de las tinieblas / Ray Bradbury. – Spanish"@en,
         "La feria de las tinieblas / Ray Bradbury. – Spansk"@no ;
     rdaed:P20315 "La feria de las tinieblas" ;
-    rdaed:P20316 "Something wicked this way comes" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20231 <http://viaf.org/viaf/1239151052019833530008> .
@@ -6415,7 +6344,6 @@
     rdfs:label "Las doradas manzanas del sol / Ray Bradbury ; translated by Francisco Abelenda. – Spanish"@en,
         "Las doradas manzanas del sol / Ray Bradbury ; oversatt av Francisco Abelenda. – Spansk"@no ;
     rdaed:P20315 "Las doradas manzanas del sol" ;
-    rdaed:P20316 "The golden apples of the sun" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/76117483> ;
@@ -6434,7 +6362,6 @@
     rdfs:label "El hombre ilustrado / Ray Bradbury ; translated by Francisco Abelenda. – Spanish"@en,
         "El hombre ilustrado / Ray Bradbury ; oversatt av Francisco Abelenda. – Spansk"@no ;
     rdaed:P20315 "El hombre ilustrado" ;
-    rdaed:P20316 "The illustrated man" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/76117483> ;
@@ -6445,8 +6372,7 @@
         "El vino del estío / Ray Bradbury ; oversatt av Francisco Abelenda. – Spansk"@no ;
     rdaed:P20071 "El vino del estío ; El verano del adiós" ;
     rdaed:P20315 "El vino del estío" ;
-    rdaed:P20316 "Dandelion wine",
-        "Green Town" ;
+    rdaed:P20316 "Green Town" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/76117483> ;
@@ -6456,7 +6382,6 @@
     rdfs:label "Les cròniques marcianes / Ray Bradbury. – Catalan"@en,
         "Les cròniques marcianes / Ray Bradbury. – Katalansk"@no ;
     rdaed:P20315 "Les cròniques marcianes" ;
-    rdaed:P20316 "The martian chronicles" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/cat> ;
     rdaeo:P20231 <http://viaf.org/viaf/175761003> .
@@ -6467,10 +6392,6 @@
     rdaed:P20071 "Homesteading the October country -- The dwarf -- The next in line -- The watchful poker chip of H. Matisse -- Skeleton -- The jar -- The lake -- The emissary -- Touched with fire -- The small assassin -- The crowd -- Jack-in-the-box -- The scythe -- Uncle Einar -- The wind -- The man upstairs -- There was an old woman -- The cistern -- Homecoming -- The wonderful death of Dudley Stone.",
         "The dwarf -- The next in line -- The watchful poker chip of H. Matisse -- Skeleton -- The jar -- The lake -- The emissary -- Touched with fire -- The small assassin -- The crowd -- Jack-in-the-box -- The scythe -- Uncle Einar -- The wind -- The man upstairs -- There was an old woman -- The cistern -- Homecoming -- The wonderful death of Dudley Stone." ;
     rdaed:P20315 "The October country" ;
-    rdaed:P20316 "The October country",
-        "The October country : by Ray Bradbury ; illustrated by Joe Mugnaini",
-        "The October country : by Ray Bradbury ; illustrated by JoeMugnaini ; [all-new introduction by the author]",
-        "The October country : stories" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/2945164782078108600004> .
@@ -6479,7 +6400,6 @@
     rdfs:label "Death is a lonely business / Ray Bradbury. – English"@en,
         "Death is a lonely business / Ray Bradbury. – Engelsk"@no ;
     rdaed:P20315 "Death is a lonely business" ;
-    rdaed:P20316 "Death is a lonely business" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/307984830> .
@@ -6488,7 +6408,6 @@
     rdfs:label "The Halloween tree / Ray Bradbury. – English"@en,
         "The Halloween tree / Ray Bradbury. – Engelsk"@no ;
     rdaed:P20315 "The Halloween tree" ;
-    rdaed:P20316 "The halloween tree" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/309288199> .
@@ -6509,7 +6428,6 @@
         "The Kilimanjaro device.--The terrible conflagration up at the place.--Tomorrow's child.--The women.--The Inspired Chicken Motel.--Downwind from Gettysburg.--Yes, we'll gather at the river.--The cold wind and the warm.--Night call, collect.--The haunting of the new.--I sing the body electric!--The Tombling day.--Any friend of Nicholas Nickleby's is a friend of mine.--Heavy-Set.--The man in the Rorschach shirt.--Henry the Ninth.--The lost city of Mars.--Christus Apollo." ;
     rdaed:P20315 "I sing the body electric" ;
     rdaed:P20316 "I sing the body electric and other stories",
-        "I sing the body electric!",
         "I sing the body electric! : Stories" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
@@ -6519,8 +6437,6 @@
     rdfs:label "The day it rained forever / Ray Bradbury. – English"@en,
         "The day it rained forever / Ray Bradbury. – Engelsk"@no ;
     rdaed:P20315 "The day it rained forever" ;
-    rdaed:P20316 "The day it rained forever",
-        "The day it rained forever : a comedy in one act" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/184365511> .
@@ -6537,8 +6453,6 @@
     rdfs:label "Dandelion wine / Ray Bradbury. – English"@en,
         "Dandelion wine / Ray Bradbury. – Engelsk"@no ;
     rdaed:P20315 "Dandelion wine" ;
-    rdaed:P20316 "Dandelion wine",
-        "Dandelion wine : a novel" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/309258185> .
@@ -6547,8 +6461,7 @@
     rdfs:label "The golden apples of the sun / Ray Bradbury. – English"@en,
         "The golden apples of the sun / Ray Bradbury. – Engelsk"@no ;
     rdaed:P20315 "The golden apples of the sun" ;
-    rdaed:P20316 "The golden apples of the sun",
-        "Twice twenty-two : The golden apples of the sun. A medicine for melancholy" ;
+    rdaed:P20316 "Twice twenty-two : The golden apples of the sun. A medicine for melancholy" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/1404145424624286831356> .
@@ -6557,7 +6470,6 @@
     rdfs:label "Fahrenheit 451 / Ray Bradbury. – Spanish"@en,
         "Fahrenheit 451 / Ray Bradbury. – Spansk"@no ;
     rdaed:P20315 "Fahrenheit 451" ;
-    rdaed:P20316 "Fahrenheit 451" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20231 <http://viaf.org/viaf/185473935> .
@@ -6566,7 +6478,6 @@
     rdfs:label "The illustrated man / Ray Bradbury. – English"@en,
         "The illustrated man / Ray Bradbury. – Engelsk"@no ;
     rdaed:P20315 "The illustrated man" ;
-    rdaed:P20316 "The illustrated man" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/2146095153500370503> .
@@ -6585,7 +6496,6 @@
         <http://id.loc.gov/vocabulary/iso639-2/spa>,
         <http://id.loc.gov/vocabulary/iso639-2/ita> ;
     rdaed:P20315 "Fahrenheit 451" ;
-    rdaed:P20316 "Fahrenheit 451" ;
     rdaeo:P20001 rdaco:1023 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng>,
         <http://id.loc.gov/vocabulary/iso639-2/fre>,
@@ -6598,9 +6508,7 @@
     rdfs:label "The Martian chronicles / Ray Bradbury. – English"@en,
         "The Martian chronicles / Ray Bradbury. – Engelsk"@no ;
     rdaed:P20315 "The Martian chronicles" ;
-    rdaed:P20316 "Silver locusts",
-        "The Martian chronicles : the fortieth anniversary edition",
-        "The martian chronicles" ;
+    rdaed:P20316 "Silver locusts" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/175761003> .
@@ -6609,7 +6517,6 @@
     rdfs:label "Fahrenheit 451 / Ray Bradbury ; translated by Francisco Abelenda. – Spanish"@en,
         "Fahrenheit 451 / Ray Bradbury ; oversatt av Francisco Abelenda. – Spansk"@no ;
     rdaed:P20315 "Fahrenheit 451" ;
-    rdaed:P20316 "Fahrenheit 451" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/76117483> ;
@@ -6619,7 +6526,6 @@
     rdfs:label "Crónicas marcianas / Ray Bradbury ; translated by Francisco Abelenda. – Spanish"@en,
         "Crónicas marcianas / Ray Bradbury ; oversatt av Francisco Abelenda. – Spansk"@no ;
     rdaed:P20315 "Crónicas marcianas" ;
-    rdaed:P20316 "The martian chronicles" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/76117483> ;
@@ -6629,8 +6535,6 @@
     rdfs:label "Fahrenheit 451 / Ray Bradbury. – Catalan"@en,
         "Fahrenheit 451 / Ray Bradbury. – Katalansk"@no ;
     rdaed:P20315 "Fahrenheit 451" ;
-    rdaed:P20316 "Fahrenheit 451",
-        "Fahrenheit 451 : Pròleg i propostes de treball d'A, Munné-Jordà" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/cat> ;
     rdaeo:P20231 <http://viaf.org/viaf/185473935> .
@@ -6639,8 +6543,6 @@
     rdfs:label "Something wicked this way comes / Ray Bradbury. – English"@en,
         "Something wicked this way comes / Ray Bradbury. – Engelsk"@no ;
     rdaed:P20315 "Something wicked this way comes" ;
-    rdaed:P20316 "Something wicked this way comes",
-        "Something wicked this way comes : a novel" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/1239151052019833530008> .
@@ -6662,8 +6564,6 @@
     rdfs:label "Fahrenheit 451 / Ray Bradbury ; translated by Alfredo Crespo. – Spanish"@en,
         "Fahrenheit 451 / Ray Bradbury ; oversatt av Alfredo Crespo. – Spansk"@no ;
     rdaed:P20315 "Fahrenheit 451" ;
-    rdaed:P20316 "Fahrenheit 451",
-        "Fahrenheit 451 : novela" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/7222256> ;
@@ -6674,7 +6574,6 @@
         "Fahrenheit 451 / Ray Bradbury. – Engelsk"@no ;
     rdaed:P20071 "Fahrenheit 451 -- The playground -- And the rock cried out." ;
     rdaed:P20315 "Fahrenheit 451" ;
-    rdaed:P20316 "Fahrenheit 451" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/185473935> .

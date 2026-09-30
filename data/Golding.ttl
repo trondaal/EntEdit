@@ -4842,8 +4842,7 @@
     rdfs:label "Herr der Fliegen / Silke Horst. – German"@en,
         "Herr der Fliegen / Silke Horst. – Tysk"@no ;
     rdaed:P20315 "Herr der Fliegen" ;
-    rdaed:P20316 "Lord of the Flies : Teacher's Guide",
-        "Lord of the flies : Teacher's guide. / Von Silke Horst" ;
+    rdaed:P20316 "Lord of the flies : Teacher's guide. / Von Silke Horst" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20231 <http://example.org/names/horstsilke/lordoftheflies> .
@@ -4863,8 +4862,6 @@
     rdfs:label "Ein ägyptisches Tagebuch / William Golding ; translated by Renate Orth-Guttmann. – German"@en,
         "Ein ägyptisches Tagebuch / William Golding ; oversatt av Renate Orth-Guttmann. – Tysk"@no ;
     rdaed:P20315 "Ein ägyptisches Tagebuch" ;
-    rdaed:P20316 "An Egyptian journal",
-        "Ein ägyptisches Tagebuch" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/47321622> ;
@@ -4874,7 +4871,6 @@
     rdfs:label "Diario egipcio / William Golding ; translated by Manuel Crespo. – Spanish"@en,
         "Diario egipcio / William Golding ; oversatt av Manuel Crespo. – Spansk"@no ;
     rdaed:P20315 "Diario egipcio" ;
-    rdaed:P20316 "An Egyptian Journal" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/53270061> ;
@@ -4884,7 +4880,6 @@
     rdfs:label "La mariposa de latón : una obra en tres actos / William Golding ; translated by Javier Fernández. – Spanish"@en,
         "La mariposa de latón : una obra en tres actos / William Golding ; oversatt av Javier Fernández. – Spansk"@no ;
     rdaed:P20315 "La mariposa de latón : una obra en tres actos" ;
-    rdaed:P20316 "The brass butterfly" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://example.org/names/fernndezjavier> ;
@@ -4926,7 +4921,6 @@
     rdfs:label "Brodie's notes on William Golding's Lord of the flies / Graham Handley. – English"@en,
         "Brodie's notes on William Golding's Lord of the flies / Graham Handley. – Engelsk"@no ;
     rdaed:P20315 "Brodie's notes on William Golding's Lord of the flies" ;
-    rdaed:P20316 "Brodie's notes on William Golding's Lord of the flies" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/110244899/brodiesnotesonwilliamgoldingslordoftheflies> .
@@ -4961,8 +4955,6 @@
     rdfs:label "Mit doppelter Zunge / William Golding ; translated by Wolfgang Held. – German"@en,
         "Mit doppelter Zunge / William Golding ; oversatt av Wolfgang Held. – Tysk"@no ;
     rdaed:P20315 "Mit doppelter Zunge" ;
-    rdaed:P20316 "Double tongue",
-        "Mit doppelter Zunge : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/116752343> ;
@@ -4972,8 +4964,6 @@
     rdfs:label "Mit doppelter Zunge / William Golding ; translated by Wolfgang Held. – German"@en,
         "Mit doppelter Zunge / William Golding ; oversatt av Wolfgang Held. – Tysk"@no ;
     rdaed:P20315 "Mit doppelter Zunge" ;
-    rdaed:P20316 "Mit doppelter Zunge : Roman",
-        "The Double Tongue" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://example.org/names/heldwolfgang> ;
@@ -4983,8 +4973,6 @@
     rdfs:label "La lengua oculta / William Golding. – Spanish"@en,
         "La lengua oculta / William Golding. – Spansk"@no ;
     rdaed:P20315 "La lengua oculta" ;
-    rdaed:P20316 "Double tongue",
-        "The double tongue" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20231 <http://viaf.org/viaf/1180145424574586830081> .
@@ -4993,8 +4981,6 @@
     rdfs:label "Herr der Fliegen / William Golding ; translated by Peter Torberg. – German"@en,
         "Herr der Fliegen / William Golding ; oversatt av Peter Torberg. – Tysk"@no ;
     rdaed:P20315 "Herr der Fliegen" ;
-    rdaed:P20316 "Herr der Fliegen : Roman",
-        "Lord of the flies" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/79155403> ;
@@ -5004,7 +4990,6 @@
     rdfs:label "Fluenes herre / William Golding ; translated by Inger Hagerup ; read by Nicolai Cleve Broch. – Spoken word, Norwegian Bokmål"@en,
         "Fluenes herre / William Golding ; oversatt av Inger Hagerup ; lest av Nicolai Cleve Broch. – Tale, bokmål"@no ;
     rdaed:P20315 "Fluenes herre" ;
-    rdaed:P20316 "Lord of the flies" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob>,
         <http://id.loc.gov/vocabulary/iso639-2/nor> ;
@@ -5016,7 +5001,6 @@
     rdfs:label "Det ulmer en ild / William Golding ; translated by Axel Amlie. – Norwegian Bokmål"@en,
         "Det ulmer en ild / William Golding ; oversatt av Axel Amlie. – Bokmål"@no ;
     rdaed:P20315 "Det ulmer en ild" ;
-    rdaed:P20316 "Fire Down Below" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob>,
         <http://id.loc.gov/vocabulary/iso639-2/nor> ;
@@ -5032,7 +5016,6 @@
     rdfs:label "Skrift på vann / William Golding ; translated by Axel Amlie. – Norwegian Bokmål"@en,
         "Skrift på vann / William Golding ; oversatt av Axel Amlie. – Bokmål"@no ;
     rdaed:P20315 "Skrift på vann" ;
-    rdaed:P20316 "Rites of passage" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob>,
         <http://id.loc.gov/vocabulary/iso639-2/nor> ;
@@ -5043,7 +5026,6 @@
     rdfs:label "Ritos de paso / William Golding. – Spanish"@en,
         "Ritos de paso / William Golding. – Spansk"@no ;
     rdaed:P20315 "Ritos de paso" ;
-    rdaed:P20316 "Rites of passage" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20231 <http://viaf.org/viaf/176165653> .
@@ -5052,7 +5034,6 @@
     rdfs:label "Ritos de paso / William Golding ; translated by Fernando Santos Fontenla. – Spanish"@en,
         "Ritos de paso / William Golding ; oversatt av Fernando Santos Fontenla. – Spansk"@no ;
     rdaed:P20315 "Ritos de paso" ;
-    rdaed:P20316 "Rites of Passage" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/19389226> ;
@@ -5062,7 +5043,6 @@
     rdfs:label "La construcción de la torre / William Golding. – Spanish"@en,
         "La construcción de la torre / William Golding. – Spansk"@no ;
     rdaed:P20315 "La construcción de la torre" ;
-    rdaed:P20316 "The spire" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20231 <http://viaf.org/viaf/178994871> .
@@ -5071,7 +5051,6 @@
     rdfs:label "La construcción de la torre / William Golding ; translated by Horacio Laurora. – Spanish"@en,
         "La construcción de la torre / William Golding ; oversatt av Horacio Laurora. – Spansk"@no ;
     rdaed:P20315 "La construcción de la torre" ;
-    rdaed:P20316 "The Spire" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/87945378> ;
@@ -5086,8 +5065,6 @@
     rdfs:label "Martin den skibbrudne / William Golding. – Norwegian Bokmål"@en,
         "Martin den skibbrudne / William Golding. – Bokmål"@no ;
     rdaed:P20315 "Martin den skibbrudne" ;
-    rdaed:P20316 "Martin den skibbrudne : roman",
-        "Pincher Martin" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob>,
         <http://id.loc.gov/vocabulary/iso639-2/nor> ;
@@ -5097,8 +5074,6 @@
     rdfs:label "Die Eingepferchten / William Golding ; translated by Emil Bastuk. – German"@en,
         "Die Eingepferchten / William Golding ; oversatt av Emil Bastuk. – Tysk"@no ;
     rdaed:P20315 "Die Eingepferchten" ;
-    rdaed:P20316 "Close Quarters",
-        "Die Eingepferchten : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/311338181> ;
@@ -5108,7 +5083,6 @@
     rdfs:label "Nærkamp / William Golding ; translated by Axel Amlie. – Norwegian Bokmål"@en,
         "Nærkamp / William Golding ; oversatt av Axel Amlie. – Bokmål"@no ;
     rdaed:P20315 "Nærkamp" ;
-    rdaed:P20316 "Close quarters" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob>,
         <http://id.loc.gov/vocabulary/iso639-2/nor> ;
@@ -5119,7 +5093,6 @@
     rdfs:label "Papirmennene / William Golding ; translated by Carl Hambro. – Norwegian Bokmål"@en,
         "Papirmennene / William Golding ; oversatt av Carl Hambro. – Bokmål"@no ;
     rdaed:P20315 "Papirmennene" ;
-    rdaed:P20316 "The paper men" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob>,
         <http://id.loc.gov/vocabulary/iso639-2/nor> ;
@@ -5160,8 +5133,6 @@
     rdfs:label "Das Feuer der Finsternis / William Golding. – German"@en,
         "Das Feuer der Finsternis / William Golding. – Tysk"@no ;
     rdaed:P20315 "Das Feuer der Finsternis" ;
-    rdaed:P20316 "Darkness Visible",
-        "Das Feuer der Finsternis : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20231 <http://viaf.org/viaf/211743501> .
@@ -5170,7 +5141,6 @@
     rdfs:label "Synlig mørke / William Golding ; translated by Oddvar Aurstad. – Norwegian Bokmål"@en,
         "Synlig mørke / William Golding ; oversatt av Oddvar Aurstad. – Bokmål"@no ;
     rdaed:P20315 "Synlig mørke" ;
-    rdaed:P20316 "Darkness visible" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob>,
         <http://id.loc.gov/vocabulary/iso639-2/nor> ;
@@ -5197,7 +5167,6 @@
     rdfs:label "Lord of the flies, William Golding / David Self. – English"@en,
         "Lord of the flies, William Golding / David Self. – Engelsk"@no ;
     rdaed:P20315 "Lord of the flies, William Golding" ;
-    rdaed:P20316 "Lord of the flies, William Golding" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/214944831/lordoftheflieswilliamgolding> .
@@ -5206,8 +5175,6 @@
     rdfs:label "Die Erben / William Golding. – German"@en,
         "Die Erben / William Golding. – Tysk"@no ;
     rdaed:P20315 "Die Erben" ;
-    rdaed:P20316 "Die Erben : Paläo-Fiction Roman (Nr. 3)",
-        "The Inheritors" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20231 <http://viaf.org/viaf/217036112> .
@@ -5216,7 +5183,6 @@
     rdfs:label "Arvtakerne / William Golding ; translated by Nils Ryum and Olav Lausund. – Norwegian Bokmål"@en,
         "Arvtakerne / William Golding ; oversatt av Nils Ryum og Olav Lausund. – Bokmål"@no ;
     rdaed:P20315 "Arvtakerne" ;
-    rdaed:P20316 "The inheritors" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob>,
         <http://id.loc.gov/vocabulary/iso639-2/nor> ;
@@ -5228,7 +5194,6 @@
     rdfs:label "Los herederos / William Golding. – Spanish"@en,
         "Los herederos / William Golding. – Spansk"@no ;
     rdaed:P20315 "Los herederos" ;
-    rdaed:P20316 "Inheritors" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20231 <http://viaf.org/viaf/217036112> .
@@ -5237,7 +5202,6 @@
     rdfs:label "Los herederos / William Golding ; translated by Luis Echávarri. – Spanish"@en,
         "Los herederos / William Golding ; oversatt av Luis Echávarri. – Spansk"@no ;
     rdaed:P20315 "Los herederos" ;
-    rdaed:P20316 "The inheritors" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/18234247> ;
@@ -5247,8 +5211,7 @@
     rdfs:label "Caída inexorable / William Golding ; translated by Javier Franco Aixelá. – Spanish"@en,
         "Caída inexorable / William Golding ; oversatt av Javier Franco Aixelá. – Spansk"@no ;
     rdaed:P20315 "Caída inexorable" ;
-    rdaed:P20316 "Caída libre",
-        "Free Fall" ;
+    rdaed:P20316 "Caída libre" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/47993680> ;
@@ -5285,7 +5248,6 @@
     rdfs:label "William Golding, Herr der Fliegen, Die Koralleninsel (R. M. Ballantyne) : Interpretationen und Anmerkungen / Reiner Poppe. – German"@en,
         "William Golding, Herr der Fliegen, Die Koralleninsel (R. M. Ballantyne) : Interpretationen und Anmerkungen / Reiner Poppe. – Tysk"@no ;
     rdaed:P20315 "William Golding, Herr der Fliegen, Die Koralleninsel (R. M. Ballantyne) : Interpretationen und Anmerkungen" ;
-    rdaed:P20316 "William Golding, Herr der Fliegen, Die Koralleninsel (R. M. Ballantyne) / Analysen und Reflexionen. Interpretationen und Anmerkungen" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20231 <http://viaf.org/viaf/262356343/williamgoldingherrderfliegendiekoralleninselrmballantyne> .
@@ -5304,7 +5266,6 @@
     rdfs:label "William Golding, Herr der Fliegen (Lord of the flies) : Kommentare, Diskussionsaspekte und Anregungen für produktionsorientiertes Lesen / Reiner Poppe. – German"@en,
         "William Golding, Herr der Fliegen (Lord of the flies) : Kommentare, Diskussionsaspekte und Anregungen für produktionsorientiertes Lesen / Reiner Poppe. – Tysk"@no ;
     rdaed:P20315 "William Golding, Herr der Fliegen (Lord of the flies) : Kommentare, Diskussionsaspekte und Anregungen für produktionsorientiertes Lesen" ;
-    rdaed:P20316 "William Golding, Herr der Fliegen (Lord of the flies)" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20231 <http://viaf.org/viaf/262356343/williamgoldingherrderfliegenlordoftheflies> .
@@ -5328,7 +5289,6 @@
     rdfs:label "The spire by William Golding / Rosemary Sumner. – English"@en,
         "The spire by William Golding / Rosemary Sumner. – Engelsk"@no ;
     rdaed:P20315 "The spire by William Golding" ;
-    rdaed:P20316 "The spire by William Golding" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/265448232/thespirebywilliamgolding> .
@@ -5353,7 +5313,6 @@
     rdfs:label "Notes on William Golding's The spire / W. S. Bunnell. – English"@en,
         "Notes on William Golding's The spire / W. S. Bunnell. – Engelsk"@no ;
     rdaed:P20315 "Notes on William Golding's The spire" ;
-    rdaed:P20316 "Notes on William Golding's The spire" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/26792887/notesonwilliamgoldingsthespire> .
@@ -5378,7 +5337,6 @@
     rdfs:label "The spire : notes / Hilda D. Spear. – English"@en,
         "The spire : notes / Hilda D. Spear. – Engelsk"@no ;
     rdaed:P20315 "The spire : notes" ;
-    rdaed:P20316 "The Spire" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/27170695/thespire> .
@@ -5397,7 +5355,6 @@
     rdfs:label "William Golding, The inheritors : notes / Hilda D. Spear. – English"@en,
         "William Golding, The inheritors : notes / Hilda D. Spear. – Engelsk"@no ;
     rdaed:P20315 "William Golding, The inheritors : notes" ;
-    rdaed:P20316 "William Golding, The inheritors : notes" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/27170695/williamgoldingtheinheritorsnotes> .
@@ -5420,7 +5377,6 @@
     rdfs:label "The philosophy of William Golding : with special reference to 'Free Fall' / Rolf Heinrich Keller. – English"@en,
         "The philosophy of William Golding : with special reference to 'Free Fall' / Rolf Heinrich Keller. – Engelsk"@no ;
     rdaed:P20315 "The philosophy of William Golding : with special reference to 'Free Fall'" ;
-    rdaed:P20316 "The philosophy of William Golding" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/282585329/thephilosophyofwilliamgolding> .
@@ -5453,7 +5409,6 @@
     rdfs:label "Stundenblätter Golding, \"Lord of the flies\" / Gerd Kaiser. – German"@en,
         "Stundenblätter Golding, \"Lord of the flies\" / Gerd Kaiser. – Tysk"@no ;
     rdaed:P20315 "Stundenblätter Golding, \"Lord of the flies\"" ;
-    rdaed:P20316 "Stundenblätter Golding, \"Lord of the flies\"" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20231 <http://viaf.org/viaf/303443830/stundenblattergoldinglordoftheflies> .
@@ -5477,7 +5432,6 @@
     rdfs:label "\"Lord of the flies\" : [Literatur-Kartei Englisch \"Lord of the flies\" ; Literatur-Kartei zum Roman von William Golding] / Roger Machin. – German"@en,
         "\"Lord of the flies\" : [Literatur-Kartei Englisch \"Lord of the flies\" ; Literatur-Kartei zum Roman von William Golding] / Roger Machin. – Tysk"@no ;
     rdaed:P20315 "\"Lord of the flies\" : [Literatur-Kartei Englisch \"Lord of the flies\" ; Literatur-Kartei zum Roman von William Golding]" ;
-    rdaed:P20316 "\"Lord of the flies\"" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20231 <http://viaf.org/viaf/306134082/lordoftheflies> .
@@ -5494,8 +5448,6 @@
     rdfs:label "Oliver / William Golding ; translated by Jürgen Abel. – German"@en,
         "Oliver / William Golding ; oversatt av Jürgen Abel. – Tysk"@no ;
     rdaed:P20315 "Oliver" ;
-    rdaed:P20316 "Oliver : e. Entwicklungsroman",
-        "The Pyramid" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/303007093> ;
@@ -5515,8 +5467,7 @@
     rdfs:label "Lord of the flies / Nigel Williams. – English"@en,
         "Lord of the flies / Nigel Williams. – Engelsk"@no ;
     rdaed:P20315 "Lord of the flies" ;
-    rdaed:P20316 "Lord of the flies",
-        "William Golding's \"Lord of the flies\"" ;
+    rdaed:P20316 "William Golding's \"Lord of the flies\"" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/310430410> .
@@ -5532,7 +5483,6 @@
     rdfs:label "Regenschirm vom Piccadilly. – German"@en,
         "Regenschirm vom Piccadilly. – Tysk"@no ;
     rdaed:P20315 "Regenschirm vom Piccadilly" ;
-    rdaed:P20316 "Deštník z Piccadilly" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20231 <http://viaf.org/viaf/312341155> .
@@ -5548,7 +5498,6 @@
     rdfs:label "Pestsäule. – German"@en,
         "Pestsäule. – Tysk"@no ;
     rdaed:P20315 "Pestsäule" ;
-    rdaed:P20316 "Morový sloup" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20231 <http://viaf.org/viaf/313685914> .
@@ -5577,7 +5526,6 @@
     rdfs:label "'Lord of the Flies' / Brian Spring. – English"@en,
         "'Lord of the Flies' / Brian Spring. – Engelsk"@no ;
     rdaed:P20315 "'Lord of the Flies'" ;
-    rdaed:P20316 "Lord of the Flies - student guide" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/36439151/lordoftheflies> .
@@ -5601,7 +5549,6 @@
     rdfs:label "Lektürehilfen William Golding, \"Lord of the flies\" / W. Meitcke. – German"@en,
         "Lektürehilfen William Golding, \"Lord of the flies\" / W. Meitcke. – Tysk"@no ;
     rdaed:P20315 "Lektürehilfen William Golding, \"Lord of the flies\"" ;
-    rdaed:P20316 "Lektürehilfen William Golding, \"Lord of the flies\"" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20231 <http://viaf.org/viaf/37534075/lekturehilfenwilliamgoldinglordoftheflies> .
@@ -5631,7 +5578,6 @@
     rdfs:label "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies) / Edgar Neis. – German"@en,
         "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies) / Edgar Neis. – Tysk"@no ;
     rdaed:P20315 "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies)" ;
-    rdaed:P20316 "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies)" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20231 <http://viaf.org/viaf/44671175/erlauterungenzuwilliamgoldingherrderfliegenlordoftheflies> .
@@ -5733,7 +5679,6 @@
     rdfs:label "Lord of the flies : notes / Alastair Niven. – English"@en,
         "Lord of the flies : notes / Alastair Niven. – Engelsk"@no ;
     rdaed:P20315 "Lord of the flies : notes" ;
-    rdaed:P20316 "Lord of the flies" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/76363614/lordoftheflies> .
@@ -5793,7 +5738,6 @@
     rdfs:label "Lord of the flies, William Golding : guide / John Mahoney and Stewart Martin. – English"@en,
         "Lord of the flies, William Golding : guide / John Mahoney og Stewart Martin. – Engelsk"@no ;
     rdaed:P20315 "Lord of the flies, William Golding : guide" ;
-    rdaed:P20316 "Lord of the flies, William Golding" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/89819722/lordoftheflieswilliamgolding> .
@@ -5818,7 +5762,6 @@
     rdfs:label "Lord of the flies by William Golding / Raymond Wilson. – English"@en,
         "Lord of the flies by William Golding / Raymond Wilson. – Engelsk"@no ;
     rdaed:P20315 "Lord of the flies by William Golding" ;
-    rdaed:P20316 "Lord of the flies by William Golding" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/94686807/lordofthefliesbywilliamgolding> .
@@ -5852,7 +5795,6 @@
     rdfs:label "William Golding, The Lord of the Flies / Jennifer Baer-Engel. – German"@en,
         "William Golding, The Lord of the Flies / Jennifer Baer-Engel. – Tysk"@no ;
     rdaed:P20315 "William Golding, The Lord of the Flies" ;
-    rdaed:P20316 "William Golding, The Lord of the Flies" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20231 <http://www.example.org/baerengeljennifer/williamgoldingthelordoftheflies> .
@@ -5875,7 +5817,6 @@
     rdfs:label "William Golding, Lord of the flies / Hans-Otto Jahnke. – German"@en,
         "William Golding, Lord of the flies / Hans-Otto Jahnke. – Tysk"@no ;
     rdaed:P20315 "William Golding, Lord of the flies" ;
-    rdaed:P20316 "William Golding, Lord of the flies" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20231 <http://www.example.org/names/jahnkehansotto/williamgoldinglordoftheflies> .
@@ -5899,7 +5840,6 @@
     rdfs:label "Students' guide to Lord of the flies / Martin King. – English"@en,
         "Students' guide to Lord of the flies / Martin King. – Engelsk"@no ;
     rdaed:P20315 "Students' guide to Lord of the flies" ;
-    rdaed:P20316 "Students' guide to Lord of the flies" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://www.example.org/names/kingmartin/studentsguidetolordoftheflies> .
@@ -5928,7 +5868,6 @@
     rdfs:label "Artículo de opinión : \"The lord of the flies\" / Patricia Peña Benítez. – English"@en,
         "Artículo de opinión : \"The lord of the flies\" / Patricia Peña Benítez. – Engelsk"@no ;
     rdaed:P20315 "Artículo de opinión : \"The lord of the flies\"" ;
-    rdaed:P20316 "Artículo de opinión \"The lord of the flies\"" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://www.example.org/names/peabentezpatricia/artculodeopininthelordoftheflies> .
@@ -6040,7 +5979,6 @@
     rdaed:P20065 <http://id.loc.gov/vocabulary/iso639-2/eng>,
         <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaed:P20315 "El señor de las moscas" ;
-    rdaed:P20316 "Lord of the flies (Peter Brook)" ;
     rdaeo:P20001 rdaco:1023 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng>,
         <http://id.loc.gov/vocabulary/iso639-2/mul> ;
@@ -6082,8 +6020,6 @@
     rdfs:label "El señor de las moscas / William Golding ; translated by Carles Serrat Mulà. – Spanish"@en,
         "El señor de las moscas / William Golding ; oversatt av Carles Serrat Mulà. – Spansk"@no ;
     rdaed:P20315 "El señor de las moscas" ;
-    rdaed:P20316 "El señor de las moscas",
-        "Lord of the flies" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/18830799> ;
@@ -6099,7 +6035,6 @@
     rdfs:label "Fuego en las entrañas / William Golding ; translated by Fernando Santos Fontenla. – Spanish"@en,
         "Fuego en las entrañas / William Golding ; oversatt av Fernando Santos Fontenla. – Spansk"@no ;
     rdaed:P20315 "Fuego en las entrañas" ;
-    rdaed:P20316 "Fire down below" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/19389226> ;
@@ -6109,7 +6044,6 @@
     rdfs:label "La construcción de la torre / William Golding ; translated by Encarna Quijada. – Spanish"@en,
         "La construcción de la torre / William Golding ; oversatt av Encarna Quijada. – Spansk"@no ;
     rdaed:P20315 "La construcción de la torre" ;
-    rdaed:P20316 "The Spire" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/581145857119122922888> ;
@@ -6119,8 +6053,7 @@
     rdfs:label "Martín el náufrago / William Golding ; translated by Clara Janés. – Spanish"@en,
         "Martín el náufrago / William Golding ; oversatt av Clara Janés. – Spansk"@no ;
     rdaed:P20315 "Martín el náufrago" ;
-    rdaed:P20316 "Martín el naúfrago",
-        "Pincher Martin" ;
+    rdaed:P20316 "Martín el naúfrago" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/7404678> ;
@@ -6130,7 +6063,6 @@
     rdfs:label "Cuerpo a cuerpo / William Golding ; translated by Fernando Santos Fontenla. – Spanish"@en,
         "Cuerpo a cuerpo / William Golding ; oversatt av Fernando Santos Fontenla. – Spansk"@no ;
     rdaed:P20315 "Cuerpo a cuerpo" ;
-    rdaed:P20316 "Close quarters" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/19389226> ;
@@ -6140,7 +6072,6 @@
     rdfs:label "Los hombres de papel / William Golding ; translated by Fernando Santos Fontenla. – Spanish"@en,
         "Los hombres de papel / William Golding ; oversatt av Fernando Santos Fontenla. – Spansk"@no ;
     rdaed:P20315 "Los hombres de papel" ;
-    rdaed:P20316 "The paper men" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/19389226> ;
@@ -6156,8 +6087,6 @@
     rdfs:label "Die Erben / William Golding ; translated by Hermann Stiehl. – German"@en,
         "Die Erben / William Golding ; oversatt av Hermann Stiehl. – Tysk"@no ;
     rdaed:P20315 "Die Erben" ;
-    rdaed:P20316 "Die Erben : [Roman]",
-        "The Inheritors" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/42309455> ;
@@ -6167,8 +6096,6 @@
     rdfs:label "Freier Fall / William Golding ; translated by Hermann Stresau. – German"@en,
         "Freier Fall / William Golding ; oversatt av Hermann Stresau. – Tysk"@no ;
     rdaed:P20315 "Freier Fall" ;
-    rdaed:P20316 "Free Fall",
-        "Freier Fall : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/52489729> ;
@@ -6183,8 +6110,7 @@
     rdfs:label "Herr der Fliegen / Reiner Poppe. – German"@en,
         "Herr der Fliegen / Reiner Poppe. – Tysk"@no ;
     rdaed:P20315 "Herr der Fliegen" ;
-    rdaed:P20316 "Erläuterungen zu Golding, Herr der Fliegen - Lord of the Flies : Lektüre- und Interpretationshilfe",
-        "Erläuterungen zu William Golding, Herr der Fliegen (Lord of the flies)" ;
+    rdaed:P20316 "Erläuterungen zu Golding, Herr der Fliegen - Lord of the Flies : Lektüre- und Interpretationshilfe" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20231 <http://viaf.org/viaf/262356343/erlauterungenzuwilliamgoldingherrderfliegenlordoftheflies> .
@@ -6199,9 +6125,6 @@
     rdfs:label "Oliver / William Golding. – German"@en,
         "Oliver / William Golding. – Tysk"@no ;
     rdaed:P20315 "Oliver" ;
-    rdaed:P20316 "Oliver : Roman. [Berecht. Übers. aus d. Engl.]",
-        "Oliver : ein Entwicklungsroman",
-        "The Pyramid" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20231 <http://viaf.org/viaf/309268108> .
@@ -6210,7 +6133,6 @@
     rdfs:label "La pirámide / William Golding ; translated by Andrés Bosch. – Spanish"@en,
         "La pirámide / William Golding ; oversatt av Andrés Bosch. – Spansk"@no ;
     rdaed:P20315 "La pirámide" ;
-    rdaed:P20316 "The Pyramid" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/11361452> ;
@@ -6225,8 +6147,7 @@
     rdfs:label "Lord of the flies, William Golding : Inhalt, Hintergrund, Interpretation ; auf Deutsch - mit englischen Formulierungshilfen! / Astrid Stannat. – German"@en,
         "Lord of the flies, William Golding : Inhalt, Hintergrund, Interpretation ; auf Deutsch - mit englischen Formulierungshilfen! / Astrid Stannat. – Tysk"@no ;
     rdaed:P20315 "Lord of the flies, William Golding : Inhalt, Hintergrund, Interpretation ; auf Deutsch - mit englischen Formulierungshilfen!" ;
-    rdaed:P20316 "Lord of the flies, William Golding",
-        "Lord of the flies, William Golding : Inhalt, Hintergrund, Interpretationen ; auf Deutsch, mit englischen Formulierungshilfen! ; mit Info-Klappe!" ;
+    rdaed:P20316 "Lord of the flies, William Golding : Inhalt, Hintergrund, Interpretationen ; auf Deutsch, mit englischen Formulierungshilfen! ; mit Info-Klappe!" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20231 <http://viaf.org/viaf/47608695/lordoftheflieswilliamgolding> .
@@ -6252,8 +6173,6 @@
         "Der Sonderbotschafter / William Golding ; oversatt av Ulla H. de Herrera. – Tysk"@no ;
     rdaed:P20071 "Der Skorpion-Gott -- Clonk Clonk -- Der Sonderbotschafter" ;
     rdaed:P20315 "Der Sonderbotschafter" ;
-    rdaed:P20316 "Der Sonderbotschafter : Romane",
-        "The Scorpion God" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/81823873> ;
@@ -6290,8 +6209,6 @@
     rdfs:label "Egyptian journal / William Golding. – English"@en,
         "Egyptian journal / William Golding. – Engelsk"@no ;
     rdaed:P20315 "Egyptian journal" ;
-    rdaed:P20316 "An Egyptian Journal",
-        "An Egyptian journal" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://oslomet.workid.no/wg/01> .
@@ -6305,8 +6222,6 @@
     rdfs:label "Äquatortaufe / William Golding ; translated by Herbert Schlüter. – German"@en,
         "Äquatortaufe / William Golding ; oversatt av Herbert Schlüter. – Tysk"@no ;
     rdaed:P20315 "Äquatortaufe" ;
-    rdaed:P20316 "Äquatortaufe : Roman",
-        "Rites of passage" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/69705000> ;
@@ -6316,7 +6231,6 @@
     rdfs:label "Der Sonderbotschafter / William Golding ; translated by Ulla H. de Herrera. – German"@en,
         "Der Sonderbotschafter / William Golding ; oversatt av Ulla H. de Herrera. – Tysk"@no ;
     rdaed:P20315 "Der Sonderbotschafter" ;
-    rdaed:P20316 "Envoy Extraordinary" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/81823873> ;
@@ -6326,8 +6240,6 @@
     rdfs:label "Der Turm der Kathedrale / William Golding. – German"@en,
         "Der Turm der Kathedrale / William Golding. – Tysk"@no ;
     rdaed:P20315 "Der Turm der Kathedrale" ;
-    rdaed:P20316 "Der Turm der Kathedrale : Nobelpreis 1983 England",
-        "The Spire" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20231 <http://viaf.org/viaf/178994871> .
@@ -6336,8 +6248,6 @@
     rdfs:label "Der Turm der Kathedrale / William Golding ; translated by Hermann Stiehl. – German"@en,
         "Der Turm der Kathedrale / William Golding ; oversatt av Hermann Stiehl. – Tysk"@no ;
     rdaed:P20315 "Der Turm der Kathedrale" ;
-    rdaed:P20316 "Der Turm der Kathedrale : Roman",
-        "The Spire" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/42309455> ;
@@ -6356,8 +6266,6 @@
     rdfs:label "Papier-Männer / William Golding ; translated by Emil Bastuk. – German"@en,
         "Papier-Männer / William Golding ; oversatt av Emil Bastuk. – Tysk"@no ;
     rdaed:P20315 "Papier-Männer" ;
-    rdaed:P20316 "Papier-Männer : Roman",
-        "The paper men" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/311338181> ;
@@ -6367,8 +6275,6 @@
     rdfs:label "Das Feuer der Finsternis / William Golding ; translated by Ursula Leipe. – German"@en,
         "Das Feuer der Finsternis / William Golding ; oversatt av Ursula Leipe. – Tysk"@no ;
     rdaed:P20315 "Das Feuer der Finsternis" ;
-    rdaed:P20316 "Darkness Visible",
-        "Das Feuer der Finsternis : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://example.org/names/leipeursula> ;
@@ -6378,7 +6284,6 @@
     rdfs:label "Free fall / William Golding. – English"@en,
         "Free fall / William Golding. – Engelsk"@no ;
     rdaed:P20315 "Free fall" ;
-    rdaed:P20316 "Free Fall" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/218116512> .
@@ -6451,7 +6356,6 @@
     rdfs:label "The brass butterfly: a play in three acts / William Golding. – English"@en,
         "The brass butterfly: a play in three acts / William Golding. – Engelsk"@no ;
     rdaed:P20315 "The brass butterfly: a play in three acts"  ;
-    rdaed:P20316 "The Brass Butterfly";
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://oslomet.workid.no/wg/05> .
@@ -6460,7 +6364,6 @@
     rdfs:label "William Golding : the man who wrote Lord of the flies / John Carey. – English"@en,
         "William Golding : the man who wrote Lord of the flies / John Carey. – Engelsk"@no ;
     rdaed:P20315 "William Golding : the man who wrote Lord of the flies" ;
-    rdaed:P20316 "William Golding : the man who wrote Lord of the flies : a life" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/114105318/williamgoldingthemanwhowrotelordoftheflies> .
@@ -6478,7 +6381,6 @@
     rdfs:label "The double tongue / William Golding. – English"@en,
         "The double tongue / William Golding. – Engelsk"@no ;
     rdaed:P20315 "The double tongue" ;
-    rdaed:P20316 "The Double Tongue" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/1180145424574586830081> .
@@ -6535,7 +6437,6 @@
     rdfs:label "The paper men / William Golding. – English"@en,
         "The paper men / William Golding. – Engelsk"@no ;
     rdaed:P20315 "The paper men" ;
-    rdaed:P20316 "The Paper Men" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/188302088> .
@@ -6549,7 +6450,6 @@
     rdfs:label "Darkness visible / William Golding. – English"@en,
         "Darkness visible / William Golding. – Engelsk"@no ;
     rdaed:P20315 "Darkness visible" ;
-    rdaed:P20316 "Darkness Visible" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/211743501> .
@@ -6558,8 +6458,7 @@
     rdfs:label "La oscuridad visible / William Golding ; translated by Eduardo Goligorsky. – Spanish"@en,
         "La oscuridad visible / William Golding ; oversatt av Eduardo Goligorsky. – Spansk"@no ;
     rdaed:P20315 "La oscuridad visible" ;
-    rdaed:P20316 "Darkness Visible",
-        "Oscuridad visible" ;
+    rdaed:P20316 "Oscuridad visible" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/38364518> ;
@@ -6578,7 +6477,6 @@
         "A moving target / William Golding. – Engelsk"@no ;
     rdaed:P20071 "Includes the Nobel lecture given in Stockholm, 1983." ;
     rdaed:P20315 "A moving target" ;
-    rdaed:P20316 "The Moving Target" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/307973201> .
@@ -6610,10 +6508,7 @@
     rdfs:label "Der Felsen des zweiten Todes / William Golding ; translated by Hermann Stiehl. – German"@en,
         "Der Felsen des zweiten Todes / William Golding ; oversatt av Hermann Stiehl. – Tysk"@no ;
     rdaed:P20315 "Der Felsen des zweiten Todes" ;
-    rdaed:P20316 "Der Felsen des zweiten Todes : Roman",
-        "Pincher Martin",
-        "Pincher Martin : Roman",
-        "Pincher Martin : Roman ; [aus d. Engl.]" ;
+    rdaed:P20316 "Pincher Martin : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/42309455> ;
@@ -6644,8 +6539,7 @@
     rdfs:label "The hot gates, etc / William Golding. – English"@en,
         "The hot gates, etc / William Golding. – Engelsk"@no ;
     rdaed:P20315 "The hot gates, etc" ;
-    rdaed:P20316 "The Hot Gates",
-        "The Hot gates : and other occasional pieces" ;
+    rdaed:P20316 "The Hot gates : and other occasional pieces" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q7740406> .
@@ -6655,7 +6549,6 @@
         "The Scorpion God / William Golding. – Engelsk"@no ;
     rdaed:P20071 "The scorpion god -- Clonk clonk -- Envoy extraordinary" ;
     rdaed:P20315 "The Scorpion God" ;
-    rdaed:P20316 "The Scorpion God : three short novels" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20145 <http://viaf.org/viaf/177762289/exp/eng/1020>,
@@ -6668,10 +6561,7 @@
         "El dios Escorpión / William Golding ; oversatt av Ernestina de Champourcin. – Spansk"@no ;
     rdaed:P20071 "El dios Escorpión -- Clonc clonc -- El enviado especial" ;
     rdaed:P20315 "El dios Escorpión" ;
-    rdaed:P20316 "El dios Escorpión ; Clonc clonc ; El enviado especial",
-        "El dios escorpión",
-        "El dios escorpión : tres novelas cortas",
-        "The Scorpion God" ;
+    rdaed:P20316 "El dios Escorpión ; Clonc clonc ; El enviado especial" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/12367718> ;
@@ -6700,7 +6590,6 @@
     rdfs:label "El enviado especial / William Golding ; translated by Ernestina de Champourcin. – Spanish"@en,
         "El enviado especial / William Golding ; oversatt av Ernestina de Champourcin. – Spansk"@no ;
     rdaed:P20315 "El enviado especial" ;
-    rdaed:P20316 "Envoy Extraordinary" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/12367718> ;
@@ -6718,7 +6607,6 @@
     rdfs:label "Clonc, clonc / William Golding ; translated by Ernestina de Champourcin. – Spanish"@en,
         "Clonc, clonc / William Golding ; oversatt av Ernestina de Champourcin. – Spansk"@no ;
     rdaed:P20315 "Clonc, clonc" ;
-    rdaed:P20316 "Clonk Clonk" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/12367718> ;
@@ -6728,7 +6616,6 @@
     rdfs:label "Scorpion god / William Golding. – English"@en,
         "Scorpion god / William Golding. – Engelsk"@no ;
     rdaed:P20315 "Scorpion god" ;
-    rdaed:P20316 "The Scorpion God" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/308018847> .
@@ -6737,7 +6624,6 @@
     rdfs:label "El dios Escorpión / William Golding ; translated by Ernestina de Champourcin. – Spanish"@en,
         "El dios Escorpión / William Golding ; oversatt av Ernestina de Champourcin. – Spansk"@no ;
     rdaed:P20315 "El dios Escorpión" ;
-    rdaed:P20316 "The Scorpion God" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/12367718> ;
@@ -6747,7 +6633,6 @@
     rdfs:label "The pyramid / William Golding. – English"@en,
         "The pyramid / William Golding. – Engelsk"@no ;
     rdaed:P20315 "The pyramid" ;
-    rdaed:P20316 "The Pyramid" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/309268108> .
@@ -6758,9 +6643,6 @@
     rdaed:P20071 "Rites of passage -- Close quarters -- Fire down",
         "Rites of passage -- Close quarters-- Fire down below" ;
     rdaed:P20315 "To the ends of the Earth" ;
-    rdaed:P20316 "To the Ends of the Earth",
-        "To the ends of the Earth : A sea trilogy comprising \"Rites of Passage\", \"Close Quarters\" and \"Fire Down Below\"",
-        "To the ends of the earth : a sea trilogy" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20145 <http://viaf.org/viaf/174553895/exp/eng/1020>,
@@ -6772,7 +6654,6 @@
     rdfs:label "Pincher Martin / William Golding. – English"@en,
         "Pincher Martin / William Golding. – Engelsk"@no ;
     rdaed:P20315 "Pincher Martin" ;
-    rdaed:P20316 "Pincher Martin" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/184334172> .
@@ -6781,7 +6662,6 @@
     rdfs:label "The inheritors / William Golding. – English"@en,
         "The inheritors / William Golding. – Engelsk"@no ;
     rdaed:P20315 "The inheritors" ;
-    rdaed:P20316 "The Inheritors" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/217036112> .
@@ -6790,7 +6670,6 @@
     rdfs:label "Fluenes herre / William Golding ; translated by Inger Hagerup. – Norwegian Bokmål"@en,
         "Fluenes herre / William Golding ; oversatt av Inger Hagerup. – Bokmål"@no ;
     rdaed:P20315 "Fluenes herre" ;
-    rdaed:P20316 "Lord of the flies" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob>,
         <http://id.loc.gov/vocabulary/iso639-2/nor> ;
@@ -6810,7 +6689,6 @@
     rdfs:label "Fire down below / William Golding. – English"@en,
         "Fire down below / William Golding. – Engelsk"@no ;
     rdaed:P20315 "Fire down below" ;
-    rdaed:P20316 "Fire Down Below" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/174553895> .
@@ -6819,8 +6697,6 @@
     rdfs:label "The spire / William Golding. – English"@en,
         "The spire / William Golding. – Engelsk"@no ;
     rdaed:P20315 "The spire" ;
-    rdaed:P20316 "The Spire",
-        "The spire : a novel" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/178994871> .
@@ -6829,7 +6705,6 @@
     rdfs:label "Close quarters / William Golding. – English"@en,
         "Close quarters / William Golding. – Engelsk"@no ;
     rdaed:P20315 "Close quarters" ;
-    rdaed:P20316 "Close Quarters" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/187146251> .
@@ -6838,9 +6713,7 @@
     rdfs:label "Herr der Fliegen / William Golding. – German"@en,
         "Herr der Fliegen / William Golding. – Tysk"@no ;
     rdaed:P20315 "Herr der Fliegen" ;
-    rdaed:P20316 "Lord of the Flies",
-        "Lord of the flies",
-        "Lord of the flies : Teacher's book. / By Dieter Smolka",
+    rdaed:P20316 "Lord of the flies : Teacher's book. / By Dieter Smolka",
         "Lord of the flies : [Hauptbd.]" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
@@ -6858,8 +6731,6 @@
     rdfs:label "El señor de las moscas / William Golding ; translated by Carmen Vergara. – Spanish"@en,
         "El señor de las moscas / William Golding ; oversatt av Carmen Vergara. – Spansk"@no ;
     rdaed:P20315 "El señor de las moscas" ;
-    rdaed:P20316 "El señor de las moscas",
-        "Lord of the flies" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/86744222> ;
@@ -6869,7 +6740,6 @@
     rdfs:label "Rites of passage / William Golding. – English"@en,
         "Rites of passage / William Golding. – Engelsk"@no ;
     rdaed:P20315 "Rites of passage" ;
-    rdaed:P20316 "Rites of Passage" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/176165653> .
@@ -6878,10 +6748,6 @@
     rdfs:label "Herr der Fliegen / William Golding ; translated by Hermann Stiehl. – German"@en,
         "Herr der Fliegen / William Golding ; oversatt av Hermann Stiehl. – Tysk"@no ;
     rdaed:P20315 "Herr der Fliegen" ;
-    rdaed:P20316 "Herr der Fliegen : Pbd. 1",
-        "Herr der Fliegen : Pbd. 2",
-        "Herr der Fliegen : Roman",
-        "Lord of the flies" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/42309455> ;
@@ -6897,12 +6763,7 @@
     rdfs:label "Lord of the Flies / William Golding. – English"@en,
         "Lord of the Flies / William Golding. – Engelsk"@no ;
     rdaed:P20315 "Lord of the Flies" ;
-    rdaed:P20316 "Lord of the Flies",
-        "Lord of the flies",
-        "Lord of the flies : [Hauptbd.]",
-        "Lord of the flies : a novel",
-        "Lord of the flies : edited by James R. Baker, Arthur P. Ziegler. Casebook edition, text, notes & criticism",
-        "William Golding's Lord of the Flies",
+    rdaed:P20316 "William Golding's Lord of the Flies",
         "William Golding's, Lord of the files" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;

@@ -2552,7 +2552,6 @@
     rdfs:label "George Orwell's very English revolution / James Wood. – English"@en,
         "George Orwell's very English revolution / James Wood. – Engelsk"@no ;
     rdaed:P20315 "George Orwell's very English revolution" ;
-    rdaed:P20316 "George Orwell's very English revolution" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/10>.
@@ -2569,7 +2568,6 @@
 	    rdfs:label "Jane Austen's heroic consciousness / James Wood. – English"@en,
 	        "Jane Austen's heroic consciousness / James Wood. – Engelsk"@no ;
 	    rdaed:P20315 "Jane Austen's heroic consciousness" ;
-	    rdaed:P20316 "Jane Austen's heroic consciousness" ;
 	    rdaeo:P20001 rdaco:1020 ;
 	    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
 	    rdaeo:P20231 <http://viaf.org/viaf/92910249/seriousnoticing/11>.

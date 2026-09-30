@@ -1164,7 +1164,6 @@
     rdfs:label "Reflecting on Miss Marple / Marion Shaw and Sabine Vanacker. – English"@en,
         "Reflecting on Miss Marple / Marion Shaw og Sabine Vanacker. – Engelsk"@no ;
     rdaed:P20315 "Reflecting on Miss Marple" ;
-    rdaed:P20316 "Reflecting on Miss Marple" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/1868153954866905680001> .
@@ -1417,7 +1416,6 @@
     rdfs:label "Murder on the Orient Express / François Rivière and Solidor. – Text, still image, English"@en,
         "Murder on the Orient Express / François Rivière og Solidor. – Tekst, stillbilde, engelsk"@no ;
     rdaed:P20315 "Murder on the Orient Express" ;
-    rdaed:P20316 "Crime de l'Orient-Express" ;
     rdaeo:P20001 rdaco:1014,
         rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
@@ -1602,7 +1600,6 @@
     rdfs:label "Murder on the Orient Express : The Graphic Novel / Bob Al-Greene. – Text, still image, English"@en,
         "Murder on the Orient Express : The Graphic Novel / Bob Al-Greene. – Tekst, stillbilde, engelsk"@no ;
     rdaed:P20315 "Murder on the Orient Express : The Graphic Novel" ;
-    rdaed:P20316 "Murder on the Orient Express: The Graphic Novel" ;
     rdaeo:P20001 rdaco:1014,
         rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
@@ -1726,7 +1723,6 @@
         <http://id.loc.gov/vocabulary/iso639-2/nob>,
         <http://id.loc.gov/vocabulary/iso639-2/swe> ;
     rdaed:P20315 "Murder on the Orient Express" ;
-    rdaed:P20316 "Murder on the Orient Express" ;
     rdaeo:P20001 rdaco:1023 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20012 <https://isni.org/isni/0000000114794233>,
@@ -1749,7 +1745,6 @@
     rdfs:label "4:50 from Paddington / Agatha Christie. – English"@en,
         "4:50 from Paddington / Agatha Christie. – Engelsk"@no ;
     rdaed:P20315 "4:50 from Paddington" ;
-    rdaed:P20316 "4:50 from Paddington" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/176021540> .
@@ -1838,7 +1833,6 @@
     rdfs:label "Death comes as the end / Agatha Christie. – English"@en,
         "Death comes as the end / Agatha Christie. – Engelsk"@no ;
     rdaed:P20315 "Death comes as the end" ;
-    rdaed:P20316 "Death comes as the end" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/8172154501923039210006> .
@@ -1947,8 +1941,7 @@
         "The hound of death, and other stories / Agatha Christie. – Engelsk"@no ;
     rdaed:P20071 "The Hound of Death -- The Red Signal -- The Fourth Man -- The Gypsy -- The Lamp -- Wireless -- The Witness for the Prosecution -- The Mystery of the Blue Jar -- The Strange Case of Sir Arthur Carmichael -- The Call of Wings -- The Last Séance -- SOS" ;
     rdaed:P20315 "The hound of death, and other stories" ;
-    rdaed:P20316 "The hound of death",
-        "The hound of death, and other stories" ;
+    rdaed:P20316 "The hound of death" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20145 <http://viaf.org/viaf/8905164661901103390006/02/exp/eng/1020>,
@@ -1987,8 +1980,7 @@
     rdfs:label "Murder On The Orient Express (Theme) / Richard Rodney Bennett. – Notated music"@en,
         "Murder On The Orient Express (Theme) / Richard Rodney Bennett. – Nedskrevet musikk"@no ;
     rdaed:P20315 "Murder On The Orient Express (Theme)" ;
-    rdaed:P20316 "Murder on the Orient Express",
-        "Murder on the Orient Express. Theme. <Piano solo.>" ;
+    rdaed:P20316 "Murder on the Orient Express. Theme. <Piano solo.>" ;
     rdaeo:P20001 rdaco:1010 ;
     rdaeo:P20231 <http://viaf.org/viaf/9356154076013911860000> .
 
@@ -2017,7 +2009,6 @@
         <http://id.loc.gov/vocabulary/iso639-2/nob>,
         <http://id.loc.gov/vocabulary/iso639-2/swe> ;
     rdaed:P20315 "Murder on the orient express" ;
-    rdaed:P20316 "Murder on the Orient Express" ;
     rdaeo:P20001 rdaco:1023 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20012 <https://www.imdb.com/name/nm0000002>,
@@ -2042,7 +2033,6 @@
     rdfs:label "The life and times of Miss Jane Marple / Anne Hart. – English"@en,
         "The life and times of Miss Jane Marple / Anne Hart. – Engelsk"@no ;
     rdaed:P20315 "The life and times of Miss Jane Marple" ;
-    rdaed:P20316 "Agatha Christie's Miss Marple : the life and times of Miss Jane Marple" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/1097151656348508400001> .
@@ -2075,7 +2065,6 @@
     rdfs:label "Death in the clouds / Agatha Christie. – English"@en,
         "Death in the clouds / Agatha Christie. – Engelsk"@no ;
     rdaed:P20315 "Death in the clouds" ;
-    rdaed:P20316 "Death in the clouds" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/73145424522186831318> .
@@ -2180,7 +2169,6 @@
     rdfs:label "Mirror crack'd from side to side / Agatha Christie. – English"@en,
         "Mirror crack'd from side to side / Agatha Christie. – Engelsk"@no ;
     rdaed:P20315 "Mirror crack'd from side to side" ;
-    rdaed:P20316 "The mirror crack'd from side to side" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/308553963> .
@@ -2189,7 +2177,6 @@
     rdfs:label "Death on the Nile / Agatha Christie. – English"@en,
         "Death on the Nile / Agatha Christie. – Engelsk"@no ;
     rdaed:P20315 "Death on the Nile" ;
-    rdaed:P20316 "Death on the Nile" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/309258229> .
@@ -2198,7 +2185,6 @@
     rdfs:label "Appointment with death / Agatha Christie. – English"@en,
         "Appointment with death / Agatha Christie. – Engelsk"@no ;
     rdaed:P20315 "Appointment with death" ;
-    rdaed:P20316 "Appointment with death" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/310912914> .
@@ -2207,7 +2193,6 @@
     rdfs:label "Murder on the links / Agatha Christie. – English"@en,
         "Murder on the links / Agatha Christie. – Engelsk"@no ;
     rdaed:P20315 "Murder on the links" ;
-    rdaed:P20316 "The murder on the links" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/5243165573959737800001> .
@@ -2216,8 +2201,6 @@
     rdfs:label "Sleeping murder / Agatha Christie. – English"@en,
         "Sleeping murder / Agatha Christie. – Engelsk"@no ;
     rdaed:P20315 "Sleeping murder" ;
-    rdaed:P20316 "Sleeping murder",
-        "Sleeping murder : Miss Marple's last case" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/740147270586435700009> .
@@ -2226,8 +2209,6 @@
     rdfs:label "The Hound of Death / Agatha Christie. – English"@en,
         "The Hound of Death / Agatha Christie. – Engelsk"@no ;
     rdaed:P20315 "The Hound of Death" ;
-    rdaed:P20316 "The Hound of Death",
-        "The hound of death : an Agatha Christie short story" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/890516466190110339000601> .
@@ -2246,7 +2227,6 @@
     rdfs:label "The murder at the vicarage / Agatha Christie. – English"@en,
         "The murder at the vicarage / Agatha Christie. – Engelsk"@no ;
     rdaed:P20315 "The murder at the vicarage" ;
-    rdaed:P20316 "The murder at the vicarage" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/1846151051771433530005> .
@@ -2255,7 +2235,6 @@
     rdfs:label "Murder on the Orient Express / Agatha Christie. – English"@en,
         "Murder on the Orient Express / Agatha Christie. – Engelsk"@no ;
     rdaed:P20315 "Murder on the Orient Express" ;
-    rdaed:P20316 "Murder on the Orient Express" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/316741387> .

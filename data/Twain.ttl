@@ -942,7 +942,6 @@
     rdfs:label "The innocents abroad / Mark Twain. – English"@en,
         "The innocents abroad / Mark Twain. – Engelsk"@no ;
     rdaed:P20315 "The innocents abroad" ;
-    rdaed:P20316 "The innocents abroad" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/315947516> .
@@ -1250,7 +1249,6 @@
     rdfs:label "Tragedy of Pudd'nhead Wilson / Mark Twain. – English"@en,
         "Tragedy of Pudd'nhead Wilson / Mark Twain. – Engelsk"@no ;
     rdaed:P20315 "Tragedy of Pudd'nhead Wilson" ;
-    rdaed:P20316 "The tragedy of Pudd'nhead Wilson" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/178306412> .
@@ -1315,7 +1313,6 @@
     rdfs:label "A Connecticut Yankee in King Arthur's court / Mark Twain. – English"@en,
         "A Connecticut Yankee in King Arthur's court / Mark Twain. – Engelsk"@no ;
     rdaed:P20315 "A Connecticut Yankee in King Arthur's court" ;
-    rdaed:P20316 "A Connecticut Yankee in King Arthur's court" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/176284998> .
@@ -1324,7 +1321,6 @@
     rdfs:label "The gilded age / Charles Dudley Warner and Mark Twain. – English"@en,
         "The gilded age / Charles Dudley Warner og Mark Twain. – Engelsk"@no ;
     rdaed:P20315 "The gilded age" ;
-    rdaed:P20316 "The gilded age" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/236105897> .
@@ -1341,7 +1337,6 @@
     rdfs:label "The prince and the pauper / Mark Twain. – English"@en,
         "The prince and the pauper / Mark Twain. – Engelsk"@no ;
     rdaed:P20315 "The prince and the pauper" ;
-    rdaed:P20316 "The prince and the pauper" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/235238105> .
@@ -1358,7 +1353,6 @@
     rdfs:label "The adventures of Tom Sawyer / Mark Twain. – English"@en,
         "The adventures of Tom Sawyer / Mark Twain. – Engelsk"@no ;
     rdaed:P20315 "The adventures of Tom Sawyer" ;
-    rdaed:P20316 "The adventures of Tom Sawyer" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/178211495> .
@@ -1367,7 +1361,6 @@
     rdfs:label "The adventures of Huckleberry Finn / Mark Twain. – English"@en,
         "The adventures of Huckleberry Finn / Mark Twain. – Engelsk"@no ;
     rdaed:P20315 "The adventures of Huckleberry Finn" ;
-    rdaed:P20316 "The adventures of Huckleberry Finn" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/178806136> .

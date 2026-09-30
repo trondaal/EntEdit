@@ -16474,7 +16474,6 @@
     rdfs:label "La faim : action dramatique / Jean-Louis Barrault. – French"@en,
         "La faim : action dramatique / Jean-Louis Barrault. – Fransk"@no ;
     rdaed:P20315 "La faim : action dramatique" ;
-    rdaed:P20316 "La faim" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20231 <http://example.org/barraultjeanlouis/lafaim> .
@@ -16561,7 +16560,6 @@
     rdfs:label "Mysterien : Hörspiel / Hellmut von Cube ; with Paul Hoffmann and Robert Dietl. – Spoken word, German"@en,
         "Mysterien : Hörspiel / Hellmut von Cube ; med Paul Hoffmann og Robert Dietl. – Tale, tysk"@no ;
     rdaed:P20315 "Mysterien : Hörspiel" ;
-    rdaed:P20316 "Mysterien" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20012 <http://example.org/dietlrobert>,
@@ -16613,7 +16611,6 @@
     rdfs:label "Segelfoss / Carl Fredrik Engelstad. – Norwegian Bokmål"@en,
         "Segelfoss / Carl Fredrik Engelstad. – Bokmål"@no ;
     rdaed:P20315 "Segelfoss" ;
-    rdaed:P20316 "Segelfoss" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://example.org/engelstadcarlfredrik/segelfoss> .
@@ -16750,7 +16747,6 @@
     rdfs:label "Hunger : a starving young man, a delusionary existence, the darker side of a modern metropolis : presented by TinkerTing, designed and directed by Pickled Image, co-produced with Figurteateret i Nordland. – English"@en,
         "Hunger : a starving young man, a delusionary existence, the darker side of a modern metropolis : presented by TinkerTing, designed and directed by Pickled Image, co-produced with Figurteateret i Nordland. – Engelsk"@no ;
     rdaed:P20315 "Hunger : a starving young man, a delusionary existence, the darker side of a modern metropolis : presented by TinkerTing, designed and directed by Pickled Image, co-produced with Figurteateret i Nordland" ;
-    rdaed:P20316 "Hunger" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://example.org/hungerplay> .
@@ -16831,7 +16827,6 @@
     rdfs:label "Makt-avmakt : en studie av Hamsuns Benoni og Rosa / Nils Magne Knutsen. – Norwegian Bokmål"@en,
         "Makt-avmakt : en studie av Hamsuns Benoni og Rosa / Nils Magne Knutsen. – Bokmål"@no ;
     rdaed:P20315 "Makt-avmakt : en studie av Hamsuns Benoni og Rosa" ;
-    rdaed:P20316 "Makt-avmakt : en studie av Hamsuns Benoni og Rosa" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://example.org/knutsennilsm/maktavmaktenstudieavhamsunsbenoniogrosa> .
@@ -17149,8 +17144,6 @@
     rdfs:label "The Ring is Closed / Knut Hamsun ; translated by Robert Ferguson. – English"@en,
         "The Ring is Closed / Knut Hamsun ; oversatt av Robert Ferguson. – Engelsk"@no ;
     rdaed:P20315 "The Ring is Closed" ;
-    rdaed:P20316 "Ringen sluttet",
-        "The ring is closed" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/92839136> ;
@@ -17161,8 +17154,6 @@
     rdfs:label "Le cercle s'est refermé / Knut Hamsun ; translated by Régis Boyer. – French"@en,
         "Le cercle s'est refermé / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "Le cercle s'est refermé" ;
-    rdaed:P20316 "Le cercle s'est refermé : roman",
-        "Ringen sluttet" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/66602903> ;
@@ -17173,8 +17164,6 @@
     rdfs:label "Shallow Soil / Knut Hamsun. – English"@en,
         "Shallow Soil / Knut Hamsun. – Engelsk"@no ;
     rdaed:P20315 "Shallow Soil" ;
-    rdaed:P20316 "Ny jord",
-        "Shallow soil" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20141 <http://viaf.org/viaf/143144898528950290965/exp/nob/1020> ;
@@ -17184,7 +17173,6 @@
     rdfs:label "Rosa / Knut Hamsun. – English"@en,
         "Rosa / Knut Hamsun. – Engelsk"@no ;
     rdaed:P20315 "Rosa" ;
-    rdaed:P20316 "Rosa" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20141 <http://viaf.org/viaf/1650145424683186830143/exp/nob/1020> ;
@@ -17194,7 +17182,6 @@
     rdfs:label "Rosa / Knut Hamsun ; translated by Sverre Lyngstad. – English"@en,
         "Rosa / Knut Hamsun ; oversatt av Sverre Lyngstad. – Engelsk"@no ;
     rdaed:P20315 "Rosa" ;
-    rdaed:P20316 "Rosa" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/111655332> ;
@@ -17205,8 +17192,6 @@
     rdfs:label "Rosa / Knut Hamsun. – German"@en,
         "Rosa / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "Rosa" ;
-    rdaed:P20316 "Rosa",
-        "Rosa : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20141 <http://viaf.org/viaf/1650145424683186830143/exp/nob/1020> ;
@@ -17226,8 +17211,7 @@
     rdfs:label "Wayfarers / Knut Hamsun. – English"@en,
         "Wayfarers / Knut Hamsun. – Engelsk"@no ;
     rdaed:P20315 "Wayfarers" ;
-    rdaed:P20316 "Landstrykere",
-        "Vagabonds" ;
+    rdaed:P20316 "Vagabonds" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20141 <http://viaf.org/viaf/180078068/exp/nob/1020> ;
@@ -17237,7 +17221,6 @@
     rdfs:label "L'homme secret : une histoire d'amour du Nordland / Knut Hamsun ; translated by Pierre Grouix. – French"@en,
         "L'homme secret : une histoire d'amour du Nordland / Knut Hamsun ; oversatt av Pierre Grouix. – Fransk"@no ;
     rdaed:P20315 "L'homme secret : une histoire d'amour du Nordland" ;
-    rdaed:P20316 "Den gaadefulde" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/44442808> ;
@@ -17248,8 +17231,7 @@
     rdfs:label "Last Joy - Look Back on Happiness / Knut Hamsun. – English"@en,
         "Last Joy - Look Back on Happiness / Knut Hamsun. – Engelsk"@no ;
     rdaed:P20315 "Last Joy - Look Back on Happiness" ;
-    rdaed:P20316 "Den siste glæde",
-        "Look back on happiness" ;
+    rdaed:P20316 "Look back on happiness" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20141 <http://viaf.org/viaf/185380595/exp/nob/1020> ;
@@ -17259,8 +17241,7 @@
     rdfs:label "Last Joy - Look Back on Happiness / Knut Hamsun ; translated by Sverre Lyngstad. – English"@en,
         "Last Joy - Look Back on Happiness / Knut Hamsun ; oversatt av Sverre Lyngstad. – Engelsk"@no ;
     rdaed:P20315 "Last Joy - Look Back on Happiness" ;
-    rdaed:P20316 "Den siste glæde",
-        "The last joy" ;
+    rdaed:P20316 "The last joy" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/111655332> ;
@@ -17271,8 +17252,7 @@
     rdfs:label "Last Joy - Look Back on Happiness / Knut Hamsun ; translated by Paula Wiking. – English"@en,
         "Last Joy - Look Back on Happiness / Knut Hamsun ; oversatt av Paula Wiking. – Engelsk"@no ;
     rdaed:P20315 "Last Joy - Look Back on Happiness" ;
-    rdaed:P20316 "Den siste glæde",
-        "Look back on happiness" ;
+    rdaed:P20316 "Look back on happiness" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/71145971353932331279> ;
@@ -17283,8 +17263,6 @@
     rdfs:label "Die letzte Freude / Knut Hamsun. – German"@en,
         "Die letzte Freude / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "Die letzte Freude" ;
-    rdaed:P20316 "Den siste glæde",
-        "Die letzte Freude : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20141 <http://viaf.org/viaf/185380595/exp/nob/1020> ;
@@ -17294,8 +17272,6 @@
     rdfs:label "Die letzte Freude / Knut Hamsun ; translated by Niels Hoyer. – German"@en,
         "Die letzte Freude / Knut Hamsun ; oversatt av Niels Hoyer. – Tysk"@no ;
     rdaed:P20315 "Die letzte Freude" ;
-    rdaed:P20316 "Den siste glæde",
-        "Die letzte Freude : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/3237667> ;
@@ -17306,7 +17282,6 @@
     rdfs:label "La última alegría / Knut Hamsun. – Spanish"@en,
         "La última alegría / Knut Hamsun. – Spansk"@no ;
     rdaed:P20315 "La última alegría" ;
-    rdaed:P20316 "Den siste glæde" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20141 <http://viaf.org/viaf/185380595/exp/nob/1020> ;
@@ -17316,8 +17291,7 @@
     rdfs:label "Le Dernier Chapitre / Knut Hamsun. – French"@en,
         "Le Dernier Chapitre / Knut Hamsun. – Fransk"@no ;
     rdaed:P20315 "Le Dernier Chapitre" ;
-    rdaed:P20316 "Siste kapitel",
-        "Un air si pur- : (Le dernier chapitre)" ;
+    rdaed:P20316 "Un air si pur- : (Le dernier chapitre)" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20141 <http://viaf.org/viaf/188303684/exp/nob/1020> ;
@@ -17327,8 +17301,6 @@
     rdfs:label "El capítulo final / Knut Hamsun ; translated by Luis Molins. – Spanish"@en,
         "El capítulo final / Knut Hamsun ; oversatt av Luis Molins. – Spansk"@no ;
     rdaed:P20315 "El capítulo final" ;
-    rdaed:P20316 "El capítulo final : novela",
-        "Siste kapitel" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/3146331927818692445> ;
@@ -17340,7 +17312,6 @@
         "August-trilogien / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20071 "Landstrykere -- August --- Men livet lever" ;
     rdaed:P20315 "August-trilogien" ;
-    rdaed:P20316 "August-trilogien" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20145 <http://viaf.org/viaf/180078068/exp/nob/1020>,
@@ -17352,7 +17323,6 @@
     rdfs:label "Pan : from Lieutenant Thomas Glahn's papers / Knut Hamsun. – English"@en,
         "Pan : from Lieutenant Thomas Glahn's papers / Knut Hamsun. – Engelsk"@no ;
     rdaed:P20315 "Pan : from Lieutenant Thomas Glahn's papers" ;
-    rdaed:P20316 "Pan" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20141 <http://viaf.org/viaf/194765531/exp/nob/1020> ;
@@ -17362,8 +17332,7 @@
     rdfs:label "Pan : from Lieutenant Thomas Glahn's papers / Knut Hamsun ; translated by Sverre Lyngstad. – English"@en,
         "Pan : from Lieutenant Thomas Glahn's papers / Knut Hamsun ; oversatt av Sverre Lyngstad. – Engelsk"@no ;
     rdaed:P20315 "Pan : from Lieutenant Thomas Glahn's papers" ;
-    rdaed:P20316 "Pan",
-        "Pan : from the papers of lieutenant Thomas Glahn" ;
+    rdaed:P20316 "Pan : from the papers of lieutenant Thomas Glahn" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/111655332> ;
@@ -17374,8 +17343,7 @@
     rdfs:label "Pan : d'après les papiers du lieutenant Thomas Glahn / Knut Hamsun ; translated by Georges Sautreau and Régis Boyer. – French"@en,
         "Pan : d'après les papiers du lieutenant Thomas Glahn / Knut Hamsun ; oversatt av Georges Sautreau og Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "Pan : d'après les papiers du lieutenant Thomas Glahn" ;
-    rdaed:P20316 "Pan",
-        "Pan : d'apres les papiers du lieutenant Thomas Glahn" ;
+    rdaed:P20316 "Pan : d'apres les papiers du lieutenant Thomas Glahn" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/14776516>,
@@ -17387,7 +17355,6 @@
     rdfs:label "Pan : d'après les papiers du lieutenant Thomas Glahn / Knut Hamsun ; translated by Régis Boyer. – French"@en,
         "Pan : d'après les papiers du lieutenant Thomas Glahn / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "Pan : d'après les papiers du lieutenant Thomas Glahn" ;
-    rdaed:P20316 "Pan" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/66602903> ;
@@ -17398,7 +17365,6 @@
     rdfs:label "Pan : d'après les papiers du lieutenant Thomas Glahn / Knut Hamsun ; translated by Georges Sautreau. – French"@en,
         "Pan : d'après les papiers du lieutenant Thomas Glahn / Knut Hamsun ; oversatt av Georges Sautreau. – Fransk"@no ;
     rdaed:P20315 "Pan : d'après les papiers du lieutenant Thomas Glahn" ;
-    rdaed:P20316 "Pan" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/14776516> ;
@@ -17409,7 +17375,6 @@
     rdfs:label "Pan, aus Leutnant Thomas Glahns Papieren / Knut Hamsun ; translated by Hermann Kiy, Julius Sandmeier and Sophie Angermann. – German"@en,
         "Pan, aus Leutnant Thomas Glahns Papieren / Knut Hamsun ; oversatt av Hermann Kiy, Julius Sandmeier og Sophie Angermann. – Tysk"@no ;
     rdaed:P20315 "Pan, aus Leutnant Thomas Glahns Papieren" ;
-    rdaed:P20316 "Pan" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/64751952>,
@@ -17422,8 +17387,7 @@
     rdfs:label "Pan, aus Leutnant Thomas Glahns Papieren / Knut Hamsun ; translated by Aldo Keel and Ingeborg Keel. – German"@en,
         "Pan, aus Leutnant Thomas Glahns Papieren / Knut Hamsun ; oversatt av Aldo Keel og Ingeborg Keel. – Tysk"@no ;
     rdaed:P20315 "Pan, aus Leutnant Thomas Glahns Papieren" ;
-    rdaed:P20316 "Pan",
-        "Pan : aus Leutnant Thomas Glahns Papieren ; Roman" ;
+    rdaed:P20316 "Pan : aus Leutnant Thomas Glahns Papieren ; Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/91374385>,
@@ -17435,7 +17399,6 @@
     rdfs:label "Pan : af løjtnant Thomas Glahns papirer / Knut Hamsun. – Norwegian"@en,
         "Pan : af løjtnant Thomas Glahns papirer / Knut Hamsun. – Norsk"@no ;
     rdaed:P20315 "Pan : af løjtnant Thomas Glahns papirer" ;
-    rdaed:P20316 "Pan" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nor> ;
     rdaeo:P20231 <http://viaf.org/viaf/194765531> .
@@ -17444,7 +17407,6 @@
     rdfs:label "Pan / Knut Hamsun. – Spoken word, Norwegian Bokmål"@en,
         "Pan / Knut Hamsun. – Tale, bokmål"@no ;
     rdaed:P20315 "Pan" ;
-    rdaed:P20316 "Pan" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/194765531> .
@@ -17453,7 +17415,6 @@
     rdfs:label "Mysteries / Knut Hamsun ; translated by Sverre Lyngstad. – English"@en,
         "Mysteries / Knut Hamsun ; oversatt av Sverre Lyngstad. – Engelsk"@no ;
     rdaed:P20315 "Mysteries" ;
-    rdaed:P20316 "Mysterier" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/111655332> ;
@@ -17464,7 +17425,6 @@
     rdfs:label "Mystères : roman / Knut Hamsun ; translated by Alain-Pierre Guilhon and Ingunn Galtier. – French"@en,
         "Mystères : roman / Knut Hamsun ; oversatt av Alain-Pierre Guilhon og Ingunn Galtier. – Fransk"@no ;
     rdaed:P20315 "Mystères : roman" ;
-    rdaed:P20316 "Mysterier" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/277228294>,
@@ -17476,7 +17436,6 @@
     rdfs:label "Mystères / Knut Hamsun ; translated by Alain-Pierre Guilhon and Ingunn Galtier. – French"@en,
         "Mystères / Knut Hamsun ; oversatt av Alain-Pierre Guilhon og Ingunn Galtier. – Fransk"@no ;
     rdaed:P20315 "Mystères" ;
-    rdaed:P20316 "Mysterier" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/49226566>,
@@ -17488,7 +17447,6 @@
     rdfs:label "Mysterier / Knut Hamsun. – Spoken word, Norwegian Bokmål"@en,
         "Mysterier / Knut Hamsun. – Tale, bokmål"@no ;
     rdaed:P20315 "Mysterier" ;
-    rdaed:P20316 "Mysterier" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/206863699> .
@@ -17497,7 +17455,6 @@
     rdfs:label "Mysterier / Knut Hamsun ; read by Nils Johnson. – Spoken word, Norwegian Bokmål"@en,
         "Mysterier / Knut Hamsun ; lest av Nils Johnson. – Tale, bokmål"@no ;
     rdaed:P20315 "Mysterier" ;
-    rdaed:P20316 "Mysterier" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/228279275> ;
@@ -17507,7 +17464,6 @@
     rdfs:label "Misterios / Knut Hamsun ; translated by Kirsti Baggethun and Regino García Badell. – Spanish"@en,
         "Misterios / Knut Hamsun ; oversatt av Kirsti Baggethun og Regino García Badell. – Spansk"@no ;
     rdaed:P20315 "Misterios" ;
-    rdaed:P20316 "Mysterier" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/215149196287474790942>,
@@ -17519,7 +17475,6 @@
     rdfs:label "Segelfoss by / Knut Hamsun ; read by Nils Johnson. – Spoken word, Norwegian Bokmål"@en,
         "Segelfoss by / Knut Hamsun ; lest av Nils Johnson. – Tale, bokmål"@no ;
     rdaed:P20315 "Segelfoss by" ;
-    rdaed:P20316 "Segelfoss by" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/228279275> ;
@@ -17529,7 +17484,6 @@
     rdfs:label "La ciudad de Segelfoss / Knut Hamsun ; translated by Frans Vives. – Spanish"@en,
         "La ciudad de Segelfoss / Knut Hamsun ; oversatt av Frans Vives. – Spansk"@no ;
     rdaed:P20315 "La ciudad de Segelfoss" ;
-    rdaed:P20316 "Segelfoss by" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/12177408753003190925> ;
@@ -17540,7 +17494,6 @@
     rdfs:label "Briefe an Marie / Knut Hamsun ; translated by Hans Däumling. – German"@en,
         "Briefe an Marie / Knut Hamsun ; oversatt av Hans Däumling. – Tysk"@no ;
     rdaed:P20315 "Briefe an Marie" ;
-    rdaed:P20316 "Brev til Marie" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/64747070> ;
@@ -17551,7 +17504,6 @@
     rdfs:label "Brev til Marie / Knut Hamsun. – Norwegian Bokmål"@en,
         "Brev til Marie / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Brev til Marie" ;
-    rdaed:P20316 "Brev til Marie" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/217145857943523021156> .
@@ -17560,7 +17512,6 @@
     rdfs:label "Hunger / Knut Hamsun ; translated by W.W Worster. – English"@en,
         "Hunger / Knut Hamsun ; oversatt av W.W Worster. – Engelsk"@no ;
     rdaed:P20315 "Hunger" ;
-    rdaed:P20316 "Sult" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/7014928> ;
@@ -17571,7 +17522,6 @@
     rdfs:label "Hunger / Knut Hamsun ; translated by Niels Hoyer. – English"@en,
         "Hunger / Knut Hamsun ; oversatt av Niels Hoyer. – Engelsk"@no ;
     rdaed:P20315 "Hunger" ;
-    rdaed:P20316 "Sult" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/3237667> ;
@@ -17582,7 +17532,6 @@
     rdfs:label "La Faim / Knut Hamsun. – French"@en,
         "La Faim / Knut Hamsun. – Fransk"@no ;
     rdaed:P20315 "La Faim" ;
-    rdaed:P20316 "Sult" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20141 <http://viaf.org/viaf/220443771/exp/nob/1020> ;
@@ -17592,8 +17541,7 @@
     rdfs:label "La Faim / Knut Hamsun ; translated by Régis Boyer. – French"@en,
         "La Faim / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "La Faim" ;
-    rdaed:P20316 "Faim",
-        "Sult" ;
+    rdaed:P20316 "Faim" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/66602903> ;
@@ -17604,8 +17552,6 @@
     rdfs:label "La Faim / Knut Hamsun ; translated by André Gide. – French"@en,
         "La Faim / Knut Hamsun ; oversatt av André Gide. – Fransk"@no ;
     rdaed:P20315 "La Faim" ;
-    rdaed:P20316 "La faim",
-        "Sult" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/96973963> ;
@@ -17616,7 +17562,6 @@
     rdfs:label "Hunger / Knut Hamsun ; translated by Julius Sandmeier ; read by Uwe Friedrichsen. – Spoken word, German"@en,
         "Hunger / Knut Hamsun ; oversatt av Julius Sandmeier ; lest av Uwe Friedrichsen. – Tale, tysk"@no ;
     rdaed:P20315 "Hunger" ;
-    rdaed:P20316 "Sult" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20022 <http://viaf.org/viaf/35339440> ;
@@ -17627,8 +17572,6 @@
     rdfs:label "Hunger / Knut Hamsun ; translated by Marie von Borch. – German"@en,
         "Hunger / Knut Hamsun ; oversatt av Marie von Borch. – Tysk"@no ;
     rdaed:P20315 "Hunger" ;
-    rdaed:P20316 "Hunger : Roman",
-        "Sult" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/39365507> ;
@@ -17639,7 +17582,6 @@
     rdfs:label "Hunger / Knut Hamsun ; translated by Niels Hoyer. – German"@en,
         "Hunger / Knut Hamsun ; oversatt av Niels Hoyer. – Tysk"@no ;
     rdaed:P20315 "Hunger" ;
-    rdaed:P20316 "Sult" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/3237667> ;
@@ -17664,7 +17606,6 @@
     rdfs:label "Hoe het groeide / Knut Hamsun. – Dutch"@en,
         "Hoe het groeide / Knut Hamsun. – Nederlandsk"@no ;
     rdaed:P20315 "Hoe het groeide" ;
-    rdaed:P20316 "Markens grøde" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/dut> ;
     rdaeo:P20141 <http://viaf.org/viaf/294124367/exp/nob/1020> ;
@@ -17674,8 +17615,6 @@
     rdfs:label "Growth of the Soil / Knut Hamsun ; translated by Sverre Lyngstad. – English"@en,
         "Growth of the Soil / Knut Hamsun ; oversatt av Sverre Lyngstad. – Engelsk"@no ;
     rdaed:P20315 "Growth of the Soil" ;
-    rdaed:P20316 "Growth of the soil",
-        "Markens grøde" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/111655332> ;
@@ -17686,8 +17625,6 @@
     rdfs:label "Segen der Erde / Knut Hamsun ; translated by Alken Bruns. – German"@en,
         "Segen der Erde / Knut Hamsun ; oversatt av Alken Bruns. – Tysk"@no ;
     rdaed:P20315 "Segen der Erde" ;
-    rdaed:P20316 "Markens grøde",
-        "Segen der Erde : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/14783676> ;
@@ -17698,8 +17635,6 @@
     rdfs:label "On Overgrown Paths / Knut Hamsun ; translated by Sverre Lyngstad. – English"@en,
         "On Overgrown Paths / Knut Hamsun ; oversatt av Sverre Lyngstad. – Engelsk"@no ;
     rdaed:P20315 "On Overgrown Paths" ;
-    rdaed:P20316 "On overgrown paths",
-        "Paa gjengrodde stier" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/111655332> ;
@@ -17710,8 +17645,6 @@
     rdfs:label "On Overgrown Paths / Knut Hamsun ; translated by Carl L. Anderson. – English"@en,
         "On Overgrown Paths / Knut Hamsun ; oversatt av Carl L. Anderson. – Engelsk"@no ;
     rdaed:P20315 "On Overgrown Paths" ;
-    rdaed:P20316 "On overgrown paths",
-        "Paa gjengrodde stier" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/41824573> ;
@@ -17722,7 +17655,6 @@
     rdfs:label "På gjengrodde stier / Knut Hamsun ; read by Kjell Stormoen. – Spoken word, Norwegian Bokmål"@en,
         "På gjengrodde stier / Knut Hamsun ; lest av Kjell Stormoen. – Tale, bokmål"@no ;
     rdaed:P20315 "På gjengrodde stier" ;
-    rdaed:P20316 "Paa gjengrodde stier" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/229586296> ;
@@ -17732,7 +17664,6 @@
     rdfs:label "Under the Autumn Star / Knut Hamsun ; translated by W.W Worster. – English"@en,
         "Under the Autumn Star / Knut Hamsun ; oversatt av W.W Worster. – Engelsk"@no ;
     rdaed:P20315 "Under the Autumn Star" ;
-    rdaed:P20316 "Under høststjærnen" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/7014928> ;
@@ -17743,7 +17674,6 @@
     rdfs:label "Sous l'étoile d'automne / Knut Hamsun. – French"@en,
         "Sous l'étoile d'automne / Knut Hamsun. – Fransk"@no ;
     rdaed:P20315 "Sous l'étoile d'automne" ;
-    rdaed:P20316 "Under høststjærnen" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20141 <http://viaf.org/viaf/309525997/exp/nob/1020> ;
@@ -17753,7 +17683,6 @@
     rdfs:label "Unter Herbststernen / Knut Hamsun ; translated by Julius Sandmeier and Sophie Angermann. – German"@en,
         "Unter Herbststernen / Knut Hamsun ; oversatt av Julius Sandmeier og Sophie Angermann. – Tysk"@no ;
     rdaed:P20315 "Unter Herbststernen" ;
-    rdaed:P20316 "Under høststjærnen" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/162089799>,
@@ -17765,8 +17694,7 @@
     rdfs:label "Bajo las estrellas de otoño / Knut Hamsun. – Spanish"@en,
         "Bajo las estrellas de otoño / Knut Hamsun. – Spansk"@no ;
     rdaed:P20315 "Bajo las estrellas de otoño" ;
-    rdaed:P20316 "Bajo la estrella de otoño : Relato de un vagabundo",
-        "Under høststjernen" ;
+    rdaed:P20316 "Bajo la estrella de otoño : Relato de un vagabundo" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20141 <http://viaf.org/viaf/309525997/exp/nob/1020> ;
@@ -17776,7 +17704,6 @@
     rdfs:label "In sprookjesland / Knut Hamsun. – Dutch"@en,
         "In sprookjesland / Knut Hamsun. – Nederlandsk"@no ;
     rdaed:P20315 "In sprookjesland" ;
-    rdaed:P20316 "I æventyrland" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/dut> ;
     rdaeo:P20141 <http://viaf.org/viaf/309525999/exp/nob/1020> ;
@@ -17786,8 +17713,6 @@
     rdfs:label "In Wonderland / Knut Hamsun ; translated by Sverre Lyngstad. – English"@en,
         "In Wonderland / Knut Hamsun ; oversatt av Sverre Lyngstad. – Engelsk"@no ;
     rdaed:P20315 "In Wonderland" ;
-    rdaed:P20316 "I æventyrland",
-        "In wonderland" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/111655332> ;
@@ -17798,7 +17723,6 @@
     rdfs:label "Benoni Benoni / Knut Hamsun. – English"@en,
         "Benoni Benoni / Knut Hamsun. – Engelsk"@no ;
     rdaed:P20315 "Benoni Benoni" ;
-    rdaed:P20316 "Benoni" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20141 <http://viaf.org/viaf/310234238/exp/nob/1020> ;
@@ -17808,7 +17732,6 @@
     rdfs:label "Benoni Benoni / Knut Hamsun ; translated by Arthur G. Chater. – English"@en,
         "Benoni Benoni / Knut Hamsun ; oversatt av Arthur G. Chater. – Engelsk"@no ;
     rdaed:P20315 "Benoni Benoni" ;
-    rdaed:P20316 "Benoni" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/75478520> ;
@@ -17819,7 +17742,6 @@
     rdfs:label "Benoni / Knut Hamsun ; translated by Georges Sautreau. – French"@en,
         "Benoni / Knut Hamsun ; oversatt av Georges Sautreau. – Fransk"@no ;
     rdaed:P20315 "Benoni" ;
-    rdaed:P20316 "Benoni" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/14776516> ;
@@ -17830,8 +17752,6 @@
     rdfs:label "Benoni / Knut Hamsun. – German"@en,
         "Benoni / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "Benoni" ;
-    rdaed:P20316 "Benoni",
-        "Gesammelte Werke in 12 Bänden : Bd. 4 : Benoni : Roman [u. a.]" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20141 <http://viaf.org/viaf/310234238/exp/nob/1020> ;
@@ -17851,8 +17771,6 @@
     rdfs:label "Benoni / Knut Hamsun ; translated by Mathilde Mann. – German"@en,
         "Benoni / Knut Hamsun ; oversatt av Mathilde Mann. – Tysk"@no ;
     rdaed:P20315 "Benoni" ;
-    rdaed:P20316 "Benoni",
-        "Benoni : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/72158557> ;
@@ -17863,8 +17781,6 @@
     rdfs:label "In the Grip of Life / Knut Hamsun. – English"@en,
         "In the Grip of Life / Knut Hamsun. – Engelsk"@no ;
     rdaed:P20315 "In the Grip of Life" ;
-    rdaed:P20316 "In the grip of life",
-        "Livet ivold" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20141 <http://viaf.org/viaf/312486496/exp/nob/1020> ;
@@ -17874,8 +17790,6 @@
     rdfs:label "Vom Teufel geholt / Knut Hamsun ; translated by Werner von Grünau. – German"@en,
         "Vom Teufel geholt / Knut Hamsun ; oversatt av Werner von Grünau. – Tysk"@no ;
     rdaed:P20315 "Vom Teufel geholt" ;
-    rdaed:P20316 "Livet ivold",
-        "Vom Teufel geholt : Schauspiel in 4 Akten" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/49404449> ;
@@ -17886,8 +17800,6 @@
     rdfs:label "Vom Teufel geholt / Knut Hamsun ; translated by Carl Morburger. – German"@en,
         "Vom Teufel geholt / Knut Hamsun ; oversatt av Carl Morburger. – Tysk"@no ;
     rdaed:P20315 "Vom Teufel geholt" ;
-    rdaed:P20316 "Livet ivold",
-        "Vom Teufel geholt : Schauspiel in 4 Akten" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/62566877> ;
@@ -17898,7 +17810,6 @@
     rdfs:label "Night roamers and other stories / Knut Hamsun. – English"@en,
         "Night roamers and other stories / Knut Hamsun. – Engelsk"@no ;
     rdaed:P20315 "Night roamers and other stories" ;
-    rdaed:P20316 "Livsfragmenter" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20141 <http://viaf.org/viaf/312501980/exp/nob/1020> ;
@@ -17908,7 +17819,6 @@
     rdfs:label "Fragments de vie / Knut Hamsun. – French"@en,
         "Fragments de vie / Knut Hamsun. – Fransk"@no ;
     rdaed:P20315 "Fragments de vie" ;
-    rdaed:P20316 "Livsfragmenter" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20141 <http://viaf.org/viaf/312501980/exp/nob/1020> ;
@@ -17918,7 +17828,6 @@
     rdfs:label "Ein Lebensfragment / Knut Hamsun ; translated by Gert Imbeck and Lothar Schneider. – German"@en,
         "Ein Lebensfragment / Knut Hamsun ; oversatt av Gert Imbeck og Lothar Schneider. – Tysk"@no ;
     rdaed:P20315 "Ein Lebensfragment" ;
-    rdaed:P20316 "Livsfragmenter" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/5620149108472868780007>,
@@ -17930,7 +17839,6 @@
     rdfs:label "Femmes à la fontaine : roman / Knut Hamsun ; translated by Régis Boyer. – French"@en,
         "Femmes à la fontaine : roman / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "Femmes à la fontaine : roman" ;
-    rdaed:P20316 "Konerne ved vandposten" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/66602903> ;
@@ -17941,7 +17849,6 @@
     rdfs:label "Konene ved vannposten / Knut Hamsun ; read by Nils Johnson. – Spoken word, Norwegian Bokmål"@en,
         "Konene ved vannposten / Knut Hamsun ; lest av Nils Johnson. – Tale, bokmål"@no ;
     rdaed:P20315 "Konene ved vannposten" ;
-    rdaed:P20316 "Konerne ved vandposten" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/228279275> ;
@@ -17951,7 +17858,6 @@
     rdfs:label "Der wilde Chor / Knut Hamsun. – German"@en,
         "Der wilde Chor / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "Der wilde Chor" ;
-    rdaed:P20316 "Det vilde kor" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20141 <http://viaf.org/viaf/316368447/exp/nob/1020> ;
@@ -17961,8 +17867,7 @@
     rdfs:label "Der wilde Chor / Knut Hamsun ; translated by Hermann Hiltbrunner. – German"@en,
         "Der wilde Chor / Knut Hamsun ; oversatt av Hermann Hiltbrunner. – Tysk"@no ;
     rdaed:P20315 "Der wilde Chor" ;
-    rdaed:P20316 "Das ewige Brausen",
-        "Det vilde kor" ;
+    rdaed:P20316 "Das ewige Brausen" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/62343206> ;
@@ -17973,7 +17878,6 @@
     rdfs:label "Aux portes du royaume / Knut Hamsun ; translated by Catherine d' At and Karin Meland. – French"@en,
         "Aux portes du royaume / Knut Hamsun ; oversatt av Catherine d' At og Karin Meland. – Fransk"@no ;
     rdaed:P20315 "Aux portes du royaume" ;
-    rdaed:P20316 "Ved rigets port" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/200905047>,
@@ -17985,8 +17889,6 @@
     rdfs:label "An des Reiches Pforten / Knut Hamsun. – German"@en,
         "An des Reiches Pforten / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "An des Reiches Pforten" ;
-    rdaed:P20316 "An des Reiches Pforten : Schauspiel in 4 Aufz. u. 1 Vorspiel",
-        "Ved rigets port" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20141 <http://viaf.org/viaf/316992494/exp/nob/1020> ;
@@ -17996,7 +17898,6 @@
     rdfs:label "August / Knut Hamsun. – English"@en,
         "August / Knut Hamsun. – Engelsk"@no ;
     rdaed:P20315 "August" ;
-    rdaed:P20316 "August" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20141 <http://viaf.org/viaf/3267149068489065730001/exp/nob/1020> ;
@@ -18006,7 +17907,6 @@
     rdfs:label "Augusto / Knut Hamsun ; translated by I. P. B. – Spanish"@en,
         "Augusto / Knut Hamsun ; oversatt av I. P. B. – Spansk"@no ;
     rdaed:P20315 "Augusto" ;
-    rdaed:P20316 "August" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://example.org/ipb> ;
@@ -18058,7 +17958,6 @@
     rdfs:label "Victoria / Knut Hamsun ; translated by Sverre Lyngstad. – English"@en,
         "Victoria / Knut Hamsun ; oversatt av Sverre Lyngstad. – Engelsk"@no ;
     rdaed:P20315 "Victoria" ;
-    rdaed:P20316 "Victoria" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/111655332> ;
@@ -18069,8 +17968,6 @@
     rdfs:label "Victoria / Knut Hamsun ; translated by Oliver Stallybrass. – English"@en,
         "Victoria / Knut Hamsun ; oversatt av Oliver Stallybrass. – Engelsk"@no ;
     rdaed:P20315 "Victoria" ;
-    rdaed:P20316 "Victoria",
-        "Victoria : a love story" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/68969509> ;
@@ -18081,7 +17978,6 @@
     rdfs:label "Victoria / Knut Hamsun. – French"@en,
         "Victoria / Knut Hamsun. – Fransk"@no ;
     rdaed:P20315 "Victoria" ;
-    rdaed:P20316 "Victoria" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20141 <http://viaf.org/viaf/395147270538135700001/exp/nob/1020> ;
@@ -18091,7 +17987,6 @@
     rdfs:label "Victoria : histoire d'un amour / Knut Hamsun ; translated by Ingunn Galtier and Régis Boyer. – French"@en,
         "Victoria : histoire d'un amour / Knut Hamsun ; oversatt av Ingunn Galtier og Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "Victoria : histoire d'un amour" ;
-    rdaed:P20316 "Victoria" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/277228294>,
@@ -18103,7 +17998,6 @@
     rdfs:label "Victoria : roman / Knut Hamsun ; translated by Alain-Pierre Guilhon and Ingunn Galtier. – French"@en,
         "Victoria : roman / Knut Hamsun ; oversatt av Alain-Pierre Guilhon og Ingunn Galtier. – Fransk"@no ;
     rdaed:P20315 "Victoria : roman" ;
-    rdaed:P20316 "Victoria" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/277228294>,
@@ -18115,7 +18009,6 @@
     rdfs:label "Victoria / Knut Hamsun ; translated by Ingunn Galtier. – French"@en,
         "Victoria / Knut Hamsun ; oversatt av Ingunn Galtier. – Fransk"@no ;
     rdaed:P20315 "Victoria" ;
-    rdaed:P20316 "Victoria" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/277228294> ;
@@ -18126,8 +18019,6 @@
     rdfs:label "Victoria / Knut Hamsun. – Spoken word, German"@en,
         "Victoria / Knut Hamsun. – Tale, tysk"@no ;
     rdaed:P20315 "Victoria" ;
-    rdaed:P20316 "Victoria",
-        "Victoria : d. Geschichte e. Liebe" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20231 <http://viaf.org/viaf/395147270538135700001> .
@@ -18157,7 +18048,6 @@
     rdfs:label "Victoria / Knut Hamsun ; translated by Berta Curiel and María Lana Jorvell. – Spanish"@en,
         "Victoria / Knut Hamsun ; oversatt av Berta Curiel og María Lana Jorvell. – Spansk"@no ;
     rdaed:P20315 "Victoria" ;
-    rdaed:P20316 "Victoria" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://example.org/curielberta>,
@@ -18185,7 +18075,6 @@
     rdfs:label "Dronningen av Saba / Knut Hamsun. – German"@en,
         "Dronningen av Saba / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "Dronningen av Saba" ;
-    rdaed:P20316 "Dronningen af Saba" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20231 <http://viaf.org/viaf/4225152200827914400006> .
@@ -18238,7 +18127,6 @@
     rdfs:label "A Wanderer Plays on Muted Strings / Knut Hamsun. – English"@en,
         "A Wanderer Plays on Muted Strings / Knut Hamsun. – Engelsk"@no ;
     rdaed:P20315 "A Wanderer Plays on Muted Strings" ;
-    rdaed:P20316 "En Vandrer spiller med sordin" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20141 <http://viaf.org/viaf/5470149068540465730001/exp/nob/1020> ;
@@ -18248,7 +18136,6 @@
     rdfs:label "A Wanderer Plays on Muted Strings / Knut Hamsun ; translated by W.W Worster. – English"@en,
         "A Wanderer Plays on Muted Strings / Knut Hamsun ; oversatt av W.W Worster. – Engelsk"@no ;
     rdaed:P20315 "A Wanderer Plays on Muted Strings" ;
-    rdaed:P20316 "En Vandrer spiller med sordin" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/7014928> ;
@@ -18259,7 +18146,6 @@
     rdfs:label "Un vagabundo toca con sordina / Knut Hamsun. – Spanish"@en,
         "Un vagabundo toca con sordina / Knut Hamsun. – Spansk"@no ;
     rdaed:P20315 "Un vagabundo toca con sordina" ;
-    rdaed:P20316 "En Vandrer spiller med sordin" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20141 <http://viaf.org/viaf/5470149068540465730001/exp/nob/1020> ;
@@ -18269,7 +18155,6 @@
     rdfs:label "El redactor Lynge : novela / Knut Hamsun. – Spanish"@en,
         "El redactor Lynge : novela / Knut Hamsun. – Spansk"@no ;
     rdaed:P20315 "El redactor Lynge : novela" ;
-    rdaed:P20316 "Redaktør Lynge" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20141 <http://viaf.org/viaf/5518152200833114400003/exp/nob/1020> ;
@@ -18322,7 +18207,6 @@
     rdfs:label "Une révolution de rue / Knut Hamsun. – French"@en,
         "Une révolution de rue / Knut Hamsun. – Fransk"@no ;
     rdaed:P20315 "Une révolution de rue" ;
-    rdaed:P20316 "En Gaderevolution" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20231 <http://viaf.org/viaf/59083692/engaderevolution> .
@@ -18371,7 +18255,6 @@
     rdfs:label "Un peu de Paris / Knut Hamsun. – French"@en,
         "Un peu de Paris / Knut Hamsun. – Fransk"@no ;
     rdaed:P20315 "Un peu de Paris" ;
-    rdaed:P20316 "Lidt Paris" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20231 <http://viaf.org/viaf/59083692/lidtparis> .
@@ -18481,7 +18364,6 @@
     rdfs:label "Le Jeu de la vie / Knut Hamsun ; translated by Catherine d' At and Karin Meland. – French"@en,
         "Le Jeu de la vie / Knut Hamsun ; oversatt av Catherine d' At og Karin Meland. – Fransk"@no ;
     rdaed:P20315 "Le Jeu de la vie" ;
-    rdaed:P20316 "Livets spil" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/200905047>,
@@ -18493,8 +18375,6 @@
     rdfs:label "Spiel des Lebens / Knut Hamsun. – German"@en,
         "Spiel des Lebens / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "Spiel des Lebens" ;
-    rdaed:P20316 "Livets spil",
-        "Spiel des Lebens : Schauspiel in vier Aufzügen" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20141 <http://viaf.org/viaf/7398163939428301160007/exp/nob/1020> ;
@@ -18504,8 +18384,6 @@
     rdfs:label "Spiel des Lebens / Knut Hamsun ; translated by Christian Morgenstern and Julius Sandmeier. – German"@en,
         "Spiel des Lebens / Knut Hamsun ; oversatt av Christian Morgenstern og Julius Sandmeier. – Tysk"@no ;
     rdaed:P20315 "Spiel des Lebens" ;
-    rdaed:P20316 "Livets spil",
-        "Spiel des Lebens : Schauspiel in 4 Aufz" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/68933209>,
@@ -18561,8 +18439,7 @@
     rdfs:label "Cultural life of modern America / Knut Hamsun ; translated by Barbara Gordon Morgridge. – English"@en,
         "Cultural life of modern America / Knut Hamsun ; oversatt av Barbara Gordon Morgridge. – Engelsk"@no ;
     rdaed:P20315 "Cultural life of modern America" ;
-    rdaed:P20316 "Fra det moderne Amerikas aandsliv",
-        "The cultural life of modern America" ;
+    rdaed:P20316 "The cultural life of modern America" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/19274528> ;
@@ -18573,7 +18450,6 @@
     rdfs:label "La vie culturelle de l'Amérique : de la vie de l'esprit dans l'Amérique moderne / Knut Hamsun. – French"@en,
         "La vie culturelle de l'Amérique : de la vie de l'esprit dans l'Amérique moderne / Knut Hamsun. – Fransk"@no ;
     rdaed:P20315 "La vie culturelle de l'Amérique : de la vie de l'esprit dans l'Amérique moderne" ;
-    rdaed:P20316 "Fra det moderne Amerikas aandsliv" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20141 <http://viaf.org/viaf/811145857935523020027/exp/nob/1020> ;
@@ -18584,8 +18460,7 @@
         "Aus dem Geistesleben des modernen Amerika / Knut Hamsun. – Tysk"@no ;
     rdaed:P20071 "Vom Geistesleben des modernen Amerika ; Festina lente." ;
     rdaed:P20315 "Aus dem Geistesleben des modernen Amerika" ;
-    rdaed:P20316 "Amerika : kritische Schriften",
-        "Fra det moderne Amerikas aandsliv" ;
+    rdaed:P20316 "Amerika : kritische Schriften" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20141 <http://viaf.org/viaf/811145857935523020027/exp/nob/1020> ;
@@ -18595,8 +18470,7 @@
     rdfs:label "Aus dem Geistesleben des modernen Amerika / Knut Hamsun ; translated by Jutta Knust. – German"@en,
         "Aus dem Geistesleben des modernen Amerika / Knut Hamsun ; oversatt av Jutta Knust. – Tysk"@no ;
     rdaed:P20315 "Aus dem Geistesleben des modernen Amerika" ;
-    rdaed:P20316 "Amerika : krit. Schriften",
-        "Fra det moderne Amerikas aandsliv" ;
+    rdaed:P20316 "Amerika : krit. Schriften" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/300450283> ;
@@ -18607,8 +18481,7 @@
     rdfs:label "Enfants de l'époque / Knut Hamsun ; translated by Régis Boyer. – French"@en,
         "Enfants de l'époque / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "Enfants de l'époque" ;
-    rdaed:P20316 "Børn av tiden",
-        "Enfants de leur temps : roman" ;
+    rdaed:P20316 "Enfants de leur temps : roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/66602903> ;
@@ -18619,7 +18492,6 @@
     rdfs:label "Kinder ihrer Zeit / Knut Hamsun. – German"@en,
         "Kinder ihrer Zeit / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "Kinder ihrer Zeit" ;
-    rdaed:P20316 "Børn av tiden" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20141 <http://viaf.org/viaf/8450149068552765730000/exp/nob/1020> ;
@@ -18629,7 +18501,6 @@
     rdfs:label "Kinder ihrer Zeit / Knut Hamsun ; translated by Ernst Harthern and Pauline Klaiber-Gottschau. – German"@en,
         "Kinder ihrer Zeit / Knut Hamsun ; oversatt av Ernst Harthern og Pauline Klaiber-Gottschau. – Tysk"@no ;
     rdaed:P20315 "Kinder ihrer Zeit" ;
-    rdaed:P20316 "Børn av tiden" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/3277778>,
@@ -18772,7 +18643,6 @@
     rdfs:label "Rêveurs / Knut Hamsun ; translated by Georges Sautreau. – French"@en,
         "Rêveurs / Knut Hamsun ; oversatt av Georges Sautreau. – Fransk"@no ;
     rdaed:P20315 "Rêveurs" ;
-    rdaed:P20316 "Sværmere" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/14776516> ;
@@ -18783,7 +18653,6 @@
     rdfs:label "Schwärmer / Knut Hamsun ; translated by Jutta Knust. – German"@en,
         "Schwärmer / Knut Hamsun ; oversatt av Jutta Knust. – Tysk"@no ;
     rdaed:P20315 "Schwärmer" ;
-    rdaed:P20316 "Sværmere" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/300450283> ;
@@ -18794,8 +18663,6 @@
     rdfs:label "Schwärmer / Knut Hamsun ; translated by Jutta Knust and Theodor Knust. – German"@en,
         "Schwärmer / Knut Hamsun ; oversatt av Jutta Knust og Theodor Knust. – Tysk"@no ;
     rdaed:P20315 "Schwärmer" ;
-    rdaed:P20316 "Schwärmer : Roman",
-        "Sværmere" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/300450283>,
@@ -18807,7 +18674,6 @@
     rdfs:label "Soñadores / Knut Hamsun ; translated by José Ramón Pérez Bances and Montserrat Costa. – Spanish"@en,
         "Soñadores / Knut Hamsun ; oversatt av José Ramón Pérez Bances og Montserrat Costa. – Spansk"@no ;
     rdaed:P20315 "Soñadores" ;
-    rdaed:P20316 "Sværmere" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/86764049>,
@@ -18819,7 +18685,6 @@
     rdfs:label "Soñadores / Knut Hamsun ; translated by José Ramón Pérez Bances. – Spanish"@en,
         "Soñadores / Knut Hamsun ; oversatt av José Ramón Pérez Bances. – Spansk"@no ;
     rdaed:P20315 "Soñadores" ;
-    rdaed:P20316 "Sværmere" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/98992194> ;
@@ -18849,7 +18714,6 @@
     rdfs:label "Königin Tamara / Knut Hamsun. – German"@en,
         "Königin Tamara / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "Königin Tamara" ;
-    rdaed:P20316 "Dronning Tamara" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20141 <http://www.wikidata.org/entity/Q11966095/exp/nob/1020> ;
@@ -18859,7 +18723,6 @@
     rdfs:label "Fighting Life / Knut Hamsun. – English"@en,
         "Fighting Life / Knut Hamsun. – Engelsk"@no ;
     rdaed:P20315 "Fighting Life" ;
-    rdaed:P20316 "Stridende liv" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20141 <http://www.wikidata.org/entity/Q12003637/exp/nob/1020> ;
@@ -18908,7 +18771,6 @@
     rdfs:label "Crépuscule / Knut Hamsun ; translated by Catherine d' At and Karin Meland. – French"@en,
         "Crépuscule / Knut Hamsun ; oversatt av Catherine d' At og Karin Meland. – Fransk"@no ;
     rdaed:P20315 "Crépuscule" ;
-    rdaed:P20316 "Aftenrøde" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/200905047>,
@@ -18920,8 +18782,6 @@
     rdfs:label "Abendröte / Knut Hamsun. – German"@en,
         "Abendröte / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "Abendröte" ;
-    rdaed:P20316 "Abendröte : Schauspiel in 3 Aufz",
-        "Aftenrøde" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20141 <http://www.wikidata.org/entity/Q15062327/exp/nob/1020> ;
@@ -18966,7 +18826,6 @@
     rdfs:label "Paa gjengrodde stier / Reidar Sørensen. – Norwegian Bokmål"@en,
         "Paa gjengrodde stier / Reidar Sørensen. – Bokmål"@no ;
     rdaed:P20315 "Paa gjengrodde stier" ;
-    rdaed:P20316 "Paa gjengrodde stier" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <https://isni.org/isni/0000000361689449/paagjengroddestier> .
@@ -18987,7 +18846,6 @@
         "Markens grøde / Gunnar Sommerfeldt ; med Amund Rydland, Karen Thalbitzer [mfl.]. – Todimensjonalt levende bilde, flere språk"@no ;
     rdaed:P20065 <http://id.loc.gov/vocabulary/iso639-2/nor> ;
     rdaed:P20315 "Markens grøde" ;
-    rdaed:P20316 "Markens grøde" ;
     rdaeo:P20001 rdaco:1023 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/mul> ;
     rdaeo:P20012 <http://viaf.org/viaf/102357788>,
@@ -19013,7 +18871,6 @@
         <http://id.loc.gov/vocabulary/iso639-2/nor>,
         <http://id.loc.gov/vocabulary/iso639-2/swe> ;
     rdaed:P20315 "Sult" ;
-    rdaed:P20316 "Sult" ;
     rdaeo:P20001 rdaco:1023 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/mul> ;
     rdaeo:P20012 <http://viaf.org/viaf/7363914>,
@@ -19036,7 +18893,6 @@
     rdfs:label "Misterios : Mysteries / directed by Paul de Lussanet ; with Rita Tushingham, Rutger Hauer [et al.]. – Two-dimensional moving image, English, Spanish"@en,
         "Misterios : Mysteries / regi Paul de Lussanet ; med Rita Tushingham, Rutger Hauer [mfl.]. – Todimensjonalt levende bilde, engelsk, spansk"@no ;
     rdaed:P20315 "Misterios : Mysteries" ;
-    rdaed:P20316 "Mysteries" ;
     rdaeo:P20001 rdaco:1023 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng>,
         <http://id.loc.gov/vocabulary/iso639-2/spa> ;
@@ -19062,7 +18918,6 @@
         "Landstrykere / regi Ola Solum ; med Helge Jordal, Marika Lagercrantz [mfl.]. – Todimensjonalt levende bilde, flere språk"@no ;
     rdaed:P20065 <http://id.loc.gov/vocabulary/iso639-2/nor> ;
     rdaed:P20315 "Landstrykere" ;
-    rdaed:P20316 "Landstrykere" ;
     rdaeo:P20001 rdaco:1023 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/mul> ;
     rdaeo:P20012 <http://viaf.org/viaf/102357918>,
@@ -19095,7 +18950,6 @@
         "Pan / Henning Carlsen ; med Bjørn Sundquist, Lasse Kolsrud [mfl.]. – Todimensjonalt levende bilde, flere språk"@no ;
     rdaed:P20065 <http://id.loc.gov/vocabulary/iso639-2/nor> ;
     rdaed:P20315 "Pan" ;
-    rdaed:P20316 "Pan" ;
     rdaeo:P20001 rdaco:1023 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/mul> ;
     rdaeo:P20012 <http://viaf.org/viaf/12515725>,
@@ -19261,7 +19115,6 @@
     rdfs:label "Der Ring schließt sich / Knut Hamsun. – German"@en,
         "Der Ring schließt sich / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "Der Ring schließt sich" ;
-    rdaed:P20316 "Ringen sluttet" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20141 <http://viaf.org/viaf/1000145424544686831283/exp/nob/1020> ;
@@ -19271,9 +19124,6 @@
     rdfs:label "Der Ring schließt sich / Knut Hamsun ; translated by Julius Sandmeier and Sophie Angermann. – German"@en,
         "Der Ring schließt sich / Knut Hamsun ; oversatt av Julius Sandmeier og Sophie Angermann. – Tysk"@no ;
     rdaed:P20315 "Der Ring schließt sich" ;
-    rdaed:P20316 "Der Ring schliesst sich",
-        "Der Ring schließt sich : Roman",
-        "Ringen sluttet" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/162089799>,
@@ -19285,8 +19135,6 @@
     rdfs:label "Shallow Soil / Knut Hamsun ; translated by Carl Christian Hyllested. – English"@en,
         "Shallow Soil / Knut Hamsun ; oversatt av Carl Christian Hyllested. – Engelsk"@no ;
     rdaed:P20315 "Shallow Soil" ;
-    rdaed:P20316 "Ny jord",
-        "Shallow soil" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/83145970108832251045> ;
@@ -19297,8 +19145,6 @@
     rdfs:label "Tierra nueva / Knut Hamsun. – Spanish"@en,
         "Tierra nueva / Knut Hamsun. – Spansk"@no ;
     rdaed:P20315 "Tierra nueva" ;
-    rdaed:P20316 "Ny jord",
-        "Tierra nueva : novela" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20141 <http://viaf.org/viaf/143144898528950290965/exp/nob/1020> ;
@@ -19308,9 +19154,6 @@
     rdfs:label "Rosa / Knut Hamsun. – French"@en,
         "Rosa / Knut Hamsun. – Fransk"@no ;
     rdaed:P20315 "Rosa" ;
-    rdaed:P20316 "Rosa",
-        "Rosa : d'apres les papiers de l'etudiant Parelius",
-        "Rosa : d'après les papiers de l'étudiant Parelius" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20141 <http://viaf.org/viaf/1650145424683186830143/exp/nob/1020> ;
@@ -19320,7 +19163,6 @@
     rdfs:label "Rosa / Knut Hamsun ; translated by Régis Boyer. – French"@en,
         "Rosa / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "Rosa" ;
-    rdaed:P20316 "Rosa" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/66602903> ;
@@ -19331,7 +19173,6 @@
     rdfs:label "Rosa / Knut Hamsun ; read by Nils Johnson. – Spoken word, Norwegian Bokmål"@en,
         "Rosa / Knut Hamsun ; lest av Nils Johnson. – Tale, bokmål"@no ;
     rdaed:P20315 "Rosa" ;
-    rdaed:P20316 "Rosa" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/228279275> ;
@@ -19341,7 +19182,6 @@
     rdfs:label "Rosa / Knut Hamsun ; translated by Rafaela Ferro. – Spanish"@en,
         "Rosa / Knut Hamsun ; oversatt av Rafaela Ferro. – Spansk"@no ;
     rdaed:P20315 "Rosa" ;
-    rdaed:P20316 "Rosa" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://example.org/ferrorafaela> ;
@@ -19358,7 +19198,6 @@
     rdfs:label "Vagabonds / Knut Hamsun ; translated by Jean Petithuguenin. – French"@en,
         "Vagabonds / Knut Hamsun ; oversatt av Jean Petithuguenin. – Fransk"@no ;
     rdaed:P20315 "Vagabonds" ;
-    rdaed:P20316 "Landstrykere" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/222438819> ;
@@ -19369,7 +19208,6 @@
     rdfs:label "Landstrykere / Knut Hamsun ; read by Arne Thomas Olsen. – Spoken word, Norwegian Bokmål"@en,
         "Landstrykere / Knut Hamsun ; lest av Arne Thomas Olsen. – Tale, bokmål"@no ;
     rdaed:P20315 "Landstrykere" ;
-    rdaed:P20316 "Landstrykere" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/37022260> ;
@@ -19388,8 +19226,6 @@
     rdfs:label "La Dernière Joie / Knut Hamsun ; translated by Régis Boyer. – French"@en,
         "La Dernière Joie / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "La Dernière Joie" ;
-    rdaed:P20316 "Den siste glæde",
-        "La dernière joie" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/66602903> ;
@@ -19400,7 +19236,6 @@
     rdfs:label "Den siste glæde / Knut Hamsun ; read by Arne Thomas Olsen. – Spoken word, Norwegian Bokmål"@en,
         "Den siste glæde / Knut Hamsun ; lest av Arne Thomas Olsen. – Tale, bokmål"@no ;
     rdaed:P20315 "Den siste glæde" ;
-    rdaed:P20316 "Den siste glæde" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/37022260> ;
@@ -19410,8 +19245,7 @@
     rdfs:label "The Last Chapter / Knut Hamsun. – English"@en,
         "The Last Chapter / Knut Hamsun. – Engelsk"@no ;
     rdaed:P20315 "The Last Chapter" ;
-    rdaed:P20316 "Chapter the last",
-        "Siste kapitel" ;
+    rdaed:P20316 "Chapter the last" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20141 <http://viaf.org/viaf/188303684/exp/nob/1020> ;
@@ -19421,8 +19255,6 @@
     rdfs:label "Das letzte Kapitel / Knut Hamsun ; translated by Hermann Hiltbrunner. – German"@en,
         "Das letzte Kapitel / Knut Hamsun ; oversatt av Hermann Hiltbrunner. – Tysk"@no ;
     rdaed:P20315 "Das letzte Kapitel" ;
-    rdaed:P20316 "Das letzte Kapitel : Roman",
-        "Siste kapitel" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/62343206> ;
@@ -19433,8 +19265,7 @@
     rdfs:label "Road leads on / Knut Hamsun ; translated by Eugene Gay-Tifft. – English"@en,
         "Road leads on / Knut Hamsun ; oversatt av Eugene Gay-Tifft. – Engelsk"@no ;
     rdaed:P20315 "Road leads on" ;
-    rdaed:P20316 "Men livet lever",
-        "The road leads on" ;
+    rdaed:P20316 "The road leads on" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/13844665> ;
@@ -19445,7 +19276,6 @@
     rdfs:label "Mais la vie continue : roman / Knut Hamsun ; translated by Régis Boyer. – French"@en,
         "Mais la vie continue : roman / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "Mais la vie continue : roman" ;
-    rdaed:P20316 "Men livet lever" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/66602903> ;
@@ -19456,7 +19286,6 @@
     rdfs:label "Men livet lever / Knut Hamsun ; read by Arne Thomas Olsen. – Spoken word, Norwegian Bokmål"@en,
         "Men livet lever / Knut Hamsun ; lest av Arne Thomas Olsen. – Tale, bokmål"@no ;
     rdaed:P20315 "Men livet lever" ;
-    rdaed:P20316 "Men livet lever" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/37022260> ;
@@ -19466,7 +19295,6 @@
     rdfs:label "Pan, aus Leutnant Thomas Glahns Papieren / Knut Hamsun ; translated by Sophie Angermann. – German"@en,
         "Pan, aus Leutnant Thomas Glahns Papieren / Knut Hamsun ; oversatt av Sophie Angermann. – Tysk"@no ;
     rdaed:P20315 "Pan, aus Leutnant Thomas Glahns Papieren" ;
-    rdaed:P20316 "Pan" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/162089799> ;
@@ -19477,8 +19305,7 @@
     rdfs:label "Pan, aus Leutnant Thomas Glahns Papieren / Knut Hamsun ; translated by Marie von Borch. – German"@en,
         "Pan, aus Leutnant Thomas Glahns Papieren / Knut Hamsun ; oversatt av Marie von Borch. – Tysk"@no ;
     rdaed:P20315 "Pan, aus Leutnant Thomas Glahns Papieren" ;
-    rdaed:P20316 "Pan",
-        "Pan : aus Leutnant Thomas Glahns Papieren" ;
+    rdaed:P20316 "Pan : aus Leutnant Thomas Glahns Papieren" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/39365507> ;
@@ -19489,7 +19316,6 @@
     rdfs:label "Pan / Knut Hamsun ; read by Nils Johnson ; performed by Jan Garbarek. – Spoken word, Norwegian Bokmål"@en,
         "Pan / Knut Hamsun ; lest av Nils Johnson ; framført av Jan Garbarek. – Tale, bokmål"@no ;
     rdaed:P20315 "Pan" ;
-    rdaed:P20316 "Pan" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20020 <http://viaf.org/viaf/115557508> ;
@@ -19500,7 +19326,6 @@
     rdfs:label "Mysteries / Knut Hamsun. – English"@en,
         "Mysteries / Knut Hamsun. – Engelsk"@no ;
     rdaed:P20315 "Mysteries" ;
-    rdaed:P20316 "Mysterier" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20141 <http://viaf.org/viaf/206863699/exp/nob/1020> ;
@@ -19510,7 +19335,6 @@
     rdfs:label "Mystėres / Knut Hamsun. – French"@en,
         "Mystėres / Knut Hamsun. – Fransk"@no ;
     rdaed:P20315 "Mystėres" ;
-    rdaed:P20316 "Mysterier" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20141 <http://viaf.org/viaf/206863699/exp/nob/1020> ;
@@ -19520,7 +19344,6 @@
     rdfs:label "La ville de Segelfoss : roman / Knut Hamsun ; translated by Régis Boyer. – French"@en,
         "La ville de Segelfoss : roman / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "La ville de Segelfoss : roman" ;
-    rdaed:P20316 "Segelfoss by" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/66602903> ;
@@ -19540,8 +19363,7 @@
     rdfs:label "La Faim / Knut Hamsun ; translated by Régis Boyer. – French"@en,
         "La Faim / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "La Faim" ;
-    rdaed:P20316 "Faim",
-        "Sult" ;
+    rdaed:P20316 "Faim" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/66602903> ;
@@ -19552,7 +19374,6 @@
     rdfs:label "Hunger / Knut Hamsun ; translated by Julius Sandmeier and Sophie Angermann ; read by Oskar Werner. – Spoken word, German"@en,
         "Hunger / Knut Hamsun ; oversatt av Julius Sandmeier og Sophie Angermann ; lest av Oskar Werner. – Tale, tysk"@no ;
     rdaed:P20315 "Hunger" ;
-    rdaed:P20316 "Sult" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20022 <http://viaf.org/viaf/51881056> ;
@@ -19564,7 +19385,6 @@
     rdfs:label "Sult / Knut Hamsun ; read by Olafr Havrevold. – Spoken word, Norwegian Bokmål"@en,
         "Sult / Knut Hamsun ; lest av Olafr Havrevold. – Tale, bokmål"@no ;
     rdaed:P20315 "Sult" ;
-    rdaed:P20316 "Sult" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/111148995811759751127> ;
@@ -19574,7 +19394,6 @@
     rdfs:label "Sult / Knut Hamsun ; read by Aksel Hennie. – Spoken word, Norwegian Bokmål"@en,
         "Sult / Knut Hamsun ; lest av Aksel Hennie. – Tale, bokmål"@no ;
     rdaed:P20315 "Sult" ;
-    rdaed:P20316 "Sult" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/121856556> ;
@@ -19584,7 +19403,6 @@
     rdfs:label "Hambre / Knut Hamsun ; translated by Asunción Lorenzo and Kirsti Baggethun. – Spanish"@en,
         "Hambre / Knut Hamsun ; oversatt av Asunción Lorenzo og Kirsti Baggethun. – Spansk"@no ;
     rdaed:P20315 "Hambre" ;
-    rdaed:P20316 "Sult" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/86862248>,
@@ -19596,8 +19414,6 @@
     rdfs:label "Segen der Erde / Knut Hamsun ; translated by Julius Sandmeier and Pauline Klaiber-Gottschau. – German"@en,
         "Segen der Erde / Knut Hamsun ; oversatt av Julius Sandmeier og Pauline Klaiber-Gottschau. – Tysk"@no ;
     rdaed:P20315 "Segen der Erde" ;
-    rdaed:P20316 "Markens grøde",
-        "Segen der Erde : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/117364598>,
@@ -19610,8 +19426,7 @@
         "La bendición de la tierra / Knut Hamsun. – Spansk"@no ;
     rdaed:P20315 "La bendición de la tierra" ;
     rdaed:P20316 "Bendición de la tierra",
-        "Bendición de la tierra : novela",
-        "Markens grøde" ;
+        "Bendición de la tierra : novela" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20141 <http://viaf.org/viaf/294124367/exp/nob/1020> ;
@@ -19621,7 +19436,6 @@
     rdfs:label "La bendición de la tierra / Knut Hamsun ; translated by Asunción Lorenzo and Kirsti Baggethun. – Spanish"@en,
         "La bendición de la tierra / Knut Hamsun ; oversatt av Asunción Lorenzo og Kirsti Baggethun. – Spansk"@no ;
     rdaed:P20315 "La bendición de la tierra" ;
-    rdaed:P20316 "Markens grøde" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/86862248>,
@@ -19633,9 +19447,6 @@
     rdfs:label "Auf überwachsenen Pfaden / Knut Hamsun ; translated by Alken Bruns. – German"@en,
         "Auf überwachsenen Pfaden / Knut Hamsun ; oversatt av Alken Bruns. – Tysk"@no ;
     rdaed:P20315 "Auf überwachsenen Pfaden" ;
-    rdaed:P20316 "Auf überwachsenen Pfaden : Roman",
-        "Paa gjengrodde stier",
-        "Werkausgabe in Einzelbänden : [...] : Auf überwachsenen Pfaden : Roman / aus dem Norweg. von Alken Bruns. Mit einem Nachw. von Heinrich Detering" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/14783676> ;
@@ -19646,7 +19457,6 @@
     rdfs:label "På gjengrodde stier / Knut Hamsun ; read by Arne Thomas Olsen. – Spoken word, Norwegian Bokmål"@en,
         "På gjengrodde stier / Knut Hamsun ; lest av Arne Thomas Olsen. – Tale, bokmål"@no ;
     rdaed:P20315 "På gjengrodde stier" ;
-    rdaed:P20316 "Paa gjengrodde stier" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/37022260> ;
@@ -19656,8 +19466,6 @@
     rdfs:label "Under the Autumn Star / Knut Hamsun. – English"@en,
         "Under the Autumn Star / Knut Hamsun. – Engelsk"@no ;
     rdaed:P20315 "Under the Autumn Star" ;
-    rdaed:P20316 "Under høststjærnen",
-        "Under the autumn star" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20141 <http://viaf.org/viaf/309525997/exp/nob/1020> ;
@@ -19667,7 +19475,6 @@
     rdfs:label "Under the Autumn Star / Knut Hamsun ; translated by Gunnvor Stallybrass and Oliver Stallybrass. – English"@en,
         "Under the Autumn Star / Knut Hamsun ; oversatt av Gunnvor Stallybrass og Oliver Stallybrass. – Engelsk"@no ;
     rdaed:P20315 "Under the Autumn Star" ;
-    rdaed:P20316 "Under høststjærnen" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/16857531>,
@@ -19679,8 +19486,6 @@
     rdfs:label "Sous l'étoile d'automne / Knut Hamsun ; translated by Régis Boyer. – French"@en,
         "Sous l'étoile d'automne / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "Sous l'étoile d'automne" ;
-    rdaed:P20316 "Sous l'étoile d'automne",
-        "Under høststjærnen" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/66602903> ;
@@ -19691,7 +19496,6 @@
     rdfs:label "Under høststjernen / Knut Hamsun ; read by Arne Thomas Olsen. – Spoken word, Norwegian Bokmål"@en,
         "Under høststjernen / Knut Hamsun ; lest av Arne Thomas Olsen. – Tale, bokmål"@no ;
     rdaed:P20315 "Under høststjernen" ;
-    rdaed:P20316 "Under høststjærnen" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/37022260> ;
@@ -19701,7 +19505,6 @@
     rdfs:label "Benoni / Knut Hamsun ; translated by Régis Boyer. – French"@en,
         "Benoni / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "Benoni" ;
-    rdaed:P20316 "Benoni" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/66602903> ;
@@ -19712,7 +19515,6 @@
     rdfs:label "Benoni / Knut Hamsun ; read by Wenche Strømdahl. – Spoken word, Norwegian Bokmål"@en,
         "Benoni / Knut Hamsun ; lest av Wenche Strømdahl. – Tale, bokmål"@no ;
     rdaed:P20315 "Benoni" ;
-    rdaed:P20316 "Benoni" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/556149296182580670003> ;
@@ -19722,8 +19524,6 @@
     rdfs:label "The Women at the Pump / Knut Hamsun ; translated by Gunnvor Stallybrass and Oliver Stallybrass. – English"@en,
         "The Women at the Pump / Knut Hamsun ; oversatt av Gunnvor Stallybrass og Oliver Stallybrass. – Engelsk"@no ;
     rdaed:P20315 "The Women at the Pump" ;
-    rdaed:P20316 "Konerne ved vandposten",
-        "The women at the pump" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/16857531>,
@@ -19735,9 +19535,7 @@
     rdfs:label "Weiber am Brunnen / Knut Hamsun. – German"@en,
         "Weiber am Brunnen / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "Weiber am Brunnen" ;
-    rdaed:P20316 "Die Weiber am Brunnen : Roman",
-        "Gesammelte Werke in 12 Bänden : Bd. 9 : Die Weiber am Brunnen : Roman",
-        "Konerne ved vandposten" ;
+    rdaed:P20316 "Die Weiber am Brunnen : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20141 <http://viaf.org/viaf/312526705/exp/nob/1020> ;
@@ -19747,8 +19545,7 @@
     rdfs:label "Weiber am Brunnen / Knut Hamsun ; translated by Julius Sandmeier. – German"@en,
         "Weiber am Brunnen / Knut Hamsun ; oversatt av Julius Sandmeier. – Tysk"@no ;
     rdaed:P20315 "Weiber am Brunnen" ;
-    rdaed:P20316 "Die Weiber am Brunnen : Roman",
-        "Konerne ved vandposten" ;
+    rdaed:P20316 "Die Weiber am Brunnen : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/59960174> ;
@@ -19759,8 +19556,6 @@
     rdfs:label "Der wilde Chor / Knut Hamsun ; translated by Heinrich Goebel. – German"@en,
         "Der wilde Chor / Knut Hamsun ; oversatt av Heinrich Goebel. – Tysk"@no ;
     rdaed:P20315 "Der wilde Chor" ;
-    rdaed:P20316 "Der wilde Chor : [Gedichte]",
-        "Det vilde kor" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/67349916> ;
@@ -19771,7 +19566,6 @@
     rdfs:label "Det vilde kor / Knut Hamsun ; read by Arne Thomas Olsen. – Spoken word, Norwegian Bokmål"@en,
         "Det vilde kor / Knut Hamsun ; lest av Arne Thomas Olsen. – Tale, bokmål"@no ;
     rdaed:P20315 "Det vilde kor" ;
-    rdaed:P20316 "Det vilde kor" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/37022260> ;
@@ -19781,8 +19575,6 @@
     rdfs:label "Auguste le marin / Knut Hamsun. – French"@en,
         "Auguste le marin / Knut Hamsun. – Fransk"@no ;
     rdaed:P20315 "Auguste le marin" ;
-    rdaed:P20316 "August",
-        "Auguste le marin : roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20141 <http://viaf.org/viaf/3267149068489065730001/exp/nob/1020> ;
@@ -19792,7 +19584,6 @@
     rdfs:label "August / Knut Hamsun ; read by Arne Thomas Olsen. – Spoken word, Norwegian Bokmål"@en,
         "August / Knut Hamsun ; lest av Arne Thomas Olsen. – Tale, bokmål"@no ;
     rdaed:P20315 "August" ;
-    rdaed:P20316 "August" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/37022260> ;
@@ -19802,8 +19593,6 @@
     rdfs:label "Victoria / Knut Hamsun ; translated by Alken Bruns. – German"@en,
         "Victoria / Knut Hamsun ; oversatt av Alken Bruns. – Tysk"@no ;
     rdaed:P20315 "Victoria" ;
-    rdaed:P20316 "Victoria",
-        "Victoria : eine Liebesgeschichte" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/14783676> ;
@@ -19814,7 +19603,6 @@
     rdfs:label "Victoria / Knut Hamsun ; read by Nils Johnson ; performed by Jan Garbarek. – Spoken word, Norwegian Bokmål"@en,
         "Victoria / Knut Hamsun ; lest av Nils Johnson ; framført av Jan Garbarek. – Tale, bokmål"@no ;
     rdaed:P20315 "Victoria" ;
-    rdaed:P20316 "Victoria" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20020 <http://viaf.org/viaf/115557508> ;
@@ -19825,7 +19613,6 @@
     rdfs:label "Victoria / Knut Hamsun ; translated by Asunción Lorenzo and Kirsti Baggethun. – Spanish"@en,
         "Victoria / Knut Hamsun ; oversatt av Asunción Lorenzo og Kirsti Baggethun. – Spansk"@no ;
     rdaed:P20315 "Victoria" ;
-    rdaed:P20316 "Victoria" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/86862248>,
@@ -19837,7 +19624,6 @@
     rdfs:label "Un vagabond joue en sourdine / Knut Hamsun ; translated by Régis Boyer. – French"@en,
         "Un vagabond joue en sourdine / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "Un vagabond joue en sourdine" ;
-    rdaed:P20316 "En Vandrer spiller med sordin" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/66602903> ;
@@ -19848,7 +19634,6 @@
     rdfs:label "En vandrer spiller med sordin / Knut Hamsun ; read by Arne Thomas Olsen. – Spoken word, Norwegian Bokmål"@en,
         "En vandrer spiller med sordin / Knut Hamsun ; lest av Arne Thomas Olsen. – Tale, bokmål"@no ;
     rdaed:P20315 "En vandrer spiller med sordin" ;
-    rdaed:P20316 "En Vandrer spiller med sordin" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/37022260> ;
@@ -20063,7 +19848,6 @@
     rdfs:label "Kinder ihrer Zeit / Knut Hamsun ; translated by Ernst Harthern, Julius Sandmeier and Pauline Klaiber-Gottschau. – German"@en,
         "Kinder ihrer Zeit / Knut Hamsun ; oversatt av Ernst Harthern, Julius Sandmeier og Pauline Klaiber-Gottschau. – Tysk"@no ;
     rdaed:P20315 "Kinder ihrer Zeit" ;
-    rdaed:P20316 "Børn av tiden" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/3277778>,
@@ -20076,7 +19860,6 @@
     rdfs:label "Børn av tiden / Knut Hamsun ; read by Nils Johnson. – Spoken word, Norwegian Bokmål"@en,
         "Børn av tiden / Knut Hamsun ; lest av Nils Johnson. – Tale, bokmål"@no ;
     rdaed:P20315 "Børn av tiden" ;
-    rdaed:P20316 "Børn av tiden" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/228279275> ;
@@ -20086,8 +19869,7 @@
     rdfs:label "Dreamers / Knut Hamsun ; translated by W.W Worster. – English"@en,
         "Dreamers / Knut Hamsun ; oversatt av W.W Worster. – Engelsk"@no ;
     rdaed:P20315 "Dreamers" ;
-    rdaed:P20316 "Mothwise",
-        "Sværmere" ;
+    rdaed:P20316 "Mothwise" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/7014928> ;
@@ -20098,7 +19880,6 @@
     rdfs:label "Dreamers / Knut Hamsun ; translated by Tom Geddes. – English"@en,
         "Dreamers / Knut Hamsun ; oversatt av Tom Geddes. – Engelsk"@no ;
     rdaed:P20315 "Dreamers" ;
-    rdaed:P20316 "Sværmere" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/64172097> ;
@@ -20109,7 +19890,6 @@
     rdfs:label "Sværmere / Knut Hamsun ; read by Henny Moan. – Spoken word, Norwegian Bokmål"@en,
         "Sværmere / Knut Hamsun ; lest av Henny Moan. – Tale, bokmål"@no ;
     rdaed:P20315 "Sværmere" ;
-    rdaed:P20316 "Sværmere" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/229609977> ;
@@ -20119,7 +19899,6 @@
     rdfs:label "Sproget i Fare / Knut Hamsun. – Norwegian Bokmål"@en,
         "Sproget i Fare / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Sproget i Fare" ;
-    rdaed:P20316 "Sproget i fare" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://workid.oslomet.no/kh/09> .
@@ -20137,8 +19916,6 @@
     rdfs:label "Kämpfende Kräfte / Knut Hamsun ; translated by Hermann Kiy. – German"@en,
         "Kämpfende Kräfte / Knut Hamsun ; oversatt av Hermann Kiy. – Tysk"@no ;
     rdaed:P20315 "Kämpfende Kräfte" ;
-    rdaed:P20316 "Kämpfende Kräfte : Novellen",
-        "Stridende liv" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/64751952> ;
@@ -20158,8 +19935,6 @@
     rdfs:label "Die Königin von Saba und andere Novellen / Knut Hamsun ; translated by Ernst Brausewetter. – German"@en,
         "Die Königin von Saba und andere Novellen / Knut Hamsun ; oversatt av Ernst Brausewetter. – Tysk"@no ;
     rdaed:P20315 "Die Königin von Saba und andere Novellen" ;
-    rdaed:P20316 "Die Königin von Saba und andere Novellen",
-        "Siesta" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/59875388> ;
@@ -20183,8 +19958,6 @@
         "Telegrafisten / regi Erik Gustavson ; med Bjørn Floberg, Jarl Kulle [mfl.]. – Todimensjonalt levende bilde, flere språk"@no ;
     rdaed:P20065 <http://id.loc.gov/vocabulary/iso639-2/nor> ;
     rdaed:P20315 "Telegrafisten" ;
-    rdaed:P20316 "Telegrafisten",
-        "Telegrafisten : drømmeren, oppfinneren, svermeren" ;
     rdaeo:P20001 rdaco:1023 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/mul> ;
     rdaeo:P20012 <http://viaf.org/viaf/85819609>,
@@ -20277,9 +20050,7 @@
     rdfs:label "Neue Erde / Knut Hamsun. – German"@en,
         "Neue Erde / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "Neue Erde" ;
-    rdaed:P20316 "Neue Erde : Roman",
-        "Neve Erde",
-        "Ny jord" ;
+    rdaed:P20316 "Neve Erde" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20141 <http://viaf.org/viaf/143144898528950290965/exp/nob/1020> ;
@@ -20289,8 +20060,6 @@
     rdfs:label "Neue Erde / Knut Hamsun ; translated by Julius Sandmeier. – German"@en,
         "Neue Erde / Knut Hamsun ; oversatt av Julius Sandmeier. – Tysk"@no ;
     rdaed:P20315 "Neue Erde" ;
-    rdaed:P20316 "Neue Erde : Roman",
-        "Ny jord" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/59960174> ;
@@ -20301,7 +20070,6 @@
     rdfs:label "Wayfarers / Knut Hamsun ; translated by James Walter McFarlane. – English"@en,
         "Wayfarers / Knut Hamsun ; oversatt av James Walter McFarlane. – Engelsk"@no ;
     rdaed:P20315 "Wayfarers" ;
-    rdaed:P20316 "Landstrykere" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/27078590> ;
@@ -20312,8 +20080,7 @@
     rdfs:label "Vagabundos / Knut Hamsun ; translated by Luis Molins. – Spanish"@en,
         "Vagabundos / Knut Hamsun ; oversatt av Luis Molins. – Spansk"@no ;
     rdaed:P20315 "Vagabundos" ;
-    rdaed:P20316 "Argonautas de cristal",
-        "Landstrykere" ;
+    rdaed:P20316 "Argonautas de cristal" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/3146331927818692445> ;
@@ -20324,7 +20091,6 @@
     rdfs:label "La última alegría / Knut Hamsun ; translated by Luis Molins. – Spanish"@en,
         "La última alegría / Knut Hamsun ; oversatt av Luis Molins. – Spansk"@no ;
     rdaed:P20315 "La última alegría" ;
-    rdaed:P20316 "Den siste glæde" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/3146331927818692445> ;
@@ -20335,8 +20101,7 @@
     rdfs:label "Pan : d'après les papiers du lieutenant Thomas Glahn / Knut Hamsun. – French"@en,
         "Pan : d'après les papiers du lieutenant Thomas Glahn / Knut Hamsun. – Fransk"@no ;
     rdaed:P20315 "Pan : d'après les papiers du lieutenant Thomas Glahn" ;
-    rdaed:P20316 "Pan",
-        "Pan : d'apres les papiers du lieutenant Thomas Glahn",
+    rdaed:P20316 "Pan : d'apres les papiers du lieutenant Thomas Glahn",
         "Pan : d'apràs les papiers du lieutenant Thomas Glahn",
         "Pan : roman" ;
     rdaeo:P20001 rdaco:1020 ;
@@ -20348,8 +20113,6 @@
     rdfs:label "Pan / Knut Hamsun ; translated by Asunción Lorenzo and Kirsti Baggethun. – Spanish"@en,
         "Pan / Knut Hamsun ; oversatt av Asunción Lorenzo og Kirsti Baggethun. – Spansk"@no ;
     rdaed:P20315 "Pan" ;
-    rdaed:P20316 "Pan",
-        "Pan : de los papeles del teniente Thomas Glahn" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/86862248>,
@@ -20361,9 +20124,6 @@
     rdfs:label "Die Stadt Segelfoss / Knut Hamsun. – German"@en,
         "Die Stadt Segelfoss / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "Die Stadt Segelfoss" ;
-    rdaed:P20316 "Die Stadt Segelfoss : roman",
-        "Gesammelte Werke in 12 Bänden : Bd. 7 : Die Stadt Segelfoss : Roman",
-        "Segelfoss by" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20141 <http://viaf.org/viaf/207944253/exp/nob/1020> ;
@@ -20373,9 +20133,6 @@
     rdfs:label "Die Stadt Segelfoss / Knut Hamsun ; translated by Pauline Klaiber-Gottschau. – German"@en,
         "Die Stadt Segelfoss / Knut Hamsun ; oversatt av Pauline Klaiber-Gottschau. – Tysk"@no ;
     rdaed:P20315 "Die Stadt Segelfoss" ;
-    rdaed:P20316 "Die Stadt Segelfoss : Roman",
-        "Die Stadt Segelfoß : Roman",
-        "Segelfoss by" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/117364598> ;
@@ -20386,7 +20143,6 @@
     rdfs:label "La ciudad de Segelfoss / Knut Hamsun ; translated by Francisco Vives. – Spanish"@en,
         "La ciudad de Segelfoss / Knut Hamsun ; oversatt av Francisco Vives. – Spansk"@no ;
     rdaed:P20315 "La ciudad de Segelfoss" ;
-    rdaed:P20316 "Segelfoss by" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://example.org/vivesfrancisco> ;
@@ -20406,9 +20162,7 @@
     rdfs:label "Growth of the Soil / Knut Hamsun. – English"@en,
         "Growth of the Soil / Knut Hamsun. – Engelsk"@no ;
     rdaed:P20315 "Growth of the Soil" ;
-    rdaed:P20316 "Growth of the soil",
-        "Markens grøde",
-        "The Growth of the soil" ;
+    rdaed:P20316 "The Growth of the soil" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20141 <http://viaf.org/viaf/294124367/exp/nob/1020> ;
@@ -20418,9 +20172,6 @@
     rdfs:label "L'Éveil de la glèbe / Knut Hamsun ; translated by Jean Petithuguenin. – French"@en,
         "L'Éveil de la glèbe / Knut Hamsun ; oversatt av Jean Petithuguenin. – Fransk"@no ;
     rdaed:P20315 "L'Éveil de la glèbe" ;
-    rdaed:P20316 "L'éveil de la glèbe",
-        "L'éveil de la glèbe : roman",
-        "Markens grøde" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/222438819> ;
@@ -20431,11 +20182,6 @@
     rdfs:label "Unter Herbststernen / Knut Hamsun. – German"@en,
         "Unter Herbststernen / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "Unter Herbststernen" ;
-    rdaed:P20316 "Gesammelte Werke in 12 Bänden : Bd. 5 : Unter Herbststernen : Roman [u. a.]",
-        "Under høststjernen",
-        "Under høststjærnen",
-        "Unter Herbststernen : Roman",
-        "Unter Herbststernen : die Erzählung eines Wanderers" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20141 <http://viaf.org/viaf/309525997/exp/nob/1020> ;
@@ -20445,8 +20191,6 @@
     rdfs:label "Au pays des contes / Knut Hamsun. – French"@en,
         "Au pays des contes / Knut Hamsun. – Fransk"@no ;
     rdaed:P20315 "Au pays des contes" ;
-    rdaed:P20316 "Au pays des contes : Choses révées et choses vécues en Caucasie",
-        "I æventyrland" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20141 <http://viaf.org/viaf/309525999/exp/nob/1020> ;
@@ -20456,8 +20200,6 @@
     rdfs:label "Vom Teufel geholt / Knut Hamsun. – German"@en,
         "Vom Teufel geholt / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "Vom Teufel geholt" ;
-    rdaed:P20316 "Livet ivold",
-        "Vom Teufel geholt : Schauspiel in vier Akten" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20141 <http://viaf.org/viaf/312486496/exp/nob/1020> ;
@@ -20485,8 +20227,6 @@
     rdfs:label "Die Stimme des Lebens / Knut Hamsun. – German"@en,
         "Die Stimme des Lebens / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "Die Stimme des Lebens" ;
-    rdaed:P20316 "Die Stimme des Lebens : Erzählungen",
-        "Livsfragmenter" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20141 <http://viaf.org/viaf/312501980/exp/nob/1020> ;
@@ -20496,8 +20236,6 @@
     rdfs:label "Livsfragmenter / Knut Hamsun. – Norwegian Bokmål"@en,
         "Livsfragmenter / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Livsfragmenter" ;
-    rdaed:P20316 "Livsfragmenter",
-        "Livsfragmenter : ni noveller" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/312501980> .
@@ -20506,8 +20244,6 @@
     rdfs:label "The Women at the Pump / Knut Hamsun. – English"@en,
         "The Women at the Pump / Knut Hamsun. – Engelsk"@no ;
     rdaed:P20315 "The Women at the Pump" ;
-    rdaed:P20316 "Konerne ved vandposten",
-        "The women at the pump" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20141 <http://viaf.org/viaf/312526705/exp/nob/1020> ;
@@ -20517,8 +20253,7 @@
     rdfs:label "Weiber am Brunnen / Knut Hamsun ; translated by Pauline Klaiber-Gottschau. – German"@en,
         "Weiber am Brunnen / Knut Hamsun ; oversatt av Pauline Klaiber-Gottschau. – Tysk"@no ;
     rdaed:P20315 "Weiber am Brunnen" ;
-    rdaed:P20316 "Die Weiber am Brunnen : Roman",
-        "Konerne ved vandposten" ;
+    rdaed:P20316 "Die Weiber am Brunnen : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/117364598> ;
@@ -20538,8 +20273,6 @@
     rdfs:label "Victoria / Knut Hamsun. – English"@en,
         "Victoria / Knut Hamsun. – Engelsk"@no ;
     rdaed:P20315 "Victoria" ;
-    rdaed:P20316 "Victoria",
-        "Victoria : a love story" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20141 <http://viaf.org/viaf/395147270538135700001/exp/nob/1020> ;
@@ -20558,7 +20291,6 @@
     rdfs:label "Die Königin von Saba / Knut Hamsun ; translated by Ernst Brausewetter. – German"@en,
         "Die Königin von Saba / Knut Hamsun ; oversatt av Ernst Brausewetter. – Tysk"@no ;
     rdaed:P20315 "Die Königin von Saba" ;
-    rdaed:P20316 "Dronningen af Saba" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/59875388> ;
@@ -20583,8 +20315,6 @@
     rdfs:label "A Wanderer Plays on Muted Strings / Knut Hamsun ; translated by Gunnvor Stallybrass and Oliver Stallybrass. – English"@en,
         "A Wanderer Plays on Muted Strings / Knut Hamsun ; oversatt av Gunnvor Stallybrass og Oliver Stallybrass. – Engelsk"@no ;
     rdaed:P20315 "A Wanderer Plays on Muted Strings" ;
-    rdaed:P20316 "A wanderer plays on muted strings",
-        "En Vandrer spiller med sordin" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/16857531>,
@@ -20596,10 +20326,7 @@
     rdfs:label "Gedämpftes Saitenspiel / Knut Hamsun. – German"@en,
         "Gedämpftes Saitenspiel / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "Gedämpftes Saitenspiel" ;
-    rdaed:P20316 "En vandrer spiller med sordin",
-        "Gedampftes Saitenspiel : Roman",
-        "Gedämpftes Saitenspiel : Erzählung eines Wanderers",
-        "Gedämpftes Saitenspiel : Roman" ;
+    rdaed:P20316 "Gedampftes Saitenspiel : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20141 <http://viaf.org/viaf/5470149068540465730001/exp/nob/1020> ;
@@ -20609,8 +20336,6 @@
     rdfs:label "Gedämpftes Saitenspiel / Knut Hamsun ; translated by Julius Sandmeier and Sophie Angermann. – German"@en,
         "Gedämpftes Saitenspiel / Knut Hamsun ; oversatt av Julius Sandmeier og Sophie Angermann. – Tysk"@no ;
     rdaed:P20315 "Gedämpftes Saitenspiel" ;
-    rdaed:P20316 "En Vandrer spiller med sordin",
-        "Gedämpftes Saitenspiel : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/162089799>,
@@ -20622,8 +20347,6 @@
     rdfs:label "Redakteur Lynge / Knut Hamsun ; translated by Marie von Borch. – German"@en,
         "Redakteur Lynge / Knut Hamsun ; oversatt av Marie von Borch. – Tysk"@no ;
     rdaed:P20315 "Redakteur Lynge" ;
-    rdaed:P20316 "Redakteur Lynge : Roman",
-        "Redaktør Lynge" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/39365507> ;
@@ -20634,7 +20357,6 @@
     rdfs:label "Die Dame von Tivoli / Knut Hamsun ; translated by Ernst Brausewetter. – German"@en,
         "Die Dame von Tivoli / Knut Hamsun ; oversatt av Ernst Brausewetter. – Tysk"@no ;
     rdaed:P20315 "Die Dame von Tivoli" ;
-    rdaed:P20316 "Damen fra tivoli" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/59875388> ;
@@ -20644,7 +20366,6 @@
     rdfs:label "Geheimes Weh / Knut Hamsun ; translated by Ernst Brausewetter. – German"@en,
         "Geheimes Weh / Knut Hamsun ; oversatt av Ernst Brausewetter. – Tysk"@no ;
     rdaed:P20315 "Geheimes Weh" ;
-    rdaed:P20316 "Hemmelig vé" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/59875388> ;
@@ -20654,7 +20375,6 @@
     rdfs:label "Johannes Treu / Knut Hamsun ; translated by Ernst Brausewetter. – German"@en,
         "Johannes Treu / Knut Hamsun ; oversatt av Ernst Brausewetter. – Tysk"@no ;
     rdaed:P20315 "Johannes Treu" ;
-    rdaed:P20316 "Jon Tro" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/59875388> ;
@@ -20664,7 +20384,6 @@
     rdfs:label "Weihnachtsschmaus / Knut Hamsun ; translated by Ernst Brausewetter. – German"@en,
         "Weihnachtsschmaus / Knut Hamsun ; oversatt av Ernst Brausewetter. – Tysk"@no ;
     rdaed:P20315 "Weihnachtsschmaus" ;
-    rdaed:P20316 "Julegilde" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/59875388> ;
@@ -20674,7 +20393,6 @@
     rdfs:label "Weihnachten in der Berghütte / Knut Hamsun ; translated by Ernst Brausewetter. – German"@en,
         "Weihnachten in der Berghütte / Knut Hamsun ; oversatt av Ernst Brausewetter. – Tysk"@no ;
     rdaed:P20315 "Weihnachten in der Berghütte" ;
-    rdaed:P20316 "Jul i aasen" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/59875388> ;
@@ -20694,7 +20412,6 @@
     rdfs:label "Pariser Skizzen / Knut Hamsun ; translated by Ernst Brausewetter. – German"@en,
         "Pariser Skizzen / Knut Hamsun ; oversatt av Ernst Brausewetter. – Tysk"@no ;
     rdaed:P20315 "Pariser Skizzen" ;
-    rdaed:P20316 "Lidt Paris" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/59875388> ;
@@ -20704,7 +20421,6 @@
     rdfs:label "Mein Skydspferd / Knut Hamsun ; translated by Ernst Brausewetter. – German"@en,
         "Mein Skydspferd / Knut Hamsun ; oversatt av Ernst Brausewetter. – Tysk"@no ;
     rdaed:P20315 "Mein Skydspferd" ;
-    rdaed:P20316 "Med skydshest" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/59875388> ;
@@ -20714,7 +20430,6 @@
     rdfs:label "Auf den Bänken bei New-foundland / Knut Hamsun ; translated by Ernst Brausewetter. – German"@en,
         "Auf den Bänken bei New-foundland / Knut Hamsun ; oversatt av Ernst Brausewetter. – Tysk"@no ;
     rdaed:P20315 "Auf den Bänken bei New-foundland" ;
-    rdaed:P20316 "Paa bankene" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/59875388> ;
@@ -20724,7 +20439,6 @@
     rdfs:label "Auf der Strasse / Knut Hamsun ; translated by Ernst Brausewetter. – German"@en,
         "Auf der Strasse / Knut Hamsun ; oversatt av Ernst Brausewetter. – Tysk"@no ;
     rdaed:P20315 "Auf der Strasse" ;
-    rdaed:P20316 "Paa gaden" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/59875388> ;
@@ -20734,7 +20448,6 @@
     rdfs:label "Schiffer Rejersen vom \"Sü̈dstern\" / Knut Hamsun ; translated by Ernst Brausewetter. – German"@en,
         "Schiffer Rejersen vom \"Sü̈dstern\" / Knut Hamsun ; oversatt av Ernst Brausewetter. – Tysk"@no ;
     rdaed:P20315 "Schiffer Rejersen vom \"Sü̈dstern\"" ;
-    rdaed:P20316 "Rejersen af \"Sydstjærnen\"" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/59875388> ;
@@ -20744,7 +20457,6 @@
     rdfs:label "Der Ring / Knut Hamsun ; translated by Ernst Brausewetter. – German"@en,
         "Der Ring / Knut Hamsun ; oversatt av Ernst Brausewetter. – Tysk"@no ;
     rdaed:P20315 "Der Ring" ;
-    rdaed:P20316 "Ringen" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/59875388> ;
@@ -20793,8 +20505,6 @@
     rdfs:label "Kinder ihrer Zeit / Knut Hamsun ; translated by Niels Hoyer. – German"@en,
         "Kinder ihrer Zeit / Knut Hamsun ; oversatt av Niels Hoyer. – Tysk"@no ;
     rdaed:P20315 "Kinder ihrer Zeit" ;
-    rdaed:P20316 "Børn av tiden",
-        "Kinder ihrer Zeit : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/3237667> ;
@@ -20814,7 +20524,6 @@
     rdfs:label "Rêveurs : roman / Knut Hamsun ; translated by Régis Boyer. – French"@en,
         "Rêveurs : roman / Knut Hamsun ; oversatt av Régis Boyer. – Fransk"@no ;
     rdaed:P20315 "Rêveurs : roman" ;
-    rdaed:P20316 "Sværmere" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/66602903> ;
@@ -20825,8 +20534,6 @@
     rdfs:label "Schwärmer / Knut Hamsun. – German"@en,
         "Schwärmer / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "Schwärmer" ;
-    rdaed:P20316 "Schwärmer : Roman",
-        "Sværmere" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20141 <http://viaf.org/viaf/995145424555286830372/exp/nob/1020> ;
@@ -20836,8 +20543,6 @@
     rdfs:label "Schwärmer / Knut Hamsun ; translated by Julius Sandmeier. – German"@en,
         "Schwärmer / Knut Hamsun ; oversatt av Julius Sandmeier. – Tysk"@no ;
     rdaed:P20315 "Schwärmer" ;
-    rdaed:P20316 "Schwärmer : Roman",
-        "Sværmere" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/59960174> ;
@@ -20848,9 +20553,6 @@
     rdfs:label "Soñadores / Knut Hamsun. – Spanish"@en,
         "Soñadores / Knut Hamsun. – Spansk"@no ;
     rdaed:P20315 "Soñadores" ;
-    rdaed:P20316 "Soñadores : (novela romántica)",
-        "Soñadores : una novela romántica completa",
-        "Sværmere" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20141 <http://viaf.org/viaf/995145424555286830372/exp/nob/1020> ;
@@ -20870,7 +20572,6 @@
     rdfs:label "Bjørger : Erzählung / Knut Hamsun ; edited by Eva Maagerö ; translated by Gert Imbeck. – German"@en,
         "Bjørger : Erzählung / Knut Hamsun ; redigert av Eva Maagerö ; oversatt av Gert Imbeck. – Tysk"@no ;
     rdaed:P20315 "Bjørger : Erzählung" ;
-    rdaed:P20316 "Bjørger" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/5620149108472868780007> ;
@@ -20882,7 +20583,6 @@
     rdfs:label "Die Stimme des Lebens und andere Novellen / Knut Hamsun. – German"@en,
         "Die Stimme des Lebens und andere Novellen / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "Die Stimme des Lebens und andere Novellen" ;
-    rdaed:P20316 "Kratskog" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20141 <http://www.wikidata.org/entity/Q15062320/exp/nob/1020> ;
@@ -20922,7 +20622,6 @@
     rdfs:label "Tierra nueva / Knut Hamsun ; translated by José Ramón Pérez Bances. – Spanish"@en,
         "Tierra nueva / Knut Hamsun ; oversatt av José Ramón Pérez Bances. – Spansk"@no ;
     rdaed:P20315 "Tierra nueva" ;
-    rdaed:P20316 "Ny jord" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/98992194> ;
@@ -20934,7 +20633,6 @@
         "Landstreicher / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "Landstreicher" ;
     rdaed:P20316 "Landstreicher Roman",
-        "Landstrykere",
         "Vagabondage : Bd. 1",
         "Vagabondage : Bd. 2" ;
     rdaeo:P20001 rdaco:1020 ;
@@ -20957,7 +20655,6 @@
     rdfs:label "Mysteries / Knut Hamsun ; translated by Gerry Bothmer. – English"@en,
         "Mysteries / Knut Hamsun ; oversatt av Gerry Bothmer. – Engelsk"@no ;
     rdaed:P20315 "Mysteries" ;
-    rdaed:P20316 "Mysterier" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/63603917> ;
@@ -20968,8 +20665,6 @@
     rdfs:label "La Faim / Knut Hamsun ; translated by Georges Sautreau. – French"@en,
         "La Faim / Knut Hamsun ; oversatt av Georges Sautreau. – Fransk"@no ;
     rdaed:P20315 "La Faim" ;
-    rdaed:P20316 "La faim",
-        "Sult" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
     rdaeo:P20037 <http://viaf.org/viaf/14776516> ;
@@ -20980,9 +20675,6 @@
     rdfs:label "Markens grøde / Knut Hamsun. – Spoken word, Norwegian Bokmål"@en,
         "Markens grøde / Knut Hamsun. – Tale, bokmål"@no ;
     rdaed:P20315 "Markens grøde" ;
-    rdaed:P20316 "Markens grøde",
-        "Markens grøde : 1",
-        "Markens grøde : 2" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/294124367> .
@@ -20991,9 +20683,6 @@
     rdfs:label "Unter Herbststernen / Knut Hamsun ; translated by Julius Sandmeier. – German"@en,
         "Unter Herbststernen / Knut Hamsun ; oversatt av Julius Sandmeier. – Tysk"@no ;
     rdaed:P20315 "Unter Herbststernen" ;
-    rdaed:P20316 "Under høststjærnen",
-        "Unter Herbststernen : Erzählg e. Wanderers",
-        "Unter Herbststernen : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/59960174> ;
@@ -21004,7 +20693,6 @@
     rdfs:label "Bajo las estrellas de otoño / Knut Hamsun ; translated by F. C. – Spanish"@en,
         "Bajo las estrellas de otoño / Knut Hamsun ; oversatt av F. C. – Spansk"@no ;
     rdaed:P20315 "Bajo las estrellas de otoño" ;
-    rdaed:P20316 "Under høststjærnen" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://personid.no/10165> ;
@@ -21015,7 +20703,6 @@
     rdfs:label "Benoni / Knut Hamsun ; translated by Rafaela Ferro. – Spanish"@en,
         "Benoni / Knut Hamsun ; oversatt av Rafaela Ferro. – Spansk"@no ;
     rdaed:P20315 "Benoni" ;
-    rdaed:P20316 "Benoni" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://example.org/ferrorafaela> ;
@@ -21026,8 +20713,7 @@
     rdfs:label "Ved rigets port / Knut Hamsun. – Norwegian Bokmål"@en,
         "Ved rigets port / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Ved rigets port" ;
-    rdaed:P20316 "Ved rigets port",
-        "Ved rikets port" ;
+    rdaed:P20316 "Ved rikets port" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/316992494> .
@@ -21036,9 +20722,6 @@
     rdfs:label "Victoria / Knut Hamsun. – Spanish"@en,
         "Victoria / Knut Hamsun. – Spansk"@no ;
     rdaed:P20315 "Victoria" ;
-    rdaed:P20316 "Victoria",
-        "Victoria : (historia de un amor)",
-        "Victoria : una historia de amor" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20141 <http://viaf.org/viaf/395147270538135700001/exp/nob/1020> ;
@@ -21048,7 +20731,6 @@
     rdfs:label "Victoria / Knut Hamsun ; translated by Berta Curiel. – Spanish"@en,
         "Victoria / Knut Hamsun ; oversatt av Berta Curiel. – Spansk"@no ;
     rdaed:P20315 "Victoria" ;
-    rdaed:P20316 "Victoria" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://example.org/curielberta> ;
@@ -21059,10 +20741,6 @@
     rdfs:label "Gedämpftes Saitenspiel / Knut Hamsun ; translated by Julius Sandmeier. – German"@en,
         "Gedämpftes Saitenspiel / Knut Hamsun ; oversatt av Julius Sandmeier. – Tysk"@no ;
     rdaed:P20315 "Gedämpftes Saitenspiel" ;
-    rdaed:P20316 "En Vandrer spiller med sordin",
-        "Gedämpftes Saitenspiel : Erzählg e. Wanderers",
-        "Gedämpftes Saitenspiel : Erzählung e. Wanderers",
-        "Gedämpftes Saitenspiel : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/59960174> ;
@@ -21082,9 +20760,6 @@
     rdfs:label "Redakteur Lynge / Knut Hamsun. – German"@en,
         "Redakteur Lynge / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "Redakteur Lynge" ;
-    rdaed:P20316 "Gesammelte Werke in 12 Bänden : Bd. 2 : Redakteur Lynge : Roman [u. a.]",
-        "Redakteur Lynge : Roman",
-        "Redaktør Lynge" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20141 <http://viaf.org/viaf/5518152200833114400003/exp/nob/1020> ;
@@ -21100,9 +20775,7 @@
     rdfs:label "Lars Oftedal / Knut Hamsun. – Norwegian Bokmål"@en,
         "Lars Oftedal / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Lars Oftedal" ;
-    rdaed:P20316 "Knut Hamsun - mordet på Lars Oftedal",
-        "Lars Oftedal",
-        "Mordet på Lars Oftedal" ;
+    rdaed:P20316 "Knut Hamsun - mordet på Lars Oftedal" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://workid.oslomet.no/kh/03> .
@@ -21111,9 +20784,6 @@
     rdfs:label "Kämpfende Kräfte / Knut Hamsun. – German"@en,
         "Kämpfende Kräfte / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "Kämpfende Kräfte" ;
-    rdaed:P20316 "Kämpfende Kräfte : Novellen",
-        "Stridende Liv",
-        "Stridende liv" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20141 <http://www.wikidata.org/entity/Q12003637/exp/nob/1020> ;
@@ -21124,9 +20794,7 @@
         "Munken vendt : eine nordische Romanze in 10 Bildern / Knut Hamsun ; oversatt av Per Schwenzen. – Tysk"@no ;
     rdaed:P20315 "Munken vendt : eine nordische Romanze in 10 Bildern" ;
     rdaed:P20316 "Munken Vendt : 8 Akte",
-        "Munken Vendt : Eine nord. Romanze in 10 Bildern",
-        "Munken Vendt : eine nordische Romanze in 10 Bildern",
-        "Munken vendt" ;
+        "Munken Vendt : Eine nord. Romanze in 10 Bildern" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/40155438> ;
@@ -21174,8 +20842,7 @@
     rdfs:label "Den gåtefulle / Knut Hamsun. – Norwegian Bokmål"@en,
         "Den gåtefulle / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Den gåtefulle" ;
-    rdaed:P20316 "Den Gaadefulde : en Kjærlighedshistorie fra Nordland",
-        "Den gaadefulde" ;
+    rdaed:P20316 "Den Gaadefulde : en Kjærlighedshistorie fra Nordland" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/183478381> .
@@ -21184,7 +20851,6 @@
     rdfs:label "Den siste glede / Knut Hamsun. – Norwegian Bokmål"@en,
         "Den siste glede / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Den siste glede" ;
-    rdaed:P20316 "Den siste glæde" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/185380595> .
@@ -21193,10 +20859,7 @@
     rdfs:label "Siste kapitel / Knut Hamsun. – Norwegian Bokmål"@en,
         "Siste kapitel / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Siste kapitel" ;
-    rdaed:P20316 "Samlede Verker : 13 : Siste Kapitel",
-        "Samlede verker : B. 9 : Siste kapitel",
-        "Siste kapitel",
-        "Siste kapittel" ;
+    rdaed:P20316 "Siste kapittel" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/188303684> .
@@ -21205,7 +20868,6 @@
     rdfs:label "Pan : from Lieutenant Thomas Glahn's papers / Knut Hamsun ; translated by W.W Worster. – English"@en,
         "Pan : from Lieutenant Thomas Glahn's papers / Knut Hamsun ; oversatt av W.W Worster. – Engelsk"@no ;
     rdaed:P20315 "Pan : from Lieutenant Thomas Glahn's papers" ;
-    rdaed:P20316 "Pan" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/7014928> ;
@@ -21216,7 +20878,6 @@
     rdfs:label "Misterios / Knut Hamsun ; translated by Alfonso Nadal. – Spanish"@en,
         "Misterios / Knut Hamsun ; oversatt av Alfonso Nadal. – Spansk"@no ;
     rdaed:P20315 "Misterios" ;
-    rdaed:P20316 "Mysterier" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/13227846> ;
@@ -21227,7 +20888,6 @@
     rdfs:label "Hunger / Knut Hamsun ; translated by Robert Bly. – English"@en,
         "Hunger / Knut Hamsun ; oversatt av Robert Bly. – Engelsk"@no ;
     rdaed:P20315 "Hunger" ;
-    rdaed:P20316 "Sult" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/79847862> ;
@@ -21238,8 +20898,6 @@
     rdfs:label "Hunger / Knut Hamsun ; translated by Julius Sandmeier. – German"@en,
         "Hunger / Knut Hamsun ; oversatt av Julius Sandmeier. – Tysk"@no ;
     rdaed:P20315 "Hunger" ;
-    rdaed:P20316 "Hunger : Roman",
-        "Sult" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/59960174> ;
@@ -21250,8 +20908,7 @@
     rdfs:label "Im Märchenland: Erlebtes und Geträumtes aus Kaukasien / Knut Hamsun. – German"@en,
         "Im Märchenland: Erlebtes und Geträumtes aus Kaukasien / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "Im Märchenland: Erlebtes und Geträumtes aus Kaukasien" ;
-    rdaed:P20316 "I æventyrland",
-        "Im Märchenland : Erlebtes und Geträumtes aus Kaukasien" ;
+    rdaed:P20316 "Im Märchenland : Erlebtes und Geträumtes aus Kaukasien" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20141 <http://viaf.org/viaf/309525999/exp/nob/1020> ;
@@ -21261,7 +20918,6 @@
     rdfs:label "En el país de los cuentos / Knut Hamsun ; translated by Pedro Camacho. – Spanish"@en,
         "En el país de los cuentos / Knut Hamsun ; oversatt av Pedro Camacho. – Spansk"@no ;
     rdaed:P20315 "En el país de los cuentos" ;
-    rdaed:P20316 "I æventyrland" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/65684351> ;
@@ -21272,9 +20928,7 @@
     rdfs:label "Benoni / Knut Hamsun ; translated by Julius Sandmeier and Sophie Angermann. – German"@en,
         "Benoni / Knut Hamsun ; oversatt av Julius Sandmeier og Sophie Angermann. – Tysk"@no ;
     rdaed:P20315 "Benoni" ;
-    rdaed:P20316 "Benoni",
-        "Benoni : Roman",
-        "Die Liebe ist hart : Roman" ;
+    rdaed:P20316 "Die Liebe ist hart : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/162089799>,
@@ -21312,7 +20966,6 @@
     rdfs:label "En vandrer spiller med sordin / Knut Hamsun. – Norwegian Bokmål"@en,
         "En vandrer spiller med sordin / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "En vandrer spiller med sordin" ;
-    rdaed:P20316 "En Vandrer spiller med sordin" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/5470149068540465730001> .
@@ -21321,7 +20974,6 @@
     rdfs:label "Un vagabundo toca con sordina / Knut Hamsun ; translated by Pedro Camacho. – Spanish"@en,
         "Un vagabundo toca con sordina / Knut Hamsun ; oversatt av Pedro Camacho. – Spansk"@no ;
     rdaed:P20315 "Un vagabundo toca con sordina" ;
-    rdaed:P20316 "En Vandrer spiller med sordin" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/65684351> ;
@@ -21356,8 +21008,6 @@
     rdfs:label "Fra det moderne Amerikas åndsliv / Knut Hamsun. – Norwegian Bokmål"@en,
         "Fra det moderne Amerikas åndsliv / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Fra det moderne Amerikas åndsliv" ;
-    rdaed:P20316 "Fra det moderne Amerikas Aandsliv",
-        "Fra det moderne Amerikas aandsliv" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/811145857935523020027> .
@@ -21372,8 +21022,6 @@
     rdfs:label "Bjørger / Knut Hamsun. – Norwegian Bokmål"@en,
         "Bjørger / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Bjørger" ;
-    rdaed:P20316 "Bjørger",
-        "Bjørger : fortælling" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://workid.oslomet.no/kh/02> .
@@ -21382,7 +21030,6 @@
     rdfs:label "Dronning Tamara / Knut Hamsun. – Norwegian Bokmål"@en,
         "Dronning Tamara / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Dronning Tamara" ;
-    rdaed:P20316 "Dronning Tamara" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q11966095> .
@@ -21400,9 +21047,6 @@
     rdfs:label "Munken vendt / Knut Hamsun. – Norwegian Bokmål"@en,
         "Munken vendt / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Munken vendt" ;
-    rdaed:P20316 "Munken Vendt",
-        "Munken Vendt : Brigantinens Saga, 1",
-        "Munken vendt" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q15062323> .
@@ -21433,7 +21077,6 @@
     rdfs:label "Siesta / Knut Hamsun. – Norwegian Bokmål"@en,
         "Siesta / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Siesta" ;
-    rdaed:P20316 "Siesta" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q15062328> .
@@ -21449,7 +21092,6 @@
     rdfs:label "Ny jord / Knut Hamsun. – Norwegian Bokmål"@en,
         "Ny jord / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Ny jord" ;
-    rdaed:P20316 "Ny jord" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/143144898528950290965> .
@@ -21458,8 +21100,6 @@
     rdfs:label "Rosa / Knut Hamsun ; translated by Julius Sandmeier and Sophie Angermann. – German"@en,
         "Rosa / Knut Hamsun ; oversatt av Julius Sandmeier og Sophie Angermann. – Tysk"@no ;
     rdaed:P20315 "Rosa" ;
-    rdaed:P20316 "Rosa",
-        "Rosa : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/162089799>,
@@ -21481,8 +21121,6 @@
     rdfs:label "Pan / Knut Hamsun. – Spanish"@en,
         "Pan / Knut Hamsun. – Spansk"@no ;
     rdaed:P20315 "Pan" ;
-    rdaed:P20316 "Pan",
-        "Pan : novela" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20141 <http://viaf.org/viaf/194765531/exp/nob/1020> ;
@@ -21501,7 +21139,6 @@
     rdfs:label "Redaktør Lynge / Knut Hamsun. – Norwegian Bokmål"@en,
         "Redaktør Lynge / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Redaktør Lynge" ;
-    rdaed:P20316 "Redaktør Lynge" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/5518152200833114400003> .
@@ -21521,8 +21158,7 @@
     rdfs:label "Livets spil / Knut Hamsun. – Norwegian Bokmål"@en,
         "Livets spil / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Livets spil" ;
-    rdaed:P20316 "Livets spil",
-        "Livets spill" ;
+    rdaed:P20316 "Livets spill" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/7398163939428301160007> .
@@ -21548,8 +21184,6 @@
     rdfs:label "Aftenrøde / Knut Hamsun. – Norwegian Bokmål"@en,
         "Aftenrøde / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Aftenrøde" ;
-    rdaed:P20316 "Aftenrøde",
-        "Aftenrøde : Slutningsspil" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q15062327> .
@@ -21569,12 +21203,6 @@
     rdfs:label "Ringen sluttet / Knut Hamsun. – Norwegian Bokmål"@en,
         "Ringen sluttet / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Ringen sluttet" ;
-    rdaed:P20316 "Ringen sluttet",
-        "Ringen sluttet : noveller, ungdomsdiktning, skuespill, dikt, erindringer",
-        "Ringen sluttet : roman : 1",
-        "Ringen sluttet : roman : 2",
-        "Samlede Verker : 17 : Ringen sluttet",
-        "Samlede verker : B. 13 : Ringen sluttet" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/1000145424544686831283> .
@@ -21601,12 +21229,6 @@
     rdfs:label "Das letzte Kapitel / Knut Hamsun. – German"@en,
         "Das letzte Kapitel / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "Das letzte Kapitel" ;
-    rdaed:P20316 "Das letzte Kapitel : Roman : B. 2 : Zweiter Teil",
-        "Das letzte Kapitel : Roman : Bd. 1 : Erster Teil",
-        "Das letzte Kapitel : Tl 1",
-        "Das letzte Kapitel : Tl 2",
-        "Das letzte kapitel : roman",
-        "Siste kapitel" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20141 <http://viaf.org/viaf/188303684/exp/nob/1020> ;
@@ -21616,9 +21238,6 @@
     rdfs:label "Mysterien / Knut Hamsun ; translated by Siegfried Weibel. – German"@en,
         "Mysterien / Knut Hamsun ; oversatt av Siegfried Weibel. – Tysk"@no ;
     rdaed:P20315 "Mysterien" ;
-    rdaed:P20316 "Mysterien : Roman",
-        "Mysterier",
-        "Werkausgabe in Einzelbänden : [...] : Mysterien : Roman / aus dem Norweg. von Siegfried Weibel. Mit einem Nachw. von Walter Baumgartner" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/193314178> ;
@@ -21639,10 +21258,6 @@
     rdfs:label "Segelfoss by / Knut Hamsun. – Norwegian Bokmål"@en,
         "Segelfoss by / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Segelfoss by" ;
-    rdaed:P20316 "Samlede Verker : 10 : Segelfoss By",
-        "Segelfoss By : 1",
-        "Segelfoss By : 2",
-        "Segelfoss by" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/207944253> .
@@ -21651,9 +21266,6 @@
     rdfs:label "Hunger / Knut Hamsun ; translated by Siegfried Weibel. – German"@en,
         "Hunger / Knut Hamsun ; oversatt av Siegfried Weibel. – Tysk"@no ;
     rdaed:P20315 "Hunger" ;
-    rdaed:P20316 "Hunger : Roman",
-        "Sult",
-        "Werkausgabe in Einzelbänden : [...] : Hunger : Roman / aus dem Norweg. von Siegfried Weibel. Mit einem Nachw. von Heiko Uecker" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/193314178> ;
@@ -21664,8 +21276,6 @@
     rdfs:label "Segen der Erde / Knut Hamsun ; translated by Pauline Klaiber-Gottschau. – German"@en,
         "Segen der Erde / Knut Hamsun ; oversatt av Pauline Klaiber-Gottschau. – Tysk"@no ;
     rdaed:P20315 "Segen der Erde" ;
-    rdaed:P20316 "Markens grøde",
-        "Segen der Erde : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/117364598> ;
@@ -21676,10 +21286,6 @@
     rdfs:label "Auf überwachsenen Pfaden / Knut Hamsun ; translated by Elisabeth Ihle. – German"@en,
         "Auf überwachsenen Pfaden / Knut Hamsun ; oversatt av Elisabeth Ihle. – Tysk"@no ;
     rdaed:P20315 "Auf überwachsenen Pfaden" ;
-    rdaed:P20316 "Auf überwachsenen Pfaden",
-        "Auf überwachsenen Pfaden : Ein Tagebuch",
-        "Auf überwachsenen Pfaden : ein Tagebuch",
-        "Paa gjengrodde stier" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/37685433> ;
@@ -21690,7 +21296,6 @@
     rdfs:label "Under høststjernen / Knut Hamsun. – Norwegian Bokmål"@en,
         "Under høststjernen / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Under høststjernen" ;
-    rdaed:P20316 "Under høststjærnen" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/309525997> .
@@ -21699,9 +21304,6 @@
     rdfs:label "Livet ivold / Knut Hamsun. – Norwegian Bokmål"@en,
         "Livet ivold / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Livet ivold" ;
-    rdaed:P20316 "Livet ivold",
-        "Livet ivold : 1 : Akt I og II",
-        "Livet ivold : 2 : Akt III og IV" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/312486496> .
@@ -21720,7 +21322,6 @@
     rdfs:label "El juego de la vida / Knut Hamsun ; translated by Frans Vives. – Spanish"@en,
         "El juego de la vida / Knut Hamsun ; oversatt av Frans Vives. – Spansk"@no ;
     rdaed:P20315 "El juego de la vida" ;
-    rdaed:P20316 "Livets spil" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/12177408753003190925> ;
@@ -21731,8 +21332,6 @@
     rdfs:label "Stridende liv / Knut Hamsun. – Norwegian Bokmål"@en,
         "Stridende liv / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Stridende liv" ;
-    rdaed:P20316 "Stridende Liv : Skildringer fra Vesten og Østen",
-        "Stridende liv" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q12003637> ;
@@ -21754,7 +21353,6 @@
     rdfs:label "La última alegría / Knut Hamsun ; translated by F. C., Luis Molins and Pedro Camacho. – Spanish"@en,
         "La última alegría / Knut Hamsun ; oversatt av F. C., Luis Molins og Pedro Camacho. – Spansk"@no ;
     rdaed:P20315 "La última alegría" ;
-    rdaed:P20316 "Den siste glæde" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/3146331927818692445>,
@@ -21767,8 +21365,6 @@
     rdfs:label "Das letzte Kapitel / Knut Hamsun ; translated by Erwin Magnus. – German"@en,
         "Das letzte Kapitel / Knut Hamsun ; oversatt av Erwin Magnus. – Tysk"@no ;
     rdaed:P20315 "Das letzte Kapitel" ;
-    rdaed:P20316 "Das letzte Kapitel : Roman",
-        "Siste kapitel" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/17979510> ;
@@ -21779,7 +21375,6 @@
     rdfs:label "Pan : from Lieutenant Thomas Glahn's papers / Knut Hamsun ; translated by James Walter McFarlane. – English"@en,
         "Pan : from Lieutenant Thomas Glahn's papers / Knut Hamsun ; oversatt av James Walter McFarlane. – Engelsk"@no ;
     rdaed:P20315 "Pan : from Lieutenant Thomas Glahn's papers" ;
-    rdaed:P20316 "Pan" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/27078590> ;
@@ -21790,10 +21385,6 @@
     rdfs:label "Hunger / Knut Hamsun. – German"@en,
         "Hunger / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "Hunger" ;
-    rdaed:P20316 "Gesammelte Werke in 12 Bänden : Bd. 1 : Hunger : Roman [u. a.]",
-        "Hunger : Roman",
-        "Romane : 1 : Hunger",
-        "Sult" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20141 <http://viaf.org/viaf/220443771/exp/nob/1020> ;
@@ -21812,7 +21403,6 @@
     rdfs:label "Bajo las estrellas de otoño / Knut Hamsun ; translated by F. C., Luis Molins and Pedro Camacho. – Spanish"@en,
         "Bajo las estrellas de otoño / Knut Hamsun ; oversatt av F. C., Luis Molins og Pedro Camacho. – Spansk"@no ;
     rdaed:P20315 "Bajo las estrellas de otoño" ;
-    rdaed:P20316 "Under høststjærnen" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/3146331927818692445>,
@@ -21834,7 +21424,6 @@
     rdfs:label "Un vagabundo toca con sordina / Knut Hamsun ; translated by F. C., Luis Molins and Pedro Camacho. – Spanish"@en,
         "Un vagabundo toca con sordina / Knut Hamsun ; oversatt av F. C., Luis Molins og Pedro Camacho. – Spansk"@no ;
     rdaed:P20315 "Un vagabundo toca con sordina" ;
-    rdaed:P20316 "En Vandrer spiller med Sordin" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/3146331927818692445>,
@@ -21847,8 +21436,7 @@
     rdfs:label "Barn av tiden / Knut Hamsun. – Norwegian Bokmål"@en,
         "Barn av tiden / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Barn av tiden" ;
-    rdaed:P20316 "Børn av Tiden : Roman",
-        "Børn av tiden" ;
+    rdaed:P20316 "Børn av Tiden : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/8450149068552765730000> .
@@ -21868,9 +21456,7 @@
     rdfs:label "Pan, aus Leutnant Thomas Glahns Papieren / Knut Hamsun. – German"@en,
         "Pan, aus Leutnant Thomas Glahns Papieren / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "Pan, aus Leutnant Thomas Glahns Papieren" ;
-    rdaed:P20316 "Gesammelte Werke in 12 Bänden : Bd. 3 : Pan : Roman [u. a.]",
-        "Pan",
-        "Pan : Aus Leutnant Thomas Glahns Papieren",
+    rdaed:P20316 "Pan : Aus Leutnant Thomas Glahns Papieren",
         "Pan : aus Lieutenant Thomas Glahns Papieren",
         "Pan : av løjtnant Thomas Glahns papirer" ;
     rdaeo:P20001 rdaco:1020 ;
@@ -21882,8 +21468,7 @@
     rdfs:label "Pan, aus Leutnant Thomas Glahns Papieren / Knut Hamsun ; translated by Julius Sandmeier. – German"@en,
         "Pan, aus Leutnant Thomas Glahns Papieren / Knut Hamsun ; oversatt av Julius Sandmeier. – Tysk"@no ;
     rdaed:P20315 "Pan, aus Leutnant Thomas Glahns Papieren" ;
-    rdaed:P20316 "Pan",
-        "Pan : aus Leutnant Thomas Glahns Papieren" ;
+    rdaed:P20316 "Pan : aus Leutnant Thomas Glahns Papieren" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/59960174> ;
@@ -21894,8 +21479,7 @@
     rdfs:label "I eventyrland / Knut Hamsun. – Norwegian Bokmål"@en,
         "I eventyrland / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "I eventyrland" ;
-    rdaed:P20316 "I Æventyrland : oplevet og drømt i Kaukasien",
-        "I æventyrland" ;
+    rdaed:P20316 "I Æventyrland : oplevet og drømt i Kaukasien" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/309525999> .
@@ -21929,8 +21513,6 @@
     rdfs:label "Nach Jahr und Tag / Knut Hamsun ; translated by Julius Sandmeier and Sophie Angermann. – German"@en,
         "Nach Jahr und Tag / Knut Hamsun ; oversatt av Julius Sandmeier og Sophie Angermann. – Tysk"@no ;
     rdaed:P20315 "Nach Jahr und Tag" ;
-    rdaed:P20316 "Men livet lever",
-        "Nach Jahr und Tag : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/162089799>,
@@ -21942,8 +21524,6 @@
     rdfs:label "Mysterien / Knut Hamsun ; translated by Julius Sandmeier. – German"@en,
         "Mysterien / Knut Hamsun ; oversatt av Julius Sandmeier. – Tysk"@no ;
     rdaed:P20315 "Mysterien" ;
-    rdaed:P20316 "Mysterien : Roman",
-        "Mysterier" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/59960174> ;
@@ -21954,7 +21534,6 @@
     rdfs:label "Hunger / Knut Hamsun ; translated by Sverre Lyngstad. – English"@en,
         "Hunger / Knut Hamsun ; oversatt av Sverre Lyngstad. – Engelsk"@no ;
     rdaed:P20315 "Hunger" ;
-    rdaed:P20316 "Sult" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/111655332> ;
@@ -21965,8 +21544,6 @@
     rdfs:label "Growth of the Soil / Knut Hamsun ; translated by W.W Worster. – English"@en,
         "Growth of the Soil / Knut Hamsun ; oversatt av W.W Worster. – Engelsk"@no ;
     rdaed:P20315 "Growth of the Soil" ;
-    rdaed:P20316 "Growth of the soil",
-        "Markens grøde" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/7014928> ;
@@ -21977,13 +21554,7 @@
     rdfs:label "Konerne ved vandposten / Knut Hamsun. – Norwegian Bokmål"@en,
         "Konerne ved vandposten / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Konerne ved vandposten" ;
-    rdaed:P20316 "Konene ved vannposten",
-        "Konerne ved Vandposten : roman",
-        "Konerne ved Vandposten : roman : 1",
-        "Konerne ved Vandposten : roman : 2",
-        "Konerne ved vandposten",
-        "Samlede Verker : 12 : Konerne ved Vandposten",
-        "Samlede verker : B. 8 : Konerne ved vandposten" ;
+    rdaed:P20316 "Konene ved vannposten" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/312526705> .
@@ -21992,8 +21563,7 @@
     rdfs:label "Vildt kor / Knut Hamsun. – Norwegian Bokmål"@en,
         "Vildt kor / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Vildt kor" ;
-    rdaed:P20316 "Det vilde kor",
-        "Det vilde kor : digte",
+    rdaed:P20316 "Det vilde kor : digte",
         "Det vilde kor : og andre dikte" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
@@ -22013,8 +21583,6 @@
     rdfs:label "Rosa / Knut Hamsun. – Norwegian Bokmål"@en,
         "Rosa / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Rosa" ;
-    rdaed:P20316 "Rosa",
-        "Rosa : af Student Parelius' Papirer" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/1650145424683186830143> .
@@ -22023,8 +21591,6 @@
     rdfs:label "Landstreicher / Knut Hamsun ; translated by Julius Sandmeier and Sophie Angermann. – German"@en,
         "Landstreicher / Knut Hamsun ; oversatt av Julius Sandmeier og Sophie Angermann. – Tysk"@no ;
     rdaed:P20315 "Landstreicher" ;
-    rdaed:P20316 "Landstreicher : Roman",
-        "Landstrykere" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/162089799>,
@@ -22046,8 +21612,6 @@
     rdfs:label "Mysterien / Knut Hamsun. – German"@en,
         "Mysterien / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "Mysterien" ;
-    rdaed:P20316 "Mysterien : roman",
-        "Mysterier" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20141 <http://viaf.org/viaf/206863699/exp/nob/1020> ;
@@ -22057,9 +21621,6 @@
     rdfs:label "Hambre / Knut Hamsun. – Spanish"@en,
         "Hambre / Knut Hamsun. – Spansk"@no ;
     rdaed:P20315 "Hambre" ;
-    rdaed:P20316 "Hambre : novela",
-        "Hambre : novela completa",
-        "Sult" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20141 <http://viaf.org/viaf/220443771/exp/nob/1020> ;
@@ -22069,7 +21630,6 @@
     rdfs:label "Benoni / Knut Hamsun. – Norwegian Bokmål"@en,
         "Benoni / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Benoni" ;
-    rdaed:P20316 "Benoni" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/310234238> .
@@ -22078,10 +21638,7 @@
     rdfs:label "Victoria / Knut Hamsun ; translated by Julius Sandmeier. – German"@en,
         "Victoria / Knut Hamsun ; oversatt av Julius Sandmeier. – Tysk"@no ;
     rdaed:P20315 "Victoria" ;
-    rdaed:P20316 "Victoria",
-        "Victoria : Die Geschichte e. Liebe",
-        "Victoria : Die Geschichte einer Liebe",
-        "Victoria und andere Romane" ;
+    rdaed:P20316 "Victoria und andere Romane" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/59960174> ;
@@ -22092,13 +21649,6 @@
     rdfs:label "Men Livet lever / Knut Hamsun. – Norwegian Bokmål"@en,
         "Men Livet lever / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Men Livet lever" ;
-    rdaed:P20316 "Men Livet lever : Roman : 1",
-        "Men Livet lever : Roman : 2",
-        "Men livet lever",
-        "Men livet lever : roman",
-        "Samlede Verker : 16 : Men Livet lever",
-        "Samlede verker : 12 : Men livet lever",
-        "Samlede verker : B. 12 : Men livet lever" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/191146462599827770953> .
@@ -22107,8 +21657,6 @@
     rdfs:label "Hunger / Knut Hamsun ; translated by George Egerton. – English"@en,
         "Hunger / Knut Hamsun ; oversatt av George Egerton. – Engelsk"@no ;
     rdaed:P20315 "Hunger" ;
-    rdaed:P20316 "Hunger : a novel",
-        "Sult" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20037 <http://viaf.org/viaf/35262867> ;
@@ -22119,12 +21667,6 @@
     rdfs:label "August / Knut Hamsun. – Norwegian Bokmål"@en,
         "August / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "August" ;
-    rdaed:P20316 "August",
-        "August : roman",
-        "August : roman : 1",
-        "August : roman : 2",
-        "Samlede Verker : 15 : August",
-        "Samlede verker : B. 11 : August" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/3267149068489065730001> .
@@ -22143,8 +21685,7 @@
     rdfs:label "Svermere / Knut Hamsun. – Norwegian Bokmål"@en,
         "Svermere / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Svermere" ;
-    rdaed:P20316 "Sværmere",
-        "Sværmere : Roman" ;
+    rdaed:P20316 "Sværmere : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/995145424555286830372> .
@@ -22160,10 +21701,7 @@
     rdaed:P20315 "Segen der Erde" ;
     rdaed:P20316 "Gegen der Erde",
         "Gegen der Erde : Roman",
-        "Gesammelte Werke in 12 Bänden : Bd. 8 : Segen der Erde : Roman",
-        "Gottes Erde : Aus: Segen der Erde u.a. Romanen",
-        "Markens grøde",
-        "Segen der Erde : roman" ;
+        "Gottes Erde : Aus: Segen der Erde u.a. Romanen" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20141 <http://viaf.org/viaf/294124367/exp/nob/1020> ;
@@ -22193,12 +21731,7 @@
     rdfs:label "Victoria / Knut Hamsun. – German"@en,
         "Victoria / Knut Hamsun. – Tysk"@no ;
     rdaed:P20315 "Victoria" ;
-    rdaed:P20316 "Romane : 2 : Victoria",
-        "Victoria",
-        "Victoria : Die Geschichte e. Liebe",
-        "Victoria : Die Geschichte einer Liebe",
-        "Victoria und Schwärmer",
-        "Werkausgabe in Einzelbänden : [...] : Victoria : eine Liebesgeschichte / aus dem Norweg. von Alken Bruns. Mit einem Vorw. von Joseph von Westphalen" ;
+    rdaed:P20316 "Victoria und Schwärmer" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20141 <http://viaf.org/viaf/395147270538135700001/exp/nob/1020> ;
@@ -22218,11 +21751,6 @@
     rdfs:label "Landstrykere / Knut Hamsun. – Norwegian Bokmål"@en,
         "Landstrykere / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Landstrykere" ;
-    rdaed:P20316 "Landstrykere",
-        "Landstrykere : roman : 1",
-        "Landstrykere : roman : 2",
-        "Samlede Verker : 14 : Landstrykere",
-        "Samlede verker : B. 10 : Landstrykere" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/180078068> .
@@ -22231,8 +21759,7 @@
     rdfs:label "Pan, aus Leutnant Thomas Glahns Papieren / Knut Hamsun ; translated by Julius Sandmeier and Sophie Angermann. – German"@en,
         "Pan, aus Leutnant Thomas Glahns Papieren / Knut Hamsun ; oversatt av Julius Sandmeier og Sophie Angermann. – Tysk"@no ;
     rdaed:P20315 "Pan, aus Leutnant Thomas Glahns Papieren" ;
-    rdaed:P20316 "Pan",
-        "Pan : Roman",
+    rdaed:P20316 "Pan : Roman",
         "Pan : [aus d. Norweg.]",
         "Pan : aus Lieutenant Thomas Glahns Papieren ; Roman" ;
     rdaeo:P20001 rdaco:1020 ;
@@ -22246,7 +21773,6 @@
     rdfs:label "Hambre / Knut Hamsun ; translated by José Viana. – Spanish"@en,
         "Hambre / Knut Hamsun ; oversatt av José Viana. – Spansk"@no ;
     rdaed:P20315 "Hambre" ;
-    rdaed:P20316 "Sult" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/86820581> ;
@@ -22288,9 +21814,6 @@
     rdfs:label "Pan / Knut Hamsun ; translated by Alfonso Hernández Catá. – Spanish"@en,
         "Pan / Knut Hamsun ; oversatt av Alfonso Hernández Catá. – Spansk"@no ;
     rdaed:P20315 "Pan" ;
-    rdaed:P20316 "Pan",
-        "Pan : Soñadores, Por los viejos caminos, Vida azarosa",
-        "Pan : novela" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/76448961> ;
@@ -22301,7 +21824,6 @@
     rdfs:label "På gjengrodde stier / Knut Hamsun. – Norwegian Bokmål"@en,
         "På gjengrodde stier / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "På gjengrodde stier" ;
-    rdaed:P20316 "Paa gjengrodde stier" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/30145424502786830193> .
@@ -22310,10 +21832,6 @@
     rdfs:label "Victoria / Knut Hamsun ; translated by Julius Sandmeier and Sophie Angermann. – German"@en,
         "Victoria / Knut Hamsun ; oversatt av Julius Sandmeier og Sophie Angermann. – Tysk"@no ;
     rdaed:P20315 "Victoria" ;
-    rdaed:P20316 "Victoria",
-        "Victoria : Die Geschichte e. Liebe",
-        "Victoria : d. Geschichte e. Liebe",
-        "Victoria : die Geschichte einer Liebe" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/162089799>,
@@ -22325,9 +21843,6 @@
     rdfs:label "Hunger / Knut Hamsun ; translated by Julius Sandmeier and Sophie Angermann. – German"@en,
         "Hunger / Knut Hamsun ; oversatt av Julius Sandmeier og Sophie Angermann. – Tysk"@no ;
     rdaed:P20315 "Hunger" ;
-    rdaed:P20316 "Hunger : Roman",
-        "Hunger : Roman ; [aus dem Norwegischen]",
-        "Sult" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/162089799>,
@@ -22339,8 +21854,6 @@
     rdfs:label "August Weltumsegler / Knut Hamsun ; translated by Julius Sandmeier and Sophie Angermann. – German"@en,
         "August Weltumsegler / Knut Hamsun ; oversatt av Julius Sandmeier og Sophie Angermann. – Tysk"@no ;
     rdaed:P20315 "August Weltumsegler" ;
-    rdaed:P20316 "August",
-        "August Weltumsegler : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/162089799>,
@@ -22352,8 +21865,6 @@
     rdfs:label "Mysterier / Knut Hamsun. – Norwegian Bokmål"@en,
         "Mysterier / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Mysterier" ;
-    rdaed:P20316 "Mysterier",
-        "Samlede verker : B. 2 : Mysterier" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/206863699> .
@@ -22380,11 +21891,6 @@
     rdfs:label "Pan / Knut Hamsun. – Norwegian Bokmål"@en,
         "Pan / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Pan" ;
-    rdaed:P20316 "Pan",
-        "Pan : af Løjtnant Thomas Glahns Papirer",
-        "Pan : av løitnant Thomas Glahns papirer",
-        "Pan : av løitnant Thomas Glans papirer",
-        "Pan : av løjtnant Thomas Glahns papirer" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/194765531> .
@@ -22393,8 +21899,6 @@
     rdfs:label "Sult / Knut Hamsun. – Norwegian Bokmål"@en,
         "Sult / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Sult" ;
-    rdaed:P20316 "Sult",
-        "Sult : roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/220443771> .
@@ -22403,8 +21907,6 @@
     rdfs:label "Segen der Erde / Knut Hamsun ; translated by Julius Sandmeier and Sophie Angermann. – German"@en,
         "Segen der Erde / Knut Hamsun ; oversatt av Julius Sandmeier og Sophie Angermann. – Tysk"@no ;
     rdaed:P20315 "Segen der Erde" ;
-    rdaed:P20316 "Markens grøde",
-        "Segen der Erde : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20037 <http://viaf.org/viaf/162089799>,
@@ -22425,11 +21927,6 @@
     rdfs:label "Markens grøde / Knut Hamsun. – Norwegian Bokmål"@en,
         "Markens grøde / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Markens grøde" ;
-    rdaed:P20316 "Markens grøde",
-        "Markens grøde : 1",
-        "Markens grøde : 2",
-        "Markens grøde : roman",
-        "Samlede Verker : 11 : Markens Grøde" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/294124367> .
@@ -22444,10 +21941,6 @@
     rdfs:label "Victoria / Knut Hamsun. – Norwegian Bokmål"@en,
         "Victoria / Knut Hamsun. – Bokmål"@no ;
     rdaed:P20315 "Victoria" ;
-    rdaed:P20316 "Victoria",
-        "Victoria : en kjærligheds historie",
-        "Victoria : en kjærlighets historie",
-        "Victoria : en kærligheds historie" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20231 <http://viaf.org/viaf/395147270538135700001> .

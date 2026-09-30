@@ -343,7 +343,7 @@ rdaeo:P20001	entedit:status "controlled property" ;
 
 #Manifestation profile
 rdamd:P30156	entedit:status "data property" ; entedit:order 1 ; rdfs:label "tittel"@no . #"title"@en .
-rdamd:P30014	entedit:status "data property" ; entedit:order 2 ; rdfs:label "nummer for del"@no . #"numbering"@en .
+rdamd:P30014	entedit:status "data property" ; entedit:linguistic false ; entedit:order 2 ; rdfs:label "nummer for del"@no . #"numbering"@en .
 rdamd:P30142	entedit:status "data property" ; entedit:order 3 ; rdfs:label "annen tittelinformasjon"@no . #"subtitle"@en .
 rdamd:P30117	entedit:status "data property" ; entedit:order 4 ; rdfs:label "ansvarsangivelse"@no . #"responsibility"@en .
 #rdamd:P30134	entedit:status "data property" ; entedit:order 4 ; rdfs:label "har tittel for manifestasjon"@no . #"tittel"@en .
