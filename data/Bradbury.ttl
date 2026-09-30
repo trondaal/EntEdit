@@ -5495,7 +5495,7 @@
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1003> ;
     entedit:P02 <https://id.nb.no/vocabulary/ntsf/302> ;
     rdawd:P10223 "Ray Bradbury's The martian chronicles" ;
-    rdawo:P10058 <http://example.org/calerodennis> ;
+    rdawo:P10058 <http://viaf.org/viaf/107048685> ;
     rdawo:P10252 <http://viaf.org/viaf/175761003> ;
     rdaxd:P00018 "http://viaf.org/viaf/175761003/adaptation" .
 
@@ -5875,7 +5875,7 @@
     rdaed:P20315 "Tåkeluren" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nno> ;
-    rdaeo:P20037 <http://example.org/eggenarnljot> ;
+    rdaeo:P20037 <http://viaf.org/viaf/62838442> ;
     rdaeo:P20141 <https://www.isfdb.org/cgi-bin/title.cgi?64798/exp/eng/1020> ;
     rdaeo:P20231 <https://www.isfdb.org/cgi-bin/title.cgi?64798> .
 
@@ -6107,7 +6107,7 @@
     rdaed:P20315 "La bruja de abril" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20037 <http://example.org/antolinratomariano> ;
+    rdaeo:P20037 <http://viaf.org/viaf/7406407> ;
     rdaeo:P20141 <https://www.isfdb.org/cgi-bin/title.cgi?58366/exp/eng/1020> ;
     rdaeo:P20231 <https://www.isfdb.org/cgi-bin/title.cgi?58366> .
 
@@ -6820,25 +6820,25 @@
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 .
 
-<http://example.org/marquesmiguel> a rdac:C10004 ;
+<http://viaf.org/viaf/305211369> a rdac:C10004 ;
     rdfs:label "Marqués, Miguel" ;
     rdaad:P50413 "Marqués, Miguel" ;
-    rdaxd:P00018 "http://example.org/marquesmiguel" .
+    rdaxd:P00018 "http://viaf.org/viaf/305211369" .
 
-<http://example.org/soutomarcial> a rdac:C10004 ;
+<http://viaf.org/viaf/60467591> a rdac:C10004 ;
     rdfs:label "Souto, Marcial" ;
     rdaad:P50413 "Souto, Marcial" ;
-    rdaxd:P00018 "http://example.org/soutomarcial" .
+    rdaxd:P00018 "http://viaf.org/viaf/60467591" .
 
-<http://example.org/vassilevsvetlin> a rdac:C10004 ;
+<http://viaf.org/viaf/280518123> a rdac:C10004 ;
     rdfs:label "Vassilev, Svetlin" ;
     rdaad:P50413 "Vassilev, Svetlin" ;
-    rdaxd:P00018 "http://example.org/vassilevsvetlin" .
+    rdaxd:P00018 "http://viaf.org/viaf/280518123" .
 
-<http://example.org/antolinratomariano> a rdac:C10004 ;
+<http://viaf.org/viaf/7406407> a rdac:C10004 ;
     rdfs:label "Antolín Rato, Mariano" ;
     rdaad:P50413 "Antolín Rato, Mariano" ;
-    rdaxd:P00018 "http://example.org/antolinratomariano" .
+    rdaxd:P00018 "http://viaf.org/viaf/7406407" .
 
 <http://viaf.org/viaf/12305881/darktheywereandgoldeneyed> a rdac:C10001 ;
     rdfs:label "Dark they were, and golden-eyed / Ray Bradbury"@en,
@@ -6855,7 +6855,7 @@
     rdaed:P20315 "Eran morenos y de ojos dorados" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20037 <http://example.org/marquesmiguel> ;
+    rdaeo:P20037 <http://viaf.org/viaf/305211369> ;
     rdaeo:P20231 <http://viaf.org/viaf/12305881/darktheywereandgoldeneyed> .
 
 <http://viaf.org/viaf/12305881/thedragon/exp/spa/1020/soutomarcial> a rdac:C10006 ;
@@ -6864,7 +6864,7 @@
     rdaed:P20315 "Dragón" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20037 <http://example.org/soutomarcial> ;
+    rdaeo:P20037 <http://viaf.org/viaf/60467591> ;
     rdaeo:P20141 <http://viaf.org/viaf/12305881/thedragon/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/12305881/thedragon> .
 
@@ -6873,7 +6873,7 @@
         "Dragón : ilustraciones / Svetlin Vassilev. – Bildeverk"@no ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1003> ;
     rdawd:P10223 "Dragón : ilustraciones" ;
-    rdawo:P10058 <http://example.org/vassilevsvetlin> ;
+    rdawo:P10058 <http://viaf.org/viaf/280518123> ;
     rdawo:P10152 <http://viaf.org/viaf/12305881/thedragon> ;
     rdaxd:P00018 "http://example.org/vassilevsvetlin/dragon" .
 
@@ -6957,17 +6957,17 @@
     rdamo:P30002 rdamt:1007 ;
     rdaxd:P00018 "isbn-9788491074557" .
 
-<http://example.org/sanmartinvargasoscar> a rdac:C10004 ;
+<http://viaf.org/viaf/87344240> a rdac:C10004 ;
     rdfs:label "Sanmartín Vargas, Óscar" ;
     rdaad:P50413 "Sanmartín Vargas, Óscar" ;
-    rdaxd:P00018 "http://example.org/sanmartinvargasoscar" .
+    rdaxd:P00018 "http://viaf.org/viaf/87344240" .
 
 <http://example.org/sanmartinvargasoscar/eranmorenosydeojosdorados> a rdac:C10001 ;
     rdfs:label "Eran morenos y de ojos dorados : ilustraciones / Óscar Sanmartín Vargas. – Picture work"@en,
         "Eran morenos y de ojos dorados : ilustraciones / Óscar Sanmartín Vargas. – Bildeverk"@no ;
     entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1003> ;
     rdawd:P10223 "Eran morenos y de ojos dorados : ilustraciones" ;
-    rdawo:P10058 <http://example.org/sanmartinvargasoscar> ;
+    rdawo:P10058 <http://viaf.org/viaf/87344240> ;
     rdawo:P10152 <http://viaf.org/viaf/12305881/darktheywereandgoldeneyed> ;
     rdaxd:P00018 "http://example.org/sanmartinvargasoscar/eranmorenosydeojosdorados" .
 
@@ -7011,15 +7011,15 @@
     rdamo:P30002 rdamt:1007 ;
     rdaxd:P00018 "isbn-9788434885882" .
 
-<http://example.org/calerodennis> a rdac:C10004 ;
+<http://viaf.org/viaf/107048685> a rdac:C10004 ;
     rdfs:label "Calero, Dennis" ;
     rdaad:P50413 "Calero, Dennis" ;
-    rdaxd:P00018 "http://example.org/calerodennis" .
+    rdaxd:P00018 "http://viaf.org/viaf/107048685" .
 
-<http://example.org/eggenarnljot> a rdac:C10004 ;
+<http://viaf.org/viaf/62838442> a rdac:C10004 ;
     rdfs:label "Eggen, Arnljot" ;
     rdaad:P50413 "Eggen, Arnljot" ;
-    rdaxd:P00018 "http://example.org/eggenarnljot" .
+    rdaxd:P00018 "http://viaf.org/viaf/62838442" .
 
 # ------------------------------------------------------------------
 # Manifestations not linked to any expression (270)

@@ -11745,7 +11745,7 @@
     rdamd:P30182 "179 S. : zahlr. Ill., 24 cm." ;
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
-    entedit:P05 <http://example.org/stillergunther> ;
+    entedit:P05 <http://viaf.org/viaf/12337397> ;
     rdamo:P30139 <http://viaf.org/viaf/174963765/exp/ger/1014/1020> ;
     rdaxd:P00018 "isbn-3763221433",
         "isbn-9783763221431" .
@@ -22349,10 +22349,10 @@
     rdaad:P50413 "Amsler, Jean" ;
     rdaxd:P00018 "http://viaf.org/viaf/3142959" .
 
-<http://example.org/stillergunther> a rdac:C10004 ;
+<http://viaf.org/viaf/12337397> a rdac:C10004 ;
     rdfs:label "Stiller, Günther" ;
     rdaad:P50413 "Stiller, Günther" ;
-    rdaxd:P00018 "http://example.org/stillergunther" .
+    rdaxd:P00018 "http://viaf.org/viaf/12337397" .
 
 <http://viaf.org/viaf/62102793> a rdac:C10004 ;
     rdfs:label "Steidl, Gerhard" ;
