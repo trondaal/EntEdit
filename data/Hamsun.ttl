@@ -20493,9 +20493,9 @@
     rdaeo:P20231 <http://viaf.org/viaf/73860916/denlykkeligealder> .
 
 <http://viaf.org/viaf/7524679/stalkyco/exp/spa/1020/riberaantonio> a rdac:C10006 ;
-    rdfs:label "Stalky & Co / translated by Antonio Ribera. – Spanish"@en,
-        "Stalky & Co / oversatt av Antonio Ribera. – Spansk"@no ;
-    rdaed:P20315 "Stalky & Co" ;
+    rdfs:label "Stalky y Cía / translated by Antonio Ribera. – Spanish"@en,
+        "Stalky y Cía / oversatt av Antonio Ribera. – Spansk"@no ;
+    rdaed:P20315 "Stalky y Cía" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/94703160> ;
@@ -20512,9 +20512,9 @@
     rdaeo:P20231 <http://viaf.org/viaf/8450149068552765730000> .
 
 <http://viaf.org/viaf/91868694/themother/exp/spa/1020/paytuvdesierracarlos> a rdac:C10006 ;
-    rdfs:label "The mother / translated by Carlos Paytuví de Sierra. – Spanish"@en,
-        "The mother / oversatt av Carlos Paytuví de Sierra. – Spansk"@no ;
-    rdaed:P20315 "The mother" ;
+    rdfs:label "La madre / translated by Carlos Paytuví de Sierra. – Spanish"@en,
+        "La Madre / oversatt av Carlos Paytuví de Sierra. – Spansk"@no ;
+    rdaed:P20315 "La madre" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://example.org/paytuvdesierracarlos> ;
@@ -21950,4 +21950,3 @@
     rdaad:P50339 "1859-1952" ;
     rdaad:P50413 "Hamsun, Knut" ;
     rdaxd:P00018 "http://viaf.org/viaf/59083692" .
-
