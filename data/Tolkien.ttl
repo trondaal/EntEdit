@@ -836,7 +836,7 @@
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/24701800> ;
     rdaeo:P20037 <http://viaf.org/viaf/65245833> ;
-    rdaeo:P20141 <http://www.wikidata.org/entity/Q208002/exp/eng/1020> ;
+    rdaeo:P20152 <http://www.wikidata.org/entity/Q208002/exp/nob/1020/65245833> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q208002> .
 
 <http://www.wikidata.org/entity/Q332388/exp/nob/1013/24701800/65245833> a rdac:C10006 ;
@@ -848,7 +848,7 @@
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/24701800> ;
     rdaeo:P20037 <http://viaf.org/viaf/65245833> ;
-    rdaeo:P20141 <http://www.wikidata.org/entity/Q332388/exp/eng/1020> ;
+    rdaeo:P20152 <http://www.wikidata.org/entity/Q332388/exp/nob/1020/65245833> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q332388> .
 
 <http://www.wikidata.org/entity/Q332581/exp/nob/1013/24701800/65245833> a rdac:C10006 ;
@@ -860,7 +860,7 @@
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/24701800> ;
     rdaeo:P20037 <http://viaf.org/viaf/65245833> ;
-    rdaeo:P20141 <http://www.wikidata.org/entity/Q332581/exp/eng/1020> ;
+    rdaeo:P20152 <http://www.wikidata.org/entity/Q332581/exp/nob/1020/65245833> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q332581> .
 
 <http://www.wikidata.org/entity/Q503325> a rdac:C10001 ;
@@ -904,6 +904,17 @@
     rdaeo:P20141 <http://www.wikidata.org/entity/Q74287/exp/eng/1020> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q74287> .
 
+<http://www.wikidata.org/entity/Q74287/exp/nob/1020/1169314213724530007/aasenfinn> a rdac:C10006 ;
+    rdfs:label "Hobbiten / J. R. R. Tolkien ; translated by Finn Åsen and Oddrun Grønnvik. – Norwegian Bokmål"@en,
+        "Hobbiten / J. R. R. Tolkien ; oversatt av Finn Åsen og Oddrun Grønnvik. – Bokmål"@no ;
+    rdaed:P20315 "Hobbiten" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20037 <http://viaf.org/viaf/1169314213724530007>,
+        <http://example.org/aasenfinn> ;
+    rdaeo:P20141 <http://www.wikidata.org/entity/Q74287/exp/eng/1020> ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q74287> .
+
 <http://www.wikidata.org/entity/Q74287/exp/nob/1013/1169314213724530007/224621493/aasenfinn> a rdac:C10006 ;
     rdfs:label "Hobbiten / J. R. R. Tolkien ; translated by Finn Åsen and Oddrun Grønnvik ; read by Knut Røe. – Spoken word, Norwegian Bokmål"@en,
         "Hobbiten / J. R. R. Tolkien ; oversatt av Finn Åsen og Oddrun Grønnvik ; lest av Knut Røe. – Tale, bokmål"@no ;
@@ -913,7 +924,7 @@
     rdaeo:P20022 <http://viaf.org/viaf/224621493> ;
     rdaeo:P20037 <http://viaf.org/viaf/1169314213724530007>,
         <http://example.org/aasenfinn> ;
-    rdaeo:P20141 <http://www.wikidata.org/entity/Q74287/exp/eng/1020> ;
+    rdaeo:P20152 <http://www.wikidata.org/entity/Q74287/exp/nob/1020/1169314213724530007/aasenfinn> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q74287> .
 
 <http://www.wikidata.org/entity/Q74287/exp/nob/1020/9349441> a rdac:C10006 ;

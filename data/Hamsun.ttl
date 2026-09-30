@@ -17409,6 +17409,7 @@
     rdaed:P20315 "Pan" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20152 <http://viaf.org/viaf/194765531/exp/nob/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/194765531> .
 
 <http://viaf.org/viaf/206863699/exp/eng/1020/111655332> a rdac:C10006 ;
@@ -17449,6 +17450,7 @@
     rdaed:P20315 "Mysterier" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20152 <http://viaf.org/viaf/206863699/exp/nob/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/206863699> .
 
 <http://viaf.org/viaf/206863699/exp/nob/1013/johnsonnils> a rdac:C10006 ;
@@ -17458,6 +17460,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/228279275> ;
+    rdaeo:P20152 <http://viaf.org/viaf/206863699/exp/nob/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/206863699> .
 
 <http://viaf.org/viaf/206863699/exp/spa/1020/86862314/garcabadellregino> a rdac:C10006 ;
@@ -17478,6 +17481,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/228279275> ;
+    rdaeo:P20152 <http://viaf.org/viaf/207944253/exp/nob/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/207944253> .
 
 <http://viaf.org/viaf/207944253/exp/spa/1020/vivesfrans> a rdac:C10006 ;
@@ -17566,6 +17570,7 @@
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20022 <http://viaf.org/viaf/35339440> ;
     rdaeo:P20037 <http://viaf.org/viaf/59960174> ;
+    rdaeo:P20152 <http://viaf.org/viaf/220443771/exp/ger/1020/59960174> ;
     rdaeo:P20231 <http://viaf.org/viaf/220443771> .
 
 <http://viaf.org/viaf/220443771/exp/ger/1020/borchmarievon> a rdac:C10006 ;
@@ -17658,6 +17663,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/229586296> ;
+    rdaeo:P20152 <http://viaf.org/viaf/30145424502786830193/exp/nob/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/30145424502786830193> .
 
 <http://viaf.org/viaf/309525997/exp/eng/1020/7014928> a rdac:C10006 ;
@@ -17852,6 +17858,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/228279275> ;
+    rdaeo:P20152 <http://viaf.org/viaf/312526705/exp/nob/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/312526705> .
 
 <http://viaf.org/viaf/316368447/exp/ger/1020> a rdac:C10006 ;
@@ -18021,6 +18028,7 @@
     rdaed:P20315 "Victoria" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+    rdaeo:P20152 <http://viaf.org/viaf/395147270538135700001/exp/ger/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/395147270538135700001> .
 
 <http://viaf.org/viaf/395147270538135700001/exp/ger/1020/kosterkahugo> a rdac:C10006 ;
@@ -19176,6 +19184,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/228279275> ;
+    rdaeo:P20152 <http://viaf.org/viaf/1650145424683186830143/exp/nob/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/1650145424683186830143> .
 
 <http://viaf.org/viaf/1650145424683186830143/exp/spa/1020/ferrorafaela> a rdac:C10006 ;
@@ -19211,6 +19220,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/37022260> ;
+    rdaeo:P20152 <http://viaf.org/viaf/180078068/exp/nob/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/180078068> .
 
 <http://viaf.org/viaf/183478381> a rdac:C10001 ;
@@ -19239,6 +19249,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/37022260> ;
+    rdaeo:P20152 <http://viaf.org/viaf/185380595/exp/nob/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/185380595> .
 
 <http://viaf.org/viaf/188303684/exp/eng/1020> a rdac:C10006 ;
@@ -19289,6 +19300,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/37022260> ;
+    rdaeo:P20152 <http://viaf.org/viaf/191146462599827770953/exp/nob/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/191146462599827770953> .
 
 <http://viaf.org/viaf/194765531/exp/ger/1020/162089799> a rdac:C10006 ;
@@ -19320,6 +19332,7 @@
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20020 <http://viaf.org/viaf/115557508> ;
     rdaeo:P20022 <http://viaf.org/viaf/228279275> ;
+    rdaeo:P20152 <http://viaf.org/viaf/194765531/exp/nob/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/194765531> .
 
 <http://viaf.org/viaf/206863699/exp/eng/1020> a rdac:C10006 ;
@@ -19379,6 +19392,7 @@
     rdaeo:P20022 <http://viaf.org/viaf/51881056> ;
     rdaeo:P20037 <http://viaf.org/viaf/162089799>,
         <http://viaf.org/viaf/59960174> ;
+    rdaeo:P20152 <http://viaf.org/viaf/220443771/exp/ger/1020/162089799/59960174> ;
     rdaeo:P20231 <http://viaf.org/viaf/220443771> .
 
 <http://viaf.org/viaf/220443771/exp/nob/1013/havrevoldolafr> a rdac:C10006 ;
@@ -19388,6 +19402,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/111148995811759751127> ;
+    rdaeo:P20152 <http://viaf.org/viaf/220443771/exp/nob/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/220443771> .
 
 <http://viaf.org/viaf/220443771/exp/nob/1013/hennieaksel> a rdac:C10006 ;
@@ -19397,6 +19412,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/121856556> ;
+    rdaeo:P20152 <http://viaf.org/viaf/220443771/exp/nob/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/220443771> .
 
 <http://viaf.org/viaf/220443771/exp/spa/1020/86862248/86862314> a rdac:C10006 ;
@@ -19460,6 +19476,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/37022260> ;
+    rdaeo:P20152 <http://viaf.org/viaf/30145424502786830193/exp/nob/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/30145424502786830193> .
 
 <http://viaf.org/viaf/309525997/exp/eng/1020> a rdac:C10006 ;
@@ -19499,6 +19516,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/37022260> ;
+    rdaeo:P20152 <http://viaf.org/viaf/309525997/exp/nob/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/309525997> .
 
 <http://viaf.org/viaf/310234238/exp/fre/1020/boyerregis> a rdac:C10006 ;
@@ -19518,6 +19536,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/556149296182580670003> ;
+    rdaeo:P20152 <http://viaf.org/viaf/310234238/exp/nob/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/310234238> .
 
 <http://viaf.org/viaf/312526705/exp/eng/1020/stallybrassgunnvor/stallybrassoliver> a rdac:C10006 ;
@@ -19569,6 +19588,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/37022260> ;
+    rdaeo:P20152 <http://viaf.org/viaf/316368447/exp/nob/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/316368447> .
 
 <http://viaf.org/viaf/3267149068489065730001/exp/fre/1020> a rdac:C10006 ;
@@ -19587,6 +19607,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/37022260> ;
+    rdaeo:P20152 <http://viaf.org/viaf/3267149068489065730001/exp/nob/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/3267149068489065730001> .
 
 <http://viaf.org/viaf/395147270538135700001/exp/ger/1020/brunsalken> a rdac:C10006 ;
@@ -19607,6 +19628,7 @@
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20020 <http://viaf.org/viaf/115557508> ;
     rdaeo:P20022 <http://viaf.org/viaf/228279275> ;
+    rdaeo:P20152 <http://viaf.org/viaf/395147270538135700001/exp/nob/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/395147270538135700001> .
 
 <http://viaf.org/viaf/395147270538135700001/exp/spa/1020/86862248/86862314> a rdac:C10006 ;
@@ -19637,6 +19659,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/37022260> ;
+    rdaeo:P20152 <http://viaf.org/viaf/5470149068540465730001/exp/nob/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/5470149068540465730001> .
 
 <http://viaf.org/viaf/59083692/aleksanderogleonarda/exp/nob/1020> a rdac:C10006 ;
@@ -19863,6 +19886,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/228279275> ;
+    rdaeo:P20152 <http://viaf.org/viaf/8450149068552765730000/exp/nob/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/8450149068552765730000> .
 
 <http://viaf.org/viaf/995145424555286830372/exp/eng/1020/7014928> a rdac:C10006 ;
@@ -19893,6 +19917,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/229609977> ;
+    rdaeo:P20152 <http://viaf.org/viaf/995145424555286830372/exp/nob/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/995145424555286830372> .
 
 <http://workid.oslomet.no/kh/09/exp/nob/1020> a rdac:C10006 ;
@@ -20677,6 +20702,7 @@
     rdaed:P20315 "Markens grøde" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20152 <http://viaf.org/viaf/294124367/exp/nob/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/294124367> .
 
 <http://viaf.org/viaf/309525997/exp/ger/1020/59960174> a rdac:C10006 ;

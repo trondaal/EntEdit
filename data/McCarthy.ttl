@@ -2308,6 +2308,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20022 <https://isni.org/isni/0000000114380049> ;
+    rdaeo:P20152 <http://viaf.org/viaf/214001528/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/214001528> .
 
 <http://viaf.org/viaf/215254416> a rdac:C10001 ;
@@ -2357,6 +2358,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20022 <https://isni.org/isni/0000000114380049> ;
+    rdaeo:P20152 <http://viaf.org/viaf/309357400/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/309357400> .
 
 <http://viaf.org/viaf/4440159478236227990002> a rdac:C10001 ;
@@ -3086,6 +3088,7 @@
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
     rdaeo:P20022 <http://viaf.org/viaf/27122071> ;
     rdaeo:P20037 <http://viaf.org/viaf/225596267> ;
+    rdaeo:P20152 <http://viaf.org/viaf/220031159/exp/nob/1020/225596267> ;
     rdaeo:P20231 <http://viaf.org/viaf/220031159> .
 
 <http://viaf.org/viaf/470166838899836200007/exp/eng/1020> a rdac:C10006 ;

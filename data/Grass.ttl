@@ -18948,6 +18948,7 @@
     rdaed:P20315 "Eintagsfliegen" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+    rdaeo:P20152 <http://viaf.org/viaf/1356158127379215150004/exp/ger/1014/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/1356158127379215150004> .
 
 <http://viaf.org/viaf/1356158127379215150004/exp/ger/1013/102319859> a rdac:C10006 ;
@@ -18957,6 +18958,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20022 <http://viaf.org/viaf/102319859> ;
+    rdaeo:P20152 <http://viaf.org/viaf/1356158127379215150004/exp/ger/1014/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/1356158127379215150004> .
 
 <http://viaf.org/viaf/1356158127379215150004/exp/ger/1014/1020> a rdac:C10006 ;
@@ -19135,6 +19137,7 @@
     rdaed:P20315 "Katz und Maus" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+    rdaeo:P20152 <http://viaf.org/viaf/174963765/exp/ger/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/174963765> .
 
 <http://viaf.org/viaf/174963765/exp/ger/1013/102319859> a rdac:C10006 ;
@@ -19144,6 +19147,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20022 <http://viaf.org/viaf/102319859> ;
+    rdaeo:P20152 <http://viaf.org/viaf/174963765/exp/ger/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/174963765> .
 
 <http://viaf.org/viaf/174963765/exp/ger/1014/1020> a rdac:C10006 ;
@@ -19362,6 +19366,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20022 <http://viaf.org/viaf/102319859> ;
+    rdaeo:P20152 <http://viaf.org/viaf/179378125/exp/ger/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/179378125> .
 
 <http://viaf.org/viaf/179378125/exp/heb/1020> a rdac:C10006 ;
@@ -19495,6 +19500,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20022 <http://viaf.org/viaf/102319859> ;
+    rdaeo:P20152 <http://viaf.org/viaf/185469169/exp/ger/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/185469169> .
 
 <http://viaf.org/viaf/185469169/exp/nob/1020/bjerrehakon> a rdac:C10006 ;
@@ -19669,6 +19675,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20022 <http://viaf.org/viaf/102319859> ;
+    rdaeo:P20152 <http://viaf.org/viaf/198560112/exp/ger/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/198560112> .
 
 <http://viaf.org/viaf/198568192/exp/ger/1020> a rdac:C10006 ;
@@ -19696,6 +19703,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20022 <http://viaf.org/viaf/102319859> ;
+    rdaeo:P20152 <http://viaf.org/viaf/202977803/exp/ger/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/202977803> .
 
 <http://viaf.org/viaf/202977803/exp/ger/1014> a rdac:C10006 ;
@@ -19769,6 +19777,7 @@
     rdaed:P20315 "Das Treffen in Telgte" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+    rdaeo:P20152 <http://viaf.org/viaf/205890609/exp/ger/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/205890609> .
 
 <http://viaf.org/viaf/205890609/exp/ger/1013/102319859> a rdac:C10006 ;
@@ -19778,6 +19787,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20022 <http://viaf.org/viaf/102319859> ;
+    rdaeo:P20152 <http://viaf.org/viaf/205890609/exp/ger/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/205890609> .
 
 <http://viaf.org/viaf/205890609/exp/hun/1020> a rdac:C10006 ;
@@ -19974,6 +19984,7 @@
     rdaed:P20315 "Der Butt" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+    rdaeo:P20152 <http://viaf.org/viaf/213148121/exp/ger/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/213148121> .
 
 <http://viaf.org/viaf/213148121/exp/ger/1013/102319859> a rdac:C10006 ;
@@ -19983,6 +19994,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20022 <http://viaf.org/viaf/102319859> ;
+    rdaeo:P20152 <http://viaf.org/viaf/213148121/exp/ger/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/213148121> .
 
 <http://viaf.org/viaf/213148121/exp/ita/1020/bianchibruna> a rdac:C10006 ;
@@ -20285,6 +20297,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20022 <http://viaf.org/viaf/102319859> ;
+    rdaeo:P20152 <http://viaf.org/viaf/312403428/exp/ger/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/312403428> .
 
 <http://viaf.org/viaf/312403428/exp/nob/1020/66142208> a rdac:C10006 ;
@@ -20349,6 +20362,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20022 <http://viaf.org/viaf/102319859> ;
+    rdaeo:P20152 <http://viaf.org/viaf/315945070/exp/ger/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/315945070> .
 
 <http://viaf.org/viaf/315945070/exp/kor/1020> a rdac:C10006 ;
@@ -20506,6 +20520,7 @@
     rdaed:P20315 "Grimms Wörter" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+    rdaeo:P20152 <http://viaf.org/viaf/6194148269702405230001/exp/ger/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/6194148269702405230001> .
 
 <http://viaf.org/viaf/6194148269702405230001/exp/ger/1013/102319859> a rdac:C10006 ;
@@ -20515,6 +20530,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20022 <http://viaf.org/viaf/102319859> ;
+    rdaeo:P20152 <http://viaf.org/viaf/6194148269702405230001/exp/ger/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/6194148269702405230001> .
 
 <http://viaf.org/viaf/6194148269702405230001/exp/ger/1013/gomringernora/sommergunter> a rdac:C10006 ;
@@ -20525,6 +20541,7 @@
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20022 <http://viaf.org/viaf/18141164>,
         <http://viaf.org/viaf/46973337> ;
+    rdaeo:P20152 <http://viaf.org/viaf/6194148269702405230001/exp/ger/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/6194148269702405230001> .
 
 <http://viaf.org/viaf/6194148269702405230001/exp/ger/1013/gomringernora/sommergunterbaby> a rdac:C10006 ;
@@ -20535,6 +20552,7 @@
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20022 <http://viaf.org/viaf/18141164>,
         <http://example.org/sommergunterbaby> ;
+    rdaeo:P20152 <http://viaf.org/viaf/6194148269702405230001/exp/ger/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/6194148269702405230001> .
 
 <http://viaf.org/viaf/6694158070654408780004> a rdac:C10001 ;
@@ -20562,6 +20580,7 @@
     rdaed:P20315 "Lyrische Beute" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+    rdaeo:P20152 <http://viaf.org/viaf/9468156012423449700000/exp/ger/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/9468156012423449700000> .
 
 <http://viaf.org/viaf/9468156012423449700000/exp/ger/1014/1020> a rdac:C10006 ;
@@ -20590,6 +20609,7 @@
     rdaed:P20315 "Ein weites Feld" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+    rdaeo:P20152 <http://www.wikidata.org/entity/Q1254354/exp/ger/1020> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q1254354> .
 
 <http://www.wikidata.org/entity/Q1254354/exp/ger/1013/102319859> a rdac:C10006 ;
@@ -20599,6 +20619,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20022 <http://viaf.org/viaf/102319859> ;
+    rdaeo:P20152 <http://www.wikidata.org/entity/Q1254354/exp/ger/1020> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q1254354> .
 
 <http://www.wikidata.org/entity/Q1254354/exp/nob/1020/66142208> a rdac:C10006 ;
@@ -20618,6 +20639,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20022 <http://viaf.org/viaf/102319859> ;
+    rdaeo:P20152 <http://www.wikidata.org/entity/Q1460598/exp/ger/1020> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q1460598> .
 
 <http://www.wikidata.org/entity/Q15805843> a rdac:C10001 ;
@@ -20859,6 +20881,7 @@
     rdaed:P20315 "Beim Häuten der Zwiebel" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+    rdaeo:P20152 <http://www.wikidata.org/entity/Q814761/exp/ger/1020> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q814761> .
 
 <http://www.wikidata.org/entity/Q814761/exp/ger/1013/102319859> a rdac:C10006 ;
@@ -20868,6 +20891,7 @@
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     rdaeo:P20022 <http://viaf.org/viaf/102319859> ;
+    rdaeo:P20152 <http://www.wikidata.org/entity/Q814761/exp/ger/1020> ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q814761> .
 
 <http://www.wikidata.org/entity/Q989760/exp/eng/1020> a rdac:C10006 ;
@@ -21798,6 +21822,7 @@
     rdaed:P20315 "Die Blechtrommel" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+    rdaeo:P20152 <http://viaf.org/viaf/179378125/exp/ger/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/179378125> .
 
 <http://viaf.org/viaf/179378125/exp/ita/1020/seccilia> a rdac:C10006 ;

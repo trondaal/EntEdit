@@ -5515,6 +5515,7 @@
     rdaed:P20315 "The Martian chronicles : [Sound recording]" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20152 <http://viaf.org/viaf/175761003/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/175761003> .
 
 <http://viaf.org/viaf/183843031/exp/ger/1020> a rdac:C10006 ;
@@ -5613,6 +5614,7 @@
     rdaed:P20315 "The illustrated man" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20152 <http://viaf.org/viaf/2146095153500370503/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/2146095153500370503> .
 
 <http://viaf.org/viaf/2146095153500370503/exp/eng/spa/1020/76117483> a rdac:C10006 ;
@@ -5780,6 +5782,7 @@
     rdaed:P20315 "Long after midnight" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20152 <http://viaf.org/viaf/4273164842509813040000/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/4273164842509813040000> .
 
 <http://viaf.org/viaf/5196155286593787180009/exp/eng/1020> a rdac:C10006 ;
@@ -5855,6 +5858,7 @@
     rdaed:P20315 "The Foghorn" ;
     rdaeo:P20001 rdaco:1013 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20152 <https://www.isfdb.org/cgi-bin/title.cgi?64798/exp/eng/1020> ;
     rdaeo:P20231 <https://www.isfdb.org/cgi-bin/title.cgi?64798> .
 
 <https://www.isfdb.org/cgi-bin/title.cgi?64798/exp/eng/1020> a rdac:C10006 ;

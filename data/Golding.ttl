@@ -5002,6 +5002,7 @@
         <http://id.loc.gov/vocabulary/iso639-2/nor> ;
     rdaeo:P20022 <http://viaf.org/viaf/10057685> ;
     rdaeo:P20037 <http://viaf.org/viaf/74661518> ;
+    rdaeo:P20152 <http://viaf.org/viaf/119144648592107423604/exp/nob/nor/1020/74661518> ;
     rdaeo:P20231 <http://viaf.org/viaf/119144648592107423604> .
 
 <http://viaf.org/viaf/174553895/exp/nob/nor/1020/226311641> a rdac:C10006 ;
