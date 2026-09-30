@@ -5366,6 +5366,7 @@
     rdaed:P20315 "Un cementiri de llunàtics : una altra història de dues ciutats" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/cat> ;
+    rdaeo:P20141 <http://viaf.org/viaf/1142162985500686300007/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/1142162985500686300007> .
 
 <http://viaf.org/viaf/12305881/elephants> a rdac:C10001 ;
@@ -5424,6 +5425,7 @@
     rdaed:P20315 "Zen en l'art d'escriure" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/cat> ;
+    rdaeo:P20141 <http://viaf.org/viaf/1356145424675986830487/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/1356145424675986830487> .
 
 <http://viaf.org/viaf/1356145424675986830487/exp/eng/1020> a rdac:C10006 ;
@@ -5435,21 +5437,21 @@
     rdaeo:P20231 <http://viaf.org/viaf/1356145424675986830487> .
 
 <http://viaf.org/viaf/1404145424624286831356/exp/und/1020> a rdac:C10006 ;
-    rdfs:label "The golden apples of the sun : [short stories] / Ray Bradbury"@en,
-        "The golden apples of the sun : [short stories] / Ray Bradbury"@no ;
+    rdfs:label "The golden apples of the sun : [short stories] / Ray Bradbury. – English"@en,
+        "The golden apples of the sun : [short stories] / Ray Bradbury. – Engelsk"@no ;
     rdaed:P20315 "The golden apples of the sun : [short stories]" ;
     rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/und> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://viaf.org/viaf/1404145424624286831356> .
 
 <http://viaf.org/viaf/1542159477729527990004/exp/cat/1020> a rdac:C10006 ;
-    rdfs:label "The fog horn / Ray Bradbury. – Catalan, Spanish"@en,
-        "The fog horn / Ray Bradbury. – Katalansk, spansk"@no ;
+    rdfs:label "The fog horn / Ray Bradbury. – Catalan"@en,
+        "The fog horn / Ray Bradbury. – Katalansk"@no ;
     rdaed:P20315 "The fog horn" ;
     rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/cat>,
-        <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20231 <http://viaf.org/viaf/1542159477729527990004> .
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/cat> ;
+    rdaeo:P20141 <https://www.isfdb.org/cgi-bin/title.cgi?64798/exp/eng/1020> ;
+    rdaeo:P20231 <https://www.isfdb.org/cgi-bin/title.cgi?64798> .
 
 <http://viaf.org/viaf/174579606/exp/cat/1020> a rdac:C10006 ;
     rdfs:label "Encendre la nit / Ray Bradbury. – Catalan"@en,
@@ -5457,15 +5459,16 @@
     rdaed:P20315 "Encendre la nit" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/cat> ;
+    rdaeo:P20141 <http://viaf.org/viaf/174579606/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/174579606> .
 
 <http://viaf.org/viaf/174579606/exp/cat/eng/1020> a rdac:C10006 ;
-    rdfs:label "Encendre la nit / Ray Bradbury. – Catalan, English"@en,
-        "Encendre la nit / Ray Bradbury. – Engelsk, katalansk"@no ;
+    rdfs:label "Encendre la nit / Ray Bradbury. – Catalan"@en,
+        "Encendre la nit / Ray Bradbury. – Katalansk"@no ;
     rdaed:P20315 "Encendre la nit" ;
     rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/cat>,
-        <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/cat> ;
+    rdaeo:P20141 <http://viaf.org/viaf/174579606/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/174579606> .
 
 <http://viaf.org/viaf/174579606/exp/nob/1020> a rdac:C10006 ;
@@ -5474,6 +5477,7 @@
     rdaed:P20315 "Gutten som var redd for mørket" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20141 <http://viaf.org/viaf/174579606/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/174579606> .
 
 <http://viaf.org/viaf/174579606/exp/spa/1020> a rdac:C10006 ;
@@ -5482,6 +5486,7 @@
     rdaed:P20315 "Encender la noche" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+    rdaeo:P20141 <http://viaf.org/viaf/174579606/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/174579606> .
 
 <http://viaf.org/viaf/175761003/adaptation> a rdac:C10001 ;
@@ -5518,6 +5523,7 @@
     rdaed:P20315 "Gesänge des Computers : Erzählungen" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+    rdaeo:P20141 <http://viaf.org/viaf/183843031/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/183843031> .
 
 <http://viaf.org/viaf/183843031/exp/swe/1020> a rdac:C10006 ;
@@ -5526,6 +5532,7 @@
     rdaed:P20315 "Den kalla vinden och den varma" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/swe> ;
+    rdaeo:P20141 <http://viaf.org/viaf/183843031/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/183843031> .
 
 <http://viaf.org/viaf/184365511> a rdac:C10001 ;
@@ -5542,6 +5549,7 @@
     rdaed:P20315 "Fahrenheit 451 : Roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+    rdaeo:P20141 <http://viaf.org/viaf/185473935/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/185473935> .
 
 <http://viaf.org/viaf/185473935/exp/ita/1020> a rdac:C10006 ;
@@ -5550,6 +5558,7 @@
     rdaed:P20315 "Fahrenheit 451" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ita> ;
+    rdaeo:P20141 <http://viaf.org/viaf/185473935/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/185473935> .
 
 <http://viaf.org/viaf/185473935/exp/por/1020> a rdac:C10006 ;
@@ -5558,6 +5567,7 @@
     rdaed:P20315 "Fahrenheit 451" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/por> ;
+    rdaeo:P20141 <http://viaf.org/viaf/185473935/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/185473935> .
 
 <http://viaf.org/viaf/185473935/exp/slv/1020> a rdac:C10006 ;
@@ -5566,6 +5576,7 @@
     rdaed:P20315 "Fahrenheit 451" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/slv> ;
+    rdaeo:P20141 <http://viaf.org/viaf/185473935/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/185473935> .
 
 <http://viaf.org/viaf/2146095153500370503/andmore> a rdac:C10001 ;
@@ -5592,6 +5603,7 @@
     rdaed:P20315 "L'home il·lustrat" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/cat> ;
+    rdaeo:P20141 <http://viaf.org/viaf/2146095153500370503/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/2146095153500370503> .
 
 <http://viaf.org/viaf/2146095153500370503/exp/eng/1013> a rdac:C10006 ;
@@ -5604,13 +5616,13 @@
     rdaeo:P20231 <http://viaf.org/viaf/2146095153500370503> .
 
 <http://viaf.org/viaf/2146095153500370503/exp/eng/spa/1020/76117483> a rdac:C10006 ;
-    rdfs:label "El hombre ilustrado / Ray Bradbury ; translated by Francisco Abelenda. – English, Spanish"@en,
-        "El hombre ilustrado / Ray Bradbury ; oversatt av Francisco Abelenda. – Engelsk, spansk"@no ;
+    rdfs:label "El hombre ilustrado / Ray Bradbury ; translated by Francisco Abelenda. – Spanish"@en,
+        "El hombre ilustrado / Ray Bradbury ; oversatt av Francisco Abelenda. – Spansk"@no ;
     rdaed:P20315 "El hombre ilustrado" ;
     rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng>,
-        <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/76117483> ;
+    rdaeo:P20141 <http://viaf.org/viaf/2146095153500370503/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/2146095153500370503> .
 
 <http://viaf.org/viaf/2146095153500370503/exp/ger/1020> a rdac:C10006 ;
@@ -5619,6 +5631,7 @@
     rdaed:P20315 "Der illustrierte Mann : Erzählungen" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+    rdaeo:P20141 <http://viaf.org/viaf/2146095153500370503/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/2146095153500370503> .
 
 <http://viaf.org/viaf/2146095153500370503/exp/nob/1020> a rdac:C10006 ;
@@ -5627,6 +5640,7 @@
     rdaed:P20315 "Den illustrerte mannen" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20141 <http://viaf.org/viaf/2146095153500370503/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/2146095153500370503> .
 
 <http://viaf.org/viaf/2146095153500370503/exp/spa/1020> a rdac:C10006 ;
@@ -5635,6 +5649,7 @@
     rdaed:P20315 "El hombre ilustrado" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+    rdaeo:P20141 <http://viaf.org/viaf/2146095153500370503/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/2146095153500370503> .
 
 <http://viaf.org/viaf/2146095153500370503/exp/swe/1020> a rdac:C10006 ;
@@ -5643,6 +5658,7 @@
     rdaed:P20315 "Den illustrerade mannen" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/swe> ;
+    rdaeo:P20141 <http://viaf.org/viaf/2146095153500370503/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/2146095153500370503> .
 
 <http://viaf.org/viaf/2945164782078108600004/exp/fre/1020> a rdac:C10006 ;
@@ -5651,6 +5667,7 @@
     rdaed:P20315 "Le pays d'octobre : roman" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+    rdaeo:P20141 <http://viaf.org/viaf/2945164782078108600004/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/2945164782078108600004> .
 
 <http://viaf.org/viaf/307984830/exp/nob/1020> a rdac:C10006 ;
@@ -5659,6 +5676,7 @@
     rdaed:P20315 "Døden er en ensom sak" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20141 <http://viaf.org/viaf/307984830/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/307984830> .
 
 <http://viaf.org/viaf/307984830/exp/spa/1020> a rdac:C10006 ;
@@ -5667,6 +5685,7 @@
     rdaed:P20315 "La muerte es un asunto solitario" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+    rdaeo:P20141 <http://viaf.org/viaf/307984830/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/307984830> .
 
 <http://viaf.org/viaf/308001247/exp/spa/1020> a rdac:C10006 ;
@@ -5675,6 +5694,7 @@
     rdaed:P20315 "Cuentos espaciales" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+    rdaeo:P20141 <http://viaf.org/viaf/308001247/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/308001247> .
 
 <http://viaf.org/viaf/308077573/exp/Español/spa/1020> a rdac:C10006 ;
@@ -5683,6 +5703,7 @@
     rdaed:P20315 "Siempre nos quedará París" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+    rdaeo:P20141 <http://viaf.org/viaf/308077573/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/308077573> .
 
 <http://viaf.org/viaf/308077573/exp/eng/1020> a rdac:C10006 ;
@@ -5694,13 +5715,13 @@
     rdaeo:P20231 <http://viaf.org/viaf/308077573> .
 
 <http://viaf.org/viaf/309258185/exp/eng/spa/1020/76117483> a rdac:C10006 ;
-    rdfs:label "El vino del estío / Ray Bradbury ; translated by Francisco Abelenda. – English, Spanish"@en,
-        "El vino del estío / Ray Bradbury ; oversatt av Francisco Abelenda. – Engelsk, spansk"@no ;
+    rdfs:label "El vino del estío / Ray Bradbury ; translated by Francisco Abelenda. – Spanish"@en,
+        "El vino del estío / Ray Bradbury ; oversatt av Francisco Abelenda. – Spansk"@no ;
     rdaed:P20315 "El vino del estío" ;
     rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng>,
-        <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/76117483> ;
+    rdaeo:P20141 <http://viaf.org/viaf/309258185/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/309258185> .
 
 <http://viaf.org/viaf/309258185/play> a rdac:C10001 ;
@@ -5741,6 +5762,7 @@
     rdaed:P20315 "Ahmed e le Macchine dell'Oblio" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ita> ;
+    rdaeo:P20141 <http://viaf.org/viaf/4143155226755084490000/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/4143155226755084490000> .
 
 <http://viaf.org/viaf/4143155226755084490000/exp/spa/1020> a rdac:C10006 ;
@@ -5749,6 +5771,7 @@
     rdaed:P20315 "Ahmed y las máquinas del olvido : una fábula" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+    rdaeo:P20141 <http://viaf.org/viaf/4143155226755084490000/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/4143155226755084490000> .
 
 <http://viaf.org/viaf/4273164842509813040000/exp/eng/1013> a rdac:C10006 ;
@@ -5794,12 +5817,12 @@
     rdaeo:P20231 <https://www.imdb.com/title/tt0060390> .
 
 <https://www.isfdb.org/cgi-bin/title.cgi?58366/exp/cat/1020> a rdac:C10006 ;
-    rdfs:label "April's witch / Ray Bradbury. – Catalan, Spanish"@en,
-        "April's witch / Ray Bradbury. – Katalansk, spansk"@no ;
+    rdfs:label "April's witch / Ray Bradbury. – Catalan"@en,
+        "April's witch / Ray Bradbury. – Katalansk"@no ;
     rdaed:P20315 "April's witch" ;
     rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/cat>,
-        <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/cat> ;
+    rdaeo:P20141 <https://www.isfdb.org/cgi-bin/title.cgi?58366/exp/eng/1020> ;
     rdaeo:P20231 <https://www.isfdb.org/cgi-bin/title.cgi?58366> .
 
 <https://www.isfdb.org/cgi-bin/title.cgi?58366/exp/eng/1020> a rdac:C10006 ;
@@ -5819,9 +5842,9 @@
     rdaxd:P00018 "https://www.isfdb.org/cgi-bin/title.cgi?58392" .
 
 <https://www.isfdb.org/cgi-bin/title.cgi?58392/exp/spa/1020> a rdac:C10006 ;
-    rdfs:label "The illustrated woman / Ray Bradbury. – Spanish"@en,
-        "The illustrated woman / Ray Bradbury. – Spansk"@no ;
-    rdaed:P20315 "The illustrated woman" ;
+    rdfs:label "La mujer tatuada / Ray Bradbury. – Spanish"@en,
+        "La mujer tatuada / Ray Bradbury. – Spansk"@no ;
+    rdaed:P20315 "La mujer tatuada" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20231 <https://www.isfdb.org/cgi-bin/title.cgi?58392> .
@@ -5843,13 +5866,13 @@
     rdaeo:P20231 <https://www.isfdb.org/cgi-bin/title.cgi?64798> .
 
 <https://www.isfdb.org/cgi-bin/title.cgi?64798/exp/mul/nno/nob/1020> a rdac:C10006 ;
-    rdfs:label "Tåkeluren / Ray Bradbury. – Norwegian Bokmål, Norwegian Nynorsk"@en,
-        "Tåkeluren / Ray Bradbury. – Bokmål, nynorsk"@no ;
+    rdfs:label "Tåkeluren / Ray Bradbury ; translated by Arnljot Eggen. – Norwegian Nynorsk"@en,
+        "Tåkeluren / Ray Bradbury ; oversatt av Arnljot Eggen. – Nynorsk"@no ;
     rdaed:P20315 "Tåkeluren" ;
     rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/mul>,
-        <http://id.loc.gov/vocabulary/iso639-2/nno>,
-        <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nno> ;
+    rdaeo:P20037 <http://example.org/eggenarnljot> ;
+    rdaeo:P20141 <https://www.isfdb.org/cgi-bin/title.cgi?64798/exp/eng/1020> ;
     rdaeo:P20231 <https://www.isfdb.org/cgi-bin/title.cgi?64798> .
 
 <https://www.isfdb.org/cgi-bin/title.cgi?64798/play> a rdac:C10001 ;
@@ -5915,15 +5938,8 @@
     rdaed:P20316 "Les pomes daurades del sol" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/cat> ;
+    rdaeo:P20141 <http://viaf.org/viaf/1404145424624286831356/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/1404145424624286831356> .
-
-<http://viaf.org/viaf/1542159477729527990004> a rdac:C10001 ;
-    rdfs:label "The fog horn / Ray Bradbury"@en,
-        "The fog horn / Ray Bradbury"@no ;
-    entedit:P01 <https://schema.nb.no/Bibliographic/Values/V1000> ;
-    rdawd:P10223 "The fog horn" ;
-    rdawo:P10061 <http://viaf.org/viaf/12305881> ;
-    rdaxd:P00018 "http://viaf.org/viaf/1542159477729527990004" .
 
 <http://viaf.org/viaf/1542159477729527990004/exp/spa/1020> a rdac:C10006 ;
     rdfs:label "The fog horn / Ray Bradbury. – Spanish"@en,
@@ -5931,16 +5947,17 @@
     rdaed:P20315 "The fog horn" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
-    rdaeo:P20231 <http://viaf.org/viaf/1542159477729527990004> .
+    rdaeo:P20141 <https://www.isfdb.org/cgi-bin/title.cgi?64798/exp/eng/1020> ;
+    rdaeo:P20231 <https://www.isfdb.org/cgi-bin/title.cgi?64798> .
 
 <http://viaf.org/viaf/175761003/exp/eng/spa/1020/76117483> a rdac:C10006 ;
-    rdfs:label "Crónicas marcianas / Ray Bradbury ; translated by Francisco Abelenda. – English, Spanish"@en,
-        "Crónicas marcianas / Ray Bradbury ; oversatt av Francisco Abelenda. – Engelsk, spansk"@no ;
+    rdfs:label "Crónicas marcianas / Ray Bradbury ; translated by Francisco Abelenda. – Spanish"@en,
+        "Crónicas marcianas / Ray Bradbury ; oversatt av Francisco Abelenda. – Spansk"@no ;
     rdaed:P20315 "Crónicas marcianas" ;
     rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng>,
-        <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/76117483> ;
+    rdaeo:P20141 <http://viaf.org/viaf/175761003/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/175761003> .
 
 <http://viaf.org/viaf/175761003/exp/nob/1020> a rdac:C10006 ;
@@ -5950,6 +5967,7 @@
     rdaed:P20316 "Krøniker fra Mars" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20141 <http://viaf.org/viaf/175761003/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/175761003> .
 
 <http://viaf.org/viaf/181334419> a rdac:C10001 ;
@@ -5974,6 +5992,7 @@
     rdaed:P20315 "Fahrenheit 451" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/baq> ;
+    rdaeo:P20141 <http://viaf.org/viaf/185473935/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/185473935> .
 
 <http://viaf.org/viaf/185473935/exp/fre/1020> a rdac:C10006 ;
@@ -5983,6 +6002,7 @@
     rdaed:P20316 "Fahrenheit 451 : nouvelles" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+    rdaeo:P20141 <http://viaf.org/viaf/185473935/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/185473935> .
 
 <http://viaf.org/viaf/185473935/exp/glg/1020> a rdac:C10006 ;
@@ -5991,6 +6011,7 @@
     rdaed:P20315 "Fahrenheit 451" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/glg> ;
+    rdaeo:P20141 <http://viaf.org/viaf/185473935/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/185473935> .
 
 <http://viaf.org/viaf/209899296/exp/eng/1020> a rdac:C10006 ;
@@ -6007,6 +6028,7 @@
     rdaed:P20315 "Remedio para melancólicos" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+    rdaeo:P20141 <http://viaf.org/viaf/209899296/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/209899296> .
 
 <http://viaf.org/viaf/209899296/exp/spa/1020/76117483> a rdac:C10006 ;
@@ -6016,6 +6038,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/76117483> ;
+    rdaeo:P20141 <http://viaf.org/viaf/209899296/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/209899296> .
 
 <http://viaf.org/viaf/308001247> a rdac:C10001 ;
@@ -6060,6 +6083,7 @@
     rdaed:P20315 "Ahora y siempre" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+    rdaeo:P20141 <http://viaf.org/viaf/5196155286593787180009/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/5196155286593787180009> .
 
 <https://www.imdb.com/title/tt0060390> a rdac:C10001 ;
@@ -6080,6 +6104,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://example.org/antolinratomariano> ;
+    rdaeo:P20141 <https://www.isfdb.org/cgi-bin/title.cgi?58366/exp/eng/1020> ;
     rdaeo:P20231 <https://www.isfdb.org/cgi-bin/title.cgi?58366> .
 
 <http://viaf.org/viaf/1142162985500686300007> a rdac:C10001 ;
@@ -6097,6 +6122,7 @@
     rdaed:P20315 "Cementerio para lunáticos" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+    rdaeo:P20141 <http://viaf.org/viaf/1142162985500686300007/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/1142162985500686300007> .
 
 <http://viaf.org/viaf/1356145424675986830487> a rdac:C10001 ;
@@ -6113,6 +6139,7 @@
     rdaed:P20315 "Fahrenheit 451" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20141 <http://viaf.org/viaf/185473935/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/185473935> .
 
 <http://viaf.org/viaf/209899296> a rdac:C10001 ;
@@ -6164,6 +6191,7 @@
     rdaed:P20315 "Siempre nos quedará París" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+    rdaeo:P20141 <http://viaf.org/viaf/308077573/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/308077573> .
 
 <http://viaf.org/viaf/309258185> a rdac:C10001 ;
@@ -6213,6 +6241,7 @@
     rdaed:P20315 "Mucho después de medianoche" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+    rdaeo:P20141 <http://viaf.org/viaf/4273164842509813040000/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/4273164842509813040000> .
 
 <https://en.wikipedia.org/wiki/The_Small_Assassin/exp/eng/1020> a rdac:C10006 ;
@@ -6255,6 +6284,7 @@
     rdaed:P20315 "Zen en el arte de escribir" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+    rdaeo:P20141 <http://viaf.org/viaf/1356145424675986830487/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/1356145424675986830487> .
 
 <http://viaf.org/viaf/1404145424624286831356> a rdac:C10001 ;
@@ -6281,6 +6311,7 @@
         "Otras crónicas marcianas" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+    rdaeo:P20141 <http://viaf.org/viaf/175761003/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/175761003> .
 
 <http://viaf.org/viaf/183843031> a rdac:C10001 ;
@@ -6297,6 +6328,7 @@
     rdaed:P20315 "Fantasmas de lo nuevo" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+    rdaeo:P20141 <http://viaf.org/viaf/183843031/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/183843031> .
 
 <http://viaf.org/viaf/2945164782078108600004/exp/spa/1020/76117483> a rdac:C10006 ;
@@ -6306,6 +6338,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/76117483> ;
+    rdaeo:P20141 <http://viaf.org/viaf/2945164782078108600004/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/2945164782078108600004> .
 
 <http://viaf.org/viaf/309288199/exp/spa/1020> a rdac:C10006 ;
@@ -6314,6 +6347,7 @@
     rdaed:P20315 "El árbol de las brujas" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+    rdaeo:P20141 <http://viaf.org/viaf/309288199/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/309288199> .
 
 <http://viaf.org/viaf/309316425/exp/eng/1020> a rdac:C10006 ;
@@ -6330,6 +6364,7 @@
     rdaed:P20315 "Las maquinarias de la alegría" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+    rdaeo:P20141 <http://viaf.org/viaf/309316425/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/309316425> .
 
 <http://viaf.org/viaf/1239151052019833530008/exp/spa/1020> a rdac:C10006 ;
@@ -6338,6 +6373,7 @@
     rdaed:P20315 "La feria de las tinieblas" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+    rdaeo:P20141 <http://viaf.org/viaf/1239151052019833530008/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/1239151052019833530008> .
 
 <http://viaf.org/viaf/1404145424624286831356/exp/spa/1020/76117483> a rdac:C10006 ;
@@ -6347,6 +6383,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/76117483> ;
+    rdaeo:P20141 <http://viaf.org/viaf/1404145424624286831356/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/1404145424624286831356> .
 
 <http://viaf.org/viaf/174579606> a rdac:C10001 ;
@@ -6365,6 +6402,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/76117483> ;
+    rdaeo:P20141 <http://viaf.org/viaf/2146095153500370503/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/2146095153500370503> .
 
 <http://viaf.org/viaf/309258185/exp/spa/1020/76117483> a rdac:C10006 ;
@@ -6376,6 +6414,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/76117483> ;
+    rdaeo:P20141 <http://viaf.org/viaf/309258185/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/309258185> .
 
 <http://viaf.org/viaf/175761003/exp/cat/1020> a rdac:C10006 ;
@@ -6384,6 +6423,7 @@
     rdaed:P20315 "Les cròniques marcianes" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/cat> ;
+    rdaeo:P20141 <http://viaf.org/viaf/175761003/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/175761003> .
 
 <http://viaf.org/viaf/2945164782078108600004/exp/eng/1020> a rdac:C10006 ;
@@ -6472,6 +6512,7 @@
     rdaed:P20315 "Fahrenheit 451" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+    rdaeo:P20141 <http://viaf.org/viaf/185473935/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/185473935> .
 
 <http://viaf.org/viaf/2146095153500370503/exp/eng/1020> a rdac:C10006 ;
@@ -6520,6 +6561,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/76117483> ;
+    rdaeo:P20141 <http://viaf.org/viaf/185473935/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/185473935> .
 
 <http://viaf.org/viaf/175761003/exp/spa/1020/76117483> a rdac:C10006 ;
@@ -6529,6 +6571,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/76117483> ;
+    rdaeo:P20141 <http://viaf.org/viaf/175761003/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/175761003> .
 
 <http://viaf.org/viaf/185473935/exp/cat/1020> a rdac:C10006 ;
@@ -6537,6 +6580,7 @@
     rdaed:P20315 "Fahrenheit 451" ;
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/cat> ;
+    rdaeo:P20141 <http://viaf.org/viaf/185473935/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/185473935> .
 
 <http://viaf.org/viaf/1239151052019833530008/exp/eng/1020> a rdac:C10006 ;
@@ -6567,6 +6611,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://viaf.org/viaf/7222256> ;
+    rdaeo:P20141 <http://viaf.org/viaf/185473935/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/185473935> .
 
 <http://viaf.org/viaf/185473935/exp/eng/1020> a rdac:C10006 ;
@@ -6816,6 +6861,7 @@
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/spa> ;
     rdaeo:P20037 <http://example.org/soutomarcial> ;
+    rdaeo:P20141 <http://viaf.org/viaf/12305881/thedragon/exp/eng/1020> ;
     rdaeo:P20231 <http://viaf.org/viaf/12305881/thedragon> .
 
 <http://example.org/vassilevsvetlin/dragon> a rdac:C10001 ;
@@ -6965,6 +7011,11 @@
     rdfs:label "Calero, Dennis" ;
     rdaad:P50413 "Calero, Dennis" ;
     rdaxd:P00018 "http://example.org/calerodennis" .
+
+<http://example.org/eggenarnljot> a rdac:C10004 ;
+    rdfs:label "Eggen, Arnljot" ;
+    rdaad:P50413 "Eggen, Arnljot" ;
+    rdaxd:P00018 "http://example.org/eggenarnljot" .
 
 # ------------------------------------------------------------------
 # Manifestations not linked to any expression (270)
