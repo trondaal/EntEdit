@@ -12,6 +12,10 @@ PREFIX inst:<http://www.ontotext.com/connectors/lucene/instance#>
 # superproperty rdaw:P10004, which would mix the two in one list. A field
 # name with $ merges into the part before it: workType$direct and
 # workType$inverse are one field, reached from either side of the link.
+# expression (the entity's own IRI, $self) and work hold IRIs for following a
+# link from a search result: the search is limited to the linked expression
+# or to the expressions of the linked work (+work:"<IRI>"), and the label's
+# words only rank the hits.
 INSERT DATA {
 	inst:expressionsIndex :createConnector '''
 {
@@ -488,6 +492,42 @@ INSERT DATA {
       "multivalued": true,
       "ignoreInvalidValues": false,
       "facet": true
+    },
+    {
+      "fieldName": "expression",
+      "propertyChain": [
+        "$self"
+      ],
+      "indexed": true,
+      "stored": false,
+      "analyzed": false,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": false
+    },
+    {
+      "fieldName": "work$direct",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/e/object/P20231"
+      ],
+      "indexed": true,
+      "stored": false,
+      "analyzed": false,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": false
+    },
+    {
+      "fieldName": "work$inverse",
+      "propertyChain": [
+        "^http://rdaregistry.info/Elements/w/object/P10078"
+      ],
+      "indexed": true,
+      "stored": false,
+      "analyzed": false,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": false
     }
   ],
   "languages": [],

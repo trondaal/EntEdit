@@ -43,36 +43,45 @@ const fuzziness = (word: string): number => {
 
 export interface LuceneQueryOptions {
   fuzzy?: boolean;
+  /**
+   * Words rank the hits but are not required: for a search whose hits are
+   * decided by another clause, e.g. following a link to a work
+   * (`toLinkQuery`), where every expression of the work must be found.
+   */
+  optional?: boolean;
 }
 
 /** Extra weight for an entity whose name, title or label holds the whole search as a phrase. */
 const PHRASE_BOOST = 10;
 
-export const toLuceneQuery = (input: string, { fuzzy = false }: LuceneQueryOptions = {}): string => {
+export const toLuceneQuery = (
+  input: string,
+  { fuzzy = false, optional = false }: LuceneQueryOptions = {},
+): string => {
+  const must = optional ? "" : "+";
   const words = input
     .trim()
     .split(/\s+/)
     .filter((word) => /[\p{L}\p{N}]/u.test(word));
-  const required = words
+  const terms = words
     .map((word) => {
       // Lower-case bare operators so they are searched as words
-      if (LUCENE_OPERATORS.has(word)) return `+${word.toLowerCase()}`;
+      if (LUCENE_OPERATORS.has(word)) return `${must}${word.toLowerCase()}`;
       const wildcard = word.length > 1 && word.endsWith("*") && !word.endsWith("\\*");
       const stem = wildcard ? word.slice(0, -1) : word;
       const escaped = stem.replace(LUCENE_SPECIAL, (c) => `\\${c}`);
-      if (wildcard) return `+${escaped}*`;
+      if (wildcard) return `${must}${escaped}*`;
       const edits = fuzzy ? fuzziness(stem) : 0;
-      if (edits === 0) return `+${escaped}`;
-      return `+(${FUZZY_FIELDS.map((field) => `${field}:${escaped}~${edits}`).join(" ")})`;
+      if (edits === 0) return `${must}${escaped}`;
+      return `${must}(${FUZZY_FIELDS.map((field) => `${field}:${escaped}~${edits}`).join(" ")})`;
     })
     .join(" ");
-  if (words.length < 2) return required;
-  // Optional: every word is still required, but the entity labelled with the
-  // whole text (a clicked relationship target, a full title) ranks first,
-  // rather than the entities that merely mention it. Inside quotes only " and
-  // \ are special.
+  if (words.length < 2) return terms;
+  // An optional phrase on top: the entity labelled with the whole text (a
+  // full title, a followed link's label) ranks first, rather than the
+  // entities that merely mention it. Inside quotes only " and \ are special.
   const phrase = `"${words.join(" ").replace(/[\\"]/g, (c) => `\\${c}`)}"`;
-  return `${required} (${FUZZY_FIELDS.map((field) => `${field}:${phrase}`).join(" ")})^${PHRASE_BOOST}`;
+  return `${terms} (${FUZZY_FIELDS.map((field) => `${field}:${phrase}`).join(" ")})^${PHRASE_BOOST}`;
 };
 
 /** Whether the fuzzy query differs from the exact one, i.e. a fallback can find more. */

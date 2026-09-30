@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo } from "react";
+import React, { useCallback } from "react";
 import {
   Paper,
   Box,
@@ -21,9 +21,6 @@ interface ManifestationResultSetProps {
   totalCount: number;
   /** No exact hits: the results match similar spellings */
   fuzzy: boolean;
-  /** Publications of a followed link (containing the linked expression or work), shown first */
-  linked?: ManifestationSearchResultType[];
-  linkedLoading?: boolean;
   searchResults: ManifestationSearchResultType[];
   searchLoading: boolean;
   searchError: Error | null;
@@ -39,8 +36,6 @@ interface ManifestationResultSetProps {
 const ManifestationResultSet: React.FC<ManifestationResultSetProps> = ({
   searchQuery,
   filtered,
-  linked = [],
-  linkedLoading = false,
   searchResults,
   totalCount,
   fuzzy,
@@ -55,22 +50,6 @@ const ManifestationResultSet: React.FC<ManifestationResultSetProps> = ({
   onEntitySearch,
 }) => {
   const { t } = useTranslation();
-  // The text search finds the linked publications too; list them once, first
-  const otherResults = useMemo(() => {
-    const linkedUris = new Set(linked.map((entry) => entry.uri));
-    return searchResults.filter((result) => !linkedUris.has(result.uri));
-  }, [linked, searchResults]);
-  const hasAnything = linked.length > 0 || otherResults.length > 0;
-  const sectionHeading = (text: string) => (
-    <Typography
-      variant="overline"
-      component="h3"
-      color="text.secondary"
-      sx={{ display: "block", px: 2, pt: 1, lineHeight: 2 }}
-    >
-      {text}
-    </Typography>
-  );
 
   // Fetch next page when user scrolls near the bottom
   const handleScroll = useCallback(
@@ -117,11 +96,11 @@ const ManifestationResultSet: React.FC<ManifestationResultSetProps> = ({
         <Box sx={{ p: 3, textAlign: "center", color: "text.secondary" }}>
           {t("search.enterSearchQueryManifestations")}
         </Box>
-      ) : searchError ? null : searchLoading || linkedLoading ? (
+      ) : searchError ? null : searchLoading ? (
         <Box sx={{ display: "flex", justifyContent: "center", p: 3 }}>
           <CircularProgress />
         </Box>
-      ) : !hasAnything ? (
+      ) : searchResults.length === 0 ? (
         <Box sx={{ p: 3, textAlign: "center", color: "text.secondary" }}>
           {!searchQuery
             ? t("search.noResultsForFilters")
@@ -147,19 +126,7 @@ const ManifestationResultSet: React.FC<ManifestationResultSetProps> = ({
           }}
           onScroll={handleScroll}
         >
-          {linked.length > 0 && sectionHeading(t("search.followedLink"))}
-          {linked.map((result) => (
-            <ManifestationSearchResult
-              key={`linked-${result.uri}`}
-              result={result}
-              onSelect={onSelectResult}
-              selectedLanguage={selectedLanguage}
-              config={config}
-              onEntitySearch={onEntitySearch}
-            />
-          ))}
-          {linked.length > 0 && otherResults.length > 0 && sectionHeading(t("search.otherResults"))}
-          {otherResults.map((result, index) => (
+          {searchResults.map((result, index) => (
             <ManifestationSearchResult
               key={`${result.uri}-${index}`}
               result={result}

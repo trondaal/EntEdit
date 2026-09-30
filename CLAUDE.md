@@ -97,7 +97,11 @@ EntEdit/
 - `ResultSet` - Generic search result display
 - `SearchFilters` - Checkbox filters with hit counts for both searches (language,
   content type, category of work, genre or form; publications add media and
-  carrier type); each search tab keeps its own selection
+  carrier type); each search tab keeps its own selection. Beside the checkboxes,
+  every selection and a followed link (the entity's name) is a removable chip, in the
+  order chosen, last one at the bottom (kept per tab as `selectionKey`/
+  `LINK_SELECTION` keys); chips and boxes share state, and "Clear all", aligned
+  with the chips, removes filters and link
 - `CollapsibleNote` - Manifestation note cut to two lines, "show the whole note"
   link included; the cut is measured (CSS line-clamp cannot fit the link)
 
@@ -139,14 +143,18 @@ EntEdit/
   (e.g. a clicked relationship target) ranks first. Clicked names and titles are
   searched as plain text (`handleEntitySearch`), not wrapped in quotes
 - `searchLink.ts` - a followed result link (`LinkTarget`: label, URI, kind), kept
-  per search tab. The target is looked up by URI and shown first under
-  "Followed link", the label's text search below it without the target: in the
-  content search the expression or a work's expressions (`useLinkedExpressions`),
-  in the publication search the manifestations embodying the expression or any
-  of the work's expressions, by date (`useLinkedManifestations`,
-  `manifestationsOfWork`). An agent link searches the name as a phrase in the
-  names field (`toNameQuery`). Following a link clears the filters; typing ends
-  the link mode
+  per search tab and shown as a removable chip with its label. `toLinkQuery` builds
+  the ordinary Lucene query for it: an expression or work link is limited by an
+  IRI field (`+expression:"<IRI>"`, `+work:"<IRI>"`; `$self` and the work links
+  in both connectors — the publication index reaches them through the embodied
+  expressions) with the label's words as *optional* ranking terms
+  (`toLuceneQuery(…, { optional: true })`), so a work's original ranks before
+  its translations; an agent link searches the name as a phrase in the names
+  field (`toNameQuery`). Filters and facet counts apply on top. A link query that
+  finds nothing at all (an index whose connectors were not recreated with the
+  link fields, a work without expressions) falls back to the label as text
+  (`findHits`, `textQueryFor`). Following a link clears the filters; removing the
+  chip or typing returns to a plain search
 - `wemiQueries.ts` - expression/manifestation detail queries shared by the search
   pages and the expandable lists under a result, built around a *scope* pattern
 - `searchFilters.ts` - search category filters as Lucene clauses (OR within a

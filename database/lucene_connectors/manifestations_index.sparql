@@ -13,6 +13,10 @@ PREFIX inst:<http://www.ontotext.com/connectors/lucene/instance#>
 # link is followed from either side, and a field name with $ merges into the
 # part before it. A manifestation counts once per value, however many of its
 # expressions have it.
+# expression and work hold the IRIs of the embodied expressions and their works,
+# for following a link from a search result: the search is limited to the
+# publications containing the linked expression or any expression of the
+# linked work, and the label's words only rank the hits.
 INSERT DATA {
 	inst:manifestationsIndex :createConnector '''
 {
@@ -620,6 +624,82 @@ INSERT DATA {
       "multivalued": true,
       "ignoreInvalidValues": false,
       "facet": true
+    },
+    {
+      "fieldName": "expression$fromManifestation",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/m/object/P30139"
+      ],
+      "indexed": true,
+      "stored": false,
+      "analyzed": false,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": false
+    },
+    {
+      "fieldName": "expression$fromExpression",
+      "propertyChain": [
+        "^http://rdaregistry.info/Elements/e/object/P20059"
+      ],
+      "indexed": true,
+      "stored": false,
+      "analyzed": false,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": false
+    },
+    {
+      "fieldName": "work$fromManifestation_fromExpression",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/m/object/P30139",
+        "http://rdaregistry.info/Elements/e/object/P20231"
+      ],
+      "indexed": true,
+      "stored": false,
+      "analyzed": false,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": false
+    },
+    {
+      "fieldName": "work$fromManifestation_fromWork",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/m/object/P30139",
+        "^http://rdaregistry.info/Elements/w/object/P10078"
+      ],
+      "indexed": true,
+      "stored": false,
+      "analyzed": false,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": false
+    },
+    {
+      "fieldName": "work$fromExpression_fromExpression",
+      "propertyChain": [
+        "^http://rdaregistry.info/Elements/e/object/P20059",
+        "http://rdaregistry.info/Elements/e/object/P20231"
+      ],
+      "indexed": true,
+      "stored": false,
+      "analyzed": false,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": false
+    },
+    {
+      "fieldName": "work$fromExpression_fromWork",
+      "propertyChain": [
+        "^http://rdaregistry.info/Elements/e/object/P20059",
+        "^http://rdaregistry.info/Elements/w/object/P10078"
+      ],
+      "indexed": true,
+      "stored": false,
+      "analyzed": false,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": false
     }
   ],
   "languages": [],

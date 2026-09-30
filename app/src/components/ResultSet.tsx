@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo } from "react";
+import React, { useCallback } from "react";
 import {
   Paper,
   Box,
@@ -21,9 +21,6 @@ interface ResultSetProps {
   totalCount: number;
   /** No exact hits: the results match similar spellings */
   fuzzy: boolean;
-  /** Entry of a followed link (the expression, or a work's expressions), shown first */
-  linked?: ExpressionSearchResult[];
-  linkedLoading?: boolean;
   searchResults: ExpressionSearchResult[];
   searchLoading: boolean;
   searchError: Error | null;
@@ -39,8 +36,6 @@ interface ResultSetProps {
 const ResultSet: React.FC<ResultSetProps> = ({
   searchQuery,
   filtered,
-  linked = [],
-  linkedLoading = false,
   searchResults,
   totalCount,
   fuzzy,
@@ -55,22 +50,6 @@ const ResultSet: React.FC<ResultSetProps> = ({
   onEntitySearch,
 }) => {
   const { t } = useTranslation();
-  // The text search finds the linked entry too; list it once, first
-  const otherResults = useMemo(() => {
-    const linkedUris = new Set(linked.map((entry) => entry.uri));
-    return searchResults.filter((result) => !linkedUris.has(result.uri));
-  }, [linked, searchResults]);
-  const hasAnything = linked.length > 0 || otherResults.length > 0;
-  const sectionHeading = (text: string) => (
-    <Typography
-      variant="overline"
-      component="h3"
-      color="text.secondary"
-      sx={{ display: "block", px: 2, pt: 1, lineHeight: 2 }}
-    >
-      {text}
-    </Typography>
-  );
 
   // Fetch next page when user scrolls near the bottom
   const handleScroll = useCallback(
@@ -117,11 +96,11 @@ const ResultSet: React.FC<ResultSetProps> = ({
         <Box sx={{ p: 3, textAlign: "center", color: "text.secondary" }}>
           {t("search.enterSearchQuery")}
         </Box>
-      ) : searchError ? null : searchLoading || linkedLoading ? (
+      ) : searchError ? null : searchLoading ? (
         <Box sx={{ display: "flex", justifyContent: "center", p: 3 }}>
           <CircularProgress />
         </Box>
-      ) : !hasAnything ? (
+      ) : searchResults.length === 0 ? (
         <Box sx={{ p: 3, textAlign: "center", color: "text.secondary" }}>
           {!searchQuery
             ? t("search.noResultsForFilters")
@@ -147,19 +126,7 @@ const ResultSet: React.FC<ResultSetProps> = ({
           }}
           onScroll={handleScroll}
         >
-          {linked.length > 0 && sectionHeading(t("search.followedLink"))}
-          {linked.map((result) => (
-            <Expression
-              key={`linked-${result.uri}`}
-              result={result}
-              onSelect={onSelectResult}
-              config={config}
-              selectedLanguage={selectedLanguage}
-              onEntitySearch={onEntitySearch}
-            />
-          ))}
-          {linked.length > 0 && otherResults.length > 0 && sectionHeading(t("search.otherResults"))}
-          {otherResults.map((result, index) => (
+          {searchResults.map((result, index) => (
             <Expression
               key={`${result.uri}-${index}`}
               result={result}

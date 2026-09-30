@@ -45,6 +45,18 @@ export interface FacetValue {
 /** Values present in a result set, with their number of hits, per field. */
 export type Facets = Partial<Record<FilterField, FacetValue[]>>;
 
+/**
+ * Keys for the order in which selections were made, oldest first: one per
+ * checked value, and `LINK_SELECTION` for a followed link. The chips of the
+ * filter panel are listed in this order.
+ */
+export const LINK_SELECTION = "link";
+export const selectionKey = (field: FilterField, value: string): string => `${field}\u0000${value}`;
+export const parseSelectionKey = (key: string): { field: FilterField; value: string } | null => {
+  const at = key.indexOf("\u0000");
+  return at < 0 ? null : { field: key.slice(0, at) as FilterField, value: key.slice(at + 1) };
+};
+
 export const hasFilters = (filters: SearchFilters): boolean =>
   FILTER_FIELDS.some((field) => (filters[field]?.length ?? 0) > 0);
 

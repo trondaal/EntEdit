@@ -18,20 +18,14 @@ import {
 import {
   buildExpressionDetailQuery,
   buildManifestationDetailQuery,
-  expressionOrderInWork,
   expressionScope,
-  expressionsOfWork,
   manifestationScope,
-  manifestationsOfExpression,
-  manifestationsOfWork,
   toExpressionDetail,
   toManifestationDetail,
   type ExpressionDetail,
   type ManifestationDetail,
 } from "../utils/wemiQueries";
 import type { SparqlEndpointConfig } from "../types/sparql";
-import type { LinkTarget } from "../utils/searchLink";
-import { sortByValueOrder } from "../utils/valueOrder";
 
 /** Number of search results fetched per page */
 export const SEARCH_PAGE_SIZE = 20;
@@ -146,7 +140,13 @@ const findHits = async (
 ): Promise<Hits & { fuzzy: boolean }> => {
   const filterClauses = toFilterClauses(filters);
   if (luceneText) {
-    return { ...(await searchPage(client, index, combineQuery(luceneText, filterClauses), offset, signal)), fuzzy: false };
+    const linked = await searchPage(client, index, combineQuery(luceneText, filterClauses), offset, signal);
+    // Nothing at all for a followed link, even without filters: an index
+    // without the link fields (connectors not yet recreated) or a work
+    // without expressions. Search the label as typed instead.
+    if (linked.total > 0 || offset > 0 || (await countHits(client, index, luceneText, signal)) > 0) {
+      return { ...linked, fuzzy: false };
+    }
   }
   const run = (similar: boolean) =>
     searchPage(client, index, combineQuery(toLuceneQuery(text, { fuzzy: similar }), filterClauses), offset, signal);
@@ -168,7 +168,8 @@ const textQueryFor = async (
   signal: AbortSignal,
   luceneText?: string,
 ): Promise<string> => {
-  if (luceneText) return luceneText;
+  // Same fallback as `findHits` when a followed link finds nothing at all
+  if (luceneText && (await countHits(client, index, luceneText, signal)) > 0) return luceneText;
   const exact = toLuceneQuery(text);
   if (!hasFuzzyTerms(text)) return exact;
   return (await countHits(client, index, exact, signal)) > 0
@@ -371,71 +372,6 @@ export const useSearchManifestations = (
     initialPageParam: FIRST_PAGE,
     getNextPageParam: nextPage,
     enabled: hasCriteria(query, normalized),
-    staleTime: 5 * 60 * 1000, // 5 minutes
-  });
-};
-
-/**
- * The entry a followed link points to, shown first in the content search: the
- * linked expression, or the expressions of a linked work (in their recorded
- * order, else by title). Agent links have no entry of their own.
- */
-export const useLinkedExpressions = (
-  config: SparqlEndpointConfig,
-  target: LinkTarget | null,
-  language: string,
-) => {
-  const uri = target?.uri;
-  const kind = target?.kind;
-  return useQuery({
-    queryKey: ["linkedExpressions", config.url, kind, uri, language],
-    queryFn: async ({ signal }): Promise<ExpressionSearchResult[]> => {
-      if (!uri || (kind !== "expression" && kind !== "work")) return [];
-      const client = new SparqlClient(config);
-      const query =
-        kind === "expression"
-          ? buildExpressionDetailQuery(expressionScope([uri]), language)
-          : buildExpressionDetailQuery(expressionsOfWork(uri), language, expressionOrderInWork(uri));
-      const response = await client.query(query, { signal });
-      return sortByValueOrder(
-        response.results.bindings.map(toExpressionDetail),
-        (e) => e.valueOrder,
-        (a, b) => (a.expression_title ?? a.uri).localeCompare(b.expression_title ?? b.uri),
-      );
-    },
-    enabled: Boolean(uri) && (kind === "expression" || kind === "work"),
-    staleTime: 5 * 60 * 1000, // 5 minutes
-  });
-};
-
-/**
- * The publications a followed link points to, shown first in the publication
- * search: those embodying the linked expression, or any expression of a
- * linked work, by date and then title. Agent links have no entry of their own.
- */
-export const useLinkedManifestations = (
-  config: SparqlEndpointConfig,
-  target: LinkTarget | null,
-  language: string,
-) => {
-  const uri = target?.uri;
-  const kind = target?.kind;
-  return useQuery({
-    queryKey: ["linkedManifestations", config.url, kind, uri, language],
-    queryFn: async ({ signal }): Promise<ManifestationSearchResult[]> => {
-      if (!uri || (kind !== "expression" && kind !== "work")) return [];
-      const client = new SparqlClient(config);
-      const scope = kind === "expression" ? manifestationsOfExpression(uri) : manifestationsOfWork(uri);
-      const response = await client.query(buildManifestationDetailQuery(scope, language), { signal });
-      return response.results.bindings
-        .map(toManifestationDetail)
-        .sort(
-          (a, b) =>
-            (a.date ?? "").localeCompare(b.date ?? "") ||
-            (a.title ?? a.uri).localeCompare(b.title ?? b.uri),
-        );
-    },
-    enabled: Boolean(uri) && (kind === "expression" || kind === "work"),
     staleTime: 5 * 60 * 1000, // 5 minutes
   });
 };

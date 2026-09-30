@@ -14,22 +14,22 @@ import { useTranslation } from "react-i18next";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import {
   useFacetLabels,
-  useLinkedExpressions,
-  useLinkedManifestations,
   useSearchExpressions,
   useSearchFacets,
   useSearchManifestations,
 } from "../hooks/useSearchQueries";
 import {
   INDEX_FILTER_FIELDS,
+  LINK_SELECTION,
   hasFilters,
+  selectionKey,
   toggleFilter,
   type FilterField,
   type SearchFilters as Filters,
   type SearchIndex,
 } from "../utils/searchFilters";
 import SearchFilters from "./SearchFilters";
-import { toNameQuery, type EntitySearchHandler, type LinkTarget } from "../utils/searchLink";
+import { toLinkQuery, type EntitySearchHandler, type LinkTarget } from "../utils/searchLink";
 import { useDebouncedValue } from "../hooks/useDebouncedValue";
 import ResultSet from "./ResultSet";
 import ManifestationResultSet from "./ManifestationResultSet";
@@ -58,19 +58,33 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
     setFiltersByMode((all) => ({ ...all, [searchMode]: update(all[searchMode]) }));
   // A link followed in a search tab, until the search text is edited
   const [linkTarget, setLinkTarget] = useState<(LinkTarget & { mode: 'expression' | 'manifestation' }) | null>(null);
+  // Order of the selections per tab, oldest first, for the filter panel's chips
+  const [orderByMode, setOrderByMode] = useState<Record<'expression' | 'manifestation', string[]>>({
+    expression: [],
+    manifestation: [],
+  });
+  const setOrder = (update: (current: string[]) => string[]) =>
+    setOrderByMode((all) => ({ ...all, [searchMode]: update(all[searchMode]) }));
+  const clearLink = () => {
+    setLinkTarget(null);
+    setOrderByMode((all) => ({
+      expression: all.expression.filter((key) => key !== LINK_SELECTION),
+      manifestation: all.manifestation.filter((key) => key !== LINK_SELECTION),
+    }));
+  };
 
   // Debounce the search query to avoid firing expensive SPARQL queries on every keystroke
   const debouncedQuery = useDebouncedValue(searchInput, 500);
 
   // Only fire the query for the active search tab to avoid unnecessary SPARQL queries.
-  // A followed link searches for its label at once, without the typing delay;
-  // an agent's name is searched as a phrase in the names field only.
+  // A followed link searches at once, without the typing delay, with the
+  // link's own Lucene query (limited to the linked expression or work, or an
+  // agent's name as a phrase; see utils/searchLink.ts).
   const activeLink = linkTarget?.mode === searchMode ? linkTarget : null;
-  const contentLink = searchMode === 'expression' ? activeLink : null;
-  const publicationLink = searchMode === 'manifestation' ? activeLink : null;
-  const agentQuery = activeLink?.kind === 'agent' ? toNameQuery(activeLink.label) : undefined;
-  const expressionQuery = searchMode === 'expression' ? (contentLink?.label ?? debouncedQuery) : '';
-  const manifestationQuery = searchMode === 'manifestation' ? (publicationLink?.label ?? debouncedQuery) : '';
+  const linkQuery = activeLink ? toLinkQuery(activeLink) : undefined;
+  const currentQuery = activeLink?.label ?? debouncedQuery;
+  const expressionQuery = searchMode === 'expression' ? currentQuery : '';
+  const manifestationQuery = searchMode === 'manifestation' ? currentQuery : '';
   const expressionFilters = searchMode === 'expression' ? filters : {};
   const manifestationFilters = searchMode === 'manifestation' ? filters : {};
   const searchIndex: SearchIndex = searchMode === 'expression' ? 'expressionsIndex' : 'manifestationsIndex';
@@ -84,16 +98,13 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
     fetchNextPage: searchFetchNextPage,
   } = useSearchExpressions(
     config, expressionQuery, selectedLanguage, expressionFilters,
-    contentLink ? agentQuery : undefined,
-  );
-  const { data: linkedExpressions, isLoading: linkedLoading } = useLinkedExpressions(
-    config, contentLink, selectedLanguage,
+    searchMode === 'expression' ? linkQuery : undefined,
   );
 
   // Counts for the current search; with neither text nor filters, for the
   // whole collection. The collection's values also decide which labels to load.
   const { data: facets, isPlaceholderData: facetsUpdating } = useSearchFacets(
-    config, searchIndex, searchMode === 'expression' ? expressionQuery : manifestationQuery, filters, true, agentQuery,
+    config, searchIndex, currentQuery, filters, true, linkQuery,
   );
   const { data: collectionFacets } = useSearchFacets(config, searchIndex, "", {});
   const facetIris = useMemo(
@@ -114,10 +125,7 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
     fetchNextPage: manifestationFetchNextPage,
   } = useSearchManifestations(
     config, manifestationQuery, selectedLanguage, manifestationFilters,
-    publicationLink ? agentQuery : undefined,
-  );
-  const { data: linkedManifestations, isLoading: linkedManifestationsLoading } = useLinkedManifestations(
-    config, publicationLink, selectedLanguage,
+    searchMode === 'manifestation' ? linkQuery : undefined,
   );
 
   // Flatten infinite query pages into flat arrays
@@ -142,17 +150,19 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
 
   const handleSearch = (value: string) => {
     setSearchInput(value);
-    setLinkTarget(null);
+    if (linkTarget) clearLink();
   };
 
   const handleClearSearch = () => {
     setSearchInput("");
-    setLinkTarget(null);
+    if (linkTarget) clearLink();
   };
 
   const handleToggleFilter = (field: FilterField, value: string) => {
     const selected = !(filters[field] ?? []).includes(value);
     setFilters((current) => toggleFilter(current, field, value));
+    const key = selectionKey(field, value);
+    setOrder((current) => (selected ? [...current.filter((k) => k !== key), key] : current.filter((k) => k !== key)));
     if (isRecording) {
       logEvent({ type: "search_filter_changed", field, value, selected, query: debouncedQuery, mode: searchMode });
     }
@@ -160,23 +170,36 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
 
   const handleClearFilters = () => {
     setFilters(() => ({}));
+    setOrder((current) => current.filter((key) => key === LINK_SELECTION));
     if (isRecording) {
       logEvent({ type: "search_filters_cleared", query: debouncedQuery, mode: searchMode });
     }
   };
 
-  // A clicked name or title goes into the search field. In the content search
-  // the entry it points to is also looked up by URI and shown first, since the
-  // label's words alone rank related entries (that repeat them) as high.
+  // "Clear all" in the filter panel: the filters and a followed link
+  const handleClearAll = () => {
+    if (hasFilters(filters)) handleClearFilters();
+    if (activeLink) clearLink();
+  };
+
+  // A clicked name or title goes into the search field, and the search is
+  // limited to what the link points to (see `linkQuery`) until the link is
+  // removed or the text edited: the label's words alone rank related entries,
+  // that repeat them, as high as the target.
   const handleEntitySearch: EntitySearchHandler = (label, target) => {
     setSearchInput(label);
-    setLinkTarget(target ? { label, ...target, mode: searchMode } : null);
     if (isRecording) {
       logEvent({ type: "search_link_followed", label, uri: target?.uri, kind: target?.kind, mode: searchMode });
     }
     // A followed link starts a new search: filters chosen for the previous
     // one (a language, a genre) would otherwise hide the entity it points to
     if (hasFilters(filters)) handleClearFilters();
+    setLinkTarget(target ? { label, ...target, mode: searchMode } : null);
+    setOrderByMode((all) => ({
+      expression: all.expression.filter((key) => key !== LINK_SELECTION),
+      manifestation: all.manifestation.filter((key) => key !== LINK_SELECTION),
+      ...(target ? { [searchMode]: [LINK_SELECTION] } : {}),
+    }));
   };
 
   return (
@@ -269,8 +292,11 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
                     facets={facets}
                     labels={facetLabels ?? new Map()}
                     filters={filters}
+                    order={orderByMode[searchMode]}
+                    link={activeLink}
                     onToggle={handleToggleFilter}
-                    onClear={handleClearFilters}
+                    onClearLink={clearLink}
+                    onClear={handleClearAll}
                     updating={facetsUpdating}
                   />
                 </Box>
@@ -294,8 +320,6 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
             <ResultSet
               searchQuery={expressionQuery}
               filtered={filtered}
-              linked={contentLink ? (linkedExpressions ?? []) : []}
-              linkedLoading={Boolean(contentLink) && linkedLoading}
               searchResults={searchResults}
               totalCount={searchData?.pages[0]?.total ?? 0}
               fuzzy={searchData?.pages[0]?.fuzzy ?? false}
@@ -317,8 +341,6 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
             <ManifestationResultSet
               searchQuery={manifestationQuery}
               filtered={filtered}
-              linked={publicationLink ? (linkedManifestations ?? []) : []}
-              linkedLoading={Boolean(publicationLink) && linkedManifestationsLoading}
               searchResults={manifestationSearchResults}
               totalCount={manifestationSearchData?.pages[0]?.total ?? 0}
               fuzzy={manifestationSearchData?.pages[0]?.fuzzy ?? false}

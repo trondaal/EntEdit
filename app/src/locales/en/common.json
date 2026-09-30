@@ -97,7 +97,9 @@
     "noResultsForWithFilters": "No results found for \"{{query}}\" with the selected filters",
     "filters": {
       "title": "Filter results",
-      "clear": "Clear filters",
+      "clear": "Clear all",
+      "remove": "Remove {{label}}",
+      "selected": "Selected",
       "mediaType": "Media type",
       "carrierType": "Carrier type",
       "language": "Language",
@@ -108,8 +110,7 @@
       "showFewer": "Show fewer"
     },
     "similarSpellings": "No exact matches for \"{{query}}\". Showing results with similar spellings.",
-    "followedLink": "Followed link",
-    "otherResults": "Other results",
+    "removeLink": "Remove the link and search the text",
     "showWholeNote": "show the whole note",
     "showLessOfNote": "show less",
     "searchFailed": "The search could not be completed. Try other search words, or check the connection to the database.",

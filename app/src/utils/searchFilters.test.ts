@@ -1,5 +1,8 @@
 import { describe, expect, it } from "vitest";
 import {
+  LINK_SELECTION,
+  parseSelectionKey,
+  selectionKey,
   combineQuery,
   hasFilters,
   normalizeFilters,
@@ -77,5 +80,16 @@ describe("parseFacets", () => {
       mediaType: [{ value: "m", count: 2 }],
       carrierType: [{ value: "c", count: 1 }],
     });
+  });
+});
+
+describe("selection keys", () => {
+  it("round-trip a field and value, IRIs included", () => {
+    const key = selectionKey("language", "http://id.loc.gov/vocabulary/iso639-2/ger");
+    expect(parseSelectionKey(key)).toEqual({ field: "language", value: "http://id.loc.gov/vocabulary/iso639-2/ger" });
+  });
+
+  it("do not mistake the link for a filter", () => {
+    expect(parseSelectionKey(LINK_SELECTION)).toBeNull();
   });
 });

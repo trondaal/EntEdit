@@ -97,7 +97,9 @@
     "noResultsForWithFilters": "Ingen treff på «{{query}}» med de valgte filtrene",
     "filters": {
       "title": "Avgrens treffene",
-      "clear": "Fjern filtre",
+      "clear": "Fjern alle",
+      "remove": "Fjern {{label}}",
+      "selected": "Valgt",
       "mediaType": "Medietype",
       "carrierType": "Bærertype",
       "language": "Språk",
@@ -108,8 +110,7 @@
       "showFewer": "Vis færre"
     },
     "similarSpellings": "Ingen eksakte treff på «{{query}}». Viser treff med lignende stavemåte.",
-    "followedLink": "Fulgt lenke",
-    "otherResults": "Andre treff",
+    "removeLink": "Fjern lenken og søk på teksten",
     "showWholeNote": "vis hele noten",
     "showLessOfNote": "vis mindre",
     "searchFailed": "Søket kunne ikke gjennomføres. Prøv andre søkeord, eller sjekk tilkoblingen til databasen.",
