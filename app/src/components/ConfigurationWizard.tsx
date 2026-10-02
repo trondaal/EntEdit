@@ -26,7 +26,7 @@ import {
   type CatalogingPreferences,
 } from "../utils/catalogingStyle";
 import type { SparqlEndpointConfig } from "../types/sparql";
-import { SparqlClient } from "../utils/sparqlClient";
+import { testEndpointConnection } from "../utils/connectionTest";
 import LanguageSelector from "./LanguageSelector";
 
 interface ConfigurationWizardProps {
@@ -72,81 +72,14 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
   ];
 
   const testConnection = async () => {
-    if (!config.url.trim()) {
-      setTestResult({
-        success: false,
-        message: t("wizard.testResult.noUrl"),
-      });
-      return;
-    }
-
     setTesting(true);
     setTestResult(null);
-
-    try {
-      // Now test with full SPARQL query
-      const client = new SparqlClient(config);
-
-      // Test with a simple query
-      const testQuery = `
-        SELECT (COUNT(*) as ?count)
-        WHERE {
-          ?s ?p ?o .
-        }
-        LIMIT 1
-      `;
-
-      const response = await client.query(testQuery);
-
-      if (response.results.bindings.length > 0) {
-        setTestResult({
-          success: true,
-          message: t("wizard.testResult.success"),
-          details: t("wizard.testResult.successDetails"),
-        });
-        setActiveStep(2); // Move to language selection
-      } else {
-        setTestResult({
-          success: true,
-          message: t("wizard.testResult.empty"),
-          details: t("wizard.testResult.emptyDetails"),
-        });
-      }
-    } catch (error) {
-      const errorMessage = (error as Error).message;
-      let enhancedMessage = t("wizard.testResult.failed");
-      let enhancedDetails = errorMessage;
-
-      // Provide specific guidance for common authentication errors
-      if (errorMessage.includes("401")) {
-        enhancedMessage = t("wizard.testResult.unauthorized");
-        enhancedDetails = t("wizard.testResult.unauthorizedDetails");
-      } else if (errorMessage.includes("403")) {
-        enhancedMessage = t("wizard.testResult.forbidden");
-        enhancedDetails = t("wizard.testResult.forbiddenDetails");
-      } else if (errorMessage.includes("404")) {
-        enhancedMessage = t("wizard.testResult.notFound");
-        enhancedDetails = t("wizard.testResult.notFoundDetails");
-      } else if (
-        errorMessage.includes("Failed to fetch") ||
-        errorMessage.includes("NetworkError") ||
-        errorMessage.includes("Load failed")
-      ) {
-        enhancedMessage = t("wizard.testResult.network");
-        enhancedDetails = t("wizard.testResult.networkDetails");
-      } else if (errorMessage.includes("CORS")) {
-        enhancedMessage = t("wizard.testResult.cors");
-        enhancedDetails = t("wizard.testResult.corsDetails");
-      }
-
-      setTestResult({
-        success: false,
-        message: enhancedMessage,
-        details: enhancedDetails,
-      });
-    } finally {
-      setTesting(false);
+    const result = await testEndpointConnection(config, t);
+    setTestResult(result);
+    if (result.success && result.hasData) {
+      setActiveStep(2); // Move to language selection
     }
+    setTesting(false);
   };
 
   const handleComplete = () => {

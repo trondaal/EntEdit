@@ -209,7 +209,8 @@
     "endpointUrlHelper": "Skriv inn URL-en til SPARQL-endepunktet ditt",
     "username": "Brukernavn (valgfritt)",
     "password": "Passord (valgfritt)",
-    "reconfigureDatabase": "Konfigurer database",
+    "redoConfiguration": "Konfigurer på nytt",
+    "testConnection": "Test tilkobling",
     "connectionSection": "Databasetilkobling"
   },
   "logging": {

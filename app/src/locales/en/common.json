@@ -209,7 +209,8 @@
     "endpointUrlHelper": "Enter the URL of your SPARQL endpoint",
     "username": "Username (optional)",
     "password": "Password (optional)",
-    "reconfigureDatabase": "Configure database",
+    "redoConfiguration": "Redo configuration",
+    "testConnection": "Test connection",
     "connectionSection": "Database connection"
   },
   "logging": {

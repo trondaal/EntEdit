@@ -11,13 +11,20 @@ import {
   DialogContent,
   DialogActions,
   Divider,
+  Alert,
+  CircularProgress,
 } from "@mui/material";
-import { ExpandMore, ExpandLess, Settings } from "@mui/icons-material";
+import { ExpandMore, ExpandLess, Settings, CheckCircle, Error as ErrorIcon } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import CatalogingStyleSettings from "./CatalogingStyleSettings";
 import type { CatalogingPreferences } from "../utils/catalogingStyle";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import LanguageSelector from "./LanguageSelector";
+import {
+  sameConnection,
+  testEndpointConnection,
+  type ConnectionTestResult,
+} from "../utils/connectionTest";
 
 interface EndpointConfigProps {
   config: SparqlEndpointConfig;
@@ -48,6 +55,24 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
   const [expanded, setExpanded] = useState(false);
   const [localConfig, setLocalConfig] = useState(config);
   const [localPreferences, setLocalPreferences] = useState(preferences);
+  const [testing, setTesting] = useState(false);
+  const [testResult, setTestResult] = useState<ConnectionTestResult | null>(null);
+
+  // A test result describes the settings it was run against, so editing them
+  // makes it stale.
+  const editConnection = (changes: Partial<SparqlEndpointConfig>) => {
+    setLocalConfig((current) => ({ ...current, ...changes }));
+    setTestResult(null);
+  };
+
+  const connectionChanged = !sameConnection(localConfig, config);
+
+  const handleTest = async () => {
+    setTesting(true);
+    setTestResult(null);
+    setTestResult(await testEndpointConnection(localConfig, t));
+    setTesting(false);
+  };
 
   const handleSave = () => {
     onConfigChange(localConfig, localPreferences);
@@ -74,9 +99,7 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
               fullWidth
               label={t("endpointConfig.endpointUrl")}
               value={localConfig.url}
-              onChange={(e) =>
-                setLocalConfig({ ...localConfig, url: e.target.value })
-              }
+              onChange={(e) => editConnection({ url: e.target.value })}
               helperText={t("endpointConfig.endpointUrlHelper")}
               sx={{ mb: 2 }}
             />
@@ -85,9 +108,7 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
               fullWidth
               label={t("endpointConfig.username")}
               value={localConfig.username || ""}
-              onChange={(e) =>
-                setLocalConfig({ ...localConfig, username: e.target.value })
-              }
+              onChange={(e) => editConnection({ username: e.target.value })}
               sx={{ mb: 2 }}
             />
 
@@ -96,11 +117,35 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
               label={t("endpointConfig.password")}
               type="password"
               value={localConfig.password || ""}
-              onChange={(e) =>
-                setLocalConfig({ ...localConfig, password: e.target.value })
-              }
+              onChange={(e) => editConnection({ password: e.target.value })}
               sx={{ mb: 2 }}
             />
+
+            <Box sx={{ display: "flex", alignItems: "center", gap: 1.5, mb: 2 }}>
+              <Button
+                variant="outlined"
+                onClick={handleTest}
+                disabled={testing || !connectionChanged || !localConfig.url.trim()}
+              >
+                {testing ? t("wizard.test.testingButton") : t("endpointConfig.testConnection")}
+              </Button>
+              {testing && <CircularProgress size={20} />}
+            </Box>
+
+            {testResult && (
+              <Alert
+                severity={testResult.success ? "success" : "error"}
+                icon={testResult.success ? <CheckCircle /> : <ErrorIcon />}
+                sx={{ mb: 2 }}
+              >
+                <Typography variant="body2">{testResult.message}</Typography>
+                {testResult.details && (
+                  <Typography variant="caption" sx={{ display: "block", mt: 0.5, whiteSpace: "pre-line" }}>
+                    {testResult.details}
+                  </Typography>
+                )}
+              </Alert>
+            )}
 
             <Divider sx={{ my: 2 }} />
             <CatalogingStyleSettings
@@ -113,7 +158,7 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
           <Button onClick={onCancel}>{t("buttons.cancel")}</Button>
           {onResetConfiguration && (
             <Button onClick={onResetConfiguration} color="error">
-              {t("endpointConfig.reconfigureDatabase")}
+              {t("endpointConfig.redoConfiguration")}
             </Button>
           )}
           <Button variant="contained" onClick={handleSave}>
