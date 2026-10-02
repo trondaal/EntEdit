@@ -51,7 +51,7 @@ Options:
                          nquads    N-Quads, keeps named graphs but drops the
                                    RDF-star annotations (.nq.gz)
   -U, --user NAME      GraphDB admin user (env: GRAPHDB_USER)
-  -P, --password PASS  GraphDB admin password (env: GRAPHDB_PASSWORD)
+  -P, --password PASS  GraphDB admin password (env: GRAPHDB_PASSWORD); asked for if omitted
       --dry-run        Print what would happen, change nothing
   -h, --help           Show this help
 
@@ -115,6 +115,13 @@ BASE_URL="${BASE_URL%/}"
 
 if [ -z "$OUTPUT_DIR" ]; then
   OUTPUT_DIR="./backups/${PREFIX%-}-$(date -u +%Y%m%dT%H%M%SZ)"
+fi
+
+# A user without a password: ask for it. Typing a password containing ! or * on
+# the command line is awkward in zsh and bash (history expansion, globbing).
+if [ -n "$GDB_USER" ] && [ -z "$GDB_PASS" ] && [ "${DRY_RUN:-0}" = 0 ] && [ -t 0 ]; then
+  read -r -s -p "GraphDB password for ${GDB_USER}: " GDB_PASS
+  printf '\n' >&2
 fi
 
 CURL_AUTH=()

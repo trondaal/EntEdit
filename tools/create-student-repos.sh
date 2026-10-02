@@ -58,7 +58,7 @@ Options:
                          read   read only
                          none   do not touch free-access settings
   -U, --user NAME      GraphDB admin user (env: GRAPHDB_USER)
-  -P, --password PASS  GraphDB admin password (env: GRAPHDB_PASSWORD)
+  -P, --password PASS  GraphDB admin password (env: GRAPHDB_PASSWORD); asked for if omitted
       --testdata       Also import database/testdata into the examples graph
       --force          Re-import into repositories that are already initialized
       --dry-run        Print what would happen, change nothing
@@ -121,6 +121,13 @@ BASE_URL="${BASE_URL%/}"
 [ -f "$CONFIG_TEMPLATE" ] || die "Repository config template not found: $CONFIG_TEMPLATE"
 if [ "$INCLUDE_TESTDATA" = 1 ] && [ ! -d "$TESTDATA_DIR" ]; then
   die "Test data not found: $TESTDATA_DIR"
+fi
+
+# A user without a password: ask for it. Typing a password containing ! or * on
+# the command line is awkward in zsh and bash (history expansion, globbing).
+if [ -n "$GDB_USER" ] && [ -z "$GDB_PASS" ] && [ "${DRY_RUN:-0}" = 0 ] && [ -t 0 ]; then
+  read -r -s -p "GraphDB password for ${GDB_USER}: " GDB_PASS
+  printf '\n' >&2
 fi
 
 CURL_AUTH=()

@@ -257,6 +257,39 @@ GraphDB security is enabled, the script merges read and write authorities for th
 new repositories into the server's free-access list, so users need no login. Run
 `--help` for all options.
 
+The tools in `tools/` that talk to GraphDB take the admin login with `-U`. Leave out
+`-P` and they ask for the password without echoing it, which avoids the shell
+trouble with characters such as `!` and `*` on the command line. In scripts, put the
+password in `GRAPHDB_PASSWORD` instead, in single quotes: `export
+GRAPHDB_PASSWORD='p!ss*word'`.
+
+### Giving each group a login
+
+Where free access is not wanted, `tools/create-student-users.sh` creates one
+GraphDB user per group, with access to that group's repository only:
+
+```bash
+./tools/create-student-users.sh -e http://host:7200 -p kurs- \
+    -r VBINF6000-H26-G -n 12 -U admin -P secret -o users.csv
+```
+
+Usernames are the prefix plus an animal (`kurs-ulv`), and passwords are random
+words plus four digits (`hatt-brun-gitar-1569`), so students can remember and
+type them. The animal for a group is fixed by the prefix, which makes the script
+safe to rerun: existing users are left alone and never get a new password. The
+three words give about 34 bits of strength, enough for a course server but not for
+anything valuable, since GraphDB does not lock an account after failed attempts.
+The credentials are printed and, with `-o`, written to a file readable only by you;
+hand each group its own line. `--per-repo 4` creates four users per repository,
+each with an animal and password of their own, for individual logins within a
+group. The first user of every group keeps the same name whatever `--per-repo` is,
+so raising it later adds users without renaming anyone; plan for the final number
+of groups from the start, because adding groups afterwards (with `--per-repo` above
+1) moves animals around, which the script reports instead of skipping silently.
+`--lang en` switches the word lists to English, `--access read` gives read-only
+users. Do not combine it with free access on the
+same repositories. Run `--help` for all options.
+
 ## Repository structure
 
 ```

@@ -61,7 +61,7 @@ EntEdit/
 │   ├── no/                 # Norwegian docs (translation)
 │   ├── index.html          # Language redirector (reads localStorage)
 │   └── setup.html          # Language redirector
-├── tools/                 # Shared admin scripts (create-student-repos.sh)
+├── tools/                 # Shared admin scripts (create-student-repos.sh, create-student-users.sh)
 ├── scripts/               # Ad hoc scripts (gitignored, not for sharing)
 ├── docker-compose.yml     # No bind mounts — published to Docker Hub as an OCI artifact
 ├── docker-compose.dev.yml # Maintainer override: mounts database/ into graphdb-init
@@ -473,6 +473,17 @@ Lucene connectors from `database/lucene_connectors`; test data is imported only 
 When GraphDB security is enabled, the script merges `READ_REPO_`/`WRITE_REPO_`
 authorities for the new repositories into the server's free-access list so students
 need no login (`--access read|write|none`). Run `--help` for all options.
+
+`tools/create-student-users.sh` is the login-based alternative to free access: one
+GraphDB user per group (`<prefix><animal>`, password of random words plus four
+digits) with read/write on that group's repository only. The animal per group is a
+shuffle seeded with the prefix, so a rerun skips existing users and never resets a
+password. `--per-repo N` makes N users per repository: member *m* of group *g* takes
+shuffled index `m * last_group + g - 1`, so raising N keeps existing names but adding
+groups moves them; an existing user without `READ_REPO_<repo>` is reported, not
+skipped, to catch exactly that. Users are created with `POST /rest/security/users/<name>`
+(`ROLE_USER`, `READ_REPO_<id>`, `WRITE_REPO_<id>`); the admin check uses the
+admin-only `/rest/security/users`, because `/rest/security` answers anonymously.
 
 ### Configuration
 
