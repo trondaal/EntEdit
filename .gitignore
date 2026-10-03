@@ -38,3 +38,4 @@ docker.access.token
 .claude/
 
 backups/
+users.csv

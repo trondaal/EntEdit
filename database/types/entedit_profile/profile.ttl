@@ -384,7 +384,7 @@ rdamd:P30004	entedit:status "data property" ; entedit:linguistic false ; entedit
 #rdamd:P30002	entedit:status "data property" ; rdfs:label "har medietype"@no . #"mediatype"@en .
 #rdamd:P30001	entedit:status "data property" ; rdfs:label "har bærertype"@no . #"carrier"@en .
 rdamd:P30106	entedit:status "data property" ; entedit:order 20 ; rdfs:label "serieangivelse"@no . #"series"@en .
-rdamd:P30165	entedit:status "data property" ; entedit:order 21 ; rdfs:label "nummerering i serie"@no . #"seriesnumbering"@en .
+#rdamd:P30165	entedit:status "data property" ; entedit:order 21 ; rdfs:label "nummerering i serie"@no . #"seriesnumbering"@en .
 #rdamd:P30050	entedit:status "data property" ; rdfs:label "har note om hefte, del, eller versjon brukt som grunnlag for identifisering av manifestasjon"@no . #"partnote"@en .
 
 rdamo:P30002	  entedit:status "controlled property" ;
