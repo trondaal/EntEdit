@@ -1,0 +1,2815 @@
+# EntEdit example data – J. G. Ballard – publishers
+# isfdb2lrm conversion of ISFDB (author 259, results/author-259, converter commit c8ab6b3, generated 2026-09-28)
+# merged with the earlier Ballard.ttl catalogue sample; persons, works and expressions
+# identified by VIAF where the earlier sample knew the VIAF identifier.
+
+@prefix entedit: <http://oslomet.no/abi/vocab#> .
+@prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
+@prefix rdac: <http://rdaregistry.info/Elements/c/> .
+@prefix rdaco: <http://rdaregistry.info/termList/RDAContentType/> .
+@prefix rdact: <http://rdaregistry.info/termList/RDACarrierType/> .
+@prefix rdaed: <http://rdaregistry.info/Elements/e/datatype/> .
+@prefix rdaeo: <http://rdaregistry.info/Elements/e/object/> .
+@prefix rdamd: <http://rdaregistry.info/Elements/m/datatype/> .
+@prefix rdamo: <http://rdaregistry.info/Elements/m/object/> .
+@prefix rdamt: <http://rdaregistry.info/termList/RDAMediaType/> .
+@prefix rdawd: <http://rdaregistry.info/Elements/w/datatype/> .
+@prefix rdawo: <http://rdaregistry.info/Elements/w/object/> .
+@prefix rdaxd: <http://rdaregistry.info/Elements/x/datatype/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vtp: <https://schema.nb.no/Bibliographic/Values/> .
+@prefix ntsf: <https://id.nb.no/vocabulary/ntsf/> .
+@prefix lang: <http://id.loc.gov/vocabulary/iso639-2/> .
+@prefix per: <http://entedit.org/person/> .
+@prefix pbl: <http://entedit.org/publisher/> .
+@prefix wrk: <http://entedit.org/work/> .
+@prefix exp: <http://entedit.org/expression/> .
+@prefix man: <http://entedit.org/manifestation/> .
+
+pbl:4
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/4",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?4" ;
+    rdaad:P50413 "HarperCollins" ;
+    rdfs:label "HarperCollins" .
+
+pbl:5
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/5",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?5" ;
+    rdaad:P50413 "HarperCollins (UK)" ;
+    rdfs:label "HarperCollins (UK)" .
+
+pbl:6
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/6",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?6" ;
+    rdaad:P50413 "HarperPrism" ;
+    rdfs:label "HarperPrism" .
+
+pbl:8
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/8",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?8" ;
+    rdaad:P50413 "Doubleday" ;
+    rdfs:label "Doubleday" .
+
+pbl:9
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/9",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?9" ;
+    rdaad:P50413 "Signet / New American Library" ;
+    rdfs:label "Signet / New American Library" .
+
+pbl:11
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/11",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?11" ;
+    rdaad:P50413 "New English Library" ;
+    rdfs:label "New English Library" .
+
+pbl:13
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/13",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?13" ;
+    rdaad:P50413 "Gollancz" ;
+    rdfs:label "Gollancz" .
+
+pbl:19
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/19",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?19" ;
+    rdaad:P50413 "Ballantine Books" ;
+    rdfs:label "Ballantine Books" .
+
+pbl:22
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/22",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?22" ;
+    rdaad:P50413 "Pocket Books" ;
+    rdfs:label "Pocket Books" .
+
+pbl:23
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/23",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?23" ;
+    rdaad:P50413 "Tor" ;
+    rdfs:label "Tor" .
+
+pbl:26
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/26",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?26" ;
+    rdaad:P50413 "Barnes & Noble Books" ;
+    rdfs:label "Barnes & Noble Books" .
+
+pbl:29
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/29",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?29" ;
+    rdaad:P50413 "Avon" ;
+    rdfs:label "Avon" .
+
+pbl:34
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/34",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?34" ;
+    rdaad:P50413 "Dell" ;
+    rdfs:label "Dell" .
+
+pbl:37
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/37",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?37" ;
+    rdaad:P50413 "Ace Books" ;
+    rdfs:label "Ace Books" .
+
+pbl:43
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/43",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?43" ;
+    rdaad:P50413 "DAW Books" ;
+    rdfs:label "DAW Books" .
+
+pbl:48
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/48",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?48" ;
+    rdaad:P50413 "Pinnacle Books" ;
+    rdfs:label "Pinnacle Books" .
+
+pbl:49
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/49",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?49" ;
+    rdaad:P50413 "Sphere" ;
+    rdfs:label "Sphere" .
+
+pbl:53
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/53",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?53" ;
+    rdaad:P50413 "Roc / New American Library" ;
+    rdfs:label "Roc / New American Library" .
+
+pbl:56
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/56",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?56" ;
+    rdaad:P50413 "The Easton Press" ;
+    rdfs:label "The Easton Press" .
+
+pbl:58
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/58",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?58" ;
+    rdaad:P50413 "Signet" ;
+    rdfs:label "Signet" .
+
+pbl:62
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/62",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?62" ;
+    rdaad:P50413 "Grafton" ;
+    rdfs:label "Grafton" .
+
+pbl:68
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/68",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?68" ;
+    rdaad:P50413 "St. Martin's Press" ;
+    rdfs:label "St. Martin's Press" .
+
+pbl:75
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/75",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?75" ;
+    rdaad:P50413 "Voyager / HarperCollins" ;
+    rdfs:label "Voyager / HarperCollins" .
+
+pbl:76
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/76",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?76" ;
+    rdaad:P50413 "Carroll & Graf" ;
+    rdfs:label "Carroll & Graf" .
+
+pbl:84
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/84",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?84" ;
+    rdaad:P50413 "Popular Library" ;
+    rdfs:label "Popular Library" .
+
+pbl:88
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/88",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?88" ;
+    rdaad:P50413 "Penguin Books" ;
+    rdfs:label "Penguin Books" .
+
+pbl:90
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/90",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?90" ;
+    rdaad:P50413 "Delacorte Press" ;
+    rdfs:label "Delacorte Press" .
+
+pbl:92
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/92",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?92" ;
+    rdaad:P50413 "Berkley Books" ;
+    rdfs:label "Berkley Books" .
+
+pbl:96
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/96",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?96" ;
+    rdaad:P50413 "Dell Laurel-Leaf" ;
+    rdfs:label "Dell Laurel-Leaf" .
+
+pbl:105
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/105",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?105" ;
+    rdaad:P50413 "Sidgwick & Jackson" ;
+    rdfs:label "Sidgwick & Jackson" .
+
+pbl:112
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/112",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?112" ;
+    rdaad:P50413 "Orb" ;
+    rdfs:label "Orb" .
+
+pbl:113
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/113",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?113" ;
+    rdaad:P50413 "Orbit" ;
+    rdfs:label "Orbit" .
+
+pbl:114
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/114",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?114" ;
+    rdaad:P50413 "Perennial Library / Harper & Row" ;
+    rdfs:label "Perennial Library / Harper & Row" .
+
+pbl:122
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/122",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?122" ;
+    rdaad:P50413 "Mayflower" ;
+    rdfs:label "Mayflower" .
+
+pbl:123
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/123",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?123" ;
+    rdaad:P50413 "Simon & Schuster" ;
+    rdfs:label "Simon & Schuster" .
+
+pbl:125
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/125",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?125" ;
+    rdaad:P50413 "Farrar, Straus and Giroux" ;
+    rdfs:label "Farrar, Straus and Giroux" .
+
+pbl:134
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/134",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?134" ;
+    rdaad:P50413 "W. W. Norton & Company" ;
+    rdfs:label "W. W. Norton & Company" .
+
+pbl:136
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/136",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?136" ;
+    rdaad:P50413 "Hutchinson" ;
+    rdfs:label "Hutchinson" .
+
+pbl:139
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/139",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?139" ;
+    rdaad:P50413 "Pan Books" ;
+    rdfs:label "Pan Books" .
+
+pbl:141
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/141",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?141" ;
+    rdaad:P50413 "Oxford University Press" ;
+    rdfs:label "Oxford University Press" .
+
+pbl:145
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/145",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?145" ;
+    rdaad:P50413 "Harper & Row" ;
+    rdfs:label "Harper & Row" .
+
+pbl:149
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/149",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?149" ;
+    rdaad:P50413 "Allison & Busby" ;
+    rdfs:label "Allison & Busby" .
+
+pbl:151
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/151",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?151" ;
+    rdaad:P50413 "Macmillan UK" ;
+    rdfs:label "Macmillan UK" .
+
+pbl:160
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/160",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?160" ;
+    rdaad:P50413 "Fawcett Crest" ;
+    rdfs:label "Fawcett Crest" .
+
+pbl:164
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/164",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?164" ;
+    rdaad:P50413 "Millennium / Orion" ;
+    rdfs:label "Millennium / Orion" .
+
+pbl:173
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/173",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?173" ;
+    rdaad:P50413 "Corgi" ;
+    rdfs:label "Corgi" .
+
+pbl:177
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/177",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?177" ;
+    rdaad:P50413 "Orbit / Futura" ;
+    rdfs:label "Orbit / Futura" .
+
+pbl:179
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/179",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?179" ;
+    rdaad:P50413 "Puffin" ;
+    rdfs:label "Puffin" .
+
+pbl:182
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/182",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?182" ;
+    rdaad:P50413 "Random House" ;
+    rdfs:label "Random House" .
+
+pbl:190
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/190",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?190" ;
+    rdaad:P50413 "Playboy Press" ;
+    rdfs:label "Playboy Press" .
+
+pbl:201
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/201",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?201" ;
+    rdaad:P50413 "ibooks" ;
+    rdfs:label "ibooks" .
+
+pbl:208
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/208",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?208" ;
+    rdaad:P50413 "Roc UK" ;
+    rdfs:label "Roc UK" .
+
+pbl:217
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/217",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?217" ;
+    rdaad:P50413 "Washington Square Press" ;
+    rdfs:label "Washington Square Press" .
+
+pbl:218
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/218",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?218" ;
+    rdaad:P50413 "Faber and Faber" ;
+    rdfs:label "Faber and Faber" .
+
+pbl:220
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/220",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?220" ;
+    rdaad:P50413 "Panther" ;
+    rdfs:label "Panther" .
+
+pbl:237
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/237",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?237" ;
+    rdaad:P50413 "Donald I. Fine" ;
+    rdfs:label "Donald I. Fine" .
+
+pbl:245
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/245",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?245" ;
+    rdaad:P50413 "Berkley Medallion" ;
+    rdfs:label "Berkley Medallion" .
+
+pbl:247
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/247",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?247" ;
+    rdaad:P50413 "Vintage (UK)" ;
+    rdfs:label "Vintage (UK)" .
+
+pbl:248
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/248",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?248" ;
+    rdaad:P50413 "Little, Brown" ;
+    rdfs:label "Little, Brown" .
+
+pbl:250
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/250",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?250" ;
+    rdaad:P50413 "Collins" ;
+    rdfs:label "Collins" .
+
+pbl:255
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/255",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?255" ;
+    rdaad:P50413 "Paperback Library" ;
+    rdfs:label "Paperback Library" .
+
+pbl:256
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/256",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?256" ;
+    rdaad:P50413 "Vintage Books" ;
+    rdfs:label "Vintage Books" .
+
+pbl:267
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/267",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?267" ;
+    rdaad:P50413 "Harcourt Brace Jovanovich" ;
+    rdfs:label "Harcourt Brace Jovanovich" .
+
+pbl:275
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/275",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?275" ;
+    rdaad:P50413 "Collier Books" ;
+    rdfs:label "Collier Books" .
+
+pbl:285
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/285",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?285" ;
+    rdaad:P50413 "Arkham House" ;
+    rdfs:label "Arkham House" .
+
+pbl:293
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/293",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?293" ;
+    rdaad:P50413 "Hamlyn" ;
+    rdfs:label "Hamlyn" .
+
+pbl:298
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/298",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?298" ;
+    rdaad:P50413 "Picador" ;
+    rdfs:label "Picador" .
+
+pbl:315
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/315",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?315" ;
+    rdaad:P50413 "Macdonald" ;
+    rdfs:label "Macdonald" .
+
+pbl:373
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/373",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?373" ;
+    rdaad:P50413 "Robert Hale" ;
+    rdfs:label "Robert Hale" .
+
+pbl:376
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/376",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?376" ;
+    rdaad:P50413 "Holt, Rinehart and Winston" ;
+    rdfs:label "Holt, Rinehart and Winston" .
+
+pbl:386
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/386",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?386" ;
+    rdaad:P50413 "Thomas Nelson" ;
+    rdfs:label "Thomas Nelson" .
+
+pbl:390
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/390",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?390" ;
+    rdaad:P50413 "Arrow Books" ;
+    rdfs:label "Arrow Books" .
+
+pbl:404
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/404",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?404" ;
+    rdaad:P50413 "TSR" ;
+    rdfs:label "TSR" .
+
+pbl:406
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/406",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?406" ;
+    rdaad:P50413 "Blackie" ;
+    rdfs:label "Blackie" .
+
+pbl:408
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/408",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?408" ;
+    rdaad:P50413 "Gnome Press" ;
+    rdfs:label "Gnome Press" .
+
+pbl:456
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/456",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?456" ;
+    rdaad:P50413 "Harper Perennial" ;
+    rdfs:label "Harper Perennial" .
+
+pbl:469
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/469",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?469" ;
+    rdaad:P50413 "Longman" ;
+    rdfs:label "Longman" .
+
+pbl:473
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/473",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?473" ;
+    rdaad:P50413 "Granada" ;
+    rdfs:label "Granada" .
+
+pbl:477
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/477",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?477" ;
+    rdaad:P50413 "Taplinger" ;
+    rdfs:label "Taplinger" .
+
+pbl:494
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/494",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?494" ;
+    rdaad:P50413 "Avon Books" ;
+    rdfs:label "Avon Books" .
+
+pbl:500
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/500",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?500" ;
+    rdaad:P50413 "Orion" ;
+    rdfs:label "Orion" .
+
+pbl:502
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/502",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?502" ;
+    rdaad:P50413 "Flamingo" ;
+    rdfs:label "Flamingo" .
+
+pbl:506
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/506",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?506" ;
+    rdaad:P50413 "Simon & Schuster UK" ;
+    rdfs:label "Simon & Schuster UK" .
+
+pbl:532
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/532",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?532" ;
+    rdaad:P50413 "Gregg Press" ;
+    rdfs:label "Gregg Press" .
+
+pbl:535
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/535",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?535" ;
+    rdaad:P50413 "Радуга" ;
+    rdaad:P50415 "Raduga" ;
+    rdfs:label "Радуга" .
+
+pbl:537
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/537",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?537" ;
+    rdaad:P50413 "Grove Press" ;
+    rdfs:label "Grove Press" .
+
+pbl:540
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/540",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?540" ;
+    rdaad:P50413 "Rand McNally & Company" ;
+    rdfs:label "Rand McNally & Company" .
+
+pbl:545
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/545",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?545" ;
+    rdaad:P50413 "Owl Books / Henry Holt" ;
+    rdfs:label "Owl Books / Henry Holt" .
+
+pbl:572
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/572",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?572" ;
+    rdaad:P50413 "Paladin" ;
+    rdfs:label "Paladin" .
+
+pbl:597
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/597",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?597" ;
+    rdaad:P50413 "Mayflower-Dell" ;
+    rdfs:label "Mayflower-Dell" .
+
+pbl:605
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/605",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?605" ;
+    rdaad:P50413 "Ecco Press" ;
+    rdfs:label "Ecco Press" .
+
+pbl:632
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/632",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?632" ;
+    rdaad:P50413 "Star" ;
+    rdfs:label "Star" .
+
+pbl:633
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/633",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?633" ;
+    rdaad:P50413 "Night Shade Books" ;
+    rdfs:label "Night Shade Books" .
+
+pbl:634
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/634",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?634" ;
+    rdaad:P50413 "Prentice-Hall" ;
+    rdfs:label "Prentice-Hall" .
+
+pbl:661
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/661",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?661" ;
+    rdaad:P50413 "Jonathan Cape" ;
+    rdfs:label "Jonathan Cape" .
+
+pbl:696
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/696",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?696" ;
+    rdaad:P50413 "G. P. Putnam's Sons" ;
+    rdfs:label "G. P. Putnam's Sons" .
+
+pbl:735
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/735",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?735" ;
+    rdaad:P50413 "Writer's Digest Books" ;
+    rdfs:label "Writer's Digest Books" .
+
+pbl:760
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/760",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?760" ;
+    rdaad:P50413 "Macfadden-Bartell" ;
+    rdfs:label "Macfadden-Bartell" .
+
+pbl:779
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/779",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?779" ;
+    rdaad:P50413 "Octopus Books" ;
+    rdfs:label "Octopus Books" .
+
+pbl:803
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/803",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?803" ;
+    rdaad:P50413 "Flamingo / HarperCollins" ;
+    rdfs:label "Flamingo / HarperCollins" .
+
+pbl:824
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/824",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?824" ;
+    rdaad:P50413 "Longmeadow Press" ;
+    rdfs:label "Longmeadow Press" .
+
+pbl:827
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/827",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?827" ;
+    rdaad:P50413 "Black Swan" ;
+    rdfs:label "Black Swan" .
+
+pbl:846
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/846",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?846" ;
+    rdaad:P50413 "Vintage Crime / Black Lizard / Vintage Books" ;
+    rdfs:label "Vintage Crime / Black Lizard / Vintage Books" .
+
+pbl:851
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/851",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?851" ;
+    rdaad:P50413 "Luchterhand" ;
+    rdfs:label "Luchterhand" .
+
+pbl:877
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/877",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?877" ;
+    rdaad:P50413 "Robinson" ;
+    rdfs:label "Robinson" .
+
+pbl:932
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/932",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?932" ;
+    rdaad:P50413 "J'ai Lu" ;
+    rdfs:label "J'ai Lu" .
+
+pbl:978
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/978",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?978" ;
+    rdaad:P50413 "University of Chicago Press" ;
+    rdfs:label "University of Chicago Press" .
+
+pbl:996
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/996",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?996" ;
+    rdaad:P50413 "Counterpoint" ;
+    rdfs:label "Counterpoint" .
+
+pbl:1031
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/1031",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?1031" ;
+    rdaad:P50413 "Wesleyan University Press" ;
+    rdfs:label "Wesleyan University Press" .
+
+pbl:1041
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/1041",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?1041" ;
+    rdaad:P50413 "Creation Books" ;
+    rdfs:label "Creation Books" .
+
+pbl:1051
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/1051",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?1051" ;
+    rdaad:P50413 "Indigo" ;
+    rdfs:label "Indigo" .
+
+pbl:1086
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/1086",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?1086" ;
+    rdaad:P50413 "Tachyon Publications" ;
+    rdfs:label "Tachyon Publications" .
+
+pbl:1114
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/1114",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?1114" ;
+    rdaad:P50413 "Stealth Press" ;
+    rdfs:label "Stealth Press" .
+
+pbl:1126
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/1126",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?1126" ;
+    rdaad:P50413 "Ullstein" ;
+    rdfs:label "Ullstein" .
+
+pbl:1127
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/1127",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?1127" ;
+    rdaad:P50413 "Heyne" ;
+    rdfs:label "Heyne" .
+
+pbl:1134
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/1134",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?1134" ;
+    rdaad:P50413 "Phoenix" ;
+    rdfs:label "Phoenix" .
+
+pbl:1226
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/1226",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?1226" ;
+    rdaad:P50413 "Harmony Books" ;
+    rdfs:label "Harmony Books" .
+
+pbl:1270
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/1270",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?1270" ;
+    rdaad:P50413 "Thunder's Mouth Press" ;
+    rdfs:label "Thunder's Mouth Press" .
+
+pbl:1319
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/1319",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?1319" ;
+    rdaad:P50413 "Souvenir Press" ;
+    rdfs:label "Souvenir Press" .
+
+pbl:1380
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/1380",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?1380" ;
+    rdaad:P50413 "Bison Books" ;
+    rdfs:label "Bison Books" .
+
+pbl:1381
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/1381",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?1381" ;
+    rdaad:P50413 "Scarecrow Press" ;
+    rdfs:label "Scarecrow Press" .
+
+pbl:1478
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/1478",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?1478" ;
+    rdaad:P50413 "Atlas Publishing and Distribution Co. Ltd" ;
+    rdfs:label "Atlas Publishing and Distribution Co. Ltd" .
+
+pbl:1518
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/1518",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?1518" ;
+    rdaad:P50413 "Hart-Davis" ;
+    rdfs:label "Hart-Davis" .
+
+pbl:1563
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/1563",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?1563" ;
+    rdaad:P50413 "Chronicle Books" ;
+    rdfs:label "Chronicle Books" .
+
+pbl:1608
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/1608",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?1608" ;
+    rdaad:P50413 "Viking" ;
+    rdfs:label "Viking" .
+
+pbl:1722
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/1722",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?1722" ;
+    rdaad:P50413 "早川書房" ;
+    rdaad:P50415 "Hayakawa Shobō",
+        "Hayakawa Shobo",
+        "はやかわしょぼう",
+        "ハヤカワショボウ" ;
+    rdfs:label "早川書房" .
+
+pbl:1726
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/1726",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?1726" ;
+    rdaad:P50413 "Fanucci Editore" ;
+    rdfs:label "Fanucci Editore" .
+
+pbl:1735
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/1735",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?1735" ;
+    rdaad:P50413 "Denoël" ;
+    rdaad:P50415 "Denoel" ;
+    rdfs:label "Denoël" .
+
+pbl:1822
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/1822",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?1822" ;
+    rdaad:P50413 "Presses Pocket" ;
+    rdfs:label "Presses Pocket" .
+
+pbl:1823
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/1823",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?1823" ;
+    rdaad:P50413 "Duke University Press" ;
+    rdfs:label "Duke University Press" .
+
+pbl:1849
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/1849",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?1849" ;
+    rdaad:P50413 "GuildAmerica Books / SFBC" ;
+    rdfs:label "GuildAmerica Books / SFBC" .
+
+pbl:1884
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/1884",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?1884" ;
+    rdaad:P50413 "Fourth Estate" ;
+    rdfs:label "Fourth Estate" .
+
+pbl:1909
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/1909",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?1909" ;
+    rdaad:P50413 "Harcourt, Brace & World" ;
+    rdfs:label "Harcourt, Brace & World" .
+
+pbl:1932
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/1932",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?1932" ;
+    rdaad:P50413 "Harvest / HBJ" ;
+    rdfs:label "Harvest / HBJ" .
+
+pbl:1949
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/1949",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?1949" ;
+    rdaad:P50413 "Bompiani" ;
+    rdfs:label "Bompiani" .
+
+pbl:1956
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/1956",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?1956" ;
+    rdaad:P50413 "Anchor Press / Doubleday" ;
+    rdfs:label "Anchor Press / Doubleday" .
+
+pbl:1976
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/1976",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?1976" ;
+    rdaad:P50413 "Savoy Books" ;
+    rdfs:label "Savoy Books" .
+
+pbl:2034
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/2034",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?2034" ;
+    rdaad:P50413 "Hawthorn Books" ;
+    rdfs:label "Hawthorn Books" .
+
+pbl:2035
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/2035",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?2035" ;
+    rdaad:P50413 "Compact Books" ;
+    rdfs:label "Compact Books" .
+
+pbl:2037
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/2037",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?2037" ;
+    rdaad:P50413 "Rowman & Littlefield" ;
+    rdfs:label "Rowman & Littlefield" .
+
+pbl:2276
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/2276",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?2276" ;
+    rdaad:P50413 "SFS Publications" ;
+    rdfs:label "SFS Publications" .
+
+pbl:2280
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/2280",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?2280" ;
+    rdaad:P50413 "Xanadu" ;
+    rdfs:label "Xanadu" .
+
+pbl:2298
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/2298",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?2298" ;
+    rdaad:P50413 "Autonomedia" ;
+    rdfs:label "Autonomedia" .
+
+pbl:2305
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/2305",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?2305" ;
+    rdaad:P50413 "Liveright" ;
+    rdfs:label "Liveright" .
+
+pbl:2358
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/2358",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?2358" ;
+    rdaad:P50413 "Dennis Dobson" ;
+    rdfs:label "Dennis Dobson" .
+
+pbl:2391
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/2391",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?2391" ;
+    rdaad:P50413 "Glencoe Press" ;
+    rdfs:label "Glencoe Press" .
+
+pbl:2578
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/2578",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?2578" ;
+    rdaad:P50413 "Galaxy Publishing Corporation" ;
+    rdfs:label "Galaxy Publishing Corporation" .
+
+pbl:2581
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/2581",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?2581" ;
+    rdaad:P50413 "Penguin Books (US)" ;
+    rdfs:label "Penguin Books (US)" .
+
+pbl:2599
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/2599",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?2599" ;
+    rdaad:P50413 "Unwin Paperbacks" ;
+    rdfs:label "Unwin Paperbacks" .
+
+pbl:2830
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/2830",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?2830" ;
+    rdaad:P50413 "Julian Messner" ;
+    rdfs:label "Julian Messner" .
+
+pbl:2867
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/2867",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?2867" ;
+    rdaad:P50413 "Treasure Press" ;
+    rdfs:label "Treasure Press" .
+
+pbl:2983
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/2983",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?2983" ;
+    rdaad:P50413 "Mentor" ;
+    rdfs:label "Mentor" .
+
+pbl:2997
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/2997",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?2997" ;
+    rdaad:P50413 "Citadel Twilight" ;
+    rdfs:label "Citadel Twilight" .
+
+pbl:3095
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/3095",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?3095" ;
+    rdaad:P50413 "Rapp & Whiting" ;
+    rdfs:label "Rapp & Whiting" .
+
+pbl:3142
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/3142",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?3142" ;
+    rdaad:P50413 "Dell Laurel" ;
+    rdfs:label "Dell Laurel" .
+
+pbl:3144
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/3144",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?3144" ;
+    rdaad:P50413 "Chancellor Press" ;
+    rdfs:label "Chancellor Press" .
+
+pbl:3369
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/3369",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?3369" ;
+    rdaad:P50413 "National Textbook Co." ;
+    rdfs:label "National Textbook Co." .
+
+pbl:3390
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/3390",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?3390" ;
+    rdaad:P50413 "Ziff-Davis Publishing Company" ;
+    rdfs:label "Ziff-Davis Publishing Company" .
+
+pbl:3393
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/3393",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?3393" ;
+    rdaad:P50413 "Ultimate Publishing Co., Inc." ;
+    rdfs:label "Ultimate Publishing Co., Inc." .
+
+pbl:3400
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/3400",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?3400" ;
+    rdaad:P50413 "Digest Productions Corporation" ;
+    rdfs:label "Digest Productions Corporation" .
+
+pbl:3410
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/3410",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?3410" ;
+    rdaad:P50413 "Nova Publications Ltd." ;
+    rdfs:label "Nova Publications Ltd." .
+
+pbl:3412
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/3412",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?3412" ;
+    rdaad:P50413 "Omni Publications International Ltd." ;
+    rdfs:label "Omni Publications International Ltd." .
+
+pbl:3422
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/3422",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?3422" ;
+    rdaad:P50413 "Roberts & Vinter Ltd." ;
+    rdfs:label "Roberts & Vinter Ltd." .
+
+pbl:3865
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/3865",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?3865" ;
+    rdaad:P50413 "Minotauro" ;
+    rdfs:label "Minotauro" .
+
+pbl:4278
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/4278",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?4278" ;
+    rdaad:P50413 "RE/Search Publications" ;
+    rdfs:label "RE/Search Publications" .
+
+pbl:4285
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/4285",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?4285" ;
+    rdaad:P50413 "Ediciones B" ;
+    rdfs:label "Ediciones B" .
+
+pbl:4361
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/4361",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?4361" ;
+    rdaad:P50413 "Suhrkamp" ;
+    rdfs:label "Suhrkamp" .
+
+pbl:4384
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/4384",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?4384" ;
+    rdaad:P50413 "Gallimard" ;
+    rdfs:label "Gallimard" .
+
+pbl:4432
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/4432",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?4432" ;
+    rdaad:P50413 "Insel" ;
+    rdfs:label "Insel" .
+
+pbl:4450
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/4450",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?4450" ;
+    rdaad:P50413 "Albin Michel" ;
+    rdfs:label "Albin Michel" .
+
+pbl:4467
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/4467",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?4467" ;
+    rdaad:P50413 "Martínez Roca" ;
+    rdfs:label "Martínez Roca" .
+
+pbl:4472
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/4472",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?4472" ;
+    rdaad:P50413 "Mondadori" ;
+    rdfs:label "Mondadori" .
+
+pbl:4475
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/4475",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?4475" ;
+    rdaad:P50413 "Le Livre de Poche" ;
+    rdfs:label "Le Livre de Poche" .
+
+pbl:4532
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/4532",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?4532" ;
+    rdaad:P50413 "Goldmann" ;
+    rdfs:label "Goldmann" .
+
+pbl:4536
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/4536",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?4536" ;
+    rdaad:P50413 "Recorded Books" ;
+    rdfs:label "Recorded Books" .
+
+pbl:4673
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/4673",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?4673" ;
+    rdaad:P50413 "The MIT Press" ;
+    rdfs:label "The MIT Press" .
+
+pbl:5091
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/5091",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?5091" ;
+    rdaad:P50413 "Charles Scribner's Sons" ;
+    rdfs:label "Charles Scribner's Sons" .
+
+pbl:5345
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/5345",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?5345" ;
+    rdaad:P50413 "Progress Publishers" ;
+    rdfs:label "Progress Publishers" .
+
+pbl:5499
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/5499",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?5499" ;
+    rdaad:P50413 "Casterman" ;
+    rdfs:label "Casterman" .
+
+pbl:5693
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/5693",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?5693" ;
+    rdaad:P50413 "Droemer Knaur" ;
+    rdfs:label "Droemer Knaur" .
+
+pbl:5719
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/5719",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?5719" ;
+    rdaad:P50413 "Bastei Lübbe" ;
+    rdaad:P50415 "Bastei Luebbe" ;
+    rdfs:label "Bastei Lübbe" .
+
+pbl:5747
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/5747",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?5747" ;
+    rdaad:P50413 "Acervo" ;
+    rdfs:label "Acervo" .
+
+pbl:5761
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/5761",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?5761" ;
+    rdaad:P50413 "Quality Paperback Book Club" ;
+    rdfs:label "Quality Paperback Book Club" .
+
+pbl:5767
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/5767",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?5767" ;
+    rdaad:P50413 "The Noonday Press" ;
+    rdfs:label "The Noonday Press" .
+
+pbl:5774
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/5774",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?5774" ;
+    rdaad:P50413 "RBA Libros" ;
+    rdfs:label "RBA Libros" .
+
+pbl:6092
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/6092",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?6092" ;
+    rdaad:P50413 "MJF Books" ;
+    rdfs:label "MJF Books" .
+
+pbl:6131
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/6131",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?6131" ;
+    rdaad:P50413 "Kiepenheuer & Witsch" ;
+    rdfs:label "Kiepenheuer & Witsch" .
+
+pbl:6371
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/6371",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?6371" ;
+    rdaad:P50413 "Baldini e Castoldi" ;
+    rdfs:label "Baldini e Castoldi" .
+
+pbl:7026
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/7026",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?7026" ;
+    rdaad:P50413 "OPTA" ;
+    rdfs:label "OPTA" .
+
+pbl:8101
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/8101",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?8101" ;
+    rdaad:P50413 "Great American Publications, Inc." ;
+    rdfs:label "Great American Publications, Inc." .
+
+pbl:8911
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/8911",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?8911" ;
+    rdaad:P50413 "Mercury Press, Inc." ;
+    rdfs:label "Mercury Press, Inc." .
+
+pbl:10061
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/10061",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?10061" ;
+    rdaad:P50413 "Triad Panther" ;
+    rdfs:label "Triad Panther" .
+
+pbl:10221
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/10221",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?10221" ;
+    rdaad:P50413 "Gollancz / Orion" ;
+    rdfs:label "Gollancz / Orion" .
+
+pbl:13141
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/13141",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?13141" ;
+    rdaad:P50413 "Triad Granada" ;
+    rdfs:label "Triad Granada" .
+
+pbl:13521
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/13521",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?13521" ;
+    rdaad:P50413 "New Worlds Publishing" ;
+    rdfs:label "New Worlds Publishing" .
+
+pbl:13641
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/13641",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?13641" ;
+    rdaad:P50413 "Equinox / Avon" ;
+    rdfs:label "Equinox / Avon" .
+
+pbl:14051
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/14051",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?14051" ;
+    rdaad:P50413 "Interzone" ;
+    rdfs:label "Interzone" .
+
+pbl:14401
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/14401",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?14401" ;
+    rdaad:P50413 "University of Southern Mississippi" ;
+    rdfs:label "University of Southern Mississippi" .
+
+pbl:14541
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/14541",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?14541" ;
+    rdaad:P50413 "Picador USA" ;
+    rdfs:label "Picador USA" .
+
+pbl:14571
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/14571",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?14571" ;
+    rdaad:P50413 "Stephen P. Brown" ;
+    rdfs:label "Stephen P. Brown" .
+
+pbl:14781
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/14781",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?14781" ;
+    rdaad:P50413 "Bruna" ;
+    rdfs:label "Bruna" .
+
+pbl:15301
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/15301",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?15301" ;
+    rdaad:P50413 "QPD" ;
+    rdfs:label "QPD" .
+
+pbl:15861
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/15861",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?15861" ;
+    rdaad:P50413 "Avernus" ;
+    rdfs:label "Avernus" .
+
+pbl:16713
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/16713",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?16713" ;
+    rdaad:P50413 "J. M. Dent" ;
+    rdfs:label "J. M. Dent" .
+
+pbl:16737
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/16737",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?16737" ;
+    rdaad:P50413 "Robson Books" ;
+    rdfs:label "Robson Books" .
+
+pbl:16853
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/16853",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?16853" ;
+    rdaad:P50413 "Tor / SFBC" ;
+    rdfs:label "Tor / SFBC" .
+
+pbl:16953
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/16953",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?16953" ;
+    rdaad:P50413 "G. P. Putnam's Sons / SFBC" ;
+    rdfs:label "G. P. Putnam's Sons / SFBC" .
+
+pbl:17013
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/17013",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?17013" ;
+    rdaad:P50413 "Doubleday / SFBC" ;
+    rdfs:label "Doubleday / SFBC" .
+
+pbl:17229
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/17229",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?17229" ;
+    rdaad:P50413 "David Pringle" ;
+    rdfs:label "David Pringle" .
+
+pbl:17981
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/17981",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?17981" ;
+    rdaad:P50413 "DAW Books / SFBC" ;
+    rdfs:label "DAW Books / SFBC" .
+
+pbl:18777
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/18777",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?18777" ;
+    rdaad:P50413 "Andrew Porter" ;
+    rdfs:label "Andrew Porter" .
+
+pbl:19989
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/19989",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?19989" ;
+    rdaad:P50413 "Roc / New American Library / SFBC" ;
+    rdfs:label "Roc / New American Library / SFBC" .
+
+pbl:20345
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/20345",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?20345" ;
+    rdaad:P50413 "The Science Fiction Book Club (UK)" ;
+    rdfs:label "The Science Fiction Book Club (UK)" .
+
+pbl:21337
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/21337",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?21337" ;
+    rdaad:P50413 "Rand McNally College Publishing Co." ;
+    rdfs:label "Rand McNally College Publishing Co." .
+
+pbl:21417
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/21417",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?21417" ;
+    rdaad:P50413 "Ramble House" ;
+    rdfs:label "Ramble House" .
+
+pbl:21509
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/21509",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?21509" ;
+    rdaad:P50413 "Delacorte Press / SFBC" ;
+    rdfs:label "Delacorte Press / SFBC" .
+
+pbl:21585
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/21585",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?21585" ;
+    rdaad:P50413 "The Folio Society" ;
+    rdfs:label "The Folio Society" .
+
+pbl:22565
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/22565",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?22565" ;
+    rdaad:P50413 "Dragon's Dream" ;
+    rdfs:label "Dragon's Dream" .
+
+pbl:24583
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/24583",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?24583" ;
+    rdaad:P50413 "Stonehart Publications, Ltd." ;
+    rdfs:label "Stonehart Publications, Ltd." .
+
+pbl:24584
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/24584",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?24584" ;
+    rdaad:P50413 "Gold Star Publications, Ltd." ;
+    rdfs:label "Gold Star Publications, Ltd." .
+
+pbl:24585
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/24585",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?24585" ;
+    rdaad:P50413 "Magnelist Publications, Ltd." ;
+    rdfs:label "Magnelist Publications, Ltd." .
+
+pbl:24663
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/24663",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?24663" ;
+    rdaad:P50413 "Czytelnik" ;
+    rdfs:label "Czytelnik" .
+
+pbl:24838
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/24838",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?24838" ;
+    rdaad:P50413 "HarperPrism / SFBC" ;
+    rdfs:label "HarperPrism / SFBC" .
+
+pbl:25293
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/25293",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?25293" ;
+    rdaad:P50413 "iBooks / SFBC" ;
+    rdfs:label "iBooks / SFBC" .
+
+pbl:25448
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/25448",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?25448" ;
+    rdaad:P50413 "Farrar, Straus and Giroux / SFBC" ;
+    rdfs:label "Farrar, Straus and Giroux / SFBC" .
+
+pbl:25597
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/25597",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?25597" ;
+    rdaad:P50413 "Lester & Orpen Dennys" ;
+    rdfs:label "Lester & Orpen Dennys" .
+
+pbl:25604
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/25604",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?25604" ;
+    rdaad:P50413 "Wren (Australia)" ;
+    rdfs:label "Wren (Australia)" .
+
+pbl:25722
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/25722",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?25722" ;
+    rdaad:P50413 "Harper Perennial (UK)" ;
+    rdfs:label "Harper Perennial (UK)" .
+
+pbl:25729
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/25729",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?25729" ;
+    rdaad:P50413 "Pabel" ;
+    rdfs:label "Pabel" .
+
+pbl:25880
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/25880",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?25880" ;
+    rdaad:P50413 "Book-of-the-Month Club" ;
+    rdfs:label "Book-of-the-Month Club" .
+
+pbl:27035
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/27035",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?27035" ;
+    rdaad:P50413 "Ballantine Books (UK)" ;
+    rdfs:label "Ballantine Books (UK)" .
+
+pbl:27169
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/27169",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?27169" ;
+    rdaad:P50413 "Bedford Books of St. Martin's Press" ;
+    rdfs:label "Bedford Books of St. Martin's Press" .
+
+pbl:27308
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/27308",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?27308" ;
+    rdaad:P50413 "Grafton / Collins (UK)" ;
+    rdfs:label "Grafton / Collins (UK)" .
+
+pbl:27482
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/27482",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?27482" ;
+    rdaad:P50413 "Orbit Book / Futura Publications" ;
+    rdfs:label "Orbit Book / Futura Publications" .
+
+pbl:27770
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/27770",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?27770" ;
+    rdaad:P50413 "ISIS Large Print Books" ;
+    rdfs:label "ISIS Large Print Books" .
+
+pbl:28197
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/28197",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?28197" ;
+    rdaad:P50413 "Roxbury Park / Lowell House" ;
+    rdfs:label "Roxbury Park / Lowell House" .
+
+pbl:28228
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/28228",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?28228" ;
+    rdaad:P50413 "Roxbury Park / SFBC" ;
+    rdfs:label "Roxbury Park / SFBC" .
+
+pbl:28492
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/28492",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?28492" ;
+    rdaad:P50413 "Mentor / New American Library" ;
+    rdfs:label "Mentor / New American Library" .
+
+pbl:28503
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/28503",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?28503" ;
+    rdaad:P50413 "Simon & Schuster / QPBC" ;
+    rdfs:label "Simon & Schuster / QPBC" .
+
+pbl:28508
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/28508",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?28508" ;
+    rdaad:P50413 "Viking / QPBC" ;
+    rdfs:label "Viking / QPBC" .
+
+pbl:28607
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/28607",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?28607" ;
+    rdaad:P50413 "Borealis / White Wolf Publishing" ;
+    rdfs:label "Borealis / White Wolf Publishing" .
+
+pbl:28626
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/28626",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?28626" ;
+    rdaad:P50413 "Picador USA / Farrar, Straus and Giroux" ;
+    rdfs:label "Picador USA / Farrar, Straus and Giroux" .
+
+pbl:28709
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/28709",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?28709" ;
+    rdaad:P50413 "Thomas Nelson & Sons" ;
+    rdfs:label "Thomas Nelson & Sons" .
+
+pbl:29021
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/29021",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?29021" ;
+    rdaad:P50413 "Deutscher Bücherbund" ;
+    rdaad:P50415 "Deutscher Buecherbund" ;
+    rdfs:label "Deutscher Bücherbund" .
+
+pbl:29100
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/29100",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?29100" ;
+    rdaad:P50413 "David Bruce & Watson" ;
+    rdfs:label "David Bruce & Watson" .
+
+pbl:29271
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/29271",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?29271" ;
+    rdaad:P50413 "Einaudi" ;
+    rdfs:label "Einaudi" .
+
+pbl:29311
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/29311",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?29311" ;
+    rdaad:P50413 "Unicorn Bookshop" ;
+    rdfs:label "Unicorn Bookshop" .
+
+pbl:29447
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/29447",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?29447" ;
+    rdaad:P50413 "Book Club Associates" ;
+    rdfs:label "Book Club Associates" .
+
+pbl:29470
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/29470",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?29470" ;
+    rdaad:P50413 "Meulenhoff" ;
+    rdfs:label "Meulenhoff" .
+
+pbl:29552
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/29552",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?29552" ;
+    rdaad:P50413 "Das Neue Berlin" ;
+    rdfs:label "Das Neue Berlin" .
+
+pbl:29837
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/29837",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?29837" ;
+    rdaad:P50413 "Flamingo / Fontana Paperbacks" ;
+    rdfs:label "Flamingo / Fontana Paperbacks" .
+
+pbl:30234
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/30234",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?30234" ;
+    rdaad:P50413 "Union générale d'éditions" ;
+    rdfs:label "Union générale d'éditions" .
+
+pbl:30291
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/30291",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?30291" ;
+    rdaad:P50413 "Casa Editrice La Tribuna" ;
+    rdfs:label "Casa Editrice La Tribuna" .
+
+pbl:30293
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/30293",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?30293" ;
+    rdaad:P50413 "Little, Brown / BOMC" ;
+    rdfs:label "Little, Brown / BOMC" .
+
+pbl:30307
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/30307",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?30307" ;
+    rdaad:P50413 "Longanesi" ;
+    rdfs:label "Longanesi" .
+
+pbl:30308
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/30308",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?30308" ;
+    rdaad:P50413 "Editrice Minerva" ;
+    rdfs:label "Editrice Minerva" .
+
+pbl:30342
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/30342",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?30342" ;
+    rdaad:P50413 "Livros do Brasil" ;
+    rdfs:label "Livros do Brasil" .
+
+pbl:30382
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/30382",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?30382" ;
+    rdaad:P50413 "Edition Phantasia" ;
+    rdfs:label "Edition Phantasia" .
+
+pbl:30504
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/30504",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?30504" ;
+    rdaad:P50413 "Edizioni dello Scorpione" ;
+    rdfs:label "Edizioni dello Scorpione" .
+
+pbl:30535
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/30535",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?30535" ;
+    rdaad:P50413 "Littlefield, Adams & Co." ;
+    rdfs:label "Littlefield, Adams & Co." .
+
+pbl:30548
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/30548",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?30548" ;
+    rdaad:P50413 "De Carlo Editore" ;
+    rdfs:label "De Carlo Editore" .
+
+pbl:30572
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/30572",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?30572" ;
+    rdaad:P50413 "Blond & Briggs" ;
+    rdfs:label "Blond & Briggs" .
+
+pbl:30598
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/30598",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?30598" ;
+    rdaad:P50413 "Marabout" ;
+    rdfs:label "Marabout" .
+
+pbl:30602
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/30602",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?30602" ;
+    rdaad:P50413 "Edizioni dell'Albero" ;
+    rdfs:label "Edizioni dell'Albero" .
+
+pbl:30651
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/30651",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?30651" ;
+    rdaad:P50413 "Fleetway Publications" ;
+    rdfs:label "Fleetway Publications" .
+
+pbl:30973
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/30973",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?30973" ;
+    rdaad:P50413 "Little, Brown / QPBC" ;
+    rdfs:label "Little, Brown / QPBC" .
+
+pbl:30991
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/30991",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?30991" ;
+    rdaad:P50413 "Feltrinelli" ;
+    rdfs:label "Feltrinelli" .
+
+pbl:31313
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/31313",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?31313" ;
+    rdaad:P50413 "Triad / Panther" ;
+    rdfs:label "Triad / Panther" .
+
+pbl:31349
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/31349",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?31349" ;
+    rdaad:P50413 "Charles Platt" ;
+    rdfs:label "Charles Platt" .
+
+pbl:32336
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/32336",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?32336" ;
+    rdaad:P50413 "Móra Ferenc Ifjúsági Könyvkiadó" ;
+    rdaad:P50415 "Mora Ferenc Ifjusagi Konyvkiado",
+        "Moora Ferenc Ifjuusaagi Koenyvkiadoo" ;
+    rdfs:label "Móra Ferenc Ifjúsági Könyvkiadó" .
+
+pbl:32347
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/32347",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?32347" ;
+    rdaad:P50413 "Kozmosz Könyvek" ;
+    rdaad:P50415 "Kozmosz Konyvek",
+        "Kozmosz Koenyvek" ;
+    rdfs:label "Kozmosz Könyvek" .
+
+pbl:33678
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/33678",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?33678" ;
+    rdaad:P50413 "Holt Paperbacks" ;
+    rdfs:label "Holt Paperbacks" .
+
+pbl:34847
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/34847",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?34847" ;
+    rdaad:P50413 "Graham Evans" ;
+    rdfs:label "Graham Evans" .
+
+pbl:34861
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/34861",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?34861" ;
+    rdaad:P50413 "講談社" ;
+    rdaad:P50415 "Kōdansha",
+        "Kodansha",
+        "こうだんしゃ" ;
+    rdfs:label "講談社" .
+
+pbl:34889
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/34889",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?34889" ;
+    rdaad:P50413 "Dragon's Dream / Quick Fox" ;
+    rdfs:label "Dragon's Dream / Quick Fox" .
+
+pbl:35225
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/35225",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?35225" ;
+    rdaad:P50413 "Calmann-Lévy" ;
+    rdfs:label "Calmann-Lévy" .
+
+pbl:35470
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/35470",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?35470" ;
+    rdaad:P50413 "Reclam" ;
+    rdfs:label "Reclam" .
+
+pbl:35515
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/35515",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?35515" ;
+    rdaad:P50413 "Arena (UK)" ;
+    rdfs:label "Arena (UK)" .
+
+pbl:35581
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/35581",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?35581" ;
+    rdaad:P50413 "Lichtenberg" ;
+    rdfs:label "Lichtenberg" .
+
+pbl:35727
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/35727",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?35727" ;
+    rdaad:P50413 "J.-C. Lattès" ;
+    rdaad:P50415 "J.-C. Lattes" ;
+    rdfs:label "J.-C. Lattès" .
+
+pbl:35793
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/35793",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?35793" ;
+    rdaad:P50413 "British Library Publishing" ;
+    rdfs:label "British Library Publishing" .
+
+pbl:36081
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/36081",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?36081" ;
+    rdaad:P50413 "Vintage Digital" ;
+    rdfs:label "Vintage Digital" .
+
+pbl:36412
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/36412",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?36412" ;
+    rdaad:P50413 "H. J. W. Becht" ;
+    rdfs:label "H. J. W. Becht" .
+
+pbl:36577
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/36577",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?36577" ;
+    rdaad:P50413 "Luitingh" ;
+    rdfs:label "Luitingh" .
+
+pbl:36660
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/36660",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?36660" ;
+    rdaad:P50413 "Het Spectrum" ;
+    rdfs:label "Het Spectrum" .
+
+pbl:36753
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/36753",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?36753" ;
+    rdaad:P50413 "Primus / Donald I. Fine" ;
+    rdfs:label "Primus / Donald I. Fine" .
+
+pbl:36991
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/36991",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?36991" ;
+    rdaad:P50413 "Shayol" ;
+    rdfs:label "Shayol" .
+
+pbl:37277
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/37277",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?37277" ;
+    rdaad:P50413 "Champ Libre" ;
+    rdfs:label "Champ Libre" .
+
+pbl:37359
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/37359",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?37359" ;
+    rdaad:P50413 "De Arbeiderspers" ;
+    rdfs:label "De Arbeiderspers" .
+
+pbl:37382
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/37382",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?37382" ;
+    rdaad:P50413 "Fischer Taschenbuch" ;
+    rdfs:label "Fischer Taschenbuch" .
+
+pbl:37439
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/37439",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?37439" ;
+    rdaad:P50413 "Marion von Schröder" ;
+    rdaad:P50415 "Marion von Schroeder",
+        "Marion von Schroder" ;
+    rdfs:label "Marion von Schröder" .
+
+pbl:37579
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/37579",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?37579" ;
+    rdaad:P50413 "ReAnimus Press" ;
+    rdfs:label "ReAnimus Press" .
+
+pbl:38285
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/38285",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?38285" ;
+    rdaad:P50413 "IPC Magazines" ;
+    rdfs:label "IPC Magazines" .
+
+pbl:38361
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/38361",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?38361" ;
+    rdaad:P50413 "Melzer" ;
+    rdfs:label "Melzer" .
+
+pbl:39239
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/39239",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?39239" ;
+    rdaad:P50413 "De Bezige Bij" ;
+    rdfs:label "De Bezige Bij" .
+
+pbl:39315
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/39315",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?39315" ;
+    rdaad:P50413 "Jugoslavija" ;
+    rdfs:label "Jugoslavija" .
+
+pbl:39567
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/39567",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?39567" ;
+    rdaad:P50413 "Farrar, Straus and Giroux / QPBC" ;
+    rdfs:label "Farrar, Straus and Giroux / QPBC" .
+
+pbl:39781
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/39781",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?39781" ;
+    rdaad:P50413 "Corian" ;
+    rdfs:label "Corian" .
+
+pbl:39878
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/39878",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?39878" ;
+    rdaad:P50413 "De Fontein" ;
+    rdfs:label "De Fontein" .
+
+pbl:39950
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/39950",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?39950" ;
+    rdaad:P50413 "Éditions Rencontre" ;
+    rdfs:label "Éditions Rencontre" .
+
+pbl:40012
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/40012",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?40012" ;
+    rdaad:P50413 "Hohenheim" ;
+    rdfs:label "Hohenheim" .
+
+pbl:40479
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/40479",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?40479" ;
+    rdaad:P50413 "Bärmeier & Nikel" ;
+    rdaad:P50415 "Baermeier & Nikel",
+        "Barmeier & Nikel" ;
+    rdfs:label "Bärmeier & Nikel" .
+
+pbl:40512
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/40512",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?40512" ;
+    rdaad:P50413 "サンリオ" ;
+    rdaad:P50415 "Sanrio" ;
+    rdfs:label "サンリオ" .
+
+pbl:40614
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/40614",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?40614" ;
+    rdaad:P50413 "Vértice" ;
+    rdfs:label "Vértice" .
+
+pbl:40702
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/40702",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?40702" ;
+    rdaad:P50413 "Gallery Books / W. H. Smith" ;
+    rdfs:label "Gallery Books / W. H. Smith" .
+
+pbl:40720
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/40720",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?40720" ;
+    rdaad:P50413 "Caminho" ;
+    rdfs:label "Caminho" .
+
+pbl:41273
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/41273",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?41273" ;
+    rdaad:P50413 "Piper (Germany)" ;
+    rdfs:label "Piper (Germany)" .
+
+pbl:41407
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/41407",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?41407" ;
+    rdaad:P50413 "Triad / Granada" ;
+    rdfs:label "Triad / Granada" .
+
+pbl:41667
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/41667",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?41667" ;
+    rdaad:P50413 "Vintage Crime/Black Lizard / SFBC" ;
+    rdfs:label "Vintage Crime/Black Lizard / SFBC" .
+
+pbl:41863
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/41863",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?41863" ;
+    rdaad:P50413 "Simon & Schuster Paperbacks" ;
+    rdfs:label "Simon & Schuster Paperbacks" .
+
+pbl:41914
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/41914",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?41914" ;
+    rdaad:P50413 "Cypher Press" ;
+    rdfs:label "Cypher Press" .
+
+pbl:41969
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/41969",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?41969" ;
+    rdaad:P50413 "東京創元社" ;
+    rdaad:P50415 "Tōkyō Sōgensha",
+        "Tokyo Sogensha" ;
+    rdfs:label "東京創元社" .
+
+pbl:41976
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/41976",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?41976" ;
+    rdaad:P50413 "Delta (Stockholm)" ;
+    rdfs:label "Delta (Stockholm)" .
+
+pbl:43161
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/43161",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?43161" ;
+    rdaad:P50413 "Sun Vision Press" ;
+    rdfs:label "Sun Vision Press" .
+
+pbl:43556
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/43556",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?43556" ;
+    rdaad:P50413 "Sphinx" ;
+    rdfs:label "Sphinx" .
+
+pbl:43896
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/43896",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?43896" ;
+    rdaad:P50413 "Canfield Press" ;
+    rdfs:label "Canfield Press" .
+
+pbl:44038
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/44038",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?44038" ;
+    rdaad:P50413 "Surinam Turtle Press" ;
+    rdfs:label "Surinam Turtle Press" .
+
+pbl:44567
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/44567",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?44567" ;
+    rdaad:P50413 "Trident Press (New York)" ;
+    rdfs:label "Trident Press (New York)" .
+
+pbl:44591
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/44591",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?44591" ;
+    rdaad:P50413 "J. M. Dent & Sons" ;
+    rdfs:label "J. M. Dent & Sons" .
+
+pbl:46410
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/46410",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?46410" ;
+    rdaad:P50413 "10/18" ;
+    rdaad:P50415 "Dix/Dix-huit" ;
+    rdfs:label "10/18" .
+
+pbl:46465
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/46465",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?46465" ;
+    rdaad:P50413 "Prosveta" ;
+    rdfs:label "Prosveta" .
+
+pbl:46552
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/46552",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?46552" ;
+    rdaad:P50413 "Dnevnik" ;
+    rdfs:label "Dnevnik" .
+
+pbl:46780
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/46780",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?46780" ;
+    rdaad:P50413 "Londreys" ;
+    rdfs:label "Londreys" .
+
+pbl:47448
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/47448",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?47448" ;
+    rdaad:P50413 "Editions Ramsay" ;
+    rdfs:label "Editions Ramsay" .
+
+pbl:47585
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/47585",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?47585" ;
+    rdaad:P50413 "Ensslin & Laiblin" ;
+    rdfs:label "Ensslin & Laiblin" .
+
+pbl:47625
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/47625",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?47625" ;
+    rdaad:P50413 "Rhodos" ;
+    rdfs:label "Rhodos" .
+
+pbl:48003
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/48003",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?48003" ;
+    rdaad:P50413 "Vjesnik" ;
+    rdfs:label "Vjesnik" .
+
+pbl:48382
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/48382",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?48382" ;
+    rdaad:P50413 "Audible Studios" ;
+    rdfs:label "Audible Studios" .
+
+pbl:48388
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/48388",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?48388" ;
+    rdaad:P50413 "North East London Polytechnic" ;
+    rdfs:label "North East London Polytechnic" .
+
+pbl:48593
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/48593",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?48593" ;
+    rdaad:P50413 "Radwan" ;
+    rdfs:label "Radwan" .
+
+pbl:48751
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/48751",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?48751" ;
+    rdaad:P50413 "Cohesion Press" ;
+    rdfs:label "Cohesion Press" .
+
+pbl:50217
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/50217",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?50217" ;
+    rdaad:P50413 "Paladin / Grafton Books" ;
+    rdfs:label "Paladin / Grafton Books" .
+
+pbl:50999
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/50999",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?50999" ;
+    rdaad:P50413 "Wahlström & Widstrand" ;
+    rdaad:P50415 "Wahlstroem & Widstrand",
+        "Wahlstrom & Widstrand" ;
+    rdfs:label "Wahlström & Widstrand" .
+
+pbl:51345
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/51345",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?51345" ;
+    rdaad:P50413 "Mille et une nuits" ;
+    rdfs:label "Mille et une nuits" .
+
+pbl:52355
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/52355",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?52355" ;
+    rdaad:P50413 "Omnibus (France)" ;
+    rdfs:label "Omnibus (France)" .
+
+pbl:52481
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/52481",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?52481" ;
+    rdaad:P50413 "Флокс" ;
+    rdaad:P50415 "Floks" ;
+    rdfs:label "Флокс" .
+
+pbl:52777
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/52777",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?52777" ;
+    rdaad:P50413 "Nathan" ;
+    rdfs:label "Nathan" .
+
+pbl:52913
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/52913",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?52913" ;
+    rdaad:P50413 "Diaphanes" ;
+    rdfs:label "Diaphanes" .
+
+pbl:52946
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/52946",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?52946" ;
+    rdaad:P50413 "Triune Books" ;
+    rdfs:label "Triune Books" .
+
+pbl:53740
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/53740",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?53740" ;
+    rdaad:P50413 "河出書房新社" ;
+    rdaad:P50415 "Kawade Shobō Shinsha",
+        "Kawade Shobo Shinsha" ;
+    rdfs:label "河出書房新社" .
+
+pbl:54727
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/54727",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?54727" ;
+    rdaad:P50413 "光文社" ;
+    rdaad:P50415 "Kōbunsha",
+        "Kobunsha",
+        "こうぶんしゃ" ;
+    rdfs:label "光文社" .
+
+pbl:54939
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/54939",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?54939" ;
+    rdaad:P50413 "Hoëbeke" ;
+    rdfs:label "Hoëbeke" .
+
+pbl:55118
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/55118",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?55118" ;
+    rdaad:P50413 "Георги Бакалов" ;
+    rdaad:P50415 "Georgi Bakalov" ;
+    rdfs:label "Георги Бакалов" .
+
+pbl:55133
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/55133",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?55133" ;
+    rdaad:P50413 "Bellhaven House" ;
+    rdfs:label "Bellhaven House" .
+
+pbl:55153
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/55153",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?55153" ;
+    rdaad:P50413 "Editoriale Del Drago" ;
+    rdfs:label "Editoriale Del Drago" .
+
+pbl:56241
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/56241",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?56241" ;
+    rdaad:P50413 "Area" ;
+    rdfs:label "Area" .
+
+pbl:56725
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/56725",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?56725" ;
+    rdaad:P50413 "Blackstone Publishing" ;
+    rdfs:label "Blackstone Publishing" .
+
+pbl:57071
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/57071",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?57071" ;
+    rdaad:P50413 "Колибри" ;
+    rdaad:P50415 "Colibri",
+        "Kolibri" ;
+    rdfs:label "Колибри" .
+
+pbl:57098
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/57098",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?57098" ;
+    rdaad:P50413 "Robinson (Germany)" ;
+    rdfs:label "Robinson (Germany)" .
+
+pbl:57349
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/57349",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?57349" ;
+    rdaad:P50413 "Sphere Books" ;
+    rdfs:label "Sphere Books" .
+
+pbl:57938
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/57938",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?57938" ;
+    rdaad:P50413 "Gigantic Books" ;
+    rdfs:label "Gigantic Books" .
+
+pbl:57970
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/57970",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?57970" ;
+    rdaad:P50413 "Rupert Hart-Davis" ;
+    rdfs:label "Rupert Hart-Davis" .
+
+pbl:58920
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/58920",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?58920" ;
+    rdaad:P50413 "Instituto Nacional do Cinema" ;
+    rdfs:label "Instituto Nacional do Cinema" .
+
+pbl:59034
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/59034",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?59034" ;
+    rdaad:P50413 "Washington Square Press / Pocket Books" ;
+    rdfs:label "Washington Square Press / Pocket Books" .
+
+pbl:59350
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/59350",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?59350" ;
+    rdaad:P50413 "Mladinska Knjiga" ;
+    rdfs:label "Mladinska Knjiga" .
+
+pbl:59725
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/59725",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?59725" ;
+    rdaad:P50413 "Tristram" ;
+    rdfs:label "Tristram" .
+
+pbl:60394
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/60394",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?60394" ;
+    rdaad:P50413 "Editorial Bruguera" ;
+    rdfs:label "Editorial Bruguera" .
+
+pbl:62440
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/62440",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?62440" ;
+    rdaad:P50413 "Ciela" ;
+    rdaad:P50415 "Сиела" ;
+    rdfs:label "Ciela" .
+
+pbl:63224
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/63224",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?63224" ;
+    rdaad:P50413 "Mondadori España" ;
+    rdfs:label "Mondadori España" .
+
+pbl:63322
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/63322",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?63322" ;
+    rdaad:P50413 "Vireo / Rare Bird Books" ;
+    rdfs:label "Vireo / Rare Bird Books" .
+
+pbl:63745
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/63745",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?63745" ;
+    rdaad:P50413 "Berenice" ;
+    rdfs:label "Berenice" .
+
+pbl:64062
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/64062",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?64062" ;
+    rdaad:P50413 "Lebowski" ;
+    rdfs:label "Lebowski" .
+
+pbl:65658
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/65658",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?65658" ;
+    rdaad:P50413 "Fabbri Editori" ;
+    rdfs:label "Fabbri Editori" .
+
+pbl:66524
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/66524",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?66524" ;
+    rdaad:P50413 "HMH Publishing" ;
+    rdfs:label "HMH Publishing" .
+
+pbl:67896
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/67896",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?67896" ;
+    rdaad:P50413 "Asgard (Germany)" ;
+    rdfs:label "Asgard (Germany)" .
+
+pbl:68189
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/68189",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?68189" ;
+    rdaad:P50413 "The Terminal Press" ;
+    rdfs:label "The Terminal Press" .
+
+pbl:68735
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/68735",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?68735" ;
+    rdaad:P50413 "Офир" ;
+    rdaad:P50415 "Ofir" ;
+    rdfs:label "Офир" .
+
+pbl:68842
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/68842",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?68842" ;
+    rdaad:P50413 "Centro de Formación Literaria Onelio Jorge Cardoso" ;
+    rdfs:label "Centro de Formación Literaria Onelio Jorge Cardoso" .
+
+pbl:68913
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/68913",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?68913" ;
+    rdaad:P50413 "Editura Trei" ;
+    rdfs:label "Editura Trei" .
+
+pbl:69017
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/69017",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?69017" ;
+    rdaad:P50413 "Știință & Tehnică" ;
+    rdaad:P50415 "Shtiintsah & Tehnicah",
+        "Shtiintsa & Tehnicah",
+        "Stiinta & Tehnica" ;
+    rdfs:label "Știință & Tehnică" .
+
+pbl:69141
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/69141",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?69141" ;
+    rdaad:P50413 "Teatrul Liric Craiova" ;
+    rdfs:label "Teatrul Liric Craiova" .
+
+pbl:69981
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/69981",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?69981" ;
+    rdaad:P50413 "GOTA" ;
+    rdfs:label "GOTA" .
+
+pbl:70019
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/70019",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?70019" ;
+    rdaad:P50413 "România literară" ;
+    rdaad:P50415 "Rominia literara",
+        "Romania literara" ;
+    rdfs:label "România literară" .
+
+pbl:70655
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/70655",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?70655" ;
+    rdaad:P50413 "Distribuidora de Publicações" ;
+    rdfs:label "Distribuidora de Publicações" .
+
+pbl:72041
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/72041",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?72041" ;
+    rdaad:P50413 "Blackstone on Brilliance Audio" ;
+    rdfs:label "Blackstone on Brilliance Audio" .
+
+pbl:75250
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/75250",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?75250" ;
+    rdaad:P50413 "Compact SF/Roberts & Vinter Ltd." ;
+    rdfs:label "Compact SF/Roberts & Vinter Ltd." .
+
+pbl:76050
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/76050",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?76050" ;
+    rdaad:P50413 "Laissez faire" ;
+    rdfs:label "Laissez faire" .
+
+pbl:76511
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/76511",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?76511" ;
+    rdaad:P50413 "Grafiska Förlaget Kindberg & Söner" ;
+    rdaad:P50415 "Grafiska Foerlaget Kindberg & Soener",
+        "Grafiska Forlaget Kindberg & Soner" ;
+    rdfs:label "Grafiska Förlaget Kindberg & Söner" .
+
+pbl:77093
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/77093",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?77093" ;
+    rdaad:P50413 "AWE/Geber" ;
+    rdfs:label "AWE/Geber" .
+
+pbl:79451
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/79451",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?79451" ;
+    rdaad:P50413 "Ars Nocturna" ;
+    rdfs:label "Ars Nocturna" .
+
+pbl:82832
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/82832",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?82832" ;
+    rdaad:P50413 "Carcosa Verlag" ;
+    rdfs:label "Carcosa Verlag" .
+
+pbl:83338
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/83338",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?83338" ;
+    rdaad:P50413 "Audible Inc." ;
+    rdfs:label "Audible Inc." .
+
+pbl:83454
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/83454",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?83454" ;
+    rdaad:P50413 "イスカーチェリSFクラブ" ;
+    rdaad:P50415 "Isukācheri SF Kurabu",
+        "Isukaacheri SF Kurabu" ;
+    rdfs:label "イスカーチェリSFクラブ" .
+
+pbl:84092
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/84092",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?84092" ;
+    rdaad:P50413 "The Running Man Publications" ;
+    rdfs:label "The Running Man Publications" .
+
+pbl:85553
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/85553",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?85553" ;
+    rdaad:P50413 "Bókadeildin & Føroya Skúlabókagrunnar" ;
+    rdaad:P50415 "Bokadeildin & Foroya Skulabokagrunnar",
+        "Bokadeildin & Foeroya Skulabokagrunnar" ;
+    rdfs:label "Bókadeildin & Føroya Skúlabókagrunnar" .
+
+pbl:86054
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/86054",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?86054" ;
+    rdaad:P50413 "Ward Lock Educational" ;
+    rdfs:label "Ward Lock Educational" .
+
+pbl:86533
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/86533",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?86533" ;
+    rdaad:P50413 "Lucien Planchat" ;
+    rdfs:label "Lucien Planchat" .
+
+pbl:87129
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/87129",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?87129" ;
+    rdaad:P50413 "4th Estate" ;
+    rdfs:label "4th Estate" .
+
+pbl:88172
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/88172",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?88172" ;
+    rdaad:P50413 "Coma Publications" ;
+    rdfs:label "Coma Publications" .
+
+pbl:89416
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/89416",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?89416" ;
+    rdaad:P50413 "Zero Population Growth / Ballantine Books" ;
+    rdfs:label "Zero Population Growth / Ballantine Books" .
+
+pbl:90097
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://entedit.org/publisher/90097",
+        "https://www.isfdb.org/cgi-bin/publisher.cgi?90097" ;
+    rdaad:P50413 "工作舎" ;
+    rdaad:P50415 "こうさくしゃ",
+        "Kōsakusha",
+        "Kousakusha" ;
+    rdfs:label "工作舎" .
