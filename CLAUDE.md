@@ -326,6 +326,13 @@ wherever values are listed:
   join). Instead give each block its own link and variable, and group
   subqueries by the scoped entity (see the work blocks in
   `buildExpressionDetailQuery`)
+- Keep grouped subqueries out of `OPTIONAL` blocks that can stand alone as a query:
+  GraphDB 10.8.4 left the `OPTIONAL { SELECT … GROUP BY }` of the collection lookup
+  unbound in the publication search (no `collectionCount`, so a collection was not
+  merged with its manifestation), while 10.8.12 answered it and the same pattern as a
+  top-level query works on both. The lookup is its own query (`buildCollectionQuery`)
+  merged in the app (`withCollections`). Compare hosted and local servers by version
+  when the same data gives different results
 - Test query changes against a large repository (millions of statements):
   both mistakes above were invisible at 100k–600k triples
 - Page Lucene hits with `lucene:limit`/`lucene:offset` (already best first),
@@ -541,7 +548,7 @@ The application expects:
   anthologies). In the publication search, a manifestation with exactly one
   expression whose work has such a genre is shown as that collection: the
   expression and work are merged into the entry (like a single-expression
-  manifestation) and left out of its Contents (`collectionSubquery` in
+  manifestation) and left out of its Contents (`buildCollectionQuery` in
   `wemiQueries.ts`, `ManifestationSearchResult`). Two or more collections are
   not merged. The collection work is not linked to its parts, so the genre is
   the only signal

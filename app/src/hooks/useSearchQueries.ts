@@ -16,12 +16,14 @@ import {
   type SearchIndex,
 } from "../utils/searchFilters";
 import {
+  buildCollectionQuery,
   buildExpressionDetailQuery,
   buildManifestationDetailQuery,
   expressionScope,
   manifestationScope,
   toExpressionDetail,
   toManifestationDetail,
+  withCollections,
   type ExpressionDetail,
   type ManifestationDetail,
 } from "../utils/wemiQueries";
@@ -362,11 +364,15 @@ export const useSearchManifestations = (
       const { uris, total, fuzzy } = await findHits(client, "manifestationsIndex", query, normalized, pageParam, signal, luceneText);
       if (uris.length === 0) return { results: [], total, fuzzy };
 
-      const details = await client.query(
-        buildManifestationDetailQuery(manifestationScope(uris), language),
-        { signal },
+      const scope = manifestationScope(uris);
+      const [details, collections] = await Promise.all([
+        client.query(buildManifestationDetailQuery(scope, language), { signal }),
+        client.query(buildCollectionQuery(scope), { signal }),
+      ]);
+      const results = inRankOrder(
+        uris,
+        withCollections(details.results.bindings.map(toManifestationDetail), collections.results.bindings),
       );
-      const results = inRankOrder(uris, details.results.bindings.map(toManifestationDetail));
       return { results, total, fuzzy };
     },
     initialPageParam: FIRST_PAGE,
