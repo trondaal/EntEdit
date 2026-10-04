@@ -1,8 +1,6 @@
-# EntEdit example data – J. G. Ballard – manifestations
-# isfdb2lrm conversion of ISFDB (author 259, results/author-259, converter commit c8ab6b3, generated 2026-09-28)
-# merged with the earlier Ballard.ttl catalogue sample; persons, works and expressions
-# identified by VIAF where the earlier sample knew the VIAF identifier.
-# Contents lists carry entedit:valueOrder annotations (Turtle-star); import as .ttls.
+# isfdb2lrm – manifestations
+# Generated 2026-10-04T10:19:34+00:00 from the local ISFDB database,
+# converter commit f744a29, mode: authors, seed authors: 259, 164697, 170693, 173463, 181841, 194463, 234758, 262838, 266877, 276482, 277873, 285901, 302772, 311516, 406684, 422160
 
 @prefix entedit: <http://oslomet.no/abi/vocab#> .
 @prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
@@ -216,7 +214,7 @@ man:2247
         exp:41419 {| entedit:valueOrder 6 |},
         exp:55975 {| entedit:valueOrder 7 |},
         exp:57665 {| entedit:valueOrder 8 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 9 |},
+        exp:40816 {| entedit:valueOrder 9 |},
         exp:41576 {| entedit:valueOrder 10 |},
         exp:51994 {| entedit:valueOrder 11 |} .
 
@@ -934,7 +932,7 @@ man:7016
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:92 ;
     rdamo:P30139 exp:3353223 {| entedit:valueOrder 0 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 1 |},
+        exp:40816 {| entedit:valueOrder 1 |},
         exp:43949 {| entedit:valueOrder 2 |},
         exp:40885 {| entedit:valueOrder 3 |},
         exp:44454 {| entedit:valueOrder 4 |},
@@ -969,7 +967,7 @@ man:7017
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:696 ;
     rdamo:P30139 exp:25740 {| entedit:valueOrder 0 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 1 |},
+        exp:40816 {| entedit:valueOrder 1 |},
         exp:43949 {| entedit:valueOrder 2 |},
         exp:40885 {| entedit:valueOrder 3 |},
         exp:44454 {| entedit:valueOrder 4 |},
@@ -1200,7 +1198,7 @@ man:8165
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:5767 ;
-    rdamo:P30139 <http://viaf.org/viaf/305922109/exp/eng/1020> .
+    rdamo:P30139 exp:3571 .
 
 man:8166
     a rdac:C10007 ;
@@ -1217,7 +1215,7 @@ man:8166
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:247 ;
-    rdamo:P30139 <http://viaf.org/viaf/305922109/exp/eng/1020> .
+    rdamo:P30139 exp:3571 .
 
 man:8167
     a rdac:C10007 ;
@@ -1233,7 +1231,7 @@ man:8167
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:5767 ;
-    rdamo:P30139 <http://viaf.org/viaf/305922109/exp/eng/1020> .
+    rdamo:P30139 exp:3571 .
 
 man:8168
     a rdac:C10007 ;
@@ -1250,7 +1248,7 @@ man:8168
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:502 ;
-    rdamo:P30139 <http://viaf.org/viaf/305922109/exp/eng/1020> .
+    rdamo:P30139 exp:3571 .
 
 man:8169
     a rdac:C10007 ;
@@ -1266,7 +1264,7 @@ man:8169
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:572 ;
-    rdamo:P30139 <http://viaf.org/viaf/305922109/exp/eng/1020> .
+    rdamo:P30139 exp:3571 .
 
 man:8170
     a rdac:C10007 ;
@@ -1284,7 +1282,7 @@ man:8170
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:256 ;
-    rdamo:P30139 <http://viaf.org/viaf/305922109/exp/eng/1020> .
+    rdamo:P30139 exp:3571 .
 
 man:8490
     a rdac:C10007 ;
@@ -1558,7 +1556,7 @@ man:12241
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:123 ;
-    rdamo:P30139 <http://viaf.org/viaf/180997771/exp/eng/1020> .
+    rdamo:P30139 exp:8348 .
 
 man:12242
     a rdac:C10007 ;
@@ -1574,7 +1572,7 @@ man:12242
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:502 ;
-    rdamo:P30139 <http://viaf.org/viaf/180997771/exp/eng/1020> .
+    rdamo:P30139 exp:8348 .
 
 man:12243
     a rdac:C10007 ;
@@ -1590,7 +1588,7 @@ man:12243
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:62 ;
-    rdamo:P30139 <http://viaf.org/viaf/180997771/exp/eng/1020> .
+    rdamo:P30139 exp:8348 .
 
 man:12244
     a rdac:C10007 ;
@@ -1606,7 +1604,7 @@ man:12244
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:62 ;
-    rdamo:P30139 <http://viaf.org/viaf/180997771/exp/eng/1020> .
+    rdamo:P30139 exp:8348 .
 
 man:12245
     a rdac:C10007 ;
@@ -1623,7 +1621,7 @@ man:12245
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:22 ;
-    rdamo:P30139 <http://viaf.org/viaf/180997771/exp/eng/1020> .
+    rdamo:P30139 exp:8348 .
 
 man:12246
     a rdac:C10007 ;
@@ -1639,7 +1637,7 @@ man:12246
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:28503 ;
-    rdamo:P30139 <http://viaf.org/viaf/180997771/exp/eng/1020> .
+    rdamo:P30139 exp:8348 .
 
 man:12247
     a rdac:C10007 ;
@@ -1657,7 +1655,7 @@ man:12247
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:217 ;
-    rdamo:P30139 <http://viaf.org/viaf/180997771/exp/eng/1020> .
+    rdamo:P30139 exp:8348 .
 
 man:12249
     a rdac:C10007 ;
@@ -1675,8 +1673,7 @@ man:12249
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:13 ;
-    rdamo:P30139 <http://viaf.org/viaf/180997771/exp/eng/1020> ;
-    rdamd:P30088 "London" .
+    rdamo:P30139 exp:8348 .
 
 man:12429
     a rdac:C10007 ;
@@ -1816,7 +1813,7 @@ man:16829
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:247 ;
     entedit:P03 <http://viaf.org/viaf/9842556> ;
-    rdamo:P30139 <http://viaf.org/viaf/202977755/exp/eng/1020> {| entedit:valueOrder 0 |},
+    rdamo:P30139 exp:3574 {| entedit:valueOrder 0 |},
         exp:1657679 {| entedit:valueOrder 1 |} .
 
 man:16830
@@ -1833,7 +1830,7 @@ man:16830
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:502 ;
-    rdamo:P30139 <http://viaf.org/viaf/202977755/exp/eng/1020> .
+    rdamo:P30139 exp:3574 .
 
 man:16831
     a rdac:C10007 ;
@@ -1849,7 +1846,7 @@ man:16831
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:572 ;
-    rdamo:P30139 <http://viaf.org/viaf/202977755/exp/eng/1020> .
+    rdamo:P30139 exp:3574 .
 
 man:16832
     a rdac:C10007 ;
@@ -1867,7 +1864,7 @@ man:16832
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:76 ;
-    rdamo:P30139 <http://viaf.org/viaf/202977755/exp/eng/1020> .
+    rdamo:P30139 exp:3574 .
 
 man:16833
     a rdac:C10007 ;
@@ -1886,7 +1883,7 @@ man:16833
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:76 ;
-    rdamo:P30139 <http://viaf.org/viaf/202977755/exp/eng/1020> .
+    rdamo:P30139 exp:3574 .
 
 man:17047
     a rdac:C10007 ;
@@ -2429,7 +2426,7 @@ man:20893
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:661 ;
-    rdamo:P30139 <http://www.wikidata.org/entity/Q6692707/exp/eng/1020> {| entedit:valueOrder 0 |},
+    rdamo:P30139 exp:37677 {| entedit:valueOrder 0 |},
         exp:44466 {| entedit:valueOrder 1 |},
         exp:57602 {| entedit:valueOrder 2 |},
         exp:57583 {| entedit:valueOrder 3 |},
@@ -2438,9 +2435,7 @@ man:20893
         exp:57589 {| entedit:valueOrder 6 |},
         exp:57615 {| entedit:valueOrder 7 |},
         exp:54304 {| entedit:valueOrder 8 |},
-        exp:57581 {| entedit:valueOrder 9 |} ;
-    rdamd:P30033 "The ultimate city -- Low-flying aircraft -- The dead astronaut -- My dream of flying to Wake Island -- The life and death of God -- The greatest television show on earth -- A place and a time to die -- The Comsat angels -- The beach murders" ;
-    rdamd:P30088 "London" .
+        exp:57581 {| entedit:valueOrder 9 |} .
 
 man:21648
     a rdac:C10007 ;
@@ -2526,11 +2521,7 @@ man:21865
         exp:57608 {| entedit:valueOrder 5 |},
         exp:45330 {| entedit:valueOrder 6 |},
         exp:49122 {| entedit:valueOrder 7 |},
-        exp:46455 {| entedit:valueOrder 8 |} ;
-    rdamd:P30033 "The cage of sand -- A question of re-entry -- The dead astronaut -- My dream of flying to Wake Island -- News from the sun -- Memories of the space age -- Myths of the near future -- The man who walked on the moon." ;
-    rdamd:P30088 "Sauk City, Wisconson" ;
-    rdamd:P30107 "First edition" ;
-    rdamo:P30321 <https://isni.org/isni/0000000007828549> .
+        exp:46455 {| entedit:valueOrder 8 |} .
 
 man:22240
     a rdac:C10007 ;
@@ -2721,7 +2712,7 @@ man:22551
         exp:55238 {| entedit:valueOrder 13 |},
         exp:40432 {| entedit:valueOrder 14 |},
         exp:135228 {| entedit:valueOrder 15 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 16 |},
+        exp:40816 {| entedit:valueOrder 16 |},
         exp:192633 {| entedit:valueOrder 17 |},
         exp:43764 {| entedit:valueOrder 18 |},
         exp:43910 {| entedit:valueOrder 19 |},
@@ -3153,7 +3144,7 @@ man:24988
         exp:1509313 {| entedit:valueOrder 19 |},
         exp:1509314 {| entedit:valueOrder 20 |},
         exp:41108 {| entedit:valueOrder 21 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 22 |} .
+        exp:40816 {| entedit:valueOrder 22 |} .
 
 man:25128
     a rdac:C10007 ;
@@ -3990,7 +3981,7 @@ man:31599
     rdamo:P30139 exp:34287 {| entedit:valueOrder 0 |},
         exp:124888 {| entedit:valueOrder 1 |},
         exp:47573 {| entedit:valueOrder 2 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 3 |},
+        exp:40816 {| entedit:valueOrder 3 |},
         exp:55693 {| entedit:valueOrder 4 |},
         exp:78505 {| entedit:valueOrder 5 |},
         exp:41461 {| entedit:valueOrder 6 |},
@@ -4018,7 +4009,7 @@ man:31600
     rdamo:P30139 exp:34287 {| entedit:valueOrder 0 |},
         exp:124888 {| entedit:valueOrder 1 |},
         exp:47573 {| entedit:valueOrder 2 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 3 |},
+        exp:40816 {| entedit:valueOrder 3 |},
         exp:55693 {| entedit:valueOrder 4 |},
         exp:78505 {| entedit:valueOrder 5 |},
         exp:41461 {| entedit:valueOrder 6 |},
@@ -5295,7 +5286,7 @@ man:35804
         exp:44455 {| entedit:valueOrder 4 |},
         exp:44514 {| entedit:valueOrder 5 |},
         exp:41557 {| entedit:valueOrder 6 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 7 |},
+        exp:40816 {| entedit:valueOrder 7 |},
         exp:57613 {| entedit:valueOrder 8 |},
         exp:65075 {| entedit:valueOrder 9 |},
         exp:41280 {| entedit:valueOrder 10 |},
@@ -5306,11 +5297,7 @@ man:35804
         exp:44123 {| entedit:valueOrder 15 |},
         exp:44460 {| entedit:valueOrder 16 |},
         exp:40885 {| entedit:valueOrder 17 |},
-        exp:57582 {| entedit:valueOrder 18 |} ;
-    rdamd:P30033 "Introduction (The Best Short Stories of J. G. Ballard) / essay by Anthony Burgess -- The Concentration City -- Manhole 69 -- The waiting grounds -- The sound sweep -- Chronopolis -- The Overloaded Man -- Billennium -- The insane ones -- The Garden of Time -- Thirteen to Centaurus -- Passport to eternity -- The Cage of Sand -- A question of re-entry -- The Terminal Beach -- The day of forever" ;
-    rdamd:P30088 "London" ;
-    rdamd:P30106 "An Orbit book" ;
-    rdamo:P30328 <http://viaf.org/viaf/71388189> .
+        exp:57582 {| entedit:valueOrder 18 |} .
 
 man:35845
     a rdac:C10007 ;
@@ -5399,7 +5386,7 @@ man:35923
         exp:44453 {| entedit:valueOrder 2 |},
         exp:44454 {| entedit:valueOrder 3 |},
         exp:41557 {| entedit:valueOrder 4 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 5 |},
+        exp:40816 {| entedit:valueOrder 5 |},
         exp:44457 {| entedit:valueOrder 6 |},
         exp:57613 {| entedit:valueOrder 7 |},
         exp:65075 {| entedit:valueOrder 8 |},
@@ -5539,7 +5526,7 @@ man:38067
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:502 ;
-    rdamo:P30139 <http://viaf.org/viaf/308025936/exp/eng/1020> .
+    rdamo:P30139 exp:3575 .
 
 man:38068
     a rdac:C10007 ;
@@ -5558,7 +5545,7 @@ man:38068
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:275 ;
-    rdamo:P30139 <http://viaf.org/viaf/308025936/exp/eng/1020> .
+    rdamo:P30139 exp:3575 .
 
 man:38069
     a rdac:C10007 ;
@@ -5575,7 +5562,7 @@ man:38069
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:62 ;
-    rdamo:P30139 <http://viaf.org/viaf/308025936/exp/eng/1020> .
+    rdamo:P30139 exp:3575 .
 
 man:38070
     a rdac:C10007 ;
@@ -5592,7 +5579,7 @@ man:38070
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:125 ;
-    rdamo:P30139 <http://viaf.org/viaf/308025936/exp/eng/1020> .
+    rdamo:P30139 exp:3575 .
 
 man:38071
     a rdac:C10007 ;
@@ -5609,7 +5596,7 @@ man:38071
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:62 ;
-    rdamo:P30139 <http://viaf.org/viaf/308025936/exp/eng/1020> .
+    rdamo:P30139 exp:3575 .
 
 man:38072
     a rdac:C10007 ;
@@ -5627,7 +5614,7 @@ man:38072
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:13 ;
-    rdamo:P30139 <http://viaf.org/viaf/308025936/exp/eng/1020> .
+    rdamo:P30139 exp:3575 .
 
 man:38073
     a rdac:C10007 ;
@@ -5943,7 +5930,7 @@ man:40156
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:13 ;
     rdamo:P30139 exp:37123 {| entedit:valueOrder 0 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 1 |},
+        exp:40816 {| entedit:valueOrder 1 |},
         exp:44514 {| entedit:valueOrder 2 |},
         exp:44450 {| entedit:valueOrder 3 |},
         exp:44456 {| entedit:valueOrder 4 |},
@@ -5969,7 +5956,7 @@ man:40157
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:13 ;
     rdamo:P30139 exp:37123 {| entedit:valueOrder 0 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 1 |},
+        exp:40816 {| entedit:valueOrder 1 |},
         exp:44514 {| entedit:valueOrder 2 |},
         exp:57613 {| entedit:valueOrder 3 |},
         exp:57628 {| entedit:valueOrder 4 |},
@@ -6006,7 +5993,7 @@ man:40782
         exp:51068 {| entedit:valueOrder 6 |},
         exp:40770 {| entedit:valueOrder 7 |},
         exp:41335 {| entedit:valueOrder 8 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 9 |},
+        exp:40816 {| entedit:valueOrder 9 |},
         exp:45711 {| entedit:valueOrder 10 |},
         exp:56179 {| entedit:valueOrder 11 |},
         exp:41379 {| entedit:valueOrder 12 |},
@@ -6124,7 +6111,7 @@ man:41019
         exp:41563 {| entedit:valueOrder 9 |},
         exp:41153 {| entedit:valueOrder 10 |},
         exp:41339 {| entedit:valueOrder 11 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 12 |} .
+        exp:40816 {| entedit:valueOrder 12 |} .
 
 man:41021
     a rdac:C10007 ;
@@ -6357,9 +6344,9 @@ man:42086
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:255 ;
     rdamo:P30139 exp:33659 {| entedit:valueOrder 0 |},
-        <http://viaf.org/viaf/309308512/exp/eng/1020> {| entedit:valueOrder 1 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 2 |},
-        <http://viaf.org/viaf/183421260/exp/eng/1020> {| entedit:valueOrder 3 |} .
+        exp:44028 {| entedit:valueOrder 1 |},
+        exp:40816 {| entedit:valueOrder 2 |},
+        exp:56831 {| entedit:valueOrder 3 |} .
 
 man:42087
     a rdac:C10007 ;
@@ -6378,9 +6365,9 @@ man:42087
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:149 ;
     rdamo:P30139 exp:33659 {| entedit:valueOrder 0 |},
-        <http://viaf.org/viaf/309308512/exp/eng/1020> {| entedit:valueOrder 1 |},
-        <http://viaf.org/viaf/183421260/exp/eng/1020> {| entedit:valueOrder 2 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 3 |} .
+        exp:44028 {| entedit:valueOrder 1 |},
+        exp:56831 {| entedit:valueOrder 2 |},
+        exp:40816 {| entedit:valueOrder 3 |} .
 
 man:42451
     a rdac:C10007 ;
@@ -6910,7 +6897,7 @@ man:46287
         exp:126435 {| entedit:valueOrder 36 |},
         exp:992055 {| entedit:valueOrder 37 |},
         exp:126434 {| entedit:valueOrder 38 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 39 |},
+        exp:40816 {| entedit:valueOrder 39 |},
         exp:43949 {| entedit:valueOrder 40 |},
         exp:126433 {| entedit:valueOrder 41 |},
         exp:40855 {| entedit:valueOrder 42 |},
@@ -7320,7 +7307,7 @@ man:49415
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:13 ;
     rdamo:P30139 exp:37124 {| entedit:valueOrder 0 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 1 |},
+        exp:40816 {| entedit:valueOrder 1 |},
         exp:44514 {| entedit:valueOrder 2 |},
         exp:57613 {| entedit:valueOrder 3 |},
         exp:57628 {| entedit:valueOrder 4 |},
@@ -7347,7 +7334,7 @@ man:49416
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:245 ;
     rdamo:P30139 exp:37121 {| entedit:valueOrder 0 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 1 |},
+        exp:40816 {| entedit:valueOrder 1 |},
         exp:44514 {| entedit:valueOrder 2 |},
         exp:57613 {| entedit:valueOrder 3 |},
         exp:57637 {| entedit:valueOrder 4 |},
@@ -9909,7 +9896,7 @@ man:106451
         exp:44453 {| entedit:valueOrder 2 |},
         exp:44454 {| entedit:valueOrder 3 |},
         exp:41557 {| entedit:valueOrder 4 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 5 |},
+        exp:40816 {| entedit:valueOrder 5 |},
         exp:44457 {| entedit:valueOrder 6 |},
         exp:57613 {| entedit:valueOrder 7 |},
         exp:65075 {| entedit:valueOrder 8 |},
@@ -9924,12 +9911,7 @@ man:106451
         exp:57579 {| entedit:valueOrder 17 |},
         exp:57580 {| entedit:valueOrder 18 |},
         exp:57616 {| entedit:valueOrder 19 |},
-        exp:44468 {| entedit:valueOrder 20 |} ;
-    rdamd:P30033 "Introduction (The Best Short Stories of J. G. Ballard) / essay by Anthony Burgess -- The Concentration City -- Manhole 69 -- Chronopolis -- The Voices of Time -- Deep End -- The Overloaded Man -- Billennium -- The Garden of Time -- Thirteen to Centaurus -- The Subliminal Man -- The Cage of Sand -- The Drowned Giant -- The Terminal Beach -- The Cloud-Sculptors of Coral D -- The Assassination of John Fitzgerald Kennedy Considered As a Downhill Motor Race -- The Atrocity Exhibition -- Plan for the Assassination of Jacqueline Kennedy -- Why I Want to Fuck Ronald Reagan" ;
-    rdamd:P30088 "New York" ;
-    rdamd:P30107 "1st Owl Book ed" ;
-    rdamd:P30137 "\"An Owl book.\"" ;
-    rdamo:P30328 <http://viaf.org/viaf/71388189> .
+        exp:44468 {| entedit:valueOrder 20 |} .
 
 man:109871
     a rdac:C10007 ;
@@ -9990,7 +9972,7 @@ man:111021
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:220 ;
-    rdamo:P30139 <http://viaf.org/viaf/305922109/exp/eng/1020> .
+    rdamo:P30139 exp:3571 .
 
 man:114161
     a rdac:C10007 ;
@@ -10045,7 +10027,7 @@ man:114231
     rdamo:P30139 exp:34287 {| entedit:valueOrder 0 |},
         exp:124888 {| entedit:valueOrder 1 |},
         exp:47573 {| entedit:valueOrder 2 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 3 |},
+        exp:40816 {| entedit:valueOrder 3 |},
         exp:55693 {| entedit:valueOrder 4 |},
         exp:78505 {| entedit:valueOrder 5 |},
         exp:41461 {| entedit:valueOrder 6 |},
@@ -10100,7 +10082,7 @@ man:119191
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:88 ;
     rdamo:P30139 exp:37123 {| entedit:valueOrder 0 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 1 |},
+        exp:40816 {| entedit:valueOrder 1 |},
         exp:44514 {| entedit:valueOrder 2 |},
         exp:44450 {| entedit:valueOrder 3 |},
         exp:44456 {| entedit:valueOrder 4 |},
@@ -10211,7 +10193,7 @@ man:120221
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:31313 ;
-    rdamo:P30139 <http://www.wikidata.org/entity/Q6692707/exp/eng/1020> {| entedit:valueOrder 0 |},
+    rdamo:P30139 exp:37677 {| entedit:valueOrder 0 |},
         exp:44466 {| entedit:valueOrder 1 |},
         exp:57602 {| entedit:valueOrder 2 |},
         exp:57583 {| entedit:valueOrder 3 |},
@@ -10404,9 +10386,9 @@ man:134501
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:173 ;
     rdamo:P30139 exp:33659 {| entedit:valueOrder 0 |},
-        <http://viaf.org/viaf/309308512/exp/eng/1020> {| entedit:valueOrder 1 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 2 |},
-        <http://viaf.org/viaf/183421260/exp/eng/1020> {| entedit:valueOrder 3 |} .
+        exp:44028 {| entedit:valueOrder 1 |},
+        exp:40816 {| entedit:valueOrder 2 |},
+        exp:56831 {| entedit:valueOrder 3 |} .
 
 man:142041
     a rdac:C10007 ;
@@ -10649,7 +10631,7 @@ man:154301
         exp:410441 {| entedit:valueOrder 5 |},
         exp:410451 {| entedit:valueOrder 6 |},
         exp:410461 {| entedit:valueOrder 7 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 8 |},
+        exp:40816 {| entedit:valueOrder 8 |},
         exp:1258960 {| entedit:valueOrder 9 |} .
 
 man:154731
@@ -10752,7 +10734,7 @@ man:157601
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:16953 ;
     rdamo:P30139 exp:25740 {| entedit:valueOrder 0 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 1 |},
+        exp:40816 {| entedit:valueOrder 1 |},
         exp:43949 {| entedit:valueOrder 2 |},
         exp:40885 {| entedit:valueOrder 3 |},
         exp:44454 {| entedit:valueOrder 4 |},
@@ -10899,7 +10881,7 @@ man:157681
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:25597 ;
-    rdamo:P30139 <http://viaf.org/viaf/308025936/exp/eng/1020> .
+    rdamo:P30139 exp:3575 .
 
 man:157691
     a rdac:C10007 ;
@@ -10950,7 +10932,7 @@ man:157731
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:28626 ;
-    rdamo:P30139 <http://viaf.org/viaf/305922109/exp/eng/1020> .
+    rdamo:P30139 exp:3571 .
 
 man:158911
     a rdac:C10007 ;
@@ -10985,7 +10967,7 @@ man:158961
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:125 ;
-    rdamo:P30139 <http://viaf.org/viaf/308025936/exp/eng/1020> .
+    rdamo:P30139 exp:3575 .
 
 man:158991
     a rdac:C10007 ;
@@ -11487,7 +11469,7 @@ man:177091
         exp:44451 {| entedit:valueOrder 2 |},
         exp:44454 {| entedit:valueOrder 3 |},
         exp:41557 {| entedit:valueOrder 4 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 5 |},
+        exp:40816 {| entedit:valueOrder 5 |},
         exp:44457 {| entedit:valueOrder 6 |},
         exp:57613 {| entedit:valueOrder 7 |},
         exp:65075 {| entedit:valueOrder 8 |},
@@ -11642,7 +11624,7 @@ man:180133
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:220 ;
-    rdamo:P30139 <http://viaf.org/viaf/180997771/exp/eng/1020> .
+    rdamo:P30139 exp:8348 .
 
 man:180361
     a rdac:C10007 ;
@@ -11882,7 +11864,7 @@ man:180397
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:502 ;
-    rdamo:P30139 <http://www.wikidata.org/entity/Q6692707/exp/eng/1020> {| entedit:valueOrder 0 |},
+    rdamo:P30139 exp:37677 {| entedit:valueOrder 0 |},
         exp:44466 {| entedit:valueOrder 1 |},
         exp:57602 {| entedit:valueOrder 2 |},
         exp:57583 {| entedit:valueOrder 3 |},
@@ -12060,7 +12042,7 @@ man:180449
         exp:44458 {| entedit:valueOrder 3 |},
         exp:57613 {| entedit:valueOrder 4 |},
         exp:44514 {| entedit:valueOrder 5 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 6 |},
+        exp:40816 {| entedit:valueOrder 6 |},
         exp:57635 {| entedit:valueOrder 7 |},
         exp:57628 {| entedit:valueOrder 8 |} .
 
@@ -12081,7 +12063,7 @@ man:180453
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:1051 ;
     rdamo:P30139 exp:37124 {| entedit:valueOrder 0 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 1 |},
+        exp:40816 {| entedit:valueOrder 1 |},
         exp:44514 {| entedit:valueOrder 2 |},
         exp:57613 {| entedit:valueOrder 3 |},
         exp:57628 {| entedit:valueOrder 4 |},
@@ -12290,7 +12272,7 @@ man:184957
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:125 ;
-    rdamo:P30139 <http://viaf.org/viaf/305922109/exp/eng/1020> .
+    rdamo:P30139 exp:3571 .
 
 man:187201
     a rdac:C10007 ;
@@ -12955,7 +12937,7 @@ man:195805
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:245 ;
     rdamo:P30139 exp:3353223 {| entedit:valueOrder 0 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 1 |},
+        exp:40816 {| entedit:valueOrder 1 |},
         exp:43949 {| entedit:valueOrder 2 |},
         exp:40885 {| entedit:valueOrder 3 |},
         exp:44454 {| entedit:valueOrder 4 |},
@@ -13046,7 +13028,7 @@ man:198033
     rdamo:P30139 exp:2063267 {| entedit:valueOrder 0 |},
         exp:124888 {| entedit:valueOrder 1 |},
         exp:47573 {| entedit:valueOrder 2 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 3 |},
+        exp:40816 {| entedit:valueOrder 3 |},
         exp:55693 {| entedit:valueOrder 4 |},
         exp:78505 {| entedit:valueOrder 5 |},
         exp:41461 {| entedit:valueOrder 6 |},
@@ -13484,7 +13466,7 @@ man:209713
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:48 ;
-    rdamo:P30139 <http://viaf.org/viaf/305922109/exp/eng/1020> .
+    rdamo:P30139 exp:3571 .
 
 man:209717
     a rdac:C10007 ;
@@ -13545,7 +13527,7 @@ man:209733
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:217 ;
-    rdamo:P30139 <http://viaf.org/viaf/180997771/exp/eng/1020> .
+    rdamo:P30139 exp:8348 .
 
 man:209737
     a rdac:C10007 ;
@@ -13629,7 +13611,7 @@ man:210757
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:245 ;
     rdamo:P30139 exp:37121 {| entedit:valueOrder 0 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 1 |},
+        exp:40816 {| entedit:valueOrder 1 |},
         exp:44514 {| entedit:valueOrder 2 |},
         exp:57613 {| entedit:valueOrder 3 |},
         exp:57637 {| entedit:valueOrder 4 |},
@@ -13718,7 +13700,7 @@ man:211361
         exp:55238 {| entedit:valueOrder 14 |},
         exp:40432 {| entedit:valueOrder 15 |},
         exp:135228 {| entedit:valueOrder 16 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 17 |},
+        exp:40816 {| entedit:valueOrder 17 |},
         exp:192633 {| entedit:valueOrder 18 |},
         exp:43764 {| entedit:valueOrder 19 |},
         exp:43910 {| entedit:valueOrder 20 |},
@@ -13770,7 +13752,7 @@ man:213353
     rdamo:P30139 exp:34287 {| entedit:valueOrder 0 |},
         exp:124888 {| entedit:valueOrder 1 |},
         exp:47573 {| entedit:valueOrder 2 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 3 |},
+        exp:40816 {| entedit:valueOrder 3 |},
         exp:55693 {| entedit:valueOrder 4 |},
         exp:78505 {| entedit:valueOrder 5 |},
         exp:41461 {| entedit:valueOrder 6 |},
@@ -13799,7 +13781,7 @@ man:213357
     rdamo:P30139 exp:34287 {| entedit:valueOrder 0 |},
         exp:124888 {| entedit:valueOrder 1 |},
         exp:47573 {| entedit:valueOrder 2 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 3 |},
+        exp:40816 {| entedit:valueOrder 3 |},
         exp:55693 {| entedit:valueOrder 4 |},
         exp:78505 {| entedit:valueOrder 5 |},
         exp:41461 {| entedit:valueOrder 6 |},
@@ -13825,17 +13807,14 @@ man:215757
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:88 ;
     rdamo:P30139 exp:37123 {| entedit:valueOrder 0 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 1 |},
+        exp:40816 {| entedit:valueOrder 1 |},
         exp:44514 {| entedit:valueOrder 2 |},
         exp:57613 {| entedit:valueOrder 3 |},
         exp:57628 {| entedit:valueOrder 4 |},
         exp:44458 {| entedit:valueOrder 5 |},
         exp:44123 {| entedit:valueOrder 6 |},
         exp:57635 {| entedit:valueOrder 7 |},
-        exp:41557 {| entedit:valueOrder 8 |} ;
-    rdamd:P30007 "©1977" ;
-    rdamd:P30033 "The voices of time -- The sound-sweep -- The overloaded man -- Thirteen to Centaurus -- The garden of time -- The cage of sand -- The watch-tower -- Chronopolis." ;
-    rdamd:P30088 "Harmondsworth, Middlesex, England" .
+        exp:41557 {| entedit:valueOrder 8 |} .
 
 man:216293
     a rdac:C10007 ;
@@ -13857,7 +13836,7 @@ man:216293
     rdamo:P30139 exp:2063267 {| entedit:valueOrder 0 |},
         exp:124888 {| entedit:valueOrder 1 |},
         exp:47573 {| entedit:valueOrder 2 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 3 |},
+        exp:40816 {| entedit:valueOrder 3 |},
         exp:55693 {| entedit:valueOrder 4 |},
         exp:78505 {| entedit:valueOrder 5 |},
         exp:41461 {| entedit:valueOrder 6 |},
@@ -14044,7 +14023,7 @@ man:219309
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:20345 ;
     rdamo:P30139 exp:37123 {| entedit:valueOrder 0 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 1 |},
+        exp:40816 {| entedit:valueOrder 1 |},
         exp:44514 {| entedit:valueOrder 2 |},
         exp:44450 {| entedit:valueOrder 3 |},
         exp:44456 {| entedit:valueOrder 4 |},
@@ -14361,7 +14340,7 @@ man:226037
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:661 ;
-    rdamo:P30139 <http://viaf.org/viaf/202977755/exp/eng/1020> .
+    rdamo:P30139 exp:3574 .
 
 man:226041
     a rdac:C10007 ;
@@ -14379,7 +14358,7 @@ man:226041
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:13141 ;
-    rdamo:P30139 <http://viaf.org/viaf/202977755/exp/eng/1020> .
+    rdamo:P30139 exp:3574 .
 
 man:226609
     a rdac:C10007 ;
@@ -14623,7 +14602,7 @@ man:243585
         exp:44453 {| entedit:valueOrder 2 |},
         exp:44454 {| entedit:valueOrder 3 |},
         exp:41557 {| entedit:valueOrder 4 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 5 |},
+        exp:40816 {| entedit:valueOrder 5 |},
         exp:44457 {| entedit:valueOrder 6 |},
         exp:57613 {| entedit:valueOrder 7 |},
         exp:65075 {| entedit:valueOrder 8 |},
@@ -14670,7 +14649,7 @@ man:243589
         exp:44514 {| entedit:valueOrder 10 |},
         exp:57637 {| entedit:valueOrder 11 |},
         exp:41557 {| entedit:valueOrder 12 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 13 |},
+        exp:40816 {| entedit:valueOrder 13 |},
         exp:57598 {| entedit:valueOrder 14 |},
         exp:44456 {| entedit:valueOrder 15 |},
         exp:44457 {| entedit:valueOrder 16 |},
@@ -14820,7 +14799,7 @@ man:243609
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:502 ;
-    rdamo:P30139 <http://viaf.org/viaf/308025936/exp/eng/1020> .
+    rdamo:P30139 exp:3575 .
 
 man:243621
     a rdac:C10007 ;
@@ -14914,7 +14893,7 @@ man:243645
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:1134 ;
     rdamo:P30139 exp:37124 {| entedit:valueOrder 0 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 1 |},
+        exp:40816 {| entedit:valueOrder 1 |},
         exp:44514 {| entedit:valueOrder 2 |},
         exp:57613 {| entedit:valueOrder 3 |},
         exp:57628 {| entedit:valueOrder 4 |},
@@ -15749,7 +15728,7 @@ man:252745
         exp:44514 {| entedit:valueOrder 10 |},
         exp:57637 {| entedit:valueOrder 11 |},
         exp:41557 {| entedit:valueOrder 12 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 13 |},
+        exp:40816 {| entedit:valueOrder 13 |},
         exp:57598 {| entedit:valueOrder 14 |},
         exp:44456 {| entedit:valueOrder 15 |},
         exp:44457 {| entedit:valueOrder 16 |},
@@ -16584,7 +16563,7 @@ man:262085
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:13 ;
-    rdamo:P30139 <http://viaf.org/viaf/308025936/exp/eng/1020> .
+    rdamo:P30139 exp:3575 .
 
 man:262098
     a rdac:C10007 ;
@@ -17490,7 +17469,7 @@ man:266811
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:247 ;
-    rdamo:P30139 <http://viaf.org/viaf/305922109/exp/eng/1020> .
+    rdamo:P30139 exp:3571 .
 
 man:266812
     a rdac:C10007 ;
@@ -17530,7 +17509,7 @@ man:267354
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:41863 ;
-    rdamo:P30139 <http://viaf.org/viaf/180997771/exp/eng/1020> .
+    rdamo:P30139 exp:8348 .
 
 man:267551
     a rdac:C10007 ;
@@ -17725,7 +17704,7 @@ man:267855
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:25722 ;
-    rdamo:P30139 <http://viaf.org/viaf/308025936/exp/eng/1020> .
+    rdamo:P30139 exp:3575 .
 
 man:267856
     a rdac:C10007 ;
@@ -17741,7 +17720,7 @@ man:267856
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:25722 ;
-    rdamo:P30139 <http://viaf.org/viaf/180997771/exp/eng/1020> .
+    rdamo:P30139 exp:8348 .
 
 man:267857
     a rdac:C10007 ;
@@ -17896,7 +17875,7 @@ man:268269
         exp:51068 {| entedit:valueOrder 6 |},
         exp:40770 {| entedit:valueOrder 7 |},
         exp:41335 {| entedit:valueOrder 8 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 9 |},
+        exp:40816 {| entedit:valueOrder 9 |},
         exp:45711 {| entedit:valueOrder 10 |},
         exp:56179 {| entedit:valueOrder 11 |},
         exp:41379 {| entedit:valueOrder 12 |},
@@ -17926,7 +17905,7 @@ man:269427
     rdamo:P30420 pbl:5761 ;
     rdamo:P30139 exp:911138 {| entedit:valueOrder 0 |},
         exp:3570 {| entedit:valueOrder 1 |},
-        <http://viaf.org/viaf/305922109/exp/eng/1020> {| entedit:valueOrder 2 |},
+        exp:3571 {| entedit:valueOrder 2 |},
         exp:3572 {| entedit:valueOrder 3 |} .
 
 man:269648
@@ -17945,7 +17924,7 @@ man:269648
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:661 ;
-    rdamo:P30139 <http://viaf.org/viaf/305922109/exp/eng/1020> .
+    rdamo:P30139 exp:3571 .
 
 man:269727
     a rdac:C10007 ;
@@ -18056,9 +18035,9 @@ man:270783
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:173 ;
     rdamo:P30139 exp:33659 {| entedit:valueOrder 0 |},
-        <http://viaf.org/viaf/309308512/exp/eng/1020> {| entedit:valueOrder 1 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 2 |},
-        <http://viaf.org/viaf/183421260/exp/eng/1020> {| entedit:valueOrder 3 |} .
+        exp:44028 {| entedit:valueOrder 1 |},
+        exp:40816 {| entedit:valueOrder 2 |},
+        exp:56831 {| entedit:valueOrder 3 |} .
 
 man:270830
     a rdac:C10007 ;
@@ -18535,7 +18514,7 @@ man:277170
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:220 ;
-    rdamo:P30139 <http://viaf.org/viaf/305922109/exp/eng/1020> .
+    rdamo:P30139 exp:3571 .
 
 man:277715
     a rdac:C10007 ;
@@ -18893,7 +18872,7 @@ man:279033
         exp:44453 {| entedit:valueOrder 2 |},
         exp:44454 {| entedit:valueOrder 3 |},
         exp:41557 {| entedit:valueOrder 4 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 5 |},
+        exp:40816 {| entedit:valueOrder 5 |},
         exp:44457 {| entedit:valueOrder 6 |},
         exp:57613 {| entedit:valueOrder 7 |},
         exp:65075 {| entedit:valueOrder 8 |},
@@ -19043,7 +19022,7 @@ man:279217
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:41407 ;
-    rdamo:P30139 <http://www.wikidata.org/entity/Q6692707/exp/eng/1020> {| entedit:valueOrder 0 |},
+    rdamo:P30139 exp:37677 {| entedit:valueOrder 0 |},
         exp:57615 {| entedit:valueOrder 1 |},
         exp:57602 {| entedit:valueOrder 2 |},
         exp:57607 {| entedit:valueOrder 3 |},
@@ -19227,16 +19206,14 @@ man:279285
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:16713 ;
     rdamo:P30139 exp:37124 {| entedit:valueOrder 0 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 1 |},
+        exp:40816 {| entedit:valueOrder 1 |},
         exp:44514 {| entedit:valueOrder 2 |},
         exp:57613 {| entedit:valueOrder 3 |},
         exp:57628 {| entedit:valueOrder 4 |},
         exp:44458 {| entedit:valueOrder 5 |},
         exp:44123 {| entedit:valueOrder 6 |},
         exp:57635 {| entedit:valueOrder 7 |},
-        exp:41557 {| entedit:valueOrder 8 |} ;
-    rdamd:P30033 "The voices of time -- The sound-sweep -- The overloaded man -- Thirteen to Centaurus -- The garden of time -- The cage of sand -- The watch-tower -- Chronopolis." ;
-    rdamd:P30088 "London" .
+        exp:41557 {| entedit:valueOrder 8 |} .
 
 man:279286
     a rdac:C10007 ;
@@ -19483,7 +19460,7 @@ man:281916
         exp:55690 {| entedit:valueOrder 8 |},
         exp:1276945 {| entedit:valueOrder 9 |},
         exp:41108 {| entedit:valueOrder 10 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 11 |} .
+        exp:40816 {| entedit:valueOrder 11 |} .
 
 man:281917
     a rdac:C10007 ;
@@ -19525,7 +19502,7 @@ man:281917
         exp:55690 {| entedit:valueOrder 18 |},
         exp:49806 {| entedit:valueOrder 19 |},
         exp:41108 {| entedit:valueOrder 20 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 21 |} .
+        exp:40816 {| entedit:valueOrder 21 |} .
 
 man:282645
     a rdac:C10007 ;
@@ -19591,7 +19568,7 @@ man:283385
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:247 ;
-    rdamo:P30139 <http://viaf.org/viaf/305922109/exp/eng/1020> {| entedit:valueOrder 0 |},
+    rdamo:P30139 exp:3571 {| entedit:valueOrder 0 |},
         exp:1061891 {| entedit:valueOrder 1 |} .
 
 man:283527
@@ -20017,7 +19994,7 @@ man:286919
         exp:55690 {| entedit:valueOrder 8 |},
         exp:1276945 {| entedit:valueOrder 9 |},
         exp:41108 {| entedit:valueOrder 10 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 11 |} .
+        exp:40816 {| entedit:valueOrder 11 |} .
 
 man:287246
     a rdac:C10007 ;
@@ -20063,7 +20040,7 @@ man:287246
         exp:56673 {| entedit:valueOrder 24 |},
         exp:55803 {| entedit:valueOrder 25 |},
         exp:52488 {| entedit:valueOrder 26 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 27 |},
+        exp:40816 {| entedit:valueOrder 27 |},
         exp:45788 {| entedit:valueOrder 28 |},
         exp:41621 {| entedit:valueOrder 29 |},
         exp:58985 {| entedit:valueOrder 30 |},
@@ -20421,7 +20398,7 @@ man:289208
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:28626 ;
-    rdamo:P30139 <http://viaf.org/viaf/305922109/exp/eng/1020> .
+    rdamo:P30139 exp:3571 .
 
 man:289563
     a rdac:C10007 ;
@@ -20869,7 +20846,7 @@ man:298915
         exp:44514 {| entedit:valueOrder 11 |},
         exp:57637 {| entedit:valueOrder 12 |},
         exp:41557 {| entedit:valueOrder 13 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 14 |},
+        exp:40816 {| entedit:valueOrder 14 |},
         exp:57598 {| entedit:valueOrder 15 |},
         exp:44456 {| entedit:valueOrder 16 |},
         exp:44457 {| entedit:valueOrder 17 |},
@@ -20956,11 +20933,7 @@ man:298915
         exp:1042032 {| entedit:valueOrder 98 |},
         exp:1042033 {| entedit:valueOrder 99 |},
         exp:47004 {| entedit:valueOrder 100 |},
-        exp:1042036 {| entedit:valueOrder 101 |} ;
-    rdamd:P30033 "Introduction / by Martin Amis -- Author's introduction -- Prima belladonna -- Escapement -- The concentration city -- Venus smiles -- Manhole 69 -- Track 12 -- The waiting grounds -- Now : zero -- The sound-sweep -- Zone of terror -- Chronopolis -- The voices of time -- The last world of Mr. Goddard -- Studio 5, the stars -- Deep end -- The overloaded man -- Mr. F is Mr. F -- Billenium -- The gentle assassin -- The insane ones -- The garden of time -- The thousand dreams of Stellavista -- Thirteen to Centaurus -- Passport to eternity -- The cage of sand -- The watch-towers -- The singing statues -- The man on the 99th floor -- The subliminal man -- The reptile enclosure -- A question of re-entry -- The time-tombs -- Now wakes the sea -- The Venus hunters -- End-game -- Minus one -- The sudden afternoon -- The screen game -- Time of passage -- Prisoner of the coral deep -- The lost Leonardo -- The terminal beach -- The illuminated man -- The delta at sunset -- The drowned giant -- The Gioconda of the twilight noon -- The volcano dances -- The beach murders -- The day of forever -- The impossible man -- Storm-bird, storm-dreamer -- Tomorrow is a million years -- The assassination of John Fitzgerald Kennedy considered as a downhill motor race -- Cry hope, cry fury! -- The recognition -- The cloud-sculptors of Coral D -- Why I want to fuck Ronald Reagan -- The dead astronaut -- The Comsat angels -- The killing ground -- A place and a time to die -- Say goodbye to the wind -- The greatest television show on earth -- My dream of flying to Wake Island -- The air disaster -- Low-flying aircraft -- The life and death of God -- Notes towards a mental breakdown -- The 60 minute zoom -- The smile -- The ultimate city -- The dead time -- The index -- The intensive care unit -- Theatre of war -- Having a wonderful time -- One afternoon at Utah Beach -- Zodiac 2000 -- Motel architecture -- A host of furious fancies -- News from the sun -- Memories of the space age -- Myths of the near future -- Report on an unidentified space station -- The object of the attack -- Answers to a quesionnaire -- The man who walked on the moon -- The secret history of World War 3 -- Love in a colder climate -- The enormous space -- The largest theme park in the world -- War fever -- Dream cargoes -- A guide to virtual death -- The message from Mars -- Report from an obscure planet -- New stories for the American edition -- The secret autobiography of J.G.B. -- The dying fall." ;
-    rdamd:P30088 "London" ;
-    rdamd:P30107 "1st American ed" ;
-    rdamo:P30328 <http://viaf.org/viaf/36913662> .
+        exp:1042036 {| entedit:valueOrder 101 |} .
 
 man:298940
     a rdac:C10007 ;
@@ -22913,7 +22886,7 @@ man:337881
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:25722 ;
-    rdamo:P30139 <http://viaf.org/viaf/180997771/exp/eng/1020> .
+    rdamo:P30139 exp:8348 .
 
 man:337882
     a rdac:C10007 ;
@@ -22932,8 +22905,7 @@ man:337882
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:25722 ;
-    rdamo:P30139 <http://viaf.org/viaf/202977755/exp/eng/1020> ;
-    rdamd:P30088 "London" .
+    rdamo:P30139 exp:3574 .
 
 man:337884
     a rdac:C10007 ;
@@ -27058,7 +27030,7 @@ man:391737
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:25722 ;
-    rdamo:P30139 <http://viaf.org/viaf/305922109/exp/eng/1020> {| entedit:valueOrder 0 |},
+    rdamo:P30139 exp:3571 {| entedit:valueOrder 0 |},
         exp:1463111 {| entedit:valueOrder 1 |},
         exp:1463112 {| entedit:valueOrder 2 |},
         exp:1463113 {| entedit:valueOrder 3 |},
@@ -27346,7 +27318,7 @@ man:395965
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:250 ;
-    rdamo:P30139 <http://viaf.org/viaf/308025936/exp/eng/1020> .
+    rdamo:P30139 exp:3575 .
 
 man:396667
     a rdac:C10007 ;
@@ -27960,7 +27932,7 @@ man:402724
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:2305 ;
-    rdamo:P30139 <http://viaf.org/viaf/308025936/exp/eng/1020> .
+    rdamo:P30139 exp:3575 .
 
 man:402726
     a rdac:C10007 ;
@@ -28469,9 +28441,7 @@ man:413614
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:2305 ;
-    rdamo:P30139 <http://viaf.org/viaf/202977755/exp/eng/1020> ;
-    rdamd:P30088 "New York" ;
-    rdamd:P30107 "1st Liveright pbk. ed" .
+    rdamo:P30139 exp:3574 .
 
 man:413618
     a rdac:C10007 ;
@@ -28905,9 +28875,9 @@ man:418466
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:255 ;
     rdamo:P30139 exp:33659 {| entedit:valueOrder 0 |},
-        <http://viaf.org/viaf/309308512/exp/eng/1020> {| entedit:valueOrder 1 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 2 |},
-        <http://viaf.org/viaf/183421260/exp/eng/1020> {| entedit:valueOrder 3 |} .
+        exp:44028 {| entedit:valueOrder 1 |},
+        exp:40816 {| entedit:valueOrder 2 |},
+        exp:56831 {| entedit:valueOrder 3 |} .
 
 man:418562
     a rdac:C10007 ;
@@ -29016,7 +28986,7 @@ man:418794
         exp:41419 {| entedit:valueOrder 6 |},
         exp:55975 {| entedit:valueOrder 7 |},
         exp:57665 {| entedit:valueOrder 8 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 9 |},
+        exp:40816 {| entedit:valueOrder 9 |},
         exp:41576 {| entedit:valueOrder 10 |},
         exp:51994 {| entedit:valueOrder 11 |} .
 
@@ -29459,7 +29429,7 @@ man:430574
         exp:55690 {| entedit:valueOrder 18 |},
         exp:49806 {| entedit:valueOrder 19 |},
         exp:41108 {| entedit:valueOrder 20 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 21 |} .
+        exp:40816 {| entedit:valueOrder 21 |} .
 
 man:431494
     a rdac:C10007 ;
@@ -29476,7 +29446,7 @@ man:431494
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:247 ;
     entedit:P03 <http://viaf.org/viaf/9842556> ;
-    rdamo:P30139 <http://viaf.org/viaf/202977755/exp/eng/1020> {| entedit:valueOrder 0 |},
+    rdamo:P30139 exp:3574 {| entedit:valueOrder 0 |},
         exp:1657679 {| entedit:valueOrder 1 |} .
 
 man:431604
@@ -30058,7 +30028,7 @@ man:439143
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:14541 ;
-    rdamo:P30139 <http://viaf.org/viaf/305922109/exp/eng/1020> .
+    rdamo:P30139 exp:3571 .
 
 man:441385
     a rdac:C10007 ;
@@ -30936,7 +30906,7 @@ man:456505
     rdamo:P30001 rdact:1018 ;
     rdamo:P30002 rdamt:1003 ;
     rdamo:P30420 pbl:123 ;
-    rdamo:P30139 <http://viaf.org/viaf/180997771/exp/eng/1020> .
+    rdamo:P30139 exp:8348 .
 
 man:457650
     a rdac:C10007 ;
@@ -30986,7 +30956,7 @@ man:457856
     rdamo:P30001 rdact:1018 ;
     rdamo:P30002 rdamt:1003 ;
     rdamo:P30420 pbl:2305 ;
-    rdamo:P30139 <http://viaf.org/viaf/202977755/exp/eng/1020> .
+    rdamo:P30139 exp:3574 .
 
 man:457866
     a rdac:C10007 ;
@@ -31432,7 +31402,7 @@ man:480533
     rdamo:P30001 rdact:1018 ;
     rdamo:P30002 rdamt:1003 ;
     rdamo:P30420 pbl:1884 ;
-    rdamo:P30139 <http://viaf.org/viaf/308025936/exp/eng/1020> .
+    rdamo:P30139 exp:3575 .
 
 man:480535
     a rdac:C10007 ;
@@ -31449,7 +31419,7 @@ man:480535
     rdamo:P30001 rdact:1018 ;
     rdamo:P30002 rdamt:1003 ;
     rdamo:P30420 pbl:1884 ;
-    rdamo:P30139 <http://viaf.org/viaf/202977755/exp/eng/1020> .
+    rdamo:P30139 exp:3574 .
 
 man:480791
     a rdac:C10007 ;
@@ -32251,7 +32221,7 @@ man:497400
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:1884 ;
-    rdamo:P30139 <http://viaf.org/viaf/180997771/exp/eng/1020> .
+    rdamo:P30139 exp:8348 .
 
 man:497872
     a rdac:C10007 ;
@@ -32445,7 +32415,7 @@ man:501743
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:1884 ;
     entedit:P03 per:212515 ;
-    rdamo:P30139 <http://viaf.org/viaf/180997771/exp/eng/1020> {| entedit:valueOrder 0 |},
+    rdamo:P30139 exp:8348 {| entedit:valueOrder 0 |},
         exp:1821221 {| entedit:valueOrder 1 |} .
 
 man:503839
@@ -32804,7 +32774,7 @@ man:522286
         exp:57613 {| entedit:valueOrder 15 |},
         exp:44459 {| entedit:valueOrder 16 |},
         exp:40885 {| entedit:valueOrder 17 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 18 |},
+        exp:40816 {| entedit:valueOrder 18 |},
         exp:57628 {| entedit:valueOrder 19 |},
         exp:44468 {| entedit:valueOrder 20 |} .
 
@@ -33160,7 +33130,7 @@ man:527882
         exp:44514 {| entedit:valueOrder 11 |},
         exp:57637 {| entedit:valueOrder 12 |},
         exp:41557 {| entedit:valueOrder 13 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 14 |},
+        exp:40816 {| entedit:valueOrder 14 |},
         exp:57598 {| entedit:valueOrder 15 |},
         exp:44456 {| entedit:valueOrder 16 |},
         exp:44457 {| entedit:valueOrder 17 |},
@@ -33264,7 +33234,7 @@ man:527967
     rdamo:P30001 rdact:1018 ;
     rdamo:P30002 rdamt:1003 ;
     rdamo:P30420 pbl:2305 ;
-    rdamo:P30139 <http://viaf.org/viaf/308025936/exp/eng/1020> .
+    rdamo:P30139 exp:3575 .
 
 man:528070
     a rdac:C10007 ;
@@ -33673,7 +33643,7 @@ man:543611
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:456 ;
-    rdamo:P30139 <http://viaf.org/viaf/180997771/exp/eng/1020> .
+    rdamo:P30139 exp:8348 .
 
 man:548165
     a rdac:C10007 ;
@@ -34524,7 +34494,7 @@ man:573105
         exp:41178 {| entedit:valueOrder 35 |},
         exp:2028196 {| entedit:valueOrder 36 |},
         exp:724445 {| entedit:valueOrder 37 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 38 |},
+        exp:40816 {| entedit:valueOrder 38 |},
         exp:2028198 {| entedit:valueOrder 39 |},
         exp:2028199 {| entedit:valueOrder 40 |},
         exp:59971 {| entedit:valueOrder 41 |},
@@ -35320,7 +35290,7 @@ man:585233
         exp:41178 {| entedit:valueOrder 35 |},
         exp:2028196 {| entedit:valueOrder 36 |},
         exp:724445 {| entedit:valueOrder 37 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 38 |},
+        exp:40816 {| entedit:valueOrder 38 |},
         exp:2028198 {| entedit:valueOrder 39 |},
         exp:2028199 {| entedit:valueOrder 40 |},
         exp:59971 {| entedit:valueOrder 41 |},
@@ -35451,7 +35421,7 @@ man:585234
         exp:41178 {| entedit:valueOrder 35 |},
         exp:2028196 {| entedit:valueOrder 36 |},
         exp:724445 {| entedit:valueOrder 37 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 38 |},
+        exp:40816 {| entedit:valueOrder 38 |},
         exp:2028198 {| entedit:valueOrder 39 |},
         exp:2028199 {| entedit:valueOrder 40 |},
         exp:59971 {| entedit:valueOrder 41 |},
@@ -35900,7 +35870,7 @@ man:598448
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:25722 ;
-    rdamo:P30139 <http://viaf.org/viaf/308025936/exp/eng/1020> .
+    rdamo:P30139 exp:3575 .
 
 man:598692
     a rdac:C10007 ;
@@ -35987,7 +35957,7 @@ man:602461
         exp:41563 {| entedit:valueOrder 9 |},
         exp:41153 {| entedit:valueOrder 10 |},
         exp:41339 {| entedit:valueOrder 11 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 12 |} .
+        exp:40816 {| entedit:valueOrder 12 |} .
 
 man:602466
     a rdac:C10007 ;
@@ -36237,7 +36207,7 @@ man:607560
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:31313 ;
-    rdamo:P30139 <http://viaf.org/viaf/305922109/exp/eng/1020> {| entedit:valueOrder 0 |},
+    rdamo:P30139 exp:3571 {| entedit:valueOrder 0 |},
         exp:2156121 {| entedit:valueOrder 1 |} .
 
 man:608146
@@ -36583,7 +36553,7 @@ man:614797
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:245 ;
     rdamo:P30139 exp:3353223 {| entedit:valueOrder 0 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 1 |},
+        exp:40816 {| entedit:valueOrder 1 |},
         exp:43949 {| entedit:valueOrder 2 |},
         exp:40885 {| entedit:valueOrder 3 |},
         exp:44454 {| entedit:valueOrder 4 |},
@@ -37215,8 +37185,7 @@ man:637215
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:14541 ;
-    rdamo:P30139 <http://viaf.org/viaf/305922109/exp/eng/1020> ;
-    rdamd:P30107 "Second Picador paperback edition" .
+    rdamo:P30139 exp:3571 .
 
 man:642920
     a rdac:C10007 ;
@@ -37341,7 +37310,7 @@ man:647254
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:247 ;
     entedit:P03 <http://viaf.org/viaf/9842556> ;
-    rdamo:P30139 <http://viaf.org/viaf/202977755/exp/eng/1020> {| entedit:valueOrder 0 |},
+    rdamo:P30139 exp:3574 {| entedit:valueOrder 0 |},
         exp:1657679 {| entedit:valueOrder 1 |} .
 
 man:652707
@@ -37358,7 +37327,7 @@ man:652707
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:25880 ;
-    rdamo:P30139 <http://viaf.org/viaf/180997771/exp/eng/1020> .
+    rdamo:P30139 exp:8348 .
 
 man:653034
     a rdac:C10007 ;
@@ -38371,7 +38340,7 @@ man:699396
         exp:55238 {| entedit:valueOrder 13 |},
         exp:40432 {| entedit:valueOrder 14 |},
         exp:135228 {| entedit:valueOrder 15 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 16 |},
+        exp:40816 {| entedit:valueOrder 16 |},
         exp:58063 {| entedit:valueOrder 17 |},
         exp:43764 {| entedit:valueOrder 18 |},
         exp:43910 {| entedit:valueOrder 19 |},
@@ -39665,7 +39634,7 @@ man:780780
     rdamo:P30001 rdact:1018 ;
     rdamo:P30002 rdamt:1003 ;
     rdamo:P30420 pbl:1884 ;
-    rdamo:P30139 <http://viaf.org/viaf/305922109/exp/eng/1020> .
+    rdamo:P30139 exp:3571 .
 
 man:781455
     a rdac:C10007 ;
@@ -39823,7 +39792,7 @@ man:781798
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:1884 ;
-    rdamo:P30139 <http://viaf.org/viaf/305922109/exp/eng/1020> {| entedit:valueOrder 0 |},
+    rdamo:P30139 exp:3571 {| entedit:valueOrder 0 |},
         exp:2742082 {| entedit:valueOrder 1 |},
         exp:1463114 {| entedit:valueOrder 2 |},
         exp:1463112 {| entedit:valueOrder 3 |} .
@@ -39843,7 +39812,7 @@ man:781800
     rdamo:P30001 rdact:1018 ;
     rdamo:P30002 rdamt:1003 ;
     rdamo:P30420 pbl:1884 ;
-    rdamo:P30139 <http://viaf.org/viaf/305922109/exp/eng/1020> {| entedit:valueOrder 0 |},
+    rdamo:P30139 exp:3571 {| entedit:valueOrder 0 |},
         exp:2742082 {| entedit:valueOrder 1 |},
         exp:1463114 {| entedit:valueOrder 2 |},
         exp:1463112 {| entedit:valueOrder 3 |} .
@@ -40003,7 +39972,7 @@ man:785820
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:63322 ;
-    rdamo:P30139 <http://viaf.org/viaf/305922109/exp/eng/1020> .
+    rdamo:P30139 exp:3571 .
 
 man:785858
     a rdac:C10007 ;
@@ -41197,7 +41166,7 @@ man:902145
         exp:41419 {| entedit:valueOrder 6 |},
         exp:55975 {| entedit:valueOrder 7 |},
         exp:57665 {| entedit:valueOrder 8 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 9 |},
+        exp:40816 {| entedit:valueOrder 9 |},
         exp:41576 {| entedit:valueOrder 10 |},
         exp:51994 {| entedit:valueOrder 11 |} .
 
@@ -41444,7 +41413,7 @@ man:929478
         exp:41419 {| entedit:valueOrder 6 |},
         exp:55975 {| entedit:valueOrder 7 |},
         exp:57665 {| entedit:valueOrder 8 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 9 |},
+        exp:40816 {| entedit:valueOrder 9 |},
         exp:41576 {| entedit:valueOrder 10 |},
         exp:51994 {| entedit:valueOrder 11 |} .
 
@@ -41755,7 +41724,7 @@ man:957062
         exp:44514 {| entedit:valueOrder 11 |},
         exp:57637 {| entedit:valueOrder 12 |},
         exp:41557 {| entedit:valueOrder 13 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 14 |},
+        exp:40816 {| entedit:valueOrder 14 |},
         exp:57598 {| entedit:valueOrder 15 |},
         exp:44456 {| entedit:valueOrder 16 |},
         exp:44457 {| entedit:valueOrder 17 |},
@@ -41907,7 +41876,7 @@ man:977942
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:41863 ;
-    rdamo:P30139 <http://viaf.org/viaf/180997771/exp/eng/1020> .
+    rdamo:P30139 exp:8348 .
 
 man:979090
     a rdac:C10007 ;
@@ -42012,7 +41981,7 @@ man:989569
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:25722 ;
-    rdamo:P30139 <http://viaf.org/viaf/305922109/exp/eng/1020> {| entedit:valueOrder 0 |},
+    rdamo:P30139 exp:3571 {| entedit:valueOrder 0 |},
         exp:1463111 {| entedit:valueOrder 1 |},
         exp:1463112 {| entedit:valueOrder 2 |},
         exp:1463113 {| entedit:valueOrder 3 |},
@@ -42035,7 +42004,7 @@ man:990008
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:256 ;
-    rdamo:P30139 <http://viaf.org/viaf/305922109/exp/eng/1020> .
+    rdamo:P30139 exp:3571 .
 
 man:991819
     a rdac:C10007 ;
@@ -42327,7 +42296,7 @@ man:1003414
         exp:44514 {| entedit:valueOrder 9 |},
         exp:57637 {| entedit:valueOrder 10 |},
         exp:41557 {| entedit:valueOrder 11 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 12 |},
+        exp:40816 {| entedit:valueOrder 12 |},
         exp:57598 {| entedit:valueOrder 13 |},
         exp:44456 {| entedit:valueOrder 14 |},
         exp:44457 {| entedit:valueOrder 15 |},
@@ -42441,7 +42410,7 @@ man:1003415
         exp:44514 {| entedit:valueOrder 9 |},
         exp:57637 {| entedit:valueOrder 10 |},
         exp:41557 {| entedit:valueOrder 11 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 12 |},
+        exp:40816 {| entedit:valueOrder 12 |},
         exp:57598 {| entedit:valueOrder 13 |},
         exp:44456 {| entedit:valueOrder 14 |},
         exp:44457 {| entedit:valueOrder 15 |},
@@ -43084,7 +43053,7 @@ man:1038565
     rdamo:P30139 exp:34287 {| entedit:valueOrder 0 |},
         exp:124888 {| entedit:valueOrder 1 |},
         exp:47573 {| entedit:valueOrder 2 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 3 |},
+        exp:40816 {| entedit:valueOrder 3 |},
         exp:55693 {| entedit:valueOrder 4 |},
         exp:78505 {| entedit:valueOrder 5 |},
         exp:41461 {| entedit:valueOrder 6 |},
@@ -43146,7 +43115,7 @@ man:1041108
         exp:41178 {| entedit:valueOrder 35 |},
         exp:2028196 {| entedit:valueOrder 36 |},
         exp:724445 {| entedit:valueOrder 37 |},
-        <http://viaf.org/viaf/311471559/exp/eng/1020> {| entedit:valueOrder 38 |},
+        exp:40816 {| entedit:valueOrder 38 |},
         exp:2028198 {| entedit:valueOrder 39 |},
         exp:2028199 {| entedit:valueOrder 40 |},
         exp:59971 {| entedit:valueOrder 41 |},
@@ -44521,7 +44490,7 @@ man:1084158
     rdamo:P30001 rdact:1018 ;
     rdamo:P30002 rdamt:1003 ;
     rdamo:P30420 pbl:4536 ;
-    rdamo:P30139 <http://viaf.org/viaf/305922109/exp/eng/1020> .
+    rdamo:P30139 exp:3571 .
 
 man:1093776
     a rdac:C10007 ;
@@ -45246,7 +45215,7 @@ man:1117812
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:1884 ;
     entedit:P03 per:212515 ;
-    rdamo:P30139 <http://viaf.org/viaf/180997771/exp/eng/1020> {| entedit:valueOrder 0 |},
+    rdamo:P30139 exp:8348 {| entedit:valueOrder 0 |},
         exp:1821221 {| entedit:valueOrder 1 |},
         exp:3640690 {| entedit:valueOrder 2 |} .
 
@@ -45265,7 +45234,7 @@ man:1118164
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:1884 ;
-    rdamo:P30139 <http://viaf.org/viaf/305922109/exp/eng/1020> {| entedit:valueOrder 0 |},
+    rdamo:P30139 exp:3571 {| entedit:valueOrder 0 |},
         exp:2742082 {| entedit:valueOrder 1 |},
         exp:1463114 {| entedit:valueOrder 2 |},
         exp:1463112 {| entedit:valueOrder 3 |} .
@@ -45285,7 +45254,7 @@ man:1118165
     rdamo:P30001 rdact:1049 ;
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:1884 ;
-    rdamo:P30139 <http://viaf.org/viaf/305922109/exp/eng/1020> {| entedit:valueOrder 0 |},
+    rdamo:P30139 exp:3571 {| entedit:valueOrder 0 |},
         exp:2742082 {| entedit:valueOrder 1 |},
         exp:1463112 {| entedit:valueOrder 2 |},
         exp:1463114 {| entedit:valueOrder 3 |} .
@@ -45363,7 +45332,7 @@ man:1121448
     rdamo:P30002 rdamt:1007 ;
     rdamo:P30420 pbl:1884 ;
     entedit:P03 per:212515 ;
-    rdamo:P30139 <http://viaf.org/viaf/180997771/exp/eng/1020> {| entedit:valueOrder 0 |},
+    rdamo:P30139 exp:8348 {| entedit:valueOrder 0 |},
         exp:1821221 {| entedit:valueOrder 1 |},
         exp:3640690 {| entedit:valueOrder 2 |} .
 
@@ -45469,497 +45438,3 @@ man:1128849
         exp:3673407 {| entedit:valueOrder 31 |},
         exp:3673416 {| entedit:valueOrder 32 |} .
 
-<http://example.org/009145814>
-    a rdac:C10007 ;
-    rdfs:label "Memories of the space age. – Penguin, 1988" ;
-    rdamd:P30011 "1988" ;
-    rdamd:P30033 "The Cage of Sand -- A Question of Re-entry -- The Dead Astronaut -- My Dream of Flying to Wake Island -- News from the Sun -- Memories of the Space Age -- Myths of the Near Future -- The Man Who Walked on the Moon" ;
-    rdamd:P30050 "The Penguin book of modern British short stories. -, London ; New York : Penguin, 1988. -." ;
-    rdamd:P30088 "London; New York" ;
-    rdamd:P30156 "Memories of the space age" ;
-    rdamd:P30176 "Penguin" ;
-    rdamo:P30001 rdact:1049 ;
-    rdamo:P30002 rdamt:1007 ;
-    rdamo:P30139 exp:44123,
-        exp:44460,
-        exp:45330,
-        exp:46455,
-        exp:49122,
-        exp:57583,
-        exp:57607,
-        exp:57608 .
-
-<http://example.org/009937949>
-    a rdac:C10007 ;
-    rdfs:label "The day of forever. – Panther, 1967" ;
-    rdamd:P30011 "1967" ;
-    rdamd:P30033 "The Day of Forever -- Prisoner of the Coral Deep -- Tomorrow is a Million Years -- The Man on the 99th Floor -- The Waiting Grounds -- The Last World of Mr Goddard -- The Gentle Assassin -- The Sudden Afternoon -- The Insane Ones -- The Assassination of John Fitzgerald Kennedy Considered as a Downhill Motor Race" ;
-    rdamd:P30156 "The day of forever" ;
-    rdamd:P30176 "Panther" ;
-    rdamd:P30182 "141 pages, 18 cm." ;
-    rdamo:P30001 rdact:1049 ;
-    rdamo:P30002 rdamt:1007 ;
-    rdamo:P30139 exp:41280,
-        exp:44455,
-        exp:57579,
-        exp:57582,
-        exp:57587,
-        exp:57603,
-        exp:57617,
-        exp:57626,
-        exp:57631,
-        exp:57598 .
-
-<http://example.org/011818370>
-    a rdac:C10007 ;
-    rdfs:label "Why I want to fuck Ronald Reagan. – Plashet, 1988" ;
-    rdamd:P30011 "1988" ;
-    rdamd:P30156 "Why I want to fuck Ronald Reagan" ;
-    rdamd:P30176 "Plashet" ;
-    rdamd:P30182 "[7]leaves." ;
-    rdamo:P30001 rdact:1049 ;
-    rdamo:P30002 rdamt:1007 ;
-    rdamo:P30139 exp:44468 .
-
-<http://example.org/017878414>
-    a rdac:C10007 ;
-    rdfs:label "The inner landscape / Mervyn Peake, J. G. Ballard, Brian W. Aldiss. – Allison and Busby, 1969" ;
-    rdamd:P30011 "1969" ;
-    rdamd:P30033 "Danger, Religion! / Aldiss, Brian W. -- The voices of time / Ballard, J. G. -- Boy in darkness / Peake, Mervyn Laurence" ;
-    rdamd:P30088 "London" ;
-    rdamd:P30117 "Mervyn Peake, J. G. Ballard, Brian W. Aldiss" ;
-    rdamd:P30156 "The inner landscape" ;
-    rdamd:P30176 "Allison and Busby" ;
-    rdamo:P30001 rdact:1049 ;
-    rdamo:P30002 rdamt:1007 ;
-    rdamo:P30139 <http://viaf.org/viaf/183421260/exp/eng/1020>,
-        <http://viaf.org/viaf/309308512/exp/eng/1020>,
-        <http://viaf.org/viaf/311471559/exp/eng/1020> .
-
-<http://example.org/1264899>
-    a rdac:C10007 ;
-    rdfs:label "Chronopolis / by J. G. Ballard. – Putnam, [1971]" ;
-    rdamd:P30011 "[1971]" ;
-    rdamd:P30033 "The voices of time -- The drowned giant -- The terminal beach -- Manhole 69 -- Storm-bird, storm-dreamer -- The sound-sweep -- Millenium -- Chronopolis -- Build-up -- The garden of time -- End game -- The watchtowers -- Now wakes the sea -- Zone of terror -- The cage of sand -- Deep end." ;
-    rdamd:P30088 "New York" ;
-    rdamd:P30117 "by J. G. Ballard" ;
-    rdamd:P30142 "and other stories" ;
-    rdamd:P30156 "Chronopolis" ;
-    rdamd:P30176 "Putnam" ;
-    rdamd:P30182 "319 pages, 21 cm." ;
-    rdamo:P30001 rdact:1049 ;
-    rdamo:P30002 rdamt:1007 ;
-    rdamo:P30139 <http://viaf.org/viaf/311471559/exp/eng/1020>,
-        exp:37126,
-        exp:41557,
-        exp:43949,
-        exp:44123,
-        exp:44451,
-        exp:44454,
-        exp:44457,
-        exp:44458,
-        exp:44514,
-        exp:57586,
-        exp:57610,
-        exp:57625,
-        exp:57635,
-        exp:57637,
-        exp:65075 .
-
-<http://example.org/4540466>
-    a rdac:C10007 ;
-    rdfs:label "The farthest reaches / Edited by Joseph Elder. – Trident Press, [1968]" ;
-    rdamd:P30011 "[1968]" ;
-    rdamd:P30033 "The worm that flies, by B. W. Aldiss -- Kyrie, by P. Anderson -- Tomorrow is a million years, by J. G. Ballard -- Pond water, by J. Brunner -- The dance of the changer and the three, by T. Carr -- Crusade, by A. C. Clarke -- Ranging, by J. Jakes -- Mind out of time, by K. Laumer -- The inspector, by J. McKimmey -- To the dark star, by R. Silverberg -- A night in elf hill, by N. Spinrad -- Sulwen's planet, by J. Vance." ;
-    rdamd:P30088 "New York" ;
-    rdamd:P30117 "Edited by Joseph Elder" ;
-    rdamd:P30156 "The farthest reaches" ;
-    rdamd:P30176 "Trident Press" ;
-    rdamd:P30182 "217 pages, 21 cm." ;
-    rdamo:P30001 rdact:1049 ;
-    rdamo:P30002 rdamt:1007 ;
-    rdamo:P30139 exp:41235,
-        exp:41516,
-        exp:56908,
-        exp:57631,
-        exp:57905,
-        exp:62005,
-        exp:64948,
-        exp:71516,
-        exp:94038,
-        exp:97136,
-        <http://www.isfdb.org/cgi-bin/title.cgi?97137/exp/eng/1020>,
-        exp:97138 ;
-    rdamo:P30267 <http://viaf.org/viaf/172050597> .
-
-<http://example.org/IAN-4250382412618>
-    a rdac:C10007 ;
-    rdfs:label "Dream cargoes / TJ Kong & Modular K. – Poker Flat Recordings, p2012" ;
-    rdamd:P30004 "IAN 4250382412618" ;
-    rdamd:P30011 "p2012" ;
-    rdamd:P30033 "Chronopolis -- The last world of Mr. Goddard -- Dream cargoes -- The Delta at sunset -- End-game (feat. Edward Capel) -- Now wakes the sea -- Studio 5, the stars -- The sound-sweep -- Memories of the space age -- Now: zero." ;
-    rdamd:P30088 "[Hamburg, Germany]" ;
-    rdamd:P30117 "TJ Kong & Modular K." ;
-    rdamd:P30137 "\"All music composed and produced by A.J.E. van Moll and G. Janssen\"-Insert.",
-        "Compact disc." ;
-    rdamd:P30156 "Dream cargoes" ;
-    rdamd:P30176 "Poker Flat Recordings" ;
-    rdamd:P30182 "1 sound disc : digital, 4 3/4 in." ;
-    rdamo:P30001 rdact:1013 ;
-    rdamo:P30002 rdamt:1001 ;
-    rdamo:P30139 <https://isni.org/isni/0000000372289205/dreamcargoes/1/exp/zxx/1011>,
-        <https://isni.org/isni/0000000372289205/dreamcargoes/10/exp/zxx/1011>,
-        <https://isni.org/isni/0000000372289205/dreamcargoes/2/exp/zxx/1011>,
-        <https://isni.org/isni/0000000372289205/dreamcargoes/3/exp/zxx/1011>,
-        <https://isni.org/isni/0000000372289205/dreamcargoes/4/exp/zxx/1011>,
-        <https://isni.org/isni/0000000372289205/dreamcargoes/5/exp/zxx/1011>,
-        <https://isni.org/isni/0000000372289205/dreamcargoes/6/exp/zxx/1011>,
-        <https://isni.org/isni/0000000372289205/dreamcargoes/7/exp/zxx/1011>,
-        <https://isni.org/isni/0000000372289205/dreamcargoes/8/exp/zxx/1011>,
-        <https://isni.org/isni/0000000372289205/dreamcargoes/9/exp/zxx/1011>,
-        <https://isni.org/isni/0000000372289205/dreamcargoes/exp/zxx/1011> ;
-    rdaxd:P00018 "IAN-4250382412618" .
-
-<http://example.org/UPC-044747309125>
-    a rdac:C10007 ;
-    rdfs:label "The isle is full of noises. – Centaur, p2010" ;
-    rdamd:P30004 "UPC 044747309125" ;
-    rdamd:P30011 "p2010" ;
-    rdamd:P30033 "Nocturno for solo alto flute / by Mario Lavista (5:55) -- Fictions : eight pieces for solo flute / by Christopher Wendell Jones (7:41) -- [ga]:[ge]:[go]:[gu] : for bass flute and computer / by David Kim-Boyle (11:32) -- Re : for solo piccolo / by Steven Hoey (9:33) -- Family portraits. Embden Pond : for alto flute and two vibraphones / by Stuart Saunders Smith (12:29) -- Chronopolis : for solo flute / by Franklin Cox (15:00)." ;
-    rdamd:P30088 "[Baton Rouge, La.]" ;
-    rdamd:P30137 "Compact disc.",
-        "Eds. recorded: Smith Publications (1st, 5th works); Rugginenti Editions (6th work).",
-        "Program and biographical notes in English (5 p.) in container." ;
-    rdamd:P30156 "The isle is full of noises" ;
-    rdamd:P30176 "Centaur" ;
-    rdamd:P30182 "1 sound disc (62 min., 12 sec.) : digital, 4 3/4 in." ;
-    rdamo:P30001 rdact:1013 ;
-    rdamo:P30002 rdamt:1001 ;
-    rdamo:P30139 <https://en.wikipedia.org/wiki/Franklin_Cox/chronopolis/exp/zxx/1011>,
-        <https://isni.org/isni/0000000033066226/islenoise/exp/zxx/1011> ;
-    rdaxd:P00018 "UPC-044747309125" .
-
-<http://example.org/isbn-0006149081>
-    a rdac:C10007 ;
-    rdfs:label "The fall of Chronopolis / Barrington Bayley. – Fontana, 1980" ;
-    rdamd:P30004 "ISBN 0006149081 (pbk)" ;
-    rdamd:P30011 "1980" ;
-    rdamd:P30088 "Glasgow" ;
-    rdamd:P30117 "Barrington Bayley" ;
-    rdamd:P30137 "Originally published : London : Allison and Busby, 1979." ;
-    rdamd:P30156 "The fall of Chronopolis" ;
-    rdamd:P30176 "Fontana" ;
-    rdamd:P30182 "191p., 18cm." ;
-    rdamo:P30001 rdact:1049 ;
-    rdamo:P30002 rdamt:1007 ;
-    rdamo:P30139 <https://www.isfdb.org/cgi-bin/title.cgi?4537/exp/eng/1020> ;
-    rdaxd:P00018 "isbn-0006149081" .
-
-<http://example.org/isbn-0006545947>
-    a rdac:C10007 ;
-    rdfs:label "The day of creation. – Flamingo, 1993" ;
-    rdamd:P30004 "ISBN 0006545947 (pbk)" ;
-    rdamd:P30011 "1993" ;
-    rdamd:P30088 "London" ;
-    rdamd:P30156 "The day of creation" ;
-    rdamd:P30176 "Flamingo" ;
-    rdamd:P30182 "287p." ;
-    rdamo:P30001 rdact:1049 ;
-    rdamo:P30002 rdamt:1007 ;
-    rdamo:P30139 <http://viaf.org/viaf/308025936/exp/eng/1020> ;
-    rdaxd:P00018 "isbn-0006545947" .
-
-<http://example.org/isbn-0007221525>
-    a rdac:C10007 ;
-    rdfs:label "Empire of the sun / J.G. Ballard. – Harper Perennial, 2006" ;
-    rdamd:P30004 "ISBN 0007221525 (pbk.)",
-        "ISBN 9780007221523 (pbk.)" ;
-    rdamd:P30011 "2006" ;
-    rdamd:P30088 "London" ;
-    rdamd:P30106 "Harper Perennial modern classics" ;
-    rdamd:P30117 "J.G. Ballard" ;
-    rdamd:P30137 "Formerly CIP.",
-        "Originally published: London: Gollancz, 1984." ;
-    rdamd:P30156 "Empire of the sun" ;
-    rdamd:P30176 "Harper Perennial" ;
-    rdamd:P30182 "351 pages, 20 cm." ;
-    rdamo:P30001 rdact:1049 ;
-    rdamo:P30002 rdamt:1007 ;
-    rdamo:P30139 <http://viaf.org/viaf/180997771/exp/eng/1020> ;
-    rdaxd:P00018 "isbn-0007221525",
-        "isbn-9780007221523" .
-
-<http://example.org/isbn-0030425069>
-    a rdac:C10007 ;
-    rdfs:label "The best short stories of J.G. Ballard. – 1st ed. – Holt, Rinehart and Winston, c1978" ;
-    rdamd:P30004 "ISBN 0030425069",
-        "ISBN 0030456614" ;
-    rdamd:P30011 "c1978" ;
-    rdamd:P30033 "Introduction (The Best Short Stories of J. G. Ballard) / essay by Anthony Burgess -- The Concentration City -- Manhole 69 -- Chronopolis -- The Voices of Time -- Deep End -- The Overloaded Man -- Billennium -- The Garden of Time -- Thirteen to Centaurus -- The Subliminal Man -- The Cage of Sand -- The Drowned Giant -- The Terminal Beach -- The Cloud-Sculptors of Coral D -- The Assassination of John Fitzgerald Kennedy Considered As a Downhill Motor Race -- The Atrocity Exhibition -- Plan for the Assassination of Jacqueline Kennedy -- Why I Want to Fuck Ronald Reagan" ;
-    rdamd:P30088 "New York" ;
-    rdamd:P30107 "1st ed" ;
-    rdamd:P30156 "The best short stories of J.G. Ballard" ;
-    rdamd:P30176 "Holt, Rinehart and Winston" ;
-    rdamd:P30182 "ix, 302 p., 24 cm." ;
-    rdamo:P30001 rdact:1049 ;
-    rdamo:P30002 rdamt:1007 ;
-    rdamo:P30139 <http://viaf.org/viaf/311471559/exp/eng/1020>,
-        exp:44468,
-        exp:37126,
-        exp:41557,
-        exp:43949,
-        exp:44123,
-        exp:44451,
-        exp:44454,
-        exp:44457,
-        exp:44458,
-        exp:44459,
-        exp:54044,
-        exp:57579,
-        exp:57586,
-        exp:57613,
-        exp:57628,
-        exp:65075,
-        exp:57580,
-        exp:57616 ;
-    rdamo:P30328 <http://viaf.org/viaf/71388189> ;
-    rdaxd:P00018 "isbn-0030425069",
-        "isbn-0030456614" .
-
-<http://example.org/isbn-0316349410>
-    a rdac:C10007 ;
-    rdfs:label "The world treasury of science fiction / edited by David G. Hartwell. – 1st ed. – Little, Brown, ©1989" ;
-    rdamd:P30004 "ISBN 0316349410",
-        "ISBN 9780316349413" ;
-    rdamd:P30011 "©1989" ;
-    rdamd:P30033 "Foreword -- Introduction -- Harrison Bergeron / Kurt Vonnegut, Jr. -- Forgetfulness / John W. Campbell, Jr. -- Special flight / John Berryman -- Chronopolis / J.G. Ballard -- Triceratops / Kono Tensei -- The man who lost the sea / Theodore Sturgeon -- On the inside track / Karl Michael Armer -- The Golem / Avram Davidson -- The new prehistory / René Rebetez-Cortes -- A meeting with Medusa / Arthur C. Clarke -- The valley of echoes / Gérard Klein -- The fifth head of Cerberus / Gene Wolfe -- The chaste planet / John Updike -- The blind pilot / Nathalie-Charles Henneberg -- The men who murdered Mohammed / Alfred Bester -- Pairpuppets / Manuel van Loggem -- Two dooms / C.M. Kornbluth -- Tale of the computer that fought a dragon / Stanislaw Lem -- The green hills of Earth / Robert A. Heinlein -- Ghost V / Robert Sheckley -- The phantom of Kansas / John Varley -- Captain Nemo's last adventure / Josef Nesvadba -- Inconstant moon / Larry Niven -- The gold at the starbow's end / Frederik Pohl -- A sign in space / Italo Calvino -- The spiral / Italo Calvino -- The dead past / Isaac Asimov -- The lens / Annemarie van Ewyck -- The hurkle is a happy beast / Theodore Sturgeon -- Zero hour / Ray Bradbury -- Nine lives / Ursula K. Le Guin -- The muse / Anthony Burgess -- The public hating / Steve Allen -- Poor superman / Fritz Leiber -- Angouleme / Thomas M. Disch -- Stranger station / Damon Knight -- The dead fish / Boris Vian -- I was the first to find you / Kirill Bulychev -- The lineman / Walter M. Miller, Jr. -- Tlön, Uqbar, Orbis Tertius / Jorge Luis Borges -- Codemus / Tor Åge Bringsvaerd -- A kind of artistry / Brian Aldiss -- Second variety / Philip K. Dick -- Weihnachtsabend / Keith Roberts -- I do not love thee, Doctor Fell / Robert Bloch -- Aye, and Gomorrah-- / Samuel R. Delany -- How Erg the Self-inducting slew a paleface / Stanislaw Lem -- Nobody's home / Joanna Russ -- Party line / Gérard Klein -- The proud robot / Lewis Padgett -- Vintage season / Henry Kuttner and C.L. Moore -- Way to Amalteia / Arkady and Boris Strugatsky." ;
-    rdamd:P30088 "Boston" ;
-    rdamd:P30107 "1st ed" ;
-    rdamd:P30117 "edited by David G. Hartwell ; with a foreword by Clifton Fadiman, general editor" ;
-    rdamd:P30156 "The world treasury of science fiction" ;
-    rdamd:P30176 "Little, Brown" ;
-    rdamd:P30182 "xix, 1083 pages, 25 cm." ;
-    rdamo:P30001 rdact:1049 ;
-    rdamo:P30002 rdamt:1007 ;
-    rdamo:P30139 <http://www.isfdb.org/cgi-bin/pe.cgi?41887/exp/eng/1020>,
-        exp:1043438,
-        exp:1044760,
-        exp:1044769,
-        exp:1193913,
-        exp:1199713,
-        exp:1227657,
-        exp:1228232,
-        exp:1564888,
-        exp:1694589,
-        exp:1733237,
-        exp:1770589,
-        exp:1772115,
-        <http://www.isfdb.org/cgi-bin/title.cgi?189852/exp/eng/1020>,
-        exp:1947904,
-        exp:2608858,
-        <http://www.isfdb.org/cgi-bin/title.cgi?2825264/exp/eng/1020>,
-        <http://www.isfdb.org/cgi-bin/title.cgi?37575/exp/eng/1020>,
-        exp:40842,
-        exp:40903,
-        exp:41026,
-        exp:41048,
-        exp:41067,
-        exp:41101,
-        exp:41107,
-        exp:41120,
-        exp:41160,
-        exp:41178,
-        exp:41205,
-        <http://www.isfdb.org/cgi-bin/title.cgi?41225/exp/eng/1020>,
-        exp:41283,
-        exp:41335,
-        exp:41350,
-        exp:41363,
-        exp:41557,
-        exp:41564,
-        exp:41658,
-        exp:45279,
-        exp:45804,
-        exp:48020,
-        <http://www.isfdb.org/cgi-bin/title.cgi?493181/exp/eng/1020>,
-        exp:51188,
-        exp:55741,
-        exp:56729,
-        exp:58525,
-        exp:59665,
-        exp:670081,
-        exp:68283,
-        exp:68754,
-        exp:77508,
-        exp:837545,
-        exp:940652 ;
-    rdamo:P30267 <http://viaf.org/viaf/33278380>,
-        <http://viaf.org/viaf/762106> ;
-    rdaxd:P00018 "isbn-0316349410",
-        "isbn-9780316349413" .
-
-<http://example.org/isbn-0575401303>
-    a rdac:C10007 ;
-    rdfs:label "The voices of time / J.G. Ballard. – Indigo, 1997" ;
-    rdamd:P30004 "ISBN 0575401303" ;
-    rdamd:P30011 "1997" ;
-    rdamd:P30033 "The voices of time -- The sound-sweep -- The overloaded man -- Thirteen to Centaurus -- The garden of time -- The cage of sand -- The watch-tower -- Chronopolis." ;
-    rdamd:P30088 "London" ;
-    rdamd:P30117 "J.G. Ballard" ;
-    rdamd:P30137 "First published as: The four-dimensional nightmare. London : Gollancz, 1963." ;
-    rdamd:P30156 "The voices of time" ;
-    rdamd:P30176 "Indigo" ;
-    rdamd:P30182 "197 pages, 20 cm." ;
-    rdamo:P30001 rdact:1049 ;
-    rdamo:P30002 rdamt:1007 ;
-    rdamo:P30139 <http://viaf.org/viaf/311471559/exp/eng/1020>,
-        exp:41557,
-        exp:44123,
-        exp:44458,
-        exp:44514,
-        exp:57613,
-        exp:57628,
-        exp:57635 ;
-    rdaxd:P00018 "isbn-0575401303" .
-
-<http://example.org/isbn-0586023070>
-    a rdac:C10007 ;
-    rdfs:label "The day of forever / J.G. Ballard. – Panther, 1967" ;
-    rdamd:P30004 "ISBN 0586023070 (pbk)" ;
-    rdamd:P30010 "(1985 [printing])" ;
-    rdamd:P30011 "1967" ;
-    rdamd:P30033 "The Day of Forever -- Prisoner of the Coral Deep -- Tomorrow is a Million Years -- The Man on the 99th Floor -- The Waiting Grounds -- The Last World of Mr Goddard -- The Gentle Assassin -- The Sudden Afternoon -- The Insane Ones -- The Assassination of John Fitzgerald Kennedy Considered as a Downhill Motor Race" ;
-    rdamd:P30088 "London" ;
-    rdamd:P30117 "J.G. Ballard" ;
-    rdamd:P30156 "The day of forever" ;
-    rdamd:P30176 "Panther" ;
-    rdamd:P30182 "126p., 20cm." ;
-    rdamo:P30001 rdact:1049 ;
-    rdamo:P30002 rdamt:1007 ;
-    rdamo:P30139 exp:41280,
-        exp:44455,
-        exp:57579,
-        exp:57582,
-        exp:57587,
-        exp:57603,
-        exp:57617,
-        exp:57626,
-        exp:57631,
-        exp:57598 ;
-    rdaxd:P00018 "isbn-0586023070" .
-
-<http://example.org/isbn-0586045031>
-    a rdac:C10007 ;
-    rdfs:label "Low-flying aircraft, and other stories / J.G. Ballard. – Triad, 1978" ;
-    rdamd:P30004 "ISBN 0586045031 (pbk)" ;
-    rdamd:P30011 "1978" ;
-    rdamd:P30033 "The ultimate city -- Low-flying aircraft -- The dead astronaut -- My dream of flying to Wake Island -- The life and death of God -- The greatest television show on earth -- A place and a time to die -- The Comsat angels -- The beach murders" ;
-    rdamd:P30088 "St Albans" ;
-    rdamd:P30117 "J.G. Ballard" ;
-    rdamd:P30137 "This collection originally published: London : Cape, 1976." ;
-    rdamd:P30156 "Low-flying aircraft, and other stories" ;
-    rdamd:P30176 "Triad" ;
-    rdamd:P30182 "191p., 18cm." ;
-    rdamo:P30001 rdact:1049 ;
-    rdamo:P30002 rdamt:1007 ;
-    rdamo:P30139 exp:44466,
-        exp:54304,
-        exp:57581,
-        exp:57583,
-        exp:57589,
-        exp:57599,
-        exp:57602,
-        exp:57607,
-        exp:57615,
-        <http://www.wikidata.org/entity/Q6692707/exp/eng/1020> ;
-    rdaxd:P00018 "isbn-0586045031" .
-
-<http://example.org/isbn-0586089896>
-    a rdac:C10007 ;
-    rdfs:label "Crash. – Paladin, 1990" ;
-    rdamd:P30004 "ISBN 0586089896 (pbk)" ;
-    rdamd:P30011 "1990" ;
-    rdamd:P30156 "Crash" ;
-    rdamd:P30176 "Paladin" ;
-    rdamd:P30182 "171p." ;
-    rdamo:P30001 rdact:1049 ;
-    rdamo:P30002 rdamt:1007 ;
-    rdamo:P30139 <http://viaf.org/viaf/305922109/exp/eng/1020> ;
-    rdaxd:P00018 "isbn-0586089896" .
-
-<http://example.org/isbn-9780575103160>
-    a rdac:C10007 ;
-    rdfs:label "Barrington Bayley SF gateway omnibus. – Gollancz, 2014" ;
-    rdamd:P30004 "ISBN 9780575103160 (paperback)" ;
-    rdamd:P30011 "2014" ;
-    rdamd:P30033 "The soul of the robot -- The knights of the limits -- The fall of Chronopolis." ;
-    rdamd:P30088 "London" ;
-    rdamd:P30137 "Includes QR codes." ;
-    rdamd:P30156 "Barrington Bayley SF gateway omnibus" ;
-    rdamd:P30176 "Gollancz" ;
-    rdamd:P30182 "x, 479 pages, 24 cm." ;
-    rdamo:P30001 rdact:1049 ;
-    rdamo:P30002 rdamt:1007 ;
-    rdamo:P30139 <https://www.isfdb.org/cgi-bin/title.cgi?37224/exp/eng/1020>,
-        <https://www.isfdb.org/cgi-bin/title.cgi?4531/exp/eng/1020>,
-        <https://www.isfdb.org/cgi-bin/title.cgi?4537/exp/eng/1020> ;
-    rdaxd:P00018 "isbn-9780575103160" .
-
-<http://example.org/isbn-9781557536648>
-    a rdac:C10007 ;
-    rdfs:label "Research data management / edited by Joyce M. Ray. – Purdue University Press, [2014]" ;
-    rdamd:P30004 "ISBN 9781557536648 (pbk.)" ;
-    rdamd:P30011 "[2014]" ;
-    rdamd:P30033 "The policy and institutional framework / James L. Mullins -- Data governance : where technology and policy collide / MacKenzie Smith -- The use of life cycle models in developing and supporting data services / Jake Carlson -- Data management assessment and planning tools / Andrew Sallans and Sherry Lake -- Trustworthy data repositories : the value and benefits of auditing and certification / Bernard F. Reilly, Jr. and Marie E. Waltz -- Copyright, open data, and the availability-usability gap : challenges, opportunities, and approaches for libraries / Melissa Levine -- Metadata services / Jenn Riley -- Data citation : principles and practice / Jan Brase, Yvonne Socha, Sarah Callaghan, Christine Borgman, Paul Uhlir, and Bonnie Carroll -- Assimilating digital repositories into the active research process / Tyler Walters -- Partnering to curate and archive social science data / Jared Lyle, George Alter, and Ann Green -- Managing and archiving research data : local repository and Cloud-based practices / Michele Kimpton and Carol Minton Morris -- Chronopolis repository services / David Minor, Brian E. C. Schottlaender, and Ardys Kozbial -- Evaluating a complex project : DataONE / Suzanne Allard -- What to measure? : toward metrics for research data management / Angus Whyte, Laura Molloy, Neil Beagrie, and John Houghton -- An institutional perspective on data curation services : a view from Cornell University / Gail Steinhart -- Purdue University Research Repository : collaborations in data management / D. Scott Brandt -- Data curation for the humanities : perspectives from Rice University / Geneva Henry -- Developing data management services for researchers at the University of Oregon / Brian Westra." ;
-    rdamd:P30088 "West Lafayette, Indiana" ;
-    rdamd:P30106 "Charleston insights in library, archival, and information sciences" ;
-    rdamd:P30117 "edited by Joyce M. Ray" ;
-    rdamd:P30142 "practical strategies for information professionals" ;
-    rdamd:P30156 "Research data management" ;
-    rdamd:P30176 "Purdue University Press" ;
-    rdamd:P30182 "436 pages : illustrations, 23 cm." ;
-    rdamo:P30001 rdact:1049 ;
-    rdamo:P30002 rdamt:1007 ;
-    rdamo:P30139 <http://viaf.org/viaf/43347281/researchdatamanagement/chronopolis/exp/eng/1020>,
-        <http://viaf.org/viaf/43347281/researchdatamanagement/exp/eng/1020> ;
-    rdaxd:P00018 "isbn-9781557536648" .
-
-<http://example.org/isbn-9781783488025>
-    a rdac:C10007 ;
-    rdfs:label "Culture control critique / Frida Beckman. – Rowman & Littlefield International, [2016]" ;
-    rdamd:P30004 "ISBN 9781783488025" ;
-    rdamd:P30011 "[2016]" ;
-    rdamd:P30033 "Introduction -- Culture, control, critique. Cultural critique from the Frankfurt School until today -- Formalism, allegory, totality. Allegory and representation -- Allegory and the present -- Space, allegory, control. Spatial preoccupations -- Celebrating ruins: The drowned world, The drought, The crystal world -- Filling the gaps: Crash, Concrete island, High rise -- Coming into allegory: Cocaine nights, Super-Cannes, Millennium people, Kingdom come -- Totalities, allegories and revolutions -- Cultural critique and form -- Time, allegory, control. Timely preoccupations -- In and out of time: \"Chronopolis\" and in time -- Cultural critique and form -- Vision, allegory, control. Visual preoccupations -- bread and circuses: The hunger games -- Cultural critique and form -- Conclusion." ;
-    rdamd:P30088 "London",
-        "New York" ;
-    rdamd:P30117 "Frida Beckman" ;
-    rdamd:P30142 "allegories of reading the present" ;
-    rdamd:P30156 "Culture control critique" ;
-    rdamd:P30176 "Rowman & Littlefield International" ;
-    rdamd:P30182 "1 online resource." ;
-    rdamo:P30001 rdact:1018 ;
-    rdamo:P30002 rdamt:1003 ;
-    rdamo:P30139 <http://viaf.org/viaf/172957858/culturecontrolcritique/chronopolis/exp/eng/1020>,
-        <http://viaf.org/viaf/172957858/culturecontrolcritique/exp/eng/1020> ;
-    rdaxd:P00018 "isbn-9781783488025" .
-
-<http://example.org/isbn-9789178672677>
-    a rdac:C10007 ;
-    rdfs:label "Kronopolis. – Karlstads universitet, 2022" ;
-    rdamd:P30004 "ISBN 9789178672677",
-        "NN http://urn.kb.se/resolve?urn=urn:nbn:se:kau:diva-88238",
-        "NN urn:nbn:se:kau:diva-88238" ;
-    rdamd:P30011 "2022" ;
-    rdamd:P30088 "Karlstad" ;
-    rdamd:P30106 "Karlstad University Studies" ;
-    rdamd:P30137 "Filosofie doktorsexamen",
-        "degree of Doctor of Philosophy" ;
-    rdamd:P30142 "Tid, makt och medialisering i Malmø" ;
-    rdamd:P30156 "Kronopolis" ;
-    rdamd:P30165 "2022:4" ;
-    rdamd:P30176 "Karlstads universitet" ;
-    rdamo:P30001 rdact:1018 ;
-    rdamo:P30002 rdamt:1003 ;
-    rdamo:P30139 <https://isni.org/isni/000000043862402X/Kronopolis/exp/swe/1020> ;
-    rdaxd:P00018 "NN-88238",
-        "isbn-9789178672677" .

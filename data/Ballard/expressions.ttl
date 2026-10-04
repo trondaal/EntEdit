@@ -1,7 +1,6 @@
-# EntEdit example data – J. G. Ballard – expressions
-# isfdb2lrm conversion of ISFDB (author 259, results/author-259, converter commit c8ab6b3, generated 2026-09-28)
-# merged with the earlier Ballard.ttl catalogue sample; persons, works and expressions
-# identified by VIAF where the earlier sample knew the VIAF identifier.
+# isfdb2lrm – expressions
+# Generated 2026-10-04T10:19:33+00:00 from the local ISFDB database,
+# converter commit f744a29, mode: authors, seed authors: 259, 164697, 170693, 173463, 181841, 194463, 234758, 262838, 266877, 276482, 277873, 285901, 302772, 311516, 406684, 422160
 
 @prefix entedit: <http://oslomet.no/abi/vocab#> .
 @prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
@@ -105,6 +104,17 @@ exp:3570
     rdaeo:P20006 lang:eng ;
     rdaeo:P20231 wrk:3570 .
 
+exp:3571
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://entedit.org/expression/3571",
+        "https://www.isfdb.org/cgi-bin/title.cgi?3571" ;
+    rdaed:P20315 "Crash"@en ;
+    rdfs:label "Crash (Ballard, J. G.) [English, 1973]" ;
+    rdaed:P20214 "1973-06" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 lang:eng ;
+    rdaeo:P20231 <http://viaf.org/viaf/305922109> .
+
 exp:3572
     a rdac:C10006 ;
     rdaxd:P00018 "http://entedit.org/expression/3572",
@@ -126,6 +136,28 @@ exp:3573
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:eng ;
     rdaeo:P20231 wrk:3573 .
+
+exp:3574
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://entedit.org/expression/3574",
+        "https://www.isfdb.org/cgi-bin/title.cgi?3574" ;
+    rdaed:P20315 "Hello America"@en ;
+    rdfs:label "Hello America (Ballard, J. G.) [English, 1981]" ;
+    rdaed:P20214 "1981" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 lang:eng ;
+    rdaeo:P20231 <http://viaf.org/viaf/202977755> .
+
+exp:3575
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://entedit.org/expression/3575",
+        "https://www.isfdb.org/cgi-bin/title.cgi?3575" ;
+    rdaed:P20315 "The Day of Creation"@en ;
+    rdfs:label "The Day of Creation (Ballard, J. G.) [English, 1987]" ;
+    rdaed:P20214 "1987" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 lang:eng ;
+    rdaeo:P20231 <http://viaf.org/viaf/308025936> .
 
 exp:4348
     a rdac:C10006 ;
@@ -236,6 +268,17 @@ exp:8222
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:fre ;
     rdaeo:P20231 wrk:8222 .
+
+exp:8348
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://entedit.org/expression/8348",
+        "https://www.isfdb.org/cgi-bin/title.cgi?8348" ;
+    rdaed:P20315 "Empire of the Sun"@en ;
+    rdfs:label "Empire of the Sun (Ballard, J. G.) [English, 1984]" ;
+    rdaed:P20214 "1984-09-13" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 lang:eng ;
+    rdaeo:P20231 <http://viaf.org/viaf/180997771> .
 
 exp:10552
     a rdac:C10006 ;
@@ -1995,6 +2038,17 @@ exp:37542
     rdaeo:P20006 lang:eng ;
     rdaeo:P20231 wrk:37542 .
 
+exp:37677
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://entedit.org/expression/37677",
+        "https://www.isfdb.org/cgi-bin/title.cgi?37677" ;
+    rdaed:P20315 "Low-Flying Aircraft and Other Stories"@en ;
+    rdfs:label "Low-Flying Aircraft and Other Stories (Ballard, J. G.) [English, 1976]" ;
+    rdaed:P20214 "1976" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 lang:eng ;
+    rdaeo:P20231 <http://www.wikidata.org/entity/Q6692707> .
+
 exp:37678
     a rdac:C10006 ;
     rdaxd:P00018 "http://entedit.org/expression/37678",
@@ -2533,6 +2587,17 @@ exp:40810
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:eng ;
     rdaeo:P20231 wrk:40810 .
+
+exp:40816
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://entedit.org/expression/40816",
+        "https://www.isfdb.org/cgi-bin/title.cgi?40816" ;
+    rdaed:P20315 "The Voices of Time"@en ;
+    rdfs:label "The Voices of Time (Ballard, J. G.) [English, 1960]" ;
+    rdaed:P20214 "1960-10" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 lang:eng ;
+    rdaeo:P20231 <http://viaf.org/viaf/311471559> .
 
 exp:40818
     a rdac:C10006 ;
@@ -7859,6 +7924,17 @@ exp:44022
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:eng ;
     rdaeo:P20231 wrk:44022 .
+
+exp:44028
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://entedit.org/expression/44028",
+        "https://www.isfdb.org/cgi-bin/title.cgi?44028" ;
+    rdaed:P20315 "Boy in Darkness"@en ;
+    rdfs:label "Boy in Darkness (Peake, Mervyn) [English, 1956]" ;
+    rdaed:P20214 "1956" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 lang:eng ;
+    rdaeo:P20231 <http://viaf.org/viaf/309308512> .
 
 exp:44029
     a rdac:C10006 ;
@@ -17839,6 +17915,17 @@ exp:56827
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:eng ;
     rdaeo:P20231 wrk:56827 .
+
+exp:56831
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://entedit.org/expression/56831",
+        "https://www.isfdb.org/cgi-bin/title.cgi?56831" ;
+    rdaed:P20315 "Danger: Religion!"@en ;
+    rdfs:label "Danger: Religion! (Aldiss, Brian W.) [English, 1962]" ;
+    rdaed:P20214 "1962-10" ;
+    rdaeo:P20001 rdaco:1020 ;
+    rdaeo:P20006 lang:eng ;
+    rdaeo:P20231 <http://viaf.org/viaf/183421260> .
 
 exp:56833
     a rdac:C10006 ;
@@ -67929,7 +68016,7 @@ exp:1388107
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:por ;
     rdaeo:P20231 <http://viaf.org/viaf/202977755> ;
-    rdaeo:P20141 <http://viaf.org/viaf/202977755/exp/eng/1020> .
+    rdaeo:P20141 exp:3574 .
 
 exp:1388161
     a rdac:C10006 ;
@@ -67942,7 +68029,7 @@ exp:1388161
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:por ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q6692707> ;
-    rdaeo:P20141 <http://www.wikidata.org/entity/Q6692707/exp/eng/1020> ;
+    rdaeo:P20141 exp:37677 ;
     rdaeo:P20037 <http://entedit.org/person/tr/fernanda-pinto-rodrigues> .
 
 exp:1388414
@@ -68759,7 +68846,7 @@ exp:1399653
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:ita ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q6692707> ;
-    rdaeo:P20141 <http://www.wikidata.org/entity/Q6692707/exp/eng/1020> ;
+    rdaeo:P20141 exp:37677 ;
     rdaeo:P20037 <http://entedit.org/person/tr/maria-benedetta-de-castiglione>,
         <http://entedit.org/person/tr/mario-galli> .
 
@@ -72029,7 +72116,7 @@ exp:1430171
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:dut ;
     rdaeo:P20231 <http://viaf.org/viaf/202977755> ;
-    rdaeo:P20141 <http://viaf.org/viaf/202977755/exp/eng/1020> ;
+    rdaeo:P20141 exp:3574 ;
     rdaeo:P20037 <http://entedit.org/person/tr/m-lindenburg> .
 
 exp:1430182
@@ -73449,7 +73536,7 @@ exp:1455793
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:ger ;
     rdaeo:P20231 <http://viaf.org/viaf/311471559> ;
-    rdaeo:P20141 <http://viaf.org/viaf/311471559/exp/eng/1020> ;
+    rdaeo:P20141 exp:40816 ;
     rdaeo:P20037 <http://entedit.org/person/tr/wolfgang-eisermann> .
 
 exp:1455794
@@ -74643,7 +74730,7 @@ exp:1476634
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:dut ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q6692707> ;
-    rdaeo:P20141 <http://www.wikidata.org/entity/Q6692707/exp/eng/1020> ;
+    rdaeo:P20141 exp:37677 ;
     rdaeo:P20037 per:20054 .
 
 exp:1476635
@@ -74916,7 +75003,7 @@ exp:1483426
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:dut ;
     rdaeo:P20231 <http://viaf.org/viaf/311471559> ;
-    rdaeo:P20141 <http://viaf.org/viaf/311471559/exp/eng/1020> ;
+    rdaeo:P20141 exp:40816 ;
     rdaeo:P20037 <http://entedit.org/person/tr/nettie-van-straten> .
 
 exp:1483427
@@ -78969,7 +79056,7 @@ exp:1521067
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:ita ;
     rdaeo:P20231 <http://viaf.org/viaf/305922109> ;
-    rdaeo:P20141 <http://viaf.org/viaf/305922109/exp/eng/1020> ;
+    rdaeo:P20141 exp:3571 ;
     rdaeo:P20037 <http://entedit.org/person/tr/gianni-pilone-colombo> .
 
 exp:1521068
@@ -81120,7 +81207,7 @@ exp:1568269
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:ita ;
     rdaeo:P20231 <http://viaf.org/viaf/311471559> ;
-    rdaeo:P20141 <http://viaf.org/viaf/311471559/exp/eng/1020> ;
+    rdaeo:P20141 exp:40816 ;
     rdaeo:P20037 <http://entedit.org/person/tr/abramo-luraschi> .
 
 exp:1568560
@@ -82572,7 +82659,7 @@ exp:1590115
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:ita ;
     rdaeo:P20231 <http://viaf.org/viaf/311471559> ;
-    rdaeo:P20141 <http://viaf.org/viaf/311471559/exp/eng/1020> ;
+    rdaeo:P20141 exp:40816 ;
     rdaeo:P20037 <http://entedit.org/person/tr/lidia-lax> .
 
 exp:1590116
@@ -86922,7 +87009,7 @@ exp:1658365
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:ger ;
     rdaeo:P20231 <http://www.wikidata.org/entity/Q6692707> ;
-    rdaeo:P20141 <http://www.wikidata.org/entity/Q6692707/exp/eng/1020> ;
+    rdaeo:P20141 exp:37677 ;
     rdaeo:P20037 per:176711 .
 
 exp:1658366
@@ -87378,7 +87465,7 @@ exp:1670903
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:fre ;
     rdaeo:P20231 <http://viaf.org/viaf/305922109> ;
-    rdaeo:P20141 <http://viaf.org/viaf/305922109/exp/eng/1020> ;
+    rdaeo:P20141 exp:3571 ;
     rdaeo:P20037 per:146134 .
 
 exp:1672702
@@ -89139,7 +89226,7 @@ exp:1744276
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:ger ;
     rdaeo:P20231 <http://viaf.org/viaf/202977755> ;
-    rdaeo:P20141 <http://viaf.org/viaf/202977755/exp/eng/1020> ;
+    rdaeo:P20141 exp:3574 ;
     rdaeo:P20037 <http://entedit.org/person/tr/rudolf-hermstein> .
 
 exp:1748357
@@ -93887,7 +93974,7 @@ exp:1808619
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:fre ;
     rdaeo:P20231 <http://viaf.org/viaf/202977755> ;
-    rdaeo:P20141 <http://viaf.org/viaf/202977755/exp/eng/1020> ;
+    rdaeo:P20141 exp:3574 ;
     rdaeo:P20037 <http://entedit.org/person/tr/elisabeth-gille> .
 
 exp:1810973
@@ -96264,7 +96351,7 @@ exp:1879697
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:dut ;
     rdaeo:P20231 <http://viaf.org/viaf/305922109> ;
-    rdaeo:P20141 <http://viaf.org/viaf/305922109/exp/eng/1020> ;
+    rdaeo:P20141 exp:3571 ;
     rdaeo:P20037 <http://entedit.org/person/tr/david-brisk> .
 
 exp:1879699
@@ -96278,7 +96365,7 @@ exp:1879699
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:dut ;
     rdaeo:P20231 <http://viaf.org/viaf/180997771> ;
-    rdaeo:P20141 <http://viaf.org/viaf/180997771/exp/eng/1020> ;
+    rdaeo:P20141 exp:8348 ;
     rdaeo:P20037 <http://entedit.org/person/tr/hans-bouman>,
         <http://entedit.org/person/tr/lucas-ligtenberg> .
 
@@ -98715,7 +98802,7 @@ exp:1968524
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:ger ;
     rdaeo:P20231 <http://viaf.org/viaf/305922109> ;
-    rdaeo:P20141 <http://viaf.org/viaf/305922109/exp/eng/1020> ;
+    rdaeo:P20141 exp:3571 ;
     rdaeo:P20037 per:145853 .
 
 exp:1968528
@@ -101671,7 +101758,7 @@ exp:2031456
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:ger ;
     rdaeo:P20231 <http://viaf.org/viaf/308025936> ;
-    rdaeo:P20141 <http://viaf.org/viaf/308025936/exp/eng/1020> ;
+    rdaeo:P20141 exp:3575 ;
     rdaeo:P20037 <http://entedit.org/person/tr/detlef-neuls> .
 
 exp:2031458
@@ -110094,7 +110181,7 @@ exp:2328328
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:fre ;
     rdaeo:P20231 <http://viaf.org/viaf/311471559> ;
-    rdaeo:P20141 <http://viaf.org/viaf/311471559/exp/eng/1020> ;
+    rdaeo:P20141 exp:40816 ;
     rdaeo:P20037 <http://entedit.org/person/tr/gisele-carson>,
         per:90341 .
 
@@ -110753,7 +110840,7 @@ exp:2348270
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:spa ;
     rdaeo:P20231 <http://viaf.org/viaf/305922109> ;
-    rdaeo:P20141 <http://viaf.org/viaf/305922109/exp/eng/1020> ;
+    rdaeo:P20141 exp:3571 ;
     rdaeo:P20037 <http://entedit.org/person/tr/francisco-abelenda> .
 
 exp:2348272
@@ -112008,7 +112095,7 @@ exp:2381068
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:ger ;
     rdaeo:P20231 <http://viaf.org/viaf/311471559> ;
-    rdaeo:P20141 <http://viaf.org/viaf/311471559/exp/eng/1020> ;
+    rdaeo:P20141 exp:40816 ;
     rdaeo:P20037 <http://entedit.org/person/tr/wolfgang-eisermann> .
 
 exp:2381070
@@ -112428,7 +112515,7 @@ exp:2387500
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:dut ;
     rdaeo:P20231 <http://viaf.org/viaf/202977755> ;
-    rdaeo:P20141 <http://viaf.org/viaf/202977755/exp/eng/1020> ;
+    rdaeo:P20141 exp:3574 ;
     rdaeo:P20037 <http://entedit.org/person/tr/robbert-jan-henkes> .
 
 exp:2387586
@@ -116007,7 +116094,7 @@ exp:2501123
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:ger ;
     rdaeo:P20231 <http://viaf.org/viaf/180997771> ;
-    rdaeo:P20141 <http://viaf.org/viaf/180997771/exp/eng/1020> ;
+    rdaeo:P20141 exp:8348 ;
     rdaeo:P20037 <http://entedit.org/person/tr/juliane-grabener>,
         <http://entedit.org/person/tr/marianne-menzel> .
 
@@ -120463,7 +120550,7 @@ exp:2680881
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:spa ;
     rdaeo:P20231 <http://viaf.org/viaf/311471559> ;
-    rdaeo:P20141 <http://viaf.org/viaf/311471559/exp/eng/1020> ;
+    rdaeo:P20141 exp:40816 ;
     rdaeo:P20037 <http://entedit.org/person/tr/jose-maria-aroca> .
 
 exp:2681893
@@ -121987,7 +122074,7 @@ exp:2716530
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:por ;
     rdaeo:P20231 <http://viaf.org/viaf/311471559> ;
-    rdaeo:P20141 <http://viaf.org/viaf/311471559/exp/eng/1020> ;
+    rdaeo:P20141 exp:40816 ;
     rdaeo:P20037 <http://entedit.org/person/tr/augusto-goncalves-and-or-helena-oliveira> .
 
 exp:2716531
@@ -122152,7 +122239,7 @@ exp:2723438
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:bul ;
     rdaeo:P20231 <http://viaf.org/viaf/305922109> ;
-    rdaeo:P20141 <http://viaf.org/viaf/305922109/exp/eng/1020> ;
+    rdaeo:P20141 exp:3571 ;
     rdaeo:P20037 <http://entedit.org/person/tr/deyan-kyuchukov> .
 
 exp:2723442
@@ -123576,7 +123663,7 @@ exp:2787583
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:ger ;
     rdaeo:P20231 <http://viaf.org/viaf/305922109> ;
-    rdaeo:P20141 <http://viaf.org/viaf/305922109/exp/eng/1020> ;
+    rdaeo:P20141 exp:3571 ;
     rdaeo:P20037 <http://entedit.org/person/tr/sabine-schulz> .
 
 exp:2789422
@@ -135058,7 +135145,7 @@ exp:3521804
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:fre ;
     rdaeo:P20231 <http://viaf.org/viaf/311471559> ;
-    rdaeo:P20141 <http://viaf.org/viaf/311471559/exp/eng/1020> ;
+    rdaeo:P20141 exp:40816 ;
     rdaeo:P20037 <http://entedit.org/person/tr/laure-casseau> .
 
 exp:3521805
@@ -137770,7 +137857,7 @@ exp:3593195
     rdaeo:P20001 rdaco:1020 ;
     rdaeo:P20006 lang:jpn ;
     rdaeo:P20231 <http://viaf.org/viaf/311471559> ;
-    rdaeo:P20141 <http://viaf.org/viaf/311471559/exp/eng/1020> .
+    rdaeo:P20141 exp:40816 .
 
 exp:3593196
     a rdac:C10006 ;
@@ -140321,389 +140408,3 @@ exp:3675440
     rdaeo:P20006 lang:jpn ;
     rdaeo:P20231 wrk:3675440 .
 
-<http://viaf.org/viaf/172957858/culturecontrolcritique/chronopolis/exp/eng/1020>
-    a rdac:C10006 ;
-    rdfs:label "In and out of time: \"Chronopolis\" and in time / Frida Beckman. – English"@en,
-        "In and out of time: \"Chronopolis\" and in time / Frida Beckman. – Engelsk"@no ;
-    rdaed:P20315 "In and out of time: \"Chronopolis\" and in time" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 lang:eng ;
-    rdaeo:P20231 <http://viaf.org/viaf/172957858/culturecontrolcritique/chronopolis> .
-
-<http://viaf.org/viaf/172957858/culturecontrolcritique/exp/eng/1020>
-    a rdac:C10006 ;
-    rdfs:label "Culture control critique : allegories of reading the present / Frida Beckman. – English"@en,
-        "Culture control critique : allegories of reading the present / Frida Beckman. – Engelsk"@no ;
-    rdaed:P20071 "Introduction -- Culture, control, critique. Cultural critique from the Frankfurt School until today -- Formalism, allegory, totality. Allegory and representation -- Allegory and the present -- Space, allegory, control. Spatial preoccupations -- Celebrating ruins: The drowned world, The drought, The crystal world -- Filling the gaps: Crash, Concrete island, High rise -- Coming into allegory: Cocaine nights, Super-Cannes, Millennium people, Kingdom come -- Totalities, allegories and revolutions -- Cultural critique and form -- Time, allegory, control. Timely preoccupations -- In and out of time: \"Chronopolis\" and in time -- Cultural critique and form -- Vision, allegory, control. Visual preoccupations -- bread and circuses: The hunger games -- Cultural critique and form -- Conclusion." ;
-    rdaed:P20315 "Culture control critique : allegories of reading the present" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 lang:eng ;
-    rdaeo:P20145 <http://viaf.org/viaf/172957858/culturecontrolcritique/chronopolis/exp/eng/1020> ;
-    rdaeo:P20231 <http://viaf.org/viaf/172957858/culturecontrolcritique> .
-
-<http://viaf.org/viaf/180997771/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaxd:P00018 "http://entedit.org/expression/8348",
-        "https://www.isfdb.org/cgi-bin/title.cgi?8348" ;
-    rdaed:P20315 "Empire of the Sun"@en ;
-    rdfs:label "Empire of the Sun (Ballard, J. G.) [English, 1984]" ;
-    rdaed:P20214 "1984-09-13" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 lang:eng ;
-    rdaeo:P20231 <http://viaf.org/viaf/180997771> .
-
-<http://viaf.org/viaf/183421260/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaxd:P00018 "http://entedit.org/expression/56831",
-        "https://www.isfdb.org/cgi-bin/title.cgi?56831" ;
-    rdaed:P20315 "Danger: Religion!"@en ;
-    rdfs:label "Danger: Religion! (Aldiss, Brian W.) [English, 1962]" ;
-    rdaed:P20214 "1962-10" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 lang:eng ;
-    rdaeo:P20231 <http://viaf.org/viaf/183421260> .
-
-<http://viaf.org/viaf/202977755/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaxd:P00018 "http://entedit.org/expression/3574",
-        "https://www.isfdb.org/cgi-bin/title.cgi?3574" ;
-    rdaed:P20315 "Hello America"@en ;
-    rdfs:label "Hello America (Ballard, J. G.) [English, 1981]" ;
-    rdaed:P20214 "1981" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 lang:eng ;
-    rdaeo:P20231 <http://viaf.org/viaf/202977755> .
-
-<http://viaf.org/viaf/305922109/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaxd:P00018 "http://entedit.org/expression/3571",
-        "https://www.isfdb.org/cgi-bin/title.cgi?3571" ;
-    rdaed:P20315 "Crash"@en ;
-    rdfs:label "Crash (Ballard, J. G.) [English, 1973]" ;
-    rdaed:P20214 "1973-06" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 lang:eng ;
-    rdaeo:P20231 <http://viaf.org/viaf/305922109> .
-
-<http://viaf.org/viaf/308025936/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaxd:P00018 "http://entedit.org/expression/3575",
-        "https://www.isfdb.org/cgi-bin/title.cgi?3575" ;
-    rdaed:P20315 "The Day of Creation"@en ;
-    rdfs:label "The Day of Creation (Ballard, J. G.) [English, 1987]" ;
-    rdaed:P20214 "1987" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 lang:eng ;
-    rdaeo:P20231 <http://viaf.org/viaf/308025936> .
-
-<http://viaf.org/viaf/309308512/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaxd:P00018 "http://entedit.org/expression/44028",
-        "https://www.isfdb.org/cgi-bin/title.cgi?44028" ;
-    rdaed:P20315 "Boy in Darkness"@en ;
-    rdfs:label "Boy in Darkness (Peake, Mervyn) [English, 1956]" ;
-    rdaed:P20214 "1956" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 lang:eng ;
-    rdaeo:P20231 <http://viaf.org/viaf/309308512> .
-
-<http://viaf.org/viaf/311471559/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaxd:P00018 "http://entedit.org/expression/40816",
-        "https://www.isfdb.org/cgi-bin/title.cgi?40816" ;
-    rdaed:P20315 "The Voices of Time"@en ;
-    rdfs:label "The Voices of Time (Ballard, J. G.) [English, 1960]" ;
-    rdaed:P20214 "1960-10" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 lang:eng ;
-    rdaeo:P20231 <http://viaf.org/viaf/311471559> .
-
-<http://viaf.org/viaf/43347281/researchdatamanagement/chronopolis/exp/eng/1020>
-    a rdac:C10006 ;
-    rdfs:label "Chronopolis repository service / Ardys Kozbial, Brian E. C. Schottlaender and David Minor. – English"@en,
-        "Chronopolis repository service / Ardys Kozbial, Brian E. C. Schottlaender og David Minor. – Engelsk"@no ;
-    rdaed:P20315 "Chronopolis repository service" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 lang:eng ;
-    rdaeo:P20231 <http://viaf.org/viaf/43347281/researchdatamanagement/chronopolis> .
-
-<http://viaf.org/viaf/43347281/researchdatamanagement/exp/eng/1020>
-    a rdac:C10006 ;
-    rdfs:label "Research data management : practical strategies for information professionals / compiled by Joyce M. Ray. – English"@en,
-        "Research data management : practical strategies for information professionals / utarbeidet av Joyce M. Ray. – Engelsk"@no ;
-    rdaed:P20071 "The policy and institutional framework / James L. Mullins -- Data governance : where technology and policy collide / MacKenzie Smith -- The use of life cycle models in developing and supporting data services / Jake Carlson -- Data management assessment and planning tools / Andrew Sallans and Sherry Lake -- Trustworthy data repositories : the value and benefits of auditing and certification / Bernard F. Reilly, Jr. and Marie E. Waltz -- Copyright, open data, and the availability-usability gap : challenges, opportunities, and approaches for libraries / Melissa Levine -- Metadata services / Jenn Riley -- Data citation : principles and practice / Jan Brase, Yvonne Socha, Sarah Callaghan, Christine Borgman, Paul Uhlir, and Bonnie Carroll -- Assimilating digital repositories into the active research process / Tyler Walters -- Partnering to curate and archive social science data / Jared Lyle, George Alter, and Ann Green -- Managing and archiving research data : local repository and Cloud-based practices / Michele Kimpton and Carol Minton Morris -- Chronopolis repository services / David Minor, Brian E. C. Schottlaender, and Ardys Kozbial -- Evaluating a complex project : DataONE / Suzanne Allard -- What to measure? : toward metrics for research data management / Angus Whyte, Laura Molloy, Neil Beagrie, and John Houghton -- An institutional perspective on data curation services : a view from Cornell University / Gail Steinhart -- Purdue University Research Repository : collaborations in data management / D. Scott Brandt -- Data curation for the humanities : perspectives from Rice University / Geneva Henry -- Developing data management services for researchers at the University of Oregon / Brian Westra." ;
-    rdaed:P20315 "Research data management : practical strategies for information professionals" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 lang:eng ;
-    rdaeo:P20145 <http://viaf.org/viaf/43347281/researchdatamanagement/chronopolis/exp/eng/1020> ;
-    rdaeo:P20231 <http://viaf.org/viaf/43347281/researchdatamanagement> .
-
-<http://www.isfdb.org/cgi-bin/pe.cgi?41887/exp/eng/1020>
-    a rdac:C10006 ;
-    rdfs:label "The fifth head of Cerberus. – English"@en,
-        "The fifth head of Cerberus. – Engelsk"@no ;
-    rdaed:P20315 "The fifth head of Cerberus" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 lang:eng ;
-    rdaeo:P20231 <http://www.isfdb.org/cgi-bin/pe.cgi?41887> .
-
-<http://www.isfdb.org/cgi-bin/title.cgi?189852/exp/eng/1020>
-    a rdac:C10006 ;
-    rdfs:label "The proud robot. – English"@en,
-        "The proud robot. – Engelsk"@no ;
-    rdaed:P20315 "The proud robot" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 lang:eng ;
-    rdaeo:P20231 <http://www.isfdb.org/cgi-bin/title.cgi?189852> .
-
-<http://www.isfdb.org/cgi-bin/title.cgi?2825264/exp/eng/1020>
-    a rdac:C10006 ;
-    rdfs:label "Zero hour. – English"@en,
-        "Zero hour. – Engelsk"@no ;
-    rdaed:P20315 "Zero hour" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 lang:eng ;
-    rdaeo:P20231 <http://www.isfdb.org/cgi-bin/title.cgi?2825264> .
-
-<http://www.isfdb.org/cgi-bin/title.cgi?37575/exp/eng/1020>
-    a rdac:C10006 ;
-    rdfs:label "Second variety. – English"@en,
-        "Second variety. – Engelsk"@no ;
-    rdaed:P20315 "Second variety" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 lang:eng ;
-    rdaeo:P20231 <http://www.isfdb.org/cgi-bin/title.cgi?37575> .
-
-<http://www.isfdb.org/cgi-bin/title.cgi?41225/exp/eng/1020>
-    a rdac:C10006 ;
-    rdfs:label "The lens. – English"@en,
-        "The lens. – Engelsk"@no ;
-    rdaed:P20315 "The lens" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 lang:eng ;
-    rdaeo:P20231 <http://www.isfdb.org/cgi-bin/title.cgi?41225> .
-
-<http://www.isfdb.org/cgi-bin/title.cgi?493181/exp/eng/1020>
-    a rdac:C10006 ;
-    rdfs:label "A kind of artistry. – English"@en,
-        "A kind of artistry. – Engelsk"@no ;
-    rdaed:P20315 "A kind of artistry" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 lang:eng ;
-    rdaeo:P20231 <http://www.isfdb.org/cgi-bin/title.cgi?493181> .
-
-<http://www.isfdb.org/cgi-bin/title.cgi?97137/exp/eng/1020>
-    a rdac:C10006 ;
-    rdfs:label "The inspector / J. McKimmey. – English"@en,
-        "The inspector / J. McKimmey. – Engelsk"@no ;
-    rdaed:P20315 "The inspector" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 lang:eng ;
-    rdaeo:P20231 <http://www.isfdb.org/cgi-bin/title.cgi?97137> .
-
-<http://www.wikidata.org/entity/Q6692707/exp/eng/1020>
-    a rdac:C10006 ;
-    rdaxd:P00018 "http://entedit.org/expression/37677",
-        "https://www.isfdb.org/cgi-bin/title.cgi?37677" ;
-    rdaed:P20315 "Low-Flying Aircraft and Other Stories"@en ;
-    rdfs:label "Low-Flying Aircraft and Other Stories (Ballard, J. G.) [English, 1976]" ;
-    rdaed:P20214 "1976" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 lang:eng ;
-    rdaeo:P20231 <http://www.wikidata.org/entity/Q6692707> ;
-    rdaed:P20071 "The ultimate city -- Low-flying aircraft -- The dead astronaut -- My dream of flying to Wake Island -- The life and death of God -- The greatest television show on earth -- A place and a time to die -- The Comsat angels -- The beach murders" ;
-    rdaeo:P20145 exp:44466 .
-
-<https://en.wikipedia.org/wiki/Franklin_Cox/chronopolis/exp/zxx/1011>
-    a rdac:C10006 ;
-    rdfs:label "Chronopolis / Frank Cox ; performed by Lisa Cella. – Performed music"@en,
-        "Chronopolis / Frank Cox ; framført av Lisa Cella. – Framført musikk"@no ;
-    rdaed:P20065 lang:eng ;
-    rdaed:P20315 "Chronopolis" ;
-    rdaeo:P20001 rdaco:1011 ;
-    rdaeo:P20006 lang:zxx ;
-    rdaeo:P20020 <https://isni.org/isni/0000000033066226> ;
-    rdaeo:P20231 <https://en.wikipedia.org/wiki/Franklin_Cox/chronopolis> .
-
-<https://isni.org/isni/0000000033066226/islenoise/exp/zxx/1011>
-    a rdac:C10006 ;
-    rdfs:label "The isle is full of noises / performed by Lisa Cella. – Performed music"@en,
-        "The isle is full of noises / framført av Lisa Cella. – Framført musikk"@no ;
-    rdaed:P20065 lang:eng ;
-    rdaed:P20071 "Nocturno for solo alto flute / by Mario Lavista (5:55) -- Fictions : eight pieces for solo flute / by Christopher Wendell Jones (7:41) -- [ga]:[ge]:[go]:[gu] : for bass flute and computer / by David Kim-Boyle (11:32) -- Re : for solo piccolo / by Steven Hoey (9:33) -- Family portraits. Embden Pond : for alto flute and two vibraphones / by Stuart Saunders Smith (12:29) -- Chronopolis : for solo flute / by Franklin Cox (15:00)." ;
-    rdaed:P20315 "The isle is full of noises" ;
-    rdaeo:P20001 rdaco:1011 ;
-    rdaeo:P20006 lang:zxx ;
-    rdaeo:P20020 <https://isni.org/isni/0000000033066226> ;
-    rdaeo:P20145 <https://en.wikipedia.org/wiki/Franklin_Cox/chronopolis/exp/zxx/1011> ;
-    rdaeo:P20231 <https://isni.org/isni/0000000033066226/islenoise> .
-
-<https://isni.org/isni/0000000372289205/dreamcargoes/1/exp/zxx/1011>
-    a rdac:C10006 ;
-    rdfs:label "Chronopolis / Erwin Van Moll and Modular K. – Performed music"@en,
-        "Chronopolis / Erwin Van Moll og Modular K. – Framført musikk"@no ;
-    rdaed:P20315 "Chronopolis" ;
-    rdaeo:P20001 rdaco:1011 ;
-    rdaeo:P20006 lang:zxx ;
-    rdaeo:P20039 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdaeo:P20231 <https://isni.org/isni/0000000372289205/dreamcargoes/1> .
-
-<https://isni.org/isni/0000000372289205/dreamcargoes/10/exp/zxx/1011>
-    a rdac:C10006 ;
-    rdfs:label "Now: zero / Erwin Van Moll and Modular K. – Performed music"@en,
-        "Now: zero / Erwin Van Moll og Modular K. – Framført musikk"@no ;
-    rdaed:P20315 "Now: zero" ;
-    rdaeo:P20001 rdaco:1011 ;
-    rdaeo:P20006 lang:zxx ;
-    rdaeo:P20039 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdaeo:P20231 <https://isni.org/isni/0000000372289205/dreamcargoes/10> .
-
-<https://isni.org/isni/0000000372289205/dreamcargoes/2/exp/zxx/1011>
-    a rdac:C10006 ;
-    rdfs:label "The last world of Mr. Goddard / Erwin Van Moll and Modular K. – Performed music"@en,
-        "The last world of Mr. Goddard / Erwin Van Moll og Modular K. – Framført musikk"@no ;
-    rdaed:P20315 "The last world of Mr. Goddard" ;
-    rdaeo:P20001 rdaco:1011 ;
-    rdaeo:P20006 lang:zxx ;
-    rdaeo:P20039 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdaeo:P20231 <https://isni.org/isni/0000000372289205/dreamcargoes/2> .
-
-<https://isni.org/isni/0000000372289205/dreamcargoes/3/exp/zxx/1011>
-    a rdac:C10006 ;
-    rdfs:label "Dream cargoes / Erwin Van Moll and Modular K. – Performed music"@en,
-        "Dream cargoes / Erwin Van Moll og Modular K. – Framført musikk"@no ;
-    rdaed:P20315 "Dream cargoes" ;
-    rdaeo:P20001 rdaco:1011 ;
-    rdaeo:P20006 lang:zxx ;
-    rdaeo:P20039 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdaeo:P20231 <https://isni.org/isni/0000000372289205/dreamcargoes/3> .
-
-<https://isni.org/isni/0000000372289205/dreamcargoes/4/exp/zxx/1011>
-    a rdac:C10006 ;
-    rdfs:label "The Delta at sunset / Erwin Van Moll and Modular K. – Performed music"@en,
-        "The Delta at sunset / Erwin Van Moll og Modular K. – Framført musikk"@no ;
-    rdaed:P20315 "The Delta at sunset" ;
-    rdaeo:P20001 rdaco:1011 ;
-    rdaeo:P20006 lang:zxx ;
-    rdaeo:P20039 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdaeo:P20231 <https://isni.org/isni/0000000372289205/dreamcargoes/4> .
-
-<https://isni.org/isni/0000000372289205/dreamcargoes/5/exp/zxx/1011>
-    a rdac:C10006 ;
-    rdfs:label "End-game (feat. Edward Capel) / Erwin Van Moll and Modular K. – Performed music"@en,
-        "End-game (feat. Edward Capel) / Erwin Van Moll og Modular K. – Framført musikk"@no ;
-    rdaed:P20315 "End-game (feat. Edward Capel)" ;
-    rdaeo:P20001 rdaco:1011 ;
-    rdaeo:P20006 lang:zxx ;
-    rdaeo:P20039 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdaeo:P20231 <https://isni.org/isni/0000000372289205/dreamcargoes/5> .
-
-<https://isni.org/isni/0000000372289205/dreamcargoes/6/exp/zxx/1011>
-    a rdac:C10006 ;
-    rdfs:label "Now wakes the sea / Erwin Van Moll and Modular K. – Performed music"@en,
-        "Now wakes the sea / Erwin Van Moll og Modular K. – Framført musikk"@no ;
-    rdaed:P20315 "Now wakes the sea" ;
-    rdaeo:P20001 rdaco:1011 ;
-    rdaeo:P20006 lang:zxx ;
-    rdaeo:P20039 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdaeo:P20231 <https://isni.org/isni/0000000372289205/dreamcargoes/6> .
-
-<https://isni.org/isni/0000000372289205/dreamcargoes/7/exp/zxx/1011>
-    a rdac:C10006 ;
-    rdfs:label "Studio 5, the stars / Erwin Van Moll and Modular K. – Performed music"@en,
-        "Studio 5, the stars / Erwin Van Moll og Modular K. – Framført musikk"@no ;
-    rdaed:P20315 "Studio 5, the stars" ;
-    rdaeo:P20001 rdaco:1011 ;
-    rdaeo:P20006 lang:zxx ;
-    rdaeo:P20039 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdaeo:P20231 <https://isni.org/isni/0000000372289205/dreamcargoes/7> .
-
-<https://isni.org/isni/0000000372289205/dreamcargoes/8/exp/zxx/1011>
-    a rdac:C10006 ;
-    rdfs:label "The sound-sweep / Erwin Van Moll and Modular K. – Performed music"@en,
-        "The sound-sweep / Erwin Van Moll og Modular K. – Framført musikk"@no ;
-    rdaed:P20315 "The sound-sweep" ;
-    rdaeo:P20001 rdaco:1011 ;
-    rdaeo:P20006 lang:zxx ;
-    rdaeo:P20039 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdaeo:P20231 <https://isni.org/isni/0000000372289205/dreamcargoes/8> .
-
-<https://isni.org/isni/0000000372289205/dreamcargoes/9/exp/zxx/1011>
-    a rdac:C10006 ;
-    rdfs:label "Memories of the space age / Erwin Van Moll and Modular K. – Performed music"@en,
-        "Memories of the space age / Erwin Van Moll og Modular K. – Framført musikk"@no ;
-    rdaed:P20315 "Memories of the space age" ;
-    rdaeo:P20001 rdaco:1011 ;
-    rdaeo:P20006 lang:zxx ;
-    rdaeo:P20039 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdaeo:P20231 <https://isni.org/isni/0000000372289205/dreamcargoes/9> .
-
-<https://isni.org/isni/0000000372289205/dreamcargoes/exp/zxx/1011>
-    a rdac:C10006 ;
-    rdfs:label "Dream cargoes / Erwin Van Moll and Modular K. – Performed music"@en,
-        "Dream cargoes / Erwin Van Moll og Modular K. – Framført musikk"@no ;
-    rdaed:P20071 "Chronopolis -- The last world of Mr. Goddard -- Dream cargoes -- The Delta at sunset -- End-game (feat. Edward Capel) -- Now wakes the sea -- Studio 5, the stars -- The sound-sweep -- Memories of the space age -- Now: zero." ;
-    rdaed:P20315 "Dream cargoes" ;
-    rdaeo:P20001 rdaco:1011 ;
-    rdaeo:P20006 lang:zxx ;
-    rdaeo:P20039 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdaeo:P20145 <https://isni.org/isni/0000000372289205/dreamcargoes/1/exp/zxx/1011>,
-        <https://isni.org/isni/0000000372289205/dreamcargoes/10/exp/zxx/1011>,
-        <https://isni.org/isni/0000000372289205/dreamcargoes/2/exp/zxx/1011>,
-        <https://isni.org/isni/0000000372289205/dreamcargoes/3/exp/zxx/1011>,
-        <https://isni.org/isni/0000000372289205/dreamcargoes/4/exp/zxx/1011>,
-        <https://isni.org/isni/0000000372289205/dreamcargoes/5/exp/zxx/1011>,
-        <https://isni.org/isni/0000000372289205/dreamcargoes/6/exp/zxx/1011>,
-        <https://isni.org/isni/0000000372289205/dreamcargoes/7/exp/zxx/1011>,
-        <https://isni.org/isni/0000000372289205/dreamcargoes/8/exp/zxx/1011>,
-        <https://isni.org/isni/0000000372289205/dreamcargoes/9/exp/zxx/1011> ;
-    rdaeo:P20231 <https://isni.org/isni/0000000372289205/dreamcargoes> .
-
-<https://isni.org/isni/000000043862402X/Kronopolis/exp/swe/1020>
-    a rdac:C10006 ;
-    rdfs:label "Kronopolis : Tid, makt och medialisering i Malmø / Fredrik Edin. – Swedish"@en,
-        "Kronopolis : Tid, makt och medialisering i Malmø / Fredrik Edin. – Svensk"@no ;
-    rdaed:P20065 lang:eng ;
-    rdaed:P20315 "Kronopolis : Tid, makt och medialisering i Malmø" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 lang:swe ;
-    rdaeo:P20231 <https://isni.org/isni/000000043862402X/Kronopolis> .
-
-<https://www.isfdb.org/cgi-bin/title.cgi?37224/exp/eng/1020>
-    a rdac:C10006 ;
-    rdfs:label "Knights of the limits / Barrington J Bayley. – English"@en,
-        "Knights of the limits / Barrington J Bayley. – Engelsk"@no ;
-    rdaed:P20315 "Knights of the limits" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 lang:eng ;
-    rdaeo:P20231 <https://www.isfdb.org/cgi-bin/title.cgi?37224> .
-
-<https://www.isfdb.org/cgi-bin/title.cgi?4531/exp/eng/1020>
-    a rdac:C10006 ;
-    rdfs:label "Soul of the robot / Barrington J Bayley. – English"@en,
-        "Soul of the robot / Barrington J Bayley. – Engelsk"@no ;
-    rdaed:P20315 "Soul of the robot" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 lang:eng ;
-    rdaeo:P20231 <https://www.isfdb.org/cgi-bin/title.cgi?4531> .
-
-<https://www.isfdb.org/cgi-bin/title.cgi?4537/exp/eng/1020>
-    a rdac:C10006 ;
-    rdfs:label "Fall of Chronopolis / Barrington J Bayley. – English"@en,
-        "Fall of Chronopolis / Barrington J Bayley. – Engelsk"@no ;
-    rdaed:P20315 "Fall of Chronopolis" ;
-    rdaed:P20316 "The fall of Chronopolis" ;
-    rdaeo:P20001 rdaco:1020 ;
-    rdaeo:P20006 lang:eng ;
-    rdaeo:P20231 <https://www.isfdb.org/cgi-bin/title.cgi?4537> .

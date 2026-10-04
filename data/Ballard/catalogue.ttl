@@ -1,8 +1,8 @@
 # EntEdit example data – J. G. Ballard – catalogue
 # Two music recordings whose tracks are named after Ballard stories (Dream cargoes, The isle is full
 # of noises), with their track works, expressions and persons. ISFDB has no such records.
-# Self-contained: links to nothing in the isfdb2lrm conversion. Do not load together with the merged
-# Ballard-*.ttl files, which already contain these records.
+# Self-contained: links to nothing in the isfdb2lrm conversion in this folder, so it can be loaded
+# with it or alone.
 
 @prefix entedit: <http://oslomet.no/abi/vocab#> .
 @prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .

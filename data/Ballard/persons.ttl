@@ -1,7 +1,6 @@
-# EntEdit example data – J. G. Ballard – persons
-# isfdb2lrm conversion of ISFDB (author 259, results/author-259, converter commit c8ab6b3, generated 2026-09-28)
-# merged with the earlier Ballard.ttl catalogue sample; persons, works and expressions
-# identified by VIAF where the earlier sample knew the VIAF identifier.
+# isfdb2lrm – persons
+# Generated 2026-10-04T10:19:35+00:00 from the local ISFDB database,
+# converter commit f744a29, mode: authors, seed authors: 259, 164697, 170693, 173463, 181841, 194463, 234758, 262838, 266877, 276482, 277873, 285901, 302772, 311516, 406684, 422160
 
 @prefix entedit: <http://oslomet.no/abi/vocab#> .
 @prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
@@ -25,6 +24,46 @@
 @prefix wrk: <http://entedit.org/work/> .
 @prefix exp: <http://entedit.org/expression/> .
 @prefix man: <http://entedit.org/manifestation/> .
+
+<http://viaf.org/viaf/12304119>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/3",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?3",
+        "http://viaf.org/viaf/12304119" ;
+    rdaad:P50413 "Anderson, Poul" ;
+    rdfs:label "Anderson, Poul" ;
+    rdaad:P50339 "1926-2001" ;
+    rdaad:P50415 "Anderson, Poul William",
+        "Karageorge, Michael",
+        "Sanders, Winston P.",
+        "Craig, A. A.",
+        "Sanders, Winston",
+        "Saunders, Winston P.",
+        "Пол Андерсон",
+        "ポール・アンダースン",
+        "Hall, Vance",
+        "Anderson, Pol",
+        "Paul Anderson (II)",
+        "Уинстон П. Сэндерс",
+        "Andersen, Poul",
+        "Arkwright, Noah",
+        "Sanders, William P.",
+        "Пол Андерсън" ;
+    entedit:P15 per:11856,
+        per:11857,
+        per:16647,
+        per:156301,
+        per:158517,
+        per:234877,
+        per:235132,
+        per:236975,
+        per:261852,
+        per:263949,
+        per:276998,
+        per:310141,
+        per:390981,
+        per:392559,
+        per:406677 .
 
 per:4
     a rdac:C10004 ;
@@ -230,6 +269,52 @@ per:10
         per:276541,
         per:406670 .
 
+<http://viaf.org/viaf/103212466>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/11",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?11",
+        "http://viaf.org/viaf/103212466" ;
+    rdaad:P50413 "Brunner, John" ;
+    rdfs:label "Brunner, John" ;
+    rdaad:P50339 "1934-1995" ;
+    rdaad:P50415 "Brunner, John Kilian Houston",
+        "Hunt, Gill",
+        "Woodcott, Keith",
+        "Brunner, K. Houston",
+        "Loxmith, John",
+        "Brunner, Kilian Houston",
+        "Staines, Trevor",
+        "H*rb*rt, A. P.",
+        "O. H*nry",
+        "Henry Crosstrees, Jr.",
+        "Quick, Ellis",
+        "Джон Браннер",
+        "ジョン・ブラナー",
+        "Braner, Džon",
+        "S*ki",
+        "Er*c Fr*nk R*ss*ll",
+        "Th*rb*r, J*m*s",
+        "B*ll*c, H*la*re",
+        "Джон Бранър" ;
+    entedit:P15 per:2414,
+        per:2492,
+        per:13443,
+        per:13475,
+        per:16738,
+        per:20961,
+        per:75721,
+        per:110504,
+        per:186453,
+        per:195656,
+        per:235378,
+        per:273416,
+        per:274519,
+        per:287951,
+        per:287953,
+        per:289483,
+        per:292199,
+        per:406878 .
+
 per:12
     a rdac:C10004 ;
     rdaxd:P00018 "http://entedit.org/person/12",
@@ -369,6 +454,62 @@ per:16
         per:306111,
         per:407274,
         per:421888 .
+
+<http://viaf.org/viaf/27062571>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/17",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?17",
+        "http://viaf.org/viaf/27062571" ;
+    rdaad:P50413 "Clarke, Arthur C." ;
+    rdfs:label "Clarke, Arthur C." ;
+    rdaad:P50339 "1917-2008" ;
+    rdaad:P50415 "Clarke, Sir Arthur Charles",
+        "Willis, Charles",
+        "O'Brien, E. G.",
+        "Clarke, Sir Arthur C.",
+        "Sir Arthur C. Clarke, K. B. E.",
+        "Clarke, Arthur",
+        "Clarke, Sir Arthur",
+        "Clarke, Artur C.",
+        "Clark, Arthur C.",
+        "Klark, Artur",
+        "Clarke, A. C.",
+        "Arthur C. Clarke, B.Sc., F.R.A.S.",
+        "Clarke, C.",
+        "Clark, Arthur",
+        "アーサー・Ｃ・クラーク",
+        "Артър Кларк",
+        "Артур Кларк",
+        "Flight Lieutenant, A. C. Clarke, R.A.F.",
+        "Clarke, Arthur C. 'Ego'",
+        "Ego",
+        "A・C・クラーク",
+        "Άρθουρ Κλαρκ",
+        "Arthur C. Clarke, B.Sc.",
+        "アーサー・C・クラーク" ;
+    entedit:P15 per:13579,
+        per:103633,
+        per:121695,
+        per:126629,
+        per:160408,
+        per:161007,
+        per:168596,
+        per:189760,
+        per:194459,
+        per:195173,
+        per:207081,
+        per:220534,
+        per:227031,
+        per:234830,
+        per:234970,
+        per:235316,
+        per:241418,
+        per:252802,
+        per:253036,
+        per:311620,
+        per:367567,
+        per:391661,
+        per:424889 .
 
 per:18
     a rdac:C10004 ;
@@ -1269,6 +1410,117 @@ per:52
     rdaad:P50413 "Shea, Michael" ;
     rdfs:label "Shea, Michael" ;
     rdaad:P50339 "1946-2014" .
+
+<http://viaf.org/viaf/109386240>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/54",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?54",
+        "http://viaf.org/viaf/109386240" ;
+    rdaad:P50413 "Silverberg, Robert" ;
+    rdfs:label "Silverberg, Robert" ;
+    rdaad:P50339 "1935-" ;
+    rdaad:P50415 "Randall, Robert",
+        "Osborne, David",
+        "Knox, Calvin M.",
+        "Blade, Alexander",
+        "Jorgensen, Ivar",
+        "Martin, Webber",
+        "Jorgenson, Ivar",
+        "Tenneshaw, S. M.",
+        "Jarvis, E. K.",
+        "Knox, Calvin",
+        "Vance, Gerald",
+        "Spencer, Leonard G.",
+        "Greer, Richard",
+        "Aghill, Gordon",
+        "Burke, Ralph",
+        "Kastel, Warren",
+        "Arnette, Robert",
+        "Mitchell, Clyde",
+        "Thornton, Hall",
+        "Silverberg, Bob",
+        "Challon, David",
+        "Hammer, Charles D.",
+        "Watson, Richard F.",
+        "Rodman, Eric",
+        "Clinton, Dirk",
+        "Merriman, Alex",
+        "Malcolm, Dan",
+        "Bethlen, T. D.",
+        "Osborne, George",
+        "Dexter, John",
+        "Silverberg, R.",
+        "McKensie, Ray",
+        "Bethlen, T. E.",
+        "Elliott, Don",
+        "Drummond, Walter",
+        "Mark Ryan (I)",
+        "Beauchamp, Loren",
+        "Longman, Marlene",
+        "ロバート・シルヴァーバーグ",
+        "Роберт Сильверберг",
+        "Роберт Силверберг",
+        "Aaargh, Calvin",
+        "Р. Силверберг",
+        "Eliot, Dan",
+        "Ward, Jonas",
+        "Dunn, Jeremy",
+        "Vincent, Stan",
+        "Randall Garrett (I)",
+        "罗伯特·西尔弗伯格",
+        "Silverberg, Robert B.",
+        "Робърт Силвърбърг" ;
+    entedit:P15 per:2420,
+        per:3190,
+        per:6405,
+        per:6710,
+        per:6927,
+        per:14405,
+        per:14406,
+        per:14407,
+        per:14415,
+        per:15672,
+        per:15731,
+        per:15733,
+        per:15734,
+        per:15736,
+        per:16494,
+        per:17190,
+        per:17236,
+        per:17238,
+        per:17239,
+        per:18969,
+        per:19784,
+        per:20690,
+        per:37431,
+        per:62421,
+        per:63801,
+        per:63811,
+        per:63841,
+        per:82857,
+        per:83105,
+        per:124893,
+        per:172905,
+        per:182776,
+        per:196087,
+        per:204011,
+        per:213693,
+        per:216538,
+        per:216899,
+        per:216912,
+        per:234841,
+        per:235287,
+        per:235309,
+        per:300185,
+        per:334368,
+        per:336918,
+        per:337123,
+        per:337451,
+        per:351435,
+        per:352471,
+        per:379421,
+        per:379895,
+        per:406647 .
 
 per:55
     a rdac:C10004 ;
@@ -2502,6 +2754,49 @@ per:122
         per:418429,
         per:424651 .
 
+<http://viaf.org/viaf/2465493>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/131",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?131",
+        "http://viaf.org/viaf/2465493" ;
+    rdaad:P50413 "Aldiss, Brian W." ;
+    rdfs:label "Aldiss, Brian W." ;
+    rdaad:P50339 "1925-2017" ;
+    rdaad:P50415 "Aldiss, Brian Wilson",
+        "Cracken, Jael",
+        "Xerxes, B. T. H.",
+        "Shackleton, C. C.",
+        "Runciman, John",
+        "Aldiss, Brian",
+        "Peristyle, Dr.",
+        "Brian Aldiss, O.B.E.",
+        "ブライアン・W・オールディス",
+        "Oldis, Brajan",
+        "Брайан Олдисс",
+        "Б. Олдисс",
+        "B・W・オールディス",
+        "Брайън Олдис",
+        "H., S. F.",
+        "ブライアン・オールディス",
+        "A., B. W." ;
+    entedit:P15 per:14232,
+        per:17361,
+        per:20291,
+        per:20976,
+        per:21289,
+        per:93849,
+        per:178980,
+        per:204723,
+        per:234835,
+        per:262839,
+        per:276149,
+        per:334359,
+        per:380689,
+        per:406683,
+        per:411300,
+        per:415625,
+        per:420973 .
+
 per:132
     a rdac:C10004 ;
     rdaxd:P00018 "http://entedit.org/person/132",
@@ -2524,6 +2819,35 @@ per:135
         "Machen, A." ;
     entedit:P15 per:115849,
         per:396045 .
+
+<http://viaf.org/viaf/111614127>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/136",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?136",
+        "http://viaf.org/viaf/111614127" ;
+    rdaad:P50413 "Vance, Jack" ;
+    rdfs:label "Vance, Jack" ;
+    rdaad:P50339 "1916-2013" ;
+    rdaad:P50415 "Vance, John Holbrook",
+        "Queen, Ellery",
+        "Holbrook, John",
+        "Wade, Alan",
+        "Held, Peter",
+        "ジャック・ヴァンス",
+        "Джек Венс",
+        "Vans, Džek",
+        "Джек Вэнс",
+        "Джак Ванс" ;
+    entedit:P15 per:4921,
+        per:20657,
+        per:21273,
+        per:31790,
+        per:31791,
+        per:237158,
+        per:276425,
+        per:276864,
+        per:301325,
+        per:408082 .
 
 per:139
     a rdac:C10004 ;
@@ -3944,6 +4268,29 @@ per:239
         per:241385,
         per:282719 .
 
+<http://viaf.org/viaf/79304712>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/243",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?243",
+        "http://viaf.org/viaf/79304712" ;
+    rdaad:P50413 "Carr, Terry" ;
+    rdfs:label "Carr, Terry" ;
+    rdaad:P50339 "1937-1987" ;
+    rdaad:P50415 "Carr, Terry Gene",
+        "Edwards, Norman",
+        "Brandon, Carl",
+        "Carr",
+        "Christian Dörge (in error)",
+        "Carr, Gerry",
+        "テリー・カー" ;
+    entedit:P15 per:2957,
+        per:15699,
+        per:145662,
+        per:331637,
+        per:333414,
+        per:372867,
+        per:421334 .
+
 per:246
     a rdac:C10004 ;
     rdaxd:P00018 "http://entedit.org/person/246",
@@ -4188,6 +4535,45 @@ per:257
         per:409077,
         per:409346,
         per:413410 .
+
+<http://viaf.org/viaf/9842556>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/259",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?259",
+        "http://viaf.org/viaf/9842556" ;
+    rdaad:P50413 "Ballard, J. G." ;
+    rdfs:label "Ballard, J. G." ;
+    rdaad:P50339 "1930-2009" ;
+    rdaad:P50415 "Ballard, James Graham",
+        "Ballard, James G.",
+        "Ballard, Jim G.",
+        "Ballard, Jim",
+        "Balard, Dž. G.",
+        "J・G・バラード",
+        "Balard, Džejms Grehem",
+        "Ballard, J.-G.",
+        "Джеймс Грэм Баллард",
+        "Balard, J. G.",
+        "Джеймс Болард",
+        "Джеймс Боллард",
+        "Дж. Г. Балард",
+        "Джеймс Балард",
+        "Ｊ・Ｇ・バラード" ;
+    entedit:P15 per:164697,
+        per:170693,
+        per:173463,
+        per:181841,
+        per:194463,
+        per:234758,
+        per:262838,
+        per:266877,
+        per:276482,
+        per:277873,
+        per:285901,
+        per:302772,
+        per:311516,
+        per:406684,
+        per:422160 .
 
 per:260
     a rdac:C10004 ;
@@ -4782,6 +5168,44 @@ per:319
         per:223131,
         per:223162,
         per:234981 .
+
+<http://viaf.org/viaf/84181241>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/324",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?324",
+        "http://viaf.org/viaf/84181241" ;
+    rdaad:P50413 "Bayley, Barrington J." ;
+    rdfs:label "Bayley, Barrington J." ;
+    rdaad:P50339 "1937-2008" ;
+    rdaad:P50415 "Bayley, Barrington John",
+        "Colvin, James",
+        "Barrington, Michael",
+        "Diamond, John",
+        "Woods, P. F.",
+        "Aumbry, Alan",
+        "Woods, Peter",
+        "Bayley, B. J.",
+        "Bayley, Barrington",
+        "Bayley, J. Barrington",
+        "Bayley, Barry",
+        "バリントン・J・ベイリー",
+        "Bailey, Barrington J.",
+        "Bejli, Barington Dž.",
+        "バリントン・Ｊ・ベイリー" ;
+    entedit:P15 per:11223,
+        per:13655,
+        per:14874,
+        per:19569,
+        per:19570,
+        per:19852,
+        per:20330,
+        per:94717,
+        per:114711,
+        per:195905,
+        per:237309,
+        per:239887,
+        per:279692,
+        per:422181 .
 
 per:328
     a rdac:C10004 ;
@@ -6216,6 +6640,16 @@ per:562
     entedit:P15 per:235294,
         per:261873,
         per:416015 .
+
+<http://viaf.org/viaf/36913662>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/563",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?563",
+        "http://viaf.org/viaf/36913662" ;
+    rdaad:P50413 "Amis, Martin" ;
+    rdfs:label "Amis, Martin" ;
+    rdaad:P50339 "1949-2023" ;
+    rdaad:P50415 "Amis, Martin Louis" .
 
 per:565
     a rdac:C10004 ;
@@ -7740,6 +8174,18 @@ per:866
     entedit:P15 per:2661,
         per:339072 .
 
+<http://viaf.org/viaf/762106>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/871",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?871",
+        "http://viaf.org/viaf/762106" ;
+    rdaad:P50413 "Fadiman, Clifton" ;
+    rdfs:label "Fadiman, Clifton" ;
+    rdaad:P50339 "1904-1999" ;
+    rdaad:P50415 "Fadiman, Clifton Paul",
+        "クリントン・ファディマン" ;
+    entedit:P15 per:405553 .
+
 per:881
     a rdac:C10004 ;
     rdaxd:P00018 "http://entedit.org/person/881",
@@ -7966,6 +8412,20 @@ per:1000
     rdaad:P50413 "Heard, H. F." ;
     rdfs:label "Heard, H. F." ;
     entedit:P16 per:1946 .
+
+<http://viaf.org/viaf/54154517>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/1019",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?1019",
+        "http://viaf.org/viaf/54154517" ;
+    rdaad:P50413 "Spinrad, Norman" ;
+    rdfs:label "Spinrad, Norman" ;
+    rdaad:P50339 "1940-" ;
+    rdaad:P50415 "Spinrad, Norman Richard",
+        "Норман Спинрад",
+        "ノーマン・スピンラッド" ;
+    entedit:P15 per:302926,
+        per:420764 .
 
 per:1020
     a rdac:C10004 ;
@@ -11412,6 +11872,26 @@ per:1674
         "Cramer, Kathryn E." ;
     entedit:P15 per:117419 .
 
+<http://viaf.org/viaf/33278380>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/1675",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?1675",
+        "http://viaf.org/viaf/33278380" ;
+    rdaad:P50413 "Hartwell, David G." ;
+    rdfs:label "Hartwell, David G." ;
+    rdaad:P50339 "1941-2016" ;
+    rdaad:P50415 "Hartwell, David Geddes",
+        "Trout, Kilgore",
+        "Hartwell, David",
+        "Hartwell, Dave",
+        "David G. Hartwell, Ph.D.",
+        "ディヴィッド・ハートウエル" ;
+    entedit:P15 per:3842,
+        per:82573,
+        per:113778,
+        per:138882,
+        per:249338 .
+
 per:1676
     a rdac:C10004 ;
     rdaxd:P00018 "http://entedit.org/person/1676",
@@ -11707,6 +12187,22 @@ per:1738
         per:206449,
         per:206490,
         per:235027 .
+
+<http://viaf.org/viaf/71388189>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/1747",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?1747",
+        "http://viaf.org/viaf/71388189" ;
+    rdaad:P50413 "Burgess, Anthony" ;
+    rdfs:label "Burgess, Anthony" ;
+    rdaad:P50339 "1917-1993" ;
+    rdaad:P50415 "Wilson, John Anthony Burgess",
+        "Kell, Joseph",
+        "Antoni Bardžis",
+        "Entoni Bardžis" ;
+    entedit:P15 per:162933,
+        per:276555,
+        per:308445 .
 
 per:1751
     a rdac:C10004 ;
@@ -12890,6 +13386,16 @@ per:2311
     rdaad:P50413 "Banks, Iain" ;
     rdfs:label "Banks, Iain" ;
     entedit:P16 per:100 .
+
+<http://viaf.org/viaf/24606270>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/2318",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?2318",
+        "http://viaf.org/viaf/24606270" ;
+    rdaad:P50413 "Peake, Mervyn" ;
+    rdfs:label "Peake, Mervyn" ;
+    rdaad:P50339 "1911-1968" ;
+    rdaad:P50415 "Peake, Mervyn Laurence" .
 
 per:2320
     a rdac:C10004 ;
@@ -17241,6 +17747,16 @@ per:10787
     rdaad:P50413 "Garnett, David S." ;
     rdfs:label "Garnett, David S." ;
     entedit:P16 per:1733 .
+
+<http://viaf.org/viaf/172050597>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/10791",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?10791",
+        "http://viaf.org/viaf/172050597" ;
+    rdaad:P50413 "Elder, Joseph" ;
+    rdfs:label "Elder, Joseph" ;
+    rdaad:P50415 "ジェセフ・エルダー" ;
+    entedit:P15 per:422826 .
 
 per:10807
     a rdac:C10004 ;
@@ -81212,17 +81728,17 @@ per:424933
     rdaad:P50413 "А. Кондраков / A. Kondrakov" ;
     rdfs:label "А. Кондраков / A. Kondrakov" .
 
-<http://entedit.org/person/tr/a-molokin-a-molokin>
-    a rdac:C10004 ;
-    rdaxd:P00018 "http://entedit.org/person/tr/a-molokin-a-molokin" ;
-    rdaad:P50413 "А. Молокин / A. Molokin" ;
-    rdfs:label "А. Молокин / A. Molokin" .
-
 <http://entedit.org/person/tr/a-molokin>
     a rdac:C10004 ;
     rdaxd:P00018 "http://entedit.org/person/tr/a-molokin" ;
     rdaad:P50413 "А. Молокин" ;
     rdfs:label "А. Молокин" .
+
+<http://entedit.org/person/tr/a-molokin-a-molokin>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/tr/a-molokin-a-molokin" ;
+    rdaad:P50413 "А. Молокин / A. Molokin" ;
+    rdfs:label "А. Молокин / A. Molokin" .
 
 <http://entedit.org/person/tr/a-pollini>
     a rdac:C10004 ;
@@ -81260,6 +81776,12 @@ per:424933
     rdaad:P50413 "Dell'Orto, Adriana" ;
     rdfs:label "Dell'Orto, Adriana" .
 
+<http://entedit.org/person/tr/alain>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/tr/alain" ;
+    rdaad:P50413 "Alain" ;
+    rdfs:label "Alain" .
+
 <http://entedit.org/person/tr/alain-le-bussy>
     a rdac:C10004 ;
     rdaxd:P00018 "http://entedit.org/person/tr/alain-le-bussy" ;
@@ -81271,12 +81793,6 @@ per:424933
     rdaxd:P00018 "http://entedit.org/person/tr/alain-paruit" ;
     rdaad:P50413 "Paruit, Alain" ;
     rdfs:label "Paruit, Alain" .
-
-<http://entedit.org/person/tr/alain>
-    a rdac:C10004 ;
-    rdaxd:P00018 "http://entedit.org/person/tr/alain" ;
-    rdaad:P50413 "Alain" ;
-    rdfs:label "Alain" .
 
 <http://entedit.org/person/tr/alar-caroff>
     a rdac:C10004 ;
@@ -81490,17 +82006,17 @@ per:424933
     rdaad:P50413 "Aji, Aron" ;
     rdfs:label "Aji, Aron" .
 
-<http://entedit.org/person/tr/augusto-goncalves-and-or-helena-oliveira>
-    a rdac:C10004 ;
-    rdaxd:P00018 "http://entedit.org/person/tr/augusto-goncalves-and-or-helena-oliveira" ;
-    rdaad:P50413 "Oliveira, Augusto Gonçalves and/or Helena" ;
-    rdfs:label "Oliveira, Augusto Gonçalves and/or Helena" .
-
 <http://entedit.org/person/tr/augusto-goncalves>
     a rdac:C10004 ;
     rdaxd:P00018 "http://entedit.org/person/tr/augusto-goncalves" ;
     rdaad:P50413 "Gonçalves, Augusto" ;
     rdfs:label "Gonçalves, Augusto" .
+
+<http://entedit.org/person/tr/augusto-goncalves-and-or-helena-oliveira>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/tr/augusto-goncalves-and-or-helena-oliveira" ;
+    rdaad:P50413 "Oliveira, Augusto Gonçalves and/or Helena" ;
+    rdfs:label "Oliveira, Augusto Gonçalves and/or Helena" .
 
 <http://entedit.org/person/tr/aurora-bernardez>
     a rdac:C10004 ;
@@ -81731,17 +82247,17 @@ per:424933
     rdaad:P50413 "Ip, Chi-yin" ;
     rdfs:label "Ip, Chi-yin" .
 
-<http://entedit.org/person/tr/christa-wegen>
-    a rdac:C10004 ;
-    rdaxd:P00018 "http://entedit.org/person/tr/christa-wegen" ;
-    rdaad:P50413 "Wegen, Christa" ;
-    rdfs:label "Wegen, Christa" .
-
 <http://entedit.org/person/tr/christa>
     a rdac:C10004 ;
     rdaxd:P00018 "http://entedit.org/person/tr/christa" ;
     rdaad:P50413 "Christa" ;
     rdfs:label "Christa" .
+
+<http://entedit.org/person/tr/christa-wegen>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/tr/christa-wegen" ;
+    rdaad:P50413 "Wegen, Christa" ;
+    rdfs:label "Wegen, Christa" .
 
 <http://entedit.org/person/tr/christine-tournier>
     a rdac:C10004 ;
@@ -82713,17 +83229,17 @@ per:424933
     rdaad:P50413 "Wiskott, Inge" ;
     rdfs:label "Wiskott, Inge" .
 
-<http://entedit.org/person/tr/ingrid-jurela-jarak>
-    a rdac:C10004 ;
-    rdaxd:P00018 "http://entedit.org/person/tr/ingrid-jurela-jarak" ;
-    rdaad:P50413 "Jurela-Jarak, Ingrid" ;
-    rdfs:label "Jurela-Jarak, Ingrid" .
-
 <http://entedit.org/person/tr/ingrid-jurela>
     a rdac:C10004 ;
     rdaxd:P00018 "http://entedit.org/person/tr/ingrid-jurela" ;
     rdaad:P50413 "Jurela, Ingrid" ;
     rdfs:label "Jurela, Ingrid" .
+
+<http://entedit.org/person/tr/ingrid-jurela-jarak>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/tr/ingrid-jurela-jarak" ;
+    rdaad:P50413 "Jurela-Jarak, Ingrid" ;
+    rdfs:label "Jurela-Jarak, Ingrid" .
 
 <http://entedit.org/person/tr/ingrid-o-fischer>
     a rdac:C10004 ;
@@ -83168,17 +83684,17 @@ per:424933
     rdaad:P50413 "Л. Огульчанская" ;
     rdfs:label "Л. Огульчанская" .
 
-<http://entedit.org/person/tr/l-terekhina-a-molokin>
-    a rdac:C10004 ;
-    rdaxd:P00018 "http://entedit.org/person/tr/l-terekhina-a-molokin" ;
-    rdaad:P50413 "Л. Терехина / A. Molokin" ;
-    rdfs:label "Л. Терехина / A. Molokin" .
-
 <http://entedit.org/person/tr/l-terekhina>
     a rdac:C10004 ;
     rdaxd:P00018 "http://entedit.org/person/tr/l-terekhina" ;
     rdaad:P50413 "Terekhina, L." ;
     rdfs:label "Terekhina, L." .
+
+<http://entedit.org/person/tr/l-terekhina-a-molokin>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/tr/l-terekhina-a-molokin" ;
+    rdaad:P50413 "Л. Терехина / A. Molokin" ;
+    rdfs:label "Л. Терехина / A. Molokin" .
 
 <http://entedit.org/person/tr/lais-mourao>
     a rdac:C10004 ;
@@ -83186,17 +83702,17 @@ per:424933
     rdaad:P50413 "Mourão, Laís" ;
     rdfs:label "Mourão, Laís" .
 
-<http://entedit.org/person/tr/laura-bocancios-and-or-silviu-genescu-and-or-ana-veronica-mircea-and-or-mihai-dan-pavelescu>
-    a rdac:C10004 ;
-    rdaxd:P00018 "http://entedit.org/person/tr/laura-bocancios-and-or-silviu-genescu-and-or-ana-veronica-mircea-and-or-mihai-dan-pavelescu" ;
-    rdaad:P50413 "Pavelescu, Laura Bocancios and/or Silviu Genescu and/or Ana-Veronica Mircea and/or Mihai-Dan" ;
-    rdfs:label "Pavelescu, Laura Bocancios and/or Silviu Genescu and/or Ana-Veronica Mircea and/or Mihai-Dan" .
-
 <http://entedit.org/person/tr/laura-bocancios>
     a rdac:C10004 ;
     rdaxd:P00018 "http://entedit.org/person/tr/laura-bocancios" ;
     rdaad:P50413 "Bocancios, Laura" ;
     rdfs:label "Bocancios, Laura" .
+
+<http://entedit.org/person/tr/laura-bocancios-and-or-silviu-genescu-and-or-ana-veronica-mircea-and-or-mihai-dan-pavelescu>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/tr/laura-bocancios-and-or-silviu-genescu-and-or-ana-veronica-mircea-and-or-mihai-dan-pavelescu" ;
+    rdaad:P50413 "Pavelescu, Laura Bocancios and/or Silviu Genescu and/or Ana-Veronica Mircea and/or Mihai-Dan" ;
+    rdfs:label "Pavelescu, Laura Bocancios and/or Silviu Genescu and/or Ana-Veronica Mircea and/or Mihai-Dan" .
 
 <http://entedit.org/person/tr/laure-casseau>
     a rdac:C10004 ;
@@ -84622,17 +85138,17 @@ per:424933
     rdaad:P50413 "Kortwich, Werner" ;
     rdfs:label "Kortwich, Werner" .
 
-<http://entedit.org/person/tr/willa-muir>
-    a rdac:C10004 ;
-    rdaxd:P00018 "http://entedit.org/person/tr/willa-muir" ;
-    rdaad:P50413 "Muir, Willa" ;
-    rdfs:label "Muir, Willa" .
-
 <http://entedit.org/person/tr/willa>
     a rdac:C10004 ;
     rdaxd:P00018 "http://entedit.org/person/tr/willa" ;
     rdaad:P50413 "Willa" ;
     rdfs:label "Willa" .
+
+<http://entedit.org/person/tr/willa-muir>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/tr/willa-muir" ;
+    rdaad:P50413 "Muir, Willa" ;
+    rdfs:label "Muir, Willa" .
 
 <http://entedit.org/person/tr/william-ames-coates>
     a rdac:C10004 ;
@@ -84737,606 +85253,3 @@ per:424933
     rdaad:P50413 "Glik, Zlatko" ;
     rdfs:label "Glik, Zlatko" .
 
-<http://viaf.org/viaf/103212466>
-    a rdac:C10004 ;
-    rdaxd:P00018 "http://entedit.org/person/11",
-        "https://www.isfdb.org/cgi-bin/ea.cgi?11",
-        "http://viaf.org/viaf/103212466" ;
-    rdaad:P50413 "Brunner, John" ;
-    rdfs:label "Brunner, John" ;
-    rdaad:P50339 "1934-1995" ;
-    rdaad:P50415 "Brunner, John Kilian Houston",
-        "Hunt, Gill",
-        "Woodcott, Keith",
-        "Brunner, K. Houston",
-        "Loxmith, John",
-        "Brunner, Kilian Houston",
-        "Staines, Trevor",
-        "H*rb*rt, A. P.",
-        "O. H*nry",
-        "Henry Crosstrees, Jr.",
-        "Quick, Ellis",
-        "Джон Браннер",
-        "ジョン・ブラナー",
-        "Braner, Džon",
-        "S*ki",
-        "Er*c Fr*nk R*ss*ll",
-        "Th*rb*r, J*m*s",
-        "B*ll*c, H*la*re",
-        "Джон Бранър" ;
-    entedit:P15 per:2414,
-        per:2492,
-        per:13443,
-        per:13475,
-        per:16738,
-        per:20961,
-        per:75721,
-        per:110504,
-        per:186453,
-        per:195656,
-        per:235378,
-        per:273416,
-        per:274519,
-        per:287951,
-        per:287953,
-        per:289483,
-        per:292199,
-        per:406878 .
-
-<http://viaf.org/viaf/109386240>
-    a rdac:C10004 ;
-    rdaxd:P00018 "http://entedit.org/person/54",
-        "https://www.isfdb.org/cgi-bin/ea.cgi?54",
-        "http://viaf.org/viaf/109386240" ;
-    rdaad:P50413 "Silverberg, Robert" ;
-    rdfs:label "Silverberg, Robert" ;
-    rdaad:P50339 "1935-" ;
-    rdaad:P50415 "Randall, Robert",
-        "Osborne, David",
-        "Knox, Calvin M.",
-        "Blade, Alexander",
-        "Jorgensen, Ivar",
-        "Martin, Webber",
-        "Jorgenson, Ivar",
-        "Tenneshaw, S. M.",
-        "Jarvis, E. K.",
-        "Knox, Calvin",
-        "Vance, Gerald",
-        "Spencer, Leonard G.",
-        "Greer, Richard",
-        "Aghill, Gordon",
-        "Burke, Ralph",
-        "Kastel, Warren",
-        "Arnette, Robert",
-        "Mitchell, Clyde",
-        "Thornton, Hall",
-        "Silverberg, Bob",
-        "Challon, David",
-        "Hammer, Charles D.",
-        "Watson, Richard F.",
-        "Rodman, Eric",
-        "Clinton, Dirk",
-        "Merriman, Alex",
-        "Malcolm, Dan",
-        "Bethlen, T. D.",
-        "Osborne, George",
-        "Dexter, John",
-        "Silverberg, R.",
-        "McKensie, Ray",
-        "Bethlen, T. E.",
-        "Elliott, Don",
-        "Drummond, Walter",
-        "Mark Ryan (I)",
-        "Beauchamp, Loren",
-        "Longman, Marlene",
-        "ロバート・シルヴァーバーグ",
-        "Роберт Сильверберг",
-        "Роберт Силверберг",
-        "Aaargh, Calvin",
-        "Р. Силверберг",
-        "Eliot, Dan",
-        "Ward, Jonas",
-        "Dunn, Jeremy",
-        "Vincent, Stan",
-        "Randall Garrett (I)",
-        "罗伯特·西尔弗伯格",
-        "Silverberg, Robert B.",
-        "Робърт Силвърбърг" ;
-    entedit:P15 per:2420,
-        per:3190,
-        per:6405,
-        per:6710,
-        per:6927,
-        per:14405,
-        per:14406,
-        per:14407,
-        per:14415,
-        per:15672,
-        per:15731,
-        per:15733,
-        per:15734,
-        per:15736,
-        per:16494,
-        per:17190,
-        per:17236,
-        per:17238,
-        per:17239,
-        per:18969,
-        per:19784,
-        per:20690,
-        per:37431,
-        per:62421,
-        per:63801,
-        per:63811,
-        per:63841,
-        per:82857,
-        per:83105,
-        per:124893,
-        per:172905,
-        per:182776,
-        per:196087,
-        per:204011,
-        per:213693,
-        per:216538,
-        per:216899,
-        per:216912,
-        per:234841,
-        per:235287,
-        per:235309,
-        per:300185,
-        per:334368,
-        per:336918,
-        per:337123,
-        per:337451,
-        per:351435,
-        per:352471,
-        per:379421,
-        per:379895,
-        per:406647 .
-
-<http://viaf.org/viaf/111614127>
-    a rdac:C10004 ;
-    rdaxd:P00018 "http://entedit.org/person/136",
-        "https://www.isfdb.org/cgi-bin/ea.cgi?136",
-        "http://viaf.org/viaf/111614127" ;
-    rdaad:P50413 "Vance, Jack" ;
-    rdfs:label "Vance, Jack" ;
-    rdaad:P50339 "1916-2013" ;
-    rdaad:P50415 "Vance, John Holbrook",
-        "Queen, Ellery",
-        "Holbrook, John",
-        "Wade, Alan",
-        "Held, Peter",
-        "ジャック・ヴァンス",
-        "Джек Венс",
-        "Vans, Džek",
-        "Джек Вэнс",
-        "Джак Ванс" ;
-    entedit:P15 per:4921,
-        per:20657,
-        per:21273,
-        per:31790,
-        per:31791,
-        per:237158,
-        per:276425,
-        per:276864,
-        per:301325,
-        per:408082 .
-
-<http://viaf.org/viaf/12304119>
-    a rdac:C10004 ;
-    rdaxd:P00018 "http://entedit.org/person/3",
-        "https://www.isfdb.org/cgi-bin/ea.cgi?3",
-        "http://viaf.org/viaf/12304119" ;
-    rdaad:P50413 "Anderson, Poul" ;
-    rdfs:label "Anderson, Poul" ;
-    rdaad:P50339 "1926-2001" ;
-    rdaad:P50415 "Anderson, Poul William",
-        "Karageorge, Michael",
-        "Sanders, Winston P.",
-        "Craig, A. A.",
-        "Sanders, Winston",
-        "Saunders, Winston P.",
-        "Пол Андерсон",
-        "ポール・アンダースン",
-        "Hall, Vance",
-        "Anderson, Pol",
-        "Paul Anderson (II)",
-        "Уинстон П. Сэндерс",
-        "Andersen, Poul",
-        "Arkwright, Noah",
-        "Sanders, William P.",
-        "Пол Андерсън" ;
-    entedit:P15 per:11856,
-        per:11857,
-        per:16647,
-        per:156301,
-        per:158517,
-        per:234877,
-        per:235132,
-        per:236975,
-        per:261852,
-        per:263949,
-        per:276998,
-        per:310141,
-        per:390981,
-        per:392559,
-        per:406677 .
-
-<http://viaf.org/viaf/172050597>
-    a rdac:C10004 ;
-    rdaxd:P00018 "http://entedit.org/person/10791",
-        "https://www.isfdb.org/cgi-bin/ea.cgi?10791",
-        "http://viaf.org/viaf/172050597" ;
-    rdaad:P50413 "Elder, Joseph" ;
-    rdfs:label "Elder, Joseph" ;
-    rdaad:P50415 "ジェセフ・エルダー" ;
-    entedit:P15 per:422826 .
-
-<http://viaf.org/viaf/172957858>
-    a rdac:C10004 ;
-    rdfs:label "Beckman, Frida" ;
-    rdaad:P50413 "Beckman, Frida" ;
-    rdaxd:P00018 "http://viaf.org/viaf/172957858" .
-
-<http://viaf.org/viaf/24606270>
-    a rdac:C10004 ;
-    rdaxd:P00018 "http://entedit.org/person/2318",
-        "https://www.isfdb.org/cgi-bin/ea.cgi?2318",
-        "http://viaf.org/viaf/24606270" ;
-    rdaad:P50413 "Peake, Mervyn" ;
-    rdfs:label "Peake, Mervyn" ;
-    rdaad:P50339 "1911-1968" ;
-    rdaad:P50415 "Peake, Mervyn Laurence" .
-
-<http://viaf.org/viaf/2465493>
-    a rdac:C10004 ;
-    rdaxd:P00018 "http://entedit.org/person/131",
-        "https://www.isfdb.org/cgi-bin/ea.cgi?131",
-        "http://viaf.org/viaf/2465493" ;
-    rdaad:P50413 "Aldiss, Brian W." ;
-    rdfs:label "Aldiss, Brian W." ;
-    rdaad:P50339 "1925-2017" ;
-    rdaad:P50415 "Aldiss, Brian Wilson",
-        "Cracken, Jael",
-        "Xerxes, B. T. H.",
-        "Shackleton, C. C.",
-        "Runciman, John",
-        "Aldiss, Brian",
-        "Peristyle, Dr.",
-        "Brian Aldiss, O.B.E.",
-        "ブライアン・W・オールディス",
-        "Oldis, Brajan",
-        "Брайан Олдисс",
-        "Б. Олдисс",
-        "B・W・オールディス",
-        "Брайън Олдис",
-        "H., S. F.",
-        "ブライアン・オールディス",
-        "A., B. W." ;
-    entedit:P15 per:14232,
-        per:17361,
-        per:20291,
-        per:20976,
-        per:21289,
-        per:93849,
-        per:178980,
-        per:204723,
-        per:234835,
-        per:262839,
-        per:276149,
-        per:334359,
-        per:380689,
-        per:406683,
-        per:411300,
-        per:415625,
-        per:420973 .
-
-<http://viaf.org/viaf/27062571>
-    a rdac:C10004 ;
-    rdaxd:P00018 "http://entedit.org/person/17",
-        "https://www.isfdb.org/cgi-bin/ea.cgi?17",
-        "http://viaf.org/viaf/27062571" ;
-    rdaad:P50413 "Clarke, Arthur C." ;
-    rdfs:label "Clarke, Arthur C." ;
-    rdaad:P50339 "1917-2008" ;
-    rdaad:P50415 "Clarke, Sir Arthur Charles",
-        "Willis, Charles",
-        "O'Brien, E. G.",
-        "Clarke, Sir Arthur C.",
-        "Sir Arthur C. Clarke, K. B. E.",
-        "Clarke, Arthur",
-        "Clarke, Sir Arthur",
-        "Clarke, Artur C.",
-        "Clark, Arthur C.",
-        "Klark, Artur",
-        "Clarke, A. C.",
-        "Arthur C. Clarke, B.Sc., F.R.A.S.",
-        "Clarke, C.",
-        "Clark, Arthur",
-        "アーサー・Ｃ・クラーク",
-        "Артър Кларк",
-        "Артур Кларк",
-        "Flight Lieutenant, A. C. Clarke, R.A.F.",
-        "Clarke, Arthur C. 'Ego'",
-        "Ego",
-        "A・C・クラーク",
-        "Άρθουρ Κλαρκ",
-        "Arthur C. Clarke, B.Sc.",
-        "アーサー・C・クラーク" ;
-    entedit:P15 per:13579,
-        per:103633,
-        per:121695,
-        per:126629,
-        per:160408,
-        per:161007,
-        per:168596,
-        per:189760,
-        per:194459,
-        per:195173,
-        per:207081,
-        per:220534,
-        per:227031,
-        per:234830,
-        per:234970,
-        per:235316,
-        per:241418,
-        per:252802,
-        per:253036,
-        per:311620,
-        per:367567,
-        per:391661,
-        per:424889 .
-
-<http://viaf.org/viaf/33278380>
-    a rdac:C10004 ;
-    rdaxd:P00018 "http://entedit.org/person/1675",
-        "https://www.isfdb.org/cgi-bin/ea.cgi?1675",
-        "http://viaf.org/viaf/33278380" ;
-    rdaad:P50413 "Hartwell, David G." ;
-    rdfs:label "Hartwell, David G." ;
-    rdaad:P50339 "1941-2016" ;
-    rdaad:P50415 "Hartwell, David Geddes",
-        "Trout, Kilgore",
-        "Hartwell, David",
-        "Hartwell, Dave",
-        "David G. Hartwell, Ph.D.",
-        "ディヴィッド・ハートウエル" ;
-    entedit:P15 per:3842,
-        per:82573,
-        per:113778,
-        per:138882,
-        per:249338 .
-
-<http://viaf.org/viaf/36913662>
-    a rdac:C10004 ;
-    rdaxd:P00018 "http://entedit.org/person/563",
-        "https://www.isfdb.org/cgi-bin/ea.cgi?563",
-        "http://viaf.org/viaf/36913662" ;
-    rdaad:P50413 "Amis, Martin" ;
-    rdfs:label "Amis, Martin" ;
-    rdaad:P50339 "1949-2023" ;
-    rdaad:P50415 "Amis, Martin Louis" .
-
-<http://viaf.org/viaf/43347281/researchdatamanagement/chronopolis/1>
-    a rdac:C10004 ;
-    rdfs:label "Minor, David" ;
-    rdaad:P50413 "Minor, David" ;
-    rdaxd:P00018 "http://viaf.org/viaf/43347281/researchdatamanagement/chronopolis/1" .
-
-<http://viaf.org/viaf/43347281/researchdatamanagement/chronopolis/2>
-    a rdac:C10004 ;
-    rdfs:label "Schottlaender, Brian E. C." ;
-    rdaad:P50413 "Schottlaender, Brian E. C." ;
-    rdaxd:P00018 "http://viaf.org/viaf/43347281/researchdatamanagement/chronopolis/2" .
-
-<http://viaf.org/viaf/43347281/researchdatamanagement/chronopolis/3>
-    a rdac:C10004 ;
-    rdfs:label "Kozbial, Ardys" ;
-    rdaad:P50413 "Kozbial, Ardys" ;
-    rdaxd:P00018 "http://viaf.org/viaf/43347281/researchdatamanagement/chronopolis/3" .
-
-<http://viaf.org/viaf/43347281>
-    a rdac:C10004 ;
-    rdfs:label "Ray, Joyce M." ;
-    rdaad:P50413 "Ray, Joyce M." ;
-    rdaxd:P00018 "http://viaf.org/viaf/43347281" .
-
-<http://viaf.org/viaf/54154517>
-    a rdac:C10004 ;
-    rdaxd:P00018 "http://entedit.org/person/1019",
-        "https://www.isfdb.org/cgi-bin/ea.cgi?1019",
-        "http://viaf.org/viaf/54154517" ;
-    rdaad:P50413 "Spinrad, Norman" ;
-    rdfs:label "Spinrad, Norman" ;
-    rdaad:P50339 "1940-" ;
-    rdaad:P50415 "Spinrad, Norman Richard",
-        "Норман Спинрад",
-        "ノーマン・スピンラッド" ;
-    entedit:P15 per:302926,
-        per:420764 .
-
-<http://viaf.org/viaf/71388189>
-    a rdac:C10004 ;
-    rdaxd:P00018 "http://entedit.org/person/1747",
-        "https://www.isfdb.org/cgi-bin/ea.cgi?1747",
-        "http://viaf.org/viaf/71388189" ;
-    rdaad:P50413 "Burgess, Anthony" ;
-    rdfs:label "Burgess, Anthony" ;
-    rdaad:P50339 "1917-1993" ;
-    rdaad:P50415 "Wilson, John Anthony Burgess",
-        "Kell, Joseph",
-        "Antoni Bardžis",
-        "Entoni Bardžis" ;
-    entedit:P15 per:162933,
-        per:276555,
-        per:308445 .
-
-<http://viaf.org/viaf/762106>
-    a rdac:C10004 ;
-    rdaxd:P00018 "http://entedit.org/person/871",
-        "https://www.isfdb.org/cgi-bin/ea.cgi?871",
-        "http://viaf.org/viaf/762106" ;
-    rdaad:P50413 "Fadiman, Clifton" ;
-    rdfs:label "Fadiman, Clifton" ;
-    rdaad:P50339 "1904-1999" ;
-    rdaad:P50415 "Fadiman, Clifton Paul",
-        "クリントン・ファディマン" ;
-    entedit:P15 per:405553 .
-
-<http://viaf.org/viaf/79304712>
-    a rdac:C10004 ;
-    rdaxd:P00018 "http://entedit.org/person/243",
-        "https://www.isfdb.org/cgi-bin/ea.cgi?243",
-        "http://viaf.org/viaf/79304712" ;
-    rdaad:P50413 "Carr, Terry" ;
-    rdfs:label "Carr, Terry" ;
-    rdaad:P50339 "1937-1987" ;
-    rdaad:P50415 "Carr, Terry Gene",
-        "Edwards, Norman",
-        "Brandon, Carl",
-        "Carr",
-        "Christian Dörge (in error)",
-        "Carr, Gerry",
-        "テリー・カー" ;
-    entedit:P15 per:2957,
-        per:15699,
-        per:145662,
-        per:331637,
-        per:333414,
-        per:372867,
-        per:421334 .
-
-<http://viaf.org/viaf/84181241>
-    a rdac:C10004 ;
-    rdaxd:P00018 "http://entedit.org/person/324",
-        "https://www.isfdb.org/cgi-bin/ea.cgi?324",
-        "http://viaf.org/viaf/84181241" ;
-    rdaad:P50413 "Bayley, Barrington J." ;
-    rdfs:label "Bayley, Barrington J." ;
-    rdaad:P50339 "1937-2008" ;
-    rdaad:P50415 "Bayley, Barrington John",
-        "Colvin, James",
-        "Barrington, Michael",
-        "Diamond, John",
-        "Woods, P. F.",
-        "Aumbry, Alan",
-        "Woods, Peter",
-        "Bayley, B. J.",
-        "Bayley, Barrington",
-        "Bayley, J. Barrington",
-        "Bayley, Barry",
-        "バリントン・J・ベイリー",
-        "Bailey, Barrington J.",
-        "Bejli, Barington Dž.",
-        "バリントン・Ｊ・ベイリー" ;
-    entedit:P15 per:11223,
-        per:13655,
-        per:14874,
-        per:19569,
-        per:19570,
-        per:19852,
-        per:20330,
-        per:94717,
-        per:114711,
-        per:195905,
-        per:237309,
-        per:239887,
-        per:279692,
-        per:422181 .
-
-<http://viaf.org/viaf/9842556>
-    a rdac:C10004 ;
-    rdaxd:P00018 "http://entedit.org/person/259",
-        "https://www.isfdb.org/cgi-bin/ea.cgi?259",
-        "http://viaf.org/viaf/9842556" ;
-    rdaad:P50413 "Ballard, J. G." ;
-    rdfs:label "Ballard, J. G." ;
-    rdaad:P50339 "1930-2009" ;
-    rdaad:P50415 "Ballard, James Graham",
-        "Ballard, James G.",
-        "Ballard, Jim G.",
-        "Ballard, Jim",
-        "Balard, Dž. G.",
-        "J・G・バラード",
-        "Balard, Džejms Grehem",
-        "Ballard, J.-G.",
-        "Джеймс Грэм Баллард",
-        "Balard, J. G.",
-        "Джеймс Болард",
-        "Джеймс Боллард",
-        "Дж. Г. Балард",
-        "Джеймс Балард",
-        "Ｊ・Ｇ・バラード" ;
-    entedit:P15 per:164697,
-        per:170693,
-        per:173463,
-        per:181841,
-        per:194463,
-        per:234758,
-        per:262838,
-        per:266877,
-        per:276482,
-        per:277873,
-        per:285901,
-        per:302772,
-        per:311516,
-        per:406684,
-        per:422160 .
-
-<https://en.wikipedia.org/wiki/Franklin_Cox>
-    a rdac:C10004 ;
-    rdfs:label "Cox, Frank (1961-)" ;
-    rdaad:P50339 "1961-" ;
-    rdaad:P50413 "Cox, Frank" ;
-    rdaxd:P00018 "https://en.wikipedia.org/wiki/Franklin_Cox" .
-
-<https://isni.org/isni/0000000007828549>
-    a rdac:C10004 ;
-    rdfs:label "Potter, Jeffrey Knight" ;
-    rdaad:P50413 "Potter, Jeffrey Knight" ;
-    rdaxd:P00018 "https://isni.org/isni/0000000007828549" .
-
-<https://isni.org/isni/0000000033066226>
-    a rdac:C10004 ;
-    rdfs:label "Cella, Lisa" ;
-    rdaad:P50413 "Cella, Lisa" ;
-    rdaxd:P00018 "https://isni.org/isni/0000000033066226" .
-
-<https://isni.org/isni/0000000064014891>
-    a rdac:C10004 ;
-    rdfs:label "McKimmey, J." ;
-    rdaad:P50413 "McKimmey, J." ;
-    rdaxd:P00018 "https://isni.org/isni/0000000064014891" .
-
-<https://isni.org/isni/000000008169370X>
-    a rdac:C10004 ;
-    rdfs:label "Jakes, John Williams (1925-)" ;
-    rdaad:P50339 "1925-" ;
-    rdaad:P50413 "Jakes, John Williams" ;
-    rdaxd:P00018 "https://isni.org/isni/000000008169370X" .
-
-<https://isni.org/isni/0000000109520828>
-    a rdac:C10004 ;
-    rdfs:label "Laumer, K." ;
-    rdaad:P50413 "Laumer, K." ;
-    rdaxd:P00018 "https://isni.org/isni/0000000109520828" .
-
-<https://isni.org/isni/0000000372289205>
-    a rdac:C10004 ;
-    rdfs:label "Van Moll, Erwin" ;
-    rdaad:P50413 "Van Moll, Erwin" ;
-    rdaxd:P00018 "https://isni.org/isni/0000000372289205" .
-
-<https://isni.org/isni/000000043862402X>
-    a rdac:C10004 ;
-    rdfs:label "Edin, Fredrik (1967-)" ;
-    rdaad:P50339 "1967-" ;
-    rdaad:P50413 "Edin, Fredrik" ;
-    rdaxd:P00018 "https://isni.org/isni/000000043862402X" .
-
-<https://isni.org/isni/000000044534099X>
-    a rdac:C10004 ;
-    rdfs:label "Modular K." ;
-    rdaad:P50413 "Modular K." ;
-    rdaxd:P00018 "https://isni.org/isni/000000044534099X" .

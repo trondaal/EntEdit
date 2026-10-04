@@ -1,7 +1,6 @@
-# EntEdit example data – J. G. Ballard – works
-# isfdb2lrm conversion of ISFDB (author 259, results/author-259, converter commit c8ab6b3, generated 2026-09-28)
-# merged with the earlier Ballard.ttl catalogue sample; persons, works and expressions
-# identified by VIAF where the earlier sample knew the VIAF identifier.
+# isfdb2lrm – works
+# Generated 2026-10-04T10:19:34+00:00 from the local ISFDB database,
+# converter commit f744a29, mode: authors, seed authors: 259, 164697, 170693, 173463, 181841, 194463, 234758, 262838, 266877, 276482, 277873, 285901, 302772, 311516, 406684, 422160
 
 @prefix entedit: <http://oslomet.no/abi/vocab#> .
 @prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
@@ -96,6 +95,18 @@ wrk:3570
     entedit:P02 ntsf:258 ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
 
+<http://viaf.org/viaf/305922109>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://entedit.org/work/3571",
+        "https://www.isfdb.org/cgi-bin/title.cgi?3571",
+        "http://viaf.org/viaf/305922109" ;
+    rdawd:P10223 "Crash"@en ;
+    rdfs:label "Crash (Ballard, J. G.)" ;
+    rdawd:P10219 "1973-06" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 ntsf:258 ;
+    rdawo:P10061 <http://viaf.org/viaf/9842556> .
+
 wrk:3572
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/3572",
@@ -114,6 +125,30 @@ wrk:3573
     rdawd:P10223 "High-Rise"@en ;
     rdfs:label "High-Rise (Ballard, J. G.)" ;
     rdawd:P10219 "1975-11" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 ntsf:258 ;
+    rdawo:P10061 <http://viaf.org/viaf/9842556> .
+
+<http://viaf.org/viaf/202977755>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://entedit.org/work/3574",
+        "https://www.isfdb.org/cgi-bin/title.cgi?3574",
+        "http://viaf.org/viaf/202977755" ;
+    rdawd:P10223 "Hello America"@en ;
+    rdfs:label "Hello America (Ballard, J. G.)" ;
+    rdawd:P10219 "1981" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 ntsf:258 ;
+    rdawo:P10061 <http://viaf.org/viaf/9842556> .
+
+<http://viaf.org/viaf/308025936>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://entedit.org/work/3575",
+        "https://www.isfdb.org/cgi-bin/title.cgi?3575",
+        "http://viaf.org/viaf/308025936" ;
+    rdawd:P10223 "The Day of Creation"@en ;
+    rdfs:label "The Day of Creation (Ballard, J. G.)" ;
+    rdawd:P10219 "1987" ;
     entedit:P01 vtp:V1000 ;
     entedit:P02 ntsf:258 ;
     rdawo:P10061 <http://viaf.org/viaf/9842556> .
@@ -233,6 +268,20 @@ wrk:8222
     entedit:P01 vtp:V1000 ;
     entedit:P02 entedit:T02 ;
     rdawo:P10061 per:337 .
+
+<http://viaf.org/viaf/180997771>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://entedit.org/work/8348",
+        "https://www.isfdb.org/cgi-bin/title.cgi?8348",
+        "http://viaf.org/viaf/180997771" ;
+    rdawd:P10223 "Empire of the Sun"@en ;
+    rdfs:label "Empire of the Sun (Ballard, J. G.)" ;
+    rdawd:P10219 "1984-09-13" ;
+    rdawd:P10330 "Semi-autobiographical novel. Sequel is \"The Kindness of Women\".",
+        "Shortlisted for the 1984 Booker Prize." ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 ntsf:258 ;
+    rdawo:P10061 <http://viaf.org/viaf/9842556> .
 
 wrk:10552
     a rdac:C10001 ;
@@ -1680,8 +1729,7 @@ wrk:37125
 wrk:37126
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/37126",
-        "https://www.isfdb.org/cgi-bin/title.cgi?37126",
-        "http://www.isfdb.org/cgi-bin/title.cgi?37126" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?37126" ;
     rdawd:P10223 "The Terminal Beach"@en ;
     rdfs:label "The Terminal Beach (Ballard, J. G.)" ;
     rdawd:P10219 "1964" ;
@@ -1735,6 +1783,18 @@ wrk:37542
     entedit:P01 vtp:V1000 ;
     entedit:P02 entedit:T02 ;
     rdawo:P10061 per:613 .
+
+<http://www.wikidata.org/entity/Q6692707>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://entedit.org/work/37677",
+        "https://www.isfdb.org/cgi-bin/title.cgi?37677",
+        "http://www.wikidata.org/entity/Q6692707" ;
+    rdawd:P10223 "Low-Flying Aircraft and Other Stories"@en ;
+    rdfs:label "Low-Flying Aircraft and Other Stories (Ballard, J. G.)" ;
+    rdawd:P10219 "1976" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 entedit:T01 ;
+    rdawo:P10061 <http://viaf.org/viaf/9842556> .
 
 wrk:37678
     a rdac:C10001 ;
@@ -2294,6 +2354,19 @@ wrk:40810
     entedit:P02 entedit:T02 ;
     rdawo:P10061 per:1252 .
 
+<http://viaf.org/viaf/311471559>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://entedit.org/work/40816",
+        "https://www.isfdb.org/cgi-bin/title.cgi?40816",
+        "http://viaf.org/viaf/311471559" ;
+    rdawd:P10223 "The Voices of Time"@en ;
+    rdfs:label "The Voices of Time (Ballard, J. G.)" ;
+    rdawd:P10219 "1960-10" ;
+    rdawd:P10330 "In a time not too far from ours, society is winding down as humans are overtaken by narcolepsy and plants and animals are mutating wildly to adapt to the old-age of Life itself, while mysterious signals from space appear to be counting down to the end of their sources, and the Universe itself." ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 entedit:T02 ;
+    rdawo:P10061 <http://viaf.org/viaf/9842556> .
+
 wrk:40818
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/40818",
@@ -2389,8 +2462,7 @@ wrk:40836
 wrk:40842
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/40842",
-        "https://www.isfdb.org/cgi-bin/title.cgi?40842",
-        "http://www.isfdb.org/cgi-bin/title.cgi?40842" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?40842" ;
     rdawd:P10223 "Two Dooms"@en ;
     rdfs:label "Two Dooms (Kornbluth, C. M.)" ;
     rdawd:P10219 "1958-07" ;
@@ -2638,8 +2710,7 @@ wrk:40900
 wrk:40903
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/40903",
-        "https://www.isfdb.org/cgi-bin/title.cgi?40903",
-        "http://www.isfdb.org/cgi-bin/title.cgi?40903" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?40903" ;
     rdawd:P10223 "Stranger Station"@en ;
     rdfs:label "Stranger Station (Knight, Damon)" ;
     rdawd:P10219 "1956-12" ;
@@ -3103,8 +3174,7 @@ wrk:41025
 wrk:41026
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/41026",
-        "https://www.isfdb.org/cgi-bin/title.cgi?41026",
-        "http://www.isfdb.org/cgi-bin/title.cgi?41026" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?41026" ;
     rdawd:P10223 "The Public Hating"@en ;
     rdfs:label "The Public Hating (Allen, Steve)" ;
     rdawd:P10219 "1955-01" ;
@@ -3186,8 +3256,7 @@ wrk:41040
 wrk:41048
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/41048",
-        "https://www.isfdb.org/cgi-bin/title.cgi?41048",
-        "http://www.isfdb.org/cgi-bin/title.cgi?41048" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?41048" ;
     rdawd:P10223 "Appointment in Tomorrow"@en ;
     rdfs:label "Appointment in Tomorrow (Leiber, Fritz)" ;
     rdawd:P10219 "1951-07" ;
@@ -3246,8 +3315,7 @@ wrk:41066
 wrk:41067
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/41067",
-        "https://www.isfdb.org/cgi-bin/title.cgi?41067",
-        "http://www.isfdb.org/cgi-bin/title.cgi?41067" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?41067" ;
     rdawd:P10223 "The Phantom of Kansas"@en ;
     rdfs:label "The Phantom of Kansas (Varley, John)" ;
     rdawd:P10219 "1976-02" ;
@@ -3373,8 +3441,7 @@ wrk:41100
 wrk:41101
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/41101",
-        "https://www.isfdb.org/cgi-bin/title.cgi?41101",
-        "http://www.isfdb.org/cgi-bin/title.cgi?41101" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?41101" ;
     rdawd:P10223 "Nobody's Home"@en ;
     rdfs:label "Nobody's Home (Russ, Joanna)" ;
     rdawd:P10219 "1972-12" ;
@@ -3421,8 +3488,7 @@ wrk:41105
 wrk:41107
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/41107",
-        "https://www.isfdb.org/cgi-bin/title.cgi?41107",
-        "http://www.isfdb.org/cgi-bin/title.cgi?41107" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?41107" ;
     rdawd:P10223 "Nine Lives"@en ;
     rdfs:label "Nine Lives (Le Guin, Ursula K.)" ;
     rdawd:P10219 "1969-11" ;
@@ -3505,8 +3571,7 @@ wrk:41115
 wrk:41120
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/41120",
-        "https://www.isfdb.org/cgi-bin/title.cgi?41120",
-        "http://www.isfdb.org/cgi-bin/title.cgi?41120" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?41120" ;
     rdawd:P10223 "The Muse"@en ;
     rdfs:label "The Muse (Burgess, Anthony)" ;
     rdawd:P10219 "1968" ;
@@ -3656,8 +3721,7 @@ wrk:41159
 wrk:41160
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/41160",
-        "https://www.isfdb.org/cgi-bin/title.cgi?41160",
-        "http://www.isfdb.org/cgi-bin/title.cgi?41160" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?41160" ;
     rdawd:P10223 "The Men Who Murdered Mohammed"@en ;
     rdfs:label "The Men Who Murdered Mohammed (Bester, Alfred)" ;
     rdawd:P10219 "1958-10" ;
@@ -3725,8 +3789,7 @@ wrk:41174
 wrk:41178
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/41178",
-        "https://www.isfdb.org/cgi-bin/title.cgi?41178",
-        "http://www.isfdb.org/cgi-bin/title.cgi?41178" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?41178" ;
     rdawd:P10223 "The Man Who Lost the Sea"@en ;
     rdfs:label "The Man Who Lost the Sea (Sturgeon, Theodore)" ;
     rdawd:P10219 "1959-10" ;
@@ -3874,8 +3937,7 @@ wrk:41198
 wrk:41205
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/41205",
-        "https://www.isfdb.org/cgi-bin/title.cgi?41205",
-        "http://www.isfdb.org/cgi-bin/title.cgi?41205" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?41205" ;
     rdawd:P10223 "The Lineman"@en ;
     rdfs:label "The Lineman (Walter M. Miller, Jr.)" ;
     rdawd:P10219 "1957-08" ;
@@ -4024,8 +4086,7 @@ wrk:41233
 wrk:41235
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/41235",
-        "https://www.isfdb.org/cgi-bin/title.cgi?41235",
-        "http://www.isfdb.org/cgi-bin/title.cgi?41235" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?41235" ;
     rdawd:P10223 "Kyrie"@en ;
     rdfs:label "Kyrie (Anderson, Poul)" ;
     rdawd:P10219 "1968-08" ;
@@ -4243,8 +4304,7 @@ wrk:41274
 wrk:41280
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/41280",
-        "https://www.isfdb.org/cgi-bin/title.cgi?41280",
-        "http://www.isfdb.org/cgi-bin/title.cgi?41280" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?41280" ;
     rdawd:P10223 "The Insane Ones"@en ;
     rdfs:label "The Insane Ones (Ballard, J. G.)" ;
     rdawd:P10219 "1962-01" ;
@@ -4255,8 +4315,7 @@ wrk:41280
 wrk:41283
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/41283",
-        "https://www.isfdb.org/cgi-bin/title.cgi?41283",
-        "http://www.isfdb.org/cgi-bin/title.cgi?41283" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?41283" ;
     rdawd:P10223 "Inconstant Moon"@en ;
     rdfs:label "Inconstant Moon (Niven, Larry)" ;
     rdawd:P10219 "1971" ;
@@ -4394,8 +4453,7 @@ wrk:41332
 wrk:41335
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/41335",
-        "https://www.isfdb.org/cgi-bin/title.cgi?41335",
-        "http://www.isfdb.org/cgi-bin/title.cgi?41335" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?41335" ;
     rdawd:P10223 "Harrison Bergeron"@en ;
     rdfs:label "Harrison Bergeron (Kurt Vonnegut, Jr.)" ;
     rdawd:P10219 "1961-10" ;
@@ -4430,8 +4488,7 @@ wrk:41339
 wrk:41350
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/41350",
-        "https://www.isfdb.org/cgi-bin/title.cgi?41350",
-        "http://www.isfdb.org/cgi-bin/title.cgi?41350" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?41350" ;
     rdawd:P10223 "The Green Hills of Earth"@en ;
     rdfs:label "The Green Hills of Earth (Heinlein, Robert A.)" ;
     rdawd:P10219 "1947-02-08" ;
@@ -4531,8 +4588,7 @@ wrk:41362
 wrk:41363
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/41363",
-        "https://www.isfdb.org/cgi-bin/title.cgi?41363",
-        "http://www.isfdb.org/cgi-bin/title.cgi?41363" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?41363" ;
     rdawd:P10223 "The Golem"@en ;
     rdfs:label "The Golem (Davidson, Avram)" ;
     rdawd:P10219 "1955-03" ;
@@ -5068,8 +5124,7 @@ wrk:41515
 wrk:41516
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/41516",
-        "https://www.isfdb.org/cgi-bin/title.cgi?41516",
-        "http://www.isfdb.org/cgi-bin/title.cgi?41516" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?41516" ;
     rdawd:P10223 "The Dance of the Changer and the Three"@en ;
     rdfs:label "The Dance of the Changer and the Three (Carr, Terry)" ;
     rdawd:P10219 "1968-06" ;
@@ -5253,8 +5308,7 @@ wrk:41555
 wrk:41557
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/41557",
-        "https://www.isfdb.org/cgi-bin/title.cgi?41557",
-        "http://www.isfdb.org/cgi-bin/title.cgi?41557" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?41557" ;
     rdawd:P10223 "Chronopolis"@en ;
     rdfs:label "Chronopolis (Ballard, J. G.)" ;
     rdawd:P10219 "1960-06" ;
@@ -5276,8 +5330,7 @@ wrk:41563
 wrk:41564
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/41564",
-        "https://www.isfdb.org/cgi-bin/title.cgi?41564",
-        "http://www.isfdb.org/cgi-bin/title.cgi?41564" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?41564" ;
     rdawd:P10223 "The Chaste Planet"@en ;
     rdfs:label "The Chaste Planet (Updike, John)" ;
     rdawd:P10219 "1975-11-10" ;
@@ -5572,8 +5625,7 @@ wrk:41656
 wrk:41658
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/41658",
-        "https://www.isfdb.org/cgi-bin/title.cgi?41658",
-        "http://www.isfdb.org/cgi-bin/title.cgi?41658" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?41658" ;
     rdawd:P10223 "Angouleme"@en ;
     rdfs:label "Angouleme (Disch, Thomas M.)" ;
     rdawd:P10219 "1971" ;
@@ -6041,8 +6093,7 @@ wrk:42205
 wrk:42206
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/42206",
-        "https://www.isfdb.org/cgi-bin/title.cgi?42206",
-        "http://www.isfdb.org/cgi-bin/title.cgi?42206" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?42206" ;
     rdawd:P10223 "The Recognition"@en ;
     rdfs:label "The Recognition (Ballard, J. G.)" ;
     rdawd:P10219 "1967-10" ;
@@ -7144,8 +7195,7 @@ wrk:43925
 wrk:43928
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/43928",
-        "https://www.isfdb.org/cgi-bin/title.cgi?43928",
-        "http://www.isfdb.org/cgi-bin/title.cgi?43928" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?43928" ;
     rdawd:P10223 "The Volcano Dances"@en ;
     rdfs:label "The Volcano Dances (Ballard, J. G.)" ;
     rdawd:P10219 "1964-06" ;
@@ -7346,8 +7396,7 @@ wrk:43948
 wrk:43949
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/43949",
-        "https://www.isfdb.org/cgi-bin/title.cgi?43949",
-        "http://www.isfdb.org/cgi-bin/title.cgi?43949" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?43949" ;
     rdawd:P10223 "The Drowned Giant"@en ;
     rdfs:label "The Drowned Giant (Ballard, J. G.)" ;
     rdawd:P10219 "1964-06" ;
@@ -7552,6 +7601,18 @@ wrk:44022
     entedit:P02 entedit:T02 ;
     rdawo:P10061 per:154 .
 
+<http://viaf.org/viaf/309308512>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://entedit.org/work/44028",
+        "https://www.isfdb.org/cgi-bin/title.cgi?44028",
+        "http://viaf.org/viaf/309308512" ;
+    rdawd:P10223 "Boy in Darkness"@en ;
+    rdfs:label "Boy in Darkness (Peake, Mervyn)" ;
+    rdawd:P10219 "1956" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 ntsf:157 ;
+    rdawo:P10061 <http://viaf.org/viaf/24606270> .
+
 wrk:44029
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/44029",
@@ -7685,8 +7746,7 @@ wrk:44122
 wrk:44123
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/44123",
-        "https://www.isfdb.org/cgi-bin/title.cgi?44123",
-        "http://www.isfdb.org/cgi-bin/title.cgi?44123" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?44123" ;
     rdawd:P10223 "The Cage of Sand"@en ;
     rdfs:label "The Cage of Sand (Ballard, J. G.)" ;
     rdawd:P10219 "1962-06" ;
@@ -7877,8 +7937,7 @@ wrk:44444
 wrk:44449
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/44449",
-        "https://www.isfdb.org/cgi-bin/title.cgi?44449",
-        "http://www.isfdb.org/cgi-bin/title.cgi?44449" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?44449" ;
     rdawd:P10223 "Escapement"@en ;
     rdfs:label "Escapement (Ballard, J. G.)" ;
     rdawd:P10219 "1956-12" ;
@@ -7889,8 +7948,7 @@ wrk:44449
 wrk:44450
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/44450",
-        "https://www.isfdb.org/cgi-bin/title.cgi?44450",
-        "http://www.isfdb.org/cgi-bin/title.cgi?44450" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?44450" ;
     rdawd:P10223 "Prima Belladonna"@en ;
     rdfs:label "Prima Belladonna (Ballard, J. G.)" ;
     rdawd:P10219 "1956-12" ;
@@ -7901,21 +7959,18 @@ wrk:44450
 wrk:44451
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/44451",
-        "https://www.isfdb.org/cgi-bin/title.cgi?44451",
-        "http://www.isfdb.org/cgi-bin/title.cgi?44451" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?44451" ;
     rdawd:P10223 "Build-Up"@en ;
     rdfs:label "Build-Up (Ballard, J. G.)" ;
     rdawd:P10219 "1957-01" ;
     entedit:P01 vtp:V1000 ;
     entedit:P02 entedit:T02 ;
-    rdawo:P10061 <http://viaf.org/viaf/9842556> ;
-    rdawd:P10086 "The concentration city" .
+    rdawo:P10061 <http://viaf.org/viaf/9842556> .
 
 wrk:44454
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/44454",
-        "https://www.isfdb.org/cgi-bin/title.cgi?44454",
-        "http://www.isfdb.org/cgi-bin/title.cgi?44454" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?44454" ;
     rdawd:P10223 "Manhole 69"@en ;
     rdfs:label "Manhole 69 (Ballard, J. G.)" ;
     rdawd:P10219 "1957-11" ;
@@ -7926,8 +7981,7 @@ wrk:44454
 wrk:44455
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/44455",
-        "https://www.isfdb.org/cgi-bin/title.cgi?44455",
-        "http://www.isfdb.org/cgi-bin/title.cgi?44455" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?44455" ;
     rdawd:P10223 "The Waiting Grounds"@en ;
     rdfs:label "The Waiting Grounds (Ballard, J. G.)" ;
     rdawd:P10219 "1959-11" ;
@@ -7938,8 +7992,7 @@ wrk:44455
 wrk:44456
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/44456",
-        "https://www.isfdb.org/cgi-bin/title.cgi?44456",
-        "http://www.isfdb.org/cgi-bin/title.cgi?44456" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?44456" ;
     rdawd:P10223 "Studio 5, the Stars"@en ;
     rdfs:label "Studio 5, the Stars (Ballard, J. G.)" ;
     rdawd:P10219 "1961-02" ;
@@ -7950,8 +8003,7 @@ wrk:44456
 wrk:44457
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/44457",
-        "https://www.isfdb.org/cgi-bin/title.cgi?44457",
-        "http://www.isfdb.org/cgi-bin/title.cgi?44457" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?44457" ;
     rdawd:P10223 "Deep End"@en ;
     rdfs:label "Deep End (Ballard, J. G.)" ;
     rdawd:P10219 "1961-05" ;
@@ -7962,8 +8014,7 @@ wrk:44457
 wrk:44458
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/44458",
-        "https://www.isfdb.org/cgi-bin/title.cgi?44458",
-        "http://www.isfdb.org/cgi-bin/title.cgi?44458" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?44458" ;
     rdawd:P10223 "The Garden of Time"@en ;
     rdfs:label "The Garden of Time (Ballard, J. G.)" ;
     rdawd:P10219 "1962-02" ;
@@ -7974,8 +8025,7 @@ wrk:44458
 wrk:44459
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/44459",
-        "https://www.isfdb.org/cgi-bin/title.cgi?44459",
-        "http://www.isfdb.org/cgi-bin/title.cgi?44459" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?44459" ;
     rdawd:P10223 "The Subliminal Man"@en ;
     rdfs:label "The Subliminal Man (Ballard, J. G.)" ;
     rdawd:P10219 "1963-01" ;
@@ -7986,8 +8036,7 @@ wrk:44459
 wrk:44460
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/44460",
-        "https://www.isfdb.org/cgi-bin/title.cgi?44460",
-        "http://www.isfdb.org/cgi-bin/title.cgi?44460" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?44460" ;
     rdawd:P10223 "A Question of Re-Entry"@en ;
     rdfs:label "A Question of Re-Entry (Ballard, J. G.)" ;
     rdawd:P10219 "1963-03" ;
@@ -7998,8 +8047,7 @@ wrk:44460
 wrk:44461
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/44461",
-        "https://www.isfdb.org/cgi-bin/title.cgi?44461",
-        "http://www.isfdb.org/cgi-bin/title.cgi?44461" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?44461" ;
     rdawd:P10223 "The Time-Tombs"@en ;
     rdfs:label "The Time-Tombs (Ballard, J. G.)" ;
     rdawd:P10219 "1963-03" ;
@@ -8021,8 +8069,7 @@ wrk:44462
 wrk:44463
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/44463",
-        "https://www.isfdb.org/cgi-bin/title.cgi?44463",
-        "http://www.isfdb.org/cgi-bin/title.cgi?44463" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?44463" ;
     rdawd:P10223 "The Air Disaster"@en ;
     rdfs:label "The Air Disaster (Ballard, J. G.)" ;
     rdawd:P10219 "1975-01" ;
@@ -8034,8 +8081,7 @@ wrk:44463
 wrk:44464
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/44464",
-        "https://www.isfdb.org/cgi-bin/title.cgi?44464",
-        "http://www.isfdb.org/cgi-bin/title.cgi?44464" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?44464" ;
     rdawd:P10223 "The Smile"@en ;
     rdfs:label "The Smile (Ballard, J. G.)" ;
     rdawd:P10219 "1976" ;
@@ -8047,8 +8093,7 @@ wrk:44464
 wrk:44465
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/44465",
-        "https://www.isfdb.org/cgi-bin/title.cgi?44465",
-        "http://www.isfdb.org/cgi-bin/title.cgi?44465" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?44465" ;
     rdawd:P10223 "The Dead Time"@en ;
     rdfs:label "The Dead Time (Ballard, J. G.)" ;
     rdawd:P10219 "1977" ;
@@ -8060,8 +8105,7 @@ wrk:44465
 wrk:44466
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/44466",
-        "https://www.isfdb.org/cgi-bin/title.cgi?44466",
-        "http://www.isfdb.org/cgi-bin/title.cgi?44466" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?44466" ;
     rdawd:P10223 "The Ultimate City"@en ;
     rdfs:label "The Ultimate City (Ballard, J. G.)" ;
     rdawd:P10219 "1976-12" ;
@@ -8072,8 +8116,7 @@ wrk:44466
 wrk:44468
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/44468",
-        "https://www.isfdb.org/cgi-bin/title.cgi?44468",
-        "http://www.isfdb.org/cgi-bin/title.cgi?1274485" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?44468" ;
     rdawd:P10223 "Why I Want to Fuck Ronald Reagan"@en ;
     rdfs:label "Why I Want to Fuck Ronald Reagan (Ballard, J. G.)" ;
     rdawd:P10219 "1968-01-16" ;
@@ -8323,9 +8366,7 @@ wrk:44513
 wrk:44514
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/44514",
-        "https://www.isfdb.org/cgi-bin/title.cgi?44514",
-        "http://www.isfdb.org/cgi-bin/title.cgi?44514",
-        "https://www.isfdb.org/cgi-bin/title.cgi?575437" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?44514" ;
     rdawd:P10223 "The Sound-Sweep"@en ;
     rdfs:label "The Sound-Sweep (Ballard, J. G.)" ;
     rdawd:P10219 "1960-02" ;
@@ -8654,8 +8695,7 @@ wrk:45241
 wrk:45279
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/45279",
-        "https://www.isfdb.org/cgi-bin/title.cgi?45279",
-        "http://www.isfdb.org/cgi-bin/title.cgi?45279" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?45279" ;
     rdawd:P10223 "Special Flight"@en ;
     rdfs:label "Special Flight (Berryman, John)" ;
     rdawd:P10219 "1939-05" ;
@@ -8688,8 +8728,7 @@ wrk:45294
 wrk:45330
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/45330",
-        "https://www.isfdb.org/cgi-bin/title.cgi?45330",
-        "http://www.isfdb.org/cgi-bin/title.cgi?45330" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?45330" ;
     rdawd:P10223 "Memories of the Space Age"@en ;
     rdfs:label "Memories of the Space Age (Ballard, J. G.)" ;
     rdawd:P10219 "1982-06" ;
@@ -8700,8 +8739,7 @@ wrk:45330
 wrk:45331
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/45331",
-        "https://www.isfdb.org/cgi-bin/title.cgi?45331",
-        "http://www.isfdb.org/cgi-bin/title.cgi?45331" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?45331" ;
     rdawd:P10223 "The Object of the Attack"@en ;
     rdfs:label "The Object of the Attack (Ballard, J. G.)" ;
     rdawd:P10219 "1984-09" ;
@@ -9307,8 +9345,7 @@ wrk:45799
 wrk:45804
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/45804",
-        "https://www.isfdb.org/cgi-bin/title.cgi?45804",
-        "http://www.isfdb.org/cgi-bin/title.cgi?45804" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?45804" ;
     rdawd:P10223 "Ghost V"@en ;
     rdfs:label "Ghost V (Sheckley, Robert)" ;
     rdawd:P10219 "1954-10" ;
@@ -9941,8 +9978,7 @@ wrk:46436
 wrk:46455
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/46455",
-        "https://www.isfdb.org/cgi-bin/title.cgi?46455",
-        "http://www.isfdb.org/cgi-bin/title.cgi?46455" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?46455" ;
     rdawd:P10223 "The Man Who Walked on the Moon"@en ;
     rdfs:label "The Man Who Walked on the Moon (Ballard, J. G.)" ;
     rdawd:P10219 "1985" ;
@@ -10246,8 +10282,7 @@ wrk:46595
 wrk:46600
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/46600",
-        "https://www.isfdb.org/cgi-bin/title.cgi?46600",
-        "http://www.isfdb.org/cgi-bin/title.cgi?46600" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?46600" ;
     rdawd:P10223 "The Enormous Space"@en ;
     rdfs:label "The Enormous Space (Ballard, J. G.)" ;
     rdawd:P10219 "1989-07" ;
@@ -10582,8 +10617,7 @@ wrk:46794
 wrk:46817
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/46817",
-        "https://www.isfdb.org/cgi-bin/title.cgi?46817",
-        "http://www.isfdb.org/cgi-bin/title.cgi?46817" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?46817" ;
     rdawd:P10223 "A Guide to Virtual Death"@en ;
     rdfs:label "A Guide to Virtual Death (Ballard, J. G.)" ;
     rdawd:P10219 "1992-02" ;
@@ -10594,8 +10628,7 @@ wrk:46817
 wrk:46818
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/46818",
-        "https://www.isfdb.org/cgi-bin/title.cgi?46818",
-        "http://www.isfdb.org/cgi-bin/title.cgi?46818" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?46818" ;
     rdawd:P10223 "The Message from Mars"@en ;
     rdfs:label "The Message from Mars (Ballard, J. G.)" ;
     rdawd:P10219 "1992-04" ;
@@ -10960,8 +10993,7 @@ wrk:47000
 wrk:47004
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/47004",
-        "https://www.isfdb.org/cgi-bin/title.cgi?47004",
-        "http://www.isfdb.org/cgi-bin/title.cgi?47004" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?47004" ;
     rdawd:P10223 "The Dying Fall"@en ;
     rdfs:label "The Dying Fall (Ballard, J. G.)" ;
     rdawd:P10219 "1996-04" ;
@@ -10972,8 +11004,7 @@ wrk:47004
 wrk:47005
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/47005",
-        "https://www.isfdb.org/cgi-bin/title.cgi?47005",
-        "http://www.isfdb.org/cgi-bin/title.cgi?47005" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?47005" ;
     rdawd:P10223 "The Secret Autobiography of J. G. B******"@en ;
     rdfs:label "The Secret Autobiography of J. G. B****** (Ballard, J. G.)" ;
     rdawd:P10219 "1981" ;
@@ -11220,8 +11251,7 @@ wrk:47860
 wrk:48020
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/48020",
-        "https://www.isfdb.org/cgi-bin/title.cgi?48020",
-        "http://www.isfdb.org/cgi-bin/title.cgi?48020" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?48020" ;
     rdawd:P10223 "Forgetfulness"@en ;
     rdfs:label "Forgetfulness (John W. Campbell, Jr.)" ;
     rdawd:P10219 "1937-06" ;
@@ -11288,8 +11318,7 @@ wrk:48146
 wrk:48153
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/48153",
-        "https://www.isfdb.org/cgi-bin/title.cgi?48153",
-        "http://www.isfdb.org/cgi-bin/title.cgi?48153" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?48153" ;
     rdawd:P10223 "War Fever"@en ;
     rdfs:label "War Fever (Ballard, J. G.)" ;
     rdawd:P10219 "1989-10" ;
@@ -11691,8 +11720,7 @@ wrk:49117
 wrk:49122
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/49122",
-        "https://www.isfdb.org/cgi-bin/title.cgi?49122",
-        "http://www.isfdb.org/cgi-bin/title.cgi?49122" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?49122" ;
     rdawd:P10223 "Myths of the Near Future"@en ;
     rdfs:label "Myths of the Near Future (Ballard, J. G.)" ;
     rdawd:P10219 "1982-10" ;
@@ -12931,8 +12959,7 @@ wrk:51183
 wrk:51188
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/51188",
-        "https://www.isfdb.org/cgi-bin/title.cgi?51188",
-        "http://www.isfdb.org/cgi-bin/title.cgi?51188" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?51188" ;
     rdawd:P10223 "The Gold at the Starbow's End"@en ;
     rdfs:label "The Gold at the Starbow's End (Pohl, Frederik)" ;
     rdawd:P10219 "1972-03" ;
@@ -14499,8 +14526,7 @@ wrk:53868
 wrk:53869
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/53869",
-        "https://www.isfdb.org/cgi-bin/title.cgi?53869",
-        "http://www.isfdb.org/cgi-bin/title.cgi?53869" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?53869" ;
     rdawd:P10223 "Cry Hope, Cry Fury!"@en ;
     rdfs:label "Cry Hope, Cry Fury! (Ballard, J. G.)" ;
     rdawd:P10219 "1967-10" ;
@@ -14824,8 +14850,7 @@ wrk:54043
 wrk:54044
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/54044",
-        "https://www.isfdb.org/cgi-bin/title.cgi?54044",
-        "http://www.isfdb.org/cgi-bin/title.cgi?54044" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?54044" ;
     rdawd:P10223 "The Cloud-Sculptors of Coral D"@en ;
     rdfs:label "The Cloud-Sculptors of Coral D (Ballard, J. G.)" ;
     rdawd:P10219 "1967-12" ;
@@ -15041,8 +15066,7 @@ wrk:54217
 wrk:54219
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/54219",
-        "https://www.isfdb.org/cgi-bin/title.cgi?54219",
-        "http://www.isfdb.org/cgi-bin/title.cgi?54219" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?54219" ;
     rdawd:P10223 "Venus Smiles"@en ;
     rdfs:label "Venus Smiles (Ballard, J. G.)" ;
     rdawd:P10219 "1957-06" ;
@@ -15199,8 +15223,7 @@ wrk:54303
 wrk:54304
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/54304",
-        "https://www.isfdb.org/cgi-bin/title.cgi?54304",
-        "http://www.isfdb.org/cgi-bin/title.cgi?54304" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?54304" ;
     rdawd:P10223 "The Comsat Angels"@en ;
     rdfs:label "The Comsat Angels (Ballard, J. G.)" ;
     rdawd:P10219 "1968-12" ;
@@ -16105,8 +16128,7 @@ wrk:55725
 wrk:55741
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/55741",
-        "https://www.isfdb.org/cgi-bin/title.cgi?55741",
-        "http://www.isfdb.org/cgi-bin/title.cgi?55741" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?55741" ;
     rdawd:P10223 "The Dead Past"@en ;
     rdfs:label "The Dead Past (Asimov, Isaac)" ;
     rdawd:P10219 "1956-04" ;
@@ -17318,8 +17340,7 @@ wrk:56728
 wrk:56729
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/56729",
-        "https://www.isfdb.org/cgi-bin/title.cgi?56729",
-        "http://www.isfdb.org/cgi-bin/title.cgi?56729" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?56729" ;
     rdawd:P10223 "A Meeting with Medusa"@en ;
     rdfs:label "A Meeting with Medusa (Clarke, Arthur C.)" ;
     rdawd:P10219 "1971-12" ;
@@ -17646,6 +17667,18 @@ wrk:56827
     entedit:P02 entedit:T02 ;
     rdawo:P10061 <http://viaf.org/viaf/2465493> .
 
+<http://viaf.org/viaf/183421260>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://entedit.org/work/56831",
+        "https://www.isfdb.org/cgi-bin/title.cgi?56831",
+        "http://viaf.org/viaf/183421260" ;
+    rdawd:P10223 "Danger: Religion!"@en ;
+    rdfs:label "Danger: Religion! (Aldiss, Brian W.)" ;
+    rdawd:P10219 "1962-10" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 ntsf:157 ;
+    rdawo:P10061 <http://viaf.org/viaf/2465493> .
+
 wrk:56833
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/56833",
@@ -17835,8 +17868,7 @@ wrk:56907
 wrk:56908
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/56908",
-        "https://www.isfdb.org/cgi-bin/title.cgi?56908",
-        "http://www.isfdb.org/cgi-bin/title.cgi?56908" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?56908" ;
     rdawd:P10223 "The Worm That Flies"@en ;
     rdfs:label "The Worm That Flies (Aldiss, Brian W.)" ;
     rdawd:P10219 "1968-08" ;
@@ -19213,8 +19245,7 @@ wrk:57572
 wrk:57575
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57575",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57575",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57575" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57575" ;
     rdawd:P10223 "The 60 Minute Zoom"@en ;
     rdfs:label "The 60 Minute Zoom (Ballard, J. G.)" ;
     rdawd:P10219 "1976" ;
@@ -19238,8 +19269,7 @@ wrk:57576
 wrk:57577
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57577",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57577",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57577" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57577" ;
     rdawd:P10223 "Answers to a Questionnaire"@en ;
     rdfs:label "Answers to a Questionnaire (Ballard, J. G.)" ;
     rdawd:P10219 "1985" ;
@@ -19262,8 +19292,7 @@ wrk:57578
 wrk:57579
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57579",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57579",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57579" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57579" ;
     rdawd:P10223 "The Assassination of John Fitzgerald Kennedy Considered As a Downhill Motor Race"@en ;
     rdfs:label "The Assassination of John Fitzgerald Kennedy Considered As a Downhill Motor Race (Ballard, J. G.)" ;
     rdawd:P10219 "1966" ;
@@ -19286,8 +19315,7 @@ wrk:57580
 wrk:57581
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57581",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57581",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57581" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57581" ;
     rdawd:P10223 "The Beach Murders"@en ;
     rdfs:label "The Beach Murders (Ballard, J. G.)" ;
     rdawd:P10219 "1966-02" ;
@@ -19299,8 +19327,7 @@ wrk:57581
 wrk:57582
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57582",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57582",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57582" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57582" ;
     rdawd:P10223 "The Day of Forever"@en ;
     rdfs:label "The Day of Forever (Ballard, J. G.)" ;
     rdawd:P10219 "1966-04" ;
@@ -19311,8 +19338,7 @@ wrk:57582
 wrk:57583
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57583",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57583",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57583" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57583" ;
     rdawd:P10223 "The Dead Astronaut"@en ;
     rdfs:label "The Dead Astronaut (Ballard, J. G.)" ;
     rdawd:P10219 "1968-05" ;
@@ -19323,8 +19349,7 @@ wrk:57583
 wrk:57584
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57584",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57584",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57584" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57584" ;
     rdawd:P10223 "The Delta at Sunset"@en ;
     rdfs:label "The Delta at Sunset (Ballard, J. G.)" ;
     rdawd:P10219 "1964-06" ;
@@ -19335,8 +19360,7 @@ wrk:57584
 wrk:57585
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57585",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57585",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57585" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57585" ;
     rdawd:P10223 "Dream Cargoes"@en ;
     rdfs:label "Dream Cargoes (Ballard, J. G.)" ;
     rdawd:P10219 "1990" ;
@@ -19348,8 +19372,7 @@ wrk:57585
 wrk:57586
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57586",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57586",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57586" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57586" ;
     rdawd:P10223 "End-Game"@en ;
     rdfs:label "End-Game (Ballard, J. G.)" ;
     rdawd:P10219 "1963-06" ;
@@ -19360,8 +19383,7 @@ wrk:57586
 wrk:57587
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57587",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57587",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57587" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57587" ;
     rdawd:P10223 "The Gentle Assassin"@en ;
     rdfs:label "The Gentle Assassin (Ballard, J. G.)" ;
     rdawd:P10219 "1961-12" ;
@@ -19372,8 +19394,7 @@ wrk:57587
 wrk:57588
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57588",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57588",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57588" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57588" ;
     rdawd:P10223 "The Gioconda of the Twilight Noon"@en ;
     rdfs:label "The Gioconda of the Twilight Noon (Ballard, J. G.)" ;
     rdawd:P10219 "1964-06" ;
@@ -19384,8 +19405,7 @@ wrk:57588
 wrk:57589
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57589",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57589",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57589" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57589" ;
     rdawd:P10223 "The Greatest Television Show on Earth"@en ;
     rdfs:label "The Greatest Television Show on Earth (Ballard, J. G.)" ;
     rdawd:P10219 "1972" ;
@@ -19397,8 +19417,7 @@ wrk:57589
 wrk:57590
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57590",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57590",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57590" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57590" ;
     rdawd:P10223 "Having a Wonderful Time"@en ;
     rdfs:label "Having a Wonderful Time (Ballard, J. G.)" ;
     rdawd:P10219 "1978" ;
@@ -19410,8 +19429,7 @@ wrk:57590
 wrk:57591
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57591",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57591",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57591" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57591" ;
     rdawd:P10223 "A Host of Furious Fancies"@en ;
     rdfs:label "A Host of Furious Fancies (Ballard, J. G.)" ;
     rdawd:P10219 "1980" ;
@@ -19423,8 +19441,7 @@ wrk:57591
 wrk:57592
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57592",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57592",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57592" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57592" ;
     rdawd:P10223 "The Illuminated Man"@en ;
     rdfs:label "The Illuminated Man (Ballard, J. G.)" ;
     rdawd:P10219 "1964-05" ;
@@ -19435,8 +19452,7 @@ wrk:57592
 wrk:57593
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57593",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57593",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57593" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57593" ;
     rdawd:P10223 "The Impossible Man"@en ;
     rdfs:label "The Impossible Man (Ballard, J. G.)" ;
     rdawd:P10219 "1966-04" ;
@@ -19447,8 +19463,7 @@ wrk:57593
 wrk:57594
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57594",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57594",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57594" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57594" ;
     rdawd:P10223 "The Index"@en ;
     rdfs:label "The Index (Ballard, J. G.)" ;
     rdawd:P10219 "1977-07" ;
@@ -19460,8 +19475,7 @@ wrk:57594
 wrk:57595
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57595",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57595",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57595" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57595" ;
     rdawd:P10223 "The Intensive Care Unit"@en ;
     rdfs:label "The Intensive Care Unit (Ballard, J. G.)" ;
     rdawd:P10219 "1977" ;
@@ -19473,8 +19487,7 @@ wrk:57595
 wrk:57596
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57596",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57596",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57596" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57596" ;
     rdawd:P10223 "The Killing Ground"@en ;
     rdfs:label "The Killing Ground (Ballard, J. G.)" ;
     rdawd:P10219 "1969-03" ;
@@ -19486,8 +19499,7 @@ wrk:57596
 wrk:57597
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57597",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57597",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57597" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57597" ;
     rdawd:P10223 "The Largest Theme Park in the World"@en ;
     rdfs:label "The Largest Theme Park in the World (Ballard, J. G.)" ;
     rdawd:P10219 "1989-07-07" ;
@@ -19498,8 +19510,7 @@ wrk:57597
 wrk:57598
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57598",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57598",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57598" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57598" ;
     rdawd:P10223 "The Last World of Mr. Goddard"@en ;
     rdfs:label "The Last World of Mr. Goddard (Ballard, J. G.)" ;
     rdawd:P10219 "1960-10" ;
@@ -19510,8 +19521,7 @@ wrk:57598
 wrk:57599
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57599",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57599",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57599" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57599" ;
     rdawd:P10223 "The Life and Death of God"@en ;
     rdfs:label "The Life and Death of God (Ballard, J. G.)" ;
     rdawd:P10219 "1976" ;
@@ -19523,8 +19533,7 @@ wrk:57599
 wrk:57600
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57600",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57600",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57600" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57600" ;
     rdawd:P10223 "The Lost Leonardo"@en ;
     rdfs:label "The Lost Leonardo (Ballard, J. G.)" ;
     rdawd:P10219 "1964-03" ;
@@ -19535,8 +19544,7 @@ wrk:57600
 wrk:57601
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57601",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57601",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57601" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57601" ;
     rdawd:P10223 "Love in a Colder Climate"@en ;
     rdfs:label "Love in a Colder Climate (Ballard, J. G.)" ;
     rdawd:P10219 "1989-01" ;
@@ -19548,8 +19556,7 @@ wrk:57601
 wrk:57602
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57602",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57602",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57602" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57602" ;
     rdawd:P10223 "Low-Flying Aircraft"@en ;
     rdfs:label "Low-Flying Aircraft (Ballard, J. G.)" ;
     rdawd:P10219 "1975" ;
@@ -19561,8 +19568,7 @@ wrk:57602
 wrk:57603
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57603",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57603",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57603" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57603" ;
     rdawd:P10223 "The Man on the 99th Floor"@en ;
     rdfs:label "The Man on the 99th Floor (Ballard, J. G.)" ;
     rdawd:P10219 "1962-07" ;
@@ -19573,8 +19579,7 @@ wrk:57603
 wrk:57604
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57604",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57604",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57604" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57604" ;
     rdawd:P10223 "Minus One"@en ;
     rdfs:label "Minus One (Ballard, J. G.)" ;
     rdawd:P10219 "1963-06" ;
@@ -19585,8 +19590,7 @@ wrk:57604
 wrk:57605
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57605",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57605",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57605" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57605" ;
     rdawd:P10223 "Motel Architecture"@en ;
     rdfs:label "Motel Architecture (Ballard, J. G.)" ;
     rdawd:P10219 "1978" ;
@@ -19598,8 +19602,7 @@ wrk:57605
 wrk:57606
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57606",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57606",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57606" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57606" ;
     rdawd:P10223 "Mr F. Is Mr F."@en ;
     rdfs:label "Mr F. Is Mr F. (Ballard, J. G.)" ;
     rdawd:P10219 "1961-08" ;
@@ -19610,8 +19613,7 @@ wrk:57606
 wrk:57607
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57607",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57607",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57607" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57607" ;
     rdawd:P10223 "My Dream of Flying to Wake Island"@en ;
     rdfs:label "My Dream of Flying to Wake Island (Ballard, J. G.)" ;
     rdawd:P10219 "1974" ;
@@ -19623,8 +19625,7 @@ wrk:57607
 wrk:57608
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57608",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57608",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57608" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57608" ;
     rdawd:P10223 "News from the Sun"@en ;
     rdfs:label "News from the Sun (Ballard, J. G.)" ;
     rdawd:P10219 "1981" ;
@@ -19648,8 +19649,7 @@ wrk:57609
 wrk:57610
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57610",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57610",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57610" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57610" ;
     rdawd:P10223 "Now Wakes the Sea"@en ;
     rdfs:label "Now Wakes the Sea (Ballard, J. G.)" ;
     rdawd:P10219 "1963-05" ;
@@ -19660,8 +19660,7 @@ wrk:57610
 wrk:57611
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57611",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57611",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57611" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57611" ;
     rdawd:P10223 "Now: Zero"@en ;
     rdfs:label "Now: Zero (Ballard, J. G.)" ;
     rdawd:P10219 "1959-12" ;
@@ -19672,8 +19671,7 @@ wrk:57611
 wrk:57612
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57612",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57612",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57612" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57612" ;
     rdawd:P10223 "One Afternoon at Utah Beach"@en ;
     rdfs:label "One Afternoon at Utah Beach (Ballard, J. G.)" ;
     rdawd:P10219 "1978" ;
@@ -19684,8 +19682,7 @@ wrk:57612
 wrk:57613
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57613",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57613",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57613" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57613" ;
     rdawd:P10223 "The Overloaded Man"@en ;
     rdfs:label "The Overloaded Man (Ballard, J. G.)" ;
     rdawd:P10219 "1961-07" ;
@@ -19696,8 +19693,7 @@ wrk:57613
 wrk:57614
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57614",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57614",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57614" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57614" ;
     rdawd:P10223 "Passport to Eternity"@en ;
     rdfs:label "Passport to Eternity (Ballard, J. G.)" ;
     rdawd:P10219 "1962-06" ;
@@ -19708,8 +19704,7 @@ wrk:57614
 wrk:57615
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57615",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57615",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57615" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57615" ;
     rdawd:P10223 "A Place and a Time to Die"@en ;
     rdfs:label "A Place and a Time to Die (Ballard, J. G.)" ;
     rdawd:P10219 "1969-09" ;
@@ -19732,8 +19727,7 @@ wrk:57616
 wrk:57617
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57617",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57617",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57617" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57617" ;
     rdawd:P10223 "Prisoner of the Coral Deep"@en ;
     rdfs:label "Prisoner of the Coral Deep (Ballard, J. G.)" ;
     rdawd:P10219 "1964-03" ;
@@ -19744,8 +19738,7 @@ wrk:57617
 wrk:57618
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57618",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57618",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57618" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57618" ;
     rdawd:P10223 "Report on an Unidentified Space Station"@en ;
     rdfs:label "Report on an Unidentified Space Station (Ballard, J. G.)" ;
     rdawd:P10219 "1982" ;
@@ -19758,8 +19751,7 @@ wrk:57618
 wrk:57619
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57619",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57619",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57619" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57619" ;
     rdawd:P10223 "The Reptile Enclosure"@en ;
     rdfs:label "The Reptile Enclosure (Ballard, J. G.)" ;
     rdawd:P10219 "1963-03" ;
@@ -19770,8 +19762,7 @@ wrk:57619
 wrk:57621
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57621",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57621",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57621" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57621" ;
     rdawd:P10223 "Say Goodbye to the Wind"@en ;
     rdfs:label "Say Goodbye to the Wind (Ballard, J. G.)" ;
     rdawd:P10219 "1970-08" ;
@@ -19782,8 +19773,7 @@ wrk:57621
 wrk:57622
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57622",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57622",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57622" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57622" ;
     rdawd:P10223 "The Screen Game"@en ;
     rdfs:label "The Screen Game (Ballard, J. G.)" ;
     rdawd:P10219 "1963-10" ;
@@ -19794,8 +19784,7 @@ wrk:57622
 wrk:57623
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57623",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57623",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57623" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57623" ;
     rdawd:P10223 "The Secret History of World War 3"@en ;
     rdfs:label "The Secret History of World War 3 (Ballard, J. G.)" ;
     rdawd:P10219 "1988" ;
@@ -19807,8 +19796,7 @@ wrk:57623
 wrk:57624
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57624",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57624",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57624" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57624" ;
     rdawd:P10223 "The Singing Statues"@en ;
     rdfs:label "The Singing Statues (Ballard, J. G.)" ;
     rdawd:P10219 "1962-07" ;
@@ -19819,8 +19807,7 @@ wrk:57624
 wrk:57625
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57625",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57625",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57625" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57625" ;
     rdawd:P10223 "Storm-Bird, Storm-Dreamer"@en ;
     rdfs:label "Storm-Bird, Storm-Dreamer (Ballard, J. G.)" ;
     rdawd:P10219 "1966-04" ;
@@ -19831,8 +19818,7 @@ wrk:57625
 wrk:57626
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57626",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57626",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57626" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57626" ;
     rdawd:P10223 "The Sudden Afternoon"@en ;
     rdfs:label "The Sudden Afternoon (Ballard, J. G.)" ;
     rdawd:P10219 "1963-09" ;
@@ -19843,8 +19829,7 @@ wrk:57626
 wrk:57627
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57627",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57627",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57627" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57627" ;
     rdawd:P10223 "Theatre of War"@en ;
     rdfs:label "Theatre of War (Ballard, J. G.)" ;
     rdawd:P10219 "1977" ;
@@ -19856,8 +19841,7 @@ wrk:57627
 wrk:57628
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57628",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57628",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57628" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57628" ;
     rdawd:P10223 "Thirteen to Centaurus"@en ;
     rdfs:label "Thirteen to Centaurus (Ballard, J. G.)" ;
     rdawd:P10219 "1962-04" ;
@@ -19868,8 +19852,7 @@ wrk:57628
 wrk:57629
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57629",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57629",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57629" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57629" ;
     rdawd:P10223 "The Thousand Dreams of Stellavista"@en ;
     rdfs:label "The Thousand Dreams of Stellavista (Ballard, J. G.)" ;
     rdawd:P10219 "1962-03" ;
@@ -19880,8 +19863,7 @@ wrk:57629
 wrk:57630
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57630",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57630",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57630" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57630" ;
     rdawd:P10223 "Time of Passage"@en ;
     rdfs:label "Time of Passage (Ballard, J. G.)" ;
     rdawd:P10219 "1964-02" ;
@@ -19893,8 +19875,7 @@ wrk:57630
 wrk:57631
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57631",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57631",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57631" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57631" ;
     rdawd:P10223 "Tomorrow Is a Million Years"@en ;
     rdfs:label "Tomorrow Is a Million Years (Ballard, J. G.)" ;
     rdawd:P10219 "1966-10" ;
@@ -19905,8 +19886,7 @@ wrk:57631
 wrk:57632
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57632",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57632",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57632" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57632" ;
     rdawd:P10223 "Track 12"@en ;
     rdfs:label "Track 12 (Ballard, J. G.)" ;
     rdawd:P10219 "1958-04" ;
@@ -19919,8 +19899,7 @@ wrk:57632
 wrk:57633
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57633",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57633",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57633" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57633" ;
     rdawd:P10223 "The Venus Hunters"@en ;
     rdfs:label "The Venus Hunters (Ballard, J. G.)" ;
     rdawd:P10219 "1963-06" ;
@@ -19932,21 +19911,18 @@ wrk:57633
 wrk:57635
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57635",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57635",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57635" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57635" ;
     rdawd:P10223 "The Watch-Towers"@en ;
     rdfs:label "The Watch-Towers (Ballard, J. G.)" ;
     rdawd:P10219 "1962-06" ;
     entedit:P01 vtp:V1000 ;
     entedit:P02 entedit:T02 ;
-    rdawo:P10061 <http://viaf.org/viaf/9842556> ;
-    rdawd:P10086 "The watch-tower" .
+    rdawo:P10061 <http://viaf.org/viaf/9842556> .
 
 wrk:57636
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57636",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57636",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57636" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57636" ;
     rdawd:P10223 "Zodiac 2000"@en ;
     rdfs:label "Zodiac 2000 (Ballard, J. G.)" ;
     rdawd:P10219 "1978" ;
@@ -19958,8 +19934,7 @@ wrk:57636
 wrk:57637
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57637",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57637",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57637" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57637" ;
     rdawd:P10223 "Zone of Terror"@en ;
     rdfs:label "Zone of Terror (Ballard, J. G.)" ;
     rdawd:P10219 "1960-03" ;
@@ -20551,8 +20526,7 @@ wrk:57903
 wrk:57905
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/57905",
-        "https://www.isfdb.org/cgi-bin/title.cgi?57905",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57905" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?57905" ;
     rdawd:P10223 "Mind Out of Time"@en ;
     rdfs:label "Mind Out of Time (Laumer, Keith)" ;
     rdawd:P10219 "1968-08" ;
@@ -21934,8 +21908,7 @@ wrk:58522
 wrk:58525
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/58525",
-        "https://www.isfdb.org/cgi-bin/title.cgi?58525",
-        "http://www.isfdb.org/cgi-bin/title.cgi?58525" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?58525" ;
     rdawd:P10223 "I Do Not Love Thee, Doctor Fell"@en ;
     rdfs:label "I Do Not Love Thee, Doctor Fell (Bloch, Robert)" ;
     rdawd:P10219 "1955-03" ;
@@ -23452,8 +23425,7 @@ wrk:59530
 wrk:59665
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/59665",
-        "https://www.isfdb.org/cgi-bin/title.cgi?59665",
-        "http://www.isfdb.org/cgi-bin/title.cgi?59665" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?59665" ;
     rdawd:P10223 "Vintage Season"@en ;
     rdfs:label "Vintage Season (Kuttner, Henry; Moore, C. L.)" ;
     rdawd:P10219 "1946-09" ;
@@ -24342,8 +24314,7 @@ wrk:62003
 wrk:62005
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/62005",
-        "https://www.isfdb.org/cgi-bin/title.cgi?62005",
-        "http://www.isfdb.org/cgi-bin/title.cgi?62005" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?62005" ;
     rdawd:P10223 "Crusade"@en ;
     rdfs:label "Crusade (Clarke, Arthur C.)" ;
     rdawd:P10219 "1968-08" ;
@@ -26339,8 +26310,7 @@ wrk:64941
 wrk:64948
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/64948",
-        "https://www.isfdb.org/cgi-bin/title.cgi?64948",
-        "http://www.isfdb.org/cgi-bin/title.cgi?64948" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?64948" ;
     rdawd:P10223 "To the Dark Star"@en ;
     rdfs:label "To the Dark Star (Silverberg, Robert)" ;
     rdawd:P10219 "1968-08" ;
@@ -26417,8 +26387,7 @@ wrk:65059
 wrk:65075
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/65075",
-        "https://www.isfdb.org/cgi-bin/title.cgi?65075",
-        "http://www.isfdb.org/cgi-bin/title.cgi?65075" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?65075" ;
     rdawd:P10223 "Billennium"@en ;
     rdfs:label "Billennium (Ballard, J. G.)" ;
     rdawd:P10219 "1961-11" ;
@@ -27584,8 +27553,7 @@ wrk:68275
 wrk:68283
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/68283",
-        "https://www.isfdb.org/cgi-bin/title.cgi?68283",
-        "http://www.isfdb.org/cgi-bin/title.cgi?68283" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?68283" ;
     rdawd:P10223 "The Hurkle Is a Happy Beast"@en ;
     rdfs:label "The Hurkle Is a Happy Beast (Sturgeon, Theodore)" ;
     rdawd:P10219 "1949-10" ;
@@ -27874,8 +27842,7 @@ wrk:68740
 wrk:68754
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/68754",
-        "https://www.isfdb.org/cgi-bin/title.cgi?68754",
-        "http://www.isfdb.org/cgi-bin/title.cgi?68754" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?68754" ;
     rdawd:P10223 "Aye, and Gomorrah ..."@en ;
     rdfs:label "Aye, and Gomorrah ... (Delany, Samuel R.)" ;
     rdawd:P10219 "1967-10" ;
@@ -28907,8 +28874,7 @@ wrk:71515
 wrk:71516
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/71516",
-        "https://www.isfdb.org/cgi-bin/title.cgi?71516",
-        "http://www.isfdb.org/cgi-bin/title.cgi?71516" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?71516" ;
     rdawd:P10223 "A Night in Elf Hill"@en ;
     rdfs:label "A Night in Elf Hill (Spinrad, Norman)" ;
     rdawd:P10219 "1968-08" ;
@@ -30687,8 +30653,7 @@ wrk:77505
 wrk:77508
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/77508",
-        "https://www.isfdb.org/cgi-bin/title.cgi?77508",
-        "http://www.isfdb.org/cgi-bin/title.cgi?77508" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?77508" ;
     rdawd:P10223 "Weihnachtabend"@en ;
     rdfs:label "Weihnachtabend (Roberts, Keith)" ;
     rdawd:P10219 "1972" ;
@@ -33180,8 +33145,7 @@ wrk:93861
 wrk:94038
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/94038",
-        "https://www.isfdb.org/cgi-bin/title.cgi?94038",
-        "http://www.isfdb.org/cgi-bin/title.cgi?94038" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?94038" ;
     rdawd:P10223 "Pond Water"@en ;
     rdfs:label "Pond Water (Brunner, John)" ;
     rdawd:P10219 "1968-08" ;
@@ -34449,8 +34413,7 @@ wrk:97130
 wrk:97136
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/97136",
-        "https://www.isfdb.org/cgi-bin/title.cgi?97136",
-        "http://www.isfdb.org/cgi-bin/title.cgi?97136" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?97136" ;
     rdawd:P10223 "Sulwen's Planet"@en ;
     rdfs:label "Sulwen's Planet (Vance, Jack)" ;
     rdawd:P10219 "1968-08" ;
@@ -34461,8 +34424,7 @@ wrk:97136
 wrk:97138
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/97138",
-        "https://www.isfdb.org/cgi-bin/title.cgi?97138",
-        "http://www.isfdb.org/cgi-bin/title.cgi?97138" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?97138" ;
     rdawd:P10223 "Ranging"@en ;
     rdfs:label "Ranging (Jakes, John)" ;
     rdawd:P10219 "1968-08" ;
@@ -43627,8 +43589,7 @@ wrk:669485
 wrk:670081
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/670081",
-        "https://www.isfdb.org/cgi-bin/title.cgi?670081",
-        "http://www.isfdb.org/cgi-bin/title.cgi?670081" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?670081" ;
     rdawd:P10223 "Путь на Амальтею"@ru ;
     rdawd:P10086 "Put' na Amal'teyu" ;
     rdfs:label "Путь на Амальтею (Аркадий Стругацкий; Борис Стругацкий)" ;
@@ -46193,8 +46154,7 @@ wrk:837544
 wrk:837545
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/837545",
-        "https://www.isfdb.org/cgi-bin/title.cgi?837545",
-        "http://www.isfdb.org/cgi-bin/title.cgi?837545" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?837545" ;
     rdawd:P10223 "Bajka o maszynie cyfrowej, co ze smokiem walczyła"@pl ;
     rdawd:P10086 "Bajka o maszynie cyfrowej, co ze smokiem walczyla" ;
     rdfs:label "Bajka o maszynie cyfrowej, co ze smokiem walczyła (Lem, Stanisław)" ;
@@ -48427,8 +48387,7 @@ wrk:940530
 wrk:940652
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/940652",
-        "https://www.isfdb.org/cgi-bin/title.cgi?940652",
-        "http://www.isfdb.org/cgi-bin/title.cgi?940652" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?940652" ;
     rdawd:P10223 "Я вас первым обнаружил!"@ru ;
     rdawd:P10086 "Ya vas pervym obnaruzhil!" ;
     rdfs:label "Я вас первым обнаружил! (Кир Булычев)" ;
@@ -50173,9 +50132,7 @@ wrk:1041712
 wrk:1042004
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/1042004",
-        "https://www.isfdb.org/cgi-bin/title.cgi?1042004",
-        "http://www.isfdb.org/cgi-bin/title.cgi?1042004",
-        "http://www.isfdb.org/cgi-bin/title.cgi?57609" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?1042004" ;
     rdawd:P10223 "Notes Towards a Mental Breakdown"@en ;
     rdfs:label "Notes Towards a Mental Breakdown (Ballard, J. G.)" ;
     rdawd:P10219 "1976" ;
@@ -50187,8 +50144,7 @@ wrk:1042004
 wrk:1042032
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/1042032",
-        "https://www.isfdb.org/cgi-bin/title.cgi?1042032",
-        "http://www.isfdb.org/cgi-bin/title.cgi?1042032" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?1042032" ;
     rdawd:P10223 "Report from an Obscure Planet"@en ;
     rdfs:label "Report from an Obscure Planet (Ballard, J. G.)" ;
     rdawd:P10219 "1992-04" ;
@@ -50254,8 +50210,7 @@ wrk:1042286
 wrk:1043438
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/1043438",
-        "https://www.isfdb.org/cgi-bin/title.cgi?1043438",
-        "http://www.isfdb.org/cgi-bin/title.cgi?1043438" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?1043438" ;
     rdawd:P10223 "La nueva prehistoria"@es ;
     rdfs:label "La nueva prehistoria (Rebetez-Cortes, René)" ;
     rdawd:P10219 "1967" ;
@@ -50278,8 +50233,7 @@ wrk:1044733
 wrk:1044760
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/1044760",
-        "https://www.isfdb.org/cgi-bin/title.cgi?1044760",
-        "http://www.isfdb.org/cgi-bin/title.cgi?1044760" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?1044760" ;
     rdawd:P10223 "Un segno nello spazio"@it ;
     rdfs:label "Un segno nello spazio (Calvino, Italo)" ;
     rdawd:P10219 "1964-11" ;
@@ -50314,8 +50268,7 @@ wrk:1044766
 wrk:1044769
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/1044769",
-        "https://www.isfdb.org/cgi-bin/title.cgi?1044769",
-        "http://www.isfdb.org/cgi-bin/title.cgi?1044769" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?1044769" ;
     rdawd:P10223 "La spirale"@it ;
     rdfs:label "La spirale (Calvino, Italo)" ;
     rdawd:P10219 "1965-11-19" ;
@@ -52822,8 +52775,7 @@ wrk:1191486
 wrk:1193913
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/1193913",
-        "https://www.isfdb.org/cgi-bin/title.cgi?1193913",
-        "http://www.isfdb.org/cgi-bin/title.cgi?1193913" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?1193913" ;
     rdawd:P10223 "Ligne de partage"@fr ;
     rdfs:label "Ligne de partage (Klein, Gérard)" ;
     rdawd:P10219 "1969-03" ;
@@ -52926,8 +52878,7 @@ wrk:1195259
 wrk:1199713
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/1199713",
-        "https://www.isfdb.org/cgi-bin/title.cgi?1199713",
-        "http://www.isfdb.org/cgi-bin/title.cgi?1199713" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?1199713" ;
     rdawd:P10223 "Paarpoppen"@nl ;
     rdfs:label "Paarpoppen (Loggem, Manuel van)" ;
     rdawd:P10219 "1972-12" ;
@@ -53668,8 +53619,7 @@ wrk:1226931
 wrk:1227657
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/1227657",
-        "https://www.isfdb.org/cgi-bin/title.cgi?1227657",
-        "http://www.isfdb.org/cgi-bin/title.cgi?1227657" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?1227657" ;
     rdawd:P10223 "La vallée des échos"@fr ;
     rdawd:P10086 "La vallee des echos" ;
     rdfs:label "La vallée des échos (Klein, Gérard)" ;
@@ -53735,8 +53685,7 @@ wrk:1228198
 wrk:1228232
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/1228232",
-        "https://www.isfdb.org/cgi-bin/title.cgi?1228232",
-        "http://www.isfdb.org/cgi-bin/title.cgi?1228232" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?1228232" ;
     rdawd:P10223 "Poslední dobrodružství kapitána Nemo"@cs ;
     rdawd:P10086 "Posledni dobrodruzstvi kapitana Nemo" ;
     rdfs:label "Poslední dobrodružství kapitána Nemo (Nesvadba, Josef)" ;
@@ -59923,8 +59872,7 @@ wrk:1564834
 wrk:1564888
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/1564888",
-        "https://www.isfdb.org/cgi-bin/title.cgi?1564888",
-        "http://www.isfdb.org/cgi-bin/title.cgi?1564888" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?1564888" ;
     rdawd:P10223 "Tlön, Uqbar, Orbis Tertius"@es ;
     rdawd:P10086 "Tloen, Uqbar, Orbis Tertius" ;
     rdfs:label "Tlön, Uqbar, Orbis Tertius (Borges, Jorge Luis)" ;
@@ -62128,8 +62076,7 @@ wrk:1692608
 wrk:1694589
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/1694589",
-        "https://www.isfdb.org/cgi-bin/title.cgi?1694589",
-        "http://www.isfdb.org/cgi-bin/title.cgi?1694589" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?1694589" ;
     rdawd:P10223 "Kodémus, eller Datamaskinen some tenkte at hva faen"@nb ;
     rdfs:label "Kodémus, eller Datamaskinen some tenkte at hva faen (Bringsvaerd, Tor Åge)" ;
     rdawd:P10219 "1968" ;
@@ -62293,8 +62240,7 @@ wrk:1728484
 wrk:1733237
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/1733237",
-        "https://www.isfdb.org/cgi-bin/title.cgi?1733237",
-        "http://www.isfdb.org/cgi-bin/title.cgi?1733237" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?1733237" ;
     rdawd:P10223 "Les poissons morts"@fr ;
     rdfs:label "Les poissons morts (Vian, Boris)" ;
     rdawd:P10219 "1947" ;
@@ -63063,8 +63009,7 @@ wrk:1770063
 wrk:1770589
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/1770589",
-        "https://www.isfdb.org/cgi-bin/title.cgi?1770589",
-        "http://www.isfdb.org/cgi-bin/title.cgi?1770589" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?1770589" ;
     rdawd:P10223 "Au pilote aveugle"@fr ;
     rdfs:label "Au pilote aveugle (Henneberg, Nathalie)" ;
     rdawd:P10219 "1959" ;
@@ -63076,8 +63021,7 @@ wrk:1770589
 wrk:1772115
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/1772115",
-        "https://www.isfdb.org/cgi-bin/title.cgi?1772115",
-        "http://www.isfdb.org/cgi-bin/title.cgi?1772115" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?1772115" ;
     rdawd:P10223 "トリケラトプス"@ja ;
     rdawd:P10086 "Torikeratopusu" ;
     rdfs:label "トリケラトプス (河野典生)" ;
@@ -65889,8 +65833,7 @@ wrk:1945848
 wrk:1947904
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/1947904",
-        "https://www.isfdb.org/cgi-bin/title.cgi?1947904",
-        "http://www.isfdb.org/cgi-bin/title.cgi?1947904" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?1947904" ;
     rdawd:P10223 "Umkreisungen"@de ;
     rdfs:label "Umkreisungen (Armer, Karl Michael)" ;
     rdawd:P10219 "1986-01" ;
@@ -73633,8 +73576,7 @@ wrk:2607195
 wrk:2608858
     a rdac:C10001 ;
     rdaxd:P00018 "http://entedit.org/work/2608858",
-        "https://www.isfdb.org/cgi-bin/title.cgi?2608858",
-        "http://www.isfdb.org/cgi-bin/title.cgi?2608858" ;
+        "https://www.isfdb.org/cgi-bin/title.cgi?2608858" ;
     rdawd:P10223 "Jak Erg Samowzbudnik Bladawca pokonał"@pl ;
     rdawd:P10086 "Jak Erg Samowzbudnik Bladawca pokonal" ;
     rdfs:label "Jak Erg Samowzbudnik Bladawca pokonał (Lem, Stanisław)" ;
@@ -83161,417 +83103,3 @@ wrk:3675440
     rdawo:P10061 per:424222,
         per:424221 .
 
-<http://viaf.org/viaf/172957858/culturecontrolcritique/chronopolis>
-    a rdac:C10001 ;
-    rdfs:label "In and out of time: \"Chronopolis\" and in time / Frida Beckman"@en,
-        "In and out of time: \"Chronopolis\" and in time / Frida Beckman"@no ;
-    entedit:P01 vtp:V1000 ;
-    entedit:P02 ntsf:494 ;
-    rdawd:P10223 "In and out of time: \"Chronopolis\" and in time" ;
-    rdawo:P10061 <http://viaf.org/viaf/172957858> ;
-    rdaxd:P00018 "http://viaf.org/viaf/172957858/culturecontrolcritique/chronopolis" .
-
-<http://viaf.org/viaf/172957858/culturecontrolcritique>
-    a rdac:C10001 ;
-    rdfs:label "Culture control critique : allegories of reading the present / Frida Beckman"@en,
-        "Culture control critique : allegories of reading the present / Frida Beckman"@no ;
-    entedit:P01 vtp:V1000 ;
-    entedit:P02 ntsf:494 ;
-    rdawd:P10223 "Culture control critique : allegories of reading the present" ;
-    rdawo:P10061 <http://viaf.org/viaf/172957858> ;
-    rdawo:P10147 <http://viaf.org/viaf/172957858/culturecontrolcritique/chronopolis> ;
-    rdaxd:P00018 "http://viaf.org/viaf/172957858/culturecontrolcritique" .
-
-<http://viaf.org/viaf/180997771>
-    a rdac:C10001 ;
-    rdaxd:P00018 "http://entedit.org/work/8348",
-        "https://www.isfdb.org/cgi-bin/title.cgi?8348",
-        "http://viaf.org/viaf/180997771" ;
-    rdawd:P10223 "Empire of the Sun"@en ;
-    rdfs:label "Empire of the Sun (Ballard, J. G.)" ;
-    rdawd:P10219 "1984-09-13" ;
-    rdawd:P10330 "Semi-autobiographical novel. Sequel is \"The Kindness of Women\".",
-        "Shortlisted for the 1984 Booker Prize." ;
-    entedit:P01 vtp:V1000 ;
-    entedit:P02 ntsf:258 ;
-    rdawo:P10061 <http://viaf.org/viaf/9842556> .
-
-<http://viaf.org/viaf/183421260>
-    a rdac:C10001 ;
-    rdaxd:P00018 "http://entedit.org/work/56831",
-        "https://www.isfdb.org/cgi-bin/title.cgi?56831",
-        "http://viaf.org/viaf/183421260" ;
-    rdawd:P10223 "Danger: Religion!"@en ;
-    rdfs:label "Danger: Religion! (Aldiss, Brian W.)" ;
-    rdawd:P10219 "1962-10" ;
-    entedit:P01 vtp:V1000 ;
-    entedit:P02 ntsf:157 ;
-    rdawo:P10061 <http://viaf.org/viaf/2465493> .
-
-<http://viaf.org/viaf/202977755>
-    a rdac:C10001 ;
-    rdaxd:P00018 "http://entedit.org/work/3574",
-        "https://www.isfdb.org/cgi-bin/title.cgi?3574",
-        "http://viaf.org/viaf/202977755" ;
-    rdawd:P10223 "Hello America"@en ;
-    rdfs:label "Hello America (Ballard, J. G.)" ;
-    rdawd:P10219 "1981" ;
-    entedit:P01 vtp:V1000 ;
-    entedit:P02 ntsf:258 ;
-    rdawo:P10061 <http://viaf.org/viaf/9842556> .
-
-<http://viaf.org/viaf/305922109>
-    a rdac:C10001 ;
-    rdaxd:P00018 "http://entedit.org/work/3571",
-        "https://www.isfdb.org/cgi-bin/title.cgi?3571",
-        "http://viaf.org/viaf/305922109" ;
-    rdawd:P10223 "Crash"@en ;
-    rdfs:label "Crash (Ballard, J. G.)" ;
-    rdawd:P10219 "1973-06" ;
-    entedit:P01 vtp:V1000 ;
-    entedit:P02 ntsf:258 ;
-    rdawo:P10061 <http://viaf.org/viaf/9842556> ;
-    rdawd:P10330 "In this hallucinatory novel, an automobile provides the hellish tableau in which Vaughan, a \"TV scientist\" turned \"nightmare angel of the highways,\" experiments with erotic atrocities among auto crash victims, each more sinister than the last. James Ballard, his friend and fellow obsessive, tells the story of this twisted visionary as he careens rapidly toward his own demise in an internationally orchestrated car crash with Elizabeth Taylor." .
-
-<http://viaf.org/viaf/308025936>
-    a rdac:C10001 ;
-    rdaxd:P00018 "http://entedit.org/work/3575",
-        "https://www.isfdb.org/cgi-bin/title.cgi?3575",
-        "http://viaf.org/viaf/308025936" ;
-    rdawd:P10223 "The Day of Creation"@en ;
-    rdfs:label "The Day of Creation (Ballard, J. G.)" ;
-    rdawd:P10219 "1987" ;
-    entedit:P01 vtp:V1000 ;
-    entedit:P02 ntsf:258 ;
-    rdawo:P10061 <http://viaf.org/viaf/9842556> .
-
-<http://viaf.org/viaf/309308512>
-    a rdac:C10001 ;
-    rdaxd:P00018 "http://entedit.org/work/44028",
-        "https://www.isfdb.org/cgi-bin/title.cgi?44028",
-        "http://viaf.org/viaf/309308512" ;
-    rdawd:P10223 "Boy in Darkness"@en ;
-    rdfs:label "Boy in Darkness (Peake, Mervyn)" ;
-    rdawd:P10219 "1956" ;
-    entedit:P01 vtp:V1000 ;
-    entedit:P02 ntsf:157 ;
-    rdawo:P10061 <http://viaf.org/viaf/24606270> .
-
-<http://viaf.org/viaf/311471559>
-    a rdac:C10001 ;
-    rdaxd:P00018 "http://entedit.org/work/40816",
-        "https://www.isfdb.org/cgi-bin/title.cgi?40816",
-        "http://viaf.org/viaf/311471559" ;
-    rdawd:P10223 "The Voices of Time"@en ;
-    rdfs:label "The Voices of Time (Ballard, J. G.)" ;
-    rdawd:P10219 "1960-10" ;
-    rdawd:P10330 "In a time not too far from ours, society is winding down as humans are overtaken by narcolepsy and plants and animals are mutating wildly to adapt to the old-age of Life itself, while mysterious signals from space appear to be counting down to the end of their sources, and the Universe itself." ;
-    entedit:P01 vtp:V1000 ;
-    entedit:P02 entedit:T02 ;
-    rdawo:P10061 <http://viaf.org/viaf/9842556> .
-
-<http://viaf.org/viaf/43347281/researchdatamanagement/chronopolis>
-    a rdac:C10001 ;
-    rdfs:label "Chronopolis repository service / Ardys Kozbial, Brian E. C. Schottlaender and David Minor"@en,
-        "Chronopolis repository service / Ardys Kozbial, Brian E. C. Schottlaender og David Minor"@no ;
-    entedit:P01 vtp:V1000 ;
-    entedit:P02 ntsf:494 ;
-    rdawd:P10223 "Chronopolis repository service" ;
-    rdawo:P10061 <http://viaf.org/viaf/43347281/researchdatamanagement/chronopolis/1>,
-        <http://viaf.org/viaf/43347281/researchdatamanagement/chronopolis/2>,
-        <http://viaf.org/viaf/43347281/researchdatamanagement/chronopolis/3> ;
-    rdaxd:P00018 "http://viaf.org/viaf/43347281/researchdatamanagement/chronopolis" .
-
-<http://viaf.org/viaf/43347281/researchdatamanagement>
-    a rdac:C10001 ;
-    rdfs:label "Research data management : practical strategies for information professionals / compiled by Joyce M. Ray"@en,
-        "Research data management : practical strategies for information professionals / utarbeidet av Joyce M. Ray"@no ;
-    entedit:P01 vtp:V1000 ;
-    entedit:P02 entedit:T01 ;
-    rdawd:P10223 "Research data management : practical strategies for information professionals" ;
-    rdawd:P10330 "\"It has become increasingly accepted that important digital data must be retained and shared in order to preserve and promote knowledge, advance research in and across all disciplines of scholarly endeavor, and maximize the return on investment of public funds. To meet this challenge, colleges and universities are adding data services to existing infrastructures by drawing on the expertise of information professionals who are already involved in the acquisition, management and preservation of data in their daily jobs. Data services include planning and implementing good data management practices, thereby increasing researchers' ability to compete for grant funding and ensuring that data collections with continuing value are preserved for reuse. This volume provides a framework to guide information professionals in academic libraries, presses, and data centers through the process of managing research data from the planning stages through the life of a grant project and beyond. It illustrates principles of good practice with use-case examples and illuminates promising data service models through case studies of innovative, successful projects and collaborations\"--" ;
-    rdawo:P10055 <http://viaf.org/viaf/43347281> ;
-    rdawo:P10147 <http://viaf.org/viaf/43347281/researchdatamanagement/chronopolis> ;
-    rdaxd:P00018 "http://viaf.org/viaf/43347281/researchdatamanagement" .
-
-<http://www.isfdb.org/cgi-bin/pe.cgi?41887>
-    a rdac:C10001 ;
-    rdfs:label "The fifth head of Cerberus"@en,
-        "The fifth head of Cerberus"@no ;
-    entedit:P01 vtp:V1000 ;
-    rdawd:P10223 "The fifth head of Cerberus" ;
-    rdaxd:P00018 "http://www.isfdb.org/cgi-bin/pe.cgi?41887" .
-
-<http://www.isfdb.org/cgi-bin/title.cgi?189852>
-    a rdac:C10001 ;
-    rdfs:label "The proud robot"@en,
-        "The proud robot"@no ;
-    entedit:P01 vtp:V1000 ;
-    rdawd:P10223 "The proud robot" ;
-    rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?189852" .
-
-<http://www.isfdb.org/cgi-bin/title.cgi?2825264>
-    a rdac:C10001 ;
-    rdfs:label "Zero hour"@en,
-        "Zero hour"@no ;
-    entedit:P01 vtp:V1000 ;
-    rdawd:P10223 "Zero hour" ;
-    rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?2825264" .
-
-<http://www.isfdb.org/cgi-bin/title.cgi?37575>
-    a rdac:C10001 ;
-    rdfs:label "Second variety"@en,
-        "Second variety"@no ;
-    entedit:P01 vtp:V1000 ;
-    rdawd:P10223 "Second variety" ;
-    rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?37575" .
-
-<http://www.isfdb.org/cgi-bin/title.cgi?41225>
-    a rdac:C10001 ;
-    rdfs:label "The lens"@en,
-        "The lens"@no ;
-    entedit:P01 vtp:V1000 ;
-    rdawd:P10223 "The lens" ;
-    rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?41225" .
-
-<http://www.isfdb.org/cgi-bin/title.cgi?493181>
-    a rdac:C10001 ;
-    rdfs:label "A kind of artistry"@en,
-        "A kind of artistry"@no ;
-    entedit:P01 vtp:V1000 ;
-    rdawd:P10223 "A kind of artistry" ;
-    rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?493181" .
-
-<http://www.isfdb.org/cgi-bin/title.cgi?97137>
-    a rdac:C10001 ;
-    rdfs:label "The inspector / J. McKimmey"@en,
-        "The inspector / J. McKimmey"@no ;
-    entedit:P01 vtp:V1000 ;
-    entedit:P02 entedit:T02 ;
-    rdawd:P10223 "The inspector" ;
-    rdawo:P10061 <https://isni.org/isni/0000000064014891> ;
-    rdaxd:P00018 "http://www.isfdb.org/cgi-bin/title.cgi?97137" .
-
-<http://www.wikidata.org/entity/Q6692707>
-    a rdac:C10001 ;
-    rdaxd:P00018 "http://entedit.org/work/37677",
-        "https://www.isfdb.org/cgi-bin/title.cgi?37677",
-        "http://www.wikidata.org/entity/Q6692707" ;
-    rdawd:P10223 "Low-Flying Aircraft and Other Stories"@en ;
-    rdfs:label "Low-Flying Aircraft and Other Stories (Ballard, J. G.)" ;
-    rdawd:P10219 "1976" ;
-    entedit:P01 vtp:V1000 ;
-    entedit:P02 entedit:T01 ;
-    rdawo:P10061 <http://viaf.org/viaf/9842556> ;
-    rdawo:P10147 wrk:44466 .
-
-<https://en.wikipedia.org/wiki/Franklin_Cox/chronopolis>
-    a rdac:C10001 ;
-    rdfs:label "Chronopolis / Frank Cox. – Musical work"@en,
-        "Chronopolis / Frank Cox. – Musikkverk"@no ;
-    entedit:P01 vtp:V1001 ;
-    entedit:P02 ntsf:414 ;
-    rdawd:P10223 "Chronopolis" ;
-    rdawo:P10053 <https://en.wikipedia.org/wiki/Franklin_Cox> ;
-    rdaxd:P00018 "https://en.wikipedia.org/wiki/Franklin_Cox/chronopolis" .
-
-<https://isni.org/isni/0000000033066226/islenoise>
-    a rdac:C10001 ;
-    rdfs:label "The isle is full of noises"@en,
-        "The isle is full of noises"@no ;
-    entedit:P02 entedit:T01 ;
-    rdawd:P10223 "The isle is full of noises" ;
-    rdawo:P10147 <https://en.wikipedia.org/wiki/Franklin_Cox/chronopolis> ;
-    rdaxd:P00018 "https://isni.org/isni/0000000033066226/islenoise" .
-
-<https://isni.org/isni/0000000372289205/dreamcargoes/10>
-    a rdac:C10001 ;
-    rdfs:label "Now: zero / Erwin Van Moll and Modular K. – Musical work"@en,
-        "Now: zero / Erwin Van Moll og Modular K. – Musikkverk"@no ;
-    entedit:P01 vtp:V1001 ;
-    entedit:P02 ntsf:414 ;
-    rdawd:P10223 "Now: zero" ;
-    rdawo:P10053 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdawo:P10304 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/10" .
-
-<https://isni.org/isni/0000000372289205/dreamcargoes/1>
-    a rdac:C10001 ;
-    rdfs:label "Chronopolis / Erwin Van Moll and Modular K. – Musical work"@en,
-        "Chronopolis / Erwin Van Moll og Modular K. – Musikkverk"@no ;
-    entedit:P01 vtp:V1001 ;
-    entedit:P02 ntsf:414 ;
-    rdawd:P10223 "Chronopolis" ;
-    rdawo:P10053 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdawo:P10304 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/1" .
-
-<https://isni.org/isni/0000000372289205/dreamcargoes/2>
-    a rdac:C10001 ;
-    rdfs:label "The last world of Mr. Goddard / Erwin Van Moll and Modular K. – Musical work"@en,
-        "The last world of Mr. Goddard / Erwin Van Moll og Modular K. – Musikkverk"@no ;
-    entedit:P01 vtp:V1001 ;
-    entedit:P02 ntsf:414 ;
-    rdawd:P10223 "The last world of Mr. Goddard" ;
-    rdawo:P10053 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdawo:P10304 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/2" .
-
-<https://isni.org/isni/0000000372289205/dreamcargoes/3>
-    a rdac:C10001 ;
-    rdfs:label "Dream cargoes / Erwin Van Moll and Modular K. – Musical work"@en,
-        "Dream cargoes / Erwin Van Moll og Modular K. – Musikkverk"@no ;
-    entedit:P01 vtp:V1001 ;
-    entedit:P02 ntsf:414 ;
-    rdawd:P10223 "Dream cargoes" ;
-    rdawo:P10053 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdawo:P10304 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/3" .
-
-<https://isni.org/isni/0000000372289205/dreamcargoes/4>
-    a rdac:C10001 ;
-    rdfs:label "The Delta at sunset / Erwin Van Moll and Modular K. – Musical work"@en,
-        "The Delta at sunset / Erwin Van Moll og Modular K. – Musikkverk"@no ;
-    entedit:P01 vtp:V1001 ;
-    entedit:P02 ntsf:414 ;
-    rdawd:P10223 "The Delta at sunset" ;
-    rdawo:P10053 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdawo:P10304 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/4" .
-
-<https://isni.org/isni/0000000372289205/dreamcargoes/5>
-    a rdac:C10001 ;
-    rdfs:label "End-game (feat. Edward Capel) / Erwin Van Moll and Modular K. – Musical work"@en,
-        "End-game (feat. Edward Capel) / Erwin Van Moll og Modular K. – Musikkverk"@no ;
-    entedit:P01 vtp:V1001 ;
-    entedit:P02 ntsf:414 ;
-    rdawd:P10223 "End-game (feat. Edward Capel)" ;
-    rdawo:P10053 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdawo:P10304 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/5" .
-
-<https://isni.org/isni/0000000372289205/dreamcargoes/6>
-    a rdac:C10001 ;
-    rdfs:label "Now wakes the sea / Erwin Van Moll and Modular K. – Musical work"@en,
-        "Now wakes the sea / Erwin Van Moll og Modular K. – Musikkverk"@no ;
-    entedit:P01 vtp:V1001 ;
-    entedit:P02 ntsf:414 ;
-    rdawd:P10223 "Now wakes the sea" ;
-    rdawo:P10053 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdawo:P10304 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/6" .
-
-<https://isni.org/isni/0000000372289205/dreamcargoes/7>
-    a rdac:C10001 ;
-    rdfs:label "Studio 5, the stars / Erwin Van Moll and Modular K. – Musical work"@en,
-        "Studio 5, the stars / Erwin Van Moll og Modular K. – Musikkverk"@no ;
-    entedit:P01 vtp:V1001 ;
-    entedit:P02 ntsf:414 ;
-    rdawd:P10223 "Studio 5, the stars" ;
-    rdawo:P10053 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdawo:P10304 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/7" .
-
-<https://isni.org/isni/0000000372289205/dreamcargoes/8>
-    a rdac:C10001 ;
-    rdfs:label "The sound-sweep / Erwin Van Moll and Modular K. – Musical work"@en,
-        "The sound-sweep / Erwin Van Moll og Modular K. – Musikkverk"@no ;
-    entedit:P01 vtp:V1001 ;
-    entedit:P02 ntsf:414 ;
-    rdawd:P10223 "The sound-sweep" ;
-    rdawo:P10053 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdawo:P10304 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/8" .
-
-<https://isni.org/isni/0000000372289205/dreamcargoes/9>
-    a rdac:C10001 ;
-    rdfs:label "Memories of the space age / Erwin Van Moll and Modular K. – Musical work"@en,
-        "Memories of the space age / Erwin Van Moll og Modular K. – Musikkverk"@no ;
-    entedit:P01 vtp:V1001 ;
-    entedit:P02 ntsf:414 ;
-    rdawd:P10223 "Memories of the space age" ;
-    rdawo:P10053 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdawo:P10304 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/9" .
-
-<https://isni.org/isni/0000000372289205/dreamcargoes>
-    a rdac:C10001 ;
-    rdfs:label "Dream cargoes / Erwin Van Moll and Modular K."@en,
-        "Dream cargoes / Erwin Van Moll og Modular K."@no ;
-    entedit:P02 entedit:T01 ;
-    rdawd:P10223 "Dream cargoes" ;
-    rdawo:P10053 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdawo:P10147 <https://isni.org/isni/0000000372289205/dreamcargoes/1>,
-        <https://isni.org/isni/0000000372289205/dreamcargoes/10>,
-        <https://isni.org/isni/0000000372289205/dreamcargoes/2>,
-        <https://isni.org/isni/0000000372289205/dreamcargoes/3>,
-        <https://isni.org/isni/0000000372289205/dreamcargoes/4>,
-        <https://isni.org/isni/0000000372289205/dreamcargoes/5>,
-        <https://isni.org/isni/0000000372289205/dreamcargoes/6>,
-        <https://isni.org/isni/0000000372289205/dreamcargoes/7>,
-        <https://isni.org/isni/0000000372289205/dreamcargoes/8>,
-        <https://isni.org/isni/0000000372289205/dreamcargoes/9> ;
-    rdawo:P10304 <https://isni.org/isni/0000000372289205>,
-        <https://isni.org/isni/000000044534099X> ;
-    rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes" .
-
-<https://isni.org/isni/000000043862402X/Kronopolis>
-    a rdac:C10001 ;
-    rdfs:label "Chronopolis : Time, Power and Mediatization in Malmø / Fredrik Edin"@en,
-        "Chronopolis : Time, Power and Mediatization in Malmø / Fredrik Edin"@no ;
-    entedit:P01 vtp:V1000 ;
-    entedit:P02 ntsf:19 ;
-    rdawd:P10223 "Chronopolis : Time, Power and Mediatization in Malmø" ;
-    rdawo:P10061 <https://isni.org/isni/000000043862402X> ;
-    rdaxd:P00018 "https://isni.org/isni/000000043862402X/Kronopolis" .
-
-<https://www.isfdb.org/cgi-bin/title.cgi?37224>
-    a rdac:C10001 ;
-    rdfs:label "Knights of the limits / Barrington J Bayley"@en,
-        "Knights of the limits / Barrington J Bayley"@no ;
-    entedit:P01 vtp:V1000 ;
-    entedit:P02 ntsf:258 ;
-    rdawd:P10223 "Knights of the limits" ;
-    rdawo:P10061 <http://viaf.org/viaf/84181241> ;
-    rdaxd:P00018 "https://www.isfdb.org/cgi-bin/title.cgi?37224" .
-
-<https://www.isfdb.org/cgi-bin/title.cgi?4531>
-    a rdac:C10001 ;
-    rdfs:label "Soul of the robot / Barrington J Bayley"@en,
-        "Soul of the robot / Barrington J Bayley"@no ;
-    entedit:P01 vtp:V1000 ;
-    entedit:P02 ntsf:258 ;
-    rdawd:P10223 "Soul of the robot" ;
-    rdawo:P10061 <http://viaf.org/viaf/84181241> ;
-    rdaxd:P00018 "https://www.isfdb.org/cgi-bin/title.cgi?4531" .
-
-<https://www.isfdb.org/cgi-bin/title.cgi?4537>
-    a rdac:C10001 ;
-    rdfs:label "Fall of Chronopolis / Barrington J Bayley"@en,
-        "Fall of Chronopolis / Barrington J Bayley"@no ;
-    entedit:P01 vtp:V1000 ;
-    entedit:P02 ntsf:258 ;
-    rdawd:P10223 "Fall of Chronopolis" ;
-    rdawo:P10061 <http://viaf.org/viaf/84181241> ;
-    rdaxd:P00018 "https://www.isfdb.org/cgi-bin/title.cgi?4537" .

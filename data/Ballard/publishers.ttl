@@ -1,7 +1,6 @@
-# EntEdit example data – J. G. Ballard – publishers
-# isfdb2lrm conversion of ISFDB (author 259, results/author-259, converter commit c8ab6b3, generated 2026-09-28)
-# merged with the earlier Ballard.ttl catalogue sample; persons, works and expressions
-# identified by VIAF where the earlier sample knew the VIAF identifier.
+# isfdb2lrm – publishers
+# Generated 2026-10-04T10:19:35+00:00 from the local ISFDB database,
+# converter commit f744a29, mode: authors, seed authors: 259, 164697, 170693, 173463, 181841, 194463, 234758, 262838, 266877, 276482, 277873, 285901, 302772, 311516, 406684, 422160
 
 @prefix entedit: <http://oslomet.no/abi/vocab#> .
 @prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
@@ -2813,3 +2812,4 @@ pbl:90097
         "Kōsakusha",
         "Kousakusha" ;
     rdfs:label "工作舎" .
+
