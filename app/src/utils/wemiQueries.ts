@@ -287,23 +287,45 @@ const MANIFESTATION_FIELDS: [string, string][] = [
  * `entedit:collection true` (a short story collection, an anthology): how
  * many, and one of them. With exactly one, the publication search presents
  * the manifestation as that collection.
+ *
+ * This is a query of its own, not an `OPTIONAL { SELECT … GROUP BY }` inside
+ * `buildManifestationDetailQuery`: GraphDB 10.8.4 left the nested grouped
+ * subquery unbound there (no `collectionCount`, so nothing was merged) while
+ * 10.8.12 answered it, and the same pattern as a top-level query works on both.
  */
-const collectionSubquery = (scope: string): string => `
-    OPTIONAL {
-        SELECT ?manifestation
-            (COUNT(DISTINCT ?collection_expression) AS ?collection_count)
-            (SAMPLE(?collection_expression) AS ?collection_sample)
-        WHERE {
-            ${scope}
-            { ?manifestation rdamo:P30139 ?collection_expression }
-            UNION { ?collection_expression rdaeo:P20059 ?manifestation }
-            { ?collection_expression rdaeo:P20231 ?collection_work }
-            UNION { ?collection_work rdawo:P10078 ?collection_expression }
-            ?collection_work entedit:P02 ?collection_genre .
-            ?collection_genre entedit:collection true .
-        }
-        GROUP BY ?manifestation
-    }`;
+export const buildCollectionQuery = (scope: string): string => `${PREFIXES}
+SELECT ?manifestation
+    (COUNT(DISTINCT ?collection_expression) AS ?collection_count)
+    (SAMPLE(?collection_expression) AS ?collection_sample)
+FROM <http://www.ontotext.com/explicit>
+WHERE {
+    ${scope}
+    { ?manifestation rdamo:P30139 ?collection_expression }
+    UNION { ?collection_expression rdaeo:P20059 ?manifestation }
+    { ?collection_expression rdaeo:P20231 ?collection_work }
+    UNION { ?collection_work rdawo:P10078 ?collection_expression }
+    ?collection_work entedit:P02 ?collection_genre .
+    ?collection_genre entedit:collection true .
+}
+GROUP BY ?manifestation
+`;
+
+/** Adds the result of `buildCollectionQuery` to the manifestations it describes. */
+export const withCollections = (
+  manifestations: ManifestationDetail[],
+  bindings: SparqlResult[],
+): ManifestationDetail[] => {
+  const collections = new Map(
+    bindings.map((b) => [
+      b.manifestation.value,
+      { count: parseInt(b.collection_count.value, 10), expression: b.collection_sample?.value },
+    ]),
+  );
+  return manifestations.map((m) => {
+    const c = collections.get(m.uri);
+    return c ? { ...m, collectionCount: c.count, collectionExpression: c.expression } : m;
+  });
+};
 
 export const buildManifestationDetailQuery = (scope: string, language: string): string => {
   const lang = escapeSparqlLiteral(language);
@@ -318,15 +340,12 @@ SELECT ?manifestation
     (SAMPLE(?carriertype_uri_val) as ?carriertype_uri)
     (GROUP_CONCAT(DISTINCT CONCAT(?manifestation_agent_relationship_label, "${SPARQL_SEP.LABEL}", ?manifestation_agent_names) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?manifestation_creators)
     (COUNT(DISTINCT ?expression) as ?expression_count)
-    (SAMPLE(?collection_count) as ?collectionCount)
-    (SAMPLE(?collection_sample) as ?collectionExpression)
 FROM <http://www.ontotext.com/explicit>
 WHERE {
     ${scope}
     OPTIONAL {
         { ?manifestation rdamo:P30139 ?expression } UNION { ?expression rdaeo:P20059 ?manifestation }
     }
-    ${collectionSubquery(scope)}
     ${MANIFESTATION_FIELDS.map(([f, p]) => `OPTIONAL { ?manifestation ${p} ?${f}_val }`).join("\n    ")}
     OPTIONAL { ?manifestation rdamd:P30137 ?note_val }
     OPTIONAL { ?manifestation rdamd:P30004 ?identifier_val }
@@ -360,7 +379,7 @@ export interface ManifestationDetail {
   carriertypeUri?: string;
   manifestation_creators?: string;
   expression_count?: number;
-  /** Expressions whose work is a collection (see `collectionSubquery`) */
+  /** Expressions whose work is a collection (see `buildCollectionQuery`; set by `withCollections`) */
   collectionCount?: number;
   /** One of them; the one when `collectionCount` is 1 */
   collectionExpression?: string;
@@ -390,6 +409,4 @@ export const toManifestationDetail = (b: SparqlResult): ManifestationDetail => (
   expression_count: b.expression_count
     ? parseInt(b.expression_count.value, 10)
     : undefined,
-  collectionCount: b.collectionCount ? parseInt(b.collectionCount.value, 10) : 0,
-  collectionExpression: b.collectionExpression?.value,
 });
