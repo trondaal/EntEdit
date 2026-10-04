@@ -74,6 +74,19 @@ entedit:T06
       "Bilder som følger teksten inne i en utgivelse, som tegninger, malerier, kart eller fotografier."@nb ;
   rdfs:label "Illustrasjoner"@no, "Illustrations"@en .
 
+# Selections: collections put together from previously collected works, often
+# retrospectively ("The Best of …", "Complete Short Stories", selections for a
+# translation), as opposed to collections conceived as works of their own
+# (entedit:T01). Used for such ISFDB COLLECTION titles by isfdb2lrm.
+entedit:T07
+  a skos:Concept ;
+  a entedit:Genretype ;
+  entedit:collection true ;
+  skos:prefLabel "Selections"@en, "Utvalg"@nb, "Utval"@nn ;
+  skos:definition "A collection of works that have mostly been collected before, put together as a selection, often retrospectively, such as a best-of or complete edition."@en ,
+      "En samling verk som for det meste har vært samlet tidligere, satt sammen som et utvalg, ofte i ettertid, som et best of eller en samleutgave."@nb ;
+  rdfs:label "Utvalg"@no, "Selections"@en .
+
   # ---------------------------------------------------------------------------
   # 2. Redefinitions of existing NTSF concepts (labels and entedit:Genretype only)
   # ---------------------------------------------------------------------------
