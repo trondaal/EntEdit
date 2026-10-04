@@ -16,6 +16,12 @@ PREFIX inst:<http://www.ontotext.com/connectors/lucene/instance#>
 # link from a search result: the search is limited to the linked expression
 # or to the expressions of the linked work (+work:"<IRI>"), and the label's
 # words only rank the hits.
+# documentFilter keeps expressions whose work is a selection (entedit:T07, a
+# retrospective collection of works that exist on their own) out of this index,
+# so they are neither found in the content search nor offered as a category. The
+# publication search (manifestationsIndex) is not affected. `genre` is the merged
+# field genre$direct/genre$inverse. UNTESTED: check on a repository that T07
+# expressions are gone, others (also with several genres or none) are kept.
 INSERT DATA {
 	inst:expressionsIndex :createConnector '''
 {
@@ -534,6 +540,7 @@ INSERT DATA {
   "types": [
     "http://rdaregistry.info/Elements/c/C10006"
   ],
+  "documentFilter": "!(?genre = <http://oslomet.no/abi/vocab#T07>)",
   "readonly": false,
   "detectFields": false,
   "importGraph": false,
