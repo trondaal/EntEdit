@@ -175,6 +175,34 @@ entedit:P04
   rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
   rdfs:label "er forfatter av innledning i"@no, "is author of introduction in"@en.
 
+
+entedit:P17
+  a rdf:Property ;
+  entedit:status "object property" ;
+  rdfs:subPropertyOf rdamo:P30328 ;
+  owl:inverseOf entedit:P18 ;
+  rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+  rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+  rdfs:label "har forfatter av forord"@no, "has author of preface"@en.
+
+entedit:P18
+  a rdf:Property ;
+  entedit:status "object property" ;
+  rdfs:subPropertyOf rdaao:P50475 ;
+  owl:inverseOf entedit:P17 ;
+  rdfs:domain <http://rdaregistry.info/Elements/c/C10002> ;
+  rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+  rdfs:label "er forfatter av forord i"@no, "is author of preface in"@en.
+
+  entedit:P19
+    a rdf:Property ;
+    entedit:status "object property" ;
+    rdfs:subPropertyOf rdamo:P30328 ;
+    owl:inverseOf entedit:P20 ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:label "har forfatter av etterord"@no, "has author of afterword"@en.
+
 entedit:P05
   a rdf:Property ;
   entedit:status "object property" ;
