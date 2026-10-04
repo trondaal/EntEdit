@@ -1,0 +1,427 @@
+# EntEdit example data – J. G. Ballard – catalogue
+# Two music recordings whose tracks are named after Ballard stories (Dream cargoes, The isle is full
+# of noises), with their track works, expressions and persons. ISFDB has no such records.
+# Self-contained: links to nothing in the isfdb2lrm conversion in this folder, so it can be loaded
+# with it or alone.
+
+@prefix entedit: <http://oslomet.no/abi/vocab#> .
+@prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
+@prefix rdac: <http://rdaregistry.info/Elements/c/> .
+@prefix rdaco: <http://rdaregistry.info/termList/RDAContentType/> .
+@prefix rdact: <http://rdaregistry.info/termList/RDACarrierType/> .
+@prefix rdaed: <http://rdaregistry.info/Elements/e/datatype/> .
+@prefix rdaeo: <http://rdaregistry.info/Elements/e/object/> .
+@prefix rdamd: <http://rdaregistry.info/Elements/m/datatype/> .
+@prefix rdamo: <http://rdaregistry.info/Elements/m/object/> .
+@prefix rdamt: <http://rdaregistry.info/termList/RDAMediaType/> .
+@prefix rdawd: <http://rdaregistry.info/Elements/w/datatype/> .
+@prefix rdawo: <http://rdaregistry.info/Elements/w/object/> .
+@prefix rdaxd: <http://rdaregistry.info/Elements/x/datatype/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vtp: <https://schema.nb.no/Bibliographic/Values/> .
+@prefix ntsf: <https://id.nb.no/vocabulary/ntsf/> .
+@prefix lang: <http://id.loc.gov/vocabulary/iso639-2/> .
+@prefix per: <http://entedit.org/person/> .
+@prefix pbl: <http://entedit.org/publisher/> .
+@prefix wrk: <http://entedit.org/work/> .
+@prefix exp: <http://entedit.org/expression/> .
+@prefix man: <http://entedit.org/manifestation/> .
+
+<http://example.org/IAN-4250382412618>
+    a rdac:C10007 ;
+    rdfs:label "Dream cargoes / TJ Kong & Modular K. – Poker Flat Recordings, p2012" ;
+    rdamd:P30004 "IAN 4250382412618" ;
+    rdamd:P30011 "p2012" ;
+    rdamd:P30033 "Chronopolis -- The last world of Mr. Goddard -- Dream cargoes -- The Delta at sunset -- End-game (feat. Edward Capel) -- Now wakes the sea -- Studio 5, the stars -- The sound-sweep -- Memories of the space age -- Now: zero." ;
+    rdamd:P30088 "[Hamburg, Germany]" ;
+    rdamd:P30117 "TJ Kong & Modular K." ;
+    rdamd:P30137 "\"All music composed and produced by A.J.E. van Moll and G. Janssen\"-Insert.",
+        "Compact disc." ;
+    rdamd:P30156 "Dream cargoes" ;
+    rdamd:P30176 "Poker Flat Recordings" ;
+    rdamd:P30182 "1 sound disc : digital, 4 3/4 in." ;
+    rdamo:P30001 rdact:1013 ;
+    rdamo:P30002 rdamt:1001 ;
+    rdamo:P30139 <https://isni.org/isni/0000000372289205/dreamcargoes/1/exp/zxx/1011>,
+        <https://isni.org/isni/0000000372289205/dreamcargoes/10/exp/zxx/1011>,
+        <https://isni.org/isni/0000000372289205/dreamcargoes/2/exp/zxx/1011>,
+        <https://isni.org/isni/0000000372289205/dreamcargoes/3/exp/zxx/1011>,
+        <https://isni.org/isni/0000000372289205/dreamcargoes/4/exp/zxx/1011>,
+        <https://isni.org/isni/0000000372289205/dreamcargoes/5/exp/zxx/1011>,
+        <https://isni.org/isni/0000000372289205/dreamcargoes/6/exp/zxx/1011>,
+        <https://isni.org/isni/0000000372289205/dreamcargoes/7/exp/zxx/1011>,
+        <https://isni.org/isni/0000000372289205/dreamcargoes/8/exp/zxx/1011>,
+        <https://isni.org/isni/0000000372289205/dreamcargoes/9/exp/zxx/1011>,
+        <https://isni.org/isni/0000000372289205/dreamcargoes/exp/zxx/1011> ;
+    rdaxd:P00018 "IAN-4250382412618" .
+
+<http://example.org/UPC-044747309125>
+    a rdac:C10007 ;
+    rdfs:label "The isle is full of noises. – Centaur, p2010" ;
+    rdamd:P30004 "UPC 044747309125" ;
+    rdamd:P30011 "p2010" ;
+    rdamd:P30033 "Nocturno for solo alto flute / by Mario Lavista (5:55) -- Fictions : eight pieces for solo flute / by Christopher Wendell Jones (7:41) -- [ga]:[ge]:[go]:[gu] : for bass flute and computer / by David Kim-Boyle (11:32) -- Re : for solo piccolo / by Steven Hoey (9:33) -- Family portraits. Embden Pond : for alto flute and two vibraphones / by Stuart Saunders Smith (12:29) -- Chronopolis : for solo flute / by Franklin Cox (15:00)." ;
+    rdamd:P30088 "[Baton Rouge, La.]" ;
+    rdamd:P30137 "Compact disc.",
+        "Eds. recorded: Smith Publications (1st, 5th works); Rugginenti Editions (6th work).",
+        "Program and biographical notes in English (5 p.) in container." ;
+    rdamd:P30156 "The isle is full of noises" ;
+    rdamd:P30176 "Centaur" ;
+    rdamd:P30182 "1 sound disc (62 min., 12 sec.) : digital, 4 3/4 in." ;
+    rdamo:P30001 rdact:1013 ;
+    rdamo:P30002 rdamt:1001 ;
+    rdamo:P30139 <https://en.wikipedia.org/wiki/Franklin_Cox/chronopolis/exp/zxx/1011>,
+        <https://isni.org/isni/0000000033066226/islenoise/exp/zxx/1011> ;
+    rdaxd:P00018 "UPC-044747309125" .
+
+<https://en.wikipedia.org/wiki/Franklin_Cox/chronopolis/exp/zxx/1011>
+    a rdac:C10006 ;
+    rdfs:label "Chronopolis / Frank Cox ; performed by Lisa Cella. – Performed music"@en,
+        "Chronopolis / Frank Cox ; framført av Lisa Cella. – Framført musikk"@no ;
+    rdaed:P20065 lang:eng ;
+    rdaed:P20315 "Chronopolis" ;
+    rdaeo:P20001 rdaco:1011 ;
+    rdaeo:P20006 lang:zxx ;
+    rdaeo:P20020 <https://isni.org/isni/0000000033066226> ;
+    rdaeo:P20231 <https://en.wikipedia.org/wiki/Franklin_Cox/chronopolis> .
+
+<https://en.wikipedia.org/wiki/Franklin_Cox/chronopolis>
+    a rdac:C10001 ;
+    rdfs:label "Chronopolis / Frank Cox. – Musical work"@en,
+        "Chronopolis / Frank Cox. – Musikkverk"@no ;
+    entedit:P01 vtp:V1001 ;
+    entedit:P02 ntsf:414 ;
+    rdawd:P10223 "Chronopolis" ;
+    rdawo:P10053 <https://en.wikipedia.org/wiki/Franklin_Cox> ;
+    rdaxd:P00018 "https://en.wikipedia.org/wiki/Franklin_Cox/chronopolis" .
+
+<https://en.wikipedia.org/wiki/Franklin_Cox>
+    a rdac:C10004 ;
+    rdfs:label "Cox, Frank (1961-)" ;
+    rdaad:P50339 "1961-" ;
+    rdaad:P50413 "Cox, Frank" ;
+    rdaxd:P00018 "https://en.wikipedia.org/wiki/Franklin_Cox" .
+
+<https://isni.org/isni/0000000033066226/islenoise/exp/zxx/1011>
+    a rdac:C10006 ;
+    rdfs:label "The isle is full of noises / performed by Lisa Cella. – Performed music"@en,
+        "The isle is full of noises / framført av Lisa Cella. – Framført musikk"@no ;
+    rdaed:P20065 lang:eng ;
+    rdaed:P20071 "Nocturno for solo alto flute / by Mario Lavista (5:55) -- Fictions : eight pieces for solo flute / by Christopher Wendell Jones (7:41) -- [ga]:[ge]:[go]:[gu] : for bass flute and computer / by David Kim-Boyle (11:32) -- Re : for solo piccolo / by Steven Hoey (9:33) -- Family portraits. Embden Pond : for alto flute and two vibraphones / by Stuart Saunders Smith (12:29) -- Chronopolis : for solo flute / by Franklin Cox (15:00)." ;
+    rdaed:P20315 "The isle is full of noises" ;
+    rdaeo:P20001 rdaco:1011 ;
+    rdaeo:P20006 lang:zxx ;
+    rdaeo:P20020 <https://isni.org/isni/0000000033066226> ;
+    rdaeo:P20145 <https://en.wikipedia.org/wiki/Franklin_Cox/chronopolis/exp/zxx/1011> ;
+    rdaeo:P20231 <https://isni.org/isni/0000000033066226/islenoise> .
+
+<https://isni.org/isni/0000000033066226/islenoise>
+    a rdac:C10001 ;
+    rdfs:label "The isle is full of noises"@en,
+        "The isle is full of noises"@no ;
+    entedit:P02 entedit:T01 ;
+    rdawd:P10223 "The isle is full of noises" ;
+    rdawo:P10147 <https://en.wikipedia.org/wiki/Franklin_Cox/chronopolis> ;
+    rdaxd:P00018 "https://isni.org/isni/0000000033066226/islenoise" .
+
+<https://isni.org/isni/0000000033066226>
+    a rdac:C10004 ;
+    rdfs:label "Cella, Lisa" ;
+    rdaad:P50413 "Cella, Lisa" ;
+    rdaxd:P00018 "https://isni.org/isni/0000000033066226" .
+
+<https://isni.org/isni/0000000372289205/dreamcargoes/1/exp/zxx/1011>
+    a rdac:C10006 ;
+    rdfs:label "Chronopolis / Erwin Van Moll and Modular K. – Performed music"@en,
+        "Chronopolis / Erwin Van Moll og Modular K. – Framført musikk"@no ;
+    rdaed:P20315 "Chronopolis" ;
+    rdaeo:P20001 rdaco:1011 ;
+    rdaeo:P20006 lang:zxx ;
+    rdaeo:P20039 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdaeo:P20231 <https://isni.org/isni/0000000372289205/dreamcargoes/1> .
+
+<https://isni.org/isni/0000000372289205/dreamcargoes/10/exp/zxx/1011>
+    a rdac:C10006 ;
+    rdfs:label "Now: zero / Erwin Van Moll and Modular K. – Performed music"@en,
+        "Now: zero / Erwin Van Moll og Modular K. – Framført musikk"@no ;
+    rdaed:P20315 "Now: zero" ;
+    rdaeo:P20001 rdaco:1011 ;
+    rdaeo:P20006 lang:zxx ;
+    rdaeo:P20039 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdaeo:P20231 <https://isni.org/isni/0000000372289205/dreamcargoes/10> .
+
+<https://isni.org/isni/0000000372289205/dreamcargoes/10>
+    a rdac:C10001 ;
+    rdfs:label "Now: zero / Erwin Van Moll and Modular K. – Musical work"@en,
+        "Now: zero / Erwin Van Moll og Modular K. – Musikkverk"@no ;
+    entedit:P01 vtp:V1001 ;
+    entedit:P02 ntsf:414 ;
+    rdawd:P10223 "Now: zero" ;
+    rdawo:P10053 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdawo:P10304 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/10" .
+
+<https://isni.org/isni/0000000372289205/dreamcargoes/1>
+    a rdac:C10001 ;
+    rdfs:label "Chronopolis / Erwin Van Moll and Modular K. – Musical work"@en,
+        "Chronopolis / Erwin Van Moll og Modular K. – Musikkverk"@no ;
+    entedit:P01 vtp:V1001 ;
+    entedit:P02 ntsf:414 ;
+    rdawd:P10223 "Chronopolis" ;
+    rdawo:P10053 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdawo:P10304 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/1" .
+
+<https://isni.org/isni/0000000372289205/dreamcargoes/2/exp/zxx/1011>
+    a rdac:C10006 ;
+    rdfs:label "The last world of Mr. Goddard / Erwin Van Moll and Modular K. – Performed music"@en,
+        "The last world of Mr. Goddard / Erwin Van Moll og Modular K. – Framført musikk"@no ;
+    rdaed:P20315 "The last world of Mr. Goddard" ;
+    rdaeo:P20001 rdaco:1011 ;
+    rdaeo:P20006 lang:zxx ;
+    rdaeo:P20039 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdaeo:P20231 <https://isni.org/isni/0000000372289205/dreamcargoes/2> .
+
+<https://isni.org/isni/0000000372289205/dreamcargoes/2>
+    a rdac:C10001 ;
+    rdfs:label "The last world of Mr. Goddard / Erwin Van Moll and Modular K. – Musical work"@en,
+        "The last world of Mr. Goddard / Erwin Van Moll og Modular K. – Musikkverk"@no ;
+    entedit:P01 vtp:V1001 ;
+    entedit:P02 ntsf:414 ;
+    rdawd:P10223 "The last world of Mr. Goddard" ;
+    rdawo:P10053 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdawo:P10304 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/2" .
+
+<https://isni.org/isni/0000000372289205/dreamcargoes/3/exp/zxx/1011>
+    a rdac:C10006 ;
+    rdfs:label "Dream cargoes / Erwin Van Moll and Modular K. – Performed music"@en,
+        "Dream cargoes / Erwin Van Moll og Modular K. – Framført musikk"@no ;
+    rdaed:P20315 "Dream cargoes" ;
+    rdaeo:P20001 rdaco:1011 ;
+    rdaeo:P20006 lang:zxx ;
+    rdaeo:P20039 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdaeo:P20231 <https://isni.org/isni/0000000372289205/dreamcargoes/3> .
+
+<https://isni.org/isni/0000000372289205/dreamcargoes/3>
+    a rdac:C10001 ;
+    rdfs:label "Dream cargoes / Erwin Van Moll and Modular K. – Musical work"@en,
+        "Dream cargoes / Erwin Van Moll og Modular K. – Musikkverk"@no ;
+    entedit:P01 vtp:V1001 ;
+    entedit:P02 ntsf:414 ;
+    rdawd:P10223 "Dream cargoes" ;
+    rdawo:P10053 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdawo:P10304 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/3" .
+
+<https://isni.org/isni/0000000372289205/dreamcargoes/4/exp/zxx/1011>
+    a rdac:C10006 ;
+    rdfs:label "The Delta at sunset / Erwin Van Moll and Modular K. – Performed music"@en,
+        "The Delta at sunset / Erwin Van Moll og Modular K. – Framført musikk"@no ;
+    rdaed:P20315 "The Delta at sunset" ;
+    rdaeo:P20001 rdaco:1011 ;
+    rdaeo:P20006 lang:zxx ;
+    rdaeo:P20039 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdaeo:P20231 <https://isni.org/isni/0000000372289205/dreamcargoes/4> .
+
+<https://isni.org/isni/0000000372289205/dreamcargoes/4>
+    a rdac:C10001 ;
+    rdfs:label "The Delta at sunset / Erwin Van Moll and Modular K. – Musical work"@en,
+        "The Delta at sunset / Erwin Van Moll og Modular K. – Musikkverk"@no ;
+    entedit:P01 vtp:V1001 ;
+    entedit:P02 ntsf:414 ;
+    rdawd:P10223 "The Delta at sunset" ;
+    rdawo:P10053 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdawo:P10304 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/4" .
+
+<https://isni.org/isni/0000000372289205/dreamcargoes/5/exp/zxx/1011>
+    a rdac:C10006 ;
+    rdfs:label "End-game (feat. Edward Capel) / Erwin Van Moll and Modular K. – Performed music"@en,
+        "End-game (feat. Edward Capel) / Erwin Van Moll og Modular K. – Framført musikk"@no ;
+    rdaed:P20315 "End-game (feat. Edward Capel)" ;
+    rdaeo:P20001 rdaco:1011 ;
+    rdaeo:P20006 lang:zxx ;
+    rdaeo:P20039 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdaeo:P20231 <https://isni.org/isni/0000000372289205/dreamcargoes/5> .
+
+<https://isni.org/isni/0000000372289205/dreamcargoes/5>
+    a rdac:C10001 ;
+    rdfs:label "End-game (feat. Edward Capel) / Erwin Van Moll and Modular K. – Musical work"@en,
+        "End-game (feat. Edward Capel) / Erwin Van Moll og Modular K. – Musikkverk"@no ;
+    entedit:P01 vtp:V1001 ;
+    entedit:P02 ntsf:414 ;
+    rdawd:P10223 "End-game (feat. Edward Capel)" ;
+    rdawo:P10053 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdawo:P10304 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/5" .
+
+<https://isni.org/isni/0000000372289205/dreamcargoes/6/exp/zxx/1011>
+    a rdac:C10006 ;
+    rdfs:label "Now wakes the sea / Erwin Van Moll and Modular K. – Performed music"@en,
+        "Now wakes the sea / Erwin Van Moll og Modular K. – Framført musikk"@no ;
+    rdaed:P20315 "Now wakes the sea" ;
+    rdaeo:P20001 rdaco:1011 ;
+    rdaeo:P20006 lang:zxx ;
+    rdaeo:P20039 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdaeo:P20231 <https://isni.org/isni/0000000372289205/dreamcargoes/6> .
+
+<https://isni.org/isni/0000000372289205/dreamcargoes/6>
+    a rdac:C10001 ;
+    rdfs:label "Now wakes the sea / Erwin Van Moll and Modular K. – Musical work"@en,
+        "Now wakes the sea / Erwin Van Moll og Modular K. – Musikkverk"@no ;
+    entedit:P01 vtp:V1001 ;
+    entedit:P02 ntsf:414 ;
+    rdawd:P10223 "Now wakes the sea" ;
+    rdawo:P10053 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdawo:P10304 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/6" .
+
+<https://isni.org/isni/0000000372289205/dreamcargoes/7/exp/zxx/1011>
+    a rdac:C10006 ;
+    rdfs:label "Studio 5, the stars / Erwin Van Moll and Modular K. – Performed music"@en,
+        "Studio 5, the stars / Erwin Van Moll og Modular K. – Framført musikk"@no ;
+    rdaed:P20315 "Studio 5, the stars" ;
+    rdaeo:P20001 rdaco:1011 ;
+    rdaeo:P20006 lang:zxx ;
+    rdaeo:P20039 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdaeo:P20231 <https://isni.org/isni/0000000372289205/dreamcargoes/7> .
+
+<https://isni.org/isni/0000000372289205/dreamcargoes/7>
+    a rdac:C10001 ;
+    rdfs:label "Studio 5, the stars / Erwin Van Moll and Modular K. – Musical work"@en,
+        "Studio 5, the stars / Erwin Van Moll og Modular K. – Musikkverk"@no ;
+    entedit:P01 vtp:V1001 ;
+    entedit:P02 ntsf:414 ;
+    rdawd:P10223 "Studio 5, the stars" ;
+    rdawo:P10053 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdawo:P10304 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/7" .
+
+<https://isni.org/isni/0000000372289205/dreamcargoes/8/exp/zxx/1011>
+    a rdac:C10006 ;
+    rdfs:label "The sound-sweep / Erwin Van Moll and Modular K. – Performed music"@en,
+        "The sound-sweep / Erwin Van Moll og Modular K. – Framført musikk"@no ;
+    rdaed:P20315 "The sound-sweep" ;
+    rdaeo:P20001 rdaco:1011 ;
+    rdaeo:P20006 lang:zxx ;
+    rdaeo:P20039 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdaeo:P20231 <https://isni.org/isni/0000000372289205/dreamcargoes/8> .
+
+<https://isni.org/isni/0000000372289205/dreamcargoes/8>
+    a rdac:C10001 ;
+    rdfs:label "The sound-sweep / Erwin Van Moll and Modular K. – Musical work"@en,
+        "The sound-sweep / Erwin Van Moll og Modular K. – Musikkverk"@no ;
+    entedit:P01 vtp:V1001 ;
+    entedit:P02 ntsf:414 ;
+    rdawd:P10223 "The sound-sweep" ;
+    rdawo:P10053 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdawo:P10304 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/8" .
+
+<https://isni.org/isni/0000000372289205/dreamcargoes/9/exp/zxx/1011>
+    a rdac:C10006 ;
+    rdfs:label "Memories of the space age / Erwin Van Moll and Modular K. – Performed music"@en,
+        "Memories of the space age / Erwin Van Moll og Modular K. – Framført musikk"@no ;
+    rdaed:P20315 "Memories of the space age" ;
+    rdaeo:P20001 rdaco:1011 ;
+    rdaeo:P20006 lang:zxx ;
+    rdaeo:P20039 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdaeo:P20231 <https://isni.org/isni/0000000372289205/dreamcargoes/9> .
+
+<https://isni.org/isni/0000000372289205/dreamcargoes/9>
+    a rdac:C10001 ;
+    rdfs:label "Memories of the space age / Erwin Van Moll and Modular K. – Musical work"@en,
+        "Memories of the space age / Erwin Van Moll og Modular K. – Musikkverk"@no ;
+    entedit:P01 vtp:V1001 ;
+    entedit:P02 ntsf:414 ;
+    rdawd:P10223 "Memories of the space age" ;
+    rdawo:P10053 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdawo:P10304 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes/9" .
+
+<https://isni.org/isni/0000000372289205/dreamcargoes/exp/zxx/1011>
+    a rdac:C10006 ;
+    rdfs:label "Dream cargoes / Erwin Van Moll and Modular K. – Performed music"@en,
+        "Dream cargoes / Erwin Van Moll og Modular K. – Framført musikk"@no ;
+    rdaed:P20071 "Chronopolis -- The last world of Mr. Goddard -- Dream cargoes -- The Delta at sunset -- End-game (feat. Edward Capel) -- Now wakes the sea -- Studio 5, the stars -- The sound-sweep -- Memories of the space age -- Now: zero." ;
+    rdaed:P20315 "Dream cargoes" ;
+    rdaeo:P20001 rdaco:1011 ;
+    rdaeo:P20006 lang:zxx ;
+    rdaeo:P20039 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdaeo:P20145 <https://isni.org/isni/0000000372289205/dreamcargoes/1/exp/zxx/1011>,
+        <https://isni.org/isni/0000000372289205/dreamcargoes/10/exp/zxx/1011>,
+        <https://isni.org/isni/0000000372289205/dreamcargoes/2/exp/zxx/1011>,
+        <https://isni.org/isni/0000000372289205/dreamcargoes/3/exp/zxx/1011>,
+        <https://isni.org/isni/0000000372289205/dreamcargoes/4/exp/zxx/1011>,
+        <https://isni.org/isni/0000000372289205/dreamcargoes/5/exp/zxx/1011>,
+        <https://isni.org/isni/0000000372289205/dreamcargoes/6/exp/zxx/1011>,
+        <https://isni.org/isni/0000000372289205/dreamcargoes/7/exp/zxx/1011>,
+        <https://isni.org/isni/0000000372289205/dreamcargoes/8/exp/zxx/1011>,
+        <https://isni.org/isni/0000000372289205/dreamcargoes/9/exp/zxx/1011> ;
+    rdaeo:P20231 <https://isni.org/isni/0000000372289205/dreamcargoes> .
+
+<https://isni.org/isni/0000000372289205/dreamcargoes>
+    a rdac:C10001 ;
+    rdfs:label "Dream cargoes / Erwin Van Moll and Modular K."@en,
+        "Dream cargoes / Erwin Van Moll og Modular K."@no ;
+    entedit:P02 entedit:T01 ;
+    rdawd:P10223 "Dream cargoes" ;
+    rdawo:P10053 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdawo:P10147 <https://isni.org/isni/0000000372289205/dreamcargoes/1>,
+        <https://isni.org/isni/0000000372289205/dreamcargoes/10>,
+        <https://isni.org/isni/0000000372289205/dreamcargoes/2>,
+        <https://isni.org/isni/0000000372289205/dreamcargoes/3>,
+        <https://isni.org/isni/0000000372289205/dreamcargoes/4>,
+        <https://isni.org/isni/0000000372289205/dreamcargoes/5>,
+        <https://isni.org/isni/0000000372289205/dreamcargoes/6>,
+        <https://isni.org/isni/0000000372289205/dreamcargoes/7>,
+        <https://isni.org/isni/0000000372289205/dreamcargoes/8>,
+        <https://isni.org/isni/0000000372289205/dreamcargoes/9> ;
+    rdawo:P10304 <https://isni.org/isni/0000000372289205>,
+        <https://isni.org/isni/000000044534099X> ;
+    rdaxd:P00018 "https://isni.org/isni/0000000372289205/dreamcargoes" .
+
+<https://isni.org/isni/0000000372289205>
+    a rdac:C10004 ;
+    rdfs:label "Van Moll, Erwin" ;
+    rdaad:P50413 "Van Moll, Erwin" ;
+    rdaxd:P00018 "https://isni.org/isni/0000000372289205" .
+
+<https://isni.org/isni/000000044534099X>
+    a rdac:C10004 ;
+    rdfs:label "Modular K." ;
+    rdaad:P50413 "Modular K." ;
+    rdaxd:P00018 "https://isni.org/isni/000000044534099X" .
