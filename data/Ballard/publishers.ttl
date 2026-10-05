@@ -1,6 +1,6 @@
 # isfdb2lrm – publishers
-# Generated 2026-10-04T10:19:35+00:00 from the local ISFDB database,
-# converter commit f744a29, mode: authors, seed authors: 259, 164697, 170693, 173463, 181841, 194463, 234758, 262838, 266877, 276482, 277873, 285901, 302772, 311516, 406684, 422160
+# Generated 2026-10-04T15:14:37+00:00 from the local ISFDB database,
+# converter commit 96e4e76, mode: authors, seed authors: 259, 164697, 170693, 173463, 181841, 194463, 234758, 262838, 266877, 276482, 277873, 285901, 302772, 311516, 406684, 422160
 
 @prefix entedit: <http://oslomet.no/abi/vocab#> .
 @prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .

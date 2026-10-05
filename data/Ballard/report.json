@@ -19,19 +19,19 @@
     422160
   ],
   "seed_manifestations": [],
-  "generated": "2026-10-04T10:19:35+00:00",
-  "commit": "f744a29",
-  "seconds": 4.2,
+  "generated": "2026-10-04T15:14:37+00:00",
+  "commit": "96e4e76",
+  "seconds": 10.7,
   "value_order": true,
   "art": false,
   "identifiers_mapped": 24,
   "entities": {
     "expressions": 11601,
-    "works": 7305,
+    "works": 8833,
     "manifestations": 1400,
     "publishers": 391,
-    "persons": 8890
+    "persons": 8923
   },
-  "persons_with_isfdb_record": 8305,
+  "persons_with_isfdb_record": 8338,
   "translators_without_isfdb_record": 589
 }
