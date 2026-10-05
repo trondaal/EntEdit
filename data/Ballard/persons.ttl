@@ -1,6 +1,6 @@
 # isfdb2lrm – persons
-# Generated 2026-10-04T10:19:35+00:00 from the local ISFDB database,
-# converter commit f744a29, mode: authors, seed authors: 259, 164697, 170693, 173463, 181841, 194463, 234758, 262838, 266877, 276482, 277873, 285901, 302772, 311516, 406684, 422160
+# Generated 2026-10-04T15:14:37+00:00 from the local ISFDB database,
+# converter commit 96e4e76, mode: authors, seed authors: 259, 164697, 170693, 173463, 181841, 194463, 234758, 262838, 266877, 276482, 277873, 285901, 302772, 311516, 406684, 422160
 
 @prefix entedit: <http://oslomet.no/abi/vocab#> .
 @prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
@@ -3985,6 +3985,36 @@ per:217
         per:320120,
         per:349762,
         per:422813 .
+
+per:218
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/218",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?218" ;
+    rdaad:P50413 "Smith, Dean Wesley" ;
+    rdfs:label "Smith, Dean Wesley" ;
+    rdaad:P50339 "1950-" ;
+    rdaad:P50415 "Schofield, Sandy",
+        "Smith, D. W.",
+        "Wesley, Kathryn",
+        "Smith, D. W. 'Prof'",
+        "Hamil, Ray",
+        "Lee, Lester",
+        "Simster, Don",
+        "Gustafson, Smith",
+        "Smith, Dean W.",
+        "ディーン・ウエスレー・スミス",
+        "Дин Уэсли Смит" ;
+    entedit:P15 per:2412,
+        per:116289,
+        per:140766,
+        per:163131,
+        per:163132,
+        per:163133,
+        per:163134,
+        per:170876,
+        per:189674,
+        per:298804,
+        per:337973 .
 
 per:219
     a rdac:C10004 ;
@@ -8825,6 +8855,25 @@ per:1067
         per:275978,
         per:336674 .
 
+per:1075
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/1075",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?1075" ;
+    rdaad:P50413 "Causo, Roberto de Sousa" ;
+    rdfs:label "Causo, Roberto de Sousa" ;
+    rdaad:P50339 "1965-" ;
+    rdaad:P50415 "de Sousa Causo, Roberto",
+        "Causo, Roberto S.",
+        "Moranu, Jeremias",
+        "Causo, Roberto",
+        "Causo, Roberto de Souza",
+        "罗伯特·考索" ;
+    entedit:P15 per:139236,
+        per:330175,
+        per:348878,
+        per:349283,
+        per:368570 .
+
 per:1078
     a rdac:C10004 ;
     rdaxd:P00018 "http://entedit.org/person/1078",
@@ -10805,6 +10854,27 @@ per:1413
         "Kessell, John" ;
     entedit:P15 per:276569,
         per:348357 .
+
+per:1417
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/1417",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?1417" ;
+    rdaad:P50413 "Pronzini, Bill" ;
+    rdfs:label "Pronzini, Bill" ;
+    rdaad:P50339 "1943-" ;
+    rdaad:P50415 "Pronzini, William John",
+        "Pronzini",
+        "Drexel, J. V.",
+        "Pronzini, Bil",
+        "Davis, Robert Hart",
+        "Proncini, Bil",
+        "ビル・プロンジーニ" ;
+    entedit:P15 per:124285,
+        per:195890,
+        per:262818,
+        per:273570,
+        per:278374,
+        per:423003 .
 
 per:1422
     a rdac:C10004 ;
@@ -13419,6 +13489,21 @@ per:2322
     entedit:P15 per:130295,
         per:189756 .
 
+per:2328
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/2328",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?2328" ;
+    rdaad:P50413 "Tolkien, Christopher" ;
+    rdfs:label "Tolkien, Christopher" ;
+    rdaad:P50339 "1924-2020" ;
+    rdaad:P50415 "Tolkien, Christopher John Reuel",
+        "Tolkien",
+        "Tolkien, C. J. R.",
+        "Tolkien, C. R." ;
+    entedit:P15 per:179258,
+        per:330078,
+        per:333089 .
+
 per:2337
     a rdac:C10004 ;
     rdaxd:P00018 "http://entedit.org/person/2337",
@@ -13607,7 +13692,8 @@ per:2412
         "https://www.isfdb.org/cgi-bin/ea.cgi?2412" ;
     rdaad:P50413 "Schofield, Sandy" ;
     rdfs:label "Schofield, Sandy" ;
-    entedit:P16 per:283 .
+    entedit:P16 per:218,
+        per:283 .
 
 per:2413
     a rdac:C10004 ;
@@ -15952,6 +16038,19 @@ per:6189
     rdfs:label "Couperus, Louis" ;
     rdaad:P50339 "1863-1923" ;
     rdaad:P50415 "Couperus, Louis Marie-Anne" .
+
+per:6193
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/6193",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?6193" ;
+    rdaad:P50413 "Corben, Richard" ;
+    rdfs:label "Corben, Richard" ;
+    rdaad:P50339 "1940-2020" ;
+    rdaad:P50415 "Corben, Richard Vance",
+        "Corben, Richard V.",
+        "Corben, Rich" ;
+    entedit:P15 per:26474,
+        per:174193 .
 
 per:6204
     a rdac:C10004 ;
@@ -29300,6 +29399,14 @@ per:26089
     rdaad:P50413 "Davies, Kevin" ;
     rdfs:label "Davies, Kevin" .
 
+per:26474
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/26474",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?26474" ;
+    rdaad:P50413 "Corben, Richard V." ;
+    rdfs:label "Corben, Richard V." ;
+    entedit:P16 per:6193 .
+
 per:27530
     a rdac:C10004 ;
     rdaxd:P00018 "http://entedit.org/person/27530",
@@ -35601,6 +35708,14 @@ per:116279
     rdfs:label "Comfort, Montgomery" ;
     entedit:P16 per:141 .
 
+per:116289
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/116289",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?116289" ;
+    rdaad:P50413 "Smith, D. W." ;
+    rdfs:label "Smith, D. W." ;
+    entedit:P16 per:218 .
+
 per:116441
     a rdac:C10004 ;
     rdaxd:P00018 "http://entedit.org/person/116441",
@@ -37020,6 +37135,14 @@ per:124283
     rdfs:label "Howard, Robert Ervin" ;
     entedit:P16 per:822 .
 
+per:124285
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/124285",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?124285" ;
+    rdaad:P50413 "Pronzini" ;
+    rdfs:label "Pronzini" ;
+    entedit:P16 per:1417 .
+
 per:124345
     a rdac:C10004 ;
     rdaxd:P00018 "http://entedit.org/person/124345",
@@ -37676,6 +37799,15 @@ per:127849
     rdaad:P50413 "Ward, Sidney" ;
     rdfs:label "Ward, Sidney" ;
     entedit:P16 per:2203 .
+
+per:127881
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/127881",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?127881" ;
+    rdaad:P50413 "Gilmore, Maeve" ;
+    rdfs:label "Gilmore, Maeve" ;
+    rdaad:P50339 "1917-1983" ;
+    rdaad:P50415 "Gilmore, Maeve Patricia Mary Theresa" .
 
 per:127941
     a rdac:C10004 ;
@@ -39641,6 +39773,14 @@ per:139008
     rdfs:label "Blaylock, Jim" ;
     entedit:P16 per:177 .
 
+per:139236
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/139236",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?139236" ;
+    rdaad:P50413 "Causo, Roberto S." ;
+    rdfs:label "Causo, Roberto S." ;
+    entedit:P16 per:1075 .
+
 per:139253
     a rdac:C10004 ;
     rdaxd:P00018 "http://entedit.org/person/139253",
@@ -39819,7 +39959,8 @@ per:140766
         "https://www.isfdb.org/cgi-bin/ea.cgi?140766" ;
     rdaad:P50413 "Wesley, Kathryn" ;
     rdfs:label "Wesley, Kathryn" ;
-    entedit:P16 per:283 .
+    entedit:P16 per:218,
+        per:283 .
 
 per:141044
     a rdac:C10004 ;
@@ -42367,6 +42508,38 @@ per:162991
     rdaad:P50415 "Schroeder, Manfred" ;
     entedit:P16 per:157952 .
 
+per:163131
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/163131",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?163131" ;
+    rdaad:P50413 "Smith, D. W. 'Prof'" ;
+    rdfs:label "Smith, D. W. 'Prof'" ;
+    entedit:P16 per:218 .
+
+per:163132
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/163132",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?163132" ;
+    rdaad:P50413 "Hamil, Ray" ;
+    rdfs:label "Hamil, Ray" ;
+    entedit:P16 per:218 .
+
+per:163133
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/163133",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?163133" ;
+    rdaad:P50413 "Lee, Lester" ;
+    rdfs:label "Lee, Lester" ;
+    entedit:P16 per:218 .
+
+per:163134
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/163134",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?163134" ;
+    rdaad:P50413 "Simster, Don" ;
+    rdfs:label "Simster, Don" ;
+    entedit:P16 per:218 .
+
 per:163272
     a rdac:C10004 ;
     rdaxd:P00018 "http://entedit.org/person/163272",
@@ -43924,6 +44097,14 @@ per:170868
     rdfs:label "Harry Warner, II" ;
     entedit:P16 per:2210 .
 
+per:170876
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/170876",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?170876" ;
+    rdaad:P50413 "Gustafson, Smith" ;
+    rdfs:label "Gustafson, Smith" ;
+    entedit:P16 per:218 .
+
 per:170936
     a rdac:C10004 ;
     rdaxd:P00018 "http://entedit.org/person/170936",
@@ -44773,6 +44954,14 @@ per:174115
     rdfs:label "Decker, Andreas" ;
     rdaad:P50339 "1960-" .
 
+per:174193
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/174193",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?174193" ;
+    rdaad:P50413 "Corben, Rich" ;
+    rdfs:label "Corben, Rich" ;
+    entedit:P16 per:6193 .
+
 per:174206
     a rdac:C10004 ;
     rdaxd:P00018 "http://entedit.org/person/174206",
@@ -45573,7 +45762,8 @@ per:179258
         "https://www.isfdb.org/cgi-bin/ea.cgi?179258" ;
     rdaad:P50413 "Tolkien" ;
     rdfs:label "Tolkien" ;
-    entedit:P16 per:302 .
+    entedit:P16 per:302,
+        per:2328 .
 
 per:179343
     a rdac:C10004 ;
@@ -46310,6 +46500,13 @@ per:183346
     rdaad:P50413 "Clemens, Samuel" ;
     rdfs:label "Clemens, Samuel" ;
     entedit:P16 per:160 .
+
+per:183348
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/183348",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?183348" ;
+    rdaad:P50413 "Ward, Candace" ;
+    rdfs:label "Ward, Candace" .
 
 per:183353
     a rdac:C10004 ;
@@ -47379,6 +47576,14 @@ per:189589
     rdfs:label "Godwin, Park" ;
     entedit:P16 per:200 .
 
+per:189674
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/189674",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?189674" ;
+    rdaad:P50413 "Smith, Dean W." ;
+    rdfs:label "Smith, Dean W." ;
+    entedit:P16 per:218 .
+
 per:189731
     a rdac:C10004 ;
     rdaxd:P00018 "http://entedit.org/person/189731",
@@ -48437,6 +48642,14 @@ per:195864
     rdaad:P50413 "Hensley, Joe H." ;
     rdfs:label "Hensley, Joe H." ;
     entedit:P16 per:1523 .
+
+per:195890
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/195890",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?195890" ;
+    rdaad:P50413 "Drexel, J. V." ;
+    rdfs:label "Drexel, J. V." ;
+    entedit:P16 per:1417 .
 
 per:195892
     a rdac:C10004 ;
@@ -60134,6 +60347,13 @@ per:262707
     rdfs:label "vom Ulenburger Land, Jenny" ;
     entedit:P16 per:10670 .
 
+per:262722
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/262722",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?262722" ;
+    rdaad:P50413 "Wofford, Erick" ;
+    rdfs:label "Wofford, Erick" .
+
 per:262767
     a rdac:C10004 ;
     rdaxd:P00018 "http://entedit.org/person/262767",
@@ -60253,6 +60473,14 @@ per:262817
     rdaad:P50413 "Bretnor, Redžinald" ;
     rdfs:label "Bretnor, Redžinald" ;
     entedit:P16 per:340 .
+
+per:262818
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/262818",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?262818" ;
+    rdaad:P50413 "Pronzini, Bil" ;
+    rdfs:label "Pronzini, Bil" ;
+    entedit:P16 per:1417 .
 
 per:262819
     a rdac:C10004 ;
@@ -62252,6 +62480,7 @@ per:273570
     rdfs:label "Davis, Robert Hart" ;
     entedit:P16 per:1123,
         per:1170,
+        per:1417,
         per:10921 .
 
 per:273639
@@ -64485,6 +64714,14 @@ per:278373
     rdfs:label "Hauard, Robert" ;
     entedit:P16 per:822 .
 
+per:278374
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/278374",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?278374" ;
+    rdaad:P50413 "Proncini, Bil" ;
+    rdfs:label "Proncini, Bil" ;
+    entedit:P16 per:1417 .
+
 per:278375
     a rdac:C10004 ;
     rdaxd:P00018 "http://entedit.org/person/278375",
@@ -66663,6 +66900,16 @@ per:298484
     rdaad:P50413 "Herrmann-Nytko, Ingrid" ;
     rdfs:label "Herrmann-Nytko, Ingrid" ;
     rdaad:P50339 "1948-" .
+
+per:298804
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/298804",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?298804" ;
+    rdaad:P50413 "ディーン・ウエスレー・スミス" ;
+    rdfs:label "ディーン・ウエスレー・スミス" ;
+    rdaad:P50415 "Sumisu, Dīn Uesurē",
+        "Sumisu, Diin Uesuree" ;
+    entedit:P16 per:218 .
 
 per:298823
     a rdac:C10004 ;
@@ -71140,6 +71387,14 @@ per:329665
     rdaad:P50415 "Elmar, Arnt" ;
     entedit:P16 per:150059 .
 
+per:330078
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/330078",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?330078" ;
+    rdaad:P50413 "Tolkien, C. J. R." ;
+    rdfs:label "Tolkien, C. J. R." ;
+    entedit:P16 per:2328 .
+
 per:330095
     a rdac:C10004 ;
     rdaxd:P00018 "http://entedit.org/person/330095",
@@ -71151,6 +71406,14 @@ per:330095
         "Lindbohm, Denis",
         "Lindbohm, Anna-Brita" ;
     entedit:P15 per:407969 .
+
+per:330175
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/330175",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?330175" ;
+    rdaad:P50413 "Moranu, Jeremias" ;
+    rdfs:label "Moranu, Jeremias" ;
+    entedit:P16 per:1075 .
 
 per:330359
     a rdac:C10004 ;
@@ -71257,6 +71520,14 @@ per:332884
     rdaad:P50413 "Warren, Professor Thomas V." ;
     rdfs:label "Warren, Professor Thomas V." ;
     entedit:P16 per:166136 .
+
+per:333089
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/333089",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?333089" ;
+    rdaad:P50413 "Tolkien, C. R." ;
+    rdfs:label "Tolkien, C. R." ;
+    entedit:P16 per:2328 .
 
 per:333297
     a rdac:C10004 ;
@@ -72071,6 +72342,15 @@ per:337969
     rdfs:label "Вонда Макинтайр" ;
     rdaad:P50415 "Makintayr, Vonda" ;
     entedit:P16 per:423 .
+
+per:337973
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/337973",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?337973" ;
+    rdaad:P50413 "Дин Уэсли Смит" ;
+    rdfs:label "Дин Уэсли Смит" ;
+    rdaad:P50415 "Smit, Din Uesli" ;
+    entedit:P16 per:218 .
 
 per:337976
     a rdac:C10004 ;
@@ -73003,6 +73283,14 @@ per:348412
     rdaad:P50415 "Howaito, Teddo" ;
     entedit:P16 per:1431 .
 
+per:348878
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/348878",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?348878" ;
+    rdaad:P50413 "Causo, Roberto" ;
+    rdfs:label "Causo, Roberto" ;
+    entedit:P16 per:1075 .
+
 per:348930
     a rdac:C10004 ;
     rdaxd:P00018 "http://entedit.org/person/348930",
@@ -73026,6 +73314,14 @@ per:349038
     rdaad:P50413 "Pohl, Frederich" ;
     rdfs:label "Pohl, Frederich" ;
     entedit:P16 per:820 .
+
+per:349283
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/349283",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?349283" ;
+    rdaad:P50413 "Souza Causo, Roberto de" ;
+    rdfs:label "Souza Causo, Roberto de" ;
+    entedit:P16 per:1075 .
 
 per:349352
     a rdac:C10004 ;
@@ -74252,6 +74548,16 @@ per:368488
     rdaad:P50413 "C. Darlton (in error)" ;
     rdfs:label "C. Darlton (in error)" ;
     entedit:P16 per:112970 .
+
+per:368570
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/368570",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?368570" ;
+    rdaad:P50413 "罗伯特·考索" ;
+    rdfs:label "罗伯特·考索" ;
+    rdaad:P50415 "Luōbótè Kǎosuǒ",
+        "Kaosuo, Luobote" ;
+    entedit:P16 per:1075 .
 
 per:368574
     a rdac:C10004 ;
@@ -78302,6 +78608,20 @@ per:411300
     entedit:P16 per:28,
         <http://viaf.org/viaf/2465493> .
 
+per:411303
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/411303",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?411303" ;
+    rdaad:P50413 "Granata, Gici Ganzini" ;
+    rdfs:label "Granata, Gici Ganzini" .
+
+per:411304
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/411304",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?411304" ;
+    rdaad:P50413 "Petris, Folco De" ;
+    rdfs:label "Petris, Folco De" .
+
 per:411353
     a rdac:C10004 ;
     rdaxd:P00018 "http://entedit.org/person/411353",
@@ -81338,6 +81658,16 @@ per:423001
         "Aidu Shingo",
         "Aidzu Shingo" ;
     entedit:P16 per:242256 .
+
+per:423003
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://entedit.org/person/423003",
+        "https://www.isfdb.org/cgi-bin/ea.cgi?423003" ;
+    rdaad:P50413 "ビル・プロンジーニ" ;
+    rdfs:label "ビル・プロンジーニ" ;
+    rdaad:P50415 "Biru Puronjīni",
+        "Puronjiini, Biru" ;
+    entedit:P16 per:1417 .
 
 per:423004
     a rdac:C10004 ;
