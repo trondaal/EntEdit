@@ -20,8 +20,10 @@ PREFIX inst:<http://www.ontotext.com/connectors/lucene/instance#>
 # retrospective collection of works that exist on their own) out of this index,
 # so they are neither found in the content search nor offered as a category. The
 # publication search (manifestationsIndex) is not affected. `genre` is the merged
-# field genre$direct/genre$inverse. UNTESTED: check on a repository that T07
-# expressions are gone, others (also with several genres or none) are kept.
+# field genre$direct/genre$inverse. Checked on GraphDB 10.8: an expression whose
+# work is a selection is left out whatever other genres it has (and is not counted
+# under them); expressions without a genre are kept. If a selection still turns up,
+# rebuild the index: an index that went stale or corrupt kept some of them.
 INSERT DATA {
 	inst:expressionsIndex :createConnector '''
 {

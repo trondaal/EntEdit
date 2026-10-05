@@ -552,6 +552,10 @@ The application expects:
   `wemiQueries.ts`, `ManifestationSearchResult`). Two or more collections are
   not merged. The collection work is not linked to its parts, so the genre is
   the only signal
+- `entedit:T07` selections (retrospective collections, `entedit:collection true`) are
+  kept out of `expressionsIndex` by its `documentFilter`, so the content search neither
+  finds them nor lists them as a category, whatever other genres they carry. The
+  publication search still shows them, merged with their manifestation
 - Standard RDFS vocabulary (rdfs:label, rdfs:domain, rdfs:range)
 - RDA vocabulary for bibliographic entities (Work, Expression, Manifestation, Item)
 - Properties must have correct `entedit:status` to appear in the editor UI;
