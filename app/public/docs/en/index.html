@@ -890,17 +890,11 @@
 
             <p>
                 The Search tab offers full-text search across the database with
-                two modes:
+                three modes:
             </p>
             <ul>
                 <li>
-                    <strong>Expression search</strong> — Finds Expressions (and
-                    shows their related Work, agents, and Manifestations).
-                    Expand a result to see all Manifestations of that
-                    Expression.
-                </li>
-                <li>
-                    <strong>Manifestation search</strong> — Finds Manifestations
+                    <strong>Publication search</strong> — Finds Manifestations
                     directly by their title, publisher, identifiers, or other
                     metadata. Expand <strong>Contents</strong> to see the Expressions a
                     Manifestation embodies, in the order set for them in the
@@ -910,6 +904,22 @@
                     or an anthology: its own Expression and Work (a genre or form
                     marked as a collection) appear in the Manifestation's entry,
                     and <strong>Contents</strong> lists only what it collects.
+                </li>
+                <li>
+                    <strong>Content search</strong> — Finds Expressions (and
+                    shows their related Work, agents, and Manifestations).
+                    Expand a result to see all Manifestations of that
+                    Expression.
+                </li>
+                <li>
+                    <strong>Work search</strong> — Finds Works by their titles
+                    and agents, and by the titles, agents, language and content
+                    type of their Expressions. Each result shows the Work with
+                    its creators, related Works, category and genre. Expand
+                    <strong>Expressions</strong> to list the Work's Expressions,
+                    then expand <strong>Publications</strong> under an Expression
+                    to list its Manifestations; the lists are loaded when they are
+                    opened.
                 </li>
             </ul>
             <p>
@@ -932,7 +942,8 @@
                 Names and titles in the results are links. Clicking a related
                 Expression or Work limits the search to it — in the content
                 search to that Expression or the Work's Expressions, in the
-                publication search to the Manifestations that embody them —
+                publication search to the Manifestations that embody them, in
+                the work search to the Work —
                 shown as a chip with its name next to the filters.
                 The label's words then only decide the order, so a Work's
                 original Expression comes before its translations. Clicking a
@@ -941,9 +952,10 @@
                 search box, returns to an ordinary search for the text.
             </p>
             <p>
-                In the content search, <strong>Filter results</strong> below
-                the search box narrows the results by language, content type,
-                category of work and genre or form. Before you search, the
+                In the content and work searches, <strong>Filter results</strong> below
+                the search box narrows the results by category of work, genre
+                or form, language and content type (and, for publications,
+                media and carrier type). Before you search, the
                 filters list the categories used in the collection, each with
                 its number of Expressions; after a search, they count the
                 results instead. Checking several values in one group finds

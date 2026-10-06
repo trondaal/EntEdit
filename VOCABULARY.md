@@ -439,11 +439,12 @@ expression whose work has an `entedit:collection true` genre is presented as tha
 collection: work and expression merge into the entry and the remaining
 expressions become its contents. Two or more collection expressions are not merged.
 
-**Full-text search.** Two GraphDB Lucene connectors, `expressionsIndex` and
-`manifestationsIndex` (`database/lucene_connectors/`), index names and titles
-through RDA property chains, and expose unanalysed IRI fields (`language`,
-`contentType`, `workType`, `genre`, plus `mediaType`, `carrierType` for
-manifestations) used for facet filters. `workType` and `genre` follow
+**Full-text search.** Three GraphDB Lucene connectors, `manifestationsIndex`,
+`expressionsIndex` and `worksIndex` (`database/lucene_connectors/`), index names
+and titles through RDA property chains, and expose unanalysed IRI fields
+(`language`, `contentType`, `workType`, `genre`, plus `mediaType`, `carrierType`
+for manifestations) used for facet filters. `worksIndex` covers the work, the
+works related to it and its expressions, but no manifestations. `workType` and `genre` follow
 `entedit:P01` / `entedit:P02`. Changing chains or the profile properties they
 depend on requires re-running the connector `.sparql` files on existing
 repositories.

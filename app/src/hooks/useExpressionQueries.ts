@@ -4,8 +4,10 @@ import type { SparqlEndpointConfig } from "../types/sparql";
 import {
   buildExpressionDetailQuery,
   expressionOrderInManifestation,
+  expressionOrderInWork,
   expressionScope,
   expressionsOfManifestation,
+  expressionsOfWork,
   toExpressionDetail,
 } from "../utils/wemiQueries";
 import { sortByValueOrder } from "../utils/valueOrder";
@@ -23,6 +25,7 @@ export interface Expression {
   expression_creators?: string;
   work_to_work_relationships?: string;
   expression_to_expression_relationships?: string;
+  manifestation_count?: number;
 }
 
 export const useExpressionsByManifestation = (
@@ -88,6 +91,40 @@ export const useExpressionDetail = (
       return { ...rest, title: expression_title };
     },
     enabled: Boolean(expressionUri),
+    staleTime: 5 * 60 * 1000, // 5 minutes
+  });
+};
+
+/**
+ * Expressions of a work, for the list under a work search result: in the
+ * order recorded on the work in the editor, the rest by language and title.
+ */
+export const useExpressionsByWork = (
+  config: SparqlEndpointConfig,
+  workUri: string | null,
+  language: string,
+) => {
+  return useQuery({
+    queryKey: ["expressionsByWork", config.url, workUri, language],
+    queryFn: async ({ signal }): Promise<Expression[]> => {
+      if (!workUri) return [];
+      const client = new SparqlClient(config);
+      const response = await client.query(
+        buildExpressionDetailQuery(expressionsOfWork(workUri), language, expressionOrderInWork(workUri)),
+        { signal },
+      );
+      const expressions = response.results.bindings
+        .map(toExpressionDetail)
+        .map(({ expression_title, ...rest }) => ({ ...rest, title: expression_title }));
+      return sortByValueOrder(
+        expressions,
+        (e) => e.valueOrder,
+        (a, b) =>
+          (a.language ?? "").localeCompare(b.language ?? "") ||
+          (a.title ?? a.work_title ?? a.uri).localeCompare(b.title ?? b.work_title ?? b.uri),
+      );
+    },
+    enabled: Boolean(workUri),
     staleTime: 5 * 60 * 1000, // 5 minutes
   });
 };

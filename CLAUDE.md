@@ -75,7 +75,9 @@ EntEdit/
 **Core Layout:**
 - `App.tsx` - Root with tab navigation, configuration state, theme provider
 - `EntityBrowser` - Three-panel layout: classes → entities → editor
-- `SearchInterface` - Full-text search using GraphDB Lucene connector
+- `SearchInterface` - Full-text search using GraphDB Lucene connectors, three tabs
+  in this order: publications (default, `manifestationsIndex`), content
+  (`expressionsIndex`) and works (`worksIndex`)
 - `AppHeader` - Fixed header with endpoint config and language selector
 
 **Entity Editing:**
@@ -86,18 +88,22 @@ EntEdit/
 - `OrderableValueList` - Drag-and-drop reordering for multi-value properties (@dnd-kit)
 
 **WEMI Display:**
+- `Work`, `WorkExpressionList` - Work search result; its expressions load when opened,
+  each with a Publications chip that opens its `ManifestationList`
 - `Expression`, `ExpressionList` - Expression view and list
-- `Manifestation`, `ManifestationList`, `ManifestationResultSet`, `ManifestationSearchResult` - Manifestation display components
+- `Manifestation`, `ManifestationList`, `ManifestationSearchResult` - Manifestation display components
+- `ResultSet` - result list shared by the three search tabs (`renderResult` per tab)
+- `ResultLines` - creator/relationship lines and chips styled like the result cards
 
 **UI Helpers:**
 - `EntityEditorHeader` - Header section of entity editor
 - `EntityPickerPanel` - Entity selection panel
 - `LabelManager`, `LanguageSelector` - Label and language UI
 - `ObjectPropertyGroup`, `ObjectPropertyValue` - Object property rendering
-- `ResultSet` - Generic search result display
-- `SearchFilters` - Checkbox filters with hit counts for both searches (language,
-  content type, category of work, genre or form; publications add media and
-  carrier type); each search tab keeps its own selection. Beside the checkboxes,
+- `SearchFilters` - Checkbox filters with hit counts for all searches, grouped
+  work → expression → manifestation (`FILTER_FIELDS`: category of work, genre or
+  form, language, content type; publications add media and carrier type), values
+  by hit count; each search tab keeps its own selection. Beside the checkboxes,
   every selection and a followed link (the entity's name) is a removable chip, in the
   order chosen, last one at the bottom (kept per tab as `selectionKey`/
   `LINK_SELECTION` keys); chips and boxes share state, and "Clear all", aligned
@@ -146,8 +152,8 @@ EntEdit/
   per search tab and shown as a removable chip with its label. `toLinkQuery` builds
   the ordinary Lucene query for it: an expression or work link is limited by an
   IRI field (`+expression:"<IRI>"`, `+work:"<IRI>"`; `$self` and the work links
-  in both connectors — the publication index reaches them through the embodied
-  expressions) with the label's words as *optional* ranking terms
+  in every connector — the publication index reaches them through the embodied
+  expressions, the work index has the work as `$self` and its expressions) with the label's words as *optional* ranking terms
   (`toLuceneQuery(…, { optional: true })`), so a work's original ranks before
   its translations; an agent link searches the name as a phrase in the names
   field (`toNameQuery`). Filters and facet counts apply on top. A link query that
@@ -155,7 +161,7 @@ EntEdit/
   link fields, a work without expressions) falls back to the label as text
   (`findHits`, `textQueryFor`). Following a link clears the filters; removing the
   chip or typing returns to a plain search
-- `wemiQueries.ts` - expression/manifestation detail queries shared by the search
+- `wemiQueries.ts` - work/expression/manifestation detail queries shared by the search
   pages and the expandable lists under a result, built around a *scope* pattern
 - `searchFilters.ts` - search category filters as Lucene clauses (OR within a
   field, AND across), the fields each index offers (`INDEX_FILTER_FIELDS`) and
@@ -349,7 +355,10 @@ wherever values are listed:
 - Search filters use unanalyzed IRI fields in `expressionsIndex` (`language`,
   `contentType`, `workType`, `genre`) and `manifestationsIndex` (the same plus
   `mediaType`, `carrierType`, reached through the embodied expressions and their
-  works — a manifestation counts once per value any of them has); counts come from
+  works — a manifestation counts once per value any of them has) and `worksIndex`
+  (`language`/`contentType` from its expressions, `workType`/`genre` on the work
+  itself; no manifestation data, so a work does not gather every publication's
+  titles and publishers); counts come from
   `lucene:facetFields`/`lucene:facets` and filters are Lucene clauses, so both
   stay in the index (3–55 ms on 89k expressions; the same counts in SPARQL took
   up to 4 s and grow with the hits). A field with a selection is counted in its
@@ -555,7 +564,9 @@ The application expects:
 - `entedit:T07` selections (retrospective collections, `entedit:collection true`) are
   kept out of `expressionsIndex` by its `documentFilter`, so the content search neither
   finds them nor lists them as a category, whatever other genres they carry. The
-  publication search still shows them, merged with their manifestation
+  publication search still shows them, merged with their manifestation, and the
+  work search lists them like any other work: `worksIndex` has no `documentFilter`,
+  so it gives a full overview of everything entered as a work
 - Standard RDFS vocabulary (rdfs:label, rdfs:domain, rdfs:range)
 - RDA vocabulary for bibliographic entities (Work, Expression, Manifestation, Item)
 - Properties must have correct `entedit:status` to appear in the editor UI;

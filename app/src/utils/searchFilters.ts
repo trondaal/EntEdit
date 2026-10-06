@@ -1,7 +1,7 @@
 /**
- * Category filters for the content and publication searches, and their counts.
+ * Category filters for the publication, content and work searches, and their counts.
  *
- * The expression and manifestation indexes hold the category IRIs in
+ * The manifestation, expression and work indexes hold the category IRIs in
  * unanalyzed fields (see database/lucene_connectors/). Filters become
  * Lucene clauses, so paging, the hit count and the counts per category all
  * come from the index: values selected within a category are alternatives
@@ -10,28 +10,30 @@
 import { sanitizeSparqlUri } from "./labelUtils";
 import type { SparqlResult } from "../types/sparql";
 
-/** Index fields offered as filters, in display order. */
+/** Index fields offered as filters, in display order: work, expression, manifestation. */
 export const FILTER_FIELDS = [
-  "mediaType",
-  "carrierType",
-  "language",
-  "contentType",
   "workType",
   "genre",
+  "language",
+  "contentType",
+  "mediaType",
+  "carrierType",
 ] as const;
 
 export type FilterField = (typeof FILTER_FIELDS)[number];
 
-export type SearchIndex = "expressionsIndex" | "manifestationsIndex";
+export type SearchIndex = "expressionsIndex" | "manifestationsIndex" | "worksIndex";
 
 /**
  * Filters offered per index. A manifestation has the categories of the
  * expressions it embodies and their works: it counts, and matches, once
- * per value that at least one of them has.
+ * per value that at least one of them has. A work likewise has the
+ * language and content type of each of its expressions.
  */
 export const INDEX_FILTER_FIELDS: Record<SearchIndex, readonly FilterField[]> = {
-  expressionsIndex: ["language", "contentType", "workType", "genre"],
+  expressionsIndex: ["workType", "genre", "language", "contentType"],
   manifestationsIndex: FILTER_FIELDS,
+  worksIndex: ["workType", "genre", "language", "contentType"],
 };
 
 /** Selected category IRIs per field. */
