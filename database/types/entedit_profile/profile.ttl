@@ -95,6 +95,30 @@ entedit:valueOrder
     rdfs:comment "Position (from 0) of the value of an annotated statement among the values of the same property for the same subject, as arranged in the editor. Used as an RDF-star annotation: stored and queried as << s p o >> entedit:valueOrder n, and written by the EntEdit export (Turtle-star, .ttls) after the value as s p o {| entedit:valueOrder n |}."@en ,
         "Plassering (fra 0) for verdien i et annotert utsagn blant verdiene til samme egenskap for samme subjekt, slik de er ordnet i redigeringsverktøyet. Brukes som RDF-star-annotasjon: lagres og spørres som << s p o >> entedit:valueOrder n, og skrives av EntEdit-eksporten (Turtle-star, .ttls) etter verdien som s p o {| entedit:valueOrder n |}."@no .
 
+# entedit:valueTitle and entedit:valueCredit annotate a statement in the same way
+# as entedit:valueOrder. On "manifestation has expression manifested" they record
+# how the expression appears in that manifestation, where this differs from the
+# expression itself: under another title (e.g. "The World the Children Made" for
+# the expression titled "The Veldt"), or credited to another agent (a pseudonym,
+# another form of the name, a house name). Example:
+#   <http://entedit.org/manifestation/41951> rdamo:P30139
+#       <http://entedit.org/expression/64827> {| entedit:valueOrder 2 ;
+#           entedit:valueTitle "The Veldt"@en |} .
+# Written by the isfdb2lrm conversion, where ISFDB variant titles that differ only
+# in title or credit are one expression.
+entedit:valueTitle
+    a owl:DatatypeProperty ;
+    rdfs:label "has value title (literal)" ;
+    rdfs:comment "Title under which the value of an annotated statement appears in this context, where it differs from the value's own title; e.g. the title under which an expression is printed in a manifestation. Used as an RDF-star annotation: << s p o >> entedit:valueTitle \"title\"."@en ,
+        "Tittel som verdien i et annotert utsagn opptrer under i denne sammenhengen, der den avviker fra verdiens egen tittel; f.eks. tittelen et uttrykk er trykt under i en manifestasjon. Brukes som RDF-star-annotasjon: << s p o >> entedit:valueTitle \"tittel\"."@no .
+
+entedit:valueCredit
+    a owl:ObjectProperty ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:label "has value credit (agent)" ;
+    rdfs:comment "Agent to whom the value of an annotated statement is credited in this context, where this differs from the value's own creators; e.g. the pseudonym or name form an expression is credited to in a manifestation. Used as an RDF-star annotation: << s p o >> entedit:valueCredit agent."@en ,
+        "Agent som verdien i et annotert utsagn er kreditert til i denne sammenhengen, der det avviker fra verdiens egne skapere; f.eks. pseudonymet eller navneformen et uttrykk er kreditert til i en manifestasjon. Brukes som RDF-star-annotasjon: << s p o >> entedit:valueCredit agent."@no .
+
 # entedit:collection true marks a genre or form (a value of entedit:P02) whose
 # works gather other works: a short story collection, an anthology. A
 # manifestation that embodies exactly one expression of such a work, besides its
