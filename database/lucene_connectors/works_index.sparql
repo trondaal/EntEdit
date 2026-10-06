@@ -23,8 +23,9 @@ PREFIX inst:<http://www.ontotext.com/connectors/lucene/instance#>
 # work ($self) and expression hold IRIs for following a link from a search
 # result: +work:"<IRI>" finds the work, +expression:"<IRI>" the work of an
 # expression.
-# documentFilter keeps selections (entedit:T07, retrospective collections of
-# works that exist on their own) out, as in expressionsIndex.
+# Unlike expressionsIndex there is no documentFilter: the work search is the
+# full overview of everything entered as a work, selections (entedit:T07)
+# included.
 INSERT DATA {
 	inst:worksIndex :createConnector '''
 {
@@ -578,7 +579,6 @@ INSERT DATA {
   "types": [
     "http://rdaregistry.info/Elements/c/C10001"
   ],
-  "documentFilter": "!(?genre = <http://oslomet.no/abi/vocab#T07>)",
   "readonly": false,
   "detectFields": false,
   "importGraph": false,
