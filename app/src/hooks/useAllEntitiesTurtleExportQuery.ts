@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { SparqlClient } from "../utils/sparqlClient";
 import type { PredObjBinding } from "../utils/turtleSerializer";
 import { sanitizeSparqlUri } from "../utils/labelUtils";
+import { notDeprecated } from "../utils/sparqlFragments";
 import type { SparqlEndpointConfig } from "../types/sparql";
 
 /**
@@ -60,6 +61,7 @@ export function useAllEntitiesTurtleExportQuery(
           {
             ?other ?incomingPred ?subject .
             ?predicate owl:inverseOf ?incomingPred .
+            ${notDeprecated("?predicate")}
             FILTER NOT EXISTS { ?subject ?predicate ?other }
             BIND(?other AS ?object)
           }

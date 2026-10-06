@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { SparqlClient } from "../utils/sparqlClient";
 import type { PredObjBinding } from "../utils/turtleSerializer";
 import { sanitizeSparqlUri } from "../utils/labelUtils";
+import { notDeprecated } from "../utils/sparqlFragments";
 import type { SparqlEndpointConfig } from "../types/sparql";
 
 /**
@@ -54,6 +55,7 @@ export function useTurtleExportQuery(
             # avoid duplicating it via the inverse property.
             ?object ?incomingPred <${sanitizedUri}> .
             ?predicate owl:inverseOf ?incomingPred .
+            ${notDeprecated("?predicate")}
             FILTER NOT EXISTS { <${sanitizedUri}> ?predicate ?object }
           }
         }

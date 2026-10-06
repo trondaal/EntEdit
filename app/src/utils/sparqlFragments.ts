@@ -92,5 +92,17 @@ export const getFallbackLanguage = (language: string): string => {
   return language === "no" ? "en" : "no";
 };
 
+/**
+ * Excludes a property the RDA Registry has deprecated (status 1008). The registry
+ * still lists deprecated properties as inverses of live ones — "is prequel to
+ * (Deprecated)" next to "has sequel work" as inverses of "has prequel work" — so a
+ * lookup through `owl:inverseOf` that does not skip them shows the old label, or
+ * writes the old predicate into an export.
+ *
+ * @param property - The SPARQL variable bound to the inverse property (e.g. "?shown")
+ */
+export const notDeprecated = (property: string): string =>
+  `FILTER NOT EXISTS { ${property} <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1008> }`;
+
 /** Languages supported by the application */
 export const SUPPORTED_LANGUAGES = ["en", "no"] as const;

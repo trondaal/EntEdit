@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   buildCollectionQuery,
+  buildExpressionDetailQuery,
   buildManifestationDetailQuery,
   buildWorkDetailQuery,
   expressionOrderInWork,
@@ -11,6 +12,7 @@ import {
   workScope,
   type ManifestationDetail,
 } from "./wemiQueries";
+import { notDeprecated } from "./sparqlFragments";
 
 const scope = manifestationScope(["http://example.org/m1"]);
 const term = (value: string) => ({ type: "literal", value });
@@ -101,5 +103,32 @@ describe("work queries", () => {
     expect(toWorkDetail(row("1")).contenttypeUri).toBe("http://rdaregistry.info/termList/RDAContentType/1020");
     expect(toWorkDetail(row("2")).contenttypeUri).toBeUndefined();
     expect(toWorkDetail(row("1")).expression_count).toBe(2);
+  });
+});
+
+describe("inverse relationships and deprecated properties", () => {
+  const deprecated = notDeprecated("?shown");
+
+  it("builds a filter on the registry's deprecated status", () => {
+    expect(deprecated).toBe(
+      "FILTER NOT EXISTS { ?shown <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1008> }",
+    );
+  });
+
+  // RDA lists "is prequel to (Deprecated)" as an inverse of "has prequel work"
+  // next to the live "has sequel work"; showing every inverse put the old label
+  // into result lines.
+  it("skips deprecated inverses when relationships are read from the other side", () => {
+    for (const query of [
+      buildWorkDetailQuery(workScope(["http://example.org/w1"]), "en"),
+      buildExpressionDetailQuery(workScope(["http://example.org/w1"]), "en"),
+    ]) {
+      expect(query).toMatch(/\?shown owl:inverseOf \?relationship \.\s+FILTER NOT EXISTS \{ \?shown <[^>]*regap\/status> <[^>]*RegStatus\/1008> \}/);
+    }
+  });
+
+  it("skips deprecated inverses for agent relationships too", () => {
+    const query = buildWorkDetailQuery(workScope(["http://example.org/w1"]), "en");
+    expect(query).toMatch(/\?inverse owl:inverseOf \?relationship \.\s+FILTER NOT EXISTS \{ \?inverse <[^>]*regap\/status> <[^>]*RegStatus\/1008> \}/);
   });
 });

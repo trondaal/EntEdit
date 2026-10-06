@@ -364,6 +364,11 @@ wherever values are listed:
   up to 4 s and grow with the hits). A field with a selection is counted in its
   own query without its own filter. Work type and genre follow `entedit:P01`/
   `P02`, not their superproperty `P10004`, which would mix the two
+- A lookup through `owl:inverseOf` can return deprecated properties: RDA lists
+  "is prequel to (Deprecated)" (`rdawo:P10195`) as an inverse of "has prequel work"
+  next to the live "has sequel work", so a hidden live inverse let the deprecated
+  one through. Add `notDeprecated("?inverse")` (`sparqlFragments.ts`, registry status
+  1008) wherever an inverse is resolved for display or export
 - With inference, `skos:altLabel` and `skos:prefLabel` count as `rdfs:label`;
   read display labels from explicit statements (`FROM <…/explicit>`) or an
   alternative label can win (`useFacetLabels`)

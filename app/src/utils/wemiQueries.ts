@@ -16,6 +16,7 @@
  */
 import { escapeSparqlLiteral, sanitizeSparqlUri } from "./labelUtils";
 import { SPARQL_SEP } from "./textFormatters";
+import { notDeprecated } from "./sparqlFragments";
 import type { SparqlResult } from "../types/sparql";
 
 const uriList = (uris: string[]): string =>
@@ -107,6 +108,7 @@ const agentsSubquery = (entity: string, key: string, scope: string, lang: string
                 ?agent ?relationship ?${entity} .
                 ?agent rdaad:P50413 ?agent_name .
                 ?inverse owl:inverseOf ?relationship .
+                ${notDeprecated("?inverse")}
                 ?inverse rdfs:label ?${entity}_agent_relationship_label .
             }
             FILTER(LANG(?${entity}_agent_relationship_label) = "${lang}")
@@ -118,7 +120,8 @@ const agentsSubquery = (entity: string, key: string, scope: string, lang: string
  * Relationships from `?entity` to other entities of `targetClass`, in either
  * direction, grouped per result row (`?key`) and relationship label: "label ‡ title ‖ uri † …".
  * Relationship properties marked `entedit:display false` are left out; an
- * incoming statement is shown with (and filtered by) its inverse property.
+ * incoming statement is shown with (and filtered by) its inverse property,
+ * skipping inverses the RDA Registry has deprecated.
  *
  * The target title is the `rdfs:label` in the chosen language, else the
  * untagged one, sampled per target first — a target with two untagged labels
@@ -146,6 +149,7 @@ const relationshipsSubquery = (
                     ?target ?relationship ?${entity} .
                     ?target a <${targetClass}> .
                     ?shown owl:inverseOf ?relationship .
+                    ${notDeprecated("?shown")}
                 }
                 ?shown rdfs:label ?${entity}_relationship_label .
                 FILTER(LANG(?${entity}_relationship_label) = "${lang}")
