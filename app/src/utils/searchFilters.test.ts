@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  INDEX_FILTER_FIELDS,
   LINK_SELECTION,
   parseSelectionKey,
   selectionKey,
@@ -91,5 +92,11 @@ describe("selection keys", () => {
 
   it("do not mistake the link for a filter", () => {
     expect(parseSelectionKey(LINK_SELECTION)).toBeNull();
+  });
+});
+
+describe("INDEX_FILTER_FIELDS", () => {
+  it("offers the work search the content search's filters", () => {
+    expect(INDEX_FILTER_FIELDS.worksIndex).toEqual(INDEX_FILTER_FIELDS.expressionsIndex);
   });
 });

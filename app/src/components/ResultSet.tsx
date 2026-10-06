@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, type ReactNode } from "react";
 import {
   Paper,
   Box,
@@ -8,12 +8,9 @@ import {
   Alert,
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import type { EntitySearchHandler } from "../utils/searchLink";
-import Expression from "./Expression";
-import type { ExpressionSearchResult } from "../hooks/useSearchQueries";
-import type { SparqlEndpointConfig } from "../types/sparql";
 
-interface ResultSetProps {
+/** Result list of a search tab; each tab renders its own kind of result. */
+interface ResultSetProps<T extends { uri: string }> {
   searchQuery: string;
   /** Category filters are applied; results are shown without search text too */
   filtered: boolean;
@@ -21,19 +18,18 @@ interface ResultSetProps {
   totalCount: number;
   /** No exact hits: the results match similar spellings */
   fuzzy: boolean;
-  searchResults: ExpressionSearchResult[];
+  searchResults: T[];
   searchLoading: boolean;
   searchError: Error | null;
-  onSelectResult: (uri: string) => void;
-  config: SparqlEndpointConfig;
-  selectedLanguage: string;
+  /** Shown before anything is searched for */
+  emptyPrompt: string;
+  renderResult: (result: T) => ReactNode;
   hasNextPage: boolean;
   isFetchingNextPage: boolean;
   onFetchNextPage: () => void;
-  onEntitySearch: EntitySearchHandler;
 }
 
-const ResultSet: React.FC<ResultSetProps> = ({
+const ResultSet = <T extends { uri: string }>({
   searchQuery,
   filtered,
   searchResults,
@@ -41,14 +37,12 @@ const ResultSet: React.FC<ResultSetProps> = ({
   fuzzy,
   searchLoading,
   searchError,
-  onSelectResult,
-  config,
-  selectedLanguage,
+  emptyPrompt,
+  renderResult,
   hasNextPage,
   isFetchingNextPage,
   onFetchNextPage,
-  onEntitySearch,
-}) => {
+}: ResultSetProps<T>) => {
   const { t } = useTranslation();
 
   // Fetch next page when user scrolls near the bottom
@@ -94,7 +88,7 @@ const ResultSet: React.FC<ResultSetProps> = ({
 
       {!searchQuery && !filtered ? (
         <Box sx={{ p: 3, textAlign: "center", color: "text.secondary" }}>
-          {t("search.enterSearchQuery")}
+          {emptyPrompt}
         </Box>
       ) : searchError ? null : searchLoading ? (
         <Box sx={{ display: "flex", justifyContent: "center", p: 3 }}>
@@ -127,14 +121,7 @@ const ResultSet: React.FC<ResultSetProps> = ({
           onScroll={handleScroll}
         >
           {searchResults.map((result, index) => (
-            <Expression
-              key={`${result.uri}-${index}`}
-              result={result}
-              onSelect={onSelectResult}
-              config={config}
-              selectedLanguage={selectedLanguage}
-              onEntitySearch={onEntitySearch}
-            />
+            <React.Fragment key={`${result.uri}-${index}`}>{renderResult(result)}</React.Fragment>
           ))}
 
           {/* Loading indicator for next page */}

@@ -19,13 +19,17 @@ import {
   buildCollectionQuery,
   buildExpressionDetailQuery,
   buildManifestationDetailQuery,
+  buildWorkDetailQuery,
   expressionScope,
   manifestationScope,
   toExpressionDetail,
   toManifestationDetail,
+  toWorkDetail,
   withCollections,
+  workScope,
   type ExpressionDetail,
   type ManifestationDetail,
+  type WorkDetail,
 } from "../utils/wemiQueries";
 import type { SparqlEndpointConfig } from "../types/sparql";
 
@@ -37,6 +41,8 @@ export interface ExpressionSearchResult extends ExpressionDetail {
 }
 
 export type ManifestationSearchResult = ManifestationDetail;
+
+export type WorkSearchResult = WorkDetail;
 
 /** One page of search results. */
 export interface SearchPage<T> {
@@ -373,6 +379,36 @@ export const useSearchManifestations = (
         uris,
         withCollections(details.results.bindings.map(toManifestationDetail), collections.results.bindings),
       );
+      return { results, total, fuzzy };
+    },
+    initialPageParam: FIRST_PAGE,
+    getNextPageParam: nextPage,
+    enabled: hasCriteria(query, normalized),
+    staleTime: 5 * 60 * 1000, // 5 minutes
+  });
+};
+
+export const useSearchWorks = (
+  config: SparqlEndpointConfig,
+  query: string,
+  language: string,
+  filters: SearchFilters = {},
+  /** Ready-made Lucene query used instead of `query` (see `findHits`) */
+  luceneText?: string,
+) => {
+  const normalized = normalizeFilters(filters);
+  return useInfiniteQuery({
+    queryKey: ["searchWorks", config.url, query, language, normalized, luceneText],
+    queryFn: async ({ pageParam, signal }): Promise<SearchPage<WorkSearchResult>> => {
+      if (!hasCriteria(query, normalized)) {
+        return EMPTY;
+      }
+      const client = new SparqlClient(config);
+      const { uris, total, fuzzy } = await findHits(client, "worksIndex", query, normalized, pageParam, signal, luceneText);
+      if (uris.length === 0) return { results: [], total, fuzzy };
+
+      const details = await client.query(buildWorkDetailQuery(workScope(uris), language), { signal });
+      const results = inRankOrder(uris, details.results.bindings.map(toWorkDetail));
       return { results, total, fuzzy };
     },
     initialPageParam: FIRST_PAGE,

@@ -1,0 +1,590 @@
+PREFIX :<http://www.ontotext.com/connectors/lucene#>
+PREFIX inst:<http://www.ontotext.com/connectors/lucene/instance#>
+# Conditional drop: only fires if the connector already exists.
+INSERT { inst:worksIndex :dropConnector "" }
+WHERE { inst:worksIndex :connectorStatus ?status }
+;
+PREFIX :<http://www.ontotext.com/connectors/lucene#>
+PREFIX inst:<http://www.ontotext.com/connectors/lucene/instance#>
+# Works, for the work search. A work is indexed like the work part of an
+# expression in expressionsIndex: its titles, labels and agents, and those of
+# the works it is related to (transformation, augmentation, whole/part), plus
+# everything of its expressions — titles, labels, agents (translators,
+# narrators), source expressions, language and content type. Each expression
+# is reached from either side of the link (rdawo:P10078 or rdaeo:P20231);
+# a field name with $ merges into the part before it, so names$expression_fromWork
+# and names$work are both the field `names`. Manifestations are left out on
+# purpose: a work with many publications would gather their titles, publishers
+# and statements of responsibility and match far too broadly.
+# language, contentType, workType and genre hold category IRIs, not analyzed,
+# for the search filters and their counts (lucene:facetFields); a work counts
+# once per language or content type that any of its expressions has. Work type
+# and genre follow entedit:P01/P02, not their superproperty rdaw:P10004.
+# work ($self) and expression hold IRIs for following a link from a search
+# result: +work:"<IRI>" finds the work, +expression:"<IRI>" the work of an
+# expression.
+# documentFilter keeps selections (entedit:T07, retrospective collections of
+# works that exist on their own) out, as in expressionsIndex.
+INSERT DATA {
+	inst:worksIndex :createConnector '''
+{
+  "fields": [
+    {
+      "fieldName": "names$work",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/x/object/P00006",
+        "http://rdaregistry.info/Elements/x/P00019"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "names$expression_fromWork",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/w/object/P10078",
+        "http://rdaregistry.info/Elements/x/object/P00006",
+        "http://rdaregistry.info/Elements/x/P00019"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "names$expression_fromExpression",
+      "propertyChain": [
+        "^http://rdaregistry.info/Elements/e/object/P20231",
+        "http://rdaregistry.info/Elements/x/object/P00006",
+        "http://rdaregistry.info/Elements/x/P00019"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "names$sourceexpression_fromWork",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/w/object/P10078",
+        "http://rdaregistry.info/Elements/e/object/P20574",
+        "http://rdaregistry.info/Elements/x/object/P00006",
+        "http://rdaregistry.info/Elements/x/P00019"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "names$sourceexpression_fromExpression",
+      "propertyChain": [
+        "^http://rdaregistry.info/Elements/e/object/P20231",
+        "http://rdaregistry.info/Elements/e/object/P20574",
+        "http://rdaregistry.info/Elements/x/object/P00006",
+        "http://rdaregistry.info/Elements/x/P00019"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "names$transformationof",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/w/object/P10337",
+        "http://rdaregistry.info/Elements/x/object/P00006",
+        "http://rdaregistry.info/Elements/x/P00019"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "names$augmentationof",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/w/object/P10192",
+        "http://rdaregistry.info/Elements/x/object/P00006",
+        "http://rdaregistry.info/Elements/x/P00019"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "names$haspartwork",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/w/object/P10147",
+        "http://rdaregistry.info/Elements/x/object/P00006",
+        "http://rdaregistry.info/Elements/x/P00019"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "names$ispartwork",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/w/object/P10019",
+        "http://rdaregistry.info/Elements/x/object/P00006",
+        "http://rdaregistry.info/Elements/x/P00019"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "titles$work",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/x/P00019"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "titles$expression_fromWork",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/w/object/P10078",
+        "http://rdaregistry.info/Elements/x/P00019"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "titles$expression_fromExpression",
+      "propertyChain": [
+        "^http://rdaregistry.info/Elements/e/object/P20231",
+        "http://rdaregistry.info/Elements/x/P00019"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "titles$sourceexpression_fromWork",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/w/object/P10078",
+        "http://rdaregistry.info/Elements/e/object/P20574",
+        "http://rdaregistry.info/Elements/x/P00019"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "titles$sourceexpression_fromExpression",
+      "propertyChain": [
+        "^http://rdaregistry.info/Elements/e/object/P20231",
+        "http://rdaregistry.info/Elements/e/object/P20574",
+        "http://rdaregistry.info/Elements/x/P00019"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "titles$transformationof",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/w/object/P10337",
+        "http://rdaregistry.info/Elements/x/P00019"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "titles$augmentationof",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/w/object/P10192",
+        "http://rdaregistry.info/Elements/x/P00019"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "titles$haspartwork",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/w/object/P10147",
+        "http://rdaregistry.info/Elements/x/P00019"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "titles$ispartwork",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/w/object/P10019",
+        "http://rdaregistry.info/Elements/x/P00019"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "labels$work",
+      "propertyChain": [
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "labels$expression_fromWork",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/w/object/P10078",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "labels$expression_fromExpression",
+      "propertyChain": [
+        "^http://rdaregistry.info/Elements/e/object/P20231",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "labels$sourceexpression_fromWork",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/w/object/P10078",
+        "http://rdaregistry.info/Elements/e/object/P20574",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "labels$sourceexpression_fromExpression",
+      "propertyChain": [
+        "^http://rdaregistry.info/Elements/e/object/P20231",
+        "http://rdaregistry.info/Elements/e/object/P20574",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "labels$transformationof",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/w/object/P10337",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "labels$augmentationof",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/w/object/P10192",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "labels$haspartwork",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/w/object/P10147",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "labels$ispartwork",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/w/object/P10019",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "categories$content_fromWork",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/w/object/P10078",
+        "http://rdaregistry.info/Elements/e/object/P20001",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "categories$content_fromExpression",
+      "propertyChain": [
+        "^http://rdaregistry.info/Elements/e/object/P20231",
+        "http://rdaregistry.info/Elements/e/object/P20001",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "categories$language_fromWork",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/w/object/P10078",
+        "http://rdaregistry.info/Elements/e/object/P20006",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "categories$language_fromExpression",
+      "propertyChain": [
+        "^http://rdaregistry.info/Elements/e/object/P20231",
+        "http://rdaregistry.info/Elements/e/object/P20006",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "categories$worktype",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/w/object/P10004",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "language$fromWork",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/w/object/P10078",
+        "http://rdaregistry.info/Elements/e/object/P20006"
+      ],
+      "indexed": true,
+      "stored": false,
+      "analyzed": false,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "language$fromExpression",
+      "propertyChain": [
+        "^http://rdaregistry.info/Elements/e/object/P20231",
+        "http://rdaregistry.info/Elements/e/object/P20006"
+      ],
+      "indexed": true,
+      "stored": false,
+      "analyzed": false,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "contentType$fromWork",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/w/object/P10078",
+        "http://rdaregistry.info/Elements/e/object/P20001"
+      ],
+      "indexed": true,
+      "stored": false,
+      "analyzed": false,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "contentType$fromExpression",
+      "propertyChain": [
+        "^http://rdaregistry.info/Elements/e/object/P20231",
+        "http://rdaregistry.info/Elements/e/object/P20001"
+      ],
+      "indexed": true,
+      "stored": false,
+      "analyzed": false,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "workType",
+      "propertyChain": [
+        "http://oslomet.no/abi/vocab#P01"
+      ],
+      "indexed": true,
+      "stored": false,
+      "analyzed": false,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "genre",
+      "propertyChain": [
+        "http://oslomet.no/abi/vocab#P02"
+      ],
+      "indexed": true,
+      "stored": false,
+      "analyzed": false,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
+      "fieldName": "work",
+      "propertyChain": [
+        "$self"
+      ],
+      "indexed": true,
+      "stored": false,
+      "analyzed": false,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": false
+    },
+    {
+      "fieldName": "expression$fromWork",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/w/object/P10078"
+      ],
+      "indexed": true,
+      "stored": false,
+      "analyzed": false,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": false
+    },
+    {
+      "fieldName": "expression$fromExpression",
+      "propertyChain": [
+        "^http://rdaregistry.info/Elements/e/object/P20231"
+      ],
+      "indexed": true,
+      "stored": false,
+      "analyzed": false,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": false
+    }
+  ],
+  "languages": [],
+  "types": [
+    "http://rdaregistry.info/Elements/c/C10001"
+  ],
+  "documentFilter": "!(?genre = <http://oslomet.no/abi/vocab#T07>)",
+  "readonly": false,
+  "detectFields": false,
+  "importGraph": false,
+  "skipInitialIndexing": false,
+  "boostProperties": [],
+  "stripMarkup": false
+}
+''' .
+}

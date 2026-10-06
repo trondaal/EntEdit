@@ -17,6 +17,7 @@ import {
   useSearchExpressions,
   useSearchFacets,
   useSearchManifestations,
+  useSearchWorks,
 } from "../hooks/useSearchQueries";
 import {
   INDEX_FILTER_FIELDS,
@@ -32,8 +33,33 @@ import SearchFilters from "./SearchFilters";
 import { toLinkQuery, type EntitySearchHandler, type LinkTarget } from "../utils/searchLink";
 import { useDebouncedValue } from "../hooks/useDebouncedValue";
 import ResultSet from "./ResultSet";
-import ManifestationResultSet from "./ManifestationResultSet";
+import Expression from "./Expression";
+import ManifestationSearchResult from "./ManifestationSearchResult";
+import Work from "./Work";
 import { useLogging } from "../hooks/useLogging";
+import type { SearchMode } from "../types/logging";
+
+/** Search tabs in display order: publications, content, works. */
+const SEARCH_MODES: readonly SearchMode[] = ["manifestation", "expression", "work"];
+
+const SEARCH_INDEX: Record<SearchMode, SearchIndex> = {
+  manifestation: "manifestationsIndex",
+  expression: "expressionsIndex",
+  work: "worksIndex",
+};
+
+const perMode = <T,>(value: () => T): Record<SearchMode, T> => ({
+  manifestation: value(),
+  expression: value(),
+  work: value(),
+});
+
+/** The selection orders with a followed link taken out, in every tab. */
+const withoutLink = (all: Record<SearchMode, string[]>): Record<SearchMode, string[]> => ({
+  manifestation: all.manifestation.filter((key) => key !== LINK_SELECTION),
+  expression: all.expression.filter((key) => key !== LINK_SELECTION),
+  work: all.work.filter((key) => key !== LINK_SELECTION),
+});
 
 interface SearchInterfaceProps {
   config: SparqlEndpointConfig;
@@ -47,30 +73,21 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
   const { t } = useTranslation();
   const { logEvent, isRecording } = useLogging();
   const [searchInput, setSearchInput] = useState<string>("");
-  const [searchMode, setSearchMode] = useState<'expression' | 'manifestation'>('expression');
+  const [searchMode, setSearchMode] = useState<SearchMode>(SEARCH_MODES[0]);
   // Each search tab keeps its own category filters
-  const [filtersByMode, setFiltersByMode] = useState<Record<'expression' | 'manifestation', Filters>>({
-    expression: {},
-    manifestation: {},
-  });
+  const [filtersByMode, setFiltersByMode] = useState<Record<SearchMode, Filters>>(() => perMode(() => ({})));
   const filters = filtersByMode[searchMode];
   const setFilters = (update: (current: Filters) => Filters) =>
     setFiltersByMode((all) => ({ ...all, [searchMode]: update(all[searchMode]) }));
   // A link followed in a search tab, until the search text is edited
-  const [linkTarget, setLinkTarget] = useState<(LinkTarget & { mode: 'expression' | 'manifestation' }) | null>(null);
+  const [linkTarget, setLinkTarget] = useState<(LinkTarget & { mode: SearchMode }) | null>(null);
   // Order of the selections per tab, oldest first, for the filter panel's chips
-  const [orderByMode, setOrderByMode] = useState<Record<'expression' | 'manifestation', string[]>>({
-    expression: [],
-    manifestation: [],
-  });
+  const [orderByMode, setOrderByMode] = useState<Record<SearchMode, string[]>>(() => perMode(() => []));
   const setOrder = (update: (current: string[]) => string[]) =>
     setOrderByMode((all) => ({ ...all, [searchMode]: update(all[searchMode]) }));
   const clearLink = () => {
     setLinkTarget(null);
-    setOrderByMode((all) => ({
-      expression: all.expression.filter((key) => key !== LINK_SELECTION),
-      manifestation: all.manifestation.filter((key) => key !== LINK_SELECTION),
-    }));
+    setOrderByMode(withoutLink);
   };
 
   // Debounce the search query to avoid firing expensive SPARQL queries on every keystroke
@@ -83,11 +100,10 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
   const activeLink = linkTarget?.mode === searchMode ? linkTarget : null;
   const linkQuery = activeLink ? toLinkQuery(activeLink) : undefined;
   const currentQuery = activeLink?.label ?? debouncedQuery;
-  const expressionQuery = searchMode === 'expression' ? currentQuery : '';
-  const manifestationQuery = searchMode === 'manifestation' ? currentQuery : '';
-  const expressionFilters = searchMode === 'expression' ? filters : {};
-  const manifestationFilters = searchMode === 'manifestation' ? filters : {};
-  const searchIndex: SearchIndex = searchMode === 'expression' ? 'expressionsIndex' : 'manifestationsIndex';
+  const queryFor = (mode: SearchMode) => (searchMode === mode ? currentQuery : '');
+  const filtersFor = (mode: SearchMode) => (searchMode === mode ? filters : {});
+  const linkQueryFor = (mode: SearchMode) => (searchMode === mode ? linkQuery : undefined);
+  const searchIndex = SEARCH_INDEX[searchMode];
 
   const {
     data: searchData,
@@ -97,8 +113,7 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
     isFetchingNextPage: searchIsFetchingNextPage,
     fetchNextPage: searchFetchNextPage,
   } = useSearchExpressions(
-    config, expressionQuery, selectedLanguage, expressionFilters,
-    searchMode === 'expression' ? linkQuery : undefined,
+    config, queryFor('expression'), selectedLanguage, filtersFor('expression'), linkQueryFor('expression'),
   );
 
   // Counts for the current search; with neither text nor filters, for the
@@ -124,8 +139,18 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
     isFetchingNextPage: manifestationIsFetchingNextPage,
     fetchNextPage: manifestationFetchNextPage,
   } = useSearchManifestations(
-    config, manifestationQuery, selectedLanguage, manifestationFilters,
-    searchMode === 'manifestation' ? linkQuery : undefined,
+    config, queryFor('manifestation'), selectedLanguage, filtersFor('manifestation'), linkQueryFor('manifestation'),
+  );
+
+  const {
+    data: workSearchData,
+    isLoading: workSearchLoading,
+    error: workSearchError,
+    hasNextPage: workHasNextPage,
+    isFetchingNextPage: workIsFetchingNextPage,
+    fetchNextPage: workFetchNextPage,
+  } = useSearchWorks(
+    config, queryFor('work'), selectedLanguage, filtersFor('work'), linkQueryFor('work'),
   );
 
   // Flatten infinite query pages into flat arrays
@@ -137,6 +162,11 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
   const manifestationSearchResults = useMemo(
     () => manifestationSearchData?.pages.flatMap((page) => page.results) ?? [],
     [manifestationSearchData],
+  );
+
+  const workSearchResults = useMemo(
+    () => workSearchData?.pages.flatMap((page) => page.results) ?? [],
+    [workSearchData],
   );
 
   // Log search when the debounced query fires
@@ -176,6 +206,12 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
     }
   };
 
+  const handleSelectResult = (uri: string) => {
+    if (isRecording) {
+      logEvent({ type: "search_result_selected", resultUri: uri, query: debouncedQuery, mode: searchMode });
+    }
+  };
+
   // "Clear all" in the filter panel: the filters and a followed link
   const handleClearAll = () => {
     if (hasFilters(filters)) handleClearFilters();
@@ -196,8 +232,7 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
     if (hasFilters(filters)) handleClearFilters();
     setLinkTarget(target ? { label, ...target, mode: searchMode } : null);
     setOrderByMode((all) => ({
-      expression: all.expression.filter((key) => key !== LINK_SELECTION),
-      manifestation: all.manifestation.filter((key) => key !== LINK_SELECTION),
+      ...withoutLink(all),
       ...(target ? { [searchMode]: [LINK_SELECTION] } : {}),
     }));
   };
@@ -244,12 +279,14 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
 
               {/* Search Mode Tabs */}
               <Tabs
-                value={searchMode === 'expression' ? 0 : 1}
-                onChange={(_, newValue) => setSearchMode(newValue === 0 ? 'expression' : 'manifestation')}
+                value={searchMode}
+                onChange={(_, mode: SearchMode) => setSearchMode(mode)}
+                variant="fullWidth"
                 sx={{ mb: 2, borderBottom: 1, borderColor: 'divider' }}
               >
-                <Tab label={t("search.expressionSearch")} />
-                <Tab label={t("search.manifestationSearch")} />
+                <Tab value="manifestation" label={t("search.manifestationSearch")} />
+                <Tab value="expression" label={t("search.expressionSearch")} />
+                <Tab value="work" label={t("search.workSearch")} />
               </Tabs>
 
               <TextField
@@ -316,47 +353,76 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
             overflow: { xs: "visible", md: "hidden" },
           }}
         >
-          {searchMode === 'expression' ? (
+          {searchMode === 'manifestation' && (
             <ResultSet
-              searchQuery={expressionQuery}
-              filtered={filtered}
-              searchResults={searchResults}
-              totalCount={searchData?.pages[0]?.total ?? 0}
-              fuzzy={searchData?.pages[0]?.fuzzy ?? false}
-              searchLoading={searchLoading}
-              searchError={searchError as Error | null}
-              onSelectResult={(uri: string) => {
-                if (isRecording) {
-                  logEvent({ type: "search_result_selected", resultUri: uri, query: debouncedQuery, mode: "expression" });
-                }
-              }}
-              config={config}
-              selectedLanguage={selectedLanguage}
-              hasNextPage={searchHasNextPage}
-              isFetchingNextPage={searchIsFetchingNextPage}
-              onFetchNextPage={searchFetchNextPage}
-              onEntitySearch={handleEntitySearch}
-            />
-          ) : (
-            <ManifestationResultSet
-              searchQuery={manifestationQuery}
+              searchQuery={currentQuery}
               filtered={filtered}
               searchResults={manifestationSearchResults}
               totalCount={manifestationSearchData?.pages[0]?.total ?? 0}
               fuzzy={manifestationSearchData?.pages[0]?.fuzzy ?? false}
               searchLoading={manifestationSearchLoading}
               searchError={manifestationSearchError as Error | null}
-              onSelectResult={(uri: string) => {
-                if (isRecording) {
-                  logEvent({ type: "search_result_selected", resultUri: uri, query: debouncedQuery, mode: "manifestation" });
-                }
-              }}
-              config={config}
-              selectedLanguage={selectedLanguage}
+              emptyPrompt={t("search.enterSearchQueryManifestations")}
+              renderResult={(result) => (
+                <ManifestationSearchResult
+                  result={result}
+                  onSelect={handleSelectResult}
+                  selectedLanguage={selectedLanguage}
+                  config={config}
+                  onEntitySearch={handleEntitySearch}
+                />
+              )}
               hasNextPage={manifestationHasNextPage}
               isFetchingNextPage={manifestationIsFetchingNextPage}
               onFetchNextPage={manifestationFetchNextPage}
-              onEntitySearch={handleEntitySearch}
+            />
+          )}
+          {searchMode === 'expression' && (
+            <ResultSet
+              searchQuery={currentQuery}
+              filtered={filtered}
+              searchResults={searchResults}
+              totalCount={searchData?.pages[0]?.total ?? 0}
+              fuzzy={searchData?.pages[0]?.fuzzy ?? false}
+              searchLoading={searchLoading}
+              searchError={searchError as Error | null}
+              emptyPrompt={t("search.enterSearchQuery")}
+              renderResult={(result) => (
+                <Expression
+                  result={result}
+                  onSelect={handleSelectResult}
+                  config={config}
+                  selectedLanguage={selectedLanguage}
+                  onEntitySearch={handleEntitySearch}
+                />
+              )}
+              hasNextPage={searchHasNextPage}
+              isFetchingNextPage={searchIsFetchingNextPage}
+              onFetchNextPage={searchFetchNextPage}
+            />
+          )}
+          {searchMode === 'work' && (
+            <ResultSet
+              searchQuery={currentQuery}
+              filtered={filtered}
+              searchResults={workSearchResults}
+              totalCount={workSearchData?.pages[0]?.total ?? 0}
+              fuzzy={workSearchData?.pages[0]?.fuzzy ?? false}
+              searchLoading={workSearchLoading}
+              searchError={workSearchError as Error | null}
+              emptyPrompt={t("search.enterSearchQueryWorks")}
+              renderResult={(result) => (
+                <Work
+                  result={result}
+                  onSelect={handleSelectResult}
+                  config={config}
+                  selectedLanguage={selectedLanguage}
+                  onEntitySearch={handleEntitySearch}
+                />
+              )}
+              hasNextPage={workHasNextPage}
+              isFetchingNextPage={workIsFetchingNextPage}
+              onFetchNextPage={workFetchNextPage}
             />
           )}
         </Box>
