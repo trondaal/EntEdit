@@ -566,8 +566,8 @@ rdaeo:P20020	entedit:status	"object property" ; rdfs:label "har instrumentalist"
 rdaao:P50080	entedit:status	"object property" ; rdfs:label "er kommentator i"@no . #	is commentator agent of	rdac:C10002	rdac:C10006
 rdaeo:P20021	entedit:status	"object property" ; rdfs:label "har kommentator"@no . #	has commentator agent	rdac:C10006	rdac:C10002
 
-rdaao:P50081	entedit:status	"object property" ; rdfs:label "er forteller av"@no . #	is narrator agent of	rdac:C10002	rdac:C10006
-rdaeo:P20022	entedit:status	"object property" ; rdfs:label "har forteller"@no . #	has narrator agent	rdac:C10006	rdac:C10002
+rdaao:P50081	entedit:status	"object property" ; rdfs:label "er innleser av"@no . #	is narrator agent of	rdac:C10002	rdac:C10006
+rdaeo:P20022	entedit:status	"object property" ; rdfs:label "har innleser"@no . #	has narrator agent	rdac:C10006	rdac:C10002
 
 rdaao:P50082	entedit:status	"object property" ; rdfs:label "er historieforteller av"@no . #	is storyteller agent of	rdac:C10002	rdac:C10006
 rdaeo:P20023	entedit:status	"object property" ; rdfs:label "har historieforteller"@no . #	has storyteller agent	rdac:C10006	rdac:C10002
