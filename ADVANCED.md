@@ -290,6 +290,45 @@ of groups from the start, because adding groups afterwards (with `--per-repo` ab
 users. Do not combine it with free access on the
 same repositories. Run `--help` for all options.
 
+## Installing or updating the vocabulary on an existing repository
+
+`tools/install-vocabularies.sh` installs the vocabularies and the profile into any
+repository you can reach, and runs the search connector queries. Give it the
+repository's SPARQL endpoint and a login:
+
+```bash
+./tools/install-vocabularies.sh -e http://localhost:7200/repositories/EntEdit -U admin
+```
+
+The password is asked for (or taken from `GRAPHDB_PASSWORD`). The endpoint can be
+GraphDB's own address or the app's proxy, `http://host/graphdb/repositories/<id>`; a
+base URL plus `--repository <id>` works too.
+
+Each folder of `database/types/` goes into a named graph of its own,
+`http://oslomet.no/abi/graph/rda_vocabulary`, `…/term_vocabularies` and
+`…/entedit_profile` (the example data keeps `http://oslomet.no/abi/examples`). That
+is what makes an upgrade simple: **drop the graph you want replaced, run the script
+again.** The script itself never deletes anything. A layer whose graph already has
+content is skipped, and `--merge` adds to it anyway (blank-node statements are then
+loaded a second time, so prefer dropping the graph). The connector queries drop and
+recreate the three search indexes, which take a while to rebuild on a large
+repository. `--skip-vocabularies` and `--skip-connectors` run one half only, and
+`--dry-run` shows the plan.
+
+```sparql
+DROP GRAPH <http://oslomet.no/abi/graph/rda_vocabulary>
+```
+
+A repository installed before the vocabularies had graphs of their own holds them
+in the default graph. The script adds the named graphs and prints, for each layer, a
+`DELETE` that removes the old copy from the default graph once you are ready. Until
+then nothing is wrong: GraphDB shows a statement that is in two graphs only once.
+
+Through the app's proxy the files can be large, which the proxy allows in web images after
+`1.0.21`; an older one answers 413, and the script then says to use GraphDB's
+own address instead. `docker/graphdb/import-types.sh` (the Docker initialisation)
+and `tools/create-student-repos.sh` use the same graph names.
+
 ## Repository structure
 
 ```

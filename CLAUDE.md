@@ -61,7 +61,7 @@ EntEdit/
 │   ├── no/                 # Norwegian docs (translation)
 │   ├── index.html          # Language redirector (reads localStorage)
 │   └── setup.html          # Language redirector
-├── tools/                 # Shared admin scripts (create-student-repos.sh, create-student-users.sh)
+├── tools/                 # Shared admin scripts (create-student-repos.sh, create-student-users.sh, install-vocabularies.sh)
 ├── scripts/               # Ad hoc scripts (gitignored, not for sharing)
 ├── docker-compose.yml     # No bind mounts — published to Docker Hub as an OCI artifact
 ├── docker-compose.dev.yml # Maintainer override: mounts database/ into graphdb-init
@@ -470,6 +470,30 @@ instead; use it whenever testing vocabulary, testdata or connector changes,
 otherwise the baked-in copies from the init image are used. Changes under
 `database/` or `docker/graphdb/` only reach users after `trondaal/entedit-init`
 is rebuilt and pushed.
+
+### Vocabulary graphs and `tools/install-vocabularies.sh`
+
+Each folder of `database/types/` is loaded into a named graph of its own,
+`http://oslomet.no/abi/graph/<folder>` (`rda_vocabulary`, `term_vocabularies`,
+`entedit_profile`); example data goes into `http://oslomet.no/abi/examples`. Upgrading
+a layer on a running database is therefore: drop its graph, run
+`tools/install-vocabularies.sh -e <endpoint> -U <user>` (password asked for). The
+script works on any repository given its endpoint, loads only layers whose graph is
+empty (`--merge` overrides; it re-adds blank-node statements), runs the
+`database/lucene_connectors/*.sparql` files, and **never deletes**. The Docker init
+(`docker/graphdb/import-types.sh`) and `create-student-repos.sh` (which calls the
+script) use the same graph names. Facts behind the design, all verified on 10.8.12:
+
+- A query without `FROM` sees all graphs as one default graph, so nothing in the app
+  depends on where a statement is stored; a statement stored in two graphs is
+  returned once.
+- `GRAPH <http://www.openrdf.org/schema/sesame#nil>` addresses the real default graph
+  only. Inferred statements count as part of it, so ask with `infer=false` when
+  checking what is *stored* there (without it, an overlap check matches everything).
+- Repositories installed before the graphs existed keep a default-graph copy; the
+  script warns and prints the `DELETE` that removes it.
+- The app's nginx must allow large uploads on `/graphdb/` (`client_max_body_size`):
+  its 1 MB default refused the vocabulary files with 413.
 
 ### Provisioning Repositories for Teaching
 

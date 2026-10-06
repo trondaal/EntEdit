@@ -264,47 +264,29 @@ import_dir() {
   done < <(find "$dir" -type f \( -name '*.ttl' -o -name '*.nt' -o -name '*.rdf' \) | sort)
 }
 
-run_connector_queries() {
-  local repo="$1" file filename stmt stmt_name
-  while IFS= read -r file; do
-    filename="$(basename "$file")"
-    echo "    ${filename}"
-    rm -f "${TMP_DIR}"/part_*.sparql
-    # Files hold several ';'-separated statements (a conditional drop followed
-    # by a create); run each as its own request so a drop against a missing
-    # connector does not block the create.
-    awk -v outdir="$TMP_DIR" '
-      BEGIN { n = 1; out = outdir "/part_001.sparql" }
-      /^[[:space:]]*;[[:space:]]*$/ {
-        close(out); n++;
-        out = sprintf("%s/part_%03d.sparql", outdir, n);
-        next
-      }
-      { print > out }
-    ' "$file"
-    for stmt in "${TMP_DIR}"/part_*.sparql; do
-      [ -s "$stmt" ] || continue
-      stmt_name="$(basename "$stmt")"
-      printf '      %-20s ' "$stmt_name"
-      if sparql_update "$repo" "$(cat "$stmt")"; then
-        echo "OK"
-      else
-        echo "WARN (see output above)"
-      fi
-    done
-  done < <(find "$SPARQL_DIR" -type f -name '*.sparql' | sort)
+# The vocabularies (each folder in its own named graph) and the search connectors
+# are installed by tools/install-vocabularies.sh, the same script one runs to
+# update an existing repository.
+install_with_script() {
+  local repo="$1"; shift
+  local merge=()
+  [ "$FORCE" = 1 ] && merge=(--merge)
+  GRAPHDB_USER="$GDB_USER" GRAPHDB_PASSWORD="$GDB_PASS" \
+    "${SCRIPT_DIR}/install-vocabularies.sh" -e "${BASE_URL}/repositories/${repo}" \
+      --types "$TYPES_DIR" --connectors "$SPARQL_DIR" ${merge[@]+"${merge[@]}"} "$@" \
+    2>&1 | sed 's/^/    /' || warn "  The installer reported problems for ${repo} (see above)"
 }
 
 initialize_repo() {
   local repo="$1" timestamp
   log "  Importing type files..."
-  import_dir "$repo" "$TYPES_DIR"
+  install_with_script "$repo" --skip-connectors
   if [ "$INCLUDE_TESTDATA" = 1 ]; then
     log "  Importing test data..."
     import_dir "$repo" "$TESTDATA_DIR" "$EXAMPLES_GRAPH"
   fi
   log "  Running full-text connector queries..."
-  run_connector_queries "$repo"
+  install_with_script "$repo" --skip-vocabularies
 
   timestamp="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
   if sparql_update "$repo" \

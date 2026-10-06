@@ -80,11 +80,14 @@ fi
 
 # --- Phase 3: Import RDF data files ---
 #
-# Files under /import-data/testdata go into a named graph so example data can be
-# managed (e.g. dropped/reloaded) independently from the vocabulary in the
-# default graph. Everything else goes into the default graph.
+# Every folder under /import-data/types goes into a named graph of its own
+# (<prefix><folder>), and the example data under /import-data/testdata into
+# another, so that vocabulary, profile and examples can each be dropped and
+# reloaded without touching the rest. tools/install-vocabularies.sh does the same
+# on an existing repository and uses the same names.
 
 EXAMPLES_GRAPH="http://oslomet.no/abi/examples"
+GRAPH_PREFIX="${VOCABULARY_GRAPH_PREFIX:-http://oslomet.no/abi/graph/}"
 
 find "$DATA_DIR" -type f \( -name "*.ttl" -o -name "*.nt" -o -name "*.rdf" \) | sort | while read -r file; do
   filename=$(basename "$file")
@@ -101,6 +104,12 @@ find "$DATA_DIR" -type f \( -name "*.ttl" -o -name "*.nt" -o -name "*.rdf" \) | 
     "$DATA_DIR"/testdata/*)
       target_url="${GRAPHDB_URL}/repositories/${REPO}/statements?context=$(printf '%s' "<${EXAMPLES_GRAPH}>" | sed 's|<|%3C|;s|>|%3E|;s|#|%23|g')"
       target_label="(examples graph)"
+      ;;
+    "$DATA_DIR"/types/*/*)
+      layer="${file#"$DATA_DIR"/types/}"
+      layer="${layer%%/*}"
+      target_url="${GRAPHDB_URL}/repositories/${REPO}/statements?context=$(printf '%s' "<${GRAPH_PREFIX}${layer}>" | sed 's|<|%3C|;s|>|%3E|;s|#|%23|g')"
+      target_label="(${layer} graph)"
       ;;
     *)
       target_url="${GRAPHDB_URL}/repositories/${REPO}/statements"

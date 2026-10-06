@@ -28,9 +28,12 @@ with what labels**, plus a small number of properties and values RDA and the
 source vocabularies lack.
 
 Everything is loaded from `database/types/` when the repository is initialised
-(`docker/graphdb/import-types.sh`), into the default graph. Example data
-(`database/testdata/`) goes into the named graph `http://oslomet.no/abi/examples`,
-so vocabulary and data can be reloaded independently.
+(`docker/graphdb/import-types.sh`), each folder into a named graph of its own:
+`http://oslomet.no/abi/graph/rda_vocabulary`, `…/term_vocabularies` and
+`…/entedit_profile`. Example data (`database/testdata/`) goes into
+`http://oslomet.no/abi/examples`. Every layer can therefore be dropped and loaded
+again without touching the others or the data (see 2.2). To install or update
+them on a repository that already exists, run `tools/install-vocabularies.sh`.
 
 | Layer | Files (`database/types/…`) | Source | Role |
 |---|---|---|---|
@@ -117,13 +120,23 @@ variants; `x` (Entity), `u` (unconstrained), `rof` (RDA/ONIX framework) and `z`
 (deprecated meta elements) complete the set. The files carry `owl:versionInfo
 v5.5.1` as published by the registry.
 
-**To update**, copy the new download's `nt/Elements/` over `rda_vocabulary/Elements/`
-and reload. A fresh install gets it by re-initialising (`FORCE_REINIT=1`). A running
-database keeps working on the old triples until then, and importing the new files
-over them adds the new statements without removing the ones the registry dropped
-or reworded (9,673 triples from 5.2.2: superseded definitions, labels and notes,
-mostly in other languages). Those are stale but harmless to the editor; delete
-them if exact content matters. Two things in the download are *not* loaded:
+**To update**, copy the new download's `nt/Elements/` over `rda_vocabulary/Elements/`,
+then load it:
+
+- *A new installation* gets it from the rebuilt `trondaal/entedit-init` image.
+- *A running database*: drop the layer's graph yourself (`DROP GRAPH
+  <http://oslomet.no/abi/graph/rda_vocabulary>`, in the Workbench's SPARQL view)
+  and run `tools/install-vocabularies.sh -e <endpoint> -U <user>`. It loads each
+  layer whose graph is empty, leaves the others alone, and then rebuilds the search
+  connectors. It never deletes, so the old version is gone only because you
+  dropped it; nothing stale is left behind.
+- *A database installed before the vocabularies had graphs of their own* holds them
+  in the default graph. Run the script once: it adds the named graphs and, for
+  each layer, prints a `DELETE` that removes the old default-graph copy. GraphDB
+  shows a statement that sits in two graphs only once, so queries are unaffected
+  in the meantime; the copy only wastes space and would survive a later drop.
+
+Two things in the download are *not* loaded:
 
 - `Elements/object.nt` (top level). In 5.5.1 it is a leftover copy of
   `m/object.nt` from v5.4.9 and conflicts with it on version information.
@@ -429,7 +442,10 @@ full specification, syntax caveats and RDF 1.2 notes are in the comments of
 
 ### 6.2 Graphs and inference
 
-- Vocabulary and profile: default graph. Example data: `http://oslomet.no/abi/examples`.
+- Vocabulary and profile: one named graph per folder of `database/types/`
+  (`http://oslomet.no/abi/graph/<folder>`). Example data:
+  `http://oslomet.no/abi/examples`. Queries without a `FROM` clause see all graphs
+  together, so the application does not care where a statement is stored.
 - Entities live in the graph of their `rdf:type` statement. Saves diff against the
   explicit snapshot and write each triple back to its own graph.
 - Inferred statements (supertypes, inverse links) are shown as *inferred* and
