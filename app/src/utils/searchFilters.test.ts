@@ -24,7 +24,7 @@ describe("toFilterClauses", () => {
 
   it("makes values within a field alternatives and fields required", () => {
     expect(toFilterClauses({ language: [GER, FRE], genre: [NOVEL] })).toBe(
-      `+(language:"${GER}" language:"${FRE}") +(genre:"${NOVEL}")`,
+      `+(genre:"${NOVEL}") +(language:"${GER}" language:"${FRE}")`,
     );
   });
 

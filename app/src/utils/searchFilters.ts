@@ -10,14 +10,14 @@
 import { sanitizeSparqlUri } from "./labelUtils";
 import type { SparqlResult } from "../types/sparql";
 
-/** Index fields offered as filters, in display order. */
+/** Index fields offered as filters, in display order: work, expression, manifestation. */
 export const FILTER_FIELDS = [
-  "mediaType",
-  "carrierType",
-  "language",
-  "contentType",
   "workType",
   "genre",
+  "language",
+  "contentType",
+  "mediaType",
+  "carrierType",
 ] as const;
 
 export type FilterField = (typeof FILTER_FIELDS)[number];
@@ -31,9 +31,9 @@ export type SearchIndex = "expressionsIndex" | "manifestationsIndex" | "worksInd
  * language and content type of each of its expressions.
  */
 export const INDEX_FILTER_FIELDS: Record<SearchIndex, readonly FilterField[]> = {
-  expressionsIndex: ["language", "contentType", "workType", "genre"],
+  expressionsIndex: ["workType", "genre", "language", "contentType"],
   manifestationsIndex: FILTER_FIELDS,
-  worksIndex: ["language", "contentType", "workType", "genre"],
+  worksIndex: ["workType", "genre", "language", "contentType"],
 };
 
 /** Selected category IRIs per field. */

@@ -100,9 +100,10 @@ EntEdit/
 - `EntityPickerPanel` - Entity selection panel
 - `LabelManager`, `LanguageSelector` - Label and language UI
 - `ObjectPropertyGroup`, `ObjectPropertyValue` - Object property rendering
-- `SearchFilters` - Checkbox filters with hit counts for all searches (language,
-  content type, category of work, genre or form; publications add media and
-  carrier type); each search tab keeps its own selection. Beside the checkboxes,
+- `SearchFilters` - Checkbox filters with hit counts for all searches, grouped
+  work → expression → manifestation (`FILTER_FIELDS`: category of work, genre or
+  form, language, content type; publications add media and carrier type), values
+  by hit count; each search tab keeps its own selection. Beside the checkboxes,
   every selection and a followed link (the entity's name) is a removable chip, in the
   order chosen, last one at the bottom (kept per tab as `selectionKey`/
   `LINK_SELECTION` keys); chips and boxes share state, and "Clear all", aligned
