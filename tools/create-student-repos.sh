@@ -255,7 +255,7 @@ import_dir() {
       rdf) ctype="application/rdf+xml" ;;
       *)   continue ;;
     esac
-    printf '    %-46s %s ' "$filename" "$label"
+    printf '    %-62s %s ' "${file#"$dir"/}" "$label"
     if import_file "$repo" "$file" "$ctype" "$graph"; then
       echo "OK"
     else

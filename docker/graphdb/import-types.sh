@@ -108,7 +108,8 @@ find "$DATA_DIR" -type f \( -name "*.ttl" -o -name "*.nt" -o -name "*.rdf" \) | 
       ;;
   esac
 
-  printf "  Importing %-50s %s " "$filename..." "$target_label"
+  shown="${file#"$DATA_DIR"/}"
+  printf "  Importing %-62s %s " "${shown#types/}..." "$target_label"
   http_code=$(curl -s -o /dev/null -w "%{http_code}" \
     -X POST "$target_url" \
     -H "Content-Type: ${ctype}" \
