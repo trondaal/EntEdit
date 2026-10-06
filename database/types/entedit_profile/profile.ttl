@@ -770,8 +770,13 @@ rdawo:P10127	entedit:status	"object property" ; rdfs:label "er dramatisering av"
 rdawo:P10019	entedit:status	"object property" ; rdfs:label "er del av"@no . #	is part of work	rdac:C10001	rdac:C10001
 rdawo:P10147	entedit:status	"object property" ; rdfs:label "har del"@no . #	has part work	rdac:C10001	rdac:C10001
 
-rdawo:P10020	entedit:status	"object property" ;  entedit:display false ; rdfs:label "har etterfølger"@no . #	has sequel work	rdac:C10001	rdac:C10001
+rdawo:P10020	entedit:status	"object property" ; rdfs:label "har etterfølger"@no . #	has sequel work	rdac:C10001	rdac:C10001
 rdawo:P10122	entedit:status	"object property" ; rdfs:label "har forløper"@no . #	has prequel work	rdac:C10001	rdac:C10001
+# The registry lists a deprecated inverse of each of these two as well. Hidden, so a
+# result list never shows "is prequel to (Deprecated)"; the application skips
+# deprecated inverses itself, this covers older versions of it.
+rdawo:P10195	entedit:display false . #	is prequel to (Deprecated), inverse of P10122
+rdawo:P10227	entedit:display false . #	is sequel to (Deprecated), inverse of P10020
 
 rdawo:P10023	entedit:status	"object property" ;  entedit:display false ; rdfs:label "har bearbeidelse til verseform"@no . #	is adapted in verse as work	rdac:C10001	rdac:C10001
 rdawo:P10128	entedit:status	"object property" ; rdfs:label "er bearbeidelse til verseform"@no . #	is verse adaptation of work	rdac:C10001	rdac:C10001

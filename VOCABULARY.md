@@ -404,9 +404,19 @@ rdaao:P50366 entedit:status "object property" ; entedit:display false .  # is su
 ```
 
 Symmetric or evenly weighted pairs (*is part of* / *has part*) are left
-unannotated so both directions show. About 24 properties (mostly work-to-work
-adaptation/derivation relationships) carry `false`. This affects **presentation
-only**: the editor still shows and edits both.
+unannotated so both directions show (*has prequel work* / *has sequel work* are
+such a pair). About 24 properties (mostly work-to-work adaptation/derivation
+relationships) carry `false`. This affects **presentation only**: the editor still
+shows and edits both.
+
+An incoming link is shown through its inverse property, and the registry
+sometimes declares more than one: *has prequel work* (`rdawo:P10122`) has the live
+*has sequel work* (`P10020`) and also the deprecated *is prequel to (Deprecated)*
+(`P10195`), in 5.2.2 as in 5.5.1. Listing every inverse showed the deprecated one
+as soon as the live one was hidden by `display false`. The search and export
+queries therefore skip inverses whose registry status is deprecated (`notDeprecated`
+in `sparqlFragments.ts`), and the profile also marks the two deprecated inverses
+`display false`. Only this pair was affected among the properties the profile enables.
 
 ### 5.4 Labels
 
