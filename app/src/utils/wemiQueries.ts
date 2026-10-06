@@ -1,11 +1,12 @@
 /**
- * Detail queries for expressions and manifestations, shared by the search
- * result pages and the expandable lists under a result.
+ * Detail queries for works, expressions and manifestations, shared by the
+ * search result pages and the expandable lists under a result.
  *
  * Every query is built around a *scope*: a SPARQL pattern that binds the
- * entities to describe (`?expression` or `?manifestation`), either the hits of
- * a search page (`expressionScope`/`manifestationScope`) or the entities linked
- * to one parent (`expressionsOfManifestation`/`manifestationsOfExpression`).
+ * entities to describe (`?work`, `?expression` or `?manifestation`), either the
+ * hits of a search page (`workScope`/`expressionScope`/`manifestationScope`) or
+ * the entities linked to one parent (`expressionsOfWork`/
+ * `expressionsOfManifestation`/`manifestationsOfExpression`).
  *
  * The scope is repeated inside every grouped subquery. SPARQL evaluates a
  * subquery on its own, before joining it with the outer pattern, so a subquery
@@ -19,6 +20,10 @@ import type { SparqlResult } from "../types/sparql";
 
 const uriList = (uris: string[]): string =>
   uris.map((uri) => `<${sanitizeSparqlUri(uri)}>`).join(" ");
+
+/** Scope binding `?work` to the given URIs. */
+export const workScope = (uris: string[]): string =>
+  `VALUES ?work { ${uriList(uris)} }`;
 
 /** Scope binding `?expression` to the given URIs. */
 export const expressionScope = (uris: string[]): string =>
@@ -41,6 +46,19 @@ export const expressionsOfManifestation = (manifestationUri: string): string => 
  */
 export const expressionOrderInManifestation = (manifestationUri: string): string =>
   `OPTIONAL { << <${sanitizeSparqlUri(manifestationUri)}> rdamo:P30139 ?expression >> entedit:valueOrder ?value_order }`;
+
+/** Scope binding `?expression` to the expressions of a work. */
+export const expressionsOfWork = (workUri: string): string => {
+  const w = `<${sanitizeSparqlUri(workUri)}>`;
+  return `{ ${w} rdawo:P10078 ?expression } UNION { ?expression rdaeo:P20231 ${w} }`;
+};
+
+/**
+ * Order of the expressions of a work, as set in the editor on the work's own
+ * statement (rdawo:P10078); a link stated only from the expression has none.
+ */
+export const expressionOrderInWork = (workUri: string): string =>
+  `OPTIONAL { << <${sanitizeSparqlUri(workUri)}> rdawo:P10078 ?expression >> entedit:valueOrder ?value_order }`;
 
 /** Scope binding `?manifestation` to the manifestations of an expression. */
 export const manifestationsOfExpression = (expressionUri: string): string => {
@@ -249,6 +267,72 @@ export const toExpressionDetail = (b: SparqlResult): ExpressionDetail => ({
     ? parseInt(b.manifestation_count.value, 10)
     : undefined,
   valueOrder: b.valueOrder ? parseInt(b.valueOrder.value, 10) : undefined,
+});
+
+/**
+ * A work as a search result: what the work part of an expression result
+ * shows (title, creators, relationships to other works, category and genre),
+ * plus how many expressions it has and their content type, which picks the
+ * icon when all of them share one.
+ */
+export const buildWorkDetailQuery = (scope: string, language: string): string => {
+  const lang = escapeSparqlLiteral(language);
+  return `${PREFIXES}
+SELECT ?work
+    (SAMPLE(?worktitle) as ?work_title)
+    (SAMPLE(?worklabel) as ?work_label)
+    (GROUP_CONCAT(DISTINCT ?workcategory_label ; SEPARATOR=" ; ") as ?workcategory)
+    (GROUP_CONCAT(DISTINCT ?genre_label ; SEPARATOR=" ; ") as ?genre)
+    (GROUP_CONCAT(DISTINCT CONCAT(?work_agent_relationship_label, "${SPARQL_SEP.LABEL}", ?work_agent_names) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?work_creators)
+    (GROUP_CONCAT(DISTINCT CONCAT(?work_relationship_label, "${SPARQL_SEP.LABEL}", ?work_relationship_targets) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?work_to_work_relationships)
+    (COUNT(DISTINCT ?expression) as ?expression_count)
+    (COUNT(DISTINCT ?contenttype) as ?contenttype_count)
+    (SAMPLE(?contenttype) as ?contenttype_uri)
+FROM <http://www.ontotext.com/explicit>
+WHERE {
+    ${scope}
+    OPTIONAL { ?work rdawd:P10223 ?worktitle }
+    OPTIONAL {
+        ?work rdfs:label ?worklabel .
+        FILTER(LANG(?worklabel) = "${lang}" || LANG(?worklabel) = "")
+    }
+    ${conceptLabel("work", "entedit:P01", "workcategory", "workcategory_label", lang)}
+    ${conceptLabel("work", "entedit:P02", "genre_entity", "genre_label", lang)}
+    ${agentsSubquery("work", "work", scope, lang)}
+    ${relationshipsSubquery("work", "work", scope, "http://rdaregistry.info/Elements/c/C10001", lang)}
+    OPTIONAL {
+        { ?work rdawo:P10078 ?expression } UNION { ?expression rdaeo:P20231 ?work }
+        OPTIONAL { ?expression rdaeo:P20001 ?contenttype }
+    }
+}
+GROUP BY ?work
+`;
+};
+
+export interface WorkDetail {
+  uri: string;
+  work_title?: string;
+  /** rdfs:label, shown when the work has no title */
+  work_label?: string;
+  work_creators?: string;
+  workcategory?: string;
+  genre?: string;
+  work_to_work_relationships?: string;
+  expression_count?: number;
+  /** Content type of the expressions, when they all have the same one */
+  contenttypeUri?: string;
+}
+
+export const toWorkDetail = (b: SparqlResult): WorkDetail => ({
+  uri: b.work.value,
+  work_title: b.work_title?.value,
+  work_label: b.work_label?.value,
+  work_creators: b.work_creators?.value || undefined,
+  workcategory: b.workcategory?.value || undefined,
+  genre: b.genre?.value || undefined,
+  work_to_work_relationships: b.work_to_work_relationships?.value || undefined,
+  expression_count: b.expression_count ? parseInt(b.expression_count.value, 10) : undefined,
+  contenttypeUri: b.contenttype_count?.value === "1" ? b.contenttype_uri?.value : undefined,
 });
 
 /** Media or carrier type: label in the chosen language, else English. */

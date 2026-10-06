@@ -73,10 +73,13 @@ export interface RelationshipRemovedEvent extends BaseEvent {
   section: string;
 }
 
+/** Search tab an event happened in: publications, content or works. */
+export type SearchMode = "manifestation" | "expression" | "work";
+
 export interface SearchPerformedEvent extends BaseEvent {
   type: "search_performed";
   query: string;
-  mode: "expression" | "manifestation";
+  mode: SearchMode;
 }
 
 export interface SearchFilterChangedEvent extends BaseEvent {
@@ -87,7 +90,7 @@ export interface SearchFilterChangedEvent extends BaseEvent {
   value: string;
   selected: boolean;
   query: string;
-  mode: "expression" | "manifestation";
+  mode: SearchMode;
 }
 
 export interface SearchLinkFollowedEvent extends BaseEvent {
@@ -96,20 +99,20 @@ export interface SearchLinkFollowedEvent extends BaseEvent {
   label: string;
   uri?: string;
   kind?: "expression" | "work" | "agent";
-  mode: "expression" | "manifestation";
+  mode: SearchMode;
 }
 
 export interface SearchFiltersClearedEvent extends BaseEvent {
   type: "search_filters_cleared";
   query: string;
-  mode: "expression" | "manifestation";
+  mode: SearchMode;
 }
 
 export interface SearchResultSelectedEvent extends BaseEvent {
   type: "search_result_selected";
   resultUri: string;
   query: string;
-  mode: "expression" | "manifestation";
+  mode: SearchMode;
 }
 
 export interface TabSwitchedEvent extends BaseEvent {

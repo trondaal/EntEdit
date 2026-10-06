@@ -48,7 +48,7 @@ PREFIX inst: <http://www.ontotext.com/connectors/lucene/instance#>
 INSERT DATA { inst:expressionsIndex :repairConnector "" }
 ```
 
-The same works for `inst:manifestationsIndex`. GraphDB logs how many entities it
+The same works for `inst:manifestationsIndex` and `inst:worksIndex`. GraphDB logs how many entities it
 reindexed.
 
 GraphDB Workbench on port 7200 is for database administration; it is not the
