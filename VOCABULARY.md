@@ -34,7 +34,7 @@ so vocabulary and data can be reloaded independently.
 
 | Layer | Files (`database/types/…`) | Source | Role |
 |---|---|---|---|
-| RDA element sets | `rda_vocabulary/*.nt` | [RDA Registry](https://www.rdaregistry.info/) | Classes, properties, inverse and subproperty axioms |
+| RDA element sets | `rda_vocabulary/Elements/**/*.nt` | [RDA Registry](https://www.rdaregistry.info/) | Classes, properties, inverse and subproperty axioms |
 | Term lists | `term_vocabularies/RDA{Content,Media,Carrier}Type.nt` | RDA Registry | Content, media and carrier types |
 | Languages | `term_vocabularies/iso639-2.rdf` | Library of Congress | Language values |
 | Work types | `term_vocabularies/vtp.rdf` | National Library of Norway (`schema.nb.no`) | Category-of-work values |
@@ -108,15 +108,40 @@ common to all entities (identifier, name, related agent).
 
 ### 2.2 Loaded files
 
-`database/types/rda_vocabulary/` holds the OWL version of the registry as
-N-Triples dumps, one set per
-entity: `c` (classes), `w e m i a p t n` (Work, Expression, Manifestation, Item,
-Agent, Place, Timespan, Nomen), and, for each, the combined file
-(`w.nt`), the `object` and the `datatype` variants. `x` (Entity), `u`
-(unconstrained), `rof` (RDA/ONIX framework) and `z` (deprecated meta elements)
-complete the set. The files carry `owl:versionInfo v5.2.2` as published by the
-registry. To update, replace the files and reload; property URIs the profile
-mentions must still exist.
+`database/types/rda_vocabulary/Elements/` holds the OWL version of the registry as
+N-Triples dumps, laid out exactly as in the registry's download (`nt/Elements/`):
+one file per entity, `c` (classes), `w e m i a p t n` (Work, Expression,
+Manifestation, Item, Agent, Place, Timespan, Nomen), each with its combined file
+(`w.nt`) and a `w/object.nt` and `w/datatype.nt` for the object and datatype
+variants; `x` (Entity), `u` (unconstrained), `rof` (RDA/ONIX framework) and `z`
+(deprecated meta elements) complete the set. The files carry `owl:versionInfo
+v5.5.1` as published by the registry.
+
+**To update**, copy the new download's `nt/Elements/` over `rda_vocabulary/Elements/`
+and reload. A fresh install gets it by re-initialising (`FORCE_REINIT=1`). A running
+database keeps working on the old triples until then, and importing the new files
+over them adds the new statements without removing the ones the registry dropped
+or reworded (9,673 triples from 5.2.2: superseded definitions, labels and notes,
+mostly in other languages). Those are stale but harmless to the editor; delete
+them if exact content matters. Two things in the download are *not* loaded:
+
+- `Elements/object.nt` (top level). In 5.5.1 it is a leftover copy of
+  `m/object.nt` from v5.4.9 and conflicts with it on version information.
+  Delete it after copying.
+- `Maps/` and `termList/`. The maps add about 4,000 `rdfs:subPropertyOf` and
+  `subClassOf` statements to LRM and Dublin Core terms, which the ruleset would
+  turn into new inferred super-properties of the properties the editor uses;
+  nothing here needs them. Of the term lists only Content, Media and Carrier
+  type are used, and they live in `term_vocabularies/`, to be refreshed from
+  `termList/` separately.
+
+Before shipping an update, check that every RDA property the project mentions
+still exists and keeps its domain, range, inverse and super-properties:
+the profile, the connectors (`database/lucene_connectors/`), the app's queries
+(`app/src/utils/wemiQueries.ts`) and the example data all name them. Changed
+labels also matter: the editor shows the alphabetically first label in the chosen
+language, so a new registry label can replace the one cataloguers are used to.
+The 5.2.2 → 5.5.1 update was checked this way and changed none of them.
 
 Registry statements are used **unchanged**. EntEdit never redefines or overrides
 anything in the RDA Registry or the other source vocabularies. The profile only
