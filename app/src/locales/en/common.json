@@ -80,9 +80,9 @@
   },
   "search": {
     "fullTextSearch": "Full-Text Search",
-    "expressionSearch": "Search for content",
-    "manifestationSearch": "Search for publications",
-    "workSearch": "Search for works",
+    "expressionSearch": "Contents",
+    "manifestationSearch": "Publications",
+    "workSearch": "Works",
     "searchResults": "Search Results",
     "searchPlaceholder": "Search entities using full-text search…",
     "searchHelp": "Search across names and titles. Results contain all the words you type. End a word with * to also match longer words (e.g. countr*). If nothing matches exactly, similar spellings are shown.",

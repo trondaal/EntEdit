@@ -80,9 +80,9 @@
   },
   "search": {
     "fullTextSearch": "Fulltekstsøk",
-    "expressionSearch": "Søk etter innhold",
-    "manifestationSearch": "Søk etter utgivelser",
-    "workSearch": "Søk etter verk",
+    "expressionSearch": "Innhold",
+    "manifestationSearch": "Utgivelser",
+    "workSearch": "Verk",
     "searchResults": "Søkeresultater",
     "searchPlaceholder": "Søk etter entiteter med fulltekstsøk…",
     "searchHelp": "Søk på tvers av navn og titler. Treffene inneholder alle ordene du skriver. Avslutt et ord med * for også å finne lengre ord (f.eks. countr*). Gir ingenting eksakt treff, vises treff med lignende stavemåte.",

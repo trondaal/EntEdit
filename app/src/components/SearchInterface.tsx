@@ -281,7 +281,6 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
               <Tabs
                 value={searchMode}
                 onChange={(_, mode: SearchMode) => setSearchMode(mode)}
-                variant="fullWidth"
                 sx={{ mb: 2, borderBottom: 1, borderColor: 'divider' }}
               >
                 <Tab value="manifestation" label={t("search.manifestationSearch")} />
