@@ -9,6 +9,9 @@
 # are exported (no inferred ones), so a restore reproduces the repository
 # exactly. Each repository's configuration is saved next to it.
 #
+# With --graph the backup is limited to the named graphs you list ("default" is the
+# default graph), e.g. just the data the editor created.
+#
 #   ./tools/backup-repos.sh -e http://localhost:7200 -p VBINF6000-H26- -n 12
 #
 # Restore one repository: create it (create-repos.sh, or the Workbench),
@@ -24,6 +27,7 @@ START=1
 WIDTH=2
 OUTPUT_DIR=""
 FORMAT="trigstar"
+GRAPHS=()
 DRY_RUN=0
 GDB_USER="${GRAPHDB_USER:-}"
 GDB_PASS="${GRAPHDB_PASSWORD:-}"
@@ -44,6 +48,11 @@ Options:
   -w, --width N        Zero-padding width for group numbers (default: 2 -> 01..09)
   -o, --output DIR     Directory for the backup
                        (default: ./backups/<prefix>-<UTC timestamp>)
+  -g, --graph IRI      Back up only this named graph; repeat for several. The word
+                       "default" means the default graph, where the editor puts new
+                       entities. The file is then called <repo>.partial.<ext> and
+                       the manifest lists the graphs. Without this option everything
+                       is exported.
   -f, --format NAME    Export format (default: trigstar):
                          trigstar  TriG-star, keeps named graphs and RDF-star
                                    value-order annotations (.trigs.gz)
@@ -57,10 +66,19 @@ Options:
 The backup directory gets, per repository, <repo>.trigs.gz and <repo>.config.ttl,
 and one manifest.tsv listing statement counts and file sizes.
 
+Only the statements you wrote are in the default graph (new entities from the
+editor); the vocabularies and the profile live in graphs of their own, and edits to
+an existing entity stay in the graph it was loaded from. To restore, create the
+repository, install the vocabularies (tools/install-vocabularies.sh) and POST the
+decompressed file to <endpoint>/repositories/<repo>/statements with
+Content-Type: application/x-trigstar: each statement lands in the graph it came from.
+
 Examples:
   ./tools/backup-repos.sh -e http://localhost:7200 -p VBINF6000-H26- -n 12
   ./tools/backup-repos.sh -e https://graphdb.example.org -p KURS- -n 25 \
       -U admin -P secret -o /Volumes/backup/kurs
+  ./tools/backup-repos.sh -e http://localhost:7200 -p VBINF6000-H26- -n 12 \
+      --graph default                      # only what was created in the editor
 EOF
 }
 
@@ -76,6 +94,7 @@ while [ $# -gt 0 ]; do
     -s|--start)    START="${2:-}"; shift 2 ;;
     -w|--width)    WIDTH="${2:-}"; shift 2 ;;
     -o|--output)   OUTPUT_DIR="${2:-}"; shift 2 ;;
+    -g|--graph)    GRAPHS+=("${2:-}"); shift 2 ;;
     -f|--format)   FORMAT="${2:-}"; shift 2 ;;
     -U|--user)     GDB_USER="${2:-}"; shift 2 ;;
     -P|--password) GDB_PASS="${2:-}"; shift 2 ;;
@@ -100,6 +119,25 @@ case "$FORMAT" in
   nquads)   ACCEPT="application/n-quads";    EXT="nq.gz" ;;
   *)        die "--format must be trigstar or nquads" ;;
 esac
+
+# --graph: "default" or an absolute IRI.
+GRAPH_ARGS=()
+GRAPH_LABEL="all"
+if [ "${#GRAPHS[@]}" -gt 0 ]; then
+  GRAPH_LABEL=""
+  for g in "${GRAPHS[@]}"; do
+    case "$g" in
+      default) GRAPH_ARGS+=(--data-urlencode "context=null") ;;
+      ''|*[[:space:]\<\>\"]*) die "--graph must be \"default\" or an IRI without spaces or angle brackets: '$g'" ;;
+      *:*) GRAPH_ARGS+=(--data-urlencode "context=<${g}>") ;;
+      *)   die "--graph must be \"default\" or an absolute IRI such as http://example.org/graph: '$g'" ;;
+    esac
+    GRAPH_LABEL="${GRAPH_LABEL:+${GRAPH_LABEL},}${g}"
+  done
+fi
+
+PART=""
+[ "${#GRAPHS[@]}" -gt 0 ] && PART="partial."
 
 # GraphDB repository IDs allow letters, digits, dash, underscore and dot.
 case "$PREFIX" in
@@ -159,6 +197,7 @@ done
 log "Repositories to back up (${COUNT}): ${REPOS[0]} ... ${REPOS[$((COUNT - 1))]}"
 log "Backup directory: ${OUTPUT_DIR}"
 log "Format: ${FORMAT} (.${EXT})"
+[ "${#GRAPHS[@]}" -gt 0 ] && log "Graphs: ${GRAPH_LABEL} (partial backup)"
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -170,20 +209,29 @@ repo_exists() {
 
 # Explicit statement count (inference off), used as a check against the export.
 explicit_size() {
-  api -f "${BASE_URL}/repositories/$1/size?infer=false" 2>/dev/null | tr -dc '0-9'
+  api -f -G "${BASE_URL}/repositories/$1/size" --data-urlencode "infer=false" \
+    ${GRAPH_ARGS[@]+"${GRAPH_ARGS[@]}"} 2>/dev/null | tr -dc '0-9'
 }
 
 backup_repo() {
-  local repo="$1" tmp="${TMP_DIR}/${repo}.export" out="${OUTPUT_DIR}/${repo}.${EXT}"
+  local repo="$1" tmp="${TMP_DIR}/${repo}.export" out="${OUTPUT_DIR}/${repo}.${PART}${EXT}"
   local code size bytes
 
   size="$(explicit_size "$repo" || true)"
   log "  Statements (explicit): ${size:-unknown}"
 
+  # An export with nothing in it still carries prefix lines, so a partial backup
+  # is judged empty by its statement count.
+  if [ "${#GRAPHS[@]}" -gt 0 ] && [ "${size:-}" = "0" ]; then
+    log "  Nothing in the selected graph(s) — no file written."
+    return 2
+  fi
+
   # Named graphs, RDF-star annotations, no inferred statements.
   code="$(api -o "$tmp" -w '%{http_code}' -G \
     "${BASE_URL}/repositories/${repo}/statements" \
     --data-urlencode "infer=false" \
+    ${GRAPH_ARGS[@]+"${GRAPH_ARGS[@]}"} \
     -H "Accept: ${ACCEPT}")"
   if [ "$code" != "200" ]; then
     warn "  Export of ${repo} failed (HTTP ${code})"
@@ -191,6 +239,10 @@ backup_repo() {
     return 1
   fi
   if [ ! -s "$tmp" ]; then
+    if [ "${#GRAPHS[@]}" -gt 0 ]; then
+      log "  Nothing in the selected graph(s) — no file written."
+      return 2
+    fi
     warn "  Export of ${repo} is empty"
     return 1
   fi
@@ -214,7 +266,7 @@ backup_repo() {
     warn "  Could not save the configuration of ${repo} (the export itself is fine)"
   fi
 
-  printf '%s\t%s\t%s\t%s\n' "$repo" "${size:-}" "$bytes" "$(basename "$out")" >> "${OUTPUT_DIR}/manifest.tsv"
+  printf '%s\t%s\t%s\t%s\t%s\n' "$repo" "${size:-}" "$bytes" "$(basename "$out")" "$GRAPH_LABEL" >> "${OUTPUT_DIR}/manifest.tsv"
   return 0
 }
 
@@ -225,7 +277,7 @@ backup_repo() {
 if [ "$DRY_RUN" = 1 ]; then
   for repo in "${REPOS[@]}"; do
     if repo_exists "$repo"; then
-      log "  ${repo}: would export to ${OUTPUT_DIR}/${repo}.${EXT}"
+      log "  ${repo}: would export to ${OUTPUT_DIR}/${repo}.${PART}${EXT}"
     else
       log "  ${repo}: does not exist, would be skipped"
     fi
@@ -236,11 +288,12 @@ if [ "$DRY_RUN" = 1 ]; then
 fi
 
 mkdir -p "$OUTPUT_DIR"
-printf 'repository\texplicit_statements\tbytes\tfile\n' > "${OUTPUT_DIR}/manifest.tsv"
+printf 'repository\texplicit_statements\tbytes\tfile\tgraphs\n' > "${OUTPUT_DIR}/manifest.tsv"
 
 BACKED_UP=()
 MISSING=()
 FAILED=()
+EMPTY=()
 
 for repo in "${REPOS[@]}"; do
   log ""
@@ -252,11 +305,13 @@ for repo in "${REPOS[@]}"; do
     continue
   fi
 
-  if backup_repo "$repo"; then
-    BACKED_UP+=("$repo")
-  else
-    FAILED+=("$repo")
-  fi
+  rc=0
+  backup_repo "$repo" || rc=$?
+  case "$rc" in
+    0) BACKED_UP+=("$repo") ;;
+    2) EMPTY+=("$repo") ;;
+    *) FAILED+=("$repo") ;;
+  esac
 done
 
 # ---------------------------------------------------------------------------
@@ -266,6 +321,7 @@ done
 log ""
 log "Summary"
 log "  Backed up: ${#BACKED_UP[@]}"
+[ "${#EMPTY[@]}" -gt 0 ] && log "  No data in the selected graph(s): ${#EMPTY[@]} (${EMPTY[*]})"
 log "  Missing:   ${#MISSING[@]}"
 log "  Failed:    ${#FAILED[@]}"
 [ "${#MISSING[@]}" -gt 0 ] && log "  Missing repositories: ${MISSING[*]}"

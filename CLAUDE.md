@@ -252,6 +252,13 @@ reciprocal statement corresponds to them.
 the user is asked to refresh. Only the properties being written are compared, so
 unrelated concurrent edits don't block a save.
 
+**Which graph:** an existing entity is saved back into the graph its `rdf:type`
+statement was loaded from (`targetGraph`); a **new** entity has no graph yet, so it is
+written to the **default graph**. There is no setting for a target graph. With the
+vocabularies in named graphs, the default graph of a new installation therefore holds
+what users created, which is what `tools/backup-repos.sh --graph default` backs up.
+On a repository from before the vocabulary graphs it also still holds the vocabulary.
+
 **New entities:** a custom URI is checked with a `COUNT` query first — inserting
 into a URI that already has statements would silently merge the two entities.
 Save is disabled until the form holds a value or a label.
@@ -534,6 +541,10 @@ groups moves them; an existing user without `READ_REPO_<repo>` is reported, not
 skipped, to catch exactly that. Users are created with `POST /rest/security/users/<name>`
 (`ROLE_USER`, `READ_REPO_<id>`, `WRITE_REPO_<id>`); the admin check uses the
 admin-only `/rest/security/users`, because `/rest/security` answers anonymously.
+
+`tools/backup-repos.sh` backs up the same `<prefix><number>` repositories as TriG-star
+(all graphs, RDF-star annotations kept, nothing inferred); `--graph IRI|default`
+(repeatable) limits it to the named graphs and writes `<repo>.partial.trigs.gz`.
 
 ### Configuration
 

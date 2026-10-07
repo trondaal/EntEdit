@@ -308,6 +308,45 @@ of groups from the start, because adding groups afterwards (with `--per-repo` ab
 users. Do not combine it with free access on the
 same repositories. Run `--help` for all options.
 
+### Backing up repositories
+
+`tools/backup-repos.sh` exports a set of repositories (`<prefix><number>`, like
+`create-repos.sh`) to compressed TriG-star files, one per repository, with the
+repository's configuration and a `manifest.tsv` of counts and sizes. The export is
+complete — all named graphs and the RDF-star value-order annotations, no inferred
+statements:
+
+```bash
+./tools/backup-repos.sh -e http://localhost:7200 -p VBINF6000-H26- -n 12 -U admin
+```
+
+Where things live decides what a backup contains, so it is worth knowing:
+
+| Graph | What is in it |
+|---|---|
+| default graph | entities created in the editor, and anything imported without a graph |
+| `http://oslomet.no/abi/graph/<folder>` | the vocabularies and the profile (reinstallable) |
+| `http://oslomet.no/abi/examples` | the example data, and edits to those entities |
+
+An entity created in the editor is written to the default graph; an entity that
+already exists is saved back to the graph it was loaded from. To back up only what
+people wrote, name the graphs you want with `--graph` (repeatable; `default` means
+the default graph):
+
+```bash
+./tools/backup-repos.sh -e http://localhost:7200 -p VBINF6000-H26- -n 12 --graph default
+```
+
+The file is then called `<repo>.partial.trigs.gz` and the manifest has a `graphs`
+column, so it is not mistaken for a full backup. A repository with nothing in the
+chosen graph gets no file and is reported as "no data". To restore into a new
+repository, create it, run `tools/install-vocabularies.sh`, and POST the
+decompressed file to `<endpoint>/repositories/<repo>/statements` with
+`Content-Type: application/x-trigstar`; every statement returns to the graph it came
+from. On a repository installed before the vocabularies had graphs of their own, the
+default graph still holds the vocabulary as well, and `--graph default` then backs
+up that too.
+
 ## Installing or updating the vocabulary on an existing repository
 
 `tools/install-vocabularies.sh` installs the vocabularies and the profile into any
