@@ -469,6 +469,11 @@ pre-selection (`prepareWorkbenchRepository` in `graphUtils.ts`) only work when
 GraphDB shares the app's origin; cross-origin deployments fall back to the user
 selecting a repository in the Workbench.
 
+The compose file reads three optional variables: `ENTEDIT_PORT`, `GRAPHDB_PORT` and
+`GDB_HEAP_SIZE` (passed to the GraphDB container; empty keeps GraphDB's defaults: a
+1 GB minimum heap and a maximum of a quarter of the memory Docker can use). They apply
+only to the `up` that sets them, so the docs say to repeat them on every `up`.
+
 `docker-compose.yml` must therefore stay free of bind mounts — OCI publishing
 rejects them. Local `database/` files are mounted through `docker-compose.dev.yml`
 instead; use it whenever testing vocabulary, testdata or connector changes,

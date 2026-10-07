@@ -12,6 +12,11 @@ services:
     ports:
       - target: 7200
         published: "${GRAPHDB_PORT:-7200}"
+    environment:
+      # Java heap, e.g. GDB_HEAP_SIZE=4g docker compose ... up -d. Left empty,
+      # GraphDB starts with a 1 GB minimum and the JVM's default maximum: a
+      # quarter of the memory Docker can use.
+      - GDB_HEAP_SIZE=${GDB_HEAP_SIZE:-}
     volumes:
       - graphdb-data:/opt/graphdb/data
     healthcheck:

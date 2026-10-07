@@ -583,6 +583,33 @@ EntEdit/<br>
   In PowerShell, run <code>$env:ENTEDIT_PORT=8080</code> first and then the command without the variable; in Command Prompt, use <code>set ENTEDIT_PORT=8080</code>. The application is then at <code>http://localhost:8080/entedit/</code> and its endpoint is <code>http://localhost:8080/graphdb/repositories/EntEdit</code> — the port is the only thing that changes. Set the variable every time you run <code>up</code>, otherwise the application moves back to port 80.
 </p>
 
+<h3 id="heap">GraphDB is slow, or stops with an <em>OutOfMemoryError</em></h3>
+
+<p>
+  GraphDB runs on Java, and out of the box its heap is limited to a quarter of the memory Docker can use — about 2&nbsp;GB when Docker has 8&nbsp;GB. That is plenty for the example data and tight for a large collection: searches slow down, or <code>docker compose logs graphdb</code> shows an <em>OutOfMemoryError</em> and GraphDB stops. Give it more with the variable <code>GDB_HEAP_SIZE</code>. <code>4g</code> is a good first step when Docker may use 8&nbsp;GB or more; keep the value below half of the memory Docker can use, since GraphDB needs memory outside the heap too. Copy the line for your terminal:
+</p>
+
+<p>macOS and Linux:</p>
+<pre><code>GDB_HEAP_SIZE=4g docker compose -f oci://docker.io/trondaal/entedit-compose:latest up -d</code></pre>
+
+<p>PowerShell:</p>
+<pre><code>$env:GDB_HEAP_SIZE="4g"; docker compose -f oci://docker.io/trondaal/entedit-compose:latest up -d</code></pre>
+
+<p>Command Prompt:</p>
+<pre><code>set "GDB_HEAP_SIZE=4g" &amp;&amp; docker compose -f oci://docker.io/trondaal/entedit-compose:latest up -d</code></pre>
+
+<p>
+  GraphDB restarts with the new size and keeps its data. Set the variable every time you run <code>up</code>, otherwise the heap goes back to the default. If you started from a downloaded Compose file, replace <code>-f oci://docker.io/trondaal/entedit-compose:latest</code> with your own file name, or leave the option out when the file is called <code>docker-compose.yml</code>.
+</p>
+
+<p>
+  If Docker itself has too little memory, raise it in Docker Desktop under <strong>Settings → Resources → Memory</strong> (with the WSL&nbsp;2 backend on Windows, the limit is set in <code>.wslconfig</code>). To see what GraphDB is using (macOS and Linux):
+</p>
+<pre><code>docker compose -f oci://docker.io/trondaal/entedit-compose:latest exec graphdb sh -c 'jcmd $(pgrep -f "[j]ava") VM.flags | tr " " "\n" | grep -E "^-XX:(Initial|Max)HeapSize"'</code></pre>
+<p>
+  The values are in bytes: <code>MaxHeapSize=4294967296</code> is 4&nbsp;GB. Without the variable, the initial size is 1&nbsp;GB and the maximum is the default described above.
+</p>
+
 <h3>EntEdit cannot connect to <code>localhost:7200</code></h3>
 
 <p>

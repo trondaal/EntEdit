@@ -165,6 +165,24 @@ correct as-is. The only difference is that each user has to select their
 repository once in the Workbench, because the app can pre-select it only when both
 are served from the same origin.
 
+### GraphDB memory
+
+GraphDB's start script sets a minimum heap of 1 GB and no maximum, so the JVM uses
+its default: a quarter of the memory it can see. In the Docker setup that is a
+quarter of what Docker may use, about 1.9 GB on 8 GB. Raise it with
+`GDB_HEAP_SIZE` (minimum and maximum together; `GDB_MIN_MEM` and `GDB_MAX_MEM`
+set them separately). `docker-compose.yml` passes the variable on, empty by
+default, so `GDB_HEAP_SIZE=4g docker compose … up -d` is all a user needs (the
+setup guide has the PowerShell and Command Prompt forms). It must be set on every
+`up`, since leaving it out recreates the container with the default.
+
+For a GraphDB you run yourself, set the same variable in its environment, or pass
+`-Xmx4g` through `GDB_JAVA_OPTS`. Keep the heap below about half of the machine's
+memory: GraphDB also needs memory outside the heap (its entity pool and caches) and
+the operating system needs some for file caching. On a cloud VM, size the machine
+for this: start with a heap of about a third to a half of its memory and raise it if
+the GraphDB log shows an `OutOfMemoryError`.
+
 ## Publishing to Docker Hub
 
 Maintainers only. Three artifacts make up a release, and together they are what

@@ -77,6 +77,33 @@ full-text search indexes — a minute or two, once.
 > variable every time you run `up`, or the app moves back to port 80. GraphDB's
 > port 7200 can be moved the same way with `GRAPHDB_PORT`.
 
+> **GraphDB slow, or stopping with an *OutOfMemoryError*?** Out of the box GraphDB
+> may use a quarter of the memory Docker can use (about 2 GB when Docker has 8 GB).
+> That is plenty for the examples and tight for a large collection. Give it more
+> with `GDB_HEAP_SIZE`. `4g` is a good first step when Docker may use 8 GB or more;
+> keep it below half of the memory Docker can use. Pick the line for your terminal:
+>
+> ```bash
+> GDB_HEAP_SIZE=4g docker compose -f oci://docker.io/trondaal/entedit-compose:latest up -d
+> ```
+>
+> ```powershell
+> $env:GDB_HEAP_SIZE="4g"; docker compose -f oci://docker.io/trondaal/entedit-compose:latest up -d
+> ```
+>
+> ```bat
+> set "GDB_HEAP_SIZE=4g" && docker compose -f oci://docker.io/trondaal/entedit-compose:latest up -d
+> ```
+>
+> GraphDB restarts with the new size and keeps its data. Set the variable every time
+> you run `up`, or the heap goes back to the default. If Docker itself has too
+> little memory, raise it in Docker Desktop under *Settings → Resources → Memory*.
+> To see what GraphDB is using (macOS/Linux):
+>
+> ```bash
+> docker compose -f oci://docker.io/trondaal/entedit-compose:latest exec graphdb sh -c 'jcmd $(pgrep -f "[j]ava") VM.flags | tr " " "\n" | grep -E "^-XX:(Initial|Max)HeapSize"'
+> ```
+
 **Stopping, updating, and looking at logs.** The Compose file itself lives on
 Docker Hub rather than on your disk, so later commands need the same
 `-f oci://...` reference:
