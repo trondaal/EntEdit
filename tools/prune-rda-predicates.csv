@@ -1,0 +1,37 @@
+# Predicates of the RDA Registry and what tools/prune-rda-vocabulary.py does with them in the pruned
+# copy: 'remove' drops every statement with the predicate, 'keep' keeps them (language-tagged
+# literals only in the languages chosen with --languages). Predicates not listed are kept.
+# 'statements' counts the registry v5.5.1 without its property hierarchy, before the language filter.
+predicate,statements,used_by_entedit,proposal,reason
+http://www.w3.org/2000/01/rdf-schema#label,75066,yes (labels everywhere),keep,"Property and class names (the registry has 20 languages; only those in --languages are kept)"
+http://www.w3.org/2004/02/skos/core#definition,67945,no,keep,Definitions of every element; help text (literals filtered by language)
+http://metadataregistry.org/uri/profile/rdakit/toolkitLabel,55823,no,remove,RDA Toolkit's own label (mostly non-English duplicates of rdfs:label)
+http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition,54836,no,remove,RDA Toolkit's own definition text (duplicates skos:definition)
+http://metadataregistry.org/uri/profile/regap/hasSubproperty,21196,no,remove,"Registry bookkeeping: the inverse of rdfs:subPropertyOf, no OWL/RDFS meaning; also lists dropped hierarchy links"
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,10827,yes,keep,owl:ObjectProperty / DatatypeProperty / Class / Ontology
+http://www.w3.org/2000/01/rdf-schema#isDefinedBy,10795,no,remove,"Which element set a property belongs to; no inference, not used"
+http://metadataregistry.org/uri/profile/regap/status,10795,yes (sparqlFragments.ts filters deprecated properties),keep,Published / Deprecated status; needed for the deprecated filter
+http://metadataregistry.org/uri/profile/regap/lexicalAlias,10786,no,remove,Alternative IRIs built from English labels (…/abridgerAgentOf.en)
+http://www.w3.org/2000/01/rdf-schema#domain,9479,yes (forms offer properties by domain),keep,Domains decide which properties a form offers
+http://www.w3.org/2004/02/skos/core#altLabel,9477,indirectly (inference makes it an rdfs:label),keep,Alternative names; with inference they count as rdfs:label (literals filtered by language)
+http://www.w3.org/2004/02/skos/core#scopeNote,7461,no,remove,Usage notes for cataloguers in the RDA Toolkit; not shown
+http://metadataregistry.org/uri/profile/rdakit/hasElementType,3185,no,remove,RDA Toolkit element type code
+http://www.w3.org/2000/01/rdf-schema#range,3023,yes,keep,Ranges decide value types and linked classes
+http://metadataregistry.org/uri/profile/rdakit/instructionNumber,1215,no,remove,Reference to an RDA Toolkit instruction number
+http://metadataregistry.org/uri/profile/rdakit/seeAlso,80,no,remove,Toolkit cross-references between elements
+http://purl.org/dc/elements/1.1/title,49,no,keep,"Element set descriptions (30 ontology headers): tiny, documents the source"
+http://purl.org/dc/elements/1.1/description,41,no,keep,Element set description (ontology headers)
+http://purl.org/vocab/vann/preferredNamespacePrefix,30,no,keep,Preferred prefix per element set (ontology headers)
+http://purl.org/dc/elements/1.1/rights,30,no,keep,Copyright statement: required attribution for the CC BY 4.0 licence
+http://creativecommons.org/ns#licence,30,no,keep,Licence (CC BY 4.0): required attribution
+http://purl.org/dc/elements/1.1/creator,30,no,keep,Ontology header
+http://purl.org/dc/elements/1.1/contributor,30,no,keep,Ontology header
+http://purl.org/dc/elements/1.1/publisher,30,no,keep,Ontology header
+http://purl.org/dc/elements/1.1/type,30,no,keep,Ontology header
+http://www.w3.org/2002/07/owl#versionInfo,30,no,keep,Registry version (v5.5.1); used to check which version is loaded
+http://purl.org/dc/elements/1.1/modified,30,no,keep,Ontology header
+http://purl.org/dc/elements/1.1/issued,30,no,keep,Ontology header
+http://www.w3.org/2000/01/rdf-schema#subClassOf,24,yes,keep,Class hierarchy (WEMI and agent classes)
+http://metadataregistry.org/uri/profile/regap/hasSubClass,12,no,remove,Registry bookkeeping: inverse of rdfs:subClassOf
+http://www.w3.org/2004/02/skos/core#note,6,no,keep,Deprecation warnings on element sets
+http://www.w3.org/2004/02/skos/core#prefLabel,2,yes,keep,Names of the registration statuses (registry.nt)

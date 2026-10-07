@@ -22,8 +22,18 @@ This script writes a copy of database/types in which only the RDA registry's
                      author agent" still entails "has related agent of RDA
                      entity", which the connectors use);
   owl:inverseOf    = kept between kept properties;
+  documentation    = predicates marked 'remove' in tools/prune-rda-predicates.csv
+                     (RDA Toolkit labels and definitions, registry bookkeeping,
+                     lexical aliases, scope notes, …) are left out;
+  languages        = language-tagged literals (labels, definitions, …) only in
+                     the languages in LANGUAGES below or --languages (en, no);
   everything else  = kept unchanged: labels, definitions, domains, ranges,
                      classes, the term vocabularies and the profile.
+
+The pruned registry is written as rda_vocabulary/hierarchy.nt (the property
+hierarchy) and one file per RDA element set (c.nt, w.nt, e.nt, m.nt, …: every
+other statement whose subject is in that set) and registry.nt (the registry's
+registration statuses), without duplicates.
 
 Properties outside the kept set lose their super-properties and inverses, so
 data using them gets no property inference. database/types itself is never
@@ -33,6 +43,7 @@ Usage:
   tools/prune-rda-vocabulary.py                 # writes build/types-pruned/
   tools/prune-rda-vocabulary.py --check         # also verifies the entailments
   tools/prune-rda-vocabulary.py --out DIR
+  tools/prune-rda-vocabulary.py --languages en,no,sv   # also keep Swedish
 
 Install the result like the normal vocabularies, into a repository whose
 rda_vocabulary graph is empty:
@@ -46,6 +57,11 @@ from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+# Languages of the labels, definitions and other language-tagged literals kept in the pruned copy
+# (primary language subtag: "en" also keeps "en-GB"). Add a language here, or use --languages.
+LANGUAGES = ("en", "no")
+# Predicates to drop from the pruned copy: the rows marked "remove"
+PREDICATES = Path(__file__).resolve().parent / "prune-rda-predicates.csv"
 RDFS = "http://www.w3.org/2000/01/rdf-schema#"
 OWL = "http://www.w3.org/2002/07/owl#"
 SUB, INV, EQ = RDFS + "subPropertyOf", OWL + "inverseOf", OWL + "equivalentProperty"
@@ -63,6 +79,15 @@ IRI_IN_TEXT = re.compile(r"https?://rdaregistry\.info/Elements/[a-z]+(?:/(?:obje
                          r"|http://oslomet\.no/abi/vocab#P\d+")
 PREFIXED = re.compile(r"\b([A-Za-z][\w-]*):(P\d+)\b")
 TTL_PREFIX = re.compile(r"@prefix\s+([\w-]*):\s*<([^>]+)>", re.I)
+LANGUAGE_TAG = re.compile(r'"@([A-Za-z]+)(?:-[\w-]+)?$')
+
+
+def removed_predicates(path: Path) -> set[str]:
+    """Predicates marked 'remove' in prune-rda-predicates.csv (lines starting with # are comments)."""
+    import csv
+    with open(path, encoding="utf-8") as f:
+        rows = csv.DictReader(line for line in f if not line.startswith("#"))
+        return {r["predicate"].strip() for r in rows if r["proposal"].strip().lower() == "remove"}
 
 
 def used_properties(sources: list[Path]) -> set[str]:
@@ -147,6 +172,10 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--types", type=Path, default=ROOT / "database/types", help="source vocabularies")
     ap.add_argument("--out", type=Path, default=ROOT / "build/types-pruned", help="where to write the copy")
+    ap.add_argument("--languages", default=",".join(LANGUAGES),
+                    help=f"comma-separated languages of literals to keep (default: {','.join(LANGUAGES)})")
+    ap.add_argument("--predicates", type=Path, default=PREDICATES,
+                    help="CSV of predicates; those marked 'remove' are dropped (default: tools/prune-rda-predicates.csv)")
     ap.add_argument("--check", action="store_true",
                     help="verify that every kept property entails the same kept properties as before")
     args = ap.parse_args()
@@ -170,40 +199,70 @@ def main() -> int:
 
     if args.out.exists():
         shutil.rmtree(args.out)
-    shutil.copytree(args.types, args.out, ignore=shutil.ignore_patterns(".DS_Store"))
-    before = after = 0
+    # The term vocabularies and the profile are copied as they are; the registry is rewritten below.
+    shutil.copytree(args.types, args.out, ignore=shutil.ignore_patterns(".DS_Store", "rda_vocabulary"))
+    out_rda = args.out / "rda_vocabulary"
+    out_rda.mkdir()
+
+    # Everything except the property hierarchy, one file per RDA element set (by the subject's namespace:
+    # c.nt classes, w.nt Work, e.nt Expression, …), without the duplicates between the registry's
+    # combined and split files.
+    by_set: dict[str, dict[str, None]] = defaultdict(dict)
+    drop = removed_predicates(args.predicates) if args.predicates.exists() else set()
+    languages = {lang.strip().lower() for lang in args.languages.split(",") if lang.strip()}
+    before = dropped_predicate = dropped_language = 0
     for path, lines in files.items():
-        out_lines = []
         for line in lines:
             m = TRIPLE.match(line)
-            if m:
-                before += 1
-                s, p, o = m.group(1).strip("<>"), m.group(2), m.group(3).strip("<>")
-                if p in (SUB, EQ):
-                    continue  # replaced by the pruned hierarchy below
-                if p == INV and not (s in kept and o in kept):
-                    continue
-                after += 1
-            out_lines.append(line)
-        target = args.out / path.relative_to(args.types)
-        target.write_text("\n".join(out_lines) + "\n", encoding="utf-8")
+            if not m:
+                continue
+            before += 1
+            s, p = m.group(1).strip("<>"), m.group(2)
+            if p in (SUB, EQ, INV):
+                continue  # the hierarchy is written separately
+            if p in drop:
+                dropped_predicate += 1
+                continue
+            tag = LANGUAGE_TAG.search(m.group(3))
+            if tag and tag.group(1).lower() not in languages:
+                dropped_language += 1
+                continue
+            element_set = s[len(RDA):].split("/", 1)[0] if s.startswith(RDA) else ""
+            # statements about the registry itself (its registration statuses) go to registry.nt
+            by_set[element_set or "registry"][line.strip()] = None
+    after = 0
+    for element_set, lines in sorted(by_set.items()):
+        heading = ("# Statements about the RDA Registry itself, e.g. the registration statuses Published and\n"
+                   "# Deprecated (EntEdit leaves out deprecated properties)." if element_set == "registry" else
+                   f"# RDA Registry element set '{element_set}' without its property hierarchy (see hierarchy.nt).")
+        (out_rda / f"{element_set}.nt").write_text(
+            heading + "\n# Generated by tools/prune-rda-vocabulary.py from database/types/rda_vocabulary.\n"
+            + "\n".join(lines) + "\n", encoding="utf-8")
+        after += len(lines)
+
+    # The property hierarchy: direct links from each kept property to the kept properties it reaches,
+    # and the inverses between kept properties.
     shortcuts = sorted((p, q) for p, qs in new_sup.items() for q in qs)
-    hierarchy = args.out / "rda_vocabulary/Elements/entedit-pruned-hierarchy.nt"
-    hierarchy.write_text(
-        "# Generated by tools/prune-rda-vocabulary.py: rdfs:subPropertyOf between the RDA and EntEdit\n"
-        "# properties EntEdit uses, each linked directly to every such property it reaches in the\n"
-        "# RDA Registry. Replaces the registry's own rdfs:subPropertyOf and owl:equivalentProperty.\n"
-        + "".join(f"<{p}> <{SUB}> <{q}> .\n" for p, q in shortcuts), encoding="utf-8")
-    after += len(shortcuts)
-    print(f"RDA registry: {before:,} statements -> {after:,} "
-          f"({len(shortcuts):,} direct subPropertyOf links between kept properties)")
+    inverses = sorted((p, q) for p, qs in new_inv.items() for q in qs)
+    (out_rda / "hierarchy.nt").write_text(
+        "# Generated by tools/prune-rda-vocabulary.py: the property hierarchy of the RDA Registry, reduced to\n"
+        "# the properties EntEdit uses. rdfs:subPropertyOf links each kept property directly to every kept\n"
+        "# property it reaches in the registry; owl:inverseOf as in the registry, between kept properties.\n"
+        + "".join(f"<{p}> <{SUB}> <{q}> .\n" for p, q in shortcuts)
+        + "".join(f"<{p}> <{INV}> <{q}> .\n" for p, q in inverses), encoding="utf-8")
+    after += len(shortcuts) + len(inverses)
+    print(f"RDA registry: {before:,} statements in {len(files)} files -> {after:,} in {len(by_set) + 1} files "
+          f"(hierarchy: {len(shortcuts):,} subPropertyOf, {len(inverses):,} inverseOf)")
+    print(f"Left out: {dropped_predicate:,} statements with {len(drop)} predicates marked 'remove' in "
+          f"{args.predicates.name}, {dropped_language:,} literals in languages other than {', '.join(sorted(languages))}")
     print(f"Written to {args.out}")
 
     if args.check:
         problems = 0
+        _, out_sup, out_inv = read_registry(out_rda)  # what was actually written
         for p in sorted(kept):
             full = entailed(p, sup, inv, kept)
-            pruned = entailed(p, new_sup, new_inv, kept)
+            pruned = entailed(p, out_sup, out_inv, kept)
             if full != pruned:
                 problems += 1
                 if problems <= 10:

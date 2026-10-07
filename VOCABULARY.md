@@ -182,6 +182,29 @@ properties; labels, definitions, domains, ranges, classes, the term vocabularies
 and the profile are copied unchanged. For the full ISFDB conversion this brings
 the inferred statements down to about 38 million.
 
+The copy also leaves out what EntEdit does not use:
+
+- **Documentation and bookkeeping predicates**, listed with a decision per
+  predicate in `tools/prune-rda-predicates.csv`: the rows marked `remove`
+  (RDA Toolkit labels and definitions, `regap:hasSubproperty`,
+  `regap:lexicalAlias`, `rdfs:isDefinedBy`, scope notes, Toolkit codes, …) are
+  dropped. Labels, definitions, alternative labels, domains, ranges, types, the
+  registration status and the element-set headers (with the CC BY licence) are
+  kept. Edit the CSV to change this; predicates not listed are kept.
+- **Languages.** Labels, definitions and other language-tagged literals are kept
+  only in the languages in `LANGUAGES` at the top of the script, currently `en`
+  and `no` (the primary subtag counts: `en` also keeps `en-GB`). To add one, add
+  it there or run e.g. `--languages en,no,sv`. Untagged literals are always kept.
+
+With these, the registry's 391,690 statements become about 58,000.
+
+The pruned registry is written as 15 files instead of the registry's 31:
+`rda_vocabulary/hierarchy.nt` holds the whole (reduced) property hierarchy,
+`c.nt`, `w.nt`, `e.nt`, `m.nt`, `i.nt`, `a.nt`, … every other statement of one
+RDA element set, constrained and unconstrained together, and `registry.nt` the
+registration statuses (Published, Deprecated). Statements the registry repeats in
+its combined and split files appear once.
+
 `database/types` itself is never changed, and the normal installation (the
 Docker image and `install-vocabularies.sh` without options) still loads the
 registry as published. To use the pruned copy, install it into a repository whose
