@@ -4,6 +4,7 @@ import {
   DEFAULT_PREFERENCES,
   type CatalogingPreferences,
 } from "./catalogingStyle";
+import { DEFAULT_DATA_GRAPH, dataGraphOf } from "./dataGraph";
 
 const CONFIG_STORAGE_KEY = "entEdit.config";
 const CREDENTIALS_STORAGE_KEY = "entEdit.credentials";
@@ -36,10 +37,17 @@ export const saveConfiguration = (
   preferences?: CatalogingPreferences,
 ): void => {
   try {
-    // Persist non-sensitive settings in localStorage
+    // Persist non-sensitive settings in localStorage. The data graph is stored
+    // only when it differs from the default, so a later change of the default
+    // reaches everyone who never chose one.
+    const dataGraph = dataGraphOf(config);
     localStorage.setItem(
       CONFIG_STORAGE_KEY,
-      JSON.stringify({ url: config.url }),
+      JSON.stringify(
+        dataGraph === DEFAULT_DATA_GRAPH
+          ? { url: config.url }
+          : { url: config.url, dataGraph },
+      ),
     );
     localStorage.setItem(LANGUAGE_STORAGE_KEY, validateLanguage(language));
 
@@ -85,6 +93,7 @@ export const loadConfiguration = (): AppConfiguration | null => {
       url: string;
       username?: string;
       password?: string;
+      dataGraph?: string;
     };
 
     // Validate that we have at least a URL
@@ -104,7 +113,11 @@ export const loadConfiguration = (): AppConfiguration | null => {
       );
       localStorage.setItem(
         CONFIG_STORAGE_KEY,
-        JSON.stringify({ url: config.url }),
+        JSON.stringify(
+          config.dataGraph
+            ? { url: config.url, dataGraph: config.dataGraph }
+            : { url: config.url },
+        ),
       );
     }
 
@@ -152,6 +165,11 @@ export const loadConfiguration = (): AppConfiguration | null => {
         url: config.url,
         username,
         password,
+        // Only a usable setting is kept; anything else means the default.
+        dataGraph:
+          config.dataGraph && dataGraphOf(config) === config.dataGraph.trim()
+            ? config.dataGraph.trim()
+            : undefined,
       },
       language: validateLanguage(language),
       isConfigured: true,

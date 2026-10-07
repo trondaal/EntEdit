@@ -332,8 +332,8 @@ docker compose up -d</code></pre>
   <li><strong>Repository creation</strong> — Creates a GraphDB repository named <code>EntEdit</code> with RDFS-Plus reasoning enabled.</li>
   <li><strong>Data import</strong> — Loads all RDF files from two directories:
     <ul style="margin-top: 0.5rem;">
-      <li><code>database/types/</code> — Vocabulary and ontology files (RDA properties, class definitions, controlled value lists). Each folder goes into a named graph of its own, <code>http://oslomet.no/abi/graph/&lt;folder&gt;</code>, so that a newer version of the RDA vocabulary or the profile can replace the old one without touching the rest.</li>
-      <li><code>database/testdata/</code> — Sample bibliographic entities (works, expressions, manifestations, agents). These are imported into the named graph <code>http://oslomet.no/abi/examples</code> so the examples can be managed independently of the vocabulary.</li>
+      <li><code>database/types/</code> — Vocabulary and ontology files (RDA properties, class definitions, controlled value lists). Each folder goes into a named graph of its own, <code>http://entedit.org/graph/&lt;folder&gt;</code>, so that a newer version of the RDA vocabulary or the profile can replace the old one without touching the rest.</li>
+      <li><code>database/testdata/</code> — Sample bibliographic entities (works, expressions, manifestations, agents). These are imported into the named graph <code>http://entedit.org/examples</code> so the examples can be managed independently of the vocabulary.</li>
     </ul>
   </li>
   <li><strong>SPARQL updates</strong> — Executes the Lucene full-text search connector definitions from <code>database/lucene_connectors/</code>, which power the Search tab.</li>
@@ -344,7 +344,7 @@ docker compose up -d</code></pre>
 <h2 id="own-data">4. Using your own data</h2>
 
 <p>
-  The simplest way to load your own RDF data is from EntEdit itself: click the <strong>Import</strong> button in the application header, choose a <code>.ttl</code>, <code>.nt</code>, or <code>.rdf</code> file, and click <strong>Import</strong>. Imported triples are appended to the repository; existing data is not replaced.
+  The simplest way to load your own RDF data is from EntEdit itself: click the <strong>Import</strong> button in the application header, choose a <code>.ttl</code>, <code>.nt</code>, or <code>.rdf</code> file, and click <strong>Import</strong>. Imported triples are appended to the repository; existing data is not replaced. They go into the named graph <code>http://entedit.org/data</code>, where EntEdit also saves what users create, unless you enter another graph in the dialog.
 </p>
 
 <p>You can also import through GraphDB Workbench:</p>
@@ -464,7 +464,7 @@ docker compose up -d</code></pre>
   <li>Open GraphDB Workbench at <code>http://localhost:7200</code> (or the port you set with <code>GRAPHDB_PORT</code>).</li>
   <li>Go to <strong>Setup → Repositories → Create new repository → GraphDB Repository</strong>. Give it an ID, for example <code>Hamsun</code>, choose the ruleset <strong>RDFS-Plus (Optimized)</strong>, tick <strong>Disable owl:sameAs</strong>, and click <strong>Create</strong>.</li>
   <li>Select the new repository in the repository menu at the top right of the Workbench. Imports and queries always go to the selected repository.</li>
-  <li><strong>Vocabulary:</strong> download the project from GitHub (<strong>Code → Download ZIP</strong>) and unpack it. The easiest way to install it is the script <code>tools/install-vocabularies.sh</code>: <code>./tools/install-vocabularies.sh -e http://localhost:7200/repositories/Hamsun -U admin</code>. It loads each folder of <code>database/types/</code> into its own named graph and then creates the search indexes (the next step). To do it by hand, in <strong>Import</strong> click <strong>Upload RDF files</strong>, select all the files in one of the three folders under <code>database/types/</code>, open the import settings, choose <strong>Named graph</strong> and enter <code>http://oslomet.no/abi/graph/</code> followed by the folder's name (for example <code>…/rda_vocabulary</code>), and import. Repeat for the other two folders.</li>
+  <li><strong>Vocabulary:</strong> download the project from GitHub (<strong>Code → Download ZIP</strong>) and unpack it. The easiest way to install it is the script <code>tools/install-vocabularies.sh</code>: <code>./tools/install-vocabularies.sh -e http://localhost:7200/repositories/Hamsun -U admin</code>. It loads each folder of <code>database/types/</code> into its own named graph and then creates the search indexes (the next step). To do it by hand, in <strong>Import</strong> click <strong>Upload RDF files</strong>, select all the files in one of the three folders under <code>database/types/</code>, open the import settings, choose <strong>Named graph</strong> and enter <code>http://entedit.org/graph/</code> followed by the folder's name (for example <code>…/rda_vocabulary</code>), and import. Repeat for the other two folders.</li>
   <li><strong>Collection:</strong> in <strong>Import</strong>, click <strong>Get RDF data from a URL</strong> and paste the file's raw address, for example <code>https://raw.githubusercontent.com/trondaal/EntEdit/main/data/Hamsun.ttl</code>. Several collections can go into the same repository.</li>
   <li><strong>Search indexes:</strong> the script above creates them. By hand, open each file in <code>database/lucene_connectors/</code> on GitHub, paste its contents into <strong>SPARQL</strong> in the Workbench and run it. The indexes cover data imported before and after.</li>
 </ol>

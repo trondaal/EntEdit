@@ -38,7 +38,7 @@ WHERE {
 # 2. Build the new labels in a staging graph. USING onto:explicit reads only
 #    asserted triples, so values inferred through subproperties stay out
 INSERT {
-  GRAPH <http://oslomet.no/abi/staging/labels> { ?m rdfs:label ?label . }
+  GRAPH <http://entedit.org/staging/labels> { ?m rdfs:label ?label . }
 }
 USING <http://www.ontotext.com/explicit>
 WHERE {
@@ -101,15 +101,15 @@ WHERE {
 
 # 3. Move labels into the named graph that holds the manifestation's type
 DELETE {
-  GRAPH <http://oslomet.no/abi/staging/labels> { ?m rdfs:label ?label . }
+  GRAPH <http://entedit.org/staging/labels> { ?m rdfs:label ?label . }
 }
 INSERT {
   GRAPH ?g { ?m rdfs:label ?label . }
 }
 WHERE {
-  GRAPH <http://oslomet.no/abi/staging/labels> { ?m rdfs:label ?label . }
+  GRAPH <http://entedit.org/staging/labels> { ?m rdfs:label ?label . }
   GRAPH ?g { ?m a rdac:C10007 . }
-  FILTER(?g != <http://oslomet.no/abi/staging/labels>)
+  FILTER(?g != <http://entedit.org/staging/labels>)
 };
 
 # 4. The rest are typed in the default graph
@@ -117,7 +117,7 @@ INSERT {
   ?m rdfs:label ?label .
 }
 WHERE {
-  GRAPH <http://oslomet.no/abi/staging/labels> { ?m rdfs:label ?label . }
+  GRAPH <http://entedit.org/staging/labels> { ?m rdfs:label ?label . }
 };
 
-DROP SILENT GRAPH <http://oslomet.no/abi/staging/labels>
+DROP SILENT GRAPH <http://entedit.org/staging/labels>

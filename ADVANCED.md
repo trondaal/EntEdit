@@ -32,7 +32,7 @@ own origin.
 
 `graphdb-init` creates the `EntEdit` repository with RDFS-Plus reasoning, imports
 the vocabulary and the example entities (the examples go into the named graph
-`http://oslomet.no/abi/examples`, so they can be managed independently of the
+`http://entedit.org/examples`, so they can be managed independently of the
 vocabulary), and creates the Lucene full-text indexes. It then writes a marker
 triple, so later restarts skip the import. To wipe the data and import again,
 restart that service with `FORCE_REINIT=1`.
@@ -324,17 +324,22 @@ Where things live decides what a backup contains, so it is worth knowing:
 
 | Graph | What is in it |
 |---|---|
-| default graph | entities created in the editor, and anything imported without a graph |
-| `http://oslomet.no/abi/graph/<folder>` | the vocabularies and the profile (reinstallable) |
-| `http://oslomet.no/abi/examples` | the example data, and edits to those entities |
+| `http://entedit.org/data` | entities created in the editor, and imports (the Import dialog's default) |
+| `http://entedit.org/graph/<folder>` | the vocabularies and the profile (reinstallable) |
+| `http://entedit.org/examples` | the example data, and edits to those entities |
+| default graph | empty on a new installation; in an older one, whatever was created before the data graph existed |
 
-An entity created in the editor is written to the default graph; an entity that
-already exists is saved back to the graph it was loaded from. To back up only what
+An entity created in the editor is written to `http://entedit.org/data`; an entity
+that already exists is saved back to the graph it was loaded from. Each user can
+choose another graph for new data under **Settings → Graph for new data** (kept in
+the browser, so people sharing a repository should agree on one), and the Import
+dialog is prefilled with it and can be changed per import. To back up only what
 people wrote, name the graphs you want with `--graph` (repeatable; `default` means
 the default graph):
 
 ```bash
-./tools/backup-repos.sh -e http://localhost:7200 -p VBINF6000-H26- -n 12 --graph default
+./tools/backup-repos.sh -e http://localhost:7200 -p VBINF6000-H26- -n 12 \
+    --graph http://entedit.org/data
 ```
 
 The file is then called `<repo>.partial.trigs.gz` and the manifest has a `graphs`
@@ -343,9 +348,9 @@ chosen graph gets no file and is reported as "no data". To restore into a new
 repository, create it, run `tools/install-vocabularies.sh`, and POST the
 decompressed file to `<endpoint>/repositories/<repo>/statements` with
 `Content-Type: application/x-trigstar`; every statement returns to the graph it came
-from. On a repository installed before the vocabularies had graphs of their own, the
-default graph still holds the vocabulary as well, and `--graph default` then backs
-up that too.
+from. Data created before the data graph existed sits in the default graph; back it
+up with `--graph default` as well (on a repository installed before the vocabularies
+had graphs of their own, that graph holds the vocabulary too).
 
 ## Installing or updating the vocabulary on an existing repository
 
@@ -362,8 +367,8 @@ GraphDB's own address or the app's proxy, `http://host/graphdb/repositories/<id>
 base URL plus `--repository <id>` works too.
 
 Each folder of `database/types/` goes into a named graph of its own,
-`http://oslomet.no/abi/graph/rda_vocabulary`, `…/term_vocabularies` and
-`…/entedit_profile` (the example data keeps `http://oslomet.no/abi/examples`). That
+`http://entedit.org/graph/rda_vocabulary`, `…/term_vocabularies` and
+`…/entedit_profile` (the example data keeps `http://entedit.org/examples`). That
 is what makes an upgrade simple: **drop the graph you want replaced, run the script
 again.** The script itself never deletes anything. A layer whose graph already has
 content is skipped, and `--merge` adds to it anyway (blank-node statements are then
@@ -373,7 +378,7 @@ repository. `--skip-vocabularies` and `--skip-connectors` run one half only, and
 `--dry-run` shows the plan.
 
 ```sparql
-DROP GRAPH <http://oslomet.no/abi/graph/rda_vocabulary>
+DROP GRAPH <http://entedit.org/graph/rda_vocabulary>
 ```
 
 A repository installed before the vocabularies had graphs of their own holds them

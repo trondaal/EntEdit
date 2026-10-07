@@ -332,8 +332,8 @@ docker compose up -d</code></pre>
   <li><strong>Oppretting av datalager</strong> — Oppretter et GraphDB-datalager (repository) med navnet <code>EntEdit</code> med RDFS-Plus-resonnering aktivert.</li>
   <li><strong>Dataimport</strong> — Laster inn alle RDF-filer fra to kataloger:
     <ul style="margin-top: 0.5rem;">
-      <li><code>database/types/</code> — Vokabular- og ontologifiler (RDA-egenskaper, klassedefinisjoner, kontrollerte verdilister). Hver mappe lastes inn i en egen navngitt graf, <code>http://oslomet.no/abi/graph/&lt;mappe&gt;</code>, slik at en nyere versjon av RDA-vokabularet eller profilen kan erstatte den gamle uten å røre resten.</li>
-      <li><code>database/testdata/</code> — Eksempler på bibliografiske entiteter (verk, uttrykk, manifestasjoner, agenter). Disse importeres til den navngitte grafen <code>http://oslomet.no/abi/examples</code> slik at eksemplene kan håndteres uavhengig av vokabularet.</li>
+      <li><code>database/types/</code> — Vokabular- og ontologifiler (RDA-egenskaper, klassedefinisjoner, kontrollerte verdilister). Hver mappe lastes inn i en egen navngitt graf, <code>http://entedit.org/graph/&lt;mappe&gt;</code>, slik at en nyere versjon av RDA-vokabularet eller profilen kan erstatte den gamle uten å røre resten.</li>
+      <li><code>database/testdata/</code> — Eksempler på bibliografiske entiteter (verk, uttrykk, manifestasjoner, agenter). Disse importeres til den navngitte grafen <code>http://entedit.org/examples</code> slik at eksemplene kan håndteres uavhengig av vokabularet.</li>
     </ul>
   </li>
   <li><strong>SPARQL-oppdateringer</strong> — Kjører Lucene-fulltekstsøkekoblingsdefinisjonene fra <code>database/lucene_connectors/</code>, som driver Søk-fanen.</li>
@@ -344,7 +344,7 @@ docker compose up -d</code></pre>
 <h2 id="own-data">4. Bruke egne data</h2>
 
 <p>
-  Den enkleste måten å laste inn egne RDF-data på, er fra EntEdit selv: klikk <strong>Importer</strong>-knappen i applikasjons-headeren, velg en <code>.ttl</code>-, <code>.nt</code>- eller <code>.rdf</code>-fil, og klikk <strong>Importer</strong>. Importerte tripler legges til i datalageret; eksisterende data erstattes ikke.
+  Den enkleste måten å laste inn egne RDF-data på, er fra EntEdit selv: klikk <strong>Importer</strong>-knappen i applikasjons-headeren, velg en <code>.ttl</code>-, <code>.nt</code>- eller <code>.rdf</code>-fil, og klikk <strong>Importer</strong>. Importerte tripler legges til i datalageret; eksisterende data erstattes ikke. De havner i den navngitte grafen <code>http://entedit.org/data</code>, der EntEdit også lagrer det brukerne oppretter, med mindre du skriver inn en annen graf i dialogen.
 </p>
 
 <p>Du kan også importere gjennom GraphDB Workbench:</p>
@@ -464,7 +464,7 @@ docker compose up -d</code></pre>
   <li>Åpne GraphDB Workbench på <code>http://localhost:7200</code> (eller porten du har satt med <code>GRAPHDB_PORT</code>).</li>
   <li>Gå til <strong>Setup → Repositories → Create new repository → GraphDB Repository</strong>. Gi det en ID, for eksempel <code>Hamsun</code>, velg regelsettet <strong>RDFS-Plus (Optimized)</strong>, kryss av for <strong>Disable owl:sameAs</strong>, og klikk <strong>Create</strong>.</li>
   <li>Velg det nye datalageret i datalagermenyen øverst til høyre i Workbench. Import og spørringer går alltid til det valgte datalageret.</li>
-  <li><strong>Vokabular:</strong> last ned prosjektet fra GitHub (<strong>Code → Download ZIP</strong>) og pakk det ut. Enklest er å installere det med skriptet <code>tools/install-vocabularies.sh</code>: <code>./tools/install-vocabularies.sh -e http://localhost:7200/repositories/Hamsun -U admin</code>. Det laster hver mappe i <code>database/types/</code> inn i sin egen navngitte graf og oppretter deretter søkeindeksene (neste trinn). For hånd klikker du under <strong>Import</strong> på <strong>Upload RDF files</strong>, velger alle filene i én av de tre mappene under <code>database/types/</code>, åpner importinnstillingene, velger <strong>Named graph</strong> og skriver inn <code>http://oslomet.no/abi/graph/</code> etterfulgt av mappens navn (for eksempel <code>…/rda_vocabulary</code>), og importerer. Gjenta for de to andre mappene.</li>
+  <li><strong>Vokabular:</strong> last ned prosjektet fra GitHub (<strong>Code → Download ZIP</strong>) og pakk det ut. Enklest er å installere det med skriptet <code>tools/install-vocabularies.sh</code>: <code>./tools/install-vocabularies.sh -e http://localhost:7200/repositories/Hamsun -U admin</code>. Det laster hver mappe i <code>database/types/</code> inn i sin egen navngitte graf og oppretter deretter søkeindeksene (neste trinn). For hånd klikker du under <strong>Import</strong> på <strong>Upload RDF files</strong>, velger alle filene i én av de tre mappene under <code>database/types/</code>, åpner importinnstillingene, velger <strong>Named graph</strong> og skriver inn <code>http://entedit.org/graph/</code> etterfulgt av mappens navn (for eksempel <code>…/rda_vocabulary</code>), og importerer. Gjenta for de to andre mappene.</li>
   <li><strong>Samling:</strong> under <strong>Import</strong> klikker du <strong>Get RDF data from a URL</strong> og limer inn filens råadresse, for eksempel <code>https://raw.githubusercontent.com/trondaal/EntEdit/main/data/Hamsun.ttl</code>. Flere samlinger kan ligge i samme datalager.</li>
   <li><strong>Søkeindekser:</strong> skriptet over oppretter dem. For hånd åpner du hver fil i <code>database/lucene_connectors/</code> på GitHub, limer innholdet inn under <strong>SPARQL</strong> i Workbench og kjører det. Indeksene dekker data som importeres både før og etter.</li>
 </ol>

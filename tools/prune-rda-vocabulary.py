@@ -69,7 +69,7 @@ LANGUAGES = ("en", "no")
 # Predicates to drop from the pruned copy: the rows marked "remove"
 PREDICATES = Path(__file__).resolve().parent / "prune-rda-predicates.csv"
 # Named graph of each folder: the same names as tools/install-vocabularies.sh and the Docker init
-GRAPH_PREFIX = "http://oslomet.no/abi/graph/"
+GRAPH_PREFIX = "http://entedit.org/graph/"
 RDFS = "http://www.w3.org/2000/01/rdf-schema#"
 OWL = "http://www.w3.org/2002/07/owl#"
 SUB, INV, EQ = RDFS + "subPropertyOf", OWL + "inverseOf", OWL + "equivalentProperty"

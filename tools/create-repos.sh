@@ -33,7 +33,7 @@ TESTDATA_DIR="${ROOT_DIR}/database/testdata"
 SPARQL_DIR="${ROOT_DIR}/database/lucene_connectors"
 CONFIG_TEMPLATE="${ROOT_DIR}/docker/graphdb/repositories/EntEdit/config.ttl"
 
-EXAMPLES_GRAPH="http://oslomet.no/abi/examples"
+EXAMPLES_GRAPH="http://entedit.org/examples"
 INIT_MARKER_GRAPH="urn:entedit:init-marker"
 INIT_MARKER_PRED="http://entedit.org/ns#initializedAt"
 INIT_MARKER_SUBJ="urn:entedit:init"

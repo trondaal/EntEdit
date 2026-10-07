@@ -2,6 +2,8 @@ export interface SparqlEndpointConfig {
   url: string;
   username?: string;
   password?: string;
+  /** Named graph new entities are saved in; unset means DEFAULT_DATA_GRAPH. */
+  dataGraph?: string;
 }
 
 export interface SparqlBinding {

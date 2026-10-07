@@ -40,7 +40,7 @@
       "description": "Select a Turtle (.ttl), Turtle-star (.ttls), N-Triples (.nt), or RDF/XML (.rdf) file to load into the database. Imported triples are appended; existing data is not replaced.",
       "chooseFile": "Choose file…",
       "graphUriLabel": "Named graph URI (optional)",
-      "graphUriHelper": "Leave empty to import into the default graph.",
+      "graphUriHelper": "Filled in with the graph new data is saved in (Settings). Change it to import elsewhere, or clear it to import into the default graph.",
       "importButton": "Import",
       "importing": "Importing…",
       "success": "Imported {{filename}}",
@@ -215,7 +215,11 @@
     "password": "Password (optional)",
     "redoConfiguration": "Redo configuration",
     "testConnection": "Test connection",
-    "connectionSection": "Database connection"
+    "connectionSection": "Database connection",
+    "dataSection": "Where new data is saved",
+    "dataGraph": "Graph for new data",
+    "dataGraphHelper": "Entities you create are saved in this named graph. Leave empty for {{graph}}.",
+    "dataGraphInvalid": "Enter a full IRI such as {{graph}}."
   },
   "logging": {
     "record": "Start logging",

@@ -28,6 +28,7 @@ import {
   type DesiredTerm,
 } from "../utils/entityUpdate";
 import { invalidateEntityCaches } from "../utils/queryInvalidation";
+import { dataGraphOf, graphForSave } from "../utils/dataGraph";
 import { useLogging } from "./useLogging";
 import { loadEntitySnapshot } from "./useEntityQueries";
 import type { EntityLabel, LoadedEntity } from "./useEntityQueries";
@@ -289,7 +290,7 @@ export function useEntityMutations({
           snapshot,
           desired,
           managedProperties,
-          targetGraph: entityUri ? loaded?.targetGraph : undefined,
+          targetGraph: graphForSave(!entityUri, loaded?.targetGraph, dataGraphOf(config)),
         }),
         buildInverseCleanup(currentEntityUri, removedRelations),
       ]

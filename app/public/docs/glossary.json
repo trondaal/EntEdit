@@ -443,6 +443,18 @@
     "Generate": {
       "no": "Generer",
       "ui": true
+    },
+    "Graph for new data": {
+      "no": "Graf for nye data",
+      "ui": true
+    },
+    "Where new data is saved": {
+      "no": "Hvor nye data lagres",
+      "ui": true
+    },
+    "Settings": {
+      "no": "Innstillinger",
+      "ui": true
     }
   },
   "general_terms": {

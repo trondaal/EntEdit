@@ -10,7 +10,7 @@
 # exactly. Each repository's configuration is saved next to it.
 #
 # With --graph the backup is limited to the named graphs you list ("default" is the
-# default graph), e.g. just the data the editor created.
+# default graph), e.g. just the data users created: --graph http://entedit.org/data.
 #
 #   ./tools/backup-repos.sh -e http://localhost:7200 -p VBINF6000-H26- -n 12
 #
@@ -48,11 +48,12 @@ Options:
   -w, --width N        Zero-padding width for group numbers (default: 2 -> 01..09)
   -o, --output DIR     Directory for the backup
                        (default: ./backups/<prefix>-<UTC timestamp>)
-  -g, --graph IRI      Back up only this named graph; repeat for several. The word
-                       "default" means the default graph, where the editor puts new
-                       entities. The file is then called <repo>.partial.<ext> and
-                       the manifest lists the graphs. Without this option everything
-                       is exported.
+  -g, --graph IRI      Back up only this named graph; repeat for several. The editor
+                       saves what users create in http://entedit.org/data. The word
+                       "default" means the default graph, which holds data created
+                       before that graph existed. The file is then called
+                       <repo>.partial.<ext> and the manifest lists the graphs.
+                       Without this option everything is exported.
   -f, --format NAME    Export format (default: trigstar):
                          trigstar  TriG-star, keeps named graphs and RDF-star
                                    value-order annotations (.trigs.gz)
@@ -66,9 +67,9 @@ Options:
 The backup directory gets, per repository, <repo>.trigs.gz and <repo>.config.ttl,
 and one manifest.tsv listing statement counts and file sizes.
 
-Only the statements you wrote are in the default graph (new entities from the
-editor); the vocabularies and the profile live in graphs of their own, and edits to
-an existing entity stay in the graph it was loaded from. To restore, create the
+What users create is in http://entedit.org/data; the vocabularies and the profile
+live in graphs of their own, and edits to an existing entity stay in the graph it
+was loaded from (the examples graph, for the shipped examples). To restore, create the
 repository, install the vocabularies (tools/install-vocabularies.sh) and POST the
 decompressed file to <endpoint>/repositories/<repo>/statements with
 Content-Type: application/x-trigstar: each statement lands in the graph it came from.
@@ -78,7 +79,7 @@ Examples:
   ./tools/backup-repos.sh -e https://graphdb.example.org -p KURS- -n 25 \
       -U admin -P secret -o /Volumes/backup/kurs
   ./tools/backup-repos.sh -e http://localhost:7200 -p VBINF6000-H26- -n 12 \
-      --graph default                      # only what was created in the editor
+      --graph http://entedit.org/data      # only what users created in the editor
 EOF
 }
 

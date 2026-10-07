@@ -29,9 +29,10 @@ source vocabularies lack.
 
 Everything is loaded from `database/types/` when the repository is initialised
 (`docker/graphdb/import-types.sh`), each folder into a named graph of its own:
-`http://oslomet.no/abi/graph/rda_vocabulary`, `…/term_vocabularies` and
+`http://entedit.org/graph/rda_vocabulary`, `…/term_vocabularies` and
 `…/entedit_profile`. Example data (`database/testdata/`) goes into
-`http://oslomet.no/abi/examples`. Every layer can therefore be dropped and loaded
+`http://entedit.org/examples`. What users create goes into a graph of its own,
+`http://entedit.org/data`, so it is kept apart from both. Every layer can therefore be dropped and loaded
 again without touching the others or the data (see 2.2). To install or update
 them on a repository that already exists, run `tools/install-vocabularies.sh`.
 
@@ -67,9 +68,11 @@ between the inferred view (default) and the explicit statements only
 | `ntsf:` | `https://id.nb.no/vocabulary/ntsf/` | NTSF genre/form values |
 
 `entedit:` is a legacy namespace (from the OsloMet project this grew out of) and
-is a stable identifier, not a resolvable URL. Two other project namespaces
-exist for housekeeping only: `http://oslomet.no/abi/examples` (the named graph of
-example data) and `urn:entedit:init-marker` (marks an initialised repository).
+is a stable identifier, not a resolvable URL. The named graphs the system uses are
+all under `http://entedit.org/`: `data` (what users create), `examples` (the
+example data), `graph/<folder>` (the vocabulary layers) and `staging/labels` (scratch
+space of the label queries in `database/sparql/`); `urn:entedit:init-marker` marks
+an initialised repository.
 Entities created in the editor without a chosen URI get
 `http://example.org/entedit/<Class>/<uuid>` (`generateEntityUri`,
 `app/src/utils/labelUtils.ts`); real deployments are expected to mint their own.
@@ -125,7 +128,7 @@ then load it:
 
 - *A new installation* gets it from the rebuilt `trondaal/entedit-init` image.
 - *A running database*: drop the layer's graph yourself (`DROP GRAPH
-  <http://oslomet.no/abi/graph/rda_vocabulary>`, in the Workbench's SPARQL view)
+  <http://entedit.org/graph/rda_vocabulary>`, in the Workbench's SPARQL view)
   and run `tools/install-vocabularies.sh -e <endpoint> -U <user>`. It loads each
   layer whose graph is empty, leaves the others alone, and then rebuilds the search
   connectors. It never deletes, so the old version is gone only because you
@@ -219,7 +222,7 @@ For a first bulk load of large data with GraphDB's offline `importrdf preload`,
 the vocabularies and the data should go in together, so that inference runs once
 during the load. `--nquads` also writes the pruned copy as one N-Quads file,
 `build/types-pruned.nq`, with each folder in the same named graph as above
-(`http://oslomet.no/abi/graph/<folder>`; `--graph-prefix` to change). It needs
+(`http://entedit.org/graph/<folder>`; `--graph-prefix` to change). It needs
 `rdflib` for the Turtle and RDF/XML files. With GraphDB stopped:
 
 ```bash
@@ -522,8 +525,10 @@ full specification, syntax caveats and RDF 1.2 notes are in the comments of
 ### 6.2 Graphs and inference
 
 - Vocabulary and profile: one named graph per folder of `database/types/`
-  (`http://oslomet.no/abi/graph/<folder>`). Example data:
-  `http://oslomet.no/abi/examples`. Queries without a `FROM` clause see all graphs
+  (`http://entedit.org/graph/<folder>`). Example data:
+  `http://entedit.org/examples`. Entities created in the editor, and imports, go to
+  `http://entedit.org/data`, unless the user chose another graph in Settings
+  (*Graph for new data*, kept in the browser) or in the Import dialog. Queries without a `FROM` clause see all graphs
   together, so the application does not care where a statement is stored.
 - Entities live in the graph of their `rdf:type` statement. Saves diff against the
   explicit snapshot and write each triple back to its own graph.
@@ -613,8 +618,8 @@ Workbench or set `FORCE_REINIT=1` (this **wipes** the repository). When reloadin
   put to use for ordering value pickers.
 - `"deprecated"` and `"not used"` are in `StatusLiteral` but no query treats them
   specially; a term is hidden simply by removing or not assigning `status`.
-- The namespace `oslomet.no/abi/vocab#` and the graph `oslomet.no/abi/examples`
-  are legacy names. Changing the namespace would require rewriting the profile,
+- The namespace `oslomet.no/abi/vocab#` is a legacy name (the graphs moved to
+  `entedit.org`). Changing the namespace would require rewriting the profile,
   the labels, stored `entedit:valueOrder` annotations and the application code.
 - NTSF's `owl:deprecated true` concepts are loaded and, if they have
   `entedit:Genretype`, offered. Deprecation is not filtered.

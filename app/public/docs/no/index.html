@@ -454,7 +454,9 @@
                 dialogen kan du endre server og innlogging direkte;
                 <strong>Test tilkobling</strong> blir tilgjengelig når du har
                 endret dem, slik at du kan sjekke de nye opplysningene før du
-                lagrer. <strong>Konfigurer på nytt</strong> fjerner det lagrede
+                lagrer. <strong>Graf for nye data</strong> velger hvor det du
+                oppretter lagres (se <a href="#data-graph">Hvor nye data
+                lagres</a>). <strong>Konfigurer på nytt</strong> fjerner det lagrede
                 oppsettet og kjører veiviseren på nytt fra begynnelsen.
             </p>
 
@@ -1351,9 +1353,21 @@
                 Velg en fil og klikk <strong>Importer</strong>. Importerte
                 tripler legges til i databasen — eksisterende data erstattes
                 ikke. Dialogen lar deg også angi hvilken navngitt graf det
-                skal importeres til; feltet er forhåndsutfylt med en
-                standardverdi, og du kan endre det eller la det stå tomt for
-                å importere til standardgrafen.
+                skal importeres til; feltet er forhåndsutfylt med grafen nye
+                entiteter lagres i (se under), og du kan endre det eller la
+                det stå tomt for å importere til standardgrafen.
+            </p>
+            <h4 id="data-graph">Hvor nye data lagres</h4>
+            <p>
+                Det du oppretter i EntEdit lagres i en egen navngitt graf,
+                <code>http://entedit.org/data</code>, atskilt fra vokabularene
+                og eksempeldataene. Da er det enkelt å ta sikkerhetskopi av,
+                flytte eller laste inn igjen ditt eget arbeid uten å røre
+                resten. En entitet som allerede finnes, lagres tilbake til
+                grafen den kom fra. Vil du bruke en annen graf for nye data,
+                endrer du <strong>Graf for nye data</strong> i innstillingene;
+                valget huskes i nettleseren din, så alle som skriver til
+                samme database bør bli enige om én.
             </p>
             <div class="info-box tip">
                 <strong>Tips:</strong> Import er en praktisk måte å laste en

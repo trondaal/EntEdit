@@ -8,9 +8,9 @@
 #
 # Every folder under database/types/ goes into a named graph of its own,
 #
-#   rda_vocabulary    ->  http://oslomet.no/abi/graph/rda_vocabulary
-#   term_vocabularies ->  http://oslomet.no/abi/graph/term_vocabularies
-#   entedit_profile   ->  http://oslomet.no/abi/graph/entedit_profile
+#   rda_vocabulary    ->  http://entedit.org/graph/rda_vocabulary
+#   term_vocabularies ->  http://entedit.org/graph/term_vocabularies
+#   entedit_profile   ->  http://entedit.org/graph/entedit_profile
 #
 # so that a layer can be replaced without touching the others or your data:
 # drop its graph yourself, run this script again. The script never deletes
@@ -28,7 +28,7 @@ ENDPOINT=""
 REPO=""
 TYPES_DIR="${ROOT_DIR}/database/types"
 SPARQL_DIR="${ROOT_DIR}/database/lucene_connectors"
-GRAPH_PREFIX="http://oslomet.no/abi/graph/"
+GRAPH_PREFIX="http://entedit.org/graph/"
 DEFAULT_GRAPH="http://www.openrdf.org/schema/sesame#nil"
 DO_VOCABULARIES=1
 DO_CONNECTORS=1
@@ -59,7 +59,7 @@ Options:
       --types DIR       Vocabulary folder (default: database/types)
       --connectors DIR  Connector queries (default: database/lucene_connectors)
       --graph-prefix IRI  Prefix of the graph names (default:
-                        http://oslomet.no/abi/graph/)
+                        http://entedit.org/graph/)
       --skip-vocabularies  Only run the connector queries
       --skip-connectors    Only install the vocabularies
       --merge           Also load into a graph that already has content (the

@@ -43,7 +43,7 @@ WHERE {
 #    asserted triples: with inference, subproperties would leak in (a
 #    screenwriter is also an author)
 INSERT {
-  GRAPH <http://oslomet.no/abi/staging/labels> { ?w rdfs:label ?labelEn , ?labelNo . }
+  GRAPH <http://entedit.org/staging/labels> { ?w rdfs:label ?labelEn , ?labelNo . }
 }
 USING <http://www.ontotext.com/explicit>
 WHERE {
@@ -148,15 +148,15 @@ WHERE {
 
 # 3. Move labels into the named graph that holds the work's type
 DELETE {
-  GRAPH <http://oslomet.no/abi/staging/labels> { ?w rdfs:label ?label . }
+  GRAPH <http://entedit.org/staging/labels> { ?w rdfs:label ?label . }
 }
 INSERT {
   GRAPH ?g { ?w rdfs:label ?label . }
 }
 WHERE {
-  GRAPH <http://oslomet.no/abi/staging/labels> { ?w rdfs:label ?label . }
+  GRAPH <http://entedit.org/staging/labels> { ?w rdfs:label ?label . }
   GRAPH ?g { ?w a rdac:C10001 . }
-  FILTER(?g != <http://oslomet.no/abi/staging/labels>)
+  FILTER(?g != <http://entedit.org/staging/labels>)
 };
 
 # 4. The rest are typed in the default graph
@@ -164,7 +164,7 @@ INSERT {
   ?w rdfs:label ?label .
 }
 WHERE {
-  GRAPH <http://oslomet.no/abi/staging/labels> { ?w rdfs:label ?label . }
+  GRAPH <http://entedit.org/staging/labels> { ?w rdfs:label ?label . }
 };
 
-DROP SILENT GRAPH <http://oslomet.no/abi/staging/labels>
+DROP SILENT GRAPH <http://entedit.org/staging/labels>

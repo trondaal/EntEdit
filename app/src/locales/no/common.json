@@ -40,7 +40,7 @@
       "description": "Velg en Turtle- (.ttl), Turtle-star- (.ttls), N-Triples- (.nt) eller RDF/XML-fil (.rdf) for å laste inn i databasen. Importerte tripler legges til; eksisterende data erstattes ikke.",
       "chooseFile": "Velg fil…",
       "graphUriLabel": "URI for navngitt graf (valgfritt)",
-      "graphUriHelper": "La stå tom for å importere til standardgrafen.",
+      "graphUriHelper": "Utfylt med grafen nye data lagres i (Innstillinger). Endre den for å importere et annet sted, eller tøm feltet for å importere til standardgrafen.",
       "importButton": "Importer",
       "importing": "Importerer…",
       "success": "Importerte {{filename}}",
@@ -215,7 +215,11 @@
     "password": "Passord (valgfritt)",
     "redoConfiguration": "Konfigurer på nytt",
     "testConnection": "Test tilkobling",
-    "connectionSection": "Databasetilkobling"
+    "connectionSection": "Databasetilkobling",
+    "dataSection": "Hvor nye data lagres",
+    "dataGraph": "Graf for nye data",
+    "dataGraphHelper": "Entiteter du oppretter lagres i denne navngitte grafen. La stå tom for {{graph}}.",
+    "dataGraphInvalid": "Skriv inn en full IRI, for eksempel {{graph}}."
   },
   "logging": {
     "record": "Start logging",

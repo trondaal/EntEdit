@@ -19,7 +19,7 @@ const WORK = "http://viaf.org/viaf/214012164";
 const TITLE = "http://rdaregistry.info/Elements/w/datatype/P10223";
 const AUTHOR = "http://rdaregistry.info/Elements/w/object/P10061";
 const CLASS_WORK = "http://rdaregistry.info/Elements/c/C10001";
-const EXAMPLES = "http://oslomet.no/abi/examples";
+const EXAMPLES = "http://entedit.org/examples";
 
 const managed = new Set([RDF_TYPE, RDFS_LABEL, TITLE, AUTHOR]);
 

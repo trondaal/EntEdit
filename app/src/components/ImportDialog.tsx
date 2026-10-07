@@ -19,8 +19,7 @@ import { useQueryClient } from "@tanstack/react-query";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import { SparqlClient, SparqlError } from "../utils/sparqlClient";
 import { invalidateAllEntityData } from "../utils/queryInvalidation";
-
-const DEFAULT_GRAPH_URI = "http://oslomet.no/abi/examples";
+import { dataGraphOf } from "../utils/dataGraph";
 
 const ACCEPTED_EXTENSIONS = [".ttl", ".ttls", ".nt", ".rdf"] as const;
 
@@ -50,7 +49,8 @@ const ImportDialog: React.FC<ImportDialogProps> = ({
   const queryClient = useQueryClient();
 
   const [file, setFile] = useState<File | null>(null);
-  const [graphUri, setGraphUri] = useState<string>(DEFAULT_GRAPH_URI);
+  const defaultGraph = dataGraphOf(config);
+  const [graphUri, setGraphUri] = useState<string>(defaultGraph);
   const [importing, setImporting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
@@ -59,11 +59,11 @@ const ImportDialog: React.FC<ImportDialogProps> = ({
   useEffect(() => {
     if (open) {
       setFile(null);
-      setGraphUri(DEFAULT_GRAPH_URI);
+      setGraphUri(defaultGraph);
       setError(null);
       setImporting(false);
     }
-  }, [open]);
+  }, [open, defaultGraph]);
   /* eslint-enable react-hooks/set-state-in-effect */
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -166,7 +166,7 @@ const ImportDialog: React.FC<ImportDialogProps> = ({
             label={t("dialogs.import.graphUriLabel")}
             value={graphUri}
             onChange={(e) => setGraphUri(e.target.value)}
-            placeholder={DEFAULT_GRAPH_URI}
+            placeholder={defaultGraph}
             helperText={t("dialogs.import.graphUriHelper")}
             disabled={importing}
             fullWidth

@@ -455,7 +455,9 @@
                 dialog that opens lets you edit the server and login directly;
                 <strong>Test connection</strong> becomes available once you
                 have changed them, so you can check the new details before
-                saving. <strong>Redo configuration</strong> clears the saved
+                saving. <strong>Graph for new data</strong> chooses where
+                what you create is saved (see <a href="#data-graph">Where new
+                data is saved</a>). <strong>Redo configuration</strong> clears the saved
                 setup and runs the wizard again from the start.
             </p>
 
@@ -1358,9 +1360,21 @@
                 Choose a file and click <strong>Import</strong>. Imported
                 triples are appended to the database — existing data is not
                 replaced. The dialog also lets you specify which named graph
-                to import into; the field is pre-filled with a default, and
-                you can change it or leave it empty to import into the
-                default graph.
+                to import into; the field is pre-filled with the graph new
+                entities are saved in (see below), and you can change it or
+                leave it empty to import into the default graph.
+            </p>
+            <h4 id="data-graph">Where new data is saved</h4>
+            <p>
+                What you create in EntEdit is saved in a named graph of its
+                own, <code>http://entedit.org/data</code>, kept apart from the
+                vocabularies and from the example data. That makes it easy to
+                back up, move or reload your own work without touching the
+                rest. An entity that already exists is saved back to the graph
+                it came from. If you want another graph for new data, change
+                <strong>Graph for new data</strong> in the settings; the
+                choice is remembered in your browser, so everyone who writes
+                to the same database should agree on one.
             </p>
             <div class="info-box tip">
                 <strong>Tip:</strong> Import is a convenient way to load a

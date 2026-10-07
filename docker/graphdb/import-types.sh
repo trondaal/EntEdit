@@ -86,8 +86,8 @@ fi
 # reloaded without touching the rest. tools/install-vocabularies.sh does the same
 # on an existing repository and uses the same names.
 
-EXAMPLES_GRAPH="http://oslomet.no/abi/examples"
-GRAPH_PREFIX="${VOCABULARY_GRAPH_PREFIX:-http://oslomet.no/abi/graph/}"
+EXAMPLES_GRAPH="http://entedit.org/examples"
+GRAPH_PREFIX="${VOCABULARY_GRAPH_PREFIX:-http://entedit.org/graph/}"
 
 find "$DATA_DIR" -type f \( -name "*.ttl" -o -name "*.nt" -o -name "*.rdf" \) | sort | while read -r file; do
   filename=$(basename "$file")

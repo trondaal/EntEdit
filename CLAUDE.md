@@ -253,11 +253,16 @@ the user is asked to refresh. Only the properties being written are compared, so
 unrelated concurrent edits don't block a save.
 
 **Which graph:** an existing entity is saved back into the graph its `rdf:type`
-statement was loaded from (`targetGraph`); a **new** entity has no graph yet, so it is
-written to the **default graph**. There is no setting for a target graph. With the
-vocabularies in named graphs, the default graph of a new installation therefore holds
-what users created, which is what `tools/backup-repos.sh --graph default` backs up.
-On a repository from before the vocabulary graphs it also still holds the vocabulary.
+statement was loaded from (`targetGraph`; `graphForSave` in `utils/dataGraph.ts`); a
+**new** entity is written to the **data graph**, `http://entedit.org/data` by default.
+The user can change it under Settings → *Graph for new data* (`dataGraph` on the
+endpoint config, stored with the URL in `entEdit.config` only when it differs from the
+default; `dataGraphOf` gives the effective graph and falls back to the default for an
+empty or unusable value). The Import dialog is prefilled with it and stays editable.
+The setting is per browser, so users sharing a repository should agree on one.
+Everything created before the data graph existed is in the default graph, and
+`tools/backup-repos.sh --graph http://entedit.org/data` (plus `--graph default` for
+that older data) backs up what users wrote.
 
 **New entities:** a custom URI is checked with a `COUNT` query first — inserting
 into a URI that already has statements would silently merge the two entities.
@@ -491,8 +496,9 @@ is rebuilt and pushed.
 ### Vocabulary graphs and `tools/install-vocabularies.sh`
 
 Each folder of `database/types/` is loaded into a named graph of its own,
-`http://oslomet.no/abi/graph/<folder>` (`rda_vocabulary`, `term_vocabularies`,
-`entedit_profile`); example data goes into `http://oslomet.no/abi/examples`. Upgrading
+`http://entedit.org/graph/<folder>` (`rda_vocabulary`, `term_vocabularies`,
+`entedit_profile`); example data goes into `http://entedit.org/examples`; user-created
+data goes into `http://entedit.org/data` (see "Entity Save/Delete Strategy"). Upgrading
 a layer on a running database is therefore: drop its graph, run
 `tools/install-vocabularies.sh -e <endpoint> -U <user>` (password asked for). The
 script works on any repository given its endpoint, loads only layers whose graph is
@@ -544,7 +550,8 @@ admin-only `/rest/security/users`, because `/rest/security` answers anonymously.
 
 `tools/backup-repos.sh` backs up the same `<prefix><number>` repositories as TriG-star
 (all graphs, RDF-star annotations kept, nothing inferred); `--graph IRI|default`
-(repeatable) limits it to the named graphs and writes `<repo>.partial.trigs.gz`.
+(repeatable) limits it to the named graphs (usually `http://entedit.org/data`) and
+writes `<repo>.partial.trigs.gz`.
 
 ### Configuration
 

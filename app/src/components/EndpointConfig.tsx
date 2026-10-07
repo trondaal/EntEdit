@@ -20,6 +20,7 @@ import CatalogingStyleSettings from "./CatalogingStyleSettings";
 import type { CatalogingPreferences } from "../utils/catalogingStyle";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import LanguageSelector from "./LanguageSelector";
+import { DEFAULT_DATA_GRAPH, isGraphSettingInvalid } from "../utils/dataGraph";
 import {
   sameConnection,
   testEndpointConnection,
@@ -74,8 +75,13 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
     setTesting(false);
   };
 
+  const dataGraphInvalid = isGraphSettingInvalid(localConfig.dataGraph ?? "");
+
   const handleSave = () => {
-    onConfigChange(localConfig, localPreferences);
+    onConfigChange(
+      { ...localConfig, dataGraph: localConfig.dataGraph?.trim() || undefined },
+      localPreferences,
+    );
     if (!isModal) {
       setExpanded(false);
     }
@@ -148,6 +154,26 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
             )}
 
             <Divider sx={{ my: 2 }} />
+            <Typography variant="subtitle2" sx={{ mb: 1.5 }}>
+              {t("endpointConfig.dataSection")}
+            </Typography>
+            <TextField
+              fullWidth
+              label={t("endpointConfig.dataGraph")}
+              value={localConfig.dataGraph ?? ""}
+              placeholder={DEFAULT_DATA_GRAPH}
+              onChange={(e) =>
+                setLocalConfig((current) => ({ ...current, dataGraph: e.target.value }))
+              }
+              error={dataGraphInvalid}
+              helperText={
+                dataGraphInvalid
+                  ? t("endpointConfig.dataGraphInvalid", { graph: DEFAULT_DATA_GRAPH })
+                  : t("endpointConfig.dataGraphHelper", { graph: DEFAULT_DATA_GRAPH })
+              }
+            />
+
+            <Divider sx={{ my: 2 }} />
             <CatalogingStyleSettings
               preferences={localPreferences}
               onChange={setLocalPreferences}
@@ -161,7 +187,7 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
               {t("endpointConfig.redoConfiguration")}
             </Button>
           )}
-          <Button variant="contained" onClick={handleSave}>
+          <Button variant="contained" onClick={handleSave} disabled={dataGraphInvalid}>
             {t("buttons.save")}
           </Button>
         </DialogActions>
