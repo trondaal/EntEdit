@@ -171,6 +171,18 @@ INSERT DATA {
       "facet": true
     },
     {
+      "fieldName": "titles$statementOfResponsibility",
+      "propertyChain": [
+        "http://rdaregistry.info/Elements/m/datatype/P30117"
+      ],
+      "indexed": true,
+      "stored": true,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": true
+    },
+    {
       "fieldName": "titles$expression",
       "propertyChain": [
         "http://rdaregistry.info/Elements/m/object/P30139",
