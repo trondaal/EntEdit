@@ -331,9 +331,10 @@ Where things live decides what a backup contains, so it is worth knowing:
 
 An entity created in the editor is written to `http://entedit.org/data`; an entity
 that already exists is saved back to the graph it was loaded from. Each user can
-choose another graph for new data under **Settings → Graph for new data** (kept in
-the browser, so people sharing a repository should agree on one), and the Import
-dialog is prefilled with it and can be changed per import. To back up only what
+choose another graph for new data under **Settings → Graph for new data** (shown
+locked; **Change…** and a confirmation are needed to pick another, and the choice is
+kept in the browser, so people sharing a repository should agree on one), and the
+Import dialog is prefilled with it and can be changed per import. To back up only what
 people wrote, name the graphs you want with `--graph` (repeatable; `default` means
 the default graph):
 

@@ -255,7 +255,10 @@ unrelated concurrent edits don't block a save.
 **Which graph:** an existing entity is saved back into the graph its `rdf:type`
 statement was loaded from (`targetGraph`; `graphForSave` in `utils/dataGraph.ts`); a
 **new** entity is written to the **data graph**, `http://entedit.org/data` by default.
-The user can change it under Settings → *Graph for new data* (`dataGraph` on the
+The user can change it under Settings → *Graph for new data*, a locked field that shows
+the graph in use; **Change…** opens a confirmation dialog that explains the
+consequences and validates the IRI, and "Use the default" goes back without asking,
+because the point is to make a non-default graph deliberate (`dataGraph` on the
 endpoint config, stored with the URL in `entEdit.config` only when it differs from the
 default; `dataGraphOf` gives the effective graph and falls back to the default for an
 empty or unusable value). The Import dialog is prefilled with it and stays editable.

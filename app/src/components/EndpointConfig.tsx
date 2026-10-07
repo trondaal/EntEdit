@@ -10,17 +10,25 @@ import {
   DialogTitle,
   DialogContent,
   DialogActions,
+  Dialog,
   Divider,
   Alert,
   CircularProgress,
 } from "@mui/material";
-import { ExpandMore, ExpandLess, Settings, CheckCircle, Error as ErrorIcon } from "@mui/icons-material";
+import {
+  ExpandMore,
+  ExpandLess,
+  Settings,
+  CheckCircle,
+  Error as ErrorIcon,
+  Lock,
+} from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import CatalogingStyleSettings from "./CatalogingStyleSettings";
 import type { CatalogingPreferences } from "../utils/catalogingStyle";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import LanguageSelector from "./LanguageSelector";
-import { DEFAULT_DATA_GRAPH, isGraphSettingInvalid } from "../utils/dataGraph";
+import { DEFAULT_DATA_GRAPH, dataGraphOf, isGraphSettingInvalid } from "../utils/dataGraph";
 import {
   sameConnection,
   testEndpointConnection,
@@ -75,7 +83,30 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
     setTesting(false);
   };
 
-  const dataGraphInvalid = isGraphSettingInvalid(localConfig.dataGraph ?? "");
+  // The graph new data is saved in is shown, not edited: changing it means
+  // pressing "Change…" and confirming, since everyone writing to a repository
+  // should agree on one.
+  const dataGraph = dataGraphOf(localConfig);
+  const usingDefaultGraph = dataGraph === DEFAULT_DATA_GRAPH;
+  const [changingGraph, setChangingGraph] = useState(false);
+  const [draftGraph, setDraftGraph] = useState("");
+  const draftTrimmed = draftGraph.trim();
+  const draftInvalid = draftTrimmed !== "" && isGraphSettingInvalid(draftTrimmed);
+  const canConfirmGraph = draftTrimmed !== "" && !draftInvalid && draftTrimmed !== dataGraph;
+
+  const startGraphChange = () => {
+    setDraftGraph(dataGraph);
+    setChangingGraph(true);
+  };
+  const confirmGraphChange = () => {
+    setLocalConfig((current) => ({
+      ...current,
+      dataGraph: draftTrimmed === DEFAULT_DATA_GRAPH ? undefined : draftTrimmed,
+    }));
+    setChangingGraph(false);
+  };
+  const useDefaultGraph = () =>
+    setLocalConfig((current) => ({ ...current, dataGraph: undefined }));
 
   const handleSave = () => {
     onConfigChange(
@@ -101,41 +132,24 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
             {t("endpointConfig.connectionSection")}
           </Typography>
           <Box sx={{ pt: 1 }}>
-            <TextField
-              fullWidth
-              label={t("endpointConfig.endpointUrl")}
-              value={localConfig.url}
-              onChange={(e) => editConnection({ url: e.target.value })}
-              helperText={t("endpointConfig.endpointUrlHelper")}
-              sx={{ mb: 2 }}
-            />
-
-            <TextField
-              fullWidth
-              label={t("endpointConfig.username")}
-              value={localConfig.username || ""}
-              onChange={(e) => editConnection({ username: e.target.value })}
-              sx={{ mb: 2 }}
-            />
-
-            <TextField
-              fullWidth
-              label={t("endpointConfig.password")}
-              type="password"
-              value={localConfig.password || ""}
-              onChange={(e) => editConnection({ password: e.target.value })}
-              sx={{ mb: 2 }}
-            />
-
-            <Box sx={{ display: "flex", alignItems: "center", gap: 1.5, mb: 2 }}>
+            {/* The test sits beside the URL it tests, to save vertical space */}
+            <Box sx={{ display: "flex", alignItems: "flex-start", gap: 1.5, mb: 2 }}>
+              <TextField
+                sx={{ flexGrow: 1 }}
+                label={t("endpointConfig.endpointUrl")}
+                value={localConfig.url}
+                onChange={(e) => editConnection({ url: e.target.value })}
+                helperText={t("endpointConfig.endpointUrlHelper")}
+              />
               <Button
                 variant="outlined"
                 onClick={handleTest}
                 disabled={testing || !connectionChanged || !localConfig.url.trim()}
+                aria-label={t("wizard.test.testButton")}
+                sx={{ height: 56, minWidth: 72, flexShrink: 0 }}
               >
-                {testing ? t("wizard.test.testingButton") : t("endpointConfig.testConnection")}
+                {testing ? <CircularProgress size={20} /> : t("endpointConfig.testConnection")}
               </Button>
-              {testing && <CircularProgress size={20} />}
             </Box>
 
             {testResult && (
@@ -153,24 +167,20 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
               </Alert>
             )}
 
-            <Divider sx={{ my: 2 }} />
-            <Typography variant="subtitle2" sx={{ mb: 1.5 }}>
-              {t("endpointConfig.dataSection")}
-            </Typography>
             <TextField
               fullWidth
-              label={t("endpointConfig.dataGraph")}
-              value={localConfig.dataGraph ?? ""}
-              placeholder={DEFAULT_DATA_GRAPH}
-              onChange={(e) =>
-                setLocalConfig((current) => ({ ...current, dataGraph: e.target.value }))
-              }
-              error={dataGraphInvalid}
-              helperText={
-                dataGraphInvalid
-                  ? t("endpointConfig.dataGraphInvalid", { graph: DEFAULT_DATA_GRAPH })
-                  : t("endpointConfig.dataGraphHelper", { graph: DEFAULT_DATA_GRAPH })
-              }
+              label={t("endpointConfig.username")}
+              value={localConfig.username || ""}
+              onChange={(e) => editConnection({ username: e.target.value })}
+              sx={{ mb: 2 }}
+            />
+
+            <TextField
+              fullWidth
+              label={t("endpointConfig.password")}
+              type="password"
+              value={localConfig.password || ""}
+              onChange={(e) => editConnection({ password: e.target.value })}
             />
 
             <Divider sx={{ my: 2 }} />
@@ -178,6 +188,40 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
               preferences={localPreferences}
               onChange={setLocalPreferences}
             />
+
+            <Divider sx={{ my: 2 }} />
+            <Typography variant="subtitle2" sx={{ mb: 1.5 }}>
+              {t("endpointConfig.dataSection")}
+            </Typography>
+            <TextField
+              fullWidth
+              label={t("endpointConfig.dataGraph")}
+              value={dataGraph}
+              helperText={
+                usingDefaultGraph
+                  ? t("endpointConfig.dataGraphIsDefault")
+                  : t("endpointConfig.dataGraphIsCustom", { graph: DEFAULT_DATA_GRAPH })
+              }
+              slotProps={{
+                htmlInput: { readOnly: true },
+                input: {
+                  readOnly: true,
+                  startAdornment: (
+                    <Lock sx={{ fontSize: "0.9rem", color: "text.disabled", mr: 0.75 }} />
+                  ),
+                },
+              }}
+            />
+            <Box sx={{ display: "flex", gap: 1, mt: 1 }}>
+              <Button size="small" onClick={startGraphChange}>
+                {t("endpointConfig.dataGraphChange")}
+              </Button>
+              {!usingDefaultGraph && (
+                <Button size="small" onClick={useDefaultGraph}>
+                  {t("endpointConfig.dataGraphUseDefault")}
+                </Button>
+              )}
+            </Box>
           </Box>
         </DialogContent>
         <DialogActions>
@@ -187,10 +231,41 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
               {t("endpointConfig.redoConfiguration")}
             </Button>
           )}
-          <Button variant="contained" onClick={handleSave} disabled={dataGraphInvalid}>
+          <Button variant="contained" onClick={handleSave}>
             {t("buttons.save")}
           </Button>
         </DialogActions>
+
+        <Dialog open={changingGraph} onClose={() => setChangingGraph(false)} maxWidth="xs" fullWidth>
+          <DialogTitle>{t("endpointConfig.dataGraphChangeTitle")}</DialogTitle>
+          <DialogContent>
+            <Typography variant="body2" sx={{ mb: 2 }}>
+              {t("endpointConfig.dataGraphChangeBody", { graph: DEFAULT_DATA_GRAPH })}
+            </Typography>
+            <TextField
+              autoFocus
+              fullWidth
+              label={t("endpointConfig.dataGraph")}
+              value={draftGraph}
+              onChange={(e) => setDraftGraph(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && canConfirmGraph) confirmGraphChange();
+              }}
+              error={draftInvalid}
+              helperText={
+                draftInvalid
+                  ? t("endpointConfig.dataGraphInvalid", { graph: DEFAULT_DATA_GRAPH })
+                  : undefined
+              }
+            />
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={() => setChangingGraph(false)}>{t("buttons.cancel")}</Button>
+            <Button variant="contained" onClick={confirmGraphChange} disabled={!canConfirmGraph}>
+              {t("endpointConfig.dataGraphChangeConfirm")}
+            </Button>
+          </DialogActions>
+        </Dialog>
       </>
     );
   }

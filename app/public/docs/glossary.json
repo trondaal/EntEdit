@@ -452,6 +452,14 @@
       "no": "Hvor nye data lagres",
       "ui": true
     },
+    "Change…": {
+      "no": "Endre…",
+      "ui": true
+    },
+    "Use the default": {
+      "no": "Bruk standard",
+      "ui": true
+    },
     "Settings": {
       "no": "Innstillinger",
       "ui": true
