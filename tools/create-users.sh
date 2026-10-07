@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Create GraphDB users for the student groups (one per group, or several per
+# Create GraphDB users for a set of groups (one per group, or several per
 # group with --per-repo), with usernames that are easy to remember and
 # passwords that are easy to type:
 #
@@ -14,7 +14,7 @@
 # Passwords are random words plus four digits; the strength is printed when
 # they are generated.
 #
-#   ./tools/create-student-users.sh -e http://localhost:7200 -p kurs- \
+#   ./tools/create-users.sh -e http://localhost:7200 -p kurs- \
 #       -r VBINF6000-H26- -n 12 -U admin -P secret -o users.csv
 #
 # Run --help for all options.
@@ -39,12 +39,12 @@ GDB_PASS="${GRAPHDB_PASSWORD:-}"
 
 usage() {
   cat <<'EOF'
-Usage: create-student-users.sh -e <endpoint> -p <prefix> -r <repo-prefix> -n <count> [options]
+Usage: create-users.sh -e <endpoint> -p <prefix> -r <repo-prefix> -n <count> [options]
 
 Required:
   -e, --endpoint URL      GraphDB base URL (a trailing /repositories/<id> is stripped)
   -p, --prefix NAME       Username prefix; the animal is appended, e.g. "kurs-" -> kurs-ulv
-  -r, --repo-prefix NAME  Prefix of the repositories made by create-student-repos.sh;
+  -r, --repo-prefix NAME  Prefix of the repositories made by create-repos.sh;
                           group N gets <repo-prefix><N> (zero-padded like that script)
   -n, --count N           Number of groups (repositories)
 

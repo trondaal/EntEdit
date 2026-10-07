@@ -61,7 +61,7 @@ EntEdit/
 │   ├── no/                 # Norwegian docs (translation)
 │   ├── index.html          # Language redirector (reads localStorage)
 │   └── setup.html          # Language redirector
-├── tools/                 # Shared admin scripts (create-student-repos.sh, create-student-users.sh, install-vocabularies.sh)
+├── tools/                 # Shared admin scripts (create-repos.sh, create-users.sh, install-vocabularies.sh)
 ├── scripts/               # Ad hoc scripts (gitignored, not for sharing)
 ├── docker-compose.yml     # No bind mounts — published to Docker Hub as an OCI artifact
 ├── docker-compose.dev.yml # Maintainer override: mounts database/ into graphdb-init
@@ -491,7 +491,7 @@ a layer on a running database is therefore: drop its graph, run
 script works on any repository given its endpoint, loads only layers whose graph is
 empty (`--merge` overrides; it re-adds blank-node statements), runs the
 `database/lucene_connectors/*.sparql` files, and **never deletes**. The Docker init
-(`docker/graphdb/import-types.sh`) and `create-student-repos.sh` (which calls the
+(`docker/graphdb/import-types.sh`) and `create-repos.sh` (which calls the
 script) use the same graph names. Facts behind the design, all verified on 10.8.12:
 
 - A query without `FROM` sees all graphs as one default graph, so nothing in the app
@@ -507,12 +507,12 @@ script) use the same graph names. Facts behind the design, all verified on 10.8.
 
 ### Provisioning Repositories for Teaching
 
-`tools/create-student-repos.sh` creates and initializes one GraphDB repository per
-student group on any GraphDB server — same procedure as the Docker init, but
+`tools/create-repos.sh` creates and initializes one GraphDB repository per
+group on any GraphDB server — same procedure as the Docker init, but
 parameterized:
 
 ```
-./tools/create-student-repos.sh -e http://host:7200 -p VBINF6000-H26- -n 12
+./tools/create-repos.sh -e http://host:7200 -p VBINF6000-H26- -n 12
 ```
 
 Names are `<prefix><zero-padded group number>` (`VBINF6000-H26-01` … `-12`).
@@ -521,10 +521,10 @@ Each repository is created from `docker/graphdb/repositories/EntEdit/config.ttl`
 Lucene connectors from `database/lucene_connectors`; test data is imported only with
 `--testdata`. Repositories carrying the init marker are skipped unless `--force`.
 When GraphDB security is enabled, the script merges `READ_REPO_`/`WRITE_REPO_`
-authorities for the new repositories into the server's free-access list so students
+authorities for the new repositories into the server's free-access list so users
 need no login (`--access read|write|none`). Run `--help` for all options.
 
-`tools/create-student-users.sh` is the login-based alternative to free access: one
+`tools/create-users.sh` is the login-based alternative to free access: one
 GraphDB user per group (`<prefix><animal>`, password of random words plus four
 digits) with read/write on that group's repository only. The animal per group is a
 shuffle seeded with the prefix, so a rerun skips existing users and never resets a

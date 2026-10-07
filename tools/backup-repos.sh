@@ -1,18 +1,17 @@
 #!/usr/bin/env bash
 #
-# Back up a set of EntEdit repositories on any GraphDB server, one per student
-# group: <prefix>01, <prefix>02, ... <prefix>NN — the same names
-# create-student-repos.sh produces.
+# Back up a set of EntEdit repositories on any GraphDB server, one per group: <prefix>01, <prefix>02, ... <prefix>NN — the same names
+# create-repos.sh produces.
 #
-# Every repository is exported in full (vocabulary, profile and the students'
+# Every repository is exported in full (vocabulary, profile and the users'
 # entities, all named graphs) as compressed TriG-star, so the RDF-star
 # entedit:valueOrder annotations survive. Only explicitly asserted statements
 # are exported (no inferred ones), so a restore reproduces the repository
 # exactly. Each repository's configuration is saved next to it.
 #
-#   ./tools/backup-student-repos.sh -e http://localhost:7200 -p VBINF6000-H26- -n 12
+#   ./tools/backup-repos.sh -e http://localhost:7200 -p VBINF6000-H26- -n 12
 #
-# Restore one repository: create it (create-student-repos.sh, or the Workbench),
+# Restore one repository: create it (create-repos.sh, or the Workbench),
 # then POST the decompressed file to <endpoint>/repositories/<repo>/statements
 # with Content-Type: application/x-trigstar. Run --help for all options.
 
@@ -31,7 +30,7 @@ GDB_PASS="${GRAPHDB_PASSWORD:-}"
 
 usage() {
   cat <<'EOF'
-Usage: backup-student-repos.sh -e <endpoint> -p <prefix> -n <count> [options]
+Usage: backup-repos.sh -e <endpoint> -p <prefix> -n <count> [options]
 
 Required:
   -e, --endpoint URL   GraphDB SPARQL endpoint or base URL. Both forms work:
@@ -59,8 +58,8 @@ The backup directory gets, per repository, <repo>.trigs.gz and <repo>.config.ttl
 and one manifest.tsv listing statement counts and file sizes.
 
 Examples:
-  ./tools/backup-student-repos.sh -e http://localhost:7200 -p VBINF6000-H26- -n 12
-  ./tools/backup-student-repos.sh -e https://graphdb.example.org -p KURS- -n 25 \
+  ./tools/backup-repos.sh -e http://localhost:7200 -p VBINF6000-H26- -n 12
+  ./tools/backup-repos.sh -e https://graphdb.example.org -p KURS- -n 25 \
       -U admin -P secret -o /Volumes/backup/kurs
 EOF
 }

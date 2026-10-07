@@ -121,9 +121,9 @@ reach the machine's port 80 or 7200 can read, edit and delete the data, includin
 dropping repositories from the Workbench.
 
 For a shared server, run GraphDB separately with its own security enabled and
-point EntEdit at it. [tools/create-student-repos.sh](tools/create-student-repos.sh)
+point EntEdit at it. [tools/create-repos.sh](tools/create-repos.sh)
 sets up one repository per group and merges the matching read/write authorities
-into the free-access list, so students need no login while the administrative
+into the free-access list, so users need no login while the administrative
 endpoints stay protected.
 
 Two topologies work, and the choice decides what has to be configured.
@@ -260,11 +260,11 @@ only if they re-initialise with `FORCE_REINIT=1`, which clears the repository.
 
 ## Provisioning many repositories
 
-`tools/create-student-repos.sh` creates and initialises one repository per group
+`tools/create-repos.sh` creates and initialises one repository per group
 on any GraphDB server — the same procedure as the Docker init, parameterised:
 
 ```bash
-./tools/create-student-repos.sh -e http://host:7200 -p VBINF6000-H26-G -n 12
+./tools/create-repos.sh -e http://host:7200 -p VBINF6000-H26-G -n 12
 ```
 
 Repositories are named `<prefix><zero-padded number>`. Each is created from
@@ -283,16 +283,16 @@ GRAPHDB_PASSWORD='p!ss*word'`.
 
 ### Giving each group a login
 
-Where free access is not wanted, `tools/create-student-users.sh` creates one
+Where free access is not wanted, `tools/create-users.sh` creates one
 GraphDB user per group, with access to that group's repository only:
 
 ```bash
-./tools/create-student-users.sh -e http://host:7200 -p kurs- \
+./tools/create-users.sh -e http://host:7200 -p kurs- \
     -r VBINF6000-H26-G -n 12 -U admin -P secret -o users.csv
 ```
 
 Usernames are the prefix plus an animal (`kurs-ulv`), and passwords are random
-words plus four digits (`hatt-brun-gitar-1569`), so students can remember and
+words plus four digits (`hatt-brun-gitar-1569`), so users can remember and
 type them. The animal for a group is fixed by the prefix, which makes the script
 safe to rerun: existing users are left alone and never get a new password. The
 three words give about 34 bits of strength, enough for a course server but not for
@@ -345,7 +345,7 @@ then nothing is wrong: GraphDB shows a statement that is in two graphs only once
 Through the app's proxy the files can be large, which the proxy allows in web images after
 `1.0.21`; an older one answers 413, and the script then says to use GraphDB's
 own address instead. `docker/graphdb/import-types.sh` (the Docker initialisation)
-and `tools/create-student-repos.sh` use the same graph names.
+and `tools/create-repos.sh` use the same graph names.
 
 ## Repository structure
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Mail each student their GraphDB login, one personal message per row, from
+"""Mail each user their GraphDB login, one personal message per row, from
 an account in Mail.app (macOS).
 
 Input is the CSV exported from the users sheet: semicolon- or comma-separated,
@@ -9,9 +9,9 @@ Rows without an email address are skipped.
 By default the messages are only created as drafts, so they can be checked in
 Mail before anything is sent. Pass --send to send them.
 
-  ./tools/mail-student-users.py users.csv          # drafts
-  ./tools/mail-student-users.py users.csv --send
-  ./tools/mail-student-users.py users.csv --list-only      # no Mail at all
+  ./tools/mail-users.py users.csv          # drafts
+  ./tools/mail-users.py users.csv --send
+  ./tools/mail-users.py users.csv --list-only      # no Mail at all
 
 Keep the CSV out of git: it contains passwords.
 """
@@ -85,7 +85,7 @@ def main():
     p.add_argument("--sender", default="Trond Aalberg <tronaa@oslomet.no>",
                    help="From address, which selects the Mail account")
     p.add_argument("--url", default="http://dijon.idi.ntnu.no/graphdb/repositories",
-                   help="Address up to the repository; each student's own "
+                   help="Address up to the repository; each user's own "
                         "repository is appended")
     p.add_argument("--subject", default=SUBJECT)
     p.add_argument("--signature", default="Trond")

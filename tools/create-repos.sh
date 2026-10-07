@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 #
 # Create and initialize a set of EntEdit repositories on any GraphDB server,
-# one per student group: <prefix>01, <prefix>02, ... <prefix>NN.
+# one per group: <prefix>01, <prefix>02, ... <prefix>NN.
 #
 # Each repository is created from the same configuration used by the Docker
 # initialization, then loaded with the vocabulary/type files and the Lucene
 # full-text connector definitions.
 #
-#   ./tools/create-student-repos.sh -e http://localhost:7200 -p VBINF6000-H26- -n 12
+#   ./tools/create-repos.sh -e http://localhost:7200 -p VBINF6000-H26- -n 12
 #
 # Run --help for all options.
 
@@ -40,7 +40,7 @@ INIT_MARKER_SUBJ="urn:entedit:init"
 
 usage() {
   cat <<'EOF'
-Usage: create-student-repos.sh -e <endpoint> -p <prefix> -n <count> [options]
+Usage: create-repos.sh -e <endpoint> -p <prefix> -n <count> [options]
 
 Required:
   -e, --endpoint URL   GraphDB SPARQL endpoint or base URL. Both forms work:
@@ -54,7 +54,7 @@ Options:
   -w, --width N        Zero-padding width for group numbers (default: 2 -> 01..09)
   -a, --access LEVEL   Unauthenticated ("public") access to grant on the new
                        repositories when GraphDB security is enabled:
-                         write  read + write, students need no login (default)
+                         write  read + write, users need no login (default)
                          read   read only
                          none   do not touch free-access settings
   -U, --user NAME      GraphDB admin user (env: GRAPHDB_USER)
@@ -65,8 +65,8 @@ Options:
   -h, --help           Show this help
 
 Examples:
-  ./tools/create-student-repos.sh -e http://localhost:7200 -p VBINF6000-H26- -n 12
-  ./tools/create-student-repos.sh -e https://graphdb.example.org -p KURS- -n 25 \
+  ./tools/create-repos.sh -e http://localhost:7200 -p VBINF6000-H26- -n 12
+  ./tools/create-repos.sh -e https://graphdb.example.org -p KURS- -n 25 \
       -U admin -P secret --access read
 EOF
 }
@@ -455,7 +455,7 @@ if [ "${#FAILED[@]}" -gt 0 ]; then
   exit 1
 fi
 log ""
-log "SPARQL endpoints for the students:"
+log "SPARQL endpoints for the groups:"
 for repo in "${REPOS[@]}"; do
   log "  ${BASE_URL}/repositories/${repo}"
 done
