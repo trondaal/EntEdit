@@ -44,10 +44,16 @@ Usage:
   tools/prune-rda-vocabulary.py --check         # also verifies the entailments
   tools/prune-rda-vocabulary.py --out DIR
   tools/prune-rda-vocabulary.py --languages en,no,sv   # also keep Swedish
+  tools/prune-rda-vocabulary.py --nquads              # also build/types-pruned.nq
 
 Install the result like the normal vocabularies, into a repository whose
 rda_vocabulary graph is empty:
   tools/install-vocabularies.sh -e <endpoint> -U <user> --types build/types-pruned
+
+or, for a first bulk load together with large data (GraphDB stopped), write it
+as N-Quads with each folder in its named graph and load both in one run:
+  tools/prune-rda-vocabulary.py --nquads
+  importrdf preload -c <repository config> build/types-pruned.nq <data files>
 """
 import argparse
 import re
@@ -62,6 +68,8 @@ ROOT = Path(__file__).resolve().parent.parent
 LANGUAGES = ("en", "no")
 # Predicates to drop from the pruned copy: the rows marked "remove"
 PREDICATES = Path(__file__).resolve().parent / "prune-rda-predicates.csv"
+# Named graph of each folder: the same names as tools/install-vocabularies.sh and the Docker init
+GRAPH_PREFIX = "http://oslomet.no/abi/graph/"
 RDFS = "http://www.w3.org/2000/01/rdf-schema#"
 OWL = "http://www.w3.org/2002/07/owl#"
 SUB, INV, EQ = RDFS + "subPropertyOf", OWL + "inverseOf", OWL + "equivalentProperty"
@@ -168,6 +176,36 @@ def entailed(p: str, sup, inv, within: set[str]) -> set[tuple[str, int]]:
     return {(q, d) for q, d in seen if q in within and q != p} | set()
 
 
+def write_nquads(types_dir: Path, target: Path, graph_prefix: str) -> None:
+    """Write every file under `types_dir` as N-Quads into one file, each folder in the named graph
+    <graph_prefix><folder>, so that vocabularies and data can be loaded in one importrdf run.
+    N-Triples files are converted line by line; Turtle and RDF/XML files are parsed with rdflib."""
+    blank = re.compile(r"_:([A-Za-z0-9_.-]+)")
+    statements = 0
+    with open(target, "w", encoding="utf-8") as out:
+        for n, path in enumerate(sorted(p for p in types_dir.rglob("*") if p.suffix in (".nt", ".ttl", ".rdf"))):
+            folder = path.relative_to(types_dir).parts[0]
+            graph = f"<{graph_prefix}{folder}>"
+            if path.suffix == ".nt":
+                lines = (line for line in open(path, encoding="utf-8") if TRIPLE.match(line))
+            else:
+                try:
+                    import rdflib
+                except ImportError:
+                    sys.exit("--nquads needs rdflib for Turtle and RDF/XML files: pip install rdflib")
+                g = rdflib.Graph().parse(path, format="turtle" if path.suffix == ".ttl" else "xml")
+                lines = g.serialize(format="nt").splitlines()
+            for line in lines:
+                m = TRIPLE.match(line)
+                if not m:
+                    continue
+                # blank node labels are only unique within a file: make them unique in the combined file
+                triple = blank.sub(lambda b: f"_:f{n}x{b.group(1)}", line.strip()[:-1].rstrip())
+                out.write(f"{triple} {graph} .\n")
+                statements += 1
+    print(f"N-Quads: {statements:,} statements in {target}")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--types", type=Path, default=ROOT / "database/types", help="source vocabularies")
@@ -176,6 +214,12 @@ def main() -> int:
                     help=f"comma-separated languages of literals to keep (default: {','.join(LANGUAGES)})")
     ap.add_argument("--predicates", type=Path, default=PREDICATES,
                     help="CSV of predicates; those marked 'remove' are dropped (default: tools/prune-rda-predicates.csv)")
+    ap.add_argument("--nquads", nargs="?", type=Path, const=ROOT / "build/types-pruned.nq", metavar="FILE",
+                    help="also write the pruned copy as one N-Quads file, each folder in its named graph "
+                         "(default: build/types-pruned.nq), to load together with data in one importrdf run; "
+                         "needs rdflib for the Turtle and RDF/XML files")
+    ap.add_argument("--graph-prefix", default=GRAPH_PREFIX,
+                    help=f"prefix of the named graphs, as in install-vocabularies.sh (default: {GRAPH_PREFIX})")
     ap.add_argument("--check", action="store_true",
                     help="verify that every kept property entails the same kept properties as before")
     args = ap.parse_args()
@@ -256,6 +300,9 @@ def main() -> int:
     print(f"Left out: {dropped_predicate:,} statements with {len(drop)} predicates marked 'remove' in "
           f"{args.predicates.name}, {dropped_language:,} literals in languages other than {', '.join(sorted(languages))}")
     print(f"Written to {args.out}")
+
+    if args.nquads:
+        write_nquads(args.out, args.nquads, args.graph_prefix)
 
     if args.check:
         problems = 0

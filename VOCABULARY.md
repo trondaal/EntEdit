@@ -215,6 +215,18 @@ python3 tools/prune-rda-vocabulary.py --check
 ./tools/install-vocabularies.sh -e <endpoint> -U <user> --types build/types-pruned
 ```
 
+For a first bulk load of large data with GraphDB's offline `importrdf preload`,
+the vocabularies and the data should go in together, so that inference runs once
+during the load. `--nquads` also writes the pruned copy as one N-Quads file,
+`build/types-pruned.nq`, with each folder in the same named graph as above
+(`http://oslomet.no/abi/graph/<folder>`; `--graph-prefix` to change). It needs
+`rdflib` for the Turtle and RDF/XML files. With GraphDB stopped:
+
+```bash
+python3 tools/prune-rda-vocabulary.py --check --nquads
+importrdf preload -c docker/graphdb/repositories/EntEdit/config.ttl build/types-pruned.nq <data files>
+```
+
 Data using RDA properties outside the kept set gets no property inference in such
 a repository. Run the script again after changing the profile or the app's
 queries, so that new properties are kept.
