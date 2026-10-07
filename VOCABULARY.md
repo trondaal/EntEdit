@@ -162,6 +162,40 @@ anything in the RDA Registry or the other source vocabularies. The profile only
 the registry lacks (mainly Norwegian), and the few domains and ranges it leaves
 open.
 
+### 2.2.1 A pruned registry for large repositories
+
+With `rdfsplus-optimized`, every statement with an RDA property also entails all
+its super-properties and inverses. The registry gives each property a constrained
+and an unconstrained version under a deep hierarchy (up to the RDA Entity
+elements), so one title or link entails 10–25 further statements. That is
+harmless for a few thousand records, but a full ISFDB conversion (about 51 million
+statements) would get about 527 million inferred ones.
+
+`tools/prune-rda-vocabulary.py` writes a copy of `database/types` to
+`build/types-pruned/` (not under version control) in which only the registry's
+property hierarchy is reduced to the properties EntEdit uses: those named in the
+profile, the app's queries, the search connectors and `database/sparql`, with
+their inverses. Each kept property gets a direct `rdfs:subPropertyOf` to every kept
+property it reaches in the registry, so the entailments EntEdit sees are
+unchanged (`--check` verifies this); `owl:inverseOf` is kept between kept
+properties; labels, definitions, domains, ranges, classes, the term vocabularies
+and the profile are copied unchanged. For the full ISFDB conversion this brings
+the inferred statements down to about 38 million.
+
+`database/types` itself is never changed, and the normal installation (the
+Docker image and `install-vocabularies.sh` without options) still loads the
+registry as published. To use the pruned copy, install it into a repository whose
+`rda_vocabulary` graph is empty:
+
+```bash
+python3 tools/prune-rda-vocabulary.py --check
+./tools/install-vocabularies.sh -e <endpoint> -U <user> --types build/types-pruned
+```
+
+Data using RDA properties outside the kept set gets no property inference in such
+a repository. Run the script again after changing the profile or the app's
+queries, so that new properties are kept.
+
 ### 2.3 What the profile adds
 
 - **Norwegian labels (the bulk of it).** The registry has no Norwegian labels
