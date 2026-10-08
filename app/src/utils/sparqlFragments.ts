@@ -9,12 +9,15 @@
  * 1. Label in the selected language
  * 2. Label without language tag (language-neutral)
  * 3. Label in the fallback language
+ * 4. With `anyLanguage`, any other label, whatever its language (the last
+ *    step before showing the URI; the pick among several is arbitrary)
  *
  * @param subject - The SPARQL variable for the subject (e.g., "?property", "?entity")
  * @param language - The primary language code (e.g., "en", "no")
  * @param fallbackLanguage - The fallback language code (e.g., "en", "no")
  * @param labelVar - The base name for the label variable (default: "label")
  * @param useLanguageMatches - Whether to use LANGMATCHES for chosen language (default: true)
+ * @param anyLanguage - Whether to end with any label in any language (default: false)
  * @returns SPARQL fragment as a string
  *
  * @example
@@ -29,6 +32,7 @@ export const createLanguageFallbackFragment = (
   fallbackLanguage: string,
   labelVar: string = "label",
   useLanguageMatches: boolean = true,
+  anyLanguage: boolean = false,
 ): string => {
   const chosenFilter = useLanguageMatches
     ? `FILTER(LANGMATCHES(LANG(?${labelVar}_chosen), "${language}")) .`
@@ -49,7 +53,10 @@ export const createLanguageFallbackFragment = (
             ${subject} rdfs:label ?${labelVar}_fallback .
             FILTER(LANG(?${labelVar}_fallback) = "${fallbackLanguage}") .
           }
-          BIND(COALESCE(?${labelVar}_chosen, ?${labelVar}_none, ?${labelVar}_fallback) AS ?${labelVar})`;
+${anyLanguage ? `          OPTIONAL {
+            ${subject} rdfs:label ?${labelVar}_any .
+          }
+` : ""}          BIND(COALESCE(?${labelVar}_chosen, ?${labelVar}_none, ?${labelVar}_fallback${anyLanguage ? `, ?${labelVar}_any` : ""}) AS ?${labelVar})`;
 };
 
 /**

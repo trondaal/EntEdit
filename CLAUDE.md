@@ -123,6 +123,9 @@ EntEdit/
 **useEntityQueries.ts** - Entity listing, pagination, and counts:
 - `useEntitiesByClass` / `useInfiniteEntitiesByClass` / `useEntityCountByClass`
 - `useEntitiesByRange` / `useInfiniteEntitiesByRange` / `useEntityCountByRange`
+- the infinite lists and the counts use the `entitiesIndex` connector when
+  `useEntityIndexAvailable` finds it built and the class is one of
+  `INDEXED_CLASSES`, and the SPARQL queries otherwise (see `entityList.ts`)
 
 **useRelationshipQueries.ts** - WEMI and agent relationship properties:
 - `useWEMIProperties` / `useAgentProperties`
@@ -161,6 +164,20 @@ EntEdit/
   link fields, a work without expressions) falls back to the label as text
   (`findHits`, `textQueryFor`). Following a link clears the filters; removing the
   chip or typing returns to a plain search
+- `entityList.ts` - the editor's entity lists through `entitiesIndex`
+  (`database/lucene_connectors/entities_index.sparql`: fields `label`, `sortLabel`,
+  `rdfType`, over the editor's classes). The index only decides which 50 entities
+  a page holds and in what order (`lucene:orderBy "sortLabel"`, `lucene:totalHits`
+  for counts); the labels come from a SPARQL lookup for those 50, so they follow
+  the UI language and switching needs no reindexing. The lookup ends with *any*
+  label (`createLanguageFallbackFragment(…, anyLanguage)`), so an entity with a
+  label in some other language is never shown by its URI. SPARQL fallback when the
+  connector is missing: an absent connector gives *no rows*, not an error, so
+  availability is read from `connectorStatus`. Limits: `sortLabel` must be
+  single-valued (several labels → one of them, arbitrary; case-sensitive byte
+  order), the filter matches word beginnings in every language rather than any
+  substring, and entities without a label sort first. A new editor class must be
+  added to the connector's `types` and to `INDEXED_CLASSES`; unit-tested
 - `wemiQueries.ts` - work/expression/manifestation detail queries shared by the search
   pages and the expandable lists under a result, built around a *scope* pattern
 - `searchFilters.ts` - search category filters as Lucene clauses (OR within a

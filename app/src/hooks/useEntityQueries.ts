@@ -6,6 +6,16 @@ import {
 } from "../utils/sparqlFragments";
 import { sanitizeSparqlUri, escapeSparqlLiteral } from "../utils/labelUtils";
 import { termFromBinding, termKey } from "../utils/rdfTerms";
+import {
+  ENTITY_INDEX_STATUS_QUERY,
+  buildEntityCountQuery,
+  buildEntityPageQuery,
+  buildPageLabelsQuery,
+  isBuilt,
+  isIndexedClass,
+  withLabels,
+  type ListedEntity,
+} from "../utils/entityList";
 import type { StoredTerm } from "../utils/entityUpdate";
 import type { SparqlEndpointConfig, OrderedValue } from "../types/sparql";
 
@@ -172,6 +182,60 @@ export const useEntityQuery = (
   });
 };
 
+/**
+ * Whether the repository has the `entitiesIndex` connector (see
+ * `utils/entityList.ts`). Without it the lists fall back to sorting in
+ * SPARQL, which is correct but slow on a large repository. Failing to ask
+ * counts as "no index".
+ */
+export const useEntityIndexAvailable = (config: SparqlEndpointConfig) =>
+  useQuery({
+    queryKey: ["entity-index-available", config.url],
+    queryFn: async ({ signal }) => {
+      try {
+        const response = await new SparqlClient(config).query(ENTITY_INDEX_STATUS_QUERY, { signal });
+        return isBuilt(response.results.bindings[0]?.status?.value);
+      } catch {
+        return false;
+      }
+    },
+    enabled: !!config.url,
+    staleTime: 5 * 60 * 1000,
+  });
+
+/** One page of a class's entities from the index: its order, the labels of the chosen language. */
+const fetchIndexedPage = async (
+  client: SparqlClient,
+  classUri: string,
+  language: string,
+  filter: string,
+  offset: number,
+  signal?: AbortSignal,
+): Promise<ListedEntity[]> => {
+  const hits = await client.query(
+    buildEntityPageQuery(classUri, filter, ENTITIES_PAGE_SIZE, offset),
+    { signal },
+  );
+  const uris = hits.results.bindings.map((binding) => binding.entity.value);
+  if (uris.length === 0) return [];
+  const labelRows = await client.query(buildPageLabelsQuery(uris, language), { signal });
+  const labels = new Map<string, string>();
+  for (const binding of labelRows.results.bindings) {
+    if (binding.label?.value) labels.set(binding.entity.value, binding.label.value);
+  }
+  return withLabels(uris, labels);
+};
+
+const fetchIndexedCount = async (
+  client: SparqlClient,
+  classUri: string,
+  filter: string,
+  signal?: AbortSignal,
+): Promise<number> => {
+  const response = await client.query(buildEntityCountQuery(classUri, filter), { signal });
+  return parseInt(response.results.bindings[0]?.total?.value || "0", 10);
+};
+
 export const useEntitiesByClass = (
   config: SparqlEndpointConfig,
   classUri: string,
@@ -188,7 +252,7 @@ export const useEntitiesByClass = (
         SELECT DISTINCT ?entity (SAMPLE(?label) AS ?label)
         WHERE {
           ?entity a <${sanitizeSparqlUri(classUri)}> .
-${createLanguageFallbackFragment("?entity", language, fallbackLanguage)}
+${createLanguageFallbackFragment("?entity", language, fallbackLanguage, "label", true, true)}
 
         }
         GROUP BY ?entity
@@ -216,6 +280,8 @@ export const useInfiniteEntitiesByClass = (
   language: string = "en",
   filter: string = "",
 ) => {
+  const available = useEntityIndexAvailable(config).data;
+  const indexed = available === true && isIndexedClass(classUri);
   return useInfiniteQuery({
     queryKey: [
       "entities-by-class-infinite",
@@ -223,9 +289,13 @@ export const useInfiniteEntitiesByClass = (
       classUri,
       language,
       filter,
+      indexed,
     ],
     queryFn: async ({ pageParam = 0, signal }) => {
       const client = new SparqlClient(config);
+      if (indexed) {
+        return fetchIndexedPage(client, classUri, language, filter, pageParam, signal);
+      }
       const fallbackLanguage = getFallbackLanguage(language);
       const escapedFilter = filter ? escapeSparqlLiteral(filter.toLowerCase()) : "";
       const filterClause = escapedFilter
@@ -238,7 +308,7 @@ export const useInfiniteEntitiesByClass = (
         SELECT DISTINCT ?entity (SAMPLE(?label) AS ?label)
         WHERE {
           ?entity a <${sanitizeSparqlUri(classUri)}> .
-${createLanguageFallbackFragment("?entity", language, fallbackLanguage)}
+${createLanguageFallbackFragment("?entity", language, fallbackLanguage, "label", true, true)}
           ${filterClause}
         }
         GROUP BY ?entity
@@ -259,7 +329,7 @@ ${createLanguageFallbackFragment("?entity", language, fallbackLanguage)}
       if (lastPage.length < ENTITIES_PAGE_SIZE) return undefined;
       return lastPageParam + ENTITIES_PAGE_SIZE;
     },
-    enabled: !!config.url && !!classUri,
+    enabled: !!config.url && !!classUri && available !== undefined,
     placeholderData: (prev) => prev,
   });
 };
@@ -274,6 +344,8 @@ export const useEntityCountByClass = (
   language: string = "en",
   filter: string = "",
 ) => {
+  const available = useEntityIndexAvailable(config).data;
+  const indexed = available === true && isIndexedClass(classUri);
   return useQuery({
     queryKey: [
       "entity-count-by-class",
@@ -281,9 +353,11 @@ export const useEntityCountByClass = (
       classUri,
       language,
       filter,
+      indexed,
     ],
     queryFn: async ({ signal }) => {
       const client = new SparqlClient(config);
+      if (indexed) return fetchIndexedCount(client, classUri, filter, signal);
 
       if (!filter) {
         // No filter: simple count without label resolution
@@ -306,14 +380,14 @@ export const useEntityCountByClass = (
         SELECT (COUNT(DISTINCT ?entity) AS ?count)
         WHERE {
           ?entity a <${sanitizeSparqlUri(classUri)}> .
-${createLanguageFallbackFragment("?entity", language, fallbackLanguage)}
+${createLanguageFallbackFragment("?entity", language, fallbackLanguage, "label", true, true)}
           FILTER(CONTAINS(LCASE(STR(?label)), "${escapedFilter}"))
         }
       `;
       const response = await client.query(query, { signal });
       return parseInt(response.results.bindings[0]?.count?.value || "0", 10);
     },
-    enabled: !!config.url && !!classUri,
+    enabled: !!config.url && !!classUri && available !== undefined,
     placeholderData: (prev) => prev,
   });
 };
@@ -336,7 +410,7 @@ export const useEntitiesByRange = (
         WHERE {
           ?entity a ?type .
           ?type rdfs:subClassOf* <${sanitizeSparqlUri(rangeUri)}> .
-${createLanguageFallbackFragment("?entity", language, fallbackLanguage, "label", false)}
+${createLanguageFallbackFragment("?entity", language, fallbackLanguage, "label", false, true)}
 
         }
         ORDER BY STR(?label) ?entity
@@ -369,6 +443,8 @@ export const useInfiniteEntitiesByRange = (
   language: string = "en",
   filter: string = "",
 ) => {
+  const available = useEntityIndexAvailable(config).data;
+  const indexed = available === true && isIndexedClass(rangeUri);
   return useInfiniteQuery({
     queryKey: [
       "entities-by-range-infinite",
@@ -376,9 +452,13 @@ export const useInfiniteEntitiesByRange = (
       rangeUri,
       language,
       filter,
+      indexed,
     ],
     queryFn: async ({ pageParam = 0, signal }) => {
       const client = new SparqlClient(config);
+      if (indexed) {
+        return fetchIndexedPage(client, rangeUri, language, filter, pageParam, signal);
+      }
       const fallbackLanguage = getFallbackLanguage(language);
       const escapedFilter = filter ? escapeSparqlLiteral(filter.toLowerCase()) : "";
       const filterClause = escapedFilter
@@ -393,7 +473,7 @@ export const useInfiniteEntitiesByRange = (
         WHERE {
           ?entity a ?type .
           ?type rdfs:subClassOf* <${sanitizeSparqlUri(rangeUri)}> .
-${createLanguageFallbackFragment("?entity", language, fallbackLanguage, "label", false)}
+${createLanguageFallbackFragment("?entity", language, fallbackLanguage, "label", false, true)}
           ${filterClause}
         }
         GROUP BY ?entity
@@ -413,7 +493,7 @@ ${createLanguageFallbackFragment("?entity", language, fallbackLanguage, "label",
       if (lastPage.length < ENTITIES_PAGE_SIZE) return undefined;
       return lastPageParam + ENTITIES_PAGE_SIZE;
     },
-    enabled: !!config.url && !!rangeUri,
+    enabled: !!config.url && !!rangeUri && available !== undefined,
     placeholderData: (prev) => prev,
   });
 };
@@ -427,6 +507,8 @@ export const useEntityCountByRange = (
   language: string = "en",
   filter: string = "",
 ) => {
+  const available = useEntityIndexAvailable(config).data;
+  const indexed = available === true && isIndexedClass(rangeUri);
   return useQuery({
     queryKey: [
       "entity-count-by-range",
@@ -434,9 +516,11 @@ export const useEntityCountByRange = (
       rangeUri,
       language,
       filter,
+      indexed,
     ],
     queryFn: async ({ signal }) => {
       const client = new SparqlClient(config);
+      if (indexed) return fetchIndexedCount(client, rangeUri, filter, signal);
 
       if (!filter) {
         const query = `
@@ -463,14 +547,14 @@ export const useEntityCountByRange = (
         WHERE {
           ?entity a ?type .
           ?type rdfs:subClassOf* <${sanitizeSparqlUri(rangeUri)}> .
-${createLanguageFallbackFragment("?entity", language, fallbackLanguage, "label", false)}
+${createLanguageFallbackFragment("?entity", language, fallbackLanguage, "label", false, true)}
           FILTER(CONTAINS(LCASE(STR(?label)), "${escapedFilter}"))
         }
       `;
       const response = await client.query(query, { signal });
       return parseInt(response.results.bindings[0]?.count?.value || "0", 10);
     },
-    enabled: !!config.url && !!rangeUri,
+    enabled: !!config.url && !!rangeUri && available !== undefined,
     placeholderData: (prev) => prev,
   });
 };

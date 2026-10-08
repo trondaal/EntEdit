@@ -48,8 +48,32 @@ PREFIX inst: <http://www.ontotext.com/connectors/lucene/instance#>
 INSERT DATA { inst:expressionsIndex :repairConnector "" }
 ```
 
-The same works for `inst:manifestationsIndex` and `inst:worksIndex`. GraphDB logs how many entities it
-reindexed.
+The same works for `inst:manifestationsIndex`, `inst:worksIndex` and `inst:entitiesIndex`. GraphDB logs how many
+entities it reindexed.
+
+**The editor's entity lists on a large repository.** `entitiesIndex`
+(`database/lucene_connectors/entities_index.sparql`) lets the editor sort, page,
+count and filter the entities of a class inside the index; without it the lists
+are sorted with SPARQL, which took about 25 s at 1.5 million expressions. The
+editor uses the index when it exists and is `BUILT`, and falls back to SPARQL
+otherwise, so a repository created before the index existed works as before.
+Add it to an existing repository by running the file in the Workbench's SPARQL
+editor (or `tools/install-vocabularies.sh -e <endpoint> --skip-vocabularies`);
+the first build reads every label and takes some minutes at a million entities.
+Details that follow from the index:
+
+- The filter box matches the *beginning of words* of the label (every word typed
+  must begin one), not any substring, and searches the labels in every language.
+- The order comes from one label per entity, compared as plain text, upper case
+  before lower case, so "de Gaulle" sorts after "Zebra". An entity with labels in
+  several languages is placed by one of them (not necessarily the one shown). The
+  labels shown follow the language chosen in the application: selected language,
+  then no language tag, then the other of English/Norwegian, then any label, and
+  the URI only for an entity without a label.
+- It indexes the classes in the connector's `types` (work, expression,
+  manifestation, item, agent, person, corporate body, family). A class added to
+  the editor's profile needs adding there, and the connector recreating, to get
+  an indexed list; other classes keep using SPARQL.
 
 GraphDB Workbench on port 7200 is for database administration; it is not the
 address EntEdit uses. The endpoint stays

@@ -574,6 +574,11 @@ works related to it and its expressions, but no manifestations. `workType` and `
 depend on requires re-running the connector `.sparql` files on existing
 repositories.
 
+**Entity lists.** A fourth connector, `entitiesIndex`, serves the editor's lists
+rather than the search: `label` (analysed, all languages), `sortLabel` (one
+unanalysed label, the sort key) and `rdfType` (the class IRIs, inferred
+superclasses included), over the classes in its `types`. See ADVANCED.md.
+
 ## 7. Extending the vocabulary
 
 **Show an existing RDA property in the editor.** Add one line to

@@ -1,0 +1,83 @@
+PREFIX :<http://www.ontotext.com/connectors/lucene#>
+PREFIX inst:<http://www.ontotext.com/connectors/lucene/instance#>
+# Conditional drop: only fires if the connector already exists.
+INSERT { inst:entitiesIndex :dropConnector "" }
+WHERE { inst:entitiesIndex :connectorStatus ?status }
+;
+PREFIX :<http://www.ontotext.com/connectors/lucene#>
+PREFIX inst:<http://www.ontotext.com/connectors/lucene/instance#>
+# The entity lists of the editor: every entity of the classes the editor
+# offers (work, expression, manifestation, item, person, corporate body,
+# agent, family), sorted, paged, counted and searched by label inside the
+# index. Without it the editor sorts every entity of a class with SPARQL,
+# which takes tens of seconds at a million entities; with it a page takes
+# a few hundredths of a second.
+# label holds the labels in every language, analyzed, for the search box
+# (every word, or a word beginning); sortLabel the same labels unanalyzed,
+# for the order of the list. rdfType holds the class IRIs, so one query
+# `+rdfType:"<class>"` lists a class; types below only decides what is
+# indexed, so a class added to the editor must be added here too.
+# The labels shown in the list are not read from the index: the editor
+# looks them up for the 50 entities of a page, in the language chosen in the
+# application, so switching language needs no new index.
+INSERT DATA {
+	inst:entitiesIndex :createConnector '''
+{
+  "fields": [
+    {
+      "fieldName": "label",
+      "propertyChain": [
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "indexed": true,
+      "stored": false,
+      "analyzed": true,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": false
+    },
+    {
+      "fieldName": "sortLabel",
+      "propertyChain": [
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "indexed": true,
+      "stored": false,
+      "analyzed": false,
+      "multivalued": false,
+      "ignoreInvalidValues": false,
+      "facet": false
+    },
+    {
+      "fieldName": "rdfType",
+      "propertyChain": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+      ],
+      "indexed": true,
+      "stored": false,
+      "analyzed": false,
+      "multivalued": true,
+      "ignoreInvalidValues": false,
+      "facet": false
+    }
+  ],
+  "languages": [],
+  "types": [
+    "http://rdaregistry.info/Elements/c/C10001",
+    "http://rdaregistry.info/Elements/c/C10002",
+    "http://rdaregistry.info/Elements/c/C10003",
+    "http://rdaregistry.info/Elements/c/C10004",
+    "http://rdaregistry.info/Elements/c/C10005",
+    "http://rdaregistry.info/Elements/c/C10006",
+    "http://rdaregistry.info/Elements/c/C10007",
+    "http://rdaregistry.info/Elements/c/C10008"
+  ],
+  "readonly": false,
+  "detectFields": false,
+  "importGraph": false,
+  "skipInitialIndexing": false,
+  "boostProperties": [],
+  "stripMarkup": false
+}
+''' .
+}
