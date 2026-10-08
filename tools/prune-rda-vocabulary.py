@@ -54,6 +54,9 @@ or, for a first bulk load together with large data (GraphDB stopped), write it
 as N-Quads with each folder in its named graph and load both in one run:
   tools/prune-rda-vocabulary.py --nquads
   importrdf preload -c <repository config> build/types-pruned.nq <data files>
+A preload does not run the reasoner: afterwards start GraphDB and run a reinfer once
+(INSERT DATA { [] <http://www.ontotext.com/owlim/system#reinfer> [] }), or the
+inverses and super-properties of the loaded data are missing (VOCABULARY.md, 2.2.1).
 """
 import argparse
 import re

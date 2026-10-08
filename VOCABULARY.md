@@ -219,8 +219,7 @@ python3 tools/prune-rda-vocabulary.py --check
 ```
 
 For a first bulk load of large data with GraphDB's offline `importrdf preload`,
-the vocabularies and the data should go in together, so that inference runs once
-during the load. `--nquads` also writes the pruned copy as one N-Quads file,
+`--nquads` also writes the pruned copy as one N-Quads file,
 `build/types-pruned.nq`, with each folder in the same named graph as above
 (`http://entedit.org/graph/<folder>`; `--graph-prefix` to change). It needs
 `rdflib` for the Turtle and RDF/XML files. With GraphDB stopped:
@@ -229,6 +228,29 @@ during the load. `--nquads` also writes the pruned copy as one N-Quads file,
 python3 tools/prune-rda-vocabulary.py --check --nquads
 importrdf preload -c docker/graphdb/repositories/EntEdit/config.ttl build/types-pruned.nq <data files>
 ```
+
+**A preload does not run the reasoner; run a reinfer afterwards.** The load is
+fast because nothing is inferred: on the ISFDB conversion (1.5 million
+expressions, 29 million explicit statements) the vocabulary and the data were in
+place, and the inverse of every link was still missing — 1.53 million
+`e rdaeo:P20231 w` and no `w rdawo:P10078 e`, 1.34 million `has author` and no `is
+author of` — although new statements written to the same repository were inferred
+correctly. Everything the editor reads through inference (a work's expressions, an
+agent's works) is empty until the inferences exist. Start GraphDB and run once,
+in the Workbench's SPARQL editor:
+
+```sparql
+INSERT DATA { [] <http://www.ontotext.com/owlim/system#reinfer> [] }
+```
+
+It recomputes the inferred statements for the whole repository and leaves the
+explicit data alone; on 29 million statements it took hours, so choose a quiet time
+and let it finish. Afterwards the repository held 54.9 million statements, 25.8
+million of them inferred. Check a pair with the counts of `?s <property> ?o` with
+and without inference (`infer=false`): the inverse property should show as many
+statements as the one it inverts. Loading through the Workbench or
+`tools/install-vocabularies.sh` (HTTP) runs the reasoner as it goes and needs no
+reinfer, at the price of a much slower load.
 
 Data using RDA properties outside the kept set gets no property inference in such
 a repository. Run the script again after changing the profile or the app's

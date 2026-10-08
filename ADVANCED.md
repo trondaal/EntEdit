@@ -398,8 +398,8 @@ is what makes an upgrade simple: **drop the graph you want replaced, run the scr
 again.** The script itself never deletes anything. A layer whose graph already has
 content is skipped, and `--merge` adds to it anyway (blank-node statements are then
 loaded a second time, so prefer dropping the graph). The connector queries drop and
-recreate the three search indexes, which take a while to rebuild on a large
-repository. `--skip-vocabularies` and `--skip-connectors` run one half only, and
+recreate the four indexes (three for the search, one for the editor's lists),
+which take a while to rebuild on a large repository. `--skip-vocabularies` and `--skip-connectors` run one half only, and
 `--dry-run` shows the plan.
 
 ```sparql
@@ -410,6 +410,12 @@ A repository installed before the vocabularies had graphs of their own holds the
 in the default graph. The script adds the named graphs and prints, for each layer, a
 `DELETE` that removes the old copy from the default graph once you are ready. Until
 then nothing is wrong: GraphDB shows a statement that is in two graphs only once.
+
+**After a bulk load with `importrdf preload`** the reasoner has not run: links
+exist, but their inverses and super-properties do not until you run a reinfer
+(`INSERT DATA { [] <http://www.ontotext.com/owlim/system#reinfer> [] }` in the
+Workbench; hours on tens of millions of statements). See "A pruned registry for
+large repositories" in [VOCABULARY.md](VOCABULARY.md#221-a-pruned-registry-for-large-repositories).
 
 Through the app's proxy the files can be large, which the proxy allows in web images after
 `1.0.21`; an older one answers 413, and the script then says to use GraphDB's

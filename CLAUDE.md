@@ -407,6 +407,14 @@ wherever values are listed:
 - The Lucene connector rejects bare query syntax (`(`, `"`, `:`, `AND`), so user
   input goes through `toLuceneQuery` (`utils/luceneQuery.ts`) before it is
   placed in `lucene:query`
+- `importrdf preload` does not run the reasoner: after a bulk load the explicit data and
+  the vocabulary are there, but no inverse or super-property statement is (on isfdb
+  1.53 M `e P20231 w` and no `w P10078 e`, while new writes were inferred correctly).
+  Everything the editor reads through inference stays empty until a one-off reinfer
+  (`INSERT DATA { [] <http://www.ontotext.com/owlim/system#reinfer> [] }`, hours at
+  29 M statements; it added 25.8 M inferred ones with the pruned vocabulary). The
+  search-result lines are unaffected, since they resolve inverses at query time
+  (`?inverse owl:inverseOf ?relationship`). VOCABULARY.md 2.2.1, ADVANCED.md
 - Schema property queries (`useRdfProperties`, `useRdfObjectProperties`, relationship hooks)
   run with inference and no JS-side deduplication — stale/duplicate annotation triples
   (e.g., multiple `entedit:order` values) cause duplicate properties in the editor UI;
