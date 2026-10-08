@@ -26,26 +26,26 @@ export const INDEXED_CLASSES: ReadonlySet<string> = new Set(
 
 export const isIndexedClass = (classUri: string): boolean => INDEXED_CLASSES.has(classUri);
 
-const LUCENE_SPECIAL = /[+\-&|!(){}[\]^"~*?:\\/]/g;
-
 /**
  * The text of the filter box as a Lucene query on the label field: every
  * word is required and the last may be unfinished, so "dra" finds "Dragon"
- * while typing. Words without a letter or digit are left out. Returns an
- * empty string for an empty filter.
+ * while typing. Empty for an empty filter.
+ *
+ * The index holds the words of a label as the analyzer cut it, so the text
+ * is cut the same way: at anything but a letter, a digit, or an apostrophe
+ * or full stop inside a word. "High-Rise" becomes `high` and `rise*`; one
+ * term `high\-rise*` matches nothing, because a wildcard term is not
+ * analyzed and no word of the label is "high-rise". Nothing Lucene treats as
+ * syntax survives the cut, so no escaping is needed.
  */
 export const toLabelQuery = (filter: string): string => {
   const words = filter
-    .trim()
     .toLowerCase()
-    .split(/\s+/)
-    .map((word) => word.replace(/\*+$/, ""))
+    .split(/[^\p{L}\p{N}'.]+/u)
+    .map((word) => word.replace(/^['.]+|['.]+$/g, ""))
     .filter((word) => /[\p{L}\p{N}]/u.test(word));
   return words
-    .map((word, index) => {
-      const escaped = word.replace(LUCENE_SPECIAL, (c) => `\\${c}`);
-      return `+label:${escaped}${index === words.length - 1 ? "*" : ""}`;
-    })
+    .map((word, index) => `+label:${word}${index === words.length - 1 ? "*" : ""}`)
     .join(" ");
 };
 

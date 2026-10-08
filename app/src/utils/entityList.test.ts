@@ -22,12 +22,23 @@ describe("toLabelQuery", () => {
     expect(toLabelQuery("/ –")).toBe("");
   });
 
-  it("escapes Lucene syntax and keeps accented letters", () => {
-    expect(toLabelQuery('Ørret (saga"')).toBe("+label:ørret +label:\\(saga\\\"*");
+  it("leaves no Lucene syntax in the query and keeps accented letters", () => {
+    expect(toLabelQuery('Ørret (saga" AND:x')).toBe("+label:ørret +label:saga +label:and +label:x*");
   });
 
   it("does not double a typed wildcard", () => {
     expect(toLabelQuery("dra*")).toBe("+label:dra*");
+  });
+
+  it("cuts words at hyphens and other punctuation, as the index does", () => {
+    expect(toLabelQuery("High-Rise")).toBe("+label:high +label:rise*");
+    expect(toLabelQuery("high-ri")).toBe("+label:high +label:ri*");
+    expect(toLabelQuery("Title / Author. – English")).toBe("+label:title +label:author +label:english*");
+  });
+
+  it("keeps an apostrophe or full stop inside a word", () => {
+    expect(toLabelQuery("O'Brien")).toBe("+label:o'brien*");
+    expect(toLabelQuery("J.R.R. Tolkien")).toBe("+label:j.r.r +label:tolkien*");
   });
 });
 
