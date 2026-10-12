@@ -404,6 +404,9 @@ wherever values are listed:
 - With inference, `skos:altLabel` and `skos:prefLabel` count as `rdfs:label`;
   read display labels from explicit statements (`FROM <…/explicit>`) or an
   alternative label can win (`useFacetLabels`)
+- The Test connection query must stay cheap: `COUNT(*)` over all statements took 51 s on
+  58 M statements (and a COUNT always returns a row, so an empty repository passed as "has
+  data"); `SELECT ?s WHERE { ?s ?p ?o } LIMIT 1` (`CONNECTION_TEST_QUERY`) answers at once
 - The Lucene connector rejects bare query syntax (`(`, `"`, `:`, `AND`), so user
   input goes through `toLuceneQuery` (`utils/luceneQuery.ts`) before it is
   placed in `lucene:query`
@@ -504,10 +507,15 @@ in `docker-compose.dev.yml`) and publish from `docker-compose.yml` alone.
 Workbench's `<base href="/">` to `/graphdb/` (its relative assets 404 otherwise,
 giving an unstyled page), and the separate `/graphdb/repositories/` location that
 is proxied untouched — the rewrite requires `Accept-Encoding ""`, and SPARQL
-results should stay compressed. The graph-visualization link and its repository
-pre-selection (`prepareWorkbenchRepository` in `graphUtils.ts`) only work when
-GraphDB shares the app's origin; cross-origin deployments fall back to the user
-selecting a repository in the Workbench.
+results should stay compressed. The graph-visualization link names its repository
+(`&repositoryId=<id>` from `getWorkbenchUrl`), which connects a GraphDB 11 Workbench
+whatever the origin; the pre-selection through localStorage (`prepareWorkbenchRepository`
+in `graphUtils.ts`, which writes both the GraphDB 10 keys `ls.repository-id`/`-location`
+and GraphDB 11's `ontotext.gdb.repository.selectedRepository`) only works when GraphDB
+shares the app's origin, so a cross-origin GraphDB 10 Workbench falls back to the user
+selecting a repository. Behind a proxy the Workbench itself must be proxied under the same
+path as the SPARQL endpoint (the link is `<endpoint minus /repositories/<id>>/graphs-…`)
+with its `<base href="/">` rewritten, as nginx.conf does.
 
 The compose file reads three optional variables: `ENTEDIT_PORT`, `GRAPHDB_PORT` and
 `GDB_HEAP_SIZE` (passed to the GraphDB container; empty keeps GraphDB's defaults: a

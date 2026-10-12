@@ -19,6 +19,14 @@ export const sameConnection = (
   (a.username ?? "") === (b.username ?? "") &&
   (a.password ?? "") === (b.password ?? "");
 
+/**
+ * Asks for one statement, which any repository answers at once. The test used
+ * to count every statement: 51 s at 58 million statements, nearly the
+ * repository's 60 s query limit, and a COUNT always returns a row, so an
+ * empty repository passed as "has data".
+ */
+export const CONNECTION_TEST_QUERY = "SELECT ?s WHERE { ?s ?p ?o } LIMIT 1";
+
 /** Runs a trivial query against the endpoint and explains any failure. */
 export async function testEndpointConnection(
   config: SparqlEndpointConfig,
@@ -29,9 +37,7 @@ export async function testEndpointConnection(
   }
 
   try {
-    const response = await new SparqlClient(config).query(
-      "SELECT (COUNT(*) as ?count) WHERE { ?s ?p ?o . } LIMIT 1",
-    );
+    const response = await new SparqlClient(config).query(CONNECTION_TEST_QUERY);
 
     if (response.results.bindings.length > 0) {
       return {
