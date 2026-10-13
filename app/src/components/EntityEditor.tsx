@@ -34,14 +34,18 @@ import ObjectPropertyGroup from "./ObjectPropertyGroup";
 import { isValidUri, formatLabel, generateEntityUri } from "../utils/labelUtils";
 import { useTurtleExportQuery } from "../hooks/useTurtleExportQuery";
 import { EntityLabelsProvider, useEntityLabels, type EntityLabelsMap } from "../hooks/useEntityLabels";
+import { PropertyViewContext, usePropertyViewState } from "../hooks/usePropertyView";
 import { useEntityQuery } from "../hooks/useEntityQueries";
 import { useEntityMutations } from "../hooks/useEntityMutations";
 import type { CatalogingPreferences } from "../utils/catalogingStyle";
 import { pruneDuplicateValues, pruneEmptyValues } from "../utils/entityUpdate";
+import { visibleCount } from "../utils/propertyView";
 
 // Stable empty map reference to avoid re-rendering context consumers while the
 // batched labels query is in flight or returns no URIs.
 const EMPTY_ENTITY_LABELS: EntityLabelsMap = new Map();
+
+const RDF_TYPE = "http://www.w3.org/1999/02/22-rdf-syntax-ns#type";
 
 interface EntityEditorProps {
   config: SparqlEndpointConfig;
@@ -212,20 +216,45 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     return uris;
   }, [objectPropertySections]);
 
-  // Collect all URI-typed object property values so we can batch-fetch their
-  // rdfs:label in a single SPARQL query instead of firing one query per value
-  // (the old pattern in ObjectPropertyValue). The resolved map is provided
-  // through EntityLabelsProvider and consumed by ObjectPropertyValue.
+  // Which values the user sees: collapsed properties and cut lists (see
+  // utils/propertyView.ts). Read by every property list through the context.
+  const propertyView = usePropertyViewState();
+
+  // Collect the URI-typed object property values on screen so we can batch-fetch
+  // their rdfs:label in a single SPARQL query instead of firing one query per
+  // value (the old pattern in ObjectPropertyValue). Only the values shown are
+  // asked for: an author with thousands of works would otherwise send them all
+  // on every load, whatever is collapsed. The resolved map is provided through
+  // EntityLabelsProvider and consumed by ObjectPropertyValue.
   const relatedEntityUris = useMemo(() => {
     const uris: string[] = [];
     for (const [property, values] of Object.entries(entityData)) {
       const isObjectProp = objectPropertyUris.has(property);
-      for (const v of values) {
+      const visible = visibleCount(values.length, propertyView.shown.get(property), {
+        isEditing,
+        collapsed: propertyView.collapsed.has(property),
+      });
+      for (const v of values.slice(0, visible)) {
         if ((isObjectProp || v.isUri) && v.value) uris.push(v.value);
       }
     }
     return uris;
-  }, [entityData, objectPropertyUris]);
+  }, [entityData, objectPropertyUris, propertyView.shown, propertyView.collapsed, isEditing]);
+
+  // "Hide all values" collapses every property that has values; "show all" undoes
+  // whatever was collapsed, one by one or together.
+  const collapsibleProperties = useMemo(
+    () =>
+      Object.entries(entityData)
+        .filter(([property, values]) => values.length > 0 && property !== RDF_TYPE)
+        .map(([property]) => property),
+    [entityData],
+  );
+  const { collapsed: collapsedProperties, collapseAll, expandAll } = propertyView;
+  const handleToggleCollapseAll = useCallback(() => {
+    if (collapsedProperties.size > 0) expandAll();
+    else collapseAll(collapsibleProperties);
+  }, [collapsedProperties, collapseAll, expandAll, collapsibleProperties]);
 
   const { data: relatedEntityLabels } = useEntityLabels(
     config,
@@ -641,6 +670,9 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         onExportTurtle={handleExportTurtle}
         isDirty={isDirty}
         saveBlockedReason={saveBlockedReason}
+        canCollapse={!isEditing && !!entityUri && collapsibleProperties.length > 0}
+        anyCollapsed={collapsedProperties.size > 0}
+        onToggleCollapseAll={handleToggleCollapseAll}
         onEditIdentity={
           preferences.showIdentifier && preferences.showLabels
             ? undefined
@@ -685,6 +717,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           onEditLabels={handleEditLabels}
         />
 
+        <PropertyViewContext.Provider value={propertyView}>
         <DataPropertiesSection
           entityData={entityData}
           showInferredMarks={preferences.showInferredMarks}
@@ -725,6 +758,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
             />
           ))}
         </EntityLabelsProvider>
+        </PropertyViewContext.Provider>
             </Box>
           </Box>
         </Tooltip>

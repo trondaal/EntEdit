@@ -22,6 +22,8 @@ import {
   LabelOutlined,
   Code,
   ArticleOutlined,
+  UnfoldLess,
+  UnfoldMore,
 } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 
@@ -46,6 +48,11 @@ interface EntityEditorHeaderProps {
   saveBlockedReason: string | null;
   /** Set when the cataloguing style keeps identifier or labels off the form. */
   onEditIdentity?: () => void;
+  /** Hide or show the values of every property: offered while reading an entity that has values. */
+  canCollapse?: boolean;
+  /** Some property is collapsed, so the button shows everything again instead of hiding everything. */
+  anyCollapsed?: boolean;
+  onToggleCollapseAll?: () => void;
 }
 
 const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
@@ -67,6 +74,9 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
   isDirty,
   saveBlockedReason,
   onEditIdentity,
+  canCollapse = false,
+  anyCollapsed = false,
+  onToggleCollapseAll,
 }) => {
   const { t } = useTranslation("entityEditor");
   const [menuAnchor, setMenuAnchor] = useState<null | HTMLElement>(null);
@@ -146,6 +156,18 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
             )}
           </>
         ) : (
+          <>
+          {canCollapse && onToggleCollapseAll && (
+            <Tooltip title={t(anyCollapsed ? "tooltips.expandAll" : "tooltips.collapseAll")}>
+              <IconButton
+                size="small"
+                onClick={onToggleCollapseAll}
+                aria-label={t(anyCollapsed ? "tooltips.expandAll" : "tooltips.collapseAll")}
+              >
+                {anyCollapsed ? <UnfoldMore /> : <UnfoldLess />}
+              </IconButton>
+            </Tooltip>
+          )}
           <Button
             variant="contained"
             size="small"
@@ -156,6 +178,7 @@ const EntityEditorHeader: React.FC<EntityEditorHeaderProps> = ({
           >
             {t("common:buttons.edit", { ns: "common" })}
           </Button>
+          </>
         )}
 
         {/* MoreVert always visible; disabled when no entity is selected */}

@@ -1,8 +1,8 @@
 import React, { useMemo } from "react";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import type { SparqlEndpointConfig, OrderedValue } from "../types/sparql";
 import ObjectPropertyValue from "./ObjectPropertyValue";
-import OrderableValueList from "./OrderableValueList";
+import PropertyValues from "./PropertyValues";
 
 interface ObjectPropertySectionProps {
   config: SparqlEndpointConfig;
@@ -38,11 +38,9 @@ const ObjectPropertySection: React.FC<ObjectPropertySectionProps> = ({
 
   return (
     <Box sx={{ mb: 2 }}>
-      <Typography variant="body2" color="text.secondary" sx={{ mb: 0.5 }}>
-        {propertyLabel}
-      </Typography>
-      <OrderableValueList
+      <PropertyValues
         propertyUri={propertyUri}
+        label={propertyLabel}
         itemIds={itemIds}
         isEditing={isEditing}
         onReorder={onReorderValues}
@@ -60,7 +58,7 @@ const ObjectPropertySection: React.FC<ObjectPropertySectionProps> = ({
             onRemove={() => onRemoveValue(index)}
           />
         )}
-      </OrderableValueList>
+      </PropertyValues>
     </Box>
   );
 };

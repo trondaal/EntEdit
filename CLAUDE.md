@@ -434,6 +434,17 @@ wherever values are listed:
 - `LabelManager` dialog uses `hideBackdrop`, `disableEnforceFocus`, `disableAutoFocus`,
   `disableRestoreFocus` to allow interaction with content behind it (non-modal)
 - Drag-and-drop reordering via @dnd-kit only shows controls when editing with 2+ values
+- Long value lists: every multi-valued property renders through `PropertyValues`, whose
+  heading (chevron, label, count) collapses the values and whose list is cut to the first
+  `INITIAL_VISIBLE` (5) with a "Show 50 more (N left)" button (`utils/propertyView.ts`,
+  unit-tested; a tail of two or fewer is shown rather than hidden). A header button hides or
+  shows all properties. The state lives in `usePropertyViewState` (provided by `EntityEditor`,
+  mounted afresh per entity) and applies to **reading only**: editing shows everything, because
+  a new value is appended at the end, empty rows and duplicate marks must be seen, and reordering
+  needs the whole list. The editor resolves labels only for the values on screen
+  (`relatedEntityUris`), so an author with 3,000 works does not send 3,000 URIs per load; the
+  heading keeps the chevron's width while editing so nothing moves between modes. Not applied
+  to the search-result lines (chips)
 - The form must not show edits that were not stored: empty rows and repeats of
   a value already recorded (same text and language — the same triple) are
   marked while editing and dropped once a save succeeds

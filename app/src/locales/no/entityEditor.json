@@ -32,7 +32,9 @@
     "languageOfValue": "Språket til denne verdien: {{lang}}",
     "requiredMissing": "Fyll inn {{fields}} før du lagrer",
     "valueLanguage": "Språk",
-    "noLanguage": "Uten språk"
+    "noLanguage": "Uten språk",
+    "collapseAll": "Skjul verdiene til alle egenskaper",
+    "expandAll": "Vis verdiene til alle egenskaper"
   },
   "messages": {
     "noLabel": "Ingen label",
@@ -109,5 +111,10 @@
       "copyFailed": "Kunne ikke kopiere til utklippstavlen",
       "errorMessage": "Feil ved henting av entitetsdata: {{message}}"
     }
+  },
+  "values": {
+    "collapse": "Skjul verdiene til {{property}}",
+    "expand": "Vis verdiene til {{property}}",
+    "showMore": "Vis {{count}} til ({{left}} igjen)"
   }
 }

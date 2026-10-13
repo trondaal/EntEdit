@@ -32,7 +32,9 @@
     "languageOfValue": "Language of this value: {{lang}}",
     "requiredMissing": "Enter {{fields}} before saving",
     "valueLanguage": "Language",
-    "noLanguage": "No language"
+    "noLanguage": "No language",
+    "collapseAll": "Hide the values of every property",
+    "expandAll": "Show the values of every property"
   },
   "messages": {
     "noLabel": "No label",
@@ -109,5 +111,10 @@
       "copyFailed": "Failed to copy to clipboard",
       "errorMessage": "Failed to fetch entity data: {{message}}"
     }
+  },
+  "values": {
+    "collapse": "Hide the values of {{property}}",
+    "expand": "Show the values of {{property}}",
+    "showMore": "Show {{count}} more ({{left}} left)"
   }
 }

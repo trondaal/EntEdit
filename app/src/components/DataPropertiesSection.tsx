@@ -14,7 +14,7 @@ import {
 import { Delete } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import type { RdfProperty, OrderedValue } from "../types/sparql";
-import OrderableValueList from "./OrderableValueList";
+import PropertyValues from "./PropertyValues";
 import { languageName, languagesInUse, VALUE_LANGUAGES } from "../utils/languages";
 import { duplicateValueIndexes } from "../utils/entityUpdate";
 
@@ -165,15 +165,9 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
 
       {dataPropertiesWithValues.map((propertyUri) => (
         <Box key={propertyUri} sx={{ mb: 2 }}>
-          <Typography
-            variant="body2"
-            color="text.secondary"
-            sx={{ mb: 0.5 }}
-          >
-            {getPropertyLabel(propertyUri)}
-          </Typography>
-          <OrderableValueList
+          <PropertyValues
             propertyUri={propertyUri}
+            label={getPropertyLabel(propertyUri)}
             itemIds={itemIdsMap[propertyUri] || []}
             isEditing={isEditing}
             onReorder={onReorderValues}
@@ -303,7 +297,7 @@ const DataPropertiesSection: React.FC<DataPropertiesSectionProps> = ({
                 )}
               </Box>
             )}
-          </OrderableValueList>
+          </PropertyValues>
         </Box>
       ))}
     </>
