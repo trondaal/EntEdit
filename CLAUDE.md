@@ -93,7 +93,9 @@ EntEdit/
 - `Expression`, `ExpressionList` - Expression view and list
 - `Manifestation`, `ManifestationList`, `ManifestationSearchResult` - Manifestation display components
 - `ResultSet` - result list shared by the three search tabs (`renderResult` per tab)
-- `ResultLines` - creator/relationship lines and chips styled like the result cards
+- `ResultLines` - creator/relationship lines and chips styled like the result cards; its
+  `RelationshipLines` is the only place the relationship lines are drawn (work, expression
+  and the expressions listed under a publication), including the collapsed ones
 
 **UI Helpers:**
 - `EntityEditorHeader` - Header section of entity editor
@@ -179,7 +181,16 @@ EntEdit/
   substring, and entities without a label sort first. A new editor class must be
   added to the connector's `types` and to `INDEXED_CLASSES`; unit-tested
 - `wemiQueries.ts` - work/expression/manifestation detail queries shared by the search
-  pages and the expandable lists under a result, built around a *scope* pattern
+  pages and the expandable lists under a result, built around a *scope* pattern.
+  Relationships marked `entedit:collapse true` in the profile are left out of the inline
+  `GROUP_CONCAT` block and counted by `collapsedRelationshipsSubquery` instead ("label ‡
+  property ‖ count"; `parseCollapsedRelationships`); `CollapsedRelationshipLine` shows
+  "Label (n) ▾" and loads the targets when opened (`buildRelationTargetsQuery`,
+  `useRelationTargets`: title order, 50 at a time, either direction through
+  `owl:inverseOf`). The count is cheaper than the targets' titles (0.05 s vs 0.08 s and
+  0.4 KB vs 41 KB for a work with 463 parts), so the saving is payload and DOM. A
+  collapsed relationship is collapsed even with one target; the expression result also
+  returns its `work_uri`, which the work-level lines need to open
 - `searchFilters.ts` - search category filters as Lucene clauses (OR within a
   field, AND across), the fields each index offers (`INDEX_FILTER_FIELDS`) and
   parsing of `lucene:facets` counts; unit-tested
@@ -648,6 +659,10 @@ cataloguing from one build:
 The application expects:
 - `entedit:status` predicate to mark active classes/properties
 - `entedit:order` predicate for property display ordering
+- `entedit:collapse true` on object properties whose targets can be numerous (has part at
+  work and expression level, adaptations, subjects): search results show the label and a
+  count and load the list on request. `entedit:display false` remains only for the deprecated
+  inverses that must not appear at all. Profile reload needed; without it nothing collapses
 - `entedit:valueOrder` predicate (via RDF-star) for multi-value ordering within a property
 - `entedit:linguistic false` on data properties whose values are not natural
   language, which suppresses the language selector for them

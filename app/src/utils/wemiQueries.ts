@@ -16,7 +16,7 @@
  */
 import { escapeSparqlLiteral, sanitizeSparqlUri } from "./labelUtils";
 import { SPARQL_SEP } from "./textFormatters";
-import { notDeprecated } from "./sparqlFragments";
+import { createLanguageFallbackFragment, getFallbackLanguage, notDeprecated } from "./sparqlFragments";
 import type { SparqlResult } from "../types/sparql";
 
 const uriList = (uris: string[]): string =>
@@ -119,9 +119,11 @@ const agentsSubquery = (entity: string, key: string, scope: string, lang: string
 /**
  * Relationships from `?entity` to other entities of `targetClass`, in either
  * direction, grouped per result row (`?key`) and relationship label: "label ‡ title ‖ uri † …".
- * Relationship properties marked `entedit:display false` are left out; an
- * incoming statement is shown with (and filtered by) its inverse property,
- * skipping inverses the RDA Registry has deprecated.
+ * Relationship properties marked `entedit:display false` are left out, and
+ * those marked `entedit:collapse true` are counted by
+ * `collapsedRelationshipsSubquery` instead of listed; an incoming statement is
+ * shown with (and filtered by) its inverse property, skipping inverses the RDA
+ * Registry has deprecated.
  *
  * The target title is the `rdfs:label` in the chosen language, else the
  * untagged one, sampled per target first — a target with two untagged labels
@@ -154,6 +156,7 @@ const relationshipsSubquery = (
                 ?shown rdfs:label ?${entity}_relationship_label .
                 FILTER(LANG(?${entity}_relationship_label) = "${lang}")
                 FILTER NOT EXISTS { ?shown entedit:display false }
+                FILTER NOT EXISTS { ?shown entedit:collapse true }
                 OPTIONAL { ?target rdfs:label ?label_lang . FILTER(LANG(?label_lang) = "${lang}") }
                 OPTIONAL { ?target rdfs:label ?label_none . FILTER(LANG(?label_none) = "") }
                 BIND(COALESCE(?label_lang, ?label_none) AS ?target_title_raw)
@@ -163,6 +166,84 @@ const relationshipsSubquery = (
         }
         GROUP BY ?${key} ?${entity}_relationship_label
     }`;
+
+/**
+ * The relationships marked `entedit:collapse true`: for each result row
+ * (`?key`) and relationship, only how many targets there are, as
+ * "label ‡ property ‖ count". The targets are fetched when the user opens the
+ * relationship (`buildRelationTargetsQuery`): a work can have hundreds of
+ * parts, which made the result page ship and render them all. Counting needs
+ * neither the targets' titles nor a concatenation of them, so the block is
+ * cheaper than the one it replaces for these relationships.
+ */
+const collapsedRelationshipsSubquery = (
+  entity: string,
+  key: string,
+  scope: string,
+  targetClass: string,
+  lang: string,
+): string => `
+    OPTIONAL {
+        SELECT ?${key} ?${entity}_collapsed_label ?${entity}_collapsed_property
+        (COUNT(DISTINCT ?target) as ?${entity}_collapsed_count)
+        WHERE {
+            ${scope}
+            {
+                ?${entity} ?relationship ?target .
+                ?target a <${targetClass}> .
+                BIND(?relationship AS ?shown)
+            } UNION {
+                ?target ?relationship ?${entity} .
+                ?target a <${targetClass}> .
+                ?shown owl:inverseOf ?relationship .
+                ${notDeprecated("?shown")}
+            }
+            ?shown entedit:collapse true .
+            ?shown rdfs:label ?${entity}_collapsed_label .
+            FILTER(LANG(?${entity}_collapsed_label) = "${lang}")
+            FILTER NOT EXISTS { ?shown entedit:display false }
+            BIND(STR(?shown) AS ?${entity}_collapsed_property)
+        }
+        GROUP BY ?${key} ?${entity}_collapsed_label ?${entity}_collapsed_property
+    }`;
+
+/**
+ * The targets of one collapsed relationship of one entity, by title, one page
+ * at a time. `propertyUri` is the property the result line was shown with
+ * (`collapsedRelationshipsSubquery`); a link stated from the other side is
+ * found through `owl:inverseOf`. A target without any label comes back
+ * without a title, for the caller to show by its URI.
+ */
+export const buildRelationTargetsQuery = (
+  entityUri: string,
+  propertyUri: string,
+  targetClass: string,
+  language: string,
+  limit: number,
+  offset: number,
+): string => {
+  const e = `<${sanitizeSparqlUri(entityUri)}>`;
+  const p = `<${sanitizeSparqlUri(propertyUri)}>`;
+  return `${PREFIXES}
+SELECT ?target (MIN(?title) as ?target_title)
+FROM <http://www.ontotext.com/explicit>
+WHERE {
+    {
+        ${e} ${p} ?target .
+        ?target a <${sanitizeSparqlUri(targetClass)}> .
+    } UNION {
+        ?target ?relationship ${e} .
+        ?target a <${sanitizeSparqlUri(targetClass)}> .
+        ${p} owl:inverseOf ?relationship .
+    }
+${createLanguageFallbackFragment("?target", language, getFallbackLanguage(language), "title", true, true)}
+}
+GROUP BY ?target
+ORDER BY ?target_title ?target
+LIMIT ${limit}
+OFFSET ${offset}
+`;
+};
 
 /** Label of a linked concept in the chosen language; `link` binds `?subject`. */
 const conceptLabel = (
@@ -203,6 +284,9 @@ SELECT ?expression
     (GROUP_CONCAT(DISTINCT CONCAT(?expression_agent_relationship_label, "${SPARQL_SEP.LABEL}", ?expression_agent_names) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?expression_creators)
     (GROUP_CONCAT(DISTINCT CONCAT(?work_relationship_label, "${SPARQL_SEP.LABEL}", ?work_relationship_targets) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?work_to_work_relationships)
     (GROUP_CONCAT(DISTINCT CONCAT(?expression_relationship_label, "${SPARQL_SEP.LABEL}", ?expression_relationship_targets) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?expression_to_expression_relationships)
+    (GROUP_CONCAT(DISTINCT CONCAT(?work_collapsed_label, "${SPARQL_SEP.LABEL}", ?work_collapsed_property, "${SPARQL_SEP.URI}", STR(?work_collapsed_count)) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?work_collapsed_relationships)
+    (GROUP_CONCAT(DISTINCT CONCAT(?expression_collapsed_label, "${SPARQL_SEP.LABEL}", ?expression_collapsed_property, "${SPARQL_SEP.URI}", STR(?expression_collapsed_count)) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?expression_collapsed_relationships)
+    (SAMPLE(?w_uri) as ?work_uri)
     (COUNT(DISTINCT ?manifestation) as ?manifestation_count)
     (MIN(?value_order) as ?valueOrder)
 FROM <http://www.ontotext.com/explicit>
@@ -216,11 +300,13 @@ WHERE {
     # expression has none (it is unbound in that row), and nesting the blocks
     # in one OPTIONAL instead makes GraphDB evaluate that group for every
     # expression-work pair before joining (~1 s at 90k expressions).
+    OPTIONAL { ${workOf("w_uri")} }
     OPTIONAL { ${workOf("w_title")} ?w_title rdawd:P10223 ?worktitle }
     ${conceptLabel("w_category", "entedit:P01", "workcategory", "workcategory_label", lang, workOf("w_category"))}
     ${conceptLabel("w_genre", "entedit:P02", "genre_entity", "genre_label", lang, workOf("w_genre"))}
     ${agentsSubquery("work", "expression", `${scope} ${workOf("work")}`, lang)}
     ${relationshipsSubquery("work", "expression", `${scope} ${workOf("work")}`, "http://rdaregistry.info/Elements/c/C10001", lang)}
+    ${collapsedRelationshipsSubquery("work", "expression", `${scope} ${workOf("work")}`, "http://rdaregistry.info/Elements/c/C10001", lang)}
 
     OPTIONAL {
         { ?expression rdaeo:P20059 ?manifestation } UNION { ?manifestation rdamo:P30139 ?expression }
@@ -230,6 +316,7 @@ WHERE {
     ${conceptLabel("expression", "rdaeo:P20001", "contenttype", "contenttype_label", lang)}
     ${agentsSubquery("expression", "expression", scope, lang)}
     ${relationshipsSubquery("expression", "expression", scope, "http://rdaregistry.info/Elements/c/C10006", lang)}
+    ${collapsedRelationshipsSubquery("expression", "expression", scope, "http://rdaregistry.info/Elements/c/C10006", lang)}
 }
 GROUP BY ?expression
 `;
@@ -248,6 +335,11 @@ export interface ExpressionDetail {
   genre?: string;
   work_to_work_relationships?: string;
   expression_to_expression_relationships?: string;
+  /** Relationships marked `entedit:collapse true`, counted: see `parseCollapsedRelationships` */
+  work_collapsed_relationships?: string;
+  expression_collapsed_relationships?: string;
+  /** The expression's work, whose relationships the `work_` fields describe; absent without one */
+  work_uri?: string;
   manifestation_count?: number;
   /** Position among the contents it was loaded for, if recorded */
   valueOrder?: number;
@@ -267,6 +359,9 @@ export const toExpressionDetail = (b: SparqlResult): ExpressionDetail => ({
   work_to_work_relationships: b.work_to_work_relationships?.value || undefined,
   expression_to_expression_relationships:
     b.expression_to_expression_relationships?.value || undefined,
+  work_collapsed_relationships: b.work_collapsed_relationships?.value || undefined,
+  expression_collapsed_relationships: b.expression_collapsed_relationships?.value || undefined,
+  work_uri: b.work_uri?.value || undefined,
   manifestation_count: b.manifestation_count
     ? parseInt(b.manifestation_count.value, 10)
     : undefined,
@@ -289,6 +384,7 @@ SELECT ?work
     (GROUP_CONCAT(DISTINCT ?genre_label ; SEPARATOR=" ; ") as ?genre)
     (GROUP_CONCAT(DISTINCT CONCAT(?work_agent_relationship_label, "${SPARQL_SEP.LABEL}", ?work_agent_names) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?work_creators)
     (GROUP_CONCAT(DISTINCT CONCAT(?work_relationship_label, "${SPARQL_SEP.LABEL}", ?work_relationship_targets) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?work_to_work_relationships)
+    (GROUP_CONCAT(DISTINCT CONCAT(?work_collapsed_label, "${SPARQL_SEP.LABEL}", ?work_collapsed_property, "${SPARQL_SEP.URI}", STR(?work_collapsed_count)) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?work_collapsed_relationships)
     (COUNT(DISTINCT ?expression) as ?expression_count)
     (COUNT(DISTINCT ?contenttype) as ?contenttype_count)
     (SAMPLE(?contenttype) as ?contenttype_uri)
@@ -304,6 +400,7 @@ WHERE {
     ${conceptLabel("work", "entedit:P02", "genre_entity", "genre_label", lang)}
     ${agentsSubquery("work", "work", scope, lang)}
     ${relationshipsSubquery("work", "work", scope, "http://rdaregistry.info/Elements/c/C10001", lang)}
+    ${collapsedRelationshipsSubquery("work", "work", scope, "http://rdaregistry.info/Elements/c/C10001", lang)}
     OPTIONAL {
         { ?work rdawo:P10078 ?expression } UNION { ?expression rdaeo:P20231 ?work }
         OPTIONAL { ?expression rdaeo:P20001 ?contenttype }
@@ -322,6 +419,8 @@ export interface WorkDetail {
   workcategory?: string;
   genre?: string;
   work_to_work_relationships?: string;
+  /** Relationships marked `entedit:collapse true`, counted: see `parseCollapsedRelationships` */
+  work_collapsed_relationships?: string;
   expression_count?: number;
   /** Content type of the expressions, when they all have the same one */
   contenttypeUri?: string;
@@ -335,6 +434,7 @@ export const toWorkDetail = (b: SparqlResult): WorkDetail => ({
   workcategory: b.workcategory?.value || undefined,
   genre: b.genre?.value || undefined,
   work_to_work_relationships: b.work_to_work_relationships?.value || undefined,
+  work_collapsed_relationships: b.work_collapsed_relationships?.value || undefined,
   expression_count: b.expression_count ? parseInt(b.expression_count.value, 10) : undefined,
   contenttypeUri: b.contenttype_count?.value === "1" ? b.contenttype_uri?.value : undefined,
 });

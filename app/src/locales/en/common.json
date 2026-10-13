@@ -121,7 +121,11 @@
     "errorLoadingExpressions": "Error loading expressions: {{message}}",
     "noExpressionsFound": "No expressions found",
     "errorLoadingManifestations": "Error loading manifestations: {{message}}",
-    "noManifestationsFound": "No manifestations found"
+    "noManifestationsFound": "No manifestations found",
+    "relatedShow": "Show the list: {{label}}",
+    "relatedHide": "Hide the list: {{label}}",
+    "relatedMore": "Show {{count}} more ({{left}} left)",
+    "relatedFailed": "Could not load the list"
   },
   "messages": {
     "selectClass": "Select a class to view entities",

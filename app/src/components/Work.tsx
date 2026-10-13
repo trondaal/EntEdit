@@ -134,7 +134,11 @@ const Work: React.FC<WorkProps> = ({
                 <CreatorLines creators={result.work_creators} onEntitySearch={onEntitySearch} />
                 <RelationshipLines
                   relationships={result.work_to_work_relationships}
+                  collapsed={result.work_collapsed_relationships}
                   kind="work"
+                  entityUri={result.uri}
+                  config={config}
+                  language={selectedLanguage}
                   onEntitySearch={onEntitySearch}
                 />
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.75, mt: 0.25 }}>

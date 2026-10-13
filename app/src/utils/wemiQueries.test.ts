@@ -3,6 +3,7 @@ import {
   buildCollectionQuery,
   buildExpressionDetailQuery,
   buildManifestationDetailQuery,
+  buildRelationTargetsQuery,
   buildWorkDetailQuery,
   expressionOrderInWork,
   expressionsOfWork,
@@ -88,7 +89,7 @@ describe("work queries", () => {
     const query = buildWorkDetailQuery(scope, "en");
     expect(query).toContain("FROM <http://www.ontotext.com/explicit>");
     expect(query).toContain("GROUP BY ?work\n");
-    expect(query.split(scope).length - 1).toBe(3); // outer, agents, relationships
+    expect(query.split(scope).length - 1).toBe(4); // outer, agents, relationships, collapsed relationships
     expect(query).toContain("COUNT(DISTINCT ?expression) as ?expression_count");
   });
 
@@ -130,5 +131,54 @@ describe("inverse relationships and deprecated properties", () => {
   it("skips deprecated inverses for agent relationships too", () => {
     const query = buildWorkDetailQuery(workScope(["http://example.org/w1"]), "en");
     expect(query).toMatch(/\?inverse owl:inverseOf \?relationship \.\s+FILTER NOT EXISTS \{ \?inverse <[^>]*regap\/status> <[^>]*RegStatus\/1008> \}/);
+  });
+});
+
+describe("collapsed relationships", () => {
+  const WORK = "http://rdaregistry.info/Elements/c/C10001";
+  const workQuery = buildWorkDetailQuery(workScope(["http://example.org/w1"]), "en");
+
+  it("lists the relationships not marked entedit:collapse inline, and counts the marked ones", () => {
+    expect(workQuery).toContain("FILTER NOT EXISTS { ?shown entedit:collapse true }");
+    expect(workQuery).toContain("?shown entedit:collapse true .");
+    expect(workQuery).toContain("COUNT(DISTINCT ?target) as ?work_collapsed_count");
+    expect(workQuery).toContain("as ?work_collapsed_relationships");
+  });
+
+  it("still leaves out the relationships marked entedit:display false, collapsed ones included", () => {
+    expect(workQuery.match(/FILTER NOT EXISTS \{ \?shown entedit:display false \}/g)).toHaveLength(2);
+  });
+
+  it("counts the collapsed relationships of an expression's work and of the expression", () => {
+    const query = buildExpressionDetailQuery(expressionsOfWork("http://example.org/w1"), "en");
+    expect(query).toContain("as ?work_collapsed_relationships");
+    expect(query).toContain("as ?expression_collapsed_relationships");
+    expect(query).toContain("(SAMPLE(?w_uri) as ?work_uri)");
+  });
+
+  it("lists the targets of one relationship of one entity, from either side, by title, a page at a time", () => {
+    const query = buildRelationTargetsQuery(
+      "http://example.org/w1",
+      "http://rdaregistry.info/Elements/w/object/P10147",
+      WORK,
+      "en",
+      50,
+      100,
+    );
+    expect(query).toContain("<http://example.org/w1> <http://rdaregistry.info/Elements/w/object/P10147> ?target");
+    expect(query).toContain("<http://rdaregistry.info/Elements/w/object/P10147> owl:inverseOf ?relationship");
+    expect(query).toContain("FROM <http://www.ontotext.com/explicit>");
+    expect(query).toContain("ORDER BY ?target_title ?target");
+    expect(query).toContain("LIMIT 50");
+    expect(query).toContain("OFFSET 100");
+  });
+
+  it("ends the title with any label, so a target is never shown by its URI while it has one", () => {
+    const query = buildRelationTargetsQuery("http://example.org/w1", "http://example.org/p", WORK, "no", 50, 0);
+    expect(query).toContain("COALESCE(?title_chosen, ?title_none, ?title_fallback, ?title_any)");
+  });
+
+  it("refuses an unsafe IRI", () => {
+    expect(() => buildRelationTargetsQuery("http://x> } DROP", "http://p", WORK, "en", 50, 0)).toThrow();
   });
 });

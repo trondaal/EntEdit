@@ -121,7 +121,11 @@
     "errorLoadingExpressions": "Feil ved lasting av uttrykk: {{message}}",
     "noExpressionsFound": "Ingen uttrykk funnet",
     "errorLoadingManifestations": "Feil ved lasting av manifestasjoner: {{message}}",
-    "noManifestationsFound": "Ingen manifestasjoner funnet"
+    "noManifestationsFound": "Ingen manifestasjoner funnet",
+    "relatedShow": "Vis listen: {{label}}",
+    "relatedHide": "Skjul listen: {{label}}",
+    "relatedMore": "Vis {{count}} til ({{left}} igjen)",
+    "relatedFailed": "Kunne ikke laste listen"
   },
   "messages": {
     "selectClass": "Velg en klasse for å se entiteter",

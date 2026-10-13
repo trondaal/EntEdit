@@ -25,6 +25,11 @@ export interface Expression {
   expression_creators?: string;
   work_to_work_relationships?: string;
   expression_to_expression_relationships?: string;
+  /** Relationships marked `entedit:collapse true`, counted (see `parseCollapsedRelationships`) */
+  work_collapsed_relationships?: string;
+  expression_collapsed_relationships?: string;
+  /** The expression's work, whose relationships the `work_` fields describe */
+  work_uri?: string;
   manifestation_count?: number;
 }
 

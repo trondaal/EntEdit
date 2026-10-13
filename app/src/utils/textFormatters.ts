@@ -142,6 +142,39 @@ export const parseRelationships = (relationshipString: string | undefined): Rela
   return result;
 };
 
+export interface CollapsedRelationship {
+  relationshipLabel: string;
+  /** The property the line is shown with, for `buildRelationTargetsQuery` */
+  propertyUri: string;
+  count: number;
+}
+
+/**
+ * Parses the "label ‡ property ‖ count" groups of the relationships marked
+ * `entedit:collapse true` (`collapsedRelationshipsSubquery`): a relationship
+ * and how many targets it has, whose list is loaded on request.
+ */
+export const parseCollapsedRelationships = (
+  collapsedString: string | undefined,
+): CollapsedRelationship[] => {
+  if (!collapsedString) return [];
+  const result: CollapsedRelationship[] = [];
+  for (const group of collapsedString.split(SPARQL_SEP.GROUP)) {
+    const labelIndex = group.indexOf(SPARQL_SEP.LABEL.trim());
+    if (labelIndex === -1) continue;
+    const relationshipLabel = group.substring(0, labelIndex).trim();
+    const [propertyUri, countText] = group
+      .substring(labelIndex + SPARQL_SEP.LABEL.trim().length)
+      .split(SPARQL_SEP.URI)
+      .map((part) => part.trim());
+    const count = parseInt(countText ?? "", 10);
+    if (relationshipLabel && propertyUri && count > 0) {
+      result.push({ relationshipLabel, propertyUri, count });
+    }
+  }
+  return result;
+};
+
 export interface ManifestationLike {
   title?: string;
   numbering?: string;

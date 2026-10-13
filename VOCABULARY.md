@@ -356,7 +356,8 @@ never appear on bibliographic entities. All are `owl:DatatypeProperty`.
 |---|---|---|---|
 | `entedit:status` | `entedit:StatusLiteral` | classes, properties | Which role a term plays in the editor (section 5.1). **A term without a status is invisible to the editor**, but data using it is preserved on save. |
 | `entedit:order` | `xsd:integer` | classes, properties | Display order among siblings. Required for data properties; optional for others (5.2). |
-| `entedit:display` | `xsd:boolean` | object properties | `false` hides one direction of a relationship pair in search and result lists. Absent means shown (5.3). |
+| `entedit:display` | `xsd:boolean` | object properties | `false` hides one direction of a relationship pair in search and result lists (now only the two deprecated inverses). Absent means shown (5.3). |
+| `entedit:collapse` | `xsd:boolean` | object properties | `true` lists a relationship in search results as its label and the number of targets, with a button that loads the list. For relationships that can have hundreds of targets (5.3). |
 | `entedit:linguistic` | `xsd:boolean` | data properties | `false` = value is not natural language (dates, identifiers, numbering, dimensions): no language selector. Absent means linguistic. |
 | `entedit:collection` | `xsd:boolean` | genre concepts (`entedit:P02` values) | `true` = works of this genre gather other works (short story collection, anthology, omnibus). Drives the collection presentation in the publication search (6.3). |
 
@@ -486,28 +487,39 @@ Positive integers; lower first. Used for:
 The concept files (`labels.genretypes.ttl`) also carry `entedit:order 1` on every
 genre concept. **The application does not read it** — it is vestigial (section 8).
 
-### 5.3 `entedit:display`
+### 5.3 `entedit:collapse` and `entedit:display`
 
 Relationship pairs have a natural "forward" direction. In search results
-(`wemiQueries.ts`) only relationships without `entedit:display false` are listed, so
-each link appears once from the side a user expects. Example: *has subject work*
-is shown, its inverse *is subject work of* is not:
+(`wemiQueries.ts`) a relationship is listed from the side a user expects: *has
+subject work* from the work that is the subject, its inverse *is subject work of*
+from the other. Some of them can have hundreds of targets (a work with every
+part, adaptation or work about it), which made a result page ship and render them
+all. Mark such a relationship `entedit:collapse true`: the result shows its label
+and the number of targets ("Has part work (463) ▾") and the list is loaded when
+the user opens it, fifty at a time, in title order. Nothing is hidden:
 
 ```turtle
-rdaao:P50366 entedit:status "object property" ; entedit:display false .  # is subject agent of
+rdawo:P10147 entedit:status "object property" ; entedit:collapse true ; rdfs:label "har del"@no .  # has part work
 ```
 
-Symmetric or evenly weighted pairs (*is part of* / *has part*) are left
-unannotated so both directions show (*has prequel work* / *has sequel work* are
-such a pair). About 24 properties (mostly work-to-work adaptation/derivation
-relationships) carry `false`. This affects **presentation only**: the editor still
-shows and edits both.
+Mark the direction that is shown; the other direction of the pair is looked up
+through `owl:inverseOf` and counted under it (a work whose parts state *is part of*
+gets "Has part work (n)" without any statement of its own). A collapsed relationship
+is always collapsed, even with one target. The profile marks *has part* at work and
+expression level and the relationships that used to carry `display false`
+(about 23, mostly work-to-work adaptation and derivation relationships). A
+repository needs the profile reloaded to get this; without the annotation the
+relationship is listed in full as before. This affects **presentation in search
+results only**: the editor still shows and edits both directions.
+
+`entedit:display false` is left for relationships that should not appear at all:
+the two deprecated inverses described below.
 
 An incoming link is shown through its inverse property, and the registry
 sometimes declares more than one: *has prequel work* (`rdawo:P10122`) has the live
 *has sequel work* (`P10020`) and also the deprecated *is prequel to (Deprecated)*
 (`P10195`), in 5.2.2 as in 5.5.1. Listing every inverse showed the deprecated one
-as soon as the live one was hidden by `display false`. The search and export
+as soon as the live one was hidden (then by `display false`, now by `collapse`). The search and export
 queries therefore skip inverses whose registry status is deprecated (`notDeprecated`
 in `sparqlFragments.ts`), and the profile also marks the two deprecated inverses
 `display false`. Only this pair was affected among the properties the profile enables.
@@ -613,8 +625,9 @@ rdamo:P30215 entedit:status "object property" ; rdfs:label "har papirprodusent"@
 rdaao:P50242 entedit:status "object property" ; rdfs:label "er papirprodusent"@no .
 ```
 
-Enable **both directions** of an object property, and add `entedit:display false`
-to the one that should stay out of result lists. Check the property has an
+Enable **both directions** of an object property, and add `entedit:collapse true`
+to the one that can list many targets, so result lists show only a count until it
+is opened. Check the property has an
 `rdfs:domain` and `rdfs:range` in the registry.
 
 **Add a role or relationship RDA lacks.** Mint `entedit:Pnn` as an
