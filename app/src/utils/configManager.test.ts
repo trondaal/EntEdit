@@ -51,3 +51,29 @@ describe("the graph new data is saved in", () => {
     expect(loadConfiguration()?.endpoint.dataGraph).toBeUndefined();
   });
 });
+
+describe("the part-relationship preference, as stored", () => {
+  let local: ReturnType<typeof memoryStorage>;
+
+  beforeEach(() => {
+    local = memoryStorage();
+    vi.stubGlobal("localStorage", local);
+    vi.stubGlobal("sessionStorage", memoryStorage());
+    local.setItem("entEdit.config", JSON.stringify({ url: endpoint }));
+  });
+
+  it("is both when nothing is stored, as for an installation older than the preference", () => {
+    local.setItem("entEdit.preferences", JSON.stringify({ showIdentifier: false }));
+    expect(loadConfiguration()?.preferences.partLevels).toBe("both");
+  });
+
+  it("is read back as chosen", () => {
+    local.setItem("entEdit.preferences", JSON.stringify({ partLevels: "expression" }));
+    expect(loadConfiguration()?.preferences.partLevels).toBe("expression");
+  });
+
+  it("is both when what is stored is not a level", () => {
+    local.setItem("entEdit.preferences", JSON.stringify({ partLevels: "everything" }));
+    expect(loadConfiguration()?.preferences.partLevels).toBe("both");
+  });
+});

@@ -20,10 +20,11 @@ import type { SparqlEndpointConfig } from "../types/sparql";
 import { getGraphVisualizationUrl, openGraphVisualization } from "../utils/graphUtils";
 import { useExpressionDetail, useExpressionsByManifestation } from "../hooks/useExpressionQueries";
 import ExpressionList from "./ExpressionList";
+import { RelationshipLines } from "./ResultLines";
+import { presentManifestation } from "../utils/manifestationPresentation";
 import {
   capitalizeFirstLetter,
   parseCreators,
-  parseRelationships,
   splitPipeValues,
   splitSemicolonValues,
   formatTitleArea,
@@ -35,9 +36,17 @@ import { getCarrierTypeIcon, typeIconSx } from "../utils/contentTypeIcons";
 
 interface ManifestationSearchResultProps {
   result: ManifestationSearchResultType;
-  onSelect: (uri: string) => void;
+  /** Click on the entry; absent where the entry is part of a list under a result */
+  onSelect?: (uri: string) => void;
   selectedLanguage: string;
   config: SparqlEndpointConfig;
+  /**
+   * The expression this manifestation is listed under, when it is. That expression
+   * is the row above, so it is not merged into the entry a second time: a
+   * manifestation of one expression would otherwise repeat the row above for every
+   * publication of it. Everything else follows the rule below, and Contents stays full.
+   */
+  parentExpressionUri?: string;
   onEntitySearch: EntitySearchHandler;
 }
 
@@ -46,6 +55,7 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
   onSelect,
   selectedLanguage,
   config,
+  parentExpressionUri,
   onEntitySearch,
 }) => {
   const { t } = useTranslation();
@@ -53,21 +63,21 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
   const [expressionsExpanded, setExpressionsExpanded] = useState(false);
   const graphUrl = getGraphVisualizationUrl(config.url, result.uri);
 
-  // The publication entry shows one expression and its work together with the
-  // manifestation: its only expression, or else the one collection among its
-  // contents (a work whose genre is marked entedit:collection). The other
-  // expressions are listed as contents.
-  const isSingleExpression = result.expression_count === 1;
-  const collectionUri =
-    !isSingleExpression && result.collectionCount === 1 ? result.collectionExpression : undefined;
-  const autoFetchUri = isSingleExpression ? result.uri : null;
-  const { data: expressions } = useExpressionsByManifestation(config, autoFetchUri, selectedLanguage);
-  const { data: collectionExpression } = useExpressionDetail(config, collectionUri, selectedLanguage);
+  // What the entry merges and lists as contents: utils/manifestationPresentation.ts
+  const {
+    isSingleExpression,
+    collectionUri,
+    mergeSingleExpression,
+    mergedCollectionUri,
+    contentsCount,
+  } = presentManifestation(result, parentExpressionUri);
+  const { data: expressions } = useExpressionsByManifestation(
+    config,
+    mergeSingleExpression ? result.uri : null,
+    selectedLanguage,
+  );
+  const { data: collectionExpression } = useExpressionDetail(config, mergedCollectionUri, selectedLanguage);
   const singleExpression = isSingleExpression ? expressions?.[0] : collectionExpression ?? undefined;
-  const contentsCount =
-    result.expression_count != null
-      ? result.expression_count - (collectionUri ? 1 : 0)
-      : undefined;
 
   const handleToggleExpressions = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -117,7 +127,7 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
     >
       <ListItem disablePadding>
         <Box
-          onClick={() => onSelect(result.uri)}
+          onClick={onSelect ? () => onSelect(result.uri) : undefined}
           sx={{ width: "100%", px: 2, py: 1 }}
         >
           <ListItemText
@@ -337,122 +347,28 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                 )}
 
                 {/* Relationships (expression-level when single expression) */}
-                {singleExpression && (singleExpression.work_to_work_relationships || singleExpression.expression_to_expression_relationships) && (
+                {singleExpression && (
                   <Box>
-                    {singleExpression.work_to_work_relationships && (
-                      <Box sx={{ mb: 0.5 }}>
-                        {parseRelationships(singleExpression.work_to_work_relationships).map((rel, index) => (
-                          <Typography
-                            key={`w2w-${index}`}
-                            variant="body2"
-                            color="text.secondary"
-                            sx={{
-                              fontSize: '0.8125rem',
-                              lineHeight: 1.5,
-                              display: 'flex',
-                              alignItems: 'baseline',
-                              '&:not(:last-child)': { mb: 0.25 }
-                            }}
-                          >
-                            <Box
-                              component="span"
-                              sx={{
-                                color: 'text.disabled',
-                                fontSize: '0.75rem',
-                                mr: 0.5,
-                              }}
-                            >
-                              →
-                            </Box>
-                            <Box component="span">
-                              {capitalizeFirstLetter(rel.relationshipLabel)}:{' '}
-                              {rel.titles.map((entry, titleIndex) => (
-                                <React.Fragment key={titleIndex}>
-                                  {titleIndex > 0 && ' ; '}
-                                  <Link
-                                    component="button"
-                                    variant="body2"
-                                    onClick={(e: React.MouseEvent) => {
-                                      e.stopPropagation();
-                                      onEntitySearch(entry.title, { uri: entry.uri, kind: "work" });
-                                    }}
-                                    sx={{
-                                      textDecoration: 'none',
-                                      fontStyle: 'italic',
-                                      '&:hover': { textDecoration: 'underline' },
-                                      cursor: 'pointer',
-                                      color: 'inherit',
-                                      fontSize: 'inherit',
-                                      lineHeight: 'inherit',
-                                      verticalAlign: 'baseline',
-                                    }}
-                                  >
-                                    {entry.title}
-                                  </Link>
-                                </React.Fragment>
-                              ))}
-                            </Box>
-                          </Typography>
-                        ))}
-                      </Box>
-                    )}
-                    {singleExpression.expression_to_expression_relationships && (
-                      <Box>
-                        {parseRelationships(singleExpression.expression_to_expression_relationships).map((rel, index) => (
-                          <Typography
-                            key={`e2e-${index}`}
-                            variant="body2"
-                            color="text.secondary"
-                            sx={{
-                              fontSize: '0.8125rem',
-                              lineHeight: 1.5,
-                              display: 'flex',
-                              alignItems: 'baseline',
-                              '&:not(:last-child)': { mb: 0.25 }
-                            }}
-                          >
-                            <Box
-                              component="span"
-                              sx={{
-                                color: 'text.disabled',
-                                fontSize: '0.75rem',
-                                mr: 0.5,
-                              }}
-                            >
-                              →
-                            </Box>
-                            <Box component="span">
-                              {capitalizeFirstLetter(rel.relationshipLabel)}:{' '}
-                              {rel.titles.map((entry, titleIndex) => (
-                                <React.Fragment key={titleIndex}>
-                                  {titleIndex > 0 && ' ; '}
-                                  <Link
-                                    component="button"
-                                    variant="body2"
-                                    onClick={(e: React.MouseEvent) => {
-                                      e.stopPropagation();
-                                      onEntitySearch(entry.title, { uri: entry.uri, kind: "expression" });
-                                    }}
-                                    sx={{
-                                      textDecoration: 'none',
-                                      fontStyle: 'italic',
-                                      '&:hover': { textDecoration: 'underline' },
-                                      cursor: 'pointer',
-                                      color: 'inherit',
-                                      fontSize: 'inherit',
-                                      lineHeight: 'inherit',
-                                      verticalAlign: 'baseline',
-                                    }}
-                                  >
-                                    {entry.title}
-                                  </Link>
-                                </React.Fragment>
-                              ))}
-                            </Box>
-                          </Typography>
-                        ))}
-                      </Box>
-                    )}
+                    <Box sx={{ mb: 0.5 }}>
+                      <RelationshipLines
+                        relationships={singleExpression.work_to_work_relationships}
+                        collapsed={singleExpression.work_collapsed_relationships}
+                        kind="work"
+                        entityUri={singleExpression.work_uri}
+                        config={config}
+                        language={selectedLanguage}
+                        onEntitySearch={onEntitySearch}
+                      />
+                    </Box>
+                    <RelationshipLines
+                      relationships={singleExpression.expression_to_expression_relationships}
+                      collapsed={singleExpression.expression_collapsed_relationships}
+                      kind="expression"
+                      entityUri={singleExpression.uri}
+                      config={config}
+                      language={selectedLanguage}
+                      onEntitySearch={onEntitySearch}
+                    />
                   </Box>
                 )}
 

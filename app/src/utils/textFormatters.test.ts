@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { formatTitleArea, parseCollapsedRelationships, SPARQL_SEP } from "./textFormatters";
+import { formatTitleArea, parseCollapsedRelationships, parseRelationships, SPARQL_SEP } from "./textFormatters";
 
 const uri = "http://example.org/m1";
 
@@ -56,5 +56,41 @@ describe("parseCollapsedRelationships", () => {
     expect(parseCollapsedRelationships("")).toEqual([]);
     expect(parseCollapsedRelationships("no separator")).toEqual([]);
     expect(parseCollapsedRelationships(entry("has part", P, "0"))).toEqual([]);
+  });
+});
+
+describe("parseRelationships", () => {
+  const P = "http://rdaregistry.info/Elements/w/object/P10019";
+
+  it("reads the property a relationship is shown with, then its targets", () => {
+    const text = `is part of work${SPARQL_SEP.LABEL}${P}${SPARQL_SEP.PROPERTY}Big anthology${SPARQL_SEP.URI}http://ex.org/w1${SPARQL_SEP.NAME}Other${SPARQL_SEP.URI}http://ex.org/w2`;
+    expect(parseRelationships(text)).toEqual([
+      {
+        relationshipLabel: "is part of work",
+        propertyUri: P,
+        titles: [
+          { title: "Big anthology", uri: "http://ex.org/w1" },
+          { title: "Other", uri: "http://ex.org/w2" },
+        ],
+      },
+    ]);
+  });
+
+  it("still reads a group without a property, as an older query returned it", () => {
+    const text = `has sequel${SPARQL_SEP.LABEL}Next book${SPARQL_SEP.URI}http://ex.org/w3`;
+    expect(parseRelationships(text)).toEqual([
+      { relationshipLabel: "has sequel", propertyUri: undefined, titles: [{ title: "Next book", uri: "http://ex.org/w3" }] },
+    ]);
+  });
+
+  it("reads several relationships", () => {
+    const text = [
+      `is part of work${SPARQL_SEP.LABEL}${P}${SPARQL_SEP.PROPERTY}A${SPARQL_SEP.URI}u1`,
+      `has sequel${SPARQL_SEP.LABEL}http://x/p${SPARQL_SEP.PROPERTY}B${SPARQL_SEP.URI}u2`,
+    ].join(SPARQL_SEP.GROUP);
+    expect(parseRelationships(text).map((r) => [r.relationshipLabel, r.propertyUri, r.titles[0].title])).toEqual([
+      ["is part of work", P, "A"],
+      ["has sequel", "http://x/p", "B"],
+    ]);
   });
 });

@@ -69,7 +69,11 @@ const WorkExpression: React.FC<{
               <CreatorLines creators={expression.expression_creators} onEntitySearch={onEntitySearch} />
               <RelationshipLines
                 relationships={expression.expression_to_expression_relationships}
+                collapsed={expression.expression_collapsed_relationships}
                 kind="expression"
+                entityUri={expression.uri}
+                config={config}
+                language={selectedLanguage}
                 onEntitySearch={onEntitySearch}
               />
               <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.75, mt: 0.25 }}>

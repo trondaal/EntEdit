@@ -20,6 +20,8 @@ export const SPARQL_SEP = {
   NAME: " † ",
   /** Between a name and its URI — e.g. "Cormac McCarthy ‖ http://viaf.org/..." */
   URI: " ‖ ",
+  /** Between a relationship's property and its targets — e.g. "is part of ‡ http://…/P10019 ⊢ Title ‖ uri" */
+  PROPERTY: " ⊢ ",
 } as const;
 
 /**
@@ -97,14 +99,16 @@ export interface RelationshipEntry {
 
 export interface RelationshipGroup {
   relationshipLabel: string;
+  /** The property the line is shown with; absent from results of an older query */
+  propertyUri?: string;
   titles: RelationshipEntry[];
 }
 
 /**
  * Parses a relationship string into structured groups of relationship label + title/URI pairs.
  *
- * Input format (using SPARQL_SEP characters):
- *   "relationship label ‡ title ‖ uri † title ‖ uri §§ relationship label ‡ title ‖ uri"
+ * Input format (using SPARQL_SEP characters), the property being optional:
+ *   "relationship label ‡ property ⊢ title ‖ uri † title ‖ uri §§ relationship label ‡ title ‖ uri"
  *
  * @returns Array of { relationshipLabel, titles: Array<{ title, uri? }> }
  */
@@ -120,7 +124,14 @@ export const parseRelationships = (relationshipString: string | undefined): Rela
     if (labelIndex === -1) return;
 
     const relationshipLabel = group.substring(0, labelIndex).trim();
-    const titleAndUriPairs = group.substring(labelIndex + SPARQL_SEP.LABEL.trim().length).trim();
+    let titleAndUriPairs = group.substring(labelIndex + SPARQL_SEP.LABEL.trim().length).trim();
+
+    let propertyUri: string | undefined;
+    const propertyIndex = titleAndUriPairs.indexOf(SPARQL_SEP.PROPERTY.trim());
+    if (propertyIndex !== -1) {
+      propertyUri = titleAndUriPairs.substring(0, propertyIndex).trim() || undefined;
+      titleAndUriPairs = titleAndUriPairs.substring(propertyIndex + SPARQL_SEP.PROPERTY.trim().length).trim();
+    }
 
     const titles: RelationshipEntry[] = [];
     const pairs = titleAndUriPairs.split(SPARQL_SEP.NAME).map(pair => pair.trim());
@@ -135,7 +146,7 @@ export const parseRelationships = (relationshipString: string | undefined): Rela
     });
 
     if (titles.length > 0) {
-      result.push({ relationshipLabel, titles });
+      result.push({ relationshipLabel, propertyUri, titles });
     }
   });
 

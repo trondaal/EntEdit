@@ -93,6 +93,15 @@ EntEdit/
 - `Expression`, `ExpressionList` - Expression view and list
 - `Manifestation`, `ManifestationList`, `ManifestationSearchResult` - Manifestation display components
 - `ResultSet` - result list shared by the three search tabs (`renderResult` per tab)
+- `ManifestationList` - the publications under an expression render the *same* component
+  as the publication search (`ManifestationSearchResult`), so a manifestation looks alike
+  wherever it appears: its single expression or its one collection is merged into the entry
+  and "Contents (n)" lists the rest (`utils/manifestationPresentation.ts`, unit-tested;
+  `useManifestations` runs the collection query like the search does). The one difference
+  under an expression is that the expression it is listed under (`parentExpressionUri`) is not
+  repeated in the entry (a manifestation of one expression would repeat the row above for
+  every publication), while Contents stay full: the parent is one of them unless it is the
+  collection itself
 - `ResultLines` - creator/relationship lines and chips styled like the result cards; its
   `RelationshipLines` is the only place the relationship lines are drawn (work, expression
   and the expressions listed under a publication), including the collapsed ones
@@ -643,6 +652,15 @@ cataloguing from one build:
   read as "custom", and carried across by `applyPreset` so choosing a style
   never changes it. It controls only the "inferred" chip and dashed outline;
   inferred values behave identically either way, removal included.
+- `partLevels` (`both` | `work` | `expression`, default `both`) is a seventh preference outside
+  the styles, like `showInferredMarks`: which level's "is part of" / "has part" lines the
+  search results show (`utils/partRelations.ts`). The two levels usually state the same thing
+  (isfdb: 99.9% of expression-level links have a work-level twin, and ~99.996% the other way),
+  so it is the user's choice, not a hidden merge; every other relationship is always shown.
+  It only filters lines: `RelationshipLines` reads it from `ResultDisplayContext`
+  (`hooks/useResultDisplay.ts`, provided by `App` around the search) and matches the four part
+  properties by URI, which inline relationship groups therefore carry
+  ("label ‡ property ⊢ title ‖ uri …", `SPARQL_SEP.PROPERTY`; collapsed ones already did)
 - Hidden fields are not lost: `EntityEditor` offers an "Identifier and labels…"
   dialog from the ⋮ menu whenever either is hidden, and a missing identifier or
   label is generated on save as before.

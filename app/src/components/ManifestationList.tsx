@@ -1,12 +1,12 @@
 import React from "react";
 import {
-  List,
   CircularProgress,
   Typography,
   Box,
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import Manifestation from "./Manifestation";
+import ManifestationSearchResult from "./ManifestationSearchResult";
+import type { EntitySearchHandler } from "../utils/searchLink";
 import { useManifestations } from "../hooks/useManifestationQueries";
 import type { SparqlEndpointConfig } from "../types/sparql";
 
@@ -14,7 +14,7 @@ interface ManifestationListProps {
   config: SparqlEndpointConfig;
   expressionUri: string;
   selectedLanguage: string;
-  onEntitySearch?: (name: string) => void;
+  onEntitySearch: EntitySearchHandler;
 }
 
 const ManifestationList: React.FC<ManifestationListProps> = ({
@@ -64,17 +64,22 @@ const ManifestationList: React.FC<ManifestationListProps> = ({
     );
   }
 
+  // Each manifestation is presented as in the publication search, with its
+  // collection merged and its contents listed; only the expression the list is
+  // under is not repeated (`parentExpressionUri`)
   return (
-    <List dense disablePadding sx={sectionSx}>
+    <Box sx={{ ...sectionSx, pl: 4, pr: 1, pt: 1 }}>
       {manifestations.map((manifestation) => (
-        <Manifestation
+        <ManifestationSearchResult
           key={manifestation.uri}
-          manifestation={manifestation}
+          result={manifestation}
           selectedLanguage={selectedLanguage}
+          config={config}
+          parentExpressionUri={expressionUri}
           onEntitySearch={onEntitySearch}
         />
       ))}
-    </List>
+    </Box>
   );
 };
 

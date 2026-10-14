@@ -125,6 +125,10 @@ const agentsSubquery = (entity: string, key: string, scope: string, lang: string
  * shown with (and filtered by) its inverse property, skipping inverses the RDA
  * Registry has deprecated.
  *
+ * Each group also carries the property it is shown with ("label ‡ property ⊢
+ * title ‖ uri † …"), which the "part relationships" preference needs to
+ * recognise them (`utils/partRelations.ts`).
+ *
  * The target title is the `rdfs:label` in the chosen language, else the
  * untagged one, sampled per target first — a target with two untagged labels
  * (stale data) would otherwise be listed twice.
@@ -137,10 +141,10 @@ const relationshipsSubquery = (
   lang: string,
 ): string => `
     OPTIONAL {
-        SELECT ?${key} ?${entity}_relationship_label
+        SELECT ?${key} ?${entity}_relationship_label ?${entity}_relationship_property
         (GROUP_CONCAT(DISTINCT CONCAT(?target_title, "${SPARQL_SEP.URI}", STR(?target)) ; SEPARATOR="${SPARQL_SEP.NAME}") as ?${entity}_relationship_targets)
         WHERE {
-            SELECT ?${key} ?${entity}_relationship_label ?target (SAMPLE(?target_title_raw) as ?target_title)
+            SELECT ?${key} ?${entity}_relationship_label ?${entity}_relationship_property ?target (SAMPLE(?target_title_raw) as ?target_title)
             WHERE {
                 ${scope}
                 {
@@ -161,10 +165,11 @@ const relationshipsSubquery = (
                 OPTIONAL { ?target rdfs:label ?label_none . FILTER(LANG(?label_none) = "") }
                 BIND(COALESCE(?label_lang, ?label_none) AS ?target_title_raw)
                 FILTER(BOUND(?target_title_raw))
+                BIND(STR(?shown) AS ?${entity}_relationship_property)
             }
-            GROUP BY ?${key} ?${entity}_relationship_label ?target
+            GROUP BY ?${key} ?${entity}_relationship_label ?${entity}_relationship_property ?target
         }
-        GROUP BY ?${key} ?${entity}_relationship_label
+        GROUP BY ?${key} ?${entity}_relationship_label ?${entity}_relationship_property
     }`;
 
 /**
@@ -282,8 +287,8 @@ SELECT ?expression
     (GROUP_CONCAT(DISTINCT ?genre_label ; SEPARATOR=" ; ") as ?genre)
     (GROUP_CONCAT(DISTINCT CONCAT(?work_agent_relationship_label, "${SPARQL_SEP.LABEL}", ?work_agent_names) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?work_creators)
     (GROUP_CONCAT(DISTINCT CONCAT(?expression_agent_relationship_label, "${SPARQL_SEP.LABEL}", ?expression_agent_names) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?expression_creators)
-    (GROUP_CONCAT(DISTINCT CONCAT(?work_relationship_label, "${SPARQL_SEP.LABEL}", ?work_relationship_targets) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?work_to_work_relationships)
-    (GROUP_CONCAT(DISTINCT CONCAT(?expression_relationship_label, "${SPARQL_SEP.LABEL}", ?expression_relationship_targets) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?expression_to_expression_relationships)
+    (GROUP_CONCAT(DISTINCT CONCAT(?work_relationship_label, "${SPARQL_SEP.LABEL}", ?work_relationship_property, "${SPARQL_SEP.PROPERTY}", ?work_relationship_targets) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?work_to_work_relationships)
+    (GROUP_CONCAT(DISTINCT CONCAT(?expression_relationship_label, "${SPARQL_SEP.LABEL}", ?expression_relationship_property, "${SPARQL_SEP.PROPERTY}", ?expression_relationship_targets) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?expression_to_expression_relationships)
     (GROUP_CONCAT(DISTINCT CONCAT(?work_collapsed_label, "${SPARQL_SEP.LABEL}", ?work_collapsed_property, "${SPARQL_SEP.URI}", STR(?work_collapsed_count)) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?work_collapsed_relationships)
     (GROUP_CONCAT(DISTINCT CONCAT(?expression_collapsed_label, "${SPARQL_SEP.LABEL}", ?expression_collapsed_property, "${SPARQL_SEP.URI}", STR(?expression_collapsed_count)) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?expression_collapsed_relationships)
     (SAMPLE(?w_uri) as ?work_uri)
@@ -383,7 +388,7 @@ SELECT ?work
     (GROUP_CONCAT(DISTINCT ?workcategory_label ; SEPARATOR=" ; ") as ?workcategory)
     (GROUP_CONCAT(DISTINCT ?genre_label ; SEPARATOR=" ; ") as ?genre)
     (GROUP_CONCAT(DISTINCT CONCAT(?work_agent_relationship_label, "${SPARQL_SEP.LABEL}", ?work_agent_names) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?work_creators)
-    (GROUP_CONCAT(DISTINCT CONCAT(?work_relationship_label, "${SPARQL_SEP.LABEL}", ?work_relationship_targets) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?work_to_work_relationships)
+    (GROUP_CONCAT(DISTINCT CONCAT(?work_relationship_label, "${SPARQL_SEP.LABEL}", ?work_relationship_property, "${SPARQL_SEP.PROPERTY}", ?work_relationship_targets) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?work_to_work_relationships)
     (GROUP_CONCAT(DISTINCT CONCAT(?work_collapsed_label, "${SPARQL_SEP.LABEL}", ?work_collapsed_property, "${SPARQL_SEP.URI}", STR(?work_collapsed_count)) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?work_collapsed_relationships)
     (COUNT(DISTINCT ?expression) as ?expression_count)
     (COUNT(DISTINCT ?contenttype) as ?contenttype_count)

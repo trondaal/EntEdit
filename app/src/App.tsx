@@ -9,6 +9,8 @@ import { queryClient } from "./utils/queryClient";
 import { invalidateAllEntityData } from "./utils/queryInvalidation";
 import { LoggingProvider } from "./contexts/LoggingContext";
 import { useLogging } from "./hooks/useLogging";
+import { ResultDisplayContext } from "./hooks/useResultDisplay";
+import { DEFAULT_PART_LEVELS } from "./utils/partRelations";
 import AppHeader from "./components/AppHeader";
 const EntityBrowser = lazy(() => import("./components/EntityBrowser"));
 const SearchInterface = lazy(() => import("./components/SearchInterface"));
@@ -257,6 +259,11 @@ function AppInner() {
 
   const urlParams = useMemo(() => new URLSearchParams(window.location.search), []);
   const showSearchTab = useMemo(() => !urlParams.has("nosearch"), [urlParams]);
+  const partLevels = appConfig?.preferences.partLevels;
+  const resultDisplay = useMemo(
+    () => ({ partLevels: partLevels ?? DEFAULT_PART_LEVELS }),
+    [partLevels],
+  );
   const showLogging = useMemo(() => !urlParams.has("nologging"), [urlParams]);
   const isDemoMode = useMemo(() => urlParams.has("demo"), [urlParams]);
   const langParam = useMemo(() => {
@@ -477,10 +484,12 @@ function AppInner() {
                       />
                     </Box>
                     {activeTab === 1 && showSearchTab && (
-                      <SearchInterface
-                        config={appConfig.endpoint}
-                        selectedLanguage={appConfig.language}
-                      />
+                      <ResultDisplayContext.Provider value={resultDisplay}>
+                        <SearchInterface
+                          config={appConfig.endpoint}
+                          selectedLanguage={appConfig.language}
+                        />
+                      </ResultDisplayContext.Provider>
                     )}
                   </Suspense>
                 </Box>

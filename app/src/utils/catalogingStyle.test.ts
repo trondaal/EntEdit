@@ -61,6 +61,24 @@ describe("the inferred marker", () => {
   });
 });
 
+describe("the part-relationship preference", () => {
+  it("shows both levels in both presets, so nothing is hidden until the user chooses", () => {
+    expect(CLASSIC_PREFERENCES.partLevels).toBe("both");
+    expect(SEMANTIC_PREFERENCES.partLevels).toBe("both");
+  });
+
+  it("does not make a preset read as custom", () => {
+    expect(styleOf({ ...SEMANTIC_PREFERENCES, partLevels: "expression" })).toBe("semantic");
+    expect(styleOf({ ...CLASSIC_PREFERENCES, partLevels: "work" })).toBe("classic");
+  });
+
+  it("survives switching style, and a style link", () => {
+    const chosen = { ...CLASSIC_PREFERENCES, partLevels: "expression" as const };
+    expect(applyPreset("semantic", chosen).partLevels).toBe("expression");
+    expect(applyStyleOverride(chosen, "?style=semantic").partLevels).toBe("expression");
+  });
+});
+
 describe("presetFor", () => {
   it("maps a style name to its preferences", () => {
     expect(presetFor("classic")).toEqual(CLASSIC_PREFERENCES);

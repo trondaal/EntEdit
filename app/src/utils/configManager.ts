@@ -5,6 +5,7 @@ import {
   type CatalogingPreferences,
 } from "./catalogingStyle";
 import { DEFAULT_DATA_GRAPH, dataGraphOf } from "./dataGraph";
+import { toPartLevels } from "./partRelations";
 
 const CONFIG_STORAGE_KEY = "entEdit.config";
 const CREDENTIALS_STORAGE_KEY = "entEdit.credentials";
@@ -157,6 +158,7 @@ export const loadConfiguration = (): AppConfiguration | null => {
           stored.showLanguageTags ?? DEFAULT_PREFERENCES.showLanguageTags,
         showInferredMarks:
           stored.showInferredMarks ?? DEFAULT_PREFERENCES.showInferredMarks,
+        partLevels: toPartLevels(stored.partLevels),
       };
     }
 

@@ -1,3 +1,5 @@
+import { DEFAULT_PART_LEVELS, type PartLevels } from "./partRelations";
+
 /**
  * How much of an entity's RDF identity the editor puts in front of the user.
  *
@@ -32,6 +34,13 @@ export interface CatalogingPreferences {
    * value when a preset is applied, and does not make the style read "custom".
    */
   showInferredMarks: boolean;
+  /**
+   * Which level's "is part of" / "has part" lines the search results show:
+   * the work's, the expression's or both. The two levels usually state the same
+   * thing, so which one is wanted is a matter of taste (`utils/partRelations.ts`).
+   * Only a display setting, like `showInferredMarks`: independent of the style.
+   */
+  partLevels: PartLevels;
 }
 
 export type CatalogingStyle = "classic" | "semantic" | "custom";
@@ -44,6 +53,7 @@ export const CLASSIC_PREFERENCES: CatalogingPreferences = {
   requireLabel: false,
   showLanguageTags: false,
   showInferredMarks: false,
+  partLevels: DEFAULT_PART_LEVELS,
 };
 
 /** Both are shown and must be filled in. */
@@ -54,12 +64,13 @@ export const SEMANTIC_PREFERENCES: CatalogingPreferences = {
   requireLabel: true,
   showLanguageTags: true,
   showInferredMarks: false,
+  partLevels: DEFAULT_PART_LEVELS,
 };
 
 /** New installations start in the semantic-web style. */
 export const DEFAULT_PREFERENCES: CatalogingPreferences = SEMANTIC_PREFERENCES;
 
-// showInferredMarks is deliberately not compared: it belongs to no style.
+// showInferredMarks and partLevels are deliberately not compared: they belong to no style.
 const sameAs = (a: CatalogingPreferences, b: CatalogingPreferences) =>
   a.showIdentifier === b.showIdentifier &&
   a.showLabels === b.showLabels &&
@@ -87,6 +98,7 @@ export const applyPreset = (
 ): CatalogingPreferences => ({
   ...presetFor(style),
   showInferredMarks: current.showInferredMarks,
+  partLevels: current.partLevels,
 });
 
 /**

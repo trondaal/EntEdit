@@ -182,3 +182,18 @@ describe("collapsed relationships", () => {
     expect(() => buildRelationTargetsQuery("http://x> } DROP", "http://p", WORK, "en", 50, 0)).toThrow();
   });
 });
+
+describe("the property of an inline relationship line", () => {
+  it("is returned with each group, for the part-relationship preference", () => {
+    const query = buildWorkDetailQuery(workScope(["http://example.org/w1"]), "en");
+    expect(query).toContain("CONCAT(?work_relationship_label, \" ‡ \", ?work_relationship_property, \" ⊢ \", ?work_relationship_targets)");
+    expect(query).toContain("BIND(STR(?shown) AS ?work_relationship_property)");
+    expect(query).toContain("GROUP BY ?work ?work_relationship_label ?work_relationship_property");
+  });
+
+  it("is returned for the expression's own relationships as well", () => {
+    const query = buildExpressionDetailQuery(expressionsOfWork("http://example.org/w1"), "en");
+    expect(query).toContain("?expression_relationship_property");
+    expect(query).toContain("?work_relationship_property");
+  });
+});

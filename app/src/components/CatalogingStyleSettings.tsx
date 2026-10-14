@@ -14,6 +14,12 @@ import {
   type CatalogingPreferences,
   type CatalogingStyle,
 } from "../utils/catalogingStyle";
+import { PART_LEVELS, toPartLevels } from "../utils/partRelations";
+
+/** The preferences that are plain on/off switches. */
+type FlagKey = {
+  [K in keyof CatalogingPreferences]: CatalogingPreferences[K] extends boolean ? K : never;
+}[keyof CatalogingPreferences];
 
 interface CatalogingStyleSettingsProps {
   preferences: CatalogingPreferences;
@@ -35,13 +41,13 @@ const CatalogingStyleSettings: React.FC<CatalogingStyleSettingsProps> = ({
   const { t } = useTranslation();
   const style = styleOf(preferences);
 
-  const toggle = (key: keyof CatalogingPreferences) => (checked: boolean) =>
+  const toggle = (key: FlagKey) => (checked: boolean) =>
     onChange({ ...preferences, [key]: checked });
 
   const rows: Array<{
     label: string;
-    show: keyof CatalogingPreferences;
-    require: keyof CatalogingPreferences;
+    show: FlagKey;
+    require: FlagKey;
   }> = [
     {
       label: t("catalogingStyle.identifierRow"),
@@ -166,6 +172,31 @@ const CatalogingStyleSettings: React.FC<CatalogingStyleSettingsProps> = ({
           <Typography variant="body2">{t("catalogingStyle.showInferredMarks")}</Typography>
         }
       />
+
+      {/* Also a display preference of its own: which level's part lines the search results show. */}
+      <Box sx={{ mt: 1.5, pt: 1.5, borderTop: 1, borderColor: "divider" }}>
+        <Typography variant="body2" sx={{ mb: 0.5 }}>
+          {t("catalogingStyle.partLevels")}
+        </Typography>
+        <ToggleButtonGroup
+          exclusive
+          size="small"
+          value={preferences.partLevels}
+          onChange={(_event, value) => {
+            if (value) onChange({ ...preferences, partLevels: toPartLevels(value) });
+          }}
+          aria-label={t("catalogingStyle.partLevels")}
+        >
+          {PART_LEVELS.map((level) => (
+            <ToggleButton key={level} value={level} sx={{ textTransform: "none", px: 2 }}>
+              {t(`catalogingStyle.partLevel.${level}`)}
+            </ToggleButton>
+          ))}
+        </ToggleButtonGroup>
+        <Typography variant="caption" color="text.secondary" sx={{ display: "block", mt: 0.5 }}>
+          {t("catalogingStyle.partLevelsNote")}
+        </Typography>
+      </Box>
 
       <Typography variant="caption" color="text.secondary" sx={{ display: "block", mt: 1 }}>
         {t("catalogingStyle.hiddenNote")}
