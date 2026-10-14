@@ -22,6 +22,7 @@ import {
 import { Class, Description, Edit, Search, Tag } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import { useVirtualizer } from "@tanstack/react-virtual";
+import { formatCount, formatCountExact } from "../utils/formatCount";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import {
   useRdfClasses,
@@ -57,7 +58,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
   onRegisterSave,
   onRegisterDiscard,
 }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { logEvent, isRecording } = useLogging();
   const [selectedClass, setSelectedClass] = useState<string | null>(null);
   const [selectedEntity, setSelectedEntity] = useState<string | null>(null);
@@ -202,18 +203,22 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
     setPendingNavigation(null);
   }, []);
 
-  // Build the count label for the entity panel header
+  // Build the count for the entity panel header: compact, because the header
+  // has little room (see utils/formatCount.ts), with the exact numbers for a tooltip
   // (must be before early return to satisfy Rules of Hooks)
-  const countLabel = useMemo(() => {
+  const count = useMemo(() => {
     if (!selectedClass || totalCount == null) return null;
+    const locale = i18n.language;
     if (debouncedFilter && filteredCount != null) {
-      return t("messages.entityCountFiltered", {
-        shown: filteredCount,
-        total: totalCount,
-      });
+      const label = (format: typeof formatCount) =>
+        t("messages.entityCountFiltered", {
+          shown: format(filteredCount, locale),
+          total: format(totalCount, locale),
+        });
+      return { text: label(formatCount), exact: label(formatCountExact) };
     }
-    return String(totalCount);
-  }, [selectedClass, debouncedFilter, filteredCount, totalCount, t]);
+    return { text: formatCount(totalCount, locale), exact: formatCountExact(totalCount, locale) };
+  }, [selectedClass, debouncedFilter, filteredCount, totalCount, t, i18n.language]);
 
   if (classesError) {
     return (
@@ -230,7 +235,9 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
           display: "grid",
           gridTemplateColumns: {
             xs: "1fr",
-            md: "minmax(160px, 0.8fr) minmax(220px, 1fr) minmax(360px, 2.2fr)",
+            // Classes : entities : editor = 1 : 2 : 3. The entity list header holds a
+            // filter field (see the header below), so it keeps twice the classes' room
+            md: "minmax(150px, 1fr) minmax(260px, 2fr) minmax(360px, 3fr)",
           },
           gap: 3,
           height: { xs: "auto", md: "calc(100vh - 160px)" },
@@ -238,7 +245,15 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
         }}
       >
         <Box sx={{ display: "flex", flexDirection: "column", minWidth: 0, overflow: { xs: "visible", md: "hidden" } }}>
-          <Paper elevation={1} sx={{ height: { xs: "auto", md: "100%" }, display: "flex", flexDirection: "column" }}>
+          <Paper
+            elevation={1}
+            sx={{
+              height: { xs: "auto", md: "100%" },
+              display: "flex",
+              flexDirection: "column",
+              containerType: "inline-size",
+            }}
+          >
             <Box sx={{ p: 2, borderBottom: 1, borderColor: "divider", height: 64, display: "flex", alignItems: "center", gap: 1 }}>
               <Typography
                 variant="h6"
@@ -256,6 +271,9 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
                   size="small"
                   color="primary"
                   variant="outlined"
+                  // The class is highlighted in the list too: drop the chip where the
+                  // panel is too narrow to show its name (it was cut to "Expre…")
+                  sx={{ "@container (max-width: 280px)": { display: "none" } }}
                 />
               )}
             </Box>
@@ -290,7 +308,16 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
         </Box>
 
         <Box sx={{ display: "flex", flexDirection: "column", minWidth: 0, overflow: { xs: "visible", md: "hidden" } }}>
-          <Paper elevation={1} sx={{ height: { xs: "auto", md: "100%" }, display: "flex", flexDirection: "column" }}>
+          <Paper
+            elevation={1}
+            sx={{
+              height: { xs: "auto", md: "100%" },
+              display: "flex",
+              flexDirection: "column",
+              // The header reacts to the width of this panel, not of the window
+              containerType: "inline-size",
+            }}
+          >
             <Box
               sx={{
                 p: 2,
@@ -302,22 +329,31 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
                 gap: 1,
               }}
             >
-              <Typography
-                variant="h6"
-                sx={{ display: "flex", alignItems: "center", flexShrink: 0 }}
-              >
-                <Description sx={{ mr: 1 }} />
-                {t("navigation.entities")}
-              </Typography>
+              <Tooltip title={t("navigation.entities")}>
+                <Typography
+                  variant="h6"
+                  sx={{ display: "flex", alignItems: "center", gap: 1, flexShrink: 0 }}
+                >
+                  <Description />
+                  {/* Icon alone when the panel is too narrow to leave the filter room */}
+                  <Box component="span" sx={{ "@container (max-width: 420px)": { display: "none" } }}>
+                    {t("navigation.entities")}
+                  </Box>
+                </Typography>
+              </Tooltip>
 
-              {/* Count badge: "filtered of total" when filtering, just total otherwise */}
-              {selectedClass && !entitiesLoading && countLabel && (
-                <Chip
-                  label={countLabel}
-                  size="small"
-                  variant="outlined"
-                  sx={{ flexShrink: 0 }}
-                />
+              {/* Count: "shown of total" when filtering, just the total otherwise */}
+              {selectedClass && !entitiesLoading && count && (
+                <Tooltip title={count.exact}>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    noWrap
+                    sx={{ flexShrink: 0 }}
+                  >
+                    {count.text}
+                  </Typography>
+                </Tooltip>
               )}
 
               <TextField
@@ -326,7 +362,7 @@ const EntityBrowser: React.FC<EntityBrowserProps> = ({
                 value={entityFilter}
                 onChange={(e) => setEntityFilter(e.target.value)}
                 disabled={!selectedClass}
-                sx={{ flex: 1, minWidth: 80 }}
+                sx={{ flex: 1, minWidth: 130 }}
                 aria-label={t("labels.filter")}
                 slotProps={{
                   input: {

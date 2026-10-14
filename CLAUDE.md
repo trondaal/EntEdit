@@ -454,6 +454,13 @@ wherever values are listed:
 - `LabelManager` dialog uses `hideBackdrop`, `disableEnforceFocus`, `disableAutoFocus`,
   `disableRestoreFocus` to allow interaction with content behind it (non-modal)
 - Drag-and-drop reordering via @dnd-kit only shows controls when editing with 2+ values
+- The editor's three panel headers are one row of 64px each. The entity list's column is
+  narrow (about 300–460px) and its header must leave the filter field at least ~150px, so
+  the count is compact from 100,000 ("8,560 of 1.5M", `utils/formatCount.ts`, exact numbers in
+  a tooltip), and the panels react to their own width with CSS container queries
+  (`containerType: inline-size` on the `Paper`): below 420px the word "Entities" is dropped
+  (icon only, tooltip), below 280px the Classes header drops the selected-class chip (the class
+  is highlighted in the list). Column weights are 1 : 2 : 3 (classes : entities : editor) with minimums 150/260/360px
 - Long value lists: every multi-valued property renders through `PropertyValues`, whose
   heading (chevron, label, count) collapses the values and whose list is cut to the first
   `INITIAL_VISIBLE` (5) with a "Show 50 more (N left)" button (`utils/propertyView.ts`,
