@@ -417,15 +417,22 @@ relationship, and each has an inverse so the role shows from the agent's side.
 Domain is Manifestation (`rdac:C10007`) and range Agent (`rdac:C10002`), reversed
 for the inverse.
 
-**Pseudonyms.** RDA's *has alternate/real identity of person* points to a nomen.
-Systems like ISFDB record pseudonyms as separate person entities, so:
+**Alternate identities.** RDA's *has alternate/real identity of person* points to a
+nomen, not to another person, and sits in a deep hierarchy of nomen properties.
+Systems like ISFDB record a pseudonym as a separate agent, so the pair links two
+agents and is defined directly under RDA's *has related agent of agent*:
 
 | Property | Inverse | Sub-property of | Label (en) |
 |---|---|---|---|
-| `entedit:P15` | `P16` | `rda:a/P50428` | has alternate identity |
-| `entedit:P16` | `P15` | `rda:a/P50429` | has real identity |
+| `entedit:P15` | `P16` | `rdaao:P50309` | has alternate identity |
+| `entedit:P16` | `P15` | `rdaao:P50309` | has real identity |
 
-Both link Person → Person (`rdac:C10004`).
+Domain and range are Agent (`rdac:C10002`), so the pair shows in the editor's Related
+Agents section for persons and corporate bodies alike, and the pickers offer agents.
+(The editor lists a property when its range is Agent or one of its subclasses; the
+picker then offers only that class, so a Person-range property such as RDA's *has
+creator person of manifestation* lists persons only.) The domain and range are stated
+on the properties themselves because RDFS does not copy them from a super-property.
 
 **Genre and form concepts** (in `labels.genretypes.ttl`; all `skos:Concept` and
 `entedit:Genretype`)

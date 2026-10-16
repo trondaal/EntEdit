@@ -706,6 +706,17 @@ The application expects:
   publication search still shows them, merged with their manifestation, and the
   work search lists them like any other work: `worksIndex` has no `documentFilter`,
   so it gives a full overview of everything entered as a work
+- The Related Agents section lists object properties whose range is Agent *or a subclass*
+  (`useAgentProperties`, `?range rdfs:subClassOf* rdac:C10002`); the picker narrows to the
+  property's own range, so a Person-range property offers persons only. Narrow properties
+  (`rdamo:P30363` creator person, `P30420` publisher corporate body) and their broader
+  parents are both listed; a value stored on the narrow one is not repeated under the parent
+  (`useEntityQuery` drops inferred values that a sub-property already carries), so parents
+  need not be left out of the profile. Domain and range must be stated on the property itself
+  (RDFS does not copy them from a super-property)
+- `entedit:P15`/`P16` (alternate / real identity, pseudonyms) are agent-to-agent, defined under
+  `rdaao:P50309` "has related agent of agent" with Agent as domain and range, not under the
+  nomen properties `rdaao:P50428`/`P50429` they used to extend
 - Standard RDFS vocabulary (rdfs:label, rdfs:domain, rdfs:range)
 - RDA vocabulary for bibliographic entities (Work, Expression, Manifestation, Item)
 - Properties must have correct `entedit:status` to appear in the editor UI;

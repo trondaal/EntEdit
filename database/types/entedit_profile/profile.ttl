@@ -302,27 +302,30 @@ entedit:P14
   rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
   rdfs:label "er fotograf i"@no, "is photographer in"@en.
 
-# Pseudonyms between persons. RDA's "has alternate/real identity of person"
-# (rdaao:P50428/P50429) point to a nomen; these sub-properties of the
-# unconstrained elements link two persons, as ISFDB records pseudonyms as
-# separate authors.
+# Alternate identities (pseudonyms, variant records of one agent). ISFDB records
+# a pseudonym as a separate author, so these link two agents. They are plain
+# agent-to-agent relationships, sub-properties of RDA's "has related agent of
+# agent" (rdaao:P50309), with Agent as domain and range: that is what puts them
+# in the editor's Related Agents section, and the pickers offer agents. They
+# replace an earlier definition under rdaao:P50428/P50429 ("has alternate/real
+# identity of person"), which point to a nomen and carry that whole hierarchy.
 
 entedit:P15
   a rdf:Property ;
   entedit:status "object property" ;
-  rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50428> ;
+  rdfs:subPropertyOf rdaao:P50309 ;
   owl:inverseOf entedit:P16 ;
-  rdfs:domain <http://rdaregistry.info/Elements/c/C10004> ;
-  rdfs:range <http://rdaregistry.info/Elements/c/C10004> ;
+  rdfs:domain <http://rdaregistry.info/Elements/c/C10002> ;
+  rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
   rdfs:label "har alternativ identitet"@no, "has alternate identity"@en.
 
 entedit:P16
   a rdf:Property ;
   entedit:status "object property" ;
-  rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50429> ;
+  rdfs:subPropertyOf rdaao:P50309 ;
   owl:inverseOf entedit:P15 ;
-  rdfs:domain <http://rdaregistry.info/Elements/c/C10004> ;
-  rdfs:range <http://rdaregistry.info/Elements/c/C10004> ;
+  rdfs:domain <http://rdaregistry.info/Elements/c/C10002> ;
+  rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
   rdfs:label "har virkelig identitet"@no, "has real identity"@en.
 
 #All classes with status "class" are displayed in the entity browsers class display

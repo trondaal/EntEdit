@@ -16,6 +16,8 @@ const RELATED_EXCLUDED_PROPERTIES = [
   "rdamo:P30139",
 ].join(",");
 
+const AGENT_CLASS = "http://rdaregistry.info/Elements/c/C10002";
+
 /** Defensive URI-based dedup — mirrors the helper in useSchemaQueries. */
 function dedupeByUri<T extends { uri: string }>(items: T[]): T[] {
   const seen = new Map<string, T>();
@@ -135,17 +137,16 @@ export const useWEMIProperties = (
   });
 };
 
-// Hook for Related Agent properties
-export const useAgentProperties = (
-  config: SparqlEndpointConfig,
-  classUri?: string,
-  language: string = "en",
-) => {
-  return useQuery({
-    queryKey: ["agent-properties", config.url, classUri, language],
-    queryFn: async ({ signal }): Promise<RdfProperty[]> => {
-      const client = new SparqlClient(config);
-      const query = `
+/**
+ * The properties of the Related Agents section: object properties whose range
+ * is Agent or one of its subclasses (Person, Corporate Body, Family …). A
+ * property with a narrower range, such as "has creator person of
+ * manifestation" (Person) or "has publisher corporate body", belongs here too;
+ * the picker (`useEntitiesByRange`) then offers only entities of that class.
+ * Their broader parents ("creator agent") are shown as well, but a value
+ * stored on the narrow property is not repeated under them (see `useEntityQuery`).
+ */
+export const buildAgentPropertiesQuery = (classUri: string | undefined, language: string): string => `
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX owl: <http://www.w3.org/2002/07/owl#>
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -159,11 +160,23 @@ export const useAgentProperties = (
           ${createSchemaLabelFragment("?property", language)}
           ?property rdfs:domain ?domain .
           ?property rdfs:range ?range .
-    	    FILTER(?range = <http://rdaregistry.info/Elements/c/C10002> ) .
+          ?range rdfs:subClassOf* <${AGENT_CLASS}> .
           ${classUri ? `<${sanitizeSparqlUri(classUri)}> rdfs:subClassOf* ?domain .` : ""}
         }
         ORDER BY ?range STR(?label)
       `;
+
+// Hook for Related Agent properties
+export const useAgentProperties = (
+  config: SparqlEndpointConfig,
+  classUri?: string,
+  language: string = "en",
+) => {
+  return useQuery({
+    queryKey: ["agent-properties", config.url, classUri, language],
+    queryFn: async ({ signal }): Promise<RdfProperty[]> => {
+      const client = new SparqlClient(config);
+      const query = buildAgentPropertiesQuery(classUri, language);
 
       const response = await client.query(query, { signal });
       return dedupeByUri(

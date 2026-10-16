@@ -166,6 +166,14 @@
     "is photographer in": {
       "no": "er fotograf i",
       "ui": true
+    },
+    "has alternate identity": {
+      "no": "har alternativ identitet",
+      "ui": true
+    },
+    "has real identity": {
+      "no": "har virkelig identitet",
+      "ui": true
     }
   },
   "work_relationships": {
