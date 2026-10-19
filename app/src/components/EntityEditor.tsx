@@ -37,8 +37,9 @@ import { EntityLabelsProvider, useEntityLabels, type EntityLabelsMap } from "../
 import { PropertyViewContext, usePropertyViewState } from "../hooks/usePropertyView";
 import { useEntityQuery } from "../hooks/useEntityQueries";
 import { useEntityMutations } from "../hooks/useEntityMutations";
+import { useLogging } from "../hooks/useLogging";
 import type { CatalogingPreferences } from "../utils/catalogingStyle";
-import { pruneDuplicateValues, pruneEmptyValues } from "../utils/entityUpdate";
+import { pruneDuplicateValues, pruneEmptyValues, RDFS_LABEL } from "../utils/entityUpdate";
 import { visibleCount } from "../utils/propertyView";
 
 // Stable empty map reference to avoid re-rendering context consumers while the
@@ -97,6 +98,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   const { data: relatedManifestationProperties = [], isLoading: relatedManifestationPropertiesLoading } =
     useRelatedManifestationProperties(config, classUri, selectedLanguage);
 
+  const { logEvent } = useLogging();
   const [entityData, setEntityData] = useState<Record<string, OrderedValue[]>>({});
   const [isEditing, setIsEditing] = useState(!entityUri);
   // isDirty tracks actual user changes (separate from isEditing which controls form interactivity)
@@ -403,6 +405,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     // graph rather than on its repository chooser. Done before the modifier-key
     // check so a Ctrl/Cmd-click, which follows the href directly, benefits too.
     prepareWorkbenchRepository(config.url);
+    if (entityUri) logEvent({ type: "graph_visualization_opened", entityUri, source: "editor" });
 
     // If user is holding Ctrl/Cmd, let the default link behavior work
     if (event.ctrlKey || event.metaKey) {
@@ -415,7 +418,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
 
     // Open in new tab with security attributes
     window.open(getGraphUrl, "_blank", "noopener,noreferrer");
-  }, [getGraphUrl, config.url]);
+  }, [getGraphUrl, config.url, logEvent, entityUri]);
 
   const getPropertyLabel = useCallback((propertyUri: string) => {
     const property = properties.find((p) => p.uri === propertyUri);
@@ -429,7 +432,8 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     setLabelManagerOpen(false);
     setIsEditing(true); // Ensure form is in edit mode
     setIsDirty(true);   // Mark entity as having unsaved changes
-  }, []);
+    logEvent({ type: "property_edited", entityUri, classUri, propertyUri: RDFS_LABEL, action: "labels_changed" });
+  }, [logEvent, entityUri, classUri]);
 
   const addProperty = useCallback((propertyUri: string) => {
     if (propertyUri && isEditing) {
@@ -444,8 +448,9 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
         };
       });
       setIsDirty(true);
+      logEvent({ type: "property_edited", entityUri, classUri, propertyUri, action: "added" });
     }
-  }, [isEditing]);
+  }, [isEditing, logEvent, entityUri, classUri]);
 
   const addObjectProperty = useCallback((propertyUri: string, entityUri: string) => {
     if (propertyUri && entityUri) {
@@ -474,7 +479,8 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       return { ...prev, [property]: values };
     });
     setIsDirty(true);
-  }, []);
+    logEvent({ type: "property_edited", entityUri, classUri, propertyUri: property, action: "language_changed" });
+  }, [logEvent, entityUri, classUri]);
 
   const updatePropertyValue = useCallback((
     property: string,
@@ -510,6 +516,13 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
     setIsDirty(true);
   }, []);
 
+  // A data value removed; a removed relationship is logged by ObjectPropertyGroup,
+  // which knows its target and section
+  const removeDataValue = useCallback((property: string, index: number) => {
+    logEvent({ type: "property_edited", entityUri, classUri, propertyUri: property, action: "removed" });
+    removePropertyValue(property, index);
+  }, [logEvent, entityUri, classUri, removePropertyValue]);
+
   const reorderPropertyValues = useCallback((property: string, fromIndex: number, toIndex: number) => {
     setEntityData((prev) => {
       const values = [...(prev[property] || [])];
@@ -523,7 +536,8 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
       };
     });
     setIsDirty(true);
-  }, []);
+    logEvent({ type: "property_edited", entityUri, classUri, propertyUri: property, action: "reordered" });
+  }, [logEvent, entityUri, classUri]);
 
   const uriError = useMemo(() => {
     return customEntityUri && !isValidUri(customEntityUri);
@@ -555,15 +569,19 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
   }, [isEditing, requestSave]);
 
   // Additional handlers for the header component
-  const handleEdit = useCallback(() => setIsEditing(true), []);
+  const handleEdit = useCallback(() => {
+    setIsEditing(true);
+    logEvent({ type: "edit_mode_entered", entityUri, classUri });
+  }, [logEvent, entityUri, classUri]);
 
   const performCancel = useCallback(() => {
+    logEvent({ type: "edit_cancelled", entityUri, classUri, hadChanges: isDirtyRef.current });
     setIsEditing(false);
     setIsDirty(false);
     setEntityData(existingEntity?.data || {});
     setEntityLabels(existingEntity?.labels || []);
     setDiscardDialogOpen(false);
-  }, [existingEntity]);
+  }, [existingEntity, logEvent, entityUri, classUri]);
 
   // Register/unregister discard handler so the header Refresh button's
   // "Discard & refresh" option can drop unsaved edits before invalidation.
@@ -729,7 +747,7 @@ const EntityEditor: React.FC<EntityEditorProps> = ({
           selectedProperty={selectedProperty}
           onPropertySelect={handlePropertySelect}
           onUpdateValue={updatePropertyValue}
-          onRemoveValue={removePropertyValue}
+          onRemoveValue={removeDataValue}
           onReorderValues={reorderPropertyValues}
           getPropertyLabel={getPropertyLabel}
         />

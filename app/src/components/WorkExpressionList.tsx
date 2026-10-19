@@ -14,6 +14,7 @@ import { useExpressionsByWork, type Expression } from "../hooks/useExpressionQue
 import type { SparqlEndpointConfig } from "../types/sparql";
 import { splitSemicolonValues } from "../utils/textFormatters";
 import { getContentTypeIcon, typeIconSmallSx } from "../utils/contentTypeIcons";
+import { useLogging } from "../hooks/useLogging";
 import { CategoryChip, CreatorLines, ExpandChip, RelationshipLines } from "./ResultLines";
 import ManifestationList from "./ManifestationList";
 
@@ -42,6 +43,7 @@ const WorkExpression: React.FC<{
   onEntitySearch: EntitySearchHandler;
 }> = ({ expression, config, selectedLanguage, onEntitySearch }) => {
   const { t } = useTranslation();
+  const { logEvent } = useLogging();
   const [manifestationsExpanded, setManifestationsExpanded] = useState(false);
   const title = expression.title || expression.work_title || expression.uri;
 
@@ -84,6 +86,9 @@ const WorkExpression: React.FC<{
                   expanded={manifestationsExpanded}
                   onToggle={(e) => {
                     e.stopPropagation();
+                    if (!manifestationsExpanded) {
+                      logEvent({ type: "search_result_expanded", section: "publications", uri: expression.uri });
+                    }
                     setManifestationsExpanded(!manifestationsExpanded);
                   }}
                 />

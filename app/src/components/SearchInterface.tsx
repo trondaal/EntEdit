@@ -37,6 +37,7 @@ import Expression from "./Expression";
 import ManifestationSearchResult from "./ManifestationSearchResult";
 import Work from "./Work";
 import { useLogging } from "../hooks/useLogging";
+import { createLinkSearchGuard } from "../utils/interactionLog";
 import type { SearchMode } from "../types/logging";
 
 /** Search tabs in display order: publications, content, works. */
@@ -86,9 +87,20 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
   const setOrder = (update: (current: string[]) => string[]) =>
     setOrderByMode((all) => ({ ...all, [searchMode]: update(all[searchMode]) }));
   const clearLink = () => {
+    if (linkTarget) {
+      logEvent({
+        type: "search_link_cleared",
+        label: linkTarget.label,
+        uri: linkTarget.uri,
+        kind: linkTarget.kind,
+        mode: linkTarget.mode,
+      });
+    }
     setLinkTarget(null);
     setOrderByMode(withoutLink);
   };
+  // The search a followed link starts is logged as that link, not as typed text
+  const [linkGuard] = useState(createLinkSearchGuard);
 
   // Debounce the search query to avoid firing expensive SPARQL queries on every keystroke
   const debouncedQuery = useDebouncedValue(searchInput, 500);
@@ -172,11 +184,21 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
   // Log search when the debounced query fires
   const prevDebouncedRef = useRef(debouncedQuery);
   useEffect(() => {
-    if (isRecording && debouncedQuery && debouncedQuery !== prevDebouncedRef.current) {
-      logEvent({ type: "search_performed", query: debouncedQuery, mode: searchMode });
+    if (debouncedQuery !== prevDebouncedRef.current) {
+      const fromLink = linkGuard.consume(debouncedQuery);
+      if (isRecording && debouncedQuery && !fromLink) {
+        logEvent({ type: "search_performed", query: debouncedQuery, mode: searchMode });
+      }
     }
     prevDebouncedRef.current = debouncedQuery;
-  }, [debouncedQuery, searchMode, isRecording, logEvent]);
+  }, [debouncedQuery, searchMode, isRecording, logEvent, linkGuard]);
+
+  const handleModeChange = (_: unknown, mode: SearchMode) => {
+    if (mode !== searchMode) {
+      logEvent({ type: "search_mode_changed", from: searchMode, to: mode, query: debouncedQuery });
+    }
+    setSearchMode(mode);
+  };
 
   const handleSearch = (value: string) => {
     setSearchInput(value);
@@ -223,6 +245,7 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
   // removed or the text edited: the label's words alone rank related entries,
   // that repeat them, as high as the target.
   const handleEntitySearch: EntitySearchHandler = (label, target) => {
+    if (label !== searchInput) linkGuard.mark(label);
     setSearchInput(label);
     if (isRecording) {
       logEvent({ type: "search_link_followed", label, uri: target?.uri, kind: target?.kind, mode: searchMode });
@@ -280,7 +303,7 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
               {/* Search Mode Tabs */}
               <Tabs
                 value={searchMode}
-                onChange={(_, mode: SearchMode) => setSearchMode(mode)}
+                onChange={handleModeChange}
                 sx={{ mb: 2, borderBottom: 1, borderColor: 'divider' }}
               >
                 <Tab value="manifestation" label={t("search.manifestationSearch")} />

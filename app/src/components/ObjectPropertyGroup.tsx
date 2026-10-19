@@ -107,6 +107,25 @@ const ObjectPropertyGroup: React.FC<ObjectPropertyGroupProps> = ({
 
   const handleCancel = useCallback(() => setSelectedProperty(""), []);
 
+  // Removing a relationship is logged here, where the target and the section are known
+  const handleRemoveValue = useCallback(
+    (property: string, index: number) => {
+      const removed = entityData[property]?.[index];
+      if (isRecording && removed?.value) {
+        logEvent({
+          type: "relationship_removed",
+          sourceEntityUri: sourceEntityUri || "",
+          propertyUri: property,
+          targetEntityUri: removed.value,
+          section: sectionKey || sectionTitle,
+          ...(removed.inferred ? { inferred: true } : {}),
+        });
+      }
+      onRemoveValue(property, index);
+    },
+    [entityData, isRecording, logEvent, sourceEntityUri, sectionKey, sectionTitle, onRemoveValue],
+  );
+
   // Don't render the section at all if there's nothing to show
   if (
     propertiesWithValues.length === 0 &&
@@ -178,7 +197,7 @@ const ObjectPropertyGroup: React.FC<ObjectPropertyGroupProps> = ({
           onUpdateValue={(index, value) =>
             onUpdateValue(propertyUri, index, value)
           }
-          onRemoveValue={(index) => onRemoveValue(propertyUri, index)}
+          onRemoveValue={(index) => handleRemoveValue(propertyUri, index)}
           onReorderValues={onReorderValues}
         />
       ))}

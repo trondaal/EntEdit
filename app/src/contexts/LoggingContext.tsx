@@ -1,12 +1,13 @@
 import React, { createContext, useRef, useState, useCallback, useEffect } from "react";
-import type { LogSession, LogEventInput } from "../types/logging";
+import type { LogSession, LogEventInput, SessionContext } from "../types/logging";
+import { stampEvent } from "../utils/interactionLog";
 
 const SESSION_STORAGE_KEY = "entEdit.activeLogSession";
 
 interface LoggingContextValue {
   isRecording: boolean;
   sessionDuration: number;
-  startSession: (endpointUrl: string, language: string) => void;
+  startSession: (endpointUrl: string, language: string, context?: SessionContext) => void;
   stopSession: () => LogSession | null;
   logEvent: (event: LogEventInput) => void;
   getSession: () => LogSession | null;
@@ -33,7 +34,7 @@ export const LoggingProvider: React.FC<{ children: React.ReactNode }> = ({ child
     };
   }, []);
 
-  const startSession = useCallback((endpointUrl: string, language: string) => {
+  const startSession = useCallback((endpointUrl: string, language: string, context?: SessionContext) => {
     // crypto.randomUUID() requires a secure context (HTTPS or localhost).
     // Fall back to a timestamp-based ID for HTTP deployments.
     const sessionId = typeof crypto.randomUUID === "function"
@@ -46,6 +47,7 @@ export const LoggingProvider: React.FC<{ children: React.ReactNode }> = ({ child
       endedAt: null,
       endpointUrl,
       language,
+      ...(context ? { context } : {}),
       events: [],
     };
     sessionRef.current = session;
@@ -111,13 +113,9 @@ export const LoggingProvider: React.FC<{ children: React.ReactNode }> = ({ child
   const logEvent = useCallback((event: LogEventInput) => {
     if (!sessionRef.current) return;
 
-    const fullEvent = {
-      ...event,
-      timestamp: new Date().toISOString(),
-      sequenceNumber: ++sequenceRef.current,
-    } as LogEventInput & { timestamp: string; sequenceNumber: number };
-
-    sessionRef.current.events.push(fullEvent);
+    sessionRef.current.events.push(
+      stampEvent(event, ++sequenceRef.current, new Date().toISOString()),
+    );
   }, []);
 
   const getSession = useCallback((): LogSession | null => {

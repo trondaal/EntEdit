@@ -19,6 +19,7 @@ import type { ManifestationSearchResult as ManifestationSearchResultType } from 
 import type { SparqlEndpointConfig } from "../types/sparql";
 import { getGraphVisualizationUrl, openGraphVisualization } from "../utils/graphUtils";
 import { useExpressionDetail, useExpressionsByManifestation } from "../hooks/useExpressionQueries";
+import { useLogging } from "../hooks/useLogging";
 import ExpressionList from "./ExpressionList";
 import { RelationshipLines } from "./ResultLines";
 import { presentManifestation } from "../utils/manifestationPresentation";
@@ -60,6 +61,7 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
 }) => {
   const { t } = useTranslation();
   const { enqueueSnackbar } = useSnackbar();
+  const { logEvent } = useLogging();
   const [expressionsExpanded, setExpressionsExpanded] = useState(false);
   const graphUrl = getGraphVisualizationUrl(config.url, result.uri);
 
@@ -81,6 +83,7 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
 
   const handleToggleExpressions = (e: React.MouseEvent) => {
     e.stopPropagation();
+    if (!expressionsExpanded) logEvent({ type: "search_result_expanded", section: "contents", uri: result.uri });
     setExpressionsExpanded(!expressionsExpanded);
   };
 
@@ -178,7 +181,8 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                         size="small"
                         onClick={(e) => {
                           e.stopPropagation();
-                          openGraphVisualization(config.url, result.uri);
+                          logEvent({ type: "graph_visualization_opened", entityUri: result.uri, source: "search" });
+                        openGraphVisualization(config.url, result.uri);
                         }}
                         sx={{
                           mt: -0.5,
@@ -208,7 +212,7 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                 )}
 
                 {/* Line 3: Notes, collapsed to two lines when long */}
-                {notesLine && <CollapsibleNote text={notesLine} />}
+                {notesLine && <CollapsibleNote text={notesLine} entityUri={result.uri} />}
 
                 {/* Line 4: Identifiers (all on one line) */}
                 {identifiersLine && (

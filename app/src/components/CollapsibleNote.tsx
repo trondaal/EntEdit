@@ -1,12 +1,15 @@
 import React, { useCallback, useLayoutEffect, useRef, useState } from "react";
 import { Box, Link, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import { useLogging } from "../hooks/useLogging";
 
 /** Lines a collapsed note may take, the "show the whole note" link included. */
 const COLLAPSED_LINES = 2;
 
 interface CollapsibleNoteProps {
   text: string;
+  /** The publication the note belongs to, for the interaction log. */
+  entityUri?: string;
 }
 
 /**
@@ -19,8 +22,9 @@ interface CollapsibleNoteProps {
  * ever shorter prefixes (binary search) until it fits. It is measured again
  * whenever the width changes.
  */
-const CollapsibleNote: React.FC<CollapsibleNoteProps> = ({ text }) => {
+const CollapsibleNote: React.FC<CollapsibleNoteProps> = ({ text, entityUri }) => {
   const { t } = useTranslation();
+  const { logEvent } = useLogging();
   const [expanded, setExpanded] = useState(false);
   /** Characters shown while collapsed; null when the whole note fits. */
   const [cut, setCut] = useState<number | null>(null);
@@ -70,6 +74,7 @@ const CollapsibleNote: React.FC<CollapsibleNoteProps> = ({ text }) => {
   const toggle = (e: React.MouseEvent) => {
     // The note sits inside a clickable search result
     e.stopPropagation();
+    if (!expanded) logEvent({ type: "search_result_expanded", section: "note", uri: entityUri });
     setExpanded((value) => !value);
   };
 

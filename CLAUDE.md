@@ -491,6 +491,29 @@ wherever values are listed:
   `requireIdentifier` is set, since the plain "leave empty to auto-generate"
   text stops being true.
 
+### Interaction logging
+
+`Start logging` records a teaching session (`contexts/LoggingContext.tsx`, `types/logging.ts`,
+`LoggingControls` for consent and download). Events describe structure, not content: which
+entity, class, property or relationship, never the text of a value. The session header carries the
+app version (`__APP_VERSION__`, injected by `vite.config.ts` from package.json) and the active
+preferences, so a log can be read against the style it was made in (`utils/interactionLog.ts`:
+`buildSessionContext`, `stampEvent`, `diffPreferences`, `diffEndpoint`, `createLinkSearchGuard`;
+unit-tested). Each interaction logs where it happens, with `logEvent` (a no-op outside a
+session): `EntityEditor` (edit mode, cancel, property add/remove/reorder/language, labels),
+`ObjectPropertyGroup` (relationship added/removed, with the target and section),
+`useEntityMutations` (saved with the property URIs written, save/delete failures),
+`SearchInterface` (searches, mode switch, filters, followed and cleared links, result clicks),
+the result components (`search_result_expanded`: a work's expressions, an expression's
+publications, a publication's contents, a collapsed relationship, a note), the graph
+visualization links (`graph_visualization_opened`, editor menu and result icons), the import
+dialog, and `App` (refresh, language, settings). Exports are deliberately not logged: they
+deliver an assignment rather than being part of working with the entities. A new interaction, tab or dialog needs its event
+added here and to the consent text (`logging.recordedItem*` in `locales/*/common.json`) and the
+guide's section 4.6. Search texts and an identifier typed for a new entity *are* recorded, as the
+consent says; file names, addresses and credentials are not. Following a link makes its label the
+search text, which `createLinkSearchGuard` keeps from also counting as a typed `search_performed`.
+
 ### Localization
 
 Two namespaces in `app/src/locales/{lang}/`:

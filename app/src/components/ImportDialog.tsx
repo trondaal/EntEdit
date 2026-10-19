@@ -20,6 +20,7 @@ import type { SparqlEndpointConfig } from "../types/sparql";
 import { SparqlClient, SparqlError } from "../utils/sparqlClient";
 import { invalidateAllEntityData } from "../utils/queryInvalidation";
 import { dataGraphOf } from "../utils/dataGraph";
+import { useLogging } from "../hooks/useLogging";
 
 const ACCEPTED_EXTENSIONS = [".ttl", ".ttls", ".nt", ".rdf"] as const;
 
@@ -47,6 +48,7 @@ const ImportDialog: React.FC<ImportDialogProps> = ({
   const { t } = useTranslation();
   const { enqueueSnackbar } = useSnackbar();
   const queryClient = useQueryClient();
+  const { logEvent } = useLogging();
 
   const [file, setFile] = useState<File | null>(null);
   const defaultGraph = dataGraphOf(config);
@@ -82,9 +84,16 @@ const ImportDialog: React.FC<ImportDialogProps> = ({
 
     setImporting(true);
     setError(null);
+    // Only the kind and size of the file are recorded, not its name
+    const imported = {
+      format: file.name.slice(file.name.lastIndexOf(".")).toLowerCase(),
+      sizeBytes: file.size,
+      graph: graphUri,
+    };
     try {
       const client = new SparqlClient(config);
       await client.import(file, ctype, graphUri);
+      logEvent({ type: "data_imported", success: true, ...imported });
       invalidateAllEntityData(queryClient);
       enqueueSnackbar(
         t("dialogs.import.success", { filename: file.name }),
@@ -97,10 +106,11 @@ const ImportDialog: React.FC<ImportDialogProps> = ({
           ? err.message
           : (err as Error).message ?? "Unknown error";
       setError(message);
+      logEvent({ type: "data_imported", success: false, ...imported });
     } finally {
       setImporting(false);
     }
-  }, [file, graphUri, config, queryClient, enqueueSnackbar, onClose, t]);
+  }, [file, graphUri, config, queryClient, enqueueSnackbar, onClose, t, logEvent]);
 
   return (
     <Dialog

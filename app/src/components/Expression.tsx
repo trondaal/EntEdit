@@ -15,6 +15,7 @@ import { useSnackbar } from "notistack";
 import { useTranslation } from "react-i18next";
 import type { EntitySearchHandler } from "../utils/searchLink";
 import type { ExpressionSearchResult } from "../hooks/useSearchQueries";
+import { useLogging } from "../hooks/useLogging";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import { getGraphVisualizationUrl, openGraphVisualization } from "../utils/graphUtils";
 import ManifestationList from "./ManifestationList";
@@ -39,6 +40,7 @@ const Expression: React.FC<ExpressionProps> = ({
 }) => {
   const { t } = useTranslation();
   const { enqueueSnackbar } = useSnackbar();
+  const { logEvent } = useLogging();
   const [manifestationsExpanded, setManifestationsExpanded] = useState(false);
   const graphUrl = getGraphVisualizationUrl(config.url, result.uri);
 
@@ -54,6 +56,7 @@ const Expression: React.FC<ExpressionProps> = ({
 
   const handleToggleManifestations = (e: React.MouseEvent) => {
     e.stopPropagation();
+    if (!manifestationsExpanded) logEvent({ type: "search_result_expanded", section: "publications", uri: result.uri });
     setManifestationsExpanded(!manifestationsExpanded);
   };
 
@@ -132,6 +135,7 @@ const Expression: React.FC<ExpressionProps> = ({
                       size="small"
                       onClick={(e) => {
                         e.stopPropagation();
+                        logEvent({ type: "graph_visualization_opened", entityUri: result.uri, source: "search" });
                         openGraphVisualization(config.url, result.uri);
                       }}
                       sx={{

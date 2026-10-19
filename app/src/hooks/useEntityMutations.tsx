@@ -140,6 +140,7 @@ export function useEntityMutations({
         const existing = await findExistingEntity(client, currentEntityUri, i18n.language);
         if (existing) {
           setSaveError(t("messages.uriInUse", existing));
+          logEvent({ type: "entity_save_failed", entityUri: null, classUri, isNew: true, reason: "uri_in_use" });
           return;
         }
       }
@@ -250,6 +251,14 @@ export function useEntityMutations({
                 .join(", "),
             }),
           );
+          logEvent({
+            type: "entity_save_failed",
+            entityUri,
+            classUri,
+            isNew: false,
+            reason: "conflict",
+            properties: conflicts,
+          });
           return;
         }
       }
@@ -313,7 +322,13 @@ export function useEntityMutations({
       if (!entityUri) {
         if (isRecording) {
           logEvent({ type: "entity_created", classUri, entityUri: currentEntityUri });
-          logEvent({ type: "entity_saved", entityUri: currentEntityUri, classUri, isNew: true });
+          logEvent({
+            type: "entity_saved",
+            entityUri: currentEntityUri,
+            classUri,
+            isNew: true,
+            properties: [...willWrite],
+          });
         }
         enqueueSnackbar(t("messages.entityCreated"), {
           variant: "success",
@@ -334,7 +349,7 @@ export function useEntityMutations({
         onSaveSuccess({ isNew: true, savedEntityUri: currentEntityUri });
       } else {
         if (isRecording) {
-          logEvent({ type: "entity_saved", entityUri, classUri, isNew: false });
+          logEvent({ type: "entity_saved", entityUri, classUri, isNew: false, properties: [...willWrite] });
         }
         enqueueSnackbar(t("messages.entitySaved"), {
           variant: "success",
@@ -344,6 +359,14 @@ export function useEntityMutations({
       }
     } catch (error) {
       setSaveError(formatMutationError(error));
+      logEvent({
+        type: "entity_save_failed",
+        entityUri,
+        classUri,
+        isNew: !entityUri,
+        reason: "error",
+        ...(error instanceof SparqlError ? { code: error.code } : {}),
+      });
     } finally {
       setSaving(false);
     }
@@ -444,6 +467,12 @@ export function useEntityMutations({
       onDeleteSuccess();
     } catch (error) {
       setDeleteError(formatMutationError(error));
+      logEvent({
+        type: "entity_delete_failed",
+        entityUri,
+        classUri,
+        ...(error instanceof SparqlError ? { code: error.code } : {}),
+      });
     } finally {
       setDeleting(false);
     }

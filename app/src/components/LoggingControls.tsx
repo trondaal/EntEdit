@@ -17,15 +17,19 @@ import { FiberManualRecord, Stop, Download } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import { useLogging } from "../hooks/useLogging";
 import type { LogSession } from "../types/logging";
+import type { CatalogingPreferences } from "../utils/catalogingStyle";
+import { buildSessionContext } from "../utils/interactionLog";
 
 interface LoggingControlsProps {
   endpointUrl: string;
   language: string;
+  preferences: CatalogingPreferences;
 }
 
 const LoggingControls: React.FC<LoggingControlsProps> = ({
   endpointUrl,
   language,
+  preferences,
 }) => {
   const { t } = useTranslation();
   const {
@@ -66,7 +70,11 @@ const LoggingControls: React.FC<LoggingControlsProps> = ({
 
   const handleConsentAgree = () => {
     setConsentOpen(false);
-    startSession(endpointUrl, language);
+    startSession(
+      endpointUrl,
+      language,
+      buildSessionContext(typeof __APP_VERSION__ === "undefined" ? "unknown" : __APP_VERSION__, preferences),
+    );
   };
 
   const handleStopClick = () => {
@@ -186,6 +194,8 @@ const LoggingControls: React.FC<LoggingControlsProps> = ({
             <li>{t("logging.recordedItem2")}</li>
             <li>{t("logging.recordedItem3")}</li>
             <li>{t("logging.recordedItem4")}</li>
+            <li>{t("logging.recordedItem5")}</li>
+            <li>{t("logging.recordedItem6")}</li>
           </Typography>
 
           <Typography variant="subtitle2" sx={{ mb: 1, fontWeight: 600 }}>
@@ -194,6 +204,7 @@ const LoggingControls: React.FC<LoggingControlsProps> = ({
           <Typography variant="body2" component="ul" sx={{ pl: 2, mb: 2, color: "text.secondary" }}>
             <li>{t("logging.notRecordedItem1")}</li>
             <li>{t("logging.notRecordedItem2")}</li>
+            <li>{t("logging.notRecordedItem3")}</li>
           </Typography>
 
           <FormControlLabel

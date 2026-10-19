@@ -17,6 +17,7 @@ import type { SparqlEndpointConfig } from "../types/sparql";
 import { getGraphVisualizationUrl, openGraphVisualization } from "../utils/graphUtils";
 import { splitSemicolonValues } from "../utils/textFormatters";
 import { getContentTypeIcon, typeIconSx } from "../utils/contentTypeIcons";
+import { useLogging } from "../hooks/useLogging";
 import { CategoryChip, CreatorLines, ExpandChip, RelationshipLines } from "./ResultLines";
 import WorkExpressionList from "./WorkExpressionList";
 
@@ -42,6 +43,7 @@ const Work: React.FC<WorkProps> = ({
 }) => {
   const { t } = useTranslation();
   const { enqueueSnackbar } = useSnackbar();
+  const { logEvent } = useLogging();
   const [expressionsExpanded, setExpressionsExpanded] = useState(false);
   const graphUrl = getGraphVisualizationUrl(config.url, result.uri);
 
@@ -49,6 +51,7 @@ const Work: React.FC<WorkProps> = ({
 
   const handleToggleExpressions = (e: React.MouseEvent) => {
     e.stopPropagation();
+    if (!expressionsExpanded) logEvent({ type: "search_result_expanded", section: "expressions", uri: result.uri });
     setExpressionsExpanded(!expressionsExpanded);
   };
 
@@ -114,6 +117,7 @@ const Work: React.FC<WorkProps> = ({
                       size="small"
                       onClick={(e) => {
                         e.stopPropagation();
+                        logEvent({ type: "graph_visualization_opened", entityUri: result.uri, source: "search" });
                         openGraphVisualization(config.url, result.uri);
                       }}
                       sx={{

@@ -11,6 +11,7 @@ import { LoggingProvider } from "./contexts/LoggingContext";
 import { useLogging } from "./hooks/useLogging";
 import { ResultDisplayContext } from "./hooks/useResultDisplay";
 import { DEFAULT_PART_LEVELS } from "./utils/partRelations";
+import { diffEndpoint, diffPreferences } from "./utils/interactionLog";
 import AppHeader from "./components/AppHeader";
 const EntityBrowser = lazy(() => import("./components/EntityBrowser"));
 const SearchInterface = lazy(() => import("./components/SearchInterface"));
@@ -236,7 +237,13 @@ function AppInner() {
     },
     [],
   );
+  const { logEvent, isRecording } = useLogging();
   const handleRefresh = useCallback(async (saveFirst: boolean) => {
+    logEvent({
+      type: "data_refreshed",
+      savedFirst: saveFirst,
+      discardedEdits: !saveFirst && discardHandlerRef.current !== null,
+    });
     if (saveFirst) {
       if (saveHandlerRef.current) await saveHandlerRef.current();
     } else if (discardHandlerRef.current) {
@@ -245,7 +252,7 @@ function AppInner() {
       discardHandlerRef.current();
     }
     invalidateAllEntityData(queryClient);
-  }, []);
+  }, [logEvent]);
 
   // Ask the browser to confirm reload/close while the editor has unsaved edits
   useEffect(() => {
@@ -270,8 +277,6 @@ function AppInner() {
     const value = urlParams.get("lang");
     return value === "en" || value === "no" ? value : null;
   }, [urlParams]);
-
-  const { logEvent, isRecording } = useLogging();
 
   // Sync i18next language with app language selection
   useEffect(() => {
@@ -346,6 +351,12 @@ function AppInner() {
     preferences: CatalogingPreferences,
   ) => {
     if (appConfig) {
+      for (const change of [
+        ...diffEndpoint(appConfig.endpoint, newConfig),
+        ...diffPreferences(appConfig.preferences, preferences),
+      ]) {
+        logEvent({ type: "setting_changed", ...change });
+      }
       setAppConfig({ ...appConfig, endpoint: newConfig, preferences });
       if (!isDemoMode) {
         saveConfiguration(newConfig, appConfig.language, preferences);
@@ -355,6 +366,9 @@ function AppInner() {
 
   const handleLanguageChange = (newLanguage: string) => {
     if (appConfig) {
+      if (newLanguage !== appConfig.language) {
+        logEvent({ type: "setting_changed", setting: "language", value: newLanguage });
+      }
       const updatedConfig = {
         ...appConfig,
         language: newLanguage,

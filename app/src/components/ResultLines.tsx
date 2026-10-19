@@ -17,6 +17,7 @@ import {
   type CollapsedRelationship,
 } from "../utils/textFormatters";
 import { useRelationTargets } from "../hooks/useRelationTargets";
+import { useLogging } from "../hooks/useLogging";
 import { useResultDisplay } from "../hooks/useResultDisplay";
 import { isHiddenPartLine } from "../utils/partRelations";
 import { extractUriFragment } from "../utils/labelUtils";
@@ -127,6 +128,7 @@ const CollapsedRelationshipLine: React.FC<{
   onEntitySearch?: EntitySearchHandler;
 }> = ({ relationship, kind, entityUri, config, language, onEntitySearch }) => {
   const { t } = useTranslation();
+  const { logEvent } = useLogging();
   const [open, setOpen] = useState(false);
   const targets = useRelationTargets(config, {
     entityUri,
@@ -146,6 +148,14 @@ const CollapsedRelationshipLine: React.FC<{
         variant="body2"
         onClick={(e: React.MouseEvent) => {
           e.stopPropagation();
+          if (!open) {
+            logEvent({
+              type: "search_result_expanded",
+              section: "relationships",
+              uri: entityUri,
+              property: relationship.propertyUri,
+            });
+          }
           setOpen((current) => !current);
         }}
         aria-expanded={open}

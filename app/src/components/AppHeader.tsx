@@ -228,6 +228,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({
               <LoggingControls
                 endpointUrl={config.url}
                 language={selectedLanguage}
+                preferences={preferences}
               />
             )}
 
