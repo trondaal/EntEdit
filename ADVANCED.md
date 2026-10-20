@@ -119,12 +119,16 @@ npm install
 npm run dev
 ```
 
-Use the endpoint URL `http://localhost:7200/repositories/EntEdit`, pointing
-straight at your own GraphDB. The dev server also proxies `/graphdb` to
-`http://localhost:7200`, but prefer the direct URL: the graph visualisation opens
-GraphDB Workbench, which renders correctly only when reached at the root of its
-own origin. Going direct also leaves your GraphDB installation untouched — the app
-never writes to Workbench settings across origins.
+Use the endpoint URL `http://localhost:5173/graphdb/repositories/EntEdit`: the dev
+server forwards `/graphdb` to GraphDB on `http://localhost:7200` (`server.proxy` in
+`vite.config.ts`, which `npm run preview` on port 4173 uses too), so the browser sees one
+origin and GraphDB needs no configuration. The direct address
+`http://localhost:7200/repositories/EntEdit` is refused by the browser (GraphDB answers
+`403 Invalid CORS request`) unless CORS is enabled in GraphDB
+(`graphdb.workbench.cors.enable`; check GraphDB's documentation). The graph visualisation
+opens GraphDB Workbench, which renders correctly only when reached at the root of its own
+origin, and the dev proxy does not rewrite its `<base href>` as nginx does, so through the
+proxy it may look unstyled: open `http://localhost:7200` yourself, or enable CORS and go direct.
 
 Other commands, from `app/`:
 

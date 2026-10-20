@@ -144,6 +144,12 @@ const ConfigurationWizard: React.FC<ConfigurationWizardProps> = ({
                 </ListItem>
                 <ListItem disablePadding>
                   <ListItemText
+                    primary={t("wizard.connection.graphdbDev")}
+                    secondary={t("wizard.connection.graphdbDevHint")}
+                  />
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemText
                     primary={t("wizard.connection.graphdbServer")}
                     secondary={t("wizard.connection.graphdbServerHint")}
                   />

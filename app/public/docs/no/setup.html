@@ -543,7 +543,7 @@ npm run dev</code></pre>
 </ol>
 
 <p>
-  Bruk endepunkt-URL-en <code>http://localhost:7200/repositories/EntEdit</code>, som peker rett på din egen GraphDB. Vite-utviklingsserveren videresender også <code>/graphdb</code>-forespørsler til <code>http://localhost:7200</code>, men foretrekk den direkte URL-en: grafvisningen åpner GraphDB Workbench, som bare vises riktig når den nås i roten av sin egen opprinnelse. Direkte tilkobling lar dessuten din egen GraphDB-installasjon være i fred — EntEdit skriver aldri til Workbench-innstillinger på tvers av opprinnelser.
+  Bruk endepunkt-URL-en <code>http://localhost:5173/graphdb/repositories/EntEdit</code>. Vite-utviklingsserveren videresender forespørsler under <code>/graphdb</code> til din GraphDB på <code>http://localhost:7200</code>, så nettleseren ser én opprinnelse og ingenting må settes opp i GraphDB. (Det samme gjelder <code>npm run preview</code>, på port 4173.) Den direkte adressen <code>http://localhost:7200/repositories/EntEdit</code> virker bare hvis CORS er slått på i GraphDB — innstillingen heter <code>graphdb.workbench.cors.enable</code>; se GraphDBs dokumentasjon — ellers blokkerer nettleseren forespørslene, og EntEdit melder tilkoblingsfeil. Grafvisningen åpner GraphDB Workbench, som bare vises riktig når den nås i roten av sin egen opprinnelse; utviklingsserveren justerer ikke Workbenchs adresser slik nginx gjør, så med det videresendte endepunktet kan grafvisningen se ustilet ut. Åpne i så fall <code>http://localhost:7200</code> selv, eller slå på CORS og bruk den direkte adressen.
 </p>
 
 <div class="info-box tip">
@@ -613,7 +613,7 @@ EntEdit/<br>
 <h3>EntEdit får ikke kontakt med <code>localhost:7200</code></h3>
 
 <p>
-  GraphDB Workbench ligger på <code>http://localhost:7200</code>, og det er der du administrerer databasen, men det er ikke adressen EntEdit skal bruke som endepunkt. Nettleseren regner port 7200 som et annet nettsted — en annen <em>opprinnelse</em> — enn EntEdit selv, og blokkerer forespørslene med en CORS-feil. Adressen <code>http://localhost/graphdb/...</code> går via nginx, som videresender forespørselen til GraphDB på serversiden, og da oppstår ikke problemet.
+  GraphDB Workbench ligger på <code>http://localhost:7200</code>, og det er der du administrerer databasen, men det er ikke adressen EntEdit skal bruke som endepunkt. Nettleseren regner port 7200 som et annet nettsted — en annen <em>opprinnelse</em> — enn EntEdit selv, og blokkerer forespørslene med en CORS-feil. Adressen <code>http://localhost/graphdb/...</code> går via nginx, som videresender forespørselen til GraphDB på serversiden, og da oppstår ikke problemet. Kjører du webapplikasjonen selv med <code>npm run dev</code>, gjør utviklingsserveren det samme: bruk <code>http://localhost:5173/graphdb/repositories/EntEdit</code>.
 </p>
 
 <h3>Ingen klasser eller egenskaper vises</h3>

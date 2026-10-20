@@ -160,10 +160,12 @@
       "endpointsNote": "EntEdit krever GraphDB — fritekstsøket bruker GraphDBs Lucene-koblinger.",
       "graphdbDocker": "http://localhost/graphdb/repositories/EntEdit",
       "graphdbDockerHint": "Docker-installasjon på denne maskinen",
+      "graphdbDev": "http://localhost:5173/graphdb/repositories/EntEdit",
+      "graphdbDevHint": "Utviklingsserver (npm run dev) på denne maskinen: den videresender /graphdb til GraphDB på port 7200, så CORS trenger ikke settes opp",
       "graphdbServer": "http://dijon.idi.ntnu.no/graphdb/repositories/[repository]",
       "graphdbServerHint": "Delt server der GraphDB ligger bak samme adresse som applikasjonen",
       "graphdbPort": "http://example.org:7200/repositories/[repository]",
-      "graphdbPortHint": "GraphDB nås direkte på sin egen port"
+      "graphdbPortHint": "GraphDB nås direkte på sin egen port: CORS må være slått på i GraphDB, ellers blokkerer nettleseren forespørslene"
     },
     "test": {
       "title": "Test databasetilkobling",

@@ -157,8 +157,12 @@ npm run preview
 repository, for example:
 
 ```
-http://localhost:7200/repositories/EntEdit
+http://localhost:4173/graphdb/repositories/EntEdit
 ```
+
+The preview server forwards `/graphdb` to GraphDB on port 7200. Entering
+`http://localhost:7200/repositories/EntEdit` directly only works if CORS is enabled in
+GraphDB; otherwise the browser blocks the requests.
 
 ## Configuration
 

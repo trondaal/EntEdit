@@ -543,7 +543,7 @@ npm run dev</code></pre>
 </ol>
 
 <p>
-  Use the endpoint URL <code>http://localhost:7200/repositories/EntEdit</code>, pointing straight at your own GraphDB. The Vite development server also proxies <code>/graphdb</code> requests to <code>http://localhost:7200</code>, but prefer the direct URL: the graph visualisation opens GraphDB Workbench, which renders correctly only when it is reached at the root of its own origin. Going direct also leaves your GraphDB installation untouched — EntEdit never writes to Workbench settings across origins.
+  Use the endpoint URL <code>http://localhost:5173/graphdb/repositories/EntEdit</code>. The Vite development server forwards requests under <code>/graphdb</code> to your GraphDB on <code>http://localhost:7200</code>, so the browser sees a single origin and nothing needs configuring in GraphDB. (The same goes for <code>npm run preview</code>, on port 4173.) The direct address <code>http://localhost:7200/repositories/EntEdit</code> works only if CORS is enabled in GraphDB — the setting is named <code>graphdb.workbench.cors.enable</code>; see GraphDB's documentation — otherwise the browser blocks the requests and EntEdit reports a connection error. The graph visualisation opens GraphDB Workbench, which renders correctly only when it is reached at the root of its own origin; the development server does not adjust the Workbench's addresses as nginx does, so with the proxied endpoint the visualisation may look unstyled. In that case open <code>http://localhost:7200</code> yourself, or enable CORS and use the direct address.
 </p>
 
 <div class="info-box tip">
@@ -613,7 +613,7 @@ EntEdit/<br>
 <h3>EntEdit cannot connect to <code>localhost:7200</code></h3>
 
 <p>
-  GraphDB Workbench lives at <code>http://localhost:7200</code> and is where you administer the database, but it is not the address EntEdit should use as its endpoint. A browser treats port 7200 as a different site — a different <em>origin</em> — from EntEdit itself, and blocks the requests with a CORS error. The address <code>http://localhost/graphdb/...</code> goes through nginx, which forwards the request to GraphDB server-side, so the problem never arises.
+  GraphDB Workbench lives at <code>http://localhost:7200</code> and is where you administer the database, but it is not the address EntEdit should use as its endpoint. A browser treats port 7200 as a different site — a different <em>origin</em> — from EntEdit itself, and blocks the requests with a CORS error. The address <code>http://localhost/graphdb/...</code> goes through nginx, which forwards the request to GraphDB server-side, so the problem never arises. When you run the web application yourself with <code>npm run dev</code>, its development server does the same: use <code>http://localhost:5173/graphdb/repositories/EntEdit</code>.
 </p>
 
 <h3>No classes or properties appear</h3>
