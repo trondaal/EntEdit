@@ -506,12 +506,12 @@ session): `EntityEditor` (edit mode, cancel, property add/remove/reorder/languag
 `SearchInterface` (searches, mode switch, filters, followed and cleared links, result clicks),
 the result components (`search_result_expanded`: a work's expressions, an expression's
 publications, a publication's contents, a collapsed relationship, a note), the graph
-visualization links (`graph_visualization_opened`, editor menu and result icons), the import
-dialog, and `App` (refresh, language, settings). Exports are deliberately not logged: they
-deliver an assignment rather than being part of working with the entities. A new interaction, tab or dialog needs its event
+visualization links (`graph_visualization_opened`, editor menu and result icons), and `App`
+(refresh, language, settings). Imports and exports are deliberately not logged: they move
+assignments and data in and out rather than being part of working with the entities. A new interaction, tab or dialog needs its event
 added here and to the consent text (`logging.recordedItem*` in `locales/*/common.json`) and the
 guide's section 4.6. Search texts and an identifier typed for a new entity *are* recorded, as the
-consent says; file names, addresses and credentials are not. Following a link makes its label the
+consent says; addresses and credentials are not. Following a link makes its label the
 search text, which `createLinkSearchGuard` keeps from also counting as a typed `search_performed`.
 
 ### Localization

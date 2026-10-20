@@ -210,15 +210,6 @@ export interface TabSwitchedEvent extends BaseEvent {
   tab: "entityBrowser" | "search";
 }
 
-export interface DataImportedEvent extends BaseEvent {
-  type: "data_imported";
-  success: boolean;
-  /** File extension, e.g. ".ttl"; the file name is not recorded. */
-  format: string;
-  sizeBytes: number;
-  graph: string;
-}
-
 /** The graph visualization opened for an entity, in the GraphDB Workbench. */
 export interface GraphVisualizationOpenedEvent extends BaseEvent {
   type: "graph_visualization_opened";
@@ -262,7 +253,6 @@ export type LogEvent =
   | SearchLinkClearedEvent
   | SearchResultSelectedEvent
   | SearchResultExpandedEvent
-  | DataImportedEvent
   | GraphVisualizationOpenedEvent
   | DataRefreshedEvent
   | SettingChangedEvent
