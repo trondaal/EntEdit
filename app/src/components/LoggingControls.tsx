@@ -196,6 +196,8 @@ const LoggingControls: React.FC<LoggingControlsProps> = ({
             <li>{t("logging.recordedItem4")}</li>
             <li>{t("logging.recordedItem5")}</li>
             <li>{t("logging.recordedItem6")}</li>
+            <li>{t("logging.recordedItem7")}</li>
+            <li>{t("logging.recordedItem8")}</li>
           </Typography>
 
           <Typography variant="subtitle2" sx={{ mb: 1, fontWeight: 600 }}>
