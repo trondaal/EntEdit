@@ -1,22 +1,9 @@
-import React, { createContext, useRef, useState, useCallback, useEffect } from "react";
+import React, { useRef, useState, useCallback, useEffect } from "react";
 import type { LogSession, LogEventInput, SessionContext } from "../types/logging";
+import { LoggingContext } from "./LoggingContextValue";
 import { stampEvent } from "../utils/interactionLog";
 
 const SESSION_STORAGE_KEY = "entEdit.activeLogSession";
-
-interface LoggingContextValue {
-  isRecording: boolean;
-  sessionDuration: number;
-  startSession: (endpointUrl: string, language: string, context?: SessionContext) => void;
-  stopSession: () => LogSession | null;
-  logEvent: (event: LogEventInput) => void;
-  getSession: () => LogSession | null;
-  hasOrphanedSession: () => boolean;
-  recoverOrphanedSession: () => LogSession | null;
-  discardOrphanedSession: () => void;
-}
-
-export const LoggingContext = createContext<LoggingContextValue | null>(null);
 
 export const LoggingProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const sessionRef = useRef<LogSession | null>(null);

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { LoggingContext } from "../contexts/LoggingContext";
+import { LoggingContext } from "../contexts/LoggingContextValue";
 
 export const useLogging = () => {
   const ctx = useContext(LoggingContext);
