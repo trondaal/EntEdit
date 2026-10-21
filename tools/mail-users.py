@@ -84,7 +84,7 @@ def main():
     p.add_argument("csv")
     p.add_argument("--sender", default="Trond Aalberg <tronaa@oslomet.no>",
                    help="From address, which selects the Mail account")
-    p.add_argument("--url", default="http://dijon.idi.ntnu.no/graphdb/repositories",
+    p.add_argument("--url", default="https://app.entedit.org/graphdb/repositories",
                    help="Address up to the repository; each user's own "
                         "repository is appended")
     p.add_argument("--subject", default=SUBJECT)

@@ -10,9 +10,11 @@ Works, Expressions, Manifestations, Items, and related agents.
 ## Live demo
 
 A read-only online demo is available at
-**[entedit.org/?demo](http://entedit.org/?demo)** — no installation required.
-Explore the interface with sample bibliographic data; editing is disabled in the
-demo.
+**[app.entedit.org/entedit](https://app.entedit.org/entedit/)** — no installation
+required. Explore the interface with sample bibliographic data; the demo database
+can be read but not changed. On a first visit the setup wizard offers the demo
+database as its default: click through it, or add `?demo` to the address to skip
+the wizard.
 
 ## Features
 

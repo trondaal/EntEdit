@@ -22,6 +22,7 @@ import {
   saveConfiguration,
   clearConfiguration,
   getDefaultConfiguration,
+  getDefaultEndpointUrl,
   type AppConfiguration
 } from "./utils/configManager";
 import {
@@ -29,8 +30,6 @@ import {
   DEFAULT_PREFERENCES,
   type CatalogingPreferences,
 } from "./utils/catalogingStyle";
-
-const DEMO_ENDPOINT_URL = "http://dijon.idi.ntnu.no:8080/repositories/EntEdit";
 
 const theme = createTheme({
   components: {
@@ -291,7 +290,8 @@ function AppInner() {
     if (isDemoMode) {
       const savedConfig = loadConfiguration();
       setAppConfig({
-        endpoint: { url: DEMO_ENDPOINT_URL, username: "", password: "" },
+        // The demo is the EntEdit repository of the server the app is served from
+        endpoint: { url: getDefaultEndpointUrl(), username: "", password: "" },
         language: langParam ?? savedConfig?.language ?? "en",
         isConfigured: true,
         preferences: applyStyleOverride(
