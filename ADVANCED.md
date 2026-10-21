@@ -336,6 +336,17 @@ of groups from the start, because adding groups afterwards (with `--per-repo` ab
 users. Do not combine it with free access on the
 same repositories. Run `--help` for all options.
 
+To move existing users to another server with the same names and passwords, give the
+list instead of generating one: `./tools/create-users.sh -e http://host:7200 -U admin
+--from-csv users.csv`. The file needs a header row with the columns `username`,
+`password` and `repository` (`group` and `email` are only listed, other columns are ignored;
+semicolon, comma or tab separated; lines above the header are skipped). The passwords are
+read from the file and by default only their length is shown (`--show-passwords` shows
+them); before anything is created the script lists every row it read (group, user name,
+e-mail if the file has one, repository) and the number of users per repository, so the
+list can be checked against the file. Users that already exist are left alone, as
+before. Keep such a file out of version control (`users.csv` is in `.gitignore`).
+
 ### Backing up repositories
 
 `tools/backup-repos.sh` exports a set of repositories (`<prefix><number>`, like
