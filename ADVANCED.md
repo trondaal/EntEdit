@@ -298,7 +298,10 @@ on any GraphDB server — the same procedure as the Docker init, parameterised:
 Repositories are named `<prefix><zero-padded number>`. Each is created from
 `docker/graphdb/repositories/EntEdit/config.ttl`, loaded with `database/types`,
 and given the Lucene connectors; example data is imported only with `--testdata`.
-Repositories already carrying the init marker are skipped unless `--force`. When
+To create repositories with exact names instead (for example `EntEdit` and a
+repository called `examples`), give `-r`/`--name` once per repository in place of
+`-p` and `-n`: `./tools/create-repos.sh -e http://localhost:7200 -r EntEdit -r examples
+--testdata`. Repositories already carrying the init marker are skipped unless `--force`. When
 GraphDB security is enabled, the script merges read and write authorities for the
 new repositories into the server's free-access list, so users need no login. Run
 `--help` for all options.

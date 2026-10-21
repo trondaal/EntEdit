@@ -19,6 +19,7 @@ ROOT_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
 ENDPOINT=""
 PREFIX=""
 COUNT=""
+NAMES=()
 START=1
 WIDTH=2
 ACCESS="write"
@@ -27,6 +28,8 @@ FORCE=0
 DRY_RUN=0
 GDB_USER="${GRAPHDB_USER:-}"
 GDB_PASS="${GRAPHDB_PASSWORD:-}"
+PASS_FROM_ENV=0
+[ -z "$GDB_PASS" ] || PASS_FROM_ENV=1
 
 TYPES_DIR="${ROOT_DIR}/database/types"
 TESTDATA_DIR="${ROOT_DIR}/database/testdata"
@@ -48,6 +51,9 @@ Required:
                        (a trailing /repositories/<id> is stripped)
   -p, --prefix NAME    Repository name prefix, e.g. "VBINF6000-H26-"
   -n, --count N        Number of repositories to create
+  or, instead of -p and -n:
+  -r, --name ID        Create the repository with exactly this ID, e.g. EntEdit.
+                       Repeat for several; -p, -n, -s and -w are then not used
 
 Options:
   -s, --start N        First group number (default: 1)
@@ -68,6 +74,7 @@ Examples:
   ./tools/create-repos.sh -e http://localhost:7200 -p VBINF6000-H26- -n 12
   ./tools/create-repos.sh -e https://graphdb.example.org -p KURS- -n 25 \
       -U admin -P secret --access read
+  ./tools/create-repos.sh -e http://localhost:7200 -r EntEdit -r examples --testdata
 EOF
 }
 
@@ -79,12 +86,13 @@ while [ $# -gt 0 ]; do
   case "$1" in
     -e|--endpoint) ENDPOINT="${2:-}"; shift 2 ;;
     -p|--prefix)   PREFIX="${2:-}"; shift 2 ;;
+    -r|--name)     NAMES+=("${2:-}"); shift 2 ;;
     -n|--count)    COUNT="${2:-}"; shift 2 ;;
     -s|--start)    START="${2:-}"; shift 2 ;;
     -w|--width)    WIDTH="${2:-}"; shift 2 ;;
     -a|--access)   ACCESS="${2:-}"; shift 2 ;;
     -U|--user)     GDB_USER="${2:-}"; shift 2 ;;
-    -P|--password) GDB_PASS="${2:-}"; shift 2 ;;
+    -P|--password) GDB_PASS="${2:-}"; PASS_FROM_ENV=0; shift 2 ;;
     --testdata)    INCLUDE_TESTDATA=1; shift ;;
     --force)       FORCE=1; shift ;;
     --dry-run)     DRY_RUN=1; shift ;;
@@ -94,14 +102,18 @@ while [ $# -gt 0 ]; do
 done
 
 [ -n "$ENDPOINT" ] || { usage >&2; die "Missing --endpoint"; }
-[ -n "$PREFIX" ]   || { usage >&2; die "Missing --prefix"; }
-[ -n "$COUNT" ]    || { usage >&2; die "Missing --count"; }
+if [ ${#NAMES[@]} -gt 0 ]; then
+  [ -z "$PREFIX" ] && [ -z "$COUNT" ] || die "--name cannot be combined with --prefix and --count"
+else
+  [ -n "$PREFIX" ]   || { usage >&2; die "Missing --prefix (or --name)"; }
+  [ -n "$COUNT" ]    || { usage >&2; die "Missing --count"; }
 
-case "$COUNT" in ''|*[!0-9]*) die "--count must be a positive integer" ;; esac
-case "$START" in ''|*[!0-9]*) die "--start must be a non-negative integer" ;; esac
-case "$WIDTH" in ''|*[!0-9]*) die "--width must be a positive integer" ;; esac
-[ "$COUNT" -ge 1 ] || die "--count must be at least 1"
-[ "$WIDTH" -ge 1 ] || die "--width must be at least 1"
+  case "$COUNT" in ''|*[!0-9]*) die "--count must be a positive integer" ;; esac
+  case "$START" in ''|*[!0-9]*) die "--start must be a non-negative integer" ;; esac
+  case "$WIDTH" in ''|*[!0-9]*) die "--width must be a positive integer" ;; esac
+  [ "$COUNT" -ge 1 ] || die "--count must be at least 1"
+  [ "$WIDTH" -ge 1 ] || die "--width must be at least 1"
+fi
 
 case "$ACCESS" in read|write|none) ;; *) die "--access must be read, write or none" ;; esac
 
@@ -109,6 +121,11 @@ case "$ACCESS" in read|write|none) ;; *) die "--access must be read, write or no
 case "$PREFIX" in
   *[!A-Za-z0-9._-]*) die "--prefix may only contain letters, digits, '.', '_' and '-'" ;;
 esac
+for name in ${NAMES[@]+"${NAMES[@]}"}; do
+  case "$name" in
+    ''|*[!A-Za-z0-9._-]*) die "--name '$name' may only contain letters, digits, '.', '_' and '-'" ;;
+  esac
+done
 
 # Accept either the base URL or a full SPARQL endpoint URL.
 BASE_URL="${ENDPOINT%/}"
@@ -146,9 +163,19 @@ trap 'rm -rf "$TMP_DIR"' EXIT
 # ---------------------------------------------------------------------------
 
 log "GraphDB server: ${BASE_URL}"
-if ! api -f -o /dev/null "${BASE_URL}/rest/repositories"; then
-  die "Cannot reach GraphDB at ${BASE_URL} (check the URL and, if security is on, --user/--password)"
-fi
+code="$(api -o /dev/null -w '%{http_code}' "${BASE_URL}/rest/repositories")" || code=000
+case "$code" in
+  200) ;;
+  401|403)
+    warn "GraphDB answered HTTP ${code}: the login was refused (user '${GDB_USER:-none}')."
+    [ -z "$GDB_USER" ] && warn "No user was given: add -U <admin user> (the password is asked for)."
+    [ "$PASS_FROM_ENV" = 1 ] && warn "The password comes from GRAPHDB_PASSWORD in your environment, not from a prompt: run 'unset GRAPHDB_PASSWORD' if it is an old one."
+    [ -n "${GRAPHDB_USER:-}" ] && warn "GRAPHDB_USER is set in your environment (${GRAPHDB_USER}); -U overrides it."
+    die "Login refused by ${BASE_URL}"
+    ;;
+  000) die "Cannot reach GraphDB at ${BASE_URL}: nothing answered (is the SSH tunnel open? is the URL right?)" ;;
+  *)   die "Unexpected answer from ${BASE_URL}/rest/repositories (HTTP ${code})" ;;
+esac
 
 SECURITY_ENABLED="$(api "${BASE_URL}/rest/security" || true)"
 case "$SECURITY_ENABLED" in
@@ -161,13 +188,18 @@ esac
 # ---------------------------------------------------------------------------
 
 REPOS=()
-i=0
-n="$START"
-while [ "$i" -lt "$COUNT" ]; do
-  REPOS+=("$(printf '%s%0*d' "$PREFIX" "$WIDTH" "$n")")
-  i=$((i + 1))
-  n=$((n + 1))
-done
+if [ ${#NAMES[@]} -gt 0 ]; then
+  REPOS=("${NAMES[@]}")
+  COUNT=${#REPOS[@]}
+else
+  i=0
+  n="$START"
+  while [ "$i" -lt "$COUNT" ]; do
+    REPOS+=("$(printf '%s%0*d' "$PREFIX" "$WIDTH" "$n")")
+    i=$((i + 1))
+    n=$((n + 1))
+  done
+fi
 
 log "Repositories to set up (${COUNT}): ${REPOS[0]} ... ${REPOS[$((COUNT - 1))]}"
 if [ "$DRY_RUN" = 1 ]; then
