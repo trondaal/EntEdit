@@ -222,6 +222,8 @@
     "redoConfiguration": "Konfigurer på nytt",
     "testConnection": "Test",
     "connectionSection": "Databasetilkobling",
+    "moreSettings": "Flere innstillinger",
+    "fewerSettings": "Færre innstillinger",
     "dataSection": "Hvor nye data lagres",
     "dataGraph": "Graf for nye data",
     "dataGraphIsDefault": "Standardgrafen. Det du oppretter lagres i denne grafen.",

@@ -222,6 +222,8 @@
     "redoConfiguration": "Redo configuration",
     "testConnection": "Test",
     "connectionSection": "Database connection",
+    "moreSettings": "More settings",
+    "fewerSettings": "Fewer settings",
     "dataSection": "Where new data is saved",
     "dataGraph": "Graph for new data",
     "dataGraphIsDefault": "The default. What you create is saved in this graph.",

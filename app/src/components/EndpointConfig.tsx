@@ -62,6 +62,8 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
 }) => {
   const { t } = useTranslation();
   const [expanded, setExpanded] = useState(false);
+  // The connection is what people change; the rest of the settings is behind "More settings"
+  const [moreOpen, setMoreOpen] = useState(false);
   const [localConfig, setLocalConfig] = useState(config);
   const [localPreferences, setLocalPreferences] = useState(preferences);
   const [testing, setTesting] = useState(false);
@@ -183,45 +185,62 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
               onChange={(e) => editConnection({ password: e.target.value })}
             />
 
-            <Divider sx={{ my: 2 }} />
-            <CatalogingStyleSettings
-              preferences={localPreferences}
-              onChange={setLocalPreferences}
-            />
-
-            <Divider sx={{ my: 2 }} />
-            <Typography variant="subtitle2" sx={{ mb: 1.5 }}>
-              {t("endpointConfig.dataSection")}
-            </Typography>
-            <TextField
-              fullWidth
-              label={t("endpointConfig.dataGraph")}
-              value={dataGraph}
-              helperText={
-                usingDefaultGraph
-                  ? t("endpointConfig.dataGraphIsDefault")
-                  : t("endpointConfig.dataGraphIsCustom", { graph: DEFAULT_DATA_GRAPH })
-              }
-              slotProps={{
-                htmlInput: { readOnly: true },
-                input: {
-                  readOnly: true,
-                  startAdornment: (
-                    <Lock sx={{ fontSize: "0.9rem", color: "text.disabled", mr: 0.75 }} />
-                  ),
-                },
-              }}
-            />
-            <Box sx={{ display: "flex", gap: 1, mt: 1 }}>
-              <Button size="small" onClick={startGraphChange}>
-                {t("endpointConfig.dataGraphChange")}
+            <Divider sx={{ mt: 2 }} />
+            <Box sx={{ pt: 1 }}>
+              <Button
+                size="small"
+                onClick={() => setMoreOpen((open) => !open)}
+                aria-expanded={moreOpen}
+                aria-controls="more-settings"
+                startIcon={moreOpen ? <ExpandLess /> : <ExpandMore />}
+                sx={{ textTransform: "none" }}
+              >
+                {moreOpen ? t("endpointConfig.fewerSettings") : t("endpointConfig.moreSettings")}
               </Button>
-              {!usingDefaultGraph && (
-                <Button size="small" onClick={useDefaultGraph}>
-                  {t("endpointConfig.dataGraphUseDefault")}
-                </Button>
-              )}
             </Box>
+            <Collapse in={moreOpen} timeout="auto" id="more-settings">
+              <Box sx={{ pt: 1 }}>
+                <CatalogingStyleSettings
+                  preferences={localPreferences}
+                  onChange={setLocalPreferences}
+                />
+
+                <Divider sx={{ my: 2 }} />
+                <Typography variant="subtitle2" sx={{ mb: 1.5 }}>
+                  {t("endpointConfig.dataSection")}
+                </Typography>
+                <TextField
+                  fullWidth
+                  label={t("endpointConfig.dataGraph")}
+                  value={dataGraph}
+                  helperText={
+                    usingDefaultGraph
+                      ? t("endpointConfig.dataGraphIsDefault")
+                      : t("endpointConfig.dataGraphIsCustom", { graph: DEFAULT_DATA_GRAPH })
+                  }
+                  slotProps={{
+                    htmlInput: { readOnly: true },
+                    input: {
+                      readOnly: true,
+                      startAdornment: (
+                        <Lock sx={{ fontSize: "0.9rem", color: "text.disabled", mr: 0.75 }} />
+                      ),
+                    },
+                  }}
+                />
+                <Box sx={{ display: "flex", gap: 1, mt: 1 }}>
+                  <Button size="small" onClick={startGraphChange}>
+                    {t("endpointConfig.dataGraphChange")}
+                  </Button>
+                  {!usingDefaultGraph && (
+                    <Button size="small" onClick={useDefaultGraph}>
+                      {t("endpointConfig.dataGraphUseDefault")}
+                    </Button>
+                  )}
+                </Box>
+
+              </Box>
+            </Collapse>
           </Box>
         </DialogContent>
         <DialogActions>
