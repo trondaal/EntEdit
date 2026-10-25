@@ -13,6 +13,9 @@ import { useTranslation } from "react-i18next";
 import type { EntitySearchHandler } from "../utils/searchLink";
 import { useExpressionsByManifestation } from "../hooks/useExpressionQueries";
 import type { SparqlEndpointConfig } from "../types/sparql";
+import { useResultDisplay } from "../hooks/useResultDisplay";
+import { ResultLevelContext, useResultLevel } from "../hooks/useResultLevel";
+import { sectionStyle } from "../utils/resultColors";
 import {
   capitalizeFirstLetter,
   parseCreators,
@@ -47,11 +50,10 @@ const ExpressionList: React.FC<ExpressionListProps> = ({
     ? allExpressions?.filter((expression) => expression.uri !== excludeUri)
     : allExpressions;
 
-  const sectionSx = {
-    bgcolor: "rgba(139, 92, 42, 0.12)",
-    borderTop: 1,
-    borderColor: "divider",
-  } as const;
+  // The list is one level below the card it is opened from; its entries and what they open follow
+  const { colors } = useResultDisplay();
+  const listLevel = useResultLevel() + 1;
+  const sectionSx = sectionStyle(colors, listLevel);
 
   if (isLoading) {
     return (
@@ -82,172 +84,174 @@ const ExpressionList: React.FC<ExpressionListProps> = ({
   }
 
   return (
-    <List dense disablePadding sx={sectionSx}>
-      {expressions.map((expression) => {
-        // Determine primary title and icon
-        const ContentTypeIcon = getContentTypeIcon(expression.contenttypeUri);
-        const primaryTitle = expression.title || expression.work_title || expression.uri;
-        const showWorkTitle = expression.work_title && expression.title && expression.work_title !== expression.title;
+    <ResultLevelContext.Provider value={listLevel}>
+      <List dense disablePadding sx={sectionSx}>
+        {expressions.map((expression) => {
+          // Determine primary title and icon
+          const ContentTypeIcon = getContentTypeIcon(expression.contenttypeUri);
+          const primaryTitle = expression.title || expression.work_title || expression.uri;
+          const showWorkTitle = expression.work_title && expression.title && expression.work_title !== expression.title;
 
-        // Collect all metadata chips
-        const allChips: string[] = [];
-        if (expression.language) {
-          allChips.push(...splitSemicolonValues(expression.language));
-        }
-        if (expression.contenttype) {
-          allChips.push(...splitSemicolonValues(expression.contenttype));
-        }
-        if (expression.workcategory) {
-          allChips.push(...splitSemicolonValues(expression.workcategory));
-        }
-        if (expression.genre) {
-          allChips.push(...splitSemicolonValues(expression.genre));
-        }
+          // Collect all metadata chips
+          const allChips: string[] = [];
+          if (expression.language) {
+            allChips.push(...splitSemicolonValues(expression.language));
+          }
+          if (expression.contenttype) {
+            allChips.push(...splitSemicolonValues(expression.contenttype));
+          }
+          if (expression.workcategory) {
+            allChips.push(...splitSemicolonValues(expression.workcategory));
+          }
+          if (expression.genre) {
+            allChips.push(...splitSemicolonValues(expression.genre));
+          }
 
-        // Parse creators with URI support
-        const workCreators = parseCreators(expression.work_creators);
-        const expressionCreators = parseCreators(expression.expression_creators);
-        const allCreators = [...workCreators, ...expressionCreators];
+          // Parse creators with URI support
+          const workCreators = parseCreators(expression.work_creators);
+          const expressionCreators = parseCreators(expression.expression_creators);
+          const allCreators = [...workCreators, ...expressionCreators];
 
-        return (
-          <ListItem key={expression.uri} disablePadding sx={{ pl: 4 }}>
-            <Box sx={{ width: "100%", px: 2, py: 1 }}>
-              <ListItemText
-              primary={
-                <Box>
-                  <Box sx={{ display: 'flex', alignItems: 'flex-start', mb: 0.5 }}>
-                    <ContentTypeIcon sx={typeIconSmallSx} />
-                    <Typography
-                      variant="body2"
-                      sx={{
-                        fontWeight: 500,
-                        fontSize: '0.875rem',
-                        lineHeight: 1.5,
-                      }}
-                    >
-                      {primaryTitle}
-                    {showWorkTitle && (
+          return (
+            <ListItem key={expression.uri} disablePadding sx={{ pl: 4 }}>
+              <Box sx={{ width: "100%", px: 2, py: 1 }}>
+                <ListItemText
+                primary={
+                  <Box>
+                    <Box sx={{ display: 'flex', alignItems: 'flex-start', mb: 0.5 }}>
+                      <ContentTypeIcon sx={typeIconSmallSx} />
                       <Typography
-                        component="span"
                         variant="body2"
-                        color="text.secondary"
-                        sx={{ ml: 1 }}
+                        sx={{
+                          fontWeight: 500,
+                          fontSize: '0.875rem',
+                          lineHeight: 1.5,
+                        }}
                       >
-                        ({expression.work_title})
-                      </Typography>
-                    )}
-                  </Typography>
-                  </Box>
-
-                  {/* Creators */}
-                  {allCreators.length > 0 && (
-                    <Box sx={{ mb: 0.5 }}>
-                      {allCreators.map((creator, creatorIndex) => (
+                        {primaryTitle}
+                      {showWorkTitle && (
                         <Typography
-                          key={creatorIndex}
+                          component="span"
                           variant="body2"
                           color="text.secondary"
-                          sx={{
-                            fontSize: '0.8125rem',
-                            lineHeight: 1.5,
-                          }}
+                          sx={{ ml: 1 }}
                         >
-                          <Box component="span" sx={{ fontWeight: 500, color: 'text.primary' }}>
-                            {capitalizeFirstLetter(creator.role)}:
-                          </Box>
-                          {' '}
-                          <Box component="span">
-                            {creator.names.map((entry, nameIndex) => (
-                              <React.Fragment key={nameIndex}>
-                                {nameIndex > 0 && ' ; '}
-                                {onEntitySearch ? (
-                                  <Link
-                                    component="button"
-                                    variant="body2"
-                                    onClick={(e: React.MouseEvent) => {
-                                      e.stopPropagation();
-                                      onEntitySearch(entry.name, { uri: entry.uri, kind: "agent" });
-                                    }}
-                                    sx={{
-                                      textDecoration: 'none',
-                                      '&:hover': { textDecoration: 'underline' },
-                                      cursor: 'pointer',
-                                      color: 'inherit',
-                                      verticalAlign: 'baseline',
-                                      fontSize: 'inherit',
-                                      lineHeight: 'inherit',
-                                    }}
-                                  >
-                                    {entry.name}
-                                  </Link>
-                                ) : (
-                                  entry.name
-                                )}
-                              </React.Fragment>
-                            ))}
-                          </Box>
+                          ({expression.work_title})
                         </Typography>
-                      ))}
+                      )}
+                    </Typography>
                     </Box>
-                  )}
 
-                  {/* Relationships */}
-                  {(expression.work_to_work_relationships || expression.work_collapsed_relationships ||
-                    expression.expression_to_expression_relationships || expression.expression_collapsed_relationships) && (
-                    <Box sx={{ mb: 0.5 }}>
-                      <RelationshipLines
-                        relationships={expression.work_to_work_relationships}
-                        collapsed={expression.work_collapsed_relationships}
-                        kind="work"
-                        entityUri={expression.work_uri}
-                        config={config}
-                        language={selectedLanguage}
-                        onEntitySearch={onEntitySearch}
-                      />
-                      <RelationshipLines
-                        relationships={expression.expression_to_expression_relationships}
-                        collapsed={expression.expression_collapsed_relationships}
-                        kind="expression"
-                        entityUri={expression.uri}
-                        config={config}
-                        language={selectedLanguage}
-                        onEntitySearch={onEntitySearch}
-                      />
-                    </Box>
-                  )}
+                    {/* Creators */}
+                    {allCreators.length > 0 && (
+                      <Box sx={{ mb: 0.5 }}>
+                        {allCreators.map((creator, creatorIndex) => (
+                          <Typography
+                            key={creatorIndex}
+                            variant="body2"
+                            color="text.secondary"
+                            sx={{
+                              fontSize: '0.8125rem',
+                              lineHeight: 1.5,
+                            }}
+                          >
+                            <Box component="span" sx={{ fontWeight: 500, color: 'text.primary' }}>
+                              {capitalizeFirstLetter(creator.role)}:
+                            </Box>
+                            {' '}
+                            <Box component="span">
+                              {creator.names.map((entry, nameIndex) => (
+                                <React.Fragment key={nameIndex}>
+                                  {nameIndex > 0 && ' ; '}
+                                  {onEntitySearch ? (
+                                    <Link
+                                      component="button"
+                                      variant="body2"
+                                      onClick={(e: React.MouseEvent) => {
+                                        e.stopPropagation();
+                                        onEntitySearch(entry.name, { uri: entry.uri, kind: "agent" });
+                                      }}
+                                      sx={{
+                                        textDecoration: 'none',
+                                        '&:hover': { textDecoration: 'underline' },
+                                        cursor: 'pointer',
+                                        color: 'inherit',
+                                        verticalAlign: 'baseline',
+                                        fontSize: 'inherit',
+                                        lineHeight: 'inherit',
+                                      }}
+                                    >
+                                      {entry.name}
+                                    </Link>
+                                  ) : (
+                                    entry.name
+                                  )}
+                                </React.Fragment>
+                              ))}
+                            </Box>
+                          </Typography>
+                        ))}
+                      </Box>
+                    )}
 
-                  {/* Metadata chips */}
-                  {allChips.length > 0 && (
-                    <Box sx={{
-                      display: 'flex',
-                      flexWrap: 'wrap',
-                      gap: 0.75,
-                      mt: 1,
-                    }}>
-                      {allChips.map((chip, index) => (
-                        <Chip
-                          key={`chip-${index}`}
-                          label={capitalizeFirstLetter(chip)}
-                          size="small"
-                          variant="outlined"
-                          sx={{
-                            height: 20,
-                            fontSize: '0.6875rem',
-                            fontWeight: 500,
-                            borderColor: 'divider',
-                          }}
+                    {/* Relationships */}
+                    {(expression.work_to_work_relationships || expression.work_collapsed_relationships ||
+                      expression.expression_to_expression_relationships || expression.expression_collapsed_relationships) && (
+                      <Box sx={{ mb: 0.5 }}>
+                        <RelationshipLines
+                          relationships={expression.work_to_work_relationships}
+                          collapsed={expression.work_collapsed_relationships}
+                          kind="work"
+                          entityUri={expression.work_uri}
+                          config={config}
+                          language={selectedLanguage}
+                          onEntitySearch={onEntitySearch}
                         />
-                      ))}
-                    </Box>
-                  )}
-                </Box>
-              }
-              />
-            </Box>
-          </ListItem>
-        );
-      })}
-    </List>
+                        <RelationshipLines
+                          relationships={expression.expression_to_expression_relationships}
+                          collapsed={expression.expression_collapsed_relationships}
+                          kind="expression"
+                          entityUri={expression.uri}
+                          config={config}
+                          language={selectedLanguage}
+                          onEntitySearch={onEntitySearch}
+                        />
+                      </Box>
+                    )}
+
+                    {/* Metadata chips */}
+                    {allChips.length > 0 && (
+                      <Box sx={{
+                        display: 'flex',
+                        flexWrap: 'wrap',
+                        gap: 0.75,
+                        mt: 1,
+                      }}>
+                        {allChips.map((chip, index) => (
+                          <Chip
+                            key={`chip-${index}`}
+                            label={capitalizeFirstLetter(chip)}
+                            size="small"
+                            variant="outlined"
+                            sx={{
+                              height: 20,
+                              fontSize: '0.6875rem',
+                              fontWeight: 500,
+                              borderColor: 'divider',
+                            }}
+                          />
+                        ))}
+                      </Box>
+                    )}
+                  </Box>
+                }
+                />
+              </Box>
+            </ListItem>
+          );
+        })}
+      </List>
+    </ResultLevelContext.Provider>
   );
 };
 

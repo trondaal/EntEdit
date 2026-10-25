@@ -21,6 +21,9 @@ import { getGraphVisualizationUrl, openGraphVisualization } from "../utils/graph
 import { useExpressionDetail, useExpressionsByManifestation } from "../hooks/useExpressionQueries";
 import { useLogging } from "../hooks/useLogging";
 import ExpressionList from "./ExpressionList";
+import { useResultDisplay } from "../hooks/useResultDisplay";
+import { useResultLevel } from "../hooks/useResultLevel";
+import { cardBackground, cardBorder } from "../utils/resultColors";
 import { RelationshipLines } from "./ResultLines";
 import { presentManifestation } from "../utils/manifestationPresentation";
 import {
@@ -62,6 +65,8 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
   const { t } = useTranslation();
   const { enqueueSnackbar } = useSnackbar();
   const { logEvent } = useLogging();
+  const { colors } = useResultDisplay();
+  const level = useResultLevel();
   const [expressionsExpanded, setExpressionsExpanded] = useState(false);
   const graphUrl = getGraphVisualizationUrl(config.url, result.uri);
 
@@ -120,12 +125,12 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
   return (
     <Box
       sx={{
-        border: 1,
+        border: cardBorder(colors, level),
         borderColor: "divider",
         borderRadius: 1,
         mb: 1,
         overflow: "hidden",
-        bgcolor: "background.paper",
+        bgcolor: cardBackground(colors, level),
       }}
     >
       <ListItem disablePadding>

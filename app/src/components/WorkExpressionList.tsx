@@ -15,6 +15,9 @@ import type { SparqlEndpointConfig } from "../types/sparql";
 import { splitSemicolonValues } from "../utils/textFormatters";
 import { getContentTypeIcon, typeIconSmallSx } from "../utils/contentTypeIcons";
 import { useLogging } from "../hooks/useLogging";
+import { useResultDisplay } from "../hooks/useResultDisplay";
+import { ResultLevelContext, useResultLevel } from "../hooks/useResultLevel";
+import { sectionStyle } from "../utils/resultColors";
 import { CategoryChip, CreatorLines, ExpandChip, RelationshipLines } from "./ResultLines";
 import ManifestationList from "./ManifestationList";
 
@@ -24,12 +27,6 @@ interface WorkExpressionListProps {
   selectedLanguage: string;
   onEntitySearch: EntitySearchHandler;
 }
-
-const sectionSx = {
-  bgcolor: "rgba(139, 92, 42, 0.12)",
-  borderTop: 1,
-  borderColor: "divider",
-} as const;
 
 /**
  * One expression of a work. The work's own creators, relationships and
@@ -125,6 +122,10 @@ const WorkExpressionList: React.FC<WorkExpressionListProps> = ({
 }) => {
   const { t } = useTranslation();
   const { data: expressions, isLoading, error } = useExpressionsByWork(config, workUri, selectedLanguage);
+  // The list is one level below the card it is opened from; its entries and what they open follow
+  const { colors } = useResultDisplay();
+  const listLevel = useResultLevel() + 1;
+  const sectionSx = sectionStyle(colors, listLevel);
 
   if (isLoading) {
     return (
@@ -155,17 +156,19 @@ const WorkExpressionList: React.FC<WorkExpressionListProps> = ({
   }
 
   return (
-    <List dense disablePadding sx={sectionSx}>
-      {expressions.map((expression) => (
-        <WorkExpression
-          key={expression.uri}
-          expression={expression}
-          config={config}
-          selectedLanguage={selectedLanguage}
-          onEntitySearch={onEntitySearch}
-        />
-      ))}
-    </List>
+    <ResultLevelContext.Provider value={listLevel}>
+      <List dense disablePadding sx={sectionSx}>
+        {expressions.map((expression) => (
+          <WorkExpression
+            key={expression.uri}
+            expression={expression}
+            config={config}
+            selectedLanguage={selectedLanguage}
+            onEntitySearch={onEntitySearch}
+          />
+        ))}
+      </List>
+    </ResultLevelContext.Provider>
   );
 };
 

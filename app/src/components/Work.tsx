@@ -20,6 +20,9 @@ import { getContentTypeIcon, typeIconSx } from "../utils/contentTypeIcons";
 import { useLogging } from "../hooks/useLogging";
 import { CategoryChip, CreatorLines, ExpandChip, RelationshipLines } from "./ResultLines";
 import WorkExpressionList from "./WorkExpressionList";
+import { useResultDisplay } from "../hooks/useResultDisplay";
+import { useResultLevel } from "../hooks/useResultLevel";
+import { cardBackground } from "../utils/resultColors";
 
 interface WorkProps {
   result: WorkSearchResult;
@@ -44,6 +47,8 @@ const Work: React.FC<WorkProps> = ({
   const { t } = useTranslation();
   const { enqueueSnackbar } = useSnackbar();
   const { logEvent } = useLogging();
+  const { colors } = useResultDisplay();
+  const level = useResultLevel();
   const [expressionsExpanded, setExpressionsExpanded] = useState(false);
   const graphUrl = getGraphVisualizationUrl(config.url, result.uri);
 
@@ -63,7 +68,7 @@ const Work: React.FC<WorkProps> = ({
         borderRadius: 1,
         mb: 1,
         overflow: "hidden",
-        bgcolor: "background.paper",
+        bgcolor: cardBackground(colors, level),
       }}
     >
       <ListItem disablePadding>

@@ -9,6 +9,9 @@ import ManifestationSearchResult from "./ManifestationSearchResult";
 import type { EntitySearchHandler } from "../utils/searchLink";
 import { useManifestations } from "../hooks/useManifestationQueries";
 import type { SparqlEndpointConfig } from "../types/sparql";
+import { useResultDisplay } from "../hooks/useResultDisplay";
+import { ResultLevelContext, useResultLevel } from "../hooks/useResultLevel";
+import { sectionStyle } from "../utils/resultColors";
 
 interface ManifestationListProps {
   config: SparqlEndpointConfig;
@@ -30,11 +33,10 @@ const ManifestationList: React.FC<ManifestationListProps> = ({
     error,
   } = useManifestations(config, expressionUri, selectedLanguage);
 
-  const sectionSx = {
-    bgcolor: "rgba(139, 92, 42, 0.12)",
-    borderTop: 1,
-    borderColor: "divider",
-  } as const;
+  // The list is one level below the card it is opened from; its entries and what they open follow
+  const { colors } = useResultDisplay();
+  const listLevel = useResultLevel() + 1;
+  const sectionSx = sectionStyle(colors, listLevel);
 
   if (isLoading) {
     return (
@@ -68,18 +70,20 @@ const ManifestationList: React.FC<ManifestationListProps> = ({
   // collection merged and its contents listed; only the expression the list is
   // under is not repeated (`parentExpressionUri`)
   return (
-    <Box sx={{ ...sectionSx, pl: 4, pr: 1, pt: 1 }}>
-      {manifestations.map((manifestation) => (
-        <ManifestationSearchResult
-          key={manifestation.uri}
-          result={manifestation}
-          selectedLanguage={selectedLanguage}
-          config={config}
-          parentExpressionUri={expressionUri}
-          onEntitySearch={onEntitySearch}
-        />
-      ))}
-    </Box>
+    <ResultLevelContext.Provider value={listLevel}>
+      <Box sx={{ ...sectionSx, pl: 4, pr: 1, pt: 1 }}>
+        {manifestations.map((manifestation) => (
+          <ManifestationSearchResult
+            key={manifestation.uri}
+            result={manifestation}
+            selectedLanguage={selectedLanguage}
+            config={config}
+            parentExpressionUri={expressionUri}
+            onEntitySearch={onEntitySearch}
+          />
+        ))}
+      </Box>
+    </ResultLevelContext.Provider>
   );
 };
 

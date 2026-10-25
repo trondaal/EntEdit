@@ -1,5 +1,6 @@
 import { createContext, useContext } from "react";
 import { DEFAULT_PART_LEVELS, type PartLevels } from "../utils/partRelations";
+import type { ResultColors } from "../utils/resultColors";
 
 /**
  * Display preferences the search results read: provided by `App` from the
@@ -8,8 +9,13 @@ import { DEFAULT_PART_LEVELS, type PartLevels } from "../utils/partRelations";
 export interface ResultDisplay {
   /** Which level's "is part of" / "has part" lines to show */
   partLevels: PartLevels;
+  /** How the nested parts of a result are coloured (`?colors=level` selects the experiment) */
+  colors: ResultColors;
 }
 
-export const ResultDisplayContext = createContext<ResultDisplay>({ partLevels: DEFAULT_PART_LEVELS });
+export const ResultDisplayContext = createContext<ResultDisplay>({
+  partLevels: DEFAULT_PART_LEVELS,
+  colors: "type",
+});
 
 export const useResultDisplay = (): ResultDisplay => useContext(ResultDisplayContext);

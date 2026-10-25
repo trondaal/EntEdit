@@ -11,6 +11,7 @@ import { LoggingProvider } from "./contexts/LoggingContext";
 import { useLogging } from "./hooks/useLogging";
 import { ResultDisplayContext } from "./hooks/useResultDisplay";
 import { DEFAULT_PART_LEVELS } from "./utils/partRelations";
+import { toResultColors } from "./utils/resultColors";
 import { diffEndpoint, diffPreferences } from "./utils/interactionLog";
 import AppHeader from "./components/AppHeader";
 const EntityBrowser = lazy(() => import("./components/EntityBrowser"));
@@ -266,9 +267,10 @@ function AppInner() {
   const urlParams = useMemo(() => new URLSearchParams(window.location.search), []);
   const showSearchTab = useMemo(() => !urlParams.has("nosearch"), [urlParams]);
   const partLevels = appConfig?.preferences.partLevels;
+  const resultColors = useMemo(() => toResultColors(urlParams.get("colors")), [urlParams]);
   const resultDisplay = useMemo(
-    () => ({ partLevels: partLevels ?? DEFAULT_PART_LEVELS }),
-    [partLevels],
+    () => ({ partLevels: partLevels ?? DEFAULT_PART_LEVELS, colors: resultColors }),
+    [partLevels, resultColors],
   );
   const showLogging = useMemo(() => !urlParams.has("nologging"), [urlParams]);
   const isDemoMode = useMemo(() => urlParams.has("demo"), [urlParams]);

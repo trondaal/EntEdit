@@ -19,6 +19,9 @@ import { useLogging } from "../hooks/useLogging";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import { getGraphVisualizationUrl, openGraphVisualization } from "../utils/graphUtils";
 import ManifestationList from "./ManifestationList";
+import { useResultDisplay } from "../hooks/useResultDisplay";
+import { useResultLevel } from "../hooks/useResultLevel";
+import { cardBackground } from "../utils/resultColors";
 import { capitalizeFirstLetter, splitSemicolonValues, parseCreators } from "../utils/textFormatters";
 import { RelationshipLines } from "./ResultLines";
 import { getContentTypeIcon, typeIconSx } from "../utils/contentTypeIcons";
@@ -41,6 +44,8 @@ const Expression: React.FC<ExpressionProps> = ({
   const { t } = useTranslation();
   const { enqueueSnackbar } = useSnackbar();
   const { logEvent } = useLogging();
+  const { colors } = useResultDisplay();
+  const level = useResultLevel();
   const [manifestationsExpanded, setManifestationsExpanded] = useState(false);
   const graphUrl = getGraphVisualizationUrl(config.url, result.uri);
 
@@ -68,7 +73,7 @@ const Expression: React.FC<ExpressionProps> = ({
         borderRadius: 1,
         mb: 1,
         overflow: "hidden",
-        bgcolor: "background.paper",
+        bgcolor: cardBackground(colors, level),
       }}
     >
       <ListItem disablePadding>
