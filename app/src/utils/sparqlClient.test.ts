@@ -113,6 +113,37 @@ describe("SparqlClient.query", () => {
   });
 });
 
+describe("which logins the browser may add", () => {
+  const withLogin = { ...config, username: "u", password: "p" };
+  const ok = async () => ({ ok: true, status: 204, statusText: "No Content" }) as Response;
+
+  it("keeps the browser from adding one when the app has none configured", async () => {
+    const spy = mockFetch(async () => jsonResponse({ results: { bindings: [] } }));
+    await new SparqlClient(config).query("SELECT 1");
+    await new SparqlClient(config).queryWithoutInference("SELECT 1");
+    expect(spy.mock.calls.map((call) => call[1]!.credentials)).toEqual(["omit", "omit"]);
+  });
+
+  it("does the same for updates and imports", async () => {
+    const spy = mockFetch(ok);
+    await new SparqlClient(config).update("INSERT DATA {}");
+    await new SparqlClient(config).import("<a> <b> <c> .", "text/turtle");
+    expect(spy.mock.calls.map((call) => call[1]!.credentials)).toEqual(["omit", "omit"]);
+  });
+
+  it("does not interfere when the app has a login of its own", async () => {
+    const spy = mockFetch(async () => jsonResponse({ results: { bindings: [] } }));
+    await new SparqlClient(withLogin).query("SELECT 1");
+    expect(spy.mock.calls[0][1]!.credentials).toBe("same-origin");
+  });
+
+  it("treats a user name without a password as no login", async () => {
+    const spy = mockFetch(async () => jsonResponse({ results: { bindings: [] } }));
+    await new SparqlClient({ ...config, username: "u" }).query("SELECT 1");
+    expect(spy.mock.calls[0][1]!.credentials).toBe("omit");
+  });
+});
+
 describe("SparqlClient.update", () => {
   it("POSTs to the /statements endpoint", async () => {
     const spy = mockFetch(

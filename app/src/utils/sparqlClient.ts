@@ -60,6 +60,18 @@ export class SparqlClient {
     this.config = config;
   }
 
+  /**
+   * Whether the browser may add a login of its own to a request. Without one configured here the
+   * app asks as an anonymous reader, and the browser must not make it anything else: after a
+   * sign-in pop-up it keeps the login it was given for the site and sends it with every later
+   * request there, and a login with no rights on the repository is refused (403) where an
+   * anonymous reader would have been let in by free access. With a login configured, the
+   * default applies.
+   */
+  private credentialsMode(): RequestCredentials {
+    return this.config.username && this.config.password ? "same-origin" : "omit";
+  }
+
   /** Builds request headers, adding HTTP Basic auth when credentials are set. */
   private buildHeaders(base: Record<string, string>): Record<string, string> {
     const headers = { ...base };
@@ -108,6 +120,7 @@ export class SparqlClient {
         method: "POST",
         headers,
         body: formData,
+        credentials: this.credentialsMode(),
         signal: options?.signal,
       });
     } catch (err) {
@@ -158,6 +171,7 @@ export class SparqlClient {
         method: "POST",
         headers,
         body: data,
+        credentials: this.credentialsMode(),
       });
     } catch (err) {
       throw new SparqlError(
@@ -187,6 +201,7 @@ export class SparqlClient {
         method: "POST",
         headers,
         body: sparql,
+        credentials: this.credentialsMode(),
       });
     } catch (err) {
       // fetch() rejects only for network-level failures (TypeError): offline,
