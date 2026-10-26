@@ -472,6 +472,15 @@ wherever values are listed:
   (`relatedEntityUris`), so an author with 3,000 works does not send 3,000 URIs per load; the
   heading keeps the chevron's width while editing so nothing moves between modes. Not applied
   to the search-result lines (chips)
+- Search results are coloured by **level**, not by kind of box (`utils/resultColors.ts`): the
+  result at the top of a tab is white, and each opened list below it (a work's expressions, an
+  expression's publications, a publication's contents) is one opaque shade darker, for the list and
+  for the cards in it alike; a card inside an opened list has no border. The depth travels in
+  `ResultLevelContext` (`hooks/useResultLevel.ts`), which each list raises by one, and the mode
+  in `ResultDisplayContext`. The earlier scheme (one translucent tint for every list, white cards,
+  borders) is still available as `?colors=type`. Indentation is not unified yet: each list
+  indents 32 px, but the text steps measured 30/35/30 px between levels because cards have a
+  border and the icons differ in size
 - The form must not show edits that were not stored: empty rows and repeats of
   a value already recorded (same text and language — the same triple) are
   marked while editing and dropped once a save succeeds

@@ -9,13 +9,13 @@ import type { ResultColors } from "../utils/resultColors";
 export interface ResultDisplay {
   /** Which level's "is part of" / "has part" lines to show */
   partLevels: PartLevels;
-  /** How the nested parts of a result are coloured (`?colors=level` selects the experiment) */
+  /** How the nested parts of a result are coloured (`?colors=type` selects the earlier scheme) */
   colors: ResultColors;
 }
 
 export const ResultDisplayContext = createContext<ResultDisplay>({
   partLevels: DEFAULT_PART_LEVELS,
-  colors: "type",
+  colors: "level",
 });
 
 export const useResultDisplay = (): ResultDisplay => useContext(ResultDisplayContext);

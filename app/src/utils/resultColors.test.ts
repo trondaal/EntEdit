@@ -9,11 +9,12 @@ import {
 } from "./resultColors";
 
 describe("toResultColors", () => {
-  it("keeps the default unless the address asks for levels", () => {
+  it("colours by level unless the address asks for the earlier scheme", () => {
+    expect(toResultColors("type")).toBe("type");
     expect(toResultColors("level")).toBe("level");
-    expect(toResultColors(null)).toBe("type");
-    expect(toResultColors("")).toBe("type");
-    expect(toResultColors("anything else")).toBe("type");
+    expect(toResultColors(null)).toBe("level");
+    expect(toResultColors("")).toBe("level");
+    expect(toResultColors("anything else")).toBe("level");
   });
 });
 
@@ -33,7 +34,7 @@ describe("levelBackground", () => {
 });
 
 describe("cardBorder", () => {
-  it("keeps the border everywhere in the default mode", () => {
+  it("keeps the border everywhere in the earlier scheme", () => {
     expect(cardBorder("type", 0)).toBe(1);
     expect(cardBorder("type", 2)).toBe(1);
   });
@@ -46,7 +47,7 @@ describe("cardBorder", () => {
 });
 
 describe("cardBackground and sectionStyle", () => {
-  it("keep today's look in the default mode, whatever the level", () => {
+  it("keep the earlier look in type mode, whatever the level", () => {
     expect(cardBackground("type", 0)).toBe("background.paper");
     expect(cardBackground("type", 3)).toBe("background.paper");
     expect(sectionStyle("type", 1).bgcolor).toBe(sectionStyle("type", 3).bgcolor);
