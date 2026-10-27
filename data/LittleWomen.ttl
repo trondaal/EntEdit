@@ -1,0 +1,1264 @@
+# Works built on works: Little Women
+#
+# Louisa May Alcott's novel and what has grown from it, as an example of the
+# relationships between works and between expressions. Most publications are in
+# English, with German and French examples. Notes are in English. Each
+# relationship is stated in one direction only; the inverse is inferred.
+#
+# Parts and sequels
+#   Little Women was published in two volumes, 1868 and 1869 (in Britain the
+#   second was called Good Wives). Here the novel is one work with the two
+#   volumes as parts (rdawo:P10147). Many catalogues treat Good Wives as a
+#   sequel instead: a point for discussion. Little Men (1871) and Jo's Boys
+#   (1886) are sequels (rdawo:P10020, has sequel work).
+#
+# Expressions of the novel
+#   - the English text of 1868-1869, and the 1880 one-volume edition, whose
+#     text was revised (rdaeo:P20189, is revision of)
+#   - translations (rdaeo:P20141): French by Anne Joba and by Paulette
+#     Vielhomme-Callais, German by Monika Baark and by Bettina Münch (two
+#     volumes, one per part)
+#   - free translations (rdaeo:P20140): P.-J. Stahl's French version of 1880,
+#     and Inge M. Artl's German version for children
+#   - abridgements (rdaeo:P20121): a Macmillan reader retold by Anne Collins,
+#     and Malika Ferdjoukh's abridged French translation (translation and
+#     abridgement at once: which relationship?)
+#   - audiobooks: English read by Laural Merlington, German read by Marie
+#     Bierstedt (Artl's text)
+#
+# Works derived from the novel (work level)
+#   - motion pictures 1933, 1949, 1994 and 2019 (rdawo:P10129). The 1949 film
+#     is a remake of the 1933 film (rdawo:P10185) and shares its
+#     screenwriters.
+#   - television: BBC 2017 (rdawo:P10132), and the Japanese anime series
+#     Ai no Wakakusa Monogatari, 1987
+#   - graphic novel: Meg, Jo, Beth, and Amy, 2019, a modern retelling
+#     (rdawo:P10252)
+#   - parody: Little Vampire Women, 2010 (rdawo:P10197)
+#   - inspired by: March, Geraldine Brooks, 2005, the story of the absent
+#     father (rdawo:P10290)
+#   - commentary: The Annotated Little Women, John Matteson (rdawo:P10187)
+#
+# Adaptations stated between expressions
+#   The musical (2005) and Mark Adamo's opera (1998) are linked to the English
+#   text with the expression relationships rdaeo:P20239 (musical theatre
+#   adaptation of) and rdaeo:P20240 (opera adaptation of), since the profile
+#   has no work-level relationship for them.
+#
+# Things to check or add, as exercises
+#   - which text (1868-1869 or 1880) the modern editions and the audiobook
+#     follow; they are linked to the 1868-1869 text here
+#   - the DVD in the French Folio junior edition holds the 1994 film; whether
+#     it is the original or a French dubbed version (a new expression) is not
+#     recorded
+#   - manifestations of the films, the TV series, the anime and the musical
+#   - Good Wives as a manifestation of part two
+#
+# Sources: Library of Congress and library catalogues for the English editions,
+# BnF for the French, Deutsche Nationalbibliothek for the German. Identifiers
+# are ad hoc (http://example.org/littlewomen/...).
+
+@prefix entedit: <http://oslomet.no/abi/vocab#> .
+@prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
+@prefix rdac: <http://rdaregistry.info/Elements/c/> .
+@prefix rdaed: <http://rdaregistry.info/Elements/e/datatype/> .
+@prefix rdaeo: <http://rdaregistry.info/Elements/e/object/> .
+@prefix rdamd: <http://rdaregistry.info/Elements/m/datatype/> .
+@prefix rdamo: <http://rdaregistry.info/Elements/m/object/> .
+@prefix rdawd: <http://rdaregistry.info/Elements/w/datatype/> .
+@prefix rdawo: <http://rdaregistry.info/Elements/w/object/> .
+@prefix rdaxd: <http://rdaregistry.info/Elements/x/datatype/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vtp: <https://schema.nb.no/Bibliographic/Values/> .
+
+# ---------------------------------------------------------------------------
+# Agents
+# ---------------------------------------------------------------------------
+
+<http://example.org/littlewomen/agent/alcott>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/alcott" ;
+    rdaad:P50413 "Alcott, Louisa May" ;
+    rdfs:label "Alcott, Louisa May" ;
+    rdaad:P50339 "1832-1888" .
+
+<http://example.org/littlewomen/agent/mayalcott>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/mayalcott" ;
+    rdaad:P50413 "Alcott, May" ;
+    rdfs:label "Alcott, May" ;
+    rdaad:P50339 "1840-1879" .
+
+<http://example.org/littlewomen/agent/merrill>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/merrill" ;
+    rdaad:P50413 "Merrill, Frank T." ;
+    rdfs:label "Merrill, Frank T." ;
+    rdaad:P50339 "1848-1936" .
+
+<http://example.org/littlewomen/agent/cukor>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/cukor" ;
+    rdaad:P50413 "Cukor, George" ;
+    rdfs:label "Cukor, George" ;
+    rdaad:P50339 "1899-1983" .
+
+<http://example.org/littlewomen/agent/hepburn>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/hepburn" ;
+    rdaad:P50413 "Hepburn, Katharine" ;
+    rdfs:label "Hepburn, Katharine" ;
+    rdaad:P50339 "1907-2003" .
+
+<http://example.org/littlewomen/agent/mason>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/mason" ;
+    rdaad:P50413 "Mason, Sarah Y." ;
+    rdfs:label "Mason, Sarah Y." ;
+    rdaad:P50339 "1896-1980" .
+
+<http://example.org/littlewomen/agent/heerman>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/heerman" ;
+    rdaad:P50413 "Heerman, Victor" ;
+    rdfs:label "Heerman, Victor" ;
+    rdaad:P50339 "1893-1977" .
+
+<http://example.org/littlewomen/agent/leroy>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/leroy" ;
+    rdaad:P50413 "LeRoy, Mervyn" ;
+    rdfs:label "LeRoy, Mervyn" ;
+    rdaad:P50339 "1900-1987" .
+
+<http://example.org/littlewomen/agent/allyson>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/allyson" ;
+    rdaad:P50413 "Allyson, June" ;
+    rdfs:label "Allyson, June" ;
+    rdaad:P50339 "1917-2006" .
+
+<http://example.org/littlewomen/agent/solt>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/solt" ;
+    rdaad:P50413 "Solt, Andrew" ;
+    rdfs:label "Solt, Andrew" .
+
+<http://example.org/littlewomen/agent/armstrong>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/armstrong" ;
+    rdaad:P50413 "Armstrong, Gillian" ;
+    rdfs:label "Armstrong, Gillian" ;
+    rdaad:P50339 "1950-" .
+
+<http://example.org/littlewomen/agent/swicord>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/swicord" ;
+    rdaad:P50413 "Swicord, Robin" ;
+    rdfs:label "Swicord, Robin" .
+
+<http://example.org/littlewomen/agent/ryder>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/ryder" ;
+    rdaad:P50413 "Ryder, Winona" ;
+    rdfs:label "Ryder, Winona" ;
+    rdaad:P50339 "1971-" .
+
+<http://example.org/littlewomen/agent/gerwig>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/gerwig" ;
+    rdaad:P50413 "Gerwig, Greta" ;
+    rdfs:label "Gerwig, Greta" ;
+    rdaad:P50339 "1983-" .
+
+<http://example.org/littlewomen/agent/ronan>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/ronan" ;
+    rdaad:P50413 "Ronan, Saoirse" ;
+    rdfs:label "Ronan, Saoirse" ;
+    rdaad:P50339 "1994-" .
+
+<http://example.org/littlewomen/agent/thomas>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/thomas" ;
+    rdaad:P50413 "Thomas, Heidi" ;
+    rdfs:label "Thomas, Heidi" ;
+    rdaad:P50339 "1962-" .
+
+<http://example.org/littlewomen/agent/caswell>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/caswell" ;
+    rdaad:P50413 "Caswell, Vanessa" ;
+    rdfs:label "Caswell, Vanessa" .
+
+<http://example.org/littlewomen/agent/hawke>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/hawke" ;
+    rdaad:P50413 "Hawke, Maya" ;
+    rdfs:label "Hawke, Maya" ;
+    rdaad:P50339 "1998-" .
+
+<http://example.org/littlewomen/agent/knee>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/knee" ;
+    rdaad:P50413 "Knee, Allan" ;
+    rdfs:label "Knee, Allan" .
+
+<http://example.org/littlewomen/agent/howland>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/howland" ;
+    rdaad:P50413 "Howland, Jason" ;
+    rdfs:label "Howland, Jason" .
+
+<http://example.org/littlewomen/agent/dickstein>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/dickstein" ;
+    rdaad:P50413 "Dickstein, Mindi" ;
+    rdfs:label "Dickstein, Mindi" .
+
+<http://example.org/littlewomen/agent/foster>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/foster" ;
+    rdaad:P50413 "Foster, Sutton" ;
+    rdfs:label "Foster, Sutton" ;
+    rdaad:P50339 "1975-" .
+
+<http://example.org/littlewomen/agent/adamo>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/adamo" ;
+    rdaad:P50413 "Adamo, Mark" ;
+    rdfs:label "Adamo, Mark" ;
+    rdaad:P50339 "1962-" .
+
+<http://example.org/littlewomen/agent/terciero>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/terciero" ;
+    rdaad:P50413 "Terciero, Rey" ;
+    rdfs:label "Terciero, Rey" .
+
+<http://example.org/littlewomen/agent/indigo>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/indigo" ;
+    rdaad:P50413 "Indigo, Bre" ;
+    rdfs:label "Indigo, Bre" .
+
+<http://example.org/littlewomen/agent/messina>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/messina" ;
+    rdaad:P50413 "Messina, Lynn" ;
+    rdfs:label "Messina, Lynn" .
+
+<http://example.org/littlewomen/agent/brooks>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/brooks" ;
+    rdaad:P50413 "Brooks, Geraldine" ;
+    rdfs:label "Brooks, Geraldine" ;
+    rdaad:P50339 "1955-" .
+
+<http://example.org/littlewomen/agent/matteson>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/matteson" ;
+    rdaad:P50413 "Matteson, John" ;
+    rdfs:label "Matteson, John" ;
+    rdaad:P50339 "1961-" .
+
+<http://example.org/littlewomen/agent/collins>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/collins" ;
+    rdaad:P50413 "Collins, Anne" ;
+    rdfs:label "Collins, Anne" .
+
+<http://example.org/littlewomen/agent/merlington>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/merlington" ;
+    rdaad:P50413 "Merlington, Laural" ;
+    rdfs:label "Merlington, Laural" .
+
+<http://example.org/littlewomen/agent/hetzel>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/hetzel" ;
+    rdaad:P50413 "Hetzel, Pierre-Jules" ;
+    rdfs:label "Hetzel, Pierre-Jules" ;
+    rdaad:P50339 "1814-1886" ;
+    entedit:P15 <http://example.org/littlewomen/agent/stahl> .
+
+<http://example.org/littlewomen/agent/stahl>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/stahl" ;
+    rdaad:P50413 "Stahl, P.-J." ;
+    rdfs:label "Stahl, P.-J." ;
+    rdaad:P50339 "1814-1886" .
+
+<http://example.org/littlewomen/agent/joba>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/joba" ;
+    rdaad:P50413 "Joba, Anne" ;
+    rdfs:label "Joba, Anne" .
+
+<http://example.org/littlewomen/agent/vielhomme>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/vielhomme" ;
+    rdaad:P50413 "Vielhomme-Callais, Paulette" ;
+    rdfs:label "Vielhomme-Callais, Paulette" .
+
+<http://example.org/littlewomen/agent/ferdjoukh>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/ferdjoukh" ;
+    rdaad:P50413 "Ferdjoukh, Malika" ;
+    rdfs:label "Ferdjoukh, Malika" ;
+    rdaad:P50339 "1957-" .
+
+<http://example.org/littlewomen/agent/baark>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/baark" ;
+    rdaad:P50413 "Baark, Monika" ;
+    rdfs:label "Baark, Monika" .
+
+<http://example.org/littlewomen/agent/till>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/till" ;
+    rdaad:P50413 "Till, Kera" ;
+    rdfs:label "Till, Kera" .
+
+<http://example.org/littlewomen/agent/munch>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/munch" ;
+    rdaad:P50413 "Münch, Bettina" ;
+    rdfs:label "Münch, Bettina" .
+
+<http://example.org/littlewomen/agent/artl>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/artl" ;
+    rdaad:P50413 "Artl, Inge M." ;
+    rdfs:label "Artl, Inge M." .
+
+<http://example.org/littlewomen/agent/bierstedt>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/littlewomen/agent/bierstedt" ;
+    rdaad:P50413 "Bierstedt, Marie" ;
+    rdfs:label "Bierstedt, Marie" .
+
+# ---------------------------------------------------------------------------
+# Works
+# ---------------------------------------------------------------------------
+
+<http://example.org/littlewomen/work/littlewomen>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/littlewomen/work/littlewomen" ;
+    rdawd:P10223 "Little Women" ;
+    rdawd:P10086 "Little Women, or, Meg, Jo, Beth and Amy" ;
+    rdfs:label "Little Women (Alcott, Louisa May)" ;
+    rdawd:P10219 "1868-1869" ;
+    rdawd:P10330 "Published in two volumes, 1868 and 1869, and in one volume from 1880" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>,
+        <https://id.nb.no/vocabulary/ntsf/216> ;
+    rdawo:P10061 <http://example.org/littlewomen/agent/alcott> ;
+    rdawo:P10147 <http://example.org/littlewomen/work/littlewomen-part1>,
+        <http://example.org/littlewomen/work/littlewomen-part2> ;
+    rdawo:P10020 <http://example.org/littlewomen/work/littlemen> .
+
+<http://example.org/littlewomen/work/littlewomen-part1>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/littlewomen/work/littlewomen-part1" ;
+    rdawd:P10223 "Little Women. Part 1" ;
+    rdfs:label "Little Women. Part 1 (Alcott, Louisa May)" ;
+    rdawd:P10219 "1868" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://example.org/littlewomen/agent/alcott> .
+
+<http://example.org/littlewomen/work/littlewomen-part2>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/littlewomen/work/littlewomen-part2" ;
+    rdawd:P10223 "Little Women. Part 2" ;
+    rdawd:P10086 "Good Wives",
+        "Little Women. Part Second" ;
+    rdfs:label "Little Women. Part 2 (Alcott, Louisa May)" ;
+    rdawd:P10219 "1869" ;
+    rdawd:P10330 "Published in Britain as Good Wives" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://example.org/littlewomen/agent/alcott> .
+
+<http://example.org/littlewomen/work/littlemen>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/littlewomen/work/littlemen" ;
+    rdawd:P10223 "Little Men" ;
+    rdawd:P10086 "Little Men: Life at Plumfield with Jo's Boys" ;
+    rdfs:label "Little Men (Alcott, Louisa May)" ;
+    rdawd:P10219 "1871" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>,
+        <https://id.nb.no/vocabulary/ntsf/216> ;
+    rdawo:P10061 <http://example.org/littlewomen/agent/alcott> ;
+    rdawo:P10020 <http://example.org/littlewomen/work/josboys> .
+
+<http://example.org/littlewomen/work/josboys>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/littlewomen/work/josboys" ;
+    rdawd:P10223 "Jo's Boys" ;
+    rdawd:P10086 "Jo's Boys, and How They Turned Out" ;
+    rdfs:label "Jo's Boys (Alcott, Louisa May)" ;
+    rdawd:P10219 "1886" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>,
+        <https://id.nb.no/vocabulary/ntsf/216> ;
+    rdawo:P10061 <http://example.org/littlewomen/agent/alcott> .
+
+<http://example.org/littlewomen/work/film1933>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/littlewomen/work/film1933" ;
+    rdawd:P10223 "Little Women" ;
+    rdfs:label "Little Women (film, Cukor, 1933)" ;
+    rdawd:P10219 "1933" ;
+    rdawd:P10330 "RKO Radio Pictures" ;
+    entedit:P01 vtp:V1002 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/1240>,
+        <https://id.nb.no/vocabulary/ntsf/1374> ;
+    rdawo:P10013 <http://example.org/littlewomen/agent/cukor> ;
+    rdawo:P10203 <http://example.org/littlewomen/agent/mason>,
+        <http://example.org/littlewomen/agent/heerman> ;
+    rdawo:P10129 <http://example.org/littlewomen/work/littlewomen> .
+
+<http://example.org/littlewomen/work/film1949>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/littlewomen/work/film1949" ;
+    rdawd:P10223 "Little Women" ;
+    rdfs:label "Little Women (film, LeRoy, 1949)" ;
+    rdawd:P10219 "1949" ;
+    rdawd:P10330 "Metro-Goldwyn-Mayer. Screenplay by Andrew Solt, Sarah Y. Mason and Victor Heerman, the last two the writers of the 1933 film" ;
+    entedit:P01 vtp:V1002 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/1240>,
+        <https://id.nb.no/vocabulary/ntsf/1374> ;
+    rdawo:P10013 <http://example.org/littlewomen/agent/leroy> ;
+    rdawo:P10203 <http://example.org/littlewomen/agent/solt>,
+        <http://example.org/littlewomen/agent/mason>,
+        <http://example.org/littlewomen/agent/heerman> ;
+    rdawo:P10129 <http://example.org/littlewomen/work/littlewomen> ;
+    rdawo:P10185 <http://example.org/littlewomen/work/film1933> .
+
+<http://example.org/littlewomen/work/film1994>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/littlewomen/work/film1994" ;
+    rdawd:P10223 "Little Women" ;
+    rdfs:label "Little Women (film, Armstrong, 1994)" ;
+    rdawd:P10219 "1994" ;
+    rdawd:P10330 "Columbia Pictures" ;
+    entedit:P01 vtp:V1002 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/1240>,
+        <https://id.nb.no/vocabulary/ntsf/1374> ;
+    rdawo:P10013 <http://example.org/littlewomen/agent/armstrong> ;
+    rdawo:P10203 <http://example.org/littlewomen/agent/swicord> ;
+    rdawo:P10129 <http://example.org/littlewomen/work/littlewomen> .
+
+<http://example.org/littlewomen/work/film2019>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/littlewomen/work/film2019" ;
+    rdawd:P10223 "Little Women" ;
+    rdfs:label "Little Women (film, Gerwig, 2019)" ;
+    rdawd:P10219 "2019" ;
+    rdawd:P10330 "Columbia Pictures. Written and directed by Greta Gerwig; tells the story out of order, moving between the sisters' youth and adulthood" ;
+    entedit:P01 vtp:V1002 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/1240>,
+        <https://id.nb.no/vocabulary/ntsf/1374> ;
+    rdawo:P10013 <http://example.org/littlewomen/agent/gerwig> ;
+    rdawo:P10203 <http://example.org/littlewomen/agent/gerwig> ;
+    rdawo:P10129 <http://example.org/littlewomen/work/littlewomen> .
+
+<http://example.org/littlewomen/work/bbc2017>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/littlewomen/work/bbc2017" ;
+    rdawd:P10223 "Little Women" ;
+    rdfs:label "Little Women (BBC, 2017)" ;
+    rdawd:P10219 "2017" ;
+    rdawd:P10330 "Television series in three episodes, BBC One, December 2017" ;
+    entedit:P01 vtp:V1006 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/1218>,
+        <https://id.nb.no/vocabulary/ntsf/1374> ;
+    rdawo:P10015 <http://example.org/littlewomen/agent/caswell> ;
+    rdawo:P10203 <http://example.org/littlewomen/agent/thomas> ;
+    rdawo:P10132 <http://example.org/littlewomen/work/littlewomen> .
+
+<http://example.org/littlewomen/work/anime1987>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/littlewomen/work/anime1987" ;
+    rdawd:P10223 "Ai no Wakakusa Monogatari" ;
+    rdawd:P10086 "Tales of Little Women",
+        "愛の若草物語" ;
+    rdfs:label "Ai no Wakakusa Monogatari (anime, 1987)" ;
+    rdawd:P10219 "1987" ;
+    rdawd:P10330 "Nippon Animation, 48 episodes in the World Masterpiece Theater series" ;
+    entedit:P01 vtp:V1006 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/1311>,
+        <https://id.nb.no/vocabulary/ntsf/1209> ;
+    rdawo:P10132 <http://example.org/littlewomen/work/littlewomen> .
+
+<http://example.org/littlewomen/work/musical>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/littlewomen/work/musical" ;
+    rdawd:P10223 "Little Women" ;
+    rdfs:label "Little Women (musical, 2005)" ;
+    rdawd:P10219 "2005" ;
+    rdawd:P10330 "Book by Allan Knee, music by Jason Howland, lyrics by Mindi Dickstein. Opened on Broadway at the Virginia Theatre, January 2005" ;
+    entedit:P01 vtp:V1009 ;
+    rdawo:P10061 <http://example.org/littlewomen/agent/knee> ;
+    rdawo:P10053 <http://example.org/littlewomen/agent/howland> ;
+    rdawo:P10204 <http://example.org/littlewomen/agent/dickstein> .
+
+<http://example.org/littlewomen/work/opera>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/littlewomen/work/opera" ;
+    rdawd:P10223 "Little Women" ;
+    rdfs:label "Little Women (opera, Adamo, Mark)" ;
+    rdawd:P10219 "1998" ;
+    rdawd:P10330 "Opera in two acts, music and libretto by Mark Adamo. First performed by Houston Grand Opera, 13 March 1998" ;
+    entedit:P01 vtp:V1001 ;
+    rdawo:P10053 <http://example.org/littlewomen/agent/adamo> ;
+    rdawo:P10205 <http://example.org/littlewomen/agent/adamo> .
+
+<http://example.org/littlewomen/work/graphicnovel>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/littlewomen/work/graphicnovel" ;
+    rdawd:P10223 "Meg, Jo, Beth, and Amy" ;
+    rdfs:label "Meg, Jo, Beth, and Amy (Terciero, Rey ; Indigo, Bre)" ;
+    rdawd:P10219 "2019" ;
+    rdawd:P10330 "A modern retelling, set in present-day New York" ;
+    entedit:P01 vtp:V1008 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/302> ;
+    rdawo:P10061 <http://example.org/littlewomen/agent/terciero> ;
+    rdawo:P10058 <http://example.org/littlewomen/agent/indigo> ;
+    rdawo:P10252 <http://example.org/littlewomen/work/littlewomen> .
+
+<http://example.org/littlewomen/work/vampire>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/littlewomen/work/vampire" ;
+    rdawd:P10223 "Little Vampire Women" ;
+    rdfs:label "Little Vampire Women (Messina, Lynn)" ;
+    rdawd:P10219 "2010" ;
+    rdawd:P10330 "Alcott's story retold with the March sisters as vampires" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/223>,
+        <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://example.org/littlewomen/agent/messina> ;
+    rdawo:P10197 <http://example.org/littlewomen/work/littlewomen> .
+
+<http://example.org/littlewomen/work/march>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/littlewomen/work/march" ;
+    rdawd:P10223 "March" ;
+    rdfs:label "March (Brooks, Geraldine)" ;
+    rdawd:P10219 "2005" ;
+    rdawd:P10330 "The story of the March sisters' father, absent in the Civil War. Pulitzer Prize for Fiction 2006" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://example.org/littlewomen/agent/brooks> ;
+    rdawo:P10290 <http://example.org/littlewomen/work/littlewomen> .
+
+<http://example.org/littlewomen/work/annotations>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/littlewomen/work/annotations" ;
+    rdawd:P10223 "The Annotated Little Women" ;
+    rdfs:label "The Annotated Little Women (Matteson, John)" ;
+    rdawd:P10219 "2016" ;
+    rdawd:P10330 "Introduction and annotations by John Matteson, published with the text of the novel" ;
+    entedit:P01 vtp:V1000 ;
+    rdawo:P10061 <http://example.org/littlewomen/agent/matteson> ;
+    rdawo:P10187 <http://example.org/littlewomen/work/littlewomen> .
+
+# ---------------------------------------------------------------------------
+# Expressions
+# ---------------------------------------------------------------------------
+
+<http://example.org/littlewomen/exp/littlewomen-part1/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen/exp/littlewomen-part1/eng" ;
+    rdaed:P20315 "Little Women" ;
+    rdfs:label "Little Women. Part 1 (English, 1868)" ;
+    rdaed:P20214 "1868" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/littlewomen/work/littlewomen-part1> .
+
+<http://example.org/littlewomen/exp/littlewomen-part2/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen/exp/littlewomen-part2/eng" ;
+    rdaed:P20315 "Little Women. Part Second" ;
+    rdfs:label "Little Women. Part 2 (English, 1869)" ;
+    rdaed:P20214 "1869" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/littlewomen/work/littlewomen-part2> .
+
+<http://example.org/littlewomen/exp/littlewomen/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen/exp/littlewomen/eng" ;
+    rdaed:P20315 "Little Women" ;
+    rdfs:label "Little Women (English, 1868-1869)" ;
+    rdaed:P20214 "1868-1869" ;
+    rdaed:P20071 "The text of the first editions of the two volumes" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/littlewomen/work/littlewomen> ;
+    rdaeo:P20145 <http://example.org/littlewomen/exp/littlewomen-part1/eng>,
+        <http://example.org/littlewomen/exp/littlewomen-part2/eng> .
+
+<http://example.org/littlewomen/exp/littlewomen/eng-1880>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen/exp/littlewomen/eng-1880" ;
+    rdaed:P20315 "Little Women" ;
+    rdfs:label "Little Women (English, revised text 1880)" ;
+    rdaed:P20214 "1880" ;
+    rdaed:P20071 "Revised text of the first one-volume edition: spelling, grammar and colloquial language were made more conventional" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/littlewomen/work/littlewomen> ;
+    rdaeo:P20189 <http://example.org/littlewomen/exp/littlewomen/eng> .
+
+<http://example.org/littlewomen/exp/littlemen/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen/exp/littlemen/eng" ;
+    rdaed:P20315 "Little Men" ;
+    rdfs:label "Little Men (English)" ;
+    rdaed:P20214 "1871" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/littlewomen/work/littlemen> .
+
+<http://example.org/littlewomen/exp/josboys/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen/exp/josboys/eng" ;
+    rdaed:P20315 "Jo's Boys" ;
+    rdfs:label "Jo's Boys (English)" ;
+    rdaed:P20214 "1886" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/littlewomen/work/josboys> .
+
+<http://example.org/littlewomen/exp/littlewomen/eng-collins>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen/exp/littlewomen/eng-collins" ;
+    rdaed:P20315 "Little Women" ;
+    rdfs:label "Little Women (English, retold by Anne Collins)" ;
+    rdaed:P20071 "Retold for learners of English, Macmillan Readers, beginner level" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/littlewomen/work/littlewomen> ;
+    rdaeo:P20049 <http://example.org/littlewomen/agent/collins> ;
+    rdaeo:P20121 <http://example.org/littlewomen/exp/littlewomen/eng> .
+
+<http://example.org/littlewomen/exp/littlewomen/eng-merlington>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen/exp/littlewomen/eng-merlington" ;
+    rdaed:P20315 "Little Women" ;
+    rdfs:label "Little Women (English, read by Laural Merlington)" ;
+    rdaed:P20071 "Unabridged reading, 18 hours 28 minutes" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/littlewomen/work/littlewomen> ;
+    rdaeo:P20022 <http://example.org/littlewomen/agent/merlington> .
+
+<http://example.org/littlewomen/exp/littlewomen/fre-stahl>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen/exp/littlewomen/fre-stahl" ;
+    rdaed:P20315 "Les quatre filles du docteur March" ;
+    rdfs:label "Les quatre filles du docteur March (French, P.-J. Stahl)" ;
+    rdaed:P20214 "1880" ;
+    rdaed:P20071 "Free translation by P.-J. Stahl (the publisher Pierre-Jules Hetzel), first published by Hetzel in 1880, which shortens and changes the text" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+    rdaeo:P20231 <http://example.org/littlewomen/work/littlewomen> ;
+    rdaeo:P20037 <http://example.org/littlewomen/agent/stahl> ;
+    rdaeo:P20140 <http://example.org/littlewomen/exp/littlewomen/eng> .
+
+<http://example.org/littlewomen/exp/littlewomen/fre-joba>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen/exp/littlewomen/fre-joba" ;
+    rdaed:P20315 "Les quatre filles du docteur March" ;
+    rdfs:label "Les quatre filles du docteur March (French, Anne Joba)" ;
+    rdaed:P20214 "1992" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+    rdaeo:P20231 <http://example.org/littlewomen/work/littlewomen> ;
+    rdaeo:P20037 <http://example.org/littlewomen/agent/joba> ;
+    rdaeo:P20141 <http://example.org/littlewomen/exp/littlewomen/eng> .
+
+<http://example.org/littlewomen/exp/littlewomen/fre-vielhomme>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen/exp/littlewomen/fre-vielhomme" ;
+    rdaed:P20315 "Les quatre filles du docteur March" ;
+    rdfs:label "Les quatre filles du docteur March (French, Paulette Vielhomme-Callais)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+    rdaeo:P20231 <http://example.org/littlewomen/work/littlewomen> ;
+    rdaeo:P20037 <http://example.org/littlewomen/agent/vielhomme> ;
+    rdaeo:P20141 <http://example.org/littlewomen/exp/littlewomen/eng> .
+
+<http://example.org/littlewomen/exp/littlewomen/fre-ferdjoukh>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen/exp/littlewomen/fre-ferdjoukh" ;
+    rdaed:P20315 "Les quatre filles du docteur March" ;
+    rdfs:label "Les quatre filles du docteur March (French, abridged, Malika Ferdjoukh)" ;
+    rdaed:P20214 "2019" ;
+    rdaed:P20071 "Translated and abridged by Malika Ferdjoukh" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+    rdaeo:P20231 <http://example.org/littlewomen/work/littlewomen> ;
+    rdaeo:P20037 <http://example.org/littlewomen/agent/ferdjoukh> ;
+    rdaeo:P20049 <http://example.org/littlewomen/agent/ferdjoukh> ;
+    rdaeo:P20141 <http://example.org/littlewomen/exp/littlewomen/eng> .
+
+<http://example.org/littlewomen/exp/littlewomen/ger-baark>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen/exp/littlewomen/ger-baark" ;
+    rdaed:P20315 "Little Women : Beth und ihre Schwestern" ;
+    rdfs:label "Little Women : Beth und ihre Schwestern (German, Monika Baark)" ;
+    rdaed:P20214 "2021" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+    rdaeo:P20231 <http://example.org/littlewomen/work/littlewomen> ;
+    rdaeo:P20037 <http://example.org/littlewomen/agent/baark> ;
+    rdaeo:P20141 <http://example.org/littlewomen/exp/littlewomen/eng> .
+
+<http://example.org/littlewomen/exp/littlewomen-part1/ger-munch>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen/exp/littlewomen-part1/ger-munch" ;
+    rdaed:P20315 "Little Women : vier Schwestern halten zusammen" ;
+    rdfs:label "Little Women : vier Schwestern halten zusammen (German, Bettina Münch)" ;
+    rdaed:P20214 "2020" ;
+    rdaed:P20071 "New translation published for the 2019 film" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+    rdaeo:P20231 <http://example.org/littlewomen/work/littlewomen-part1> ;
+    rdaeo:P20037 <http://example.org/littlewomen/agent/munch> ;
+    rdaeo:P20141 <http://example.org/littlewomen/exp/littlewomen-part1/eng> .
+
+<http://example.org/littlewomen/exp/littlewomen-part2/ger-munch>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen/exp/littlewomen-part2/ger-munch" ;
+    rdaed:P20315 "Little Women : vier Schwestern finden ihren Weg" ;
+    rdfs:label "Little Women : vier Schwestern finden ihren Weg (German, Bettina Münch)" ;
+    rdaed:P20214 "2021" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+    rdaeo:P20231 <http://example.org/littlewomen/work/littlewomen-part2> ;
+    rdaeo:P20037 <http://example.org/littlewomen/agent/munch> ;
+    rdaeo:P20141 <http://example.org/littlewomen/exp/littlewomen-part2/eng> .
+
+<http://example.org/littlewomen/exp/littlewomen/ger-artl>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen/exp/littlewomen/ger-artl" ;
+    rdaed:P20315 "Betty und ihre Schwestern" ;
+    rdfs:label "Betty und ihre Schwestern (German, Inge M. Artl)" ;
+    rdaed:P20071 "Translated and adapted for children by Inge M. Artl. Beth is called Betty, as in the older German translations" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+    rdaeo:P20231 <http://example.org/littlewomen/work/littlewomen> ;
+    rdaeo:P20037 <http://example.org/littlewomen/agent/artl> ;
+    rdaeo:P20140 <http://example.org/littlewomen/exp/littlewomen/eng> .
+
+<http://example.org/littlewomen/exp/littlewomen/ger-bierstedt>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen/exp/littlewomen/ger-bierstedt" ;
+    rdaed:P20315 "Betty und ihre Schwestern" ;
+    rdfs:label "Betty und ihre Schwestern (German, read by Marie Bierstedt)" ;
+    rdaed:P20214 "2009" ;
+    rdaed:P20071 "Abridged reading of Inge M. Artl's translation, directed by Kati Schaefer" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+    rdaeo:P20231 <http://example.org/littlewomen/work/littlewomen> ;
+    rdaeo:P20022 <http://example.org/littlewomen/agent/bierstedt> ;
+    rdaeo:P20037 <http://example.org/littlewomen/agent/artl> .
+
+<http://example.org/littlewomen/exp/film1933>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen/exp/film1933" ;
+    rdaed:P20315 "Little Women" ;
+    rdfs:label "Little Women (film, 1933)" ;
+    rdaed:P20214 "1933" ;
+    rdaed:P20071 "With Katharine Hepburn as Jo" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1023> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/littlewomen/work/film1933> ;
+    rdaeo:P20012 <http://example.org/littlewomen/agent/hepburn> .
+
+<http://example.org/littlewomen/exp/film1949>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen/exp/film1949" ;
+    rdaed:P20315 "Little Women" ;
+    rdfs:label "Little Women (film, 1949)" ;
+    rdaed:P20214 "1949" ;
+    rdaed:P20071 "With June Allyson as Jo" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1023> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/littlewomen/work/film1949> ;
+    rdaeo:P20012 <http://example.org/littlewomen/agent/allyson> .
+
+<http://example.org/littlewomen/exp/film1994>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen/exp/film1994" ;
+    rdaed:P20315 "Little Women" ;
+    rdfs:label "Little Women (film, 1994)" ;
+    rdaed:P20214 "1994" ;
+    rdaed:P20071 "With Winona Ryder as Jo" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1023> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/littlewomen/work/film1994> ;
+    rdaeo:P20012 <http://example.org/littlewomen/agent/ryder> .
+
+<http://example.org/littlewomen/exp/film2019>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen/exp/film2019" ;
+    rdaed:P20315 "Little Women" ;
+    rdfs:label "Little Women (film, 2019)" ;
+    rdaed:P20214 "2019" ;
+    rdaed:P20071 "With Saoirse Ronan as Jo" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1023> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/littlewomen/work/film2019> ;
+    rdaeo:P20012 <http://example.org/littlewomen/agent/ronan> .
+
+<http://example.org/littlewomen/exp/bbc2017>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen/exp/bbc2017" ;
+    rdaed:P20315 "Little Women" ;
+    rdfs:label "Little Women (BBC, 2017)" ;
+    rdaed:P20214 "2017" ;
+    rdaed:P20071 "With Maya Hawke as Jo" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1023> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/littlewomen/work/bbc2017> ;
+    rdaeo:P20012 <http://example.org/littlewomen/agent/hawke> .
+
+<http://example.org/littlewomen/exp/anime1987>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen/exp/anime1987" ;
+    rdaed:P20315 "Ai no Wakakusa Monogatari" ;
+    rdfs:label "Ai no Wakakusa Monogatari (Japanese, 1987)" ;
+    rdaed:P20214 "1987" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1023> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/jpn> ;
+    rdaeo:P20231 <http://example.org/littlewomen/work/anime1987> .
+
+<http://example.org/littlewomen/exp/musical>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen/exp/musical" ;
+    rdaed:P20315 "Little Women" ;
+    rdfs:label "Little Women (musical, 2005)" ;
+    rdaed:P20214 "2005" ;
+    rdaed:P20071 "Book, lyrics and score. Sutton Foster played Jo on Broadway" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020>,
+        <http://rdaregistry.info/termList/RDAContentType/1010> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/littlewomen/work/musical> ;
+    rdaeo:P20239 <http://example.org/littlewomen/exp/littlewomen/eng> .
+
+<http://example.org/littlewomen/exp/opera>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen/exp/opera" ;
+    rdaed:P20315 "Little Women" ;
+    rdfs:label "Little Women (opera, Adamo, vocal score)" ;
+    rdaed:P20214 "1998" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1010> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/littlewomen/work/opera> ;
+    rdaeo:P20240 <http://example.org/littlewomen/exp/littlewomen/eng> .
+
+<http://example.org/littlewomen/exp/graphicnovel>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen/exp/graphicnovel" ;
+    rdaed:P20315 "Meg, Jo, Beth, and Amy" ;
+    rdfs:label "Meg, Jo, Beth, and Amy (graphic novel, English)" ;
+    rdaed:P20214 "2019" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020>,
+        <http://rdaregistry.info/termList/RDAContentType/1014> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/littlewomen/work/graphicnovel> .
+
+<http://example.org/littlewomen/exp/vampire>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen/exp/vampire" ;
+    rdaed:P20315 "Little Vampire Women" ;
+    rdfs:label "Little Vampire Women (English)" ;
+    rdaed:P20214 "2010" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/littlewomen/work/vampire> .
+
+<http://example.org/littlewomen/exp/march>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen/exp/march" ;
+    rdaed:P20315 "March" ;
+    rdfs:label "March (English)" ;
+    rdaed:P20214 "2005" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/littlewomen/work/march> .
+
+<http://example.org/littlewomen/exp/annotations>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen/exp/annotations" ;
+    rdaed:P20315 "The Annotated Little Women" ;
+    rdfs:label "The Annotated Little Women (English)" ;
+    rdaed:P20214 "2016" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020>,
+        <http://rdaregistry.info/termList/RDAContentType/1014> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/littlewomen/work/annotations> .
+
+# ---------------------------------------------------------------------------
+# Manifestations
+# ---------------------------------------------------------------------------
+
+<http://example.org/littlewomen/manifestation/1868/roberts>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/littlewomen/manifestation/1868/roberts" ;
+    rdfs:label "Little Women (Roberts Brothers, 1868)" ;
+    rdamd:P30156 "Little Women" ;
+    rdamd:P30142 "or, Meg, Jo, Beth and Amy" ;
+    rdamd:P30117 "by Louisa M. Alcott ; illustrated by May Alcott" ;
+    rdamd:P30182 "341 p. : ill." ;
+    rdamd:P30176 "Roberts Brothers" ;
+    rdamd:P30088 "Boston" ;
+    rdamd:P30011 "1868" ;
+    rdamd:P30137 "First edition of the first part" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    entedit:P05 <http://example.org/littlewomen/agent/mayalcott> ;
+    rdamo:P30139 <http://example.org/littlewomen/exp/littlewomen-part1/eng> .
+
+<http://example.org/littlewomen/manifestation/1869/roberts>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/littlewomen/manifestation/1869/roberts" ;
+    rdfs:label "Little Women. Part Second (Roberts Brothers, 1869)" ;
+    rdamd:P30156 "Little Women" ;
+    rdamd:P30142 "or, Meg, Jo, Beth and Amy. Part second" ;
+    rdamd:P30117 "by Louisa M. Alcott" ;
+    rdamd:P30182 "359 p." ;
+    rdamd:P30176 "Roberts Brothers" ;
+    rdamd:P30088 "Boston" ;
+    rdamd:P30011 "1869" ;
+    rdamd:P30137 "First edition of the second part" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/littlewomen/exp/littlewomen-part2/eng> .
+
+<http://example.org/littlewomen/manifestation/1880/roberts>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/littlewomen/manifestation/1880/roberts" ;
+    rdfs:label "Little Women (Roberts Brothers, 1880)" ;
+    rdamd:P30156 "Little Women" ;
+    rdamd:P30142 "or, Meg, Jo, Beth and Amy" ;
+    rdamd:P30117 "by Louisa M. Alcott ; illustrated by Frank T. Merrill" ;
+    rdamd:P30107 "New edition" ;
+    rdamd:P30176 "Roberts Brothers" ;
+    rdamd:P30088 "Boston" ;
+    rdamd:P30011 "1880" ;
+    rdamd:P30137 "The two parts in one volume, illustrated by Frank T. Merrill" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    entedit:P05 <http://example.org/littlewomen/agent/merrill> ;
+    rdamo:P30139 <http://example.org/littlewomen/exp/littlewomen/eng-1880> .
+
+<http://example.org/littlewomen/manifestation/1871/roberts>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/littlewomen/manifestation/1871/roberts" ;
+    rdfs:label "Little Men (Roberts Brothers, 1871)" ;
+    rdamd:P30156 "Little Men" ;
+    rdamd:P30142 "life at Plumfield with Jo's boys" ;
+    rdamd:P30117 "by Louisa M. Alcott" ;
+    rdamd:P30176 "Roberts Brothers" ;
+    rdamd:P30088 "Boston" ;
+    rdamd:P30011 "1871" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/littlewomen/exp/littlemen/eng> .
+
+<http://example.org/littlewomen/manifestation/1886/roberts>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/littlewomen/manifestation/1886/roberts" ;
+    rdfs:label "Jo's Boys (Roberts Brothers, 1886)" ;
+    rdamd:P30156 "Jo's Boys" ;
+    rdamd:P30142 "and how they turned out : a sequel to \"Little Men\"" ;
+    rdamd:P30117 "by Louisa M. Alcott" ;
+    rdamd:P30176 "Roberts Brothers" ;
+    rdamd:P30088 "Boston" ;
+    rdamd:P30011 "1886" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/littlewomen/exp/josboys/eng> .
+
+<http://example.org/littlewomen/manifestation/2016/norton>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/littlewomen/manifestation/2016/norton" ;
+    rdfs:label "The Annotated Little Women (Norton, 2016)" ;
+    rdamd:P30156 "The Annotated Little Women" ;
+    rdamd:P30117 "Louisa May Alcott ; edited with an introduction and notes by John Matteson" ;
+    rdamd:P30182 "lxxvii, 652 pages : illustrations" ;
+    rdamd:P30169 "27 cm" ;
+    rdamd:P30176 "W. W. Norton & Company" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "2016" ;
+    rdamd:P30004 "ISBN 9780393072198" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/littlewomen/exp/annotations>,
+        <http://example.org/littlewomen/exp/littlewomen/eng> .
+
+<http://example.org/littlewomen/manifestation/2008/macmillan>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/littlewomen/manifestation/2008/macmillan" ;
+    rdfs:label "Little Women (Macmillan Readers, 2008)" ;
+    rdamd:P30156 "Little Women" ;
+    rdamd:P30117 "Louisa M. Alcott ; retold by Anne Collins" ;
+    rdamd:P30182 "64 pages" ;
+    rdamd:P30176 "Hueber" ;
+    rdamd:P30088 "Ismaning" ;
+    rdamd:P30011 "2008" ;
+    rdamd:P30106 "Macmillan Guided Readers. Beginner level" ;
+    rdamd:P30137 "German licensed edition of a Macmillan reader" ;
+    rdamd:P30004 "ISBN 9783193929563" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/littlewomen/exp/littlewomen/eng-collins> .
+
+<http://example.org/littlewomen/manifestation/2009/bertzfischer>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/littlewomen/manifestation/2009/bertzfischer" ;
+    rdfs:label "Little Women (Bertz + Fischer, 2009, audiobook)" ;
+    rdamd:P30156 "Little Women" ;
+    rdamd:P30142 "original + ungekürzt" ;
+    rdamd:P30117 "by Louisa May Alcott ; read by Laural Merlington" ;
+    rdamd:P30182 "2 CDs (MP3, 18 hrs 28 min)" ;
+    rdamd:P30176 "Bertz + Fischer" ;
+    rdamd:P30088 "Berlin" ;
+    rdamd:P30011 "2009" ;
+    rdamd:P30106 "Bertz + Fischer Audiobooks" ;
+    rdamd:P30137 "The complete text is included as a PDF file on the discs" ;
+    rdamd:P30004 "ISBN 9783865055613" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1004> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1001> ;
+    rdamo:P30139 <http://example.org/littlewomen/exp/littlewomen/eng-merlington>,
+        <http://example.org/littlewomen/exp/littlewomen/eng> .
+
+<http://example.org/littlewomen/manifestation/2019/littlebrown>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/littlewomen/manifestation/2019/littlebrown" ;
+    rdfs:label "Meg, Jo, Beth, and Amy (Little, Brown, 2019)" ;
+    rdamd:P30156 "Meg, Jo, Beth, and Amy" ;
+    rdamd:P30142 "a graphic novel : a modern retelling of Little Women" ;
+    rdamd:P30117 "Rey Terciero ; illustrated by Bre Indigo" ;
+    rdamd:P30182 "256 pages : color illustrations" ;
+    rdamd:P30176 "Little, Brown and Company" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "2019" ;
+    rdamd:P30004 "ISBN 9780316522885" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/littlewomen/exp/graphicnovel> .
+
+<http://example.org/littlewomen/manifestation/2010/harperteen>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/littlewomen/manifestation/2010/harperteen" ;
+    rdfs:label "Little Vampire Women (HarperTeen, 2010)" ;
+    rdamd:P30156 "Little Vampire Women" ;
+    rdamd:P30117 "Louisa May Alcott and Lynn Messina" ;
+    rdamd:P30182 "317 pages" ;
+    rdamd:P30169 "21 cm" ;
+    rdamd:P30176 "HarperTeen" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "2010" ;
+    rdamd:P30004 "ISBN 9780061976254" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/littlewomen/exp/vampire> .
+
+<http://example.org/littlewomen/manifestation/2005/viking>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/littlewomen/manifestation/2005/viking" ;
+    rdfs:label "March (Viking, 2005)" ;
+    rdamd:P30156 "March" ;
+    rdamd:P30142 "a novel" ;
+    rdamd:P30117 "Geraldine Brooks" ;
+    rdamd:P30182 "280 pages" ;
+    rdamd:P30176 "Viking" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "2005" ;
+    rdamd:P30004 "ISBN 0670033359" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/littlewomen/exp/march> .
+
+<http://example.org/littlewomen/manifestation/schirmer>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/littlewomen/manifestation/schirmer" ;
+    rdfs:label "Little Women (G. Schirmer, vocal score)" ;
+    rdamd:P30156 "Little Women" ;
+    rdamd:P30142 "opera in two acts : vocal score" ;
+    rdamd:P30117 "music and libretto by Mark Adamo" ;
+    rdamd:P30176 "G. Schirmer" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30004 "ISBN 9780634020926" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/littlewomen/exp/opera> .
+
+<http://example.org/littlewomen/manifestation/1974/famot>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/littlewomen/manifestation/1974/famot" ;
+    rdfs:label "Les quatre filles du docteur March (Famot, 1974)" ;
+    rdamd:P30156 "Les quatre filles du docteur March" ;
+    rdamd:P30117 "L.M. Alcott ; traduction de P.J. Stahl" ;
+    rdamd:P30182 "323 p., [12] f. : ill." ;
+    rdamd:P30169 "19 cm" ;
+    rdamd:P30176 "Famot" ;
+    rdamd:P30088 "Genève" ;
+    rdamd:P30011 "1974" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/littlewomen/exp/littlewomen/fre-stahl> .
+
+<http://example.org/littlewomen/manifestation/1992/franceloisirs>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/littlewomen/manifestation/1992/franceloisirs" ;
+    rdfs:label "Les quatre filles du docteur March (France loisirs, 1992)" ;
+    rdamd:P30156 "Les quatre filles du docteur March" ;
+    rdamd:P30117 "Louisa May Alcott ; trad. nouv. d'Anne Joba ; [dossier de Nicole Bon]" ;
+    rdamd:P30182 "285 p." ;
+    rdamd:P30169 "19 cm" ;
+    rdamd:P30176 "France loisirs" ;
+    rdamd:P30088 "Paris" ;
+    rdamd:P30011 "1992" ;
+    rdamd:P30106 "Collection Jeunes" ;
+    rdamd:P30004 "ISBN 2-7242-6927-6" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/littlewomen/exp/littlewomen/fre-joba> .
+
+<http://example.org/littlewomen/manifestation/2009/gallimard>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/littlewomen/manifestation/2009/gallimard" ;
+    rdfs:label "Les quatre filles du docteur March (Gallimard, 2009, with DVD)" ;
+    rdamd:P30156 "Les quatre filles du docteur March" ;
+    rdamd:P30117 "Louisa May Alcott ; traduit de l'anglais par Paulette Vielhomme-Callais ; illustrations de Rozier-Gaudriault" ;
+    rdamd:P30182 "1 vol. (374 p.) : ill. + 1 DVD vidéo (1 h 54 min)" ;
+    rdamd:P30169 "18 cm" ;
+    rdamd:P30176 "Gallimard" ;
+    rdamd:P30088 "Paris" ;
+    rdamd:P30011 "2009" ;
+    rdamd:P30106 "Folio junior ; 413. Folio junior cinéma" ;
+    rdamd:P30137 "Book and DVD of the 1994 film in one package" ;
+    rdamd:P30004 "ISBN 978-2-07-062851-3" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/littlewomen/exp/littlewomen/fre-vielhomme>,
+        <http://example.org/littlewomen/exp/film1994> .
+
+<http://example.org/littlewomen/manifestation/2019/ecoledesloisirs>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/littlewomen/manifestation/2019/ecoledesloisirs" ;
+    rdfs:label "Les quatre filles du docteur March (L'École des loisirs, 2019)" ;
+    rdamd:P30156 "Les quatre filles du docteur March" ;
+    rdamd:P30117 "Louisa May Alcott ; traduit et abrégé par Malika Ferdjoukh" ;
+    rdamd:P30107 "Texte abrégé" ;
+    rdamd:P30182 "234 p." ;
+    rdamd:P30169 "19 cm" ;
+    rdamd:P30176 "L'École des loisirs" ;
+    rdamd:P30088 "Paris" ;
+    rdamd:P30011 "2019" ;
+    rdamd:P30106 "Classiques" ;
+    rdamd:P30004 "ISBN 978-2-211-30465-8" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/littlewomen/exp/littlewomen/fre-ferdjoukh> .
+
+<http://example.org/littlewomen/manifestation/2021/reclam>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/littlewomen/manifestation/2021/reclam" ;
+    rdfs:label "Little Women : Beth und ihre Schwestern (Reclam, 2021)" ;
+    rdamd:P30156 "Little Women" ;
+    rdamd:P30142 "Beth und ihre Schwestern" ;
+    rdamd:P30117 "Louisa May Alcott ; aus dem Englischen übersetzt von Monika Baark ; illustriert von Kera Till" ;
+    rdamd:P30182 "586 Seiten : Illustrationen" ;
+    rdamd:P30169 "25 cm" ;
+    rdamd:P30176 "Reclam" ;
+    rdamd:P30088 "Ditzingen" ;
+    rdamd:P30011 "2021" ;
+    rdamd:P30004 "ISBN 9783150113578" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    entedit:P05 <http://example.org/littlewomen/agent/till> ;
+    rdamo:P30139 <http://example.org/littlewomen/exp/littlewomen/ger-baark> .
+
+<http://example.org/littlewomen/manifestation/2020/atrium>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/littlewomen/manifestation/2020/atrium" ;
+    rdfs:label "Little Women : vier Schwestern halten zusammen (Atrium, 2020)" ;
+    rdamd:P30156 "Little Women" ;
+    rdamd:P30142 "vier Schwestern halten zusammen" ;
+    rdamd:P30117 "Louisa May Alcott ; aus dem Englischen von Bettina Münch" ;
+    rdamd:P30107 "Neu übersetzte Ausgabe, 1. Auflage" ;
+    rdamd:P30182 "399 Seiten" ;
+    rdamd:P30169 "22 cm" ;
+    rdamd:P30176 "Atrium Verlag" ;
+    rdamd:P30088 "Zürich" ;
+    rdamd:P30011 "2020" ;
+    rdamd:P30004 "ISBN 9783855356539" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/littlewomen/exp/littlewomen-part1/ger-munch> .
+
+<http://example.org/littlewomen/manifestation/2021/atrium>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/littlewomen/manifestation/2021/atrium" ;
+    rdfs:label "Little Women : vier Schwestern finden ihren Weg (Atrium, 2021)" ;
+    rdamd:P30156 "Little Women" ;
+    rdamd:P30142 "vier Schwestern finden ihren Weg" ;
+    rdamd:P30117 "Louisa May Alcott ; aus dem Englischen von Bettina Münch" ;
+    rdamd:P30107 "Neu übersetzte Ausgabe, 1. Auflage" ;
+    rdamd:P30182 "431 Seiten" ;
+    rdamd:P30169 "22 cm" ;
+    rdamd:P30176 "Atrium Verlag" ;
+    rdamd:P30088 "Zürich" ;
+    rdamd:P30011 "2021" ;
+    rdamd:P30004 "ISBN 9783855356577" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/littlewomen/exp/littlewomen-part2/ger-munch> .
+
+<http://example.org/littlewomen/manifestation/2014/arena>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/littlewomen/manifestation/2014/arena" ;
+    rdfs:label "Betty und ihre Schwestern (Arena, 2014)" ;
+    rdamd:P30156 "Betty und ihre Schwestern" ;
+    rdamd:P30117 "Louisa May Alcott ; aus dem Englischen übersetzt und bearbeitet von Inge M. Artl" ;
+    rdamd:P30107 "1. Auflage" ;
+    rdamd:P30182 "233 Seiten" ;
+    rdamd:P30169 "20 cm" ;
+    rdamd:P30176 "Arena" ;
+    rdamd:P30088 "Würzburg" ;
+    rdamd:P30011 "2014" ;
+    rdamd:P30106 "Arena-Kinderbuch-Klassiker" ;
+    rdamd:P30004 "ISBN 9783401069739" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/littlewomen/exp/littlewomen/ger-artl> .
+
+<http://example.org/littlewomen/manifestation/2009/luebbe>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/littlewomen/manifestation/2009/luebbe" ;
+    rdfs:label "Betty und ihre Schwestern (Lübbe audio, 2009, audiobook)" ;
+    rdamd:P30156 "Marie Bierstedt liest Louisa May Alcott, Betty und ihre Schwestern" ;
+    rdamd:P30117 "Regie: Kati Schaefer ; aus dem Amerikanischen übersetzt von Inge M. Artl" ;
+    rdamd:P30107 "Bearbeitete Fassung" ;
+    rdamd:P30182 "4 CDs" ;
+    rdamd:P30169 "12 cm" ;
+    rdamd:P30176 "Lübbe" ;
+    rdamd:P30088 "Bergisch Gladbach" ;
+    rdamd:P30011 "2009" ;
+    rdamd:P30106 "Lübbe audio - Bücher zum Hören" ;
+    rdamd:P30137 "Recommended from age 10" ;
+    rdamd:P30004 "ISBN 9783785738597" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1004> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1001> ;
+    rdamo:P30139 <http://example.org/littlewomen/exp/littlewomen/ger-bierstedt> .

@@ -14,3 +14,18 @@ Nesbo.ttl: "Collections and aggregates" - Jo Nesbø's two short story collection
   12 stories (Aschehoug 2022, the English translation), French translations at collection
   level only. Publication data from Nasjonalbiblioteket and BnF; ad hoc
   http://example.org/nesbo/... identifiers. Loaded into the local repository Nesbo.
+OrientExpress.ttl: "Adaptations and other relationships" - Agatha Christie's Murder on the
+  Orient Express (1934) and what derives from it: two Norwegian translations, an abridged
+  ELT reader, four audiobooks (new expressions of the novel), and films, TV, radio, a play,
+  a graphic novel with a Norwegian translation, a computer game, a Disney parody, a study
+  guide and a supplement (new works, related at work level). Publication data from
+  Nasjonalbiblioteket and library catalogues; ad hoc http://example.org/orient/...
+  identifiers. Loaded into the local repository OrientExpress.
+LittleWomen.ttl: "Works built on works" - Louisa May Alcott's Little Women for an
+  international group (notes in English): the novel as a whole with its two parts, the
+  sequels Little Men and Jo's Boys, the revised 1880 text, French and German translations
+  (literal, free and abridged), an ELT reader, audiobooks, four films (one a remake), TV,
+  anime, musical and opera (adaptations stated between expressions), a graphic novel, a
+  parody, a novel inspired by it and an annotated edition. Publication data from library
+  catalogues, BnF and DNB; ad hoc http://example.org/littlewomen/... identifiers. Loaded
+  into the local repository LittleWomen.

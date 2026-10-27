@@ -1,0 +1,890 @@
+# Adaptations and other relationships: Murder on the Orient Express
+#
+# Agatha Christie's novel (1934) and the works and expressions derived from it,
+# chosen to show the different relationships RDA has between works and between
+# expressions. Each statement is made in one direction only; the inverse
+# ("har bearbeidelse til spillefilm", "har oversettelse" ...) is inferred.
+#
+# Same work, new expression:
+#   - the English original, two Norwegian translations (Axel S. Seeberg 1975,
+#     Ola Halvor Seeberg Nygård 2012), each "er oversettelse av" the original
+#   - an abridged English reader (Collins ELT, level B1), "er forkortelse av"
+#     the original. RDA also allows an abridgement to be treated as a work of
+#     its own (rdawo:P10125): a point for discussion.
+#   - audiobooks: English read by Dan Stevens (2013) and Kenneth Branagh (2017),
+#     Norwegian read by John Yngvar Fearnley (1992, Seeberg's translation) and
+#     Bjørn Fougner (2017, Nygård's translation). A reading is an expression of
+#     its own (spoken word); RDA has no relationship "is a reading of", so the
+#     text read is named only in the note.
+#
+# New works, related to the novel (work level):
+#   - motion pictures, Sidney Lumet 1974 and Kenneth Branagh 2017
+#     (er bearbeidelse til spillefilm). The 2017 film is often called a remake,
+#     but both adapt the novel; whether to add "er nyinnspilling av" is left
+#     open.
+#   - television, Agatha Christie's Poirot 2010 (er bearbeidelse for fjernsyn),
+#     an episode that is part of a series work
+#   - radio, BBC Radio 4 1992 (er bearbeidelse for radio)
+#   - stage play, Ken Ludwig 2017 (er dramatisering av)
+#   - graphic novel, Eckartsberg and Chaiko 2017 (er bearbeidelse til
+#     tegneserieroman), French, with a Norwegian translation (expression level)
+#   - computer game, 2006 (er bearbeidelse av, the general relationship, since
+#     RDA has none for games)
+#   - Disney parody, Topolino sull'Orient Express 1985 (er parodi av). The story
+#     is a jewel theft, not a murder: parody, imitation or only inspiration?
+#   - study guide, Gale 2016 (er veiledning til)
+#   - the notes and glossary in the Collins reader (er supplement til), a work
+#     of their own embodied in the same book as the abridged text
+#
+# Not recorded, as exercises: the French and other translations, the 2001 CBS
+# film, the 2023 computer game, the manifestations of the plays and the TV
+# episode, the 1934 first editions' extent, Richard Rodney Bennett's film
+# music.
+#
+# Sources: Nasjonalbiblioteket (api.nb.no) for the Norwegian editions, library
+# catalogues and the publishers for the others. Identifiers are ad hoc
+# (http://example.org/orient/...).
+
+@prefix entedit: <http://oslomet.no/abi/vocab#> .
+@prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
+@prefix rdac: <http://rdaregistry.info/Elements/c/> .
+@prefix rdaed: <http://rdaregistry.info/Elements/e/datatype/> .
+@prefix rdaeo: <http://rdaregistry.info/Elements/e/object/> .
+@prefix rdamd: <http://rdaregistry.info/Elements/m/datatype/> .
+@prefix rdamo: <http://rdaregistry.info/Elements/m/object/> .
+@prefix rdawd: <http://rdaregistry.info/Elements/w/datatype/> .
+@prefix rdawo: <http://rdaregistry.info/Elements/w/object/> .
+@prefix rdaxd: <http://rdaregistry.info/Elements/x/datatype/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vtp: <https://schema.nb.no/Bibliographic/Values/> .
+
+# ---------------------------------------------------------------------------
+# Agents
+# ---------------------------------------------------------------------------
+
+<http://example.org/orient/agent/christie>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/orient/agent/christie" ;
+    rdaad:P50413 "Christie, Agatha" ;
+    rdfs:label "Christie, Agatha" ;
+    rdaad:P50339 "1890-1976" .
+
+<http://example.org/orient/agent/seeberg>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/orient/agent/seeberg" ;
+    rdaad:P50413 "Seeberg, Axel S." ;
+    rdfs:label "Seeberg, Axel S." ;
+    rdaad:P50339 "1914-1994" .
+
+<http://example.org/orient/agent/nygard>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/orient/agent/nygard" ;
+    rdaad:P50413 "Nygård, Ola Halvor Seeberg" ;
+    rdfs:label "Nygård, Ola Halvor Seeberg" ;
+    rdaad:P50339 "1964-" .
+
+<http://example.org/orient/agent/fearnley>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/orient/agent/fearnley" ;
+    rdaad:P50413 "Fearnley, John Yngvar" ;
+    rdfs:label "Fearnley, John Yngvar" ;
+    rdaad:P50339 "1940-" .
+
+<http://example.org/orient/agent/fougner>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/orient/agent/fougner" ;
+    rdaad:P50413 "Fougner, Bjørn" ;
+    rdfs:label "Fougner, Bjørn" ;
+    rdaad:P50339 "1952-" .
+
+<http://example.org/orient/agent/stevens>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/orient/agent/stevens" ;
+    rdaad:P50413 "Stevens, Dan" ;
+    rdfs:label "Stevens, Dan" ;
+    rdaad:P50339 "1982-" .
+
+<http://example.org/orient/agent/branagh>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/orient/agent/branagh" ;
+    rdaad:P50413 "Branagh, Kenneth" ;
+    rdfs:label "Branagh, Kenneth" ;
+    rdaad:P50339 "1960-" .
+
+<http://example.org/orient/agent/lumet>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/orient/agent/lumet" ;
+    rdaad:P50413 "Lumet, Sidney" ;
+    rdfs:label "Lumet, Sidney" ;
+    rdaad:P50339 "1924-2011" .
+
+<http://example.org/orient/agent/dehn>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/orient/agent/dehn" ;
+    rdaad:P50413 "Dehn, Paul" ;
+    rdfs:label "Dehn, Paul" ;
+    rdaad:P50339 "1912-1976" .
+
+<http://example.org/orient/agent/finney>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/orient/agent/finney" ;
+    rdaad:P50413 "Finney, Albert" ;
+    rdfs:label "Finney, Albert" ;
+    rdaad:P50339 "1936-2019" .
+
+<http://example.org/orient/agent/green>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/orient/agent/green" ;
+    rdaad:P50413 "Green, Michael" ;
+    rdfs:label "Green, Michael" .
+
+<http://example.org/orient/agent/suchet>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/orient/agent/suchet" ;
+    rdaad:P50413 "Suchet, David" ;
+    rdfs:label "Suchet, David" ;
+    rdaad:P50339 "1946-" .
+
+<http://example.org/orient/agent/harcourt>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/orient/agent/harcourt" ;
+    rdaad:P50413 "Harcourt, Stewart" ;
+    rdfs:label "Harcourt, Stewart" .
+
+<http://example.org/orient/agent/martin>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/orient/agent/martin" ;
+    rdaad:P50413 "Martin, Philip" ;
+    rdfs:label "Martin, Philip" .
+
+<http://example.org/orient/agent/bakewell>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/orient/agent/bakewell" ;
+    rdaad:P50413 "Bakewell, Michael" ;
+    rdfs:label "Bakewell, Michael" .
+
+<http://example.org/orient/agent/williams>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/orient/agent/williams" ;
+    rdaad:P50413 "Williams, Enyd" ;
+    rdfs:label "Williams, Enyd" .
+
+<http://example.org/orient/agent/moffatt>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/orient/agent/moffatt" ;
+    rdaad:P50413 "Moffatt, John" ;
+    rdfs:label "Moffatt, John" ;
+    rdaad:P50339 "1922-2012" .
+
+<http://example.org/orient/agent/ludwig>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/orient/agent/ludwig" ;
+    rdaad:P50413 "Ludwig, Ken" ;
+    rdfs:label "Ludwig, Ken" ;
+    rdaad:P50339 "1950-" .
+
+<http://example.org/orient/agent/eckartsberg>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/orient/agent/eckartsberg" ;
+    rdaad:P50413 "Eckartsberg, Benjamin von" ;
+    rdfs:label "Eckartsberg, Benjamin von" ;
+    rdaad:P50339 "1970-" .
+
+<http://example.org/orient/agent/chaiko>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/orient/agent/chaiko" ;
+    rdaad:P50413 "Chaiko" ;
+    rdfs:label "Chaiko" ;
+    rdaad:P50339 "1981-" .
+
+<http://example.org/orient/agent/rosasen>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/orient/agent/rosasen" ;
+    rdaad:P50413 "Røsåsen, Jens Erik" ;
+    rdfs:label "Røsåsen, Jens Erik" ;
+    rdaad:P50339 "1959-" .
+
+<http://example.org/orient/agent/prosperi>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/orient/agent/prosperi" ;
+    rdaad:P50413 "Prosperi, Pier Francesco" ;
+    rdfs:label "Prosperi, Pier Francesco" .
+
+<http://example.org/orient/agent/gatto>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/orient/agent/gatto" ;
+    rdaad:P50413 "Gatto, Luciano" ;
+    rdfs:label "Gatto, Luciano" .
+
+# ---------------------------------------------------------------------------
+# Works
+# ---------------------------------------------------------------------------
+
+<http://example.org/orient/work/novel>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/orient/work/novel" ;
+    rdawd:P10223 "Murder on the Orient Express" ;
+    rdawd:P10086 "Murder in the Calais Coach" ;
+    rdfs:label "Murder on the Orient Express (Christie, Agatha)" ;
+    rdawd:P10219 "1934" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/159> ;
+    rdawo:P10061 <http://example.org/orient/agent/christie> .
+
+<http://example.org/orient/work/film1974>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/orient/work/film1974" ;
+    rdawd:P10223 "Murder on the Orient Express" ;
+    rdfs:label "Murder on the Orient Express (film, Lumet, 1974)" ;
+    rdawd:P10219 "1974" ;
+    rdawd:P10330 "Produksjon: Storbritannia / USA, EMI Films" ;
+    entedit:P01 vtp:V1002 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/1240>,
+        <https://id.nb.no/vocabulary/ntsf/1196> ;
+    rdawo:P10013 <http://example.org/orient/agent/lumet> ;
+    rdawo:P10203 <http://example.org/orient/agent/dehn> ;
+    rdawo:P10129 <http://example.org/orient/work/novel> .
+
+<http://example.org/orient/work/film2017>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/orient/work/film2017" ;
+    rdawd:P10223 "Murder on the Orient Express" ;
+    rdfs:label "Murder on the Orient Express (film, Branagh, 2017)" ;
+    rdawd:P10219 "2017" ;
+    rdawd:P10330 "Produksjon: USA, Twentieth Century Fox" ;
+    entedit:P01 vtp:V1002 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/1240>,
+        <https://id.nb.no/vocabulary/ntsf/1196> ;
+    rdawo:P10013 <http://example.org/orient/agent/branagh> ;
+    rdawo:P10203 <http://example.org/orient/agent/green> ;
+    rdawo:P10129 <http://example.org/orient/work/novel> .
+
+<http://example.org/orient/work/poirotseries>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/orient/work/poirotseries" ;
+    rdawd:P10223 "Agatha Christie's Poirot" ;
+    rdfs:label "Agatha Christie's Poirot (TV-serie, 1989-2013)" ;
+    rdawd:P10219 "1989-2013" ;
+    rdawd:P10330 "ITV, 70 episoder i 13 sesonger med David Suchet som Poirot" ;
+    entedit:P01 vtp:V1006 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/1209>,
+        <https://id.nb.no/vocabulary/ntsf/1196> .
+
+<http://example.org/orient/work/tv2010>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/orient/work/tv2010" ;
+    rdawd:P10223 "Murder on the Orient Express" ;
+    rdfs:label "Murder on the Orient Express (Agatha Christie's Poirot, 2010)" ;
+    rdawd:P10219 "2010" ;
+    rdawd:P10330 "Sendt på ITV 25. desember 2010 (sesong 12)" ;
+    entedit:P01 vtp:V1006 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/1205>,
+        <https://id.nb.no/vocabulary/ntsf/1196> ;
+    rdawo:P10015 <http://example.org/orient/agent/martin> ;
+    rdawo:P10203 <http://example.org/orient/agent/harcourt> ;
+    rdawo:P10132 <http://example.org/orient/work/novel> ;
+    rdawo:P10019 <http://example.org/orient/work/poirotseries> .
+
+<http://example.org/orient/work/radio1992>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/orient/work/radio1992" ;
+    rdawd:P10223 "Murder on the Orient Express" ;
+    rdfs:label "Murder on the Orient Express (BBC Radio 4, 1992)" ;
+    rdawd:P10219 "1992" ;
+    rdawd:P10330 "Dramatisert av Michael Bakewell. Sendt på BBC Radio 4 i fem deler, 28. desember 1992 - 1. januar 1993" ;
+    entedit:P01 vtp:V1006 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/131> ;
+    rdawo:P10014 <http://example.org/orient/agent/williams> ;
+    rdawo:P10203 <http://example.org/orient/agent/bakewell> ;
+    rdawo:P10131 <http://example.org/orient/work/novel> .
+
+<http://example.org/orient/work/play>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/orient/work/play" ;
+    rdawd:P10223 "Murder on the Orient Express" ;
+    rdfs:label "Murder on the Orient Express (skuespill, Ludwig, Ken)" ;
+    rdawd:P10219 "2017" ;
+    rdawd:P10330 "Urpremiere på McCarter Theatre, Princeton, mars 2017, regi Emily Mann" ;
+    entedit:P01 vtp:V1009 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/583> ;
+    rdawo:P10061 <http://example.org/orient/agent/ludwig> ;
+    rdawo:P10127 <http://example.org/orient/work/novel> .
+
+<http://example.org/orient/work/graphicnovel>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/orient/work/graphicnovel" ;
+    rdawd:P10223 "Hercule Poirot : le crime de l'Orient-Express" ;
+    rdfs:label "Hercule Poirot : le crime de l'Orient-Express (Eckartsberg, Benjamin von ; Chaiko)" ;
+    rdawd:P10219 "2017" ;
+    entedit:P01 vtp:V1008 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/302> ;
+    rdawo:P10061 <http://example.org/orient/agent/eckartsberg> ;
+    rdawo:P10058 <http://example.org/orient/agent/chaiko> ;
+    rdawo:P10252 <http://example.org/orient/work/novel> .
+
+<http://example.org/orient/work/game2006>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/orient/work/game2006" ;
+    rdawd:P10223 "Agatha Christie: Murder on the Orient Express" ;
+    rdfs:label "Agatha Christie: Murder on the Orient Express (dataspill, 2006)" ;
+    rdawd:P10219 "2006" ;
+    rdawd:P10330 "Pek-og-klikk-eventyrspill utviklet av AWE Games. Spilleren følger en assistent av Poirot; David Suchet gir Poirot stemme" ;
+    entedit:P01 vtp:V1005 ;
+    rdawo:P10142 <http://example.org/orient/work/novel> .
+
+<http://example.org/orient/work/topolino>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/orient/work/topolino" ;
+    rdawd:P10223 "Topolino sull'Orient Express" ;
+    rdfs:label "Topolino sull'Orient Express (Prosperi, Pier Francesco ; Gatto, Luciano)" ;
+    rdawd:P10219 "1985" ;
+    rdawd:P10330 "Disney-tegneserie: Mikke og Minni reiser fra Paris med Orientekspressen, og Mikke etterforsker tyveriet av et kostbart halskjede. Først trykt i Topolino 1566-1567, desember 1985" ;
+    entedit:P01 vtp:V1008 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/301>,
+        <https://id.nb.no/vocabulary/ntsf/223> ;
+    rdawo:P10061 <http://example.org/orient/agent/prosperi> ;
+    rdawo:P10058 <http://example.org/orient/agent/gatto> ;
+    rdawo:P10197 <http://example.org/orient/work/novel> .
+
+<http://example.org/orient/work/studyguide>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/orient/work/studyguide" ;
+    rdawd:P10223 "A study guide for Agatha Christie's Murder on the Orient Express" ;
+    rdfs:label "A study guide for Agatha Christie's Murder on the Orient Express (Gale, 2016)" ;
+    rdawd:P10219 "2016" ;
+    rdawd:P10330 "Utdrag fra Gales Novels for Students: handlingsreferat, personer, forfatterbiografi, studiespørsmål, historisk bakgrunn, videre lesning" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/1726> ;
+    rdawo:P10150 <http://example.org/orient/work/novel> .
+
+<http://example.org/orient/work/elt-notes>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/orient/work/elt-notes" ;
+    rdawd:P10223 "Murder on the Orient Express : character list, cultural notes, glossary" ;
+    rdfs:label "Murder on the Orient Express : notes and glossary (Collins ELT Readers)" ;
+    rdawd:P10219 "2017" ;
+    rdawd:P10330 "Personliste, kulturhistoriske noter og ordliste til den forkortede utgaven i Collins Agatha Christie ELT Readers. Utgitt bare i samme bind som teksten" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/1504>,
+        <https://id.nb.no/vocabulary/ntsf/184> ;
+    rdawo:P10154 <http://example.org/orient/work/novel> .
+
+# ---------------------------------------------------------------------------
+# Expressions
+# ---------------------------------------------------------------------------
+
+<http://example.org/orient/exp/novel/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/orient/exp/novel/eng" ;
+    rdaed:P20315 "Murder on the Orient Express" ;
+    rdfs:label "Murder on the Orient Express (Christie, Agatha)" ;
+    rdaed:P20214 "1934" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/orient/work/novel> .
+
+<http://example.org/orient/exp/novel/nob-seeberg>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/orient/exp/novel/nob-seeberg" ;
+    rdaed:P20315 "Mord på Orientekspressen" ;
+    rdfs:label "Mord på Orientekspressen (Christie, Agatha ; oversatt av Axel S. Seeberg)" ;
+    rdaed:P20214 "1975" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://example.org/orient/work/novel> ;
+    rdaeo:P20037 <http://example.org/orient/agent/seeberg> ;
+    rdaeo:P20141 <http://example.org/orient/exp/novel/eng> .
+
+<http://example.org/orient/exp/novel/nob-nygard>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/orient/exp/novel/nob-nygard" ;
+    rdaed:P20315 "Mord på Orientekspressen" ;
+    rdfs:label "Mord på Orientekspressen (Christie, Agatha ; oversatt av Ola Halvor Seeberg Nygård)" ;
+    rdaed:P20214 "2012" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://example.org/orient/work/novel> ;
+    rdaeo:P20037 <http://example.org/orient/agent/nygard> ;
+    rdaeo:P20141 <http://example.org/orient/exp/novel/eng> .
+
+<http://example.org/orient/exp/novel/eng-b1>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/orient/exp/novel/eng-b1" ;
+    rdaed:P20315 "Murder on the Orient Express" ;
+    rdfs:label "Murder on the Orient Express (Christie, Agatha ; forkortet, Collins ELT B1)" ;
+    rdaed:P20214 "2017" ;
+    rdaed:P20071 "Forkortet og tilrettelagt for engelskelever etter Collins COBUILD-skalaen, nivå 3 (CEF B1), 11 000-20 000 ord" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/orient/work/novel> ;
+    rdaeo:P20121 <http://example.org/orient/exp/novel/eng> .
+
+<http://example.org/orient/exp/novel/eng-stevens>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/orient/exp/novel/eng-stevens" ;
+    rdaed:P20315 "Murder on the Orient Express" ;
+    rdfs:label "Murder on the Orient Express (Christie, Agatha ; lest av Dan Stevens)" ;
+    rdaed:P20214 "2013" ;
+    rdaed:P20071 "Uforkortet opplesning av den engelske originalteksten" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/orient/work/novel> ;
+    rdaeo:P20022 <http://example.org/orient/agent/stevens> .
+
+<http://example.org/orient/exp/novel/eng-branagh>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/orient/exp/novel/eng-branagh" ;
+    rdaed:P20315 "Murder on the Orient Express" ;
+    rdfs:label "Murder on the Orient Express (Christie, Agatha ; lest av Kenneth Branagh)" ;
+    rdaed:P20214 "2017" ;
+    rdaed:P20071 "Uforkortet opplesning av den engelske originalteksten" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/orient/work/novel> ;
+    rdaeo:P20022 <http://example.org/orient/agent/branagh> .
+
+<http://example.org/orient/exp/novel/nob-fearnley>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/orient/exp/novel/nob-fearnley" ;
+    rdaed:P20315 "Mord på Orientekspressen" ;
+    rdfs:label "Mord på Orientekspressen (Christie, Agatha ; lest av John Yngvar Fearnley)" ;
+    rdaed:P20214 "1992" ;
+    rdaed:P20071 "Opplesning av Axel S. Seebergs oversettelse, med musikk av Hallgeir Rustan" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://example.org/orient/work/novel> ;
+    rdaeo:P20022 <http://example.org/orient/agent/fearnley> ;
+    rdaeo:P20037 <http://example.org/orient/agent/seeberg> .
+
+<http://example.org/orient/exp/novel/nob-fougner>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/orient/exp/novel/nob-fougner" ;
+    rdaed:P20315 "Mord på Orientekspressen" ;
+    rdfs:label "Mord på Orientekspressen (Christie, Agatha ; lest av Bjørn Fougner)" ;
+    rdaed:P20214 "2017" ;
+    rdaed:P20071 "Opplesning av Ola Halvor Seeberg Nygårds oversettelse" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://example.org/orient/work/novel> ;
+    rdaeo:P20022 <http://example.org/orient/agent/fougner> ;
+    rdaeo:P20037 <http://example.org/orient/agent/nygard> .
+
+<http://example.org/orient/exp/film1974>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/orient/exp/film1974" ;
+    rdaed:P20315 "Murder on the Orient Express" ;
+    rdfs:label "Murder on the Orient Express (film, Lumet, 1974)" ;
+    rdaed:P20214 "1974" ;
+    rdaed:P20071 "Med Albert Finney som Hercule Poirot" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1023> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/orient/work/film1974> ;
+    rdaeo:P20012 <http://example.org/orient/agent/finney> .
+
+<http://example.org/orient/exp/film2017>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/orient/exp/film2017" ;
+    rdaed:P20315 "Murder on the Orient Express" ;
+    rdfs:label "Murder on the Orient Express (film, Branagh, 2017)" ;
+    rdaed:P20214 "2017" ;
+    rdaed:P20071 "Med Kenneth Branagh som Hercule Poirot" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1023> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/orient/work/film2017> ;
+    rdaeo:P20012 <http://example.org/orient/agent/branagh> .
+
+<http://example.org/orient/exp/tv2010>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/orient/exp/tv2010" ;
+    rdaed:P20315 "Murder on the Orient Express" ;
+    rdfs:label "Murder on the Orient Express (Agatha Christie's Poirot, 2010)" ;
+    rdaed:P20214 "2010" ;
+    rdaed:P20071 "Med David Suchet som Hercule Poirot" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1023> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/orient/work/tv2010> ;
+    rdaeo:P20012 <http://example.org/orient/agent/suchet> .
+
+<http://example.org/orient/exp/radio1992>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/orient/exp/radio1992" ;
+    rdaed:P20315 "Murder on the Orient Express" ;
+    rdfs:label "Murder on the Orient Express (BBC Radio 4, 1992)" ;
+    rdaed:P20214 "1992" ;
+    rdaed:P20071 "Med John Moffatt som Hercule Poirot" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/orient/work/radio1992> ;
+    rdaeo:P20012 <http://example.org/orient/agent/moffatt> .
+
+<http://example.org/orient/exp/play>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/orient/exp/play" ;
+    rdaed:P20315 "Murder on the Orient Express" ;
+    rdfs:label "Murder on the Orient Express (skuespill, Ludwig, Ken)" ;
+    rdaed:P20214 "2017" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/orient/work/play> .
+
+<http://example.org/orient/exp/graphicnovel/fre>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/orient/exp/graphicnovel/fre" ;
+    rdaed:P20315 "Hercule Poirot : le crime de l'Orient-Express" ;
+    rdfs:label "Hercule Poirot : le crime de l'Orient-Express (Eckartsberg ; Chaiko)" ;
+    rdaed:P20214 "2017" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020>,
+        <http://rdaregistry.info/termList/RDAContentType/1014> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+    rdaeo:P20231 <http://example.org/orient/work/graphicnovel> .
+
+<http://example.org/orient/exp/graphicnovel/nob>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/orient/exp/graphicnovel/nob" ;
+    rdaed:P20315 "Hercule Poirot : mord på Orientekspressen" ;
+    rdfs:label "Hercule Poirot : mord på Orientekspressen (Eckartsberg ; Chaiko ; oversatt av Jens Erik Røsåsen)" ;
+    rdaed:P20214 "2019" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020>,
+        <http://rdaregistry.info/termList/RDAContentType/1014> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://example.org/orient/work/graphicnovel> ;
+    rdaeo:P20037 <http://example.org/orient/agent/rosasen> ;
+    rdaeo:P20141 <http://example.org/orient/exp/graphicnovel/fre> .
+
+<http://example.org/orient/exp/game2006>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/orient/exp/game2006" ;
+    rdaed:P20315 "Agatha Christie: Murder on the Orient Express" ;
+    rdfs:label "Agatha Christie: Murder on the Orient Express (dataspill, 2006)" ;
+    rdaed:P20214 "2006" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1008> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/orient/work/game2006> .
+
+<http://example.org/orient/exp/topolino>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/orient/exp/topolino" ;
+    rdaed:P20315 "Topolino sull'Orient Express" ;
+    rdfs:label "Topolino sull'Orient Express (Prosperi ; Gatto)" ;
+    rdaed:P20214 "1985" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020>,
+        <http://rdaregistry.info/termList/RDAContentType/1014> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ita> ;
+    rdaeo:P20231 <http://example.org/orient/work/topolino> .
+
+<http://example.org/orient/exp/studyguide>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/orient/exp/studyguide" ;
+    rdaed:P20315 "A study guide for Agatha Christie's Murder on the Orient Express" ;
+    rdfs:label "A study guide for Agatha Christie's Murder on the Orient Express (Gale, 2016)" ;
+    rdaed:P20214 "2016" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/orient/work/studyguide> .
+
+<http://example.org/orient/exp/elt-notes>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/orient/exp/elt-notes" ;
+    rdaed:P20315 "Murder on the Orient Express : character list, cultural notes, glossary" ;
+    rdfs:label "Murder on the Orient Express : notes and glossary (Collins ELT Readers)" ;
+    rdaed:P20214 "2017" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/orient/work/elt-notes> .
+
+# ---------------------------------------------------------------------------
+# Manifestations
+# ---------------------------------------------------------------------------
+
+<http://example.org/orient/manifestation/1934/collins>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/orient/manifestation/1934/collins" ;
+    rdfs:label "Murder on the Orient Express (Collins, 1934)" ;
+    rdamd:P30156 "Murder on the Orient Express" ;
+    rdamd:P30117 "by Agatha Christie" ;
+    rdamd:P30176 "Collins, The Crime Club" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30011 "1934" ;
+    rdamd:P30137 "Første utgave, utgitt 1. januar 1934" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/orient/exp/novel/eng> .
+
+<http://example.org/orient/manifestation/1934/doddmead>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/orient/manifestation/1934/doddmead" ;
+    rdfs:label "Murder in the Calais Coach (Dodd, Mead, 1934)" ;
+    rdamd:P30156 "Murder in the Calais Coach" ;
+    rdamd:P30117 "by Agatha Christie" ;
+    rdamd:P30176 "Dodd, Mead and Company" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "1934" ;
+    rdamd:P30137 "Første amerikanske utgave, utgitt 28. februar 1934. Samme tekst under en annen tittel" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/orient/exp/novel/eng> .
+
+<http://example.org/orient/manifestation/2017/harpercollins>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/orient/manifestation/2017/harpercollins" ;
+    rdfs:label "Murder on the Orient Express (HarperCollins, 2017)" ;
+    rdamd:P30156 "Murder on the Orient Express" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30182 "288 pages" ;
+    rdamd:P30176 "HarperCollins" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30011 "2017" ;
+    rdamd:P30137 "Film tie-in edition, cover from the 2017 film" ;
+    rdamd:P30004 "ISBN 9780008268879" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/orient/exp/novel/eng> .
+
+<http://example.org/orient/manifestation/1975/aschehoug>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/orient/manifestation/1975/aschehoug" ;
+    rdfs:label "Mord på Orientekspressen (Aschehoug, 1975)" ;
+    rdamd:P30156 "Mord på Orientekspressen" ;
+    rdamd:P30117 "Agatha Christie ; oversatt av Axel S. Seeberg" ;
+    rdamd:P30182 "167 s." ;
+    rdamd:P30176 "Aschehoug" ;
+    rdamd:P30088 "Oslo" ;
+    rdamd:P30011 "1975" ;
+    rdamd:P30004 "ISBN 8203064701" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/orient/exp/novel/nob-seeberg> .
+
+<http://example.org/orient/manifestation/2012/aschehoug>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/orient/manifestation/2012/aschehoug" ;
+    rdfs:label "Mord på Orientekspressen (Aschehoug, 2012)" ;
+    rdamd:P30156 "Mord på Orientekspressen" ;
+    rdamd:P30117 "Agatha Christie ; oversatt av Ola Halvor Seeberg Nygård" ;
+    rdamd:P30182 "172 s." ;
+    rdamd:P30176 "Aschehoug" ;
+    rdamd:P30088 "Oslo" ;
+    rdamd:P30011 "2012" ;
+    rdamd:P30137 "1. norske utg. 1975" ;
+    rdamd:P30004 "ISBN 9788203217791" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/orient/exp/novel/nob-nygard> .
+
+<http://example.org/orient/manifestation/2017/aschehoug>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/orient/manifestation/2017/aschehoug" ;
+    rdfs:label "Mord på Orientekspressen (Aschehoug, 2017)" ;
+    rdamd:P30156 "Mord på Orientekspressen" ;
+    rdamd:P30117 "Agatha Christie ; oversatt av Ola Halvor Seeberg Nygård" ;
+    rdamd:P30182 "172 s." ;
+    rdamd:P30169 "21 cm" ;
+    rdamd:P30176 "Aschehoug" ;
+    rdamd:P30088 "Oslo" ;
+    rdamd:P30011 "2017" ;
+    rdamd:P30137 "1. norske utg. 1975" ;
+    rdamd:P30004 "ISBN 978-82-03-37280-3" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/orient/exp/novel/nob-nygard> .
+
+<http://example.org/orient/manifestation/2017/collins-elt>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/orient/manifestation/2017/collins-elt" ;
+    rdfs:label "Murder on the Orient Express (Collins ELT Readers, 2017)" ;
+    rdamd:P30156 "Murder on the Orient Express" ;
+    rdamd:P30142 "B1" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30182 "96 pages" ;
+    rdamd:P30176 "Collins" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30011 "2017" ;
+    rdamd:P30106 "Collins Agatha Christie ELT Readers ; level 3" ;
+    rdamd:P30137 "Includes character list, cultural notes and glossary" ;
+    rdamd:P30004 "ISBN 9780008249670" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/orient/exp/novel/eng-b1>,
+        <http://example.org/orient/exp/elt-notes> .
+
+<http://example.org/orient/manifestation/2013/harperaudio-stevens>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/orient/manifestation/2013/harperaudio-stevens" ;
+    rdfs:label "Murder on the Orient Express (HarperAudio, 2013, Dan Stevens)" ;
+    rdamd:P30156 "Murder on the Orient Express" ;
+    rdamd:P30117 "Agatha Christie ; read by Dan Stevens" ;
+    rdamd:P30107 "Unabridged" ;
+    rdamd:P30182 "CD-plater (ca. 6 t 30 min)" ;
+    rdamd:P30176 "HarperAudio" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "2013" ;
+    rdamd:P30004 "ISBN 9780062265913" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1004> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1001> ;
+    rdamo:P30139 <http://example.org/orient/exp/novel/eng-stevens> .
+
+<http://example.org/orient/manifestation/2017/harperaudio-branagh>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/orient/manifestation/2017/harperaudio-branagh" ;
+    rdfs:label "Murder on the Orient Express (HarperAudio, 2017, Kenneth Branagh)" ;
+    rdamd:P30156 "Murder on the Orient Express" ;
+    rdamd:P30117 "Agatha Christie ; read by Kenneth Branagh" ;
+    rdamd:P30107 "Unabridged, movie tie-in" ;
+    rdamd:P30182 "1 lydfil" ;
+    rdamd:P30176 "HarperAudio" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "2017" ;
+    rdamd:P30004 "ISBN 9780062847928" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30139 <http://example.org/orient/exp/novel/eng-branagh> .
+
+<http://example.org/orient/manifestation/1992/lydbokforlaget>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/orient/manifestation/1992/lydbokforlaget" ;
+    rdfs:label "Mord på Orientekspressen (Lydbokforlaget, 1992, John Yngvar Fearnley)" ;
+    rdamd:P30156 "Mord på Orientekspressen" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30176 "Lydbokforlaget" ;
+    rdamd:P30088 "Melhus" ;
+    rdamd:P30011 "1992" ;
+    rdamd:P30137 "Lest av John Yngvar Fearnley. Musikk: Hallgeir Rustan" ;
+    rdamd:P30004 "ISBN 8242102147" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1007> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1001> ;
+    rdamo:P30139 <http://example.org/orient/exp/novel/nob-fearnley> .
+
+<http://example.org/orient/manifestation/2017/lydbokforlaget>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/orient/manifestation/2017/lydbokforlaget" ;
+    rdfs:label "Mord på Orientekspressen (Lydbokforlaget, 2017, Bjørn Fougner)" ;
+    rdamd:P30156 "Mord på Orientekspressen" ;
+    rdamd:P30117 "Agatha Christie ; oversatt av Ola Halvor Seeberg Nygård" ;
+    rdamd:P30107 "1. utgave" ;
+    rdamd:P30182 "1 lydfil (6 t 38 min)" ;
+    rdamd:P30176 "Lydbokforlaget" ;
+    rdamd:P30088 "Oslo" ;
+    rdamd:P30011 "2017" ;
+    rdamd:P30106 "Hercule Poirot" ;
+    rdamd:P30137 "Lest av Bjørn Fougner" ;
+    rdamd:P30004 "ISBN 9788242166548" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30139 <http://example.org/orient/exp/novel/nob-fougner> .
+
+<http://example.org/orient/manifestation/2013/film1974-bluray>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/orient/manifestation/2013/film1974-bluray" ;
+    rdfs:label "Murder on the Orient Express (Blu-ray, 2013, Lumet)" ;
+    rdamd:P30156 "Murder on the Orient Express" ;
+    rdamd:P30117 "directed by Sidney Lumet" ;
+    rdamd:P30182 "1 plate (Blu-ray) (2 t 9 min) : lyd, kol." ;
+    rdamd:P30176 "Universal Sony Pictures Home Entertainment Nordic" ;
+    rdamd:P30011 "2013" ;
+    rdamd:P30137 "Basert på en roman av Agatha Christie. Produksjon: Storbritannia / USA, 1974. Kodet for region A, B & C" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1060> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1008> ;
+    rdamo:P30139 <http://example.org/orient/exp/film1974> .
+
+<http://example.org/orient/manifestation/2017/film2017-dvd>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/orient/manifestation/2017/film2017-dvd" ;
+    rdfs:label "Murder on the Orient Express (DVD, 2017, Branagh)" ;
+    rdamd:P30156 "Murder on the Orient Express" ;
+    rdamd:P30117 "regi Kenneth Branagh" ;
+    rdamd:P30182 "1 plate (DVD) (1 t 49 min) : lyd, kol." ;
+    rdamd:P30176 "Twentieth Century Fox Home Entertainment" ;
+    rdamd:P30088 "Oslo" ;
+    rdamd:P30011 "2017" ;
+    rdamd:P30137 "Ekstramateriale" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1060> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1008> ;
+    rdamo:P30139 <http://example.org/orient/exp/film2017> .
+
+<http://example.org/orient/manifestation/radio1992-cd>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/orient/manifestation/radio1992-cd" ;
+    rdfs:label "Murder on the Orient Express (BBC Radio Collection, CD)" ;
+    rdamd:P30156 "Murder on the Orient Express" ;
+    rdamd:P30142 "a BBC Radio 4 full-cast dramatisation" ;
+    rdamd:P30117 "Agatha Christie ; dramatised by Michael Bakewell ; directed by Enyd Williams" ;
+    rdamd:P30106 "BBC Radio Collection" ;
+    rdamd:P30004 "ISBN 9780563478348" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1004> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1001> ;
+    rdamo:P30139 <http://example.org/orient/exp/radio1992> .
+
+<http://example.org/orient/manifestation/2017/paquet>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/orient/manifestation/2017/paquet" ;
+    rdfs:label "Hercule Poirot : le crime de l'Orient-Express (Paquet, 2017)" ;
+    rdamd:P30156 "Hercule Poirot" ;
+    rdamd:P30142 "le crime de l'Orient-Express" ;
+    rdamd:P30117 "d'après Agatha Christie ; scénario Benjamin von Eckartsberg ; dessin et couleurs Chaiko" ;
+    rdamd:P30182 "64 p." ;
+    rdamd:P30176 "Paquet" ;
+    rdamd:P30011 "2017" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/orient/exp/graphicnovel/fre> .
+
+<http://example.org/orient/manifestation/2019/egmont>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/orient/manifestation/2019/egmont" ;
+    rdfs:label "Hercule Poirot : mord på Orientekspressen (Egmont, 2019)" ;
+    rdamd:P30156 "Hercule Poirot" ;
+    rdamd:P30142 "mord på Orientekspressen" ;
+    rdamd:P30117 "basert på Agatha Christies roman ; manus: Benjamin von Eckartsberg ; tegninger og farger: Chaiko ; oversettelse: Jens Erik Røsåsen" ;
+    rdamd:P30182 "64 sider : ill." ;
+    rdamd:P30169 "29 cm" ;
+    rdamd:P30176 "Egmont Publishing" ;
+    rdamd:P30088 "[Oslo]" ;
+    rdamd:P30011 "2019" ;
+    rdamd:P30106 "Agatha Christie" ;
+    rdamd:P30004 "ISBN 9788242964854" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/orient/exp/graphicnovel/nob> .
+
+<http://example.org/orient/manifestation/2006/game>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/orient/manifestation/2006/game" ;
+    rdfs:label "Agatha Christie: Murder on the Orient Express (PC, 2006)" ;
+    rdamd:P30156 "Agatha Christie: Murder on the Orient Express" ;
+    rdamd:P30117 "developed by AWE Games" ;
+    rdamd:P30176 "The Adventure Company" ;
+    rdamd:P30011 "2006" ;
+    rdamd:P30137 "For Microsoft Windows" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1013> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30139 <http://example.org/orient/exp/game2006> .
+
+<http://example.org/orient/manifestation/2023/panini>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/orient/manifestation/2023/panini" ;
+    rdfs:label "Topolino sull'Orient Express e altre storie ispirate ai romanzi di Agatha Christie (Panini, 2023)" ;
+    rdamd:P30156 "Topolino sull'Orient Express e altre storie ispirate ai romanzi di Agatha Christie" ;
+    rdamd:P30182 "224 p." ;
+    rdamd:P30176 "Panini Comics" ;
+    rdamd:P30088 "Modena" ;
+    rdamd:P30011 "2023" ;
+    rdamd:P30106 "Disney special books ; 24" ;
+    rdamd:P30137 "Seks Disney-tegneserier basert på Agatha Christies romaner; bare tittelhistorien er registrert" ;
+    rdamd:P30004 "ISBN 9788828748601" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/orient/exp/topolino> .
+
+<http://example.org/orient/manifestation/2016/gale>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/orient/manifestation/2016/gale" ;
+    rdfs:label "A study guide for Agatha Christie's Murder on the Orient Express (Gale, 2016)" ;
+    rdamd:P30156 "A study guide for Agatha Christie's \"Murder on the Orient Express\"" ;
+    rdamd:P30182 "1 online ressurs (25 sider)" ;
+    rdamd:P30176 "Gale, Cengage Learning" ;
+    rdamd:P30011 "2016" ;
+    rdamd:P30106 "Novels for students" ;
+    rdamd:P30004 "ISBN 9781535829076" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30139 <http://example.org/orient/exp/studyguide> .
