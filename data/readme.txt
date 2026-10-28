@@ -12,8 +12,11 @@ Nesbo.ttl: "Collections and aggregates" - Jo Nesbø's two short story collection
   (Sjalusimannen og andre fortellinger, Rotteøya og andre fortellinger, 2021): each story
   and each collection as work and expression, an omnibus work for the editions with all
   12 stories (Aschehoug 2022, the English translation), French translations at collection
-  level only. Publication data from Nasjonalbiblioteket and BnF; ad hoc
-  http://example.org/nesbo/... identifiers. Loaded into the local repository Nesbo.
+  level only. Also six novels with their first Norwegian editions, and four publications
+  holding two novels each (Bokklubben, two audiobooks, a German omnibus), the audio drama
+  Sjalusimannen in four episodes and three Danish audiobooks of single stories. Publication data
+  from Nasjonalbiblioteket and BnF; ad hoc http://example.org/nesbo/... identifiers.
+  Loaded into the local repository Nesbo.
 OrientExpress.ttl: "Adaptations and other relationships" - Agatha Christie's Murder on the
   Orient Express (1934) and what derives from it: two Norwegian translations, an abridged
   ELT reader, four audiobooks (new expressions of the novel), and films, TV, radio, a play,

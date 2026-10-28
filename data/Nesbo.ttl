@@ -21,6 +21,30 @@
 # collection level is recorded for them: the French titles of the individual
 # stories are left out, as an exercise.
 #
+# Novels published together: six novels, each with its first Norwegian edition,
+# and four publications that hold two of them:
+#   - Flaggermusmannen ; Kakerlakkene, as a book (Bokklubben 2006) and as an
+#     audiobook (Lydbokforlaget 2008) that reuses the readings first published
+#     in 1999 and 2005
+#   - Snømannen ; Panserhjerte, an audiobook (2010) from the readings of 2007
+#     and 2009
+#   - Blood on snow : Der Auftrag & Das Versteck (Ullstein 2018), the German
+#     translations of Blod på snø and Mere blod, under a collective title found
+#     only in this edition
+# Each is modelled like the story collections: an omnibus work (entedit:T04)
+# with the novels as parts. Whether a publication without a collective title
+# needs a work of its own, and whether the book and the audiobook of
+# Flaggermusmannen ; Kakerlakkene share one, are points for discussion.
+#
+# Single stories on their own:
+#   - the audio drama Sjalusimannen (Aschehoug 2021), four episodes published
+#     one by one; a work of its own based on the story (rdawo:P10142), with the
+#     episodes as parts
+#   - Danish audiobooks of single stories (Modtryk 2024), translated by Allan
+#     Hilton Andersen and read by Bent Otto Hansen: London, Tilståelsen and
+#     Rotteøen. The publisher numbers them in series named after the
+#     collections, so the series statement is the only trace of the collection.
+#
 # A manifestation embodies the expression of the collection (or omnibus) and
 # the expressions of every story it contains. The order of the stories is not
 # recorded (it needs RDF-star, entedit:valueOrder), so lists fall back to title
@@ -796,3 +820,855 @@
     rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
     rdamo:P30420 <http://example.org/nesbo/agent/gallimard> ;
     rdamo:P30139 <http://example.org/nesbo/exp/rotteoya-samling/fre> .
+
+# ---------------------------------------------------------------------------
+# Novels, and publications with two novels
+# ---------------------------------------------------------------------------
+
+<http://example.org/nesbo/agent/kolsrud>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/nesbo/agent/kolsrud" ;
+    rdaad:P50413 "Kolsrud, Lasse" ;
+    rdfs:label "Kolsrud, Lasse" ;
+    rdaad:P50339 "1959-" .
+
+<http://example.org/nesbo/agent/schau>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/nesbo/agent/schau" ;
+    rdaad:P50413 "Schau, Finn" ;
+    rdfs:label "Schau, Finn" ;
+    rdaad:P50339 "1948-" .
+
+<http://example.org/nesbo/agent/storhoi>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/nesbo/agent/storhoi" ;
+    rdaad:P50413 "Storhøi, Dennis" ;
+    rdfs:label "Storhøi, Dennis" ;
+    rdaad:P50339 "1960-" .
+
+<http://example.org/nesbo/agent/wintherlarsen>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/nesbo/agent/wintherlarsen" ;
+    rdaad:P50413 "Winther-Larsen, Helge" ;
+    rdfs:label "Winther-Larsen, Helge" ;
+    rdaad:P50339 "1953-" .
+
+<http://example.org/nesbo/agent/frauenlob>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/nesbo/agent/frauenlob" ;
+    rdaad:P50413 "Frauenlob, Günther" ;
+    rdfs:label "Frauenlob, Günther" ;
+    rdaad:P50339 "1965-" .
+
+<http://example.org/nesbo/agent/bokklubben>
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://example.org/nesbo/agent/bokklubben" ;
+    rdaad:P50413 "Bokklubben" ;
+    rdfs:label "Bokklubben" .
+
+<http://example.org/nesbo/agent/lydbokforlaget>
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://example.org/nesbo/agent/lydbokforlaget" ;
+    rdaad:P50413 "Lydbokforlaget" ;
+    rdfs:label "Lydbokforlaget" .
+
+<http://example.org/nesbo/agent/ullstein>
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://example.org/nesbo/agent/ullstein" ;
+    rdaad:P50413 "Ullstein" ;
+    rdfs:label "Ullstein" .
+
+<http://example.org/nesbo/work/flaggermusmannen>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/nesbo/work/flaggermusmannen" ;
+    rdawd:P10223 "Flaggermusmannen" ;
+    rdfs:label "Flaggermusmannen (Nesbø, Jo)" ;
+    rdawd:P10219 "1997" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/159>, <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://example.org/nesbo/agent/nesbojo> .
+
+<http://example.org/nesbo/work/kakerlakkene>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/nesbo/work/kakerlakkene" ;
+    rdawd:P10223 "Kakerlakkene" ;
+    rdfs:label "Kakerlakkene (Nesbø, Jo)" ;
+    rdawd:P10219 "1998" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/159>, <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://example.org/nesbo/agent/nesbojo> .
+
+<http://example.org/nesbo/work/snomannen>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/nesbo/work/snomannen" ;
+    rdawd:P10223 "Snømannen" ;
+    rdfs:label "Snømannen (Nesbø, Jo)" ;
+    rdawd:P10219 "2007" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/159>, <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://example.org/nesbo/agent/nesbojo> .
+
+<http://example.org/nesbo/work/panserhjerte>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/nesbo/work/panserhjerte" ;
+    rdawd:P10223 "Panserhjerte" ;
+    rdfs:label "Panserhjerte (Nesbø, Jo)" ;
+    rdawd:P10219 "2009" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/159>, <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://example.org/nesbo/agent/nesbojo> .
+
+<http://example.org/nesbo/work/blodpasno>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/nesbo/work/blodpasno" ;
+    rdawd:P10223 "Blod på snø" ;
+    rdfs:label "Blod på snø (Nesbø, Jo)" ;
+    rdawd:P10219 "2015" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/159>, <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://example.org/nesbo/agent/nesbojo> .
+
+<http://example.org/nesbo/work/mereblod>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/nesbo/work/mereblod" ;
+    rdawd:P10223 "Mere blod" ;
+    rdfs:label "Mere blod (Nesbø, Jo)" ;
+    rdawd:P10219 "2015" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/159>, <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://example.org/nesbo/agent/nesbojo> .
+
+<http://example.org/nesbo/exp/flaggermusmannen/nob>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/flaggermusmannen/nob" ;
+    rdaed:P20315 "Flaggermusmannen" ;
+    rdfs:label "Flaggermusmannen (Nesbø, Jo)" ;
+    rdaed:P20214 "1997" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/flaggermusmannen> .
+
+<http://example.org/nesbo/exp/flaggermusmannen/nob-kolsrud>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/flaggermusmannen/nob-kolsrud" ;
+    rdaed:P20315 "Flaggermusmannen" ;
+    rdfs:label "Flaggermusmannen (Nesbø, Jo ; lest av Lasse Kolsrud)" ;
+    rdaed:P20214 "1999" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/flaggermusmannen> ;
+    rdaeo:P20022 <http://example.org/nesbo/agent/kolsrud> .
+
+<http://example.org/nesbo/exp/kakerlakkene/nob>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/kakerlakkene/nob" ;
+    rdaed:P20315 "Kakerlakkene" ;
+    rdfs:label "Kakerlakkene (Nesbø, Jo)" ;
+    rdaed:P20214 "1998" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/kakerlakkene> .
+
+<http://example.org/nesbo/exp/kakerlakkene/nob-schau>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/kakerlakkene/nob-schau" ;
+    rdaed:P20315 "Kakerlakkene" ;
+    rdfs:label "Kakerlakkene (Nesbø, Jo ; lest av Finn Schau)" ;
+    rdaed:P20214 "2005" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/kakerlakkene> ;
+    rdaeo:P20022 <http://example.org/nesbo/agent/schau> .
+
+<http://example.org/nesbo/exp/snomannen/nob>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/snomannen/nob" ;
+    rdaed:P20315 "Snømannen" ;
+    rdfs:label "Snømannen (Nesbø, Jo)" ;
+    rdaed:P20214 "2007" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/snomannen> .
+
+<http://example.org/nesbo/exp/snomannen/nob-storhoi>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/snomannen/nob-storhoi" ;
+    rdaed:P20315 "Snømannen" ;
+    rdfs:label "Snømannen (Nesbø, Jo ; lest av Dennis Storhøi)" ;
+    rdaed:P20214 "2007" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/snomannen> ;
+    rdaeo:P20022 <http://example.org/nesbo/agent/storhoi> .
+
+<http://example.org/nesbo/exp/panserhjerte/nob>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/panserhjerte/nob" ;
+    rdaed:P20315 "Panserhjerte" ;
+    rdfs:label "Panserhjerte (Nesbø, Jo)" ;
+    rdaed:P20214 "2009" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/panserhjerte> .
+
+<http://example.org/nesbo/exp/panserhjerte/nob-wintherlarsen>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/panserhjerte/nob-wintherlarsen" ;
+    rdaed:P20315 "Panserhjerte" ;
+    rdfs:label "Panserhjerte (Nesbø, Jo ; lest av Helge Winther-Larsen)" ;
+    rdaed:P20214 "2009" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/panserhjerte> ;
+    rdaeo:P20022 <http://example.org/nesbo/agent/wintherlarsen> .
+
+<http://example.org/nesbo/exp/blodpasno/nob>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/blodpasno/nob" ;
+    rdaed:P20315 "Blod på snø" ;
+    rdfs:label "Blod på snø (Nesbø, Jo)" ;
+    rdaed:P20214 "2015" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/blodpasno> .
+
+<http://example.org/nesbo/exp/blodpasno/ger>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/blodpasno/ger" ;
+    rdaed:P20315 "Der Auftrag" ;
+    rdfs:label "Der Auftrag (Nesbø, Jo ; Deutsch von Günther Frauenlob)" ;
+    rdaed:P20214 "2018" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/blodpasno> ;
+    rdaeo:P20037 <http://example.org/nesbo/agent/frauenlob> .
+
+<http://example.org/nesbo/exp/mereblod/nob>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/mereblod/nob" ;
+    rdaed:P20315 "Mere blod" ;
+    rdfs:label "Mere blod (Nesbø, Jo)" ;
+    rdaed:P20214 "2015" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/mereblod> .
+
+<http://example.org/nesbo/exp/mereblod/ger>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/mereblod/ger" ;
+    rdaed:P20315 "Das Versteck" ;
+    rdfs:label "Das Versteck (Nesbø, Jo ; Deutsch von Günther Frauenlob)" ;
+    rdaed:P20214 "2018" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/mereblod> ;
+    rdaeo:P20037 <http://example.org/nesbo/agent/frauenlob> .
+
+<http://example.org/nesbo/work/flaggermusmannen-kakerlakkene>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/nesbo/work/flaggermusmannen-kakerlakkene" ;
+    rdawd:P10223 "Flaggermusmannen ; Kakerlakkene" ;
+    rdfs:label "Flaggermusmannen ; Kakerlakkene (samlebind, Nesbø, Jo)" ;
+    rdawd:P10330 "De to første romanene om Harry Hole i én utgivelse, uten felles tittel. Utgitt som bok (Bokklubben 2006) og som lydbok (Lydbokforlaget 2008)" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 entedit:T04 ;
+    rdawo:P10061 <http://example.org/nesbo/agent/nesbojo> ;
+    rdawo:P10147 <http://example.org/nesbo/work/flaggermusmannen>,
+        <http://example.org/nesbo/work/kakerlakkene> .
+
+<http://example.org/nesbo/work/snomannen-panserhjerte>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/nesbo/work/snomannen-panserhjerte" ;
+    rdawd:P10223 "Snømannen ; Panserhjerte" ;
+    rdfs:label "Snømannen ; Panserhjerte (samlebind, Nesbø, Jo)" ;
+    rdawd:P10330 "Den sjuende og åttende romanen om Harry Hole i én lydbok, uten felles tittel" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 entedit:T04 ;
+    rdawo:P10061 <http://example.org/nesbo/agent/nesbojo> ;
+    rdawo:P10147 <http://example.org/nesbo/work/snomannen>,
+        <http://example.org/nesbo/work/panserhjerte> .
+
+<http://example.org/nesbo/work/bloodonsnow>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/nesbo/work/bloodonsnow" ;
+    rdawd:P10223 "Blood on snow : Der Auftrag & Das Versteck" ;
+    rdfs:label "Blood on snow : Der Auftrag & Das Versteck (samlebind, Nesbø, Jo)" ;
+    rdawd:P10330 "Tysk samlebind med de to kortromanene Blod på snø og Mere blod. Fellestittelen finnes bare i den tyske utgaven" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 entedit:T04 ;
+    rdawo:P10061 <http://example.org/nesbo/agent/nesbojo> ;
+    rdawo:P10147 <http://example.org/nesbo/work/blodpasno>,
+        <http://example.org/nesbo/work/mereblod> .
+
+<http://example.org/nesbo/exp/flaggermusmannen-kakerlakkene/nob>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/flaggermusmannen-kakerlakkene/nob" ;
+    rdaed:P20315 "Flaggermusmannen ; Kakerlakkene" ;
+    rdfs:label "Flaggermusmannen ; Kakerlakkene (samlebind, bok)" ;
+    rdaed:P20214 "2006" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/flaggermusmannen-kakerlakkene> ;
+    rdaeo:P20145 <http://example.org/nesbo/exp/flaggermusmannen/nob>,
+        <http://example.org/nesbo/exp/kakerlakkene/nob> .
+
+<http://example.org/nesbo/exp/flaggermusmannen-kakerlakkene/nob-lyd>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/flaggermusmannen-kakerlakkene/nob-lyd" ;
+    rdaed:P20315 "Flaggermusmannen ; Kakerlakkene" ;
+    rdfs:label "Flaggermusmannen ; Kakerlakkene (samlebind, lydbok)" ;
+    rdaed:P20214 "2008" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/flaggermusmannen-kakerlakkene> ;
+    rdaeo:P20145 <http://example.org/nesbo/exp/flaggermusmannen/nob-kolsrud>,
+        <http://example.org/nesbo/exp/kakerlakkene/nob-schau> .
+
+<http://example.org/nesbo/exp/snomannen-panserhjerte/nob-lyd>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/snomannen-panserhjerte/nob-lyd" ;
+    rdaed:P20315 "Snømannen ; Panserhjerte" ;
+    rdfs:label "Snømannen ; Panserhjerte (samlebind, lydbok)" ;
+    rdaed:P20214 "2010" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/snomannen-panserhjerte> ;
+    rdaeo:P20145 <http://example.org/nesbo/exp/snomannen/nob-storhoi>,
+        <http://example.org/nesbo/exp/panserhjerte/nob-wintherlarsen> .
+
+<http://example.org/nesbo/exp/bloodonsnow/ger>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/bloodonsnow/ger" ;
+    rdaed:P20315 "Blood on snow : Der Auftrag & Das Versteck" ;
+    rdfs:label "Blood on snow : Der Auftrag & Das Versteck (Deutsch von Günther Frauenlob)" ;
+    rdaed:P20214 "2018" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/bloodonsnow> ;
+    rdaeo:P20037 <http://example.org/nesbo/agent/frauenlob> ;
+    rdaeo:P20145 <http://example.org/nesbo/exp/blodpasno/ger>,
+        <http://example.org/nesbo/exp/mereblod/ger> .
+
+<http://example.org/nesbo/manifestation/flaggermusmannen/1997/aschehoug>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/nesbo/manifestation/flaggermusmannen/1997/aschehoug" ;
+    rdfs:label "Flaggermusmannen (Aschehoug, 1997)" ;
+    rdamd:P30156 "Flaggermusmannen" ;
+    rdamd:P30117 "Jo Nesbø" ;
+    rdamd:P30182 "338 s." ;
+    rdamd:P30176 "Aschehoug" ;
+    rdamd:P30088 "Oslo" ;
+    rdamd:P30011 "1997" ;
+    rdamd:P30106 "Harry Hole ; 1" ;
+    rdamd:P30004 "ISBN 8203179231" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/nesbo/agent/aschehoug> ;
+    rdamo:P30139 <http://example.org/nesbo/exp/flaggermusmannen/nob> .
+
+<http://example.org/nesbo/manifestation/kakerlakkene/1998/aschehoug>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/nesbo/manifestation/kakerlakkene/1998/aschehoug" ;
+    rdfs:label "Kakerlakkene (Aschehoug, 1998)" ;
+    rdamd:P30156 "Kakerlakkene" ;
+    rdamd:P30142 "kriminalroman" ;
+    rdamd:P30117 "Jo Nesbø" ;
+    rdamd:P30182 "337 s." ;
+    rdamd:P30176 "Aschehoug" ;
+    rdamd:P30088 "Oslo" ;
+    rdamd:P30011 "1998" ;
+    rdamd:P30106 "Harry Hole ; 2" ;
+    rdamd:P30004 "ISBN 82-03-18013-2" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/nesbo/agent/aschehoug> ;
+    rdamo:P30139 <http://example.org/nesbo/exp/kakerlakkene/nob> .
+
+<http://example.org/nesbo/manifestation/snomannen/2007/aschehoug>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/nesbo/manifestation/snomannen/2007/aschehoug" ;
+    rdfs:label "Snømannen (Aschehoug, 2007)" ;
+    rdamd:P30156 "Snømannen" ;
+    rdamd:P30142 "roman" ;
+    rdamd:P30117 "Jo Nesbø" ;
+    rdamd:P30182 "438 s." ;
+    rdamd:P30176 "Aschehoug" ;
+    rdamd:P30088 "Oslo" ;
+    rdamd:P30011 "2007" ;
+    rdamd:P30106 "Harry Hole ; 7" ;
+    rdamd:P30004 "ISBN 978-82-03-19212-8" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/nesbo/agent/aschehoug> ;
+    rdamo:P30139 <http://example.org/nesbo/exp/snomannen/nob> .
+
+<http://example.org/nesbo/manifestation/panserhjerte/2009/aschehoug>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/nesbo/manifestation/panserhjerte/2009/aschehoug" ;
+    rdfs:label "Panserhjerte (Aschehoug, 2009)" ;
+    rdamd:P30156 "Panserhjerte" ;
+    rdamd:P30117 "Jo Nesbø" ;
+    rdamd:P30182 "638 s." ;
+    rdamd:P30176 "Aschehoug" ;
+    rdamd:P30088 "Oslo" ;
+    rdamd:P30011 "2009" ;
+    rdamd:P30106 "Harry Hole ; 8" ;
+    rdamd:P30004 "ISBN 9788203195518" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/nesbo/agent/aschehoug> ;
+    rdamo:P30139 <http://example.org/nesbo/exp/panserhjerte/nob> .
+
+<http://example.org/nesbo/manifestation/blodpasno/2015/aschehoug>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/nesbo/manifestation/blodpasno/2015/aschehoug" ;
+    rdfs:label "Blod på snø (Aschehoug, 2015)" ;
+    rdamd:P30156 "Blod på snø" ;
+    rdamd:P30117 "Jo Nesbø" ;
+    rdamd:P30182 "172 s." ;
+    rdamd:P30176 "Aschehoug" ;
+    rdamd:P30088 "Oslo" ;
+    rdamd:P30011 "2015" ;
+    rdamd:P30004 "ISBN 978-82-03-35762-6" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/nesbo/agent/aschehoug> ;
+    rdamo:P30139 <http://example.org/nesbo/exp/blodpasno/nob> .
+
+<http://example.org/nesbo/manifestation/mereblod/2015/aschehoug>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/nesbo/manifestation/mereblod/2015/aschehoug" ;
+    rdfs:label "Mere blod (Aschehoug, 2015)" ;
+    rdamd:P30156 "Mere blod" ;
+    rdamd:P30117 "Jo Nesbø" ;
+    rdamd:P30182 "235 s." ;
+    rdamd:P30176 "Aschehoug" ;
+    rdamd:P30088 "Oslo" ;
+    rdamd:P30011 "2015" ;
+    rdamd:P30004 "ISBN 978-82-03-35927-9" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/nesbo/agent/aschehoug> ;
+    rdamo:P30139 <http://example.org/nesbo/exp/mereblod/nob> .
+
+<http://example.org/nesbo/manifestation/flaggermusmannen-kakerlakkene/2006/bokklubben>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/nesbo/manifestation/flaggermusmannen-kakerlakkene/2006/bokklubben" ;
+    rdfs:label "Flaggermusmannen ; Kakerlakkene (Bokklubben, 2006)" ;
+    rdamd:P30156 "Flaggermusmannen ; Kakerlakkene" ;
+    rdamd:P30117 "Jo Nesbø" ;
+    rdamd:P30182 "634 s." ;
+    rdamd:P30176 "Bokklubben" ;
+    rdamd:P30088 "Oslo" ;
+    rdamd:P30011 "2006" ;
+    rdamd:P30137 "1. utg. Oslo : Aschehoug, henholdsvis 1997 og 1998" ;
+    rdamd:P30004 "ISBN 9788252562514" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/nesbo/agent/bokklubben> ;
+    rdamo:P30139 <http://example.org/nesbo/exp/flaggermusmannen-kakerlakkene/nob>,
+        <http://example.org/nesbo/exp/flaggermusmannen/nob>,
+        <http://example.org/nesbo/exp/kakerlakkene/nob> .
+
+<http://example.org/nesbo/manifestation/flaggermusmannen-kakerlakkene/2008/lydbokforlaget>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/nesbo/manifestation/flaggermusmannen-kakerlakkene/2008/lydbokforlaget" ;
+    rdfs:label "Flaggermusmannen ; Kakerlakkene (Lydbokforlaget, 2008, lydbok)" ;
+    rdamd:P30156 "Flaggermusmannen ; Kakerlakkene" ;
+    rdamd:P30117 "Jo Nesbø" ;
+    rdamd:P30182 "1 digibok (digital lydbok med integrert avspilling)" ;
+    rdamd:P30176 "Lydbokforlaget" ;
+    rdamd:P30088 "[Melhus]" ;
+    rdamd:P30011 "2008" ;
+    rdamd:P30137 "Lest av Lasse Kolsrud og Finn Schau. 1. norske lydbokutg. henholdsvis 1999 og 2005" ;
+    rdamd:P30004 "ISBN 9788242145024" ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1001> ;
+    rdamo:P30420 <http://example.org/nesbo/agent/lydbokforlaget> ;
+    rdamo:P30139 <http://example.org/nesbo/exp/flaggermusmannen-kakerlakkene/nob-lyd>,
+        <http://example.org/nesbo/exp/flaggermusmannen/nob-kolsrud>,
+        <http://example.org/nesbo/exp/kakerlakkene/nob-schau> .
+
+<http://example.org/nesbo/manifestation/snomannen-panserhjerte/2010/lydbokforlaget>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/nesbo/manifestation/snomannen-panserhjerte/2010/lydbokforlaget" ;
+    rdfs:label "Snømannen ; Panserhjerte (Lydbokforlaget, 2010, lydbok)" ;
+    rdamd:P30156 "Snømannen ; Panserhjerte" ;
+    rdamd:P30117 "Jo Nesbø" ;
+    rdamd:P30182 "1 digibok (kan kun brukes i digispiller)" ;
+    rdamd:P30176 "Lydbokforlaget" ;
+    rdamd:P30088 "[Melhus]" ;
+    rdamd:P30011 "2010" ;
+    rdamd:P30137 "Lest av Helge Winther-Larsen og Dennis Storhøi. 1. lydbokutg. henholdsvis 2007 og 2009" ;
+    rdamd:P30004 "ISBN 9788242149350" ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1001> ;
+    rdamo:P30420 <http://example.org/nesbo/agent/lydbokforlaget> ;
+    rdamo:P30139 <http://example.org/nesbo/exp/snomannen-panserhjerte/nob-lyd>,
+        <http://example.org/nesbo/exp/snomannen/nob-storhoi>,
+        <http://example.org/nesbo/exp/panserhjerte/nob-wintherlarsen> .
+
+<http://example.org/nesbo/manifestation/bloodonsnow/2018/ullstein>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/nesbo/manifestation/bloodonsnow/2018/ullstein" ;
+    rdfs:label "Blood on snow : Der Auftrag & Das Versteck (Ullstein, 2018)" ;
+    rdamd:P30156 "Blood on snow" ;
+    rdamd:P30142 "Der Auftrag & Das Versteck : die Blood on Snow-Thriller in einem Band" ;
+    rdamd:P30117 "Jo Nesbø ; aus dem Norwegischen von Günther Frauenlob" ;
+    rdamd:P30182 "436 Seiten" ;
+    rdamd:P30169 "19 cm" ;
+    rdamd:P30176 "Ullstein" ;
+    rdamd:P30088 "Berlin" ;
+    rdamd:P30011 "2018" ;
+    rdamd:P30137 "Originaltitel: Blod på snø ; Mere blod" ;
+    rdamd:P30004 "ISBN 978-3-548-28976-2" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/nesbo/agent/ullstein> ;
+    rdamo:P30139 <http://example.org/nesbo/exp/bloodonsnow/ger>,
+        <http://example.org/nesbo/exp/blodpasno/ger>,
+        <http://example.org/nesbo/exp/mereblod/ger> .
+
+# ---------------------------------------------------------------------------
+# Single stories on their own: the audio drama Sjalusimannen and Danish audiobooks
+# ---------------------------------------------------------------------------
+
+<http://example.org/nesbo/agent/andersen>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/nesbo/agent/andersen" ;
+    rdaad:P50413 "Andersen, Allan Hilton" ;
+    rdfs:label "Andersen, Allan Hilton" .
+
+<http://example.org/nesbo/agent/hansen>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/nesbo/agent/hansen" ;
+    rdaad:P50413 "Hansen, Bent Otto" ;
+    rdfs:label "Hansen, Bent Otto" .
+
+<http://example.org/nesbo/agent/eriksen>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/nesbo/agent/eriksen" ;
+    rdaad:P50413 "Eriksen, Gjermund" ;
+    rdfs:label "Eriksen, Gjermund" .
+
+<http://example.org/nesbo/agent/bugge>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/nesbo/agent/bugge" ;
+    rdaad:P50413 "Bugge, Embla" ;
+    rdfs:label "Bugge, Embla" .
+
+<http://example.org/nesbo/agent/maurstad>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/nesbo/agent/maurstad" ;
+    rdaad:P50413 "Maurstad, Scott" ;
+    rdfs:label "Maurstad, Scott" .
+
+<http://example.org/nesbo/agent/nordin>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/nesbo/agent/nordin" ;
+    rdaad:P50413 "Nordin, Sven" ;
+    rdfs:label "Nordin, Sven" ;
+    rdaad:P50339 "1957-" .
+
+<http://example.org/nesbo/agent/santelmann>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/nesbo/agent/santelmann" ;
+    rdaad:P50413 "Santelmann, Tobias" ;
+    rdfs:label "Santelmann, Tobias" ;
+    rdaad:P50339 "1980-" .
+
+<http://example.org/nesbo/agent/helstad>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/nesbo/agent/helstad" ;
+    rdaad:P50413 "Helstad, Benjamin" ;
+    rdfs:label "Helstad, Benjamin" ;
+    rdaad:P50339 "1987-" .
+
+<http://example.org/nesbo/agent/akerlie>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/nesbo/agent/akerlie" ;
+    rdaad:P50413 "Akerlie, Iben" ;
+    rdfs:label "Akerlie, Iben" ;
+    rdaad:P50339 "1988-" .
+
+<http://example.org/nesbo/agent/modtryk>
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://example.org/nesbo/agent/modtryk" ;
+    rdaad:P50413 "Modtryk" ;
+    rdfs:label "Modtryk" .
+
+<http://example.org/nesbo/work/sjalusimannen-lyddrama>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/nesbo/work/sjalusimannen-lyddrama" ;
+    rdawd:P10223 "Sjalusimannen" ;
+    rdfs:label "Sjalusimannen (lyddrama, 2021)" ;
+    rdawd:P10219 "2021" ;
+    rdawd:P10330 "Lyddrama i fire episoder basert på Jo Nesbøs novelle «Sjalusimannen». Manus Gjermund Eriksen og Embla Bugge, regi Scott Maurstad, produsert av Svarttrost produksjoner for Aschehoug. Første sesong av Nesbøs fortellinger som lyddrama; Rotteøya fulgte som andre sesong" ;
+    entedit:P01 vtp:V1006 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/131>, <https://id.nb.no/vocabulary/ntsf/159> ;
+    rdawo:P10066 <http://example.org/nesbo/agent/maurstad> ;
+    rdawo:P10203 <http://example.org/nesbo/agent/eriksen>,
+        <http://example.org/nesbo/agent/bugge> ;
+    rdawo:P10142 <http://example.org/nesbo/work/sjalusimannen> ;
+    rdawo:P10147 <http://example.org/nesbo/work/sjalusimannen-lyddrama/1>,
+        <http://example.org/nesbo/work/sjalusimannen-lyddrama/2>,
+        <http://example.org/nesbo/work/sjalusimannen-lyddrama/3>,
+        <http://example.org/nesbo/work/sjalusimannen-lyddrama/4> .
+
+<http://example.org/nesbo/work/sjalusimannen-lyddrama/1>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/nesbo/work/sjalusimannen-lyddrama/1" ;
+    rdawd:P10223 "Sjalusimannen 1 : Fallet" ;
+    rdawd:P10012 "Episode 1" ;
+    rdfs:label "Sjalusimannen 1 : Fallet (lyddrama, episode 1 av 4)" ;
+    rdawd:P10219 "2021" ;
+    entedit:P01 vtp:V1006 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/131> .
+
+<http://example.org/nesbo/exp/sjalusimannen-lyddrama/1>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/sjalusimannen-lyddrama/1" ;
+    rdaed:P20315 "Sjalusimannen 1 : Fallet" ;
+    rdfs:label "Sjalusimannen 1 : Fallet (lyddrama, episode 1 av 4)" ;
+    rdaed:P20214 "2021" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/sjalusimannen-lyddrama/1> .
+
+<http://example.org/nesbo/work/sjalusimannen-lyddrama/2>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/nesbo/work/sjalusimannen-lyddrama/2" ;
+    rdawd:P10223 "Sjalusimannen 2" ;
+    rdawd:P10012 "Episode 2" ;
+    rdfs:label "Sjalusimannen 2 (lyddrama, episode 2 av 4)" ;
+    rdawd:P10219 "2021" ;
+    entedit:P01 vtp:V1006 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/131> .
+
+<http://example.org/nesbo/exp/sjalusimannen-lyddrama/2>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/sjalusimannen-lyddrama/2" ;
+    rdaed:P20315 "Sjalusimannen 2" ;
+    rdfs:label "Sjalusimannen 2 (lyddrama, episode 2 av 4)" ;
+    rdaed:P20214 "2021" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/sjalusimannen-lyddrama/2> .
+
+<http://example.org/nesbo/work/sjalusimannen-lyddrama/3>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/nesbo/work/sjalusimannen-lyddrama/3" ;
+    rdawd:P10223 "Sjalusimannen 3" ;
+    rdawd:P10012 "Episode 3" ;
+    rdfs:label "Sjalusimannen 3 (lyddrama, episode 3 av 4)" ;
+    rdawd:P10219 "2021" ;
+    entedit:P01 vtp:V1006 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/131> .
+
+<http://example.org/nesbo/exp/sjalusimannen-lyddrama/3>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/sjalusimannen-lyddrama/3" ;
+    rdaed:P20315 "Sjalusimannen 3" ;
+    rdfs:label "Sjalusimannen 3 (lyddrama, episode 3 av 4)" ;
+    rdaed:P20214 "2021" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/sjalusimannen-lyddrama/3> .
+
+<http://example.org/nesbo/work/sjalusimannen-lyddrama/4>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/nesbo/work/sjalusimannen-lyddrama/4" ;
+    rdawd:P10223 "Sjalusimannen 4" ;
+    rdawd:P10012 "Episode 4" ;
+    rdfs:label "Sjalusimannen 4 (lyddrama, episode 4 av 4)" ;
+    rdawd:P10219 "2021" ;
+    entedit:P01 vtp:V1006 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/131> .
+
+<http://example.org/nesbo/exp/sjalusimannen-lyddrama/4>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/sjalusimannen-lyddrama/4" ;
+    rdaed:P20315 "Sjalusimannen 4" ;
+    rdfs:label "Sjalusimannen 4 (lyddrama, episode 4 av 4)" ;
+    rdaed:P20214 "2021" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/sjalusimannen-lyddrama/4> .
+
+<http://example.org/nesbo/exp/sjalusimannen-lyddrama>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/sjalusimannen-lyddrama" ;
+    rdaed:P20315 "Sjalusimannen" ;
+    rdfs:label "Sjalusimannen (lyddrama, 2021)" ;
+    rdaed:P20214 "2021" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/sjalusimannen-lyddrama> ;
+    rdaeo:P20012 <http://example.org/nesbo/agent/nordin>,
+        <http://example.org/nesbo/agent/santelmann>,
+        <http://example.org/nesbo/agent/helstad>,
+        <http://example.org/nesbo/agent/akerlie>,
+        <http://example.org/nesbo/agent/storhoi>,
+        <http://example.org/nesbo/agent/nesbojo> ;
+    rdaeo:P20145 <http://example.org/nesbo/exp/sjalusimannen-lyddrama/1>,
+        <http://example.org/nesbo/exp/sjalusimannen-lyddrama/2>,
+        <http://example.org/nesbo/exp/sjalusimannen-lyddrama/3>,
+        <http://example.org/nesbo/exp/sjalusimannen-lyddrama/4> .
+
+<http://example.org/nesbo/manifestation/sjalusimannen-lyddrama/1/aschehoug>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/nesbo/manifestation/sjalusimannen-lyddrama/1/aschehoug" ;
+    rdfs:label "Sjalusimannen 1 (Aschehoug, 2021, lyddrama)" ;
+    rdamd:P30156 "Sjalusimannen 1" ;
+    rdamd:P30142 "Fallet" ;
+    rdamd:P30117 "Jo Nesbø" ;
+    rdamd:P30182 "1 lydfil (36 min 31 s)" ;
+    rdamd:P30176 "Aschehoug" ;
+    rdamd:P30088 "Oslo" ;
+    rdamd:P30011 "2021" ;
+    rdamd:P30106 "Sjalusimannen ; del 1" ;
+    rdamd:P30137 "Utgitt 11.03.2021" ;
+    rdamd:P30004 "Fabel F201800000276" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30420 <http://example.org/nesbo/agent/aschehoug> ;
+    rdamo:P30139 <http://example.org/nesbo/exp/sjalusimannen-lyddrama/1> .
+
+<http://example.org/nesbo/manifestation/sjalusimannen-lyddrama/2/aschehoug>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/nesbo/manifestation/sjalusimannen-lyddrama/2/aschehoug" ;
+    rdfs:label "Sjalusimannen 2 (Aschehoug, 2021, lyddrama)" ;
+    rdamd:P30156 "Sjalusimannen 2" ;
+    rdamd:P30117 "Jo Nesbø" ;
+    rdamd:P30182 "1 lydfil" ;
+    rdamd:P30176 "Aschehoug" ;
+    rdamd:P30088 "Oslo" ;
+    rdamd:P30011 "2021" ;
+    rdamd:P30106 "Sjalusimannen ; del 2" ;
+    rdamd:P30004 "Fabel F201800000277" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30420 <http://example.org/nesbo/agent/aschehoug> ;
+    rdamo:P30139 <http://example.org/nesbo/exp/sjalusimannen-lyddrama/2> .
+
+<http://example.org/nesbo/manifestation/sjalusimannen-lyddrama/3/aschehoug>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/nesbo/manifestation/sjalusimannen-lyddrama/3/aschehoug" ;
+    rdfs:label "Sjalusimannen 3 (Aschehoug, 2021, lyddrama)" ;
+    rdamd:P30156 "Sjalusimannen 3" ;
+    rdamd:P30117 "Jo Nesbø" ;
+    rdamd:P30182 "1 lydfil" ;
+    rdamd:P30176 "Aschehoug" ;
+    rdamd:P30088 "Oslo" ;
+    rdamd:P30011 "2021" ;
+    rdamd:P30106 "Sjalusimannen ; del 3" ;
+    rdamd:P30004 "Fabel F201800000278" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30420 <http://example.org/nesbo/agent/aschehoug> ;
+    rdamo:P30139 <http://example.org/nesbo/exp/sjalusimannen-lyddrama/3> .
+
+<http://example.org/nesbo/manifestation/sjalusimannen-lyddrama/4/aschehoug>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/nesbo/manifestation/sjalusimannen-lyddrama/4/aschehoug" ;
+    rdfs:label "Sjalusimannen 4 (Aschehoug, 2021, lyddrama)" ;
+    rdamd:P30156 "Sjalusimannen 4" ;
+    rdamd:P30117 "Jo Nesbø" ;
+    rdamd:P30182 "1 lydfil" ;
+    rdamd:P30176 "Aschehoug" ;
+    rdamd:P30088 "Oslo" ;
+    rdamd:P30011 "2021" ;
+    rdamd:P30106 "Sjalusimannen ; del 4" ;
+    rdamd:P30004 "Fabel F201800000279" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30420 <http://example.org/nesbo/agent/aschehoug> ;
+    rdamo:P30139 <http://example.org/nesbo/exp/sjalusimannen-lyddrama/4> .
+
+<http://example.org/nesbo/exp/london/dan-hansen>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/london/dan-hansen" ;
+    rdaed:P20315 "London" ;
+    rdfs:label "London (Nesbø, Jo ; dansk, lest av Bent Otto Hansen)" ;
+    rdaed:P20214 "2024" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/dan> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/london> ;
+    rdaeo:P20037 <http://example.org/nesbo/agent/andersen> ;
+    rdaeo:P20022 <http://example.org/nesbo/agent/hansen> .
+
+<http://example.org/nesbo/manifestation/london/2024/modtryk>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/nesbo/manifestation/london/2024/modtryk" ;
+    rdfs:label "London (Modtryk, 2024, lydbog)" ;
+    rdamd:P30156 "London" ;
+    rdamd:P30142 "en Jo Nesbø novelle" ;
+    rdamd:P30117 "Jo Nesbø ; oversat af Allan Hilton Andersen ; læst af Bent Otto Hansen" ;
+    rdamd:P30182 "1 lydfil (43 min)" ;
+    rdamd:P30176 "Modtryk" ;
+    rdamd:P30011 "2024" ;
+    rdamd:P30106 "Jalousimanden ; 1" ;
+    rdamd:P30137 "Novellen er en del af novellesamlingen Jalousimanden og andre fortællinger" ;
+    rdamd:P30004 "ISBN 9788771460087" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30420 <http://example.org/nesbo/agent/modtryk> ;
+    rdamo:P30139 <http://example.org/nesbo/exp/london/dan-hansen> .
+
+<http://example.org/nesbo/exp/tilstaelsen/dan-hansen>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/tilstaelsen/dan-hansen" ;
+    rdaed:P20315 "Tilståelsen" ;
+    rdfs:label "Tilståelsen (Nesbø, Jo ; dansk, lest av Bent Otto Hansen)" ;
+    rdaed:P20214 "2024" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/dan> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/tilstaelsen> ;
+    rdaeo:P20037 <http://example.org/nesbo/agent/andersen> ;
+    rdaeo:P20022 <http://example.org/nesbo/agent/hansen> .
+
+<http://example.org/nesbo/manifestation/tilstaelsen/2024/modtryk>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/nesbo/manifestation/tilstaelsen/2024/modtryk" ;
+    rdfs:label "Tilståelsen (Modtryk, 2024, lydbog)" ;
+    rdamd:P30156 "Tilståelsen" ;
+    rdamd:P30142 "en Jo Nesbø novelle" ;
+    rdamd:P30117 "Jo Nesbø ; oversat af Allan Hilton Andersen ; læst af Bent Otto Hansen" ;
+    rdamd:P30182 "1 lydfil (24 min)" ;
+    rdamd:P30176 "Modtryk" ;
+    rdamd:P30011 "2024" ;
+    rdamd:P30106 "Jalousimanden ; 5" ;
+    rdamd:P30137 "Novellen er en del af novellesamlingen Jalousimanden og andre fortællinger" ;
+    rdamd:P30004 "ISBN 9788771460391" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30420 <http://example.org/nesbo/agent/modtryk> ;
+    rdamo:P30139 <http://example.org/nesbo/exp/tilstaelsen/dan-hansen> .
+
+<http://example.org/nesbo/exp/rotteoya/dan-hansen>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/rotteoya/dan-hansen" ;
+    rdaed:P20315 "Rotteøen" ;
+    rdfs:label "Rotteøen (Nesbø, Jo ; dansk, lest av Bent Otto Hansen)" ;
+    rdaed:P20214 "2024" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/dan> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/rotteoya> ;
+    rdaeo:P20037 <http://example.org/nesbo/agent/andersen> ;
+    rdaeo:P20022 <http://example.org/nesbo/agent/hansen> .
+
+<http://example.org/nesbo/manifestation/rotteoya/2024/modtryk>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/nesbo/manifestation/rotteoya/2024/modtryk" ;
+    rdfs:label "Rotteøen (Modtryk, 2024, lydbog)" ;
+    rdamd:P30156 "Rotteøen" ;
+    rdamd:P30142 "en Jo Nesbø novelle" ;
+    rdamd:P30117 "Jo Nesbø ; oversat af Allan Hilton Andersen ; læst af Bent Otto Hansen" ;
+    rdamd:P30182 "1 lydfil (3 t 47 min)" ;
+    rdamd:P30176 "Modtryk" ;
+    rdamd:P30011 "2024" ;
+    rdamd:P30106 "Rotteøen ; 1" ;
+    rdamd:P30137 "Novellen er en del af novellesamlingen Rotteøen og andre fortællinger" ;
+    rdamd:P30004 "ISBN 9788771460735" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
+    rdamo:P30420 <http://example.org/nesbo/agent/modtryk> ;
+    rdamo:P30139 <http://example.org/nesbo/exp/rotteoya/dan-hansen> .
