@@ -156,7 +156,7 @@ export interface SearchLinkFollowedEvent extends BaseEvent {
   /** Name or title that was clicked, now the search text */
   label: string;
   uri?: string;
-  kind?: "expression" | "work" | "agent";
+  kind?: "expression" | "work" | "agent" | "manifestation";
   mode: SearchMode;
 }
 
@@ -173,7 +173,7 @@ export interface SearchLinkClearedEvent extends BaseEvent {
   /** The link's label, as shown on its chip. */
   label: string;
   uri?: string;
-  kind?: "expression" | "work" | "agent";
+  kind?: "expression" | "work" | "agent" | "manifestation";
   mode: SearchMode;
 }
 

@@ -7,7 +7,10 @@
  *   the index (`expression`, `work`; see database/lucene_connectors/), and the
  *   label's words only rank the hits, so a work's original, whose title and
  *   author match its label, comes before its translations;
- * - an agent link searches the name as a phrase in the names field.
+ * - an agent link searches the name as a phrase in the names field;
+ * - a manifestation link has no IRI field to limit by (the indexes describe
+ *   manifestations by their content), so its label is searched as typed; the
+ *   label is indexed (`labels`), and the phrase boost ranks it first.
  *
  * Removing the link leaves the label as an ordinary search.
  */
@@ -15,7 +18,7 @@ import { sanitizeSparqlUri } from "./labelUtils";
 import { toLuceneQuery } from "./luceneQuery";
 
 /** What a followed link points to. */
-export type LinkKind = "expression" | "work" | "agent";
+export type LinkKind = "expression" | "work" | "agent" | "manifestation";
 
 export interface LinkTarget {
   /** Label shown in the search field */
@@ -42,7 +45,7 @@ export const toNameQuery = (name: string): string => `+names:${phrase(name)}`;
  */
 export const toLinkQuery = ({ label, uri, kind }: LinkTarget): string | undefined => {
   if (kind === "agent") return toNameQuery(label);
-  if (!uri) return undefined;
+  if (!uri || kind === "manifestation") return undefined;
   const limit = `+${kind}:${phrase(sanitizeSparqlUri(uri))}`;
   const ranking = toLuceneQuery(label, { optional: true });
   return ranking ? `${limit} ${ranking}` : limit;

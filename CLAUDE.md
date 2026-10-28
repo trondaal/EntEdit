@@ -103,8 +103,12 @@ EntEdit/
   every publication), while Contents stay full: the parent is one of them unless it is the
   collection itself
 - `ResultLines` - creator/relationship lines and chips styled like the result cards; its
-  `RelationshipLines` is the only place the relationship lines are drawn (work, expression
-  and the expressions listed under a publication), including the collapsed ones
+  `RelationshipLines` is the only place the relationship lines are drawn (work, expression,
+  manifestation and the expressions listed under a publication), including the collapsed ones.
+  A manifestation's relationships to other manifestations (equivalent, reprint, accompanied
+  by …) come from `buildManifestationDetailQuery`, so they show wherever a publication is
+  listed: the publication search and the publications under an expression. The lines run
+  from work to expression to manifestation, so the manifestation's own come last
 
 **UI Helpers:**
 - `EntityEditorHeader` - Header section of entity editor
@@ -170,7 +174,8 @@ EntEdit/
   expressions, the work index has the work as `$self` and its expressions) with the label's words as *optional* ranking terms
   (`toLuceneQuery(…, { optional: true })`), so a work's original ranks before
   its translations; an agent link searches the name as a phrase in the names
-  field (`toNameQuery`). Filters and facet counts apply on top. A link query that
+  field (`toNameQuery`). A manifestation link has no IRI field in any index, so
+  its label is searched as text (the label is indexed). Filters and facet counts apply on top. A link query that
   finds nothing at all (an index whose connectors were not recreated with the
   link fields, a work without expressions) falls back to the label as text
   (`findHits`, `textQueryFor`). Following a link clears the filters; removing the

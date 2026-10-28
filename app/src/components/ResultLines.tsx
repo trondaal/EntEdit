@@ -121,7 +121,7 @@ const RelationshipLine: React.FC<{ children: React.ReactNode }> = ({ children })
  */
 const CollapsedRelationshipLine: React.FC<{
   relationship: CollapsedRelationship;
-  kind: "work" | "expression";
+  kind: "work" | "expression" | "manifestation";
   entityUri: string;
   config: SparqlEndpointConfig;
   language: string;
@@ -219,9 +219,9 @@ export const RelationshipLines: React.FC<{
   relationships?: string;
   /** Relationships marked `entedit:collapse true`, counted (`parseCollapsedRelationships`) */
   collapsed?: string;
-  /** What the targets are: works or expressions */
-  kind: "work" | "expression";
-  /** The work or expression the relationships belong to: needed to open a collapsed one */
+  /** What the targets are: works, expressions or manifestations */
+  kind: "work" | "expression" | "manifestation";
+  /** The entity the relationships belong to: needed to open a collapsed one */
   entityUri?: string;
   config?: SparqlEndpointConfig;
   language?: string;

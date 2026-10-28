@@ -9,6 +9,7 @@ export const RELATION_PAGE_SIZE = 50;
 const TARGET_CLASS = {
   work: "http://rdaregistry.info/Elements/c/C10001",
   expression: "http://rdaregistry.info/Elements/c/C10006",
+  manifestation: "http://rdaregistry.info/Elements/c/C10007",
 } as const;
 
 export interface RelationTarget {

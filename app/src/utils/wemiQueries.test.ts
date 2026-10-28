@@ -40,6 +40,20 @@ describe("buildManifestationDetailQuery", () => {
     expect(query).not.toContain("collection_count");
     expect(query).not.toContain("entedit:collection");
   });
+
+  it("reads the publisher name the profile uses (rdamd:P30176, not P30076)", () => {
+    expect(buildManifestationDetailQuery(scope, "en")).toContain("?manifestation rdamd:P30176 ?publisher_val");
+  });
+
+  it("lists relationships to other manifestations, from either side, scoped to the hits", () => {
+    const query = buildManifestationDetailQuery(scope, "en");
+    expect(query).toContain("?target a <http://rdaregistry.info/Elements/c/C10007>");
+    expect(query).toContain("as ?manifestation_to_manifestation_relationships");
+    expect(query).toContain("as ?manifestation_collapsed_relationships");
+    expect(query).toContain("GROUP BY ?manifestation ?manifestation_relationship_label ?manifestation_relationship_property");
+    // Each grouped subquery binds its own manifestations (agents, relationships, collapsed)
+    expect(query.match(/VALUES \?manifestation \{ <http:\/\/example.org\/m1> \}/g)).toHaveLength(4);
+  });
 });
 
 describe("withCollections", () => {

@@ -381,6 +381,18 @@ const ManifestationSearchResult: React.FC<ManifestationSearchResultProps> = ({
                   </Box>
                 )}
 
+                {/* Relationships to other manifestations (equivalent, reprint, accompanied by …),
+                    last: the lines go from work to expression to manifestation */}
+                <RelationshipLines
+                  relationships={result.manifestation_to_manifestation_relationships}
+                  collapsed={result.manifestation_collapsed_relationships}
+                  kind="manifestation"
+                  entityUri={result.uri}
+                  config={config}
+                  language={selectedLanguage}
+                  onEntitySearch={onEntitySearch}
+                />
+
                 {/* Metadata chips */}
                 <Box sx={{
                   display: 'flex',

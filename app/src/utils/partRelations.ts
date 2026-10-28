@@ -39,9 +39,10 @@ export const isPartProperty = (propertyUri: string | undefined): boolean =>
  * Whether a relationship line is hidden by the preference: only part lines, and
  * only those of a level the preference leaves out. `level` is the level of the
  * line: work-to-work lines are "work", expression-to-expression ones "expression".
+ * Manifestation lines are never hidden: the preference covers only these two levels.
  */
 export const isHiddenPartLine = (
   propertyUri: string | undefined,
-  level: "work" | "expression",
+  level: "work" | "expression" | "manifestation",
   partLevels: PartLevels,
 ): boolean => isPartProperty(propertyUri) && partLevels !== "both" && partLevels !== level;

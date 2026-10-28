@@ -38,6 +38,12 @@ describe("toLinkQuery", () => {
     expect(toLinkQuery({ label: "Cat and Mouse", kind: "work" })).toBeUndefined();
   });
 
+  it("searches a manifestation's label as typed, since no index has a manifestation IRI field", () => {
+    expect(
+      toLinkQuery({ label: "Murder on the Orient Express (Collins, 1934)", uri: "http://x/m1", kind: "manifestation" }),
+    ).toBeUndefined();
+  });
+
   it("refuses IRIs that could break out of the query", () => {
     expect(() => toLinkQuery({ label: "x", uri: 'http://x/"a', kind: "work" })).toThrow();
   });

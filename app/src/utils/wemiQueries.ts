@@ -467,7 +467,7 @@ const MANIFESTATION_FIELDS: [string, string][] = [
   ["responsibilityStatement", "rdamd:P30117"],
   ["edition", "rdamd:P30107"],
   ["place", "rdamd:P30088"], // place of publication
-  ["publisher", "rdamd:P30076"],
+  ["publisher", "rdamd:P30176"], // publisher name
   ["date", "rdamd:P30011"], // date of publication
   ["extent", "rdamd:P30182"],
   ["dimensions", "rdamd:P30169"],
@@ -532,6 +532,8 @@ SELECT ?manifestation
     (SAMPLE(?carriertype_label) as ?carriertype)
     (SAMPLE(?carriertype_uri_val) as ?carriertype_uri)
     (GROUP_CONCAT(DISTINCT CONCAT(?manifestation_agent_relationship_label, "${SPARQL_SEP.LABEL}", ?manifestation_agent_names) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?manifestation_creators)
+    (GROUP_CONCAT(DISTINCT CONCAT(?manifestation_relationship_label, "${SPARQL_SEP.LABEL}", ?manifestation_relationship_property, "${SPARQL_SEP.PROPERTY}", ?manifestation_relationship_targets) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?manifestation_to_manifestation_relationships)
+    (GROUP_CONCAT(DISTINCT CONCAT(?manifestation_collapsed_label, "${SPARQL_SEP.LABEL}", ?manifestation_collapsed_property, "${SPARQL_SEP.URI}", STR(?manifestation_collapsed_count)) ; SEPARATOR="${SPARQL_SEP.GROUP}") as ?manifestation_collapsed_relationships)
     (COUNT(DISTINCT ?expression) as ?expression_count)
 FROM <http://www.ontotext.com/explicit>
 WHERE {
@@ -545,6 +547,8 @@ WHERE {
     ${typeWithFallback("rdamo:P30002", "mediatype", lang)}
     ${typeWithFallback("rdamo:P30001", "carriertype", lang)}
     ${agentsSubquery("manifestation", "manifestation", scope, lang)}
+    ${relationshipsSubquery("manifestation", "manifestation", scope, "http://rdaregistry.info/Elements/c/C10007", lang)}
+    ${collapsedRelationshipsSubquery("manifestation", "manifestation", scope, "http://rdaregistry.info/Elements/c/C10007", lang)}
 }
 GROUP BY ?manifestation
 `;
@@ -571,6 +575,10 @@ export interface ManifestationDetail {
   carriertype?: string;
   carriertypeUri?: string;
   manifestation_creators?: string;
+  /** Relationships to other manifestations (equivalent, reprint, accompanied by …) */
+  manifestation_to_manifestation_relationships?: string;
+  /** Relationships marked `entedit:collapse true`, counted: see `parseCollapsedRelationships` */
+  manifestation_collapsed_relationships?: string;
   expression_count?: number;
   /** Expressions whose work is a collection (see `buildCollectionQuery`; set by `withCollections`) */
   collectionCount?: number;
@@ -599,6 +607,9 @@ export const toManifestationDetail = (b: SparqlResult): ManifestationDetail => (
   carriertype: b.carriertype?.value,
   carriertypeUri: b.carriertype_uri?.value,
   manifestation_creators: b.manifestation_creators?.value || undefined,
+  manifestation_to_manifestation_relationships:
+    b.manifestation_to_manifestation_relationships?.value || undefined,
+  manifestation_collapsed_relationships: b.manifestation_collapsed_relationships?.value || undefined,
   expression_count: b.expression_count
     ? parseInt(b.expression_count.value, 10)
     : undefined,
