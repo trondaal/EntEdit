@@ -3,23 +3,24 @@
 #   Sjalusimannen og andre fortellinger (Aschehoug, 2021), 7 stories
 #   Rotteøya og andre fortellinger (Aschehoug, 2021), 5 stories
 #
-# Modelled as works and expressions at two levels: each story is a work of its
-# own (genre entedit:T02, individual short stories), and each collection is a
-# work (entedit:T01, short story collections) that has the stories as parts.
-# The aggregates that bring both collections together are a third level:
+# A restrictive reading: each story is a work of its own (genre entedit:T02,
+# individual short stories), and the two named collections are NOT works or
+# expressions: a publication of a collection embodies the expressions of the
+# stories it contains. Whether a collection is a work of its own is a matter of
+# interpretation; this file deliberately leaves them out.
 #
-#   - Aschehoug's 2022 paperback holds all 12 stories, but under the title of
-#     the first collection only, "Sjalusimannen og andre fortellinger".
-#   - The English translation by Robert Ferguson, "The jealousy man and other
-#     stories" (Harvill Secker and Knopf, 2021), holds all 12 in two parts,
-#     "Jealousy" and "Power".
-#   Both are expressions of one omnibus work (entedit:T04) whose parts are the
-#   two collection works.
+# The same holds for the editions with all 12 stories: Aschehoug's 2022
+# paperback (under the title of the first collection only, "Sjalusimannen og
+# andre fortellinger") and Robert Ferguson's English translation, "The jealousy
+# man and other stories" (Harvill Secker and Knopf, 2021), in two parts,
+# "Jealousy" and "Power". They embody the 12 story expressions directly; no
+# work in this file is an aggregate.
 #
 # The French translations (Céline Romand-Monnier, Gallimard, Série noire) came
-# out as two books, "De la jalousie" (2022) and "Rat Island" (2024). Only the
-# collection level is recorded for them: the French titles of the individual
-# stories are left out, as an exercise.
+# out as two books, "De la jalousie" (2022) and "Rat Island" (2024). The French
+# titles of the stories in De la jalousie are from a review (k-libre.fr), not
+# from the book; for Rat Island only the title story's French title is known,
+# and the other four are left without a French title, as an exercise.
 #
 # Novels published together: six novels, each with its first Norwegian edition,
 # and four publications that hold two of them:
@@ -237,51 +238,6 @@
     entedit:P01 vtp:V1000 ;
     entedit:P02 entedit:T02 ;
     rdawo:P10061 <http://example.org/nesbo/agent/nesbojo> .
-
-<http://example.org/nesbo/work/sjalusimannen-samling>
-    a rdac:C10001 ;
-    rdaxd:P00018 "http://example.org/nesbo/work/sjalusimannen-samling" ;
-    rdawd:P10223 "Sjalusimannen og andre fortellinger" ;
-    rdfs:label "Sjalusimannen og andre fortellinger (Nesbø, Jo)" ;
-    rdawd:P10219 "2021" ;
-    entedit:P01 vtp:V1000 ;
-    entedit:P02 entedit:T01 ;
-    rdawo:P10061 <http://example.org/nesbo/agent/nesbojo> ;
-    rdawo:P10147 <http://example.org/nesbo/work/london>,
-        <http://example.org/nesbo/work/sjalusimannen>,
-        <http://example.org/nesbo/work/koen>,
-        <http://example.org/nesbo/work/soppel>,
-        <http://example.org/nesbo/work/tilstaelsen>,
-        <http://example.org/nesbo/work/odd>,
-        <http://example.org/nesbo/work/oredobben> .
-
-<http://example.org/nesbo/work/rotteoya-samling>
-    a rdac:C10001 ;
-    rdaxd:P00018 "http://example.org/nesbo/work/rotteoya-samling" ;
-    rdawd:P10223 "Rotteøya og andre fortellinger" ;
-    rdfs:label "Rotteøya og andre fortellinger (Nesbø, Jo)" ;
-    rdawd:P10219 "2021" ;
-    entedit:P01 vtp:V1000 ;
-    entedit:P02 entedit:T01 ;
-    rdawo:P10061 <http://example.org/nesbo/agent/nesbojo> ;
-    rdawo:P10147 <http://example.org/nesbo/work/rotteoya>,
-        <http://example.org/nesbo/work/makulator>,
-        <http://example.org/nesbo/work/sikadene>,
-        <http://example.org/nesbo/work/serum>,
-        <http://example.org/nesbo/work/svartspringer> .
-
-<http://example.org/nesbo/work/samleutgave>
-    a rdac:C10001 ;
-    rdaxd:P00018 "http://example.org/nesbo/work/samleutgave" ;
-    rdawd:P10223 "Sjalusimannen og andre fortellinger ; Rotteøya og andre fortellinger" ;
-    rdawd:P10086 "The jealousy man and other stories" ;
-    rdfs:label "Sjalusimannen og andre fortellinger ; Rotteøya og andre fortellinger (Nesbø, Jo)" ;
-    rdawd:P10330 "Samleutgave av begge novellesamlingene, 12 noveller. Den norske utgaven fra 2022 har bare tittelen på den første samlingen, den engelske oversettelsen deler novellene i to deler, «Jealousy» og «Power»." ;
-    entedit:P01 vtp:V1000 ;
-    entedit:P02 entedit:T04 ;
-    rdawo:P10061 <http://example.org/nesbo/agent/nesbojo> ;
-    rdawo:P10147 <http://example.org/nesbo/work/sjalusimannen-samling>,
-        <http://example.org/nesbo/work/rotteoya-samling> .
 
 # ---------------------------------------------------------------------------
 # Expressions: Norwegian originals, English and French translations
@@ -539,104 +495,133 @@
     rdaeo:P20231 <http://example.org/nesbo/work/svartspringer> ;
     rdaeo:P20037 <http://example.org/nesbo/agent/fergusonrobert> .
 
-<http://example.org/nesbo/exp/sjalusimannen-samling/nob>
+<http://example.org/nesbo/exp/london/fre>
     a rdac:C10006 ;
-    rdaxd:P00018 "http://example.org/nesbo/exp/sjalusimannen-samling/nob" ;
-    rdaed:P20315 "Sjalusimannen og andre fortellinger" ;
-    rdfs:label "Sjalusimannen og andre fortellinger (Nesbø, Jo)" ;
-    rdaed:P20214 "2021" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://example.org/nesbo/work/sjalusimannen-samling> ;
-    rdaeo:P20145 <http://example.org/nesbo/exp/london/nob>,
-        <http://example.org/nesbo/exp/sjalusimannen/nob>,
-        <http://example.org/nesbo/exp/koen/nob>,
-        <http://example.org/nesbo/exp/soppel/nob>,
-        <http://example.org/nesbo/exp/tilstaelsen/nob>,
-        <http://example.org/nesbo/exp/odd/nob>,
-        <http://example.org/nesbo/exp/oredobben/nob> .
-
-<http://example.org/nesbo/exp/rotteoya-samling/nob>
-    a rdac:C10006 ;
-    rdaxd:P00018 "http://example.org/nesbo/exp/rotteoya-samling/nob" ;
-    rdaed:P20315 "Rotteøya og andre fortellinger" ;
-    rdfs:label "Rotteøya og andre fortellinger (Nesbø, Jo)" ;
-    rdaed:P20214 "2021" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://example.org/nesbo/work/rotteoya-samling> ;
-    rdaeo:P20145 <http://example.org/nesbo/exp/rotteoya/nob>,
-        <http://example.org/nesbo/exp/makulator/nob>,
-        <http://example.org/nesbo/exp/sikadene/nob>,
-        <http://example.org/nesbo/exp/serum/nob>,
-        <http://example.org/nesbo/exp/svartspringer/nob> .
-
-<http://example.org/nesbo/exp/sjalusimannen-samling/fre>
-    a rdac:C10006 ;
-    rdaxd:P00018 "http://example.org/nesbo/exp/sjalusimannen-samling/fre" ;
-    rdaed:P20315 "De la jalousie" ;
-    rdfs:label "De la jalousie (Nesbø, Jo)" ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/london/fre" ;
+    rdaed:P20315 "Londres" ;
+    rdfs:label "Londres (Nesbø, Jo ; fransk)" ;
     rdaed:P20214 "2022" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20231 <http://example.org/nesbo/work/sjalusimannen-samling> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/london> ;
     rdaeo:P20037 <http://example.org/nesbo/agent/romandmonnierceline> .
 
-<http://example.org/nesbo/exp/rotteoya-samling/fre>
+<http://example.org/nesbo/exp/sjalusimannen/fre>
     a rdac:C10006 ;
-    rdaxd:P00018 "http://example.org/nesbo/exp/rotteoya-samling/fre" ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/sjalusimannen/fre" ;
+    rdaed:P20315 "Phtonos" ;
+    rdfs:label "Phtonos (Nesbø, Jo ; fransk)" ;
+    rdaed:P20214 "2022" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/sjalusimannen> ;
+    rdaeo:P20037 <http://example.org/nesbo/agent/romandmonnierceline> .
+
+<http://example.org/nesbo/exp/koen/fre>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/koen/fre" ;
+    rdaed:P20315 "La file d'attente" ;
+    rdfs:label "La file d'attente (Nesbø, Jo ; fransk)" ;
+    rdaed:P20214 "2022" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/koen> ;
+    rdaeo:P20037 <http://example.org/nesbo/agent/romandmonnierceline> .
+
+<http://example.org/nesbo/exp/soppel/fre>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/soppel/fre" ;
+    rdaed:P20315 "Déchet" ;
+    rdfs:label "Déchet (Nesbø, Jo ; fransk)" ;
+    rdaed:P20214 "2022" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/soppel> ;
+    rdaeo:P20037 <http://example.org/nesbo/agent/romandmonnierceline> .
+
+<http://example.org/nesbo/exp/tilstaelsen/fre>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/tilstaelsen/fre" ;
+    rdaed:P20315 "Les aveux" ;
+    rdfs:label "Les aveux (Nesbø, Jo ; fransk)" ;
+    rdaed:P20214 "2022" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/tilstaelsen> ;
+    rdaeo:P20037 <http://example.org/nesbo/agent/romandmonnierceline> .
+
+<http://example.org/nesbo/exp/odd/fre>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/odd/fre" ;
+    rdaed:P20315 "Odd" ;
+    rdfs:label "Odd (Nesbø, Jo ; fransk)" ;
+    rdaed:P20214 "2022" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/odd> ;
+    rdaeo:P20037 <http://example.org/nesbo/agent/romandmonnierceline> .
+
+<http://example.org/nesbo/exp/oredobben/fre>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/oredobben/fre" ;
+    rdaed:P20315 "La boucle" ;
+    rdfs:label "La boucle (Nesbø, Jo ; fransk)" ;
+    rdaed:P20214 "2022" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/oredobben> ;
+    rdaeo:P20037 <http://example.org/nesbo/agent/romandmonnierceline> .
+
+<http://example.org/nesbo/exp/rotteoya/fre>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/rotteoya/fre" ;
     rdaed:P20315 "Rat Island" ;
-    rdfs:label "Rat Island (Nesbø, Jo)" ;
+    rdfs:label "Rat Island (Nesbø, Jo ; fransk)" ;
     rdaed:P20214 "2024" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
-    rdaeo:P20231 <http://example.org/nesbo/work/rotteoya-samling> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/rotteoya> ;
     rdaeo:P20037 <http://example.org/nesbo/agent/romandmonnierceline> .
 
-<http://example.org/nesbo/exp/samleutgave/nob>
+<http://example.org/nesbo/exp/makulator/fre>
     a rdac:C10006 ;
-    rdaxd:P00018 "http://example.org/nesbo/exp/samleutgave/nob" ;
-    rdaed:P20315 "Sjalusimannen og andre fortellinger" ;
-    rdfs:label "Sjalusimannen og andre fortellinger (Nesbø, Jo)" ;
-    rdaed:P20214 "2022" ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/makulator/fre" ;
+    rdfs:label "Makulator (Nesbø, Jo ; fransk, fransk tittel ikke registrert)" ;
+    rdaed:P20214 "2024" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://example.org/nesbo/work/samleutgave> ;
-    rdaeo:P20145 <http://example.org/nesbo/exp/london/nob>,
-        <http://example.org/nesbo/exp/sjalusimannen/nob>,
-        <http://example.org/nesbo/exp/koen/nob>,
-        <http://example.org/nesbo/exp/soppel/nob>,
-        <http://example.org/nesbo/exp/tilstaelsen/nob>,
-        <http://example.org/nesbo/exp/odd/nob>,
-        <http://example.org/nesbo/exp/oredobben/nob>,
-        <http://example.org/nesbo/exp/rotteoya/nob>,
-        <http://example.org/nesbo/exp/makulator/nob>,
-        <http://example.org/nesbo/exp/sikadene/nob>,
-        <http://example.org/nesbo/exp/serum/nob>,
-        <http://example.org/nesbo/exp/svartspringer/nob> .
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/makulator> ;
+    rdaeo:P20037 <http://example.org/nesbo/agent/romandmonnierceline> .
 
-<http://example.org/nesbo/exp/samleutgave/eng>
+<http://example.org/nesbo/exp/sikadene/fre>
     a rdac:C10006 ;
-    rdaxd:P00018 "http://example.org/nesbo/exp/samleutgave/eng" ;
-    rdaed:P20315 "The jealousy man and other stories" ;
-    rdfs:label "The jealousy man and other stories (Nesbø, Jo)" ;
-    rdaed:P20214 "2021" ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/sikadene/fre" ;
+    rdfs:label "Sikadene (Nesbø, Jo ; fransk, fransk tittel ikke registrert)" ;
+    rdaed:P20214 "2024" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://example.org/nesbo/work/samleutgave> ;
-    rdaeo:P20037 <http://example.org/nesbo/agent/fergusonrobert> ;
-    rdaeo:P20145 <http://example.org/nesbo/exp/london/eng>,
-        <http://example.org/nesbo/exp/sjalusimannen/eng>,
-        <http://example.org/nesbo/exp/koen/eng>,
-        <http://example.org/nesbo/exp/soppel/eng>,
-        <http://example.org/nesbo/exp/tilstaelsen/eng>,
-        <http://example.org/nesbo/exp/odd/eng>,
-        <http://example.org/nesbo/exp/oredobben/eng>,
-        <http://example.org/nesbo/exp/rotteoya/eng>,
-        <http://example.org/nesbo/exp/makulator/eng>,
-        <http://example.org/nesbo/exp/sikadene/eng>,
-        <http://example.org/nesbo/exp/serum/eng>,
-        <http://example.org/nesbo/exp/svartspringer/eng> .
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/sikadene> ;
+    rdaeo:P20037 <http://example.org/nesbo/agent/romandmonnierceline> .
+
+<http://example.org/nesbo/exp/serum/fre>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/serum/fre" ;
+    rdfs:label "Serum (Nesbø, Jo ; fransk, fransk tittel ikke registrert)" ;
+    rdaed:P20214 "2024" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/serum> ;
+    rdaeo:P20037 <http://example.org/nesbo/agent/romandmonnierceline> .
+
+<http://example.org/nesbo/exp/svartspringer/fre>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/svartspringer/fre" ;
+    rdfs:label "Svart springer (Nesbø, Jo ; fransk, fransk tittel ikke registrert)" ;
+    rdaed:P20214 "2024" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/svartspringer> ;
+    rdaeo:P20037 <http://example.org/nesbo/agent/romandmonnierceline> .
 
 # ---------------------------------------------------------------------------
 # Manifestations
@@ -659,8 +644,7 @@
     rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
     rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
     rdamo:P30420 <http://example.org/nesbo/agent/aschehoug> ;
-    rdamo:P30139 <http://example.org/nesbo/exp/sjalusimannen-samling/nob>,
-        <http://example.org/nesbo/exp/london/nob>,
+    rdamo:P30139 <http://example.org/nesbo/exp/london/nob>,
         <http://example.org/nesbo/exp/sjalusimannen/nob>,
         <http://example.org/nesbo/exp/koen/nob>,
         <http://example.org/nesbo/exp/soppel/nob>,
@@ -685,8 +669,7 @@
     rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
     rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
     rdamo:P30420 <http://example.org/nesbo/agent/aschehoug> ;
-    rdamo:P30139 <http://example.org/nesbo/exp/rotteoya-samling/nob>,
-        <http://example.org/nesbo/exp/rotteoya/nob>,
+    rdamo:P30139 <http://example.org/nesbo/exp/rotteoya/nob>,
         <http://example.org/nesbo/exp/makulator/nob>,
         <http://example.org/nesbo/exp/sikadene/nob>,
         <http://example.org/nesbo/exp/serum/nob>,
@@ -708,8 +691,7 @@
     rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
     rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
     rdamo:P30420 <http://example.org/nesbo/agent/aschehoug> ;
-    rdamo:P30139 <http://example.org/nesbo/exp/samleutgave/nob>,
-        <http://example.org/nesbo/exp/london/nob>,
+    rdamo:P30139 <http://example.org/nesbo/exp/london/nob>,
         <http://example.org/nesbo/exp/sjalusimannen/nob>,
         <http://example.org/nesbo/exp/koen/nob>,
         <http://example.org/nesbo/exp/soppel/nob>,
@@ -738,8 +720,7 @@
     rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
     rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
     rdamo:P30420 <http://example.org/nesbo/agent/harvillsecker> ;
-    rdamo:P30139 <http://example.org/nesbo/exp/samleutgave/eng>,
-        <http://example.org/nesbo/exp/london/eng>,
+    rdamo:P30139 <http://example.org/nesbo/exp/london/eng>,
         <http://example.org/nesbo/exp/sjalusimannen/eng>,
         <http://example.org/nesbo/exp/koen/eng>,
         <http://example.org/nesbo/exp/soppel/eng>,
@@ -769,8 +750,7 @@
     rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
     rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
     rdamo:P30420 <http://example.org/nesbo/agent/knopf> ;
-    rdamo:P30139 <http://example.org/nesbo/exp/samleutgave/eng>,
-        <http://example.org/nesbo/exp/london/eng>,
+    rdamo:P30139 <http://example.org/nesbo/exp/london/eng>,
         <http://example.org/nesbo/exp/sjalusimannen/eng>,
         <http://example.org/nesbo/exp/koen/eng>,
         <http://example.org/nesbo/exp/soppel/eng>,
@@ -800,7 +780,13 @@
     rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
     rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
     rdamo:P30420 <http://example.org/nesbo/agent/gallimard> ;
-    rdamo:P30139 <http://example.org/nesbo/exp/sjalusimannen-samling/fre> .
+    rdamo:P30139 <http://example.org/nesbo/exp/london/fre>,
+        <http://example.org/nesbo/exp/sjalusimannen/fre>,
+        <http://example.org/nesbo/exp/koen/fre>,
+        <http://example.org/nesbo/exp/soppel/fre>,
+        <http://example.org/nesbo/exp/tilstaelsen/fre>,
+        <http://example.org/nesbo/exp/odd/fre>,
+        <http://example.org/nesbo/exp/oredobben/fre> .
 
 <http://example.org/nesbo/manifestation/ratisland/2024/gallimard>
     a rdac:C10007 ;
@@ -819,7 +805,11 @@
     rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
     rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
     rdamo:P30420 <http://example.org/nesbo/agent/gallimard> ;
-    rdamo:P30139 <http://example.org/nesbo/exp/rotteoya-samling/fre> .
+    rdamo:P30139 <http://example.org/nesbo/exp/rotteoya/fre>,
+        <http://example.org/nesbo/exp/makulator/fre>,
+        <http://example.org/nesbo/exp/sikadene/fre>,
+        <http://example.org/nesbo/exp/serum/fre>,
+        <http://example.org/nesbo/exp/svartspringer/fre> .
 
 # ---------------------------------------------------------------------------
 # Novels, and publications with two novels
