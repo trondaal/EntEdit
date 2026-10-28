@@ -37,6 +37,14 @@
 # expressions directly. This differs from the story collections, which are
 # works of their own.
 #
+# Two authors in one book: Stemmer fra Balkan (Aschehoug, 1999) holds two
+# non-fiction texts from the war in Kosovo and Serbia in 1999, Jo Nesbø's
+# interviews "Stemmer fra Balkan" and Espen Søbye's diary "Atten dager i mai".
+# The book has no collective title (title proper is the first text's, and the
+# second text and its author follow in the statement of responsibility), so as
+# with the novels there is no aggregate work: the manifestation embodies the two
+# expressions directly.
+#
 # Single stories on their own:
 #   - the audio drama Sjalusimannen (Aschehoug 2021), four episodes published
 #     one by one; a work of its own based on the story (rdawo:P10142), with the
@@ -1332,6 +1340,75 @@
     rdamo:P30420 <http://example.org/nesbo/agent/ullstein> ;
     rdamo:P30139 <http://example.org/nesbo/exp/blodpasno/ger>,
         <http://example.org/nesbo/exp/mereblod/ger> .
+
+# ---------------------------------------------------------------------------
+# Two authors in one book: Stemmer fra Balkan
+# ---------------------------------------------------------------------------
+
+<http://example.org/nesbo/agent/sobyeespen>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/nesbo/agent/sobyeespen" ;
+    rdaad:P50413 "Søbye, Espen" ;
+    rdfs:label "Søbye, Espen" ;
+    rdaad:P50339 "1954-" .
+
+<http://example.org/nesbo/work/stemmerfrabalkan>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/nesbo/work/stemmerfrabalkan" ;
+    rdawd:P10223 "Stemmer fra Balkan" ;
+    rdfs:label "Stemmer fra Balkan (Nesbø, Jo)" ;
+    rdawd:P10219 "1999" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/1761>, <https://id.nb.no/vocabulary/ntsf/250> ;
+    rdawo:P10061 <http://example.org/nesbo/agent/nesbojo> .
+
+<http://example.org/nesbo/exp/stemmerfrabalkan/nob>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/stemmerfrabalkan/nob" ;
+    rdaed:P20315 "Stemmer fra Balkan" ;
+    rdfs:label "Stemmer fra Balkan (Nesbø, Jo)" ;
+    rdaed:P20214 "1999" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/stemmerfrabalkan> .
+
+<http://example.org/nesbo/work/attendagerimai>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/nesbo/work/attendagerimai" ;
+    rdawd:P10223 "Atten dager i mai" ;
+    rdfs:label "Atten dager i mai (Søbye, Espen)" ;
+    rdawd:P10219 "1999" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/54>, <https://id.nb.no/vocabulary/ntsf/250> ;
+    rdawo:P10061 <http://example.org/nesbo/agent/sobyeespen> .
+
+<http://example.org/nesbo/exp/attendagerimai/nob>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/nesbo/exp/attendagerimai/nob" ;
+    rdaed:P20315 "Atten dager i mai" ;
+    rdfs:label "Atten dager i mai (Søbye, Espen)" ;
+    rdaed:P20214 "1999" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://example.org/nesbo/work/attendagerimai> .
+
+<http://example.org/nesbo/manifestation/stemmerfrabalkan/1999/aschehoug>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/nesbo/manifestation/stemmerfrabalkan/1999/aschehoug" ;
+    rdfs:label "Stemmer fra Balkan ; Atten dager i mai (Aschehoug, 1999)" ;
+    rdamd:P30156 "Stemmer fra Balkan" ;
+    rdamd:P30117 "Jo Nesbø. Atten dager i mai / Espen Søbye" ;
+    rdamd:P30182 "337 s., pl. ill." ;
+    rdamd:P30176 "Aschehoug" ;
+    rdamd:P30088 "Oslo" ;
+    rdamd:P30011 "1999" ;
+    rdamd:P30137 "Har litteraturliste" ;
+    rdamd:P30004 "ISBN 82-03-18212-7" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/nesbo/agent/aschehoug> ;
+    rdamo:P30139 <http://example.org/nesbo/exp/stemmerfrabalkan/nob>,
+        <http://example.org/nesbo/exp/attendagerimai/nob> .
 
 # ---------------------------------------------------------------------------
 # Single stories on their own: the audio drama Sjalusimannen and Danish audiobooks

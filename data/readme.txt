@@ -14,7 +14,8 @@ Nesbo.ttl: "Collections and aggregates" - Jo Nesbø's two short story collection
   combining both collections (Aschehoug 2022, the English translation) are not works of
   their own; French translations by collection and story. Also six novels with their first Norwegian editions, and four publications
   holding two novels each (Bokklubben, two audiobooks, a German omnibus), the audio drama
-  Sjalusimannen in four episodes and three Danish audiobooks of single stories. Publication data
+  Sjalusimannen in four episodes, three Danish audiobooks of single stories, and Stemmer fra
+  Balkan (1999), one book with non-fiction texts by two authors (Nesbø, Espen Søbye). Publication data
   from Nasjonalbiblioteket and BnF; ad hoc http://example.org/nesbo/... identifiers.
   Loaded into the local repository Nesbo.
 OrientExpress.ttl: "Adaptations and other relationships" - Agatha Christie's Murder on the
