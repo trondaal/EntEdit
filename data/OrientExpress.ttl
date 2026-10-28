@@ -37,11 +37,23 @@
 #   - study guide, Gale 2016 (er veiledning til)
 #   - the notes and glossary in the Collins reader (er supplement til), a work
 #     of their own embodied in the same book as the abridged text
+#   - the film music of the 1974 and 2017 films (Richard Rodney Bennett,
+#     Patrick Doyle): music works of their own, each "er musikk for spillefilm"
+#     the film's expression. RDA does not count film music as a supplement; the
+#     profile offers the relationship at expression level only
+#
+# The Disney parody also has a Norwegian translation, "Mysteriet på
+# Orientekspressen" in Donalds litteraturhistorie 6 (2015), identified through
+# Inducks (story code I TL 1566-AP); the translator is not named.
+#
+# Same expression, alternative manifestations: two large print editions of the
+# English text (Ulverscroft, HarperLuxe), each "har ekvivalent" an ordinary
+# edition (the inverse is the same property).
 #
 # Not recorded, as exercises: the French and other translations, the 2001 CBS
 # film, the 2023 computer game, the manifestations of the plays and the TV
-# episode, the 1934 first editions' extent, Richard Rodney Bennett's film
-# music.
+# episode, the 1934 first editions' extent, the song "Never Forget" on the 2017
+# soundtrack.
 #
 # Sources: Nasjonalbiblioteket (api.nb.no) for the Norwegian editions, library
 # catalogues and the publishers for the others. Identifiers are ad hoc
@@ -218,6 +230,26 @@
     rdaad:P50413 "Gatto, Luciano" ;
     rdfs:label "Gatto, Luciano" .
 
+<http://example.org/orient/agent/bennett>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/orient/agent/bennett" ;
+    rdaad:P50413 "Bennett, Richard Rodney" ;
+    rdfs:label "Bennett, Richard Rodney" ;
+    rdaad:P50339 "1936-2012" .
+
+<http://example.org/orient/agent/doyle>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/orient/agent/doyle" ;
+    rdaad:P50413 "Doyle, Patrick" ;
+    rdfs:label "Doyle, Patrick" ;
+    rdaad:P50339 "1953-" .
+
+<http://example.org/orient/agent/shearman>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/orient/agent/shearman" ;
+    rdaad:P50413 "Shearman, James" ;
+    rdfs:label "Shearman, James" .
+
 # ---------------------------------------------------------------------------
 # Works
 # ---------------------------------------------------------------------------
@@ -335,6 +367,26 @@
     rdawo:P10061 <http://example.org/orient/agent/prosperi> ;
     rdawo:P10058 <http://example.org/orient/agent/gatto> ;
     rdawo:P10197 <http://example.org/orient/work/novel> .
+
+<http://example.org/orient/work/music1974>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/orient/work/music1974" ;
+    rdawd:P10223 "Murder on the Orient Express" ;
+    rdfs:label "Murder on the Orient Express (filmmusikk, Bennett, Richard Rodney, 1974)" ;
+    rdawd:P10219 "1974" ;
+    rdawd:P10330 "Musikk til Sidney Lumets film (1974). Nominert til Oscar for beste filmmusikk" ;
+    entedit:P01 vtp:V1001 ;
+    rdawo:P10053 <http://example.org/orient/agent/bennett> .
+
+<http://example.org/orient/work/music2017>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/orient/work/music2017" ;
+    rdawd:P10223 "Murder on the Orient Express" ;
+    rdfs:label "Murder on the Orient Express (filmmusikk, Doyle, Patrick, 2017)" ;
+    rdawd:P10219 "2017" ;
+    rdawd:P10330 "Musikk til Kenneth Branaghs film (2017)" ;
+    entedit:P01 vtp:V1001 ;
+    rdawo:P10053 <http://example.org/orient/agent/doyle> .
 
 <http://example.org/orient/work/studyguide>
     a rdac:C10001 ;
@@ -562,6 +614,41 @@
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ita> ;
     rdaeo:P20231 <http://example.org/orient/work/topolino> .
 
+<http://example.org/orient/exp/topolino/nob>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/orient/exp/topolino/nob" ;
+    rdaed:P20315 "Mysteriet på Orientekspressen" ;
+    rdfs:label "Mysteriet på Orientekspressen (Prosperi ; Gatto ; norsk)" ;
+    rdaed:P20071 "Norsk oversettelse; oversetteren er ikke navngitt. Historien kom på norsk første gang som «Eventyr på Orientekspressen» i Donald Pocket 96 (1989); om teksten fra 2015 er en ny oversettelse, er ikke undersøkt" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020>,
+        <http://rdaregistry.info/termList/RDAContentType/1014> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://example.org/orient/work/topolino> ;
+    rdaeo:P20141 <http://example.org/orient/exp/topolino> .
+
+<http://example.org/orient/exp/music1974>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/orient/exp/music1974" ;
+    rdaed:P20315 "Murder on the Orient Express" ;
+    rdfs:label "Murder on the Orient Express (filmmusikk, Bennett, 1974)" ;
+    rdaed:P20214 "1974" ;
+    rdaed:P20071 "Spilt av Orchestra of the Royal Opera House, Covent Garden" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1011> ;
+    rdaeo:P20231 <http://example.org/orient/work/music1974> ;
+    rdaeo:P20252 <http://example.org/orient/exp/film1974> .
+
+<http://example.org/orient/exp/music2017>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/orient/exp/music2017" ;
+    rdaed:P20315 "Murder on the Orient Express" ;
+    rdfs:label "Murder on the Orient Express (filmmusikk, Doyle, 2017)" ;
+    rdaed:P20214 "2017" ;
+    rdaed:P20071 "Innspilt i London (AIR Lyndhurst Hall og AIR-Edel). Med sangen «Never Forget» (Doyle / Branagh), sunget av Michelle Pfeiffer" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1011> ;
+    rdaeo:P20231 <http://example.org/orient/work/music2017> ;
+    rdaeo:P20011 <http://example.org/orient/agent/shearman> ;
+    rdaeo:P20252 <http://example.org/orient/exp/film2017> .
+
 <http://example.org/orient/exp/studyguide>
     a rdac:C10006 ;
     rdaxd:P00018 "http://example.org/orient/exp/studyguide" ;
@@ -629,6 +716,44 @@
     rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
     rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
     rdamo:P30139 <http://example.org/orient/exp/novel/eng> .
+
+<http://example.org/orient/manifestation/1965/ulverscroft>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/orient/manifestation/1965/ulverscroft" ;
+    rdfs:label "Murder on the Orient Express (Ulverscroft, 1965, stor skrift)" ;
+    rdamd:P30156 "Murder on the Orient Express" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30182 "372 pages (large print)" ;
+    rdamd:P30169 "23 cm" ;
+    rdamd:P30176 "Ulverscroft" ;
+    rdamd:P30088 "Leicester" ;
+    rdamd:P30011 "1965" ;
+    rdamd:P30137 "Large print. ISBN-en står i bibliotekenes poster, men må høre til et senere opplag" ;
+    rdamd:P30004 "ISBN 0708901883" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/orient/exp/novel/eng> ;
+    rdamo:P30024 <http://example.org/orient/manifestation/1934/collins> .
+
+<http://example.org/orient/manifestation/2011/harperluxe>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/orient/manifestation/2011/harperluxe" ;
+    rdfs:label "Murder on the Orient Express (HarperLuxe, 2011, stor skrift)" ;
+    rdamd:P30156 "Murder on the Orient Express" ;
+    rdamd:P30142 "a Hercule Poirot mystery" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30107 "First HarperLuxe edition" ;
+    rdamd:P30182 "xii, 329 pages (large print)" ;
+    rdamd:P30169 "23 cm" ;
+    rdamd:P30176 "HarperLuxe" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "[2011]" ;
+    rdamd:P30137 "Large print" ;
+    rdamd:P30004 "ISBN 9780062081537" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/orient/exp/novel/eng> ;
+    rdamo:P30024 <http://example.org/orient/manifestation/2017/harpercollins> .
 
 <http://example.org/orient/manifestation/1975/aschehoug>
     a rdac:C10007 ;
@@ -864,6 +989,56 @@
     rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
     rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
     rdamo:P30139 <http://example.org/orient/exp/topolino> .
+
+<http://example.org/orient/manifestation/2015/egmont>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/orient/manifestation/2015/egmont" ;
+    rdfs:label "Donalds litteraturhistorie 6 : Mysteriet på Orientekspressen og andre klassikere (Egmont, 2015)" ;
+    rdamd:P30156 "Donalds litteraturhistorie. 6, Mysteriet på Orientekspressen og andre klassikere" ;
+    rdamd:P30117 "[redaktør: Solveig Thime ; forord og introduksjoner er oversatt av Tor Tveite]" ;
+    rdamd:P30182 "279 s. : kol. ill." ;
+    rdamd:P30169 "26 cm" ;
+    rdamd:P30176 "Egmont Comics Nordic" ;
+    rdamd:P30088 "Oslo" ;
+    rdamd:P30011 "2015" ;
+    rdamd:P30137 "Walt Disney. Fem Disney-tegneserier etter litterære klassikere, hver med en kort introduksjon til boka den bygger på; bare «Mysteriet på Orientekspressen» er registrert" ;
+    rdamd:P30004 "ISBN 978-82-429-5053-6" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/orient/exp/topolino/nob> .
+
+<http://example.org/orient/manifestation/1974/emi-lp>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/orient/manifestation/1974/emi-lp" ;
+    rdfs:label "Murder on the Orient Express (EMI, 1974, LP, filmmusikk)" ;
+    rdamd:P30156 "Murder on the Orient Express" ;
+    rdamd:P30142 "original soundtrack" ;
+    rdamd:P30117 "music composed by Richard Rodney Bennett" ;
+    rdamd:P30182 "1 LP" ;
+    rdamd:P30176 "EMI" ;
+    rdamd:P30011 "1974" ;
+    rdamd:P30137 "Spilt av Orchestra of the Royal Opera House, Covent Garden. Utgitt i USA av Capitol (ST-11361)" ;
+    rdamd:P30004 "EMI EMC 3054" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1004> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1001> ;
+    rdamo:P30139 <http://example.org/orient/exp/music1974> .
+
+<http://example.org/orient/manifestation/2017/sony-cd>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/orient/manifestation/2017/sony-cd" ;
+    rdfs:label "Murder on the Orient Express (Sony Classical, 2017, CD, filmmusikk)" ;
+    rdamd:P30156 "Murder on the Orient Express" ;
+    rdamd:P30142 "original motion picture soundtrack" ;
+    rdamd:P30117 "music by Patrick Doyle" ;
+    rdamd:P30182 "1 CD (57 min)" ;
+    rdamd:P30176 "Sony Classical" ;
+    rdamd:P30088 "[New York]" ;
+    rdamd:P30011 "[2017]" ;
+    rdamd:P30137 "Dirigent: James Shearman. Spor 23: «Never Forget», sunget av Michelle Pfeiffer" ;
+    rdamd:P30004 "Sony Classical 88985466342" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1004> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1001> ;
+    rdamo:P30139 <http://example.org/orient/exp/music2017> .
 
 <http://example.org/orient/manifestation/2016/gale>
     a rdac:C10007 ;

@@ -20,9 +20,11 @@ Nesbo.ttl: "Collections and aggregates" - Jo Nesbø's two short story collection
 OrientExpress.ttl: "Adaptations and other relationships" - Agatha Christie's Murder on the
   Orient Express (1934) and what derives from it: two Norwegian translations, an abridged
   ELT reader, four audiobooks (new expressions of the novel), and films, TV, radio, a play,
-  a graphic novel with a Norwegian translation, a computer game, a Disney parody, a study
-  guide and a supplement (new works, related at work level). Publication data from
-  Nasjonalbiblioteket and library catalogues; ad hoc http://example.org/orient/...
+  a graphic novel with a Norwegian translation, a computer game, a Disney parody with a
+  Norwegian translation, a study guide and a supplement (new works, related at work level),
+  the film music of the 1974 and 2017 films (music for the films' expressions) and two
+  large print editions (equivalent manifestations). Publication data from
+  Nasjonalbiblioteket, library catalogues and Inducks; ad hoc http://example.org/orient/...
   identifiers. Loaded into the local repository OrientExpress.
 LittleWomen.ttl: "Works built on works" - Louisa May Alcott's Little Women for an
   international group (notes in English): the novel as a whole with its two parts, the
