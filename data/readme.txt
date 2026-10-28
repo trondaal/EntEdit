@@ -24,7 +24,9 @@ OrientExpress.ttl: "Adaptations and other relationships" - Agatha Christie's Mur
   a graphic novel with a Norwegian translation, a computer game, a Disney parody with a
   Norwegian translation, a study guide and a supplement (new works, related at work level),
   the film music of the 1974 and 2017 films (music for the films' expressions) and two
-  large print editions (equivalent manifestations). Publication data from
+  large print editions (equivalent manifestations); subject relationships: a study guide
+  about the novel, and a documentary about the 1974 film and a portrait of Christie,
+  both extras on its 2004 DVD. Publication data from
   Nasjonalbiblioteket, library catalogues and Inducks; ad hoc http://example.org/orient/...
   identifiers. Loaded into the local repository OrientExpress.
 LittleWomen.ttl: "Works built on works" - Louisa May Alcott's Little Women for an

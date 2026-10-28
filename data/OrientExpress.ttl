@@ -34,7 +34,7 @@
 #     RDA has none for games)
 #   - Disney parody, Topolino sull'Orient Express 1985 (er parodi av). The story
 #     is a jewel theft, not a murder: parody, imitation or only inspiration?
-#   - study guide, Gale 2016 (er veiledning til)
+#   - study guide, Gale 2016 (er veiledning til, and har emne the novel)
 #   - the notes and glossary in the Collins reader (er supplement til), a work
 #     of their own embodied in the same book as the abridged text
 #   - the film music of the 1974 and 2017 films (Richard Rodney Bennett,
@@ -45,6 +45,16 @@
 # The Disney parody also has a Norwegian translation, "Mysteriet på
 # Orientekspressen" in Donalds litteraturhistorie 6 (2015), identified through
 # Inducks (story code I TL 1566-AP); the translator is not named.
+#
+# Subject relationships (har emne, rdawo:P10257 work, rdawo:P10319 agent):
+#   - Novel-Ties study guide, Learning Links 1992: about the novel, but not a
+#     guide to a particular edition; har emne only, unlike the Gale guide
+#   - Making 'Murder on the Orient Express', Laurent Bouzereau 2004: a
+#     documentary in four parts about the 1974 film (har emne the film)
+#   - Agatha Christie: a portrait, 2004: a short film with Christie's grandson
+#     Mathew Prichard (har emne the agent Christie)
+# The two short films came out as extras on Paramount's 2004 DVD of the 1974
+# film, which therefore embodies three expressions; the trailer is left out.
 #
 # Same expression, alternative manifestations: two large print editions of the
 # English text (Ulverscroft, HarperLuxe), each "har ekvivalent" an ordinary
@@ -250,6 +260,13 @@
     rdaad:P50413 "Shearman, James" ;
     rdfs:label "Shearman, James" .
 
+<http://example.org/orient/agent/bouzereau>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://example.org/orient/agent/bouzereau" ;
+    rdaad:P50413 "Bouzereau, Laurent" ;
+    rdfs:label "Bouzereau, Laurent" ;
+    rdaad:P50339 "1962-" .
+
 # ---------------------------------------------------------------------------
 # Works
 # ---------------------------------------------------------------------------
@@ -397,7 +414,8 @@
     rdawd:P10330 "Utdrag fra Gales Novels for Students: handlingsreferat, personer, forfatterbiografi, studiespørsmål, historisk bakgrunn, videre lesning" ;
     entedit:P01 vtp:V1000 ;
     entedit:P02 <https://id.nb.no/vocabulary/ntsf/1726> ;
-    rdawo:P10150 <http://example.org/orient/work/novel> .
+    rdawo:P10150 <http://example.org/orient/work/novel> ;
+    rdawo:P10257 <http://example.org/orient/work/novel> .
 
 <http://example.org/orient/work/elt-notes>
     a rdac:C10001 ;
@@ -410,6 +428,40 @@
     entedit:P02 <https://id.nb.no/vocabulary/ntsf/1504>,
         <https://id.nb.no/vocabulary/ntsf/184> ;
     rdawo:P10154 <http://example.org/orient/work/novel> .
+
+<http://example.org/orient/work/noveltie>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/orient/work/noveltie" ;
+    rdawd:P10223 "Murder on the Orient Express : Novel-Ties study guide" ;
+    rdfs:label "Murder on the Orient Express : Novel-Ties study guide (Learning Links, 1992)" ;
+    rdawd:P10219 "1992" ;
+    rdawd:P10330 "Studieveiledning for lærere, klassetrinn 10-12: ordforråd, spørsmål og oppgaver kapittel for kapittel" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/185> ;
+    rdawo:P10257 <http://example.org/orient/work/novel> .
+
+<http://example.org/orient/work/making1974>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/orient/work/making1974" ;
+    rdawd:P10223 "Making 'Murder on the Orient Express'" ;
+    rdfs:label "Making 'Murder on the Orient Express' (dokumentar, Bouzereau, 2004)" ;
+    rdawd:P10219 "2004" ;
+    rdawd:P10330 "Dokumentar i fire deler (All aboard!, The passengers, The ride, The end of the line) med Sidney Lumet, produsentene Richard Goodwin og John Brabourne og flere av skuespillerne" ;
+    entedit:P01 vtp:V1002 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/1202> ;
+    rdawo:P10013 <http://example.org/orient/agent/bouzereau> ;
+    rdawo:P10257 <http://example.org/orient/work/film1974> .
+
+<http://example.org/orient/work/portrait>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/orient/work/portrait" ;
+    rdawd:P10223 "Agatha Christie : a portrait" ;
+    rdfs:label "Agatha Christie : a portrait (dokumentar, 2004)" ;
+    rdawd:P10219 "2004" ;
+    rdawd:P10330 "Kort film der barnebarnet Mathew Prichard forteller om Agatha Christie og bakgrunnen for Hercule Poirot og Mord på Orientekspressen" ;
+    entedit:P01 vtp:V1002 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/1202> ;
+    rdawo:P10319 <http://example.org/orient/agent/christie> .
 
 # ---------------------------------------------------------------------------
 # Expressions
@@ -669,6 +721,36 @@
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     rdaeo:P20231 <http://example.org/orient/work/elt-notes> .
 
+<http://example.org/orient/exp/noveltie>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/orient/exp/noveltie" ;
+    rdaed:P20315 "Murder on the Orient Express : Novel-Ties study guide" ;
+    rdfs:label "Murder on the Orient Express : Novel-Ties study guide (Learning Links, 1992)" ;
+    rdaed:P20214 "1992" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/orient/work/noveltie> .
+
+<http://example.org/orient/exp/making1974>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/orient/exp/making1974" ;
+    rdaed:P20315 "Making 'Murder on the Orient Express'" ;
+    rdfs:label "Making 'Murder on the Orient Express' (dokumentar, Bouzereau, 2004)" ;
+    rdaed:P20214 "2004" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1023> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/orient/work/making1974> .
+
+<http://example.org/orient/exp/portrait>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/orient/exp/portrait" ;
+    rdaed:P20315 "Agatha Christie : a portrait" ;
+    rdfs:label "Agatha Christie : a portrait (dokumentar, 2004)" ;
+    rdaed:P20214 "2004" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1023> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/orient/work/portrait> .
+
 # ---------------------------------------------------------------------------
 # Manifestations
 # ---------------------------------------------------------------------------
@@ -901,6 +983,22 @@
     rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1008> ;
     rdamo:P30139 <http://example.org/orient/exp/film1974> .
 
+<http://example.org/orient/manifestation/2004/film1974-dvd>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/orient/manifestation/2004/film1974-dvd" ;
+    rdfs:label "Murder on the Orient Express (DVD, Paramount, 2004, Lumet)" ;
+    rdamd:P30156 "Murder on the Orient Express" ;
+    rdamd:P30117 "directed by Sidney Lumet" ;
+    rdamd:P30182 "1 videoplate (DVD) (127 min) : lyd, kol." ;
+    rdamd:P30176 "Paramount Home Entertainment" ;
+    rdamd:P30011 "2004" ;
+    rdamd:P30137 "Widescreen 1.85:1. Utgitt 7. september 2004. Ekstramateriale: Agatha Christie : a portrait (10 min) ; Making 'Murder on the Orient Express' (dokumentar i fire deler, 49 min) ; trailer" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1060> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1008> ;
+    rdamo:P30139 <http://example.org/orient/exp/film1974>,
+        <http://example.org/orient/exp/making1974>,
+        <http://example.org/orient/exp/portrait> .
+
 <http://example.org/orient/manifestation/2017/film2017-dvd>
     a rdac:C10007 ;
     rdaxd:P00018 "http://example.org/orient/manifestation/2017/film2017-dvd" ;
@@ -1053,3 +1151,19 @@
     rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
     rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
     rdamo:P30139 <http://example.org/orient/exp/studyguide> .
+
+<http://example.org/orient/manifestation/1992/learninglinks>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/orient/manifestation/1992/learninglinks" ;
+    rdfs:label "Murder on the Orient Express : Novel-Ties study guide (Learning Links, 1992)" ;
+    rdamd:P30156 "Murder on the Orient Express" ;
+    rdamd:P30142 "Novel-Ties study guide" ;
+    rdamd:P30182 "31 sider" ;
+    rdamd:P30176 "Learning Links" ;
+    rdamd:P30088 "[New Hyde Park, N.Y.]" ;
+    rdamd:P30011 "1992" ;
+    rdamd:P30106 "Novel-ties" ;
+    rdamd:P30004 "ISBN 0-88122-717-X" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/orient/exp/noveltie> .
