@@ -31,10 +31,10 @@
 #   - Blood on snow : Der Auftrag & Das Versteck (Ullstein 2018), the German
 #     translations of Blod på snø and Mere blod, under a collective title found
 #     only in this edition
-# Each is modelled like the story collections: an omnibus work (entedit:T04)
-# with the novels as parts. Whether a publication without a collective title
-# needs a work of its own, and whether the book and the audiobook of
-# Flaggermusmannen ; Kakerlakkene share one, are points for discussion.
+# The two novels are only put together in the publication: there is no omnibus
+# work or expression, and the manifestation embodies the two novels'
+# expressions directly. This differs from the story collections, which are
+# works of their own.
 #
 # Single stories on their own:
 #   - the audio drama Sjalusimannen (Aschehoug 2021), four episodes published
@@ -1064,91 +1064,6 @@
     rdaeo:P20231 <http://example.org/nesbo/work/mereblod> ;
     rdaeo:P20037 <http://example.org/nesbo/agent/frauenlob> .
 
-<http://example.org/nesbo/work/flaggermusmannen-kakerlakkene>
-    a rdac:C10001 ;
-    rdaxd:P00018 "http://example.org/nesbo/work/flaggermusmannen-kakerlakkene" ;
-    rdawd:P10223 "Flaggermusmannen ; Kakerlakkene" ;
-    rdfs:label "Flaggermusmannen ; Kakerlakkene (samlebind, Nesbø, Jo)" ;
-    rdawd:P10330 "De to første romanene om Harry Hole i én utgivelse, uten felles tittel. Utgitt som bok (Bokklubben 2006) og som lydbok (Lydbokforlaget 2008)" ;
-    entedit:P01 vtp:V1000 ;
-    entedit:P02 entedit:T04 ;
-    rdawo:P10061 <http://example.org/nesbo/agent/nesbojo> ;
-    rdawo:P10147 <http://example.org/nesbo/work/flaggermusmannen>,
-        <http://example.org/nesbo/work/kakerlakkene> .
-
-<http://example.org/nesbo/work/snomannen-panserhjerte>
-    a rdac:C10001 ;
-    rdaxd:P00018 "http://example.org/nesbo/work/snomannen-panserhjerte" ;
-    rdawd:P10223 "Snømannen ; Panserhjerte" ;
-    rdfs:label "Snømannen ; Panserhjerte (samlebind, Nesbø, Jo)" ;
-    rdawd:P10330 "Den sjuende og åttende romanen om Harry Hole i én lydbok, uten felles tittel" ;
-    entedit:P01 vtp:V1000 ;
-    entedit:P02 entedit:T04 ;
-    rdawo:P10061 <http://example.org/nesbo/agent/nesbojo> ;
-    rdawo:P10147 <http://example.org/nesbo/work/snomannen>,
-        <http://example.org/nesbo/work/panserhjerte> .
-
-<http://example.org/nesbo/work/bloodonsnow>
-    a rdac:C10001 ;
-    rdaxd:P00018 "http://example.org/nesbo/work/bloodonsnow" ;
-    rdawd:P10223 "Blood on snow : Der Auftrag & Das Versteck" ;
-    rdfs:label "Blood on snow : Der Auftrag & Das Versteck (samlebind, Nesbø, Jo)" ;
-    rdawd:P10330 "Tysk samlebind med de to kortromanene Blod på snø og Mere blod. Fellestittelen finnes bare i den tyske utgaven" ;
-    entedit:P01 vtp:V1000 ;
-    entedit:P02 entedit:T04 ;
-    rdawo:P10061 <http://example.org/nesbo/agent/nesbojo> ;
-    rdawo:P10147 <http://example.org/nesbo/work/blodpasno>,
-        <http://example.org/nesbo/work/mereblod> .
-
-<http://example.org/nesbo/exp/flaggermusmannen-kakerlakkene/nob>
-    a rdac:C10006 ;
-    rdaxd:P00018 "http://example.org/nesbo/exp/flaggermusmannen-kakerlakkene/nob" ;
-    rdaed:P20315 "Flaggermusmannen ; Kakerlakkene" ;
-    rdfs:label "Flaggermusmannen ; Kakerlakkene (samlebind, bok)" ;
-    rdaed:P20214 "2006" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://example.org/nesbo/work/flaggermusmannen-kakerlakkene> ;
-    rdaeo:P20145 <http://example.org/nesbo/exp/flaggermusmannen/nob>,
-        <http://example.org/nesbo/exp/kakerlakkene/nob> .
-
-<http://example.org/nesbo/exp/flaggermusmannen-kakerlakkene/nob-lyd>
-    a rdac:C10006 ;
-    rdaxd:P00018 "http://example.org/nesbo/exp/flaggermusmannen-kakerlakkene/nob-lyd" ;
-    rdaed:P20315 "Flaggermusmannen ; Kakerlakkene" ;
-    rdfs:label "Flaggermusmannen ; Kakerlakkene (samlebind, lydbok)" ;
-    rdaed:P20214 "2008" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://example.org/nesbo/work/flaggermusmannen-kakerlakkene> ;
-    rdaeo:P20145 <http://example.org/nesbo/exp/flaggermusmannen/nob-kolsrud>,
-        <http://example.org/nesbo/exp/kakerlakkene/nob-schau> .
-
-<http://example.org/nesbo/exp/snomannen-panserhjerte/nob-lyd>
-    a rdac:C10006 ;
-    rdaxd:P00018 "http://example.org/nesbo/exp/snomannen-panserhjerte/nob-lyd" ;
-    rdaed:P20315 "Snømannen ; Panserhjerte" ;
-    rdfs:label "Snømannen ; Panserhjerte (samlebind, lydbok)" ;
-    rdaed:P20214 "2010" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
-    rdaeo:P20231 <http://example.org/nesbo/work/snomannen-panserhjerte> ;
-    rdaeo:P20145 <http://example.org/nesbo/exp/snomannen/nob-storhoi>,
-        <http://example.org/nesbo/exp/panserhjerte/nob-wintherlarsen> .
-
-<http://example.org/nesbo/exp/bloodonsnow/ger>
-    a rdac:C10006 ;
-    rdaxd:P00018 "http://example.org/nesbo/exp/bloodonsnow/ger" ;
-    rdaed:P20315 "Blood on snow : Der Auftrag & Das Versteck" ;
-    rdfs:label "Blood on snow : Der Auftrag & Das Versteck (Deutsch von Günther Frauenlob)" ;
-    rdaed:P20214 "2018" ;
-    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
-    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
-    rdaeo:P20231 <http://example.org/nesbo/work/bloodonsnow> ;
-    rdaeo:P20037 <http://example.org/nesbo/agent/frauenlob> ;
-    rdaeo:P20145 <http://example.org/nesbo/exp/blodpasno/ger>,
-        <http://example.org/nesbo/exp/mereblod/ger> .
-
 <http://example.org/nesbo/manifestation/flaggermusmannen/1997/aschehoug>
     a rdac:C10007 ;
     rdaxd:P00018 "http://example.org/nesbo/manifestation/flaggermusmannen/1997/aschehoug" ;
@@ -1266,8 +1181,7 @@
     rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
     rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
     rdamo:P30420 <http://example.org/nesbo/agent/bokklubben> ;
-    rdamo:P30139 <http://example.org/nesbo/exp/flaggermusmannen-kakerlakkene/nob>,
-        <http://example.org/nesbo/exp/flaggermusmannen/nob>,
+    rdamo:P30139 <http://example.org/nesbo/exp/flaggermusmannen/nob>,
         <http://example.org/nesbo/exp/kakerlakkene/nob> .
 
 <http://example.org/nesbo/manifestation/flaggermusmannen-kakerlakkene/2008/lydbokforlaget>
@@ -1284,8 +1198,7 @@
     rdamd:P30004 "ISBN 9788242145024" ;
     rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1001> ;
     rdamo:P30420 <http://example.org/nesbo/agent/lydbokforlaget> ;
-    rdamo:P30139 <http://example.org/nesbo/exp/flaggermusmannen-kakerlakkene/nob-lyd>,
-        <http://example.org/nesbo/exp/flaggermusmannen/nob-kolsrud>,
+    rdamo:P30139 <http://example.org/nesbo/exp/flaggermusmannen/nob-kolsrud>,
         <http://example.org/nesbo/exp/kakerlakkene/nob-schau> .
 
 <http://example.org/nesbo/manifestation/snomannen-panserhjerte/2010/lydbokforlaget>
@@ -1302,8 +1215,7 @@
     rdamd:P30004 "ISBN 9788242149350" ;
     rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1001> ;
     rdamo:P30420 <http://example.org/nesbo/agent/lydbokforlaget> ;
-    rdamo:P30139 <http://example.org/nesbo/exp/snomannen-panserhjerte/nob-lyd>,
-        <http://example.org/nesbo/exp/snomannen/nob-storhoi>,
+    rdamo:P30139 <http://example.org/nesbo/exp/snomannen/nob-storhoi>,
         <http://example.org/nesbo/exp/panserhjerte/nob-wintherlarsen> .
 
 <http://example.org/nesbo/manifestation/bloodonsnow/2018/ullstein>
@@ -1323,8 +1235,7 @@
     rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
     rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
     rdamo:P30420 <http://example.org/nesbo/agent/ullstein> ;
-    rdamo:P30139 <http://example.org/nesbo/exp/bloodonsnow/ger>,
-        <http://example.org/nesbo/exp/blodpasno/ger>,
+    rdamo:P30139 <http://example.org/nesbo/exp/blodpasno/ger>,
         <http://example.org/nesbo/exp/mereblod/ger> .
 
 # ---------------------------------------------------------------------------
