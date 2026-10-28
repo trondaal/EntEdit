@@ -209,17 +209,36 @@ export const isConfigured = (): boolean => {
  * Get default configuration for first-time setup
  */
 /**
+ * A repository id as GraphDB allows it. Only a plain name is accepted from a link
+ * (`?repo=`), never an address, so a link can only point at the server that served
+ * the app.
+ */
+const REPOSITORY_NAME = /^[A-Za-z0-9_-][A-Za-z0-9._-]*$/;
+
+/**
+ * The endpoint of a repository on the server that served the app, or null when the
+ * name is not a plain repository id.
+ */
+export const getRepositoryEndpointUrl = (name: string, origin?: string): string | null => {
+  if (!REPOSITORY_NAME.test(name) || name.endsWith(".")) return null;
+  let base = origin;
+  if (base === undefined) {
+    try {
+      base = window.location.origin;
+    } catch {
+      base = "http://localhost";
+    }
+  }
+  return `${base}/graphdb/repositories/${name}`;
+};
+
+/**
  * Default endpoint for the first run: the GraphDB proxied by the same server
  * that served the app. A hard-coded "http://localhost/..." is wrong as soon as
  * the app runs on another port or is opened from another machine.
  */
-export const getDefaultEndpointUrl = (): string => {
-  try {
-    return `${window.location.origin}/graphdb/repositories/EntEdit`;
-  } catch {
-    return "http://localhost/graphdb/repositories/EntEdit";
-  }
-};
+export const getDefaultEndpointUrl = (): string =>
+  getRepositoryEndpointUrl("EntEdit") ?? "http://localhost/graphdb/repositories/EntEdit";
 
 export const getDefaultConfiguration = (): AppConfiguration => {
   return {

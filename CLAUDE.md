@@ -670,6 +670,11 @@ writes `<repo>.partial.trigs.gz`.
   `entEdit.preferences`); credentials live in sessionStorage
 - `ConfigurationWizard` shown on first run or when unconfigured
 - URL parameter `?nosearch` hides the search tab
+- `?repo=<name>` opens that repository of the serving host (`getRepositoryEndpointUrl`: a
+  plain GraphDB repository id only, never an address, so a link cannot point the app at
+  another server); `?demo` is the same for `EntEdit`. Both are session-only: nothing is saved,
+  no login is sent (read-only unless the repository allows anonymous writes), and a name that
+  is not a plain id is ignored. The main use is teaching links to specific example repositories
 - Default endpoint is derived from the app's own origin
   (`<origin>/graphdb/repositories/EntEdit`), not a hard-coded host
 

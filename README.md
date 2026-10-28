@@ -14,7 +14,9 @@ A read-only online demo is available at
 required. Explore the interface with sample bibliographic data; the demo database
 can be read but not changed. On a first visit the setup wizard offers the demo
 database as its default: click through it, or add `?demo` to the address to skip
-the wizard.
+the wizard. To link to another repository on the same server, use `?repo=<name>`
+(for example `?repo=Examples`): it opens that repository read-only for the session,
+without changing the browser's saved settings.
 
 ## Features
 

@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { DEFAULT_DATA_GRAPH } from "./dataGraph";
-import { loadConfiguration, saveConfiguration } from "./configManager";
+import { getRepositoryEndpointUrl, loadConfiguration, saveConfiguration } from "./configManager";
 
 const memoryStorage = () => {
   const data = new Map<string, string>();
@@ -75,5 +75,35 @@ describe("the part-relationship preference, as stored", () => {
   it("is both when what is stored is not a level", () => {
     local.setItem("entEdit.preferences", JSON.stringify({ partLevels: "everything" }));
     expect(loadConfiguration()?.preferences.partLevels).toBe("both");
+  });
+});
+
+describe("getRepositoryEndpointUrl", () => {
+  it("builds the endpoint of a repository on the given host", () => {
+    expect(getRepositoryEndpointUrl("Examples", "https://app.entedit.org")).toBe(
+      "https://app.entedit.org/graphdb/repositories/Examples",
+    );
+    expect(getRepositoryEndpointUrl("VBINF6000-H26-03", "http://localhost:5173")).toBe(
+      "http://localhost:5173/graphdb/repositories/VBINF6000-H26-03",
+    );
+  });
+
+  it("accepts only a plain repository name, never an address or a path", () => {
+    for (const name of [
+      "",
+      "..",
+      ".hidden",
+      "a.",
+      "a/b",
+      "../x",
+      "http://evil.example/x",
+      "//evil.example",
+      "a b",
+      "a?b",
+      "a#b",
+      "a%2Fb",
+    ]) {
+      expect(getRepositoryEndpointUrl(name, "https://app.entedit.org")).toBeNull();
+    }
   });
 });

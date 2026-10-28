@@ -24,6 +24,7 @@ import {
   clearConfiguration,
   getDefaultConfiguration,
   getDefaultEndpointUrl,
+  getRepositoryEndpointUrl,
   type AppConfiguration
 } from "./utils/configManager";
 import {
@@ -273,7 +274,16 @@ function AppInner() {
     [partLevels, resultColors],
   );
   const showLogging = useMemo(() => !urlParams.has("nologging"), [urlParams]);
-  const isDemoMode = useMemo(() => urlParams.has("demo"), [urlParams]);
+  // ?repo=<name> opens a repository of the serving host, ?demo is the EntEdit repository;
+  // both are for this session only: nothing is saved and no login is sent
+  const linkedEndpointUrl = useMemo(() => {
+    const repo = urlParams.get("repo");
+    if (repo) {
+      const url = getRepositoryEndpointUrl(repo);
+      if (url) return url;
+    }
+    return urlParams.has("demo") ? getDefaultEndpointUrl() : null;
+  }, [urlParams]);
   const langParam = useMemo(() => {
     const value = urlParams.get("lang");
     return value === "en" || value === "no" ? value : null;
@@ -289,11 +299,10 @@ function AppInner() {
   // One-time mount-time bootstrap: read from localStorage and seed app state.
   /* eslint-disable react-hooks/set-state-in-effect -- mount initialization, not derived state */
   useEffect(() => {
-    if (isDemoMode) {
+    if (linkedEndpointUrl) {
       const savedConfig = loadConfiguration();
       setAppConfig({
-        // The demo is the EntEdit repository of the server the app is served from
-        endpoint: { url: getDefaultEndpointUrl(), username: "", password: "" },
+        endpoint: { url: linkedEndpointUrl, username: "", password: "" },
         language: langParam ?? savedConfig?.language ?? "en",
         isConfigured: true,
         preferences: applyStyleOverride(
@@ -325,7 +334,7 @@ function AppInner() {
     }
 
     setLoading(false);
-  }, [isDemoMode, langParam]);
+  }, [linkedEndpointUrl, langParam]);
   /* eslint-enable react-hooks/set-state-in-effect */
 
   const handleConfigurationComplete = (
@@ -360,7 +369,7 @@ function AppInner() {
         logEvent({ type: "setting_changed", ...change });
       }
       setAppConfig({ ...appConfig, endpoint: newConfig, preferences });
-      if (!isDemoMode) {
+      if (!linkedEndpointUrl) {
         saveConfiguration(newConfig, appConfig.language, preferences);
       }
     }
@@ -376,7 +385,7 @@ function AppInner() {
         language: newLanguage,
       };
       setAppConfig(updatedConfig);
-      if (!isDemoMode) {
+      if (!linkedEndpointUrl) {
         saveConfiguration(appConfig.endpoint, newLanguage);
       }
     }
