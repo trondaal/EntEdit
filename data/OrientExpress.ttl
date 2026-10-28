@@ -22,8 +22,10 @@
 #     (er bearbeidelse til spillefilm). The 2017 film is often called a remake,
 #     but both adapt the novel; whether to add "er nyinnspilling av" is left
 #     open.
-#   - television, Agatha Christie's Poirot 2010 (er bearbeidelse for fjernsyn),
-#     an episode that is part of a series work
+#   - television, Agatha Christie's Poirot 2010 (er bearbeidelse for fjernsyn).
+#     The episode belongs to a series, but the series is not a work here: this
+#     example keeps clear of part relationships, so the series is named in the
+#     label and note only
 #   - radio, BBC Radio 4 1992 (er bearbeidelse for radio)
 #   - stage play, Ken Ludwig 2017 (er dramatisering av)
 #   - graphic novel, Eckartsberg and Chaiko 2017 (er bearbeidelse til
@@ -259,31 +261,19 @@
     rdawo:P10203 <http://example.org/orient/agent/green> ;
     rdawo:P10129 <http://example.org/orient/work/novel> .
 
-<http://example.org/orient/work/poirotseries>
-    a rdac:C10001 ;
-    rdaxd:P00018 "http://example.org/orient/work/poirotseries" ;
-    rdawd:P10223 "Agatha Christie's Poirot" ;
-    rdfs:label "Agatha Christie's Poirot (TV-serie, 1989-2013)" ;
-    rdawd:P10219 "1989-2013" ;
-    rdawd:P10330 "ITV, 70 episoder i 13 sesonger med David Suchet som Poirot" ;
-    entedit:P01 vtp:V1006 ;
-    entedit:P02 <https://id.nb.no/vocabulary/ntsf/1209>,
-        <https://id.nb.no/vocabulary/ntsf/1196> .
-
 <http://example.org/orient/work/tv2010>
     a rdac:C10001 ;
     rdaxd:P00018 "http://example.org/orient/work/tv2010" ;
     rdawd:P10223 "Murder on the Orient Express" ;
     rdfs:label "Murder on the Orient Express (Agatha Christie's Poirot, 2010)" ;
     rdawd:P10219 "2010" ;
-    rdawd:P10330 "Sendt på ITV 25. desember 2010 (sesong 12)" ;
+    rdawd:P10330 "Episode i TV-serien Agatha Christie's Poirot (ITV, 1989-2013), sendt 25. desember 2010 (sesong 12)" ;
     entedit:P01 vtp:V1006 ;
     entedit:P02 <https://id.nb.no/vocabulary/ntsf/1205>,
         <https://id.nb.no/vocabulary/ntsf/1196> ;
     rdawo:P10015 <http://example.org/orient/agent/martin> ;
     rdawo:P10203 <http://example.org/orient/agent/harcourt> ;
-    rdawo:P10132 <http://example.org/orient/work/novel> ;
-    rdawo:P10019 <http://example.org/orient/work/poirotseries> .
+    rdawo:P10132 <http://example.org/orient/work/novel> .
 
 <http://example.org/orient/work/radio1992>
     a rdac:C10001 ;
