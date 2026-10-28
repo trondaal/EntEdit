@@ -61,9 +61,9 @@
 # edition (the inverse is the same property).
 #
 # Not recorded, as exercises: the French and other translations, the 2001 CBS
-# film, the 2023 computer game, the manifestations of the plays and the TV
-# episode, the 1934 first editions' extent, the song "Never Forget" on the 2017
-# soundtrack.
+# film, the 2023 computer game, the 1934 first editions' extent, the song
+# "Never Forget" on the 2017 soundtrack, the extra "David Suchet on the Orient
+# Express" on the Poirot DVD.
 #
 # Sources: Nasjonalbiblioteket (api.nb.no) for the Norwegian editions, library
 # catalogues and the publishers for the others. Identifiers are ad hoc
@@ -999,6 +999,21 @@
         <http://example.org/orient/exp/making1974>,
         <http://example.org/orient/exp/portrait> .
 
+<http://example.org/orient/manifestation/2010/tv2010-dvd>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/orient/manifestation/2010/tv2010-dvd" ;
+    rdfs:label "Agatha Christie's Poirot. Murder on the Orient Express (DVD, Acorn Media, 2010)" ;
+    rdamd:P30156 "Agatha Christie's Poirot. Murder on the Orient Express" ;
+    rdamd:P30107 "Widescreen" ;
+    rdamd:P30182 "1 DVD (89 min) : lyd, kol. ; 12 cm" ;
+    rdamd:P30176 "Acorn Media" ;
+    rdamd:P30088 "[United States]" ;
+    rdamd:P30011 "2010" ;
+    rdamd:P30137 "Episode i sesong 12 av Agatha Christie's Poirot (ITV). Utgitt i boksen Agatha Christie's Poirot : the movie collection, set 5. Ekstramateriale: David Suchet on the Orient Express (47 min)" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1060> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1008> ;
+    rdamo:P30139 <http://example.org/orient/exp/tv2010> .
+
 <http://example.org/orient/manifestation/2017/film2017-dvd>
     a rdac:C10007 ;
     rdaxd:P00018 "http://example.org/orient/manifestation/2017/film2017-dvd" ;
@@ -1151,6 +1166,22 @@
     rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1018> ;
     rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1003> ;
     rdamo:P30139 <http://example.org/orient/exp/studyguide> .
+
+<http://example.org/orient/manifestation/2019/samuelfrench>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/orient/manifestation/2019/samuelfrench" ;
+    rdfs:label "Agatha Christie's Murder on the Orient Express (Samuel French, 2019, skuespill)" ;
+    rdamd:P30156 "Agatha Christie's Murder on the Orient Express" ;
+    rdamd:P30117 "adapted by Ken Ludwig" ;
+    rdamd:P30107 "Acting edition" ;
+    rdamd:P30182 "88 sider" ;
+    rdamd:P30176 "Samuel French" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "2019" ;
+    rdamd:P30004 "ISBN 978-0-573-70773-5" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/orient/exp/play> .
 
 <http://example.org/orient/manifestation/1992/learninglinks>
     a rdac:C10007 ;
