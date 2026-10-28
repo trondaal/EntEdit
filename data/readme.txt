@@ -9,10 +9,10 @@ Ballard/: J. G. Ballard, works and publications from ISFDB, one file per entity 
   catalogue.ttl: two music recordings (Dream cargoes, The isle is full of noises) whose
   tracks are named after Ballard stories; not in ISFDB, links to nothing in the conversion.
 Nesbo.ttl: "Collections and aggregates" - Jo Nesbø's two short story collections
-  (Sjalusimannen og andre fortellinger, Rotteøya og andre fortellinger, 2021), read
-  restrictively: each story is a work, and no collection or combination is a work or
-  expression of its own, including the editions with all 12 stories (Aschehoug 2022,
-  the English translation); French translations story by story. Also six novels with their first Norwegian editions, and four publications
+  (Sjalusimannen og andre fortellinger, Rotteøya og andre fortellinger, 2021):
+  each story and each of the two collections as work and expression; the editions
+  combining both collections (Aschehoug 2022, the English translation) are not works of
+  their own; French translations by collection and story. Also six novels with their first Norwegian editions, and four publications
   holding two novels each (Bokklubben, two audiobooks, a German omnibus), the audio drama
   Sjalusimannen in four episodes and three Danish audiobooks of single stories. Publication data
   from Nasjonalbiblioteket and BnF; ad hoc http://example.org/nesbo/... identifiers.
