@@ -205,6 +205,9 @@ EntEdit/
   0.4 KB vs 41 KB for a work with 463 parts), so the saving is payload and DOM. A
   collapsed relationship is collapsed even with one target; the expression result also
   returns its `work_uri`, which the work-level lines need to open
+- `relationshipFilter.ts` / `relationshipList.ts` - the hidden-relationships preference (set
+  matching, migration from `partLevels`) and the relationship list and usage queries behind
+  its dialog; unit-tested
 - `searchFilters.ts` - search category filters as Lucene clauses (OR within a
   field, AND across), the fields each index offers (`INDEX_FILTER_FIELDS`) and
   parsing of `lucene:facets` counts; unit-tested
@@ -701,15 +704,28 @@ cataloguing from one build:
   read as "custom", and carried across by `applyPreset` so choosing a style
   never changes it. It controls only the "inferred" chip and dashed outline;
   inferred values behave identically either way, removal included.
-- `partLevels` (`both` | `work` | `expression`, default `both`) is a seventh preference outside
-  the styles, like `showInferredMarks`: which level's "is part of" / "has part" lines the
-  search results show (`utils/partRelations.ts`). The two levels usually state the same thing
-  (isfdb: 99.9% of expression-level links have a work-level twin, and ~99.996% the other way),
-  so it is the user's choice, not a hidden merge; every other relationship is always shown.
-  It only filters lines: `RelationshipLines` reads it from `ResultDisplayContext`
-  (`hooks/useResultDisplay.ts`, provided by `App` around the search) and matches the four part
-  properties by URI, which inline relationship groups therefore carry
-  ("label ‡ property ⊢ title ‖ uri …", `SPARQL_SEP.PROPERTY`; collapsed ones already did)
+- `hiddenRelationships` (a list of property URIs, default empty) is a seventh preference outside
+  the styles, like `showInferredMarks`: the relationships whose lines the search results leave
+  out, chosen one by one in `RelationshipVisibilityDialog` (Settings → More settings → Choose…,
+  and the "n relationships hidden · Change" note under the search filters, which edits the
+  stored preference at once). It only filters lines: `RelationshipLines` reads the set from
+  `ResultDisplayContext` and matches the URI each line carries (`utils/relationshipFilter.ts`).
+  The queries read explicit statements only (`FROM <…/explicit>`), and a line carries the
+  property that was stated, or for a statement stored on the other side its `owl:inverseOf`
+  (resolved at query time), so a link stored in either direction is matched by the same URI;
+  sub-properties are *not* followed, a statement made with one has its own line and its own
+  entry. It replaced `partLevels` (work | expression | both): a stored value is converted
+  by `hiddenFromPartLevels` into the part pair of the level it left out. The settings
+  dialog lists the profile's active object properties from a class to itself, per level
+  (`buildRelationshipListQuery`; about 270 in all, so it is a dialog of its own: tabs, a filter,
+  the common ones first from `COMMON_RELATIONSHIPS`, "show/hide all" for what the filter lists)
+  and, per level when its tab is open, how many entities have each (`buildRelationshipUsageQuery`:
+  `COUNT(DISTINCT ?entity)` over the property and its inverse, explicit statements; a failure only
+  leaves the numbers out). Only relationships between entities of one level appear in the
+  result lines, so a property to another class (subjects that are persons or concepts, agents)
+  is neither listed nor affected. A property used in data but not marked active in the profile
+  is not listed. The setup wizard leaves the choice out (it needs a database to read). The
+  session log records only how many are hidden (`diffPreferences`), never which
 - Hidden fields are not lost: `EntityEditor` offers an "Identifier and labels…"
   dialog from the ⋮ menu whenever either is hidden, and a missing identifier or
   label is generated on save as before.

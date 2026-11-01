@@ -5,7 +5,7 @@ import {
   type CatalogingPreferences,
 } from "./catalogingStyle";
 import { DEFAULT_DATA_GRAPH, dataGraphOf } from "./dataGraph";
-import { toPartLevels } from "./partRelations";
+import { hiddenFromPartLevels, toHiddenRelationships } from "./relationshipFilter";
 
 const CONFIG_STORAGE_KEY = "entEdit.config";
 const CREDENTIALS_STORAGE_KEY = "entEdit.credentials";
@@ -142,6 +142,7 @@ export const loadConfiguration = (): AppConfiguration | null => {
     const preferencesStr = localStorage.getItem(PREFERENCES_STORAGE_KEY);
     if (preferencesStr) {
       const stored = JSON.parse(preferencesStr) as Partial<CatalogingPreferences> & {
+        partLevels?: unknown;
         warnAutoUri?: boolean;
         warnAutoLabel?: boolean;
       };
@@ -158,7 +159,11 @@ export const loadConfiguration = (): AppConfiguration | null => {
           stored.showLanguageTags ?? DEFAULT_PREFERENCES.showLanguageTags,
         showInferredMarks:
           stored.showInferredMarks ?? DEFAULT_PREFERENCES.showInferredMarks,
-        partLevels: toPartLevels(stored.partLevels),
+        // The list replaced the earlier partLevels choice, which is converted
+        hiddenRelationships:
+          stored.hiddenRelationships !== undefined
+            ? toHiddenRelationships(stored.hiddenRelationships)
+            : hiddenFromPartLevels(stored.partLevels),
       };
     }
 

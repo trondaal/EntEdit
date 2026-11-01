@@ -3,6 +3,7 @@
  * components so they can be tested without a DOM.
  */
 import type { CatalogingPreferences } from "./catalogingStyle";
+import { sameHidden } from "./relationshipFilter";
 import type { LogEvent, LogEventInput, SessionContext } from "../types/logging";
 import type { SparqlEndpointConfig } from "../types/sparql";
 
@@ -24,14 +25,26 @@ export interface SettingChange {
   value: string | boolean;
 }
 
-/** The preferences that differ, each with its new value. */
+/**
+ * The preferences that differ, each with its new value. The list of hidden
+ * relationships is compared as a set and recorded as how many are hidden.
+ */
 export const diffPreferences = (
   before: CatalogingPreferences,
   after: CatalogingPreferences,
-): SettingChange[] =>
-  (Object.keys(after) as Array<keyof CatalogingPreferences>)
-    .filter((key) => before[key] !== after[key])
-    .map((key) => ({ setting: key, value: after[key] }));
+): SettingChange[] => {
+  const changes: SettingChange[] = [];
+  for (const key of Object.keys(after) as Array<keyof CatalogingPreferences>) {
+    if (key === "hiddenRelationships") {
+      if (!sameHidden(before.hiddenRelationships, after.hiddenRelationships)) {
+        changes.push({ setting: key, value: String(after.hiddenRelationships.length) });
+      }
+    } else if (before[key] !== after[key]) {
+      changes.push({ setting: key, value: after[key] as string | boolean });
+    }
+  }
+  return changes;
+};
 
 /**
  * The endpoint settings that differ. Addresses are not recorded (they can name a

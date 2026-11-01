@@ -1,5 +1,4 @@
 import { createContext, useContext } from "react";
-import { DEFAULT_PART_LEVELS, type PartLevels } from "../utils/partRelations";
 import type { ResultColors } from "../utils/resultColors";
 
 /**
@@ -7,14 +6,14 @@ import type { ResultColors } from "../utils/resultColors";
  * user's preferences, so the result components need no props for them.
  */
 export interface ResultDisplay {
-  /** Which level's "is part of" / "has part" lines to show */
-  partLevels: PartLevels;
+  /** The relationship properties whose lines are left out (`utils/relationshipFilter.ts`) */
+  hiddenRelationships: ReadonlySet<string>;
   /** How the nested parts of a result are coloured (`?colors=type` selects the earlier scheme) */
   colors: ResultColors;
 }
 
 export const ResultDisplayContext = createContext<ResultDisplay>({
-  partLevels: DEFAULT_PART_LEVELS,
+  hiddenRelationships: new Set(),
   colors: "level",
 });
 

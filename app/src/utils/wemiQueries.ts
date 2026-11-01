@@ -126,8 +126,8 @@ const agentsSubquery = (entity: string, key: string, scope: string, lang: string
  * Registry has deprecated.
  *
  * Each group also carries the property it is shown with ("label ‡ property ⊢
- * title ‖ uri † …"), which the "part relationships" preference needs to
- * recognise them (`utils/partRelations.ts`).
+ * title ‖ uri † …"), which the choice of hidden relationships needs to
+ * recognise them (`utils/relationshipFilter.ts`).
  *
  * The target title is the `rdfs:label` in the chosen language, else the
  * untagged one, sampled per target first — a target with two untagged labels

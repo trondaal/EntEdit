@@ -79,6 +79,8 @@
     "search": "Søk"
   },
   "search": {
+    "relationshipsHidden": "{{count}} relasjoner skjult",
+    "relationshipsChange": "Endre",
     "fullTextSearch": "Fulltekstsøk",
     "expressionSearch": "Innhold",
     "manifestationSearch": "Utgivelser",
@@ -281,12 +283,37 @@
     "hiddenNote": "Et skjult felt er fortsatt tilgjengelig i ⋮-menyen i editoren, og en verdi genereres automatisk hvis du ikke skriver inn noe.",
     "showInferredMarks": "Merk verdier databasen har utledet (de kan redigeres uansett)",
     "showLanguageTags": "Vis språket til tekstverdier, og la det settes under redigering",
-    "partLevels": "Vis «er del av» og «har del» i søkeresultatene på:",
-    "partLevel": {
-      "both": "Verk og uttrykk",
+    "relationships": "Relasjoner som vises i søkeresultatene:",
+    "relationshipsAllShown": "alle vises",
+    "relationshipsHidden": "{{count}} skjult",
+    "relationshipsChoose": "Velg…",
+    "relationshipsNote": "Å skjule en relasjon utelater den bare fra søkeresultatene; ingenting endres i databasen."
+  },
+  "relationshipChoice": {
+    "title": "Relasjoner i søkeresultatene",
+    "description": "Velg hvilke relasjoner søkeresultatene viser, for eksempel for å utelate «har del» på uttrykksnivå når verket allerede sier det. En skjult relasjon utelates bare fra visningen; ingenting endres i databasen.",
+    "level": {
       "work": "Verk",
-      "expression": "Uttrykk"
+      "expression": "Uttrykk",
+      "manifestation": "Manifestasjon"
     },
-    "partLevelsNote": "Verket og uttrykket sier vanligvis det samme om deler og helhet. Dette velger bare hvilke av dem søkeresultatene viser; ingenting endres i databasen."
+    "filter": "Finn en relasjon",
+    "common": "Vanlige",
+    "all": "Alle relasjoner",
+    "usageHeader": "I denne databasen",
+    "usageTooltip": "Hvor mange enheter som har denne relasjonen i databasen du er koblet til",
+    "unused": "ikke brukt her",
+    "countsFailed": "Antallene kunne ikke leses; listen fungerer likevel.",
+    "loadFailed": "Relasjonene kunne ikke leses fra databasen.",
+    "empty": "Ingen relasjoner samsvarer.",
+    "noneInProfile": "Fant ingen relasjoner. Er profilen lastet?",
+    "hiddenCount": "{{count}} skjult",
+    "showAll": "Vis alle",
+    "hideAll": "Skjul alle",
+    "showThese": "Vis disse",
+    "hideThese": "Skjul disse",
+    "reset": "Vis alt igjen",
+    "done": "Ferdig",
+    "visible": "Vises i resultatene"
   }
 }

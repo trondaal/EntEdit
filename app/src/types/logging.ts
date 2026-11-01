@@ -13,7 +13,7 @@
  */
 export interface SessionContext {
   appVersion: string;
-  preferences: Record<string, boolean | string>;
+  preferences: Record<string, boolean | string | readonly string[]>;
 }
 
 export interface LogSession {

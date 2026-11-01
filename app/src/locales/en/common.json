@@ -79,6 +79,8 @@
     "search": "Search"
   },
   "search": {
+    "relationshipsHidden": "{{count}} relationships hidden",
+    "relationshipsChange": "Change",
     "fullTextSearch": "Full-Text Search",
     "expressionSearch": "Contents",
     "manifestationSearch": "Publications",
@@ -281,12 +283,37 @@
     "hiddenNote": "When a field is hidden it stays available in the editor's ⋮ menu, and a value is generated automatically if you don't enter one.",
     "showInferredMarks": "Mark values the database inferred (they can be edited either way)",
     "showLanguageTags": "Show the language of text values, and let it be set while editing",
-    "partLevels": "Show “is part of” and “has part” in the search results on:",
-    "partLevel": {
-      "both": "Work and expression",
+    "relationships": "Relationships shown in the search results:",
+    "relationshipsAllShown": "all shown",
+    "relationshipsHidden": "{{count}} hidden",
+    "relationshipsChoose": "Choose…",
+    "relationshipsNote": "Hiding a relationship only leaves it out of the search results; nothing changes in the database."
+  },
+  "relationshipChoice": {
+    "title": "Relationships in the search results",
+    "description": "Choose which relationships the search results show, for example to leave out “has part” at the expression level when the work already says it. A hidden relationship is only left out of the display; nothing changes in the database.",
+    "level": {
       "work": "Work",
-      "expression": "Expression"
+      "expression": "Expression",
+      "manifestation": "Manifestation"
     },
-    "partLevelsNote": "The work and the expression usually state the same part relationship. This only decides which of them the search results show; nothing changes in the database."
+    "filter": "Find a relationship",
+    "common": "Common",
+    "all": "All relationships",
+    "usageHeader": "In this database",
+    "usageTooltip": "How many entities have this relationship in the database you are connected to",
+    "unused": "not used here",
+    "countsFailed": "The counts could not be read; the list still works.",
+    "loadFailed": "The relationships could not be read from the database.",
+    "empty": "No relationship matches.",
+    "noneInProfile": "No relationships found. Is the profile loaded?",
+    "hiddenCount": "{{count}} hidden",
+    "showAll": "Show all",
+    "hideAll": "Hide all",
+    "showThese": "Show these",
+    "hideThese": "Hide these",
+    "reset": "Show everything again",
+    "done": "Done",
+    "visible": "Shown in the results"
   }
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import {
   Box,
+  Button,
   Checkbox,
   FormControlLabel,
   ToggleButton,
@@ -14,7 +15,6 @@ import {
   type CatalogingPreferences,
   type CatalogingStyle,
 } from "../utils/catalogingStyle";
-import { PART_LEVELS, toPartLevels } from "../utils/partRelations";
 
 /** The preferences that are plain on/off switches. */
 type FlagKey = {
@@ -26,6 +26,11 @@ interface CatalogingStyleSettingsProps {
   onChange: (preferences: CatalogingPreferences) => void;
   /** Omit the heading where the surrounding step already carries it. */
   hideHeading?: boolean;
+  /**
+   * Opens the dialog that chooses which relationships the search results show. The choice
+   * needs a database to read the relationships from, so the setup wizard leaves it out.
+   */
+  onOpenRelationships?: () => void;
 }
 
 /**
@@ -37,6 +42,7 @@ const CatalogingStyleSettings: React.FC<CatalogingStyleSettingsProps> = ({
   preferences,
   onChange,
   hideHeading = false,
+  onOpenRelationships,
 }) => {
   const { t } = useTranslation();
   const style = styleOf(preferences);
@@ -173,30 +179,27 @@ const CatalogingStyleSettings: React.FC<CatalogingStyleSettingsProps> = ({
         }
       />
 
-      {/* Also a display preference of its own: which level's part lines the search results show. */}
-      <Box sx={{ mt: 1.5, pt: 1.5, borderTop: 1, borderColor: "divider" }}>
-        <Typography variant="body2" sx={{ mb: 0.5 }}>
-          {t("catalogingStyle.partLevels")}
-        </Typography>
-        <ToggleButtonGroup
-          exclusive
-          size="small"
-          value={preferences.partLevels}
-          onChange={(_event, value) => {
-            if (value) onChange({ ...preferences, partLevels: toPartLevels(value) });
-          }}
-          aria-label={t("catalogingStyle.partLevels")}
-        >
-          {PART_LEVELS.map((level) => (
-            <ToggleButton key={level} value={level} sx={{ textTransform: "none", px: 2 }}>
-              {t(`catalogingStyle.partLevel.${level}`)}
-            </ToggleButton>
-          ))}
-        </ToggleButtonGroup>
-        <Typography variant="caption" color="text.secondary" sx={{ display: "block", mt: 0.5 }}>
-          {t("catalogingStyle.partLevelsNote")}
-        </Typography>
-      </Box>
+      {/* Also a display preference of its own: which relationships the search results show. */}
+      {onOpenRelationships && (
+        <Box sx={{ mt: 1.5, pt: 1.5, borderTop: 1, borderColor: "divider" }}>
+          <Box sx={{ display: "flex", alignItems: "center", flexWrap: "wrap", gap: 1 }}>
+            <Typography variant="body2">{t("catalogingStyle.relationships")}</Typography>
+            <Typography variant="body2" color="text.secondary">
+              {preferences.hiddenRelationships.length === 0
+                ? t("catalogingStyle.relationshipsAllShown")
+                : t("catalogingStyle.relationshipsHidden", {
+                    count: preferences.hiddenRelationships.length,
+                  })}
+            </Typography>
+            <Button size="small" onClick={onOpenRelationships} sx={{ textTransform: "none" }}>
+              {t("catalogingStyle.relationshipsChoose")}
+            </Button>
+          </Box>
+          <Typography variant="caption" color="text.secondary" sx={{ display: "block", mt: 0.5 }}>
+            {t("catalogingStyle.relationshipsNote")}
+          </Typography>
+        </Box>
+      )}
 
       <Typography variant="caption" color="text.secondary" sx={{ display: "block", mt: 1 }}>
         {t("catalogingStyle.hiddenNote")}

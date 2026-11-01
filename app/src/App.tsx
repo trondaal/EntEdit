@@ -10,10 +10,10 @@ import { invalidateAllEntityData } from "./utils/queryInvalidation";
 import { LoggingProvider } from "./contexts/LoggingContext";
 import { useLogging } from "./hooks/useLogging";
 import { ResultDisplayContext } from "./hooks/useResultDisplay";
-import { DEFAULT_PART_LEVELS } from "./utils/partRelations";
 import { toResultColors } from "./utils/resultColors";
 import { diffEndpoint, diffPreferences } from "./utils/interactionLog";
 import AppHeader from "./components/AppHeader";
+import RelationshipVisibilityDialog from "./components/RelationshipVisibilityDialog";
 const EntityBrowser = lazy(() => import("./components/EntityBrowser"));
 const SearchInterface = lazy(() => import("./components/SearchInterface"));
 const ConfigurationWizard = lazy(() => import("./components/ConfigurationWizard"));
@@ -219,6 +219,7 @@ function AppInner() {
   const [loading, setLoading] = useState(true);
   const [showWizard, setShowWizard] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
+  const [relationshipsOpen, setRelationshipsOpen] = useState(false);
   const [isEditorDirty, setIsEditorDirty] = useState(false);
   // Refs holding the active editor's save / discard functions (if any).
   // EntityEditor registers/unregisters these based on its dirty state, so the
@@ -267,11 +268,12 @@ function AppInner() {
 
   const urlParams = useMemo(() => new URLSearchParams(window.location.search), []);
   const showSearchTab = useMemo(() => !urlParams.has("nosearch"), [urlParams]);
-  const partLevels = appConfig?.preferences.partLevels;
+  const hiddenList = appConfig?.preferences.hiddenRelationships;
+  const hiddenRelationships = useMemo(() => new Set(hiddenList ?? []), [hiddenList]);
   const resultColors = useMemo(() => toResultColors(urlParams.get("colors")), [urlParams]);
   const resultDisplay = useMemo(
-    () => ({ partLevels: partLevels ?? DEFAULT_PART_LEVELS, colors: resultColors }),
-    [partLevels, resultColors],
+    () => ({ hiddenRelationships, colors: resultColors }),
+    [hiddenRelationships, resultColors],
   );
   const showLogging = useMemo(() => !urlParams.has("nologging"), [urlParams]);
   // ?repo=<name> opens a repository of the serving host, ?demo is the EntEdit repository;
@@ -513,6 +515,7 @@ function AppInner() {
                         <SearchInterface
                           config={appConfig.endpoint}
                           selectedLanguage={appConfig.language}
+                          onOpenRelationships={() => setRelationshipsOpen(true)}
                         />
                       </ResultDisplayContext.Provider>
                     )}
@@ -520,6 +523,20 @@ function AppInner() {
                 </Box>
               </Box>
             </Box>
+          )}
+
+          {/* Opened from the note under the search filters: a change is stored at once */}
+          {appConfig?.isConfigured && relationshipsOpen && (
+            <RelationshipVisibilityDialog
+              open
+              onClose={() => setRelationshipsOpen(false)}
+              config={appConfig.endpoint}
+              language={appConfig.language}
+              hidden={appConfig.preferences.hiddenRelationships}
+              onChange={(hiddenRelationships) =>
+                handleConfigChange(appConfig.endpoint, { ...appConfig.preferences, hiddenRelationships })
+              }
+            />
           )}
 
           {import.meta.env.DEV && <ReactQueryDevtools initialIsOpen={false} />}

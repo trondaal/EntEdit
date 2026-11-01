@@ -25,6 +25,7 @@ import {
 } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import CatalogingStyleSettings from "./CatalogingStyleSettings";
+import RelationshipVisibilityDialog from "./RelationshipVisibilityDialog";
 import type { CatalogingPreferences } from "../utils/catalogingStyle";
 import type { SparqlEndpointConfig } from "../types/sparql";
 import LanguageSelector from "./LanguageSelector";
@@ -66,6 +67,7 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
   const [moreOpen, setMoreOpen] = useState(false);
   const [localConfig, setLocalConfig] = useState(config);
   const [localPreferences, setLocalPreferences] = useState(preferences);
+  const [relationshipsOpen, setRelationshipsOpen] = useState(false);
   const [testing, setTesting] = useState(false);
   const [testResult, setTestResult] = useState<ConnectionTestResult | null>(null);
 
@@ -109,6 +111,20 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
   };
   const useDefaultGraph = () =>
     setLocalConfig((current) => ({ ...current, dataGraph: undefined }));
+
+  // The relationships are chosen against the database in the form, and kept with the other preferences
+  const relationshipDialog = (
+    <RelationshipVisibilityDialog
+      open={relationshipsOpen}
+      onClose={() => setRelationshipsOpen(false)}
+      config={localConfig}
+      language={selectedLanguage}
+      hidden={localPreferences.hiddenRelationships}
+      onChange={(hiddenRelationships) =>
+        setLocalPreferences((current) => ({ ...current, hiddenRelationships }))
+      }
+    />
+  );
 
   const handleSave = () => {
     onConfigChange(
@@ -203,6 +219,7 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
                 <CatalogingStyleSettings
                   preferences={localPreferences}
                   onChange={setLocalPreferences}
+                  onOpenRelationships={() => setRelationshipsOpen(true)}
                 />
 
                 <Divider sx={{ my: 2 }} />
@@ -285,6 +302,7 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
             </Button>
           </DialogActions>
         </Dialog>
+        {relationshipDialog}
       </>
     );
   }
@@ -351,6 +369,7 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
             <CatalogingStyleSettings
               preferences={localPreferences}
               onChange={setLocalPreferences}
+              onOpenRelationships={() => setRelationshipsOpen(true)}
             />
           </Box>
 
@@ -362,6 +381,7 @@ const EndpointConfig: React.FC<EndpointConfigProps> = ({
           </Box>
         </Box>
       </Collapse>
+      {relationshipDialog}
     </Paper>
   );
 };

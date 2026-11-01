@@ -61,21 +61,21 @@ describe("the inferred marker", () => {
   });
 });
 
-describe("the part-relationship preference", () => {
-  it("shows both levels in both presets, so nothing is hidden until the user chooses", () => {
-    expect(CLASSIC_PREFERENCES.partLevels).toBe("both");
-    expect(SEMANTIC_PREFERENCES.partLevels).toBe("both");
+describe("the hidden-relationships preference", () => {
+  it("hides nothing in both presets, so nothing is hidden until the user chooses", () => {
+    expect(CLASSIC_PREFERENCES.hiddenRelationships).toEqual([]);
+    expect(SEMANTIC_PREFERENCES.hiddenRelationships).toEqual([]);
   });
 
   it("does not make a preset read as custom", () => {
-    expect(styleOf({ ...SEMANTIC_PREFERENCES, partLevels: "expression" })).toBe("semantic");
-    expect(styleOf({ ...CLASSIC_PREFERENCES, partLevels: "work" })).toBe("classic");
+    expect(styleOf({ ...SEMANTIC_PREFERENCES, hiddenRelationships: ["http://x/a"] })).toBe("semantic");
+    expect(styleOf({ ...CLASSIC_PREFERENCES, hiddenRelationships: ["http://x/a"] })).toBe("classic");
   });
 
   it("survives switching style, and a style link", () => {
-    const chosen = { ...CLASSIC_PREFERENCES, partLevels: "expression" as const };
-    expect(applyPreset("semantic", chosen).partLevels).toBe("expression");
-    expect(applyStyleOverride(chosen, "?style=semantic").partLevels).toBe("expression");
+    const chosen = { ...CLASSIC_PREFERENCES, hiddenRelationships: ["http://x/a"] };
+    expect(applyPreset("semantic", chosen).hiddenRelationships).toEqual(["http://x/a"]);
+    expect(applyStyleOverride(chosen, "?style=semantic").hiddenRelationships).toEqual(["http://x/a"]);
   });
 });
 

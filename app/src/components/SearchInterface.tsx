@@ -8,6 +8,7 @@ import {
   IconButton,
   Tabs,
   Tab,
+  Link,
 } from "@mui/material";
 import { Search, Clear } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
@@ -37,6 +38,7 @@ import Expression from "./Expression";
 import ManifestationSearchResult from "./ManifestationSearchResult";
 import Work from "./Work";
 import { useLogging } from "../hooks/useLogging";
+import { useResultDisplay } from "../hooks/useResultDisplay";
 import { createLinkSearchGuard } from "../utils/interactionLog";
 import type { SearchMode } from "../types/logging";
 
@@ -65,13 +67,17 @@ const withoutLink = (all: Record<SearchMode, string[]>): Record<SearchMode, stri
 interface SearchInterfaceProps {
   config: SparqlEndpointConfig;
   selectedLanguage: string;
+  /** Opens the dialog that chooses which relationships the results show */
+  onOpenRelationships?: () => void;
 }
 
 const SearchInterface: React.FC<SearchInterfaceProps> = ({
   config,
   selectedLanguage,
+  onOpenRelationships,
 }) => {
   const { t } = useTranslation();
+  const { hiddenRelationships } = useResultDisplay();
   const { logEvent, isRecording } = useLogging();
   const [searchInput, setSearchInput] = useState<string>("");
   const [searchMode, setSearchMode] = useState<SearchMode>(SEARCH_MODES[0]);
@@ -359,6 +365,15 @@ const SearchInterface: React.FC<SearchInterfaceProps> = ({
                     updating={facetsUpdating}
                   />
                 </Box>
+              )}
+              {/* Lines left out of the results are never silent: say so, and say how to change it */}
+              {hiddenRelationships.size > 0 && onOpenRelationships && (
+                <Typography variant="caption" color="text.secondary" sx={{ display: "block", mt: 2 }}>
+                  {t("search.relationshipsHidden", { count: hiddenRelationships.size })} ·{" "}
+                  <Link component="button" variant="caption" onClick={onOpenRelationships}>
+                    {t("search.relationshipsChange")}
+                  </Link>
+                </Typography>
               )}
             </Box>
           </Paper>

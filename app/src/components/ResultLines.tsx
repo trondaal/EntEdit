@@ -19,7 +19,7 @@ import {
 import { useRelationTargets } from "../hooks/useRelationTargets";
 import { useLogging } from "../hooks/useLogging";
 import { useResultDisplay } from "../hooks/useResultDisplay";
-import { isHiddenPartLine } from "../utils/partRelations";
+import { isHiddenRelationship } from "../utils/relationshipFilter";
 import { extractUriFragment } from "../utils/labelUtils";
 import type { SparqlEndpointConfig } from "../types/sparql";
 
@@ -227,13 +227,13 @@ export const RelationshipLines: React.FC<{
   language?: string;
   onEntitySearch?: EntitySearchHandler;
 }> = ({ relationships, collapsed, kind, entityUri, config, language, onEntitySearch }) => {
-  const { partLevels } = useResultDisplay();
-  // The part pair is stated at both levels: the preference decides which one shows
+  const { hiddenRelationships } = useResultDisplay();
+  // Relationships the user chose not to see are left out, the collapsed ones too
   const inline = parseRelationships(relationships).filter(
-    (rel) => !isHiddenPartLine(rel.propertyUri, kind, partLevels),
+    (rel) => !isHiddenRelationship(rel.propertyUri, hiddenRelationships),
   );
   const counted = (entityUri && config && language ? parseCollapsedRelationships(collapsed) : []).filter(
-    (rel) => !isHiddenPartLine(rel.propertyUri, kind, partLevels),
+    (rel) => !isHiddenRelationship(rel.propertyUri, hiddenRelationships),
   );
   if (inline.length === 0 && counted.length === 0) return null;
   return (

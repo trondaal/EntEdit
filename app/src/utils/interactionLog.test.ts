@@ -40,12 +40,25 @@ describe("diffPreferences", () => {
     const changes = diffPreferences(CLASSIC_PREFERENCES, {
       ...CLASSIC_PREFERENCES,
       showIdentifier: true,
-      partLevels: "work",
+      showInferredMarks: true,
     });
     expect(changes).toEqual([
       { setting: "showIdentifier", value: true },
-      { setting: "partLevels", value: "work" },
+      { setting: "showInferredMarks", value: true },
     ]);
+  });
+
+  it("records the hidden relationships as how many there are, never which", () => {
+    const hidden = ["http://rdaregistry.info/Elements/e/object/P20145", "http://rdaregistry.info/Elements/w/object/P10147"];
+    const changes = diffPreferences(CLASSIC_PREFERENCES, { ...CLASSIC_PREFERENCES, hiddenRelationships: hidden });
+    expect(changes).toEqual([{ setting: "hiddenRelationships", value: "2" }]);
+    expect(JSON.stringify(changes)).not.toContain("rdaregistry");
+  });
+
+  it("does not report the same hidden relationships in another order", () => {
+    const a = { ...CLASSIC_PREFERENCES, hiddenRelationships: ["http://x/a", "http://x/b"] };
+    const b = { ...CLASSIC_PREFERENCES, hiddenRelationships: ["http://x/b", "http://x/a"] };
+    expect(diffPreferences(a, b)).toEqual([]);
   });
 
   it("reports a whole style change as every preference that differs", () => {

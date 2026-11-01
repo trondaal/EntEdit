@@ -52,7 +52,7 @@ describe("the graph new data is saved in", () => {
   });
 });
 
-describe("the part-relationship preference, as stored", () => {
+describe("the hidden-relationships preference, as stored", () => {
   let local: ReturnType<typeof memoryStorage>;
 
   beforeEach(() => {
@@ -62,19 +62,33 @@ describe("the part-relationship preference, as stored", () => {
     local.setItem("entEdit.config", JSON.stringify({ url: endpoint }));
   });
 
-  it("is both when nothing is stored, as for an installation older than the preference", () => {
+  it("hides nothing when nothing is stored, as for an installation older than the preference", () => {
     local.setItem("entEdit.preferences", JSON.stringify({ showIdentifier: false }));
-    expect(loadConfiguration()?.preferences.partLevels).toBe("both");
+    expect(loadConfiguration()?.preferences.hiddenRelationships).toEqual([]);
   });
 
   it("is read back as chosen", () => {
-    local.setItem("entEdit.preferences", JSON.stringify({ partLevels: "expression" }));
-    expect(loadConfiguration()?.preferences.partLevels).toBe("expression");
+    const hidden = ["http://rdaregistry.info/Elements/e/object/P20145"];
+    local.setItem("entEdit.preferences", JSON.stringify({ hiddenRelationships: hidden }));
+    expect(loadConfiguration()?.preferences.hiddenRelationships).toEqual(hidden);
   });
 
-  it("is both when what is stored is not a level", () => {
-    local.setItem("entEdit.preferences", JSON.stringify({ partLevels: "everything" }));
-    expect(loadConfiguration()?.preferences.partLevels).toBe("both");
+  it("converts the earlier part-level choice into the lines it left out", () => {
+    local.setItem("entEdit.preferences", JSON.stringify({ partLevels: "expression" }));
+    expect(loadConfiguration()?.preferences.hiddenRelationships).toEqual([
+      "http://rdaregistry.info/Elements/w/object/P10019",
+      "http://rdaregistry.info/Elements/w/object/P10147",
+    ]);
+  });
+
+  it("prefers the list to an earlier part-level choice stored beside it", () => {
+    local.setItem("entEdit.preferences", JSON.stringify({ partLevels: "work", hiddenRelationships: [] }));
+    expect(loadConfiguration()?.preferences.hiddenRelationships).toEqual([]);
+  });
+
+  it("hides nothing when what is stored is not a list of URIs", () => {
+    local.setItem("entEdit.preferences", JSON.stringify({ hiddenRelationships: "everything" }));
+    expect(loadConfiguration()?.preferences.hiddenRelationships).toEqual([]);
   });
 });
 
