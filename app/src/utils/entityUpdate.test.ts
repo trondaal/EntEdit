@@ -13,6 +13,7 @@ import {
   duplicateValueIndexes,
   pruneDuplicateValues,
   normalizeNewLiterals,
+  distinctTerms,
 } from "./entityUpdate";
 
 const WORK = "http://viaf.org/viaf/214012164";
@@ -513,5 +514,52 @@ describe("changedProperties", () => {
     ];
     expect(changedProperties(snapshot, reordered, managed)).toEqual(new Set([TITLE]));
     expect(changedProperties(snapshot, [...reordered].reverse().map((t, i) => ({ ...t, order: i })), managed)).toEqual(new Set());
+  });
+});
+
+describe("a triple stored in two graphs", () => {
+  const DATA = "http://entedit.org/data";
+  const inBoth: StoredTerm[] = [
+    ...storedWork,
+    { property: TITLE, value: "No country for old men", graph: DATA },
+    { property: RDF_TYPE, value: CLASS_WORK, isUri: true, graph: DATA },
+  ];
+
+  it("is shown once", () => {
+    const shown = distinctTerms(inBoth);
+    expect(shown).toHaveLength(storedWork.length);
+    expect(shown.filter((term) => term.property === TITLE && !term.lang)).toHaveLength(1);
+  });
+
+  it("keeps the values that differ in language or text", () => {
+    const shown = distinctTerms(inBoth);
+    expect(shown.some((term) => term.lang === "no")).toBe(true);
+  });
+
+  it("is removed from both graphs when the value is deleted from the form", () => {
+    const desired = desiredWork.filter(
+      (term) => !(term.property === TITLE && !term.lang),
+    );
+    const update = buildEntityUpdate({
+      entityUri: WORK,
+      snapshot: inBoth,
+      desired,
+      managedProperties: managed,
+      targetGraph: EXAMPLES,
+    });
+    expect(update).toContain(`GRAPH <${EXAMPLES}>`);
+    expect(update).toContain(`GRAPH <${DATA}>`);
+    expect(update.match(/"No country for old men"/g)?.length).toBeGreaterThanOrEqual(2);
+  });
+
+  it("changes nothing when the form still holds the value once", () => {
+    const update = buildEntityUpdate({
+      entityUri: WORK,
+      snapshot: inBoth,
+      desired: desiredWork,
+      managedProperties: managed,
+      targetGraph: EXAMPLES,
+    });
+    expect(update).toBe("");
   });
 });

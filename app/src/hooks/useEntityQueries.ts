@@ -16,7 +16,7 @@ import {
   withLabels,
   type ListedEntity,
 } from "../utils/entityList";
-import type { StoredTerm } from "../utils/entityUpdate";
+import { distinctTerms, type StoredTerm } from "../utils/entityUpdate";
 import type { SparqlEndpointConfig, OrderedValue } from "../types/sparql";
 
 /** Number of entities fetched per page in infinite queries */
@@ -129,8 +129,8 @@ export const useEntityQuery = (
         data[property].push(term);
       };
 
-      // Explicit triples first, in their stored order
-      for (const term of snapshot) {
+      // Explicit triples first, in their stored order; a triple stored in several graphs is one value
+      for (const term of distinctTerms(snapshot)) {
         if (term.property === RDFS_LABEL) {
           labels.push({
             id: `label-${labels.length}`,

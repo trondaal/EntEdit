@@ -14,6 +14,24 @@ export interface StoredTerm extends RdfTerm {
   order?: number;
 }
 
+/**
+ * The stored triples with each distinct triple once. The same statement can be stored in
+ * several named graphs (an import of data that was already loaded from the examples, say),
+ * and the snapshot holds one entry per graph. The form must show it once: it is one
+ * statement, and with two copies on screen deleting one of them leaves the other, so the
+ * diff sees the value as still wanted and nothing is removed. Removing the value from the
+ * form then removes it from every graph, since the diff still reads the whole snapshot.
+ */
+export const distinctTerms = (snapshot: StoredTerm[]): StoredTerm[] => {
+  const seen = new Set<string>();
+  return snapshot.filter((term) => {
+    const key = `${term.property}\u0000${termKey(term)}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+};
+
 /** A triple the form says should exist after saving. */
 export interface DesiredTerm extends RdfTerm {
   property: string;
@@ -56,7 +74,8 @@ export function reorderedProperties(snapshot: StoredTerm[], desired: DesiredTerm
   const storedByKey = new Map<string, StoredTerm>();
   const loadPosition = new Map<string, number>();
   const seenPerProperty = new Map<string, number>();
-  for (const term of snapshot) {
+  // A triple stored in two graphs is one value in the form: count it once
+  for (const term of distinctTerms(snapshot)) {
     const key = groupKey(term.property, term);
     storedByKey.set(key, term);
     const position = seenPerProperty.get(term.property) ?? 0;
