@@ -36,7 +36,7 @@ TESTDATA_DIR="${ROOT_DIR}/database/testdata"
 SPARQL_DIR="${ROOT_DIR}/database/lucene_connectors"
 CONFIG_TEMPLATE="${ROOT_DIR}/docker/graphdb/repositories/EntEdit/config.ttl"
 
-EXAMPLES_GRAPH="http://entedit.org/examples"
+DATA_GRAPH="http://entedit.org/data"
 INIT_MARKER_GRAPH="urn:entedit:init-marker"
 INIT_MARKER_PRED="http://entedit.org/ns#initializedAt"
 INIT_MARKER_SUBJ="urn:entedit:init"
@@ -65,7 +65,7 @@ Options:
                          none   do not touch free-access settings
   -U, --user NAME      GraphDB admin user (env: GRAPHDB_USER)
   -P, --password PASS  GraphDB admin password (env: GRAPHDB_PASSWORD); asked for if omitted
-      --testdata       Also import database/testdata into the examples graph
+      --testdata       Also import database/testdata into the data graph
       --force          Re-import into repositories that are already initialized
       --dry-run        Print what would happen, change nothing
   -h, --help           Show this help
@@ -278,7 +278,7 @@ import_file() {
 import_dir() {
   local repo="$1" dir="$2" graph="${3:-}" file filename ctype label
   label="(default graph)"
-  [ -n "$graph" ] && label="(examples graph)"
+  [ -n "$graph" ] && label="(data graph)"
   while IFS= read -r file; do
     filename="$(basename "$file")"
     case "${filename##*.}" in
@@ -315,7 +315,7 @@ initialize_repo() {
   install_with_script "$repo" --skip-connectors
   if [ "$INCLUDE_TESTDATA" = 1 ]; then
     log "  Importing test data..."
-    import_dir "$repo" "$TESTDATA_DIR" "$EXAMPLES_GRAPH"
+    import_dir "$repo" "$TESTDATA_DIR" "$DATA_GRAPH"
   fi
   log "  Running full-text connector queries..."
   install_with_script "$repo" --skip-vocabularies

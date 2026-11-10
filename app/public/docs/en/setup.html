@@ -333,7 +333,7 @@ docker compose up -d</code></pre>
   <li><strong>Data import</strong> — Loads all RDF files from two directories:
     <ul style="margin-top: 0.5rem;">
       <li><code>database/types/</code> — Vocabulary and ontology files (RDA properties, class definitions, controlled value lists). Each folder goes into a named graph of its own, <code>http://entedit.org/graph/&lt;folder&gt;</code>, so that a newer version of the RDA vocabulary or the profile can replace the old one without touching the rest.</li>
-      <li><code>database/testdata/</code> — Sample bibliographic entities (works, expressions, manifestations, agents). These are imported into the named graph <code>http://entedit.org/examples</code> so the examples can be managed independently of the vocabulary.</li>
+      <li><code>database/testdata/</code> — Sample bibliographic entities (works, expressions, manifestations, agents). These are imported into the named graph <code>http://entedit.org/data</code>, where everything you create or import is kept too; delete the examples in the editor when you do not want them.</li>
     </ul>
   </li>
   <li><strong>SPARQL updates</strong> — Executes the Lucene full-text search connector definitions from <code>database/lucene_connectors/</code>, which power the Search tab.</li>
@@ -560,7 +560,7 @@ EntEdit/<br>
 ├── data/               <span style="color: var(--text-secondary);">← Example collections (not part of the installation)</span><br>
 ├── database/<br>
 │   ├── types/          <span style="color: var(--text-secondary);">← Vocabulary files (loaded into GraphDB)</span><br>
-│   ├── testdata/       <span style="color: var(--text-secondary);">← Sample RDF entities (examples graph)</span><br>
+│   ├── testdata/       <span style="color: var(--text-secondary);">← Sample RDF entities (data graph)</span><br>
 │   └── lucene_connectors/  <span style="color: var(--text-secondary);">← Lucene full-text index definitions</span><br>
 ├── docker/<br>
 │   └── graphdb/        <span style="color: var(--text-secondary);">← Repository config + init script</span><br>

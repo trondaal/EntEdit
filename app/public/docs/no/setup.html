@@ -333,7 +333,7 @@ docker compose up -d</code></pre>
   <li><strong>Dataimport</strong> — Laster inn alle RDF-filer fra to kataloger:
     <ul style="margin-top: 0.5rem;">
       <li><code>database/types/</code> — Vokabular- og ontologifiler (RDA-egenskaper, klassedefinisjoner, kontrollerte verdilister). Hver mappe lastes inn i en egen navngitt graf, <code>http://entedit.org/graph/&lt;mappe&gt;</code>, slik at en nyere versjon av RDA-vokabularet eller profilen kan erstatte den gamle uten å røre resten.</li>
-      <li><code>database/testdata/</code> — Eksempler på bibliografiske entiteter (verk, uttrykk, manifestasjoner, agenter). Disse importeres til den navngitte grafen <code>http://entedit.org/examples</code> slik at eksemplene kan håndteres uavhengig av vokabularet.</li>
+      <li><code>database/testdata/</code> — Eksempler på bibliografiske entiteter (verk, uttrykk, manifestasjoner, agenter). Disse importeres til den navngitte grafen <code>http://entedit.org/data</code>, der alt du oppretter eller importerer også lagres; slett eksemplene i editoren hvis du ikke vil ha dem.</li>
     </ul>
   </li>
   <li><strong>SPARQL-oppdateringer</strong> — Kjører Lucene-fulltekstsøkekoblingsdefinisjonene fra <code>database/lucene_connectors/</code>, som driver Søk-fanen.</li>
@@ -560,7 +560,7 @@ EntEdit/<br>
 ├── data/               <span style="color: var(--text-secondary);">← Eksempelsamlinger (ikke del av installasjonen)</span><br>
 ├── database/<br>
 │   ├── types/          <span style="color: var(--text-secondary);">← Vokabularfiler (lastes inn i GraphDB)</span><br>
-│   ├── testdata/       <span style="color: var(--text-secondary);">← Eksempel-RDF-entiteter (eksempelgraf)</span><br>
+│   ├── testdata/       <span style="color: var(--text-secondary);">← Eksempel-RDF-entiteter (datagrafen)</span><br>
 │   └── lucene_connectors/  <span style="color: var(--text-secondary);">← Lucene-fulltekstindeksdefinisjoner</span><br>
 ├── docker/<br>
 │   └── graphdb/        <span style="color: var(--text-secondary);">← Datalagerkonfigurasjon + init-skript</span><br>

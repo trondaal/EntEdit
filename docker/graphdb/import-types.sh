@@ -81,12 +81,15 @@ fi
 # --- Phase 3: Import RDF data files ---
 #
 # Every folder under /import-data/types goes into a named graph of its own
-# (<prefix><folder>), and the example data under /import-data/testdata into
-# another, so that vocabulary, profile and examples can each be dropped and
+# (<prefix><folder>), so that vocabulary and profile can each be dropped and
 # reloaded without touching the rest. tools/install-vocabularies.sh does the same
-# on an existing repository and uses the same names.
+# on an existing repository and uses the same names. The example data under
+# /import-data/testdata goes into the data graph, where everything users create and
+# import goes too: an entity is then stored in one place whichever way it arrived,
+# and an example imported again later merges instead of becoming a second copy.
+# (Installations made before this kept the examples in http://entedit.org/examples.)
 
-EXAMPLES_GRAPH="http://entedit.org/examples"
+DATA_GRAPH="http://entedit.org/data"
 GRAPH_PREFIX="${VOCABULARY_GRAPH_PREFIX:-http://entedit.org/graph/}"
 
 find "$DATA_DIR" -type f \( -name "*.ttl" -o -name "*.nt" -o -name "*.rdf" \) | sort | while read -r file; do
@@ -102,8 +105,8 @@ find "$DATA_DIR" -type f \( -name "*.ttl" -o -name "*.nt" -o -name "*.rdf" \) | 
 
   case "$file" in
     "$DATA_DIR"/testdata/*)
-      target_url="${GRAPHDB_URL}/repositories/${REPO}/statements?context=$(printf '%s' "<${EXAMPLES_GRAPH}>" | sed 's|<|%3C|;s|>|%3E|;s|#|%23|g')"
-      target_label="(examples graph)"
+      target_url="${GRAPHDB_URL}/repositories/${REPO}/statements?context=$(printf '%s' "<${DATA_GRAPH}>" | sed 's|<|%3C|;s|>|%3E|;s|#|%23|g')"
+      target_label="(data graph)"
       ;;
     "$DATA_DIR"/types/*/*)
       layer="${file#"$DATA_DIR"/types/}"

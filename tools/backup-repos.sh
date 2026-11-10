@@ -69,7 +69,7 @@ and one manifest.tsv listing statement counts and file sizes.
 
 What users create is in http://entedit.org/data; the vocabularies and the profile
 live in graphs of their own, and edits to an existing entity stay in the graph it
-was loaded from (the examples graph, for the shipped examples). To restore, create the
+was loaded from (the data graph, also for the shipped examples). To restore, create the
 repository, install the vocabularies (tools/install-vocabularies.sh) and POST the
 decompressed file to <endpoint>/repositories/<repo>/statements with
 Content-Type: application/x-trigstar: each statement lands in the graph it came from.

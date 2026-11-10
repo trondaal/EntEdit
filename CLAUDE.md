@@ -611,8 +611,9 @@ is rebuilt and pushed.
 
 Each folder of `database/types/` is loaded into a named graph of its own,
 `http://entedit.org/graph/<folder>` (`rda_vocabulary`, `term_vocabularies`,
-`entedit_profile`); example data goes into `http://entedit.org/examples`; user-created
-data goes into `http://entedit.org/data` (see "Entity Save/Delete Strategy"). Upgrading
+`entedit_profile`); the example data and everything users create or import go into
+`http://entedit.org/data` (see "Entity Save/Delete Strategy"; installations made before the
+examples moved there kept them in `http://entedit.org/examples`). Upgrading
 a layer on a running database is therefore: drop its graph, run
 `tools/install-vocabularies.sh -e <endpoint> -U <user>` (password asked for). The
 script works on any repository given its endpoint, loads only layers whose graph is

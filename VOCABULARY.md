@@ -31,8 +31,9 @@ Everything is loaded from `database/types/` when the repository is initialised
 (`docker/graphdb/import-types.sh`), each folder into a named graph of its own:
 `http://entedit.org/graph/rda_vocabulary`, `…/term_vocabularies` and
 `…/entedit_profile`. Example data (`database/testdata/`) goes into
-`http://entedit.org/examples`. What users create goes into a graph of its own,
-`http://entedit.org/data`, so it is kept apart from both. Every layer can therefore be dropped and loaded
+`http://entedit.org/data`, where what users create and import goes too (installations made
+before this kept the examples in `http://entedit.org/examples`), so it is kept apart from the
+vocabulary and the profile. Every layer can therefore be dropped and loaded
 again without touching the others or the data (see 2.2). To install or update
 them on a repository that already exists, run `tools/install-vocabularies.sh`.
 
@@ -566,9 +567,8 @@ full specification, syntax caveats and RDF 1.2 notes are in the comments of
 ### 6.2 Graphs and inference
 
 - Vocabulary and profile: one named graph per folder of `database/types/`
-  (`http://entedit.org/graph/<folder>`). Example data:
-  `http://entedit.org/examples`. Entities created in the editor, and imports, go to
-  `http://entedit.org/data`, unless the user chose another graph in Settings
+  (`http://entedit.org/graph/<folder>`). Example data, entities created in the editor,
+  and imports go to `http://entedit.org/data`, unless the user chose another graph in Settings
   (*Graph for new data*, kept in the browser) or in the Import dialog. Queries without a `FROM` clause see all graphs
   together, so the application does not care where a statement is stored.
 - Entities live in the graph of their `rdf:type` statement. Saves diff against the

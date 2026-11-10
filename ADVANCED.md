@@ -31,9 +31,10 @@ changing: the app derives its default endpoint and the Workbench link from its
 own origin.
 
 `graphdb-init` creates the `EntEdit` repository with RDFS-Plus reasoning, imports
-the vocabulary and the example entities (the examples go into the named graph
-`http://entedit.org/examples`, so they can be managed independently of the
-vocabulary), and creates the Lucene full-text indexes. It then writes a marker
+the vocabulary and the example entities (the vocabulary goes into named graphs of its own so
+it can be reloaded; the examples go into `http://entedit.org/data`, with everything else users
+create, and are deleted in the editor when they are not wanted), and creates the Lucene
+full-text indexes. It then writes a marker
 triple, so later restarts skip the import. To wipe the data and import again,
 restart that service with `FORCE_REINIT=1`.
 
@@ -366,9 +367,9 @@ Where things live decides what a backup contains, so it is worth knowing:
 
 | Graph | What is in it |
 |---|---|
-| `http://entedit.org/data` | entities created in the editor, and imports (the Import dialog's default) |
+| `http://entedit.org/data` | entities created in the editor, imports (the Import dialog's default) and the example entities |
 | `http://entedit.org/graph/<folder>` | the vocabularies and the profile (reinstallable) |
-| `http://entedit.org/examples` | the example data, and edits to those entities |
+| `http://entedit.org/examples` | the example data of installations made before the examples moved to the data graph |
 | default graph | empty on a new installation; in an older one, whatever was created before the data graph existed |
 
 An entity created in the editor is written to `http://entedit.org/data`; an entity
@@ -411,7 +412,7 @@ base URL plus `--repository <id>` works too.
 
 Each folder of `database/types/` goes into a named graph of its own,
 `http://entedit.org/graph/rda_vocabulary`, `…/term_vocabularies` and
-`…/entedit_profile` (the example data keeps `http://entedit.org/examples`). That
+`…/entedit_profile`. That
 is what makes an upgrade simple: **drop the graph you want replaced, run the script
 again.** The script itself never deletes anything. A layer whose graph already has
 content is skipped, and `--merge` adds to it anyway (blank-node statements are then
