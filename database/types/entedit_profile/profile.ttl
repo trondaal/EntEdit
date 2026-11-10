@@ -1102,7 +1102,7 @@ rdaeo:P20172	entedit:status	"object property" ; rdfs:label "har supplement"@no .
 rdaeo:P20152	entedit:status	"object property" ; rdfs:label "er bearbeidelse av"@no . #	is adaptation of expression	rdac:C10006	rdac:C10006
 rdaeo:P20153	entedit:status	"object property" ; rdfs:label "er bearbeidet som"@no . #	is adapted as expression	rdac:C10006	rdac:C10006
 
-rdaeo:P20154	entedit:status	"object property" ; rdfs:label "er etterfulgt av"@no . #	is preceded by expression	rdac:C10006	rdac:C10006
+rdaeo:P20154	entedit:status	"object property" ; rdfs:label "etterfølger"@no . #	is preceded by expression	rdac:C10006	rdac:C10006
 rdaeo:P20169	entedit:status	"object property" ; rdfs:label "er avløst av"@no . #	is succeeded by expression	rdac:C10006	rdac:C10006
 
 rdaeo:P20158	entedit:status	"object property" ; rdfs:label "har manus for spillefilm"@no . #	has motion picture screenplay expression	rdac:C10006	rdac:C10006

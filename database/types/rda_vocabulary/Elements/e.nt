@@ -19195,7 +19195,7 @@
 <http://rdaregistry.info/Elements/e/P20154> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "megelőzi a következő kifejezési forma:"@hu .
 <http://rdaregistry.info/Elements/e/P20154> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "Hozzákapcsol egy kifejezési formát egy mű kifejezési formájához, amely megelőz egy azt követő kifejezési formát, azaz időben korábban vagy narratívában stb. előtte áll."@hu .
 <http://rdaregistry.info/Elements/e/P20154> <http://www.w3.org/2000/01/rdf-schema#label> "edeltävä ekspressio"@fi .
-<http://rdaregistry.info/Elements/e/P20154> <http://www.w3.org/2000/01/rdf-schema#label> "er etterfulgt av uttrykk"@no .
+<http://rdaregistry.info/Elements/e/P20154> <http://www.w3.org/2000/01/rdf-schema#label> "etterfølger uttrykk"@no .
 <http://rdaregistry.info/Elements/e/P20154> <http://www.w3.org/2004/02/skos/core#definition> "Relaterer et uttrykk til et uttrykk av et verk som kommer før, enten i tid eller i historien, et påfølgende uttrykk."@no .
 <http://rdaregistry.info/Elements/e/P20154> <http://www.w3.org/2000/01/rdf-schema#label> "is voorafgegaan door expressie"@nl .
 <http://rdaregistry.info/Elements/e/P20154> <http://www.w3.org/2004/02/skos/core#definition> "Relateert een expressie aan een expressie van een werk wiens chronologisch bereik ligt voor dat van een andere expressie."@nl .
