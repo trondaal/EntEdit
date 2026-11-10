@@ -241,7 +241,7 @@ that first, so the two never drift apart, then use the same number below.
 
 ```bash
 docker buildx build --platform linux/amd64,linux/arm64 \
-  -t trondaal/entedit:1.0.38 -t trondaal/entedit:latest \
+  -t trondaal/entedit:1.0.39 -t trondaal/entedit:latest \
   --push ./app
 ```
 
@@ -251,7 +251,7 @@ docker buildx build --platform linux/amd64,linux/arm64 \
 ```bash
 docker buildx build --platform linux/amd64,linux/arm64 \
   -f docker/init/Dockerfile \
-  -t trondaal/entedit-init:1.0.0 -t trondaal/entedit-init:latest \
+  -t trondaal/entedit-init:1.0.19 -t trondaal/entedit-init:latest \
   --push .
 ```
 
