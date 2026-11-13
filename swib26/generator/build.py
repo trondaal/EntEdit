@@ -769,12 +769,17 @@ EXERCISES = [
      "collections with and without a title of their own.",
      "The publications and the distinct works with their expressions: link the publications to the expressions, "
      "and add the collections you consider works."),
+    # planned; no page yet
+    (None, "User tasks and data quality: search and exploration",
+     "How well the data supports users' tasks, assessed by searching and exploring it.",
+     "Details to come."),
 ]
 items = "\n".join(
-    f'    <li>\n      <h3><a href="{page}.html">{html.escape(title)}</a></h3>\n'
+    "    <li>\n      <h3>" + (f'<a href="{page}.html">{html.escape(title)}</a>' if page else html.escape(title))
+    + "</h3>\n"
     f"      <p>{html.escape(text, quote=False)}</p>\n"
     + (f'      <p class="record">Start file: <a href="start/{page}.ttl">start/{page}.ttl</a> · '
-       if (ROOT / "start" / f"{page}.ttl").exists() else '      <p class="record">')
+       if page and (ROOT / "start" / f"{page}.ttl").exists() else '      <p class="record">')
     + f"{html.escape(start, quote=False)}</p>\n    </li>"
     for page, title, text, start in EXERCISES)
 WORKSHOP_TIME = "08:00–12:00 UTC"

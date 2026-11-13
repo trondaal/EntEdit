@@ -43,7 +43,7 @@ cd ~/entedit-swib26 && git sparse-checkout set swib26
 Mount it in the Caddy container (`docker-compose.override.yml`, under `caddy` → `volumes`):
 
 ```yaml
-      - ~/entedit-swib26/swib26:/srv/swib26:ro
+      - /root/entedit-swib26/swib26:/srv/swib26:ro
 ```
 
 and serve it in the Caddyfile, before the final `handle`:
@@ -52,7 +52,8 @@ and serve it in the Caddyfile, before the final `handle`:
 redir /swib26 /swib26/
 handle_path /swib26/* {
 	root * /srv/swib26
-	header /*.ttl Content-Type "text/turtle; charset=utf-8"
+	@ttl path *.ttl
+	header @ttl Content-Type "text/turtle; charset=utf-8"
 	file_server
 }
 ```
