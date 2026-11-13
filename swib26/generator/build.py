@@ -297,13 +297,13 @@ class Example:
         """The example as Turtle: everything, or for a start file what in_start lets through."""
         out = list(self.out)
         if start and self.start_all:
-            out[0] = (f"# Start file for the SWIB26 exercise {PAGES[self.name]}: the publications (manifestations),\n"
+            out[0] = (f"# Start file for the SWIB26 activity {PAGES[self.name]}: the publications (manifestations),\n"
                       "# the works and expressions they embody, and the people and publishers, described from\n"
                       "# library catalogue records. State the relationships between the works (and between\n"
                       "# expressions where RDA has them only there).\n")
         elif start:  # the comment of the complete model describes the answer
             given = "some of the works and their expressions, " if self.start_works else ""
-            out[0] = (f"# Start file for the SWIB26 exercise {PAGES[self.name]}: the publications (manifestations),\n"
+            out[0] = (f"# Start file for the SWIB26 activity {PAGES[self.name]}: the publications (manifestations),\n"
                       f"# {given}and the people and publishers, described from library catalogue records. Link\n"
                       "# each manifestation to the expressions it embodies, and add the works and expressions\n"
                       "# that are missing.\n")
@@ -446,7 +446,7 @@ for slug, rec in x.records.items():
     x.manifestation(slug, None, [f"{slug}/eng"])
     surname = name.split(",")[0]
     x.headings[slug] = f"{surname}: {title[0].upper() + title[1:]} ({re.search(r"\d{4}", description(rec)['date']).group()})"
-x.write("Learning activity: cataloguing a publication",
+x.write("Activity: cataloguing a publication",
         "Each participant takes one of the thirty publications below, so that everyone can work in the same "
         "repository at the same time: no two of them share an author or a work. From the description and the "
         "catalogue record, create the work, the expression and the manifestation, and the person who wrote it, "
@@ -516,7 +516,7 @@ x.headings = {
     "ger-fischer-2005": "Alibi (2005)",
     "ger-atlantik-2014": "Alibi (2014)",
 }
-x.write("Exercise: translations (Agatha Christie)",
+x.write("Activity: translations (Agatha Christie)",
         "The publications below carry the same story by Agatha Christie, one of them together with a second novel. Which works and expressions can you "
         "identify? When is a publication a new expression and when is it only a new manifestation of one you "
         "already have? Draw or write out your model. Follow the links to the catalogue records, where you can also "
@@ -604,7 +604,7 @@ x.headings = {
     "opera-score-2001": "Little Women, an opera in vocal score (2001)",
     "film-dvd-2019": "Little Women, the film on DVD (2019)",
 }
-x.write("Exercise: relationships between works (Little Women)",
+x.write("Activity: relationships between works (Little Women)",
         "All the publications below go back to Louisa May Alcott's novel, which first came out in two parts. Which "
         "of them are works of their own, and which relationship would you state between each of them and the novel, "
         "and between the two parts? Look up the relationship elements "
@@ -721,7 +721,7 @@ x.headings = {
     "giles-bombadil-1975": "Farmer Giles of Ham ; The Adventures of Tom Bombadil (1975)",
     "treeleaf-smith-1975": "Tree and Leaf – Smith of Wootton Major – The Homecoming of Beorhtnoth (1975)",
 }
-x.write("Exercise: collections and aggregates (J. R. R. Tolkien)",
+x.write("Activity: collections and aggregates (J. R. R. Tolkien)",
         "The publications below gather Tolkien's writings in different combinations. When does a collection "
         "form a work of its own with the stories or poems as parts, and when is a publication only a container for "
         "several expressions? Identify the works you would include, draw or write out how they relate, and look at "
@@ -754,8 +754,7 @@ x.write("Exercise: collections and aggregates (J. R. R. Tolkien)",
 # --- Main page ----------------------------------------------------------------------------------
 EXERCISES = [
     ("cataloguing", "Cataloguing a publication",
-     "Thirty English-language novels, crime and other modern fiction, one for each participant, with no shared "
-     "authors or works, so that a whole group can catalogue in the same repository at the same time.",
+     "A set of English-language novels, crime and other modern fiction, suitable as an introduction to the tool.",
      "No start file: catalogue your publication from scratch."),
     ("translations-christie", "Translations: Agatha Christie",
      "The murder of Roger Ackroyd in English, Norwegian and German: new translations, new editions and a "
@@ -811,8 +810,9 @@ zoom = (f'<a href="{html.escape(ZOOM_LINK)}">{html.escape(ZOOM_LINK)}</a>' if ZO
   <ol class="steps">
     <li><strong>Introduction (45 minutes).</strong> The challenges of learning entity-oriented metadata. A
     presentation and demonstration of EntEdit: its design rationale and how it can be used in teaching.</li>
-    <li><strong>Hands-on session (2 hours).</strong> Run EntEdit on your own computer or use the online version,
-    and work through the learning activities below.</li>
+    <li><strong>Interactive hands-on sessions (2 hours).</strong> We will explore the use of the tool together
+    in breakout rooms, with plenary sessions in between. You can use the online version or install it on your
+    own machine. More information about the setup will be given during the session.</li>
     <li><strong>Discussion.</strong> The opportunities and challenges of experience-based learning of
     entity-oriented metadata.</li>
   </ol>
@@ -830,7 +830,7 @@ zoom = (f'<a href="{html.escape(ZOOM_LINK)}">{html.escape(ZOOM_LINK)}</a>' if ZO
   <ul>
     <li><a href="https://app.entedit.org/entedit/">The running prototype</a> at app.entedit.org</li>
     <li><a href="https://github.com/trondaal/EntEdit">Source code and documentation</a> on GitHub</li>
-    <li><a href="https://app.entedit.org/entedit/docs/en/index.html">Cataloguing guide</a> and
+    <li><a href="https://app.entedit.org/entedit/docs/en/index.html">Cataloguing startup</a> and
     <a href="https://app.entedit.org/entedit/docs/en/setup.html">setup guide</a></li>
   </ul>
   </section>
@@ -838,13 +838,15 @@ zoom = (f'<a href="{html.escape(ZOOM_LINK)}">{html.escape(ZOOM_LINK)}</a>' if ZO
   <section>
   <h2>Preparing for the workshop</h2>
   <ul>
+    <li><strong>Try EntEdit.</strong> Visit the <a href="https://app.entedit.org/entedit/?demo">demo
+    prototype</a> and explore the tool yourself.</li>
     <li><strong>IFLA LRM.</strong> EntEdit follows the IFLA Library Reference Model. If it is new to you, read
     the description of the entities, above all Work, Expression, Manifestation, Item and Agent, and skim the
     relationships between them: <a href="https://repository.ifla.org/handle/20.500.14598/40">IFLA Library
     Reference Model: A Conceptual Model for Bibliographic Information</a>.</li>
     <li><strong>RDA.</strong> The elements and relationships come from the <a
     href="https://www.rdaregistry.info/">RDA Registry</a>; you will look up relationship types there during the
-    exercises.</li>
+    activities.</li>
     <li><strong>Running EntEdit yourself (optional).</strong> To run EntEdit on your own computer, install
     Docker and follow the <a href="https://app.entedit.org/entedit/docs/en/setup.html">setup guide</a> before
     the workshop. Otherwise you can use the online version.</li>
@@ -852,22 +854,11 @@ zoom = (f'<a href="{html.escape(ZOOM_LINK)}">{html.escape(ZOOM_LINK)}</a>' if ZO
   </section>
 
   <section>
-  <h2>Learning activities</h2>
-  <p>Each activity is a small set of real publications, described from library catalogue records. The task is
-  to find the works and expressions behind them and the relationships between them, and to record them in
-  EntEdit.</p>
-  <ol class="steps">
-    <li>Choose an activity and read its page: every publication has a short description, a note on what it
-    contains and a link to the full record in a library catalogue.</li>
-    <li>Download the activity's start file. It always holds the publications (manifestations) and the people
-    and publishers involved; what else it holds, and so what is left for you to do, is listed with each
-    activity.</li>
-    <li>Import the start file into your repository with the Import dialog in EntEdit.</li>
-    <li>Add what is missing: the works and expressions, the links from each publication to the expressions it
-    embodies, and the relationships between works and between expressions.</li>
-    <li>Compare your model with other participants', and with how the catalogue records describe the same
-    publications.</li>
-  </ol>
+  <h2>Activities</h2>
+  <p>We will explore the tool, and discuss its use in teaching, with a selection of example datasets. In some
+  activities you start from bibliographic descriptions only and use the tool to create the entities and add
+  their attributes and relationships. In others we also provide a start file with basic descriptions that you
+  can import and build on. Each activity has its own page.</p>
   <ol class="exercises">
 {items}
   </ol>
