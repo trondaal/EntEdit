@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Activity: user tasks and data quality</title>
+  <style>
+    :root { --text: #1f2328; --muted: #59636e; --line: #d8dee4; --accent: #0b5cad; --bg: #ffffff; --panel: #f6f8fa; }
+    @media (prefers-color-scheme: dark) {
+      :root { --text: #e6edf3; --muted: #9198a1; --line: #3d444d; --accent: #6cb6ff; --bg: #151b23; --panel: #1f2630; }
+    }
+    body { margin: 0; background: var(--bg); color: var(--text);
+           font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+    h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 1rem; }
+    .intro { font-size: 1.05rem; margin: 0 0 2.5rem; }
+    .publications { list-style: none; counter-reset: pub; margin: 0; padding: 0; }
+    .publications > li { counter-increment: pub; padding: 1.25rem 0 1.5rem; border-top: 1px solid var(--line); }
+    .publications h2 { font-size: 1.15rem; line-height: 1.35; margin: 0 0 .5rem; }
+    .publications h2::before { content: counter(pub) ". "; color: var(--muted); }
+    .publications p { margin: .4rem 0; }
+    .isbd { background: var(--panel); border-left: 3px solid var(--line); padding: .6rem .8rem;
+            font-size: .92rem; color: var(--text); }
+    .record { font-size: .9rem; color: var(--muted); }
+    a { color: var(--accent); }
+    .back { margin: 0 0 1.5rem; font-size: .9rem; }
+    .eyebrow { margin: 0 0 .25rem; font-size: .85rem; letter-spacing: .06em; text-transform: uppercase;
+               color: var(--muted); }
+    main > section { margin-top: 2.25rem; }
+    main > section > h2 { font-size: 1.3rem; margin: 0 0 .75rem; }
+    .todo { color: var(--muted); font-style: italic; }
+    .back a::before { content: "← "; }
+    .start { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: .6rem .9rem;
+             margin: 0 0 2.5rem; font-size: .95rem; }
+    .exercises { padding-left: 1.25rem; }
+    .exercises li { margin: 0 0 1.25rem; }
+    .exercises h3 { font-size: 1.1rem; margin: 0 0 .25rem; }
+    .exercises p { margin: .2rem 0; }
+    ol.steps li { margin: 0 0 .5rem; }
+    .viaf { margin-top: 3rem; padding-top: 1.5rem; border-top: 2px solid var(--line); font-size: .92rem; }
+    .viaf h2 { font-size: 1.15rem; }
+    .viaf h3 { font-size: 1rem; margin: 1.25rem 0 .25rem; }
+    .viaf ul { padding-left: 1.25rem; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="back"><a href="./">Learning entity-oriented metadata with EntEdit</a></p>
+  <h1>Activity: user tasks and data quality</h1>
+  <p class="intro">In this activity we look at the data from the user's side: what it lets a user do when
+  searching and exploring, and what that tells us about its quality.</p>
+
+  <section>
+  <h2>The IFLA LRM user tasks</h2>
+  <p><a href="https://repository.ifla.org/handle/20.500.14598/40">IFLA LRM</a> describes five generic tasks that bibliographic data should support:</p>
+  <ul>
+    <li><strong>Find:</strong> bring together information about one or more resources of interest by
+    searching on any relevant criteria.</li>
+    <li><strong>Identify:</strong> understand clearly what the resources found are, and tell similar resources
+    apart.</li>
+    <li><strong>Select:</strong> decide which of the resources found suit the user's needs, and set aside
+    those that do not.</li>
+    <li><strong>Obtain:</strong> get access to the content of the resource.</li>
+    <li><strong>Explore:</strong> discover resources through their relationships to other resources, and
+    place them in context.</li>
+  </ul>
+  </section>
+
+  <section>
+  <h2>Search and display in EntEdit</h2>
+  <p>EntEdit's search is built on full-text indexes that GraphDB keeps of the entities and their
+  relationships. A search finds results that contain all the words typed; a word ending in * also matches
+  longer words. The search has three views, each with its own index:</p>
+  <ul>
+    <li><strong>Publications</strong> (manifestations), the default. A publication is found by its own titles
+    and statement of responsibility, and by the names and titles of what it embodies: its expressions, their
+    works, and works they are translations, adaptations or parts of. Each result shows the publication with
+    its content: a single expression is shown as part of the entry, several are listed under Contents.</li>
+    <li><strong>Contents</strong> (expressions). Each result shows an expression with its work, its creators
+    and contributors, its language and type of content, and its relationships; its publications can be
+    opened below it.</li>
+    <li><strong>Works.</strong> Each result shows a work with its creators and relationships; its expressions
+    can be opened below it, and the publications of each expression below that.</li>
+  </ul>
+  <p>Beside the results, filters with hit counts narrow them by category of work, genre or form, language and
+  content type, and for publications also by media and carrier type. The names and titles in a result are
+  links: following one searches for that person or entity. Relationships to many entities are shown as a
+  count that opens a list. Every result also links to a graph view of the entity and its relationships.</p>
+  <p>The Edit tab gives a second way in: lists of all entities of a class, filtered by their names.</p>
+  </section>
+
+  <section>
+  <h2>The activity</h2>
+  <p class="todo">Details to come.</p>
+  </section>
+</main>
+</body>
+</html>

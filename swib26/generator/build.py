@@ -769,8 +769,7 @@ EXERCISES = [
      "collections with and without a title of their own.",
      "The publications and the distinct works with their expressions: link the publications to the expressions, "
      "and add the collections you consider works."),
-    # planned; no page yet
-    (None, "User tasks and data quality: search and exploration",
+    ("user-tasks", "User tasks and data quality: search and exploration",
      "How well the data supports users' tasks, assessed by searching and exploring it.",
      "Details to come."),
 ]
@@ -782,7 +781,7 @@ items = "\n".join(
        if page and (ROOT / "start" / f"{page}.ttl").exists() else '      <p class="record">')
     + f"{html.escape(start, quote=False)}</p>\n    </li>"
     for page, title, text, start in EXERCISES)
-WORKSHOP_TIME = "08:00–12:00 UTC"
+WORKSHOP_TIME = "Monday 16 November 2026, 08:00–12:00 UTC"
 ZOOM_LINK = "https://oslomet.zoom.us/j/61004023053?pwd=YZiyYrwprHLGIvqo6ZH3Uqq968aEEA.1"
 
 zoom = (f'<a href="{html.escape(ZOOM_LINK)}">{html.escape(ZOOM_LINK)}</a>' if ZOOM_LINK
@@ -870,6 +869,71 @@ zoom = (f'<a href="{html.escape(ZOOM_LINK)}">{html.escape(ZOOM_LINK)}</a>' if ZO
   <p class="record">People and works carry their VIAF identifiers (http://viaf.org/viaf/…) as IRIs, so the same
   person or work is the same resource in every file. The activities and their sources are kept on
   <a href="https://github.com/trondaal/EntEdit/tree/main/swib26">GitHub</a>.</p>
+  </section>
+</main>
+</body>
+</html>
+""", encoding="utf-8")
+
+
+# --- User tasks and data quality ---------------------------------------------------------------
+LRM = "https://repository.ifla.org/handle/20.500.14598/40"
+(ROOT / "user-tasks.html").write_text(f"""<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Activity: user tasks and data quality</title>
+{STYLE}</head>
+<body>
+<main>
+  <p class="back"><a href="./">Learning entity-oriented metadata with EntEdit</a></p>
+  <h1>Activity: user tasks and data quality</h1>
+  <p class="intro">In this activity we look at the data from the user's side: what it lets a user do when
+  searching and exploring, and what that tells us about its quality.</p>
+
+  <section>
+  <h2>The IFLA LRM user tasks</h2>
+  <p><a href="{LRM}">IFLA LRM</a> describes five generic tasks that bibliographic data should support:</p>
+  <ul>
+    <li><strong>Find:</strong> bring together information about one or more resources of interest by
+    searching on any relevant criteria.</li>
+    <li><strong>Identify:</strong> understand clearly what the resources found are, and tell similar resources
+    apart.</li>
+    <li><strong>Select:</strong> decide which of the resources found suit the user's needs, and set aside
+    those that do not.</li>
+    <li><strong>Obtain:</strong> get access to the content of the resource.</li>
+    <li><strong>Explore:</strong> discover resources through their relationships to other resources, and
+    place them in context.</li>
+  </ul>
+  </section>
+
+  <section>
+  <h2>Search and display in EntEdit</h2>
+  <p>EntEdit's search is built on full-text indexes that GraphDB keeps of the entities and their
+  relationships. A search finds results that contain all the words typed; a word ending in * also matches
+  longer words. The search has three views, each with its own index:</p>
+  <ul>
+    <li><strong>Publications</strong> (manifestations), the default. A publication is found by its own titles
+    and statement of responsibility, and by the names and titles of what it embodies: its expressions, their
+    works, and works they are translations, adaptations or parts of. Each result shows the publication with
+    its content: a single expression is shown as part of the entry, several are listed under Contents.</li>
+    <li><strong>Contents</strong> (expressions). Each result shows an expression with its work, its creators
+    and contributors, its language and type of content, and its relationships; its publications can be
+    opened below it.</li>
+    <li><strong>Works.</strong> Each result shows a work with its creators and relationships; its expressions
+    can be opened below it, and the publications of each expression below that.</li>
+  </ul>
+  <p>Beside the results, filters with hit counts narrow them by category of work, genre or form, language and
+  content type, and for publications also by media and carrier type. The names and titles in a result are
+  links: following one searches for that person or entity. Relationships to many entities are shown as a
+  count that opens a list. Every result also links to a graph view of the entity and its relationships.</p>
+  <p>The Edit tab gives a second way in: lists of all entities of a class, filtered by their names.</p>
+  </section>
+
+  <section>
+  <h2>The activity</h2>
+  <p class="todo">Details to come.</p>
   </section>
 </main>
 </body>

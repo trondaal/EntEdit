@@ -7,7 +7,7 @@ its Docker images.
 | File | |
 |---|---|
 | `index.html` | The task and the list of exercises |
-| `cataloguing.html`, `translations-christie.html`, `relationships-little-women.html`, `collections-tolkien.html` | One page per exercise: the publications with a description, a content note and a link to a catalogue record, and the VIAF identifiers involved |
+| `cataloguing.html`, `translations-christie.html`, `relationships-little-women.html`, `collections-tolkien.html`, `user-tasks.html` | One page per exercise: the publications with a description, a content note and a link to a catalogue record, and the VIAF identifiers involved |
 | `start/*.ttl` | What participants import (the cataloguing activity has none: each participant catalogues one of thirty novels from scratch, with no shared authors or works). Always the manifestations, people and publishers; beyond that it differs per exercise. Christie: nothing more. Little Women: also the works and expressions, linked to each other and to the manifestations, but no relationships between works or between expressions. Tolkien: also the distinct works listed on its page with their expressions (none for The Lord of the Rings as a whole), but no manifestation-to-expression links and no relationships between works or expressions |
 | `solutions/*.ttl` | The complete models: works, expressions and their relationships. Not linked from the pages, but reachable by URL once published |
 | `marc/*.xml` | The MARC 21 records the publication descriptions are taken from (BIBSYS, Library of Congress, Deutsche Nationalbibliothek, British Library) |
