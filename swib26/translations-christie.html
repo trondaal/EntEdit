@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercise: translations (Agatha Christie)</title>
+  <style>
+    :root { --text: #1f2328; --muted: #59636e; --line: #d8dee4; --accent: #0b5cad; --bg: #ffffff; --panel: #f6f8fa; }
+    @media (prefers-color-scheme: dark) {
+      :root { --text: #e6edf3; --muted: #9198a1; --line: #3d444d; --accent: #6cb6ff; --bg: #151b23; --panel: #1f2630; }
+    }
+    body { margin: 0; background: var(--bg); color: var(--text);
+           font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+    h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 1rem; }
+    .intro { font-size: 1.05rem; margin: 0 0 2.5rem; }
+    .publications { list-style: none; counter-reset: pub; margin: 0; padding: 0; }
+    .publications > li { counter-increment: pub; padding: 1.25rem 0 1.5rem; border-top: 1px solid var(--line); }
+    .publications h2 { font-size: 1.15rem; line-height: 1.35; margin: 0 0 .5rem; }
+    .publications h2::before { content: counter(pub) ". "; color: var(--muted); }
+    .publications p { margin: .4rem 0; }
+    .isbd { background: var(--panel); border-left: 3px solid var(--line); padding: .6rem .8rem;
+            font-size: .92rem; color: var(--text); }
+    .record { font-size: .9rem; color: var(--muted); }
+    a { color: var(--accent); }
+    .back { margin: 0 0 1.5rem; font-size: .9rem; }
+    .eyebrow { margin: 0 0 .25rem; font-size: .85rem; letter-spacing: .06em; text-transform: uppercase;
+               color: var(--muted); }
+    main > section { margin-top: 2.25rem; }
+    main > section > h2 { font-size: 1.3rem; margin: 0 0 .75rem; }
+    .todo { color: var(--muted); font-style: italic; }
+    .back a::before { content: "← "; }
+    .start { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: .6rem .9rem;
+             margin: 0 0 2.5rem; font-size: .95rem; }
+    .exercises { padding-left: 1.25rem; }
+    .exercises li { margin: 0 0 1.25rem; }
+    .exercises h3 { font-size: 1.1rem; margin: 0 0 .25rem; }
+    .exercises p { margin: .2rem 0; }
+    ol.steps li { margin: 0 0 .5rem; }
+    .viaf { margin-top: 3rem; padding-top: 1.5rem; border-top: 2px solid var(--line); font-size: .92rem; }
+    .viaf h2 { font-size: 1.15rem; }
+    .viaf h3 { font-size: 1rem; margin: 1.25rem 0 .25rem; }
+    .viaf ul { padding-left: 1.25rem; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="back"><a href="./">Learning entity-oriented metadata with EntEdit</a></p>
+  <h1>Exercise: translations (Agatha Christie)</h1>
+  <p class="intro">The publications below carry the same story by Agatha Christie, one of them together with a second novel. Which works and expressions can you identify? When is a publication a new expression and when is it only a new manifestation of one you already have? Draw or write out your model. Follow the links to the catalogue records, where you can also see what they state about the translation and, where the catalogue has one, the cover.</p>
+  <p class="start">Start file to import: <a href="start/translations-christie.ttl">start/translations-christie.ttl</a></p>
+  <ol class="publications">
+    <li>
+      <h2>The Murder of Roger Ackroyd (2002)</h2>
+      <p class="isbd">The murder of Roger Ackroyd / Agatha Christie. — Agatha Christie signature ed. — London : Harper, 2002. — 368 s. — (Poirot). — (The Agatha Christie collection). — ISBN 9780007141340</p>
+      <p>Paperback reissue of the English text of the Hercule Poirot novel first published in 1926.</p>
+      <p class="record"><a href="https://catalogue.bl.uk/permalink/44BL_MAIN/195da65/alma990093804890109251">Catalogue record</a> · British Library</p>
+    </li>
+    <li>
+      <h2>Doktoren mister en pasient (1991)</h2>
+      <p class="isbd">Doktoren mister en pasient / Agatha Christie ; oversatt av R.A. Arentz. — [Oslo] : Aschehoug, 1991. — 209 s. — ISBN 8203167349</p>
+      <p>A later Norwegian edition of the novel in R. A. Arentz's translation, which first appeared in 1938.</p>
+      <p class="record"><a href="https://bibsys-xp.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma999109411494702201&amp;context=L&amp;vid=47BIBSYS_HIOA:HIOA&amp;lang=en">Catalogue record</a> · Oria, Norway</p>
+    </li>
+    <li>
+      <h2>Doktoren mister en pasient, audiobook (2006)</h2>
+      <p class="isbd">Doktoren mister en pasient / Agatha Christie ; oversatt av R.A. Arentz. — [Melhus] : Lydbokforl., 2006. — 7 plater (CD) (8 t, 14 min) : digital ; 12 cm, i eske. — ISBN 9788242119650</p>
+      <p>Norwegian audiobook on seven CDs: Per Frisch reads R. A. Arentz's translation.</p>
+      <p class="record"><a href="https://bibsys-xp.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma990610885364702201&amp;context=L&amp;vid=47BIBSYS_HIOA:HIOA&amp;lang=en">Catalogue record</a> · Oria, Norway</p>
+    </li>
+    <li>
+      <h2>A Murder Is Announced (1985)</h2>
+      <p class="isbd">A murder is announced / Agatha Christie. — The Winterbrook ed., 1st ed. — New York : Dodd, Mead, [1985], c1950. — 297 p. ; 22 cm. — ISBN 0396087027</p>
+      <p>An American edition of a later Christie novel, a Miss Marple mystery first published in 1950.</p>
+      <p class="record"><a href="https://lccn.loc.gov/85004373">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Doktoren mister en pasient ; Invitasjon til mord (2004)</h2>
+      <p class="isbd">Doktoren mister en pasient ; Invitasjon til mord / Agatha Christie ; [Doktoren mister en pasient] oversatt av R.A. Arentz ; [Invitasjon til mord] oversatt av Jan Christensen. — Oslo : Aschehoug, 2004. — 206, 173 s. — (Poirots beste). — (Miss Marples beste). — ISBN 8203208231</p>
+      <p>Two Christie novels in one volume, each with its own page numbering: R. A. Arentz's translation of the Hercule Poirot novel above and Jan Christensen's translation of A murder is announced. The book has no title of its own beyond the two titles.</p>
+      <p class="record"><a href="https://bibsys-xp.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma990404344514702201&amp;context=L&amp;vid=47BIBSYS_HIOA:HIOA&amp;lang=en">Catalogue record</a> · Oria, Norway</p>
+    </li>
+    <li>
+      <h2>Roger Ackroyd und sein Mörder (1928)</h2>
+      <p class="isbd">Roger Ackroyd und sein Mörder : Roman / Agatha Christie. [Deutsch von Irene Kafka. Einzig berecht. deutsche Übertr. aus d. Engl.]. — München : Drei Masken Verlag, [1928]. — 294 S. ; 8</p>
+      <p>The first German translation of the novel, by Irene Kafka, under a title close to the English one.</p>
+      <p class="record"><a href="https://d-nb.info/573911096">Catalogue record</a> · Deutsche Nationalbibliothek</p>
+    </li>
+    <li>
+      <h2>Alibi (2005)</h2>
+      <p class="isbd">Alibi : Roman / Agatha Christie. Aus dem Engl. von Friedrich Pütsch. — Frankfurt, M. : Fischer-Taschenbuch-Verl., 2005. — 196 S. ; 18 cm. — (Fischer). — ISBN 9783596172573</p>
+      <p>German translation of the novel by Friedrich Pütsch, under the German title Alibi. It first appeared in 1937.</p>
+      <p class="record"><a href="https://d-nb.info/981838294">Catalogue record</a> · Deutsche Nationalbibliothek</p>
+    </li>
+    <li>
+      <h2>Alibi (2014)</h2>
+      <p class="isbd">Alibi : ein Fall für Poirot / Agatha Christie. Aus dem Engl. von Michael Mundhenk. — 1. Aufl. — Hamburg : Atlantik, 2014. — 285 S. : Ill., graph. Darst. ; 19 cm. — ISBN 9783455650044</p>
+      <p>A new German translation of the novel by Michael Mundhenk. The title is still Alibi.</p>
+      <p class="record"><a href="https://d-nb.info/1051336694">Catalogue record</a> · Deutsche Nationalbibliothek</p>
+    </li>
+  </ol>
+  <section class="viaf">
+  <h2>VIAF identifiers</h2>
+  <p>Only people and works that have a VIAF record are listed. Those for which we found no VIAF
+  identifier are left out, so this is not a list of everyone and everything in the example.</p>
+  <h3>People</h3>
+  <ul>
+    <li>Arentz, Ronald Archer: <a href="http://viaf.org/viaf/179147423157144881771">http://viaf.org/viaf/179147423157144881771</a></li>
+    <li>Christensen, Jan: <a href="http://viaf.org/viaf/19145971391132330928">http://viaf.org/viaf/19145971391132330928</a></li>
+    <li>Christie, Agatha: <a href="http://viaf.org/viaf/71388952">http://viaf.org/viaf/71388952</a></li>
+    <li>Frisch, Per: <a href="http://viaf.org/viaf/229606047">http://viaf.org/viaf/229606047</a></li>
+    <li>Kafka, Irene: <a href="http://viaf.org/viaf/2940916">http://viaf.org/viaf/2940916</a></li>
+    <li>Mundhenk, Michael: <a href="http://viaf.org/viaf/104727766">http://viaf.org/viaf/104727766</a></li>
+    <li>Pütsch, Friedrich: <a href="http://viaf.org/viaf/22576440">http://viaf.org/viaf/22576440</a></li>
+  </ul>
+  <h3>Works</h3>
+  <ul>
+    <li>A murder is announced (Christie, Agatha): <a href="http://viaf.org/viaf/181004220">http://viaf.org/viaf/181004220</a></li>
+    <li>The murder of Roger Ackroyd (Christie, Agatha): <a href="http://viaf.org/viaf/217048217">http://viaf.org/viaf/217048217</a></li>
+  </ul>
+  </section>
+</main>
+</body>
+</html>

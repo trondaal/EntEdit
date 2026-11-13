@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercise: collections and aggregates (J. R. R. Tolkien)</title>
+  <style>
+    :root { --text: #1f2328; --muted: #59636e; --line: #d8dee4; --accent: #0b5cad; --bg: #ffffff; --panel: #f6f8fa; }
+    @media (prefers-color-scheme: dark) {
+      :root { --text: #e6edf3; --muted: #9198a1; --line: #3d444d; --accent: #6cb6ff; --bg: #151b23; --panel: #1f2630; }
+    }
+    body { margin: 0; background: var(--bg); color: var(--text);
+           font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+    h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 1rem; }
+    .intro { font-size: 1.05rem; margin: 0 0 2.5rem; }
+    .publications { list-style: none; counter-reset: pub; margin: 0; padding: 0; }
+    .publications > li { counter-increment: pub; padding: 1.25rem 0 1.5rem; border-top: 1px solid var(--line); }
+    .publications h2 { font-size: 1.15rem; line-height: 1.35; margin: 0 0 .5rem; }
+    .publications h2::before { content: counter(pub) ". "; color: var(--muted); }
+    .publications p { margin: .4rem 0; }
+    .isbd { background: var(--panel); border-left: 3px solid var(--line); padding: .6rem .8rem;
+            font-size: .92rem; color: var(--text); }
+    .record { font-size: .9rem; color: var(--muted); }
+    a { color: var(--accent); }
+    .back { margin: 0 0 1.5rem; font-size: .9rem; }
+    .eyebrow { margin: 0 0 .25rem; font-size: .85rem; letter-spacing: .06em; text-transform: uppercase;
+               color: var(--muted); }
+    main > section { margin-top: 2.25rem; }
+    main > section > h2 { font-size: 1.3rem; margin: 0 0 .75rem; }
+    .todo { color: var(--muted); font-style: italic; }
+    .back a::before { content: "← "; }
+    .start { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: .6rem .9rem;
+             margin: 0 0 2.5rem; font-size: .95rem; }
+    .exercises { padding-left: 1.25rem; }
+    .exercises li { margin: 0 0 1.25rem; }
+    .exercises h3 { font-size: 1.1rem; margin: 0 0 .25rem; }
+    .exercises p { margin: .2rem 0; }
+    ol.steps li { margin: 0 0 .5rem; }
+    .viaf { margin-top: 3rem; padding-top: 1.5rem; border-top: 2px solid var(--line); font-size: .92rem; }
+    .viaf h2 { font-size: 1.15rem; }
+    .viaf h3 { font-size: 1rem; margin: 1.25rem 0 .25rem; }
+    .viaf ul { padding-left: 1.25rem; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="back"><a href="./">Learning entity-oriented metadata with EntEdit</a></p>
+  <h1>Exercise: collections and aggregates (J. R. R. Tolkien)</h1>
+  <p class="intro">The publications below gather Tolkien's writings in different combinations. When does a collection form a work of its own with the stories or poems as parts, and when is a publication only a container for several expressions? Identify the works you would include, draw or write out how they relate, and look at how each catalogue record shows the contents.</p>
+  <p class="start">Start file to import: <a href="start/collections-tolkien.ttl">start/collections-tolkien.ttl</a></p>
+  <ol class="publications">
+    <li>
+      <h2>The Lord of the Rings, 50th anniversary set with the companion (2005)</h2>
+      <p class="isbd">The Lord of the Rings / J.R.R. Tolkien. — [50th anniversary ed.]. — London : HarperCollins, 2005. — 4 v. : ill. (chiefly col.), col. maps ; 23 cm. — ISBN 0007203543</p>
+      <p>Boxed set of four hardbacks for the 50th anniversary: the three volumes of The lord of the rings, with colour illustrations and maps, and The lord of the rings: a reader's companion by Wayne G. Hammond and Christina Scull, first published the same year.</p>
+      <p class="record"><a href="https://catalogue.bl.uk/permalink/44BL_MAIN/195da65/alma990132206940109251">Catalogue record</a> · British Library</p>
+    </li>
+    <li>
+      <h2>The Lord of the Rings, 60th anniversary set with the companion (2014)</h2>
+      <p class="isbd">The lord of the rings / J.R.R. Tolkien. — 60th anniversary edition. — London : HarperCollinsPublishers, 2014. — 1 volume : illustrations (black and white, and colour), maps (colour) ; 23 cm. — ISBN 9780007581146</p>
+      <p>Boxed set of four hardbacks for the 60th anniversary: the three volumes of The lord of the rings, with dust jackets after Tolkien's own unused designs, and The lord of the rings: a reader's companion by Wayne G. Hammond and Christina Scull. The catalogue record describes the set as one volume.</p>
+      <p class="record"><a href="https://idiscover.lib.cam.ac.uk/discovery/fulldisplay?docid=alma9958399173403606&amp;context=L&amp;vid=44CAM_INST:44CAM_PROD&amp;lang=en">Catalogue record</a> · Cambridge University Library</p>
+    </li>
+    <li>
+      <h2>The Lord of the Rings: A Reader's Companion (2008)</h2>
+      <p class="isbd">The Lord of the rings : a reader's companion / by Wayne G. Hammond and Christina Scull. — London : HarperCollins, 2008. — lxxxii, 894 p. ; 20 cm. — ISBN 9780007270606</p>
+      <p>Paperback edition of Hammond and Scull's chapter-by-chapter commentary on The lord of the rings, first published in 2005. The same companion is the fourth volume of the 2014 boxed set.</p>
+      <p class="record"><a href="https://catalogue.bl.uk/permalink/44BL_MAIN/195da65/alma990144580510109251">Catalogue record</a> · British Library</p>
+    </li>
+    <li>
+      <h2>The Hobbit ; The Lord of the Rings, boxed set (2011)</h2>
+      <p class="isbd">The hobbit ; The Lord of the Rings / J.R.R. Tolkien. — London : HarperCollins, 2011. — 4 v. : ill., maps ; 20 cm. — ISBN 9780261103566</p>
+      <p>Boxed set of four paperbacks in a slip case: The hobbit and the three volumes of The lord of the rings (The fellowship of the ring, The two towers, The return of the king), each with its own ISBN as well as one for the set.</p>
+      <p class="record"><a href="https://catalogue.bl.uk/permalink/44BL_MAIN/195da65/alma990159606740109251">Catalogue record</a> · British Library</p>
+    </li>
+    <li>
+      <h2>Tree and Leaf (1964)</h2>
+      <p class="isbd">Tree and leaf / J.R.R. Tolkien. — London : Allen &amp; Unwin, 1964. — 92 s. — (Unwin books). — ISBN 0048240206</p>
+      <p>Tolkien's essay On fairy-stories and his short story Leaf by Niggle, published together under a title of their own.</p>
+      <p class="record"><a href="https://bibsys-xp.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma999311850334702201&amp;context=L&amp;vid=47BIBSYS_HIOA:HIOA&amp;lang=en">Catalogue record</a> · Oria, Norway</p>
+    </li>
+    <li>
+      <h2>Tales from the Perilous Realm (1998)</h2>
+      <p class="isbd">Tales from the perilous realm / J.R.R. Tolkien. — London : HarperCollins, 1998. — 178 s. — ISBN 0261103431</p>
+      <p>Farmer Giles of Ham, The adventures of Tom Bombadil, Leaf by Niggle and Smith of Wootton Major under a title chosen for this selection.</p>
+      <p class="record"><a href="https://bibsys-xp.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma999825358304702201&amp;context=L&amp;vid=47BIBSYS_HIOA:HIOA&amp;lang=en">Catalogue record</a> · Oria, Norway</p>
+    </li>
+    <li>
+      <h2>Farmer Giles of Ham ; The Adventures of Tom Bombadil (1975)</h2>
+      <p class="isbd">Farmer Giles of Ham ; [and], The adventures of Tom Bombadil / J. R. R. Tolkien. — London : Unwin Books, 1975. — 144 p. : ill. ; 20 cm. — ISBN 0048231258</p>
+      <p>Paperback with the story Farmer Giles of Ham and the poems of The adventures of Tom Bombadil. The book has no title of its own beyond the two titles.</p>
+      <p class="record"><a href="https://lccn.loc.gov/77360006">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Tree and Leaf – Smith of Wootton Major – The Homecoming of Beorhtnoth (1975)</h2>
+      <p class="isbd">Tree and leaf - Smith of Wootton Major - The homecoming of Beorhtnoth / J.R.R. Tolkien. — London : Unwin Books, 1975. — 175 s. — ISBN 0048200158</p>
+      <p>Paperback with the two parts of Tree and leaf, the story Smith of Wootton Major and the verse play The homecoming of Beorhtnoth. The titles simply follow one another on the book.</p>
+      <p class="record"><a href="https://bibsys-xp.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma991515216464702201&amp;context=L&amp;vid=47BIBSYS_HIOA:HIOA&amp;lang=en">Catalogue record</a> · Oria, Norway</p>
+    </li>
+  </ol>
+  <section class="viaf">
+  <h2>VIAF identifiers</h2>
+  <p>Only people and works that have a VIAF record are listed. Those for which we found no VIAF
+  identifier are left out, so this is not a list of everyone and everything in the example.</p>
+  <h3>People</h3>
+  <ul>
+    <li>Hammond, Wayne G.: <a href="http://viaf.org/viaf/59153962">http://viaf.org/viaf/59153962</a></li>
+    <li>Scull, Christina: <a href="http://viaf.org/viaf/54260077">http://viaf.org/viaf/54260077</a></li>
+    <li>Tolkien, J. R. R.: <a href="http://viaf.org/viaf/95218067">http://viaf.org/viaf/95218067</a></li>
+  </ul>
+  <h3>Works</h3>
+  <ul>
+    <li>Farmer Giles of Ham (Tolkien, J. R. R.): <a href="http://viaf.org/viaf/275497244">http://viaf.org/viaf/275497244</a></li>
+    <li>Leaf by Niggle (Tolkien, J. R. R.): <a href="http://viaf.org/viaf/178224870">http://viaf.org/viaf/178224870</a></li>
+    <li>On fairy-stories (Tolkien, J. R. R.): <a href="http://viaf.org/viaf/180202865">http://viaf.org/viaf/180202865</a></li>
+    <li>Smith of Wootton Major (Tolkien, J. R. R.): <a href="http://viaf.org/viaf/312339051">http://viaf.org/viaf/312339051</a></li>
+    <li>The fellowship of the ring (Tolkien, J. R. R.): <a href="http://viaf.org/viaf/185888925">http://viaf.org/viaf/185888925</a></li>
+    <li>The hobbit (Tolkien, J. R. R.): <a href="http://viaf.org/viaf/309569545">http://viaf.org/viaf/309569545</a></li>
+    <li>The homecoming of Beorhtnoth, Beorhthelm's son (Tolkien, J. R. R.): <a href="http://viaf.org/viaf/184640748">http://viaf.org/viaf/184640748</a></li>
+    <li>The lord of the rings (Tolkien, J. R. R.): <a href="http://viaf.org/viaf/184093601">http://viaf.org/viaf/184093601</a></li>
+    <li>The lord of the rings : a reader's companion (Hammond, Wayne G. ; Scull, Christina): <a href="http://viaf.org/viaf/9014152502908610800009">http://viaf.org/viaf/9014152502908610800009</a></li>
+    <li>The return of the king (Tolkien, J. R. R.): <a href="http://viaf.org/viaf/306062885">http://viaf.org/viaf/306062885</a></li>
+    <li>The two towers (Tolkien, J. R. R.): <a href="http://viaf.org/viaf/186301504">http://viaf.org/viaf/186301504</a></li>
+  </ul>
+  </section>
+</main>
+</body>
+</html>

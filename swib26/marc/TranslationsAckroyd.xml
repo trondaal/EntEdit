@@ -1,0 +1,1103 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection xmlns="http://www.loc.gov/MARC21/slim"><record>
+          <leader>01556cam a2200373 c 4500</leader>
+          <controlfield tag="001">990900103294702201</controlfield>
+          <controlfield tag="005">20260915162717.0</controlfield>
+          <controlfield tag="007">ta</controlfield>
+          <controlfield tag="008">141016s2002    xx#|||||||||||000|u|eng|d</controlfield>
+          <datafield ind1=" " ind2=" " tag="020">
+            <subfield code="a">9780007141340</subfield>
+            <subfield code="q">h.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">090010329-47bibsys_network</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">(NO-TrBIB)090010329</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="040">
+            <subfield code="a">NO-TrBIB</subfield>
+            <subfield code="b">nob</subfield>
+            <subfield code="e">katreg</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="080">
+            <subfield code="a">820</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="100">
+            <subfield code="a">Christie, Agatha</subfield>
+            <subfield code="d">1890-1976</subfield>
+            <subfield code="0">(NO-TrBIB)90057229</subfield>
+          </datafield>
+          <datafield ind1="1" ind2="4" tag="245">
+            <subfield code="a">The murder of Roger Ackroyd</subfield>
+            <subfield code="c">Agatha Christie</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="250">
+            <subfield code="a">Agatha Christie signature ed.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="260">
+            <subfield code="a">London</subfield>
+            <subfield code="b">Harper</subfield>
+            <subfield code="c">2002</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="300">
+            <subfield code="a">368 s.</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="490">
+            <subfield code="a">Poirot</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="490">
+            <subfield code="a">The Agatha Christie collection</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="500">
+            <subfield code="a">Originalutg.: [London] : Collins, 1926</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="583">
+            <subfield code="a">Langtidslagret</subfield>
+            <subfield code="b">aa</subfield>
+            <subfield code="c">2026</subfield>
+            <subfield code="d">permanent</subfield>
+            <subfield code="f">BOTT</subfield>
+            <subfield code="u">https://www.bott-samarbeidet.no/fagsamarbeid/ub-bott/felles/</subfield>
+            <subfield code="2">spanor</subfield>
+            <subfield code="5">NoTsU</subfield>
+          </datafield>
+          <datafield ind1=" " ind2="0" tag="650">
+            <subfield code="a">Belgians</subfield>
+            <subfield code="z">England</subfield>
+          </datafield>
+          <datafield ind1=" " ind2="0" tag="650">
+            <subfield code="a">Poirot, Hercule (Fictitious character)</subfield>
+          </datafield>
+          <datafield ind1=" " ind2="0" tag="650">
+            <subfield code="a">Private investigators</subfield>
+            <subfield code="z">England</subfield>
+          </datafield>
+          <datafield ind1=" " ind2="0" tag="830">
+            <subfield code="a">Poirot</subfield>
+          </datafield>
+          <datafield ind1=" " ind2="4" tag="830">
+            <subfield code="a">The Agatha Christie collection</subfield>
+          </datafield>
+          <datafield ind1="4" ind2="2" tag="856">
+            <subfield code="u">http://www.loc.gov/catdir/enhancements/fy0659/2006042980-d.html</subfield>
+          </datafield>
+          <datafield ind1="4" ind2="2" tag="856">
+            <subfield code="3">Forlagets beskrivelse (kort)</subfield>
+            <subfield code="u">https://contents.bibs.aws.unit.no/?isbn=9780007141340</subfield>
+          </datafield>
+          <datafield ind1="4" ind2="2" tag="856">
+            <subfield code="3">Forlagets beskrivelse (lang)</subfield>
+            <subfield code="u">https://contents.bibs.aws.unit.no/?isbn=9780007141340</subfield>
+          </datafield>
+          <datafield ind1="4" ind2="2" tag="856">
+            <subfield code="3">Miniatyrbilde</subfield>
+            <subfield code="u">https://contents.bibs.aws.unit.no/files/images/small/0/4/9780007141340.jpg</subfield>
+            <subfield code="q">image/jpeg</subfield>
+          </datafield>
+          <datafield ind1="4" ind2="2" tag="856">
+            <subfield code="3">Omslagsbilde</subfield>
+            <subfield code="u">https://contents.bibs.aws.unit.no/files/images/large/0/4/9780007141340.jpg</subfield>
+            <subfield code="q">image/jpeg</subfield>
+          </datafield>
+          <datafield ind1="0" ind2="1" tag="852">
+            <subfield code="a">47BIBSYS_HIT</subfield>
+            <subfield code="6">990900103294702210</subfield>
+            <subfield code="9">P</subfield>
+          </datafield>
+          <datafield ind1="0" ind2="1" tag="852">
+            <subfield code="a">47BIBSYS_UBTO</subfield>
+            <subfield code="6">990900103294702205</subfield>
+            <subfield code="9">P</subfield>
+          </datafield>
+          <datafield ind1="0" ind2="1" tag="852">
+            <subfield code="a">47BIBSYS_NTNU_UB</subfield>
+            <subfield code="6">990900103294702203</subfield>
+            <subfield code="9">P</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="901">
+            <subfield code="a">80</subfield>
+          </datafield>
+        </record>
+      <record>
+          <leader>01578cam a2200385 c 4500</leader>
+          <controlfield tag="001">999109411494702201</controlfield>
+          <controlfield tag="005">20260903183515.0</controlfield>
+          <controlfield tag="007">ta</controlfield>
+          <controlfield tag="007">cr||||||||||||</controlfield>
+          <controlfield tag="008">090506s1991    no ||||| |||||000|1|nob|^</controlfield>
+          <datafield ind1=" " ind2=" " tag="015">
+            <subfield code="a">9509420</subfield>
+            <subfield code="2">nbf</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="020">
+            <subfield code="a">8203167349</subfield>
+            <subfield code="q">h.</subfield>
+            <subfield code="c">Nkr 35.00</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">910941149-47bibsys_network</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">(NO-TrBIB)910941149</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">(NO-TrBIB)092383807</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="040">
+            <subfield code="a">NO-OsNB</subfield>
+            <subfield code="b">nob</subfield>
+            <subfield code="e">katreg</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="041">
+            <subfield code="h">eng</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="042">
+            <subfield code="a">norbibl</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="044">
+            <subfield code="c">no</subfield>
+          </datafield>
+          <datafield ind1="7" ind2="4" tag="082">
+            <subfield code="a">823</subfield>
+            <subfield code="q">NO-OsNB</subfield>
+            <subfield code="2">4/nor</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="100">
+            <subfield code="a">Christie, Agatha</subfield>
+            <subfield code="d">1890-1976</subfield>
+            <subfield code="0">(NO-TrBIB)90057229</subfield>
+          </datafield>
+          <datafield ind1="1" ind2="0" tag="245">
+            <subfield code="a">Doktoren mister en pasient</subfield>
+            <subfield code="c">Agatha Christie ; oversatt av R.A. Arentz</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="246">
+            <subfield code="a">The Murder of Roger Ackroyd</subfield>
+            <subfield code="i">Originaltittel</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="260">
+            <subfield code="a">[Oslo]</subfield>
+            <subfield code="b">Aschehoug</subfield>
+            <subfield code="c">1991</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="300">
+            <subfield code="a">209 s.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="500">
+            <subfield code="a">1. norske utg. 1938</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="533">
+            <subfield code="a">Elektronisk reproduksjon</subfield>
+            <subfield code="b">[Norge]</subfield>
+            <subfield code="c">Nasjonalbiblioteket Digital</subfield>
+            <subfield code="d">2009-05-06</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="583">
+            <subfield code="a">Langtidslagret</subfield>
+            <subfield code="b">aa</subfield>
+            <subfield code="c">2026</subfield>
+            <subfield code="d">permanent</subfield>
+            <subfield code="2">spanor</subfield>
+            <subfield code="5">NO-OsNB</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="700">
+            <subfield code="a">Arentz, Ronald Archer</subfield>
+            <subfield code="0">(NO-TrBIB)7018486</subfield>
+            <subfield code="4">trl</subfield>
+          </datafield>
+          <datafield ind1="4" ind2="2" tag="856">
+            <subfield code="3">Forlagets beskrivelse (lang)</subfield>
+            <subfield code="u">https://contents.bibs.aws.unit.no/content/?isbn=9788203167348</subfield>
+          </datafield>
+          <datafield ind1="4" ind2="2" tag="856">
+            <subfield code="3">Forlagets beskrivelse (lang)</subfield>
+            <subfield code="u">https://contents.bibs.aws.unit.no/?isbn=8203167349</subfield>
+          </datafield>
+          <datafield ind1="4" ind2="1" tag="856">
+            <subfield code="3">Fulltekst</subfield>
+            <subfield code="u">https://urn.nb.no/URN:NBN:no-nb_digibok_2007111304101</subfield>
+            <subfield code="y">Nettbiblioteket</subfield>
+            <subfield code="z">Digital representasjon</subfield>
+          </datafield>
+          <datafield ind1="0" ind2="1" tag="852">
+            <subfield code="a">47BIBSYS_NB</subfield>
+            <subfield code="6">999109411494702202</subfield>
+            <subfield code="9">D</subfield>
+            <subfield code="9">P</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="901">
+            <subfield code="a">90</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="913">
+            <subfield code="a">Norbok</subfield>
+            <subfield code="b">NB</subfield>
+          </datafield>
+          <datafield ind1="4" ind2="1" tag="940">
+            <subfield code="3">Fulltekst</subfield>
+            <subfield code="u">https://urn.nb.no/URN:NBN:no-nb_digibok_2007111304101</subfield>
+            <subfield code="y">Nettbiblioteket</subfield>
+            <subfield code="z">Digital representasjon</subfield>
+            <subfield code="5">Felt for visning av Nettbibliotek-lenker i Oria</subfield>
+          </datafield>
+        </record>
+      <record>
+          <leader>01882cim a2200409 c 4500</leader>
+          <controlfield tag="001">990610885364702201</controlfield>
+          <controlfield tag="005">20231220062929.0</controlfield>
+          <controlfield tag="007">sd f||||||||||</controlfield>
+          <controlfield tag="008">141016s2006    no#|||| |||||||f#|||nob|^</controlfield>
+          <datafield ind1=" " ind2=" " tag="015">
+            <subfield code="a">0612681</subfield>
+            <subfield code="2">nbf</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="020">
+            <subfield code="a">9788242119650</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="020">
+            <subfield code="a">8242119651</subfield>
+            <subfield code="c">Nkr 399.00</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">061088536-47bibsys_network</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">(NO-TrBIB)061088536</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="040">
+            <subfield code="a">NO-OsNB</subfield>
+            <subfield code="b">nob</subfield>
+            <subfield code="e">katreg</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="041">
+            <subfield code="h">eng</subfield>
+            <subfield code="d">nob</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="042">
+            <subfield code="a">norbibl</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="044">
+            <subfield code="c">no</subfield>
+          </datafield>
+          <datafield ind1="7" ind2="4" tag="082">
+            <subfield code="a">823</subfield>
+            <subfield code="q">NO-OsNB</subfield>
+            <subfield code="2">5/nor</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="100">
+            <subfield code="a">Christie, Agatha</subfield>
+            <subfield code="d">1890-1976</subfield>
+            <subfield code="0">(NO-TrBIB)90057229</subfield>
+          </datafield>
+          <datafield ind1="1" ind2="0" tag="245">
+            <subfield code="a">Doktoren mister en pasient</subfield>
+            <subfield code="c">Agatha Christie ; oversatt av R.A. Arentz</subfield>
+            <subfield code="h">[lydopptak]</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="246">
+            <subfield code="a">The murder of Roger Ackroyd</subfield>
+            <subfield code="i">Originaltittel</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="260">
+            <subfield code="a">[Melhus]</subfield>
+            <subfield code="b">Lydbokforl.</subfield>
+            <subfield code="c">2006</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="300">
+            <subfield code="a">7 plater (CD) (8 t, 14 min)</subfield>
+            <subfield code="c">12 cm, i eske</subfield>
+            <subfield code="b">digital</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="500">
+            <subfield code="a">Lest av Per Frisch</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="700">
+            <subfield code="a">Frisch, Per</subfield>
+            <subfield code="d">1951-</subfield>
+            <subfield code="e">medarb.</subfield>
+            <subfield code="0">(NO-TrBIB)90679992</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="700">
+            <subfield code="a">Arentz, R.A.</subfield>
+            <subfield code="4">trl</subfield>
+          </datafield>
+          <datafield ind1="4" ind2="2" tag="856">
+            <subfield code="3">Forlagets beskrivelse (lang)</subfield>
+            <subfield code="u">https://contents.bibs.aws.unit.no/content/?isbn=9788242119650</subfield>
+          </datafield>
+          <datafield ind1="4" ind2="2" tag="856">
+            <subfield code="3">Lydfil</subfield>
+            <subfield code="u">https://contents.bibs.aws.unit.no/files/audio/mp3/0/5/9788242119650.mp3</subfield>
+            <subfield code="q">audio/mpeg</subfield>
+          </datafield>
+          <datafield ind1="4" ind2="2" tag="856">
+            <subfield code="3">Originalt bilde</subfield>
+            <subfield code="u">https://contents.bibs.aws.unit.no/files/images/original/0/5/9788242119650.jpg</subfield>
+            <subfield code="q">image/jpeg</subfield>
+          </datafield>
+          <datafield ind1="4" ind2="2" tag="856">
+            <subfield code="3">Omslagsbilde</subfield>
+            <subfield code="u">https://contents.bibs.aws.unit.no/files/images/large/0/5/9788242119650.jpg</subfield>
+            <subfield code="q">image/jpeg</subfield>
+          </datafield>
+          <datafield ind1="4" ind2="2" tag="856">
+            <subfield code="3">Omslagsbilde</subfield>
+            <subfield code="u">https://contents.bibs.aws.unit.no/files/images/small/0/5/9788242119650.jpg</subfield>
+            <subfield code="q">image/jpeg</subfield>
+          </datafield>
+          <datafield ind1="4" ind2="2" tag="856">
+            <subfield code="3">Forlagets beskrivelse (lang)</subfield>
+            <subfield code="u">https://contents.bibs.aws.unit.no/?isbn=8242119651</subfield>
+          </datafield>
+          <datafield ind1="4" ind2="2" tag="856">
+            <subfield code="3">Forlagets beskrivelse (lang)</subfield>
+            <subfield code="u">https://contents.bibs.aws.unit.no/?isbn=9788242119650</subfield>
+          </datafield>
+          <datafield ind1="4" ind2="2" tag="856">
+            <subfield code="3">Omslagsbilde</subfield>
+            <subfield code="u">https://contents.bibs.aws.unit.no/files/images/small/1/5/8242119651.jpg</subfield>
+            <subfield code="q">image/jpeg</subfield>
+          </datafield>
+          <datafield ind1="0" ind2="1" tag="852">
+            <subfield code="a">47BIBSYS_NB</subfield>
+            <subfield code="6">990610885364702202</subfield>
+            <subfield code="9">P</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="901">
+            <subfield code="a">90</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="913">
+            <subfield code="a">Norbok</subfield>
+            <subfield code="b">NB</subfield>
+          </datafield>
+        </record>
+      <record>
+  <leader>01198cam a2200337 a 4500</leader>
+  <controlfield tag="001">4276955</controlfield>
+  <controlfield tag="005">20250607163915.2</controlfield>
+  <controlfield tag="008">850219s1985    nyu           000 1 eng  </controlfield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">4276955</subfield>
+  </datafield>
+  <datafield tag="906" ind1=" " ind2=" ">
+    <subfield code="a">7</subfield>
+    <subfield code="b">cbc</subfield>
+    <subfield code="c">orignew</subfield>
+    <subfield code="d">1</subfield>
+    <subfield code="e">ocip</subfield>
+    <subfield code="f">19</subfield>
+    <subfield code="g">y-gencatlg</subfield>
+  </datafield>
+  <datafield tag="955" ind1=" " ind2=" ">
+    <subfield code="a">LCAP batch update 2025-06-02-04:00: LCAPM-644, LCAPM-893, LCAPM-150</subfield>
+  </datafield>
+  <datafield tag="010" ind1=" " ind2=" ">
+    <subfield code="a">   85004373 </subfield>
+  </datafield>
+  <datafield tag="020" ind1=" " ind2=" ">
+    <subfield code="a">0396087027</subfield>
+  </datafield>
+  <datafield tag="020" ind1=" " ind2=" ">
+    <subfield code="a">9780396087021</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="9">(DLC)   85004373</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">DLC</subfield>
+    <subfield code="c">DLC</subfield>
+    <subfield code="d">DLC</subfield>
+  </datafield>
+  <datafield tag="050" ind1="0" ind2="0">
+    <subfield code="a">PR6005.H66</subfield>
+    <subfield code="b">M847 1985</subfield>
+  </datafield>
+  <datafield tag="082" ind1="0" ind2="0">
+    <subfield code="a">823/.912</subfield>
+    <subfield code="2">19</subfield>
+  </datafield>
+  <datafield tag="100" ind1="1" ind2=" ">
+    <subfield code="a">Christie, Agatha,</subfield>
+    <subfield code="d">1890-1976.</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="2">
+    <subfield code="a">A murder is announced /</subfield>
+    <subfield code="c">Agatha Christie.</subfield>
+  </datafield>
+  <datafield tag="250" ind1=" " ind2=" ">
+    <subfield code="a">The Winterbrook ed., 1st ed.</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">New York :</subfield>
+    <subfield code="b">Dodd, Mead,</subfield>
+    <subfield code="c">[1985], c1950.</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">297 p. ;</subfield>
+    <subfield code="c">22 cm.</subfield>
+  </datafield>
+  <datafield tag="336" ind1=" " ind2=" ">
+    <subfield code="a">text</subfield>
+    <subfield code="b">txt</subfield>
+    <subfield code="2">rdacontent</subfield>
+  </datafield>
+  <datafield tag="337" ind1=" " ind2=" ">
+    <subfield code="a">unmediated</subfield>
+    <subfield code="b">n</subfield>
+    <subfield code="2">rdamedia</subfield>
+  </datafield>
+  <datafield tag="338" ind1=" " ind2=" ">
+    <subfield code="a">volume</subfield>
+    <subfield code="b">nc</subfield>
+    <subfield code="2">rdacarrier</subfield>
+  </datafield>
+  <datafield tag="600" ind1="1" ind2="0">
+    <subfield code="a">Marple, Jane</subfield>
+    <subfield code="c">(Fictitious character)</subfield>
+    <subfield code="v">Fiction.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Women detectives</subfield>
+    <subfield code="z">England</subfield>
+    <subfield code="v">Fiction.</subfield>
+  </datafield>
+  <datafield tag="655" ind1=" " ind2="7">
+    <subfield code="a">Detective and mystery stories.</subfield>
+    <subfield code="2">gsafd</subfield>
+  </datafield>
+  <datafield tag="655" ind1=" " ind2="7">
+    <subfield code="a">Fiction.</subfield>
+    <subfield code="2">lcgft</subfield>
+    <subfield code="0">https://id.loc.gov/authorities/genreForms/gf2014026339</subfield>
+  </datafield>
+  <datafield tag="991" ind1=" " ind2=" ">
+    <subfield code="b">c-GenColl</subfield>
+    <subfield code="h">PR6005.H66</subfield>
+    <subfield code="i">M847 1985</subfield>
+    <subfield code="p">00004434365</subfield>
+    <subfield code="t">Copy 1</subfield>
+    <subfield code="w">BOOKS</subfield>
+  </datafield>
+</record><record>
+          <leader>02646cam a2200553 c 4500</leader>
+          <controlfield tag="001">990404344514702201</controlfield>
+          <controlfield tag="005">20260903155704.0</controlfield>
+          <controlfield tag="007">ta</controlfield>
+          <controlfield tag="007">cr||||||||||||</controlfield>
+          <controlfield tag="008">141016s2004    no#||||| |||||000|1|nob|^</controlfield>
+          <datafield ind1=" " ind2=" " tag="015">
+            <subfield code="a">0407910</subfield>
+            <subfield code="2">nbf</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="020">
+            <subfield code="a">8203208231</subfield>
+            <subfield code="q">h.</subfield>
+            <subfield code="c">Nkr 99.00</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">040434451-47bibsys_network</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">(NO-TrBIB)040434451</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">(NO-TrBIB)12206402x</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="040">
+            <subfield code="a">NO-OsNB</subfield>
+            <subfield code="b">nob</subfield>
+            <subfield code="e">katreg</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="041">
+            <subfield code="h">eng</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="042">
+            <subfield code="a">norbibl</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="044">
+            <subfield code="c">no</subfield>
+          </datafield>
+          <datafield ind1="7" ind2="4" tag="082">
+            <subfield code="a">823</subfield>
+            <subfield code="q">NO-OsNB</subfield>
+            <subfield code="2">5/nor</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="100">
+            <subfield code="a">Christie, Agatha</subfield>
+            <subfield code="d">1890-1976</subfield>
+            <subfield code="0">(NO-TrBIB)90057229</subfield>
+          </datafield>
+          <datafield ind1="1" ind2="0" tag="245">
+            <subfield code="a">Doktoren mister en pasient ; Invitasjon til mord</subfield>
+            <subfield code="c">Agatha Christie ; [Doktoren mister en pasient] oversatt av R.A. Arentz ; [Invitasjon til mord] oversatt av Jan Christensen</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="246">
+            <subfield code="a">The murder of Roger Ackroyd</subfield>
+            <subfield code="i">Originaltittel</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="246">
+            <subfield code="a">A murder is announced</subfield>
+            <subfield code="i">Originaltittel</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="260">
+            <subfield code="a">Oslo</subfield>
+            <subfield code="b">Aschehoug</subfield>
+            <subfield code="c">2004</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="300">
+            <subfield code="a">206, 173 s.</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="490">
+            <subfield code="a">Poirots beste</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="490">
+            <subfield code="a">Miss Marples beste</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="500">
+            <subfield code="a">Pagineringer i motsatt retning</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="500">
+            <subfield code="a">1. norske utg. henholdsvis 1938 og 1962</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="500">
+            <subfield code="a">Doktoren mister en pasient i serien Poirots beste. Invitasjon til mord i serien Miss Marples beste</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="533">
+            <subfield code="a">Elektronisk reproduksjon</subfield>
+            <subfield code="b">[Norge]</subfield>
+            <subfield code="c">Nasjonalbiblioteket Digital</subfield>
+            <subfield code="d">2012-07-31</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="583">
+            <subfield code="a">Langtidslagret</subfield>
+            <subfield code="b">aa</subfield>
+            <subfield code="c">2026</subfield>
+            <subfield code="d">permanent</subfield>
+            <subfield code="2">spanor</subfield>
+            <subfield code="5">NO-OsNB</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="700">
+            <subfield code="a">Arentz, R.A.</subfield>
+            <subfield code="4">trl</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="700">
+            <subfield code="a">Christensen, Jan</subfield>
+            <subfield code="4">trl</subfield>
+          </datafield>
+          <datafield ind1="0" ind2=" " tag="740">
+            <subfield code="a">Doktoren mister en pasient</subfield>
+          </datafield>
+          <datafield ind1="0" ind2=" " tag="740">
+            <subfield code="a">Invitasjon til mord</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="800">
+            <subfield code="a">Christie, Agatha</subfield>
+            <subfield code="t">Poirots beste</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="800">
+            <subfield code="a">Christie, Agatha</subfield>
+            <subfield code="t">Miss Marples beste</subfield>
+          </datafield>
+          <datafield ind1="4" ind2="2" tag="856">
+            <subfield code="3">Forlagets beskrivelse (lang)</subfield>
+            <subfield code="u">https://contents.bibs.aws.unit.no/content/?isbn=9788203208232</subfield>
+          </datafield>
+          <datafield ind1="4" ind2="2" tag="856">
+            <subfield code="3">Omslagsbilde</subfield>
+            <subfield code="u">https://contents.bibs.aws.unit.no/files/images/large/2/3/9788203208232.jpg</subfield>
+            <subfield code="q">image/jpeg</subfield>
+          </datafield>
+          <datafield ind1="4" ind2="2" tag="856">
+            <subfield code="3">Originalt bilde</subfield>
+            <subfield code="u">https://contents.bibs.aws.unit.no/files/images/original/2/3/9788203208232.jpg</subfield>
+            <subfield code="q">image/jpeg</subfield>
+          </datafield>
+          <datafield ind1="4" ind2="2" tag="856">
+            <subfield code="3">Omslagsbilde</subfield>
+            <subfield code="u">https://contents.bibs.aws.unit.no/files/images/small/2/3/9788203208232.jpg</subfield>
+            <subfield code="q">image/jpeg</subfield>
+          </datafield>
+          <datafield ind1="4" ind2="1" tag="856">
+            <subfield code="3">Fulltekst</subfield>
+            <subfield code="u">https://urn.nb.no/URN:NBN:no-nb_digibok_2012073108108</subfield>
+            <subfield code="y">Nettbiblioteket</subfield>
+            <subfield code="z">Digital representasjon</subfield>
+          </datafield>
+          <datafield ind1="4" ind2="2" tag="856">
+            <subfield code="3">Forlagets beskrivelse (lang)</subfield>
+            <subfield code="u">https://contents.bibs.aws.unit.no/?isbn=8203208231</subfield>
+          </datafield>
+          <datafield ind1="4" ind2="2" tag="856">
+            <subfield code="3">Omslagsbilde</subfield>
+            <subfield code="u">https://contents.bibs.aws.unit.no/files/images/small/1/3/8203208231.jpg</subfield>
+            <subfield code="q">image/jpeg</subfield>
+          </datafield>
+          <datafield ind1="0" ind2="1" tag="852">
+            <subfield code="a">47BIBSYS_NB</subfield>
+            <subfield code="6">990404344514702202</subfield>
+            <subfield code="9">D</subfield>
+            <subfield code="9">P</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="901">
+            <subfield code="a">90</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="913">
+            <subfield code="a">Norbok</subfield>
+            <subfield code="b">NB</subfield>
+          </datafield>
+          <datafield ind1="4" ind2="1" tag="940">
+            <subfield code="3">Fulltekst</subfield>
+            <subfield code="u">https://urn.nb.no/URN:NBN:no-nb_digibok_2012073108108</subfield>
+            <subfield code="y">Nettbiblioteket</subfield>
+            <subfield code="z">Digital representasjon</subfield>
+            <subfield code="5">Felt for visning av Nettbibliotek-lenker i Oria</subfield>
+          </datafield>
+        </record>
+      <record type="Bibliographic">
+    <leader>00000nam a2200000 c 4500</leader>
+    <controlfield tag="001">573911096</controlfield>
+    <controlfield tag="003">DE-101</controlfield>
+    <controlfield tag="005">20221008002417.0</controlfield>
+    <controlfield tag="007">tu</controlfield>
+    <controlfield tag="008">011214s1928    gw ||||| |||| 00||||ger  </controlfield>
+    <datafield tag="015" ind1=" " ind2=" ">
+      <subfield code="a">00,L01</subfield>
+      <subfield code="2">dnb</subfield>
+    </datafield>
+    <datafield tag="016" ind1="7" ind2=" ">
+      <subfield code="2">DE-101</subfield>
+      <subfield code="a">573911096</subfield>
+    </datafield>
+    <datafield tag="020" ind1=" " ind2=" ">
+      <subfield code="c">3.-</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(DE-599)DNB573911096</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(OCoLC)72034233</subfield>
+    </datafield>
+    <datafield tag="040" ind1=" " ind2=" ">
+      <subfield code="a">9999</subfield>
+      <subfield code="b">ger</subfield>
+      <subfield code="c">DE-101</subfield>
+      <subfield code="d">0292</subfield>
+    </datafield>
+    <datafield tag="041" ind1=" " ind2=" ">
+      <subfield code="a">ger</subfield>
+    </datafield>
+    <datafield tag="044" ind1=" " ind2=" ">
+      <subfield code="c">XA-DE</subfield>
+    </datafield>
+    <datafield tag="084" ind1=" " ind2=" ">
+      <subfield code="a">59</subfield>
+      <subfield code="a">810</subfield>
+      <subfield code="a">820</subfield>
+      <subfield code="a">830</subfield>
+      <subfield code="a">839</subfield>
+      <subfield code="a">840</subfield>
+      <subfield code="a">850</subfield>
+      <subfield code="a">860</subfield>
+      <subfield code="a">870</subfield>
+      <subfield code="a">880</subfield>
+      <subfield code="a">890</subfield>
+      <subfield code="a">B</subfield>
+      <subfield code="q">DE-101</subfield>
+      <subfield code="2">sdnb</subfield>
+    </datafield>
+    <datafield tag="100" ind1="1" ind2=" ">
+      <subfield code="0">(DE-588)118520628</subfield>
+      <subfield code="0">https://d-nb.info/gnd/118520628</subfield>
+      <subfield code="0">(DE-101)118520628</subfield>
+      <subfield code="a">Christie, Agatha</subfield>
+      <subfield code="d">1890-1976</subfield>
+      <subfield code="e">Verfasser</subfield>
+      <subfield code="4">aut</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="245" ind1="1" ind2="0">
+      <subfield code="a">Roger Ackroyd und sein Mörder</subfield>
+      <subfield code="b">Roman</subfield>
+      <subfield code="c">Agatha Christie. [Deutsch von Irene Kafka. Einzig berecht. deutsche Übertr. aus d. Engl.]</subfield>
+    </datafield>
+    <datafield tag="264" ind1=" " ind2="1">
+      <subfield code="a">München</subfield>
+      <subfield code="b">Drei Masken Verlag</subfield>
+      <subfield code="c">[1928]</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+      <subfield code="a">294 S.</subfield>
+      <subfield code="c">8</subfield>
+    </datafield>
+    <datafield tag="336" ind1=" " ind2=" ">
+      <subfield code="a">Text</subfield>
+      <subfield code="b">txt</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield tag="337" ind1=" " ind2=" ">
+      <subfield code="a">ohne Hilfsmittel zu benutzen</subfield>
+      <subfield code="b">n</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield tag="338" ind1=" " ind2=" ">
+      <subfield code="a">Band</subfield>
+      <subfield code="b">nc</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield tag="366" ind1=" " ind2=" ">
+      <subfield code="c">OP 20150505</subfield>
+      <subfield code="2">onixas</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2=" ">
+      <subfield code="0">(DE-588)105812331</subfield>
+      <subfield code="0">https://d-nb.info/gnd/105812331</subfield>
+      <subfield code="0">(DE-101)105812331</subfield>
+      <subfield code="a">Kafka, Irene</subfield>
+      <subfield code="d">1888-1942</subfield>
+      <subfield code="e">Übersetzer</subfield>
+      <subfield code="4">trl</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2="2">
+      <subfield code="a">Christie, Agatha</subfield>
+      <subfield code="d">1890-1976</subfield>
+      <subfield code="2">gnd</subfield>
+      <subfield code="t">The murder of Roger Ackroyd</subfield>
+      <subfield code="g">dt.</subfield>
+    </datafield>
+    <datafield tag="850" ind1=" " ind2=" ">
+      <subfield code="a">DE-101a</subfield>
+    </datafield>
+    <datafield tag="856" ind1="4" ind2="2">
+      <subfield code="m">B:DE-101</subfield>
+      <subfield code="q">application/pdf</subfield>
+      <subfield code="u">https://d-nb.info/573911096/04</subfield>
+      <subfield code="3">Inhaltsverzeichnis</subfield>
+    </datafield>
+  </record><record type="Bibliographic">
+    <leader>00000pam a2200000 c 4500</leader>
+    <controlfield tag="001">981838294</controlfield>
+    <controlfield tag="003">DE-101</controlfield>
+    <controlfield tag="005">20171202013845.0</controlfield>
+    <controlfield tag="007">tu</controlfield>
+    <controlfield tag="008">061109s2005    gw ||||| |||| 00||||ger  </controlfield>
+    <datafield tag="015" ind1=" " ind2=" ">
+      <subfield code="a">07,A25,1252</subfield>
+      <subfield code="z">06,N49,1424</subfield>
+      <subfield code="2">dnb</subfield>
+    </datafield>
+    <datafield tag="016" ind1="7" ind2=" ">
+      <subfield code="2">DE-101</subfield>
+      <subfield code="a">981838294</subfield>
+    </datafield>
+    <datafield tag="020" ind1=" " ind2=" ">
+      <subfield code="a">9783596172573</subfield>
+      <subfield code="c">kart. : EUR 7.95, sfr 14.70</subfield>
+      <subfield code="9">978-3-596-17257-3</subfield>
+    </datafield>
+    <datafield tag="020" ind1=" " ind2=" ">
+      <subfield code="a">3596172578</subfield>
+      <subfield code="c">kart. : EUR 7.95, sfr 14.70</subfield>
+      <subfield code="9">3-596-17257-8</subfield>
+    </datafield>
+    <datafield tag="024" ind1="3" ind2=" ">
+      <subfield code="a">9783596172573</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(DE-599)DNB981838294</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(OCoLC)180968736</subfield>
+    </datafield>
+    <datafield tag="040" ind1=" " ind2=" ">
+      <subfield code="a">1245</subfield>
+      <subfield code="b">ger</subfield>
+      <subfield code="c">DE-101</subfield>
+      <subfield code="d">9999</subfield>
+    </datafield>
+    <datafield tag="041" ind1=" " ind2=" ">
+      <subfield code="a">ger</subfield>
+      <subfield code="h">eng</subfield>
+    </datafield>
+    <datafield tag="044" ind1=" " ind2=" ">
+      <subfield code="c">XA-DE-HE</subfield>
+    </datafield>
+    <datafield tag="082" ind1="7" ind2="4">
+      <subfield code="8">1\p</subfield>
+      <subfield code="a">820</subfield>
+      <subfield code="a">B</subfield>
+      <subfield code="q">DE-101</subfield>
+      <subfield code="2">22sdnb</subfield>
+    </datafield>
+    <datafield tag="100" ind1="1" ind2=" ">
+      <subfield code="0">(DE-588)118520628</subfield>
+      <subfield code="0">https://d-nb.info/gnd/118520628</subfield>
+      <subfield code="0">(DE-101)118520628</subfield>
+      <subfield code="a">Christie, Agatha</subfield>
+      <subfield code="d">1890-1976</subfield>
+      <subfield code="e">Verfasser</subfield>
+      <subfield code="4">aut</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="245" ind1="1" ind2="0">
+      <subfield code="a">Alibi</subfield>
+      <subfield code="b">Roman</subfield>
+      <subfield code="c">Agatha Christie. Aus dem Engl. von Friedrich Pütsch</subfield>
+    </datafield>
+    <datafield tag="264" ind1=" " ind2="1">
+      <subfield code="a">Frankfurt, M.</subfield>
+      <subfield code="b">Fischer-Taschenbuch-Verl. </subfield>
+      <subfield code="c">2005</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+      <subfield code="a">196 S.</subfield>
+      <subfield code="c">18 cm</subfield>
+    </datafield>
+    <datafield tag="336" ind1=" " ind2=" ">
+      <subfield code="a">Text</subfield>
+      <subfield code="b">txt</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield tag="337" ind1=" " ind2=" ">
+      <subfield code="a">ohne Hilfsmittel zu benutzen</subfield>
+      <subfield code="b">n</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield tag="338" ind1=" " ind2=" ">
+      <subfield code="a">Band</subfield>
+      <subfield code="b">nc</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield tag="490" ind1="1" ind2=" ">
+      <subfield code="a">Fischer</subfield>
+      <subfield code="v">17257</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(VLB-PF)BC: Paperback</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2="2">
+      <subfield code="a">Christie, Agatha</subfield>
+      <subfield code="d">1890-1976</subfield>
+      <subfield code="2">gnd</subfield>
+      <subfield code="t">The murder of Roger Ackroyd</subfield>
+      <subfield code="g">dt.</subfield>
+    </datafield>
+    <datafield tag="830" ind1=" " ind2="0">
+      <subfield code="a">Fischer</subfield>
+      <subfield code="v">17257</subfield>
+      <subfield code="w">(DE-101)010293345</subfield>
+      <subfield code="w">(DE-600)26776-4</subfield>
+      <subfield code="9">517257</subfield>
+      <subfield code="7">as</subfield>
+    </datafield>
+    <datafield tag="850" ind1=" " ind2=" ">
+      <subfield code="a">DE-101a</subfield>
+      <subfield code="a">DE-101b</subfield>
+    </datafield>
+    <datafield tag="856" ind1="4" ind2="2">
+      <subfield code="m">X:MVB</subfield>
+      <subfield code="q">text/html</subfield>
+      <subfield code="u">https://services.dnb.de/plus/idn/981838294/blurb/</subfield>
+      <subfield code="3">Inhaltstext</subfield>
+    </datafield>
+    <datafield tag="883" ind1="2" ind2=" ">
+      <subfield code="8">1\p</subfield>
+      <subfield code="a">dnb</subfield>
+      <subfield code="d">20160229</subfield>
+      <subfield code="q">DE-101</subfield>
+      <subfield code="u">https://d-nb.info/provenance/plan#dnb</subfield>
+    </datafield>
+    <datafield tag="925" ind1="r" ind2=" ">
+      <subfield code="a">ra</subfield>
+    </datafield>
+  </record><record type="Bibliographic">
+    <leader>00000pam a2200000 c 4500</leader>
+    <controlfield tag="001">1051336694</controlfield>
+    <controlfield tag="003">DE-101</controlfield>
+    <controlfield tag="005">20171201215409.0</controlfield>
+    <controlfield tag="007">tu</controlfield>
+    <controlfield tag="008">140520s2014    gw ||||| |||| 00||||ger  </controlfield>
+    <datafield tag="015" ind1=" " ind2=" ">
+      <subfield code="a">14,A40</subfield>
+      <subfield code="z">14,N22</subfield>
+      <subfield code="2">dnb</subfield>
+    </datafield>
+    <datafield tag="016" ind1="7" ind2=" ">
+      <subfield code="2">DE-101</subfield>
+      <subfield code="a">1051336694</subfield>
+    </datafield>
+    <datafield tag="020" ind1=" " ind2=" ">
+      <subfield code="a">9783455650044</subfield>
+      <subfield code="c">kart. : EUR 9.99 (DE), EUR 10.30 (AT), sfr 16.90 (freier Pr.)</subfield>
+      <subfield code="9">978-3-455-65004-4</subfield>
+    </datafield>
+    <datafield tag="020" ind1=" " ind2=" ">
+      <subfield code="a">345565004X</subfield>
+      <subfield code="9">3-455-65004-X</subfield>
+    </datafield>
+    <datafield tag="024" ind1="3" ind2=" ">
+      <subfield code="a">9783455650044</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(DE-599)DNB1051336694</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(OCoLC)880721301</subfield>
+    </datafield>
+    <datafield tag="040" ind1=" " ind2=" ">
+      <subfield code="a">1245</subfield>
+      <subfield code="b">ger</subfield>
+      <subfield code="c">DE-101</subfield>
+      <subfield code="d">9999</subfield>
+    </datafield>
+    <datafield tag="041" ind1=" " ind2=" ">
+      <subfield code="a">ger</subfield>
+      <subfield code="h">eng</subfield>
+    </datafield>
+    <datafield tag="044" ind1=" " ind2=" ">
+      <subfield code="c">XA-DE-HH</subfield>
+    </datafield>
+    <datafield tag="082" ind1="7" ind2="4">
+      <subfield code="8">1\p</subfield>
+      <subfield code="a">820</subfield>
+      <subfield code="a">B</subfield>
+      <subfield code="q">DE-101</subfield>
+      <subfield code="2">23sdnb</subfield>
+    </datafield>
+    <datafield tag="090" ind1=" " ind2=" ">
+      <subfield code="a">b</subfield>
+    </datafield>
+    <datafield tag="100" ind1="1" ind2=" ">
+      <subfield code="0">(DE-588)118520628</subfield>
+      <subfield code="0">https://d-nb.info/gnd/118520628</subfield>
+      <subfield code="0">(DE-101)118520628</subfield>
+      <subfield code="a">Christie, Agatha</subfield>
+      <subfield code="d">1890-1976</subfield>
+      <subfield code="e">Verfasser</subfield>
+      <subfield code="4">aut</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="245" ind1="1" ind2="0">
+      <subfield code="a">Alibi</subfield>
+      <subfield code="b">ein Fall für Poirot</subfield>
+      <subfield code="c">Agatha Christie. Aus dem Engl. von Michael Mundhenk</subfield>
+    </datafield>
+    <datafield tag="250" ind1=" " ind2=" ">
+      <subfield code="a">1. Aufl.</subfield>
+    </datafield>
+    <datafield tag="264" ind1=" " ind2="1">
+      <subfield code="a">Hamburg</subfield>
+      <subfield code="b">Atlantik</subfield>
+      <subfield code="c">2014</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+      <subfield code="a">285 S.</subfield>
+      <subfield code="b">Ill., graph. Darst.</subfield>
+      <subfield code="c">19 cm</subfield>
+    </datafield>
+    <datafield tag="336" ind1=" " ind2=" ">
+      <subfield code="a">Text</subfield>
+      <subfield code="b">txt</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield tag="337" ind1=" " ind2=" ">
+      <subfield code="a">ohne Hilfsmittel zu benutzen</subfield>
+      <subfield code="b">n</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield tag="338" ind1=" " ind2=" ">
+      <subfield code="a">Band</subfield>
+      <subfield code="b">nc</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(Produktform)Paperback / softback</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">Ermittler</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">Hercule Poirot</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">Krimi</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">Margaret Rutherford</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">Miss Marple</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">Mord</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">Peter Ustinov</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">Queen of Crime</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">Verbrechen</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(VLB-WN)2121: Taschenbuch / Belletristik/Krimis, Thriller, Spionage</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="0">(DE-101)1010874802</subfield>
+      <subfield code="a">Krimis, Thriller, Spionage</subfield>
+      <subfield code="2">gatbeg</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2=" ">
+      <subfield code="0">(DE-588)112713793</subfield>
+      <subfield code="0">https://d-nb.info/gnd/112713793</subfield>
+      <subfield code="0">(DE-101)112713793</subfield>
+      <subfield code="a">Mundhenk, Michael</subfield>
+      <subfield code="d">1954-</subfield>
+      <subfield code="e">Übersetzer</subfield>
+      <subfield code="4">trl</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2="2">
+      <subfield code="a">Christie, Agatha</subfield>
+      <subfield code="d">1890-1976</subfield>
+      <subfield code="2">gnd</subfield>
+      <subfield code="t">The murder of Roger Ackroyd</subfield>
+      <subfield code="g">dt.</subfield>
+    </datafield>
+    <datafield tag="776" ind1="0" ind2="8">
+      <subfield code="i">Erscheint auch als</subfield>
+      <subfield code="n">Online-Ausgabe</subfield>
+      <subfield code="a">Christie, Agatha, 1890-1976</subfield>
+      <subfield code="t">Alibi</subfield>
+      <subfield code="d">Hamburg : Atlantik, 2014</subfield>
+      <subfield code="h">Online-Ressource</subfield>
+      <subfield code="w">(DE-101)1063012759</subfield>
+    </datafield>
+    <datafield tag="850" ind1=" " ind2=" ">
+      <subfield code="a">DE-101a</subfield>
+      <subfield code="a">DE-101b</subfield>
+    </datafield>
+    <datafield tag="856" ind1="4" ind2="2">
+      <subfield code="m">X:MVB</subfield>
+      <subfield code="q">text/html</subfield>
+      <subfield code="u">https://services.dnb.de/plus/idn/1051336694/blurb/</subfield>
+      <subfield code="3">Inhaltstext</subfield>
+    </datafield>
+    <datafield tag="856" ind1="4" ind2="2">
+      <subfield code="m">B:DE-101</subfield>
+      <subfield code="q">application/pdf</subfield>
+      <subfield code="u">https://d-nb.info/1051336694/04</subfield>
+      <subfield code="3">Inhaltsverzeichnis</subfield>
+    </datafield>
+    <datafield tag="883" ind1="2" ind2=" ">
+      <subfield code="8">1\p</subfield>
+      <subfield code="a">dnb</subfield>
+      <subfield code="d">20160229</subfield>
+      <subfield code="q">DE-101</subfield>
+      <subfield code="u">https://d-nb.info/provenance/plan#dnb</subfield>
+    </datafield>
+    <datafield tag="925" ind1="r" ind2=" ">
+      <subfield code="a">ra</subfield>
+    </datafield>
+  </record></collection>

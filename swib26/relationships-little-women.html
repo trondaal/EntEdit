@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercise: relationships between works (Little Women)</title>
+  <style>
+    :root { --text: #1f2328; --muted: #59636e; --line: #d8dee4; --accent: #0b5cad; --bg: #ffffff; --panel: #f6f8fa; }
+    @media (prefers-color-scheme: dark) {
+      :root { --text: #e6edf3; --muted: #9198a1; --line: #3d444d; --accent: #6cb6ff; --bg: #151b23; --panel: #1f2630; }
+    }
+    body { margin: 0; background: var(--bg); color: var(--text);
+           font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+    h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 1rem; }
+    .intro { font-size: 1.05rem; margin: 0 0 2.5rem; }
+    .publications { list-style: none; counter-reset: pub; margin: 0; padding: 0; }
+    .publications > li { counter-increment: pub; padding: 1.25rem 0 1.5rem; border-top: 1px solid var(--line); }
+    .publications h2 { font-size: 1.15rem; line-height: 1.35; margin: 0 0 .5rem; }
+    .publications h2::before { content: counter(pub) ". "; color: var(--muted); }
+    .publications p { margin: .4rem 0; }
+    .isbd { background: var(--panel); border-left: 3px solid var(--line); padding: .6rem .8rem;
+            font-size: .92rem; color: var(--text); }
+    .record { font-size: .9rem; color: var(--muted); }
+    a { color: var(--accent); }
+    .back { margin: 0 0 1.5rem; font-size: .9rem; }
+    .eyebrow { margin: 0 0 .25rem; font-size: .85rem; letter-spacing: .06em; text-transform: uppercase;
+               color: var(--muted); }
+    main > section { margin-top: 2.25rem; }
+    main > section > h2 { font-size: 1.3rem; margin: 0 0 .75rem; }
+    .todo { color: var(--muted); font-style: italic; }
+    .back a::before { content: "← "; }
+    .start { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: .6rem .9rem;
+             margin: 0 0 2.5rem; font-size: .95rem; }
+    .exercises { padding-left: 1.25rem; }
+    .exercises li { margin: 0 0 1.25rem; }
+    .exercises h3 { font-size: 1.1rem; margin: 0 0 .25rem; }
+    .exercises p { margin: .2rem 0; }
+    ol.steps li { margin: 0 0 .5rem; }
+    .viaf { margin-top: 3rem; padding-top: 1.5rem; border-top: 2px solid var(--line); font-size: .92rem; }
+    .viaf h2 { font-size: 1.15rem; }
+    .viaf h3 { font-size: 1rem; margin: 1.25rem 0 .25rem; }
+    .viaf ul { padding-left: 1.25rem; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="back"><a href="./">Learning entity-oriented metadata with EntEdit</a></p>
+  <h1>Exercise: relationships between works (Little Women)</h1>
+  <p class="intro">All the publications below go back to Louisa May Alcott's novel, which first came out in two parts. Which of them are works of their own, and which relationship would you state between each of them and the novel, and between the two parts? Look up the relationship elements in the RDA Registry. Then compare your answer with how each catalogue record expresses the link to the novel, if it does.</p>
+  <p class="start">Start file to import: <a href="start/relationships-little-women.ttl">start/relationships-little-women.ttl</a></p>
+  <ol class="publications">
+    <li>
+      <h2>Little Women, first edition (1868)</h2>
+      <p class="isbd">Little women, or, Meg, Jo, Beth, and Amy / by Louisa May Alcott ; illustrated by May Alcott. — Boston : Roberts Brothers, 1868. — iv, [3], 8-341, [7] p., [4] leaves of plates : ill. ; 17 cm</p>
+      <p>The first edition of the story of the four March sisters, illustrated by the author's sister May Alcott.</p>
+      <p class="record"><a href="https://lccn.loc.gov/94159885">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Little Women, part second (1869)</h2>
+      <p class="isbd">Little Women : or Meg, Jo, Beth and Amy; part second; with illustrations / by Louisa M. Alcott. — Boston : Roberts Brothers, 1869. — 359 s</p>
+      <p>The continuation, published the following year by the same publisher as "part second". British editions often published it on its own as Good wives.</p>
+      <p class="record"><a href="https://bibsys-xp.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma999708728604702201&amp;context=L&amp;vid=47BIBSYS_HIOA:HIOA&amp;lang=en">Catalogue record</a> · Oria, Norway</p>
+    </li>
+    <li>
+      <h2>Little Women, the complete novel (1994)</h2>
+      <p class="isbd">Little women or, Meg, Jo, Beth and Amy / Louisa May Alcott; with illustrations by M.E. Gray. — New York : A.A. Knopf, c1994. — 527 p. : ill. ; 22 cm. — (Everyman's library children's classics). — ISBN 0679436421</p>
+      <p>Little women was first published as two separate books, in 1868 and 1869, and later as one. This edition has the complete novel, both parts in a single volume, in the Everyman's Library Children's Classics series.</p>
+      <p class="record"><a href="https://lccn.loc.gov/94005865">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Meg, Jo, Beth, and Amy, a graphic novel (2019)</h2>
+      <p class="isbd">Meg, Jo, Beth, and Amy : a graphic novel / by Rey Terciero and Bre Indigo. — New York : Little, Brown and Company, 2019. — 1 bind (upaginert) : illustrasjoner. — ISBN 978-0-316-52286-1</p>
+      <p>A graphic novel set in present-day New York, with a blended and diverse March family. Written by Rey Terciero and drawn by Bre Indigo.</p>
+      <p class="record"><a href="https://bibsys-xp.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma999921647652602201&amp;context=L&amp;vid=47BIBSYS_HIOA:HIOA&amp;lang=en">Catalogue record</a> · Oria, Norway</p>
+    </li>
+    <li>
+      <h2>Little Women, a play (2001)</h2>
+      <p class="isbd">Little women : Meg, Jo, Beth, and Amy / adapted by Sandra Fenichel Asher. — Woodstock, Ill. : Dramatic Pub., c2001. — 82 p. : music ; 19 cm. — ISBN 9781583420584</p>
+      <p>A two-act play for the stage, based on Alcott's writings, published as a script.</p>
+      <p class="record"><a href="https://lccn.loc.gov/2011281596">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Little Women, an opera in vocal score (2001)</h2>
+      <p class="isbd">Little women : opera in two acts / words and music by Mark Adamo, after the novel by Louisa May Alcott. — Chester, N.Y. : G. Schirmer, 2001, c1998. — 1 vocal score (317 p.) ; 31 cm. — ISBN 0634020927</p>
+      <p>Vocal score of an opera in two acts. Mark Adamo wrote both words and music.</p>
+      <p class="record"><a href="https://lccn.loc.gov/2003555914">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Little Women, the film on DVD (2019)</h2>
+      <p class="isbd">Little women / written for the screen and directed by Greta Gerwig. — [S.l.] : Columbia Pictures, 2019. — 1 plate (DVD-video) (2 t, 9 min) : lyd, kol</p>
+      <p>Greta Gerwig's feature film on DVD, with Saoirse Ronan as Jo. It moves between two periods in the sisters' lives instead of following the novel's order.</p>
+      <p class="record"><a href="https://bibsys-xp.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma999921122387502201&amp;context=L&amp;vid=47BIBSYS_HIOA:HIOA&amp;lang=en">Catalogue record</a> · Oria, Norway</p>
+    </li>
+  </ol>
+  <section class="viaf">
+  <h2>VIAF identifiers</h2>
+  <p>Only people and works that have a VIAF record are listed. Those for which we found no VIAF
+  identifier are left out, so this is not a list of everyone and everything in the example.</p>
+  <h3>People</h3>
+  <ul>
+    <li>Adamo, Mark: <a href="http://viaf.org/viaf/51306277">http://viaf.org/viaf/51306277</a></li>
+    <li>Alcott, Louisa May: <a href="http://viaf.org/viaf/29528997">http://viaf.org/viaf/29528997</a></li>
+    <li>Asher, Sandy: <a href="http://viaf.org/viaf/43130453">http://viaf.org/viaf/43130453</a></li>
+    <li>Gerwig, Greta: <a href="http://viaf.org/viaf/169433365">http://viaf.org/viaf/169433365</a></li>
+    <li>Indigo, Bre: <a href="http://viaf.org/viaf/33154921207663590177">http://viaf.org/viaf/33154921207663590177</a></li>
+    <li>Ronan, Saoirse: <a href="http://viaf.org/viaf/166139052">http://viaf.org/viaf/166139052</a></li>
+    <li>Terciero, Rey: <a href="http://viaf.org/viaf/5141154923707663780000">http://viaf.org/viaf/5141154923707663780000</a></li>
+  </ul>
+  <h3>Works</h3>
+  <ul>
+    <li>Little women (Alcott, Louisa May): <a href="http://viaf.org/viaf/174058143">http://viaf.org/viaf/174058143</a></li>
+    <li>Little women (film, Gerwig, 2019): <a href="http://viaf.org/viaf/80167863629422740114">http://viaf.org/viaf/80167863629422740114</a></li>
+    <li>Little women (opera, Adamo, Mark): <a href="http://viaf.org/viaf/306113684">http://viaf.org/viaf/306113684</a></li>
+    <li>Little women, part second (Alcott, Louisa May): <a href="http://viaf.org/viaf/183030696">http://viaf.org/viaf/183030696</a></li>
+    <li>Meg, Jo, Beth, and Amy (Terciero, Rey ; Indigo, Bre): <a href="http://viaf.org/viaf/3082160310483258300009">http://viaf.org/viaf/3082160310483258300009</a></li>
+  </ul>
+  </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning activity: cataloguing a publication</title>
+  <style>
+    :root { --text: #1f2328; --muted: #59636e; --line: #d8dee4; --accent: #0b5cad; --bg: #ffffff; --panel: #f6f8fa; }
+    @media (prefers-color-scheme: dark) {
+      :root { --text: #e6edf3; --muted: #9198a1; --line: #3d444d; --accent: #6cb6ff; --bg: #151b23; --panel: #1f2630; }
+    }
+    body { margin: 0; background: var(--bg); color: var(--text);
+           font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+    h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 1rem; }
+    .intro { font-size: 1.05rem; margin: 0 0 2.5rem; }
+    .publications { list-style: none; counter-reset: pub; margin: 0; padding: 0; }
+    .publications > li { counter-increment: pub; padding: 1.25rem 0 1.5rem; border-top: 1px solid var(--line); }
+    .publications h2 { font-size: 1.15rem; line-height: 1.35; margin: 0 0 .5rem; }
+    .publications h2::before { content: counter(pub) ". "; color: var(--muted); }
+    .publications p { margin: .4rem 0; }
+    .isbd { background: var(--panel); border-left: 3px solid var(--line); padding: .6rem .8rem;
+            font-size: .92rem; color: var(--text); }
+    .record { font-size: .9rem; color: var(--muted); }
+    a { color: var(--accent); }
+    .back { margin: 0 0 1.5rem; font-size: .9rem; }
+    .eyebrow { margin: 0 0 .25rem; font-size: .85rem; letter-spacing: .06em; text-transform: uppercase;
+               color: var(--muted); }
+    main > section { margin-top: 2.25rem; }
+    main > section > h2 { font-size: 1.3rem; margin: 0 0 .75rem; }
+    .todo { color: var(--muted); font-style: italic; }
+    .back a::before { content: "← "; }
+    .start { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: .6rem .9rem;
+             margin: 0 0 2.5rem; font-size: .95rem; }
+    .exercises { padding-left: 1.25rem; }
+    .exercises li { margin: 0 0 1.25rem; }
+    .exercises h3 { font-size: 1.1rem; margin: 0 0 .25rem; }
+    .exercises p { margin: .2rem 0; }
+    ol.steps li { margin: 0 0 .5rem; }
+    .viaf { margin-top: 3rem; padding-top: 1.5rem; border-top: 2px solid var(--line); font-size: .92rem; }
+    .viaf h2 { font-size: 1.15rem; }
+    .viaf h3 { font-size: 1rem; margin: 1.25rem 0 .25rem; }
+    .viaf ul { padding-left: 1.25rem; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="back"><a href="./">Learning entity-oriented metadata with EntEdit</a></p>
+  <h1>Learning activity: cataloguing a publication</h1>
+  <p class="intro">Each participant takes one of the thirty publications below, so that everyone can work in the same repository at the same time: no two of them share an author or a work. From the description and the catalogue record, create the work, the expression and the manifestation, and the person who wrote it, and relate them to each other. Record the publisher as text on the manifestation only. Then look at what the others have made, in the entity lists and in the search.</p>
+  <ol class="publications">
+    <li>
+      <h2>Adichie: Purple hibiscus (2003)</h2>
+      <p class="isbd">Purple hibiscus : a novel / by Chimamanda Ngozi Adichie. — 1st ed. — Chapel Hill : Algonquin Books of Chapel Hill, 2003. — 307 p. ; 23 cm. — ISBN 1565123875</p>
+      <p class="record"><a href="https://lccn.loc.gov/2003051894">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Atkinson: Case histories (2004)</h2>
+      <p class="isbd">Case histories : a novel / Kate Atkinson. — 1st American Ed. — New York : Little, Brown and Co., c2004. — 312 p. ; 24 cm. — ISBN 0316740403</p>
+      <p class="record"><a href="https://lccn.loc.gov/2004002379">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Barnes: The sense of an ending (2011)</h2>
+      <p class="isbd">The sense of an ending / Julian Barnes. — New York : Alfred A. Knopf, 2011. — 163 p. ; 20 cm. — ISBN 9780307957122</p>
+      <p class="record"><a href="https://lccn.loc.gov/2011025433">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Child: The enemy (2004)</h2>
+      <p class="isbd">The enemy / Lee Child. — New York : Delacorte Press, 2004. — 393 p. ; 24 cm. — (Reacher series). — ISBN 0385336675</p>
+      <p class="record"><a href="https://lccn.loc.gov/2003065282">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Cleeves: Raven black (2006)</h2>
+      <p class="isbd">Raven black / Ann Cleeves. — London : Macmillan, 2006. — 375 p. ; 22 cm. — ISBN 1405054727</p>
+      <p class="record"><a href="https://lccn.loc.gov/2006386003">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Coben: Tell no one (2001)</h2>
+      <p class="isbd">Tell no one : a novel / by Harlan Coben. — New York, N.Y. : Delacorte Press, c2001. — 339 p. ; 25 cm. — ISBN 0385335555</p>
+      <p class="record"><a href="https://lccn.loc.gov/00052288">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Connelly: The Lincoln lawyer (2005)</h2>
+      <p class="isbd">The Lincoln lawyer : a novel / Michael Connelly. — 1st ed. — New York : Little, Brown, c2005. — 404 p. ; 25 cm. — ISBN 0316734934</p>
+      <p class="record"><a href="https://lccn.loc.gov/2005012863">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Egan: A visit from the Goon Squad (2010)</h2>
+      <p class="isbd">A visit from the Goon Squad / Jennifer Egan. — 1st ed. — New York : Alfred A. Knopf, 2010. — 273 p. : ill. ; 25 cm. — ISBN 9780307592835</p>
+      <p class="record"><a href="https://lccn.loc.gov/2009046496">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Flynn: Gone girl (2012)</h2>
+      <p class="isbd">Gone girl : a novel / Gillian Flynn. — 1st. ed. — New York : Crown, c2012. — 419 p. ; 24 cm. — ISBN 9780307588364</p>
+      <p class="record"><a href="https://lccn.loc.gov/2011041525">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>French: In the woods (2007)</h2>
+      <p class="isbd">In the woods / Tana French. — London : Hodder &amp; Stoughton, 2007. — 485 p. ; 24 cm. — (Dublin murder squad series). — ISBN 9780340924754</p>
+      <p class="record"><a href="https://lccn.loc.gov/2007280320">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Hawkins: The girl on the train (2015)</h2>
+      <p class="isbd">The girl on the train / Paula Hawkins. — New York : Riverhead Books, a member of Penguin Group (USA), 2015. — 323 pages ; 24 cm. — ISBN 9781594633669</p>
+      <p class="record"><a href="https://lccn.loc.gov/2014027001">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Herron: Slow horses (2010)</h2>
+      <p class="isbd">Slow horses / Mick Herron. — 1st US ed. — New York : Soho Constable, 2010. — 329 p. ; 23 cm. — ISBN 9781569476437</p>
+      <p class="record"><a href="https://lccn.loc.gov/2010002459">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Hosseini: The kite runner (2003)</h2>
+      <p class="isbd">The kite runner / Khaled Hosseini. — New York : Riverhead Books, 2003. — 324 p. ; 24 cm. — ISBN 1573222453</p>
+      <p class="record"><a href="https://lccn.loc.gov/2003043106">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Kingsolver: Demon Copperhead (2022)</h2>
+      <p class="isbd">Demon Copperhead : a novel / Barbara Kingsolver. — First edition. — New York, NY : Harper, an imprint of HarperCollinsPublishers, [2022]. — 548 pages ; 24 cm. — ISBN 9780063251922</p>
+      <p class="record"><a href="https://lccn.loc.gov/2022441858">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Lahiri: The namesake (2004)</h2>
+      <p class="isbd">The namesake / Jhumpa Lahiri. — London : Flamingo, 2004. — 291 p. ; 23 cm. — ISBN 000225901X</p>
+      <p class="record"><a href="https://lccn.loc.gov/2004401901">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Lehane: Mystic river (2001)</h2>
+      <p class="isbd">Mystic river / Dennis Lehane. — New York : William Morrow, 2001. — 401 p. ; 25 cm. — ISBN 0688163165</p>
+      <p class="record"><a href="https://lccn.loc.gov/2001273012">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Levy: Small island (2004)</h2>
+      <p class="isbd">Small island / Andrea Levy. — London : Review, 2004. — 441 p. ; 21 cm. — ISBN 0755307496</p>
+      <p class="record"><a href="https://lccn.loc.gov/2005415917">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Lippman: What the dead know (2007)</h2>
+      <p class="isbd">What the dead know / Laura Lippman. — 1st ed. — New York : William Morrow, c2007. — 376 p. ; 24 cm. — ISBN 9780061128851</p>
+      <p class="record"><a href="https://lccn.loc.gov/2006052495">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Mantel: Wolf Hall (2009)</h2>
+      <p class="isbd">Wolf Hall / Hilary Mantel. — London : Fourth Estate, 2009. — 651 p. ; 25 cm. — ISBN 9780007230181</p>
+      <p class="record"><a href="https://lccn.loc.gov/2009396791">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Martel: Life of Pi (2001)</h2>
+      <p class="isbd">Life of Pi : a novel / Yann Martel. — lst U.S. ed. — New York : Harcourt, c2001. — xii, 319 p. ; 24 cm. — ISBN 0151008116</p>
+      <p class="record"><a href="https://lccn.loc.gov/2001039737">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>McEwan: Atonement (2002)</h2>
+      <p class="isbd">Atonement : a novel / Ian McEwan. — 1st ed. in the U.S.A. — New York : N.A. Talese/Doubleday, 2002, c2001. — 351 p. ; 25 cm. — ISBN 0385503954</p>
+      <p class="record"><a href="https://lccn.loc.gov/2001044291">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Ng: Everything I never told you (2014)</h2>
+      <p class="isbd">Everything I never told you / Celeste Ng. — New York : Penguin Press HC, 2014. — 297 pages ; 23 cm. — ISBN 9781594205712</p>
+      <p class="record"><a href="https://lccn.loc.gov/2013039961">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Osman: The Thursday murder club (2020)</h2>
+      <p class="isbd">The Thursday murder club / Richard Osman. — [New York] : Pamela Dorman Books/Viking, [2020]. — 355 pages ; 24 cm. — ISBN 9781984880963</p>
+      <p class="record"><a href="https://lccn.loc.gov/2020008501">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Owens: Where the crawdads sing (2018)</h2>
+      <p class="isbd">Where the crawdads sing / Delia Owens. — New York : G.P. Putnam's Sons, [2018]. — 370 pages ; 24 cm. — ISBN 9780735219090</p>
+      <p class="record"><a href="https://lccn.loc.gov/2018010775">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Penny: Still life (2006)</h2>
+      <p class="isbd">Still life / Louise Penny. — 1st St. Martin's Minotaur ed. — New York : St. Martin's Minotaur, 2006. — viii, 312 p. ; 22 cm. — ISBN 0312352557</p>
+      <p class="record"><a href="https://lccn.loc.gov/2006041992">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Rankin: Exit music (2008)</h2>
+      <p class="isbd">Exit music / Ian Rankin. — 1st U.S. ed. — New York : Little, Brown and Co., 2008. — 421 p. ; 25 cm. — (The Inspector Rebus series). — ISBN 9780316057585</p>
+      <p class="record"><a href="https://lccn.loc.gov/2008001888">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Rooney: Normal people (2018)</h2>
+      <p class="isbd">Normal people / Sally Rooney. — London : Faber &amp; Faber, 2018. — 266 pages ; 23 cm. — ISBN 9780571334643</p>
+      <p class="record"><a href="https://lccn.loc.gov/2018410841">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Slaughter: Blindsighted (2001)</h2>
+      <p class="isbd">Blindsighted / Karin Slaughter. — 1st edition. — New York : William Morrow, [2001]. — 311 pages ; 25 cm. — ISBN 0688174574</p>
+      <p class="record"><a href="https://lccn.loc.gov/00046039">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Smith: White teeth (2000)</h2>
+      <p class="isbd">White teeth / Zadie Smith. — London : Hamish Hamilton, 2000. — 461 p. ; 24 cm. — ISBN 024113997X</p>
+      <p class="record"><a href="https://lccn.loc.gov/2001369115">Catalogue record</a> · Library of Congress</p>
+    </li>
+    <li>
+      <h2>Strout: Olive Kitteridge (2008)</h2>
+      <p class="isbd">Olive Kitteridge / Elizabeth Strout. — 1st ed. — New York : Random House, c2008. — 270 p. ; 25 cm. — ISBN 9781400062089</p>
+      <p class="record"><a href="https://lccn.loc.gov/2007016999">Catalogue record</a> · Library of Congress</p>
+    </li>
+  </ol>
+  <section class="viaf">
+  <h2>VIAF identifiers</h2>
+  <p>Only people and works that have a VIAF record are listed. Those for which we found no VIAF
+  identifier are left out, so this is not a list of everyone and everything in the example.</p>
+  <h3>People</h3>
+  <ul>
+    <li>Adichie, Chimamanda Ngozi: <a href="http://viaf.org/viaf/87194517">http://viaf.org/viaf/87194517</a></li>
+    <li>Atkinson, Kate: <a href="http://viaf.org/viaf/59219639">http://viaf.org/viaf/59219639</a></li>
+    <li>Barnes, Julian: <a href="http://viaf.org/viaf/51710796">http://viaf.org/viaf/51710796</a></li>
+    <li>Child, Lee: <a href="http://viaf.org/viaf/100304282">http://viaf.org/viaf/100304282</a></li>
+    <li>Cleeves, Ann: <a href="http://viaf.org/viaf/40585642">http://viaf.org/viaf/40585642</a></li>
+    <li>Coben, Harlan: <a href="http://viaf.org/viaf/116846308">http://viaf.org/viaf/116846308</a></li>
+    <li>Connelly, Michael: <a href="http://viaf.org/viaf/19745715">http://viaf.org/viaf/19745715</a></li>
+    <li>Egan, Jennifer: <a href="http://viaf.org/viaf/56717951">http://viaf.org/viaf/56717951</a></li>
+    <li>Flynn, Gillian: <a href="http://viaf.org/viaf/103168327">http://viaf.org/viaf/103168327</a></li>
+    <li>French, Tana: <a href="http://viaf.org/viaf/149427877">http://viaf.org/viaf/149427877</a></li>
+    <li>Hawkins, Paula: <a href="http://viaf.org/viaf/14277202">http://viaf.org/viaf/14277202</a></li>
+    <li>Herron, Mick: <a href="http://viaf.org/viaf/24546389">http://viaf.org/viaf/24546389</a></li>
+    <li>Hosseini, Khaled: <a href="http://viaf.org/viaf/98912036">http://viaf.org/viaf/98912036</a></li>
+    <li>Kingsolver, Barbara: <a href="http://viaf.org/viaf/79097759">http://viaf.org/viaf/79097759</a></li>
+    <li>Lahiri, Jhumpa: <a href="http://viaf.org/viaf/100885199">http://viaf.org/viaf/100885199</a></li>
+    <li>Lehane, Dennis: <a href="http://viaf.org/viaf/10004693">http://viaf.org/viaf/10004693</a></li>
+    <li>Levy, Andrea: <a href="http://viaf.org/viaf/74098174">http://viaf.org/viaf/74098174</a></li>
+    <li>Lippman, Laura: <a href="http://viaf.org/viaf/85629402">http://viaf.org/viaf/85629402</a></li>
+    <li>Mantel, Hilary: <a href="http://viaf.org/viaf/44415775">http://viaf.org/viaf/44415775</a></li>
+    <li>Martel, Yann: <a href="http://viaf.org/viaf/85372278">http://viaf.org/viaf/85372278</a></li>
+    <li>McEwan, Ian: <a href="http://viaf.org/viaf/109587997">http://viaf.org/viaf/109587997</a></li>
+    <li>Ng, Celeste: <a href="http://viaf.org/viaf/20146635715841982875">http://viaf.org/viaf/20146635715841982875</a></li>
+    <li>Osman, Richard: <a href="http://viaf.org/viaf/310665412">http://viaf.org/viaf/310665412</a></li>
+    <li>Owens, Delia: <a href="http://viaf.org/viaf/110347652">http://viaf.org/viaf/110347652</a></li>
+    <li>Penny, Louise: <a href="http://viaf.org/viaf/79555703">http://viaf.org/viaf/79555703</a></li>
+    <li>Rankin, Ian: <a href="http://viaf.org/viaf/76462000">http://viaf.org/viaf/76462000</a></li>
+    <li>Rooney, Sally: <a href="http://viaf.org/viaf/49149912708206212971">http://viaf.org/viaf/49149912708206212971</a></li>
+    <li>Slaughter, Karin: <a href="http://viaf.org/viaf/56832090">http://viaf.org/viaf/56832090</a></li>
+    <li>Smith, Zadie: <a href="http://viaf.org/viaf/14951645">http://viaf.org/viaf/14951645</a></li>
+    <li>Strout, Elizabeth: <a href="http://viaf.org/viaf/66631918">http://viaf.org/viaf/66631918</a></li>
+  </ul>
+  <h3>Works</h3>
+  <ul>
+    <li>A visit from the Goon Squad (Egan, Jennifer): <a href="http://viaf.org/viaf/6720151474916500490009">http://viaf.org/viaf/6720151474916500490009</a></li>
+    <li>Atonement (McEwan, Ian): <a href="http://viaf.org/viaf/195844162">http://viaf.org/viaf/195844162</a></li>
+    <li>Blindsighted (Slaughter, Karin): <a href="http://viaf.org/viaf/1175145424652986831400">http://viaf.org/viaf/1175145424652986831400</a></li>
+    <li>Demon Copperhead (Kingsolver, Barbara): <a href="http://viaf.org/viaf/342170292134077690001">http://viaf.org/viaf/342170292134077690001</a></li>
+    <li>Everything I never told you (Ng, Celeste): <a href="http://viaf.org/viaf/316872346">http://viaf.org/viaf/316872346</a></li>
+    <li>Purple hibiscus (Adichie, Chimamanda Ngozi): <a href="http://viaf.org/viaf/305113980">http://viaf.org/viaf/305113980</a></li>
+    <li>The girl on the train (Hawkins, Paula): <a href="http://viaf.org/viaf/317270260">http://viaf.org/viaf/317270260</a></li>
+    <li>The kite runner (Hosseini, Khaled): <a href="http://viaf.org/viaf/220035581">http://viaf.org/viaf/220035581</a></li>
+    <li>The Lincoln lawyer (Connelly, Michael): <a href="http://viaf.org/viaf/180944535">http://viaf.org/viaf/180944535</a></li>
+    <li>The namesake (Lahiri, Jhumpa): <a href="http://viaf.org/viaf/207953409">http://viaf.org/viaf/207953409</a></li>
+    <li>Wolf Hall (Mantel, Hilary): <a href="http://viaf.org/viaf/308112483">http://viaf.org/viaf/308112483</a></li>
+  </ul>
+  </section>
+</main>
+</body>
+</html>

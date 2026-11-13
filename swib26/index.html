@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning entity-oriented metadata with EntEdit · SWIB26</title>
+  <style>
+    :root { --text: #1f2328; --muted: #59636e; --line: #d8dee4; --accent: #0b5cad; --bg: #ffffff; --panel: #f6f8fa; }
+    @media (prefers-color-scheme: dark) {
+      :root { --text: #e6edf3; --muted: #9198a1; --line: #3d444d; --accent: #6cb6ff; --bg: #151b23; --panel: #1f2630; }
+    }
+    body { margin: 0; background: var(--bg); color: var(--text);
+           font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+    h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 1rem; }
+    .intro { font-size: 1.05rem; margin: 0 0 2.5rem; }
+    .publications { list-style: none; counter-reset: pub; margin: 0; padding: 0; }
+    .publications > li { counter-increment: pub; padding: 1.25rem 0 1.5rem; border-top: 1px solid var(--line); }
+    .publications h2 { font-size: 1.15rem; line-height: 1.35; margin: 0 0 .5rem; }
+    .publications h2::before { content: counter(pub) ". "; color: var(--muted); }
+    .publications p { margin: .4rem 0; }
+    .isbd { background: var(--panel); border-left: 3px solid var(--line); padding: .6rem .8rem;
+            font-size: .92rem; color: var(--text); }
+    .record { font-size: .9rem; color: var(--muted); }
+    a { color: var(--accent); }
+    .back { margin: 0 0 1.5rem; font-size: .9rem; }
+    .eyebrow { margin: 0 0 .25rem; font-size: .85rem; letter-spacing: .06em; text-transform: uppercase;
+               color: var(--muted); }
+    main > section { margin-top: 2.25rem; }
+    main > section > h2 { font-size: 1.3rem; margin: 0 0 .75rem; }
+    .todo { color: var(--muted); font-style: italic; }
+    .back a::before { content: "← "; }
+    .start { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: .6rem .9rem;
+             margin: 0 0 2.5rem; font-size: .95rem; }
+    .exercises { padding-left: 1.25rem; }
+    .exercises li { margin: 0 0 1.25rem; }
+    .exercises h3 { font-size: 1.1rem; margin: 0 0 .25rem; }
+    .exercises p { margin: .2rem 0; }
+    ol.steps li { margin: 0 0 .5rem; }
+    .viaf { margin-top: 3rem; padding-top: 1.5rem; border-top: 2px solid var(--line); font-size: .92rem; }
+    .viaf h2 { font-size: 1.15rem; }
+    .viaf h3 { font-size: 1rem; margin: 1.25rem 0 .25rem; }
+    .viaf ul { padding-left: 1.25rem; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">SWIB26 workshop</p>
+  <h1>Learning entity-oriented metadata with EntEdit</h1>
+  <p class="intro">The future of library data is entity-based, and the new generation of librarians must be
+  trained in the mindset, formats, vocabularies and identifiers that will be the core of library data. In
+  education we lack convenient and pedagogically oriented tools that students can use to build knowledge of,
+  reflect on and gain experience with bibliographic entities. This workshop presents EntEdit, an
+  entity-oriented editor made for that purpose, and lets you try it out on a set of learning activities.</p>
+
+  <section>
+  <h2>Time and place</h2>
+  <p><strong>When:</strong> 08:00–12:00 UTC<br>
+  <strong>Where:</strong> online, on Zoom: <a href="https://oslomet.zoom.us/j/61004023053?pwd=YZiyYrwprHLGIvqo6ZH3Uqq968aEEA.1">https://oslomet.zoom.us/j/61004023053?pwd=YZiyYrwprHLGIvqo6ZH3Uqq968aEEA.1</a></p>
+  </section>
+
+  <section>
+  <h2>Agenda</h2>
+  <ol class="steps">
+    <li><strong>Introduction (45 minutes).</strong> The challenges of learning entity-oriented metadata. A
+    presentation and demonstration of EntEdit: its design rationale and how it can be used in teaching.</li>
+    <li><strong>Hands-on session (2 hours).</strong> Run EntEdit on your own computer or use the online version,
+    and work through the learning activities below.</li>
+    <li><strong>Discussion.</strong> The opportunities and challenges of experience-based learning of
+    entity-oriented metadata.</li>
+  </ol>
+  </section>
+
+  <section>
+  <h2>EntEdit</h2>
+  <p>EntEdit is an entity-oriented editor where students create entities, give them attributes and relate them
+  to each other. They can explore the structures they build in visualizations, see how the data behaves in a
+  bibliographic search, and download it as RDF (Turtle), for example to share their work or hand in an
+  assignment. The editor can also log what users do, to learn how students build their set of entities.</p>
+  <p>It is a web application with the GraphDB triple store as its backend, and uses a subset of the RDA Registry
+  vocabulary for its classes and properties. It runs on your own computer with Docker Compose, without any
+  licence, or as a shared web service. It is available under the CC BY-NC 4.0 licence.</p>
+  <ul>
+    <li><a href="https://app.entedit.org/entedit/">The running prototype</a> at app.entedit.org</li>
+    <li><a href="https://github.com/trondaal/EntEdit">Source code and documentation</a> on GitHub</li>
+    <li><a href="https://app.entedit.org/entedit/docs/en/index.html">Cataloguing guide</a> and
+    <a href="https://app.entedit.org/entedit/docs/en/setup.html">setup guide</a></li>
+  </ul>
+  </section>
+
+  <section>
+  <h2>Preparing for the workshop</h2>
+  <ul>
+    <li><strong>IFLA LRM.</strong> EntEdit follows the IFLA Library Reference Model. If it is new to you, read
+    the description of the entities, above all Work, Expression, Manifestation, Item and Agent, and skim the
+    relationships between them: <a href="https://repository.ifla.org/handle/20.500.14598/40">IFLA Library
+    Reference Model: A Conceptual Model for Bibliographic Information</a>.</li>
+    <li><strong>RDA.</strong> The elements and relationships come from the <a
+    href="https://www.rdaregistry.info/">RDA Registry</a>; you will look up relationship types there during the
+    exercises.</li>
+    <li><strong>Running EntEdit yourself (optional).</strong> To run EntEdit on your own computer, install
+    Docker and follow the <a href="https://app.entedit.org/entedit/docs/en/setup.html">setup guide</a> before
+    the workshop. Otherwise you can use the online version.</li>
+  </ul>
+  </section>
+
+  <section>
+  <h2>Learning activities</h2>
+  <p>Each activity is a small set of real publications, described from library catalogue records. The task is
+  to find the works and expressions behind them and the relationships between them, and to record them in
+  EntEdit.</p>
+  <ol class="steps">
+    <li>Choose an activity and read its page: every publication has a short description, a note on what it
+    contains and a link to the full record in a library catalogue.</li>
+    <li>Download the activity's start file. It always holds the publications (manifestations) and the people
+    and publishers involved; what else it holds, and so what is left for you to do, is listed with each
+    activity.</li>
+    <li>Import the start file into your repository with the Import dialog in EntEdit.</li>
+    <li>Add what is missing: the works and expressions, the links from each publication to the expressions it
+    embodies, and the relationships between works and between expressions.</li>
+    <li>Compare your model with other participants', and with how the catalogue records describe the same
+    publications.</li>
+  </ol>
+  <ol class="exercises">
+    <li>
+      <h3><a href="cataloguing.html">Cataloguing a publication</a></h3>
+      <p>Thirty English-language novels, crime and other modern fiction, one for each participant, with no shared authors or works, so that a whole group can catalogue in the same repository at the same time.</p>
+      <p class="record">No start file: catalogue your publication from scratch.</p>
+    </li>
+    <li>
+      <h3><a href="translations-christie.html">Translations: Agatha Christie</a></h3>
+      <p>The murder of Roger Ackroyd in English, Norwegian and German: new translations, new editions and a reading of a translation, and a book that holds two novels.</p>
+      <p class="record">Start file: <a href="start/translations-christie.ttl">start/translations-christie.ttl</a> · The publications only: add the works and expressions and link them.</p>
+    </li>
+    <li>
+      <h3><a href="relationships-little-women.html">Relationships between works: Little Women</a></h3>
+      <p>Louisa May Alcott's novel, first published in two parts, and what has been made from it: a graphic novel, a play, an opera and a film.</p>
+      <p class="record">Start file: <a href="start/relationships-little-women.ttl">start/relationships-little-women.ttl</a> · The publications, works and expressions, already linked: add the relationships between the works.</p>
+    </li>
+    <li>
+      <h3><a href="collections-tolkien.html">Collections and aggregates: J. R. R. Tolkien</a></h3>
+      <p>The lord of the rings in boxed sets, alone or with other books, and Tolkien's shorter writings in collections with and without a title of their own.</p>
+      <p class="record">Start file: <a href="start/collections-tolkien.ttl">start/collections-tolkien.ttl</a> · The publications and the distinct works with their expressions: link the publications to the expressions, and add the collections you consider works.</p>
+    </li>
+  </ol>
+  <p class="record">People and works carry their VIAF identifiers (http://viaf.org/viaf/…) as IRIs, so the same
+  person or work is the same resource in every file. The activities and their sources are kept on
+  <a href="https://github.com/trondaal/EntEdit/tree/main/swib26">GitHub</a>.</p>
+  </section>
+</main>
+</body>
+</html>

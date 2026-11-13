@@ -37,6 +37,8 @@ LittleWomen.ttl: "Works built on works" - Louisa May Alcott's Little Women for a
   parody, a novel inspired by it and an annotated edition. Publication data from library
   catalogues, BnF and DNB; ad hoc http://example.org/littlewomen/... identifiers. Loaded
   into the local repository LittleWomen.
+The three short examples made for the SWIB26 tutorial (translations, adaptations, collections)
+  are in swib26/ at the top of the repository, with their own README.
 exercises/: one HTML page per example above (Nesbo, OrientExpress, LittleWomen) with an
   ISBD-style description and a plain-language content note for every publication, for
   students to catalogue and then compare with the loaded example. The descriptions are

@@ -1,0 +1,378 @@
+# Start file for the SWIB26 exercise relationships-little-women: the publications (manifestations),
+# the works and expressions they embody, and the people and publishers, described from
+# library catalogue records. State the relationships between the works (and between
+# expressions where RDA has them only there).
+
+@prefix entedit: <http://oslomet.no/abi/vocab#> .
+@prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
+@prefix rdac: <http://rdaregistry.info/Elements/c/> .
+@prefix rdaed: <http://rdaregistry.info/Elements/e/datatype/> .
+@prefix rdaeo: <http://rdaregistry.info/Elements/e/object/> .
+@prefix rdamd: <http://rdaregistry.info/Elements/m/datatype/> .
+@prefix rdamo: <http://rdaregistry.info/Elements/m/object/> .
+@prefix rdawd: <http://rdaregistry.info/Elements/w/datatype/> .
+@prefix rdawo: <http://rdaregistry.info/Elements/w/object/> .
+@prefix rdaxd: <http://rdaregistry.info/Elements/x/datatype/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vtp: <https://schema.nb.no/Bibliographic/Values/> .
+
+<http://viaf.org/viaf/29528997>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/29528997" ;
+    rdaad:P50413 "Alcott, Louisa May" ;
+    rdfs:label "Alcott, Louisa May" ;
+    rdaad:P50339 "1832-1888" ;
+    rdaad:P50094 "http://viaf.org/viaf/29528997" .
+
+<http://viaf.org/viaf/5141154923707663780000>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/5141154923707663780000" ;
+    rdaad:P50413 "Terciero, Rey" ;
+    rdfs:label "Terciero, Rey" ;
+    rdaad:P50094 "http://viaf.org/viaf/5141154923707663780000" .
+
+<http://viaf.org/viaf/33154921207663590177>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/33154921207663590177" ;
+    rdaad:P50413 "Indigo, Bre" ;
+    rdfs:label "Indigo, Bre" ;
+    rdaad:P50094 "http://viaf.org/viaf/33154921207663590177" .
+
+<http://viaf.org/viaf/43130453>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/43130453" ;
+    rdaad:P50413 "Asher, Sandy" ;
+    rdfs:label "Asher, Sandy" ;
+    rdaad:P50094 "http://viaf.org/viaf/43130453" .
+
+<http://viaf.org/viaf/51306277>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/51306277" ;
+    rdaad:P50413 "Adamo, Mark" ;
+    rdfs:label "Adamo, Mark" ;
+    rdaad:P50094 "http://viaf.org/viaf/51306277" .
+
+<http://viaf.org/viaf/169433365>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/169433365" ;
+    rdaad:P50413 "Gerwig, Greta" ;
+    rdfs:label "Gerwig, Greta" ;
+    rdaad:P50339 "1983-" ;
+    rdaad:P50094 "http://viaf.org/viaf/169433365" .
+
+<http://viaf.org/viaf/166139052>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/166139052" ;
+    rdaad:P50413 "Ronan, Saoirse" ;
+    rdfs:label "Ronan, Saoirse" ;
+    rdaad:P50339 "1994-" ;
+    rdaad:P50094 "http://viaf.org/viaf/166139052" .
+
+<http://example.org/littlewomen-relationships/agent/roberts>
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://example.org/littlewomen-relationships/agent/roberts" ;
+    rdaad:P50413 "Roberts Brothers" ;
+    rdfs:label "Roberts Brothers" .
+
+<http://example.org/littlewomen-relationships/agent/knopf>
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://example.org/littlewomen-relationships/agent/knopf" ;
+    rdaad:P50413 "Alfred A. Knopf" ;
+    rdfs:label "Alfred A. Knopf" .
+
+<http://example.org/littlewomen-relationships/agent/littlebrown>
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://example.org/littlewomen-relationships/agent/littlebrown" ;
+    rdaad:P50413 "Little, Brown and Company" ;
+    rdfs:label "Little, Brown and Company" .
+
+<http://example.org/littlewomen-relationships/agent/dramatic>
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://example.org/littlewomen-relationships/agent/dramatic" ;
+    rdaad:P50413 "Dramatic Publishing" ;
+    rdfs:label "Dramatic Publishing" .
+
+<http://example.org/littlewomen-relationships/agent/schirmer>
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://example.org/littlewomen-relationships/agent/schirmer" ;
+    rdaad:P50413 "G. Schirmer" ;
+    rdfs:label "G. Schirmer" .
+
+<http://example.org/littlewomen-relationships/agent/columbia>
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://example.org/littlewomen-relationships/agent/columbia" ;
+    rdaad:P50413 "Columbia Pictures" ;
+    rdfs:label "Columbia Pictures" .
+
+<http://example.org/littlewomen-relationships/work/part1>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/littlewomen-relationships/work/part1" ;
+    rdawd:P10223 "Little women" ;
+    rdfs:label "Little women, part 1 (Alcott, Louisa May)" ;
+    rdawd:P10219 "1868" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/29528997> .
+
+<http://viaf.org/viaf/183030696>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/183030696" ;
+    rdawd:P10223 "Little women, part second" ;
+    rdfs:label "Little women, part second (Alcott, Louisa May)" ;
+    rdawd:P10219 "1869" ;
+    rdawd:P10330 "Published in Britain as Good wives" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/29528997> ;
+    rdawd:P10002 "http://viaf.org/viaf/183030696" .
+
+<http://viaf.org/viaf/174058143>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/174058143" ;
+    rdawd:P10223 "Little women" ;
+    rdfs:label "Little women (Alcott, Louisa May)" ;
+    rdawd:P10219 "1868-1869" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/29528997> ;
+    rdawd:P10002 "http://viaf.org/viaf/174058143" .
+
+<http://viaf.org/viaf/3082160310483258300009>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/3082160310483258300009" ;
+    rdawd:P10223 "Meg, Jo, Beth, and Amy" ;
+    rdfs:label "Meg, Jo, Beth, and Amy (Terciero, Rey ; Indigo, Bre)" ;
+    rdawd:P10219 "2019" ;
+    rdawd:P10330 "A modern retelling of Little women" ;
+    entedit:P01 vtp:V1008 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/302> ;
+    rdawo:P10061 <http://viaf.org/viaf/5141154923707663780000> ;
+    rdawo:P10058 <http://viaf.org/viaf/33154921207663590177> ;
+    rdawd:P10002 "http://viaf.org/viaf/3082160310483258300009" .
+
+<http://example.org/littlewomen-relationships/work/play>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/littlewomen-relationships/work/play" ;
+    rdawd:P10223 "Little women : Meg, Jo, Beth, and Amy" ;
+    rdfs:label "Little women (play, Asher, Sandy)" ;
+    rdawd:P10219 "2001" ;
+    entedit:P01 vtp:V1009 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/583> ;
+    rdawo:P10061 <http://viaf.org/viaf/43130453> .
+
+<http://viaf.org/viaf/306113684>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/306113684" ;
+    rdawd:P10223 "Little women" ;
+    rdfs:label "Little women (opera, Adamo, Mark)" ;
+    rdawd:P10219 "1998" ;
+    entedit:P01 vtp:V1001 ;
+    rdawo:P10053 <http://viaf.org/viaf/51306277> ;
+    rdawo:P10205 <http://viaf.org/viaf/51306277> ;
+    rdawd:P10002 "http://viaf.org/viaf/306113684" .
+
+<http://viaf.org/viaf/80167863629422740114>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/80167863629422740114" ;
+    rdawd:P10223 "Little women" ;
+    rdfs:label "Little women (film, Gerwig, 2019)" ;
+    rdawd:P10219 "2019" ;
+    rdawd:P10330 "Production: USA, 2019" ;
+    entedit:P01 vtp:V1002 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/1240> ;
+    rdawo:P10013 <http://viaf.org/viaf/169433365> ;
+    rdawo:P10203 <http://viaf.org/viaf/169433365> ;
+    rdawd:P10002 "http://viaf.org/viaf/80167863629422740114" .
+
+<http://example.org/littlewomen-relationships/exp/part1/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen-relationships/exp/part1/eng" ;
+    rdaed:P20315 "Little women" ;
+    rdfs:label "Little women, part 1 (Alcott, Louisa May)" ;
+    rdaed:P20214 "1868" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/littlewomen-relationships/work/part1> .
+
+<http://example.org/littlewomen-relationships/exp/part2/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen-relationships/exp/part2/eng" ;
+    rdaed:P20315 "Little women, part second" ;
+    rdfs:label "Little women, part second (Alcott, Louisa May)" ;
+    rdaed:P20214 "1869" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/183030696> .
+
+<http://example.org/littlewomen-relationships/exp/novel/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen-relationships/exp/novel/eng" ;
+    rdaed:P20315 "Little women" ;
+    rdfs:label "Little women (Alcott, Louisa May)" ;
+    rdaed:P20214 "1868-1869" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/174058143> .
+
+<http://example.org/littlewomen-relationships/exp/graphic/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen-relationships/exp/graphic/eng" ;
+    rdaed:P20315 "Meg, Jo, Beth, and Amy" ;
+    rdfs:label "Meg, Jo, Beth, and Amy (Terciero, Rey ; Indigo, Bre)" ;
+    rdaed:P20214 "2019" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020>, <http://rdaregistry.info/termList/RDAContentType/1014> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/3082160310483258300009> .
+
+<http://example.org/littlewomen-relationships/exp/play/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen-relationships/exp/play/eng" ;
+    rdaed:P20315 "Little women : Meg, Jo, Beth, and Amy" ;
+    rdfs:label "Little women (play, Asher, Sandy)" ;
+    rdaed:P20214 "2001" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/littlewomen-relationships/work/play> .
+
+<http://example.org/littlewomen-relationships/exp/opera/score>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen-relationships/exp/opera/score" ;
+    rdaed:P20315 "Little women" ;
+    rdfs:label "Little women (opera, Adamo, Mark ; vocal score)" ;
+    rdaed:P20214 "1998" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1010> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/306113684> .
+
+<http://example.org/littlewomen-relationships/exp/film2019/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/littlewomen-relationships/exp/film2019/eng" ;
+    rdaed:P20315 "Little women" ;
+    rdfs:label "Little women (film, Gerwig, 2019)" ;
+    rdaed:P20214 "2019" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1023> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/80167863629422740114> ;
+    rdaeo:P20012 <http://viaf.org/viaf/166139052> .
+
+<http://example.org/littlewomen-relationships/manifestation/part1-roberts-1868>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/littlewomen-relationships/manifestation/part1-roberts-1868" ;
+    rdfs:label "Little women, or, Meg, Jo, Beth, and Amy (Roberts Brothers, 1868)" ;
+    rdamd:P30156 "Little women, or, Meg, Jo, Beth, and Amy" ;
+    rdamd:P30117 "by Louisa May Alcott ; illustrated by May Alcott" ;
+    rdamd:P30182 "iv, [3], 8-341, [7] p., [4] leaves of plates : ill." ;
+    rdamd:P30169 "17 cm." ;
+    rdamd:P30176 "Roberts Brothers" ;
+    rdamd:P30088 "Boston" ;
+    rdamd:P30011 "1868" ;
+    rdamd:P30137 "First edition" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/littlewomen-relationships/agent/roberts> ;
+    rdamo:P30139 <http://example.org/littlewomen-relationships/exp/part1/eng> .
+
+<http://example.org/littlewomen-relationships/manifestation/part2-roberts-1869>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/littlewomen-relationships/manifestation/part2-roberts-1869" ;
+    rdfs:label "Little Women (Roberts Brothers, 1869)" ;
+    rdamd:P30156 "Little Women" ;
+    rdamd:P30142 "or Meg, Jo, Beth and Amy; part second; with illustrations" ;
+    rdamd:P30117 "by Louisa M. Alcott" ;
+    rdamd:P30182 "359 s." ;
+    rdamd:P30176 "Roberts Brothers" ;
+    rdamd:P30088 "Boston" ;
+    rdamd:P30011 "1869" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/littlewomen-relationships/agent/roberts> ;
+    rdamo:P30139 <http://example.org/littlewomen-relationships/exp/part2/eng> .
+
+<http://example.org/littlewomen-relationships/manifestation/novel-knopf-1994>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/littlewomen-relationships/manifestation/novel-knopf-1994" ;
+    rdfs:label "Little women or, Meg, Jo, Beth and Amy (A.A. Knopf, c1994)" ;
+    rdamd:P30156 "Little women or, Meg, Jo, Beth and Amy" ;
+    rdamd:P30117 "Louisa May Alcott; with illustrations by M.E. Gray" ;
+    rdamd:P30182 "527 p. : ill." ;
+    rdamd:P30169 "22 cm." ;
+    rdamd:P30176 "A.A. Knopf" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "c1994" ;
+    rdamd:P30106 "Everyman's library children's classics" ;
+    rdamd:P30004 "ISBN 0679436421" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/littlewomen-relationships/agent/knopf> ;
+    rdamo:P30139 <http://example.org/littlewomen-relationships/exp/novel/eng>,
+        <http://example.org/littlewomen-relationships/exp/part1/eng>,
+        <http://example.org/littlewomen-relationships/exp/part2/eng> .
+
+<http://example.org/littlewomen-relationships/manifestation/graphic-2019>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/littlewomen-relationships/manifestation/graphic-2019" ;
+    rdfs:label "Meg, Jo, Beth, and Amy (Little, Brown and Company, 2019)" ;
+    rdamd:P30156 "Meg, Jo, Beth, and Amy" ;
+    rdamd:P30142 "a graphic novel" ;
+    rdamd:P30117 "by Rey Terciero and Bre Indigo" ;
+    rdamd:P30182 "1 bind (upaginert) : illustrasjoner" ;
+    rdamd:P30176 "Little, Brown and Company" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "2019" ;
+    rdamd:P30004 "ISBN 978-0-316-52286-1" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/littlewomen-relationships/agent/littlebrown> ;
+    rdamo:P30139 <http://example.org/littlewomen-relationships/exp/graphic/eng> .
+
+<http://example.org/littlewomen-relationships/manifestation/play-asher-2001>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/littlewomen-relationships/manifestation/play-asher-2001" ;
+    rdfs:label "Little women (Dramatic Pub., c2001)" ;
+    rdamd:P30156 "Little women" ;
+    rdamd:P30142 "Meg, Jo, Beth, and Amy" ;
+    rdamd:P30117 "adapted by Sandra Fenichel Asher" ;
+    rdamd:P30182 "82 p. : music" ;
+    rdamd:P30169 "19 cm." ;
+    rdamd:P30176 "Dramatic Pub." ;
+    rdamd:P30088 "Woodstock, Ill." ;
+    rdamd:P30011 "c2001" ;
+    rdamd:P30004 "ISBN 9781583420584" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/littlewomen-relationships/agent/dramatic> ;
+    rdamo:P30139 <http://example.org/littlewomen-relationships/exp/play/eng> .
+
+<http://example.org/littlewomen-relationships/manifestation/opera-score-2001>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/littlewomen-relationships/manifestation/opera-score-2001" ;
+    rdfs:label "Little women (G. Schirmer, 2001, c1998)" ;
+    rdamd:P30156 "Little women" ;
+    rdamd:P30142 "opera in two acts" ;
+    rdamd:P30117 "words and music by Mark Adamo, after the novel by Louisa May Alcott" ;
+    rdamd:P30182 "1 vocal score (317 p.)" ;
+    rdamd:P30169 "31 cm." ;
+    rdamd:P30176 "G. Schirmer" ;
+    rdamd:P30088 "Chester, N.Y." ;
+    rdamd:P30011 "2001, c1998" ;
+    rdamd:P30137 "Publisher's no.: Ed. 4130; HL50483808" ;
+    rdamd:P30004 "ISBN 0634020927" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/littlewomen-relationships/agent/schirmer> ;
+    rdamo:P30139 <http://example.org/littlewomen-relationships/exp/opera/score> .
+
+<http://example.org/littlewomen-relationships/manifestation/film-dvd-2019>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/littlewomen-relationships/manifestation/film-dvd-2019" ;
+    rdfs:label "Little women (Columbia Pictures, 2019)" ;
+    rdamd:P30156 "Little women" ;
+    rdamd:P30117 "written for the screen and directed by Greta Gerwig" ;
+    rdamd:P30182 "1 plate (DVD-video) (2 t, 9 min) : lyd, kol." ;
+    rdamd:P30176 "Columbia Pictures" ;
+    rdamd:P30088 "[S.l.]" ;
+    rdamd:P30011 "2019" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1060> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1008> ;
+    rdamo:P30420 <http://example.org/littlewomen-relationships/agent/columbia> ;
+    rdamo:P30139 <http://example.org/littlewomen-relationships/exp/film2019/eng> .

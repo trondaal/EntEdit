@@ -1,0 +1,370 @@
+# Translations: Agatha Christie's The Murder of Roger Ackroyd (1926). English original; a Norwegian
+# translation in an edition of its own, read aloud, and in a book with a second novel (A murder is announced,
+# also in English); three German translations, the later two under the same title. The two-novel
+# book has no collective title and no work for the whole.
+# Publication data from the MARC 21 records in swib26/marc/TranslationsAckroyd.xml.
+
+@prefix entedit: <http://oslomet.no/abi/vocab#> .
+@prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
+@prefix rdac: <http://rdaregistry.info/Elements/c/> .
+@prefix rdaed: <http://rdaregistry.info/Elements/e/datatype/> .
+@prefix rdaeo: <http://rdaregistry.info/Elements/e/object/> .
+@prefix rdamd: <http://rdaregistry.info/Elements/m/datatype/> .
+@prefix rdamo: <http://rdaregistry.info/Elements/m/object/> .
+@prefix rdawd: <http://rdaregistry.info/Elements/w/datatype/> .
+@prefix rdawo: <http://rdaregistry.info/Elements/w/object/> .
+@prefix rdaxd: <http://rdaregistry.info/Elements/x/datatype/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vtp: <https://schema.nb.no/Bibliographic/Values/> .
+
+<http://viaf.org/viaf/71388952>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/71388952" ;
+    rdaad:P50413 "Christie, Agatha" ;
+    rdfs:label "Christie, Agatha" ;
+    rdaad:P50339 "1890-1976" ;
+    rdaad:P50094 "http://viaf.org/viaf/71388952" .
+
+<http://viaf.org/viaf/179147423157144881771>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/179147423157144881771" ;
+    rdaad:P50413 "Arentz, Ronald Archer" ;
+    rdfs:label "Arentz, Ronald Archer" ;
+    rdaad:P50094 "http://viaf.org/viaf/179147423157144881771" .
+
+<http://viaf.org/viaf/229606047>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/229606047" ;
+    rdaad:P50413 "Frisch, Per" ;
+    rdfs:label "Frisch, Per" ;
+    rdaad:P50339 "1951-" ;
+    rdaad:P50094 "http://viaf.org/viaf/229606047" .
+
+<http://viaf.org/viaf/22576440>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/22576440" ;
+    rdaad:P50413 "Pütsch, Friedrich" ;
+    rdfs:label "Pütsch, Friedrich" ;
+    rdaad:P50094 "http://viaf.org/viaf/22576440" .
+
+<http://viaf.org/viaf/104727766>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/104727766" ;
+    rdaad:P50413 "Mundhenk, Michael" ;
+    rdfs:label "Mundhenk, Michael" ;
+    rdaad:P50339 "1954-" ;
+    rdaad:P50094 "http://viaf.org/viaf/104727766" .
+
+<http://viaf.org/viaf/19145971391132330928>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/19145971391132330928" ;
+    rdaad:P50413 "Christensen, Jan" ;
+    rdfs:label "Christensen, Jan" ;
+    rdaad:P50094 "http://viaf.org/viaf/19145971391132330928" .
+
+<http://viaf.org/viaf/2940916>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/2940916" ;
+    rdaad:P50413 "Kafka, Irene" ;
+    rdfs:label "Kafka, Irene" ;
+    rdaad:P50094 "http://viaf.org/viaf/2940916" .
+
+<http://example.org/ackroyd/agent/harper>
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://example.org/ackroyd/agent/harper" ;
+    rdaad:P50413 "Harper" ;
+    rdfs:label "Harper" .
+
+<http://example.org/ackroyd/agent/aschehoug>
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://example.org/ackroyd/agent/aschehoug" ;
+    rdaad:P50413 "Aschehoug" ;
+    rdfs:label "Aschehoug" .
+
+<http://example.org/ackroyd/agent/lydbokforlaget>
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://example.org/ackroyd/agent/lydbokforlaget" ;
+    rdaad:P50413 "Lydbokforlaget" ;
+    rdfs:label "Lydbokforlaget" .
+
+<http://example.org/ackroyd/agent/fischer>
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://example.org/ackroyd/agent/fischer" ;
+    rdaad:P50413 "Fischer Taschenbuch Verlag" ;
+    rdfs:label "Fischer Taschenbuch Verlag" .
+
+<http://example.org/ackroyd/agent/atlantik>
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://example.org/ackroyd/agent/atlantik" ;
+    rdaad:P50413 "Atlantik" ;
+    rdfs:label "Atlantik" .
+
+<http://example.org/ackroyd/agent/doddmead>
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://example.org/ackroyd/agent/doddmead" ;
+    rdaad:P50413 "Dodd, Mead" ;
+    rdfs:label "Dodd, Mead" .
+
+<http://example.org/ackroyd/agent/dreimasken>
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://example.org/ackroyd/agent/dreimasken" ;
+    rdaad:P50413 "Drei Masken Verlag" ;
+    rdfs:label "Drei Masken Verlag" .
+
+<http://viaf.org/viaf/217048217>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/217048217" ;
+    rdawd:P10223 "The murder of Roger Ackroyd" ;
+    rdfs:label "The murder of Roger Ackroyd (Christie, Agatha)" ;
+    rdawd:P10219 "1926" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/159>, <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/71388952> ;
+    rdawd:P10002 "http://viaf.org/viaf/217048217" .
+
+<http://viaf.org/viaf/181004220>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/181004220" ;
+    rdawd:P10223 "A murder is announced" ;
+    rdfs:label "A murder is announced (Christie, Agatha)" ;
+    rdawd:P10219 "1950" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/159>, <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/71388952> ;
+    rdawd:P10002 "http://viaf.org/viaf/181004220" .
+
+<http://example.org/ackroyd/exp/announced/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/ackroyd/exp/announced/eng" ;
+    rdaed:P20315 "A murder is announced" ;
+    rdfs:label "A murder is announced (Christie, Agatha)" ;
+    rdaed:P20214 "1950" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/181004220> .
+
+<http://example.org/ackroyd/exp/announced/nob-christensen>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/ackroyd/exp/announced/nob-christensen" ;
+    rdaed:P20315 "Invitasjon til mord" ;
+    rdfs:label "Invitasjon til mord (Christie, Agatha ; translated by Jan Christensen)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://viaf.org/viaf/181004220> ;
+    rdaeo:P20037 <http://viaf.org/viaf/19145971391132330928> ;
+    rdaeo:P20141 <http://example.org/ackroyd/exp/announced/eng> .
+
+<http://example.org/ackroyd/exp/novel/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/ackroyd/exp/novel/eng" ;
+    rdaed:P20315 "The murder of Roger Ackroyd" ;
+    rdfs:label "The murder of Roger Ackroyd (Christie, Agatha)" ;
+    rdaed:P20214 "1926" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/217048217> .
+
+<http://example.org/ackroyd/exp/novel/nob-arentz>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/ackroyd/exp/novel/nob-arentz" ;
+    rdaed:P20315 "Doktoren mister en pasient" ;
+    rdfs:label "Doktoren mister en pasient (Christie, Agatha ; translated by R. A. Arentz)" ;
+    rdaed:P20214 "1938" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://viaf.org/viaf/217048217> ;
+    rdaeo:P20037 <http://viaf.org/viaf/179147423157144881771> ;
+    rdaeo:P20141 <http://example.org/ackroyd/exp/novel/eng> .
+
+<http://example.org/ackroyd/exp/novel/nob-frisch>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/ackroyd/exp/novel/nob-frisch" ;
+    rdaed:P20315 "Doktoren mister en pasient" ;
+    rdfs:label "Doktoren mister en pasient (Christie, Agatha ; read by Per Frisch)" ;
+    rdaed:P20214 "2006" ;
+    rdaed:P20071 "Reading of R. A. Arentz's translation" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1013> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/nob> ;
+    rdaeo:P20231 <http://viaf.org/viaf/217048217> ;
+    rdaeo:P20037 <http://viaf.org/viaf/179147423157144881771> ;
+    rdaeo:P20022 <http://viaf.org/viaf/229606047> .
+
+<http://example.org/ackroyd/exp/novel/ger-kafka>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/ackroyd/exp/novel/ger-kafka" ;
+    rdaed:P20315 "Roger Ackroyd und sein Mörder" ;
+    rdfs:label "Roger Ackroyd und sein Mörder (Christie, Agatha ; translated by Irene Kafka)" ;
+    rdaed:P20214 "1928" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+    rdaeo:P20231 <http://viaf.org/viaf/217048217> ;
+    rdaeo:P20037 <http://viaf.org/viaf/2940916> ;
+    rdaeo:P20141 <http://example.org/ackroyd/exp/novel/eng> .
+
+<http://example.org/ackroyd/exp/novel/ger-puetsch>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/ackroyd/exp/novel/ger-puetsch" ;
+    rdaed:P20315 "Alibi" ;
+    rdfs:label "Alibi (Christie, Agatha ; translated by Friedrich Pütsch)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+    rdaeo:P20231 <http://viaf.org/viaf/217048217> ;
+    rdaeo:P20037 <http://viaf.org/viaf/22576440> ;
+    rdaeo:P20141 <http://example.org/ackroyd/exp/novel/eng> .
+
+<http://example.org/ackroyd/exp/novel/ger-mundhenk>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/ackroyd/exp/novel/ger-mundhenk" ;
+    rdaed:P20315 "Alibi" ;
+    rdfs:label "Alibi (Christie, Agatha ; translated by Michael Mundhenk)" ;
+    rdaed:P20214 "2014" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+    rdaeo:P20231 <http://viaf.org/viaf/217048217> ;
+    rdaeo:P20037 <http://viaf.org/viaf/104727766> ;
+    rdaeo:P20141 <http://example.org/ackroyd/exp/novel/eng> .
+
+<http://example.org/ackroyd/manifestation/eng-harper-2002>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/ackroyd/manifestation/eng-harper-2002" ;
+    rdfs:label "The murder of Roger Ackroyd (Harper, 2002)" ;
+    rdamd:P30156 "The murder of Roger Ackroyd" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30107 "Agatha Christie signature ed." ;
+    rdamd:P30182 "368 s." ;
+    rdamd:P30176 "Harper" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30011 "2002" ;
+    rdamd:P30106 "Poirot", "The Agatha Christie collection" ;
+    rdamd:P30137 "First published London : Collins, 1926" ;
+    rdamd:P30004 "ISBN 9780007141340" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/ackroyd/agent/harper> ;
+    rdamo:P30139 <http://example.org/ackroyd/exp/novel/eng> .
+
+<http://example.org/ackroyd/manifestation/nob-aschehoug-1991>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/ackroyd/manifestation/nob-aschehoug-1991" ;
+    rdfs:label "Doktoren mister en pasient (Aschehoug, 1991)" ;
+    rdamd:P30156 "Doktoren mister en pasient" ;
+    rdamd:P30117 "Agatha Christie ; oversatt av R.A. Arentz" ;
+    rdamd:P30182 "209 s." ;
+    rdamd:P30176 "Aschehoug" ;
+    rdamd:P30088 "[Oslo]" ;
+    rdamd:P30011 "1991" ;
+    rdamd:P30004 "ISBN 8203167349" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/ackroyd/agent/aschehoug> ;
+    rdamo:P30139 <http://example.org/ackroyd/exp/novel/nob-arentz> .
+
+<http://example.org/ackroyd/manifestation/nob-audio-2006>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/ackroyd/manifestation/nob-audio-2006" ;
+    rdfs:label "Doktoren mister en pasient (Lydbokforl., 2006)" ;
+    rdamd:P30156 "Doktoren mister en pasient" ;
+    rdamd:P30117 "Agatha Christie ; oversatt av R.A. Arentz" ;
+    rdamd:P30182 "7 plater (CD) (8 t, 14 min) : digital" ;
+    rdamd:P30169 "12 cm, i eske" ;
+    rdamd:P30176 "Lydbokforl." ;
+    rdamd:P30088 "[Melhus]" ;
+    rdamd:P30011 "2006" ;
+    rdamd:P30137 "Read by Per Frisch" ;
+    rdamd:P30004 "ISBN 9788242119650" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1004> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1001> ;
+    rdamo:P30420 <http://example.org/ackroyd/agent/lydbokforlaget> ;
+    rdamo:P30139 <http://example.org/ackroyd/exp/novel/nob-frisch> .
+
+<http://example.org/ackroyd/manifestation/eng-announced-dodd-1985>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/ackroyd/manifestation/eng-announced-dodd-1985" ;
+    rdfs:label "A murder is announced (Dodd, Mead, [1985], c1950)" ;
+    rdamd:P30156 "A murder is announced" ;
+    rdamd:P30117 "Agatha Christie" ;
+    rdamd:P30107 "The Winterbrook ed., 1st ed." ;
+    rdamd:P30182 "297 p." ;
+    rdamd:P30169 "22 cm." ;
+    rdamd:P30176 "Dodd, Mead" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "[1985], c1950" ;
+    rdamd:P30137 "Copyright 1950" ;
+    rdamd:P30004 "ISBN 0396087027" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/ackroyd/agent/doddmead> ;
+    rdamo:P30139 <http://example.org/ackroyd/exp/announced/eng> .
+
+<http://example.org/ackroyd/manifestation/nob-omnibus-2004>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/ackroyd/manifestation/nob-omnibus-2004" ;
+    rdfs:label "Doktoren mister en pasient ; Invitasjon til mord (Aschehoug, 2004)" ;
+    rdamd:P30156 "Doktoren mister en pasient ; Invitasjon til mord" ;
+    rdamd:P30117 "Agatha Christie ; [Doktoren mister en pasient] oversatt av R.A. Arentz ; [Invitasjon til mord] oversatt av Jan Christensen" ;
+    rdamd:P30182 "206, 173 s." ;
+    rdamd:P30176 "Aschehoug" ;
+    rdamd:P30088 "Oslo" ;
+    rdamd:P30011 "2004" ;
+    rdamd:P30106 "Poirots beste", "Miss Marples beste" ;
+    rdamd:P30004 "ISBN 8203208231" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/ackroyd/agent/aschehoug> ;
+    rdamo:P30139 <http://example.org/ackroyd/exp/novel/nob-arentz>,
+        <http://example.org/ackroyd/exp/announced/nob-christensen> .
+
+<http://example.org/ackroyd/manifestation/ger-kafka-1928>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/ackroyd/manifestation/ger-kafka-1928" ;
+    rdfs:label "Roger Ackroyd und sein Mörder (Drei Masken Verlag, [1928])" ;
+    rdamd:P30156 "Roger Ackroyd und sein Mörder" ;
+    rdamd:P30142 "Roman" ;
+    rdamd:P30117 "Agatha Christie. [Deutsch von Irene Kafka. Einzig berecht. deutsche Übertr. aus d. Engl.]" ;
+    rdamd:P30182 "294 S." ;
+    rdamd:P30169 "8" ;
+    rdamd:P30176 "Drei Masken Verlag" ;
+    rdamd:P30088 "München" ;
+    rdamd:P30011 "[1928]" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/ackroyd/agent/dreimasken> ;
+    rdamo:P30139 <http://example.org/ackroyd/exp/novel/ger-kafka> .
+
+<http://example.org/ackroyd/manifestation/ger-fischer-2005>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/ackroyd/manifestation/ger-fischer-2005" ;
+    rdfs:label "Alibi (Fischer-Taschenbuch-Verl., 2005)" ;
+    rdamd:P30156 "Alibi" ;
+    rdamd:P30142 "Roman" ;
+    rdamd:P30117 "Agatha Christie. Aus dem Engl. von Friedrich Pütsch" ;
+    rdamd:P30182 "196 S." ;
+    rdamd:P30169 "18 cm" ;
+    rdamd:P30176 "Fischer-Taschenbuch-Verl." ;
+    rdamd:P30088 "Frankfurt, M." ;
+    rdamd:P30011 "2005" ;
+    rdamd:P30106 "Fischer" ;
+    rdamd:P30004 "ISBN 9783596172573" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/ackroyd/agent/fischer> ;
+    rdamo:P30139 <http://example.org/ackroyd/exp/novel/ger-puetsch> .
+
+<http://example.org/ackroyd/manifestation/ger-atlantik-2014>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/ackroyd/manifestation/ger-atlantik-2014" ;
+    rdfs:label "Alibi (Atlantik, 2014)" ;
+    rdamd:P30156 "Alibi" ;
+    rdamd:P30142 "ein Fall für Poirot" ;
+    rdamd:P30117 "Agatha Christie. Aus dem Engl. von Michael Mundhenk" ;
+    rdamd:P30107 "1. Aufl." ;
+    rdamd:P30182 "285 S. : Ill., graph. Darst." ;
+    rdamd:P30169 "19 cm" ;
+    rdamd:P30176 "Atlantik" ;
+    rdamd:P30088 "Hamburg" ;
+    rdamd:P30011 "2014" ;
+    rdamd:P30004 "ISBN 9783455650044" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/ackroyd/agent/atlantik> ;
+    rdamo:P30139 <http://example.org/ackroyd/exp/novel/ger-mundhenk> .

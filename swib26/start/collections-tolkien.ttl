@@ -1,0 +1,411 @@
+# Start file for the SWIB26 exercise collections-tolkien: the publications (manifestations),
+# some of the works and their expressions, and the people and publishers, described from library catalogue records. Link
+# each manifestation to the expressions it embodies, and add the works and expressions
+# that are missing.
+
+@prefix entedit: <http://oslomet.no/abi/vocab#> .
+@prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
+@prefix rdac: <http://rdaregistry.info/Elements/c/> .
+@prefix rdaed: <http://rdaregistry.info/Elements/e/datatype/> .
+@prefix rdaeo: <http://rdaregistry.info/Elements/e/object/> .
+@prefix rdamd: <http://rdaregistry.info/Elements/m/datatype/> .
+@prefix rdamo: <http://rdaregistry.info/Elements/m/object/> .
+@prefix rdawd: <http://rdaregistry.info/Elements/w/datatype/> .
+@prefix rdawo: <http://rdaregistry.info/Elements/w/object/> .
+@prefix rdaxd: <http://rdaregistry.info/Elements/x/datatype/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vtp: <https://schema.nb.no/Bibliographic/Values/> .
+
+<http://viaf.org/viaf/95218067>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/95218067" ;
+    rdaad:P50413 "Tolkien, J. R. R." ;
+    rdfs:label "Tolkien, J. R. R." ;
+    rdaad:P50339 "1892-1973" ;
+    rdaad:P50094 "http://viaf.org/viaf/95218067" .
+
+<http://viaf.org/viaf/59153962>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/59153962" ;
+    rdaad:P50413 "Hammond, Wayne G." ;
+    rdfs:label "Hammond, Wayne G." ;
+    rdaad:P50339 "1953-" ;
+    rdaad:P50094 "http://viaf.org/viaf/59153962" .
+
+<http://viaf.org/viaf/54260077>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/54260077" ;
+    rdaad:P50413 "Scull, Christina" ;
+    rdfs:label "Scull, Christina" ;
+    rdaad:P50339 "1942-" ;
+    rdaad:P50094 "http://viaf.org/viaf/54260077" .
+
+<http://example.org/tolkien-collections/agent/allenunwin>
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://example.org/tolkien-collections/agent/allenunwin" ;
+    rdaad:P50413 "Allen & Unwin" ;
+    rdfs:label "Allen & Unwin" .
+
+<http://example.org/tolkien-collections/agent/harpercollins>
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://example.org/tolkien-collections/agent/harpercollins" ;
+    rdaad:P50413 "HarperCollins" ;
+    rdfs:label "HarperCollins" .
+
+<http://example.org/tolkien-collections/agent/unwinbooks>
+    a rdac:C10005 ;
+    rdaxd:P00018 "http://example.org/tolkien-collections/agent/unwinbooks" ;
+    rdaad:P50413 "Unwin Books" ;
+    rdfs:label "Unwin Books" .
+
+<http://viaf.org/viaf/275497244>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/275497244" ;
+    rdawd:P10223 "Farmer Giles of Ham" ;
+    rdfs:label "Farmer Giles of Ham (Tolkien, J. R. R.)" ;
+    rdawd:P10219 "1949" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/83> ;
+    rdawo:P10061 <http://viaf.org/viaf/95218067> ;
+    rdawd:P10002 "http://viaf.org/viaf/275497244" .
+
+<http://example.org/tolkien-collections/exp/giles/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/tolkien-collections/exp/giles/eng" ;
+    rdaed:P20315 "Farmer Giles of Ham" ;
+    rdfs:label "Farmer Giles of Ham (Tolkien, J. R. R.)" ;
+    rdaed:P20214 "1949" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/275497244> .
+
+<http://viaf.org/viaf/312339051>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/312339051" ;
+    rdawd:P10223 "Smith of Wootton Major" ;
+    rdfs:label "Smith of Wootton Major (Tolkien, J. R. R.)" ;
+    rdawd:P10219 "1967" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/83> ;
+    rdawo:P10061 <http://viaf.org/viaf/95218067> ;
+    rdawd:P10002 "http://viaf.org/viaf/312339051" .
+
+<http://example.org/tolkien-collections/exp/smith/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/tolkien-collections/exp/smith/eng" ;
+    rdaed:P20315 "Smith of Wootton Major" ;
+    rdfs:label "Smith of Wootton Major (Tolkien, J. R. R.)" ;
+    rdaed:P20214 "1967" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/312339051> .
+
+<http://viaf.org/viaf/178224870>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/178224870" ;
+    rdawd:P10223 "Leaf by Niggle" ;
+    rdfs:label "Leaf by Niggle (Tolkien, J. R. R.)" ;
+    rdawd:P10219 "1945" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/83> ;
+    rdawo:P10061 <http://viaf.org/viaf/95218067> ;
+    rdawd:P10002 "http://viaf.org/viaf/178224870" .
+
+<http://example.org/tolkien-collections/exp/niggle/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/tolkien-collections/exp/niggle/eng" ;
+    rdaed:P20315 "Leaf by Niggle" ;
+    rdfs:label "Leaf by Niggle (Tolkien, J. R. R.)" ;
+    rdaed:P20214 "1945" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/178224870> .
+
+<http://viaf.org/viaf/180202865>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/180202865" ;
+    rdawd:P10223 "On fairy-stories" ;
+    rdfs:label "On fairy-stories (Tolkien, J. R. R.)" ;
+    rdawd:P10219 "1947" ;
+    entedit:P01 vtp:V1000 ;
+    rdawo:P10061 <http://viaf.org/viaf/95218067> ;
+    rdawd:P10002 "http://viaf.org/viaf/180202865" .
+
+<http://example.org/tolkien-collections/exp/fairy/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/tolkien-collections/exp/fairy/eng" ;
+    rdaed:P20315 "On fairy-stories" ;
+    rdfs:label "On fairy-stories (Tolkien, J. R. R.)" ;
+    rdaed:P20214 "1947" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/180202865> .
+
+<http://viaf.org/viaf/184640748>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/184640748" ;
+    rdawd:P10223 "The homecoming of Beorhtnoth, Beorhthelm's son" ;
+    rdfs:label "The homecoming of Beorhtnoth, Beorhthelm's son (Tolkien, J. R. R.)" ;
+    rdawd:P10219 "1953" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/583> ;
+    rdawo:P10061 <http://viaf.org/viaf/95218067> ;
+    rdawd:P10002 "http://viaf.org/viaf/184640748" .
+
+<http://example.org/tolkien-collections/exp/homecoming/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/tolkien-collections/exp/homecoming/eng" ;
+    rdaed:P20315 "The homecoming of Beorhtnoth, Beorhthelm's son" ;
+    rdfs:label "The homecoming of Beorhtnoth, Beorhthelm's son (Tolkien, J. R. R.)" ;
+    rdaed:P20214 "1953" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/184640748> .
+
+<http://viaf.org/viaf/309569545>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/309569545" ;
+    rdawd:P10223 "The hobbit" ;
+    rdfs:label "The hobbit (Tolkien, J. R. R.)" ;
+    rdawd:P10219 "1937" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>, <https://id.nb.no/vocabulary/ntsf/91> ;
+    rdawo:P10061 <http://viaf.org/viaf/95218067> ;
+    rdawd:P10002 "http://viaf.org/viaf/309569545" .
+
+<http://example.org/tolkien-collections/exp/hobbit/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/tolkien-collections/exp/hobbit/eng" ;
+    rdaed:P20315 "The hobbit" ;
+    rdfs:label "The hobbit (Tolkien, J. R. R.)" ;
+    rdaed:P20214 "1937" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/309569545> .
+
+<http://viaf.org/viaf/185888925>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/185888925" ;
+    rdawd:P10223 "The fellowship of the ring" ;
+    rdfs:label "The fellowship of the ring (Tolkien, J. R. R.)" ;
+    rdawd:P10219 "1954" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>, <https://id.nb.no/vocabulary/ntsf/91> ;
+    rdawo:P10061 <http://viaf.org/viaf/95218067> ;
+    rdawd:P10002 "http://viaf.org/viaf/185888925" .
+
+<http://example.org/tolkien-collections/exp/fellowship/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/tolkien-collections/exp/fellowship/eng" ;
+    rdaed:P20315 "The fellowship of the ring" ;
+    rdfs:label "The fellowship of the ring (Tolkien, J. R. R.)" ;
+    rdaed:P20214 "1954" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/185888925> .
+
+<http://viaf.org/viaf/186301504>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/186301504" ;
+    rdawd:P10223 "The two towers" ;
+    rdfs:label "The two towers (Tolkien, J. R. R.)" ;
+    rdawd:P10219 "1954" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>, <https://id.nb.no/vocabulary/ntsf/91> ;
+    rdawo:P10061 <http://viaf.org/viaf/95218067> ;
+    rdawd:P10002 "http://viaf.org/viaf/186301504" .
+
+<http://example.org/tolkien-collections/exp/towers/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/tolkien-collections/exp/towers/eng" ;
+    rdaed:P20315 "The two towers" ;
+    rdfs:label "The two towers (Tolkien, J. R. R.)" ;
+    rdaed:P20214 "1954" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/186301504> .
+
+<http://viaf.org/viaf/306062885>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/306062885" ;
+    rdawd:P10223 "The return of the king" ;
+    rdfs:label "The return of the king (Tolkien, J. R. R.)" ;
+    rdawd:P10219 "1955" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>, <https://id.nb.no/vocabulary/ntsf/91> ;
+    rdawo:P10061 <http://viaf.org/viaf/95218067> ;
+    rdawd:P10002 "http://viaf.org/viaf/306062885" .
+
+<http://example.org/tolkien-collections/exp/king/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/tolkien-collections/exp/king/eng" ;
+    rdaed:P20315 "The return of the king" ;
+    rdfs:label "The return of the king (Tolkien, J. R. R.)" ;
+    rdaed:P20214 "1955" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/306062885> .
+
+<http://viaf.org/viaf/184093601>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/184093601" ;
+    rdawd:P10223 "The lord of the rings" ;
+    rdfs:label "The lord of the rings (Tolkien, J. R. R.)" ;
+    rdawd:P10219 "1954-1955" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258>, <https://id.nb.no/vocabulary/ntsf/91> ;
+    rdawo:P10061 <http://viaf.org/viaf/95218067> ;
+    rdawd:P10002 "http://viaf.org/viaf/184093601" .
+
+<http://viaf.org/viaf/9014152502908610800009>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/9014152502908610800009" ;
+    rdawd:P10223 "The lord of the rings : a reader's companion" ;
+    rdfs:label "The lord of the rings : a reader's companion (Hammond, Wayne G. ; Scull, Christina)" ;
+    rdawd:P10219 "2005" ;
+    entedit:P01 vtp:V1000 ;
+    rdawo:P10061 <http://viaf.org/viaf/59153962>,
+        <http://viaf.org/viaf/54260077> ;
+    rdawd:P10002 "http://viaf.org/viaf/9014152502908610800009" .
+
+<http://example.org/tolkien-collections/exp/companion/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/tolkien-collections/exp/companion/eng" ;
+    rdaed:P20315 "The lord of the rings : a reader's companion" ;
+    rdfs:label "The lord of the rings : a reader's companion (Hammond, Wayne G. ; Scull, Christina)" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/9014152502908610800009> .
+
+<http://example.org/tolkien-collections/manifestation/treeleaf-1964>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/tolkien-collections/manifestation/treeleaf-1964" ;
+    rdfs:label "Tree and leaf (Allen & Unwin, 1964)" ;
+    rdamd:P30156 "Tree and leaf" ;
+    rdamd:P30117 "J.R.R. Tolkien" ;
+    rdamd:P30182 "92 s." ;
+    rdamd:P30176 "Allen & Unwin" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30011 "1964" ;
+    rdamd:P30106 "Unwin books" ;
+    rdamd:P30004 "ISBN 0048240206" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/tolkien-collections/agent/allenunwin> .
+
+<http://example.org/tolkien-collections/manifestation/perilous-1998>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/tolkien-collections/manifestation/perilous-1998" ;
+    rdfs:label "Tales from the perilous realm (HarperCollins, 1998)" ;
+    rdamd:P30156 "Tales from the perilous realm" ;
+    rdamd:P30117 "J.R.R. Tolkien" ;
+    rdamd:P30182 "178 s." ;
+    rdamd:P30176 "HarperCollins" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30011 "1998" ;
+    rdamd:P30004 "ISBN 0261103431" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/tolkien-collections/agent/harpercollins> .
+
+<http://example.org/tolkien-collections/manifestation/giles-bombadil-1975>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/tolkien-collections/manifestation/giles-bombadil-1975" ;
+    rdfs:label "Farmer Giles of Ham ; [and], The adventures of Tom Bombadil (Unwin Books, 1975)" ;
+    rdamd:P30156 "Farmer Giles of Ham ; [and], The adventures of Tom Bombadil" ;
+    rdamd:P30117 "J. R. R. Tolkien" ;
+    rdamd:P30182 "144 p. : ill." ;
+    rdamd:P30169 "20 cm." ;
+    rdamd:P30176 "Unwin Books" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30011 "1975" ;
+    rdamd:P30004 "ISBN 0048231258" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/tolkien-collections/agent/unwinbooks> .
+
+<http://example.org/tolkien-collections/manifestation/hobbit-lotr-set-2011>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/tolkien-collections/manifestation/hobbit-lotr-set-2011" ;
+    rdfs:label "The hobbit ; The Lord of the Rings (HarperCollins, 2011)" ;
+    rdamd:P30156 "The hobbit ; The Lord of the Rings" ;
+    rdamd:P30117 "J.R.R. Tolkien" ;
+    rdamd:P30182 "4 v. : ill., maps" ;
+    rdamd:P30169 "20 cm." ;
+    rdamd:P30176 "HarperCollins" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30011 "2011" ;
+    rdamd:P30137 "Four volumes in a slip case" ;
+    rdamd:P30004 "ISBN 9780261103566" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/tolkien-collections/agent/harpercollins> .
+
+<http://example.org/tolkien-collections/manifestation/lotr-companion-set-2005>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/tolkien-collections/manifestation/lotr-companion-set-2005" ;
+    rdfs:label "The Lord of the Rings (HarperCollins, 2005)" ;
+    rdamd:P30156 "The Lord of the Rings" ;
+    rdamd:P30117 "J.R.R. Tolkien" ;
+    rdamd:P30107 "[50th anniversary ed.]." ;
+    rdamd:P30182 "4 v. : ill. (chiefly col.), col. maps" ;
+    rdamd:P30169 "23 cm." ;
+    rdamd:P30176 "HarperCollins" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30011 "2005" ;
+    rdamd:P30137 "Four volumes in a slip case. Previous edition: 2002" ;
+    rdamd:P30004 "ISBN 0007203543" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/tolkien-collections/agent/harpercollins> .
+
+<http://example.org/tolkien-collections/manifestation/lotr-companion-set-2014>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/tolkien-collections/manifestation/lotr-companion-set-2014" ;
+    rdfs:label "The lord of the rings (HarperCollinsPublishers, 2014)" ;
+    rdamd:P30156 "The lord of the rings" ;
+    rdamd:P30117 "J.R.R. Tolkien" ;
+    rdamd:P30107 "60th anniversary edition." ;
+    rdamd:P30182 "1 volume : illustrations (black and white, and colour), maps (colour)" ;
+    rdamd:P30169 "23 cm" ;
+    rdamd:P30176 "HarperCollinsPublishers" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30011 "2014" ;
+    rdamd:P30137 "Four volumes in a slip case" ;
+    rdamd:P30004 "ISBN 9780007581146" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/tolkien-collections/agent/harpercollins> .
+
+<http://example.org/tolkien-collections/manifestation/companion-2008>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/tolkien-collections/manifestation/companion-2008" ;
+    rdfs:label "The Lord of the rings (HarperCollins, 2008)" ;
+    rdamd:P30156 "The Lord of the rings" ;
+    rdamd:P30142 "a reader's companion" ;
+    rdamd:P30117 "by Wayne G. Hammond and Christina Scull" ;
+    rdamd:P30182 "lxxxii, 894 p." ;
+    rdamd:P30169 "20 cm." ;
+    rdamd:P30176 "HarperCollins" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30011 "2008" ;
+    rdamd:P30137 "Originally published: 2005" ;
+    rdamd:P30004 "ISBN 9780007270606" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/tolkien-collections/agent/harpercollins> .
+
+<http://example.org/tolkien-collections/manifestation/treeleaf-smith-1975>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/tolkien-collections/manifestation/treeleaf-smith-1975" ;
+    rdfs:label "Tree and leaf - Smith of Wootton Major - The homecoming of Beorhtnoth (Unwin Books, 1975)" ;
+    rdamd:P30156 "Tree and leaf - Smith of Wootton Major - The homecoming of Beorhtnoth" ;
+    rdamd:P30117 "J.R.R. Tolkien" ;
+    rdamd:P30182 "175 s." ;
+    rdamd:P30176 "Unwin Books" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30011 "1975" ;
+    rdamd:P30004 "ISBN 0048200158" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30420 <http://example.org/tolkien-collections/agent/unwinbooks> .

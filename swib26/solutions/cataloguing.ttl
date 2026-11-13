@@ -1,0 +1,1354 @@
+# Cataloguing: thirty English-language novels, crime and other modern fiction, one per participant,
+# in editions after 2000 whose records name the author only. No two
+# share an author or a work, so participants can catalogue in the same repository at the same time.
+# Each has a work, an English expression, the manifestation and the author; the publisher is
+# recorded as text on the manifestation only, not as an agent.
+# Publication data from the MARC 21 records in swib26/marc/Cataloguing.xml.
+
+@prefix entedit: <http://oslomet.no/abi/vocab#> .
+@prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
+@prefix rdac: <http://rdaregistry.info/Elements/c/> .
+@prefix rdaed: <http://rdaregistry.info/Elements/e/datatype/> .
+@prefix rdaeo: <http://rdaregistry.info/Elements/e/object/> .
+@prefix rdamd: <http://rdaregistry.info/Elements/m/datatype/> .
+@prefix rdamo: <http://rdaregistry.info/Elements/m/object/> .
+@prefix rdawd: <http://rdaregistry.info/Elements/w/datatype/> .
+@prefix rdawo: <http://rdaregistry.info/Elements/w/object/> .
+@prefix rdaxd: <http://rdaregistry.info/Elements/x/datatype/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vtp: <https://schema.nb.no/Bibliographic/Values/> .
+
+<http://viaf.org/viaf/87194517>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/87194517" ;
+    rdaad:P50413 "Adichie, Chimamanda Ngozi" ;
+    rdfs:label "Adichie, Chimamanda Ngozi" ;
+    rdaad:P50339 "1977-" ;
+    rdaad:P50094 "http://viaf.org/viaf/87194517" .
+
+<http://viaf.org/viaf/305113980>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/305113980" ;
+    rdawd:P10223 "Purple hibiscus" ;
+    rdfs:label "Purple hibiscus (Adichie, Chimamanda Ngozi)" ;
+    rdawd:P10219 "2003" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/87194517> ;
+    rdawd:P10002 "http://viaf.org/viaf/305113980" .
+
+<http://example.org/cataloguing/exp/adichie/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/adichie/eng" ;
+    rdaed:P20315 "Purple hibiscus" ;
+    rdfs:label "Purple hibiscus (Adichie, Chimamanda Ngozi)" ;
+    rdaed:P20214 "2003" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/305113980> .
+
+<http://example.org/cataloguing/manifestation/adichie>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/adichie" ;
+    rdfs:label "Purple hibiscus (Algonquin Books of Chapel Hill, 2003)" ;
+    rdamd:P30156 "Purple hibiscus" ;
+    rdamd:P30142 "a novel" ;
+    rdamd:P30117 "by Chimamanda Ngozi Adichie" ;
+    rdamd:P30107 "1st ed." ;
+    rdamd:P30182 "307 p." ;
+    rdamd:P30169 "23 cm." ;
+    rdamd:P30176 "Algonquin Books of Chapel Hill" ;
+    rdamd:P30088 "Chapel Hill" ;
+    rdamd:P30011 "2003" ;
+    rdamd:P30004 "ISBN 1565123875" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/adichie/eng> .
+
+<http://viaf.org/viaf/59219639>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/59219639" ;
+    rdaad:P50413 "Atkinson, Kate" ;
+    rdfs:label "Atkinson, Kate" ;
+    rdaad:P50094 "http://viaf.org/viaf/59219639" .
+
+<http://example.org/cataloguing/work/atkinson>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/cataloguing/work/atkinson" ;
+    rdawd:P10223 "Case histories" ;
+    rdfs:label "Case histories (Atkinson, Kate)" ;
+    rdawd:P10219 "2004" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/159>, <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/59219639> .
+
+<http://example.org/cataloguing/exp/atkinson/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/atkinson/eng" ;
+    rdaed:P20315 "Case histories" ;
+    rdfs:label "Case histories (Atkinson, Kate)" ;
+    rdaed:P20214 "2004" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/cataloguing/work/atkinson> .
+
+<http://example.org/cataloguing/manifestation/atkinson>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/atkinson" ;
+    rdfs:label "Case histories (Little, Brown and Co., c2004)" ;
+    rdamd:P30156 "Case histories" ;
+    rdamd:P30142 "a novel" ;
+    rdamd:P30117 "Kate Atkinson" ;
+    rdamd:P30107 "1st American Ed." ;
+    rdamd:P30182 "312 p." ;
+    rdamd:P30169 "24 cm." ;
+    rdamd:P30176 "Little, Brown and Co." ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "c2004" ;
+    rdamd:P30004 "ISBN 0316740403" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/atkinson/eng> .
+
+<http://viaf.org/viaf/51710796>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/51710796" ;
+    rdaad:P50413 "Barnes, Julian" ;
+    rdfs:label "Barnes, Julian" ;
+    rdaad:P50094 "http://viaf.org/viaf/51710796" .
+
+<http://example.org/cataloguing/work/barnes>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/cataloguing/work/barnes" ;
+    rdawd:P10223 "The sense of an ending" ;
+    rdfs:label "The sense of an ending (Barnes, Julian)" ;
+    rdawd:P10219 "2011" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/51710796> .
+
+<http://example.org/cataloguing/exp/barnes/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/barnes/eng" ;
+    rdaed:P20315 "The sense of an ending" ;
+    rdfs:label "The sense of an ending (Barnes, Julian)" ;
+    rdaed:P20214 "2011" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/cataloguing/work/barnes> .
+
+<http://example.org/cataloguing/manifestation/barnes>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/barnes" ;
+    rdfs:label "The sense of an ending (Alfred A. Knopf, 2011)" ;
+    rdamd:P30156 "The sense of an ending" ;
+    rdamd:P30117 "Julian Barnes" ;
+    rdamd:P30182 "163 p." ;
+    rdamd:P30169 "20 cm." ;
+    rdamd:P30176 "Alfred A. Knopf" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "2011" ;
+    rdamd:P30004 "ISBN 9780307957122" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/barnes/eng> .
+
+<http://viaf.org/viaf/100304282>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/100304282" ;
+    rdaad:P50413 "Child, Lee" ;
+    rdfs:label "Child, Lee" ;
+    rdaad:P50094 "http://viaf.org/viaf/100304282" .
+
+<http://example.org/cataloguing/work/child>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/cataloguing/work/child" ;
+    rdawd:P10223 "The enemy" ;
+    rdfs:label "The enemy (Child, Lee)" ;
+    rdawd:P10219 "2004" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/159>, <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/100304282> .
+
+<http://example.org/cataloguing/exp/child/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/child/eng" ;
+    rdaed:P20315 "The enemy" ;
+    rdfs:label "The enemy (Child, Lee)" ;
+    rdaed:P20214 "2004" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/cataloguing/work/child> .
+
+<http://example.org/cataloguing/manifestation/child>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/child" ;
+    rdfs:label "The enemy (Delacorte Press, 2004)" ;
+    rdamd:P30156 "The enemy" ;
+    rdamd:P30117 "Lee Child" ;
+    rdamd:P30182 "393 p." ;
+    rdamd:P30169 "24 cm." ;
+    rdamd:P30176 "Delacorte Press" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "2004" ;
+    rdamd:P30106 "Reacher series" ;
+    rdamd:P30004 "ISBN 0385336675" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/child/eng> .
+
+<http://viaf.org/viaf/40585642>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/40585642" ;
+    rdaad:P50413 "Cleeves, Ann" ;
+    rdfs:label "Cleeves, Ann" ;
+    rdaad:P50094 "http://viaf.org/viaf/40585642" .
+
+<http://example.org/cataloguing/work/cleeves>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/cataloguing/work/cleeves" ;
+    rdawd:P10223 "Raven black" ;
+    rdfs:label "Raven black (Cleeves, Ann)" ;
+    rdawd:P10219 "2006" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/159>, <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/40585642> .
+
+<http://example.org/cataloguing/exp/cleeves/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/cleeves/eng" ;
+    rdaed:P20315 "Raven black" ;
+    rdfs:label "Raven black (Cleeves, Ann)" ;
+    rdaed:P20214 "2006" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/cataloguing/work/cleeves> .
+
+<http://example.org/cataloguing/manifestation/cleeves>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/cleeves" ;
+    rdfs:label "Raven black (Macmillan, 2006)" ;
+    rdamd:P30156 "Raven black" ;
+    rdamd:P30117 "Ann Cleeves" ;
+    rdamd:P30182 "375 p." ;
+    rdamd:P30169 "22 cm." ;
+    rdamd:P30176 "Macmillan" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30011 "2006" ;
+    rdamd:P30004 "ISBN 1405054727" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/cleeves/eng> .
+
+<http://viaf.org/viaf/116846308>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/116846308" ;
+    rdaad:P50413 "Coben, Harlan" ;
+    rdfs:label "Coben, Harlan" ;
+    rdaad:P50339 "1962-" ;
+    rdaad:P50094 "http://viaf.org/viaf/116846308" .
+
+<http://example.org/cataloguing/work/coben>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/cataloguing/work/coben" ;
+    rdawd:P10223 "Tell no one" ;
+    rdfs:label "Tell no one (Coben, Harlan)" ;
+    rdawd:P10219 "2001" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/159>, <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/116846308> .
+
+<http://example.org/cataloguing/exp/coben/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/coben/eng" ;
+    rdaed:P20315 "Tell no one" ;
+    rdfs:label "Tell no one (Coben, Harlan)" ;
+    rdaed:P20214 "2001" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/cataloguing/work/coben> .
+
+<http://example.org/cataloguing/manifestation/coben>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/coben" ;
+    rdfs:label "Tell no one (Delacorte Press, c2001)" ;
+    rdamd:P30156 "Tell no one" ;
+    rdamd:P30142 "a novel" ;
+    rdamd:P30117 "by Harlan Coben" ;
+    rdamd:P30182 "339 p." ;
+    rdamd:P30169 "25 cm." ;
+    rdamd:P30176 "Delacorte Press" ;
+    rdamd:P30088 "New York, N.Y." ;
+    rdamd:P30011 "c2001" ;
+    rdamd:P30004 "ISBN 0385335555" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/coben/eng> .
+
+<http://viaf.org/viaf/19745715>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/19745715" ;
+    rdaad:P50413 "Connelly, Michael" ;
+    rdfs:label "Connelly, Michael" ;
+    rdaad:P50339 "1956-" ;
+    rdaad:P50094 "http://viaf.org/viaf/19745715" .
+
+<http://viaf.org/viaf/180944535>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/180944535" ;
+    rdawd:P10223 "The Lincoln lawyer" ;
+    rdfs:label "The Lincoln lawyer (Connelly, Michael)" ;
+    rdawd:P10219 "2005" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/159>, <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/19745715> ;
+    rdawd:P10002 "http://viaf.org/viaf/180944535" .
+
+<http://example.org/cataloguing/exp/connelly/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/connelly/eng" ;
+    rdaed:P20315 "The Lincoln lawyer" ;
+    rdfs:label "The Lincoln lawyer (Connelly, Michael)" ;
+    rdaed:P20214 "2005" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/180944535> .
+
+<http://example.org/cataloguing/manifestation/connelly>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/connelly" ;
+    rdfs:label "The Lincoln lawyer (Little, Brown, c2005)" ;
+    rdamd:P30156 "The Lincoln lawyer" ;
+    rdamd:P30142 "a novel" ;
+    rdamd:P30117 "Michael Connelly" ;
+    rdamd:P30107 "1st ed." ;
+    rdamd:P30182 "404 p." ;
+    rdamd:P30169 "25 cm." ;
+    rdamd:P30176 "Little, Brown" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "c2005" ;
+    rdamd:P30004 "ISBN 0316734934" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/connelly/eng> .
+
+<http://viaf.org/viaf/56717951>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/56717951" ;
+    rdaad:P50413 "Egan, Jennifer" ;
+    rdfs:label "Egan, Jennifer" ;
+    rdaad:P50094 "http://viaf.org/viaf/56717951" .
+
+<http://viaf.org/viaf/6720151474916500490009>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/6720151474916500490009" ;
+    rdawd:P10223 "A visit from the Goon Squad" ;
+    rdfs:label "A visit from the Goon Squad (Egan, Jennifer)" ;
+    rdawd:P10219 "2010" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/56717951> ;
+    rdawd:P10002 "http://viaf.org/viaf/6720151474916500490009" .
+
+<http://example.org/cataloguing/exp/egan/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/egan/eng" ;
+    rdaed:P20315 "A visit from the Goon Squad" ;
+    rdfs:label "A visit from the Goon Squad (Egan, Jennifer)" ;
+    rdaed:P20214 "2010" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/6720151474916500490009> .
+
+<http://example.org/cataloguing/manifestation/egan>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/egan" ;
+    rdfs:label "A visit from the Goon Squad (Alfred A. Knopf, 2010)" ;
+    rdamd:P30156 "A visit from the Goon Squad" ;
+    rdamd:P30117 "Jennifer Egan" ;
+    rdamd:P30107 "1st ed." ;
+    rdamd:P30182 "273 p. : ill." ;
+    rdamd:P30169 "25 cm." ;
+    rdamd:P30176 "Alfred A. Knopf" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "2010" ;
+    rdamd:P30004 "ISBN 9780307592835" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/egan/eng> .
+
+<http://viaf.org/viaf/103168327>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/103168327" ;
+    rdaad:P50413 "Flynn, Gillian" ;
+    rdfs:label "Flynn, Gillian" ;
+    rdaad:P50339 "1971-" ;
+    rdaad:P50094 "http://viaf.org/viaf/103168327" .
+
+<http://example.org/cataloguing/work/flynn>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/cataloguing/work/flynn" ;
+    rdawd:P10223 "Gone girl" ;
+    rdfs:label "Gone girl (Flynn, Gillian)" ;
+    rdawd:P10219 "2012" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/159>, <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/103168327> .
+
+<http://example.org/cataloguing/exp/flynn/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/flynn/eng" ;
+    rdaed:P20315 "Gone girl" ;
+    rdfs:label "Gone girl (Flynn, Gillian)" ;
+    rdaed:P20214 "2012" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/cataloguing/work/flynn> .
+
+<http://example.org/cataloguing/manifestation/flynn>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/flynn" ;
+    rdfs:label "Gone girl (Crown, c2012)" ;
+    rdamd:P30156 "Gone girl" ;
+    rdamd:P30142 "a novel" ;
+    rdamd:P30117 "Gillian Flynn" ;
+    rdamd:P30107 "1st. ed." ;
+    rdamd:P30182 "419 p." ;
+    rdamd:P30169 "24 cm." ;
+    rdamd:P30176 "Crown" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "c2012" ;
+    rdamd:P30004 "ISBN 9780307588364" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/flynn/eng> .
+
+<http://viaf.org/viaf/149427877>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/149427877" ;
+    rdaad:P50413 "French, Tana" ;
+    rdfs:label "French, Tana" ;
+    rdaad:P50094 "http://viaf.org/viaf/149427877" .
+
+<http://example.org/cataloguing/work/french>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/cataloguing/work/french" ;
+    rdawd:P10223 "In the woods" ;
+    rdfs:label "In the woods (French, Tana)" ;
+    rdawd:P10219 "2007" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/159>, <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/149427877> .
+
+<http://example.org/cataloguing/exp/french/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/french/eng" ;
+    rdaed:P20315 "In the woods" ;
+    rdfs:label "In the woods (French, Tana)" ;
+    rdaed:P20214 "2007" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/cataloguing/work/french> .
+
+<http://example.org/cataloguing/manifestation/french>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/french" ;
+    rdfs:label "In the woods (Hodder & Stoughton, 2007)" ;
+    rdamd:P30156 "In the woods" ;
+    rdamd:P30117 "Tana French" ;
+    rdamd:P30182 "485 p." ;
+    rdamd:P30169 "24 cm." ;
+    rdamd:P30176 "Hodder & Stoughton" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30011 "2007" ;
+    rdamd:P30106 "Dublin murder squad series" ;
+    rdamd:P30004 "ISBN 9780340924754" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/french/eng> .
+
+<http://viaf.org/viaf/14277202>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/14277202" ;
+    rdaad:P50413 "Hawkins, Paula" ;
+    rdfs:label "Hawkins, Paula" ;
+    rdaad:P50094 "http://viaf.org/viaf/14277202" .
+
+<http://viaf.org/viaf/317270260>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/317270260" ;
+    rdawd:P10223 "The girl on the train" ;
+    rdfs:label "The girl on the train (Hawkins, Paula)" ;
+    rdawd:P10219 "2015" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/159>, <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/14277202> ;
+    rdawd:P10002 "http://viaf.org/viaf/317270260" .
+
+<http://example.org/cataloguing/exp/hawkins/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/hawkins/eng" ;
+    rdaed:P20315 "The girl on the train" ;
+    rdfs:label "The girl on the train (Hawkins, Paula)" ;
+    rdaed:P20214 "2015" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/317270260> .
+
+<http://example.org/cataloguing/manifestation/hawkins>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/hawkins" ;
+    rdfs:label "The girl on the train (Riverhead Books, a member of Penguin Group (USA), 2015)" ;
+    rdamd:P30156 "The girl on the train" ;
+    rdamd:P30117 "Paula Hawkins" ;
+    rdamd:P30182 "323 pages" ;
+    rdamd:P30169 "24 cm" ;
+    rdamd:P30176 "Riverhead Books, a member of Penguin Group (USA)" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "2015" ;
+    rdamd:P30004 "ISBN 9781594633669" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/hawkins/eng> .
+
+<http://viaf.org/viaf/24546389>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/24546389" ;
+    rdaad:P50413 "Herron, Mick" ;
+    rdfs:label "Herron, Mick" ;
+    rdaad:P50094 "http://viaf.org/viaf/24546389" .
+
+<http://example.org/cataloguing/work/herron>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/cataloguing/work/herron" ;
+    rdawd:P10223 "Slow horses" ;
+    rdfs:label "Slow horses (Herron, Mick)" ;
+    rdawd:P10219 "2010" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/159>, <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/24546389> .
+
+<http://example.org/cataloguing/exp/herron/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/herron/eng" ;
+    rdaed:P20315 "Slow horses" ;
+    rdfs:label "Slow horses (Herron, Mick)" ;
+    rdaed:P20214 "2010" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/cataloguing/work/herron> .
+
+<http://example.org/cataloguing/manifestation/herron>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/herron" ;
+    rdfs:label "Slow horses (Soho Constable, 2010)" ;
+    rdamd:P30156 "Slow horses" ;
+    rdamd:P30117 "Mick Herron" ;
+    rdamd:P30107 "1st US ed." ;
+    rdamd:P30182 "329 p." ;
+    rdamd:P30169 "23 cm." ;
+    rdamd:P30176 "Soho Constable" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "2010" ;
+    rdamd:P30004 "ISBN 9781569476437" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/herron/eng> .
+
+<http://viaf.org/viaf/98912036>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/98912036" ;
+    rdaad:P50413 "Hosseini, Khaled" ;
+    rdfs:label "Hosseini, Khaled" ;
+    rdaad:P50094 "http://viaf.org/viaf/98912036" .
+
+<http://viaf.org/viaf/220035581>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/220035581" ;
+    rdawd:P10223 "The kite runner" ;
+    rdfs:label "The kite runner (Hosseini, Khaled)" ;
+    rdawd:P10219 "2003" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/98912036> ;
+    rdawd:P10002 "http://viaf.org/viaf/220035581" .
+
+<http://example.org/cataloguing/exp/hosseini/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/hosseini/eng" ;
+    rdaed:P20315 "The kite runner" ;
+    rdfs:label "The kite runner (Hosseini, Khaled)" ;
+    rdaed:P20214 "2003" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/220035581> .
+
+<http://example.org/cataloguing/manifestation/hosseini>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/hosseini" ;
+    rdfs:label "The kite runner (Riverhead Books, 2003)" ;
+    rdamd:P30156 "The kite runner" ;
+    rdamd:P30117 "Khaled Hosseini" ;
+    rdamd:P30182 "324 p." ;
+    rdamd:P30169 "24 cm." ;
+    rdamd:P30176 "Riverhead Books" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "2003" ;
+    rdamd:P30004 "ISBN 1573222453" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/hosseini/eng> .
+
+<http://viaf.org/viaf/79097759>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/79097759" ;
+    rdaad:P50413 "Kingsolver, Barbara" ;
+    rdfs:label "Kingsolver, Barbara" ;
+    rdaad:P50094 "http://viaf.org/viaf/79097759" .
+
+<http://viaf.org/viaf/342170292134077690001>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/342170292134077690001" ;
+    rdawd:P10223 "Demon Copperhead" ;
+    rdfs:label "Demon Copperhead (Kingsolver, Barbara)" ;
+    rdawd:P10219 "2022" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/79097759> ;
+    rdawd:P10002 "http://viaf.org/viaf/342170292134077690001" .
+
+<http://example.org/cataloguing/exp/kingsolver/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/kingsolver/eng" ;
+    rdaed:P20315 "Demon Copperhead" ;
+    rdfs:label "Demon Copperhead (Kingsolver, Barbara)" ;
+    rdaed:P20214 "2022" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/342170292134077690001> .
+
+<http://example.org/cataloguing/manifestation/kingsolver>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/kingsolver" ;
+    rdfs:label "Demon Copperhead (Harper, an imprint of HarperCollinsPublishers, [2022])" ;
+    rdamd:P30156 "Demon Copperhead" ;
+    rdamd:P30142 "a novel" ;
+    rdamd:P30117 "Barbara Kingsolver" ;
+    rdamd:P30107 "First edition." ;
+    rdamd:P30182 "548 pages" ;
+    rdamd:P30169 "24 cm" ;
+    rdamd:P30176 "Harper, an imprint of HarperCollinsPublishers" ;
+    rdamd:P30088 "New York, NY" ;
+    rdamd:P30011 "[2022]" ;
+    rdamd:P30004 "ISBN 9780063251922" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/kingsolver/eng> .
+
+<http://viaf.org/viaf/100885199>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/100885199" ;
+    rdaad:P50413 "Lahiri, Jhumpa" ;
+    rdfs:label "Lahiri, Jhumpa" ;
+    rdaad:P50094 "http://viaf.org/viaf/100885199" .
+
+<http://viaf.org/viaf/207953409>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/207953409" ;
+    rdawd:P10223 "The namesake" ;
+    rdfs:label "The namesake (Lahiri, Jhumpa)" ;
+    rdawd:P10219 "2003" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/100885199> ;
+    rdawd:P10002 "http://viaf.org/viaf/207953409" .
+
+<http://example.org/cataloguing/exp/lahiri/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/lahiri/eng" ;
+    rdaed:P20315 "The namesake" ;
+    rdfs:label "The namesake (Lahiri, Jhumpa)" ;
+    rdaed:P20214 "2003" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/207953409> .
+
+<http://example.org/cataloguing/manifestation/lahiri>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/lahiri" ;
+    rdfs:label "The namesake (Flamingo, 2004)" ;
+    rdamd:P30156 "The namesake" ;
+    rdamd:P30117 "Jhumpa Lahiri" ;
+    rdamd:P30182 "291 p." ;
+    rdamd:P30169 "23 cm." ;
+    rdamd:P30176 "Flamingo" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30011 "2004" ;
+    rdamd:P30004 "ISBN 000225901X" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/lahiri/eng> .
+
+<http://viaf.org/viaf/10004693>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/10004693" ;
+    rdaad:P50413 "Lehane, Dennis" ;
+    rdfs:label "Lehane, Dennis" ;
+    rdaad:P50094 "http://viaf.org/viaf/10004693" .
+
+<http://example.org/cataloguing/work/lehane>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/cataloguing/work/lehane" ;
+    rdawd:P10223 "Mystic river" ;
+    rdfs:label "Mystic river (Lehane, Dennis)" ;
+    rdawd:P10219 "2001" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/159>, <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/10004693> .
+
+<http://example.org/cataloguing/exp/lehane/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/lehane/eng" ;
+    rdaed:P20315 "Mystic river" ;
+    rdfs:label "Mystic river (Lehane, Dennis)" ;
+    rdaed:P20214 "2001" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/cataloguing/work/lehane> .
+
+<http://example.org/cataloguing/manifestation/lehane>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/lehane" ;
+    rdfs:label "Mystic river (William Morrow, 2001)" ;
+    rdamd:P30156 "Mystic river" ;
+    rdamd:P30117 "Dennis Lehane" ;
+    rdamd:P30182 "401 p." ;
+    rdamd:P30169 "25 cm." ;
+    rdamd:P30176 "William Morrow" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "2001" ;
+    rdamd:P30004 "ISBN 0688163165" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/lehane/eng> .
+
+<http://viaf.org/viaf/74098174>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/74098174" ;
+    rdaad:P50413 "Levy, Andrea" ;
+    rdfs:label "Levy, Andrea" ;
+    rdaad:P50339 "1956-2019" ;
+    rdaad:P50094 "http://viaf.org/viaf/74098174" .
+
+<http://example.org/cataloguing/work/levy>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/cataloguing/work/levy" ;
+    rdawd:P10223 "Small island" ;
+    rdfs:label "Small island (Levy, Andrea)" ;
+    rdawd:P10219 "2004" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/74098174> .
+
+<http://example.org/cataloguing/exp/levy/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/levy/eng" ;
+    rdaed:P20315 "Small island" ;
+    rdfs:label "Small island (Levy, Andrea)" ;
+    rdaed:P20214 "2004" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/cataloguing/work/levy> .
+
+<http://example.org/cataloguing/manifestation/levy>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/levy" ;
+    rdfs:label "Small island (Review, 2004)" ;
+    rdamd:P30156 "Small island" ;
+    rdamd:P30117 "Andrea Levy" ;
+    rdamd:P30182 "441 p." ;
+    rdamd:P30169 "21 cm." ;
+    rdamd:P30176 "Review" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30011 "2004" ;
+    rdamd:P30004 "ISBN 0755307496" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/levy/eng> .
+
+<http://viaf.org/viaf/85629402>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/85629402" ;
+    rdaad:P50413 "Lippman, Laura" ;
+    rdfs:label "Lippman, Laura" ;
+    rdaad:P50339 "1959-" ;
+    rdaad:P50094 "http://viaf.org/viaf/85629402" .
+
+<http://example.org/cataloguing/work/lippman>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/cataloguing/work/lippman" ;
+    rdawd:P10223 "What the dead know" ;
+    rdfs:label "What the dead know (Lippman, Laura)" ;
+    rdawd:P10219 "2007" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/159>, <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/85629402> .
+
+<http://example.org/cataloguing/exp/lippman/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/lippman/eng" ;
+    rdaed:P20315 "What the dead know" ;
+    rdfs:label "What the dead know (Lippman, Laura)" ;
+    rdaed:P20214 "2007" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/cataloguing/work/lippman> .
+
+<http://example.org/cataloguing/manifestation/lippman>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/lippman" ;
+    rdfs:label "What the dead know (William Morrow, c2007)" ;
+    rdamd:P30156 "What the dead know" ;
+    rdamd:P30117 "Laura Lippman" ;
+    rdamd:P30107 "1st ed." ;
+    rdamd:P30182 "376 p." ;
+    rdamd:P30169 "24 cm." ;
+    rdamd:P30176 "William Morrow" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "c2007" ;
+    rdamd:P30004 "ISBN 9780061128851" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/lippman/eng> .
+
+<http://viaf.org/viaf/44415775>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/44415775" ;
+    rdaad:P50413 "Mantel, Hilary" ;
+    rdfs:label "Mantel, Hilary" ;
+    rdaad:P50339 "1952-2022" ;
+    rdaad:P50094 "http://viaf.org/viaf/44415775" .
+
+<http://viaf.org/viaf/308112483>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/308112483" ;
+    rdawd:P10223 "Wolf Hall" ;
+    rdfs:label "Wolf Hall (Mantel, Hilary)" ;
+    rdawd:P10219 "2009" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/44415775> ;
+    rdawd:P10002 "http://viaf.org/viaf/308112483" .
+
+<http://example.org/cataloguing/exp/mantel/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/mantel/eng" ;
+    rdaed:P20315 "Wolf Hall" ;
+    rdfs:label "Wolf Hall (Mantel, Hilary)" ;
+    rdaed:P20214 "2009" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/308112483> .
+
+<http://example.org/cataloguing/manifestation/mantel>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/mantel" ;
+    rdfs:label "Wolf Hall (Fourth Estate, 2009)" ;
+    rdamd:P30156 "Wolf Hall" ;
+    rdamd:P30117 "Hilary Mantel" ;
+    rdamd:P30182 "651 p." ;
+    rdamd:P30169 "25 cm." ;
+    rdamd:P30176 "Fourth Estate" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30011 "2009" ;
+    rdamd:P30004 "ISBN 9780007230181" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/mantel/eng> .
+
+<http://viaf.org/viaf/85372278>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/85372278" ;
+    rdaad:P50413 "Martel, Yann" ;
+    rdfs:label "Martel, Yann" ;
+    rdaad:P50094 "http://viaf.org/viaf/85372278" .
+
+<http://example.org/cataloguing/work/martel>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/cataloguing/work/martel" ;
+    rdawd:P10223 "Life of Pi" ;
+    rdfs:label "Life of Pi (Martel, Yann)" ;
+    rdawd:P10219 "2001" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/85372278> .
+
+<http://example.org/cataloguing/exp/martel/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/martel/eng" ;
+    rdaed:P20315 "Life of Pi" ;
+    rdfs:label "Life of Pi (Martel, Yann)" ;
+    rdaed:P20214 "2001" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/cataloguing/work/martel> .
+
+<http://example.org/cataloguing/manifestation/martel>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/martel" ;
+    rdfs:label "Life of Pi (Harcourt, c2001)" ;
+    rdamd:P30156 "Life of Pi" ;
+    rdamd:P30142 "a novel" ;
+    rdamd:P30117 "Yann Martel" ;
+    rdamd:P30107 "lst U.S. ed." ;
+    rdamd:P30182 "xii, 319 p." ;
+    rdamd:P30169 "24 cm." ;
+    rdamd:P30176 "Harcourt" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "c2001" ;
+    rdamd:P30004 "ISBN 0151008116" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/martel/eng> .
+
+<http://viaf.org/viaf/109587997>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/109587997" ;
+    rdaad:P50413 "McEwan, Ian" ;
+    rdfs:label "McEwan, Ian" ;
+    rdaad:P50094 "http://viaf.org/viaf/109587997" .
+
+<http://viaf.org/viaf/195844162>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/195844162" ;
+    rdawd:P10223 "Atonement" ;
+    rdfs:label "Atonement (McEwan, Ian)" ;
+    rdawd:P10219 "2001" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/109587997> ;
+    rdawd:P10002 "http://viaf.org/viaf/195844162" .
+
+<http://example.org/cataloguing/exp/mcewan/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/mcewan/eng" ;
+    rdaed:P20315 "Atonement" ;
+    rdfs:label "Atonement (McEwan, Ian)" ;
+    rdaed:P20214 "2001" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/195844162> .
+
+<http://example.org/cataloguing/manifestation/mcewan>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/mcewan" ;
+    rdfs:label "Atonement (N.A. Talese/Doubleday, 2002, c2001)" ;
+    rdamd:P30156 "Atonement" ;
+    rdamd:P30142 "a novel" ;
+    rdamd:P30117 "Ian McEwan" ;
+    rdamd:P30107 "1st ed. in the U.S.A." ;
+    rdamd:P30182 "351 p." ;
+    rdamd:P30169 "25 cm." ;
+    rdamd:P30176 "N.A. Talese/Doubleday" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "2002, c2001" ;
+    rdamd:P30004 "ISBN 0385503954" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/mcewan/eng> .
+
+<http://viaf.org/viaf/20146635715841982875>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/20146635715841982875" ;
+    rdaad:P50413 "Ng, Celeste" ;
+    rdfs:label "Ng, Celeste" ;
+    rdaad:P50094 "http://viaf.org/viaf/20146635715841982875" .
+
+<http://viaf.org/viaf/316872346>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/316872346" ;
+    rdawd:P10223 "Everything I never told you" ;
+    rdfs:label "Everything I never told you (Ng, Celeste)" ;
+    rdawd:P10219 "2014" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/20146635715841982875> ;
+    rdawd:P10002 "http://viaf.org/viaf/316872346" .
+
+<http://example.org/cataloguing/exp/ng/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/ng/eng" ;
+    rdaed:P20315 "Everything I never told you" ;
+    rdfs:label "Everything I never told you (Ng, Celeste)" ;
+    rdaed:P20214 "2014" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/316872346> .
+
+<http://example.org/cataloguing/manifestation/ng>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/ng" ;
+    rdfs:label "Everything I never told you (Penguin Press HC, 2014)" ;
+    rdamd:P30156 "Everything I never told you" ;
+    rdamd:P30117 "Celeste Ng" ;
+    rdamd:P30182 "297 pages" ;
+    rdamd:P30169 "23 cm" ;
+    rdamd:P30176 "Penguin Press HC" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "2014" ;
+    rdamd:P30004 "ISBN 9781594205712" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/ng/eng> .
+
+<http://viaf.org/viaf/310665412>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/310665412" ;
+    rdaad:P50413 "Osman, Richard" ;
+    rdfs:label "Osman, Richard" ;
+    rdaad:P50339 "1970-" ;
+    rdaad:P50094 "http://viaf.org/viaf/310665412" .
+
+<http://example.org/cataloguing/work/osman>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/cataloguing/work/osman" ;
+    rdawd:P10223 "The Thursday murder club" ;
+    rdfs:label "The Thursday murder club (Osman, Richard)" ;
+    rdawd:P10219 "2020" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/159>, <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/310665412> .
+
+<http://example.org/cataloguing/exp/osman/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/osman/eng" ;
+    rdaed:P20315 "The Thursday murder club" ;
+    rdfs:label "The Thursday murder club (Osman, Richard)" ;
+    rdaed:P20214 "2020" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/cataloguing/work/osman> .
+
+<http://example.org/cataloguing/manifestation/osman>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/osman" ;
+    rdfs:label "The Thursday murder club (Pamela Dorman Books/Viking, [2020])" ;
+    rdamd:P30156 "The Thursday murder club" ;
+    rdamd:P30117 "Richard Osman" ;
+    rdamd:P30182 "355 pages" ;
+    rdamd:P30169 "24 cm" ;
+    rdamd:P30176 "Pamela Dorman Books/Viking" ;
+    rdamd:P30088 "[New York]" ;
+    rdamd:P30011 "[2020]" ;
+    rdamd:P30004 "ISBN 9781984880963" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/osman/eng> .
+
+<http://viaf.org/viaf/110347652>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/110347652" ;
+    rdaad:P50413 "Owens, Delia" ;
+    rdfs:label "Owens, Delia" ;
+    rdaad:P50094 "http://viaf.org/viaf/110347652" .
+
+<http://example.org/cataloguing/work/owens>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/cataloguing/work/owens" ;
+    rdawd:P10223 "Where the crawdads sing" ;
+    rdfs:label "Where the crawdads sing (Owens, Delia)" ;
+    rdawd:P10219 "2018" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/110347652> .
+
+<http://example.org/cataloguing/exp/owens/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/owens/eng" ;
+    rdaed:P20315 "Where the crawdads sing" ;
+    rdfs:label "Where the crawdads sing (Owens, Delia)" ;
+    rdaed:P20214 "2018" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/cataloguing/work/owens> .
+
+<http://example.org/cataloguing/manifestation/owens>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/owens" ;
+    rdfs:label "Where the crawdads sing (G.P. Putnam's Sons, [2018])" ;
+    rdamd:P30156 "Where the crawdads sing" ;
+    rdamd:P30117 "Delia Owens" ;
+    rdamd:P30182 "370 pages" ;
+    rdamd:P30169 "24 cm" ;
+    rdamd:P30176 "G.P. Putnam's Sons" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "[2018]" ;
+    rdamd:P30004 "ISBN 9780735219090" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/owens/eng> .
+
+<http://viaf.org/viaf/79555703>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/79555703" ;
+    rdaad:P50413 "Penny, Louise" ;
+    rdfs:label "Penny, Louise" ;
+    rdaad:P50094 "http://viaf.org/viaf/79555703" .
+
+<http://example.org/cataloguing/work/penny>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/cataloguing/work/penny" ;
+    rdawd:P10223 "Still life" ;
+    rdfs:label "Still life (Penny, Louise)" ;
+    rdawd:P10219 "2005" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/159>, <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/79555703> .
+
+<http://example.org/cataloguing/exp/penny/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/penny/eng" ;
+    rdaed:P20315 "Still life" ;
+    rdfs:label "Still life (Penny, Louise)" ;
+    rdaed:P20214 "2005" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/cataloguing/work/penny> .
+
+<http://example.org/cataloguing/manifestation/penny>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/penny" ;
+    rdfs:label "Still life (St. Martin's Minotaur, 2006)" ;
+    rdamd:P30156 "Still life" ;
+    rdamd:P30117 "Louise Penny" ;
+    rdamd:P30107 "1st St. Martin's Minotaur ed." ;
+    rdamd:P30182 "viii, 312 p." ;
+    rdamd:P30169 "22 cm." ;
+    rdamd:P30176 "St. Martin's Minotaur" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "2006" ;
+    rdamd:P30004 "ISBN 0312352557" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/penny/eng> .
+
+<http://viaf.org/viaf/76462000>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/76462000" ;
+    rdaad:P50413 "Rankin, Ian" ;
+    rdfs:label "Rankin, Ian" ;
+    rdaad:P50094 "http://viaf.org/viaf/76462000" .
+
+<http://example.org/cataloguing/work/rankin>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/cataloguing/work/rankin" ;
+    rdawd:P10223 "Exit music" ;
+    rdfs:label "Exit music (Rankin, Ian)" ;
+    rdawd:P10219 "2007" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/159>, <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/76462000> .
+
+<http://example.org/cataloguing/exp/rankin/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/rankin/eng" ;
+    rdaed:P20315 "Exit music" ;
+    rdfs:label "Exit music (Rankin, Ian)" ;
+    rdaed:P20214 "2007" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/cataloguing/work/rankin> .
+
+<http://example.org/cataloguing/manifestation/rankin>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/rankin" ;
+    rdfs:label "Exit music (Little, Brown and Co., 2008)" ;
+    rdamd:P30156 "Exit music" ;
+    rdamd:P30117 "Ian Rankin" ;
+    rdamd:P30107 "1st U.S. ed." ;
+    rdamd:P30182 "421 p." ;
+    rdamd:P30169 "25 cm." ;
+    rdamd:P30176 "Little, Brown and Co." ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "2008" ;
+    rdamd:P30106 "The Inspector Rebus series" ;
+    rdamd:P30004 "ISBN 9780316057585" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/rankin/eng> .
+
+<http://viaf.org/viaf/49149912708206212971>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/49149912708206212971" ;
+    rdaad:P50413 "Rooney, Sally" ;
+    rdfs:label "Rooney, Sally" ;
+    rdaad:P50094 "http://viaf.org/viaf/49149912708206212971" .
+
+<http://example.org/cataloguing/work/rooney>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/cataloguing/work/rooney" ;
+    rdawd:P10223 "Normal people" ;
+    rdfs:label "Normal people (Rooney, Sally)" ;
+    rdawd:P10219 "2018" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/49149912708206212971> .
+
+<http://example.org/cataloguing/exp/rooney/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/rooney/eng" ;
+    rdaed:P20315 "Normal people" ;
+    rdfs:label "Normal people (Rooney, Sally)" ;
+    rdaed:P20214 "2018" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/cataloguing/work/rooney> .
+
+<http://example.org/cataloguing/manifestation/rooney>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/rooney" ;
+    rdfs:label "Normal people (Faber & Faber, 2018)" ;
+    rdamd:P30156 "Normal people" ;
+    rdamd:P30117 "Sally Rooney" ;
+    rdamd:P30182 "266 pages" ;
+    rdamd:P30169 "23 cm" ;
+    rdamd:P30176 "Faber & Faber" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30011 "2018" ;
+    rdamd:P30004 "ISBN 9780571334643" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/rooney/eng> .
+
+<http://viaf.org/viaf/56832090>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/56832090" ;
+    rdaad:P50413 "Slaughter, Karin" ;
+    rdfs:label "Slaughter, Karin" ;
+    rdaad:P50339 "1971-" ;
+    rdaad:P50094 "http://viaf.org/viaf/56832090" .
+
+<http://viaf.org/viaf/1175145424652986831400>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/1175145424652986831400" ;
+    rdawd:P10223 "Blindsighted" ;
+    rdfs:label "Blindsighted (Slaughter, Karin)" ;
+    rdawd:P10219 "2001" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/159>, <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/56832090> ;
+    rdawd:P10002 "http://viaf.org/viaf/1175145424652986831400" .
+
+<http://example.org/cataloguing/exp/slaughter/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/slaughter/eng" ;
+    rdaed:P20315 "Blindsighted" ;
+    rdfs:label "Blindsighted (Slaughter, Karin)" ;
+    rdaed:P20214 "2001" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://viaf.org/viaf/1175145424652986831400> .
+
+<http://example.org/cataloguing/manifestation/slaughter>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/slaughter" ;
+    rdfs:label "Blindsighted (William Morrow, [2001])" ;
+    rdamd:P30156 "Blindsighted" ;
+    rdamd:P30117 "Karin Slaughter" ;
+    rdamd:P30107 "1st edition" ;
+    rdamd:P30182 "311 pages" ;
+    rdamd:P30169 "25 cm" ;
+    rdamd:P30176 "William Morrow" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "[2001]" ;
+    rdamd:P30004 "ISBN 0688174574" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/slaughter/eng> .
+
+<http://viaf.org/viaf/14951645>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/14951645" ;
+    rdaad:P50413 "Smith, Zadie" ;
+    rdfs:label "Smith, Zadie" ;
+    rdaad:P50094 "http://viaf.org/viaf/14951645" .
+
+<http://example.org/cataloguing/work/smith>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/cataloguing/work/smith" ;
+    rdawd:P10223 "White teeth" ;
+    rdfs:label "White teeth (Smith, Zadie)" ;
+    rdawd:P10219 "2000" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/14951645> .
+
+<http://example.org/cataloguing/exp/smith/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/smith/eng" ;
+    rdaed:P20315 "White teeth" ;
+    rdfs:label "White teeth (Smith, Zadie)" ;
+    rdaed:P20214 "2000" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/cataloguing/work/smith> .
+
+<http://example.org/cataloguing/manifestation/smith>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/smith" ;
+    rdfs:label "White teeth (Hamish Hamilton, 2000)" ;
+    rdamd:P30156 "White teeth" ;
+    rdamd:P30117 "Zadie Smith" ;
+    rdamd:P30182 "461 p." ;
+    rdamd:P30169 "24 cm." ;
+    rdamd:P30176 "Hamish Hamilton" ;
+    rdamd:P30088 "London" ;
+    rdamd:P30011 "2000" ;
+    rdamd:P30004 "ISBN 024113997X" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/smith/eng> .
+
+<http://viaf.org/viaf/66631918>
+    a rdac:C10004 ;
+    rdaxd:P00018 "http://viaf.org/viaf/66631918" ;
+    rdaad:P50413 "Strout, Elizabeth" ;
+    rdfs:label "Strout, Elizabeth" ;
+    rdaad:P50094 "http://viaf.org/viaf/66631918" .
+
+<http://example.org/cataloguing/work/strout>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://example.org/cataloguing/work/strout" ;
+    rdawd:P10223 "Olive Kitteridge" ;
+    rdfs:label "Olive Kitteridge (Strout, Elizabeth)" ;
+    rdawd:P10219 "2008" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/66631918> .
+
+<http://example.org/cataloguing/exp/strout/eng>
+    a rdac:C10006 ;
+    rdaxd:P00018 "http://example.org/cataloguing/exp/strout/eng" ;
+    rdaed:P20315 "Olive Kitteridge" ;
+    rdfs:label "Olive Kitteridge (Strout, Elizabeth)" ;
+    rdaed:P20214 "2008" ;
+    rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1020> ;
+    rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    rdaeo:P20231 <http://example.org/cataloguing/work/strout> .
+
+<http://example.org/cataloguing/manifestation/strout>
+    a rdac:C10007 ;
+    rdaxd:P00018 "http://example.org/cataloguing/manifestation/strout" ;
+    rdfs:label "Olive Kitteridge (Random House, c2008)" ;
+    rdamd:P30156 "Olive Kitteridge" ;
+    rdamd:P30117 "Elizabeth Strout" ;
+    rdamd:P30107 "1st ed." ;
+    rdamd:P30182 "270 p." ;
+    rdamd:P30169 "25 cm." ;
+    rdamd:P30176 "Random House" ;
+    rdamd:P30088 "New York" ;
+    rdamd:P30011 "c2008" ;
+    rdamd:P30004 "ISBN 9781400062089" ;
+    rdamo:P30001 <http://rdaregistry.info/termList/RDACarrierType/1049> ;
+    rdamo:P30002 <http://rdaregistry.info/termList/RDAMediaType/1007> ;
+    rdamo:P30139 <http://example.org/cataloguing/exp/strout/eng> .

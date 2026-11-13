@@ -1,0 +1,941 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection xmlns="http://www.loc.gov/MARC21/slim"><record>
+          <leader>     pam a2200205 a 4500</leader>
+          <controlfield tag="001">990132206940109251</controlfield>
+          <controlfield tag="005">20061102105037.0</controlfield>
+          <controlfield tag="008">050518s2005    enkab    b    001 1 eng^^</controlfield>
+          <datafield ind1=" " ind2=" " tag="015">
+            <subfield code="a">GBA550469</subfield>
+            <subfield code="2">bnb</subfield>
+          </datafield>
+          <datafield ind1="7" ind2=" " tag="016">
+            <subfield code="a">013220694</subfield>
+            <subfield code="2">Uk</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="020">
+            <subfield code="a">0007203543 (pt. 1 : cased) :</subfield>
+            <subfield code="c">£18.99</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="020">
+            <subfield code="a">0007203586 (pt. 1 : pbk.) :</subfield>
+            <subfield code="c">£6.99</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="020">
+            <subfield code="a">0007203551 (pt. 2 : cased) :</subfield>
+            <subfield code="c">£18.99</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="020">
+            <subfield code="a">0007203594 (pt. 2 : pbk.) :</subfield>
+            <subfield code="c">£6.99</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="020">
+            <subfield code="a">000720356X (pt. 3 : cased) :</subfield>
+            <subfield code="c">£18.99</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="020">
+            <subfield code="a">0007203608 (pt. 3 : pbk.) :</subfield>
+            <subfield code="c">£6.99</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="020">
+            <subfield code="a">000720308X (reader's companion : cased) :</subfield>
+            <subfield code="c">£18.99</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="020">
+            <subfield code="a">000720907X (reader's companion : pbk.) :</subfield>
+            <subfield code="c">£7.99</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">(Uk)013220694</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">(Uk)013220694BLL01-Aleph</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="040">
+            <subfield code="a">StDuBDS</subfield>
+            <subfield code="b">eng</subfield>
+            <subfield code="c">StDuBDS</subfield>
+            <subfield code="d">Uk</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="042">
+            <subfield code="a">ukblsr</subfield>
+          </datafield>
+          <datafield ind1="0" ind2="4" tag="082">
+            <subfield code="a">823.912</subfield>
+            <subfield code="2">22</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="100">
+            <subfield code="a">Tolkien, J. R. R.</subfield>
+            <subfield code="q">(John Ronald Reuel),</subfield>
+            <subfield code="d">1892-1973.</subfield>
+          </datafield>
+          <datafield ind1="1" ind2="4" tag="245">
+            <subfield code="a">The Lord of the Rings /</subfield>
+            <subfield code="c">J.R.R. Tolkien.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="250">
+            <subfield code="a">[50th anniversary ed.].</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="260">
+            <subfield code="a">London :</subfield>
+            <subfield code="b">HarperCollins,</subfield>
+            <subfield code="c">2005.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="300">
+            <subfield code="a">4 v. :</subfield>
+            <subfield code="b">ill. (chiefly col.), col. maps ;</subfield>
+            <subfield code="c">23 cm.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="336">
+            <subfield code="a">text</subfield>
+            <subfield code="2">rdacontent</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="337">
+            <subfield code="a">unmediated</subfield>
+            <subfield code="2">rdamedia</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="338">
+            <subfield code="a">volume</subfield>
+            <subfield code="2">rdacarrier</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="500">
+            <subfield code="a">Includes: The Lord of the Rings : a reader's companion / by Wayne G. Hammond and Christina Scull.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="500">
+            <subfield code="a">Previous ed.: 2002.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="500">
+            <subfield code="a">In slip case.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="500">
+            <subfield code="a">Title from slip case.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="504">
+            <subfield code="a">Includes bibliographical references and indexes.</subfield>
+          </datafield>
+          <datafield ind1="0" ind2=" " tag="505">
+            <subfield code="a">pt. 1. The fellowship of the ring -- pt. 2. The two towers -- pt. 3. The return of the king -- A reader's companion.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="500">
+            <subfield code="a">Formerly CIP.</subfield>
+            <subfield code="5">Uk</subfield>
+          </datafield>
+          <datafield ind1=" " ind2="0" tag="650">
+            <subfield code="a">Middle Earth (Imaginary place)</subfield>
+            <subfield code="v">Fiction.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2="0" tag="655">
+            <subfield code="a">Fantasy fiction.</subfield>
+          </datafield>
+          <datafield ind1="1" ind2="0" tag="600">
+            <subfield code="a">Tolkien, J. R. R.</subfield>
+            <subfield code="q">(John Ronald Reuel),</subfield>
+            <subfield code="d">1892-1973.</subfield>
+            <subfield code="t">Lord of the rings</subfield>
+            <subfield code="v">Handbooks, manuals, etc.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2="0" tag="650">
+            <subfield code="a">Fantasy fiction, English</subfield>
+            <subfield code="x">History and criticism</subfield>
+            <subfield code="v">Handbooks, manuals, etc.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2="0" tag="650">
+            <subfield code="a">Middle Earth (Imaginary place)</subfield>
+            <subfield code="v">Handbooks, manuals, etc.</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="700">
+            <subfield code="a">Hammond, Wayne G.</subfield>
+            <subfield code="t">Lord of the Rings : a reader's companion.</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="700">
+            <subfield code="a">Scull, Christina.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="913">
+            <subfield code="a">Y</subfield>
+            <subfield code="d">20061102</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="AVA">
+            <subfield code="0">990132206940109251</subfield>
+            <subfield code="8">222316079090009251</subfield>
+            <subfield code="a">44BL_MAIN</subfield>
+            <subfield code="b">PHYS</subfield>
+            <subfield code="c">Stored at St Pancras - London (&lt;b&gt;Delivery time: London 70min, Boston Spa 48hrs&lt;/b&gt;)</subfield>
+            <subfield code="d">YC.2006.a.19413</subfield>
+            <subfield code="e">available</subfield>
+            <subfield code="f">1</subfield>
+            <subfield code="g">0</subfield>
+            <subfield code="v">from:2 until:2</subfield>
+            <subfield code="i">PHYSRR</subfield>
+            <subfield code="j">B3GEN</subfield>
+            <subfield code="p">1</subfield>
+            <subfield code="q">Physical Collections</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="AVA">
+            <subfield code="0">990132206940109251</subfield>
+            <subfield code="8">222316079050009251</subfield>
+            <subfield code="a">44BL_MAIN</subfield>
+            <subfield code="b">PHYS</subfield>
+            <subfield code="c">Stored at St Pancras - London (&lt;b&gt;Delivery time: London 70min, Boston Spa 48hrs&lt;/b&gt;)</subfield>
+            <subfield code="d">YC.2006.a.19411</subfield>
+            <subfield code="e">available</subfield>
+            <subfield code="f">1</subfield>
+            <subfield code="g">0</subfield>
+            <subfield code="v">from:4 until:4</subfield>
+            <subfield code="i">PHYSRR</subfield>
+            <subfield code="j">B3GEN</subfield>
+            <subfield code="p">2</subfield>
+            <subfield code="q">Physical Collections</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="AVA">
+            <subfield code="0">990132206940109251</subfield>
+            <subfield code="8">222316079070009251</subfield>
+            <subfield code="a">44BL_MAIN</subfield>
+            <subfield code="b">PHYS</subfield>
+            <subfield code="c">Stored at St Pancras - London (&lt;b&gt;Delivery time: London 70min, Boston Spa 48hrs&lt;/b&gt;)</subfield>
+            <subfield code="d">YC.2006.a.19412</subfield>
+            <subfield code="e">available</subfield>
+            <subfield code="f">1</subfield>
+            <subfield code="g">0</subfield>
+            <subfield code="v">from:3 until:3</subfield>
+            <subfield code="i">PHYSRR</subfield>
+            <subfield code="j">B3GEN</subfield>
+            <subfield code="p">3</subfield>
+            <subfield code="q">Physical Collections</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="AVA">
+            <subfield code="0">990132206940109251</subfield>
+            <subfield code="8">222316079110009251</subfield>
+            <subfield code="a">44BL_MAIN</subfield>
+            <subfield code="b">PHYS</subfield>
+            <subfield code="c">Stored at St Pancras - London (&lt;b&gt;Delivery time: London 70min, Boston Spa 48hrs&lt;/b&gt;)</subfield>
+            <subfield code="d">YC.2006.a.19414</subfield>
+            <subfield code="e">available</subfield>
+            <subfield code="f">1</subfield>
+            <subfield code="g">0</subfield>
+            <subfield code="v">from:1 until:1</subfield>
+            <subfield code="i">PHYSRR</subfield>
+            <subfield code="j">B3GEN</subfield>
+            <subfield code="p">4</subfield>
+            <subfield code="q">Physical Collections</subfield>
+          </datafield>
+        </record>
+      <record>
+          <leader>     nam a22003251i 4500</leader>
+          <controlfield tag="001">990166823100109251</controlfield>
+          <controlfield tag="008">140210s2014    enkab         001 f eng|d</controlfield>
+          <datafield ind1=" " ind2=" " tag="015">
+            <subfield code="a">GBB437326</subfield>
+            <subfield code="2">bnb</subfield>
+          </datafield>
+          <datafield ind1="7" ind2=" " tag="016">
+            <subfield code="a">016682310</subfield>
+            <subfield code="2">Uk</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="020">
+            <subfield code="a">9780007581146 (hbk.) :</subfield>
+            <subfield code="c">£80.00</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">(Uk)016682310</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">(Uk)016682310BLL01-Aleph</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="040">
+            <subfield code="a">StDuBDS</subfield>
+            <subfield code="b">eng</subfield>
+            <subfield code="c">StDuBDS</subfield>
+            <subfield code="d">Uk</subfield>
+            <subfield code="e">rda</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="042">
+            <subfield code="a">ukblsr</subfield>
+          </datafield>
+          <datafield ind1="0" ind2="4" tag="082">
+            <subfield code="a">823.912</subfield>
+            <subfield code="2">23</subfield>
+          </datafield>
+          <datafield ind1="0" ind2="4" tag="245">
+            <subfield code="a">The lord of the rings /</subfield>
+            <subfield code="c">J.R.R. Tolkien.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="250">
+            <subfield code="a">60th anniversary edition.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2="1" tag="264">
+            <subfield code="a">London :</subfield>
+            <subfield code="b">HarperCollinsPublishers,</subfield>
+            <subfield code="c">2014.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="300">
+            <subfield code="a">1 volume :</subfield>
+            <subfield code="b">illustrations (black and white, and colour), maps (colour) ;</subfield>
+            <subfield code="c">23 cm</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="336">
+            <subfield code="a">text</subfield>
+            <subfield code="2">rdacontent</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="336">
+            <subfield code="a">still image</subfield>
+            <subfield code="2">rdacontent</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="336">
+            <subfield code="a">cartographic image</subfield>
+            <subfield code="2">rdacontent</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="337">
+            <subfield code="a">unmediated</subfield>
+            <subfield code="2">rdamedia</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="338">
+            <subfield code="a">volume</subfield>
+            <subfield code="2">rdacarrier</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="500">
+            <subfield code="a">Includes index.</subfield>
+          </datafield>
+          <datafield ind1="0" ind2=" " tag="505">
+            <subfield code="a">The fellowship of the ring -- The two towers -- The return of the king -- Lord of the rings : a reader's companion.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="500">
+            <subfield code="a">Formerly CIP.</subfield>
+            <subfield code="5">Uk</subfield>
+          </datafield>
+          <datafield ind1=" " ind2="0" tag="650">
+            <subfield code="a">Middle Earth (Imaginary place)</subfield>
+            <subfield code="v">Fiction.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2="0" tag="650">
+            <subfield code="a">Fantasy fiction, English.</subfield>
+          </datafield>
+          <datafield ind1="1" ind2="0" tag="600">
+            <subfield code="a">Tolkien, J. R. R.</subfield>
+            <subfield code="q">(John Ronald Reuel),</subfield>
+            <subfield code="d">1892-1973.</subfield>
+            <subfield code="t">Lord of the rings.</subfield>
+          </datafield>
+          <datafield ind1="1" ind2="2" tag="700">
+            <subfield code="a">Tolkien, J. R. R.</subfield>
+            <subfield code="q">(John Ronald Reuel),</subfield>
+            <subfield code="d">1892-1973.</subfield>
+            <subfield code="t">Lord of the rings.</subfield>
+          </datafield>
+          <datafield ind1="1" ind2="2" tag="700">
+            <subfield code="a">Tolkien, J. R. R.</subfield>
+            <subfield code="q">(John Ronald Reuel),</subfield>
+            <subfield code="d">1892-1973.</subfield>
+            <subfield code="t">Fellowship of the ring.</subfield>
+          </datafield>
+          <datafield ind1="1" ind2="2" tag="700">
+            <subfield code="a">Tolkien, J. R. R.</subfield>
+            <subfield code="q">(John Ronald Reuel),</subfield>
+            <subfield code="d">1892-1973.</subfield>
+            <subfield code="t">Two towers.</subfield>
+          </datafield>
+          <datafield ind1="1" ind2="2" tag="700">
+            <subfield code="a">Tolkien, J. R. R.</subfield>
+            <subfield code="q">(John Ronald Reuel),</subfield>
+            <subfield code="d">1892-1973.</subfield>
+            <subfield code="t">Return of the king.</subfield>
+          </datafield>
+          <datafield ind1="1" ind2="2" tag="700">
+            <subfield code="a">Hammond, Wayne G.</subfield>
+            <subfield code="t">Lord of the rings : a reader's companion.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="913">
+            <subfield code="a">Y</subfield>
+            <subfield code="d">20180207</subfield>
+          </datafield>
+        </record>
+      <record>
+          <leader>     pam a2200265 a 4500</leader>
+          <controlfield tag="001">990144580510109251</controlfield>
+          <controlfield tag="005">20080616135800.0</controlfield>
+          <controlfield tag="008">071123r20082005enk      b    001 0 eng c</controlfield>
+          <datafield ind1=" " ind2=" " tag="015">
+            <subfield code="a">GBA796947</subfield>
+            <subfield code="2">bnb</subfield>
+          </datafield>
+          <datafield ind1="7" ind2=" " tag="016">
+            <subfield code="a">014458051</subfield>
+            <subfield code="2">Uk</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="020">
+            <subfield code="a">9780007270606 (pbk.) :</subfield>
+            <subfield code="c">£12.99</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="020">
+            <subfield code="a">0007270607 (pbk.) :</subfield>
+            <subfield code="c">£12.99</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">(Uk)014458051</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">(Uk)014458051BLL01-Aleph</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">(UkCU)4597652</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="040">
+            <subfield code="a">StDuBDS</subfield>
+            <subfield code="b">eng</subfield>
+            <subfield code="c">StDuBDS</subfield>
+            <subfield code="d">Uk</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="042">
+            <subfield code="a">ukscp</subfield>
+          </datafield>
+          <datafield ind1="0" ind2="4" tag="082">
+            <subfield code="a">823.912</subfield>
+            <subfield code="2">22</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="100">
+            <subfield code="a">Hammond, Wayne G.</subfield>
+          </datafield>
+          <datafield ind1="1" ind2="4" tag="245">
+            <subfield code="a">The Lord of the rings :</subfield>
+            <subfield code="b">a reader's companion /</subfield>
+            <subfield code="c">by Wayne G. Hammond and Christina Scull.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="260">
+            <subfield code="a">London :</subfield>
+            <subfield code="b">HarperCollins,</subfield>
+            <subfield code="c">2008.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="300">
+            <subfield code="a">lxxxii, 894 p. ;</subfield>
+            <subfield code="c">20 cm.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="336">
+            <subfield code="a">text</subfield>
+            <subfield code="2">rdacontent</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="337">
+            <subfield code="a">unmediated</subfield>
+            <subfield code="2">rdamedia</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="338">
+            <subfield code="a">volume</subfield>
+            <subfield code="2">rdacarrier</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="500">
+            <subfield code="a">Originally published: 2005.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="504">
+            <subfield code="a">Includes bibliographical references and index.</subfield>
+          </datafield>
+          <datafield ind1="1" ind2="0" tag="600">
+            <subfield code="a">Tolkien, J. R. R.</subfield>
+            <subfield code="q">(John Ronald Reuel),</subfield>
+            <subfield code="d">1892-1973.</subfield>
+            <subfield code="t">Lord of the rings.</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="700">
+            <subfield code="a">Scull, Christina.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="913">
+            <subfield code="a">Y</subfield>
+            <subfield code="d">20080317</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="985">
+            <subfield code="a">LDL record matched &amp; merged</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="AVA">
+            <subfield code="0">990144580510109251</subfield>
+            <subfield code="8">222292989420009251</subfield>
+            <subfield code="a">44BL_MAIN</subfield>
+            <subfield code="b">PHYS</subfield>
+            <subfield code="c">Stored at Boston Spa - Yorkshire (&lt;b&gt;Delivery time: London 48hrs, Boston Spa 48hrs&lt;/b&gt;)</subfield>
+            <subfield code="d">m08/.16664</subfield>
+            <subfield code="e">available</subfield>
+            <subfield code="f">1</subfield>
+            <subfield code="g">0</subfield>
+            <subfield code="i">PHYSRR</subfield>
+            <subfield code="j">3MDSM</subfield>
+            <subfield code="p">1</subfield>
+            <subfield code="q">Physical Collections</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="AVA">
+            <subfield code="0">990144580510109251</subfield>
+            <subfield code="8">222292989400009251</subfield>
+            <subfield code="a">44BL_MAIN</subfield>
+            <subfield code="b">PHYS</subfield>
+            <subfield code="c">Stored at St Pancras - London (&lt;b&gt;Delivery time: London 70min, Boston Spa 48hrs&lt;/b&gt;)</subfield>
+            <subfield code="d">YK.2009.a.13879</subfield>
+            <subfield code="e">available</subfield>
+            <subfield code="f">1</subfield>
+            <subfield code="g">0</subfield>
+            <subfield code="i">PHYSRR</subfield>
+            <subfield code="j">B1GEN</subfield>
+            <subfield code="p">2</subfield>
+            <subfield code="q">Physical Collections</subfield>
+          </datafield>
+        </record>
+      <record>
+          <leader>     nam a22      a 4500</leader>
+          <controlfield tag="001">990159606740109251</controlfield>
+          <controlfield tag="005">20111104105553.0</controlfield>
+          <controlfield tag="008">111102s2011    enkab        |0|1 1|eng^^</controlfield>
+          <datafield ind1=" " ind2=" " tag="015">
+            <subfield code="a">GBB1C7460</subfield>
+            <subfield code="2">bnb</subfield>
+          </datafield>
+          <datafield ind1="7" ind2=" " tag="016">
+            <subfield code="a">015960674</subfield>
+            <subfield code="2">Uk</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="020">
+            <subfield code="a">9780261103566 (set)</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="020">
+            <subfield code="a">9780261103344 (The Hobbit : pbk.)</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="020">
+            <subfield code="a">9780261103573 (The Fellowship of the Ring : pbk.)</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="020">
+            <subfield code="a">9780261103580 (The Two Towers : pbk.)</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="020">
+            <subfield code="a">9780261103597 (The Return of the King : pbk.)</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">(Uk)015960674</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">(Uk)015960674BLL01-Aleph</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="040">
+            <subfield code="a">Uk</subfield>
+            <subfield code="b">eng</subfield>
+            <subfield code="c">Uk</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="042">
+            <subfield code="a">ukblsr</subfield>
+          </datafield>
+          <datafield ind1="0" ind2="4" tag="082">
+            <subfield code="a">823.912</subfield>
+            <subfield code="2">23</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="100">
+            <subfield code="a">Tolkien, J. R. R.</subfield>
+            <subfield code="q">(John Ronald Reuel),</subfield>
+            <subfield code="d">1892-1973.</subfield>
+          </datafield>
+          <datafield ind1="1" ind2="4" tag="245">
+            <subfield code="a">The hobbit ;</subfield>
+            <subfield code="b">The Lord of the Rings /</subfield>
+            <subfield code="c">J.R.R. Tolkien.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="260">
+            <subfield code="a">London :</subfield>
+            <subfield code="b">HarperCollins,</subfield>
+            <subfield code="c">2011.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="300">
+            <subfield code="a">4 v. :</subfield>
+            <subfield code="b">ill., maps ;</subfield>
+            <subfield code="c">20 cm.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="336">
+            <subfield code="a">text</subfield>
+            <subfield code="2">rdacontent</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="337">
+            <subfield code="a">unmediated</subfield>
+            <subfield code="2">rdamedia</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="338">
+            <subfield code="a">volume</subfield>
+            <subfield code="2">rdacarrier</subfield>
+          </datafield>
+          <datafield ind1="0" ind2=" " tag="505">
+            <subfield code="a">The hobbit -- The Lord of the Rings: pt. 1. The Fellowship of the Ring -- pt. 2. The two towers -- pt. 3. The return of the king.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="500">
+            <subfield code="a">In slip case.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="500">
+            <subfield code="a">Includes index.</subfield>
+          </datafield>
+          <datafield ind1="1" ind2="2" tag="700">
+            <subfield code="a">Tolkien, J. R. R.</subfield>
+            <subfield code="q">(John Ronald Reuel),</subfield>
+            <subfield code="d">1892-1973.</subfield>
+            <subfield code="t">Lord of the rings.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="913">
+            <subfield code="a">Y</subfield>
+            <subfield code="d">20111104</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="AVA">
+            <subfield code="0">990159606740109251</subfield>
+            <subfield code="8">222357380350009251</subfield>
+            <subfield code="a">44BL_MAIN</subfield>
+            <subfield code="b">PHYS</subfield>
+            <subfield code="c">Stored at Boston Spa - Yorkshire (&lt;b&gt;Delivery time: London 48hrs, Boston Spa 48hrs&lt;/b&gt;)</subfield>
+            <subfield code="d">H.2011/.9871</subfield>
+            <subfield code="e">available</subfield>
+            <subfield code="f">1</subfield>
+            <subfield code="g">0</subfield>
+            <subfield code="v">from:3 until:3</subfield>
+            <subfield code="i">PHYSRR</subfield>
+            <subfield code="j">31GEN</subfield>
+            <subfield code="p">1</subfield>
+            <subfield code="q">Physical Collections</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="AVA">
+            <subfield code="0">990159606740109251</subfield>
+            <subfield code="8">222357380410009251</subfield>
+            <subfield code="a">44BL_MAIN</subfield>
+            <subfield code="b">PHYS</subfield>
+            <subfield code="c">Stored at Boston Spa - Yorkshire (&lt;b&gt;Delivery time: London 48hrs, Boston Spa 48hrs&lt;/b&gt;)</subfield>
+            <subfield code="d">H.2011/.9868</subfield>
+            <subfield code="e">available</subfield>
+            <subfield code="f">1</subfield>
+            <subfield code="g">0</subfield>
+            <subfield code="v">from:1 until:1</subfield>
+            <subfield code="i">PHYSRR</subfield>
+            <subfield code="j">31GEN</subfield>
+            <subfield code="p">2</subfield>
+            <subfield code="q">Physical Collections</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="AVA">
+            <subfield code="0">990159606740109251</subfield>
+            <subfield code="8">222357380370009251</subfield>
+            <subfield code="a">44BL_MAIN</subfield>
+            <subfield code="b">PHYS</subfield>
+            <subfield code="c">Stored at Boston Spa - Yorkshire (&lt;b&gt;Delivery time: London 48hrs, Boston Spa 48hrs&lt;/b&gt;)</subfield>
+            <subfield code="d">H.2011/.9870</subfield>
+            <subfield code="e">available</subfield>
+            <subfield code="f">1</subfield>
+            <subfield code="g">0</subfield>
+            <subfield code="v">from:2 until:2</subfield>
+            <subfield code="i">PHYSRR</subfield>
+            <subfield code="j">31GEN</subfield>
+            <subfield code="p">3</subfield>
+            <subfield code="q">Physical Collections</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="AVA">
+            <subfield code="0">990159606740109251</subfield>
+            <subfield code="8">222357380390009251</subfield>
+            <subfield code="a">44BL_MAIN</subfield>
+            <subfield code="b">PHYS</subfield>
+            <subfield code="c">Stored at Boston Spa - Yorkshire (&lt;b&gt;Delivery time: London 48hrs, Boston Spa 48hrs&lt;/b&gt;)</subfield>
+            <subfield code="d">H.2011/.9869</subfield>
+            <subfield code="e">available</subfield>
+            <subfield code="f">1</subfield>
+            <subfield code="g">0</subfield>
+            <subfield code="v">from:2 until:2</subfield>
+            <subfield code="i">PHYSRR</subfield>
+            <subfield code="j">31GEN</subfield>
+            <subfield code="p">4</subfield>
+            <subfield code="q">Physical Collections</subfield>
+          </datafield>
+        </record>
+      <record>
+          <leader>00575cam a2200217 c 4500</leader>
+          <controlfield tag="001">999311850334702201</controlfield>
+          <controlfield tag="005">20160114235948.0</controlfield>
+          <controlfield tag="007">ta</controlfield>
+          <controlfield tag="008">140911s1964    xx#|||||||||||000|u|eng|d</controlfield>
+          <datafield ind1=" " ind2=" " tag="020">
+            <subfield code="a">0048240206</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="020">
+            <subfield code="a">0048240141</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">931185033-47bibsys_network</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">(NO-TrBIB)931185033</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="040">
+            <subfield code="a">NO-TrBIB</subfield>
+            <subfield code="b">nob</subfield>
+            <subfield code="e">katreg</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="100">
+            <subfield code="a">Tolkien, J.R.R.</subfield>
+            <subfield code="d">1892-1973</subfield>
+            <subfield code="0">(NO-TrBIB)90056310</subfield>
+          </datafield>
+          <datafield ind1="1" ind2="0" tag="245">
+            <subfield code="a">Tree and leaf</subfield>
+            <subfield code="c">J.R.R. Tolkien</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="260">
+            <subfield code="a">London</subfield>
+            <subfield code="b">Allen &amp; Unwin</subfield>
+            <subfield code="c">1964</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="300">
+            <subfield code="a">92 s.</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="490">
+            <subfield code="a">Unwin books</subfield>
+          </datafield>
+          <datafield ind1=" " ind2="0" tag="830">
+            <subfield code="a">Unwin books</subfield>
+          </datafield>
+          <datafield ind1="0" ind2="1" tag="852">
+            <subfield code="a">47BIBSYS_UBO</subfield>
+            <subfield code="6">999311850334702204</subfield>
+            <subfield code="9">P</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="901">
+            <subfield code="a">80</subfield>
+          </datafield>
+        </record>
+      <record>
+          <leader>01399cam a2200325 c 4500</leader>
+          <controlfield tag="001">999825358304702201</controlfield>
+          <controlfield tag="005">20221020074759.0</controlfield>
+          <controlfield tag="007">ta</controlfield>
+          <controlfield tag="008">140911s1998    xx#|||||||||||000|j|eng|d</controlfield>
+          <datafield ind1=" " ind2=" " tag="020">
+            <subfield code="a">0261103431</subfield>
+            <subfield code="q">h.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">98253583x-47bibsys_network</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">(NO-TrBIB)98253583x</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="040">
+            <subfield code="a">NO-TrBIB</subfield>
+            <subfield code="b">nob</subfield>
+            <subfield code="e">katreg</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="100">
+            <subfield code="a">Tolkien, J.R.R.</subfield>
+            <subfield code="d">1892-1973</subfield>
+            <subfield code="0">(NO-TrBIB)90056310</subfield>
+          </datafield>
+          <datafield ind1="1" ind2="0" tag="245">
+            <subfield code="a">Tales from the perilous realm</subfield>
+            <subfield code="c">J.R.R. Tolkien</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="260">
+            <subfield code="a">London</subfield>
+            <subfield code="b">HarperCollins</subfield>
+            <subfield code="c">1998</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="300">
+            <subfield code="a">178 s.</subfield>
+          </datafield>
+          <datafield ind1="0" ind2=" " tag="505">
+            <subfield code="a">Farmer Giles of Ham. The adventures of Tom Bombadil. Leaf by niggle. Smith of Wootton Major</subfield>
+          </datafield>
+          <datafield ind1=" " ind2="0" tag="650">
+            <subfield code="a">Fantastic literature, English</subfield>
+          </datafield>
+          <datafield ind1=" " ind2="0" tag="650">
+            <subfield code="a">Middle Earth (Imaginary place)</subfield>
+            <subfield code="x">Fiction</subfield>
+          </datafield>
+          <datafield ind1=" " ind2="0" tag="650">
+            <subfield code="a">Fantasy</subfield>
+          </datafield>
+          <datafield ind1="0" ind2=" " tag="700">
+            <subfield code="a">Farmer Giles of Ham</subfield>
+            <subfield code="0">(NO-TrBIB)99011783</subfield>
+          </datafield>
+          <datafield ind1="0" ind2=" " tag="700">
+            <subfield code="a">The adventures of Tom Bombadil</subfield>
+            <subfield code="0">(NO-TrBIB)99011782</subfield>
+          </datafield>
+          <datafield ind1="0" ind2=" " tag="700">
+            <subfield code="a">Leaf by niggle</subfield>
+            <subfield code="0">(NO-TrBIB)99011781</subfield>
+          </datafield>
+          <datafield ind1="0" ind2=" " tag="700">
+            <subfield code="a">Smith of Wootton Major</subfield>
+            <subfield code="0">(NO-TrBIB)99011780</subfield>
+          </datafield>
+          <datafield ind1="4" ind2="2" tag="856">
+            <subfield code="3">Omslagsbilde</subfield>
+            <subfield code="u">https://contents.bibs.aws.unit.no/files/images/large/6/3/9780261103436.jpg</subfield>
+            <subfield code="q">image/jpeg</subfield>
+          </datafield>
+          <datafield ind1="4" ind2="2" tag="856">
+            <subfield code="3">Forlagets beskrivelse (lang)</subfield>
+            <subfield code="u">https://contents.bibs.aws.unit.no/content/?isbn=9780261103436</subfield>
+          </datafield>
+          <datafield ind1="4" ind2="2" tag="856">
+            <subfield code="3">Forlagets beskrivelse (kort)</subfield>
+            <subfield code="u">https://contents.bibs.aws.unit.no/?isbn=0261103431</subfield>
+          </datafield>
+          <datafield ind1="4" ind2="2" tag="856">
+            <subfield code="3">Forlagets beskrivelse (lang)</subfield>
+            <subfield code="u">https://contents.bibs.aws.unit.no/?isbn=0261103431</subfield>
+          </datafield>
+          <datafield ind1="0" ind2="1" tag="852">
+            <subfield code="a">47BIBSYS_HH</subfield>
+            <subfield code="6">999825358304702214</subfield>
+            <subfield code="9">P</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="901">
+            <subfield code="a">80</subfield>
+          </datafield>
+        </record>
+      <record>
+  <leader>01100cam a2200313 i 4500</leader>
+  <controlfield tag="001">3198341</controlfield>
+  <controlfield tag="005">20250607145450.1</controlfield>
+  <controlfield tag="008">770812s1975    enka   j      000 1 eng  </controlfield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">3198341</subfield>
+  </datafield>
+  <datafield tag="906" ind1=" " ind2=" ">
+    <subfield code="a">7</subfield>
+    <subfield code="b">cbc</subfield>
+    <subfield code="c">orignew</subfield>
+    <subfield code="d">3</subfield>
+    <subfield code="e">ncip</subfield>
+    <subfield code="f">19</subfield>
+    <subfield code="g">y-gencatlg</subfield>
+  </datafield>
+  <datafield tag="955" ind1=" " ind2=" ">
+    <subfield code="a">LCAP batch update 2025-06-02-04:00: LCAPM-644, LCAPM-150</subfield>
+  </datafield>
+  <datafield tag="010" ind1=" " ind2=" ">
+    <subfield code="a">   77360006 </subfield>
+  </datafield>
+  <datafield tag="015" ind1=" " ind2=" ">
+    <subfield code="a">GB75-30129</subfield>
+  </datafield>
+  <datafield tag="020" ind1=" " ind2=" ">
+    <subfield code="a">0048231258 :</subfield>
+    <subfield code="c">£1.00</subfield>
+  </datafield>
+  <datafield tag="020" ind1=" " ind2=" ">
+    <subfield code="a">9780048231253</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="9">(DLC)   77360006</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">DLC</subfield>
+    <subfield code="c">DLC</subfield>
+    <subfield code="d">DLC</subfield>
+  </datafield>
+  <datafield tag="050" ind1="0" ind2="0">
+    <subfield code="a">PZ8.T52</subfield>
+    <subfield code="b">Fat</subfield>
+  </datafield>
+  <datafield tag="082" ind1="0" ind2="0">
+    <subfield code="a">823/.9/12</subfield>
+  </datafield>
+  <datafield tag="100" ind1="1" ind2=" ">
+    <subfield code="a">Tolkien, J. R. R.</subfield>
+    <subfield code="q">(John Ronald Reuel),</subfield>
+    <subfield code="d">1892-1973.</subfield>
+  </datafield>
+  <datafield tag="240" ind1="1" ind2="0">
+    <subfield code="a">Farmer Giles of Ham</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="0">
+    <subfield code="a">Farmer Giles of Ham ; [and], The adventures of Tom Bombadil /</subfield>
+    <subfield code="c">J. R. R. Tolkien.</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">London :</subfield>
+    <subfield code="b">Unwin Books,</subfield>
+    <subfield code="c">1975.</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">144 p. :</subfield>
+    <subfield code="b">ill. ;</subfield>
+    <subfield code="c">20 cm.</subfield>
+  </datafield>
+  <datafield tag="336" ind1=" " ind2=" ">
+    <subfield code="a">text</subfield>
+    <subfield code="b">txt</subfield>
+    <subfield code="2">rdacontent</subfield>
+  </datafield>
+  <datafield tag="337" ind1=" " ind2=" ">
+    <subfield code="a">unmediated</subfield>
+    <subfield code="b">n</subfield>
+    <subfield code="2">rdamedia</subfield>
+  </datafield>
+  <datafield tag="338" ind1=" " ind2=" ">
+    <subfield code="a">volume</subfield>
+    <subfield code="b">nc</subfield>
+    <subfield code="2">rdacarrier</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2="2">
+    <subfield code="a">Tolkien, J. R. R.</subfield>
+    <subfield code="q">(John Ronald Reuel),</subfield>
+    <subfield code="d">1892-1973.</subfield>
+    <subfield code="t">Adventures of Tom Bombadil.</subfield>
+    <subfield code="f">1975.</subfield>
+  </datafield>
+  <datafield tag="991" ind1=" " ind2=" ">
+    <subfield code="b">c-GenColl</subfield>
+    <subfield code="h">PZ8.T52</subfield>
+    <subfield code="i">Fat</subfield>
+    <subfield code="p">00012271219</subfield>
+    <subfield code="t">Copy 1</subfield>
+    <subfield code="w">BOOKS</subfield>
+  </datafield>
+</record><record>
+          <leader>00665cam a22002177c 4500</leader>
+          <controlfield tag="001">991515216464702201</controlfield>
+          <controlfield tag="005">20160114231000.0</controlfield>
+          <controlfield tag="007">ta</controlfield>
+          <controlfield tag="008">150818s1975    xx#|||||||||||000|j|eng|d</controlfield>
+          <datafield ind1=" " ind2=" " tag="020">
+            <subfield code="a">0048200158</subfield>
+            <subfield code="q">h.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">151521646-47bibsys_network</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">(NO-TrBIB)151521646</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="040">
+            <subfield code="a">NO-TrBIB</subfield>
+            <subfield code="b">nob</subfield>
+            <subfield code="e">katreg</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="100">
+            <subfield code="a">Tolkien, J.R.R.</subfield>
+            <subfield code="d">1892-1973</subfield>
+            <subfield code="0">(NO-TrBIB)90056310</subfield>
+          </datafield>
+          <datafield ind1="1" ind2="0" tag="245">
+            <subfield code="a">Tree and leaf - Smith of Wootton Major - The homecoming of Beorhtnoth</subfield>
+            <subfield code="c">J.R.R. Tolkien</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="260">
+            <subfield code="a">London</subfield>
+            <subfield code="b">Unwin Books</subfield>
+            <subfield code="c">1975</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="300">
+            <subfield code="a">175 s.</subfield>
+          </datafield>
+          <datafield ind1="0" ind2=" " tag="740">
+            <subfield code="a">Tree and leaf</subfield>
+          </datafield>
+          <datafield ind1="0" ind2=" " tag="740">
+            <subfield code="a">Smith of Wootton Major</subfield>
+          </datafield>
+          <datafield ind1="0" ind2=" " tag="740">
+            <subfield code="a">The homecoming of Beorhtnoth</subfield>
+          </datafield>
+          <datafield ind1="0" ind2="1" tag="852">
+            <subfield code="a">47BIBSYS_UBO</subfield>
+            <subfield code="6">991515216464702204</subfield>
+            <subfield code="9">P</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="901">
+            <subfield code="a">60</subfield>
+          </datafield>
+        </record>
+      </collection>
