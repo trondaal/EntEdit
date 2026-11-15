@@ -826,14 +826,14 @@ EXERCISES = [
      "repository."),
 ]
 SESSIONS = [
-    ("Session 1: getting started",
+    ("Session A: getting started",
      "A first look at the tool: each participant describes one publication from scratch.",
      ["introduction"]),
-    ("Session 2: going further",
+    ("Session B: going further",
      "Three activities in sequence, each on a harder modelling question: translations, relationships between "
      "works, and collections.",
      ["translations-christie", "relationships-little-women", "collections-tolkien"]),
-    ("Session 3: reflection",
+    ("Session C: reflection",
      "Looking at the data from the users' side, and discussing what the activities have shown.",
      ["user-tasks"]),
 ]
