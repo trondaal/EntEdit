@@ -117,9 +117,18 @@ REPO_URL="${BASE_URL}/repositories/${REPO}"
 
 # A user without a password: ask for it. Typing a password containing ! or * on
 # the command line is awkward in zsh and bash (history expansion, globbing).
-if [ -n "$GDB_USER" ] && [ -z "$GDB_PASS" ] && [ "$DRY_RUN" = 0 ] && [ -t 0 ]; then
-  read -r -s -p "GraphDB password for ${GDB_USER}: " GDB_PASS
-  printf '\n' >&2
+# Without a terminal on stdin (a pipe, or a Run button), ask on /dev/tty; with no
+# terminal at all, stop: an empty password only shows up later as a refused login.
+if [ -n "$GDB_USER" ] && [ -z "$GDB_PASS" ] && [ "$DRY_RUN" = 0 ]; then
+  if [ -t 0 ]; then
+    read -r -s -p "GraphDB password for ${GDB_USER}: " GDB_PASS
+    printf '\n' >&2
+  elif { : </dev/tty; } 2>/dev/null; then
+    read -r -s -p "GraphDB password for ${GDB_USER}: " GDB_PASS </dev/tty
+    printf '\n' >&2
+  else
+    die "No password for ${GDB_USER} and no terminal to ask for it in: run the script in a terminal, or give it with -P or GRAPHDB_PASSWORD"
+  fi
 fi
 
 CURL_AUTH=()
