@@ -14,6 +14,10 @@
     main { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
     h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 1rem; }
     .intro { font-size: 1.05rem; margin: 0 0 2.5rem; }
+    .connect { margin: 0 0 2.5rem; }
+    .connect h2 { font-size: 1.3rem; margin: 0 0 .5rem; }
+    .connect li { margin: .3rem 0; }
+    .connect code { font-size: .9em; overflow-wrap: anywhere; }
     .publications { list-style: none; counter-reset: pub; margin: 0; padding: 0; }
     .publications > li { counter-increment: pub; padding: 1.25rem 0 1.5rem; border-top: 1px solid var(--line); }
     .publications h2 { font-size: 1.15rem; line-height: 1.35; margin: 0 0 .5rem; }
@@ -60,6 +64,28 @@
   <p class="back"><a href="./">Learning entity-oriented metadata with EntEdit</a></p>
   <h1>Activity: introduction to the tool</h1>
   <p class="intro">Each participant takes one of the thirty publications below, so that everyone can work in the same repository at the same time: no two of them share an author or a work. From the description and the catalogue record, create the work, the expression and the manifestation, and the person who wrote it, and relate them to each other. Record the publisher as text on the manifestation only. Then look at what the others have made, in the entity lists and in the search.</p>
+  <section class="connect">
+  <h2>Connecting to your room's repository</h2>
+  <p>Each breakout room has a repository of its own, shared by everyone in the room, and you keep
+  using it in the later activities.</p>
+  <ol>
+    <li>Open <a href="https://app.entedit.org/entedit/">app.entedit.org/entedit/</a>. On the first visit
+    the setup, “Set up EntEdit”, opens.</li>
+    <li>Paste your room's address in <strong>SPARQL Endpoint URL</strong>:
+      <ul>
+        <li>Room 1: <code>https://app.entedit.org/graphdb/repositories/SWIB26-T1</code></li>
+        <li>Room 2: <code>https://app.entedit.org/graphdb/repositories/SWIB26-T2</code></li>
+        <li>Room 3: <code>https://app.entedit.org/graphdb/repositories/SWIB26-T3</code></li>
+        <li>Room 4: <code>https://app.entedit.org/graphdb/repositories/SWIB26-T4</code></li>
+        <li>Room 5: <code>https://app.entedit.org/graphdb/repositories/SWIB26-T5</code></li>
+      </ul>
+    </li>
+    <li>Enter the username and password given in your room.</li>
+    <li>Test the connection, then choose the language and the cataloguing style.</li>
+    <li>Already set up EntEdit in this browser? Change the address under Settings.</li>
+  </ol>
+  </section>
+
   <ol class="publications">
     <li>
       <h2>Adichie: Purple hibiscus (2003)</h2>

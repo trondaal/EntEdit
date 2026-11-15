@@ -1,7 +1,7 @@
 # Start file for the SWIB26 activity translations-christie: the publications (manifestations),
-# and the people and publishers, described from library catalogue records. Link
-# each manifestation to the expressions it embodies, and add the works and expressions
-# that are missing.
+# the works with their author, and the people and publishers, described from library
+# catalogue records. Create the expressions and set up the rest of the connections:
+# expression to work, manifestation to expression, translators and readers.
 
 @prefix entedit: <http://oslomet.no/abi/vocab#> .
 @prefix rdaad: <http://rdaregistry.info/Elements/a/datatype/> .
@@ -109,6 +109,28 @@
     rdaxd:P00018 "http://example.org/ackroyd/agent/dreimasken" ;
     rdaad:P50413 "Drei Masken Verlag" ;
     rdfs:label "Drei Masken Verlag" .
+
+<http://viaf.org/viaf/217048217>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/217048217" ;
+    rdawd:P10223 "The murder of Roger Ackroyd" ;
+    rdfs:label "The murder of Roger Ackroyd (Christie, Agatha)" ;
+    rdawd:P10219 "1926" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/159>, <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/71388952> ;
+    rdawd:P10002 "http://viaf.org/viaf/217048217" .
+
+<http://viaf.org/viaf/181004220>
+    a rdac:C10001 ;
+    rdaxd:P00018 "http://viaf.org/viaf/181004220" ;
+    rdawd:P10223 "A murder is announced" ;
+    rdfs:label "A murder is announced (Christie, Agatha)" ;
+    rdawd:P10219 "1950" ;
+    entedit:P01 vtp:V1000 ;
+    entedit:P02 <https://id.nb.no/vocabulary/ntsf/159>, <https://id.nb.no/vocabulary/ntsf/258> ;
+    rdawo:P10061 <http://viaf.org/viaf/71388952> ;
+    rdawd:P10002 "http://viaf.org/viaf/181004220" .
 
 <http://example.org/ackroyd/manifestation/eng-harper-2002>
     a rdac:C10007 ;

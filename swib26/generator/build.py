@@ -210,6 +210,10 @@ STYLE = """  <style>
     main { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
     h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 1rem; }
     .intro { font-size: 1.05rem; margin: 0 0 2.5rem; }
+    .connect { margin: 0 0 2.5rem; }
+    .connect h2 { font-size: 1.3rem; margin: 0 0 .5rem; }
+    .connect li { margin: .3rem 0; }
+    .connect code { font-size: .9em; overflow-wrap: anywhere; }
     .publications { list-style: none; counter-reset: pub; margin: 0; padding: 0; }
     .publications > li { counter-increment: pub; padding: 1.25rem 0 1.5rem; border-top: 1px solid var(--line); }
     .publications h2 { font-size: 1.15rem; line-height: 1.35; margin: 0 0 .5rem; }
@@ -260,11 +264,13 @@ class Example:
         self.viaf = {"agent": [], "work": []}  # (label, VIAF id) for the list at the end of the page
         root = ET.parse(ROOT / "marc" / f"{name}.xml").getroot()
         self.entities = []  # (class, IRI, properties), written to both Turtle files
-        self.start_works = set()  # works given in the start file, with their expressions
+        self.start_works = set()  # works given in the start file
+        self.start_work_expressions = True  # whether the expressions of those works are given too
         # True: the start file has every entity and what each manifestation embodies, and leaves out only
         # the relationships between works and between expressions
         self.start_all = False
         self.has_start = True  # False: participants start from an empty repository
+        self.connect = False  # True: the page tells how to connect to the room's repository
         self.records = dict(zip([s for s, *_ in SELECTION[name]], root))
 
     def iri(self, path):
@@ -293,7 +299,8 @@ class Example:
         if cls == "rdac:C10001":
             return path in given
         work = next((o for p, o in props if p == "rdaeo:P20231"), None)
-        return cls == "rdac:C10006" and work in {self.uri(w) for w in given}
+        return (cls == "rdac:C10006" and self.start_work_expressions
+                and work in {self.uri(w) for w in given})
 
     def dropped(self, path, p, o):
         """Whether a statement is left out of the start file."""
@@ -313,8 +320,14 @@ class Example:
                       "# the works and expressions they embody, and the people and publishers, described from\n"
                       "# library catalogue records. State the relationships between the works (and between\n"
                       "# expressions where RDA has them only there).\n")
+        elif start and self.start_works and not self.start_work_expressions:
+            out[0] = (f"# Start file for the SWIB26 activity {PAGES[self.name]}: the publications (manifestations),\n"
+                      "# the works with their author, and the people and publishers, described from library\n"
+                      "# catalogue records. Create the expressions and set up the rest of the connections:\n"
+                      "# expression to work, manifestation to expression, translators and readers.\n")
         elif start:  # the comment of the complete model describes the answer
-            given = "some of the works and their expressions, " if self.start_works else ""
+            given = ("" if not self.start_works else "some of the works and their expressions, "
+                     if self.start_work_expressions else "the works, ")
             out[0] = (f"# Start file for the SWIB26 activity {PAGES[self.name]}: the publications (manifestations),\n"
                       f"# {given}and the people and publishers, described from library catalogue records. Link\n"
                       "# each manifestation to the expressions it embodies, and add the works and expressions\n"
@@ -382,7 +395,7 @@ class Example:
             f"  <title>{html.escape(title)}</title>\n{STYLE}</head>\n<body>\n<main>\n"
             f'  <p class="back"><a href="./">Learning entity-oriented metadata with EntEdit</a></p>\n'
             f"  <h1>{html.escape(title)}</h1>\n  <p class=\"intro\">{html.escape(intro, quote=False)}</p>\n"
-            + start + '  <ol class="publications">\n' + "\n".join(items) + "\n  </ol>\n" + self.viaf_list()
+            + start + (CONNECT if self.connect else "") + '  <ol class="publications">\n' + "\n".join(items) + "\n  </ol>\n" + self.viaf_list()
             + "</main>\n</body>\n</html>\n", encoding="utf-8")
 
     def viaf_list(self):
@@ -402,6 +415,23 @@ class Example:
         return "".join(out)
 
 
+ROOMS = 5
+ROOM_URL = "https://app.entedit.org/graphdb/repositories/SWIB26-T{}"
+CONNECT = (
+    '  <section class="connect">\n  <h2>Connecting to your room\'s repository</h2>\n'
+    "  <p>Each breakout room has a repository of its own, shared by everyone in the room, and you keep\n"
+    "  using it in the later activities.</p>\n  <ol>\n"
+    '    <li>Open <a href="https://app.entedit.org/entedit/">app.entedit.org/entedit/</a>. On the first visit\n'
+    "    the setup, “Set up EntEdit”, opens.</li>\n"
+    "    <li>Paste your room's address in <strong>SPARQL Endpoint URL</strong>:\n      <ul>\n"
+    + "".join(f"        <li>Room {n}: <code>{ROOM_URL.format(n)}</code></li>\n" for n in range(1, ROOMS + 1))
+    + "      </ul>\n    </li>\n"
+    "    <li>Enter the username and password given in your room.</li>\n"
+    "    <li>Test the connection, then choose the language and the cataloguing style.</li>\n"
+    "    <li>Already set up EntEdit in this browser? Change the address under Settings.</li>\n"
+    "  </ol>\n  </section>\n\n")
+
+
 # --- Cataloguing: one publication per participant ------------------------------------------------
 x = Example("Cataloguing", "cataloguing",
             "Cataloguing: thirty English-language novels, crime and other modern fiction, one per participant,\n"
@@ -411,6 +441,7 @@ x = Example("Cataloguing", "cataloguing",
             "# recorded as text on the manifestation only, not as an agent.\n"
             "# Publication data from the MARC 21 records in swib26/marc/Cataloguing.xml.")
 x.has_start = False
+x.connect = True
 # slug: (work title, year first published)
 FIRST = {
     "adichie": ("Purple hibiscus", "2003"),
@@ -518,6 +549,8 @@ x.manifestation("nob-omnibus-2004", "aschehoug", ["novel/nob-arentz", "announced
 x.manifestation("ger-kafka-1928", "dreimasken", ["novel/ger-kafka"])
 x.manifestation("ger-fischer-2005", "fischer", ["novel/ger-puetsch"])
 x.manifestation("ger-atlantik-2014", "atlantik", ["novel/ger-mundhenk"])
+x.start_works = {"work/novel", "work/announced"}
+x.start_work_expressions = False
 x.headings = {
     "eng-harper-2002": "The Murder of Roger Ackroyd (2002)",
     "nob-aschehoug-1991": "Doktoren mister en pasient (1991)",
@@ -529,7 +562,9 @@ x.headings = {
     "ger-atlantik-2014": "Alibi (2014)",
 }
 x.write("Activity: translations (Agatha Christie)",
-        "The publications below carry the same story by Agatha Christie, one of them together with a second novel. Which works and expressions can you "
+        "The publications below carry the same story by Agatha Christie, one of them together with a second novel. The start file gives you the two "
+        "works, The murder of Roger Ackroyd and A murder is announced, with Agatha Christie as their author. Your "
+        "task is to create the expressions and set up the rest of the connections. Which expressions can you "
         "identify? When is a publication a new expression and when is it only a new manifestation of one you "
         "already have? Draw or write out your model. Follow the links to the catalogue records, where you can also "
         "see what they state about the translation and, where the catalogue has one, the cover.",
@@ -772,7 +807,8 @@ EXERCISES = [
     ("translations-christie", "Translations: Agatha Christie",
      "The murder of Roger Ackroyd in English, Norwegian and German: new translations, new editions and a "
      "reading of a translation, and a book that holds two novels.",
-     "The publications only: add the works and expressions and link them."),
+     "The publications and the two works with their author: create the expressions and set up the rest "
+     "of the connections."),
     ("relationships-little-women", "Relationships between works: Little Women",
      "Louisa May Alcott's novel, first published in two parts, and what has been made from it: a graphic novel, "
      "a play, an opera and a film.",
