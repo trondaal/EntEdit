@@ -224,6 +224,7 @@ STYLE = """  <style>
                color: var(--muted); }
     main > section { margin-top: 2.25rem; }
     main > section > h2 { font-size: 1.3rem; margin: 0 0 .75rem; }
+    main > section > h3 { font-size: 1.05rem; margin: 1.5rem 0 .4rem; }
     .todo { color: var(--muted); font-style: italic; }
     .back a::before { content: "← "; }
     .start { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: .6rem .9rem;
@@ -765,9 +766,9 @@ x.write("Activity: collections and aggregates (J. R. R. Tolkien)",
 # --- Main page ----------------------------------------------------------------------------------
 EXERCISES = [
     ("introduction", "Introduction to the tool",
-     "Create and relate person, work, expression and manifestation, for one of a set of English-language novels "
-     "(crime and other modern fiction).",
-     "No start file: describe your publication from scratch."),
+     "Get to know the tool by creating, describing and relating entities. Use examples from a list of "
+     "English-language novels (crime and other modern fiction) or use your own example.",
+     ""),
     ("translations-christie", "Translations: Agatha Christie",
      "The murder of Roger Ackroyd in English, Norwegian and German: new translations, new editions and a "
      "reading of a translation, and a book that holds two novels.",
@@ -782,8 +783,11 @@ EXERCISES = [
      "The publications and the distinct works with their expressions: link the publications to the expressions, "
      "and add the collections you consider works."),
     ("user-tasks", "User tasks and data quality: search and exploration",
-     "How well the data supports users' tasks, assessed by searching and exploring it.",
-     "Details to come."),
+     "Explore the search with the data you made: how it presents the work, expression and manifestation "
+     "hierarchy, the entities and the links between them, which relationships it should show, and how "
+     "collections and aggregates appear.",
+     "No start file: search the data your group made in the earlier activities, or the larger examples "
+     "repository."),
 ]
 SESSIONS = [
     ("Session 1: getting started",
@@ -844,9 +848,10 @@ def session_sections():
             has_start = (ROOT / "start" / f"{page}.ttl").exists()
             out.append(f'    <li>\n      <h4><a href="{page}.html">{html.escape(title_)}</a></h4>\n'
                        f"      <p>{html.escape(text_, quote=False)}</p>\n"
-                       + (f'      <p class="record">Start file: <a href="start/{page}.ttl">start/{page}.ttl</a> · '
-                          if has_start else '      <p class="record">')
-                       + f"{html.escape(start, quote=False)}</p>\n    </li>")
+                       + ((f'      <p class="record">Start file: <a href="start/{page}.ttl">start/{page}.ttl</a> · '
+                           if has_start else '      <p class="record">')
+                          + f"{html.escape(start, quote=False)}</p>\n" if start else "")
+                       + "    </li>")
         out.append("  </ol>")
     return "\n".join(out) + "\n"
 
@@ -882,8 +887,8 @@ zoom = (f'<a href="{html.escape(ZOOM_LINK)}">{html.escape(ZOOM_LINK)}</a>' if ZO
   <section>
   <h2>Agenda</h2>
   <ol class="steps">
-    <li><strong>Introduction (45 minutes).</strong> The challenges of learning entity-oriented metadata. A
-    presentation and demonstration of EntEdit: its design rationale and how it can be used in teaching.</li>
+    <li><strong>Introduction (30 minutes).</strong> Getting to know each other. Introduction to the challenges of
+    learning entity-oriented metadata. Introduction to the tool.</li>
     <li><strong>Interactive hands-on sessions (2 hours).</strong> We will explore the use of the tool together
     in breakout rooms, with plenary sessions in between. You can use the online version or install it on your
     own machine. More information about the setup will be given during the session.</li>
@@ -1000,7 +1005,69 @@ LRM = "https://repository.ifla.org/handle/20.500.14598/40"
 
   <section>
   <h2>The activity</h2>
-  <p class="todo">Details to come.</p>
+  <p>Work in your group and use the Search tab, either in the database you used in the earlier activities
+  or, for a larger dataset, in the <a href="https://app.entedit.org/entedit/?repo=examples">examples
+  repository</a>. The searches suggested below are for the data from the earlier activities; in the
+  examples, choose your own: an author, a work with many expressions, a collection. The
+  aim is not to test the search, but to use it as a way of looking at the data: each choice about how to show
+  the entities is also a question about how they should be described. Take one part at a time, and note what
+  you would show to a user, what you would leave out, and what you would change in the data.</p>
+
+  <h3>1. The hierarchy in three views</h3>
+  <ul>
+    <li>Search for <em>Ackroyd</em> in Publications, Contents and Works. Where do the English original, the
+    translations and the audiobook appear, and how is the hierarchy of work, expression and manifestation
+    shown in each view?</li>
+    <li>In Works, open the work, then an expression, then its publications. Is the order of the levels the
+    one a user would expect?</li>
+    <li>Which view would you start from for each of the user tasks above, and which would you make the
+    default?</li>
+  </ul>
+
+  <h3>2. Presenting an entity and its links</h3>
+  <ul>
+    <li>Look at one result closely. What lets a user identify it and tell it from the others, and what helps
+    them select it? Is anything missing, or repeated?</li>
+    <li>Follow the links: a name, a work title, a related work. What does the search show for each, and is
+    it what a user who clicked would expect? Remove the link to go back.</li>
+    <li>Try the filters. Do the categories and the counts make sense with your data?</li>
+  </ul>
+
+  <h3>3. Which relationships to show</h3>
+  <ul>
+    <li>Search for <em>Little women</em>. Which relationships are shown, and at which level: work,
+    expression or publication? A relationship can be stated from either entity: does it matter for the
+    display which side your group chose?</li>
+    <li>Some relationships are shown as a count that opens a list. Where does that help, and where would
+    you rather see the targets at once?</li>
+    <li>Hide relationships with the note under the filters (“Change”), or under Settings. Which ones help
+    users explore, and which ones only add noise? Would the answer be the same for a different user, or a
+    larger collection?</li>
+  </ul>
+
+  <h3>4. Collections and aggregates</h3>
+  <ul>
+    <li>Search for <em>Lord of the rings</em>, <em>Tree and leaf</em> and <em>Perilous realm</em> in
+    Publications. How are the boxed sets and the collections shown, and what do their Contents list?</li>
+    <li>A publication of a single expression is shown as one entry. So is a publication of a single
+    collection, when the collection's work has a genre or form marked as a collection (a short story
+    collection or an anthology, for example); its parts are then listed under Contents. Find an example in
+    your data, or make one, and compare it with a publication whose works simply follow one another.</li>
+    <li>Look at the same titles in Works. Which collections appear as works of their own, and should they?
+    Compare with the book that holds two of Christie's novels.</li>
+    <li>How would you present a boxed set, a collection with a title of its own and a collection without
+    one, so that a user can find both the whole and the parts?</li>
+  </ul>
+
+  <h3>5. Data quality</h3>
+  <ul>
+    <li>What did searching show about your own data: missing links, a publication with no content, the
+    same work entered twice, a relationship stated at one level in one place and at another elsewhere?</li>
+    <li>Which of these would a user notice, and which user task would fail because of it?</li>
+  </ul>
+
+  <p>Before the plenary, agree on two or three observations to share: one about how the search presents
+  the data, and one about the data itself.</p>
   </section>
 </main>
 </body>
