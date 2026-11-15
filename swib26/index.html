@@ -33,6 +33,17 @@
     .start { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: .6rem .9rem;
              margin: 0 0 2.5rem; font-size: .95rem; }
     .exercises { padding-left: 1.25rem; }
+    .exercises h4 { font-size: 1.05rem; margin: 0 0 .25rem; }
+    .session-title { font-size: 1.1rem; margin: 2rem 0 .25rem; }
+    svg.sessions { display: block; width: 100%; max-width: 30rem; margin: 1.5rem auto 1rem; }
+    svg.sessions .band { fill: var(--panel); stroke: var(--line); }
+    svg.sessions .box { fill: var(--bg); stroke: var(--accent); stroke-width: 1.5; }
+    svg.sessions a:hover .box { fill: var(--panel); }
+    svg.sessions .num { fill: var(--accent); }
+    svg.sessions .numtext { fill: var(--bg); font: 600 14px system-ui, sans-serif; }
+    svg.sessions .label { fill: var(--text); font: 500 15px system-ui, sans-serif; }
+    svg.sessions .session { fill: var(--muted); font: 600 12px system-ui, sans-serif; letter-spacing: .06em; }
+    svg.sessions .arrow { stroke: var(--muted); stroke-width: 2; fill: none; marker-end: none; }
     .exercises li { margin: 0 0 1.25rem; }
     .exercises h3 { font-size: 1.1rem; margin: 0 0 .25rem; }
     .exercises p { margin: .2rem 0; }
@@ -62,9 +73,8 @@
   <section>
   <h2>Agenda</h2>
   <ol class="steps">
-    <li><strong>Introduction (45 minutes).</strong> The challenges of learning entity-oriented metadata. A
-    presentation and demonstration of EntEdit: its design rationale and how it can be used in teaching.</li>
-    <li><strong>Interactive hands-on sessions (2 hours).</strong> We will explore the use of the tool together
+    <li><strong>Introduction (30 minutes).</strong> Getting to know each other. Introduction to the challenges of learning entity-oriented metadata. Introduction to the tool.</li>
+	<li><strong>Interactive hands-on sessions (2 hours).</strong> We will explore the use of the tool together
     in breakout rooms, with plenary sessions in between. You can use the online version or install it on your
     own machine. More information about the setup will be given during the session.</li>
     <li><strong>Discussion.</strong> The opportunities and challenges of experience-based learning of
@@ -109,33 +119,49 @@
 
   <section>
   <h2>Activities</h2>
-  <p>We will explore the tool, and discuss its use in teaching, with a selection of example datasets. In some
-  activities you start from bibliographic descriptions only and use the tool to create the entities and add
-  their attributes and relationships. In others we also provide a start file with basic descriptions that you
-  can import and build on. Each activity has its own page.</p>
-  <ol class="exercises">
+  <p>We will explore the tool, and discuss its use in teaching, with a selection of example datasets, in three
+  sessions. In some activities you start from bibliographic descriptions only and use the tool to create the
+  entities and add their attributes and relationships. In others we also provide a start file with basic
+  descriptions that you can import and build on. Each activity has its own page.</p>
+  <svg class="sessions" viewBox="0 0 480 490" role="img" aria-label="The activities in three sessions">
+  <rect x="10" y="10" width="460" height="94" rx="12" class="band"/><text x="26" y="33" class="session">SESSION 1: GETTING STARTED</text><a href="introduction.html"><rect x="40" y="44" width="400" height="46" rx="8" class="box"/><circle cx="66" cy="67.0" r="13" class="num"/><text x="66" y="72.0" text-anchor="middle" class="numtext">1</text><text x="90" y="72.0" class="label">Introduction to the tool</text></a>
+  <path d="M240 108 v22 M234 124 l6 6 l6 -6" class="arrow"/>
+  <rect x="10" y="134" width="460" height="222" rx="12" class="band"/><text x="26" y="157" class="session">SESSION 2: GOING FURTHER</text><a href="translations-christie.html"><rect x="40" y="168" width="400" height="46" rx="8" class="box"/><circle cx="66" cy="191.0" r="13" class="num"/><text x="66" y="196.0" text-anchor="middle" class="numtext">2</text><text x="90" y="196.0" class="label">Translations (Christie)</text></a><path d="M240 217 v12 M234 223 l6 6 l6 -6" class="arrow"/><a href="relationships-little-women.html"><rect x="40" y="232" width="400" height="46" rx="8" class="box"/><circle cx="66" cy="255.0" r="13" class="num"/><text x="66" y="260.0" text-anchor="middle" class="numtext">3</text><text x="90" y="260.0" class="label">Relationships between works (Little Women)</text></a><path d="M240 281 v12 M234 287 l6 6 l6 -6" class="arrow"/><a href="collections-tolkien.html"><rect x="40" y="296" width="400" height="46" rx="8" class="box"/><circle cx="66" cy="319.0" r="13" class="num"/><text x="66" y="324.0" text-anchor="middle" class="numtext">4</text><text x="90" y="324.0" class="label">Collections and aggregates (Tolkien)</text></a>
+  <path d="M240 360 v22 M234 376 l6 6 l6 -6" class="arrow"/>
+  <rect x="10" y="386" width="460" height="94" rx="12" class="band"/><text x="26" y="409" class="session">SESSION 3: REFLECTION</text><a href="user-tasks.html"><rect x="40" y="420" width="400" height="46" rx="8" class="box"/><circle cx="66" cy="443.0" r="13" class="num"/><text x="66" y="448.0" text-anchor="middle" class="numtext">5</text><text x="90" y="448.0" class="label">User tasks and data quality</text></a>
+  </svg>
+  <h3 class="session-title">Session 1: getting started</h3>
+  <p>A first look at the tool: each participant describes one publication from scratch.</p>
+  <ol class="exercises" start="1">
     <li>
-      <h3><a href="cataloguing.html">Cataloguing a publication</a></h3>
-      <p>A set of English-language novels, crime and other modern fiction, suitable as an introduction to the tool.</p>
-      <p class="record">No start file: catalogue your publication from scratch.</p>
+      <h4><a href="introduction.html">Introduction to the tool</a></h4>
+      <p>Get to know the tool by creating, describing and relating enitites. Use examples from a list of English-language novels (crime and other modern fiction) or use your own example.</p>
     </li>
+  </ol>
+  <h3 class="session-title">Session 2: going further</h3>
+  <p>Three activities in sequence, each on a harder modelling question: translations, relationships between works, and collections.</p>
+  <ol class="exercises" start="2">
     <li>
-      <h3><a href="translations-christie.html">Translations: Agatha Christie</a></h3>
+      <h4><a href="translations-christie.html">Translations: Agatha Christie</a></h4>
       <p>The murder of Roger Ackroyd in English, Norwegian and German: new translations, new editions and a reading of a translation, and a book that holds two novels.</p>
       <p class="record">Start file: <a href="start/translations-christie.ttl">start/translations-christie.ttl</a> · The publications only: add the works and expressions and link them.</p>
     </li>
     <li>
-      <h3><a href="relationships-little-women.html">Relationships between works: Little Women</a></h3>
+      <h4><a href="relationships-little-women.html">Relationships between works: Little Women</a></h4>
       <p>Louisa May Alcott's novel, first published in two parts, and what has been made from it: a graphic novel, a play, an opera and a film.</p>
       <p class="record">Start file: <a href="start/relationships-little-women.ttl">start/relationships-little-women.ttl</a> · The publications, works and expressions, already linked: add the relationships between the works.</p>
     </li>
     <li>
-      <h3><a href="collections-tolkien.html">Collections and aggregates: J. R. R. Tolkien</a></h3>
+      <h4><a href="collections-tolkien.html">Collections and aggregates: J. R. R. Tolkien</a></h4>
       <p>The lord of the rings in boxed sets, alone or with other books, and Tolkien's shorter writings in collections with and without a title of their own.</p>
       <p class="record">Start file: <a href="start/collections-tolkien.ttl">start/collections-tolkien.ttl</a> · The publications and the distinct works with their expressions: link the publications to the expressions, and add the collections you consider works.</p>
     </li>
+  </ol>
+  <h3 class="session-title">Session 3: reflection</h3>
+  <p>Looking at the data from the users' side, and discussing what the activities have shown.</p>
+  <ol class="exercises" start="5">
     <li>
-      <h3><a href="user-tasks.html">User tasks and data quality: search and exploration</a></h3>
+      <h4><a href="user-tasks.html">User tasks and data quality: search and exploration</a></h4>
       <p>How well the data supports users' tasks, assessed by searching and exploring it.</p>
       <p class="record">Details to come.</p>
     </li>

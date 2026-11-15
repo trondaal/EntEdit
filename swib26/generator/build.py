@@ -14,7 +14,7 @@ from selection import SELECTION
 
 ROOT = pathlib.Path(__file__).parents[1]
 # File name of each example's page and Turtle files
-PAGES = {"Cataloguing": "cataloguing", "TranslationsAckroyd": "translations-christie", "RelationshipsLittleWomen": "relationships-little-women",
+PAGES = {"Cataloguing": "introduction", "TranslationsAckroyd": "translations-christie", "RelationshipsLittleWomen": "relationships-little-women",
          "CollectionsTolkien": "collections-tolkien"}
 # Classes and links kept in the start files
 START_CLASSES = {"rdac:C10004", "rdac:C10005", "rdac:C10007"}
@@ -229,6 +229,17 @@ STYLE = """  <style>
     .start { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: .6rem .9rem;
              margin: 0 0 2.5rem; font-size: .95rem; }
     .exercises { padding-left: 1.25rem; }
+    .exercises h4 { font-size: 1.05rem; margin: 0 0 .25rem; }
+    .session-title { font-size: 1.1rem; margin: 2rem 0 .25rem; }
+    svg.sessions { display: block; width: 100%; max-width: 30rem; margin: 1.5rem auto 1rem; }
+    svg.sessions .band { fill: var(--panel); stroke: var(--line); }
+    svg.sessions .box { fill: var(--bg); stroke: var(--accent); stroke-width: 1.5; }
+    svg.sessions a:hover .box { fill: var(--panel); }
+    svg.sessions .num { fill: var(--accent); }
+    svg.sessions .numtext { fill: var(--bg); font: 600 14px system-ui, sans-serif; }
+    svg.sessions .label { fill: var(--text); font: 500 15px system-ui, sans-serif; }
+    svg.sessions .session { fill: var(--muted); font: 600 12px system-ui, sans-serif; letter-spacing: .06em; }
+    svg.sessions .arrow { stroke: var(--muted); stroke-width: 2; fill: none; marker-end: none; }
     .exercises li { margin: 0 0 1.25rem; }
     .exercises h3 { font-size: 1.1rem; margin: 0 0 .25rem; }
     .exercises p { margin: .2rem 0; }
@@ -446,7 +457,7 @@ for slug, rec in x.records.items():
     x.manifestation(slug, None, [f"{slug}/eng"])
     surname = name.split(",")[0]
     x.headings[slug] = f"{surname}: {title[0].upper() + title[1:]} ({re.search(r"\d{4}", description(rec)['date']).group()})"
-x.write("Activity: cataloguing a publication",
+x.write("Activity: introduction to the tool",
         "Each participant takes one of the thirty publications below, so that everyone can work in the same "
         "repository at the same time: no two of them share an author or a work. From the description and the "
         "catalogue record, create the work, the expression and the manifestation, and the person who wrote it, "
@@ -753,9 +764,10 @@ x.write("Activity: collections and aggregates (J. R. R. Tolkien)",
 
 # --- Main page ----------------------------------------------------------------------------------
 EXERCISES = [
-    ("cataloguing", "Cataloguing a publication",
-     "A set of English-language novels, crime and other modern fiction, suitable as an introduction to the tool.",
-     "No start file: catalogue your publication from scratch."),
+    ("introduction", "Introduction to the tool",
+     "Create and relate person, work, expression and manifestation, for one of a set of English-language novels "
+     "(crime and other modern fiction).",
+     "No start file: describe your publication from scratch."),
     ("translations-christie", "Translations: Agatha Christie",
      "The murder of Roger Ackroyd in English, Norwegian and German: new translations, new editions and a "
      "reading of a translation, and a book that holds two novels.",
@@ -773,14 +785,72 @@ EXERCISES = [
      "How well the data supports users' tasks, assessed by searching and exploring it.",
      "Details to come."),
 ]
-items = "\n".join(
-    "    <li>\n      <h3>" + (f'<a href="{page}.html">{html.escape(title)}</a>' if page else html.escape(title))
-    + "</h3>\n"
-    f"      <p>{html.escape(text, quote=False)}</p>\n"
-    + (f'      <p class="record">Start file: <a href="start/{page}.ttl">start/{page}.ttl</a> · '
-       if page and (ROOT / "start" / f"{page}.ttl").exists() else '      <p class="record">')
-    + f"{html.escape(start, quote=False)}</p>\n    </li>"
-    for page, title, text, start in EXERCISES)
+SESSIONS = [
+    ("Session 1: getting started",
+     "A first look at the tool: each participant describes one publication from scratch.",
+     ["introduction"]),
+    ("Session 2: going further",
+     "Three activities in sequence, each on a harder modelling question: translations, relationships between "
+     "works, and collections.",
+     ["translations-christie", "relationships-little-women", "collections-tolkien"]),
+    ("Session 3: reflection",
+     "Looking at the data from the users' side, and discussing what the activities have shown.",
+     ["user-tasks"]),
+]
+SHORT = {"introduction": "Introduction to the tool", "translations-christie": "Translations (Christie)",
+         "relationships-little-women": "Relationships between works (Little Women)",
+         "collections-tolkien": "Collections and aggregates (Tolkien)", "user-tasks": "User tasks and data quality"}
+NUMBER = {page: n for n, (page, *_) in enumerate(EXERCISES, 1)}
+BY_PAGE = {page: rest for page, *rest in EXERCISES}
+
+
+def arrow(y, length):
+    """A downward arrow at the middle of the figure."""
+    return f'<path d="M240 {y} v{length} M234 {y + length - 6} l6 6 l6 -6" class="arrow"/>'
+
+
+def session_figure():
+    """The three sessions as a vertical diagram: one box per activity, numbered, linked to its page."""
+    w, box_h, gap, out, y = 480, 46, 18, [], 10
+    for k, (title, _, pages) in enumerate(SESSIONS):
+        top = y
+        y += 34
+        boxes = []
+        for m, page in enumerate(pages):
+            if m:
+                boxes.append(arrow(y - gap + 3, gap - 6))
+            boxes.append(f'<a href="{page}.html"><rect x="40" y="{y}" width="400" height="{box_h}" rx="8" class="box"/>'
+                         f'<circle cx="66" cy="{y + box_h / 2}" r="13" class="num"/>'
+                         f'<text x="66" y="{y + box_h / 2 + 5}" text-anchor="middle" class="numtext">{NUMBER[page]}</text>'
+                         f'<text x="90" y="{y + box_h / 2 + 5}" class="label">{html.escape(SHORT[page])}</text></a>')
+            y += box_h + gap
+        y += -gap + 14
+        out.append(f'<rect x="10" y="{top}" width="460" height="{y - top}" rx="12" class="band"/>'
+                   f'<text x="26" y="{top + 23}" class="session">{html.escape(title.upper())}</text>' + "".join(boxes))
+        if k < len(SESSIONS) - 1:
+            out.append(arrow(y + 4, 22))
+            y += 30
+    return (f'  <svg class="sessions" viewBox="0 0 {w} {y + 10}" role="img" '
+            f'aria-label="The activities in three sessions">\n  ' + "\n  ".join(out) + "\n  </svg>\n")
+
+
+def session_sections():
+    out = []
+    for title, text, pages in SESSIONS:
+        out.append(f'  <h3 class="session-title">{html.escape(title)}</h3>\n  <p>{html.escape(text, quote=False)}</p>\n'
+                   f'  <ol class="exercises" start="{NUMBER[pages[0]]}">')
+        for page in pages:
+            title_, text_, start = BY_PAGE[page]
+            has_start = (ROOT / "start" / f"{page}.ttl").exists()
+            out.append(f'    <li>\n      <h4><a href="{page}.html">{html.escape(title_)}</a></h4>\n'
+                       f"      <p>{html.escape(text_, quote=False)}</p>\n"
+                       + (f'      <p class="record">Start file: <a href="start/{page}.ttl">start/{page}.ttl</a> · '
+                          if has_start else '      <p class="record">')
+                       + f"{html.escape(start, quote=False)}</p>\n    </li>")
+        out.append("  </ol>")
+    return "\n".join(out) + "\n"
+
+
 WORKSHOP_TIME = "Monday 16 November 2026, 08:00–12:00 UTC"
 ZOOM_LINK = "https://oslomet.zoom.us/j/61004023053?pwd=YZiyYrwprHLGIvqo6ZH3Uqq968aEEA.1"
 
@@ -859,14 +929,11 @@ zoom = (f'<a href="{html.escape(ZOOM_LINK)}">{html.escape(ZOOM_LINK)}</a>' if ZO
 
   <section>
   <h2>Activities</h2>
-  <p>We will explore the tool, and discuss its use in teaching, with a selection of example datasets. In some
-  activities you start from bibliographic descriptions only and use the tool to create the entities and add
-  their attributes and relationships. In others we also provide a start file with basic descriptions that you
-  can import and build on. Each activity has its own page.</p>
-  <ol class="exercises">
-{items}
-  </ol>
-  <p class="record">People and works carry their VIAF identifiers (http://viaf.org/viaf/…) as IRIs, so the same
+  <p>We will explore the tool, and discuss its use in teaching, with a selection of example datasets, in three
+  sessions. In some activities you start from bibliographic descriptions only and use the tool to create the
+  entities and add their attributes and relationships. In others we also provide a start file with basic
+  descriptions that you can import and build on. Each activity has its own page.</p>
+{session_figure()}{session_sections()}  <p class="record">People and works carry their VIAF identifiers (http://viaf.org/viaf/…) as IRIs, so the same
   person or work is the same resource in every file. The activities and their sources are kept on
   <a href="https://github.com/trondaal/EntEdit/tree/main/swib26">GitHub</a>.</p>
   </section>
