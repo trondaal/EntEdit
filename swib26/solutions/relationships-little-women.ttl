@@ -1,8 +1,7 @@
 # Relationships between works: Louisa May Alcott's Little Women (1868-69) and four adaptations:
 # graphic novel, play, opera and film. The novel came out in two parts (1868, 1869), each a work of
 # its own and a part of the novel; the second is the sequel to the first. Each adaptation is a new
-# work, related to the novel at work level, or at expression level where RDA and the profile have
-# the relationship only there (the opera).
+# work, related to the novel at work level; the play and the opera are dramatizations of it.
 # Publication data from the MARC 21 records in swib26/marc/RelationshipsLittleWomen.xml.
 
 @prefix entedit: <http://oslomet.no/abi/vocab#> .
@@ -176,6 +175,7 @@
     entedit:P01 vtp:V1001 ;
     rdawo:P10053 <http://viaf.org/viaf/51306277> ;
     rdawo:P10205 <http://viaf.org/viaf/51306277> ;
+    rdawo:P10127 <http://viaf.org/viaf/174058143> ;
     rdawd:P10002 "http://viaf.org/viaf/306113684" .
 
 <http://viaf.org/viaf/80167863629422740114>
@@ -252,8 +252,7 @@
     rdaed:P20214 "1998" ;
     rdaeo:P20001 <http://rdaregistry.info/termList/RDAContentType/1010> ;
     rdaeo:P20006 <http://id.loc.gov/vocabulary/iso639-2/eng> ;
-    rdaeo:P20231 <http://viaf.org/viaf/306113684> ;
-    rdaeo:P20240 <http://example.org/littlewomen-relationships/exp/novel/eng> .
+    rdaeo:P20231 <http://viaf.org/viaf/306113684> .
 
 <http://example.org/littlewomen-relationships/exp/film2019/eng>
     a rdac:C10006 ;

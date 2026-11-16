@@ -387,8 +387,9 @@ class Example:
                          f'      <p class="isbd">{html.escape(isbd(description(rec)), quote=False)}</p>\n{note}'
                          f'      <p class="record"><a href="{html.escape(url)}">Catalogue record</a> · {source}</p>\n'
                          f"    </li>")
-        start = (f'  <p class="start">Start file to import: <a href="start/{page}.ttl">start/{page}.ttl</a></p>\n'
-                 if self.has_start else "")
+        solution = f'Solution: <a href="solutions/{page}.ttl">solutions/{page}.ttl</a>'
+        start = (f'  <p class="start">Start file to import: <a href="start/{page}.ttl">start/{page}.ttl</a> · '
+                 f"{solution}</p>\n" if self.has_start else f'  <p class="start">{solution}</p>\n')
         (ROOT / f"{page}.html").write_text(
             f'<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n'
             f'  <meta name="viewport" content="width=device-width, initial-scale=1">\n'
@@ -568,28 +569,32 @@ x.write("Activity: translations (Agatha Christie)",
         "identify? When is a publication a new expression and when is it only a new manifestation of one you "
         "already have? Draw or write out your model. Follow the links to the catalogue records, where you can also "
         "see what they state about the translation and, where the catalogue has one, the cover.",
-        {"eng-harper-2002": "Paperback reissue of the English text of the Hercule Poirot novel first published in 1926.",
-         "nob-aschehoug-1991": "A later Norwegian edition of the novel in R. A. Arentz's translation, which first "
-                               "appeared in 1938.",
-         "nob-audio-2006": "Norwegian audiobook on seven CDs: Per Frisch reads R. A. Arentz's translation.",
-         "eng-announced-dodd-1985": "An American edition of a later Christie novel, a Miss Marple mystery first "
-                                   "published in 1950.",
-         "nob-omnibus-2004": "Two Christie novels in one volume, each with its own page numbering: R. A. Arentz's "
-                             "translation of the Hercule Poirot novel above and Jan Christensen's translation of A "
+        {"eng-harper-2002": "Paperback reissue of the English text of The murder of Roger Ackroyd, the Hercule "
+                            "Poirot novel first published in 1926.",
+         "nob-aschehoug-1991": "Doktoren mister en pasient (“The doctor loses a patient”) is the Norwegian "
+                               "translation of The murder of Roger Ackroyd, by R. A. Arentz. This is a later "
+                               "edition of the translation, which first appeared in 1938.",
+         "nob-audio-2006": "Norwegian audiobook on seven CDs: Per Frisch reads R. A. Arentz's translation of The "
+                           "murder of Roger Ackroyd, Doktoren mister en pasient.",
+         "eng-announced-dodd-1985": "An American edition of A murder is announced, a later Christie novel: a Miss "
+                                   "Marple mystery first published in 1950.",
+         "nob-omnibus-2004": "Two Christie novels in one volume, each with its own page numbering. Doktoren mister "
+                             "en pasient is R. A. Arentz's translation of The murder of Roger Ackroyd, and "
+                             "Invitasjon til mord (“Invitation to murder”) is Jan Christensen's translation of A "
                              "murder is announced. The book has no title of its own beyond the two titles.",
-         "ger-kafka-1928": "The first German translation of the novel, by Irene Kafka, under a title close to the "
-                           "English one.",
-         "ger-fischer-2005": "German translation of the novel by Friedrich Pütsch, under the German title Alibi. "
-                             "It first appeared in 1937.",
-         "ger-atlantik-2014": "A new German translation of the novel by Michael Mundhenk. The title is still Alibi."})
+         "ger-kafka-1928": "Roger Ackroyd und sein Mörder (“Roger Ackroyd and his murderer”) is the first German "
+                           "translation of The murder of Roger Ackroyd, by Irene Kafka.",
+         "ger-fischer-2005": "Alibi is Friedrich Pütsch's German translation of The murder of Roger Ackroyd. It "
+                             "first appeared in 1937.",
+         "ger-atlantik-2014": "A new German translation of The murder of Roger Ackroyd, by Michael Mundhenk. The "
+                              "title is still Alibi."})
 
 # --- Relationships between works --------------------------------------------------------------------------------
 x = Example("RelationshipsLittleWomen", "littlewomen-relationships",
             "Relationships between works: Louisa May Alcott's Little Women (1868-69) and four adaptations:\n"
             "# graphic novel, play, opera and film. The novel came out in two parts (1868, 1869), each a work of\n"
             "# its own and a part of the novel; the second is the sequel to the first. Each adaptation is a new\n"
-            "# work, related to the novel at work level, or at expression level where RDA and the profile have\n"
-            "# the relationship only there (the opera).\n"
+            "# work, related to the novel at work level; the play and the opera are dramatizations of it.\n"
             "# Publication data from the MARC 21 records in swib26/marc/RelationshipsLittleWomen.xml.")
 for slug, name, dates in [("alcott", "Alcott, Louisa May", "1832-1888"), ("terciero", "Terciero, Rey", None),
                           ("indigo", "Indigo, Bre", None), ("asher", "Asher, Sandy", None),
@@ -601,7 +606,6 @@ for slug, name in [("roberts", "Roberts Brothers"), ("knopf", "Alfred A. Knopf")
                    ("columbia", "Columbia Pictures")]:
     x.publisher(slug, name)
 NOVEL_W = x.uri("work/novel")
-NOVEL_E = x.uri("exp/novel/eng")
 PART2 = "Little women, part second"
 x.work("part1", "Little women", "Little women, part 1 (Alcott, Louisa May)", "V1000", [NTSF.format(258)],
        [("rdawo:P10061", x.uri("agent/alcott")), ("rdawo:P10020", x.uri("work/part2"))], date="1868")
@@ -617,7 +621,8 @@ x.work("graphic", "Meg, Jo, Beth, and Amy", "Meg, Jo, Beth, and Amy (Terciero, R
 x.work("play", "Little women : Meg, Jo, Beth, and Amy", "Little women (play, Asher, Sandy)", "V1009", [NTSF.format(583)],
        [("rdawo:P10061", x.uri("agent/asher")), ("rdawo:P10127", NOVEL_W)], date="2001")
 x.work("opera", "Little women", "Little women (opera, Adamo, Mark)", "V1001", [],
-       [("rdawo:P10053", x.uri("agent/adamo")), ("rdawo:P10205", x.uri("agent/adamo"))], date="1998")
+       [("rdawo:P10053", x.uri("agent/adamo")), ("rdawo:P10205", x.uri("agent/adamo")),
+        ("rdawo:P10127", NOVEL_W)], date="1998")
 x.work("film2019", "Little women", "Little women (film, Gerwig, 2019)", "V1002", [NTSF.format(1240)],
        [("rdawo:P10013", x.uri("agent/gerwig")), ("rdawo:P10203", x.uri("agent/gerwig")),
         ("rdawo:P10129", NOVEL_W)], date="2019", note="Production: USA, 2019")
@@ -631,7 +636,7 @@ x.expression("graphic/eng", "Meg, Jo, Beth, and Amy", "Meg, Jo, Beth, and Amy (T
 x.expression("play/eng", "Little women : Meg, Jo, Beth, and Amy", "Little women (play, Asher, Sandy)", "eng", "play",
              [TEXT], date="2001")
 x.expression("opera/score", "Little women", "Little women (opera, Adamo, Mark ; vocal score)", "eng", "opera",
-             [NOTATED], [("rdaeo:P20240", NOVEL_E)], date="1998")
+             [NOTATED], date="1998")
 x.expression("film2019/eng", "Little women", "Little women (film, Gerwig, 2019)", "eng", "film2019", [MOVING],
              [("rdaeo:P20012", x.uri("agent/ronan"))], date="2019")
 x.manifestation("part1-roberts-1868", "roberts", ["part1/eng"], note="First edition")
@@ -887,6 +892,8 @@ def session_sections():
                        + ((f'      <p class="record">Start file: <a href="start/{page}.ttl">start/{page}.ttl</a> · '
                            if has_start else '      <p class="record">')
                           + f"{html.escape(start, quote=False)}</p>\n" if start else "")
+                       + (f'      <p class="record">Solution: <a href="solutions/{page}.ttl">solutions/{page}.ttl</a></p>\n'
+                          if (ROOT / "solutions" / f"{page}.ttl").exists() else "")
                        + "    </li>")
         out.append("  </ol>")
     return "\n".join(out) + "\n"
@@ -977,6 +984,13 @@ zoom = (f'<a href="{html.escape(ZOOM_LINK)}">{html.escape(ZOOM_LINK)}</a>' if ZO
 {session_figure()}{session_sections()}  <p class="record">People and works carry their VIAF identifiers (http://viaf.org/viaf/…) as IRIs, so the same
   person or work is the same resource in every file. The activities and their sources are kept on
   <a href="https://github.com/trondaal/EntEdit/tree/main/swib26">GitHub</a>.</p>
+  </section>
+
+  <section>
+  <h2>A larger database</h2>
+  <p>For those who want to explore further, the <a href="https://dijon.idi.ntnu.no/entedit/?repo=isfdb">ISFDB
+  repository</a> is a conversion of the Internet Speculative Fiction Database to IFLA LRM and RDA, opened in
+  EntEdit.</p>
   </section>
 </main>
 </body>
