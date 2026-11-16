@@ -992,6 +992,16 @@ zoom = (f'<a href="{html.escape(ZOOM_LINK)}">{html.escape(ZOOM_LINK)}</a>' if ZO
   repository</a> is a conversion of the Internet Speculative Fiction Database to IFLA LRM and RDA, opened in
   EntEdit.</p>
   </section>
+
+  <section>
+  <h2>Contact and collaboration</h2>
+  <p>We would like others to use EntEdit in their teaching and their work, and we are interested in learning
+  from your experience: what works, what does not, and what you would do differently. We are happy to assist
+  with setting it up and to give advice on how it can be used. Get in touch by e-mail to Trond Aalberg,
+  <a href="mailto:trond.aalberg@oslomet.no">trond.aalberg@oslomet.no</a>, or through the
+  <a href="https://github.com/trondaal/EntEdit">EntEdit project on GitHub</a>, where you can also open an
+  issue with questions or suggestions.</p>
+  </section>
 </main>
 </body>
 </html>
